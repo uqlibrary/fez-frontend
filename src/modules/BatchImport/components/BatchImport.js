@@ -10,7 +10,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import Button from '@material-ui/core/Button';
 
-import { PUBLICATION_TYPE_DESIGN } from 'config/general';
+import { PUBLICATION_TYPE_DESIGN, CSV_INGEST_DOCUMENT_TYPES } from 'config/general';
 import { createBatchImport } from 'actions';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -44,6 +44,13 @@ const onChange = (values, dispatch, props, prevValues) => {
         dispatch(change(FORM_NAME, 'collection_pid', null));
     }
 };
+
+const csvIngestDoctypesList = Object.values(publicationTypes(false))
+    .filter(item => CSV_INGEST_DOCUMENT_TYPES.includes(item.id))
+    .map(item => ({
+        value: item.id,
+        text: item.name,
+    }));
 
 export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded, submitting, history }) => {
     const [validationErrors, setValidationErrors] = useState(null);
@@ -160,6 +167,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                                 name="doc_type_id"
                                                 required
                                                 validate={[validation.required]}
+                                                itemsList={csvIngestDoctypesList}
                                                 {...batchImportTxt.formLabels.docType}
                                             />
                                         </Grid>

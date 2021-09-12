@@ -722,6 +722,9 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
     const changeDisplayTypeRequest = records.map(record => ({
         rek_pid: record.rek_pid,
         ...data,
+        fez_record_search_key_herdc_code: {
+            rek_herdc_code: null,
+        },
     }));
     return async dispatch => {
         dispatch({

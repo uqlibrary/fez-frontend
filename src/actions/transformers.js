@@ -1154,7 +1154,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
 export const getHerdcCodeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_herdc_code && record.rek_herdc_code.value === null) {
+    if (record.rek_herdc_code === '0' || (!!record.rek_herdc_code && record.rek_herdc_code.value === null)) {
         return {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
@@ -1188,9 +1188,12 @@ export const getHerdcStatusSearchKey = record => {
 
 export const getOpenAccessStatusTypeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null) {
+    if (
+        record.rek_oa_status_type === '0' ||
+        (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null)
+    ) {
         return {
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
         };
     }
 

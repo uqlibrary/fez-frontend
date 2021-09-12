@@ -306,6 +306,7 @@ export default {
             'Generic Document': {
                 rek_date: 'Date',
                 fez_record_search_key_subject: 'Research fields, Courses and Disciplines',
+                fez_record_search_key_contributor: 'Contributor(s)',
             },
             Image: {
                 rek_date: 'Date',
