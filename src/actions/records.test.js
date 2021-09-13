@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import { record, collectionRecord, communityRecord } from 'mock/data';
+import { createOrUpdateDoi } from './records';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -1478,6 +1479,43 @@ describe('Record action creators', () => {
                         },
                         true,
                     ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
+    describe('createOrUpdateDoi', () => {
+        it('dispatches expected actions on success for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CREATE_OR_UPDATE_DOI_INPROGRESS, actions.CREATE_OR_UPDATE_DOI_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.createOrUpdateDoi([
+                    {
+                        rek_pid: 'UQ:11111',
+                    },
+                ]),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CREATE_OR_UPDATE_DOI_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CREATE_OR_UPDATE_DOI_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.createOrUpdateDoi([
+                        {
+                            rek_pid: 'UQ:11111',
+                        },
+                    ]),
                 );
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
