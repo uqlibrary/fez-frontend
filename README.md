@@ -368,6 +368,18 @@ Deployment pipelines are setup for branches: "master", "staging, "production" an
 Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
 
+### Gotchas
+
+There are some build steps that are exclusive to master, staging and production branches:
+- npm run test:unit:ci1
+- npm run test:e2e:dashboard
+
+This means that even when a given branch passes tests and builds successfully in CB, it doesn't necessary mean that it's free issues.
+
+In order to identify possible issues before pushing master upstream, make sure to run the commands above locally after merging your changes to that branch.
+
+For more details, look at ./bin/codebuild-test.sh
+
 ## Google Analytics integration
 
 Fez-frontend includes GTM (Google Tag Manager). GTM is set at webpack build time in webpack configuration. It can be
