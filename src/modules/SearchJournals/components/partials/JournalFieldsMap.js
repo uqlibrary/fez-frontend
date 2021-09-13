@@ -87,8 +87,7 @@ export const JournalFieldsMap = [
                     quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
                 });
             }
-            const highestQuartile = quartileList.length > 0 ? Array.min(quartileList) : null;
-            return highestQuartile;
+            return quartileList.length > 0 ? Array.min(quartileList) : null;
         },
     },
     {
@@ -251,7 +250,7 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'jnl_jcr_scie_category_quartile',
+        key: 'jnl_jcr_scie_category_jif_percentile',
         label: 'Impact factor percentile',
         size: 125,
         prefix: '',
@@ -266,7 +265,7 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
             ) {
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    return `${item.jnl_jcr_scie_category_quartile} - ${item.jnl_jcr_scie_category_description_lookup}`;
+                    return `${item.jnl_jcr_scie_category_jif_percentile} - ${item.jnl_jcr_scie_category_description_lookup}`;
                 });
                 label = label.join(', ');
             } else if (
@@ -275,7 +274,7 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
             ) {
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    return `${item.jnl_jcr_ssci_category_quartile} - ${item.jnl_jcr_ssci_category_description_lookup}`;
+                    return `${item.jnl_jcr_ssci_category_jif_percentile} - ${item.jnl_jcr_ssci_category_description_lookup}`;
                 });
                 label = label.join(', ');
             }
@@ -289,7 +288,7 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
             ) {
                 label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    return item.jnl_jcr_scie_category_quartile;
+                    return item.jnl_jcr_scie_category_jif_percentile;
                 });
                 label = label.join(', ');
             } else if (
@@ -298,7 +297,7 @@ export const JournalFieldsMap = [
                 data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
             ) {
                 label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    return item.jnl_jcr_ssci_category_quartile;
+                    return item.jnl_jcr_ssci_category_jif_percentile;
                 });
                 label = label.join(', ');
             }
