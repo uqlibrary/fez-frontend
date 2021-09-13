@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
 const JournalsList = journals => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
-            Cookies.set('minimalView', false);
+            Cookies.set('minimalView', true);
         }
     }, []);
     const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') === 'true');
