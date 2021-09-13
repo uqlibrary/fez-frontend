@@ -1447,3 +1447,14 @@ export const getCopyToCollectionData = (records, data) => {
         };
     });
 };
+
+export const createOrUpdateDoi = records => {
+    return records.map(record => {
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_doi: {
+                rek_doi: true,
+            },
+        };
+    });
+};
