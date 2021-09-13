@@ -971,7 +971,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'image/jpeg';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
         expect(wrapper.state().preview.fileName).toEqual(fileName);
         expect(wrapper.state().preview.previewMediaUrl).toEqual(previewMediaUrl);
         expect(wrapper.state().preview.mediaUrl).toEqual(mediaUrl);
@@ -993,7 +1000,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'video/mp4';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         let preview = wrapper.find('Memo(MediaPreview)').shallow();
 
@@ -1021,7 +1035,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'video/mp4';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         wrapper.find('Memo(MediaPreview)').simulate('videoFailed', { code: 1234, message: 'video failed' });
         wrapper.update();
@@ -1047,7 +1068,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'image/jpeg';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         wrapper.find('Memo(MediaPreview)').simulate('imageFailed');
         wrapper.update();

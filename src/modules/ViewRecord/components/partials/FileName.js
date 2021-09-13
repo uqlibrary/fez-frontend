@@ -46,23 +46,22 @@ export class FileName extends PureComponent {
         return (this.isImage(mimeType) || this.isVideo(mimeType)) && !!this.props.previewMediaUrl;
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => e => {
+    showPreview = e => {
         e.preventDefault();
-        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums);
+        const { checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl } = this.props;
+        this.props.onFileSelect({
+            checksums,
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
     };
 
     render() {
-        const {
-            pid,
-            fileName,
-            allowDownload,
-            mimeType,
-            mediaUrl,
-            webMediaUrl,
-            previewMediaUrl,
-            securityStatus,
-            checksums,
-        } = this.props;
+        const { pid, fileName, allowDownload, mimeType, previewMediaUrl, checksums } = this.props;
         return (
             <Grid container alignItems="center" wrap="nowrap">
                 <Grid item xs>
@@ -79,24 +78,8 @@ export class FileName extends PureComponent {
                     {allowDownload && this.canShowPreview(mimeType) && (
                         <Typography variant="body2">
                             <a
-                                onClick={this.showPreview(
-                                    fileName,
-                                    mediaUrl,
-                                    previewMediaUrl,
-                                    mimeType,
-                                    webMediaUrl,
-                                    securityStatus,
-                                    checksums,
-                                )}
-                                onKeyPress={this.showPreview(
-                                    fileName,
-                                    mediaUrl,
-                                    previewMediaUrl,
-                                    mimeType,
-                                    webMediaUrl,
-                                    securityStatus,
-                                    checksums,
-                                )}
+                                onClick={this.showPreview}
+                                onKeyPress={this.showPreview}
                                 className={this.props.classes.filename}
                             >
                                 {fileName}

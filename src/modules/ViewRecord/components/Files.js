@@ -245,15 +245,11 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => {
+    showPreview = ({ securityStatus, checksums = {}, ...rest }) => {
         if (securityStatus) {
             this.setState({
                 preview: {
-                    fileName,
-                    mediaUrl,
-                    webMediaUrl,
-                    previewMediaUrl,
-                    mimeType,
+                    ...rest,
                     securityStatus,
                     checksums,
                     videoLoading: true,
