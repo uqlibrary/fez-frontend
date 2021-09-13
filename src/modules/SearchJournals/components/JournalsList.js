@@ -18,7 +18,8 @@ const JournalsList = journals => {
             Cookies.set('minimalView', true);
         }
     }, []);
-    const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') === 'true');
+
+    const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') !== 'false');
     const toggleView = () => {
         Cookies.set('minimalView', !minimalView);
         setMinimalView(!minimalView);
