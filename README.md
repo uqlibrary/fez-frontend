@@ -301,6 +301,18 @@ If you want Codebuild to run cypress tests before you merge to master, include t
 
 - If a test occasionally fails as "requires a DOM element." add a `.should()` test after the `.get()`, to make it wait for the element to appear (`.should()` loops)
 
+#### Gotchas
+
+When running ```npm test``` and related scripts natively in linux (without using a VM), jest can be quite demanding making the OS unresponsive.
+
+One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
+
+You can either use ```test:cpu-restricted``` or the following if additional options are required:
+
+```bash
+NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
+```
+
 ## Mocking
 
 To run website on mock data run `npm run start:mock` webserver will start on `http://localhost:3000/`
@@ -355,6 +367,18 @@ Deployment pipelines are setup for branches: "master", "staging, "production" an
 
 Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
+
+### Gotchas
+
+There are some build steps that are exclusive to master, staging and production branches:
+- npm run test:unit:ci1
+- npm run test:e2e:dashboard
+
+This means that even when a given branch passes tests and builds successfully in CB, it doesn't necessary mean that it's free issues.
+
+In order to identify possible issues before pushing master upstream, make sure to run the commands above locally after merging your changes to that branch.
+
+For more details, look at ./bin/codebuild-test.sh
 
 ## Google Analytics integration
 

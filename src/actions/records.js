@@ -811,3 +811,31 @@ export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false
         }
     };
 };
+
+/**
+ * @param {array} records
+ */
+export const createOrUpdateDoi = records => {
+    const request = transformers.createOrUpdateDoi(records);
+    return async dispatch => {
+        dispatch({
+            type: actions.CREATE_OR_UPDATE_DOI_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), request);
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
