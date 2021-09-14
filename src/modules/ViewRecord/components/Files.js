@@ -477,7 +477,7 @@ export class FilesClass extends Component {
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
-                                    <FileName {...item} onFileSelect={this.showPreview} />
+                                    <FileName {...item} id={`file-name-${index}`} onFileSelect={this.showPreview} />
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid

@@ -1,55 +1,60 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
-import AudioPlayer from './AudioPlayer';
+
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+
+import AudioPlayer from './AudioPlayer';
+import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
+
 import { pathConfig } from 'config/pathConfig';
 
-export const styles = theme => ({
-    filename: {
-        ...theme.typography.body2,
-        cursor: 'pointer',
-    },
-});
+export const useStyles = makeStyles(
+    theme => ({
+        filename: {
+            ...theme.typography.body2,
+            cursor: 'pointer',
+        },
+    }),
+    { withTheme: true },
+);
 
-export class FileName extends PureComponent {
-    static propTypes = {
-        pid: PropTypes.string.isRequired,
-        fileName: PropTypes.string.isRequired,
-        mimeType: PropTypes.string.isRequired,
-        mediaUrl: PropTypes.string.isRequired,
-        webMediaUrl: PropTypes.string,
-        previewMediaUrl: PropTypes.string.isRequired,
-        onFileSelect: PropTypes.func.isRequired,
-        allowDownload: PropTypes.bool,
-        securityStatus: PropTypes.bool,
-        classes: PropTypes.object,
-        checksums: PropTypes.object,
-    };
+const FileName = ({
+    allowDownload,
+    checksums,
+    fileName,
+    id,
+    mediaUrl,
+    mimeType,
+    onFileSelect,
+    pid,
+    previewMediaUrl,
+    securityStatus,
+    webMediaUrl,
+}) => {
+    const classes = useStyles();
 
-    isAudio = mimeType => {
+    const isAudio = mimeType => {
         return mimeType.indexOf('audio') >= 0;
     };
 
-    isVideo = mimeType => {
+    const isVideo = mimeType => {
         return mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf';
     };
 
-    isImage = mimeType => {
+    const isImage = mimeType => {
         return mimeType.indexOf('image') >= 0;
     };
 
-    canShowPreview = mimeType => {
-        return (this.isImage(mimeType) || this.isVideo(mimeType)) && !!this.props.previewMediaUrl;
+    const canShowPreview = mimeType => {
+        return (isImage(mimeType) || isVideo(mimeType)) && previewMediaUrl;
     };
 
-    showPreview = e => {
+    const showPreview = e => {
         e.preventDefault();
-        const { checksums, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl } = this.props;
-        this.props.onFileSelect({
+        onFileSelect({
             checksums,
             fileName,
             mediaUrl,
@@ -60,51 +65,58 @@ export class FileName extends PureComponent {
         });
     };
 
-    render() {
-        const { pid, fileName, allowDownload, mimeType, previewMediaUrl, checksums } = this.props;
-        return (
-            <Grid container alignItems="center" wrap="nowrap">
-                <Grid item xs>
-                    {allowDownload && !this.canShowPreview(mimeType) && (
-                        <ExternalLink
-                            href={pathConfig.file.url(pid, fileName, checksums && checksums.media)}
-                            title={fileName}
-                            className={this.props.classes.filename}
-                            openInNewIcon
-                        >
+    return (
+        <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
+            <Grid item xs>
+                {allowDownload && !canShowPreview(mimeType) && (
+                    <ExternalLink
+                        href={pathConfig.file.url(pid, fileName, checksums && checksums.media)}
+                        title={fileName}
+                        className={classes.filename}
+                        openInNewIcon
+                        id={`${id}-download`}
+                    >
+                        {fileName}
+                    </ExternalLink>
+                )}
+                {allowDownload && canShowPreview(mimeType) && (
+                    <Typography variant="body2" id={`${id}-preview`}>
+                        <a onClick={showPreview} onKeyPress={showPreview} className={classes.filename}>
                             {fileName}
-                        </ExternalLink>
-                    )}
-                    {allowDownload && this.canShowPreview(mimeType) && (
-                        <Typography variant="body2">
-                            <a
-                                onClick={this.showPreview}
-                                onKeyPress={this.showPreview}
-                                className={this.props.classes.filename}
-                            >
-                                {fileName}
-                            </a>
-                        </Typography>
-                    )}
-                    {!allowDownload && <Typography variant="body2">{fileName}</Typography>}
-                </Grid>
-                <Hidden xsDown>
-                    <Grid item sm>
-                        {allowDownload && this.isAudio(this.props.mimeType) && (
-                            <AudioPlayer
-                                pid={pid}
-                                fileName={
-                                    previewMediaUrl ||
-                                    pathConfig.file.url(pid, fileName, checksums && checksums.preview)
-                                }
-                                mimeType={mimeType}
-                            />
-                        )}
-                    </Grid>
-                </Hidden>
+                        </a>
+                    </Typography>
+                )}
+                {!allowDownload && <Typography variant="body2">{fileName}</Typography>}
             </Grid>
-        );
-    }
-}
+            <Hidden xsDown>
+                <Grid item sm>
+                    {allowDownload && isAudio(mimeType) && (
+                        <AudioPlayer
+                            pid={pid}
+                            fileName={
+                                previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)
+                            }
+                            mimeType={mimeType}
+                        />
+                    )}
+                </Grid>
+            </Hidden>
+        </Grid>
+    );
+};
 
-export default withStyles(styles, { withTheme: true })(FileName);
+FileName.propTypes = {
+    id: PropTypes.string,
+    pid: PropTypes.string.isRequired,
+    fileName: PropTypes.string.isRequired,
+    mimeType: PropTypes.string.isRequired,
+    mediaUrl: PropTypes.string.isRequired,
+    webMediaUrl: PropTypes.string,
+    previewMediaUrl: PropTypes.string.isRequired,
+    onFileSelect: PropTypes.func.isRequired,
+    allowDownload: PropTypes.bool,
+    securityStatus: PropTypes.bool,
+    checksums: PropTypes.object,
+};
+
+export default FileName;

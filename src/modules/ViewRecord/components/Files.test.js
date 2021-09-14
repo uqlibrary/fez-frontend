@@ -990,7 +990,7 @@ describe('Files Component ', () => {
     it('should set video loading flag to hide loading message', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
@@ -1025,7 +1025,7 @@ describe('Files Component ', () => {
     it('should set video load error flags', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
@@ -1058,7 +1058,7 @@ describe('Files Component ', () => {
     it('should set image error flag', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
