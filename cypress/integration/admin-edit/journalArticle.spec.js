@@ -146,12 +146,12 @@ context('Journal Article admin edit', () => {
                             issns.forEach((issn, index) => {
                                 cy.get(`#rek-issn-list-row-${index}`).should('contain.text', issn.rek_issn);
                                 cy.get(`#rek-issn-list-row-${index}`).within(() => {
-                                    cy.get('#external-link-sherparomeo')
+                                    cy.get('#sherparomeo-link')
                                         .should('contain.text', 'SHERPA/RoMEO')
                                         .should('have.attr', 'href', issn.fez_sherpa_romeo.srm_journal_link);
                                 });
                                 cy.get(`#rek-issn-list-row-${index}`).within(() => {
-                                    cy.get('#external-link-ulrichs')
+                                    cy.get('#ulrichs-link')
                                         .should('contain.text', 'Ulrichs')
                                         .should(
                                             'have.attr',

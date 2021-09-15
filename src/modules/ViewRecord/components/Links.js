@@ -86,6 +86,7 @@ export class LinksClass extends PureComponent {
             index: 'google',
             link: (
                 <ExternalLink
+                    id="google-scholar"
                     href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
                     title={locale.viewRecord.sections.links.googleScholar.linkDescription}
                 >
@@ -148,7 +149,7 @@ export class LinksClass extends PureComponent {
         return {
             index: index,
             link: (
-                <ExternalLink href={link.rek_link} title={linkDescription}>
+                <ExternalLink href={link.rek_link} title={linkDescription} id={`publication-${index}`}>
                     {link.rek_link}
                 </ExternalLink>
             ),

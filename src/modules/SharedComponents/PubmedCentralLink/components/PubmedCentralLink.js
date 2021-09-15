@@ -15,6 +15,7 @@ export default class PubmedCentralLink extends PureComponent {
         }
         return (
             <ExternalLink
+                id="pubmed-central"
                 className="pubmedCentralLinkUrl"
                 href={txt.externalUrl.replace('[id]', this.props.pubmedCentralId)}
                 title={txt.ariaLabel}

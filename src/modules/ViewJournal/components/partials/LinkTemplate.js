@@ -10,12 +10,7 @@ export const LinkTemplate = ({ data, templateProps, fieldId }) => {
         <DefaultTemplate
             fieldId={fieldId}
             data={
-                <ExternalLink
-                    href={href(data)}
-                    title={title}
-                    id={`${fieldId}-lookup`}
-                    data-testid={`${fieldId}-lookup`}
-                >
+                <ExternalLink href={href(data)} title={title} id={`${fieldId}-lookup`}>
                     {text(data)}
                 </ExternalLink>
             }

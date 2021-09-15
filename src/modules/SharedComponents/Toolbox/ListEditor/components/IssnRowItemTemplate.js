@@ -30,7 +30,7 @@ export const IssnRowItemTemplate = React.memo(
                             href={item.value.sherpaRomeo.link}
                             aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
                             title={globalLocale.global.sherpaRomeoLink.title}
-                            id="external-link-sherparomeo"
+                            id="sherparomeo"
                         >
                             {globalLocale.global.sherpaRomeoLink.externalLinktext}
                         </ExternalLink>
@@ -42,7 +42,7 @@ export const IssnRowItemTemplate = React.memo(
                             href={item.value.ulrichs.link}
                             aria-label={globalLocale.global.ulrichsLink.ariaLabel}
                             title={item.value.ulrichs.title}
-                            id="external-link-ulrichs"
+                            id="ulrichs"
                         >
                             {globalLocale.global.ulrichsLink.externalLinktext}
                         </ExternalLink>

@@ -155,8 +155,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-191 ExternalLink-externalLink-193"
+                          class="googleCitationCount CitationCountView-citationCount-191 makeStyles-externalLink-193"
+                          data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
+                          id="citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
