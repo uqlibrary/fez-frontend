@@ -22,19 +22,6 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'jnl_publisher',
-        label: 'Journal publisher',
-        size: 300,
-        prefix: '',
-        suffix: '',
-        compactView: true,
-        compactSize: true,
-        showTooltip: true,
-        translateFn: data => {
-            return data.jnl_publisher || 'NA';
-        },
-    },
-    {
         key: 'fez_journal_doaj',
         label: 'Open access',
         size: 55,
@@ -57,7 +44,7 @@ export const JournalFieldsMap = [
     },
     {
         key: '',
-        label: 'Highest quartile reached',
+        label: 'Highest quartile (1 is best)',
         size: 150,
         prefix: 'Q',
         suffix: '',
@@ -92,7 +79,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score',
-        label: 'CiteScore',
+        label: 'CiteScore (higher is better)',
         size: 100,
         prefix: '',
         suffix: '',
@@ -139,7 +126,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'fez_journal_cite_score',
-        label: 'CiteScore percentile',
+        label: 'CiteScore percentile (100 is best)',
         size: 250,
         prefix: '',
         suffix: '',
@@ -180,7 +167,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_jcr_scie_impact_factor',
-        label: 'Impact factor',
+        label: 'Impact factor (higher is better)',
         size: 100,
         prefix: '',
         suffix: '',
@@ -251,7 +238,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_jcr_scie_category_jif_percentile',
-        label: 'Impact factor percentile',
+        label: 'Impact factor percentile (higher is best)',
         size: 125,
         prefix: '',
         suffix: '',
@@ -306,7 +293,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score_snip',
-        label: 'SNIP',
+        label: 'SNIP (higher is better)',
         size: 70,
         prefix: '',
         suffix: '',
@@ -318,7 +305,7 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score_sjr',
-        label: 'SJR',
+        label: 'SJR (higher is better)',
         size: 70,
         prefix: '',
         suffix: '',
