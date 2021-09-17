@@ -1,27 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import IconButton from '@material-ui/core/IconButton';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import GetAppIcon from '@material-ui/icons/GetApp';
+import { makeStyles } from '@material-ui/styles';
 
 import AudioPlayer from './AudioPlayer';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
+import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 import { pathConfig } from 'config/pathConfig';
+import componentsLocale from 'locale/components';
+// import { useConfirmationState } from 'hooks';
 
 export const useStyles = makeStyles(
     theme => ({
         filename: {
             ...theme.typography.body2,
             cursor: 'pointer',
+            placeSelf: 'center',
+        },
+        fileDownloadIcon: {
+            textAlign: 'right',
         },
     }),
     { withTheme: true },
 );
 
 const FileName = ({
+    downloadLicence,
     allowDownload,
     checksums,
     fileName,
@@ -65,12 +75,32 @@ const FileName = ({
         });
     };
 
+    const downloadUrl = pathConfig.file.url(pid, fileName, checksums && checksums.media);
+
+    // const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
+    const [isOpen, setOpenState] = React.useState(false);
+    const showConfirmation = () => setOpenState(true);
+    const hideConfirmation = () => setOpenState(false);
+
+    const openDownloadUrl = () => {
+        window.open(downloadUrl, '_blank');
+    };
+
+    const txt = componentsLocale.components.attachedFiles;
+
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
             <Grid item xs>
-                {allowDownload && !canShowPreview(mimeType) && (
+                <ConfirmationBox
+                    confirmationBoxId="file-download-accept-licence"
+                    isOpen={isOpen}
+                    onAction={openDownloadUrl}
+                    onClose={hideConfirmation}
+                    locale={txt.licenceConfirmation(downloadLicence)}
+                />
+                {allowDownload && !downloadLicence && !canShowPreview(mimeType) && (
                     <ExternalLink
-                        href={pathConfig.file.url(pid, fileName, checksums && checksums.media)}
+                        href={downloadUrl}
                         title={fileName}
                         className={classes.filename}
                         openInNewIcon
@@ -86,11 +116,29 @@ const FileName = ({
                         </a>
                     </Typography>
                 )}
-                {!allowDownload && <Typography variant="body2">{fileName}</Typography>}
+                {(!allowDownload || (!!downloadLicence && !canShowPreview(mimeType))) && (
+                    <Grid container>
+                        <Grid item xs className={classes.filename}>
+                            <Typography variant="body2">{fileName}</Typography>
+                        </Grid>
+                        {!!downloadLicence && (
+                            <Grid item xs="auto" className={classes.fileDownloadIcon}>
+                                <IconButton
+                                    aria-label={txt.downloadButtonLabel}
+                                    onClick={showConfirmation}
+                                    id={`${id}-download-button`}
+                                    data-testid={`${id}-download-button`}
+                                >
+                                    <GetAppIcon />
+                                </IconButton>
+                            </Grid>
+                        )}
+                    </Grid>
+                )}
             </Grid>
             <Hidden xsDown>
-                <Grid item sm>
-                    {allowDownload && isAudio(mimeType) && (
+                {allowDownload && isAudio(mimeType) && (
+                    <Grid item sm>
                         <AudioPlayer
                             pid={pid}
                             fileName={
@@ -98,14 +146,15 @@ const FileName = ({
                             }
                             mimeType={mimeType}
                         />
-                    )}
-                </Grid>
+                    </Grid>
+                )}
             </Hidden>
         </Grid>
     );
 };
 
 FileName.propTypes = {
+    downloadLicence: PropTypes.object,
     id: PropTypes.string,
     pid: PropTypes.string.isRequired,
     fileName: PropTypes.string.isRequired,

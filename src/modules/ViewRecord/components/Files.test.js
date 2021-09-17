@@ -1,7 +1,6 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
-import { FilesClass } from './Files';
+import { FilesClass, formatBytes, getFileOpenAccessStatus, untranscodedItem, styles } from './Files';
 import * as mock from 'mock/data';
 
 const pub = {
@@ -804,7 +803,7 @@ const pub = {
     rek_pubmed_doc_type_lookup: null,
 };
 
-function setup(testProps, args = { isShallow: true }) {
+function setup(testProps) {
     const props = {
         theme: {},
         isAdmin: testProps.isAdmin || true,
@@ -816,7 +815,7 @@ function setup(testProps, args = { isShallow: true }) {
         author: testProps.author || mock.currentAuthor.uqresearcher,
         ...testProps,
     };
-    return getElement(FilesClass, props, args);
+    return getElement(FilesClass, props, { isShallow: true });
 }
 
 describe('Files Component ', () => {
@@ -832,6 +831,25 @@ describe('Files Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a style helper', () => {
+        const theme = { palette: { secondary: { light: 'red' } } };
+        expect(styles(theme)).toStrictEqual({
+            header: {
+                borderBottom: '1px solid red',
+            },
+            dataWrapper: {
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+            },
+            fileIcon: {
+                opacity: 0.5,
+            },
+            thumbIconCentered: {
+                textAlign: 'center',
+            },
+        });
     });
 
     it('should not render cultural sensitivity statement', () => {
@@ -879,24 +897,6 @@ describe('Files Component ', () => {
             },
             hideCulturalSensitivityStatement: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render component full mount', () => {
-        const wrapper = getElement(
-            Files,
-            {
-                theme: {},
-                account: { canMasquerade: true },
-                isAdmin: true,
-                isAuthor: true,
-                publication: journalArticle,
-                hideCulturalSensitivityStatement: false,
-                setHideCulturalSensitivityStatement: jest.fn(),
-                classes: {},
-            },
-            { isShallow: false },
-        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

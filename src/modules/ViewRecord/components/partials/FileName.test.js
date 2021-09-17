@@ -1,9 +1,10 @@
 import React from 'react';
-import { render, fireEvent, act } from 'test-utils';
+import { render, fireEvent, act, AllTheProviders } from 'test-utils';
 
 import FileName from './FileName';
 
 import { journalArticle } from 'mock/data/testing/records';
+import { CURRENT_LICENCES } from 'config/general';
 
 import mediaQuery from 'css-mediaquery';
 const createMatchMedia = width => {
@@ -30,7 +31,11 @@ function setup(testProps = {}) {
         allowDownload: false,
         ...rest,
     };
-    return render(<FileName {...props} />);
+    return render(
+        <AllTheProviders>
+            <FileName {...props} />
+        </AllTheProviders>,
+    );
 }
 
 describe('File Name Component ', () => {
@@ -39,7 +44,7 @@ describe('File Name Component ', () => {
     });
 
     it('should render component and display file name only', () => {
-        const { getByText, queryByTestId } = setup({});
+        const { getByText, queryByTestId } = setup({ downloadLicence: {} });
         expect(queryByTestId('test-file-name')).toBeInTheDocument();
         expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
     });
@@ -95,5 +100,38 @@ describe('File Name Component ', () => {
             fireEvent.keyPress(getByText('test.mp4'), { key: 'Enter', code: 13, charCode: 13 });
         });
         expect(testFn).toHaveBeenCalledTimes(1);
+    });
+
+    it('should be able to trigger and cancel licence confirmation', () => {
+        const { getByTestId } = setup({
+            allowDownload: true,
+            fileName: 'test.zip',
+            mimeType: 'application/zip',
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        act(() => {
+            fireEvent.click(getByTestId('test-file-name-download-button'));
+        });
+        expect(getByTestId('confirm-cancel-action')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(getByTestId('confirm-cancel-action'));
+        });
+    });
+
+    it('should be able to trigger and accept licence confirmation', () => {
+        global.open = jest.fn();
+        const { getByTestId } = setup({
+            allowDownload: true,
+            fileName: 'test.zip',
+            mimeType: 'application/zip',
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        act(() => {
+            fireEvent.click(getByTestId('test-file-name-download-button'));
+        });
+        expect(getByTestId('confirm-action')).toBeInTheDocument();
+        fireEvent.click(getByTestId('confirm-action'));
+
+        expect(global.open).toHaveBeenCalledWith('http://localhost/view/UQ:676287/test.zip', '_blank');
     });
 });
