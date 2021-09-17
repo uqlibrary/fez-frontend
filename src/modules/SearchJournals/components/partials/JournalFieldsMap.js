@@ -11,6 +11,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_title',
         label: 'Journal title',
+        subLabel: '',
         size: 400, // Pixels width - can be anything.
         prefix: '',
         suffix: '',
@@ -24,6 +25,7 @@ export const JournalFieldsMap = [
     {
         key: 'fez_journal_doaj',
         label: 'Open access',
+        subLabel: '',
         size: 55,
         prefix: '',
         suffix: '',
@@ -44,12 +46,13 @@ export const JournalFieldsMap = [
     },
     {
         key: '',
-        label: 'Highest quartile (1 is best)',
-        size: 150,
+        label: 'Highest quartile',
+        subLabel: '(Q1 is best)',
+        size: 120,
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        compactSize: 3,
+        compactSize: 2,
         showTooltip: false,
         translateFn: data => {
             const quartileList = [];
@@ -79,8 +82,9 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score',
-        label: 'CiteScore (higher is better)',
-        size: 100,
+        label: 'CiteScore',
+        subLabel: '(higher is better)',
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -90,43 +94,9 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'jnl_cite_score_asjc_code_rank',
-        label: 'CiteScore rank',
-        size: 250,
-        prefix: '',
-        suffix: '',
-        compactView: false,
-        showTooltip: true,
-        toolTipLabel: data => {
-            let tooltip = undefined;
-            if (data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0) {
-                tooltip = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
-                    return `${item.jnl_cite_score_asjc_code_rank}/${
-                        item.jnl_cite_score_asjc_code_rank_out_of
-                    } for ${item.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, '')}`;
-                });
-                tooltip = tooltip.join(', ');
-            }
-            return tooltip;
-        },
-        translateFn: data => {
-            let label = undefined;
-            if (
-                data.fez_journal_cite_score &&
-                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code &&
-                data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0
-            ) {
-                label = data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
-                    return `${item.jnl_cite_score_asjc_code_rank}/${item.jnl_cite_score_asjc_code_rank_out_of}`;
-                });
-                label = label.join(', ');
-            }
-            return label;
-        },
-    },
-    {
         key: 'fez_journal_cite_score',
-        label: 'CiteScore percentile (100 is best)',
+        label: 'CiteScore percentile',
+        subLabel: '(100 is best)',
         size: 250,
         prefix: '',
         suffix: '',
@@ -167,8 +137,9 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_jcr_scie_impact_factor',
-        label: 'Impact factor (higher is better)',
-        size: 100,
+        label: 'Impact factor',
+        subLabel: '(higher is better)',
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -182,64 +153,10 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: 'jnl_jcr_scie_category_ranking',
-        label: 'Impact factor rank',
-        size: 150,
-        prefix: '',
-        suffix: '',
-        compactView: false,
-        showTooltip: true,
-        toolTipLabel: data => {
-            let label = undefined;
-            if (
-                data.fez_journal_jcr_scie &&
-                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
-                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
-            ) {
-                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    return `${item.jnl_jcr_scie_category_ranking} - ${item.jnl_jcr_scie_category_description_lookup}`;
-                });
-                label = label.join(' | ');
-            } else if (
-                data.fez_journal_jcr_ssci &&
-                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
-                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
-            ) {
-                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    return `${item.jnl_jcr_ssci_category_ranking} - ${item.jnl_jcr_ssci_category_description_lookup}`;
-                });
-                label = label.join(' | ');
-            }
-            return label;
-        },
-        translateFn: data => {
-            let label = undefined;
-            if (
-                data.fez_journal_jcr_scie &&
-                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category &&
-                data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0
-            ) {
-                label = data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-                    return item.jnl_jcr_scie_category_ranking;
-                });
-                label = label.join(', ');
-            } else if (
-                data.fez_journal_jcr_ssci &&
-                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category &&
-                data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0
-            ) {
-                label = data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-                    return item.jnl_jcr_ssci_category_ranking;
-                });
-                label = label.join(', ');
-            }
-            return label;
-        },
-    },
-    {
         key: 'jnl_jcr_scie_category_jif_percentile',
-        label: 'Impact factor percentile (higher is best)',
-        size: 125,
+        label: 'Impact factor percentile',
+        subLabel: '(higher is better)',
+        size: 180,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -293,8 +210,9 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score_snip',
-        label: 'SNIP (higher is better)',
-        size: 70,
+        label: 'SNIP',
+        subLabel: '(higher is better)',
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -305,8 +223,9 @@ export const JournalFieldsMap = [
     },
     {
         key: 'jnl_cite_score_sjr',
-        label: 'SJR (higher is better)',
-        size: 70,
+        label: 'SJR',
+        subLabel: '(higher is better)',
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,

@@ -14,6 +14,7 @@ const JournalsListHeaderCol2Min = ({ journal }) => {
         >
             <InputLabel shrink style={{ whiteSpace: 'normal', textOverflow: 'ellipsis', fontWeight: 600 }}>
                 {journal.label}
+                <span style={{ display: 'block', fontWeight: 400 }}>{journal.subLabel}</span>
             </InputLabel>
         </Grid>
     );
