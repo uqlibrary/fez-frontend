@@ -239,7 +239,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-type-&-collection"
               id="standard-card-type-&-collection"
             >
@@ -322,7 +322,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-author/creator-research-statement"
               id="standard-card-author/creator-research-statement"
             >
@@ -515,7 +515,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-ntro-data"
               id="standard-card-ntro-data"
             >
@@ -718,7 +718,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-grant-details"
               id="standard-card-grant-details"
             >
@@ -894,7 +894,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
@@ -1670,7 +1670,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-notes"
               id="standard-card-notes"
             >

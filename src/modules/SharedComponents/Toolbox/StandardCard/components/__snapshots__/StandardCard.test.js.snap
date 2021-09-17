@@ -1,233 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cards component renders given ID for standar card 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="testClass StandardCard"
-  data-testid="test-card"
-  id="test-card"
-  style={Object {}}
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={false}
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    style={Object {}}
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h3",
-        "data-testid": "test-card-header",
-        "id": "test-card-header",
-        "variant": "h5",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className=""
-    data-testid="test-card-content"
-    id="test-card-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders given ID for standard card 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-32 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="test-card"
+    id="test-card"
+  >
+    <div
+      class="MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="test-card-header"
+          id="test-card-header"
+        >
+          card title
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="test-card-content"
+      id="test-card-content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Cards component renders with custom colours and full height 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="undefined StandardCard"
-  data-testid="standard-card-card-title"
-  id="standard-card-card-title"
-  style={
-    Object {
-      "backgroundColor": "#fcc",
-      "color": "#111",
-      "height": "100%",
-    }
-  }
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={false}
-    classes={
-      Object {
-        "root": "#555",
-      }
-    }
-    style={
-      Object {
-        "backgroundColor": "#ccc",
-      }
-    }
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h3",
-        "data-testid": "standard-card-card-title-header",
-        "id": "standard-card-card-title-header",
-        "variant": "h5",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className="no-padding"
-    data-testid="standard-card-card-title-content"
-    id="standard-card-card-title-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders with custom colours and full height 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-17 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-card-title"
+    id="standard-card-card-title"
+    style="background-color: rgb(255, 204, 204); color: rgb(17, 17, 17); height: 100%;"
+  >
+    <div
+      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-19"
+      style="background-color: rgb(204, 204, 204);"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card-card-title-header"
+          id="standard-card-card-title-header"
+        >
+          card title
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root makeStyles-cardContentNoPadding-18"
+      data-testid="standard-card-card-title-content"
+      id="standard-card-card-title-content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Cards component renders with small title and as a subcard 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="testClass StandardCard"
-  data-testid="standard-card-card-title"
-  id="standard-card-card-title"
-  style={Object {}}
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={false}
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    style={Object {}}
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h4",
-        "data-testid": "standard-card-card-title-header",
-        "id": "standard-card-card-title-header",
-        "variant": "h6",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className=""
-    data-testid="standard-card-card-title-content"
-    id="standard-card-card-title-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders with no title 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-6 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-"
+    id="standard-card-"
+  >
+    <div
+      class="MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card--header"
+          id="standard-card--header"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="standard-card--content"
+      id="standard-card--content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Cards component renders with square top and accent header 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="undefined StandardCard"
-  data-testid="standard-card-card-title"
-  id="standard-card-card-title"
-  style={Object {}}
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={false}
-    classes={
-      Object {
-        "root": "#333",
-      }
-    }
-    style={
-      Object {
-        "borderTopLeftRadius": 0,
-        "borderTopRightRadius": 0,
-      }
-    }
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h3",
-        "data-testid": "standard-card-card-title-header",
-        "id": "standard-card-card-title-header",
-        "variant": "h5",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className=""
-    data-testid="standard-card-card-title-content"
-    id="standard-card-card-title-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders with small title and as a subcard 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-27 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-card-title"
+    id="standard-card-card-title"
+  >
+    <div
+      class="MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h4
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h6 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card-card-title-header"
+          id="standard-card-card-title-header"
+        >
+          card title
+        </h4>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="standard-card-card-title-content"
+      id="standard-card-card-title-content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Cards component renders with title and help button 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="testClass StandardCard"
-  data-testid="standard-card-card-title"
-  id="standard-card-card-title"
-  style={Object {}}
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={
-      <Memo(Connect(HelpIcon))
-        buttonLabel="OK"
-        text="help text"
-        title="help"
-      />
-    }
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    style={Object {}}
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h3",
-        "data-testid": "standard-card-card-title-header",
-        "id": "standard-card-card-title-header",
-        "variant": "h5",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className=""
-    data-testid="standard-card-card-title-content"
-    id="standard-card-card-title-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders with square top and accent header 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-22 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-card-title"
+    id="standard-card-card-title"
+  >
+    <div
+      class="MuiCardHeader-root makeStyles-cardHeaderAccent-25"
+      style="border-top-left-radius: 0; border-top-right-radius: 0;"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card-card-title-header"
+          id="standard-card-card-title-header"
+        >
+          card title
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="standard-card-card-title-content"
+      id="standard-card-card-title-content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Cards component renders with title and no help icon 1`] = `
-<WithStyles(ForwardRef(Card))
-  className="testClass StandardCard"
-  data-testid="standard-card-card-title"
-  id="standard-card-card-title"
-  style={Object {}}
->
-  <WithStyles(ForwardRef(CardHeader))
-    action={false}
-    classes={
-      Object {
-        "root": undefined,
-      }
-    }
-    style={Object {}}
-    title="card title"
-    titleTypographyProps={
-      Object {
-        "color": "inherit",
-        "component": "h3",
-        "data-testid": "standard-card-card-title-header",
-        "id": "standard-card-card-title-header",
-        "variant": "h5",
-      }
-    }
-  />
-  <WithStyles(ForwardRef(CardContent))
-    className=""
-    data-testid="standard-card-card-title-content"
-    id="standard-card-card-title-content"
-  />
-</WithStyles(ForwardRef(Card))>
+exports[`StandardCard component renders with title and help button 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-11 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-card-title"
+    id="standard-card-card-title"
+  >
+    <div
+      class="MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card-card-title-header"
+          id="standard-card-card-title-header"
+        >
+          card title
+        </h3>
+      </div>
+      <div
+        class="MuiCardHeader-action"
+      >
+        <button
+          aria-label="Click for more information"
+          class="MuiButtonBase-root MuiIconButton-root"
+          id="help-icon"
+          tabindex="0"
+          title="Click for more information"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              class="MuiSvgIcon-root makeStyles-helpIcon-16"
+              focusable="false"
+              role="img"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+              />
+              <title>
+                Click for more information
+              </title>
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="standard-card-card-title-content"
+      id="standard-card-card-title-content"
+    />
+  </div>
+</DocumentFragment>
 `;
 
-exports[`StandardCard component should render StyledCard with same props 1`] = `
-<WithStyles(Cards)
-  test1="test1value"
-  test2="test2value"
-/>
+exports[`StandardCard component renders with title and no help icon 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiPaper-root MuiCard-root makeStyles-card-1 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    data-testid="standard-card-card-title"
+    id="standard-card-card-title"
+  >
+    <div
+      class="MuiCardHeader-root"
+    >
+      <div
+        class="MuiCardHeader-content"
+      >
+        <h3
+          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          data-testid="standard-card-card-title-header"
+          id="standard-card-card-title-header"
+        >
+          card title
+        </h3>
+      </div>
+    </div>
+    <div
+      class="MuiCardContent-root"
+      data-testid="standard-card-card-title-content"
+      id="standard-card-card-title-content"
+    />
+  </div>
+</DocumentFragment>
 `;
