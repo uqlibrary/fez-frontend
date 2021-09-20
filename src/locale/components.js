@@ -2277,6 +2277,15 @@ export default {
                 openInNewWindow: 'Open/Download file in a new window',
                 close: 'Close',
             },
+            downloadButtonLabel: 'Download file',
+            licenceConfirmation: licence =>
+                (!!licence && {
+                    confirmationTitle: licence.text,
+                    confirmationMessage: licence?.description?.join(' '),
+                    confirmButtonLabel: 'I agree',
+                    cancelButtonLabel: 'Cancel',
+                }) ||
+                {},
         },
         digiTeam: {
             batchImport: {

@@ -57,9 +57,10 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
         xs={10}
         zeroMinWidth={true}
       >
-        <WithStyles(ExternalLink)
+        <ExternalLink
           className="noHover"
           href="test"
+          id="main-menu-logo"
           openInNewIcon={false}
           title="test"
         >
@@ -75,7 +76,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
           >
             test
           </div>
-        </WithStyles(ExternalLink)>
+        </ExternalLink>
       </WithStyles(ForwardRef(Grid))>
       <Hidden
         smUp={true}
@@ -145,13 +146,14 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
   />
   <div>
     CRICOS Provider No: 
-    <WithStyles(ExternalLink)
+    <ExternalLink
       href="http://www.uq.edu.au/about/cricos-link"
+      id="cricos"
       openInNewIcon={false}
       title="CRICOS Provider No: "
     >
       00025B
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </div>
 </WithStyles(ForwardRef(Drawer))>
 `;
@@ -194,9 +196,10 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         xs={10}
         zeroMinWidth={true}
       >
-        <WithStyles(ExternalLink)
+        <ExternalLink
           className="noHover"
           href="test"
+          id="main-menu-logo"
           openInNewIcon={false}
           title="test"
         >
@@ -212,7 +215,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           >
             test
           </div>
-        </WithStyles(ExternalLink)>
+        </ExternalLink>
       </WithStyles(ForwardRef(Grid))>
       <Hidden
         smUp={true}
@@ -300,13 +303,14 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   />
   <div>
     CRICOS Provider No: 
-    <WithStyles(ExternalLink)
+    <ExternalLink
       href="http://www.uq.edu.au/about/cricos-link"
+      id="cricos"
       openInNewIcon={false}
       title="CRICOS Provider No: "
     >
       00025B
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </div>
 </WithStyles(ForwardRef(Drawer))>
 `;
@@ -349,9 +353,10 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
         xs={10}
         zeroMinWidth={true}
       >
-        <WithStyles(ExternalLink)
+        <ExternalLink
           className="noHover"
           href="test"
+          id="main-menu-logo"
           openInNewIcon={false}
           title="test"
         >
@@ -367,7 +372,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           >
             test
           </div>
-        </WithStyles(ExternalLink)>
+        </ExternalLink>
       </WithStyles(ForwardRef(Grid))>
       <Hidden
         smUp={true}
@@ -455,13 +460,14 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
   />
   <div>
     CRICOS Provider No: 
-    <WithStyles(ExternalLink)
+    <ExternalLink
       href="http://www.uq.edu.au/about/cricos-link"
+      id="cricos"
       openInNewIcon={false}
       title="CRICOS Provider No: "
     >
       00025B
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </div>
 </WithStyles(ForwardRef(Drawer))>
 `;

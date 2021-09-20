@@ -15,6 +15,7 @@ import { withStyles } from '@material-ui/core/styles';
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -27,7 +28,7 @@ import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
-const styles = theme => ({
+export const styles = theme => ({
     header: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
@@ -245,19 +246,19 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => {
+    showPreview = ({ checksums = {}, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
         if (securityStatus) {
             this.setState({
                 preview: {
-                    fileName,
-                    mediaUrl,
-                    webMediaUrl,
-                    previewMediaUrl,
-                    mimeType,
-                    securityStatus,
                     checksums,
-                    videoLoading: true,
+                    fileName,
                     imageError: false,
+                    mediaUrl,
+                    mimeType,
+                    previewMediaUrl,
+                    securityStatus,
+                    videoLoading: true,
+                    webMediaUrl,
                 },
             });
         }
@@ -401,6 +402,9 @@ export class FilesClass extends Component {
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
+        const licence = (publication.fez_record_search_key_license || {}).rek_license;
+        const downloadLicence = CURRENT_LICENCES.find(item => item.value === licence);
+
         if (fileData.length === 0) return null;
         return (
             <Grid item xs={12}>
@@ -481,7 +485,12 @@ export class FilesClass extends Component {
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
-                                    <FileName {...item} onFileSelect={this.showPreview} />
+                                    <FileName
+                                        {...item}
+                                        id={`file-name-${index}`}
+                                        downloadLicence={downloadLicence}
+                                        onFileSelect={this.showPreview}
+                                    />
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid
@@ -545,6 +554,4 @@ export class FilesClass extends Component {
     }
 }
 
-const StyledFilesClass = withStyles(styles, { withTheme: true })(FilesClass);
-const Files = props => <StyledFilesClass {...props} />;
-export default Files;
+export default withStyles(styles, { withTheme: true })(FilesClass);

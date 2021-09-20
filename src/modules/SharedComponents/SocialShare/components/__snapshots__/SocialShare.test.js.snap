@@ -15,7 +15,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-facebook-link"
       height={500}
       href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -32,7 +32,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -43,7 +43,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-twitter-link"
       height={300}
       href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
@@ -60,7 +60,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -71,7 +71,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-linkedin-link"
       height={500}
       href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -88,7 +88,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -99,7 +99,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-researchgate-link"
       height={600}
       href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
@@ -116,7 +116,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -127,7 +127,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-mendeley-link"
       height={500}
       href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -144,7 +144,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -155,7 +155,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-email-link"
       href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au/view/UQ:676287"
       id="email"
@@ -170,7 +170,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -181,7 +181,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-print-link"
       href="#"
       id="print"
@@ -198,7 +198,7 @@ exports[`Component SocialShare should fire print method on click 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -218,7 +218,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-facebook-link"
       height={500}
       href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -235,7 +235,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -246,7 +246,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-twitter-link"
       height={300}
       href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
@@ -263,7 +263,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -274,7 +274,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-linkedin-link"
       height={500}
       href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -291,7 +291,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -302,7 +302,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-researchgate-link"
       height={600}
       href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au/view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
@@ -319,7 +319,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -330,7 +330,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-mendeley-link"
       height={500}
       href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au/view/UQ:676287"
@@ -347,7 +347,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -358,7 +358,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-email-link"
       href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au/view/UQ:676287"
       id="email"
@@ -373,7 +373,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -384,7 +384,7 @@ exports[`Component SocialShare should render component 1`] = `
       }
     }
   >
-    <WithStyles(ExternalLink)
+    <ExternalLink
       data-testid="social-share-print-link"
       href="#"
       id="print"
@@ -401,7 +401,7 @@ exports[`Component SocialShare should render component 1`] = `
         round={true}
         size={24}
       />
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;

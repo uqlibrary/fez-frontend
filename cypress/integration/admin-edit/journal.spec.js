@@ -58,7 +58,7 @@ context('Journal admin edit', () => {
                 cy.wrap(row)
                     .should('contain', issn)
                     .should('contain', 'SHERPA/RoMEO')
-                    .get('#external-link-sherparomeo')
+                    .get('#sherparomeo-link')
                     .should('have.attr', 'href', sherpaLink);
             });
         });

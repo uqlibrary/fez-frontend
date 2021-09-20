@@ -16,7 +16,12 @@ export default class WhatIsEspace extends PureComponent {
                     {txt.text}
                     {txt.readMoreLink.indexOf('http') === -1 && <Link to={txt.readMoreLink}>{txt.readMoreLabel}</Link>}
                     {txt.readMoreLink.indexOf('http') >= 0 && (
-                        <ExternalLink href={txt.readMoreLink} title={txt.readMoreTitle} aria-label={txt.readMoreTitle}>
+                        <ExternalLink
+                            id="what-is-espace-read-more"
+                            href={txt.readMoreLink}
+                            title={txt.readMoreTitle}
+                            aria-label={txt.readMoreTitle}
+                        >
                             {txt.readMoreLabel}
                         </ExternalLink>
                     )}

@@ -68,7 +68,7 @@ export class Thumbnail extends Component {
             (mimeType.indexOf('octet-stream') >= 0 && mediaUrl.indexOf('flv') >= 0)
         ) {
             return (
-                <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false}>
+                <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false} id="thumbnail">
                     <Img
                         crossOrigin="anonymous"
                         src={thumbnailMediaUrl}

@@ -1,9 +1,24 @@
-import { journalArticle } from 'mock/data/testing/records';
-import { FileName } from './FileName';
+import React from 'react';
+import { render, fireEvent, act, AllTheProviders } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+import FileName from './FileName';
+
+import { journalArticle } from 'mock/data/testing/records';
+import { CURRENT_LICENCES } from 'config/general';
+
+import mediaQuery from 'css-mediaquery';
+const createMatchMedia = width => {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+};
+
+function setup(testProps = {}) {
     const { previewFileName, ...rest } = testProps;
     const props = {
+        id: 'test-file-name',
         classes: {},
         pid: journalArticle.rek_pid,
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
@@ -16,95 +31,107 @@ function setup(testProps = {}, args = { isShallow: true }) {
         allowDownload: false,
         ...rest,
     };
-    return getElement(FileName, props, args);
+    return render(
+        <AllTheProviders>
+            <FileName {...props} />
+        </AllTheProviders>,
+    );
 }
 
 describe('File Name Component ', () => {
+    beforeAll(() => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
+    });
+
     it('should render component and display file name only', () => {
-        const wrapper = setup({}, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName').length).toEqual(1);
-        expect(wrapper.find('FileName a').length).toEqual(0);
-        expect(wrapper.find('FileName audio').length).toEqual(0);
+        const { getByText, queryByTestId } = setup({ downloadLicence: {} });
+        expect(queryByTestId('test-file-name')).toBeInTheDocument();
+        expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
     });
 
     it('should display file name link', () => {
-        const wrapper = setup(
-            {
-                allowDownload: true,
-                fileName: 'test.jpg',
-                previewFileName: 'preview_test.jpg',
-                checksums: { media: '111' },
-            },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName').length).toEqual(1);
-        expect(wrapper.find('FileName a').length).toEqual(1);
+        const { getByText, container } = setup({
+            allowDownload: true,
+            fileName: 'test.jpg',
+            previewFileName: 'preview_test.jpg',
+            checksums: { media: '111' },
+        });
+        expect(getByText('test.jpg')).toBeInTheDocument();
+        expect(container.querySelector('a[title="test.jpg"][target="_blank"]')).toBeInTheDocument();
     });
 
     it('should render audio player', () => {
-        const wrapper = setup(
-            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3', checksums: { media: '111' } },
-            { isShallow: false },
-        );
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('FileName').length).toEqual(1);
-    });
-
-    it('should return canShowPreview as true for image/video files', () => {
-        let wrapper = setup({ mimeType: 'image/jpeg', previewMediaUrl: 'test' });
-        expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
-        // TODO revert once videos are transcoded to open format #158519502
-        wrapper = setup({ mimeType: 'video/mp4', previewMediaUrl: 'test' });
-        expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
-        wrapper = setup({ mimeType: 'octet-stream', previewMediaUrl: 'test' });
-        expect(wrapper.instance().canShowPreview('octet-stream')).toEqual(false);
-        wrapper = setup({ mimeType: 'some/text', previewMediaUrl: 'test' });
-        expect(wrapper.instance().canShowPreview('some/text')).toEqual(false);
+        const { getByText, queryByTestId, container } = setup({
+            allowDownload: true,
+            mimeType: 'audio/mp3',
+            fileName: 'test.mp3',
+            checksums: { media: '111' },
+        });
+        expect(getByText('test.mp3')).toBeInTheDocument();
+        expect(queryByTestId('audioPlayer')).toBeInTheDocument();
+        expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBeInTheDocument();
     });
 
     it('should run onFileSelect function on click', () => {
-        const onFileSelect = jest.fn();
-        const wrapper = setup(
-            {
-                allowDownload: true,
-                mimeType: 'image/jpeg',
-                fileName: 'test.jpg',
-                previewFileName: 'preview_test.jpg',
-                onFileSelect: onFileSelect,
-            },
-            { isShallow: false },
-        );
-        const element = wrapper.find('FileName a');
-        expect(toJson(wrapper)).toMatchSnapshot();
-        element.simulate('click');
-        expect(onFileSelect).toHaveBeenCalledTimes(1);
+        const testFn = jest.fn();
+        const { getByText } = setup({
+            allowDownload: true,
+            mimeType: 'image/jpeg',
+            fileName: 'test.jpg',
+            previewFileName: 'preview_test.jpg',
+            onFileSelect: testFn,
+        });
+        act(() => {
+            fireEvent.click(getByText('test.jpg'));
+        });
+        expect(testFn).toHaveBeenCalledTimes(1);
     });
 
     it('should run onFileSelect function on key press', () => {
-        const onFileSelect = jest.fn();
-        const wrapper = setup(
-            {
-                allowDownload: true,
-                fileName: 'test.jpg',
-                previewFileName: 'preview_test.jpg',
-                mimeType: 'image/jpeg',
-                onFileSelect: onFileSelect,
-            },
-            { isShallow: false },
-        );
-        const element = wrapper.find('FileName a');
-        expect(toJson(wrapper)).toMatchSnapshot();
-        element.simulate('keyPress');
-        expect(onFileSelect).toHaveBeenCalledTimes(1);
+        const testFn = jest.fn();
+        const { getByText } = setup({
+            allowDownload: true,
+            fileName: 'test.mp4',
+            previewFileName: 'preview_test.jpg',
+            mimeType: 'video/mp4',
+            onFileSelect: testFn,
+        });
+        act(() => {
+            fireEvent.keyPress(getByText('test.mp4'), { key: 'Enter', code: 13, charCode: 13 });
+        });
+        expect(testFn).toHaveBeenCalledTimes(1);
     });
 
-    it('should detect videos from mime type', () => {
-        const wrapper = setup();
-        const test1 = wrapper.instance().isVideo('video/mp4');
-        expect(test1).toBe(true);
-        const test2 = wrapper.instance().isVideo('audio/mp3');
-        expect(test2).toBe(false);
+    it('should be able to trigger and cancel licence confirmation', () => {
+        const { getByTestId } = setup({
+            allowDownload: true,
+            fileName: 'test.zip',
+            mimeType: 'application/zip',
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        act(() => {
+            fireEvent.click(getByTestId('test-file-name-download-button'));
+        });
+        expect(getByTestId('confirm-cancel-action')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(getByTestId('confirm-cancel-action'));
+        });
+    });
+
+    it('should be able to trigger and accept licence confirmation', () => {
+        global.open = jest.fn();
+        const { getByTestId } = setup({
+            allowDownload: true,
+            fileName: 'test.zip',
+            mimeType: 'application/zip',
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        act(() => {
+            fireEvent.click(getByTestId('test-file-name-download-button'));
+        });
+        expect(getByTestId('confirm-action')).toBeInTheDocument();
+        fireEvent.click(getByTestId('confirm-action'));
+
+        expect(global.open).toHaveBeenCalledWith('http://localhost/view/UQ:676287/test.zip', '_blank');
     });
 });

@@ -25,10 +25,7 @@ context('Creative Work admin edit', () => {
             .as('bibliographicTab')
             .within(() => {
                 cy.get('h4').should('contain', 'Related publications');
-                // prettier-ignore
-                const pubList = record.fez_record_search_key_isderivationof.map(
-                    item => item.rek_isderivationof_lookup
-                );
+                const pubList = record.fez_record_search_key_isderivationof.map(item => item.rek_isderivationof_lookup);
                 pubList.forEach((pub, index) => {
                     cy.get(`[data-testid=rek-isderivationof-list-row-${index}]`).should('have.text', pub);
                 });
