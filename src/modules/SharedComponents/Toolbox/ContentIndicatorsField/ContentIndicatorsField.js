@@ -32,13 +32,12 @@ export const showContentIndicatorsField = record => {
 };
 
 export const getContentIndicatorsListItems = displayType =>
-    Object.values(
-        displayType && displayType in CONTENT_INDICATORS_DOCTYPE_MAP
-            ? CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
-            : CONTENT_INDICATORS_DOCTYPE_MAP.default,
-    );
+    CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
+        ? CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
+        : CONTENT_INDICATORS_DOCTYPE_MAP.default;
 
 export const getContentIndicators = props => {
+    console.log(props.displayType, getContentIndicatorsListItems(props.displayType));
     return getContentIndicatorsListItems(props.displayType).map(item => ({
         ...item,
         disabled:
@@ -75,7 +74,7 @@ ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.object,
     label: PropTypes.string,
-    displayType: PropTypes.numeric,
+    displayType: PropTypes.number,
     disabled: PropTypes.bool,
     canUnselect: PropTypes.bool,
 };
