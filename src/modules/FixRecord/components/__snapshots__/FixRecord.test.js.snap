@@ -1621,6 +1621,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -2834,6 +2835,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -3528,6 +3530,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
