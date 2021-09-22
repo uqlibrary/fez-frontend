@@ -1170,16 +1170,6 @@ export const CONTENT_INDICATORS = [
     { value: 454081, text: 'Case Study' },
 ];
 
-export const CONTENT_INDICATORS_FOR_CONFERENCE_PAPER = [
-    { value: 456746, text: 'Plenary' },
-    { value: 456747, text: 'Invited' },
-];
-
-export const CONTENT_INDICATORS_DOCTYPE_MAP = {
-    default: CONTENT_INDICATORS,
-    [PUBLICATION_TYPE_CONFERENCE_PAPER]: [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER],
-};
-
 export const AUDIENCE_SIZE = [
     { value: 453992, text: 'Less than 100' },
     { value: 453993, text: '100 - 500' },

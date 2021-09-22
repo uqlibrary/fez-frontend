@@ -4704,7 +4704,6 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
-                displayType={174}
                 fullWidth={true}
                 id="content-indicators"
                 label="Please select any relevant indicator(s)."
@@ -5247,7 +5246,6 @@ exports[`Component PublicationForm should render component with GenericDocument 
               <Field
                 component={[Function]}
                 disabled={false}
-                displayType={202}
                 fullWidth={true}
                 id="content-indicators"
                 label="Please select any relevant indicator(s)."
@@ -5790,7 +5788,6 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               <Field
                 component={[Function]}
                 disabled={false}
-                displayType={179}
                 fullWidth={true}
                 id="content-indicators"
                 label="Please select any relevant indicator(s)."
@@ -6333,7 +6330,6 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               <Field
                 component={[Function]}
                 disabled={false}
-                displayType={275}
                 fullWidth={true}
                 id="content-indicators"
                 label="Please select any relevant indicator(s)."

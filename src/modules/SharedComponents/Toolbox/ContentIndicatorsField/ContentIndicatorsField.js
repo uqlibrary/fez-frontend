@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import {
+    CONTENT_INDICATORS,
     CONTENT_INDICATORS_DOCTYPE_BLACKLIST,
     CONTENT_INDICATORS_COLLECTIONS_BLACKLIST,
-    CONTENT_INDICATORS_DOCTYPE_MAP,
 } from 'config/general';
 
 export const getSelected = props => {
@@ -31,15 +31,8 @@ export const showContentIndicatorsField = record => {
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
-export const getContentIndicatorsListItems = displayType =>
-    Object.values(
-        displayType && displayType in CONTENT_INDICATORS_DOCTYPE_MAP
-            ? CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
-            : CONTENT_INDICATORS_DOCTYPE_MAP.default,
-    );
-
-export const getContentIndicators = props => {
-    return getContentIndicatorsListItems(props.displayType).map(item => ({
+export const getContentIndicators = props =>
+    CONTENT_INDICATORS.map(item => ({
         ...item,
         disabled:
             !props.canUnselect &&
@@ -48,7 +41,6 @@ export const getContentIndicators = props => {
             !!props.meta.initial.toJS &&
             props.meta.initial.toJS().includes(item.value),
     }));
-};
 
 export const ContentIndicatorsField = props => (
     <NewGenericSelectField
@@ -65,7 +57,7 @@ export const ContentIndicatorsField = props => (
                 !!props.meta &&
                 !!props.meta.initial &&
                 !!props.meta.initial.toJS &&
-                props.meta.initial.toJS().length === getContentIndicatorsListItems(props.displayType).length)
+                props.meta.initial.toJS().length === CONTENT_INDICATORS.length)
         }
         genericSelectFieldId="rek-content-indicator"
     />

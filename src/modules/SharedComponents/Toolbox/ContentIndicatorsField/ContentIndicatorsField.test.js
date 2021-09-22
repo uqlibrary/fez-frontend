@@ -1,16 +1,6 @@
 import Immutable from 'immutable';
-import {
-    ContentIndicatorsField,
-    getContentIndicators,
-    getContentIndicatorsListItems,
-    showContentIndicatorsField,
-} from './ContentIndicatorsField';
-import {
-    CONTENT_INDICATORS_FOR_CONFERENCE_PAPER,
-    CONTENT_INDICATORS,
-    PUBLICATION_TYPE_CONFERENCE_PAPER,
-    PUBLICATION_TYPE_THESIS,
-} from 'config/general';
+import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
+import { CONTENT_INDICATORS, PUBLICATION_TYPE_THESIS } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -86,49 +76,6 @@ describe('ContentIndicatorsField component', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should return content indicators list items', () => {
-        const actual = getContentIndicatorsListItems().map(item => ({
-            ...item,
-            disabled: false,
-        }));
-
-        expect(getContentIndicators({})).toEqual(actual);
-        expect(actual).toEqual(
-            expect.arrayContaining(
-                CONTENT_INDICATORS.map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-            expect.not.arrayContaining(
-                CONTENT_INDICATORS_FOR_CONFERENCE_PAPER.map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-        );
-    });
-
-    it('should specific should return content indicators list items for conference paper', () => {
-        const input = {
-            displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
-        };
-        const actual = getContentIndicatorsListItems(PUBLICATION_TYPE_CONFERENCE_PAPER).map(item => ({
-            ...item,
-            disabled: false,
-        }));
-
-        expect(getContentIndicators(input)).toEqual(actual);
-        expect(actual).toEqual(
-            expect.arrayContaining(
-                [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({
-                    ...item,
-                    disabled: false,
-                })),
-            ),
-        );
     });
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {
