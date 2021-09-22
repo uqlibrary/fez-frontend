@@ -110,7 +110,7 @@ export default class PublicationForm extends Component {
     render() {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         const displayType = this.props.formValues.get('rek_display_type');
-        console.log('PublicationForm', displayType);
+        console.log('PublicationForm', displayType, this.props.formValues.toJS());
         return (
             <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                 <form onSubmit={this._handleDefaultSubmit}>
