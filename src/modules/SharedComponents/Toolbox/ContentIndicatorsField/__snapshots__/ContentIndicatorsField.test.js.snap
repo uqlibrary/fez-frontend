@@ -23,6 +23,16 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
         "text": "Case Study",
         "value": 454081,
       },
+      Object {
+        "disabled": false,
+        "text": "test 1",
+        "value": 456746,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 2",
+        "value": 456747,
+      },
     ]
   }
   locale={
@@ -44,6 +54,14 @@ exports[`ContentIndicatorsField component should mark dropdown as disabled when 
         Object {
           "text": "Case Study",
           "value": 454081,
+        },
+        Object {
+          "text": "test 1",
+          "value": 456746,
+        },
+        Object {
+          "text": "test 2",
+          "value": 456747,
         },
       ],
     }
@@ -76,6 +94,16 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
         "text": "Case Study",
         "value": 454081,
       },
+      Object {
+        "disabled": false,
+        "text": "test 1",
+        "value": 456746,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 2",
+        "value": 456747,
+      },
     ]
   }
   locale={
@@ -97,6 +125,14 @@ exports[`ContentIndicatorsField component should not mark dropdown as disabled w
         Object {
           "text": "Case Study",
           "value": 454081,
+        },
+        Object {
+          "text": "test 1",
+          "value": 456746,
+        },
+        Object {
+          "text": "test 2",
+          "value": 456747,
         },
       ],
     }
@@ -127,6 +163,16 @@ exports[`ContentIndicatorsField component should render default view 1`] = `
         "disabled": false,
         "text": "Case Study",
         "value": 454081,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 1",
+        "value": 456746,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 2",
+        "value": 456747,
       },
     ]
   }
@@ -170,6 +216,16 @@ exports[`ContentIndicatorsField component should render with given field props 1
         "disabled": false,
         "text": "Case Study",
         "value": 454081,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 1",
+        "value": 456746,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 2",
+        "value": 456747,
       },
     ]
   }
@@ -225,6 +281,16 @@ exports[`ContentIndicatorsField component should render with given field props 2
         "disabled": false,
         "text": "Case Study",
         "value": 454081,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 1",
+        "value": 456746,
+      },
+      Object {
+        "disabled": false,
+        "text": "test 2",
+        "value": 456747,
       },
     ]
   }
