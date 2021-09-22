@@ -4,7 +4,7 @@ import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectFie
 import {
     CONTENT_INDICATORS_DOCTYPE_BLACKLIST,
     CONTENT_INDICATORS_COLLECTIONS_BLACKLIST,
-    CONTENT_INDICATORS_DOCTYPE_MAP,
+    contentIndicators,
 } from 'config/general';
 
 export const getSelected = props => {
@@ -31,14 +31,8 @@ export const showContentIndicatorsField = record => {
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
-export const getContentIndicatorsListItems = displayType =>
-    CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
-        ? CONTENT_INDICATORS_DOCTYPE_MAP[displayType]
-        : CONTENT_INDICATORS_DOCTYPE_MAP.default;
-
 export const getContentIndicators = props => {
-    console.log(props.displayType, getContentIndicatorsListItems(props.displayType));
-    return getContentIndicatorsListItems(props.displayType).map(item => ({
+    return contentIndicators(props.displayType).map(item => ({
         ...item,
         disabled:
             !props.canUnselect &&
@@ -64,7 +58,7 @@ export const ContentIndicatorsField = props => (
                 !!props.meta &&
                 !!props.meta.initial &&
                 !!props.meta.initial.toJS &&
-                props.meta.initial.toJS().length === getContentIndicatorsListItems(props.displayType).length)
+                props.meta.initial.toJS().length === contentIndicators(props.displayType).length)
         }
         genericSelectFieldId="rek-content-indicator"
     />
