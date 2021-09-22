@@ -75,7 +75,6 @@ ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.object,
     label: PropTypes.string,
-    displayType: PropTypes.numeric,
     disabled: PropTypes.bool,
     canUnselect: PropTypes.bool,
 };
