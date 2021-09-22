@@ -1168,8 +1168,6 @@ export const CONTENT_INDICATORS = [
     { value: 454079, text: 'Scholarship of Teaching and Learning' },
     { value: 454080, text: 'Protocol' },
     { value: 454081, text: 'Case Study' },
-    { value: 456746, text: 'test 1' },
-    { value: 456747, text: 'test 2' },
 ];
 
 export const CONTENT_INDICATORS_FOR_CONFERENCE_PAPER = [
