@@ -109,6 +109,8 @@ export default class PublicationForm extends Component {
 
     render() {
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
+        const displayType = this.props.formValues.get('rek_display_type');
+        console.log('PublicationForm', displayType);
         return (
             <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                 <form onSubmit={this._handleDefaultSubmit}>
@@ -179,7 +181,7 @@ export default class PublicationForm extends Component {
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                     <Field
                                                         component={ContentIndicatorsField}
-                                                        displayType={this.props.formValues.get('rek_display_type')}
+                                                        displayType={displayType}
                                                         disabled={this.props.submitting}
                                                         id="content-indicators"
                                                         name="contentIndicators"

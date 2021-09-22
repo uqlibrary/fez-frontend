@@ -167,6 +167,7 @@ export default class FixRecord extends PureComponent {
             </React.Fragment>
         );
         const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txtFixForm });
+        console.log('FixRecord', this.props.recordToFix.rek_display_type);
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>

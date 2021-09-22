@@ -43,26 +43,29 @@ export const getContentIndicators = props => {
     }));
 };
 
-export const ContentIndicatorsField = props => (
-    <NewGenericSelectField
-        itemsList={getContentIndicators(props)}
-        locale={{ label: props.label }}
-        value={getSelected(props)}
-        onChange={(!!props.input && props.input.onChange) || undefined}
-        errorText={(!!props.meta && props.meta.error) || ''}
-        error={(!!props.meta && !!props.meta.error) || false}
-        {...props}
-        disabled={
-            props.disabled ||
-            (!props.canUnselect &&
-                !!props.meta &&
-                !!props.meta.initial &&
-                !!props.meta.initial.toJS &&
-                props.meta.initial.toJS().length === contentIndicators(props.displayType).length)
-        }
-        genericSelectFieldId="rek-content-indicator"
-    />
-);
+export const ContentIndicatorsField = props => {
+    console.log('ContentIndicatorsField', props);
+    return (
+        <NewGenericSelectField
+            itemsList={getContentIndicators(props)}
+            locale={{ label: props.label }}
+            value={getSelected(props)}
+            onChange={(!!props.input && props.input.onChange) || undefined}
+            errorText={(!!props.meta && props.meta.error) || ''}
+            error={(!!props.meta && !!props.meta.error) || false}
+            {...props}
+            disabled={
+                props.disabled ||
+                (!props.canUnselect &&
+                    !!props.meta &&
+                    !!props.meta.initial &&
+                    !!props.meta.initial.toJS &&
+                    props.meta.initial.toJS().length === contentIndicators(props.displayType).length)
+            }
+            genericSelectFieldId="rek-content-indicator"
+        />
+    );
+};
 
 ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
