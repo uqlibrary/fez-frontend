@@ -106,4 +106,3 @@ const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
-global.d = console.log;
