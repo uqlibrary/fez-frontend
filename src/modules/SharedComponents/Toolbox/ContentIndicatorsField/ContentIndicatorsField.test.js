@@ -1,15 +1,11 @@
 import Immutable from 'immutable';
-import {
-    ContentIndicatorsField,
-    getContentIndicators,
-    getContentIndicatorsListItems,
-    showContentIndicatorsField,
-} from './ContentIndicatorsField';
+import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
 import {
     CONTENT_INDICATORS_FOR_CONFERENCE_PAPER,
     CONTENT_INDICATORS,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_THESIS,
+    contentIndicators,
 } from 'config/general';
 
 function setup(testProps = {}) {
@@ -89,7 +85,7 @@ describe('ContentIndicatorsField component', () => {
     });
 
     it('should return content indicators list items', () => {
-        const actual = getContentIndicatorsListItems().map(item => ({
+        const actual = contentIndicators().map(item => ({
             ...item,
             disabled: false,
         }));
@@ -115,7 +111,7 @@ describe('ContentIndicatorsField component', () => {
         const input = {
             displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
         };
-        const actual = getContentIndicatorsListItems(PUBLICATION_TYPE_CONFERENCE_PAPER).map(item => ({
+        const actual = contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER).map(item => ({
             ...item,
             disabled: false,
         }));
