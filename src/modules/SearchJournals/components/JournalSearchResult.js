@@ -11,6 +11,8 @@ import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsLis
 
 import JournalsList from './JournalsList';
 import locale from 'locale/components';
+import { StandardRighthandCard } from '../../SharedComponents/Toolbox/StandardRighthandCard';
+import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 
 export const JournalSearchResult = () => {
     const txt = locale.components.journalSearch.journalSearchResult;
@@ -28,46 +30,61 @@ export const JournalSearchResult = () => {
         return 'No journals found';
     }
     return (
-        <StandardCard noHeader>
-            <Grid container spacing={2}>
-                {!!journalsListLoading && (
-                    <Grid item xs={12}>
-                        <InlineLoader message={txt.loadingMessage} />
+        <Grid container spacing={2}>
+            <Grid item xs sm md={9}>
+                <StandardCard noHeader>
+                    <Grid container spacing={2}>
+                        {!!journalsListLoading && (
+                            <Grid item xs={12}>
+                                <InlineLoader message={txt.loadingMessage} />
+                            </Grid>
+                        )}
+                        {!!journalsListError && (
+                            <Grid item xs={12}>
+                                <Alert {...journalsListError} />
+                            </Grid>
+                        )}
+                        <Grid item xs={12}>
+                            <PublicationsListSorting
+                                canUseExport
+                                pagingData={{ total: 5 }}
+                                sortBy="created_date"
+                                sortDirection="Desc"
+                                pageSize={10}
+                            />
+                        </Grid>
+                        {journalsList.length > 20 && (
+                            <Grid item xs={12}>
+                                <PublicationsListPaging
+                                    pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
+                                />
+                            </Grid>
+                        )}
+                        <Grid item xs={12}>
+                            <JournalsList journals={journalsList.data} />
+                        </Grid>
+                        {journalsList.length > 20 && (
+                            <Grid item xs={12}>
+                                <PublicationsListPaging
+                                    pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
+                                />
+                            </Grid>
+                        )}
                     </Grid>
-                )}
-                {!!journalsListError && (
-                    <Grid item xs={12}>
-                        <Alert {...journalsListError} />
-                    </Grid>
-                )}
-                <Grid item xs={12}>
-                    <PublicationsListSorting
-                        canUseExport
-                        pagingData={{ total: 5 }}
-                        sortBy="created_date"
-                        sortDirection="Desc"
-                        pageSize={10}
-                    />
-                </Grid>
-                {journalsList.length > 20 && (
-                    <Grid item xs={12}>
-                        <PublicationsListPaging
-                            pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
-                        />
-                    </Grid>
-                )}
-                <Grid item xs={12}>
-                    <JournalsList journals={journalsList.data} />
-                </Grid>
-                {journalsList.length > 20 && (
-                    <Grid item xs={12}>
-                        <PublicationsListPaging
-                            pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
-                        />
-                    </Grid>
-                )}
+                </StandardCard>
             </Grid>
-        </StandardCard>
+            <Grid item xs={3}>
+                <StandardRighthandCard
+                    title={locale.components.facetsFilter.title}
+                    help={locale.components.facetsFilter.help}
+                >
+                    <JournalSearchFacetsFilter
+                        key={'journal-search-facets-filter'}
+                        facetsData={journalsList.filters.facets}
+                    />
+                </StandardRighthandCard>
+            </Grid>
+        </Grid>
     );
 };
 

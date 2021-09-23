@@ -52,7 +52,7 @@ export const JournalFieldsMap = [
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        compactSize: 2,
+        compactSize: 4,
         showTooltip: false,
         translateFn: data => {
             const quartileList = [];

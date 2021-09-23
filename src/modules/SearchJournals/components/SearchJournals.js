@@ -8,11 +8,9 @@ import Grid from '@material-ui/core/Grid';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';
 import JournalSearchResult from './JournalSearchResult';
-import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
-import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { searchJournals } from 'actions';
 import locale from 'locale/components';
 
@@ -86,11 +84,6 @@ export const SearchJournals = () => {
                 </Grid>
                 <Grid item xs>
                     <JournalSearchResult key={`journal-search-result-${locationKey}`} />
-                </Grid>
-                <Grid item xs={3} style={{ display: 'none' }}>
-                    <StandardRighthandCard>
-                        <JournalSearchFacetsFilter key={`journal-search-facets-filter-${locationKey}`} />
-                    </StandardRighthandCard>
                 </Grid>
             </Grid>
         </StandardPage>
