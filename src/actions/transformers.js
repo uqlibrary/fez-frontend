@@ -5,7 +5,7 @@ import {
     FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_INHERIT,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { contentIndicators } from '../config/general';
+import { contentIndicators } from '../config';
 
 const moment = require('moment');
 

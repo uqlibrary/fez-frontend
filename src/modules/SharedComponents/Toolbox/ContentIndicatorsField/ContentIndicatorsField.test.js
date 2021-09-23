@@ -1,5 +1,9 @@
 import Immutable from 'immutable';
-import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
+import {
+    ContentIndicatorsField,
+    getContentIndicatorsItemsList,
+    showContentIndicatorsField,
+} from './ContentIndicatorsField';
 import {
     CONTENT_INDICATORS_FOR_CONFERENCE_PAPER,
     CONTENT_INDICATORS,
@@ -56,7 +60,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = true;
         expected[2].disabled = true;
-        expect(getContentIndicators(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(input)).toEqual(expected);
     });
 
     it('should not mark existing indicators as disabled for admins', () => {
@@ -72,7 +76,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = false;
         expected[2].disabled = false;
-        expect(getContentIndicators(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(input)).toEqual(expected);
     });
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
@@ -90,7 +94,7 @@ describe('ContentIndicatorsField component', () => {
             disabled: false,
         }));
 
-        expect(getContentIndicators({})).toEqual(actual);
+        expect(getContentIndicatorsItemsList({})).toEqual(actual);
         expect(actual).toEqual(
             expect.arrayContaining(
                 CONTENT_INDICATORS.map(item => ({
@@ -116,7 +120,7 @@ describe('ContentIndicatorsField component', () => {
             disabled: false,
         }));
 
-        expect(getContentIndicators(input)).toEqual(actual);
+        expect(getContentIndicatorsItemsList(input)).toEqual(actual);
         expect(actual).toEqual(
             expect.arrayContaining(
                 [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({
