@@ -179,6 +179,7 @@ export default class PublicationForm extends Component {
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                     <Field
                                                         component={ContentIndicatorsField}
+                                                        displayType={this.props.formValues.get('rek_display_type')}
                                                         disabled={this.props.submitting}
                                                         id="content-indicators"
                                                         name="contentIndicators"

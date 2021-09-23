@@ -1,8 +1,7 @@
 import PublicationForm from './PublicationForm';
 import Immutable from 'immutable';
 import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
-import { validation, routes } from 'config';
-import { PUBLICATION_TYPE_THESIS } from 'config/general';
+import { validation } from 'config';
 
 function setup(testProps = {}) {
     const props = {
