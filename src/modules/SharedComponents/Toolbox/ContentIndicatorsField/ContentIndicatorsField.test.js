@@ -60,7 +60,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = true;
         expected[2].disabled = true;
-        expect(getContentIndicatorsItemsList(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
     it('should not mark existing indicators as disabled for admins', () => {
@@ -76,7 +76,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = false;
         expected[2].disabled = false;
-        expect(getContentIndicatorsItemsList(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
@@ -94,7 +94,7 @@ describe('ContentIndicatorsField component', () => {
             disabled: false,
         }));
 
-        expect(getContentIndicatorsItemsList({})).toEqual(actual);
+        expect(getContentIndicatorsItemsList(contentIndicators())).toEqual(actual);
         expect(actual).toEqual(
             expect.arrayContaining(
                 CONTENT_INDICATORS.map(item => ({
@@ -115,12 +115,13 @@ describe('ContentIndicatorsField component', () => {
         const input = {
             displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
         };
-        const actual = contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER).map(item => ({
+        const items = contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER);
+        const actual = items.map(item => ({
             ...item,
             disabled: false,
         }));
 
-        expect(getContentIndicatorsItemsList(input)).toEqual(actual);
+        expect(getContentIndicatorsItemsList(items, input)).toEqual(actual);
         expect(actual).toEqual(
             expect.arrayContaining(
                 [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({

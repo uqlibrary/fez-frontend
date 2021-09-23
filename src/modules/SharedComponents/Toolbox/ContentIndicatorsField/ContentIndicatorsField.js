@@ -28,11 +28,8 @@ export const showContentIndicatorsField = record => {
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
-// eslint-disable-next-line react-hooks/rules-of-hooks
-export const getContentIndicators = displayType => useContentIndicators(displayType);
-
-export const getContentIndicatorsItemsList = props => {
-    return getContentIndicators(props.displayType).map(item => ({
+export const getContentIndicatorsItemsList = (items, props = {}) => {
+    return items.map(item => ({
         ...item,
         disabled:
             !props.canUnselect &&
@@ -44,9 +41,10 @@ export const getContentIndicatorsItemsList = props => {
 };
 
 export const ContentIndicatorsField = props => {
+    const items = useContentIndicators(props.displayType);
     return (
         <NewGenericSelectField
-            itemsList={getContentIndicatorsItemsList(props)}
+            itemsList={getContentIndicatorsItemsList(items, props)}
             locale={{ label: props.label }}
             value={getSelected(props)}
             onChange={(!!props.input && props.input.onChange) || undefined}
@@ -59,7 +57,7 @@ export const ContentIndicatorsField = props => {
                     !!props.meta &&
                     !!props.meta.initial &&
                     !!props.meta.initial.toJS &&
-                    props.meta.initial.toJS().length === getContentIndicators(props.displayType).length)
+                    props.meta.initial.toJS().length === items.length)
             }
             genericSelectFieldId="rek-content-indicator"
         />
