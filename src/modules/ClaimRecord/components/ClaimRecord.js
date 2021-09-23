@@ -201,7 +201,6 @@ export default class ClaimRecord extends PureComponent {
                 alertLocale: txt,
             });
         }
-        console.log('ClaimForm', publication.rek_display_type);
 
         return (
             <StandardPage title={txt.title}>
