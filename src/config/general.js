@@ -1180,7 +1180,10 @@ export const CONTENT_INDICATORS_DOCTYPE_MAP = {
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER],
 };
 
-export const contentIndicators = displayType => CONTENT_INDICATORS_DOCTYPE_MAP[displayType || 'default'];
+export const contentIndicators = displayType =>
+    CONTENT_INDICATORS_DOCTYPE_MAP[
+        (displayType === CONTENT_INDICATORS_FOR_CONFERENCE_PAPER && displayType) || 'default'
+    ];
 
 export const AUDIENCE_SIZE = [
     { value: 453992, text: 'Less than 100' },
