@@ -58,7 +58,7 @@ export default {
         },
         title: 'Optional: Content Indicators',
         description:
-            'If relevant to your work, you can select multiple (up to 3) content indicators ' +
+            'If relevant to your work, you can select multiple content indicators ' +
             'to add more information about your work.',
         fieldLabels: {
             label: 'Please select any relevant indicator(s).',
