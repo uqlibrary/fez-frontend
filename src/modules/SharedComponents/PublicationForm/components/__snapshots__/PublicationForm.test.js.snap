@@ -894,7 +894,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
@@ -1434,7 +1434,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
@@ -4699,7 +4699,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
@@ -5242,7 +5242,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
@@ -5785,7 +5785,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
@@ -6328,7 +6328,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
               xs={12}
             >
               <WithStyles(ForwardRef(Typography))>
-                If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
+                If relevant to your work, you can select multiple content indicators to add more information about your work.
               </WithStyles(ForwardRef(Typography))>
               <Field
                 component={[Function]}
