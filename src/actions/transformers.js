@@ -1,11 +1,11 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
-import { CONTENT_INDICATORS } from 'config/general';
 import {
     FILE_ACCESS_CONDITION_CLOSED,
     FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_INHERIT,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { contentIndicators } from '../config';
 
 const moment = require('moment');
 
@@ -20,10 +20,15 @@ export const getIssueValues = data => {
     const newContentIndicators =
         !!data.contentIndicators &&
         data.contentIndicators.filter(item => initialContentIndicators.indexOf(item) === -1);
+    const availableContentIndicators = contentIndicators(
+        (data.publication && data.publication.rek_display_type) || null,
+    );
     return {
         contentIndicators:
             (newContentIndicators &&
-                newContentIndicators.map(id => CONTENT_INDICATORS.find(item => item.value === id).text).join('; ')) ||
+                newContentIndicators
+                    .map(id => availableContentIndicators.find(item => item.value === id).text)
+                    .join('; ')) ||
             null,
         comments: data.comments || null,
         files:
@@ -127,7 +132,9 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     }));
     const attachmentEmbargoDates = files
         .map((item, index) => {
-            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
+            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) {
+                return null;
+            }
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
                 rek_file_attachment_embargo_date_order: initialCount + index + 1,
@@ -721,7 +728,9 @@ export const getSearchKey = (searchKey, currentAuthorOrder, initialValues = [], 
                   if (initialValue[searchKey.value.orderKey] === currentAuthorOrder) {
                       authorOrderMatched = true;
                       return currentAuthorSearchKeyObject;
-                  } else return initialValue;
+                  } else {
+                      return initialValue;
+                  }
               })
             : [currentAuthorSearchKeyObject];
 
