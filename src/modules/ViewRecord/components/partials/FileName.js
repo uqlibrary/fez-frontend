@@ -77,7 +77,6 @@ const FileName = ({
 
     const downloadUrl = pathConfig.file.url(pid, fileName, checksums && checksums.media);
 
-    // const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [isOpen, setOpenState] = React.useState(false);
     const showConfirmation = () => setOpenState(true);
     const hideConfirmation = () => setOpenState(false);
@@ -116,7 +115,7 @@ const FileName = ({
                         </a>
                     </Typography>
                 )}
-                {(!allowDownload || (!!downloadLicence && !canShowPreview(mimeType))) && (
+                {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
                             <Typography variant="body2">{fileName}</Typography>
