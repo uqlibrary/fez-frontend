@@ -59,7 +59,7 @@ const FileName = ({
     };
 
     const canShowPreview = mimeType => {
-        return (isImage(mimeType) || isVideo(mimeType)) && previewMediaUrl;
+        return previewMediaUrl && (isImage(mimeType) || isVideo(mimeType));
     };
 
     const showPreview = e => {
@@ -109,8 +109,8 @@ const FileName = ({
                         {fileName}
                     </ExternalLink>
                 )}
-                {allowDownload && canShowPreview(mimeType) && (
-                    <Typography variant="body2" id={`${id}-preview`}>
+                {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
+                    <Typography variant="body2" id={`${id}-preview`} data-testid={`${id}-preview`}>
                         <a onClick={showPreview} onKeyPress={showPreview} className={classes.filename}>
                             {fileName}
                         </a>
@@ -137,7 +137,7 @@ const FileName = ({
                 )}
             </Grid>
             <Hidden xsDown>
-                {allowDownload && isAudio(mimeType) && (
+                {allowDownload && !downloadLicence && isAudio(mimeType) && (
                     <Grid item sm>
                         <AudioPlayer
                             pid={pid}
