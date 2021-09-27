@@ -57,7 +57,7 @@ export default {
                 },
                 title: 'Optional: Content Indicators',
                 description:
-                    'If relevant to your work, you can select multiple (of 3 available) content indicators to ' +
+                    'If relevant to your work, you can select multiple content indicators to ' +
                     'add more information about your work, but you cannot remove indicators already selected. ' +
                     'To amend existing information, Suggest changes above.',
                 label: 'Please add any relevant indicator(s).',
@@ -184,8 +184,8 @@ export default {
                 },
                 title: 'Optional: Content Indicators',
                 description:
-                    'If relevant to your work, you can select multiple (of 3 available) content indicators to ' +
-                    'add more information about your work, but you cannot remove indicators already selected. ' +
+                    'If relevant to your work, you can select multiple content indicators to add more ' +
+                    'information about your work, but you cannot remove indicators already selected. ' +
                     'To amend existing information, Suggest a correction above.',
                 label: 'Please add any relevant indicator(s).',
             },
