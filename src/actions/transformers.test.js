@@ -1,6 +1,5 @@
 import * as transformers from './transformers';
-import { CONTENT_INDICATORS } from 'config/general';
-import { createOrUpdateDoi } from './transformers';
+import { CONTENT_INDICATORS, PUBLICATION_TYPE_CONFERENCE_PAPER, contentIndicators } from 'config/general';
 
 const moment = require('moment');
 
@@ -410,13 +409,38 @@ describe('getIssueValues test', () => {
         files: {
             queue: [{ name: 'file1.txt' }, { name: 'file2.txt' }],
         },
-        contentIndicators: CONTENT_INDICATORS.map(item => item.value),
+        contentIndicators: contentIndicators().map(item => item.value),
     };
     const expected = {
         comments: 'test1',
         link: 'test2',
         files: 'file1.txt, file2.txt',
-        contentIndicators: CONTENT_INDICATORS.map(item => item.text).join('; '),
+        contentIndicators: contentIndicators()
+            .map(item => item.text)
+            .join('; '),
+    };
+    expect(transformers.getIssueValues(input)).toEqual(expected);
+});
+
+describe('getIssueValues test for conference paper', () => {
+    const input = {
+        comments: 'test1',
+        rek_link: 'test2',
+        files: {
+            queue: [{ name: 'file1.txt' }, { name: 'file2.txt' }],
+        },
+        publication: {
+            rek_display_type: PUBLICATION_TYPE_CONFERENCE_PAPER,
+        },
+        contentIndicators: contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER).map(item => item.value),
+    };
+    const expected = {
+        comments: 'test1',
+        link: 'test2',
+        files: 'file1.txt, file2.txt',
+        contentIndicators: contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER)
+            .map(item => item.text)
+            .join('; '),
     };
     expect(transformers.getIssueValues(input)).toEqual(expected);
 });

@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import {
-    CONTENT_INDICATORS,
-    CONTENT_INDICATORS_DOCTYPE_BLACKLIST,
-    CONTENT_INDICATORS_COLLECTIONS_BLACKLIST,
-} from 'config/general';
+import { CONTENT_INDICATORS_DOCTYPE_BLACKLIST, CONTENT_INDICATORS_COLLECTIONS_BLACKLIST } from 'config/general';
+import { useContentIndicators } from 'hooks';
 
 export const getSelected = props => {
     let selectedValues = (!!props.input && props.input.value) || [];
@@ -31,8 +28,8 @@ export const showContentIndicatorsField = record => {
     return !isBlacklistedType && !inBlacklistedCollection;
 };
 
-export const getContentIndicators = props =>
-    CONTENT_INDICATORS.map(item => ({
+export const getContentIndicatorsItemsList = (items, props = {}) => {
+    return items.map(item => ({
         ...item,
         disabled:
             !props.canUnselect &&
@@ -41,32 +38,37 @@ export const getContentIndicators = props =>
             !!props.meta.initial.toJS &&
             props.meta.initial.toJS().includes(item.value),
     }));
+};
 
-export const ContentIndicatorsField = props => (
-    <NewGenericSelectField
-        itemsList={getContentIndicators(props)}
-        locale={{ label: props.label }}
-        value={getSelected(props)}
-        onChange={(!!props.input && props.input.onChange) || undefined}
-        errorText={(!!props.meta && props.meta.error) || ''}
-        error={(!!props.meta && !!props.meta.error) || false}
-        {...props}
-        disabled={
-            props.disabled ||
-            (!props.canUnselect &&
-                !!props.meta &&
-                !!props.meta.initial &&
-                !!props.meta.initial.toJS &&
-                props.meta.initial.toJS().length === CONTENT_INDICATORS.length)
-        }
-        genericSelectFieldId="rek-content-indicator"
-    />
-);
+export const ContentIndicatorsField = props => {
+    const items = useContentIndicators(props.displayType);
+    return (
+        <NewGenericSelectField
+            itemsList={getContentIndicatorsItemsList(items, props)}
+            locale={{ label: props.label }}
+            value={getSelected(props)}
+            onChange={(!!props.input && props.input.onChange) || undefined}
+            errorText={(!!props.meta && props.meta.error) || ''}
+            error={(!!props.meta && !!props.meta.error) || false}
+            {...props}
+            disabled={
+                props.disabled ||
+                (!props.canUnselect &&
+                    !!props.meta &&
+                    !!props.meta.initial &&
+                    !!props.meta.initial.toJS &&
+                    props.meta.initial.toJS().length === items.length)
+            }
+            genericSelectFieldId="rek-content-indicator"
+        />
+    );
+};
 
 ContentIndicatorsField.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.object,
     label: PropTypes.string,
+    displayType: PropTypes.number,
     disabled: PropTypes.bool,
     canUnselect: PropTypes.bool,
 };
