@@ -89,12 +89,10 @@ describe('ContentIndicatorsField component', () => {
     });
 
     it('should return content indicators list items', () => {
-        const actual = contentIndicators().map(item => ({
-            ...item,
-            disabled: false,
-        }));
+        const wrapper = setup();
+        const actual = wrapper.prop('itemsList');
 
-        expect(getContentIndicatorsItemsList(contentIndicators())).toEqual(actual);
+        expect(actual).toEqual(getContentIndicatorsItemsList(contentIndicators()));
         expect(actual).toEqual(
             expect.arrayContaining(
                 CONTENT_INDICATORS.map(item => ({
@@ -115,13 +113,12 @@ describe('ContentIndicatorsField component', () => {
         const input = {
             displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
         };
-        const items = contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER);
-        const actual = items.map(item => ({
-            ...item,
-            disabled: false,
-        }));
+        const wrapper = setup(input);
+        const actual = wrapper.prop('itemsList');
 
-        expect(getContentIndicatorsItemsList(items, input)).toEqual(actual);
+        expect(actual).toEqual(
+            getContentIndicatorsItemsList(contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER), input),
+        );
         expect(actual).toEqual(
             expect.arrayContaining(
                 [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({
