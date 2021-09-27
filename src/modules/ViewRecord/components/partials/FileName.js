@@ -59,7 +59,7 @@ const FileName = ({
     };
 
     const canShowPreview = mimeType => {
-        return (isImage(mimeType) || isVideo(mimeType)) && previewMediaUrl;
+        return previewMediaUrl && (isImage(mimeType) || isVideo(mimeType));
     };
 
     const showPreview = e => {
@@ -77,7 +77,6 @@ const FileName = ({
 
     const downloadUrl = pathConfig.file.url(pid, fileName, checksums && checksums.media);
 
-    // const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [isOpen, setOpenState] = React.useState(false);
     const showConfirmation = () => setOpenState(true);
     const hideConfirmation = () => setOpenState(false);
@@ -109,14 +108,14 @@ const FileName = ({
                         {fileName}
                     </ExternalLink>
                 )}
-                {allowDownload && canShowPreview(mimeType) && (
-                    <Typography variant="body2" id={`${id}-preview`}>
+                {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
+                    <Typography variant="body2" id={`${id}-preview`} data-testid={`${id}-preview`}>
                         <a onClick={showPreview} onKeyPress={showPreview} className={classes.filename}>
                             {fileName}
                         </a>
                     </Typography>
                 )}
-                {(!allowDownload || (!!downloadLicence && !canShowPreview(mimeType))) && (
+                {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
                             <Typography variant="body2">{fileName}</Typography>
@@ -137,7 +136,7 @@ const FileName = ({
                 )}
             </Grid>
             <Hidden xsDown>
-                {allowDownload && isAudio(mimeType) && (
+                {allowDownload && !downloadLicence && isAudio(mimeType) && (
                     <Grid item sm>
                         <AudioPlayer
                             pid={pid}

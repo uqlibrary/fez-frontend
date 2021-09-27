@@ -7,6 +7,7 @@ import { journalArticle } from 'mock/data/testing/records';
 import { CURRENT_LICENCES } from 'config/general';
 
 import mediaQuery from 'css-mediaquery';
+
 const createMatchMedia = width => {
     return query => ({
         matches: mediaQuery.match(query, { width }),
@@ -15,10 +16,12 @@ const createMatchMedia = width => {
     });
 };
 
+const id = 'test-file-name';
+
 function setup(testProps = {}) {
     const { previewFileName, ...rest } = testProps;
     const props = {
-        id: 'test-file-name',
+        id: id,
         classes: {},
         pid: journalArticle.rek_pid,
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
@@ -50,14 +53,42 @@ describe('File Name Component ', () => {
     });
 
     it('should display file name link', () => {
-        const { getByText, container } = setup({
+        const { getByText, queryByTestId, container } = setup({
+            allowDownload: true,
+            fileName: 'test.pdf',
+            previewFileName: 'preview_test.jpg',
+            checksums: { media: '111' },
+        });
+        expect(getByText('test.pdf')).toBeInTheDocument();
+        expect(queryByTestId(`${id}-download-button`)).toBe(null);
+        expect(container.querySelector('a[title="test.pdf"][target="_blank"]')).toBeInTheDocument();
+    });
+
+    it('should display image preview', () => {
+        const { getByText, queryByTestId } = setup({
             allowDownload: true,
             fileName: 'test.jpg',
+            mimeType: 'image/jpeg',
             previewFileName: 'preview_test.jpg',
             checksums: { media: '111' },
         });
         expect(getByText('test.jpg')).toBeInTheDocument();
-        expect(container.querySelector('a[title="test.jpg"][target="_blank"]')).toBeInTheDocument();
+        expect(queryByTestId(`${id}-download-button`)).toBe(null);
+        expect(queryByTestId(`${id}-preview`)).toBeInTheDocument();
+    });
+
+    it("shouldn't display image preview when a restrictive license is being used", () => {
+        const { getByText, queryByTestId } = setup({
+            allowDownload: true,
+            fileName: 'test.jpg',
+            mimeType: 'image/jpeg',
+            previewFileName: 'preview_test.jpg',
+            checksums: { media: '111' },
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        expect(getByText('test.jpg')).toBeInTheDocument();
+        expect(queryByTestId(`${id}-download-button`)).toBeInTheDocument();
+        expect(queryByTestId(`${id}-preview`)).toBe(null);
     });
 
     it('should render audio player', () => {
@@ -68,8 +99,23 @@ describe('File Name Component ', () => {
             checksums: { media: '111' },
         });
         expect(getByText('test.mp3')).toBeInTheDocument();
+        expect(queryByTestId(`${id}-download-button`)).toBe(null);
         expect(queryByTestId('audioPlayer')).toBeInTheDocument();
         expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBeInTheDocument();
+    });
+
+    it("shouldn't render audio player when a restrictive license is being used", () => {
+        const { getByText, getByTestId, queryByTestId, container } = setup({
+            allowDownload: true,
+            mimeType: 'audio/mp3',
+            fileName: 'test.mp3',
+            checksums: { media: '111' },
+            downloadLicence: CURRENT_LICENCES[0],
+        });
+        expect(getByText('test.mp3')).toBeInTheDocument();
+        expect(getByTestId(`${id}-download-button`)).toBeInTheDocument();
+        expect(queryByTestId('audioPlayer')).toBe(null);
+        expect(container.querySelector('button[aria-label^="Click to play audio file"]')).toBe(null);
     });
 
     it('should run onFileSelect function on click', () => {
@@ -110,7 +156,7 @@ describe('File Name Component ', () => {
             downloadLicence: CURRENT_LICENCES[0],
         });
         act(() => {
-            fireEvent.click(getByTestId('test-file-name-download-button'));
+            fireEvent.click(getByTestId(`${id}-download-button`));
         });
         expect(getByTestId('confirm-cancel-action')).toBeInTheDocument();
         act(() => {
@@ -127,7 +173,7 @@ describe('File Name Component ', () => {
             downloadLicence: CURRENT_LICENCES[0],
         });
         act(() => {
-            fireEvent.click(getByTestId('test-file-name-download-button'));
+            fireEvent.click(getByTestId(`${id}-download-button`));
         });
         expect(getByTestId('confirm-action')).toBeInTheDocument();
         fireEvent.click(getByTestId('confirm-action'));
