@@ -1625,6 +1625,37 @@ describe('Files Component ', () => {
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 
+    it('getFileData{} branch 3', () => {
+        const publication = {
+            ...fileDataRecord,
+            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+            fez_datastream_info: [
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'test.pdf',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'application/pdf',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 0,
+                    dsi_security_policy: 5,
+                },
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'thumbnail_test_t.jpg',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+            ],
+        };
+        const wrapper = setup({ publication: publication });
+        expect(JSON.stringify(wrapper.instance().getFileData(publication))).toMatchSnapshot();
+    });
+
     it('getDownloadLicence()', () => {
         const publicationWithRestrictiveLicense = {
             ...fileDataRecord,
@@ -1632,15 +1663,6 @@ describe('Files Component ', () => {
         };
         expect(getDownloadLicence(fileDataRecord)).toBe(undefined);
         expect(getDownloadLicence(publicationWithRestrictiveLicense)).toEqual(CURRENT_LICENCES[0]);
-    });
-
-    it('getFileData{} branch 3', () => {
-        const publication = {
-            ...fileDataRecord,
-            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
-        };
-        const wrapper = setup({ publication: publication });
-        expect(JSON.stringify(wrapper.instance().getDownloadLicence(publication))).toMatchSnapshot();
     });
 
     it('Should render the correct icon for a valid transcoded file', () => {
