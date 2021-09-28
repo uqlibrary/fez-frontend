@@ -27,13 +27,7 @@ import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import {
-    checkForThumbnail,
-    checkForPreview,
-    checkForWeb,
-    formatBytes,
-    getDownloadLicence,
-} from 'modules/ViewRecord/components/Files';
+import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
 import { stripHtml } from 'helpers/general';
@@ -98,16 +92,17 @@ export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
 };
 
-export const getFileData = (record, openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
-    const downloadLicence = getDownloadLicence(record);
+export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
               const pid = dataStream.dsi_pid;
               const fileName = dataStream.dsi_dsid;
               const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
               const previewFileName = checkForPreview(fileName, dataStreams);
               const webFileName = checkForWeb(fileName, dataStreams);
+
               const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
 
               return {
@@ -117,14 +112,14 @@ export const getFileData = (record, openAccessStatusId, dataStreams, isAdmin, is
                   mimeType,
                   thumbnailFileName,
                   calculatedSize: formatBytes(dataStream.dsi_size),
-                  allowDownload: !downloadLicence && (openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate),
+                  allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
                   iconProps: {
                       pid,
                       mimeType,
                       fileName,
                       thumbnailFileName,
                       previewFileName,
-                      allowDownload: (!downloadLicence && openAccessStatus.isOpenAccess) || isAuthor || isAdmin,
+                      allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
                       webFileName,
                       securityAccess: true,
                   },
@@ -162,7 +157,7 @@ export const AttachedFiles = ({
     const { openAccessStatusId } = useFormValuesContext();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    const fileData = getFileData(record, openAccessStatusId, dataStreams, isAdmin, isAuthor);
+    const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
 
     // tested in cypress
