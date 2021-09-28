@@ -56,17 +56,24 @@ const getSecurityAccess = (dataStream, props) => {
     );
 };
 
+export const getDownloadLicence = publication => {
+    const licence = ((publication && publication.fez_record_search_key_license) || {}).rek_license;
+    return CURRENT_LICENCES.find(item => item.value === licence);
+};
+
 export const getFileOpenAccessStatus = (publication, dataStream, props) => {
     const embargoDate = dataStream.dsi_embargo_date;
     const openAccessStatusId =
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
+    const downloadLicence = getDownloadLicence(publication);
+    const allowDownload = !downloadLicence && (dataStream.dsi_security_policy === 4 ? !!props.account : true);
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
         return {
             isOpenAccess: false,
             embargoDate: null,
             openAccessStatusId: openAccessStatusId,
-            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+            allowDownload: allowDownload,
         };
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
@@ -81,7 +88,7 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         isOpenAccess: true,
         embargoDate: null,
         openAccessStatusId: openAccessStatusId,
-        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+        allowDownload: allowDownload,
     };
 };
 
@@ -334,7 +341,10 @@ export class FilesClass extends Component {
                           pid,
                           mimeType,
                           fileName,
-                          !(!componentProps.account && dataStream.dsi_security_policy === 4) ? thumbnailFileName : null,
+                          !getDownloadLicence(publication) &&
+                              !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                              ? thumbnailFileName
+                              : null,
                           previewFileName,
                           webFileName,
                           securityAccess,
@@ -402,9 +412,6 @@ export class FilesClass extends Component {
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
-        const licence = (publication.fez_record_search_key_license || {}).rek_license;
-        const downloadLicence = CURRENT_LICENCES.find(item => item.value === licence);
-
         if (fileData.length === 0) return null;
         return (
             <Grid item xs={12}>
@@ -488,7 +495,7 @@ export class FilesClass extends Component {
                                     <FileName
                                         {...item}
                                         id={`file-name-${index}`}
-                                        downloadLicence={downloadLicence}
+                                        downloadLicence={getDownloadLicence(publication)}
                                         onFileSelect={this.showPreview}
                                     />
                                 </Grid>
