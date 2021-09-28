@@ -124,7 +124,7 @@ export const getFileData = (record, openAccessStatusId, dataStreams, isAdmin, is
                       fileName,
                       thumbnailFileName,
                       previewFileName,
-                      allowDownload: !downloadLicence && (openAccessStatus.isOpenAccess || isAuthor || isAdmin),
+                      allowDownload: (!downloadLicence && openAccessStatus.isOpenAccess) || isAuthor || isAdmin,
                       webFileName,
                       securityAccess: true,
                   },
