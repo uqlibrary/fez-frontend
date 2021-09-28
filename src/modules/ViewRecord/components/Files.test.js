@@ -1,7 +1,15 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import { FilesClass, formatBytes, getFileOpenAccessStatus, untranscodedItem, styles } from './Files';
+import {
+    FilesClass,
+    formatBytes,
+    getFileOpenAccessStatus,
+    untranscodedItem,
+    styles,
+    getDownloadLicence,
+} from './Files';
 import * as mock from 'mock/data';
+import { CURRENT_LICENCES } from '../../../config/general';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -1171,6 +1179,16 @@ describe('Files Component ', () => {
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
         expect(
+            getFileOpenAccessStatus(
+                {
+                    ...publicationEmbargoOAFile,
+                    fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+                },
+                publicationEmbargoOAFile.fez_datastream_info[2],
+                props,
+            ),
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
+        expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
     });
@@ -1602,9 +1620,49 @@ describe('Files Component ', () => {
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 
-    it('getFileData{} branch 1', () => {
+    it('getFileData{} branch 2', () => {
         const wrapper = setup({ publication: fileDataRecord, isAdmin: false, author: null });
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
+    });
+
+    it('getFileData{} branch 3', () => {
+        const publication = {
+            ...fileDataRecord,
+            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+            fez_datastream_info: [
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'test.pdf',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'application/pdf',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 0,
+                    dsi_security_policy: 5,
+                },
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'thumbnail_test_t.jpg',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+            ],
+        };
+        const wrapper = setup({ publication: publication });
+        expect(JSON.stringify(wrapper.instance().getFileData(publication))).toMatchSnapshot();
+    });
+
+    it('getDownloadLicence()', () => {
+        const publicationWithRestrictiveLicense = {
+            ...fileDataRecord,
+            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+        };
+        expect(getDownloadLicence(fileDataRecord)).toBe(undefined);
+        expect(getDownloadLicence(publicationWithRestrictiveLicense)).toEqual(CURRENT_LICENCES[0]);
     });
 
     it('Should render the correct icon for a valid transcoded file', () => {
