@@ -109,8 +109,13 @@ const FileName = ({
                     </ExternalLink>
                 )}
                 {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
-                    <Typography variant="body2" id={`${id}-preview`} data-testid={`${id}-preview`}>
-                        <a onClick={showPreview} onKeyPress={showPreview} className={classes.filename}>
+                    <Typography variant="body2">
+                        <a
+                            onClick={showPreview}
+                            onKeyPress={showPreview}
+                            className={classes.filename}
+                            id={`${id}-preview`}
+                        >
                             {fileName}
                         </a>
                     </Typography>

@@ -63,7 +63,7 @@ const initialPreviewState = {
 const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl) => {
+    const showPreview = ({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl }) => {
         setPreview({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl });
     };
 
