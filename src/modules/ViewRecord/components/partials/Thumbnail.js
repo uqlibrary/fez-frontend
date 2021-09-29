@@ -47,7 +47,7 @@ export class Thumbnail extends Component {
 
     showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => e => {
         e.preventDefault();
-        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums);
+        this.props.onClick({ fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums });
     };
 
     render() {
