@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
-import { bio, brain, cats, tech, lungCancer, none, forCode, virus } from './data/journalKeywordSearches/index';
+import { bio, brain, cats, tech, lungCancer, none, forCode, virus } from './data/journals/search/keyword/index';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -382,25 +382,29 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...mockData.journalLookup })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: '.*' }).apiUrl)))
     .reply(config => {
-        console.log('Returning lookup data for:', config.url.replace('https://api.library.uq.edu.au/staging/journals/search?rule=keywords&query=', '') || 'NA');
-        if(config.url.indexOf('query=null') > -1) {
-            return [200, { data: {}}]
-        } else if(config.url.indexOf('query=bio') > -1) {
-            return [200, { ...bio }]
-        } else if(config.url.indexOf('query=brain') > -1) {
-            return [200, { ...brain }]
-        } else if(config.url.indexOf('query=tech') > -1) {
-            return [200, { ...tech }]
-        } else if(config.url.indexOf('query=cats') > -1) {
-            return [200, { ...cats }]
-        } else if(config.url.indexOf('query=lung cancer') > -1) {
-            return [200, { ...lungCancer }]
-        } else if(config.url.indexOf('query=1405') > -1) {
-            return [200, { ...forCode }]
-        } else if(config.url.indexOf('query=virus') > -1) {
-            return [200, { ...virus }]
+        console.log(
+            'Returning lookup data for:',
+            config.url.replace('https://api.library.uq.edu.au/staging/journals/search?rule=keywords&query=', '') ||
+                'NA',
+        );
+        if (config.url.indexOf('query=null') > -1) {
+            return [200, { data: {} }];
+        } else if (config.url.indexOf('query=bio') > -1) {
+            return [200, { ...bio }];
+        } else if (config.url.indexOf('query=brain') > -1) {
+            return [200, { ...brain }];
+        } else if (config.url.indexOf('query=tech') > -1) {
+            return [200, { ...tech }];
+        } else if (config.url.indexOf('query=cats') > -1) {
+            return [200, { ...cats }];
+        } else if (config.url.indexOf('query=lung cancer') > -1) {
+            return [200, { ...lungCancer }];
+        } else if (config.url.indexOf('query=1405') > -1) {
+            return [200, { ...forCode }];
+        } else if (config.url.indexOf('query=virus') > -1) {
+            return [200, { ...virus }];
         }
-        return [200, { ...none }]
+        return [200, { ...none }];
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
     .reply(200, { ...mockData.journalList })
