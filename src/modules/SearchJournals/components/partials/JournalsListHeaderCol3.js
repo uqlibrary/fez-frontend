@@ -17,12 +17,18 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
         >
             <Grid item xs>
                 <Tooltip title={!!minimalView ? 'Show more data' : 'Show less data'}>
-                    <IconButton onClick={toggleView} style={{ marginTop: -25, marginLeft: 8, padding: 4 }}>
+                    <IconButton
+                        onClick={toggleView}
+                        style={{ marginTop: -18, marginLeft: 8, paddingLeft: 4, paddingRight: 4 }}
+                    >
                         {!minimalView ? (
-                            <SwapHorizontalCircleIcon style={{ color: '#CCC' }} />
+                            <SwapHorizontalCircleIcon style={{ paddingBottom: 10, color: '#2377cb' }} />
                         ) : (
-                            <SwapHorizontalCircleOutlinedIcon style={{ color: '#2377cb' }} />
+                            <SwapHorizontalCircleOutlinedIcon style={{ paddingBottom: 10, color: '#2377cb' }} />
                         )}
+                        <div style={{ fontSize: '0.8rem', marginTop: 17, marginLeft: -23, paddingTop: 6 }}>
+                            {!!minimalView ? 'more' : 'less'}
+                        </div>
                     </IconButton>
                 </Tooltip>
             </Grid>

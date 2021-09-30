@@ -47,7 +47,7 @@ export const JournalFieldsMap = [
     {
         key: '',
         label: 'Highest quartile',
-        subLabel: '(Q1 is best)',
+        subLabel: 'Q1 is best',
         size: 120,
         prefix: 'Q',
         suffix: '',
@@ -83,7 +83,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_cite_score',
         label: 'CiteScore',
-        subLabel: '(higher is better)',
+        subLabel: 'higher is better',
         size: 120,
         prefix: '',
         suffix: '',
@@ -96,7 +96,7 @@ export const JournalFieldsMap = [
     {
         key: 'fez_journal_cite_score',
         label: 'CiteScore percentile',
-        subLabel: '(100 is best)',
+        subLabel: '100 is best',
         size: 250,
         prefix: '',
         suffix: '',
@@ -138,7 +138,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_jcr_scie_impact_factor',
         label: 'Impact factor',
-        subLabel: '(higher is better)',
+        subLabel: 'higher is better',
         size: 120,
         prefix: '',
         suffix: '',
@@ -155,7 +155,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_jcr_scie_category_jif_percentile',
         label: 'Impact factor percentile',
-        subLabel: '(higher is better)',
+        subLabel: 'higher is better',
         size: 180,
         prefix: '',
         suffix: '',
@@ -211,7 +211,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_cite_score_snip',
         label: 'SNIP',
-        subLabel: '(higher is better)',
+        subLabel: 'higher is better',
         size: 120,
         prefix: '',
         suffix: '',
@@ -224,7 +224,7 @@ export const JournalFieldsMap = [
     {
         key: 'jnl_cite_score_sjr',
         label: 'SJR',
-        subLabel: '(higher is better)',
+        subLabel: 'higher is better',
         size: 120,
         prefix: '',
         suffix: '',
