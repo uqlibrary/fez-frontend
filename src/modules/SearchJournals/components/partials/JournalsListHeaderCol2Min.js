@@ -9,8 +9,7 @@ const JournalsListHeaderCol2Min = ({ journal }) => {
             item
             key={journal.key}
             id={`journal-list-header-${journal.key}`}
-            xs={journal.compactSize}
-            style={{ height: 34 }}
+            style={{ width: journal.size, height: 34 }}
         >
             <InputLabel
                 shrink

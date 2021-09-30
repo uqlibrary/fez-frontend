@@ -16,9 +16,9 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                         <Grid
                             key={index}
                             item
-                            xs={item.compactSize}
                             id={`journal-list-header-title-${index}`}
                             style={{
+                                width: item.size,
                                 height: 43,
                                 overflow: 'hidden',
                                 textOverflow: 'ellipsis',
