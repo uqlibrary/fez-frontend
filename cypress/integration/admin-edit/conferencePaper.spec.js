@@ -37,15 +37,11 @@ context('Conference Paper admin edit', () => {
                 );
                 cy.get('[data-testid=rek-native-script-conference-name-input]').should(
                     'have.value',
-                    // prettier-ignore
-                    record.fez_record_search_key_native_script_conference_name
-                            .rek_native_script_conference_name,
+                    record.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name,
                 );
                 cy.get('[data-testid=rek-roman-script-conference-name-input]').should(
                     'have.value',
-                    // prettier-ignore
-                    record.fez_record_search_key_roman_script_conference_name
-                            .rek_roman_script_conference_name,
+                    record.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name,
                 );
                 cy.get('[data-testid=rek-translated-conference-name-input]').should(
                     'have.value',
@@ -70,21 +66,15 @@ context('Conference Paper admin edit', () => {
                     .should('have.length', 0);
                 cy.get('[data-testid=rek-native-script-proceedings-title-input]').should(
                     'have.value',
-                    // prettier-ignore
-                    record.fez_record_search_key_native_script_proceedings_title
-                            .rek_native_script_proceedings_title,
+                    record.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title,
                 );
                 cy.get('[data-testid=rek-roman-script-proceedings-title-input]').should(
                     'have.value',
-                    // prettier-ignore
-                    record.fez_record_search_key_roman_script_proceedings_title
-                            .rek_roman_script_proceedings_title,
+                    record.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title,
                 );
                 cy.get('[data-testid=rek-translated-proceedings-title-input]').should(
                     'have.value',
-                    // prettier-ignore
-                    record.fez_record_search_key_translated_proceedings_title
-                            .rek_translated_proceedings_title,
+                    record.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title,
                 );
                 cy.get('[data-testid=rek-journal-name-input]').should(
                     'have.value',

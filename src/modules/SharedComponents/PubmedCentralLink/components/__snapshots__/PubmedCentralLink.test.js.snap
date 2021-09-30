@@ -7,12 +7,13 @@ exports[`PubmedCentralLink test  should render component with empty span 1`] = `
 `;
 
 exports[`PubmedCentralLink test  should render component with pubmedCentralId 1`] = `
-<WithStyles(ExternalLink)
+<ExternalLink
   aria-label="Full text via Pubmed Central (open access)"
   className="pubmedCentralLinkUrl"
   href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677"
+  id="pubmed-central"
   title="Full text via Pubmed Central (open access)"
 >
   https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12345677
-</WithStyles(ExternalLink)>
+</ExternalLink>
 `;

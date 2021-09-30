@@ -146,12 +146,12 @@ context('Journal Article admin edit', () => {
                             issns.forEach((issn, index) => {
                                 cy.get(`#rek-issn-list-row-${index}`).should('contain.text', issn.rek_issn);
                                 cy.get(`#rek-issn-list-row-${index}`).within(() => {
-                                    cy.get('#external-link-sherparomeo')
+                                    cy.get('#sherparomeo-link')
                                         .should('contain.text', 'SHERPA/RoMEO')
                                         .should('have.attr', 'href', issn.fez_sherpa_romeo.srm_journal_link);
                                 });
                                 cy.get(`#rek-issn-list-row-${index}`).within(() => {
-                                    cy.get('#external-link-ulrichs')
+                                    cy.get('#ulrichs-link')
                                         .should('contain.text', 'Ulrichs')
                                         .should(
                                             'have.attr',
@@ -449,10 +449,7 @@ context('Journal Article admin edit', () => {
         cy.log('Files Tab');
         cy.get('[data-testid=files-section-header]').should('have.text', 'Files');
         cy.get('[data-testid=files-section-content]').within(() => {
-            // prettier-ignore
-            const fileSizeInMB = Math.round(
-                            record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
-                        ) / 100;
+            const fileSizeInMB = Math.round((record.fez_datastream_info[1].dsi_size / 1024 / 1024) * 100) / 100;
             cy.get('h4')
                 .eq(0)
                 .should('have.text', 'Attached files');

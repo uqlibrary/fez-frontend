@@ -31,16 +31,12 @@ export const getColumns = classes => {
             editable: 'never',
             render: rowData => (
                 <ExternalLink
+                    id={`fvs-search-parameters-${rowData.tableData.id}`}
                     key={rowData.fvs_search_parameters}
                     href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_search_parameters.replace('/', '')}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    <span
-                        data-testid={`fvs-search-parameters-${rowData.tableData.id}-link`}
-                        id={`fvs-search-parameters-${rowData.tableData.id}-link`}
-                    >
-                        {favouriteSearchList.columns.realLink.cellText}
-                    </span>
+                    {favouriteSearchList.columns.realLink.cellText}
                 </ExternalLink>
             ),
         },
@@ -82,12 +78,11 @@ export const getColumns = classes => {
             render: rowData => (
                 <ExternalLink
                     key={rowData.fvs_alias}
+                    id={`fvs-alias-${rowData.tableData.id}`}
                     href={`${APP_URL}${PATH_PREFIX}${rowData.fvs_alias}`}
                     aria-label={locale.global.linkWillOpenInNewWindow.replace('[destination]', rowData.fvs_description)}
                 >
-                    <span className={classes.text} data-testid={`fvs-alias-${rowData.tableData.id}-link`}>
-                        {rowData.fvs_alias}
-                    </span>
+                    <span className={classes.text}>{rowData.fvs_alias}</span>
                 </ExternalLink>
             ),
         },

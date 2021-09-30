@@ -247,11 +247,9 @@ export class AdditionalInformationClass extends PureComponent {
                         <p key={`license_description_line-${index}`}>{line}</p>
                     ))}
                 {licenseLink && (
-                    <div data-testid="rek-license-link">
-                        <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
-                            {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
-                        </ExternalLink>
-                    </div>
+                    <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
+                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
+                    </ExternalLink>
                 )}
             </span>
         );

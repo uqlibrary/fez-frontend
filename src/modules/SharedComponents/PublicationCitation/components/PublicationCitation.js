@@ -276,6 +276,7 @@ export class PublicationCitation extends PureComponent {
                     const sourceConfig = locale.global.sources[source.source];
                     return (
                         <ExternalLink
+                            id={`publication-source-${source.source}`}
                             key={'source_' + index}
                             className="publicationSource"
                             href={sourceConfig.externalUrl.replace('[id]', source.id)}
@@ -331,6 +332,7 @@ export class PublicationCitation extends PureComponent {
                             {showMetrics && (
                                 <Grid item xs={12} sm="auto" className="citationMetrics">
                                     <ExternalLink
+                                        id={`my-trending-pubs-${recordValue.source}`}
                                         href={recordValue.citation_url}
                                         title={txt.linkWillOpenInNewWindow.replace(
                                             '[destination]',
