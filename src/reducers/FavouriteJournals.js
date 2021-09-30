@@ -8,17 +8,17 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.SEARCH_JOURNALS_LOADING]: state => ({
+    [actions.FAVOURITE_JOURNALS_LOADING]: state => ({
         ...state,
         journalsListLoading: true,
     }),
-    [actions.SEARCH_JOURNALS_LOADED]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_LOADED]: (state, action) => ({
         ...state,
         journalsListLoading: false,
         journalsListLoaded: true,
         journalsList: action.payload,
     }),
-    [actions.SEARCH_JOURNALS_FAILED]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_FAILED]: (state, action) => ({
         ...state,
         journalsListLoading: false,
         journalsListLoaded: true,
@@ -27,7 +27,7 @@ const handlers = {
     }),
 };
 
-export default function searchJournalsReducer(state = initialState, action) {
+export default function favouriteJournalsReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

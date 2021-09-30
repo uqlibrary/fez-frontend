@@ -6,6 +6,7 @@ import {
     MASTER_JOURNAL_LIST_INGEST_API,
     JOURNAL_KEYWORDS_LOOKUP_API,
     JOURNAL_SEARCH_API,
+    JOURNAL_FAVOURITES_API,
 } from 'repositories/routes';
 
 export const loadJournalLookup = searchText => dispatch => {
@@ -98,5 +99,15 @@ export const searchJournals = searchQuery => async dispatch => {
         dispatch({ type: actions.SEARCH_JOURNALS_LOADED, payload: searchResponse });
     } catch (e) {
         dispatch({ type: actions.SEARCH_JOURNALS_FAILED, payload: e });
+    }
+};
+
+export const favouriteJournals = () => async dispatch => {
+    dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
+    try {
+        const response = await get(JOURNAL_FAVOURITES_API());
+        dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
+    } catch (e) {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: e });
     }
 };

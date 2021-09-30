@@ -13,12 +13,12 @@ import JournalsList from './JournalsList';
 import locale from 'locale/components';
 
 export const FavouriteJournalList = () => {
-    const txt = locale.components.journalSearch.journalSearchResult;
+    const txt = locale.components.journalSearch.favouriteJournalsList;
 
-    const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
-    const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
-    const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
-    const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
+    const journalsListLoading = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoading);
+    const journalsList = useSelector(state => state.get('favouriteJournalsReducer').journalsList);
+    const journalsListLoaded = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoaded);
+    const journalsListError = useSelector(state => state.get('favouriteJournalsReducer').journalsListError);
 
     if (!journalsListLoaded) {
         return <div />;

@@ -1,4 +1,4 @@
-export const results = {
+const results = {
     "total": 2,
     "took": 381,
     "per_page": 20,
@@ -424,3 +424,5 @@ export const results = {
         }
     }
 };
+
+export default results;

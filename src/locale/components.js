@@ -3629,6 +3629,13 @@ export default {
                     text: <div>We were unable to find any results.</div>,
                 },
             },
+            favouriteJournalsList: {
+                loadingMessage: 'Loading journals list',
+                noResultsFound: {
+                    title: 'No journals found',
+                    text: <div>You haven't added any journals to your favourite list yet.</div>,
+                },
+            },
         },
     },
 };
