@@ -17,6 +17,7 @@ const DoiCitationView = ({ doi, hideDoiLink }) => {
             )}
             {!hideDoiLink && (
                 <ExternalLink
+                    id="citation-doi"
                     className="citationDoiLink"
                     href={doiLink}
                     title={txt.ariaLabel}

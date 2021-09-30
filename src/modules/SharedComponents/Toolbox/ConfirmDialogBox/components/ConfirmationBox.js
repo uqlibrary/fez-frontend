@@ -12,7 +12,7 @@ import Hidden from '@material-ui/core/Hidden';
 
 export const useStyles = makeStyles(theme => ({
     alternateActionButtonClass: {
-        color: theme.palette.white.main,
+        color: theme.palette.white?.main,
         backgroundColor: theme.palette.warning.main,
         '&:hover': {
             backgroundColor: theme.palette.warning.dark,

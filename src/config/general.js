@@ -135,6 +135,7 @@ export const CSV_INGEST_DOCUMENT_TYPES = [
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_IMAGE,
@@ -1168,6 +1169,19 @@ export const CONTENT_INDICATORS = [
     { value: 454080, text: 'Protocol' },
     { value: 454081, text: 'Case Study' },
 ];
+
+export const CONTENT_INDICATORS_FOR_CONFERENCE_PAPER = [
+    { value: 456746, text: 'Plenary' },
+    { value: 456747, text: 'Invited' },
+];
+
+export const CONTENT_INDICATORS_DOCTYPE_MAP = {
+    default: CONTENT_INDICATORS,
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER],
+};
+
+export const contentIndicators = displayType =>
+    CONTENT_INDICATORS_DOCTYPE_MAP[(displayType === PUBLICATION_TYPE_CONFERENCE_PAPER && displayType) || 'default'];
 
 export const AUDIENCE_SIZE = [
     { value: 453992, text: 'Less than 100' },

@@ -259,7 +259,7 @@ describe('PublicationCitation ', () => {
             showMetrics: true,
             showSourceCountIcon: true,
         });
-        expect(toJson(wrapper.find('.citationMetrics WithStyles(ExternalLink)'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('.citationMetrics ExternalLink'))).toMatchSnapshot();
 
         // Display count without icon
         wrapper.setProps({

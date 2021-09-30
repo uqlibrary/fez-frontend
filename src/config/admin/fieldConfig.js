@@ -883,7 +883,7 @@ export default {
             componentProps: {
                 name: 'adminSection.fez_record_search_key_oa_status_type.rek_oa_status_type',
                 genericSelectFieldId: 'rek-oa-status-type',
-                itemsList: OA_STATUS_TYPE,
+                itemsList: [{ value: '0', text: 'None' }, ...OA_STATUS_TYPE],
                 canUnselect: true,
                 ...selectFields.oaStatusType,
             },

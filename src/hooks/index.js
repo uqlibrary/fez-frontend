@@ -1,11 +1,16 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useCallback } from 'react';
 import { useRecordContext, useAccountContext } from 'context';
-import { publicationTypes } from 'config';
+import { publicationTypes, contentIndicators } from 'config';
 
 export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     const { record } = useRecordContext();
     return (publicationTypes({}, isAdmin)[displayType || record.rek_display_type] || {}).subtypes || [];
+};
+
+export const useContentIndicators = (displayType = null) => {
+    const { record } = useRecordContext();
+    return contentIndicators(displayType || (record && record.rek_display_type));
 };
 
 export const userIsResearcher = () => {

@@ -126,7 +126,7 @@ const BulkExport = ({
                 data-testid={id}
                 disabled={['success', 'loading'].includes(statusClass)}
                 endIcon={statusIcon}
-                fullwidth
+                fullWidth
                 id={id}
                 key={format.value}
                 onClick={() => {

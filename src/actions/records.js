@@ -722,6 +722,9 @@ export const changeDisplayType = (records, data, isBulkUpdate = false) => {
     const changeDisplayTypeRequest = records.map(record => ({
         rek_pid: record.rek_pid,
         ...data,
+        fez_record_search_key_herdc_code: {
+            rek_herdc_code: null,
+        },
     }));
     return async dispatch => {
         dispatch({
@@ -801,6 +804,34 @@ export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false
         } catch (e) {
             dispatch({
                 type: actions.CHANGE_COLLECTIONS_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
+/**
+ * @param {array} records
+ */
+export const createOrUpdateDoi = records => {
+    const request = transformers.createOrUpdateDoi(records);
+    return async dispatch => {
+        dispatch({
+            type: actions.CREATE_OR_UPDATE_DOI_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), request);
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CREATE_OR_UPDATE_DOI_FAILED,
                 payload: e,
             });
 

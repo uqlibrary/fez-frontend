@@ -1,8 +1,15 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { default as fileDataRecord } from 'mock/data/testing/fileData';
-import Files, { formatBytes, getFileOpenAccessStatus, untranscodedItem } from './Files';
-import { FilesClass } from './Files';
+import {
+    FilesClass,
+    formatBytes,
+    getFileOpenAccessStatus,
+    untranscodedItem,
+    styles,
+    getDownloadLicence,
+} from './Files';
 import * as mock from 'mock/data';
+import { CURRENT_LICENCES } from '../../../config/general';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -804,7 +811,7 @@ const pub = {
     rek_pubmed_doc_type_lookup: null,
 };
 
-function setup(testProps, args = { isShallow: true }) {
+function setup(testProps) {
     const props = {
         theme: {},
         isAdmin: testProps.isAdmin || true,
@@ -816,7 +823,7 @@ function setup(testProps, args = { isShallow: true }) {
         author: testProps.author || mock.currentAuthor.uqresearcher,
         ...testProps,
     };
-    return getElement(FilesClass, props, args);
+    return getElement(FilesClass, props, { isShallow: true });
 }
 
 describe('Files Component ', () => {
@@ -832,6 +839,25 @@ describe('Files Component ', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should have a style helper', () => {
+        const theme = { palette: { secondary: { light: 'red' } } };
+        expect(styles(theme)).toStrictEqual({
+            header: {
+                borderBottom: '1px solid red',
+            },
+            dataWrapper: {
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+            },
+            fileIcon: {
+                opacity: 0.5,
+            },
+            thumbIconCentered: {
+                textAlign: 'center',
+            },
+        });
     });
 
     it('should not render cultural sensitivity statement', () => {
@@ -879,24 +905,6 @@ describe('Files Component ', () => {
             },
             hideCulturalSensitivityStatement: true,
         });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render component full mount', () => {
-        const wrapper = getElement(
-            Files,
-            {
-                theme: {},
-                account: { canMasquerade: true },
-                isAdmin: true,
-                isAuthor: true,
-                publication: journalArticle,
-                hideCulturalSensitivityStatement: false,
-                setHideCulturalSensitivityStatement: jest.fn(),
-                classes: {},
-            },
-            { isShallow: false },
-        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -971,7 +979,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'image/jpeg';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
         expect(wrapper.state().preview.fileName).toEqual(fileName);
         expect(wrapper.state().preview.previewMediaUrl).toEqual(previewMediaUrl);
         expect(wrapper.state().preview.mediaUrl).toEqual(mediaUrl);
@@ -983,7 +998,7 @@ describe('Files Component ', () => {
     it('should set video loading flag to hide loading message', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
@@ -993,7 +1008,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'video/mp4';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         let preview = wrapper.find('Memo(MediaPreview)').shallow();
 
@@ -1011,7 +1033,7 @@ describe('Files Component ', () => {
     it('should set video load error flags', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
@@ -1021,7 +1043,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'video/mp4';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         wrapper.find('Memo(MediaPreview)').simulate('videoFailed', { code: 1234, message: 'video failed' });
         wrapper.update();
@@ -1037,7 +1066,7 @@ describe('Files Component ', () => {
     it('should set image error flag', () => {
         const wrapper = setup({ publication: pub });
         wrapper
-            .find('WithStyles(FileName)')
+            .find('FileName')
             .first()
             .simulate('click');
 
@@ -1047,7 +1076,14 @@ describe('Files Component ', () => {
         const webMediaUrl = 'webMediaUrl';
         const mimeType = 'image/jpeg';
         const securityStatus = true;
-        wrapper.instance().showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        wrapper.instance().showPreview({
+            fileName,
+            mediaUrl,
+            mimeType,
+            previewMediaUrl,
+            securityStatus,
+            webMediaUrl,
+        });
 
         wrapper.find('Memo(MediaPreview)').simulate('imageFailed');
         wrapper.update();
@@ -1142,6 +1178,16 @@ describe('Files Component ', () => {
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[2], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: true });
+        expect(
+            getFileOpenAccessStatus(
+                {
+                    ...publicationEmbargoOAFile,
+                    fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+                },
+                publicationEmbargoOAFile.fez_datastream_info[2],
+                props,
+            ),
+        ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
         expect(
             getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[3], props),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695, allowDownload: false });
@@ -1574,9 +1620,49 @@ describe('Files Component ', () => {
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 
-    it('getFileData{} branch 1', () => {
+    it('getFileData{} branch 2', () => {
         const wrapper = setup({ publication: fileDataRecord, isAdmin: false, author: null });
         expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
+    });
+
+    it('getFileData{} branch 3', () => {
+        const publication = {
+            ...fileDataRecord,
+            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+            fez_datastream_info: [
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'test.pdf',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'application/pdf',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 0,
+                    dsi_security_policy: 5,
+                },
+                {
+                    dsi_pid: 'UQ:185044',
+                    dsi_dsid: 'thumbnail_test_t.jpg',
+                    dsi_open_access: 1,
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+            ],
+        };
+        const wrapper = setup({ publication: publication });
+        expect(JSON.stringify(wrapper.instance().getFileData(publication))).toMatchSnapshot();
+    });
+
+    it('getDownloadLicence()', () => {
+        const publicationWithRestrictiveLicense = {
+            ...fileDataRecord,
+            fez_record_search_key_license: { rek_license: CURRENT_LICENCES[0].value },
+        };
+        expect(getDownloadLicence(fileDataRecord)).toBe(undefined);
+        expect(getDownloadLicence(publicationWithRestrictiveLicense)).toEqual(CURRENT_LICENCES[0]);
     });
 
     it('Should render the correct icon for a valid transcoded file', () => {
