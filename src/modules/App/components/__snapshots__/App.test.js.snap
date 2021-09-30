@@ -726,7 +726,11 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -1401,6 +1405,13 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journals/compare/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_22"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
@@ -1748,7 +1759,11 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -2423,6 +2438,13 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journals/compare/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_22"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
@@ -3228,7 +3250,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -3920,6 +3946,13 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journals/compare/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_22"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
@@ -4267,7 +4300,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -4983,6 +5020,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journals/compare/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_22"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
@@ -5330,7 +5374,11 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -6031,6 +6079,13 @@ exports[`Application component should render app for account with fez author wit
             path="/journals/compare/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_22"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
@@ -6378,7 +6433,11 @@ exports[`Application component should render application with routing for the us
           "path": "/journals/compare/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing favourites",
           "path": "/journals/favourites/",
         },
@@ -8516,7 +8575,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journals/compare/",
                           },
                           Object {
-                            "component": undefined,
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
+                            },
                             "pageTitle": "Strategic publishing favourites",
                             "path": "/journals/favourites/",
                           },
@@ -8886,7 +8949,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/journals/compare/",
                             },
                             Object {
-                              "component": undefined,
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
+                              },
                               "pageTitle": "Strategic publishing favourites",
                               "path": "/journals/favourites/",
                             },
@@ -9257,7 +9324,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/journals/compare/",
                               },
                               Object {
-                                "component": undefined,
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
+                                },
                                 "pageTitle": "Strategic publishing favourites",
                                 "path": "/journals/favourites/",
                               },
@@ -10759,6 +10830,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "exportAuthorPublications": [Function],
                                                           "exportEspacePublications": [Function],
                                                           "exportPublications": [Function],
+                                                          "favouriteJournals": [Function],
                                                           "fixRecord": [Function],
                                                           "getBatchImportDirectories": [Function],
                                                           "getCollectionsListAPI": [Function],
@@ -14659,6 +14731,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "exportAuthorPublications": [Function],
                                                                           "exportEspacePublications": [Function],
                                                                           "exportPublications": [Function],
+                                                                          "favouriteJournals": [Function],
                                                                           "fixRecord": [Function],
                                                                           "getBatchImportDirectories": [Function],
                                                                           "getCollectionsListAPI": [Function],
@@ -14827,6 +14900,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "exportAuthorPublications": [Function],
                                                                             "exportEspacePublications": [Function],
                                                                             "exportPublications": [Function],
+                                                                            "favouriteJournals": [Function],
                                                                             "fixRecord": [Function],
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
@@ -16142,6 +16216,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "exportAuthorPublications": [Function],
                                                                                     "exportEspacePublications": [Function],
                                                                                     "exportPublications": [Function],
+                                                                                    "favouriteJournals": [Function],
                                                                                     "fixRecord": [Function],
                                                                                     "getBatchImportDirectories": [Function],
                                                                                     "getCollectionsListAPI": [Function],
@@ -16264,6 +16339,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "exportAuthorPublications": [Function],
                                                                                       "exportEspacePublications": [Function],
                                                                                       "exportPublications": [Function],
+                                                                                      "favouriteJournals": [Function],
                                                                                       "fixRecord": [Function],
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
