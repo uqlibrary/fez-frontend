@@ -299,7 +299,7 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.journals.favourites,
-                      component: components.JournalsFavourites,
+                      component: components.FavouriteJournals,
                       pageTitle: locale.pages.journals.favourites.title,
                   },
               ]

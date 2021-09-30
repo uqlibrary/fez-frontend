@@ -10,8 +10,10 @@ import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchInterfaceState, useSelectedKeywords, useJournalSearchQueryParams } from '../hooks';
+import { useHistory } from 'react-router';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
+    const history = useHistory();
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const {
@@ -28,8 +30,6 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
         initialSelectedKeywords,
     );
-    const handleFavouriteJournalsClick = React.useCallback(() => history.push(pathConfig.journal.favourite), []);
-    const handleBrowseAllJournalsClick = React.useCallback(() => history.push(pathConfig.journal.browseAll), []);
     const handleSearchJournalsClick = React.useCallback(() => {
         toggleJournalSearchInput();
         toggleKeywordsBrowser();
@@ -91,7 +91,11 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                 <Button
                                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
-                                    onClick={handleFavouriteJournalsClick}
+                                    onClick={() =>
+                                        history.push({
+                                            pathname: pathConfig.journals.favourites,
+                                        })
+                                    }
                                     id="journal-search-favourite-journals-button"
                                     data-testid="journal-search-favourite-journals-button"
                                     fullWidth
@@ -103,7 +107,6 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                     data-testid="journal-search-browse-all-button"
                                     children={txt.journalSearchInterface.buttons.browseAllJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}
-                                    onClick={handleBrowseAllJournalsClick}
                                     fullWidth
                                 />
                             </Grid>
@@ -130,6 +133,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
 
 JournalSearchInterface.propTypes = {
     onSearch: PropTypes.func,
+    onFavourite: PropTypes.func,
     initialSelectedKeywords: PropTypes.object,
 };
 
