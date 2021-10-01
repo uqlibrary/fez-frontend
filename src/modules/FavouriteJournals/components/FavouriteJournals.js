@@ -11,7 +11,7 @@ import { favouriteJournals } from '../../../actions';
 
 export const FavouriteJournals = () => {
     const dispatch = useDispatch();
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.favouriteJournals;
     React.useEffect(() => {
         dispatch(favouriteJournals());
         // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -3607,6 +3607,26 @@ export default {
                 message: 'A user could not be deleted.',
             },
         },
+        favouriteJournals: {
+            favouriteJournalsInterface: {
+                title: 'You Favourite Journals',
+                instructions:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis risus, mollis in sem id, auctor tempus tellus. Praesent maximus tempor tellus pellentesque tincidunt. Integer maximus accumsan tellus ac aliquet. Nam sollicitudin odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. Pellentesque leo nibh, ornare non metus consequat, tincidunt scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. Nullam sit amet mattis est, ut finibus orci.',
+                buttons: {
+                    returnToSearch: {
+                        title: 'RETURN TO JOURNAL SEARCH',
+                        aria: 'Return to Journal Search',
+                    },
+                },
+            },
+            favouriteJournalsList: {
+                loadingMessage: 'Loading journals list',
+                noResultsFound: {
+                    title: 'No journals found',
+                    text: <div>You haven't added any journals to your favourite list yet.</div>,
+                },
+            },
+        },
         journalSearch: {
             journalSearchInterface: {
                 title: 'Journal search',
@@ -3624,17 +3644,6 @@ export default {
                     searchJournals: {
                         title: 'Step 3. Search',
                         aria: 'Search',
-                    },
-                },
-            },
-            favouriteJournalsInterface: {
-                title: 'You Favourite Journals',
-                instructions:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis risus, mollis in sem id, auctor tempus tellus. Praesent maximus tempor tellus pellentesque tincidunt. Integer maximus accumsan tellus ac aliquet. Nam sollicitudin odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. Pellentesque leo nibh, ornare non metus consequat, tincidunt scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. Nullam sit amet mattis est, ut finibus orci.',
-                buttons: {
-                    returnToSearch: {
-                        title: 'RETURN TO JOURNAL SEARCH',
-                        aria: 'Return to Journal Search',
                     },
                 },
             },
@@ -3667,13 +3676,6 @@ export default {
                 noResultsFound: {
                     title: 'No journals found',
                     text: <div>We were unable to find any results.</div>,
-                },
-            },
-            favouriteJournalsList: {
-                loadingMessage: 'Loading journals list',
-                noResultsFound: {
-                    title: 'No journals found',
-                    text: <div>You haven't added any journals to your favourite list yet.</div>,
                 },
             },
         },

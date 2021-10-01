@@ -7,7 +7,7 @@ import { useHistory } from 'react-router';
 
 export const FavouriteJournalsInterface = () => {
     const history = useHistory();
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.favouriteJournals;
     return (
         <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
             <Grid container spacing={2}>

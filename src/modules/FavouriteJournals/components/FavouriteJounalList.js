@@ -13,7 +13,7 @@ import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
 export const FavouriteJournalList = () => {
-    const txt = locale.components.journalSearch.favouriteJournalsList;
+    const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
     const journalsListLoading = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('favouriteJournalsReducer').journalsList);
