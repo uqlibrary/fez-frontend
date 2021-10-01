@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
-import { FavouriteJournalsInterface } from './FavouriteJournalsInterface';
+import FavouriteJournalsInterface from './FavouriteJournalsInterface';
 import FavouriteJournalList from './FavouriteJounalList';
 import { favouriteJournals } from '../../../actions';
 

@@ -11,7 +11,7 @@ import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsLis
 
 import JournalsList from './JournalsList';
 import locale from 'locale/components';
-import { StandardRighthandCard } from '../../SharedComponents/Toolbox/StandardRighthandCard';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 
 export const JournalSearchResult = () => {

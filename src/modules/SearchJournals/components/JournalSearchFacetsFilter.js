@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
-import FacetFilterListItem from '../../SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
-import FacetFilterNestedListItem from '../../SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
+import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
+import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,

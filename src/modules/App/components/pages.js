@@ -42,5 +42,5 @@ export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
-export { FavouriteJournals } from 'modules/SearchJournals';
+export { FavouriteJournals } from 'modules/FavouriteJournals';
 export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
