@@ -12,7 +12,7 @@ import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsLis
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
-export const FavouriteJournalList = () => {
+export const FavouriteJournalsList = () => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
     const journalsListLoading = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoading);
@@ -75,4 +75,4 @@ export const FavouriteJournalList = () => {
     );
 };
 
-export default React.memo(FavouriteJournalList);
+export default React.memo(FavouriteJournalsList);

@@ -6,7 +6,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
 import FavouriteJournalsInterface from './FavouriteJournalsInterface';
-import FavouriteJournalList from './FavouriteJounalList';
+import FavouriteJournalsList from './FavouriteJournalsList';
 import { favouriteJournals } from '../../../actions';
 
 export const FavouriteJournals = () => {
@@ -24,7 +24,7 @@ export const FavouriteJournals = () => {
         >
             <Grid container spacing={3}>
                 <Grid item xs>
-                    <FavouriteJournalList />
+                    <FavouriteJournalsList />
                 </Grid>
                 <Grid item xs={12}>
                     <FavouriteJournalsInterface />
