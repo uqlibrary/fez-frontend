@@ -9,7 +9,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 
-import { JournalsList } from 'modules/SharedComponents/JournalSearchResults';
+import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
 export const FavouriteJournalList = () => {
