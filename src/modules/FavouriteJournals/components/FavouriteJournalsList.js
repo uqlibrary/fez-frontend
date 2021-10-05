@@ -54,7 +54,7 @@ export const FavouriteJournalsList = () => {
                 </Grid>
             )}
             <Grid item xs={12}>
-                <JournalsList journals={journalsList.data} />
+                <JournalsList journals={journalsList.data} isSelectable={false} />
             </Grid>
         </>
     );
