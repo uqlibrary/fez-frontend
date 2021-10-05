@@ -12,7 +12,7 @@ import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
-const JournalsList = ({ journals, onChange }) => {
+const JournalsList = ({ journals, onChange, isSelectable = true }) => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -43,7 +43,15 @@ const JournalsList = ({ journals, onChange }) => {
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
-                        return <JournalsListDataCol1 key={index} index={index} journal={item} onChange={onChange} />;
+                        return (
+                            <JournalsListDataCol1
+                                key={index}
+                                index={index}
+                                journal={item}
+                                onChange={onChange}
+                                isSelectable={isSelectable}
+                            />
+                        );
                     })}
             </Grid>
             <Grid item xs style={{ overflowX: 'auto', overflowY: 'hidden', marginLeft: 4 }}>
@@ -98,6 +106,7 @@ const JournalsList = ({ journals, onChange }) => {
 JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
     onChange: PropTypes.func,
+    isSelectable: PropTypes.bool.isRequired,
 };
 
 export default React.memo(JournalsList);

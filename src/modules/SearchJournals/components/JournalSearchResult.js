@@ -30,6 +30,10 @@ export const JournalSearchResult = () => {
             pathname: pathConfig.journals.compare,
             state: { journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]) },
         });
+    const handleFavouriteJournalsClick = () =>
+        history.push({
+            pathname: pathConfig.journals.favourites,
+        });
 
     if (!journalsListLoaded) {
         return <div />;
@@ -86,11 +90,7 @@ export const JournalSearchResult = () => {
                                 <Button
                                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
-                                    onClick={() =>
-                                        history.push({
-                                            pathname: pathConfig.journals.favourites,
-                                        })
-                                    }
+                                    onClick={handleFavouriteJournalsClick}
                                     id="journal-search-favourite-journals-button"
                                     data-testid="journal-search-favourite-journals-button"
                                     fullWidth

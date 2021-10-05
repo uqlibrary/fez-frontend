@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol1 = ({ journal, index, onChange }) => {
+const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true }) => {
     return (
         <Grid
             container
@@ -23,14 +23,16 @@ const JournalsListDataCol1 = ({ journal, index, onChange }) => {
                 overflow: 'hidden',
             }}
         >
-            <Grid item xs={1} id={`journal-list-data-select-${index}`} style={{ height: 48 }}>
-                <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                    <Checkbox style={{ padding: 2, marginTop: 10 }} value={journal.jnl_jid} onChange={onChange} />
-                </Tooltip>
-            </Grid>
+            {isSelectable && (
+                <Grid item xs={1} id={`journal-list-data-select-${index}`} style={{ height: 48 }}>
+                    <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
+                        <Checkbox style={{ padding: 2, marginTop: 10 }} value={journal.jnl_jid} onChange={onChange} />
+                    </Tooltip>
+                </Grid>
+            )}
             <Grid
                 item
-                xs={11}
+                xs={isSelectable ? 11 : 12}
                 id={`journal-list-header-title-${index}`}
                 style={{
                     whiteSpace: 'nowrap',
@@ -66,6 +68,7 @@ JournalsListDataCol1.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
+    isSelectable: PropTypes.bool.isRequired,
 };
 
 export default React.memo(JournalsListDataCol1);
