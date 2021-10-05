@@ -22,7 +22,11 @@ export const FavouriteJournalsList = () => {
     }
 
     if (!journalsList || (!!journalsList && journalsList.length === 0)) {
-        return 'No journals found';
+        return (
+            <Grid item xs={12}>
+                No journals found
+            </Grid>
+        );
     }
 
     return (

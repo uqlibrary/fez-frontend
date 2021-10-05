@@ -84,7 +84,7 @@ export const JournalSearchResult = () => {
                     <Grid style={{ paddingTop: 20 }} item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
                             <JournalsCommonButtons />
-                            <Grid item xs="auto">
+                            <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={countSelectedJournals() < 2}
                                     onClick={handleJournalsComparisonClick}
@@ -94,6 +94,7 @@ export const JournalSearchResult = () => {
                                     color="primary"
                                     id="journal-compare-button"
                                     data-testid="journal-compare-button"
+                                    fullWidth
                                 />
                             </Grid>
                         </Grid>

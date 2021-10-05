@@ -27,23 +27,19 @@ export const FavouriteJournals = () => {
                     <Grid container spacing={2}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <Grid container spacing={2}>
-                                    <FavouriteJournalsList />
-                                    <Grid item xs={12} style={{ paddingTop: 20 }}>
-                                        <Grid container spacing={2} justify="flex-end">
-                                            <Grid item xs="auto">
-                                                <Button
-                                                    variant="contained"
-                                                    children={txt.buttons.returnToSearch.title}
-                                                    aria-label={txt.buttons.returnToSearch.aria}
-                                                    type="submit"
-                                                    color="primary"
-                                                    onClick={handleReturnToSearchClick}
-                                                    id="journal-search-button"
-                                                    data-testid="journal-search-button"
-                                                />
-                                            </Grid>
-                                        </Grid>
+                                <FavouriteJournalsList />
+                                <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
+                                    <Grid item xs="auto">
+                                        <Button
+                                            variant="contained"
+                                            children={txt.buttons.returnToSearch.title}
+                                            aria-label={txt.buttons.returnToSearch.aria}
+                                            type="submit"
+                                            color="primary"
+                                            onClick={handleReturnToSearchClick}
+                                            id="journal-search-button"
+                                            data-testid="journal-search-button"
+                                        />
                                     </Grid>
                                 </Grid>
                             </StandardCard>

@@ -86,7 +86,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                     <Grid item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
                             <JournalsCommonButtons />
-                            <Grid item xs="auto">
+                            <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={!hasAnySelectedKeywords}
                                     variant="contained"
@@ -97,6 +97,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                     onClick={handleSearchJournalsClick}
                                     id="journal-search-button"
                                     data-testid="journal-search-button"
+                                    fullWidth
                                 />
                             </Grid>
                         </Grid>
