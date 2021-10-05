@@ -3608,15 +3608,11 @@ export default {
             },
         },
         favouriteJournals: {
-            favouriteJournalsInterface: {
-                title: 'You Favourite Journals',
-                instructions:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis risus, mollis in sem id, auctor tempus tellus. Praesent maximus tempor tellus pellentesque tincidunt. Integer maximus accumsan tellus ac aliquet. Nam sollicitudin odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. Pellentesque leo nibh, ornare non metus consequat, tincidunt scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. Nullam sit amet mattis est, ut finibus orci.',
-                buttons: {
-                    returnToSearch: {
-                        title: 'RETURN TO JOURNAL SEARCH',
-                        aria: 'Return to Journal Search',
-                    },
+            title: 'You Favourite Journals',
+            buttons: {
+                returnToSearch: {
+                    title: 'RETURN TO JOURNAL SEARCH',
+                    aria: 'Return to Journal Search',
                 },
             },
             favouriteJournalsList: {

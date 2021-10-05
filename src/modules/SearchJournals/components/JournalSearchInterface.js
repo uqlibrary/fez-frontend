@@ -8,12 +8,10 @@ import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
-import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchInterfaceState, useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
-import { useHistory } from 'react-router';
+import { JournalsCommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
-    const history = useHistory();
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const {
@@ -30,10 +28,6 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
         initialSelectedKeywords,
     );
-    const handleFavouriteJournalsClick = () =>
-        history.push({
-            pathname: pathConfig.journals.favourites,
-        });
     const handleSearchJournalsClick = React.useCallback(() => {
         toggleJournalSearchInput();
         toggleKeywordsBrowser();
@@ -91,25 +85,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                 {showButtons && (
                     <Grid item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
-                                    aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
-                                    onClick={handleFavouriteJournalsClick}
-                                    id="journal-search-favourite-journals-button"
-                                    data-testid="journal-search-favourite-journals-button"
-                                    fullWidth
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    id="journal-search-browse-all-button"
-                                    data-testid="journal-search-browse-all-button"
-                                    children={txt.journalSearchInterface.buttons.browseAllJournals.title}
-                                    aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}
-                                    fullWidth
-                                />
-                            </Grid>
+                            <JournalsCommonButtons />
                             <Grid item xs="auto">
                                 <Button
                                     disabled={!hasAnySelectedKeywords}

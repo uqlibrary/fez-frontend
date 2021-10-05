@@ -15,6 +15,7 @@ import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from '../../../config';
 import { useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
+import { JournalsCommonButtons } from '../../SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchResult = () => {
     const history = useHistory();
@@ -29,10 +30,6 @@ export const JournalSearchResult = () => {
         history.push({
             pathname: pathConfig.journals.compare,
             state: { journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]) },
-        });
-    const handleFavouriteJournalsClick = () =>
-        history.push({
-            pathname: pathConfig.journals.favourites,
         });
 
     if (!journalsListLoaded) {
@@ -84,27 +81,9 @@ export const JournalSearchResult = () => {
                             </Grid>
                         )}
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid style={{ paddingTop: 20 }} item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
-                                    aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
-                                    onClick={handleFavouriteJournalsClick}
-                                    id="journal-search-favourite-journals-button"
-                                    data-testid="journal-search-favourite-journals-button"
-                                    fullWidth
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    id="journal-search-browse-all-button"
-                                    data-testid="journal-search-browse-all-button"
-                                    children={txt.journalSearchInterface.buttons.browseAllJournals.title}
-                                    aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}
-                                    fullWidth
-                                />
-                            </Grid>
+                            <JournalsCommonButtons />
                             <Grid item xs="auto">
                                 <Button
                                     disabled={countSelectedJournals() < 2}

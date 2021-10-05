@@ -68,7 +68,7 @@ JournalsListDataCol1.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
-    isSelectable: PropTypes.bool.isRequired,
+    isSelectable: PropTypes.bool,
 };
 
 export default React.memo(JournalsListDataCol1);

@@ -106,7 +106,7 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
 JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
     onChange: PropTypes.func,
-    isSelectable: PropTypes.bool.isRequired,
+    isSelectable: PropTypes.bool,
 };
 
 export default React.memo(JournalsList);
