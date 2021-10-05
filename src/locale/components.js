@@ -3653,8 +3653,8 @@ export default {
                         aria: 'Search',
                     },
                     compareJournals: {
-                        title: 'COMPARED SELECTED',
-                        aria: 'Compared Selected',
+                        title: 'COMPARE SELECTED',
+                        aria: 'Compare Selected',
                     },
                 },
             },
