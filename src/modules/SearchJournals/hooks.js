@@ -56,6 +56,36 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
     };
 };
 
+export const useSelectedJournals = (state = {}) => {
+    const [selectedJournals, setSelectedJournals] = React.useState(state);
+
+    const handleSelectedJournalsChange = React.useCallback(e => {
+        if (e.target.checked) {
+            setSelectedJournals(current => {
+                const selected = { ...current };
+                selected[e.target.value] = true;
+                return selected;
+            });
+            return;
+        }
+
+        setSelectedJournals(current => {
+            const selected = [...current];
+            delete selected[e.target.value];
+            return selected;
+        });
+    }, []);
+
+    const countSelectedJournals = () => Object.values(selectedJournals).length;
+
+    return {
+        selectedJournals,
+        setSelectedJournals,
+        handleSelectedJournalsChange,
+        countSelectedJournals,
+    };
+};
+
 export const useJournalSearchQueryParams = () => {
     const location = useLocation();
     const journalSearchQueryParams = deparam(location.search.substr(1));

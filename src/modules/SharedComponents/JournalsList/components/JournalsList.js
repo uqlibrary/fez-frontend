@@ -12,7 +12,7 @@ import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
-const JournalsList = journals => {
+const JournalsList = ({ journals, onChange }) => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -41,10 +41,9 @@ const JournalsList = journals => {
                 <JournalsListHeaderCol1 />
                 {/* Data */}
                 {journals &&
-                    journals.journals &&
-                    journals.journals.length > 0 &&
-                    journals.journals.map((item, index) => {
-                        return <JournalsListDataCol1 key={index} index={index} journal={item} />;
+                    journals.length > 0 &&
+                    journals.map((item, index) => {
+                        return <JournalsListDataCol1 key={index} index={index} journal={item} onChange={onChange} />;
                     })}
             </Grid>
             <Grid item xs style={{ overflowX: 'auto', overflowY: 'hidden', marginLeft: 4 }}>
@@ -70,9 +69,8 @@ const JournalsList = journals => {
                     <Grid container spacing={0} alignItems="center">
                         <Grid item xs={12} style={{ marginTop: 6 }}>
                             {journals &&
-                                journals.journals &&
-                                journals.journals.length > 0 &&
-                                journals.journals.map((item, index) => {
+                                journals.length > 0 &&
+                                journals.map((item, index) => {
                                     return !minimalView ? (
                                         <JournalsListDataCol2Full key={index} index={index} journal={item} />
                                     ) : (
@@ -88,9 +86,8 @@ const JournalsList = journals => {
                 <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
                 {/* Data */}
                 {journals &&
-                    journals.journals &&
-                    journals.journals.length > 0 &&
-                    journals.journals.map((item, index) => {
+                    journals.length > 0 &&
+                    journals.map((item, index) => {
                         return <JournalsListDataCol3 key={index} index={index} journal={item} />;
                     })}
             </Grid>
@@ -100,6 +97,7 @@ const JournalsList = journals => {
 
 JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
+    onChange: PropTypes.func,
 };
 
 export default React.memo(JournalsList);

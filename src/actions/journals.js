@@ -1,12 +1,12 @@
 import { get, post } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
-    JOURNAL_LOOKUP_API,
     JOURNAL_API,
-    MASTER_JOURNAL_LIST_INGEST_API,
-    JOURNAL_KEYWORDS_LOOKUP_API,
-    JOURNAL_SEARCH_API,
     JOURNAL_FAVOURITES_API,
+    JOURNAL_KEYWORDS_LOOKUP_API,
+    JOURNAL_LOOKUP_API,
+    JOURNAL_SEARCH_API,
+    MASTER_JOURNAL_LIST_INGEST_API,
 } from 'repositories/routes';
 
 export const loadJournalLookup = searchText => dispatch => {

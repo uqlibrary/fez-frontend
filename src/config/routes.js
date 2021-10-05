@@ -1,6 +1,6 @@
 import React from 'react';
 import { locale } from 'locale';
-import { pathConfig, getSearchUrl } from './pathConfig';
+import { getSearchUrl, pathConfig } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
@@ -294,7 +294,7 @@ export const getRoutesConfig = ({
                   },
                   {
                       path: pathConfig.journals.compare,
-                      component: components.JournalsCompare,
+                      component: components.JournalComparison,
                       pageTitle: locale.pages.journals.compare.title,
                   },
                   {

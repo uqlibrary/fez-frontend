@@ -17,7 +17,11 @@ export const ExactMatchSearchKeywordsList = ({ keywordsListTitle, keywordsList }
                         title={keywordsListTitle}
                         key={keywordItem.keyword}
                         keyword={
-                            <ExternalLink title={keywordItem.title} href={keywordItem.href}>
+                            <ExternalLink
+                                title={keywordItem.title}
+                                href={keywordItem.href}
+                                id={`${index}-${keywordItem.title}-exact-match-search-keyword-list`}
+                            >
                                 {keywordItem.keyword}
                             </ExternalLink>
                         }

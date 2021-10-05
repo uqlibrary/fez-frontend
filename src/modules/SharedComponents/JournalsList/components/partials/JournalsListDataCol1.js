@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol1 = ({ journal, index }) => {
+const JournalsListDataCol1 = ({ journal, index, onChange }) => {
     return (
         <Grid
             container
@@ -25,7 +25,7 @@ const JournalsListDataCol1 = ({ journal, index }) => {
         >
             <Grid item xs={1} id={`journal-list-data-select-${index}`} style={{ height: 48 }}>
                 <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                    <Checkbox style={{ padding: 2, marginTop: 10 }} />
+                    <Checkbox style={{ padding: 2, marginTop: 10 }} value={journal.jnl_jid} onChange={onChange} />
                 </Tooltip>
             </Grid>
             <Grid
@@ -47,7 +47,11 @@ const JournalsListDataCol1 = ({ journal, index }) => {
                         component="span"
                         style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}
                     >
-                        <ExternalLink href={`/journal/view/${journal.jnl_jid}`} title={journal.jnl_title}>
+                        <ExternalLink
+                            href={`/journal/view/${journal.jnl_jid}`}
+                            title={journal.jnl_title}
+                            id={`${journal.jnl_jid}-${journal.jnl_title}`}
+                        >
                             {journal.jnl_title}
                         </ExternalLink>
                     </Typography>
@@ -61,6 +65,7 @@ const JournalsListDataCol1 = ({ journal, index }) => {
 JournalsListDataCol1.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
+    onChange: PropTypes.func,
 };
 
 export default React.memo(JournalsListDataCol1);

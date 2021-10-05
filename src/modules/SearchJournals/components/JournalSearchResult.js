@@ -1,26 +1,35 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
-import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
+import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 
-import JournalsList from './JournalsList';
+import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
+import { pathConfig } from '../../../config';
+import { useSelectedJournals } from '../hooks';
+import { useHistory } from 'react-router';
 
 export const JournalSearchResult = () => {
-    const txt = locale.components.journalSearch.journalSearchResult;
-
+    const history = useHistory();
+    const txt = locale.components.journalSearch;
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
     const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
     const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
+
+    const { selectedJournals, handleSelectedJournalsChange, countSelectedJournals } = useSelectedJournals();
+    const handleJournalsComparisonClick = () =>
+        history.push({
+            pathname: pathConfig.journals.compare,
+            state: { journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]) },
+        });
 
     if (!journalsListLoaded) {
         return <div />;
@@ -36,7 +45,7 @@ export const JournalSearchResult = () => {
                     <Grid container spacing={2}>
                         {!!journalsListLoading && (
                             <Grid item xs={12}>
-                                <InlineLoader message={txt.loadingMessage} />
+                                <InlineLoader message={txt.journalSearchResult.loadingMessage} />
                             </Grid>
                         )}
                         {!!journalsListError && (
@@ -61,7 +70,7 @@ export const JournalSearchResult = () => {
                             </Grid>
                         )}
                         <Grid item xs={12}>
-                            <JournalsList journals={journalsList.data} />
+                            <JournalsList journals={journalsList.data} onChange={handleSelectedJournalsChange} />
                         </Grid>
                         {journalsList.length > 20 && (
                             <Grid item xs={12}>
@@ -70,6 +79,45 @@ export const JournalSearchResult = () => {
                                 />
                             </Grid>
                         )}
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Grid container spacing={2} justify="flex-end">
+                            <Grid item xs={12} sm="auto">
+                                <Button
+                                    children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
+                                    aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
+                                    onClick={() =>
+                                        history.push({
+                                            pathname: pathConfig.journals.favourites,
+                                        })
+                                    }
+                                    id="journal-search-favourite-journals-button"
+                                    data-testid="journal-search-favourite-journals-button"
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm="auto">
+                                <Button
+                                    id="journal-search-browse-all-button"
+                                    data-testid="journal-search-browse-all-button"
+                                    children={txt.journalSearchInterface.buttons.browseAllJournals.title}
+                                    aria-label={txt.journalSearchInterface.buttons.browseAllJournals.aria}
+                                    fullWidth
+                                />
+                            </Grid>
+                            <Grid item xs="auto">
+                                <Button
+                                    disabled={countSelectedJournals() < 2}
+                                    onClick={handleJournalsComparisonClick}
+                                    variant="contained"
+                                    children={txt.journalSearchInterface.buttons.compareJournals.title}
+                                    aria-label={txt.journalSearchInterface.buttons.compareJournals.aria}
+                                    color="primary"
+                                    id="journal-compare-button"
+                                    data-testid="journal-compare-button"
+                                />
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </StandardCard>
             </Grid>

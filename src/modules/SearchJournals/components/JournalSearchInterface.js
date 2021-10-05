@@ -9,7 +9,7 @@ import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
 import { pathConfig } from 'config/pathConfig';
-import { useJournalSearchInterfaceState, useSelectedKeywords, useJournalSearchQueryParams } from '../hooks';
+import { useJournalSearchInterfaceState, useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
 import { useHistory } from 'react-router';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
@@ -30,6 +30,10 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
         initialSelectedKeywords,
     );
+    const handleFavouriteJournalsClick = () =>
+        history.push({
+            pathname: pathConfig.journals.favourites,
+        });
     const handleSearchJournalsClick = React.useCallback(() => {
         toggleJournalSearchInput();
         toggleKeywordsBrowser();
@@ -91,11 +95,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                 <Button
                                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
-                                    onClick={() =>
-                                        history.push({
-                                            pathname: pathConfig.journals.favourites,
-                                        })
-                                    }
+                                    onClick={handleFavouriteJournalsClick}
                                     id="journal-search-favourite-journals-button"
                                     data-testid="journal-search-favourite-journals-button"
                                     fullWidth

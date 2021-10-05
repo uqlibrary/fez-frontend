@@ -3627,6 +3627,17 @@ export default {
                 },
             },
         },
+        journalComparison: {
+            journalComparisonInterface: {
+                title: 'You Favourite Journals',
+                buttons: {
+                    returnToSearch: {
+                        title: 'RETURN TO SEARCH RESULTS',
+                        aria: 'Return to search results',
+                    },
+                },
+            },
+        },
         journalSearch: {
             journalSearchInterface: {
                 title: 'Journal search',
@@ -3644,6 +3655,10 @@ export default {
                     searchJournals: {
                         title: 'Step 3. Search',
                         aria: 'Search',
+                    },
+                    compareJournals: {
+                        title: 'COMPARED SELECTED',
+                        aria: 'Compared Selected',
                     },
                 },
             },
