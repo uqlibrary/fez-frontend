@@ -6,6 +6,7 @@ import { selectFields } from 'locale/selectFields';
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
 export default {
     components: {
         publicationsList: {
@@ -3624,13 +3625,11 @@ export default {
             },
         },
         journalComparison: {
-            journalComparisonInterface: {
-                title: 'You Favourite Journals',
-                buttons: {
-                    returnToSearch: {
-                        title: 'RETURN TO SEARCH RESULTS',
-                        aria: 'Return to search results',
-                    },
+            title: 'You Favourite Journals',
+            buttons: {
+                returnToSearch: {
+                    title: 'RETURN TO SEARCH RESULTS',
+                    aria: 'Return to search results',
                 },
             },
         },

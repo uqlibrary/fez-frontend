@@ -15,11 +15,7 @@ export const JournalComparison = () => {
     const txt = locale.components.journalComparison;
     const handleReturnToResultsClick = () => history.goBack();
     return (
-        <StandardPage
-            title={txt.journalComparisonInterface.title}
-            id="journal-search-page"
-            data-testid="journal-search-page"
-        >
+        <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
                 <Grid item xs>
                     <Grid container spacing={2}>
@@ -30,8 +26,8 @@ export const JournalComparison = () => {
                                     <Grid item xs="auto">
                                         <Button
                                             variant="contained"
-                                            children={txt.journalComparisonInterface.buttons.returnToSearch.title}
-                                            aria-label={txt.journalComparisonInterface.buttons.returnToSearch.aria}
+                                            children={txt.buttons.returnToSearch.title}
+                                            aria-label={txt.buttons.returnToSearch.aria}
                                             type="submit"
                                             color="primary"
                                             onClick={handleReturnToResultsClick}
