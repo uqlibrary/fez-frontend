@@ -721,7 +721,11 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -1400,6 +1404,13 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journals/results/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_21"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
@@ -1754,7 +1765,11 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -2433,6 +2448,13 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journals/results/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_21"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
@@ -3245,7 +3267,11 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -3941,6 +3967,13 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journals/results/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_21"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
@@ -4295,7 +4328,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -5015,6 +5052,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journals/results/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_21"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
@@ -5369,7 +5413,11 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -6074,6 +6122,13 @@ exports[`Application component should render app for account with fez author wit
             path="/journals/results/"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             key="route_21"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
@@ -6428,7 +6483,11 @@ exports[`Application component should render application with routing for the us
           "path": "/journals/results/",
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
           "pageTitle": "Strategic publishing compare",
           "path": "/journals/compare/",
         },
@@ -8570,7 +8629,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journals/results/",
                           },
                           Object {
-                            "component": undefined,
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
+                            },
                             "pageTitle": "Strategic publishing compare",
                             "path": "/journals/compare/",
                           },
@@ -8944,7 +9007,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/journals/results/",
                             },
                             Object {
-                              "component": undefined,
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
+                              },
                               "pageTitle": "Strategic publishing compare",
                               "path": "/journals/compare/",
                             },
@@ -9319,7 +9386,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/journals/results/",
                               },
                               Object {
-                                "component": undefined,
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
+                                },
                                 "pageTitle": "Strategic publishing compare",
                                 "path": "/journals/compare/",
                               },
