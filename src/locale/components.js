@@ -7,6 +7,17 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+export const loremIpsum =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'Duis turpis risus, mollis in sem id, auctor tempus tellus. ' +
+    'Praesent maximus tempor tellus pellentesque tincidunt. ' +
+    'Integer maximus accumsan tellus ac aliquet. Nam sollicitudin ' +
+    'odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada ' +
+    'id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. ' +
+    'Pellentesque leo nibh, ornare non metus consequat, tincidunt ' +
+    'scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. ' +
+    'Nullam sit amet mattis est, ut finibus orci.';
+
 export default {
     components: {
         publicationsList: {
@@ -3625,7 +3636,7 @@ export default {
             },
         },
         journalComparison: {
-            title: 'You Favourite Journals',
+            title: 'Journal comparison',
             buttons: {
                 returnToSearch: {
                     title: 'RETURN TO SEARCH RESULTS',
@@ -3634,10 +3645,34 @@ export default {
             },
         },
         journalSearch: {
+            FAQ: {
+                title: 'Need more help?',
+                items: [
+                    {
+                        question: 'What do all these metrics mean?',
+                        answer: loremIpsum,
+                    },
+                    {
+                        question: 'How do I decide who is the best journal to publish with?',
+                        answer: loremIpsum,
+                    },
+                    {
+                        question: 'What is ERA?',
+                        answer: loremIpsum,
+                    },
+                    {
+                        question: "Why can't | find my peers favourite/recommended journal?",
+                        answer: loremIpsum,
+                    },
+                    {
+                        question: 'Speak to someone.',
+                        answer: loremIpsum,
+                    },
+                ],
+            },
             journalSearchInterface: {
                 title: 'Journal search',
-                instructions:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis risus, mollis in sem id, auctor tempus tellus. Praesent maximus tempor tellus pellentesque tincidunt. Integer maximus accumsan tellus ac aliquet. Nam sollicitudin odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. Pellentesque leo nibh, ornare non metus consequat, tincidunt scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. Nullam sit amet mattis est, ut finibus orci.',
+                instructions: loremIpsum,
                 buttons: {
                     myFavouriteJournals: {
                         title: 'My favourite journals',

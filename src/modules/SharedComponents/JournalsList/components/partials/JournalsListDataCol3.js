@@ -5,7 +5,7 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol2 = ({ journal, index }) => {
+const JournalsListDataCol3 = ({ journal, index }) => {
     return (
         <Grid
             container
@@ -36,9 +36,9 @@ const JournalsListDataCol2 = ({ journal, index }) => {
     );
 };
 
-JournalsListDataCol2.propTypes = {
+JournalsListDataCol3.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
 };
 
-export default React.memo(JournalsListDataCol2);
+export default React.memo(JournalsListDataCol3);

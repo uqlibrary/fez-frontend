@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -10,12 +11,12 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
-import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from '../../../config';
 import { useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { JournalsCommonButtons } from '../../SharedComponents/JournalsCommonButtons';
+import { JournalSearchFAQ } from './JournalSearchFAQ';
 
 export const JournalSearchResult = () => {
     const history = useHistory();
@@ -101,17 +102,15 @@ export const JournalSearchResult = () => {
                     </Grid>
                 </StandardCard>
             </Grid>
-            <Grid item xs={3}>
-                <StandardRighthandCard
-                    title={locale.components.facetsFilter.title}
-                    help={locale.components.facetsFilter.help}
-                >
+            <Hidden smDown>
+                <Grid item md={3}>
                     <JournalSearchFacetsFilter
                         key={'journal-search-facets-filter'}
                         facetsData={journalsList.filters.facets}
                     />
-                </StandardRighthandCard>
-            </Grid>
+                    <JournalSearchFAQ />
+                </Grid>
+            </Hidden>
         </Grid>
     );
 };

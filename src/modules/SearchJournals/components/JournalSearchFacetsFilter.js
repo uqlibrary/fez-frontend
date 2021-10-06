@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
+import locale from '../../../locale/components';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -130,33 +132,35 @@ export const JournalSearchFacetsFilter = ({
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
-        <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
-            <List component="nav" dense>
-                {facetsToDisplay.map(item => {
-                    return (
-                        <FacetFilterListItem
-                            id={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
-                            key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
-                            title={item.title}
-                            disabled={disabled}
-                            nestedItems={
-                                <JournalFacetFilterNestedListItemsList
-                                    facetCategory={item}
-                                    disabled={disabled}
-                                    activeFacets={{
-                                        filters: activeFacetsFilters,
-                                        ranges: activeFacetsRanges,
-                                        showFavouritedOnly,
-                                    }}
-                                    handleFacetClick={_handleFacetClick}
-                                    isFacetFilterActive={isFacetFilterActive}
-                                />
-                            }
-                        />
-                    );
-                })}
-            </List>
-        </div>
+        <StandardRighthandCard title={locale.components.facetsFilter.title} help={locale.components.facetsFilter.help}>
+            <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
+                <List component="nav" dense>
+                    {facetsToDisplay.map(item => {
+                        return (
+                            <FacetFilterListItem
+                                id={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
+                                key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
+                                title={item.title}
+                                disabled={disabled}
+                                nestedItems={
+                                    <JournalFacetFilterNestedListItemsList
+                                        facetCategory={item}
+                                        disabled={disabled}
+                                        activeFacets={{
+                                            filters: activeFacetsFilters,
+                                            ranges: activeFacetsRanges,
+                                            showFavouritedOnly,
+                                        }}
+                                        handleFacetClick={_handleFacetClick}
+                                        isFacetFilterActive={isFacetFilterActive}
+                                    />
+                                }
+                            />
+                        );
+                    })}
+                </List>
+            </div>
+        </StandardRighthandCard>
     );
 };
 
