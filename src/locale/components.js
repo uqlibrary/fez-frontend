@@ -3650,23 +3650,23 @@ export default {
                 items: [
                     {
                         question: 'What do all these metrics mean?',
-                        answer: loremIpsum,
+                        answer: `${loremIpsum} 1`,
                     },
                     {
                         question: 'How do I decide who is the best journal to publish with?',
-                        answer: loremIpsum,
+                        answer: `${loremIpsum} 2`,
                     },
                     {
                         question: 'What is ERA?',
-                        answer: loremIpsum,
+                        answer: `${loremIpsum} 3`,
                     },
                     {
                         question: "Why can't | find my peers favourite/recommended journal?",
-                        answer: loremIpsum,
+                        answer: `${loremIpsum} 4`,
                     },
                     {
                         question: 'Speak to someone.',
-                        answer: loremIpsum,
+                        answer: `${loremIpsum} 5`,
                     },
                 ],
             },

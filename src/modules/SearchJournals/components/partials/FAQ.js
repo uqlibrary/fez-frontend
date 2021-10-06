@@ -4,7 +4,7 @@ import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import locale from '../../../locale/components';
+import locale from '../../../../locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 const Accordion = styled(props => <MuiAccordion elevation={0} square {...props} />)(({ theme }) => ({
@@ -28,7 +28,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export const JournalSearchFAQ = ({}) => {
+export const FAQ = ({}) => {
     const txt = locale.components.journalSearch.FAQ;
     const [expanded, setExpanded] = React.useState();
     const handleChange = faq => (e, expanded) => {
@@ -43,7 +43,7 @@ export const JournalSearchFAQ = ({}) => {
                     onChange={handleChange(`faq-${index}`)}
                     key={`faq-${index}`}
                 >
-                    <AccordionSummary aria-controls={`faq-${index}-content`} id={`faq-summary-${index}`}>
+                    <AccordionSummary aria-controls={`faq-content-${index}`} id={`faq-summary-${index}`}>
                         <Typography>
                             <a>{faq.question}</a>
                         </Typography>
@@ -57,4 +57,4 @@ export const JournalSearchFAQ = ({}) => {
     );
 };
 
-export default React.memo(JournalSearchFAQ);
+export default React.memo(FAQ);

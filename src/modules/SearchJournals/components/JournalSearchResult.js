@@ -16,7 +16,7 @@ import { pathConfig } from '../../../config';
 import { useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { JournalsCommonButtons } from '../../SharedComponents/JournalsCommonButtons';
-import { JournalSearchFAQ } from './JournalSearchFAQ';
+import { FAQ } from './partials/FAQ';
 
 export const JournalSearchResult = () => {
     const history = useHistory();
@@ -108,7 +108,7 @@ export const JournalSearchResult = () => {
                         key={'journal-search-facets-filter'}
                         facetsData={journalsList.filters.facets}
                     />
-                    <JournalSearchFAQ />
+                    <FAQ />
                 </Grid>
             </Hidden>
         </Grid>
