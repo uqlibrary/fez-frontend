@@ -3643,6 +3643,9 @@ export default {
                     aria: 'Return to search results',
                 },
             },
+            list: {
+                empty: 'No journals were selected for comparison',
+            },
         },
         journalSearch: {
             FAQ: {

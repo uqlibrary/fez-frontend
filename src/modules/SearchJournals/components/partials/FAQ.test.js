@@ -9,7 +9,7 @@ function setup() {
 }
 
 describe('FAQ partial', () => {
-    it('should render all', async () => {
+    it('should render all', () => {
         const { getByText } = setup();
         const txt = locale.components.journalSearch.FAQ;
         expect(getByText(txt.title)).toBeInTheDocument();
@@ -18,7 +18,7 @@ describe('FAQ partial', () => {
             expect(getByText(faq.answer)).toBeInTheDocument();
         });
     });
-    it('should toggle answer', async () => {
+    it('should toggle answer', () => {
         const { getByTestId } = setup();
         const index = 1;
         expect(getByTestId(`faq-summary-${index}`)).toHaveAttribute('aria-expanded', 'false');

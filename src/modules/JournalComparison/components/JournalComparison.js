@@ -21,7 +21,7 @@ export const JournalComparison = () => {
                     <Grid container spacing={2}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <JournalComparisonList journals={location.state.journals} />
+                                <JournalComparisonList journals={location.state?.journals} />
                                 <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
                                     <Grid item xs="auto">
                                         <Button
@@ -31,8 +31,8 @@ export const JournalComparison = () => {
                                             type="submit"
                                             color="primary"
                                             onClick={handleReturnToResultsClick}
-                                            id="journal-search-button"
-                                            data-testid="journal-search-button"
+                                            id="return-to-search-results-button"
+                                            data-testid="return-to-search-results"
                                         />
                                     </Grid>
                                 </Grid>
