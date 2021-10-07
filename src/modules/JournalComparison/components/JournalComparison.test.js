@@ -28,7 +28,7 @@ describe('JournalComparison', () => {
             pathname: pathConfig.journals.search,
         });
         const { getByTestId } = setup(Immutable.Map({ history: history }));
-        fireEvent.click(getByTestId('return-to-search-results'));
+        fireEvent.click(getByTestId('return-to-search-results-button'));
         expect(history.location.pathname).toBe(pathConfig.journals.search);
     });
 });

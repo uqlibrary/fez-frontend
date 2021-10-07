@@ -1,20 +1,14 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { render } from 'test-utils';
 import { locale } from '../../../locale';
 import * as mockData from 'mock/data/testing/journals/journalComparison';
 import { JournalComparisonList } from './JournalComparisonList';
 
 function setup(testProps = {}) {
-    return render(
-        <WithRouter>
-            <WithReduxStore>
-                <JournalComparisonList {...testProps} />
-            </WithReduxStore>
-        </WithRouter>,
-    );
+    return render(<JournalComparisonList {...testProps} />);
 }
 
-describe('JournalComparison', () => {
+describe('JournalComparisonList', () => {
     it('should render when there are no journals to compare', () => {
         const { getByText } = setup();
         expect(getByText(locale.components.journalComparison.list.empty)).toBeInTheDocument();

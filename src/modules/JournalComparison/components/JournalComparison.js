@@ -32,7 +32,7 @@ export const JournalComparison = () => {
                                             color="primary"
                                             onClick={handleReturnToResultsClick}
                                             id="return-to-search-results-button"
-                                            data-testid="return-to-search-results"
+                                            data-testid="return-to-search-results-button"
                                         />
                                     </Grid>
                                 </Grid>
