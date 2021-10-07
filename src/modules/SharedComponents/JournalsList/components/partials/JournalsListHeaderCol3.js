@@ -11,7 +11,6 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
         <Grid
             container
             spacing={0}
-            id="journal-list-header-1"
             alignItems="flex-end"
             style={{ width: 45, height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
         >

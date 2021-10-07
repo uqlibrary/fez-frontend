@@ -10,7 +10,7 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
         <Grid
             container
             spacing={0}
-            id={`journal-list-data-${index}`}
+            id={`journal-list-data-${index}-full`}
             alignItems="center"
             style={{ borderBottom: '1px dashed #e6e6e6' }}
         >
