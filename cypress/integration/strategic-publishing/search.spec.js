@@ -18,8 +18,8 @@ context('Strategic Publishing - Search', () => {
         cy.get('button[data-testid="journal-search-favourite-journals-button"]').should('not.have.attr', 'disabled');
 
         cy.checkA11y('div.StandardPage ', {
-            reportName: 'Masquerade',
-            scopeName: 'Content',
+            reportName: 'Search Journals',
+            scopeName: 'Page render',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
         });
     });
@@ -34,8 +34,8 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-keyword-list-subjects & field of research-no-matches"]').should('exist');
 
         cy.checkA11y('div.StandardPage ', {
-            reportName: 'Masquerade',
-            scopeName: 'Content',
+            reportName: 'Search Journals',
+            scopeName: 'Keywords',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
         });
     });
@@ -60,8 +60,8 @@ context('Strategic Publishing - Search', () => {
             .should('have.length', 22);
 
         cy.checkA11y('div.StandardPage ', {
-            reportName: 'Masquerade',
-            scopeName: 'Content',
+            reportName: 'Search Journals',
+            scopeName: 'Keywords',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
         });
         cy.get('[data-testid="clear-journal-search-keywords"]').click();
@@ -102,9 +102,28 @@ context('Strategic Publishing - Search', () => {
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
         cy.checkA11y('div.StandardPage ', {
-            reportName: 'Masquerade',
-            scopeName: 'Content',
+            reportName: 'Search Journals',
+            scopeName: 'Keywords chips',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
         });
+    });
+
+    it('FAQ', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="search-journals-faq"]', { timeout: 1000 }).should('be.visible');
+        cy.get('[data-testid="faq-summary-0"]').click();
+
+        cy.checkA11y(
+            '[data-testid="search-journals-faq"]',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Search Journals',
+                scopeName: 'FAQ',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
     });
 });
