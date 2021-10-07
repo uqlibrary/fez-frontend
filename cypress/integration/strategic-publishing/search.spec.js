@@ -17,7 +17,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
         cy.get('button[data-testid="journal-search-favourite-journals-button"]').should('not.have.attr', 'disabled');
 
-        cy.checkA11y('div.StandardPage ', {
+        cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
             scopeName: 'Page render',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
@@ -33,7 +33,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-keyword-list-keyword matches-no-matches"]').should('exist');
         cy.get('[data-testid="journal-search-keyword-list-subjects & field of research-no-matches"]').should('exist');
 
-        cy.checkA11y('div.StandardPage ', {
+        cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
             scopeName: 'Keywords',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
@@ -59,7 +59,7 @@ context('Strategic Publishing - Search', () => {
             .find('span')
             .should('have.length', 22);
 
-        cy.checkA11y('div.StandardPage ', {
+        cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
             scopeName: 'Keywords',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
@@ -101,7 +101,7 @@ context('Strategic Publishing - Search', () => {
             .click();
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
-        cy.checkA11y('div.StandardPage ', {
+        cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
             scopeName: 'Keywords chips',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],

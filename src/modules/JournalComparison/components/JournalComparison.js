@@ -8,12 +8,14 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
 import { useHistory, useLocation } from 'react-router';
+import { pathConfig } from '../../../config';
 
 export const JournalComparison = () => {
     const history = useHistory();
     const location = useLocation();
     const txt = locale.components.journalComparison;
-    const handleReturnToResultsClick = () => history.goBack();
+    const handleReturnToResultsClick = () =>
+        location.state?.journals ? history.goBack() : history.push(pathConfig.journals.search);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>

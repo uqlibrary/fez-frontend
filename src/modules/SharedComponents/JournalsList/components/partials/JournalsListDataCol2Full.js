@@ -20,7 +20,6 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
                     <Grid
                         key={index}
                         item
-                        id={`journal-list-header-title-${index}`}
                         style={{
                             height: 43,
                             overflow: 'hidden',

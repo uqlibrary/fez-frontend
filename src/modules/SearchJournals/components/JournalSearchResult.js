@@ -93,8 +93,8 @@ export const JournalSearchResult = () => {
                                     children={txt.journalSearchInterface.buttons.compareJournals.title}
                                     aria-label={txt.journalSearchInterface.buttons.compareJournals.aria}
                                     color="primary"
-                                    id="journal-compare-button"
-                                    data-testid="journal-compare-button"
+                                    id="journal-comparison-button"
+                                    data-testid="journal-comparison-button"
                                     fullWidth
                                 />
                             </Grid>
