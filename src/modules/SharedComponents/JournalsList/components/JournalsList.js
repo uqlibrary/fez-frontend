@@ -38,7 +38,7 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
                 {/* Header */}
-                <JournalsListHeaderCol1 />
+                <JournalsListHeaderCol1 isSelectable={isSelectable} />
                 {/* Data */}
                 {journals &&
                     journals.length > 0 &&

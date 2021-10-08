@@ -36,14 +36,18 @@ export const FAQ = ({}) => {
     };
 
     return (
-        <StandardRighthandCard title={txt.title} help={txt.help}>
+        <StandardRighthandCard title={txt.title} help={txt.help} testId="search-journals-faq">
             {txt.items.map((faq, index) => (
                 <Accordion
                     expanded={expanded === `faq-${index}`}
                     onChange={handleChange(`faq-${index}`)}
                     key={`faq-${index}`}
                 >
-                    <AccordionSummary aria-controls={`faq-content-${index}`} id={`faq-summary-${index}`}>
+                    <AccordionSummary
+                        aria-controls={`faq-content-${index}`}
+                        id={`faq-summary-${index}`}
+                        data-testid={`faq-summary-${index}`}
+                    >
                         <Typography>
                             <a>{faq.question}</a>
                         </Typography>

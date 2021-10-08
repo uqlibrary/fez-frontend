@@ -7,7 +7,12 @@ import PropTypes from 'prop-types';
 
 const JournalsListDataCol2Min = ({ journal, index }) => {
     return (
-        <Grid container spacing={0} id={`journal-list-data-${index}`} style={{ borderBottom: '1px dashed #e6e6e6' }}>
+        <Grid
+            container
+            spacing={0}
+            id={`journal-list-data-${index}-min`}
+            style={{ borderBottom: '1px dashed #e6e6e6' }}
+        >
             {JournalFieldsMap.slice(1)
                 .filter(item => item.compactView)
                 .map((item, index) => {
@@ -16,7 +21,6 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                         <Grid
                             key={index}
                             item
-                            id={`journal-list-header-title-${index}`}
                             style={{
                                 width: item.size,
                                 height: 43,

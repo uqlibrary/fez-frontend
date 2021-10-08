@@ -8,7 +8,7 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
         <Grid
             item
             key={journal.key}
-            id={`journal-list-header-${journal.key}`}
+            id={`journal-list-header-full-${journal.key}`}
             style={{ width: journal.size, height: 34 }}
         >
             <InputLabel

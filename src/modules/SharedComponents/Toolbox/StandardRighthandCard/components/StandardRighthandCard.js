@@ -21,6 +21,7 @@ export class StandardRighthandCard extends React.Component {
         classes: PropTypes.object.isRequired,
         children: PropTypes.any,
         title: PropTypes.string,
+        testId: PropTypes.string,
         help: PropTypes.shape({
             title: PropTypes.string,
             text: PropTypes.any,
@@ -29,9 +30,9 @@ export class StandardRighthandCard extends React.Component {
     };
 
     render() {
-        const { classes, title, children, help } = this.props;
+        const { classes, title, children, help, testId } = this.props;
         return (
-            <Grid container>
+            <Grid container {...(testId ? { 'data-testid': testId } : {})}>
                 <Grid item xs className={classes.title}>
                     {title && (
                         <Typography variant={'h6'} color={'primary'}>

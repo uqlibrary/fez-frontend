@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
+import { locale } from '../../../locale';
 
 export const JournalComparisonList = ({ journals }) => {
+    const txt = locale.components.journalComparison.list;
     if (!journals || (!!journals && journals.length === 0)) {
-        return 'No journals found';
+        return txt.empty;
     }
     return (
         <Grid container spacing={2}>
@@ -19,7 +21,7 @@ export const JournalComparisonList = ({ journals }) => {
 };
 
 JournalComparisonList.propTypes = {
-    journals: PropTypes.array.isRequired,
+    journals: PropTypes.array,
 };
 
 export default React.memo(JournalComparisonList);
