@@ -12,16 +12,16 @@ import locale from 'locale/components';
 export const FavouriteJournalsList = () => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
-    const journalsListLoading = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoading);
-    const journalsList = useSelector(state => state.get('favouriteJournalsReducer').journalsList);
-    const journalsListLoaded = useSelector(state => state.get('favouriteJournalsReducer').journalsListLoaded);
-    const journalsListError = useSelector(state => state.get('favouriteJournalsReducer').journalsListError);
+    const journals = useSelector(state => state.get('favouriteJournalsReducer').items);
+    const loading = useSelector(state => state.get('favouriteJournalsReducer').loading);
+    const loaded = useSelector(state => state.get('favouriteJournalsReducer').loaded);
+    const error = useSelector(state => state.get('favouriteJournalsReducer').error);
 
-    if (!journalsListLoaded) {
+    if (!loaded) {
         return <div />;
     }
 
-    if (!journalsList || (!!journalsList && journalsList.length === 0)) {
+    if (!journals || (!!journals && journals.length === 0)) {
         return (
             <Grid item xs={12}>
                 No journals found
@@ -31,14 +31,14 @@ export const FavouriteJournalsList = () => {
 
     return (
         <>
-            {!!journalsListLoading && (
+            {!!loading && (
                 <Grid item xs={12}>
                     <InlineLoader message={txt.loadingMessage} />
                 </Grid>
             )}
-            {!!journalsListError && (
+            {!!error && (
                 <Grid item xs={12}>
-                    <Alert {...journalsListError} />
+                    <Alert {...error} />
                 </Grid>
             )}
             <Grid item xs={12}>
@@ -50,7 +50,7 @@ export const FavouriteJournalsList = () => {
                     pageSize={10}
                 />
             </Grid>
-            {journalsList.length > 20 && (
+            {journals.length > 20 && (
                 <Grid item xs={12}>
                     <PublicationsListPaging
                         pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
@@ -58,7 +58,7 @@ export const FavouriteJournalsList = () => {
                 </Grid>
             )}
             <Grid item xs={12}>
-                <JournalsList journals={journalsList.data} isSelectable={false} />
+                <JournalsList journals={journals.data} isSelectable={false} />
             </Grid>
         </>
     );

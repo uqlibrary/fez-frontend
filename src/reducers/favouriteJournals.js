@@ -1,29 +1,68 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    journalsListLoading: false,
-    journalsList: null,
-    journalsListLoaded: false,
-    journalsListError: false,
+    items: null,
+    loading: false,
+    loaded: false,
+    error: false,
+    favourites: {},
 };
 
 const handlers = {
     [actions.FAVOURITE_JOURNALS_LOADING]: state => ({
         ...state,
-        journalsListLoading: true,
+        loading: true,
     }),
     [actions.FAVOURITE_JOURNALS_LOADED]: (state, action) => ({
         ...state,
-        journalsListLoading: false,
-        journalsListLoaded: true,
-        journalsList: action.payload,
+        loading: false,
+        loaded: true,
+        items: action.payload,
     }),
     [actions.FAVOURITE_JOURNALS_FAILED]: (state, action) => ({
         ...state,
-        journalsListLoading: false,
-        journalsListLoaded: true,
-        journalsListError: action.payload,
-        journalsList: null,
+        loading: false,
+        loaded: true,
+        error: action.payload,
+        items: null,
+    }),
+    [actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING]: (state, action) => ({
+        ...state,
+        favourites: {
+            ...state.favourites,
+            ...{
+                [action.payload.id]: {
+                    isFavourite: action.payload.isFavourite,
+                    requesting: true,
+                },
+            },
+        },
+    }),
+    [actions.FAVOURITE_JOURNALS_TOGGLE_SUCCESS]: (state, action) => ({
+        ...state,
+        favourites: {
+            ...state.favourites,
+            ...{
+                [action.payload.id]: {
+                    isFavourite: action.payload.isFavourite,
+                    requesting: false,
+                    success: true,
+                },
+            },
+        },
+    }),
+    [actions.FAVOURITE_JOURNALS_TOGGLE_FAILED]: (state, action) => ({
+        ...state,
+        favourites: {
+            ...state.favourites,
+            ...{
+                [action.payload.id]: {
+                    isFavourite: action.payload.isFavourite,
+                    requesting: false,
+                    success: false,
+                },
+            },
+        },
     }),
 };
 

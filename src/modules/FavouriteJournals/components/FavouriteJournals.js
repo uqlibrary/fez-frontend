@@ -8,16 +8,17 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
-import { favouriteJournals } from '../../../actions';
+import { retrieveFavouriteJournals } from '../../../actions';
 import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
+import { pathConfig } from '../../../config';
 
 export const FavouriteJournals = () => {
     const history = useHistory();
     const dispatch = useDispatch();
     const txt = locale.components.favouriteJournals;
-    const handleReturnToSearchClick = () => history.goBack();
+    const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
     React.useEffect(() => {
-        dispatch(favouriteJournals());
+        dispatch(retrieveFavouriteJournals());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
@@ -37,8 +38,8 @@ export const FavouriteJournals = () => {
                                             type="submit"
                                             color="primary"
                                             onClick={handleReturnToSearchClick}
-                                            id="journal-search-button"
-                                            data-testid="journal-search-button"
+                                            id="return-to-search-results-button"
+                                            data-testid="return-to-search-results-button"
                                         />
                                     </Grid>
                                 </Grid>

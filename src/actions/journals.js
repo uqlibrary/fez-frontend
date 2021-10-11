@@ -102,12 +102,26 @@ export const searchJournals = searchQuery => async dispatch => {
     }
 };
 
-export const favouriteJournals = () => async dispatch => {
+export const retrieveFavouriteJournals = () => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     try {
         const response = await get(JOURNAL_FAVOURITES_API());
         dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
     } catch (e) {
         dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: e });
+    }
+};
+
+export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
+    dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING, payload: { id } });
+    try {
+        if (isFavourite) {
+            await destroy(JOURNAL_FAVOURITES_API(id));
+        } else {
+            await post(JOURNAL_FAVOURITES_API(), { fvj_jid: id });
+        }
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_SUCCESS, payload: { id, isFavourite: !isFavourite } });
+    } catch (e) {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_FAILED, payload: { id, e } });
     }
 };

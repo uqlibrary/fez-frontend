@@ -1,18 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
-import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
+import JournalsListFavouriteHeader from './partials/JournalsListFavouriteHeader';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
 import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
-import JournalsListDataCol3 from './partials/JournalsListDataCol3';
+import JournalsListFavouriteCol from './partials/JournalsListFavouriteCol';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 const JournalsList = ({ journals, onChange, isSelectable = true }) => {
+    const favourites = useSelector(state => state.get('favouriteJournalsReducer').favourites);
+
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -91,12 +94,23 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
             </Grid>
             <Grid item xs={'auto'}>
                 {/* Header */}
-                <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
+                <JournalsListFavouriteHeader toggleView={toggleView} minimalView={!!minimalView} />
                 {/* Data */}
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
-                        return <JournalsListDataCol3 key={index} index={index} journal={item} />;
+                        let isFavourite = item.fez_favourite_journals?.length > 0 ? true : false;
+                        if (item.jnl_jid in favourites) {
+                            isFavourite = favourites[item.jnl_jid].isFavourite;
+                        }
+                        return (
+                            <JournalsListFavouriteCol
+                                key={index}
+                                journal={item}
+                                disabled={favourites[item.jnl_jid]?.requesting ?? false}
+                                isFavourite={isFavourite}
+                            />
+                        );
                     })}
             </Grid>
         </Grid>
