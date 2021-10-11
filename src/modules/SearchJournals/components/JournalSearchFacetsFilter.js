@@ -143,6 +143,7 @@ export const JournalSearchFacetsFilter = ({
                                 key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
                                 title={item.title}
                                 disabled={disabled}
+                                isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
                                 nestedItems={
                                     <JournalFacetFilterNestedListItemsList
                                         facetCategory={item}

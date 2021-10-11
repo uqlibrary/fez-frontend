@@ -152,6 +152,7 @@ export const JournalSearchResult = ({ onSearch }) => {
                         activeFacets={journalSearchQueryParams.activeFacets}
                         facetsData={journalsList.filters.facets}
                         onFacetsChanged={facetsChanged}
+                        disabled={!journalsListLoaded}
                     />
                     <FAQ />
                 </Grid>
