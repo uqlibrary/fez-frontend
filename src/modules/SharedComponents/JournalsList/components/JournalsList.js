@@ -14,7 +14,7 @@ import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 
 const JournalsList = ({ journals, onChange, isSelectable = true }) => {
-    const favourites = useSelector(state => state.get('favouriteJournalsReducer').favourites);
+    const favourites = useSelector(state => state?.get?.('favouriteJournalsReducer').favourites) || {};
 
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {

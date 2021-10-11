@@ -1,11 +1,18 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 import { render } from 'test-utils';
 import { locale } from '../../../locale';
 import * as mockData from 'mock/data/testing/journals/journalComparison';
 import { JournalComparisonList } from './JournalComparisonList';
 
 function setup(testProps = {}) {
-    return render(<JournalComparisonList {...testProps} />);
+    const mockStore = configureStore();
+    return render(
+        <Provider store={mockStore({})}>
+            <JournalComparisonList {...testProps} />
+        </Provider>,
+    );
 }
 
 describe('JournalComparisonList', () => {
