@@ -114,6 +114,10 @@ export const retrieveFavouriteJournals = () => async dispatch => {
 
 export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING, payload: { id } });
+    // add a delay to encourage minimizing request load
+    await new Promise(resolve => {
+        setTimeout(resolve, 200);
+    });
     try {
         if (isFavourite) {
             await destroy(JOURNAL_FAVOURITES_API(id));

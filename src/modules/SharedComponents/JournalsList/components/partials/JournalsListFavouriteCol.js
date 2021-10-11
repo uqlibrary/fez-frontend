@@ -13,6 +13,10 @@ const FavoriteIcon = styled(DisabledIcon)(({ theme }) => ({
     color: theme.palette.primary.main,
 }));
 
+// eslint-disable-next-line react/prop-types
+const ConditionalTooltip = ({ disabled, children, ...props }) =>
+    !disabled ? <Tooltip {...props}>{children}</Tooltip> : children;
+
 const JournalsListFavouriteCol = ({ journal, isFavourite = false, disabled = false }) => {
     const dispatch = useDispatch();
     const handleToggleFavouriteClick = () => {
@@ -35,12 +39,10 @@ const JournalsListFavouriteCol = ({ journal, isFavourite = false, disabled = fal
                     borderLeft: '1px dashed #e6e6e6',
                 }}
             >
-                <Tooltip
+                <ConditionalTooltip
                     title={`Click to add - ${journal.jnl_title} - to your favourites`}
                     placement="left"
-                    disableFocusListener={disabled}
-                    disableHoverListener={disabled}
-                    disableTouchListener={disabled}
+                    disabled={disabled}
                 >
                     <IconButton
                         style={{ padding: 4, marginLeft: 6, marginTop: 2 }}
@@ -52,7 +54,7 @@ const JournalsListFavouriteCol = ({ journal, isFavourite = false, disabled = fal
                         {disabled && <DisabledIcon />}
                         {!disabled && isFavourite && <FavoriteIcon />}
                     </IconButton>
-                </Tooltip>
+                </ConditionalTooltip>
             </Grid>
         </Grid>
     );
