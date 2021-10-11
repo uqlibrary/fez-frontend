@@ -107,7 +107,7 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
                             <JournalsListFavouriteCol
                                 key={index}
                                 journal={item}
-                                disabled={favourites[item.jnl_jid]?.requesting ?? false}
+                                disabled={favourites[item.jnl_jid]?.loading ?? false}
                                 isFavourite={isFavourite}
                             />
                         );

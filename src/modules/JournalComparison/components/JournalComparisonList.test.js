@@ -6,19 +6,19 @@ import { locale } from '../../../locale';
 import * as mockData from 'mock/data/testing/journals/journalComparison';
 import { JournalComparisonList } from './JournalComparisonList';
 
-function setup(testProps = {}) {
+const setup = (testProps = {}) => {
     const mockStore = configureStore();
     return render(
         <Provider store={mockStore({})}>
             <JournalComparisonList {...testProps} />
         </Provider>,
     );
-}
+};
 
 describe('JournalComparisonList', () => {
     it('should render when there are no journals to compare', () => {
         const { getByText } = setup();
-        expect(getByText(locale.components.journalComparison.list.empty)).toBeInTheDocument();
+        expect(getByText(locale.components.journalComparison.journalComparisonList.empty)).toBeInTheDocument();
     });
     it('should render when there are journals to compare', async () => {
         const { getByText } = setup({ journals: mockData.journals });

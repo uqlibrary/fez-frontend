@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -9,6 +8,7 @@ import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
 import { useHistory, useLocation } from 'react-router';
 import { pathConfig } from '../../../config';
+import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 
 export const JournalComparison = () => {
     const history = useHistory();
@@ -26,15 +26,10 @@ export const JournalComparison = () => {
                                 <JournalComparisonList journals={location.state?.journals} />
                                 <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
                                     <Grid item xs="auto">
-                                        <Button
-                                            variant="contained"
+                                        <BackToSearchButton
                                             children={txt.buttons.returnToSearch.title}
                                             aria-label={txt.buttons.returnToSearch.aria}
-                                            type="submit"
-                                            color="primary"
                                             onClick={handleReturnToResultsClick}
-                                            id="return-to-search-results-button"
-                                            data-testid="return-to-search-results-button"
                                         />
                                     </Grid>
                                 </Grid>

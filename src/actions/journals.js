@@ -113,7 +113,7 @@ export const retrieveFavouriteJournals = () => async dispatch => {
 };
 
 export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING, payload: { id } });
+    dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADING, payload: { id } });
     // add a rand delay of 200ms max to avoid requests hitting the api at the exact same time
     const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     await new Promise(resolve => {
@@ -125,8 +125,8 @@ export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
         } else {
             await post(JOURNAL_FAVOURITES_API(), { fvj_jid: id });
         }
-        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_SUCCESS, payload: { id, isFavourite: !isFavourite } });
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADED, payload: { id, isFavourite: !isFavourite } });
     } catch (e) {
-        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_FAILED, payload: { id, e } });
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_FAILED, payload: { id, isFavourite: isFavourite } });
     }
 };

@@ -7,7 +7,7 @@ import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import { locale } from '../../../locale';
 
 export const JournalComparisonList = ({ journals }) => {
-    const txt = locale.components.journalComparison.list;
+    const txt = locale.components.journalComparison.journalComparisonList;
     if (!journals || (!!journals && journals.length === 0)) {
         return txt.empty;
     }

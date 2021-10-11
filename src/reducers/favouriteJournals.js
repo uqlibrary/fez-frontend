@@ -1,10 +1,9 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    items: null,
+    response: null,
     loading: false,
-    loaded: false,
-    error: false,
+    error: null,
     favourites: {},
 };
 
@@ -16,37 +15,33 @@ const handlers = {
     [actions.FAVOURITE_JOURNALS_LOADED]: (state, action) => ({
         ...state,
         loading: false,
-        loaded: true,
-        items: action.payload,
+        response: action.payload,
     }),
     [actions.FAVOURITE_JOURNALS_FAILED]: (state, action) => ({
         ...state,
         loading: false,
-        loaded: true,
         error: action.payload,
-        items: null,
+        response: null,
     }),
-    [actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_TOGGLE_LOADING]: (state, action) => ({
         ...state,
         favourites: {
             ...state.favourites,
             ...{
                 [action.payload.id]: {
-                    isFavourite: action.payload.isFavourite,
-                    requesting: true,
+                    loading: true,
                 },
             },
         },
     }),
-    [actions.FAVOURITE_JOURNALS_TOGGLE_SUCCESS]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_TOGGLE_LOADED]: (state, action) => ({
         ...state,
         favourites: {
             ...state.favourites,
             ...{
                 [action.payload.id]: {
                     isFavourite: action.payload.isFavourite,
-                    requesting: false,
-                    success: true,
+                    loading: false,
                 },
             },
         },
@@ -58,8 +53,7 @@ const handlers = {
             ...{
                 [action.payload.id]: {
                     isFavourite: action.payload.isFavourite,
-                    requesting: false,
-                    success: false,
+                    loading: false,
                 },
             },
         },

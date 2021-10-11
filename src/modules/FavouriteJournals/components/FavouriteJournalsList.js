@@ -1,6 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -9,38 +9,39 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
-export const FavouriteJournalsList = () => {
+export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
-    const journals = useSelector(state => state.get('favouriteJournalsReducer').items);
-    const loading = useSelector(state => state.get('favouriteJournalsReducer').loading);
-    const loaded = useSelector(state => state.get('favouriteJournalsReducer').loaded);
-    const error = useSelector(state => state.get('favouriteJournalsReducer').error);
-
-    if (!loaded) {
-        return <div />;
+    if (!loading && !error && total === undefined && !journals === undefined) {
+        return <div id="favourite-journals-list-nothing" />;
     }
 
-    if (!journals || (!!journals && journals.length === 0)) {
+    if (loading) {
         return (
-            <Grid item xs={12}>
-                No journals found
+            <Grid id="favourite-journals-list-loading" item xs={12}>
+                <InlineLoader message={txt.loading} />
+            </Grid>
+        );
+    }
+
+    if (error) {
+        return (
+            <Grid id="favourite-journals-list-error" item xs={12}>
+                <Alert {...error} />
+            </Grid>
+        );
+    }
+
+    if (!total && !journals?.length) {
+        return (
+            <Grid id="favourite-journals-list-empty" item xs={12}>
+                {txt.empty}
             </Grid>
         );
     }
 
     return (
         <>
-            {!!loading && (
-                <Grid item xs={12}>
-                    <InlineLoader message={txt.loadingMessage} />
-                </Grid>
-            )}
-            {!!error && (
-                <Grid item xs={12}>
-                    <Alert {...error} />
-                </Grid>
-            )}
             <Grid item xs={12}>
                 <PublicationsListSorting
                     canUseExport
@@ -50,7 +51,7 @@ export const FavouriteJournalsList = () => {
                     pageSize={10}
                 />
             </Grid>
-            {journals.length > 20 && (
+            {total > 20 && (
                 <Grid item xs={12}>
                     <PublicationsListPaging
                         pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
@@ -58,10 +59,17 @@ export const FavouriteJournalsList = () => {
                 </Grid>
             )}
             <Grid item xs={12}>
-                <JournalsList journals={journals.data} isSelectable={false} />
+                <JournalsList journals={journals} isSelectable={false} />
             </Grid>
         </>
     );
+};
+
+FavouriteJournalsList.propTypes = {
+    error: PropTypes.object,
+    total: PropTypes.number,
+    journals: PropTypes.array,
+    loading: PropTypes.bool,
 };
 
 export default React.memo(FavouriteJournalsList);

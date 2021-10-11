@@ -3628,11 +3628,8 @@ export default {
                 },
             },
             favouriteJournalsList: {
-                loadingMessage: 'Loading journals list',
-                noResultsFound: {
-                    title: 'No journals found',
-                    text: <div>You haven't added any journals to your favourite list yet.</div>,
-                },
+                loading: 'Loading favourite journal list',
+                empty: "You haven't added any journals to your favourite list yet.",
             },
         },
         journalComparison: {
@@ -3643,7 +3640,7 @@ export default {
                     aria: 'Return to search results',
                 },
             },
-            list: {
+            journalComparisonList: {
                 empty: 'No journals were selected for comparison',
             },
         },

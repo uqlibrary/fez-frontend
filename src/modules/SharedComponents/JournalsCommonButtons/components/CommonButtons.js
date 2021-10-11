@@ -6,7 +6,7 @@ import locale from '../../../../locale/components';
 import { pathConfig } from '../../../../config';
 import { useHistory } from 'react-router';
 
-const JournalsCommonButtons = () => {
+const CommonButtons = () => {
     const history = useHistory();
     const txt = locale.components.journalSearch;
     const handleFavouriteJournalsClick = () =>
@@ -38,4 +38,4 @@ const JournalsCommonButtons = () => {
     );
 };
 
-export default React.memo(JournalsCommonButtons);
+export default React.memo(CommonButtons);

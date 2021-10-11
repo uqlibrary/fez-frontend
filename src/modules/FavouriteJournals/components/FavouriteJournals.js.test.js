@@ -1,21 +1,21 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
-import { JournalComparison } from '../index';
 import Immutable from 'immutable';
+import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import { createMemoryHistory } from 'history';
 import { pathConfig } from '../../../config';
+import { FavouriteJournals } from '../index';
 
 function setup(testProps = Immutable.Map({})) {
     return render(
         <WithRouter history={testProps.history}>
             <WithReduxStore>
-                <JournalComparison />
+                <FavouriteJournals />
             </WithReduxStore>
         </WithRouter>,
     );
 }
 
-describe('JournalComparison', () => {
+describe('FavouriteJournals', () => {
     it('should navigate to journal search page', () => {
         const history = createMemoryHistory({ initialEntries: [pathConfig.journals.compare] });
         history.push({
