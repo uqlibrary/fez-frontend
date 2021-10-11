@@ -12,7 +12,7 @@ import locale from 'locale/components';
 export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
 
-    if (!loading && !error && total === undefined && !journals === undefined) {
+    if (!loading && !error && total === undefined && journals === undefined) {
         return <div id="favourite-journals-list-nothing" />;
     }
 

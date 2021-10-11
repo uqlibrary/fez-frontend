@@ -13,7 +13,7 @@ describe('JournalComparisonList', () => {
         expect(wrapper.find(JournalsList).length).toBe(0);
         expect(wrapper.text()).toContain(locale.components.journalComparison.journalComparisonList.empty);
     });
-    it('should render when there are journals to compare', async () => {
+    it('should render when there are journals to compare', () => {
         const wrapper = setup({ journals: mockData.journals });
         expect(wrapper.find(JournalsList).length).toBe(1);
     });

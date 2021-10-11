@@ -18,7 +18,7 @@ describe('FavouriteJournalsList', () => {
         expect(queryByTestId('favourite-journals-list-empty')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-error')).not.toBeInTheDocument();
     });
-    it('should display loading message', async () => {
+    it('should display loading message', () => {
         const { getByText, queryByTestId } = setup({ loading: true });
         expect(queryByTestId('favourite-journals-list-nothing')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-loading')).toBeInTheDocument();
@@ -34,19 +34,19 @@ describe('FavouriteJournalsList', () => {
         expect(queryByTestId('favourite-journals-list-error')).not.toBeInTheDocument();
         expect(getByText(locale.components.favouriteJournals.favouriteJournalsList.empty)).toBeInTheDocument();
     });
-    it('should display loading error', async () => {
+    it('should display loading error', () => {
         const { queryByTestId } = setup({ loaded: true, error: {} });
         expect(queryByTestId('favourite-journals-list-nothing')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-loading')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-empty')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-error')).toBeInTheDocument();
     });
-    it('should render when there are fav journals', async () => {
+    it('should render when there are fav journals', () => {
         const wrapper = getElement(FavouriteJournalsList, { loaded: true, journals: mockData.journals });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
     });
-    it('should render when there are fav journals with pagination', async () => {
+    it('should render when there are fav journals with pagination', () => {
         const wrapper = getElement(FavouriteJournalsList, { loaded: true, journals: mockData.journals, total: 30 });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
