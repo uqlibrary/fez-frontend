@@ -114,9 +114,10 @@ export const retrieveFavouriteJournals = () => async dispatch => {
 
 export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_REQUESTING, payload: { id } });
-    // add a delay to encourage minimizing request load
+    // add a rand delay of 200ms max to avoid requests hitting the api at the exact same time
+    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     await new Promise(resolve => {
-        setTimeout(resolve, 200);
+        setTimeout(resolve, 100 + random(50, 100));
     });
     try {
         if (isFavourite) {
