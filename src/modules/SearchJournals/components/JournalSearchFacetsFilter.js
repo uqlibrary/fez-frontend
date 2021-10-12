@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
-import locale from '../../../locale/components';
+import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
@@ -80,13 +80,14 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
         : parseInt(activeFacetsFilters[category], 10) === value;
 };
 
-const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges, showFavrouritedOnly, excludeFacetsList) =>
+const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges, showFavouritedOnly, excludeFacetsList) =>
     Object.keys(activeFacetsFilters).filter(filter => !excludeFacetsList.includes(filter)).length > 0 ||
     Object.keys(activeFacetsRanges).length > 0 ||
-    !!showFavrouritedOnly;
+    !!showFavouritedOnly;
 
 export const JournalSearchFacetsFilter = ({
     facetsData,
+    activeFacets,
     excludeFacetsList,
     renameFacetsList,
     lookupFacetsList,
@@ -94,9 +95,9 @@ export const JournalSearchFacetsFilter = ({
     onFacetsChanged,
 }) => {
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
-    const [activeFacetsFilters, setActiveFacetsFilters] = useState({});
-    const [activeFacetsRanges] = useState({});
-    const [showFavouritedOnly] = useState(false);
+    const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
+    const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
+    const [showFavouritedOnly] = useState(!!activeFacets.showFavouritedOnly);
     const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
     useEffect(() => {
@@ -132,7 +133,7 @@ export const JournalSearchFacetsFilter = ({
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
-        <StandardRighthandCard title={locale.components.facetsFilter.title} help={locale.components.facetsFilter.help}>
+        <StandardRighthandCard title={locale.components.journalSearch.journalFacetsFilter.title}>
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>
                     {facetsToDisplay.map(item => {
@@ -142,6 +143,7 @@ export const JournalSearchFacetsFilter = ({
                                 key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
                                 title={item.title}
                                 disabled={disabled}
+                                isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
                                 nestedItems={
                                     <JournalFacetFilterNestedListItemsList
                                         facetCategory={item}

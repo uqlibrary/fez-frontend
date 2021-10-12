@@ -3723,6 +3723,29 @@ export default {
                     text: <div>We were unable to find any results.</div>,
                 },
             },
+            sorting: {
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'published_date', label: 'Published date' },
+                    { value: 'score', label: 'Search relevance' },
+                    { value: 'title', label: 'Title' },
+                    { value: 'created_date', label: 'Created date' },
+                    { value: 'updated_date', label: 'Updated date' },
+                    { value: 'altmetric_score', label: 'Altmetric score' },
+                    { value: 'scopus_citation_count', label: 'Scopus citation count' },
+                    { value: 'thomson_citation_count', label: 'Web of Science citation count' },
+                ],
+            },
+            journalFacetsFilter: {
+                title: 'Refine results',
+                resetButtonText: 'Reset',
+                favoriteFilter: {
+                    displayTitle: 'Favourite Journals',
+                    activeFilter: 'Show journals favourited',
+                },
+                renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
+            },
         },
     },
 };

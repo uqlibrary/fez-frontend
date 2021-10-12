@@ -19,7 +19,6 @@ export const SearchJournals = () => {
     const history = useHistory();
     const { journalSearchQueryParams, locationKey } = useJournalSearchQueryParams();
     const { selectedKeywords, setSelectedKeywords } = useSelectedKeywords(journalSearchQueryParams.keywords);
-
     /**
      * Handle search function on any type of update in search query
      *  -   Should handle keywords change
@@ -83,7 +82,7 @@ export const SearchJournals = () => {
                     />
                 </Grid>
                 <Grid item xs>
-                    <JournalSearchResult key={`journal-search-result-${locationKey}`} />
+                    <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
                 </Grid>
             </Grid>
         </StandardPage>
