@@ -99,7 +99,7 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
-                        let isFavourite = item.fez_favourite_journals?.length > 0 ? true : false;
+                        let isFavourite = item.fez_favourite_journals === true;
                         if (item.jnl_jid in favourites) {
                             isFavourite = favourites[item.jnl_jid].isFavourite;
                         }

@@ -11,6 +11,7 @@ import locale from 'locale/components';
 
 export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
+    journals?.map?.(item => (item.fez_favourite_journals = true));
 
     if (!loading && !error && total !== 0 && !journals) {
         return <div id="favourite-journals-list-nothing" />;
