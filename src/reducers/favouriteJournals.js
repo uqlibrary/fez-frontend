@@ -65,7 +65,5 @@ export default function favouriteJournalsReducer(state = initialState, action) {
     if (!handler) {
         return state;
     }
-    const newstate = handler(state, action);
-    console.log(newstate);
-    return newstate;
+    return handler(state, action);
 }

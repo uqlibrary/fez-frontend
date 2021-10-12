@@ -3628,7 +3628,7 @@ export default {
                 },
             },
             favouriteJournalsList: {
-                loading: 'Loading favourite journal list',
+                loading: 'Loading ...',
                 empty: "You haven't added any journals to your favourite list yet.",
             },
         },
