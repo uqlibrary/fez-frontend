@@ -3745,7 +3745,7 @@ export default {
                     displayTitle: 'Favourite Journals',
                     activeFilter: 'Show journals favourited',
                 },
-                renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
+                renameFacetsList: {},
             },
         },
     },

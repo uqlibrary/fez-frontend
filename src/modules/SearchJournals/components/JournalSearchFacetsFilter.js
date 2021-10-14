@@ -58,7 +58,7 @@ const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
             facetTitle: key,
             facets: rawFacet.buckets.map(item => {
                 return {
-                    title: item.key,
+                    title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
                     key: item.key,
                     count: item.doc_count,
                 };
