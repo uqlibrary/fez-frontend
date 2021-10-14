@@ -37,11 +37,11 @@ JournalFacetFilterNestedListItemsList.propTypes = {
 };
 
 const showFavouritedOnlyFacet = {
-    title: 'Show favourited only',
+    title: 'Favourited Journals',
     facetTitle: 'showFavouritedOnly',
     facets: [
         {
-            title: 'Show favourited only',
+            title: 'Show journals favourited',
             key: 'showFavouritedOnly',
         },
     ],
