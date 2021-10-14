@@ -32,7 +32,6 @@ export const SearchJournals = () => {
             pathname: pathConfig.journals.search,
             search: param(searchQuery),
         });
-        // run search journal action here.
     };
 
     /**
@@ -57,8 +56,6 @@ export const SearchJournals = () => {
     /**
      * Run this effect whenever url search query parameters are changed
      *  -   This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
-     * @todo    Handle facets, page, pageSize change
-     * @todo    Call journal search action
      */
     React.useEffect(() => {
         if (!!journalSearchQueryParams.keywords && Object.values(journalSearchQueryParams.keywords).length > 0) {

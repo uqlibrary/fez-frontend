@@ -13,11 +13,11 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
-import { pathConfig } from '../../../config';
+import { pathConfig } from 'config/pathConfig';
 import { useJournalSearchQueryParams, useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { FAQ } from './partials/FAQ';
-import { CommonButtons } from '../../SharedComponents/JournalsCommonButtons';
+import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchResult = ({ onSearch }) => {
     const history = useHistory();
@@ -51,7 +51,7 @@ export const JournalSearchResult = ({ onSearch }) => {
         updateSemaphore.current = true;
         onSearch({
             ...journalSearchQueryParams,
-            sort: sortBy,
+            sortBy: sortBy,
             sortDirection: sortDirection,
         });
     };
@@ -79,6 +79,14 @@ export const JournalSearchResult = ({ onSearch }) => {
     if (!journalsList || (!!journalsList && journalsList.length === 0)) {
         return 'No journals found';
     }
+
+    const pagingData = {
+        from: journalsList.from,
+        to: journalsList.to,
+        total: journalsList.total,
+        per_page: journalsList.per_page,
+        current_page: journalsList.current_page,
+    };
     return (
         <Grid container spacing={2}>
             <Grid item xs sm md={9}>
@@ -97,30 +105,37 @@ export const JournalSearchResult = ({ onSearch }) => {
                         <Grid item xs={12}>
                             <PublicationsListSorting
                                 canUseExport
-                                pagingData={{ total: 5 }}
-                                sortBy="created_date"
-                                sortDirection="Desc"
+                                pagingData={pagingData}
+                                sortingData={txt.sorting}
+                                sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
+                                sortDirection={
+                                    (journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'
+                                }
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
                                 pageSize={10}
                             />
                         </Grid>
-                        {journalsList.length > 20 && (
+                        {journalsList.data.length > 5 && (
                             <Grid item xs={12}>
                                 <PublicationsListPaging
-                                    pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
+                                    disabled={!journalsListLoaded}
+                                    loading={!journalsListLoaded}
+                                    pagingData={pagingData}
                                     onPageChanged={pageChanged}
+                                    pagingId="search-journals-paging-top"
                                 />
                             </Grid>
                         )}
                         <Grid item xs={12}>
                             <JournalsList journals={journalsList.data} onChange={handleSelectedJournalsChange} />
                         </Grid>
-                        {journalsList.length > 20 && (
+                        {journalsList.data.length > 5 && (
                             <Grid item xs={12}>
                                 <PublicationsListPaging
-                                    pagingData={{ from: 1, to: 20, total: 100, per_page: 20, current_page: 1 }}
+                                    pagingData={pagingData}
                                     onPageChanged={pageChanged}
+                                    pagingId="search-journals-paging-bottom"
                                 />
                             </Grid>
                         )}
