@@ -34,19 +34,23 @@ export const FavouriteJournals = () => {
                     <Grid container spacing={2}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <FavouriteJournalsList
-                                    total={response?.total}
-                                    journals={response?.data}
-                                    loading={loading}
-                                    error={error}
-                                />
-                                <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
-                                    <Grid item xs="auto">
-                                        <BackToSearchButton
-                                            children={txt.buttons.returnToSearch.title}
-                                            aria-label={txt.buttons.returnToSearch.aria}
-                                            onClick={handleReturnToSearchClick}
-                                        />
+                                <Grid container spacing={2}>
+                                    <FavouriteJournalsList
+                                        total={response?.total}
+                                        journals={response?.data}
+                                        loading={loading}
+                                        error={error}
+                                    />
+                                </Grid>
+                                <Grid style={{ paddingTop: 20 }} item xs={12}>
+                                    <Grid container spacing={2} justify="flex-end">
+                                        <Grid item xs="auto">
+                                            <BackToSearchButton
+                                                children={txt.buttons.returnToSearch.title}
+                                                aria-label={txt.buttons.returnToSearch.aria}
+                                                onClick={handleReturnToSearchClick}
+                                            />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </StandardCard>

@@ -3620,7 +3620,7 @@ export default {
             },
         },
         favouriteJournals: {
-            title: 'You Favourite Journals',
+            title: 'My Favourite Journals',
             buttons: {
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
@@ -3629,7 +3629,8 @@ export default {
             },
             favouriteJournalsList: {
                 loading: 'Loading ...',
-                empty: "You haven't added any journals to your favourite list yet.",
+                empty:
+                    "You haven't added any journals to this list. Click the heart icon on the results page to add a favourite.",
             },
         },
         journalComparison: {

@@ -50,6 +50,6 @@ describe('FavouriteJournalsList', () => {
         const wrapper = getElement(FavouriteJournalsList, { loaded: true, journals: mockData.journals, total: 30 });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
-        expect(wrapper.find(PublicationsListPaging).length).toBe(1);
+        expect(wrapper.find(PublicationsListPaging).length).toBe(2);
     });
 });

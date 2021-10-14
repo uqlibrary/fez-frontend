@@ -23,14 +23,18 @@ export const JournalComparison = () => {
                     <Grid container spacing={2}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <JournalComparisonList journals={location.state?.journals} />
-                                <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
-                                    <Grid item xs="auto">
-                                        <BackToSearchButton
-                                            children={txt.buttons.returnToSearch.title}
-                                            aria-label={txt.buttons.returnToSearch.aria}
-                                            onClick={handleReturnToResultsClick}
-                                        />
+                                <Grid container spacing={2}>
+                                    <JournalComparisonList journals={location.state?.journals} />
+                                </Grid>
+                                <Grid style={{ paddingTop: 20 }} item xs={12}>
+                                    <Grid container spacing={2} justify="flex-end">
+                                        <Grid item xs="auto">
+                                            <BackToSearchButton
+                                                children={txt.buttons.returnToSearch.title}
+                                                aria-label={txt.buttons.returnToSearch.aria}
+                                                onClick={handleReturnToResultsClick}
+                                            />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </StandardCard>
