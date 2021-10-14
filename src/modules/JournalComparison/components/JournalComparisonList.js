@@ -12,10 +12,8 @@ export const JournalComparisonList = ({ journals }) => {
         return txt.empty;
     }
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
-                <JournalsList journals={journals} isSelectable={false} />
-            </Grid>
+        <Grid item xs={12}>
+            <JournalsList journals={journals} isSelectable={false} />
         </Grid>
     );
 };

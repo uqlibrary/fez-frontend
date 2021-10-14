@@ -62,6 +62,13 @@ export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
             <Grid item xs={12}>
                 <JournalsList journals={journals} isSelectable={false} />
             </Grid>
+            {total > 20 && (
+                <Grid item xs={12}>
+                    <PublicationsListPaging
+                        pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
+                    />
+                </Grid>
+            )}
         </>
     );
 };
