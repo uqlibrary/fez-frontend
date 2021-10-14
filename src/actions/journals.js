@@ -1,4 +1,4 @@
-import { get, post } from 'repositories/generic';
+import { destroy, get, post } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -102,12 +102,31 @@ export const searchJournals = searchQuery => async dispatch => {
     }
 };
 
-export const favouriteJournals = () => async dispatch => {
+export const retrieveFavouriteJournals = () => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     try {
         const response = await get(JOURNAL_FAVOURITES_API());
         dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
     } catch (e) {
         dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: e });
+    }
+};
+
+export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
+    dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADING, payload: { id } });
+    // add a rand delay of 200ms max to avoid requests hitting the api at the exact same time
+    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+    await new Promise(resolve => {
+        setTimeout(resolve, 100 + random(50, 100));
+    });
+    try {
+        if (isFavourite) {
+            await destroy(JOURNAL_FAVOURITES_API(id));
+        } else {
+            await post(JOURNAL_FAVOURITES_API(), { fvj_jid: id });
+        }
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADED, payload: { id, isFavourite: !isFavourite } });
+    } catch (e) {
+        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_FAILED, payload: { id, isFavourite: isFavourite } });
     }
 };

@@ -16,8 +16,8 @@ import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from '../../../config';
 import { useJournalSearchQueryParams, useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
-import { JournalsCommonButtons } from '../../SharedComponents/JournalsCommonButtons';
 import { FAQ } from './partials/FAQ';
+import { CommonButtons } from '../../SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchResult = ({ onSearch }) => {
     const history = useHistory();
@@ -127,7 +127,7 @@ export const JournalSearchResult = ({ onSearch }) => {
                     </Grid>
                     <Grid style={{ paddingTop: 20 }} item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
-                            <JournalsCommonButtons />
+                            <CommonButtons />
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={countSelectedJournals() < 2}

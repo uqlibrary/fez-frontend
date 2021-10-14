@@ -1,12 +1,12 @@
-import { validation, openAccessConfig } from 'config';
+import { openAccessConfig, validation } from 'config';
 import {
     IN_CREATION,
     IN_DRAFT,
     IN_REVIEW,
-    UNPUBLISHED,
+    PUB_SEARCH_BULK_EXPORT_SIZE,
     RETRACTED,
     SUBMITTED_FOR_APPROVAL,
-    PUB_SEARCH_BULK_EXPORT_SIZE,
+    UNPUBLISHED,
 } from 'config/general';
 import param from 'can-param';
 
@@ -149,8 +149,8 @@ export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?query=${query}`,
 });
-export const JOURNAL_FAVOURITES_API = () => ({
-    apiUrl: 'journals/favourites',
+export const JOURNAL_FAVOURITES_API = (id = '') => ({
+    apiUrl: `journals/favourites/${id}`.replace(/\/$/, ''),
 });
 
 // file uploading apis

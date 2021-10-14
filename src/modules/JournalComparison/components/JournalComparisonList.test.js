@@ -1,20 +1,20 @@
-import React from 'react';
-import { render } from 'test-utils';
-import { locale } from '../../../locale';
 import * as mockData from 'mock/data/testing/journals/journalComparison';
 import { JournalComparisonList } from './JournalComparisonList';
+import { JournalsList } from '../../SharedComponents/JournalsList';
+import { locale } from '../../../locale';
 
-function setup(testProps = {}) {
-    return render(<JournalComparisonList {...testProps} />);
-}
+const setup = (testProps = {}) => {
+    return getElement(JournalComparisonList, testProps);
+};
 
 describe('JournalComparisonList', () => {
     it('should render when there are no journals to compare', () => {
-        const { getByText } = setup();
-        expect(getByText(locale.components.journalComparison.list.empty)).toBeInTheDocument();
+        const wrapper = setup();
+        expect(wrapper.find(JournalsList).length).toBe(0);
+        expect(wrapper.text()).toContain(locale.components.journalComparison.journalComparisonList.empty);
     });
-    it('should render when there are journals to compare', async () => {
-        const { getByText } = setup({ journals: mockData.journals });
-        mockData.journals.map(journal => expect(getByText(journal.jnl_title)).toBeInTheDocument());
+    it('should render when there are journals to compare', () => {
+        const wrapper = setup({ journals: mockData.journals });
+        expect(wrapper.find(JournalsList).length).toBe(1);
     });
 });

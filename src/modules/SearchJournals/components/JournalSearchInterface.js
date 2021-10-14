@@ -9,7 +9,7 @@ import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
 import { useJournalSearchInterfaceState, useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
-import { JournalsCommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
+import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
@@ -85,7 +85,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                 {showButtons && (
                     <Grid item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
-                            <JournalsCommonButtons />
+                            <CommonButtons />
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={!hasAnySelectedKeywords}

@@ -1,25 +1,32 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
-import { favouriteJournals } from '../../../actions';
 import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
+import { pathConfig } from '../../../config';
+import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
+import { retrieveFavouriteJournals } from '../../../actions';
 
 export const FavouriteJournals = () => {
-    const history = useHistory();
     const dispatch = useDispatch();
+    const history = useHistory();
     const txt = locale.components.favouriteJournals;
-    const handleReturnToSearchClick = () => history.goBack();
+
     React.useEffect(() => {
-        dispatch(favouriteJournals());
+        dispatch(retrieveFavouriteJournals());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
+    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
+    const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
+
+    const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
@@ -27,19 +34,23 @@ export const FavouriteJournals = () => {
                     <Grid container spacing={2}>
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
-                                <FavouriteJournalsList />
-                                <Grid container spacing={2} justify="flex-end" style={{ paddingTop: 20 }}>
-                                    <Grid item xs="auto">
-                                        <Button
-                                            variant="contained"
-                                            children={txt.buttons.returnToSearch.title}
-                                            aria-label={txt.buttons.returnToSearch.aria}
-                                            type="submit"
-                                            color="primary"
-                                            onClick={handleReturnToSearchClick}
-                                            id="journal-search-button"
-                                            data-testid="journal-search-button"
-                                        />
+                                <Grid container spacing={2}>
+                                    <FavouriteJournalsList
+                                        total={response?.total}
+                                        journals={response?.data}
+                                        loading={loading}
+                                        error={error}
+                                    />
+                                </Grid>
+                                <Grid style={{ paddingTop: 20 }} item xs={12}>
+                                    <Grid container spacing={2} justify="flex-end">
+                                        <Grid item xs="auto">
+                                            <BackToSearchButton
+                                                children={txt.buttons.returnToSearch.title}
+                                                aria-label={txt.buttons.returnToSearch.aria}
+                                                onClick={handleReturnToSearchClick}
+                                            />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </StandardCard>
