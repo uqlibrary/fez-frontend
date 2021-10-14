@@ -14,7 +14,7 @@ export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*
 
 /**
  * Translate selected facets to query string parameters
- * @param {object} selected facets
+ * @param {object}  facets
  * @returns {object}
  */
 export const getFacetsParams = facets => {
