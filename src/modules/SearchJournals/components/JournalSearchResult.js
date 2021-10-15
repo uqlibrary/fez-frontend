@@ -117,7 +117,7 @@ export const JournalSearchResult = ({ onSearch }) => {
                                 }
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
-                                pageSize={10}
+                                pageSize={pagingData.per_page}
                             />
                         </Grid>
                         <Grid item xs={12}>
