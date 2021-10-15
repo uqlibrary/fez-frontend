@@ -72,11 +72,15 @@ export const JournalSearchResult = ({ onSearch }) => {
             state: { journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]) },
         });
 
-    if (!journalsListLoaded) {
+    if (
+        !journalsListLoaded ||
+        !journalSearchQueryParams.keywords ||
+        Object.values(journalSearchQueryParams.keywords).length === 0
+    ) {
         return <div />;
     }
 
-    if (!journalsList || (!!journalsList && journalsList.length === 0)) {
+    if (!journalsList || (!!journalsList && journalsList.data.length === 0)) {
         return 'No journals found';
     }
 
@@ -116,29 +120,25 @@ export const JournalSearchResult = ({ onSearch }) => {
                                 pageSize={10}
                             />
                         </Grid>
-                        {journalsList.data.length > 5 && (
-                            <Grid item xs={12}>
-                                <PublicationsListPaging
-                                    disabled={!journalsListLoaded}
-                                    loading={!journalsListLoaded}
-                                    pagingData={pagingData}
-                                    onPageChanged={pageChanged}
-                                    pagingId="search-journals-paging-top"
-                                />
-                            </Grid>
-                        )}
+                        <Grid item xs={12}>
+                            <PublicationsListPaging
+                                disabled={!journalsListLoaded}
+                                loading={!journalsListLoaded}
+                                pagingData={pagingData}
+                                onPageChanged={pageChanged}
+                                pagingId="search-journals-paging-top"
+                            />
+                        </Grid>
                         <Grid item xs={12}>
                             <JournalsList journals={journalsList.data} onChange={handleSelectedJournalsChange} />
                         </Grid>
-                        {journalsList.data.length > 5 && (
-                            <Grid item xs={12}>
-                                <PublicationsListPaging
-                                    pagingData={pagingData}
-                                    onPageChanged={pageChanged}
-                                    pagingId="search-journals-paging-bottom"
-                                />
-                            </Grid>
-                        )}
+                        <Grid item xs={12}>
+                            <PublicationsListPaging
+                                pagingData={pagingData}
+                                onPageChanged={pageChanged}
+                                pagingId="search-journals-paging-bottom"
+                            />
+                        </Grid>
                     </Grid>
                     <Grid style={{ paddingTop: 20 }} item xs={12}>
                         <Grid container spacing={2} justify="flex-end">

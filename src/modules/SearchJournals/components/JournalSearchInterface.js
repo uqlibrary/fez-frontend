@@ -26,7 +26,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
     const txt = locale.components.journalSearch;
 
     const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
-        initialSelectedKeywords,
+        journalSearchQueryParams.keywords,
     );
     const handleSearchJournalsClick = React.useCallback(() => {
         toggleJournalSearchInput();
