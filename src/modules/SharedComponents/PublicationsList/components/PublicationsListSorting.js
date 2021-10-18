@@ -126,7 +126,11 @@ const PublicationsListSorting = props => {
             {props.canUseExport && (
                 <Hidden xsDown>
                     <Grid item sm={6} md={3}>
-                        <ExportPublications onChange={exportPublicationsFormatChanged} disabled={props.disabled} />
+                        <ExportPublications
+                            onChange={exportPublicationsFormatChanged}
+                            disabled={props.disabled}
+                            exportData={props.exportData}
+                        />
                     </Grid>
                 </Hidden>
             )}
@@ -137,6 +141,7 @@ const PublicationsListSorting = props => {
 PublicationsListSorting.propTypes = {
     bulkExportSize: PropTypes.number,
     canUseExport: PropTypes.bool,
+    exportData: PropTypes.object,
     disabled: PropTypes.bool,
     initPageLength: PropTypes.number,
     onExportPublications: PropTypes.func,
@@ -156,6 +161,7 @@ PublicationsListSorting.propTypes = {
 };
 
 PublicationsListSorting.defaultProps = {
+    exportData: {},
     sortingData: locale.components.sorting,
 };
 

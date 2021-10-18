@@ -3724,6 +3724,10 @@ export default {
                     text: <div>We were unable to find any results.</div>,
                 },
             },
+            export: {
+                label: 'Export results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
             sorting: {
                 pageSize: 'Journals per page',
                 sortLabel: 'Sort results by',

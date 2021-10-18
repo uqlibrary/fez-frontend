@@ -257,6 +257,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={false}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -480,6 +481,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={false}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -711,6 +713,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={false}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -1031,6 +1034,7 @@ exports[`MyRecords test renders loading screen while export publications loading
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={true}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -1245,6 +1249,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={true}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}
@@ -1495,6 +1500,7 @@ exports[`MyRecords test should handle export publications 1`] = `
             <PublicationsListSorting
               bulkExportSize={1000}
               disabled={false}
+              exportData={Object {}}
               initPageLength={20}
               onExportPublications={[Function]}
               onPageSizeChanged={[Function]}

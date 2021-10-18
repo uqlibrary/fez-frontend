@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -18,8 +18,10 @@ import { useJournalSearchQueryParams, useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
+import { exportJournals } from 'actions/journals';
 
 export const JournalSearchResult = ({ onSearch }) => {
+    const dispatch = useDispatch();
     const history = useHistory();
     const txt = locale.components.journalSearch;
     const { journalSearchQueryParams } = useJournalSearchQueryParams();
@@ -29,6 +31,15 @@ export const JournalSearchResult = ({ onSearch }) => {
     const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
 
     const updateSemaphore = React.useRef(false);
+
+    const handleExport = exportFormat => {
+        dispatch(
+            exportJournals({
+                ...journalSearchQueryParams,
+                ...exportFormat,
+            }),
+        );
+    };
 
     const pageSizeChanged = pageSize => {
         updateSemaphore.current = true;
@@ -109,12 +120,14 @@ export const JournalSearchResult = ({ onSearch }) => {
                         <Grid item xs={12}>
                             <PublicationsListSorting
                                 canUseExport
+                                exportData={txt.export}
                                 pagingData={pagingData}
                                 sortingData={txt.sorting}
                                 sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
                                 sortDirection={
                                     (journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'
                                 }
+                                onExportPublications={handleExport}
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
                                 pageSize={pagingData.per_page}

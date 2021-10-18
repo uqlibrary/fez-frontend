@@ -8,6 +8,7 @@ import {
     JOURNAL_SEARCH_API,
     MASTER_JOURNAL_LIST_INGEST_API,
 } from 'repositories/routes';
+import { promptForDownload } from './exportPublicationsDataTransformers';
 
 export const loadJournalLookup = searchText => dispatch => {
     dispatch({ type: actions.JOURNAL_LOOKUP_LOADING, payload: searchText });
@@ -100,6 +101,50 @@ export const searchJournals = searchQuery => async dispatch => {
     } catch (e) {
         dispatch({ type: actions.SEARCH_JOURNALS_FAILED, payload: e });
     }
+};
+
+/**
+ * Reusable export journals action
+ *
+ * @param searchQuery
+ * @return {*}
+ */
+export const exportJournals = searchQuery => async dispatch => {
+    const requestParams = JOURNAL_SEARCH_API(searchQuery);
+    const exportConfig = {
+        format: requestParams.options.params.export_to,
+        page: requestParams.options.params.page,
+    };
+
+    dispatch({
+        type: actions.EXPORT_JOURNALS_LOADING,
+        payload: exportConfig,
+    });
+
+    try {
+        const response = await get(requestParams);
+        promptForDownload(exportConfig.format, response);
+        dispatch({
+            type: actions.EXPORT_JOURNALS_LOADED,
+            payload: exportConfig,
+        });
+    } catch (error) {
+        dispatch({
+            type: actions.EXPORT_JOURNALS_FAILED,
+            payload: {
+                ...exportConfig,
+                errorMessage: error.message,
+            },
+        });
+    }
+};
+
+export const resetExportJournalsStatus = () => {
+    return dispatch => {
+        dispatch({
+            type: actions.EXPORT_JOURNALS_RESET,
+        });
+    };
 };
 
 export const retrieveFavouriteJournals = () => async dispatch => {

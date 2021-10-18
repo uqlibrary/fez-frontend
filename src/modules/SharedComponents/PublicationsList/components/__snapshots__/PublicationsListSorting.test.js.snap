@@ -508,6 +508,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
     >
       <ExportPublications
         disabled={false}
+        exportData={Object {}}
         onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
