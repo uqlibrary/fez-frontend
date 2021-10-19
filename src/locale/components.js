@@ -3850,6 +3850,33 @@ export default {
                     displayTitle: 'Favourite Journals',
                     activeFilter: 'Show journals favourited',
                 },
+                help: {
+                    title: 'Refine results',
+                    text: (
+                        <React.Fragment>
+                            <h3>Listed in</h3>
+                            <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Embargo</h3>
+                            <p>Refine results by length of time before an article is open and freely available.</p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Refine results by JIF Quartile, where Q1 is best.</p>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Refine results by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Highest quartile</h3>
+                            <p>
+                                Refine results by the Highest quartile a journal reaches across systems and categories.
+                            </p>
+                            <h3>Publish open access</h3>
+                            <p>
+                                Article processing charges (APCs) are fees paid by an author to a publisher to make a
+                                research output immediately available and openly accessible.
+                            </p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'CLOSE',
+                },
                 renameFacetsList: {},
             },
         },

@@ -53,7 +53,17 @@ export const JournalFieldsMap = [
         suffix: '',
         compactView: true,
         compactSize: 4,
+        titleHelp: {
+            title: 'Highest quartile',
+            text: (
+                <p>
+                    Indicates the highest quartile that the journal has ranked in <b>any category</b> from Scopus or Web
+                    of Science.
+                </p>
+            ),
+        },
         showTooltip: true,
+        titleTooltip: 'Journals ranked Q1 (highest) to Q4 (lowest) in the same subject category',
         toolTipLabel: () => {
             return 'Click on a journal title to view all';
         },

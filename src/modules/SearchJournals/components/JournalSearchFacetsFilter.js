@@ -134,7 +134,10 @@ export const JournalSearchFacetsFilter = ({
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
-        <StandardRighthandCard title={locale.components.journalSearch.journalFacetsFilter.title}>
+        <StandardRighthandCard
+            title={locale.components.journalSearch.journalFacetsFilter.title}
+            help={locale.components.journalSearch.journalFacetsFilter.help}
+        >
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>
                     {facetsToDisplay.map(item => {
