@@ -53,7 +53,10 @@ export const JournalFieldsMap = [
         suffix: '',
         compactView: true,
         compactSize: 4,
-        showTooltip: false,
+        showTooltip: true,
+        toolTipLabel: () => {
+            return 'Click on a journal title to view all';
+        },
         translateFn: data => {
             const quartileList = [];
 

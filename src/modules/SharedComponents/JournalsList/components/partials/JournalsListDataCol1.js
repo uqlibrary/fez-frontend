@@ -50,7 +50,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true })
                     lineHeight: 2,
                 }}
             >
-                <Tooltip title={`Click to view ${journal.jnl_title}`} placement="right">
+                <Tooltip title={`Click for detailed view of ${journal.jnl_title}`} placement="right">
                     <Typography
                         variant="body1"
                         component="span"
