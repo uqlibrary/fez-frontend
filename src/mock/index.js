@@ -409,7 +409,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
     .reply(200, { ...journalsSearch.favourites })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
-    .reply(200, { ...mockData.journalList })
+    .reply(config => {
+        return config.params.export_to && config.params.export_to === 'excel'
+            ? [200, 'Exported', { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }]
+            : [200, { ...mockData.journalList }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
