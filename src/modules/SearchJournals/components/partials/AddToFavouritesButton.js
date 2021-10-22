@@ -8,7 +8,9 @@ import { LoadingButton } from '../../../SharedComponents/LoadingButton';
 export const AddToFavouritesButton = ({ selectedJournals, disabled, clearSelectedJournals }) => {
     const dispatch = useDispatch();
     const txt = locale.components.journalSearch;
-    const adding = useSelector(state => state.get?.('favouriteJournalsReducer').addFavouritesLoading);
+    const adding = useSelector(state => state.get?.('favouriteJournalsReducer').add.loading);
+    const state = useSelector(state => state.get?.('favouriteJournalsReducer'));
+    console.log(state);
 
     const handleAddToFavouriteClick = () =>
         dispatch(addToFavourites(Object.keys(selectedJournals))).then(() => clearSelectedJournals({}));

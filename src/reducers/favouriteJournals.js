@@ -1,53 +1,78 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    favouritesResponse: null,
-    favouritesLoading: false,
-    favouritesError: null,
-    addFavouritesLoading: false,
-    removeFavouritesLoading: false,
+    response: null,
+    loading: false,
+    error: null,
+    add: {
+        loading: false,
+        error: null,
+    },
+    remove: {
+        loading: false,
+        error: null,
+    },
 };
 
 const handlers = {
     [actions.FAVOURITE_JOURNALS_LOADING]: state => ({
         ...state,
-        favouritesLoading: true,
+        loading: true,
     }),
     [actions.FAVOURITE_JOURNALS_LOADED]: (state, action) => ({
         ...state,
-        favouritesLoading: false,
-        favouritesResponse: action.payload,
+        loading: false,
+        response: action.payload,
     }),
     [actions.FAVOURITE_JOURNALS_FAILED]: (state, action) => ({
         ...state,
-        favouritesLoading: false,
-        favouritesError: action.payload,
+        loading: false,
+        error: action.payload?.message,
+        response: null,
     }),
     [actions.FAVOURITE_JOURNALS_ADD_REQUESTING]: state => ({
         ...state,
-        addFavouritesLoading: true,
+        add: {
+            ...state.add,
+            loading: true,
+        },
     }),
     [actions.FAVOURITE_JOURNALS_ADD_SUCCESS]: state => ({
         ...state,
-        addFavouritesLoading: false,
+        add: {
+            ...state.add,
+            loading: false,
+        },
     }),
     [actions.FAVOURITE_JOURNALS_ADD_FAILED]: (state, action) => ({
         ...state,
-        addFavouritesLoading: false,
-        addFavouritesError: action.payload,
+        add: {
+            ...state.add,
+            loading: false,
+            error: action.payload?.message,
+        },
     }),
     [actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING]: state => ({
         ...state,
-        removeFavouritesLoading: true,
+        remove: {
+            ...state.remove,
+            loading: true,
+        },
     }),
     [actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS]: state => ({
         ...state,
-        removeFavouritesLoading: false,
+        remove: {
+            ...state.remove,
+            loading: false,
+        },
     }),
     [actions.FAVOURITE_JOURNALS_REMOVE_FAILED]: (state, action) => ({
         ...state,
-        removeFavouritesLoading: false,
-        removeFavouritesError: action.payload,
+        remove: {
+            ...state.remove,
+            loading: false,
+            error: action.payload?.message,
+        },
     }),
 };
 

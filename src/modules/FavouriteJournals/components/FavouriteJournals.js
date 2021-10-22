@@ -25,10 +25,10 @@ export const FavouriteJournals = () => {
         countSelectedJournals,
     } = useSelectedJournals();
 
-    const response = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesResponse);
-    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesLoading);
-    const error = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesError);
-    const removing = useSelector(state => state.get?.('favouriteJournalsReducer').removeFavouritesLoading);
+    const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
+    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
+    const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
+    const removing = useSelector(state => state.get?.('favouriteJournalsReducer').remove.loading);
 
     const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
     const handleRemoveFromFavouritesClick = () =>
