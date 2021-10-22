@@ -10,23 +10,36 @@ import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from '../../../config';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
-import { retrieveFavouriteJournals } from '../../../actions';
+import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
+import { useSelectedJournals } from '../../SearchJournals/hooks';
+import { LoadingButton } from '../../SharedComponents/LoadingButton';
 
 export const FavouriteJournals = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const txt = locale.components.favouriteJournals;
+    const {
+        selectedJournals,
+        clearSelectedJournals,
+        handleSelectedJournalsChange,
+        countSelectedJournals,
+    } = useSelectedJournals();
+
+    const response = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesResponse);
+    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesLoading);
+    const error = useSelector(state => state.get?.('favouriteJournalsReducer').favouritesError);
+    const removing = useSelector(state => state.get?.('favouriteJournalsReducer').removeFavouritesLoading);
+
+    const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
+    const handleRemoveFromFavouritesClick = () =>
+        dispatch(removeFromFavourites(Object.keys(selectedJournals)))
+            .then(() => clearSelectedJournals({}))
+            .then(() => dispatch(retrieveFavouriteJournals()));
 
     React.useEffect(() => {
         dispatch(retrieveFavouriteJournals());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
-    const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
-    const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
-
-    const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
@@ -40,10 +53,26 @@ export const FavouriteJournals = () => {
                                         journals={response?.data}
                                         loading={loading}
                                         error={error}
+                                        selected={selectedJournals}
+                                        onSelectionChange={handleSelectedJournalsChange}
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: 20 }} item xs={12}>
-                                    <Grid container spacing={2} justify="flex-end">
+                                    <Grid container spacing={2}>
+                                        <Grid item xs="auto">
+                                            <LoadingButton
+                                                variant="contained"
+                                                type="submit"
+                                                color="primary"
+                                                id="remove-from-favourites"
+                                                data-testid="remove-from-favourites"
+                                                disabled={!!removing || countSelectedJournals() < 1}
+                                                loading={removing}
+                                                aria-label={txt.buttons.removeFromFavourites.aria}
+                                                children={txt.buttons.removeFromFavourites.title}
+                                                onClick={handleRemoveFromFavouritesClick}
+                                            />
+                                        </Grid>
                                         <Grid item xs="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}

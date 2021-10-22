@@ -59,6 +59,7 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
 export const useSelectedJournals = (state = {}) => {
     const [selectedJournals, setSelectedJournals] = React.useState(state);
 
+    const clearSelectedJournals = () => setSelectedJournals({});
     const handleSelectedJournalsChange = React.useCallback(e => {
         if (e.target.checked) {
             setSelectedJournals(current => {
@@ -70,7 +71,7 @@ export const useSelectedJournals = (state = {}) => {
         }
 
         setSelectedJournals(current => {
-            const selected = [...current];
+            const selected = { ...current };
             delete selected[e.target.value];
             return selected;
         });
@@ -81,6 +82,7 @@ export const useSelectedJournals = (state = {}) => {
     return {
         selectedJournals,
         setSelectedJournals,
+        clearSelectedJournals,
         handleSelectedJournalsChange,
         countSelectedJournals,
     };

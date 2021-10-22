@@ -1,21 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
-import JournalsListFavouriteHeader from './partials/JournalsListFavouriteHeader';
 import JournalsListDataCol1 from './partials/JournalsListDataCol1';
 import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
 import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
-import JournalsListFavouriteCol from './partials/JournalsListFavouriteCol';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
 import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
+import JournalsListDataCol3 from './partials/JournalsListDataCol3';
+import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 
-const JournalsList = ({ journals, onChange, isSelectable = true }) => {
-    const favourites = useSelector(state => state?.get?.('favouriteJournalsReducer').favourites) || {};
-
+const JournalsList = ({ journals, onSelectionChange, selected = {} }) => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -41,7 +38,7 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
                 {/* Header */}
-                <JournalsListHeaderCol1 isSelectable={isSelectable} />
+                <JournalsListHeaderCol1 />
                 {/* Data */}
                 {journals &&
                     journals.length > 0 &&
@@ -51,8 +48,8 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
                                 key={index}
                                 index={index}
                                 journal={item}
-                                onChange={onChange}
-                                isSelectable={isSelectable}
+                                onChange={onSelectionChange}
+                                checked={selected[item.jnl_jid]}
                             />
                         );
                     })}
@@ -94,23 +91,12 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
             </Grid>
             <Grid item xs={'auto'}>
                 {/* Header */}
-                <JournalsListFavouriteHeader toggleView={toggleView} minimalView={!!minimalView} />
+                <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
                 {/* Data */}
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
-                        let isFavourite = item.fez_favourite_journals === true;
-                        if (item.jnl_jid in favourites) {
-                            isFavourite = favourites[item.jnl_jid].isFavourite;
-                        }
-                        return (
-                            <JournalsListFavouriteCol
-                                key={index}
-                                journal={item}
-                                disabled={favourites[item.jnl_jid]?.loading ?? false}
-                                isFavourite={isFavourite}
-                            />
-                        );
+                        return <JournalsListDataCol3 key={index} journal={item} />;
                     })}
             </Grid>
         </Grid>
@@ -119,8 +105,8 @@ const JournalsList = ({ journals, onChange, isSelectable = true }) => {
 
 JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
-    onChange: PropTypes.func,
-    isSelectable: PropTypes.bool,
+    onSelectionChange: PropTypes.func,
+    selected: PropTypes.object,
 };
 
 export default React.memo(JournalsList);

@@ -1,62 +1,53 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    response: null,
-    loading: false,
-    error: null,
-    favourites: {},
+    favouritesResponse: null,
+    favouritesLoading: false,
+    favouritesError: null,
+    addFavouritesLoading: false,
+    removeFavouritesLoading: false,
 };
 
 const handlers = {
     [actions.FAVOURITE_JOURNALS_LOADING]: state => ({
         ...state,
-        loading: true,
+        favouritesLoading: true,
     }),
     [actions.FAVOURITE_JOURNALS_LOADED]: (state, action) => ({
         ...state,
-        loading: false,
-        response: action.payload,
+        favouritesLoading: false,
+        favouritesResponse: action.payload,
     }),
     [actions.FAVOURITE_JOURNALS_FAILED]: (state, action) => ({
         ...state,
-        loading: false,
-        error: action.payload,
-        response: null,
+        favouritesLoading: false,
+        favouritesError: action.payload,
     }),
-    [actions.FAVOURITE_JOURNALS_TOGGLE_LOADING]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_ADD_REQUESTING]: state => ({
         ...state,
-        favourites: {
-            ...state.favourites,
-            ...{
-                [action.payload.id]: {
-                    loading: true,
-                },
-            },
-        },
+        addFavouritesLoading: true,
     }),
-    [actions.FAVOURITE_JOURNALS_TOGGLE_LOADED]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_ADD_SUCCESS]: state => ({
         ...state,
-        favourites: {
-            ...state.favourites,
-            ...{
-                [action.payload.id]: {
-                    isFavourite: action.payload.isFavourite,
-                    loading: false,
-                },
-            },
-        },
+        addFavouritesLoading: false,
     }),
-    [actions.FAVOURITE_JOURNALS_TOGGLE_FAILED]: (state, action) => ({
+    [actions.FAVOURITE_JOURNALS_ADD_FAILED]: (state, action) => ({
         ...state,
-        favourites: {
-            ...state.favourites,
-            ...{
-                [action.payload.id]: {
-                    isFavourite: action.payload.isFavourite,
-                    loading: false,
-                },
-            },
-        },
+        addFavouritesLoading: false,
+        addFavouritesError: action.payload,
+    }),
+    [actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING]: state => ({
+        ...state,
+        removeFavouritesLoading: true,
+    }),
+    [actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS]: state => ({
+        ...state,
+        removeFavouritesLoading: false,
+    }),
+    [actions.FAVOURITE_JOURNALS_REMOVE_FAILED]: (state, action) => ({
+        ...state,
+        removeFavouritesLoading: false,
+        removeFavouritesError: action.payload,
     }),
 };
 

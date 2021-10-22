@@ -3622,6 +3622,10 @@ export default {
         favouriteJournals: {
             title: 'My Favourite Journals',
             buttons: {
+                removeFromFavourites: {
+                    title: 'REMOVE FROM FAVOURITES',
+                    aria: 'Remove from favourites',
+                },
                 returnToSearch: {
                     title: 'RETURN TO JOURNAL SEARCH',
                     aria: 'Return to Journal Search',
@@ -3690,6 +3694,10 @@ export default {
                     compareJournals: {
                         title: 'COMPARE SELECTED',
                         aria: 'Compare Selected',
+                    },
+                    addToFavourites: {
+                        title: 'ADD TO FAVOURITES',
+                        aria: 'Add to favourites',
                     },
                 },
             },

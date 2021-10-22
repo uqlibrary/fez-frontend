@@ -17,6 +17,7 @@ import { useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from '../../SharedComponents/JournalsCommonButtons';
+import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 
 export const JournalSearchResult = () => {
     const history = useHistory();
@@ -26,7 +27,12 @@ export const JournalSearchResult = () => {
     const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
     const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
 
-    const { selectedJournals, handleSelectedJournalsChange, countSelectedJournals } = useSelectedJournals();
+    const {
+        selectedJournals,
+        clearSelectedJournals,
+        handleSelectedJournalsChange,
+        countSelectedJournals,
+    } = useSelectedJournals();
     const handleJournalsComparisonClick = () =>
         history.push({
             pathname: pathConfig.journals.compare,
@@ -40,6 +46,7 @@ export const JournalSearchResult = () => {
     if (!journalsList || (!!journalsList && journalsList.length === 0)) {
         return 'No journals found';
     }
+
     return (
         <Grid container spacing={2}>
             <Grid item xs sm md={9}>
@@ -72,7 +79,11 @@ export const JournalSearchResult = () => {
                             </Grid>
                         )}
                         <Grid item xs={12}>
-                            <JournalsList journals={journalsList.data} onChange={handleSelectedJournalsChange} />
+                            <JournalsList
+                                journals={journalsList.data}
+                                selected={selectedJournals}
+                                onSelectionChange={handleSelectedJournalsChange}
+                            />
                         </Grid>
                         {journalsList.length > 20 && (
                             <Grid item xs={12}>
@@ -83,8 +94,14 @@ export const JournalSearchResult = () => {
                         )}
                     </Grid>
                     <Grid style={{ paddingTop: 20 }} item xs={12}>
-                        <Grid container spacing={2} justify="flex-end">
-                            <CommonButtons />
+                        <Grid container spacing={2}>
+                            <Grid item xs={12} sm="auto">
+                                <AddToFavouritesButton
+                                    disabled={countSelectedJournals() < 1}
+                                    clearSelectedJournals={clearSelectedJournals}
+                                    selectedJournals={selectedJournals}
+                                />
+                            </Grid>
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={countSelectedJournals() < 2}
@@ -98,6 +115,7 @@ export const JournalSearchResult = () => {
                                     fullWidth
                                 />
                             </Grid>
+                            <CommonButtons />
                         </Grid>
                     </Grid>
                 </StandardCard>

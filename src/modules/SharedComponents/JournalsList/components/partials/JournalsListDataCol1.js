@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true }) => {
+const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true, checked = false }) => {
     return (
         <Grid
             container
@@ -32,7 +32,12 @@ const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true })
                     style={{ height: 48 }}
                 >
                     <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                        <Checkbox style={{ padding: 2, marginTop: 10 }} value={journal.jnl_jid} onChange={onChange} />
+                        <Checkbox
+                            style={{ padding: 2, marginTop: 10 }}
+                            value={journal.jnl_jid}
+                            onChange={onChange}
+                            checked={checked}
+                        />
                     </Tooltip>
                 </Grid>
             )}
@@ -76,6 +81,7 @@ JournalsListDataCol1.propTypes = {
     index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
     isSelectable: PropTypes.bool,
+    checked: PropTypes.bool,
 };
 
 export default React.memo(JournalsListDataCol1);

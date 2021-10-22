@@ -149,9 +149,7 @@ export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?query=${query}`,
 });
-export const JOURNAL_FAVOURITES_API = (id = '') => ({
-    apiUrl: `journals/favourites/${id}`.replace(/\/$/, ''),
-});
+export const JOURNAL_FAVOURITES_API = append => ({ apiUrl: 'journals/favourites' + (!!append ? `/${append}` : '') });
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });

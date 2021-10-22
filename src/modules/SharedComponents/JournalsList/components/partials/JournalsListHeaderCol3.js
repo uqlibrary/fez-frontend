@@ -6,7 +6,7 @@ import SwapHorizontalCircleIcon from '@material-ui/icons/SwapHorizontalCircle';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 
-const JournalsListFavouriteHeader = ({ toggleView, minimalView }) => {
+const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
     return (
         <Grid
             container
@@ -35,9 +35,9 @@ const JournalsListFavouriteHeader = ({ toggleView, minimalView }) => {
     );
 };
 
-JournalsListFavouriteHeader.propTypes = {
+JournalsListHeaderCol3.propTypes = {
     toggleView: PropTypes.func.isRequired,
     minimalView: PropTypes.bool.isRequired,
 };
 
-export default React.memo(JournalsListFavouriteHeader);
+export default React.memo(JournalsListHeaderCol3);

@@ -1,4 +1,4 @@
-import { destroy, get, post } from 'repositories/generic';
+import { get, post } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -112,21 +112,40 @@ export const retrieveFavouriteJournals = () => async dispatch => {
     }
 };
 
-export const toggleFavouriteJournal = (id, isFavourite) => async dispatch => {
-    dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADING, payload: { id } });
+const randomWait = async (min, max) => {
     // add a rand delay of 200ms max to avoid requests hitting the api at the exact same time
     const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     await new Promise(resolve => {
-        setTimeout(resolve, 100 + random(50, 100));
+        setTimeout(resolve, 100 + random(min, max));
     });
-    try {
-        if (isFavourite) {
-            await destroy(JOURNAL_FAVOURITES_API(id));
-        } else {
-            await post(JOURNAL_FAVOURITES_API(), { fvj_jid: id });
-        }
-        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_LOADED, payload: { id, isFavourite: !isFavourite } });
-    } catch (e) {
-        dispatch({ type: actions.FAVOURITE_JOURNALS_TOGGLE_FAILED, payload: { id, isFavourite: isFavourite } });
-    }
+};
+
+export const addToFavourites = ids => async dispatch => {
+    dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_REQUESTING });
+    await randomWait(50, 100);
+    return post(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
+        response => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_SUCCESS });
+            return Promise.resolve(response);
+        },
+        error => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_ADD_FAILED, payload: error });
+            return Promise.reject(error.message);
+        },
+    );
+};
+
+export const removeFromFavourites = ids => async dispatch => {
+    dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
+    await randomWait(50, 100);
+    return post(JOURNAL_FAVOURITES_API('delete'), { ids: ids }).then(
+        response => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
+            return Promise.resolve(response);
+        },
+        error => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_FAILED, payload: error });
+            return Promise.reject(error.message);
+        },
+    );
 };

@@ -9,7 +9,7 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
-export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
+export const FavouriteJournalsList = ({ total, journals, loading, error, onSelectionChange, selected }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
     journals?.map?.(item => (item.fez_favourite_journals = true));
 
@@ -60,7 +60,7 @@ export const FavouriteJournalsList = ({ total, journals, loading, error }) => {
                 </Grid>
             )}
             <Grid item xs={12}>
-                <JournalsList journals={journals} isSelectable={false} />
+                <JournalsList journals={journals} onSelectionChange={onSelectionChange} selected={selected} />
             </Grid>
             {total > 20 && (
                 <Grid item xs={12}>
@@ -78,6 +78,8 @@ FavouriteJournalsList.propTypes = {
     total: PropTypes.number,
     journals: PropTypes.array,
     loading: PropTypes.bool,
+    onSelectionChange: PropTypes.func,
+    selected: PropTypes.object,
 };
 
 export default React.memo(FavouriteJournalsList);
