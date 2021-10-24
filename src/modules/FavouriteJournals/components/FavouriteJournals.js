@@ -57,22 +57,24 @@ export const FavouriteJournals = () => {
                                         onSelectionChange={handleSelectedJournalsChange}
                                     />
                                 </Grid>
-                                <Grid style={{ paddingTop: 20 }} item xs={12}>
+                                <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs="auto">
-                                            <LoadingButton
-                                                variant="contained"
-                                                type="submit"
-                                                color="primary"
-                                                id="remove-from-favourites"
-                                                data-testid="remove-from-favourites"
-                                                disabled={!!removing || countSelectedJournals() < 1}
-                                                loading={removing}
-                                                aria-label={txt.buttons.removeFromFavourites.aria}
-                                                children={txt.buttons.removeFromFavourites.title}
-                                                onClick={handleRemoveFromFavouritesClick}
-                                            />
-                                        </Grid>
+                                        {!!response?.total && (
+                                            <Grid item xs="auto">
+                                                <LoadingButton
+                                                    variant="contained"
+                                                    type="submit"
+                                                    color="primary"
+                                                    id="remove-from-favourites"
+                                                    data-testid="remove-from-favourites"
+                                                    disabled={!!removing || countSelectedJournals() < 1}
+                                                    loading={removing}
+                                                    aria-label={txt.buttons.removeFromFavourites.aria}
+                                                    children={txt.buttons.removeFromFavourites.title}
+                                                    onClick={handleRemoveFromFavouritesClick}
+                                                />
+                                            </Grid>
+                                        )}
                                         <Grid item xs="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}

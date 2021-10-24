@@ -3634,7 +3634,7 @@ export default {
             favouriteJournalsList: {
                 loading: 'Loading ...',
                 empty:
-                    "You haven't added any journals to this list. Click the heart icon on the results page to add a favourite.",
+                    "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
             },
         },
         journalComparison: {
