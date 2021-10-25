@@ -8,12 +8,18 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
+import { useJournalSearch, useJournalSearchControls } from '../../SearchJournals/hooks';
+import { pathConfig } from '../../../config';
 
-export const FavouriteJournalsList = ({ total, journals, loading, error, onSelectionChange, selected }) => {
+export const FavouriteJournalsList = ({ journalsList, loading, error, onSelectionChange, selected }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
-    journals?.map?.(item => (item.fez_favourite_journals = true));
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
+        handleSearch,
+        journalSearchQueryParams,
+    );
 
-    if (!loading && !error && total !== 0 && !journals) {
+    if (!loading && !error && journalsList?.total !== 0 && !journalsList?.data) {
         return <div id="favourite-journals-list-nothing" />;
     }
 
@@ -33,7 +39,7 @@ export const FavouriteJournalsList = ({ total, journals, loading, error, onSelec
         );
     }
 
-    if (!total && !journals?.length) {
+    if (!journalsList.total) {
         return (
             <Grid id="favourite-journals-list-empty" item xs={12}>
                 {txt.empty}
@@ -46,37 +52,46 @@ export const FavouriteJournalsList = ({ total, journals, loading, error, onSelec
             <Grid item xs={12}>
                 <PublicationsListSorting
                     canUseExport
-                    pagingData={{ total: 5 }}
-                    sortBy="created_date"
-                    sortDirection="Desc"
-                    pageSize={10}
+                    exportData={txt.export}
+                    pagingData={journalsList}
+                    sortingData={txt.sorting}
+                    sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
+                    sortDirection={(journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'}
+                    onExportPublications={handleExport}
+                    onSortByChanged={sortByChanged}
+                    onPageSizeChanged={pageSizeChanged}
+                    /* eslint-disable-next-line camelcase */
+                    pageSize={journalsList?.per_page}
                 />
             </Grid>
-            {total > 20 && (
-                <Grid item xs={12}>
-                    <PublicationsListPaging
-                        pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
-                    />
-                </Grid>
-            )}
             <Grid item xs={12}>
-                <JournalsList journals={journals} onSelectionChange={onSelectionChange} selected={selected} />
+                <PublicationsListPaging
+                    disabled={loading}
+                    loading={loading}
+                    pagingData={journalsList}
+                    onPageChanged={pageChanged}
+                    pagingId="search-journals-paging-top"
+                />
             </Grid>
-            {total > 20 && (
-                <Grid item xs={12}>
-                    <PublicationsListPaging
-                        pagingData={{ from: 1, to: 20, total: 100, per_page: 10, current_page: 1 }}
-                    />
-                </Grid>
-            )}
+            <Grid item xs={12}>
+                <JournalsList journals={journalsList?.data} onSelectionChange={onSelectionChange} selected={selected} />
+            </Grid>
+            <Grid item xs={12}>
+                <PublicationsListPaging
+                    disabled={loading}
+                    loading={loading}
+                    pagingData={journalsList}
+                    onPageChanged={pageChanged}
+                    pagingId="search-journals-paging-top"
+                />
+            </Grid>
         </>
     );
 };
 
 FavouriteJournalsList.propTypes = {
     error: PropTypes.object,
-    total: PropTypes.number,
-    journals: PropTypes.array,
+    journalsList: PropTypes.object,
     loading: PropTypes.bool,
     onSelectionChange: PropTypes.func,
     selected: PropTypes.object,

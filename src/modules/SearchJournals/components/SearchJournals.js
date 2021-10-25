@@ -1,38 +1,19 @@
 import React from 'react';
-import param from 'can-param';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router';
 
 import Grid from '@material-ui/core/Grid';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';
 import JournalSearchResult from './JournalSearchResult';
-
-import { pathConfig } from 'config/pathConfig';
-import { useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
+import { useJournalSearch, useSelectedKeywords } from '../hooks';
 import { searchJournals } from 'actions';
 import locale from 'locale/components';
 
 export const SearchJournals = () => {
     const dispatch = useDispatch();
-    const history = useHistory();
-    const { journalSearchQueryParams, locationKey } = useJournalSearchQueryParams();
+    const { journalSearchQueryParams, locationKey, handleSearch } = useJournalSearch();
     const { selectedKeywords, setSelectedKeywords } = useSelectedKeywords(journalSearchQueryParams.keywords);
-    /**
-     * Handle search function on any type of update in search query
-     *  -   Should handle keywords change
-     *  -   Should handle paging change
-     *  -   Should handle facets change
-     * @param {Object} searchQuery common search query object (keywords, paging, facets etc.)
-     * @returns void
-     */
-    const handleSearch = searchQuery => {
-        history.push({
-            pathname: pathConfig.journals.search,
-            search: param(searchQuery),
-        });
-    };
 
     /**
      * Setting selected keywords would re-render this page which should run effect to:

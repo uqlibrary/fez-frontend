@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -14,68 +14,23 @@ import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
-import { useJournalSearchQueryParams, useSelectedJournals } from '../hooks';
+import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
 import { useHistory } from 'react-router';
 import { FAQ } from './partials/FAQ';
-import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
-import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
-import { exportJournals } from 'actions/journals';
+import { AddToFavouritesButton, CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchResult = ({ onSearch }) => {
-    const dispatch = useDispatch();
     const history = useHistory();
     const txt = locale.components.journalSearch;
-    const { journalSearchQueryParams } = useJournalSearchQueryParams();
+    const { journalSearchQueryParams } = useJournalSearch();
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged } = useJournalSearchControls(
+        onSearch,
+        journalSearchQueryParams,
+    );
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
     const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
     const journalsListError = useSelector(state => state.get('searchJournalsReducer').journalsListError);
-
-    const updateSemaphore = React.useRef(false);
-
-    const handleExport = exportFormat => {
-        dispatch(
-            exportJournals({
-                ...journalSearchQueryParams,
-                ...exportFormat,
-            }),
-        );
-    };
-
-    const pageSizeChanged = pageSize => {
-        updateSemaphore.current = true;
-        onSearch({
-            ...journalSearchQueryParams,
-            pageSize: pageSize,
-            page: 1,
-        });
-    };
-
-    const pageChanged = page => {
-        updateSemaphore.current = true;
-        onSearch({
-            ...journalSearchQueryParams,
-            page: page,
-        });
-    };
-
-    const sortByChanged = (sortBy, sortDirection) => {
-        updateSemaphore.current = true;
-        onSearch({
-            ...journalSearchQueryParams,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-        });
-    };
-
-    const facetsChanged = activeFacets => {
-        updateSemaphore.current = true;
-        onSearch({
-            ...journalSearchQueryParams,
-            activeFacets: { ...activeFacets },
-            page: 1,
-        });
-    };
 
     const {
         selectedJournals,
@@ -86,7 +41,10 @@ export const JournalSearchResult = ({ onSearch }) => {
     const handleJournalsComparisonClick = () =>
         history.push({
             pathname: pathConfig.journals.compare,
-            state: { journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]) },
+            state: {
+                fromSearch: true,
+                journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]),
+            },
         });
 
     if (
@@ -101,13 +59,6 @@ export const JournalSearchResult = ({ onSearch }) => {
         return 'No journals found';
     }
 
-    const pagingData = {
-        from: journalsList.from,
-        to: journalsList.to,
-        total: journalsList.total,
-        per_page: journalsList.per_page,
-        current_page: journalsList.current_page,
-    };
     return (
         <Grid container spacing={2}>
             <Grid item xs sm md={9}>
@@ -127,7 +78,7 @@ export const JournalSearchResult = ({ onSearch }) => {
                             <PublicationsListSorting
                                 canUseExport
                                 exportData={txt.export}
-                                pagingData={pagingData}
+                                pagingData={journalsList}
                                 sortingData={txt.sorting}
                                 sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
                                 sortDirection={
@@ -136,14 +87,14 @@ export const JournalSearchResult = ({ onSearch }) => {
                                 onExportPublications={handleExport}
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
-                                pageSize={pagingData.per_page}
+                                pageSize={journalsList.per_page}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <PublicationsListPaging
                                 disabled={!journalsListLoaded}
                                 loading={!journalsListLoaded}
-                                pagingData={pagingData}
+                                pagingData={journalsList}
                                 onPageChanged={pageChanged}
                                 pagingId="search-journals-paging-top"
                             />
@@ -157,7 +108,7 @@ export const JournalSearchResult = ({ onSearch }) => {
                         </Grid>
                         <Grid item xs={12}>
                             <PublicationsListPaging
-                                pagingData={pagingData}
+                                pagingData={journalsList}
                                 onPageChanged={pageChanged}
                                 pagingId="search-journals-paging-bottom"
                             />

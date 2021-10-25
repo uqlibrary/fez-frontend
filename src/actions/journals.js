@@ -147,10 +147,10 @@ export const resetExportJournalsStatus = () => {
     };
 };
 
-export const retrieveFavouriteJournals = () => async dispatch => {
+export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
     try {
-        const response = await get(JOURNAL_FAVOURITES_API());
+        const response = await get(JOURNAL_FAVOURITES_API({ query: searchQuery }));
         dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
     } catch (e) {
         dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: e });
@@ -183,7 +183,7 @@ export const addToFavourites = ids => async dispatch => {
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);
-    return post(JOURNAL_FAVOURITES_API('delete'), { ids: ids }).then(
+    return post(JOURNAL_FAVOURITES_API({ append: 'delete' }), { ids: ids }).then(
         response => {
             dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
             return Promise.resolve(response);

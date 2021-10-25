@@ -6,16 +6,12 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
-import { useHistory, useLocation } from 'react-router';
-import { pathConfig } from '../../../config';
+import { useLocation } from 'react-router';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 
 export const JournalComparison = () => {
-    const history = useHistory();
     const location = useLocation();
     const txt = locale.components.journalComparison;
-    const handleReturnToResultsClick = () =>
-        location.state?.journals ? history.goBack() : history.push(pathConfig.journals.search);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
@@ -26,13 +22,12 @@ export const JournalComparison = () => {
                                 <Grid container spacing={2}>
                                     <JournalComparisonList journals={location.state?.journals} />
                                 </Grid>
-                                <Grid style={{ paddingTop: 20 }} item xs={12}>
-                                    <Grid container spacing={2} justify="flex-end">
+                                <Grid style={{ paddingTop: location.state?.journals ? 20 : 25 }} item xs={12}>
+                                    <Grid container spacing={2} justify="flex">
                                         <Grid item xs="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
-                                                onClick={handleReturnToResultsClick}
                                             />
                                         </Grid>
                                     </Grid>

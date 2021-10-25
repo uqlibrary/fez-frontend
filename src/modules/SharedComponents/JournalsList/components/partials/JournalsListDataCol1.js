@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true, checked = false }) => {
+const JournalsListDataCol1 = ({ journal, index, onChange, checked = false }) => {
     return (
         <Grid
             container
@@ -23,27 +23,25 @@ const JournalsListDataCol1 = ({ journal, index, onChange, isSelectable = true, c
                 overflow: 'hidden',
             }}
         >
-            {isSelectable && (
-                <Grid
-                    item
-                    xs={1}
-                    id={`journal-list-checkbox-${index}`}
-                    data-testid={`journal-list-checkbox-${index}`}
-                    style={{ height: 48 }}
-                >
-                    <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                        <Checkbox
-                            style={{ padding: 2, marginTop: 10 }}
-                            value={journal.jnl_jid}
-                            onChange={onChange}
-                            checked={checked}
-                        />
-                    </Tooltip>
-                </Grid>
-            )}
             <Grid
                 item
-                xs={isSelectable ? 11 : 12}
+                xs={1}
+                id={`journal-list-checkbox-${index}`}
+                data-testid={`journal-list-checkbox-${index}`}
+                style={{ height: 48 }}
+            >
+                <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
+                    <Checkbox
+                        style={{ padding: 2, marginTop: 10 }}
+                        value={journal.jnl_jid}
+                        onChange={onChange}
+                        checked={checked}
+                    />
+                </Tooltip>
+            </Grid>
+            <Grid
+                item
+                xs={11}
                 id={`journal-list-title-${index}`}
                 data-testid={`journal-list-title-${index}`}
                 style={{
@@ -80,7 +78,6 @@ JournalsListDataCol1.propTypes = {
     journal: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
-    isSelectable: PropTypes.bool,
     checked: PropTypes.bool,
 };
 

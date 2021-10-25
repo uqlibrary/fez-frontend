@@ -12,6 +12,7 @@ const CommonButtons = () => {
     const handleFavouriteJournalsClick = () =>
         history.push({
             pathname: pathConfig.journals.favourites,
+            state: { fromSearch: true },
         });
     return (
         <>

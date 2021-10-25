@@ -149,7 +149,6 @@ export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
     apiUrl: `journals/search?query=${query}`,
 });
-export const JOURNAL_FAVOURITES_API = append => ({ apiUrl: 'journals/favourites' + (!!append ? `/${append}` : '') });
 
 // file uploading apis
 export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
@@ -482,4 +481,21 @@ export const JOURNAL_SEARCH_API = query => {
             },
         },
     };
+};
+
+export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
+    const params = {
+        apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),
+    };
+
+    if (query) {
+        params.options = {
+            params: {
+                ...getKeywordsParams(query.keywords),
+                ...getStandardSearchParams({ ...query, facets: query.activeFacets }),
+            },
+        };
+    }
+
+    return params;
 };

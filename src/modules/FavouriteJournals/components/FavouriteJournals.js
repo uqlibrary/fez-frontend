@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
-import { useHistory } from 'react-router';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
@@ -11,12 +10,11 @@ import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from '../../../config';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
-import { useSelectedJournals } from '../../SearchJournals/hooks';
+import { useJournalSearch, useSelectedJournals } from '../../SearchJournals/hooks';
 import { LoadingButton } from '../../SharedComponents/LoadingButton';
 
 export const FavouriteJournals = () => {
     const dispatch = useDispatch();
-    const history = useHistory();
     const txt = locale.components.favouriteJournals;
     const {
         selectedJournals,
@@ -24,22 +22,23 @@ export const FavouriteJournals = () => {
         handleSelectedJournalsChange,
         countSelectedJournals,
     } = useSelectedJournals();
+    const { journalSearchQueryParams } = useJournalSearch(pathConfig.journals.favourites);
 
     const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
     const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
     const removing = useSelector(state => state.get?.('favouriteJournalsReducer').remove.loading);
 
-    const handleReturnToSearchClick = () => history.push(pathConfig.journals.search);
     const handleRemoveFromFavouritesClick = () =>
         dispatch(removeFromFavourites(Object.keys(selectedJournals)))
             .then(() => clearSelectedJournals({}))
-            .then(() => dispatch(retrieveFavouriteJournals()));
+            .then(() => dispatch(retrieveFavouriteJournals(journalSearchQueryParams)));
 
+    const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     React.useEffect(() => {
-        dispatch(retrieveFavouriteJournals());
+        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [page, pageSize, sortBy, sortDirection]);
     return (
         <StandardPage title={txt.title} id="journal-search-page" data-testid="journal-search-page">
             <Grid container spacing={3}>
@@ -49,8 +48,7 @@ export const FavouriteJournals = () => {
                             <StandardCard noHeader>
                                 <Grid container spacing={2}>
                                     <FavouriteJournalsList
-                                        total={response?.total}
-                                        journals={response?.data}
+                                        journalsList={response}
                                         loading={loading}
                                         error={error}
                                         selected={selectedJournals}
@@ -79,7 +77,6 @@ export const FavouriteJournals = () => {
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
-                                                onClick={handleReturnToSearchClick}
                                             />
                                         </Grid>
                                     </Grid>

@@ -1,6 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
+import { useDispatch } from 'react-redux';
 import deparam from 'can-deparam';
+import param from 'can-param';
+import { exportJournals } from '../../actions';
+import { pathConfig } from '../../config';
 
 export const useJournalSearchInterfaceState = initialState => {
     const [showKeywordsBrowser, setKeywordsBrowserVisibility] = React.useState(initialState);
@@ -88,7 +92,8 @@ export const useSelectedJournals = (state = {}) => {
     };
 };
 
-export const useJournalSearchQueryParams = () => {
+export const useJournalSearch = (path = pathConfig.journals.search) => {
+    const history = useHistory();
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
     const journalSearchQueryParams = {
@@ -102,8 +107,67 @@ export const useJournalSearchQueryParams = () => {
         },
     };
 
+    const handleSearch = searchQuery => {
+        history.push({
+            pathname: path,
+            search: param(searchQuery),
+        });
+    };
+
     return {
         journalSearchQueryParams,
         locationKey: location.key,
+        handleSearch,
     };
+};
+
+export const useJournalSearchControls = (onSearch, journalSearchQueryParams) => {
+    const dispatch = useDispatch();
+    const updateSemaphore = React.useRef(false);
+
+    const handleExport = exportFormat => {
+        dispatch(
+            exportJournals({
+                ...journalSearchQueryParams,
+                ...exportFormat,
+            }),
+        );
+    };
+
+    const pageSizeChanged = pageSize => {
+        updateSemaphore.current = true;
+        onSearch({
+            ...journalSearchQueryParams,
+            pageSize: pageSize,
+            page: 1,
+        });
+    };
+
+    const pageChanged = page => {
+        updateSemaphore.current = true;
+        onSearch({
+            ...journalSearchQueryParams,
+            page: page,
+        });
+    };
+
+    const sortByChanged = (sortBy, sortDirection) => {
+        updateSemaphore.current = true;
+        onSearch({
+            ...journalSearchQueryParams,
+            sortBy: sortBy,
+            sortDirection: sortDirection,
+        });
+    };
+
+    const facetsChanged = activeFacets => {
+        updateSemaphore.current = true;
+        onSearch({
+            ...journalSearchQueryParams,
+            activeFacets: { ...activeFacets },
+            page: 1,
+        });
+    };
+
+    return { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged };
 };

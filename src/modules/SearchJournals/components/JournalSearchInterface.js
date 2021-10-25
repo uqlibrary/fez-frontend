@@ -8,11 +8,11 @@ import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
-import { useJournalSearchInterfaceState, useJournalSearchQueryParams, useSelectedKeywords } from '../hooks';
+import { useJournalSearch, useJournalSearchInterfaceState, useSelectedKeywords } from '../hooks';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
-    const { journalSearchQueryParams } = useJournalSearchQueryParams();
+    const { journalSearchQueryParams } = useJournalSearch();
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const {
         showKeywordsBrowser,
