@@ -23,7 +23,7 @@ export const JournalComparison = () => {
                                     <JournalComparisonList journals={location.state?.journals} />
                                 </Grid>
                                 <Grid style={{ paddingTop: location.state?.journals ? 20 : 25 }} item xs={12}>
-                                    <Grid container spacing={2} justify="flex">
+                                    <Grid container spacing={2}>
                                         <Grid item xs="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}

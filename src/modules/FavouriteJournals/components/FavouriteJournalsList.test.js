@@ -27,7 +27,7 @@ describe('FavouriteJournalsList', () => {
         expect(getByText(locale.components.favouriteJournals.favouriteJournalsList.loading)).toBeInTheDocument();
     });
     it('should render when there are no fav journals', () => {
-        const { getByText, queryByTestId } = setup({ loaded: true, total: 0 });
+        const { getByText, queryByTestId } = setup({ loaded: true, journalsList: { total: 0 } });
         expect(queryByTestId('favourite-journals-list-nothing')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-loading')).not.toBeInTheDocument();
         expect(queryByTestId('favourite-journals-list-empty')).toBeInTheDocument();
@@ -42,12 +42,18 @@ describe('FavouriteJournalsList', () => {
         expect(queryByTestId('favourite-journals-list-error')).toBeInTheDocument();
     });
     it('should render when there are fav journals', () => {
-        const wrapper = getElement(FavouriteJournalsList, { loaded: true, journals: mockData.journals });
+        const wrapper = getElement(FavouriteJournalsList, {
+            loaded: true,
+            journalsList: { total: mockData.journals.length, data: mockData.journals },
+        });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
     });
     it('should render when there are fav journals with pagination', () => {
-        const wrapper = getElement(FavouriteJournalsList, { loaded: true, journals: mockData.journals, total: 30 });
+        const wrapper = getElement(FavouriteJournalsList, {
+            loaded: true,
+            journalsList: { total: mockData.journals.length, data: mockData.journals },
+        });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
         expect(wrapper.find(PublicationsListPaging).length).toBe(2);

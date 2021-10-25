@@ -8,16 +8,20 @@ import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedC
 
 import { JournalsList } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
-import { useJournalSearch, useJournalSearchControls } from '../../SearchJournals/hooks';
-import { pathConfig } from '../../../config';
 
-export const FavouriteJournalsList = ({ journalsList, loading, error, onSelectionChange, selected }) => {
+export const FavouriteJournalsList = ({
+    journalsList,
+    loading,
+    error,
+    onSelectionChange,
+    onExport,
+    onSortByChange,
+    onPageChange,
+    onPageSizeChange,
+    selected,
+    journalSearchQueryParams,
+}) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
-    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
-        handleSearch,
-        journalSearchQueryParams,
-    );
 
     if (!loading && !error && journalsList?.total !== 0 && !journalsList?.data) {
         return <div id="favourite-journals-list-nothing" />;
@@ -57,9 +61,9 @@ export const FavouriteJournalsList = ({ journalsList, loading, error, onSelectio
                     sortingData={txt.sorting}
                     sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
                     sortDirection={(journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'}
-                    onExportPublications={handleExport}
-                    onSortByChanged={sortByChanged}
-                    onPageSizeChanged={pageSizeChanged}
+                    onExportPublications={onExport}
+                    onSortByChanged={onSortByChange}
+                    onPageSizeChanged={onPageSizeChange}
                     /* eslint-disable-next-line camelcase */
                     pageSize={journalsList?.per_page}
                 />
@@ -69,7 +73,7 @@ export const FavouriteJournalsList = ({ journalsList, loading, error, onSelectio
                     disabled={loading}
                     loading={loading}
                     pagingData={journalsList}
-                    onPageChanged={pageChanged}
+                    onPageChanged={onPageChange}
                     pagingId="search-journals-paging-top"
                 />
             </Grid>
@@ -81,7 +85,7 @@ export const FavouriteJournalsList = ({ journalsList, loading, error, onSelectio
                     disabled={loading}
                     loading={loading}
                     pagingData={journalsList}
-                    onPageChanged={pageChanged}
+                    onPageChanged={onPageChange}
                     pagingId="search-journals-paging-top"
                 />
             </Grid>
@@ -94,6 +98,11 @@ FavouriteJournalsList.propTypes = {
     journalsList: PropTypes.object,
     loading: PropTypes.bool,
     onSelectionChange: PropTypes.func,
+    onExport: PropTypes.func,
+    onPageSizeChange: PropTypes.func,
+    onPageChange: PropTypes.func,
+    onSortByChange: PropTypes.func,
+    journalSearchQueryParams: PropTypes.object,
     selected: PropTypes.object,
 };
 

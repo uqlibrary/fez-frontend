@@ -1,16 +1,16 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
+import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
+import { pathConfig } from '../../../config';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
 import locale from 'locale/components';
 import FavouriteJournalsList from './FavouriteJournalsList';
 import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
-import { pathConfig } from '../../../config';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
-import { useJournalSearch, useSelectedJournals } from '../../SearchJournals/hooks';
 import { LoadingButton } from '../../SharedComponents/LoadingButton';
 
 export const FavouriteJournals = () => {
@@ -22,7 +22,11 @@ export const FavouriteJournals = () => {
         handleSelectedJournalsChange,
         countSelectedJournals,
     } = useSelectedJournals();
-    const { journalSearchQueryParams } = useJournalSearch(pathConfig.journals.favourites);
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
+        handleSearch,
+        journalSearchQueryParams,
+    );
 
     const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
@@ -53,6 +57,11 @@ export const FavouriteJournals = () => {
                                         error={error}
                                         selected={selectedJournals}
                                         onSelectionChange={handleSelectedJournalsChange}
+                                        onExport={handleExport}
+                                        onPageSizeChange={pageSizeChanged}
+                                        onPageChange={pageChanged}
+                                        onSortByChange={sortByChanged}
+                                        journalSearchQueryParams={journalSearchQueryParams}
                                     />
                                 </Grid>
                                 <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} item xs={12}>
