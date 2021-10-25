@@ -22,11 +22,10 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
-export const FacetsFilterListItem = ({ title, disabled, nestedItems, id }) => {
+export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActive }) => {
     const classes = useStyles();
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(isActive || false);
     const handleIsOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
-
     return (
         <Fragment key={`facet_fragment_${id}`}>
             <ListItem
@@ -60,6 +59,7 @@ FacetsFilterListItem.propTypes = {
     id: PropTypes.string,
     nestedItems: PropTypes.any,
     title: PropTypes.string,
+    isActive: PropTypes.bool,
 };
 
 export default React.memo(FacetsFilterListItem);

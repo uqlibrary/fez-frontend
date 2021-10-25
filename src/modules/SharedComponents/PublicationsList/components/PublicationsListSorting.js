@@ -13,7 +13,7 @@ import { ExportPublications } from 'modules/SharedComponents/ExportPublications'
 import { userIsAdmin, userIsResearcher } from 'hooks';
 
 const PublicationsListSorting = props => {
-    const [sortBy, setSortBy] = React.useState(props.sortBy || locale.components.sorting.sortBy[0].value);
+    const [sortBy, setSortBy] = React.useState(props.sortBy || props.sortingData.sortBy[0].value);
     const [sortDirection, setSortDirection] = React.useState(
         props.sortDirection || locale.components.sorting.sortDirection[0],
     );
@@ -64,9 +64,9 @@ const PublicationsListSorting = props => {
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
                 <FormControl fullWidth>
-                    <InputLabel shrink>{txt.sortLabel}</InputLabel>
+                    <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
                     <Select id="sortBy" onChange={sortByChanged} value={sortBy} disabled={props.disabled}>
-                        {txt.sortBy.map((item, index) => {
+                        {props.sortingData.sortBy.map((item, index) => {
                             return (
                                 <MenuItem key={index} value={item.value}>
                                     {item.label}
@@ -97,7 +97,7 @@ const PublicationsListSorting = props => {
             </Grid>
             <Grid item xs={12} sm={props.canUseExport ? 6 : 12} md={props.canUseExport ? 3 : 4}>
                 <FormControl fullWidth>
-                    <InputLabel shrink>{txt.pageSize}</InputLabel>
+                    <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
                     <Select id="pageSize" value={pageSize} disabled={props.disabled} onChange={pageSizeChanged}>
                         {pageLength.map(number => {
                             return (
@@ -126,7 +126,11 @@ const PublicationsListSorting = props => {
             {props.canUseExport && (
                 <Hidden xsDown>
                     <Grid item sm={6} md={3}>
-                        <ExportPublications onChange={exportPublicationsFormatChanged} disabled={props.disabled} />
+                        <ExportPublications
+                            onChange={exportPublicationsFormatChanged}
+                            disabled={props.disabled}
+                            exportData={props.exportData}
+                        />
                     </Grid>
                 </Hidden>
             )}
@@ -137,12 +141,14 @@ const PublicationsListSorting = props => {
 PublicationsListSorting.propTypes = {
     bulkExportSize: PropTypes.number,
     canUseExport: PropTypes.bool,
+    exportData: PropTypes.object,
     disabled: PropTypes.bool,
     initPageLength: PropTypes.number,
     onExportPublications: PropTypes.func,
     onPageSizeChanged: PropTypes.func,
     onSortByChanged: PropTypes.func,
     pageSize: PropTypes.number,
+    sortingData: PropTypes.object,
     pagingData: PropTypes.shape({
         from: PropTypes.number,
         to: PropTypes.number,
@@ -152,6 +158,11 @@ PublicationsListSorting.propTypes = {
     }),
     sortBy: PropTypes.string,
     sortDirection: PropTypes.string,
+};
+
+PublicationsListSorting.defaultProps = {
+    exportData: {},
+    sortingData: locale.components.sorting,
 };
 
 export default PublicationsListSorting;

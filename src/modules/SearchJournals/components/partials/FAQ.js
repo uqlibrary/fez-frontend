@@ -52,8 +52,8 @@ export const FAQ = ({}) => {
                             <a>{faq.question}</a>
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails id={`faq-details-${index}`}>
-                        <Typography>{faq.answer}</Typography>
+                    <AccordionDetails id={`faq-details-${index}`} data-testid={`faq-details-${index}`}>
+                        {faq.answer}
                     </AccordionDetails>
                 </Accordion>
             ))}

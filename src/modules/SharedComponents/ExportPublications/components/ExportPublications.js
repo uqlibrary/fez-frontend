@@ -10,6 +10,7 @@ export default class ExportPublications extends PureComponent {
     static propTypes = {
         disabled: PropTypes.bool,
         onChange: PropTypes.func,
+        exportData: PropTypes.object,
     };
 
     formatChanged = event => {
@@ -17,7 +18,11 @@ export default class ExportPublications extends PureComponent {
     };
 
     render() {
-        const txt = locale.components.export;
+        const txt =
+            this.props.exportData && this.props.exportData.format && this.props.exportData.format.length > 0
+                ? this.props.exportData
+                : locale.components.export;
+
         return (
             <FormControl fullWidth>
                 <InputLabel shrink>{txt.label}</InputLabel>

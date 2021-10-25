@@ -90,7 +90,17 @@ export const useSelectedJournals = (state = {}) => {
 
 export const useJournalSearchQueryParams = () => {
     const location = useLocation();
-    const journalSearchQueryParams = deparam(location.search.substr(1));
+    const searchQueryParams = deparam(location.search.substr(1));
+    const journalSearchQueryParams = {
+        ...searchQueryParams,
+        activeFacets: {
+            filters: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.filters) || {},
+            ranges: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.ranges) || {},
+            ...(searchQueryParams.activeFacets && searchQueryParams.activeFacets.hasOwnProperty('showFavouritedOnly')
+                ? { showFavouritedOnly: searchQueryParams.activeFacets.showFavouritedOnly === 'true' }
+                : {}),
+        },
+    };
 
     return {
         journalSearchQueryParams,

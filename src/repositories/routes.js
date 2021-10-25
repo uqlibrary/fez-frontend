@@ -14,7 +14,7 @@ export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*
 
 /**
  * Translate selected facets to query string parameters
- * @param {object} selected facets
+ * @param {object}  facets
  * @returns {object}
  */
 export const getFacetsParams = facets => {
@@ -472,18 +472,13 @@ export const getKeywordsParams = keywords => {
 
 export const JOURNAL_SEARCH_API = query => {
     const searchQuery = getKeywordsParams(query.keywords);
-    // const searchFacets = getFacetsParams(query);
-    // filters[facets][Indexed in]
+
     return {
         apiUrl: 'journals/search',
         options: {
             params: {
                 ...searchQuery,
-                // ...searchFacets,
-                page: '1',
-                per_page: '10',
-                // sort: '',
-                // order_by: '', // sortDirection.toLowerCase(),
+                ...getStandardSearchParams({ ...query, facets: query.activeFacets }),
             },
         },
     };

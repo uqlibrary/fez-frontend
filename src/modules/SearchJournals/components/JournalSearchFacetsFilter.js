@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
-import locale from '../../../locale/components';
+import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
@@ -21,7 +21,7 @@ export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFi
                 index={index}
                 onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
                 isActive={isActive}
-                primaryText={`${item.title} (${item.count})`}
+                primaryText={item.count ? `${item.title} (${item.count})` : `${item.title}`}
                 disabled={disabled}
             />
         );
@@ -36,34 +36,30 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     isFacetFilterActive: PropTypes.func,
 };
 
-const getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
+const showFavouritedOnlyFacet = {
+    title: 'Favourite Journals',
+    facetTitle: 'ShowFavouritedOnly',
+    facets: [
+        {
+            title: 'Show journals favourited',
+            key: 'ShowFavouritedOnly',
+        },
+    ],
+};
+
+const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
     const facetsToDisplay = [];
     Object.keys(rawFacets).forEach(key => {
         const rawFacet = rawFacets[key];
-        const rawFacetLookup = rawFacets[`${key} (lookup)`];
-
-        // ignore facet if it has no data or is in exclude list
-        if (
-            key.indexOf('(lookup)') >= 0 ||
-            (excludeFacetsList && excludeFacetsList.indexOf(key) >= 0) ||
-            (rawFacet.buckets && rawFacet.buckets.length === 0)
-        ) {
-            return;
-        }
-
         // construct facet object to display, if facet has a lookup - get display name from lookup,
         // if facet key has a rename record, then use that
         const facetToDisplay = {
             title: renameFacetsList[key] || key,
-            facetTitle: lookupFacetsList[key] || key,
-            facets: rawFacet.buckets.map((item, index) => {
-                const facetValue =
-                    rawFacetLookup && rawFacetLookup.buckets.length > index
-                        ? rawFacetLookup.buckets[index].key
-                        : item.key;
+            facetTitle: key,
+            facets: rawFacet.buckets.map(item => {
                 return {
-                    title: facetValue,
-                    key: lookupFacetsList[key] ? facetValue : item.key,
+                    title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
+                    key: item.key,
                     count: item.doc_count,
                 };
             }),
@@ -71,32 +67,35 @@ const getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, look
 
         facetsToDisplay.push(facetToDisplay);
     });
+
+    // add show favourite only facet
+    facetsToDisplay.push(showFavouritedOnlyFacet);
     return facetsToDisplay;
 };
 
 const isFacetFilterActive = (activeFacetsFilters, category, value) => {
-    return activeFacetsFilters.hasOwnProperty(category) && isNaN(activeFacetsFilters[category])
-        ? activeFacetsFilters[category] === value
-        : parseInt(activeFacetsFilters[category], 10) === value;
+    if (activeFacetsFilters.hasOwnProperty(category)) {
+        return (
+            (Array.isArray(activeFacetsFilters[category]) && activeFacetsFilters[category].includes(value)) ||
+            category === showFavouritedOnlyFacet.facetTitle
+        );
+    }
+    return false;
 };
 
-const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges, showFavrouritedOnly, excludeFacetsList) =>
-    Object.keys(activeFacetsFilters).filter(filter => !excludeFacetsList.includes(filter)).length > 0 ||
-    Object.keys(activeFacetsRanges).length > 0 ||
-    !!showFavrouritedOnly;
+const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges) =>
+    Object.keys(activeFacetsFilters).length > 0 || Object.keys(activeFacetsRanges).length > 0;
 
 export const JournalSearchFacetsFilter = ({
     facetsData,
-    excludeFacetsList,
+    activeFacets,
     renameFacetsList,
-    lookupFacetsList,
     disabled,
     onFacetsChanged,
 }) => {
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
-    const [activeFacetsFilters, setActiveFacetsFilters] = useState({});
-    const [activeFacetsRanges] = useState({});
-    const [showFavouritedOnly] = useState(false);
+    const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
+    const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
     const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
     useEffect(() => {
@@ -104,35 +103,41 @@ export const JournalSearchFacetsFilter = ({
             onFacetsChanged({
                 filters: activeFacetsFilters,
                 ranges: activeFacetsRanges,
-                showFavouritedOnly: showFavouritedOnly,
             });
         }
 
         return () => setIsFacetFilterClicked(false);
-    }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, showFavouritedOnly, onFacetsChanged]);
+    }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, onFacetsChanged]);
 
-    const facetsToDisplay = getFacetsToDisplay(facetsData, excludeFacetsList, renameFacetsList, lookupFacetsList);
+    const facetsToDisplay = getFacetsToDisplay(facetsData, renameFacetsList);
 
     const _handleFacetClick = (category, facet) => () => {
         const newActiveFacetsFilters = { ...activeFacetsFilters };
-
         if (isFacetFilterActive(newActiveFacetsFilters, category, facet)) {
-            delete newActiveFacetsFilters[category];
+            if (category === showFavouritedOnlyFacet.facetTitle) {
+                delete newActiveFacetsFilters[category];
+            } else {
+                newActiveFacetsFilters[category] = newActiveFacetsFilters[category].filter(item => item !== facet);
+            }
+        } else if (newActiveFacetsFilters.hasOwnProperty(category)) {
+            newActiveFacetsFilters[category].push(facet);
         } else {
-            newActiveFacetsFilters[category] = facet;
+            newActiveFacetsFilters[category] = category === showFavouritedOnlyFacet.facetTitle ? true : [facet];
         }
+
         setIsFacetFilterClicked(true);
         setActiveFacetsFilters(newActiveFacetsFilters);
-        setHasActiveFilters(
-            getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges, showFavouritedOnly, excludeFacetsList),
-        );
+        setHasActiveFilters(getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges));
     };
 
     if (facetsToDisplay.length === 0 && !hasActiveFilters) {
         return <span id="empty-facet-filters" className="facetsFilter empty" />;
     }
     return (
-        <StandardRighthandCard title={locale.components.facetsFilter.title} help={locale.components.facetsFilter.help}>
+        <StandardRighthandCard
+            title={locale.components.journalSearch.journalFacetsFilter.title}
+            help={locale.components.journalSearch.journalFacetsFilter.help}
+        >
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>
                     {facetsToDisplay.map(item => {
@@ -142,6 +147,7 @@ export const JournalSearchFacetsFilter = ({
                                 key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
                                 title={item.title}
                                 disabled={disabled}
+                                isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
                                 nestedItems={
                                     <JournalFacetFilterNestedListItemsList
                                         facetCategory={item}
@@ -149,7 +155,6 @@ export const JournalSearchFacetsFilter = ({
                                         activeFacets={{
                                             filters: activeFacetsFilters,
                                             ranges: activeFacetsRanges,
-                                            showFavouritedOnly,
                                         }}
                                         handleFacetClick={_handleFacetClick}
                                         isFacetFilterActive={isFacetFilterActive}
@@ -168,18 +173,14 @@ JournalSearchFacetsFilter.propTypes = {
     facetsData: PropTypes.object,
     activeFacets: PropTypes.object,
     initialFacets: PropTypes.object,
-    excludeFacetsList: PropTypes.array,
     renameFacetsList: PropTypes.object,
-    lookupFacetsList: PropTypes.object,
     disabled: PropTypes.bool,
     showFavouritedFilter: PropTypes.bool,
     onFacetsChanged: PropTypes.func,
 };
 
 JournalSearchFacetsFilter.defaultProps = {
-    excludeFacetsList: [],
     renameFacetsList: {},
-    lookupFacetsList: {},
     showFavouritedFilter: false,
 };
 

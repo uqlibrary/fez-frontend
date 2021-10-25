@@ -3654,24 +3654,125 @@ export default {
                 title: 'Need more help?',
                 items: [
                     {
-                        question: 'What do all these metrics mean?',
-                        answer: `${loremIpsum} 1`,
+                        question: 'How do I refine my shortlist?',
+                        answer: (
+                            <div>
+                                You can further refine your journal choice by investigating:
+                                <ul>
+                                    <li>aims and scope of the journal</li>
+                                    <li>journal quality</li>
+                                    <li>peer review process</li>
+                                    <li>publisher reputation and credibility</li>
+                                    <li>promotion and availability of your article</li>
+                                </ul>
+                                <p>Click on the title of the journal to explore these criteria in detail.</p>
+                                <p>
+                                    Read more{' < '}
+                                    <a
+                                        target="_blank"
+                                        href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                    >
+                                        Strategic scholarly publishing - Library - University of Queensland (uq.edu.au)
+                                    </a>
+                                    {' >'}
+                                </p>
+                            </div>
+                        ),
                     },
                     {
-                        question: 'How do I decide who is the best journal to publish with?',
-                        answer: `${loremIpsum} 2`,
+                        question: 'What are journal level metrics?',
+                        answer: (
+                            <div>
+                                <p>
+                                    There are different indicators used to measure journal quality. These indicators are
+                                    calculated by looking at the citations received in the most recent year, for
+                                    publications from previous 2-5 years. There are slight variations in the methodology
+                                    used to calculate these indicators, depending on the database provider (e.g. Journal
+                                    Citation Reports, Scopus).
+                                </p>
+                                <p>
+                                    You can compare the different metrics for specific journals by selecting the compare
+                                    selected button. The Library also has an online metrics tutorial{' < '}
+                                    <a target="_blank" href="https://uq.libwizard.com/f/metrics">
+                                        https://uq.libwizard.com/f/metrics
+                                    </a>
+                                    {' >'}
+                                </p>
+                                <p>
+                                    Read more{' < '}
+                                    <a
+                                        target="_blank"
+                                        href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                    >
+                                        Strategic scholarly publishing - Library - University of Queensland (uq.edu.au)
+                                    </a>
+                                    {' >'}
+                                </p>
+                            </div>
+                        ),
                     },
                     {
-                        question: 'What is ERA?',
-                        answer: `${loremIpsum} 3`,
+                        question: 'How do I publish open access?',
+                        answer: (
+                            <div>
+                                <p>
+                                    Open access is free, unrestricted, online access to research output. There are
+                                    different types of open access, including green and gold open access.
+                                </p>
+                                <p>
+                                    Some publishers have Article processing charges (also referred to as APCs) is a fee
+                                    paid by an author to make a research output immediately available and openly
+                                    accessible. The Library also has agreements with some publishers, where the APC does
+                                    not apply to some journals for UQ authors.
+                                </p>
+                                <p>
+                                    To find a journal with an open access policy which meets your requirements or funder
+                                    mandate, use the facets to refine your results by publish open access or embargo
+                                    facets.
+                                </p>
+                                <p>
+                                    Read more{' < '}
+                                    <a
+                                        target="_blank"
+                                        href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                    >
+                                        https://web.library.uq.edu.au/library-services/services-researchers/open-access
+                                    </a>
+                                    {' >'}
+                                </p>
+                            </div>
+                        ),
                     },
                     {
-                        question: "Why can't | find my peers favourite/recommended journal?",
-                        answer: `${loremIpsum} 4`,
+                        question: 'How can I find out more about a journal?',
+                        answer: (
+                            <ul>
+                                <li>Use the compare selected button to compare the metrics for particular journals</li>
+                                <li>
+                                    Click on the journal title for detailed information on a journal title, collated by
+                                    the Library
+                                </li>
+                                <li>
+                                    Follow the links from the detailed information to access more information on the
+                                    journal’s scope, review process, or open access policies.
+                                </li>
+                            </ul>
+                        ),
                     },
                     {
-                        question: 'Speak to someone.',
-                        answer: `${loremIpsum} 5`,
+                        question: 'Talk to someone',
+                        answer: (
+                            <ul>
+                                <li>
+                                    Ask Us {' < '}
+                                    <a target="_blank" href="https://web.library.uq.edu.au/contact-us">
+                                        Contact us - Library - University of Queensland (uq.edu.au)
+                                    </a>
+                                    {' >'}
+                                </li>
+                                <li>For feedback espace@library.uq.edu.au</li>
+                            </ul>
+                        ),
                     },
                 ],
             },
@@ -3731,6 +3832,60 @@ export default {
                     title: 'No journals found',
                     text: <div>We were unable to find any results.</div>,
                 },
+            },
+            export: {
+                label: 'Export results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
+            sorting: {
+                pageSize: 'Journals per page',
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'title', label: 'Title' },
+                    { value: 'score', label: 'Search relevance' },
+                    { value: 'highest_quartile', label: 'Highest quartile' },
+                    { value: 'cite_score', label: 'CiteScore' },
+                    { value: 'impact_factor', label: 'Impact factor' },
+                    { value: 'sjp', label: 'SJR' },
+                    { value: 'snip', label: 'SNIP' },
+                ],
+            },
+            journalFacetsFilter: {
+                title: 'Refine results',
+                resetButtonText: 'Reset',
+                favoriteFilter: {
+                    displayTitle: 'Favourite Journals',
+                    activeFilter: 'Show journals favourited',
+                },
+                help: {
+                    title: 'Refine results',
+                    text: (
+                        <React.Fragment>
+                            <h3>Listed in</h3>
+                            <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Embargo</h3>
+                            <p>Refine results by length of time before an article is open and freely available.</p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Refine results by JIF Quartile, where Q1 is best.</p>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Refine results by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Highest quartile</h3>
+                            <p>
+                                Refine results by the Highest quartile a journal reaches across systems and categories.
+                            </p>
+                            <h3>Publish open access</h3>
+                            <p>
+                                Article processing charges (APCs) are fees paid by an author to a publisher to make a
+                                research output immediately available and openly accessible.
+                            </p>
+                        </React.Fragment>
+                    ),
+                    buttonLabel: 'CLOSE',
+                },
+                renameFacetsList: {},
             },
         },
     },

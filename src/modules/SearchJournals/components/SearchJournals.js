@@ -19,7 +19,6 @@ export const SearchJournals = () => {
     const history = useHistory();
     const { journalSearchQueryParams, locationKey } = useJournalSearchQueryParams();
     const { selectedKeywords, setSelectedKeywords } = useSelectedKeywords(journalSearchQueryParams.keywords);
-
     /**
      * Handle search function on any type of update in search query
      *  -   Should handle keywords change
@@ -33,7 +32,6 @@ export const SearchJournals = () => {
             pathname: pathConfig.journals.search,
             search: param(searchQuery),
         });
-        // run search journal action here.
     };
 
     /**
@@ -58,8 +56,6 @@ export const SearchJournals = () => {
     /**
      * Run this effect whenever url search query parameters are changed
      *  -   This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
-     * @todo    Handle facets, page, pageSize change
-     * @todo    Call journal search action
      */
     React.useEffect(() => {
         if (!!journalSearchQueryParams.keywords && Object.values(journalSearchQueryParams.keywords).length > 0) {
@@ -83,7 +79,7 @@ export const SearchJournals = () => {
                     />
                 </Grid>
                 <Grid item xs>
-                    <JournalSearchResult key={`journal-search-result-${locationKey}`} />
+                    <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
                 </Grid>
             </Grid>
         </StandardPage>
