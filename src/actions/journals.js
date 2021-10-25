@@ -149,12 +149,16 @@ export const resetExportJournalsStatus = () => {
 
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_LOADING });
-    try {
-        const response = await get(JOURNAL_FAVOURITES_API({ query: searchQuery }));
-        dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
-    } catch (e) {
-        dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: e });
-    }
+    return get(JOURNAL_FAVOURITES_API({ query: searchQuery })).then(
+        response => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_LOADED, payload: response });
+            return Promise.resolve(response);
+        },
+        error => {
+            dispatch({ type: actions.FAVOURITE_JOURNALS_FAILED, payload: error });
+            return Promise.reject(error.message);
+        },
+    );
 };
 
 const randomWait = async (min, max) => {

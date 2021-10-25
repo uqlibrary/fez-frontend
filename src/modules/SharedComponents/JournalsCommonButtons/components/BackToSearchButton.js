@@ -1,13 +1,14 @@
 import React from 'react';
-import { useHistory, useLocation } from 'react-router';
+import PropTypes from 'prop-types';
+import { useHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
 import { pathConfig } from '../../../../config';
 
 const BackToSearchButton = props => {
     const history = useHistory();
-    const location = useLocation();
+    const { historyOffset, ...otherProps } = props;
     const handleReturnToSearchClick = () =>
-        location.state?.fromSearch ? history.goBack() : history.push(pathConfig.journals.search);
+        historyOffset ? history.go(-historyOffset) : history.push(pathConfig.journals.search);
     return (
         <Button
             variant="contained"
@@ -16,9 +17,13 @@ const BackToSearchButton = props => {
             id="return-to-search-results-button"
             data-testid="return-to-search-results-button"
             onClick={handleReturnToSearchClick}
-            {...props}
+            {...otherProps}
         />
     );
+};
+
+BackToSearchButton.propTypes = {
+    historyOffset: PropTypes.number,
 };
 
 export default React.memo(BackToSearchButton);

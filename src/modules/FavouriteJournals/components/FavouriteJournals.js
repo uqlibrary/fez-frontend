@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Grid from '@material-ui/core/Grid';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../../SearchJournals/hooks';
@@ -12,9 +12,11 @@ import { StandardCard } from '../../SharedComponents/Toolbox/StandardCard';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
 import { removeFromFavourites, retrieveFavouriteJournals } from '../../../actions';
 import { LoadingButton } from '../../SharedComponents/LoadingButton';
+import { useLocation } from 'react-router';
 
 export const FavouriteJournals = () => {
     const dispatch = useDispatch();
+    const location = useLocation();
     const txt = locale.components.favouriteJournals;
     const {
         selectedJournals,
@@ -27,6 +29,9 @@ export const FavouriteJournals = () => {
         handleSearch,
         journalSearchQueryParams,
     );
+    // keep track of page ctrl interactions, so we can go back to the search page correctly
+    const controlInteractions = useRef(0);
+    const fromSearch = useRef(location.state?.fromSearch);
 
     const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
@@ -39,8 +44,10 @@ export const FavouriteJournals = () => {
             .then(() => dispatch(retrieveFavouriteJournals(journalSearchQueryParams)));
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
-    React.useEffect(() => {
-        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
+    useEffect(() => {
+        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection })).then(
+            () => controlInteractions.current++,
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, pageSize, sortBy, sortDirection]);
     return (
@@ -86,6 +93,7 @@ export const FavouriteJournals = () => {
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
+                                                historyOffset={fromSearch.current ? controlInteractions.current + 1 : 0}
                                             />
                                         </Grid>
                                     </Grid>
