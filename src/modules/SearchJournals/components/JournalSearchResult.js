@@ -17,7 +17,8 @@ import { pathConfig } from 'config/pathConfig';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
 import { useHistory, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
-import { AddToFavouritesButton, CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
+import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
+import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 
 export const JournalSearchResult = ({ onSearch }) => {
     const location = useLocation();

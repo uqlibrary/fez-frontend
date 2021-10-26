@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/react, @types/react-dom, @types/react-dropzone, @types/react-event-listener, @types/react-infinite, @types/react-json-tree, @types/react-json-tree, @types/react-redux, @types/react-router, @types/react-router-dom, @types/react-rte, @types/redux-form, @types/recompose, @types/redux-immutable}" />
+    <file url="PROJECT" libraries="{@types/material-ui, @types/react, @types/react-redux, @types/react-router, @types/redux-form, @types/redux-immutable}" />
   </component>
 </project>

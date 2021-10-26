@@ -22,5 +22,6 @@
     <orderEntry type="library" name="@types/redux-form" level="application" />
     <orderEntry type="library" name="@types/recompose" level="application" />
     <orderEntry type="library" name="@types/redux-immutable" level="application" />
+    <orderEntry type="library" name="@types/material-ui" level="application" />
   </component>
 </module>

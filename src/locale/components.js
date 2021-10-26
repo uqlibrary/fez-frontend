@@ -3801,6 +3801,11 @@ export default {
                         aria: 'Add to favourites',
                     },
                 },
+                confirmations: {
+                    addToFavourites: {
+                        confirmationMessage: 'COUNT item(s) have been added.',
+                    },
+                },
             },
             input: {
                 placeholder: 'Type at least 3 characters to start a search',
