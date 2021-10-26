@@ -1,28 +1,20 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
 import { JournalComparison } from '../index';
-import Immutable from 'immutable';
-import { createMemoryHistory } from 'history';
-import { pathConfig } from '../../../config';
 
-function setup(testProps = Immutable.Map({})) {
+const setup = () => {
     return render(
-        <WithRouter history={testProps.history}>
+        <WithRouter>
             <WithReduxStore>
                 <JournalComparison />
             </WithReduxStore>
         </WithRouter>,
     );
-}
+};
 
 describe('JournalComparison', () => {
-    it('should navigate to journal search page', () => {
-        const history = createMemoryHistory({ initialEntries: [pathConfig.journals.compare] });
-        history.push({
-            pathname: pathConfig.journals.search,
-        });
-        const { getByTestId } = setup(Immutable.Map({ history: history }));
-        fireEvent.click(getByTestId('return-to-search-results-button'));
-        expect(history.location.pathname).toBe(pathConfig.journals.search);
+    it('should render', () => {
+        const { queryByTestId } = setup();
+        expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
     });
 });

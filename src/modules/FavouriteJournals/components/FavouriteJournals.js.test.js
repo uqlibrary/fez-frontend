@@ -1,28 +1,36 @@
 import React from 'react';
-import Immutable from 'immutable';
 import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
-import { createMemoryHistory } from 'history';
-import { pathConfig } from '../../../config';
 import { FavouriteJournals } from '../index';
+import Immutable from 'immutable';
+import * as mockData from '../../../mock/data/testing/journals/journalComparison';
 
-function setup(testProps = Immutable.Map({})) {
+const setup = ({ state = {} } = {}) => {
     return render(
-        <WithRouter history={testProps.history}>
-            <WithReduxStore>
+        <WithRouter>
+            <WithReduxStore initialState={Immutable.Map({ favouriteJournalsReducer: state })}>
                 <FavouriteJournals />
             </WithReduxStore>
         </WithRouter>,
     );
-}
+};
 
+const mocks = {};
 describe('FavouriteJournals', () => {
-    it('should navigate to journal search page', () => {
-        const history = createMemoryHistory({ initialEntries: [pathConfig.journals.compare] });
-        history.push({
-            pathname: pathConfig.journals.search,
+    afterEach(() => {
+        Object.keys(mocks).map(name => mocks[name].mockRestore());
+    });
+    it('should render when there no are fav journals ', () => {
+        mocks.useState = jest.spyOn(React, 'useState');
+        mocks.useState.mockImplementation(() => [{ [mockData.journals[0].jnl_jid]: true }, jest.fn()]);
+        const { getByTestId, queryByTestId } = setup({
+            state: { loading: false, response: { total: 1, data: mockData.journals } },
         });
-        const { getByTestId } = setup(Immutable.Map({ history: history }));
-        fireEvent.click(getByTestId('return-to-search-results-button'));
-        expect(history.location.pathname).toBe(pathConfig.journals.search);
+        expect(queryByTestId('remove-from-favourites')).toBeInTheDocument();
+        fireEvent.click(getByTestId('remove-from-favourites'));
+    });
+    it('should render when there are fav journals', () => {
+        const { queryByTestId } = setup();
+        expect(queryByTestId('remove-from-favourites')).not.toBeInTheDocument();
+        expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
     });
 });

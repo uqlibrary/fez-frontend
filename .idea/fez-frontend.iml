@@ -4,7 +4,6 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/coverage" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -23,5 +22,6 @@
     <orderEntry type="library" name="@types/recompose" level="application" />
     <orderEntry type="library" name="@types/redux-immutable" level="application" />
     <orderEntry type="library" name="@types/material-ui" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>
