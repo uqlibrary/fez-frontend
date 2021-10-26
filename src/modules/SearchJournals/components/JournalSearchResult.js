@@ -15,11 +15,12 @@ import locale from 'locale/components';
 import JournalSearchFacetsFilter from './JournalSearchFacetsFilter';
 import { pathConfig } from 'config/pathConfig';
 import { useJournalSearch, useJournalSearchControls, useSelectedJournals } from '../hooks';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { AddToFavouritesButton, CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
 export const JournalSearchResult = ({ onSearch }) => {
+    const location = useLocation();
     const history = useHistory();
     const txt = locale.components.journalSearch;
     const { journalSearchQueryParams } = useJournalSearch();
@@ -42,7 +43,7 @@ export const JournalSearchResult = ({ onSearch }) => {
         history.push({
             pathname: pathConfig.journals.compare,
             state: {
-                fromSearch: true,
+                prevLocation: location,
                 journals: journalsList.data?.filter(journal => journal && selectedJournals[journal.jnl_jid]),
             },
         });

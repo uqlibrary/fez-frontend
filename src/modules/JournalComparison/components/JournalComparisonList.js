@@ -17,7 +17,7 @@ export const JournalComparisonList = ({ journals }) => {
     }
     return (
         <Grid item xs={12}>
-            <JournalsList journals={journals} />
+            <JournalsList journals={journals} isSelectable={false} />
         </Grid>
     );
 };

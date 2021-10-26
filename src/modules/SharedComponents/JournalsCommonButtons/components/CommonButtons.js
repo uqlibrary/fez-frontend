@@ -4,16 +4,18 @@ import Button from '@material-ui/core/Button';
 
 import locale from '../../../../locale/components';
 import { pathConfig } from '../../../../config';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 
 const CommonButtons = () => {
+    const location = useLocation();
     const history = useHistory();
     const txt = locale.components.journalSearch;
-    const handleFavouriteJournalsClick = () =>
+    const handleFavouriteJournalsClick = () => {
         history.push({
             pathname: pathConfig.journals.favourites,
-            state: { fromSearch: true },
+            state: { prevLocation: location },
         });
+    };
     return (
         <>
             <Grid item xs={12} sm="auto">

@@ -28,7 +28,7 @@ export const JournalComparison = () => {
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
-                                                historyOffset={location.state?.journals ? 1 : 0}
+                                                prevLocation={location.state?.prevLocation}
                                             />
                                         </Grid>
                                     </Grid>

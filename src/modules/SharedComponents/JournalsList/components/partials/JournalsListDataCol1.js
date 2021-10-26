@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
-const JournalsListDataCol1 = ({ journal, index, onChange, checked = false }) => {
+const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSelectable = true }) => {
     return (
         <Grid
             container
@@ -23,22 +23,24 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false }) => 
                 overflow: 'hidden',
             }}
         >
-            <Grid
-                item
-                xs={1}
-                id={`journal-list-checkbox-${index}`}
-                data-testid={`journal-list-checkbox-${index}`}
-                style={{ height: 48 }}
-            >
-                <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
-                    <Checkbox
-                        style={{ padding: 2, marginTop: 10 }}
-                        value={journal.jnl_jid}
-                        onChange={onChange}
-                        checked={checked}
-                    />
-                </Tooltip>
-            </Grid>
+            {isSelectable && (
+                <Grid
+                    item
+                    xs={1}
+                    id={`journal-list-checkbox-${index}`}
+                    data-testid={`journal-list-checkbox-${index}`}
+                    style={{ height: 48 }}
+                >
+                    <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
+                        <Checkbox
+                            style={{ padding: 2, marginTop: 10 }}
+                            value={journal.jnl_jid}
+                            onChange={onChange}
+                            checked={checked}
+                        />
+                    </Tooltip>
+                </Grid>
+            )}
             <Grid
                 item
                 xs={11}
@@ -79,6 +81,7 @@ JournalsListDataCol1.propTypes = {
     index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
     checked: PropTypes.bool,
+    isSelectable: PropTypes.bool,
 };
 
 export default React.memo(JournalsListDataCol1);

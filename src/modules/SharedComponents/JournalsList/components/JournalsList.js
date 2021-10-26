@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 
-const JournalsList = ({ journals, onSelectionChange, selected = {} }) => {
+const JournalsList = ({ journals, onSelectionChange, selected = {}, isSelectable }) => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -50,6 +50,7 @@ const JournalsList = ({ journals, onSelectionChange, selected = {} }) => {
                                 journal={item}
                                 onChange={onSelectionChange}
                                 checked={selected[item.jnl_jid]}
+                                isSelectable={isSelectable}
                             />
                         );
                     })}
@@ -107,6 +108,7 @@ JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
     onSelectionChange: PropTypes.func,
     selected: PropTypes.object,
+    isSelectable: PropTypes.bool,
 };
 
 export default React.memo(JournalsList);

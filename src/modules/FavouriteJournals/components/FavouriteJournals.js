@@ -18,6 +18,8 @@ export const FavouriteJournals = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const txt = locale.components.favouriteJournals;
+    // keep track of previous location, so we can go back to the search page correctly after re rendering this component
+    const prevLocation = useRef(location.state?.prevLocation);
     const {
         selectedJournals,
         clearSelectedJournals,
@@ -29,9 +31,6 @@ export const FavouriteJournals = () => {
         handleSearch,
         journalSearchQueryParams,
     );
-    // keep track of page ctrl interactions, so we can go back to the search page correctly
-    const controlInteractions = useRef(0);
-    const fromSearch = useRef(location.state?.fromSearch);
 
     const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
@@ -45,9 +44,7 @@ export const FavouriteJournals = () => {
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
     useEffect(() => {
-        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection })).then(
-            () => controlInteractions.current++,
-        );
+        dispatch(retrieveFavouriteJournals({ page, pageSize, sortBy, sortDirection }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page, pageSize, sortBy, sortDirection]);
     return (
@@ -93,7 +90,7 @@ export const FavouriteJournals = () => {
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
-                                                historyOffset={fromSearch.current ? controlInteractions.current + 1 : 0}
+                                                prevLocation={prevLocation.current}
                                             />
                                         </Grid>
                                     </Grid>

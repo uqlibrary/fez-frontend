@@ -6,9 +6,9 @@ import { pathConfig } from '../../../../config';
 
 const BackToSearchButton = props => {
     const history = useHistory();
-    const { historyOffset, ...otherProps } = props;
+    const { prevLocation, ...otherProps } = props;
     const handleReturnToSearchClick = () =>
-        historyOffset ? history.go(-historyOffset) : history.push(pathConfig.journals.search);
+        prevLocation ? history.replace(prevLocation) : history.push(pathConfig.journals.search);
     return (
         <Button
             variant="contained"
@@ -23,7 +23,7 @@ const BackToSearchButton = props => {
 };
 
 BackToSearchButton.propTypes = {
-    historyOffset: PropTypes.number,
+    prevLocation: PropTypes.object,
 };
 
 export default React.memo(BackToSearchButton);
