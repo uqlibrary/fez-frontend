@@ -397,6 +397,8 @@ Deployment pipelines are setup for branches: "master", "staging, "production" an
 Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
 
+Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline)
+
 ### Gotchas
 
 There are some build steps that are exclusive to master, staging and production branches:
