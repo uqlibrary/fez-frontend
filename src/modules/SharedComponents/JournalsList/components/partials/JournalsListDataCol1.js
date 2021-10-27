@@ -37,6 +37,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                             value={journal.jnl_jid}
                             onChange={onChange}
                             checked={checked}
+                            label={`Select ${journal.jnl_title}`}
                         />
                     </Tooltip>
                 </Grid>

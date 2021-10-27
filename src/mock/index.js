@@ -1,8 +1,7 @@
 /* eslint-disable */
-import { api, sessionApi } from 'config';
+import { api, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
@@ -408,6 +407,10 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
     .reply(200, { ...journalsSearch.favourites })
+    .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
+    .reply(200)
+    .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({ append: 'delete' }).apiUrl)))
+    .reply(200)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
     .reply(config => {
         return config.params.export_to && config.params.export_to === 'excel'

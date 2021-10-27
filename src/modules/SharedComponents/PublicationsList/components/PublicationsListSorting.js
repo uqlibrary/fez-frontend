@@ -84,10 +84,15 @@ const PublicationsListSorting = props => {
                         onChange={orderDirectionsChanged}
                         value={sortDirection}
                         disabled={props.disabled}
+                        data-testid="publication-list-sorting-sort-order"
                     >
                         {txt.sortDirection.map((item, index) => {
                             return (
-                                <MenuItem key={index} value={item}>
+                                <MenuItem
+                                    key={index}
+                                    value={item}
+                                    data-testid={`publication-list-sorting-sort-order-option-${index}`}
+                                >
                                     {item}
                                 </MenuItem>
                             );

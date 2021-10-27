@@ -86,7 +86,7 @@ export const FavouriteJournalsList = ({
                     loading={loading}
                     pagingData={journalsList}
                     onPageChanged={onPageChange}
-                    pagingId="search-journals-paging-top"
+                    pagingId="search-journals-paging-bottom"
                 />
             </Grid>
         </>

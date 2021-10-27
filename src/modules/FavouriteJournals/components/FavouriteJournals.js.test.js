@@ -28,12 +28,12 @@ describe('FavouriteJournals', () => {
         const { getByTestId, queryByTestId } = setup({
             state: { loading: false, response: { total: 1, data: mockData.journals } },
         });
-        expect(queryByTestId('remove-from-favourites')).toBeInTheDocument();
-        fireEvent.click(getByTestId('remove-from-favourites'));
+        expect(queryByTestId('remove-from-favourites-button')).toBeInTheDocument();
+        fireEvent.click(getByTestId('remove-from-favourites-button'));
     });
     it('should render when there are favs', () => {
         const { queryByTestId } = setup();
-        expect(queryByTestId('remove-from-favourites')).not.toBeInTheDocument();
+        expect(queryByTestId('remove-from-favourites-button')).not.toBeInTheDocument();
         expect(queryByTestId('return-to-search-results-button')).toBeInTheDocument();
     });
 });

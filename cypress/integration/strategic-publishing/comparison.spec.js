@@ -12,19 +12,19 @@ context('Strategic Publishing - Comparison', () => {
         );
     });
 
-    it('Should navigate to journal search when there are no journals to compare', () => {
-        cy.visit('localhost:3000/journals/compare/');
+    it('Should navigate to search', () => {
+        cy.visit('/journals/compare/');
         cy.contains('No journals were selected for comparison');
         cy.get('[data-testid="return-to-search-results-button"]').click();
         cy.location('pathname').should('contain', '/journals/search/');
     });
 
-    it('Compare journals', () => {
-        cy.visit('localhost:3000/journals/search/');
+    it('Compare journals and go back to search results', () => {
         // steps required to get to the comparison page with journals
-        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
-        cy.get('[data-testid="journal-search-button"]').click();
+        const uri = '/journals/search/';
+        const query =
+            '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
+        cy.visit(`${uri}${query}`);
         cy.get('[data-testid="journal-list-checkbox-0"]', { timeout: 1000 }).should('be.visible');
         // make sure 3rd journal is present
         cy.get('[data-testid="journal-list-title-2"]').should('exist');
@@ -59,7 +59,11 @@ context('Strategic Publishing - Comparison', () => {
                 );
 
                 cy.get('[data-testid="return-to-search-results-button"]').click();
-                cy.location('pathname').should('contain', '/journals/search/');
+                // go back to search results
+                cy.location().should(loc => {
+                    expect(loc.pathname).to.eq(uri);
+                    expect(loc.search).to.eq(query);
+                });
             });
         });
     });

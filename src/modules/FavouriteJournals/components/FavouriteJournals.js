@@ -76,8 +76,8 @@ export const FavouriteJournals = () => {
                                                     variant="contained"
                                                     type="submit"
                                                     color="primary"
-                                                    id="remove-from-favourites"
-                                                    data-testid="remove-from-favourites"
+                                                    id="remove-from-favourites-button"
+                                                    data-testid="remove-from-favourites-button"
                                                     disabled={!!removing || countSelectedJournals() < 1}
                                                     loading={removing}
                                                     aria-label={txt.buttons.removeFromFavourites.aria}
