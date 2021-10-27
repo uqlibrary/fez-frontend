@@ -55,7 +55,7 @@ export const ConfirmationBox = ({
     };
 
     return (
-        <Dialog style={{ padding: 6 }} open={isOpen}>
+        <Dialog style={{ padding: 6 }} open={isOpen} id={confirmationBoxId} data-testid={confirmationBoxId}>
             <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
                 <DialogContentText data-testid="message-content">{locale.confirmationMessage}</DialogContentText>

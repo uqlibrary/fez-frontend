@@ -7,11 +7,11 @@ import locale from '../../../../locale/components';
 import { LoadingButton } from '../../../SharedComponents/LoadingButton';
 import { ConfirmationBox } from '../../../SharedComponents/Toolbox/ConfirmDialogBox';
 
-export const AddToFavouritesButton = ({ selectedJournals, disabled, clearSelectedJournals }) => {
+export const AddToFavouritesButton = ({ selectedJournals = {}, disabled, clearSelectedJournals }) => {
     const dispatch = useDispatch();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
-    const txt = locale.components.journalSearch;
-    const adding = useSelector(state => state.get?.('favouriteJournalsReducer').add.loading);
+    const txt = locale.components.journalSearch.journalSearchInterface;
+    const adding = useSelector(state => state.get?.('favouriteJournalsReducer').add?.loading);
 
     const selectionCount = Object.keys(selectedJournals).length;
     const closeDialog = () => {
@@ -27,18 +27,14 @@ export const AddToFavouritesButton = ({ selectedJournals, disabled, clearSelecte
     return (
         <>
             <ConfirmationBox
-                testId="rek-doi-confirmation-box"
-                confirmationBoxId="rek-doi"
+                confirmationBoxId="add-to-favourites-confirmation-box"
                 hideCancelButton
                 isOpen={isDialogOpen}
                 locale={{
-                    ...txt.journalSearchInterface.confirmations.addToFavourites,
+                    ...txt.confirmations.addToFavourites,
                     // eslint-disable-next-line max-len
                     confirmationMessage: selectionCount
-                        ? txt.journalSearchInterface.confirmations.addToFavourites.confirmationMessage.replace(
-                              'COUNT',
-                              selectionCount,
-                          )
+                        ? txt.confirmations.addToFavourites.confirmationMessage.replace('COUNT', selectionCount)
                         : '',
                 }}
                 onClose={closeDialog}
@@ -48,8 +44,8 @@ export const AddToFavouritesButton = ({ selectedJournals, disabled, clearSelecte
                 loading={adding}
                 onClick={handleAddToFavouriteClick}
                 variant="contained"
-                children={txt.journalSearchInterface.buttons.addToFavourites.title}
-                aria-label={txt.journalSearchInterface.buttons.addToFavourites.aria}
+                children={txt.buttons.addToFavourites.title}
+                aria-label={txt.buttons.addToFavourites.aria}
                 color="primary"
                 id="add-to-favourites-button"
                 data-testid="add-to-favourites-button"
