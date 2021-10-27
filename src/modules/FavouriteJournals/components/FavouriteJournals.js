@@ -37,7 +37,6 @@ export const FavouriteJournals = () => {
     const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
     const removing = useSelector(state => state.get?.('favouriteJournalsReducer').remove?.loading);
 
-    /* istanbul ignore next */
     const handleRemoveFromFavouritesClick = () =>
         dispatch(removeFromFavourites(Object.keys(selectedJournals)))
             .then(() => clearSelectedJournals({}))
