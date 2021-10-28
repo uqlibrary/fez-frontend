@@ -61,7 +61,7 @@ const JournalsList = ({ journals, onSelectionChange, selected = {}, isSelectable
                         container
                         spacing={0}
                         alignItems="flex-end"
-                        style={{ borderBottom: '1px solid #CCC', height: 32, width: '100%' }}
+                        style={{ borderBottom: '1px solid #CCC', height: 32, width: '100%', overflowY: 'hidden' }}
                     >
                         {/* Header */}
                         {!minimalView

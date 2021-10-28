@@ -23,7 +23,16 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
                 </InputLabel>
             </Tooltip>
             {!!journal.titleHelp && (
-                <Grid item xs={2} style={{ marginTop: -45, marginLeft: 78 }}>
+                <Grid
+                    item
+                    xs={2}
+                    style={{
+                        marginTop: -45,
+                        marginRight: journal.size < 250 ? 20 : 0,
+                        paddingRight: journal.size < 120 ? 20 : 0,
+                        float: 'right',
+                    }}
+                >
                     <HelpIcon {...journal.titleHelp} />
                 </Grid>
             )}

@@ -26,11 +26,15 @@ export const JournalFieldsMap = [
         key: 'fez_journal_doaj',
         label: 'Open access',
         subLabel: '',
-        size: 55,
+        size: 70,
         prefix: '',
         suffix: '',
         compactView: true,
         compactSize: 2,
+        titleHelp: {
+            title: 'Open Access',
+            text: <p>Open access is free, online access to research</p>,
+        },
         showTooltip: true,
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
@@ -97,10 +101,20 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score',
         label: 'CiteScore',
         subLabel: 'higher is better',
-        size: 110,
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'CiteScore',
+            text: (
+                <React.fragment>
+                    <p>Scopus metric for journal citation impact. Updated annually.</p>
+                    <p>Higher is better.</p>
+                    <p>Not comparable across categories.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: false,
         translateFn: data => {
             return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score) || '';
@@ -114,6 +128,17 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'CiteScore percentile',
+            text: (
+                <React.fragment>
+                    <p>CiteScore percentile indicating where a journal is ranked within a category.</p>
+                    <p>E.g. 98 indicates that the journal is in a top 2% of its category.</p>
+                    <p>Higher is better (0-99).</p>
+                    <p>Comparable across categories.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: true,
         toolTipLabel: data => {
             let tooltip = undefined;
@@ -156,6 +181,16 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'Impact factor',
+            text: (
+                <React.fragment>
+                    <p>Web of Science metric for journal citation impact. Updated annually.</p>
+                    <p>Higher is better (0-99).</p>
+                    <p>Not comparable across categories.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: false,
         translateFn: data => {
             return (
@@ -169,10 +204,21 @@ export const JournalFieldsMap = [
         key: 'jnl_jcr_scie_category_jif_percentile',
         label: 'Impact factor percentile',
         subLabel: 'higher is better',
-        size: 180,
+        size: 250,
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'CiteScore percentile',
+            text: (
+                <React.fragment>
+                    <p>Impact factor percentile indicating where a journal is ranked within a category.</p>
+                    <p>E.g. So 89 indicates that the journal is in a top 11% of its category.</p>
+                    <p>Higher is better (0-99).</p>
+                    <p>Comparable across categories.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: true,
         toolTipLabel: data => {
             let label = undefined;
@@ -225,10 +271,20 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score_snip',
         label: 'SNIP',
         subLabel: 'higher is better',
-        size: 110,
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'SNIP',
+            text: (
+                <React.fragment>
+                    <p>Scopus journal citation impact metric adjusted for field-specific citation practices.</p>
+                    <p>Higher is better;1 is average.</p>
+                    <p>Designed to be comparable across categories.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: false,
         translateFn: data => {
             return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score_snip) || null;
@@ -238,10 +294,25 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score_sjr',
         label: 'SJR',
         subLabel: 'higher is better',
-        size: 110,
+        size: 120,
         prefix: '',
         suffix: '',
         compactView: false,
+        titleHelp: {
+            title: 'SJR',
+            text: (
+                <React.fragment>
+                    <p>
+                        Scopus journal citation impact metric that measures the prestige of citations recevied by a
+                        journal.
+                    </p>
+                    <p>E.g. 98 indicates that the journal is in a top 2% of its category.</p>
+                    <p>Higher is better.</p>
+                    <p>Comparable across categories.</p>
+                    <p>Recommended to use in Life and Health Science disciplines.</p>
+                </React.fragment>
+            ),
+        },
         showTooltip: false,
         translateFn: data => {
             return (data.fez_journal_cite_score && data.fez_journal_cite_score.jnl_cite_score_sjr) || null;
