@@ -10,7 +10,7 @@ exports[`Search record should handle skip search 1`] = `
       "skip": "Skip search",
       "submit": "Search",
       "text": "Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.",
-      "title": "Search for your works",
+      "title": "Search for you[TYPO] works",
     }
   }
   onSkipSearch={[Function]}
@@ -28,7 +28,7 @@ exports[`Search record should render stepper and a publication search form 1`] =
       "skip": "Skip search",
       "submit": "Search",
       "text": "Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.",
-      "title": "Search for your works",
+      "title": "Search for you[TYPO] works",
     }
   }
   onSkipSearch={[Function]}
