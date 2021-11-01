@@ -2,6 +2,11 @@ import AddDataCollection, { licenseText } from './AddDataCollection';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 
+// LS - Jest test for AddDataCollectionForm component
+import React from 'react';
+import AddDataCollectionForm from '../containers/AddDataCollection';
+import { render, WithReduxStore, WithRouter } from 'test-utils';
+
 function setup(testProps) {
     const props = {
         autofill: jest.fn(),
@@ -176,5 +181,23 @@ describe('AddDataCollection test', () => {
 
         // licence text lacks required internal structure
         expect(toJson(licenseText(['something']))).toMatchSnapshot();
+    });
+});
+
+// LS - setup for testing component with Jest
+const jestSetup = () => {
+    return render(
+        <WithReduxStore>
+            <WithRouter>
+                <AddDataCollectionForm />
+            </WithRouter>
+        </WithReduxStore>,
+    );
+};
+
+describe('Add Data Collection', () => {
+    it('Should have a subheading that reads: "Deposit agreement"', () => {
+        const { getByText } = jestSetup();
+        expect(getByText('Deposit agreement')).toBeInTheDocument();
     });
 });
