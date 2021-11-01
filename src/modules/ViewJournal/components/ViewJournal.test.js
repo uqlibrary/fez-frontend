@@ -382,6 +382,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
         expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
+
     });
 
     it('should render correct creative licenses (BY-ND)', async () => {
@@ -511,5 +512,27 @@ describe('ViewJournal', () => {
             'Public, Environmental & Occupational Health (0090-0036)',
         );
         expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
+    });
+    /************  
+    PT#1589667 SL 02112021 - Test for title change (From: UQ Specific Data -> To (Exact): UQ eSpace)
+    ************/
+    it('Should correctly show UQ eSpace instead of UQ Specific Data', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_doaj: {
+                    ...journalDetails.data.fez_journal_doaj,
+                    jnl_doaj_sa: true,
+                },
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        fireEvent.click(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading'));
+
+        expect(getByTestId('journal-details-uqData-header')).toHaveTextContent(/^UQ eSpace$/);
     });
 });

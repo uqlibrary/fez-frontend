@@ -913,7 +913,7 @@ export const journalViewConfig = {
         ],
     },
     uqData: {
-        title: 'UQ specific data',
+        title: 'UQ eSpace',
         rows: [
             [
                 {
