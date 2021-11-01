@@ -392,7 +392,7 @@ export default {
             title: 'Add a missing work to eSpace',
             stepper: [{ label: 'Search for your work' }, { label: 'Search results' }, { label: 'Add your work' }],
             step1: {
-                title: 'Search for your works',
+                title: 'Search for you[TYPO] works',
                 text:
                     'Enter either the DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of work. This will allow us to check whether the work is already in eSpace or is available from another source.',
                 // help: {
