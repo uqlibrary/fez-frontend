@@ -223,7 +223,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - install jest `npm install jest -g`
 - run tests `npm test`
 
-Before committing changes, locally run tests and update stapshots (if required). To update snapshots run
+Before committing changes, locally run tests and update snapshots (if required). To update snapshots run
 `npm run test:unit:update`.
 
 [Code coverage](coverage/jest/index.html) is available (after running `npm test`)
