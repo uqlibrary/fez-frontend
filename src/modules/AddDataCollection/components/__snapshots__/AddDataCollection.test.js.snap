@@ -66,7 +66,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
           xs={12}
         >
           <StandardCard
-            title="Deposit agree[TYPO]"
+            title="Deposit agreement"
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
@@ -1643,7 +1643,7 @@ exports[`AddDataCollection test should render component with a valid collection 
           xs={12}
         >
           <StandardCard
-            title="Deposit agree[TYPO]"
+            title="Deposit agreement"
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
@@ -3216,7 +3216,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
           xs={12}
         >
           <StandardCard
-            title="Deposit agree[TYPO]"
+            title="Deposit agreement"
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
@@ -4789,7 +4789,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
           xs={12}
         >
           <StandardCard
-            title="Deposit agree[TYPO]"
+            title="Deposit agreement"
           >
             <WithStyles(ForwardRef(Grid))
               container={true}
