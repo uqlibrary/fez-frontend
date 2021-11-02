@@ -33,7 +33,7 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
                         float: 'right',
                     }}
                 >
-                    <HelpIcon {...journal.titleHelp} />
+                    <HelpIcon {...journal.titleHelp} testId={journal.key} />
                 </Grid>
             )}
         </Grid>

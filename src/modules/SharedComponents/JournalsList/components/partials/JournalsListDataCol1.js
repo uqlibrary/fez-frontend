@@ -12,7 +12,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
             container
             spacing={1}
             direction="row"
-            id={`journal-list-data-${index}`}
+            id={`journal-list-data-col-1-${index}`}
             alignItems="center"
             alignContent="center"
             style={{
@@ -25,10 +25,10 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
         >
             {isSelectable && (
                 <Grid item xs={1} style={{ height: 48 }}>
-                    <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
+                    <Tooltip title={`Select ${journal.jnl_title}`} placement="right">
                         <Checkbox
-                            id={`journal-list-checkbox-${index}`}
-                            data-testid={`journal-list-checkbox-${index}`}
+                            id={`journal-list-data-col-1-checkbox-${index}`}
+                            data-testid={`journal-list-data-col-1-checkbox-${index}`}
                             style={{ padding: 2, marginTop: 10 }}
                             value={journal.jnl_jid}
                             onChange={onChange}
@@ -41,8 +41,8 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
             <Grid
                 item
                 xs={11}
-                id={`journal-list-title-${index}`}
-                data-testid={`journal-list-title-${index}`}
+                id={`journal-list-data-col-1-title-${index}`}
+                data-testid={`journal-list-data-col-1-title-${index}`}
                 style={{
                     whiteSpace: 'nowrap',
                     textOverflow: 'ellipsis',

@@ -4,7 +4,7 @@ context('ORCiD Upload button', () => {
     });
 
     it('should appear and open panel on click; panel can close', () => {
-        cy.get('[data-testid="orcid-help-icon"]')
+        cy.get('[data-testid="help-icon-orcid"]')
             .should('exist')
             .click();
         cy.get('[data-testid="help-drawer-message"]').should('exist');
@@ -16,7 +16,7 @@ context('ORCiD Upload button', () => {
     });
 
     it('should open panel which closes on requesting ORCID upload', () => {
-        cy.get('[data-testid="orcid-help-icon"]').click();
+        cy.get('[data-testid="help-icon-orcid"]').click();
         cy.get('[data-testid="help-drawer-message"]').should('exist');
         cy.get('[data-testid="orcid-upload-start-button"]').click();
         cy.get('[data-testid="help-drawer-message"]').should('not.exist');

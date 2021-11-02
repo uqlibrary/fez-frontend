@@ -77,12 +77,12 @@ const JournalsList = ({
                         {/* Header */}
                         {!minimalView
                             ? JournalFieldsMap.slice(1).map((item, index) => {
-                                  return <JournalsListHeaderCol2Full journal={item} key={index} />;
+                                  return <JournalsListHeaderCol2Full journal={item} index={index} key={index} />;
                               })
                             : JournalFieldsMap.slice(1)
                                   .filter(item => !!item.compactView)
                                   .map((item, index) => {
-                                      return <JournalsListHeaderCol2Min journal={item} key={index} />;
+                                      return <JournalsListHeaderCol2Min journal={item} index={index} key={index} />;
                                   })}
                     </Grid>
                     {/* Data */}

@@ -29,7 +29,12 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick,
 
     return (
         <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
-            <IconButton id="help-icon" onClick={setDrawerContent} aria-label={tooltip} data-testid={testId}>
+            <IconButton
+                onClick={setDrawerContent}
+                aria-label={tooltip}
+                id={`help-icon-${testId}`}
+                data-testid={`help-icon-${testId}`}
+            >
                 <IconComponent className={classes.helpIcon} size={iconSize} titleAccess={tooltip} />
             </IconButton>
         </Tooltip>

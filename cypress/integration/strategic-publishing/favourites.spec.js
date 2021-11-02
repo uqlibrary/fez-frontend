@@ -1,7 +1,56 @@
 context('Strategic Publishing - Favourite Journals', () => {
     it('Should render', () => {
         cy.visit('/journals/favourites/');
-        cy.get('[data-testid="journal-list-checkbox-1"]', { timeout: 1000 });
+        cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]', { timeout: 1000 });
+        cy.injectAxe();
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                // TODO add 'critical' to the list below once journalList passes accessibility tests
+                includedImpacts: ['minor', 'moderate', 'serious'],
+            },
+            violations => cy.axeViolationParser(violations),
+        );
+    });
+
+    it('Should toggle select all', () => {
+        cy.visit('/journals/favourites/');
+        cy.get('#journal-list-header-col-1-select-all', { timeout: 1000 }).should('not.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('not.be.checked');
+        // select all
+        cy.get('#journal-list-header-col-1-select-all').click();
+        cy.get('#journal-list-header-col-1-select-all').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('be.checked');
+        // unselect first record
+        cy.get('#journal-list-data-col-1-checkbox-0').click();
+        cy.get('#journal-list-header-col-1-select-all').should('not.be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('be.checked');
+        // select first record
+        cy.get('#journal-list-data-col-1-checkbox-0').click();
+        cy.get('#journal-list-header-col-1-select-all').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('be.checked');
+        // unselect all
+        cy.get('#journal-list-header-col-1-select-all').click();
+        cy.get('#journal-list-header-col-1-select-all').should('not.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('not.be.checked');
+        // select all
+        cy.get('#journal-list-header-col-1-select-all').click();
+        cy.get('#journal-list-header-col-1-select-all').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('be.checked');
+        // refresh page
+        cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
+        cy.get('[data-testid="publication-list-sorting-sort-order-option-1"]').click();
+        // make sure selection was cleared
+        cy.get('#journal-list-header-col-1-select-all', { timeout: 1000 }).should('not.checked');
+        cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
+        cy.get('#journal-list-data-col-1-checkbox-1').should('not.be.checked');
+
         cy.injectAxe();
         cy.checkA11y(
             'div.StandardPage',
@@ -28,7 +77,7 @@ context('Strategic Publishing - Favourite Journals', () => {
         cy.location('pathname').should('contain', '/journals/favourites/');
         cy.get('[data-testid="remove-from-favourites-button"]').should('be.disabled');
         // remove a fav
-        cy.get('[data-testid="journal-list-checkbox-1"]')
+        cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]')
             .click()
             .should('not.be.disabled');
         cy.get('[data-testid="remove-from-favourites-button"]')

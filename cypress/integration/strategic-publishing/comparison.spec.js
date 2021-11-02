@@ -25,31 +25,31 @@ context('Strategic Publishing - Comparison', () => {
         const query =
             '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
         cy.visit(`${uri}${query}`);
-        cy.get('[data-testid="journal-list-checkbox-0"]', { timeout: 1000 }).should('be.visible');
+        cy.get('[data-testid="journal-list-data-col-1-checkbox-0"]', { timeout: 1000 }).should('be.visible');
         // make sure 3rd journal is present
-        cy.get('[data-testid="journal-list-title-2"]').should('exist');
+        cy.get('[data-testid="journal-list-data-col-1-title-2"]').should('exist');
 
-        cy.get('[data-testid="journal-list-title-0"]').then($el => {
+        cy.get('[data-testid="journal-list-data-col-1-title-0"]').then($el => {
             // get title from 1st journal
             const title1 = $el.text();
-            cy.get('[data-testid="journal-list-title-1"]').then($el => {
+            cy.get('[data-testid="journal-list-data-col-1-title-1"]').then($el => {
                 // get title from 2nd journal
                 const title2 = $el.text();
                 // select journals for comparison
                 cy.get('[data-testid="journal-comparison-button"]').should('be.disabled');
-                cy.get('[data-testid="journal-list-checkbox-0"]').click();
+                cy.get('[data-testid="journal-list-data-col-1-checkbox-0"]').click();
                 cy.get('[data-testid="journal-comparison-button"]').should('be.disabled');
-                cy.get('[data-testid="journal-list-checkbox-1"]').click();
+                cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]').click();
                 cy.get('[data-testid="journal-comparison-button"]').should('not.be.disabled');
                 cy.get('[data-testid="journal-comparison-button"]').click();
                 cy.location('pathname').should('eq', '/journals/compare/');
                 cy.injectAxe();
 
                 // make sure the selected journal are present
-                cy.get('[data-testid="journal-list-title-0"]').contains(title1);
-                cy.get('[data-testid="journal-list-title-1"]').contains(title2);
+                cy.get('[data-testid="journal-list-data-col-1-title-0"]').contains(title1);
+                cy.get('[data-testid="journal-list-data-col-1-title-1"]').contains(title2);
                 // make sure 3rd journal is not present
-                cy.get('[data-testid="journal-list-title-2"]').should('not.exist');
+                cy.get('[data-testid="journal-list-data-col-1-title-2"]').should('not.exist');
                 cy.checkA11y(
                     'div.StandardPage',
                     {

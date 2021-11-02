@@ -24,17 +24,17 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 {isSelectable && (
                     <Tooltip title="Select All" placement="right">
                         <Checkbox
-                            id="journals-list-header-title-select-all"
-                            data-testid="journals-list-header-title-select-all"
+                            id="journal-list-header-col-1-select-all"
+                            data-testid="journal-list-header-col-1-select-all"
                             onChange={onChange}
                             style={{ padding: 2, marginTop: -8 }}
-                            label="Select all"
                             checked={checked}
+                            label="Select All"
                         />
                     </Tooltip>
                 )}
             </Grid>
-            <Grid item xs id="journal-list-header-title" style={{ height: 32, paddingLeft: 4 }}>
+            <Grid item xs id="journal-list-header-col-1" style={{ height: 32, paddingLeft: 4 }}>
                 <InputLabel shrink style={{ fontWeight: 600 }}>
                     {JournalFieldsMap[0].label}
                 </InputLabel>

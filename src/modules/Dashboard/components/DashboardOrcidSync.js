@@ -106,7 +106,7 @@ export const DashboardOrcidSync = props => {
         title: messageTemplate.title,
         tooltip: status,
     };
-    return <HelpIcon {...helpIconProps} testId="orcid-help-icon" />;
+    return <HelpIcon {...helpIconProps} testId="orcid" />;
 };
 
 DashboardOrcidSync.propTypes = {
