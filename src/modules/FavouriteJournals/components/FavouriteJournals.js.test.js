@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import { FavouriteJournals } from '../index';
 import Immutable from 'immutable';
-import * as mockData from '../../../mock/data/testing/journals/journalComparison';
+import mockData from '../../../mock/data/testing/journals/journals';
 import * as redux from 'react-redux';
 
 const setup = ({ state = {} } = {}) => {
@@ -23,12 +23,12 @@ describe('FavouriteJournals', () => {
     it('should remove journal ', () => {
         mocks.useState = jest.spyOn(React, 'useState');
         mocks.useState
-            .mockImplementationOnce(() => [{ [mockData.journals[0].jnl_jid]: true }, jest.fn()])
+            .mockImplementationOnce(() => [{ [mockData[0].jnl_jid]: true }, jest.fn()])
             .mockImplementationOnce(() => [false, jest.fn()]);
         mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { getByTestId, queryByTestId } = setup({
-            state: { loading: false, response: { total: 1, data: mockData.journals } },
+            state: { loading: false, response: { total: 1, data: mockData } },
         });
         expect(queryByTestId('remove-from-favourites-button')).toBeInTheDocument();
         fireEvent.click(getByTestId('remove-from-favourites-button'));

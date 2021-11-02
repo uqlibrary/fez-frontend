@@ -1,4 +1,4 @@
-import * as mockData from 'mock/data/testing/journals/journalComparison';
+import mockData from 'mock/data/testing/journals/journals';
 import { JournalComparisonList } from './JournalComparisonList';
 import { JournalsList } from '../../SharedComponents/JournalsList';
 import { locale } from '../../../locale';
@@ -14,7 +14,7 @@ describe('JournalComparisonList', () => {
         expect(wrapper.text()).toContain(locale.components.journalComparison.journalComparisonList.empty);
     });
     it('should render when there are journals to compare', () => {
-        const wrapper = setup({ journals: mockData.journals });
+        const wrapper = setup({ journals: mockData });
         expect(wrapper.find(JournalsList).length).toBe(1);
     });
 });

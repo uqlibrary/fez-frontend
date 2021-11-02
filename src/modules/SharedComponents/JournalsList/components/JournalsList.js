@@ -47,8 +47,8 @@ const JournalsList = ({
                 {/* Header */}
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
-                    isAllSelected={isAllSelected}
-                    onToggleSelectAll={onToggleSelectAll}
+                    checked={isAllSelected}
+                    onChange={onToggleSelectAll}
                 />
                 {/* Data */}
                 {journals &&

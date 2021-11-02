@@ -24,15 +24,11 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
             }}
         >
             {isSelectable && (
-                <Grid
-                    item
-                    xs={1}
-                    id={`journal-list-checkbox-${index}`}
-                    data-testid={`journal-list-checkbox-${index}`}
-                    style={{ height: 48 }}
-                >
+                <Grid item xs={1} style={{ height: 48 }}>
                     <Tooltip title={`Click to add ${journal.jnl_title} to your compare list`} placement="right">
                         <Checkbox
+                            id={`journal-list-checkbox-${index}`}
+                            data-testid={`journal-list-checkbox-${index}`}
                             style={{ padding: 2, marginTop: 10 }}
                             value={journal.jnl_jid}
                             onChange={onChange}

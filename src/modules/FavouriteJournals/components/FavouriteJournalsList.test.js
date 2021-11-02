@@ -1,5 +1,5 @@
 import React from 'react';
-import * as mockData from 'mock/data/testing/journals/journalComparison';
+import mockData from 'mock/data/testing/journals/journals';
 import { FavouriteJournalsList } from './FavouriteJournalsList';
 import { rtlRender } from '../../../../utils/test-utils';
 import { PublicationsListPaging, PublicationsListSorting } from '../../SharedComponents/PublicationsList';
@@ -44,7 +44,7 @@ describe('FavouriteJournalsList', () => {
     it('should render when there are fav journals', () => {
         const wrapper = getElement(FavouriteJournalsList, {
             loaded: true,
-            journalsList: { total: mockData.journals.length, data: mockData.journals },
+            journalsList: { total: mockData.length, data: mockData },
         });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);
@@ -52,7 +52,7 @@ describe('FavouriteJournalsList', () => {
     it('should render when there are fav journals with pagination', () => {
         const wrapper = getElement(FavouriteJournalsList, {
             loaded: true,
-            journalsList: { total: mockData.journals.length, data: mockData.journals },
+            journalsList: { total: mockData.length, data: mockData },
             journalSearchQueryParams: {
                 sortBy: 'title',
                 sortDirection: 'Asc',

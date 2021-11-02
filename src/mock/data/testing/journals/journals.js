@@ -1,4 +1,4 @@
-export const journals = [
+export default [
     {
         "jnl_created_date": "2020-11-16 07:36:09",
         "fez_journal_jcr_scie": null,
