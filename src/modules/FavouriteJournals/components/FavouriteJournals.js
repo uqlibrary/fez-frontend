@@ -20,26 +20,30 @@ export const FavouriteJournals = () => {
     const txt = locale.components.favouriteJournals;
     // keep track of previous location, so we can go back to the search page correctly after re rendering this component
     const prevLocation = useRef(location.state?.prevLocation);
-    const {
-        selectedJournals,
-        clearSelectedJournals,
-        handleSelectedJournalsChange,
-        countSelectedJournals,
-    } = useSelectedJournals();
-    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
-        handleSearch,
-        journalSearchQueryParams,
-    );
 
     const response = useSelector(state => state.get?.('favouriteJournalsReducer').response);
     const loading = useSelector(state => state.get?.('favouriteJournalsReducer').loading);
     const error = useSelector(state => state.get?.('favouriteJournalsReducer').error);
     const removing = useSelector(state => state.get?.('favouriteJournalsReducer').remove?.loading);
 
+    const {
+        selectedJournals,
+        isAllSelected,
+        handleSelectedJournalsChange,
+        clearSelectedJournals,
+        countSelectedJournals,
+        handleToggleSelectAllJournals,
+    } = useSelectedJournals({ available: response?.data });
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
+    /* istanbul ignore next */
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(params => {
+        handleSearch(params);
+        clearSelectedJournals();
+    }, journalSearchQueryParams);
+
     const handleRemoveFromFavouritesClick = () =>
         dispatch(removeFromFavourites(Object.keys(selectedJournals)))
-            .then(() => clearSelectedJournals({}))
+            .then(() => clearSelectedJournals())
             .then(() => dispatch(retrieveFavouriteJournals(journalSearchQueryParams)));
 
     const { page, pageSize, sortBy, sortDirection } = journalSearchQueryParams;
@@ -60,7 +64,9 @@ export const FavouriteJournals = () => {
                                         loading={loading}
                                         error={error}
                                         selected={selectedJournals}
+                                        isAllSelected={isAllSelected}
                                         onSelectionChange={handleSelectedJournalsChange}
+                                        onToggleSelectAll={handleToggleSelectAllJournals}
                                         onExport={handleExport}
                                         onPageSizeChange={pageSizeChanged}
                                         onPageChange={pageChanged}

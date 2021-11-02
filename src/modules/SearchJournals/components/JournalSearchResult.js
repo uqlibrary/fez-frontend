@@ -24,11 +24,7 @@ export const JournalSearchResult = ({ onSearch }) => {
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.journalSearch;
-    const { journalSearchQueryParams } = useJournalSearch();
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged } = useJournalSearchControls(
-        onSearch,
-        journalSearchQueryParams,
-    );
+
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
     const journalsListLoaded = useSelector(state => state.get('searchJournalsReducer').journalsListLoaded);
@@ -36,10 +32,21 @@ export const JournalSearchResult = ({ onSearch }) => {
 
     const {
         selectedJournals,
-        clearSelectedJournals,
+        isAllSelected,
         handleSelectedJournalsChange,
+        clearSelectedJournals,
         countSelectedJournals,
-    } = useSelectedJournals();
+        handleToggleSelectAllJournals,
+    } = useSelectedJournals({ available: journalsList?.data });
+    const { journalSearchQueryParams } = useJournalSearch();
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged } = useJournalSearchControls(
+        params => {
+            onSearch(params);
+            clearSelectedJournals();
+        },
+        journalSearchQueryParams,
+    );
+
     const handleJournalsComparisonClick = () =>
         history.push({
             pathname: pathConfig.journals.compare,
@@ -105,7 +112,9 @@ export const JournalSearchResult = ({ onSearch }) => {
                             <JournalsList
                                 journals={journalsList.data}
                                 selected={selectedJournals}
+                                isAllSelected={isAllSelected}
                                 onSelectionChange={handleSelectedJournalsChange}
+                                onToggleSelectAll={handleToggleSelectAllJournals}
                             />
                         </Grid>
                         <Grid item xs={12}>

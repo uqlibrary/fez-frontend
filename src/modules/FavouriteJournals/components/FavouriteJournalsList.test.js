@@ -53,6 +53,10 @@ describe('FavouriteJournalsList', () => {
         const wrapper = getElement(FavouriteJournalsList, {
             loaded: true,
             journalsList: { total: mockData.journals.length, data: mockData.journals },
+            journalSearchQueryParams: {
+                sortBy: 'title',
+                sortDirection: 'Asc',
+            },
         });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
         expect(wrapper.find(JournalsList).length).toBe(1);

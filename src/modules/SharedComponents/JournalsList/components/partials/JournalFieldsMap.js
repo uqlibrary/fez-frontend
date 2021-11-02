@@ -108,11 +108,11 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'CiteScore',
             text: (
-                <React.fragment>
+                <>
                     <p>Scopus metric for journal citation impact. Updated annually.</p>
                     <p>Higher is better.</p>
                     <p>Not comparable across categories.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: false,
@@ -131,12 +131,12 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'CiteScore percentile',
             text: (
-                <React.fragment>
+                <>
                     <p>CiteScore percentile indicating where a journal is ranked within a category.</p>
                     <p>E.g. 98 indicates that the journal is in a top 2% of its category.</p>
                     <p>Higher is better (0-99).</p>
                     <p>Comparable across categories.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: true,
@@ -184,11 +184,11 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'Impact factor',
             text: (
-                <React.fragment>
+                <>
                     <p>Web of Science metric for journal citation impact. Updated annually.</p>
                     <p>Higher is better (0-99).</p>
                     <p>Not comparable across categories.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: false,
@@ -211,12 +211,12 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'CiteScore percentile',
             text: (
-                <React.fragment>
+                <>
                     <p>Impact factor percentile indicating where a journal is ranked within a category.</p>
                     <p>E.g. So 89 indicates that the journal is in a top 11% of its category.</p>
                     <p>Higher is better (0-99).</p>
                     <p>Comparable across categories.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: true,
@@ -278,11 +278,11 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'SNIP',
             text: (
-                <React.fragment>
+                <>
                     <p>Scopus journal citation impact metric adjusted for field-specific citation practices.</p>
                     <p>Higher is better;1 is average.</p>
                     <p>Designed to be comparable across categories.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: false,
@@ -301,7 +301,7 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'SJR',
             text: (
-                <React.fragment>
+                <>
                     <p>
                         Scopus journal citation impact metric that measures the prestige of citations recevied by a
                         journal.
@@ -310,7 +310,7 @@ export const JournalFieldsMap = [
                     <p>Higher is better.</p>
                     <p>Comparable across categories.</p>
                     <p>Recommended to use in Life and Health Science disciplines.</p>
-                </React.fragment>
+                </>
             ),
         },
         showTooltip: false,

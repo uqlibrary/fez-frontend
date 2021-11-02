@@ -12,7 +12,14 @@ import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 
-const JournalsList = ({ journals, onSelectionChange, selected = {}, isSelectable }) => {
+const JournalsList = ({
+    journals,
+    onSelectionChange,
+    onToggleSelectAll,
+    selected = {},
+    isSelectable,
+    isAllSelected,
+}) => {
     React.useEffect(() => {
         if (!Cookies.get('minimalView')) {
             Cookies.set('minimalView', true);
@@ -38,7 +45,11 @@ const JournalsList = ({ journals, onSelectionChange, selected = {}, isSelectable
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
                 {/* Header */}
-                <JournalsListHeaderCol1 isSelectable={isSelectable} />
+                <JournalsListHeaderCol1
+                    isSelectable={isSelectable}
+                    isAllSelected={isAllSelected}
+                    onToggleSelectAll={onToggleSelectAll}
+                />
                 {/* Data */}
                 {journals &&
                     journals.length > 0 &&
@@ -107,8 +118,10 @@ const JournalsList = ({ journals, onSelectionChange, selected = {}, isSelectable
 JournalsList.propTypes = {
     journals: PropTypes.array.isRequired,
     onSelectionChange: PropTypes.func,
+    onToggleSelectAll: PropTypes.func,
     selected: PropTypes.object,
     isSelectable: PropTypes.bool,
+    isAllSelected: PropTypes.bool,
 };
 
 export default React.memo(JournalsList);

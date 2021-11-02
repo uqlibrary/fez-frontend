@@ -4,8 +4,9 @@ import { JournalFieldsMap } from './JournalFieldsMap';
 import Checkbox from '@material-ui/core/Checkbox';
 import InputLabel from '@material-ui/core/InputLabel';
 import PropTypes from 'prop-types';
+import { Tooltip } from '@material-ui/core';
 
-const JournalsListHeaderCol1 = ({ isSelectable = true }) => {
+const JournalsListHeaderCol1 = ({ onToggleSelectAll, isSelectable = true, isAllSelected }) => {
     return (
         <Grid
             container
@@ -21,11 +22,14 @@ const JournalsListHeaderCol1 = ({ isSelectable = true }) => {
         >
             <Grid item xs="auto" id="journal-list-header-checkbox" style={{ height: 32 }}>
                 {isSelectable && (
-                    <Checkbox
-                        disabled
-                        style={{ padding: 2, paddingTop: 0, marginTop: -6, opacity: 0 }}
-                        label="Select all"
-                    />
+                    <Tooltip title="Select All" placement="right">
+                        <Checkbox
+                            onChange={onToggleSelectAll}
+                            style={{ padding: 2, marginTop: -8 }}
+                            label="Select all"
+                            checked={isAllSelected}
+                        />
+                    </Tooltip>
                 )}
             </Grid>
             <Grid item xs id="journal-list-header-title" style={{ height: 32, paddingLeft: 4 }}>
@@ -39,6 +43,8 @@ const JournalsListHeaderCol1 = ({ isSelectable = true }) => {
 
 JournalsListHeaderCol1.propTypes = {
     isSelectable: PropTypes.bool,
+    isAllSelected: PropTypes.bool,
+    onToggleSelectAll: PropTypes.func,
 };
 
 export default React.memo(JournalsListHeaderCol1);

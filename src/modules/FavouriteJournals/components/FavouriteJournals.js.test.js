@@ -22,7 +22,9 @@ describe('FavouriteJournals', () => {
     });
     it('should remove journal ', () => {
         mocks.useState = jest.spyOn(React, 'useState');
-        mocks.useState.mockImplementation(() => [{ [mockData.journals[0].jnl_jid]: true }, jest.fn()]);
+        mocks.useState
+            .mockImplementationOnce(() => [{ [mockData.journals[0].jnl_jid]: true }, jest.fn()])
+            .mockImplementationOnce(() => [false, jest.fn()]);
         mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
         mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
         const { getByTestId, queryByTestId } = setup({

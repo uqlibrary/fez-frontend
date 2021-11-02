@@ -14,11 +14,13 @@ export const FavouriteJournalsList = ({
     loading,
     error,
     onSelectionChange,
+    onToggleSelectAll,
     onExport,
     onSortByChange,
     onPageChange,
     onPageSizeChange,
     selected,
+    isAllSelected,
     journalSearchQueryParams,
 }) => {
     const txt = locale.components.favouriteJournals.favouriteJournalsList;
@@ -78,7 +80,13 @@ export const FavouriteJournalsList = ({
                 />
             </Grid>
             <Grid item xs={12}>
-                <JournalsList journals={journalsList?.data} onSelectionChange={onSelectionChange} selected={selected} />
+                <JournalsList
+                    journals={journalsList?.data}
+                    onSelectionChange={onSelectionChange}
+                    onToggleSelectAll={onToggleSelectAll}
+                    selected={selected}
+                    isAllSelected={isAllSelected}
+                />
             </Grid>
             <Grid item xs={12}>
                 <PublicationsListPaging
@@ -98,12 +106,14 @@ FavouriteJournalsList.propTypes = {
     journalsList: PropTypes.object,
     loading: PropTypes.bool,
     onSelectionChange: PropTypes.func,
+    onToggleSelectAll: PropTypes.func,
     onExport: PropTypes.func,
     onPageSizeChange: PropTypes.func,
     onPageChange: PropTypes.func,
     onSortByChange: PropTypes.func,
     journalSearchQueryParams: PropTypes.object,
     selected: PropTypes.object,
+    isAllSelected: PropTypes.bool,
 };
 
 export default React.memo(FavouriteJournalsList);

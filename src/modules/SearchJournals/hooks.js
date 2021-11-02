@@ -60,35 +60,62 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
     };
 };
 
-export const useSelectedJournals = (state = {}) => {
+export const useSelectedJournals = ({ state = {}, available = {} } = {}) => {
     const [selectedJournals, setSelectedJournals] = React.useState(state);
+    const [isAllSelected, setIsAllSelected] = React.useState(false);
 
-    const clearSelectedJournals = () => setSelectedJournals({});
-    const handleSelectedJournalsChange = React.useCallback(e => {
-        if (e.target.checked) {
-            setSelectedJournals(current => {
-                const selected = { ...current };
-                selected[e.target.value] = true;
-                return selected;
-            });
+    const countSelectedJournals = React.useCallback(() => Object.values(selectedJournals).length, [selectedJournals]);
+    const clearSelectedJournals = React.useCallback(() => {
+        setIsAllSelected(false);
+        setSelectedJournals({});
+    }, []);
+
+    const handleToggleSelectAllJournals = React.useCallback(() => {
+        if (isAllSelected) {
+            clearSelectedJournals();
             return;
         }
 
-        setSelectedJournals(current => {
-            const selected = { ...current };
-            delete selected[e.target.value];
-            return selected;
-        });
-    }, []);
+        setSelectedJournals(
+            available?.map(journal => ({ [journal.jnl_jid]: true })).reduce((all, item) => ({ ...all, ...item }), {}),
+        );
+        setIsAllSelected(true);
+    }, [clearSelectedJournals, available, isAllSelected]);
 
-    const countSelectedJournals = () => Object.values(selectedJournals).length;
+    const handleSelectedJournalsChange = React.useCallback(
+        e => {
+            if (e.target.checked) {
+                setSelectedJournals(current => {
+                    const selected = { ...current };
+                    selected[e.target.value] = true;
+                    return selected;
+                });
+
+                // countSelectedJournals() + 1 because selectedJournals is not instantly updated
+                // upon setSelectedJournals is called
+                if (available.length > 0 && available.length === countSelectedJournals() + 1) {
+                    setIsAllSelected(true);
+                }
+                return;
+            }
+
+            setSelectedJournals(current => {
+                const selected = { ...current };
+                delete selected[e.target.value];
+                return selected;
+            });
+            setIsAllSelected(false);
+        },
+        [available.length, countSelectedJournals],
+    );
 
     return {
         selectedJournals,
-        setSelectedJournals,
-        clearSelectedJournals,
+        isAllSelected,
         handleSelectedJournalsChange,
+        clearSelectedJournals,
         countSelectedJournals,
+        handleToggleSelectAllJournals,
     };
 };
 
