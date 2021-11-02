@@ -32,8 +32,8 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick,
             <IconButton
                 onClick={setDrawerContent}
                 aria-label={tooltip}
-                id={`help-icon-${testId}`}
-                data-testid={`help-icon-${testId}`}
+                id={`help-icon${!!testId ? `-${testId}` : ''}`}
+                data-testid={`help-icon${!!testId ? `-${testId}` : ''}`}
             >
                 <IconComponent className={classes.helpIcon} size={iconSize} titleAccess={tooltip} />
             </IconButton>

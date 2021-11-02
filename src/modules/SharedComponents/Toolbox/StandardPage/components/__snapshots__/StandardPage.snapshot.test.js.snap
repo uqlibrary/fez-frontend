@@ -1306,7 +1306,8 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   aria-describedby={null}
                                   aria-label="Click for more information"
                                   className=""
-                                  id="help-icon"
+                                  data-testid="help-icon-undefined"
+                                  id="help-icon-undefined"
                                   onBlur={[Function]}
                                   onClick={[Function]}
                                   onFocus={[Function]}
@@ -1333,7 +1334,8 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         "sizeSmall": "MuiIconButton-sizeSmall",
                                       }
                                     }
-                                    id="help-icon"
+                                    data-testid="help-icon-undefined"
+                                    id="help-icon-undefined"
                                     onBlur={[Function]}
                                     onClick={[Function]}
                                     onFocus={[Function]}
@@ -1348,9 +1350,10 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       aria-label="Click for more information"
                                       centerRipple={true}
                                       className="MuiIconButton-root"
+                                      data-testid="help-icon-undefined"
                                       disabled={false}
                                       focusRipple={true}
-                                      id="help-icon"
+                                      id="help-icon-undefined"
                                       onBlur={[Function]}
                                       onClick={[Function]}
                                       onFocus={[Function]}
@@ -1372,9 +1375,10 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             "root": "MuiButtonBase-root",
                                           }
                                         }
+                                        data-testid="help-icon-undefined"
                                         disabled={false}
                                         focusRipple={true}
-                                        id="help-icon"
+                                        id="help-icon-undefined"
                                         onBlur={[Function]}
                                         onClick={[Function]}
                                         onFocus={[Function]}
@@ -1388,8 +1392,9 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           aria-describedby={null}
                                           aria-label="Click for more information"
                                           className="MuiButtonBase-root MuiIconButton-root"
+                                          data-testid="help-icon-undefined"
                                           disabled={false}
-                                          id="help-icon"
+                                          id="help-icon-undefined"
                                           onBlur={[Function]}
                                           onClick={[Function]}
                                           onDragLeave={[Function]}
@@ -1490,7 +1495,8 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     <button
                                       aria-label="Click for more information"
                                       class="MuiButtonBase-root MuiIconButton-root"
-                                      id="help-icon"
+                                      data-testid="help-icon-undefined"
+                                      id="help-icon-undefined"
                                       tabindex="0"
                                       title="Click for more information"
                                       type="button"
