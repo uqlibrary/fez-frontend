@@ -34,7 +34,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                     </Tooltip>
                 )}
             </Grid>
-            <Grid item xs id="journal-list-header-col-1" style={{ height: 32, paddingLeft: 4 }}>
+            <Grid item xs id="journal-list-header-col-1" style={{ height: 32, paddingLeft: 14 }}>
                 <InputLabel shrink style={{ fontWeight: 600 }}>
                     {JournalFieldsMap[0].label}
                 </InputLabel>
