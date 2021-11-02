@@ -512,9 +512,7 @@ describe('ViewJournal', () => {
         );
         expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
     });
-    /************  
-    Test for title change
-    ************/
+    // Test for title change
     it('Should correctly show required title change', async () => {
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
@@ -525,7 +523,7 @@ describe('ViewJournal', () => {
         const { getByTestId, getByText } = setup();
 
         await waitForElementToBeRemoved(() => getByText('Loading journal data'));
-        
+
         // Regex: Exact pattern Match (between start and end) - Must match exactly.
         expect(getByTestId('journal-details-uqData-header')).toHaveTextContent(/^UQ eSpace$/);
     });
