@@ -155,9 +155,7 @@ export class DashboardClass extends PureComponent {
 
     _loadOrcidSync = (waitTime = 1) => {
         // considering loadOrcidSyncDelay props, we have to clear any previously scheduled requests
-        if (!!this.state.lastOrcidSyncScheduledRequest) {
-            global.clearTimeout(this.state.lastOrcidSyncScheduledRequest);
-        }
+        !!this.state.lastOrcidSyncScheduledRequest && global.clearTimeout(this.state.lastOrcidSyncScheduledRequest);
         this.setState({
             lastOrcidSyncScheduledRequest: global.setTimeout(() => {
                 !this.props.loadingOrcidSyncStatus &&
