@@ -109,6 +109,7 @@ export class DashboardClass extends PureComponent {
         orcidSyncStatus: PropTypes.object,
         requestingOrcidSync: PropTypes.bool,
         orcidSyncEnabled: PropTypes.bool,
+        loadOrcidSyncDelay: PropTypes.number,
     };
 
     constructor(props) {
@@ -116,6 +117,7 @@ export class DashboardClass extends PureComponent {
         this.state = {
             dashboardPubsTabs: 1,
             orcidSyncStatusRefreshCount: 0,
+            loadOrcidSyncDelay: 5000,
         };
     }
 
@@ -125,14 +127,14 @@ export class DashboardClass extends PureComponent {
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id, this.props.authorDetails);
             !this.props.incomplete.publicationsList.length &&
                 this.props.actions.searchAuthorPublications({}, 'incomplete');
-            this._loadOrcidSync();
+            this._loadOrcidSync(this.props.loadOrcidSyncDelay);
             this.state.orcidSyncStatusRefreshCount = 1;
         }
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.orcidSyncEnabled !== prevProps.orcidSyncEnabled) {
-            this._loadOrcidSync();
+            this._loadOrcidSync(this.props.loadOrcidSyncDelay);
             this.state.orcidSyncStatusRefreshCount = 1;
         }
         this.props.loadingOrcidSyncStatus !== prevProps.loadingOrcidSyncStatus &&
@@ -149,7 +151,10 @@ export class DashboardClass extends PureComponent {
             {
                 orcidSyncStatusRefreshCount: this.state.orcidSyncStatusRefreshCount + 1,
             },
-            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount, 1) * 5000),
+            () =>
+                this._loadOrcidSync(
+                    fibonacci(this.state.orcidSyncStatusRefreshCount, 1) * this.props.loadOrcidSyncDelay,
+                ),
         );
 
     _loadOrcidSync = (waitTime = 0) =>
