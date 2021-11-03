@@ -8,8 +8,10 @@ import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import { AuthorsPublicationsPerYearChart } from 'modules/SharedComponents/Toolbox/Charts';
-import { AuthorsPublicationTypesCountChart } from 'modules/SharedComponents/Toolbox/Charts';
+import {
+    AuthorsPublicationsPerYearChart,
+    AuthorsPublicationTypesCountChart,
+} from 'modules/SharedComponents/Toolbox/Charts';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -52,9 +54,9 @@ export const styles = theme => ({
  *
  * @param {number} iteration
  */
-export const fibonacci = iteration => {
+export const fibonacci = (iteration, from = 0) => {
     let a = 1;
-    let b = 0;
+    let b = from;
     let temp;
     let num = iteration;
 
@@ -147,7 +149,7 @@ export class DashboardClass extends PureComponent {
             {
                 orcidSyncStatusRefreshCount: this.state.orcidSyncStatusRefreshCount + 1,
             },
-            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount) * 1000),
+            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount, 1) * 5000),
         );
 
     _loadOrcidSync = (waitTime = 0) =>
