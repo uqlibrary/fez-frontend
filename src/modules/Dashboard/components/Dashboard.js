@@ -153,15 +153,22 @@ export class DashboardClass extends PureComponent {
             () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount, 1)),
         );
 
-    _loadOrcidSync = (waitTime = 1) =>
-        global.setTimeout(() => {
-            !this.props.loadingOrcidSyncStatus &&
-                this.props.orcidSyncEnabled &&
-                (this.props.orcidSyncStatus === null || !!waitTime) &&
-                this.props.actions &&
-                this.props.actions.loadOrcidSyncStatus &&
-                this.props.actions.loadOrcidSyncStatus();
-        }, waitTime * this.props.loadOrcidSyncDelay * 1000);
+    _loadOrcidSync = (waitTime = 1) => {
+        // considering loadOrcidSyncDelay props, we have to clear any previously scheduled requests
+        if (!!this.state.lastOrcidSyncScheduledRequest) {
+            global.clearTimeout(this.state.lastOrcidSyncScheduledRequest);
+        }
+        this.setState({
+            lastOrcidSyncScheduledRequest: global.setTimeout(() => {
+                !this.props.loadingOrcidSyncStatus &&
+                    this.props.orcidSyncEnabled &&
+                    (this.props.orcidSyncStatus === null || !!waitTime) &&
+                    this.props.actions &&
+                    this.props.actions.loadOrcidSyncStatus &&
+                    this.props.actions.loadOrcidSyncStatus();
+            }, waitTime * this.props.loadOrcidSyncDelay * 1000),
+        });
+    };
 
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
