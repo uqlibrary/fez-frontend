@@ -1,4 +1,4 @@
-import { DashboardClass, styles, fibonacci } from './Dashboard';
+import { DashboardClass, fibonacci, styles } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 
