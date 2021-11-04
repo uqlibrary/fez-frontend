@@ -35,7 +35,6 @@ export const SearchJournals = () => {
      * Setting selected keywords would re-render this page which should run effect to:
      *  - Set url query string params
      *  - Call load journal list action
-     * @param {Object} selectedKeywords selected keywords from JournalSearchInterface component
      */
     const handleSearchJournalsClick = React.useCallback(() => {
         setShowInputControls(false);
