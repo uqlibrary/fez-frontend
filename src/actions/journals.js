@@ -115,7 +115,7 @@ export const exportJournals = searchQuery => async dispatch => {
         format: requestParams.options.params.export_to,
         page: requestParams.options.params.page,
     };
-
+    console.log(exportConfig);
     dispatch({
         type: actions.EXPORT_JOURNALS_LOADING,
         payload: exportConfig,
@@ -123,12 +123,14 @@ export const exportJournals = searchQuery => async dispatch => {
 
     try {
         const response = await get(requestParams);
+        console.log('export');
         promptForDownload(exportConfig.format, response);
         dispatch({
             type: actions.EXPORT_JOURNALS_LOADED,
             payload: exportConfig,
         });
     } catch (error) {
+        console.log(error);
         dispatch({
             type: actions.EXPORT_JOURNALS_FAILED,
             payload: {
