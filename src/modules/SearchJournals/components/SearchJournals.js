@@ -22,6 +22,15 @@ export const SearchJournals = () => {
     } = useSelectedKeywords(journalSearchQueryParams.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
 
+    const handleKeywordDeleteAndResetSearchPageOption = keyword => {
+        // reset all filter except keywords once a keyword is removed
+        const { keywords } = journalSearchQueryParams;
+        handleSearch({
+            keywords,
+        });
+        handleKeywordDelete(keyword);
+    };
+
     /**
      * Setting selected keywords would re-render this page which should run effect to:
      *  - Set url query string params
@@ -75,11 +84,11 @@ export const SearchJournals = () => {
                     <JournalSearchInterface
                         key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
+                        handleKeywordDelete={handleKeywordDeleteAndResetSearchPageOption}
                         {...{
                             selectedKeywords,
                             setSelectedKeywords,
                             handleKeywordAdd,
-                            handleKeywordDelete,
                             hasAnySelectedKeywords,
                             showInputControls,
                         }}
