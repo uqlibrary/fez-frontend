@@ -13,17 +13,36 @@ import locale from 'locale/components';
 export const SearchJournals = () => {
     const dispatch = useDispatch();
     const { journalSearchQueryParams, locationKey, handleSearch } = useJournalSearch();
-    const { selectedKeywords, setSelectedKeywords } = useSelectedKeywords(journalSearchQueryParams.keywords);
+    const {
+        selectedKeywords,
+        setSelectedKeywords,
+        handleKeywordAdd,
+        handleKeywordDelete,
+        hasAnySelectedKeywords,
+    } = useSelectedKeywords(journalSearchQueryParams.keywords);
+    const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
 
     /**
      * Setting selected keywords would re-render this page which should run effect to:
-     *  -   Set url query string params
-     *  -   Call load journal list action
+     *  - Set url query string params
+     *  - Call load journal list action
      * @param {Object} selectedKeywords selected keywords from JournalSearchInterface component
      */
-    const handleSearchKeywords = selectedKeywords => {
+    const handleSearchJournalsClick = React.useCallback(() => {
+        setShowInputControls(false);
         setSelectedKeywords(selectedKeywords);
-    };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedKeywords]);
+
+    /**
+     *  Hide search input controls if there aren't any selected keywords
+     */
+    React.useEffect(() => {
+        if (!hasAnySelectedKeywords) {
+            setShowInputControls(true);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedKeywords, hasAnySelectedKeywords]);
 
     /**
      * Run this effect whenever keywords are changed
@@ -36,14 +55,14 @@ export const SearchJournals = () => {
 
     /**
      * Run this effect whenever url search query parameters are changed
-     *  -   This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
+     *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
     React.useEffect(() => {
-        if (!!journalSearchQueryParams.keywords && Object.values(journalSearchQueryParams.keywords).length > 0) {
+        if (!showInputControls && hasAnySelectedKeywords) {
             dispatch(searchJournals(journalSearchQueryParams));
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [journalSearchQueryParams]);
+    }, [showInputControls, hasAnySelectedKeywords, journalSearchQueryParams]);
     const txt = locale.components.journalSearch;
     return (
         <StandardPage
@@ -55,12 +74,21 @@ export const SearchJournals = () => {
                 <Grid item xs={12}>
                     <JournalSearchInterface
                         key={`journal-search-interface-${locationKey}`}
-                        onSearch={handleSearchKeywords}
-                        initialSelectedKeywords={selectedKeywords}
+                        onSearch={handleSearchJournalsClick}
+                        {...{
+                            selectedKeywords,
+                            setSelectedKeywords,
+                            handleKeywordAdd,
+                            handleKeywordDelete,
+                            hasAnySelectedKeywords,
+                            showInputControls,
+                        }}
                     />
                 </Grid>
                 <Grid item xs>
-                    <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
+                    {!showInputControls && (
+                        <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
+                    )}
                 </Grid>
             </Grid>
         </StandardPage>

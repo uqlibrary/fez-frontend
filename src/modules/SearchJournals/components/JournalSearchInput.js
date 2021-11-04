@@ -5,7 +5,7 @@ import { throttle } from 'throttle-debounce';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { loadJournalSearchKeywords, clearJournalSearchKeywords } from 'actions';
+import { clearJournalSearchKeywords, loadJournalSearchKeywords } from 'actions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Grid from '@material-ui/core/Grid';
@@ -14,7 +14,7 @@ import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
 import Tooltip from '@material-ui/core/Tooltip';
 
-export const JournalSearchInput = () => {
+export const JournalSearchInput = ({ onReset }) => {
     const txt = locale.components.journalSearch;
     const dispatch = useDispatch();
     const [journalSearchInput, setJournalSearchInput] = React.useState('');
@@ -33,6 +33,7 @@ export const JournalSearchInput = () => {
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value), []);
     const handleJournalVoiceSearchInput = React.useCallback(value => !!value && setJournalSearchInput(value), []);
     const handleClearSearchInput = React.useCallback(() => {
+        onReset();
         setJournalSearchInput('');
         dispatch(clearJournalSearchKeywords());
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -121,6 +122,7 @@ export const JournalSearchInput = () => {
 
 JournalSearchInput.propTypes = {
     initialValue: PropTypes.string,
+    onReset: PropTypes.func,
 };
 
 export default React.memo(JournalSearchInput);

@@ -8,33 +8,22 @@ import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
-import { useJournalSearch, useJournalSearchInterfaceState, useSelectedKeywords } from '../hooks';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
-export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) => {
-    const { journalSearchQueryParams } = useJournalSearch();
+export const JournalSearchInterface = ({
+    onSearch,
+    selectedKeywords,
+    setSelectedKeywords,
+    handleKeywordAdd,
+    handleKeywordDelete,
+    hasAnySelectedKeywords,
+    showInputControls,
+}) => {
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
-    const {
-        showKeywordsBrowser,
-        showJournalSearchInput,
-        showButtons,
-        toggleKeywordsBrowser,
-        toggleJournalSearchInput,
-        toggleButtons,
-    } = useJournalSearchInterfaceState(!journalSearchQueryParams.keywords);
+    const initialSelectedKeywords = React.useRef(selectedKeywords);
 
     const txt = locale.components.journalSearch;
 
-    const { selectedKeywords, handleKeywordAdd, handleKeywordDelete, hasAnySelectedKeywords } = useSelectedKeywords(
-        journalSearchQueryParams.keywords,
-    );
-    const handleSearchJournalsClick = React.useCallback(() => {
-        toggleJournalSearchInput();
-        toggleKeywordsBrowser();
-        toggleButtons();
-        onSearch(selectedKeywords);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedKeywords]);
     const handleSnackbarOpen = () => {
         setSnackbarNotify(true);
     };
@@ -45,10 +34,10 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
         setSnackbarNotify(false);
     };
     React.useEffect(() => {
-        if (initialSelectedKeywords !== selectedKeywords) {
+        if (!showInputControls && hasAnySelectedKeywords && initialSelectedKeywords.current !== selectedKeywords) {
             handleSnackbarOpen();
         }
-    }, [initialSelectedKeywords, selectedKeywords]);
+    }, [showInputControls, hasAnySelectedKeywords, selectedKeywords]);
     return (
         <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
             <Snackbar
@@ -64,9 +53,9 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                 message={<span>Search list updated</span>}
             />
             <Grid container spacing={2}>
-                {showJournalSearchInput && (
+                {showInputControls && (
                     <Grid item xs={12}>
-                        <JournalSearchInput />
+                        <JournalSearchInput onReset={() => setSelectedKeywords({})} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
@@ -77,12 +66,12 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                         />
                     </Grid>
                 )}
-                {showKeywordsBrowser && (
+                {showInputControls && (
                     <Grid item xs={12}>
                         <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />
                     </Grid>
                 )}
-                {showButtons && (
+                {showInputControls && (
                     <Grid item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
                             <CommonButtons />
@@ -94,7 +83,7 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
                                     aria-label={txt.journalSearchInterface.buttons.searchJournals.aria}
                                     type="submit"
                                     color="primary"
-                                    onClick={handleSearchJournalsClick}
+                                    onClick={onSearch}
                                     id="journal-search-button"
                                     data-testid="journal-search-button"
                                     fullWidth
@@ -111,7 +100,12 @@ export const JournalSearchInterface = ({ onSearch, initialSelectedKeywords }) =>
 JournalSearchInterface.propTypes = {
     onSearch: PropTypes.func,
     onFavourite: PropTypes.func,
-    initialSelectedKeywords: PropTypes.object,
+    selectedKeywords: PropTypes.object,
+    setSelectedKeywords: PropTypes.func,
+    handleKeywordAdd: PropTypes.func,
+    handleKeywordDelete: PropTypes.func,
+    hasAnySelectedKeywords: PropTypes.bool,
+    showInputControls: PropTypes.bool,
 };
 
 export default React.memo(JournalSearchInterface);

@@ -6,25 +6,6 @@ import param from 'can-param';
 import { exportJournals } from '../../actions';
 import { pathConfig } from '../../config';
 
-export const useJournalSearchInterfaceState = initialState => {
-    const [showKeywordsBrowser, setKeywordsBrowserVisibility] = React.useState(initialState);
-    const [showJournalSearchInput, setJournalSearchInputVisibility] = React.useState(initialState);
-    const [showButtons, setButtonsVisibility] = React.useState(initialState);
-
-    const toggleKeywordsBrowser = () => setKeywordsBrowserVisibility(on => !on);
-    const toggleJournalSearchInput = () => setJournalSearchInputVisibility(on => !on);
-    const toggleButtons = () => setButtonsVisibility(on => !on);
-
-    return {
-        showKeywordsBrowser,
-        showJournalSearchInput,
-        showButtons,
-        toggleJournalSearchInput,
-        toggleKeywordsBrowser,
-        toggleButtons,
-    };
-};
-
 export const useSelectedKeywords = (initialKeywords = {}) => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(initialKeywords);
 
