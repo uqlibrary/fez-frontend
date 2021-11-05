@@ -33,6 +33,7 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
     const classes = useStyles();
     return (
         <ListItem
+            id={`facet-filter-nested-item-${primaryText.replace(/ /g, '-').toLowerCase()}`}
             key={`facet-filter-nested-item-${index}`}
             button
             onClick={onFacetClick}

@@ -83,9 +83,6 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
     return false;
 };
 
-const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges) =>
-    Object.keys(activeFacetsFilters).length > 0 || Object.keys(activeFacetsRanges).length > 0;
-
 export const JournalSearchFacetsFilter = ({
     facetsData,
     activeFacets,
@@ -96,7 +93,7 @@ export const JournalSearchFacetsFilter = ({
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
     const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
-    const [hasActiveFilters, setHasActiveFilters] = useState(false);
+    // const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
     useEffect(() => {
         if (isFacetFilterClicked) {
@@ -127,12 +124,8 @@ export const JournalSearchFacetsFilter = ({
 
         setIsFacetFilterClicked(true);
         setActiveFacetsFilters(newActiveFacetsFilters);
-        setHasActiveFilters(getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges));
     };
 
-    if (facetsToDisplay.length === 0 && !hasActiveFilters) {
-        return <span id="empty-facet-filters" className="facetsFilter empty" />;
-    }
     return (
         <StandardRighthandCard
             title={locale.components.journalSearch.journalFacetsFilter.title}
