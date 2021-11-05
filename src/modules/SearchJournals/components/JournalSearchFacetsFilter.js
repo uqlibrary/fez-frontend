@@ -36,7 +36,7 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     isFacetFilterActive: PropTypes.func,
 };
 
-const showFavouritedOnlyFacet = {
+export const showFavouritedOnlyFacet = {
     title: 'Favourite Journals',
     facetTitle: 'ShowFavouritedOnly',
     facets: [
@@ -47,7 +47,7 @@ const showFavouritedOnlyFacet = {
     ],
 };
 
-const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
+export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
     const facetsToDisplay = [];
     Object.keys(rawFacets).forEach(key => {
         const rawFacet = rawFacets[key];
@@ -59,7 +59,7 @@ const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
             facets: rawFacet.buckets.map(item => {
                 return {
                     title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
-                    key: item.key,
+                    key: key.endsWith('quartile') ? String(item.key) : item.key,
                     count: item.doc_count,
                 };
             }),
