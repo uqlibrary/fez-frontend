@@ -34,8 +34,8 @@ export const styles = theme => ({
 export class DashboardArticleCount extends PureComponent {
     static propTypes = {
         articleCount: PropTypes.number,
-        articleFirstYear: PropTypes.string,
-        articleLastYear: PropTypes.string,
+        articleFirstYear: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+        articleLastYear: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         classes: PropTypes.object,
     };
 
