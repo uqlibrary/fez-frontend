@@ -6,30 +6,34 @@ import Grid from '@material-ui/core/Grid';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';
 import JournalSearchResult from './JournalSearchResult';
-import { useJournalSearch, useSelectedKeywords } from '../hooks';
+import { filterNonValidKeywords, useJournalSearch, useSelectedKeywords } from '../hooks';
 import { searchJournals } from 'actions';
 import locale from 'locale/components';
+import deparam from 'can-deparam';
+import { useHistory } from 'react-router';
+
+const areKeywordsDifferent = (keywords, anotherKeywords) => {
+    const keywordsNames = Object.keys(keywords || {});
+    const anotherKeywordsNames = Object.keys(anotherKeywords || {});
+    return (
+        keywordsNames.filter(keyword => !anotherKeywordsNames.includes(keyword)).length > 0 ||
+        anotherKeywordsNames.filter(keyword => !keywordsNames.includes(keyword)).length > 0
+    );
+};
 
 export const SearchJournals = () => {
+    const history = useHistory();
     const dispatch = useDispatch();
     const { journalSearchQueryParams, locationKey, handleSearch } = useJournalSearch();
+    const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
     const {
         selectedKeywords,
         setSelectedKeywords,
         handleKeywordAdd,
         handleKeywordDelete,
         hasAnySelectedKeywords,
-    } = useSelectedKeywords(journalSearchQueryParams.keywords);
+    } = useSelectedKeywords(journalSearchQueryParams?.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
-
-    const handleKeywordDeleteAndResetSearchPageOption = keyword => {
-        // reset all filter except keywords once a keyword is removed
-        const { keywords } = journalSearchQueryParams;
-        handleSearch({
-            keywords,
-        });
-        handleKeywordDelete(keyword);
-    };
 
     /**
      * Setting selected keywords would re-render this page which should run effect to:
@@ -43,6 +47,32 @@ export const SearchJournals = () => {
     }, [selectedKeywords]);
 
     /**
+     * Effect to Keep keywords update when the forward and back browser buttons are used
+     * once a given search is made and keywords are selected
+     */
+    React.useEffect(() => {
+        return history.listen(location => {
+            // in case the
+            if (history.action !== 'POP') {
+                return;
+            }
+
+            // get current search query
+            const searchQueryParams = deparam(location.search.substr(1));
+            const keywordsFromUrl = filterNonValidKeywords(searchQueryParams?.keywords);
+            if (!Object.keys(keywordsFromUrl).length || !areKeywordsDifferent(keywordsFromUrl, selectedKeywords)) {
+                return;
+            }
+
+            // if there are differences between selectedKeywords state variable
+            // and the current search query keywords, update the state
+            setSelectedKeywords(searchQueryParams.keywords);
+            setShowInputControls(false);
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedKeywords]);
+
+    /**
      *  Hide search input controls if there aren't any selected keywords
      */
     React.useEffect(() => {
@@ -50,14 +80,18 @@ export const SearchJournals = () => {
             setShowInputControls(true);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedKeywords, hasAnySelectedKeywords]);
+    }, [hasAnySelectedKeywords]);
 
     /**
      * Run this effect whenever keywords are changed
      */
     React.useEffect(() => {
-        const searchQuery = { ...journalSearchQueryParams, keywords: selectedKeywords };
-        handleSearch(searchQuery);
+        // if we land on this page via a url with keywords, bail
+        if (!areKeywordsDifferent(initialKeywords.current, selectedKeywords)) {
+            return;
+        }
+        // otherwise, update the query search
+        handleSearch({ ...journalSearchQueryParams, keywords: selectedKeywords });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
 
@@ -70,7 +104,7 @@ export const SearchJournals = () => {
             dispatch(searchJournals(journalSearchQueryParams));
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [showInputControls, hasAnySelectedKeywords, journalSearchQueryParams]);
+    }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
     const txt = locale.components.journalSearch;
     return (
         <StandardPage
@@ -83,7 +117,7 @@ export const SearchJournals = () => {
                     <JournalSearchInterface
                         key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
-                        handleKeywordDelete={handleKeywordDeleteAndResetSearchPageOption}
+                        handleKeywordDelete={handleKeywordDelete}
                         {...{
                             selectedKeywords,
                             setSelectedKeywords,

@@ -6,8 +6,23 @@ import param from 'can-param';
 import { exportJournals } from '../../actions';
 import { pathConfig } from '../../config';
 
+export const isValidKeyword = keyword => typeof keyword === 'object' && keyword.id && keyword.type && keyword.text;
+export const filterNonValidKeywords = keywords => {
+    if (typeof keywords !== 'object') {
+        return {};
+    }
+    return Object.keys(keywords)
+        .filter(name => {
+            return isValidKeyword(keywords[name]);
+        })
+        .reduce((valid, name) => {
+            valid[name] = keywords[name];
+            return valid;
+        }, {});
+};
+
 export const useSelectedKeywords = (initialKeywords = {}) => {
-    const [selectedKeywords, setSelectedKeywords] = React.useState(initialKeywords);
+    const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
     const getKeywordKey = keyword => `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
 
@@ -30,7 +45,7 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
         [],
     );
 
-    const hasAnySelectedKeywords = Object.values(selectedKeywords).length > 0;
+    const hasAnySelectedKeywords = selectedKeywords && Object.values(selectedKeywords).length > 0;
 
     return {
         selectedKeywords,
@@ -119,6 +134,9 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
         history.push({
             pathname: path,
             search: param(searchQuery),
+            state: {
+                source: 'code',
+            },
         });
     };
 
