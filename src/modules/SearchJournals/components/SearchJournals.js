@@ -34,6 +34,12 @@ export const SearchJournals = () => {
         hasAnySelectedKeywords,
     } = useSelectedKeywords(journalSearchQueryParams?.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
+    const fromHandleKeywordDelete = React.useRef(false);
+
+    const composedHandleKeywordDelete = keyword => {
+        handleKeywordDelete(keyword);
+        fromHandleKeywordDelete.current = true;
+    };
 
     /**
      * Setting selected keywords would re-render this page which should run effect to:
@@ -100,11 +106,18 @@ export const SearchJournals = () => {
      *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
     React.useEffect(() => {
-        if (!showInputControls && hasAnySelectedKeywords) {
-            dispatch(searchJournals(journalSearchQueryParams));
+        if (showInputControls || !hasAnySelectedKeywords) {
+            fromHandleKeywordDelete.current = false;
+            return;
         }
+
+        // add a delay when keywords are being removed
+        // to avoid unnecessary load on the API
+        dispatch(searchJournals(journalSearchQueryParams, fromHandleKeywordDelete.current ? 1200 : 0));
+        fromHandleKeywordDelete.current = false;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
+
     const txt = locale.components.journalSearch;
     return (
         <StandardPage
@@ -117,7 +130,7 @@ export const SearchJournals = () => {
                     <JournalSearchInterface
                         key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
-                        handleKeywordDelete={handleKeywordDelete}
+                        handleKeywordDelete={composedHandleKeywordDelete}
                         {...{
                             selectedKeywords,
                             setSelectedKeywords,
