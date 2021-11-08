@@ -36,7 +36,7 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     isFacetFilterActive: PropTypes.func,
 };
 
-const showFavouritedOnlyFacet = {
+export const showFavouritedOnlyFacet = {
     title: 'Favourite Journals',
     facetTitle: 'ShowFavouritedOnly',
     facets: [
@@ -47,19 +47,20 @@ const showFavouritedOnlyFacet = {
     ],
 };
 
-const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
+export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
     const facetsToDisplay = [];
     Object.keys(rawFacets).forEach(key => {
         const rawFacet = rawFacets[key];
         // construct facet object to display, if facet has a lookup - get display name from lookup,
-        // if facet key has a rename record, then use that
+        // if facet key has a rename record, then use that.
+        // Note use of Number.isFinite - will convert any *actual* numeric values to string
         const facetToDisplay = {
             title: renameFacetsList[key] || key,
             facetTitle: key,
             facets: rawFacet.buckets.map(item => {
                 return {
                     title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
-                    key: item.key,
+                    key: Number.isFinite(item.key) ? String(item.key) : item.key,
                     count: item.doc_count,
                 };
             }),
@@ -83,9 +84,6 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
     return false;
 };
 
-const getHasActiveFilters = (activeFacetsFilters, activeFacetsRanges) =>
-    Object.keys(activeFacetsFilters).length > 0 || Object.keys(activeFacetsRanges).length > 0;
-
 export const JournalSearchFacetsFilter = ({
     facetsData,
     activeFacets,
@@ -96,7 +94,7 @@ export const JournalSearchFacetsFilter = ({
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
     const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
-    const [hasActiveFilters, setHasActiveFilters] = useState(false);
+    // const [hasActiveFilters, setHasActiveFilters] = useState(false);
 
     // set active facets once querystring gets update
     // the reason why using useState above is not enough can be found in
@@ -134,12 +132,8 @@ export const JournalSearchFacetsFilter = ({
 
         setIsFacetFilterClicked(true);
         setActiveFacetsFilters(newActiveFacetsFilters);
-        setHasActiveFilters(getHasActiveFilters(newActiveFacetsFilters, activeFacetsRanges));
     };
 
-    if (facetsToDisplay.length === 0 && !hasActiveFilters) {
-        return <span id="empty-facet-filters" className="facetsFilter empty" />;
-    }
     return (
         <StandardRighthandCard
             title={locale.components.journalSearch.journalFacetsFilter.title}
