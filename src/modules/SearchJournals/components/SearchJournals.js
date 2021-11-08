@@ -118,7 +118,7 @@ export const SearchJournals = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
 
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     return (
         <StandardPage
             title={txt.journalSearchInterface.title}

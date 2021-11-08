@@ -22,7 +22,7 @@ export const JournalSearchInterface = ({
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const initialSelectedKeywords = React.useRef(selectedKeywords);
 
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
 
     const handleSnackbarOpen = () => {
         setSnackbarNotify(true);

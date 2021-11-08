@@ -14,7 +14,7 @@ import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
     const isInitialValues = useSelector(state => state.get('journalReducer').isInitialValues);
     const journalSearchKeywordsError = useSelector(state => state.get('journalReducer').journalSearchKeywordsError);
@@ -42,7 +42,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @returns void
      */
     const handleSubjectKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.keywordsBrowser.forCodeMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.partials.keywordsBrowser.forCodeMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -54,7 +54,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @returns void
      */
     const handleTitleKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.keywordsBrowser.titleMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.partials.keywordsBrowser.titleMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -66,7 +66,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @returns void
      */
     const handleKeywordsKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.keywordsBrowser.keywordMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.partials.keywordsBrowser.keywordMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -94,14 +94,14 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     {hasExactKeywords && (
                         <Grid item xs={12}>
                             <ExactMatchSearchKeywordsList
-                                keywordsListTitle={txt.keywordsBrowser.exactMatch.title}
+                                keywordsListTitle={txt.partials.keywordsBrowser.exactMatch.title}
                                 keywordsList={journalSearchKeywords.exactMatch || []}
                             />
                         </Grid>
                     )}
                     <Grid item xs={12}>
                         <SearchKeywordsList
-                            keywordsListTitle={txt.keywordsBrowser.titleMatch.title}
+                            keywordsListTitle={txt.partials.keywordsBrowser.titleMatch.title}
                             keywordsList={journalSearchKeywords.titleMatch || []}
                             onKeywordClick={handleTitleKeywordClick}
                         />
@@ -111,7 +111,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             {separator}
             <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <SearchKeywordsList
-                    keywordsListTitle={txt.keywordsBrowser.keywordMatch.title}
+                    keywordsListTitle={txt.partials.keywordsBrowser.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch || []}
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
@@ -119,7 +119,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             {separator}
             <Grid item xs={12} sm={12} md style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <ForCodeSearchKeywordsList
-                    keywordsListTitle={txt.keywordsBrowser.forCodeMatch.title}
+                    keywordsListTitle={txt.partials.keywordsBrowser.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch || []}
                     onKeywordClick={handleSubjectKeywordClick}
                 />

@@ -2,27 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import KeywordsList from './KeywordsList';
 import ForCodeSearchKeyword from './ForCodeSearchKeyword';
-import { helpLocale } from './JournalSearchHelpLocale';
+import { locale } from '../../../../locale';
 
-export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => (
-    <KeywordsList
-        title={keywordsListTitle}
-        list={
-            (!!keywordsList &&
-                keywordsList.length > 0 &&
-                keywordsList.map((keywordItem, index) => (
-                    <ForCodeSearchKeyword
-                        index={index}
-                        key={keywordItem.keyword}
-                        {...keywordItem}
-                        onKeywordClick={onKeywordClick}
-                    />
-                ))) ||
-            []
-        }
-        help={helpLocale.KeywordSearchFORSubject}
-    />
-);
+export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
+    const txt = locale.components.searchJournals.partials.forCodeSearchKeywordsList;
+    return (
+        <KeywordsList
+            title={keywordsListTitle}
+            list={
+                (!!keywordsList &&
+                    keywordsList.length > 0 &&
+                    keywordsList.map((keywordItem, index) => (
+                        <ForCodeSearchKeyword
+                            index={index}
+                            key={keywordItem.keyword}
+                            {...keywordItem}
+                            onKeywordClick={onKeywordClick}
+                        />
+                    ))) ||
+                []
+            }
+            help={txt.help.KeywordSearchFORSubject}
+        />
+    );
+};
 
 ForCodeSearchKeywordsList.propTypes = {
     keywordsListTitle: PropTypes.string.isRequired,

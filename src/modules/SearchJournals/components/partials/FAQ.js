@@ -29,7 +29,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export const FAQ = ({}) => {
-    const txt = locale.components.journalSearch.FAQ;
+    const txt = locale.components.searchJournals.partials.FAQ;
     const [expanded, setExpanded] = React.useState();
     const handleChange = faq => (e, expanded) => {
         setExpanded(expanded ? faq : false);

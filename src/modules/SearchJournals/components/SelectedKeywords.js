@@ -5,11 +5,11 @@ import SelectedKeywordItem from './partials/SelectedKeywordItem';
 import locale from 'locale/components';
 
 export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     return (
         <React.Fragment>
             <Typography variant="subtitle2" color="primary" component="span">
-                {txt.selectedKeywords.title}
+                {txt.partials.selectedKeywords.title}
             </Typography>
             <React.Fragment>
                 {keywords.map((keyword, index) => {

@@ -15,7 +15,7 @@ import { VoiceToText } from './partials/voiceToText';
 import Tooltip from '@material-ui/core/Tooltip';
 
 export const JournalSearchInput = ({ onReset }) => {
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     const dispatch = useDispatch();
     const [journalSearchInput, setJournalSearchInput] = React.useState('');
     const loadingJournalSearchKeywords = useSelector(

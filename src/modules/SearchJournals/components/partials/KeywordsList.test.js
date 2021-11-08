@@ -56,6 +56,6 @@ describe('KeywordsList', () => {
             list: [],
             help,
         });
-        expect(getByText(locale.components.journalSearch.keywordsList.noResultsFound)).toBeInTheDocument();
+        expect(getByText(locale.components.searchJournals.partials.keywordsList.noResultsFound)).toBeInTheDocument();
     });
 });

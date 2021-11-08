@@ -10,7 +10,7 @@ import { ConfirmationBox } from '../../../SharedComponents/Toolbox/ConfirmDialog
 export const AddToFavouritesButton = ({ selectedJournals = {}, disabled, clearSelectedJournals }) => {
     const dispatch = useDispatch();
     const [isDialogOpen, setIsDialogOpen] = useState(false);
-    const txt = locale.components.journalSearch.journalSearchInterface;
+    const txt = locale.components.searchJournals.journalSearchInterface;
     const adding = useSelector(state => state.get?.('favouriteJournalsReducer').add?.loading);
 
     const selectionCount = Object.keys(selectedJournals).length;

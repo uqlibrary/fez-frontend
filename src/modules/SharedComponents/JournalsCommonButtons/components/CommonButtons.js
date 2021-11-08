@@ -9,7 +9,7 @@ import { useHistory, useLocation } from 'react-router';
 const CommonButtons = () => {
     const location = useLocation();
     const history = useHistory();
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     const handleFavouriteJournalsClick = () => {
         history.push({
             pathname: pathConfig.journals.favourites,

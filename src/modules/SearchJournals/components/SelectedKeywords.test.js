@@ -12,7 +12,7 @@ describe('SelectedKeywords', () => {
         const { getByText } = setup({
             keywords: [{ type: 'type1', text: 'cats' }],
         });
-        expect(getByText(locale.components.journalSearch.selectedKeywords.title)).toBeInTheDocument();
+        expect(getByText(locale.components.searchJournals.partials.selectedKeywords.title)).toBeInTheDocument();
     });
 
     it('should render available keywords', () => {

@@ -8,7 +8,7 @@ import locale from '../../../../locale/components';
 export const getId = title => `journal-search-keyword-list-${title.trim().toLowerCase()}`;
 
 export const KeywordsList = ({ title, list, help }) => {
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
     return (
         <Grid container id={getId(title)} data-testid={getId(title)}>
             <Grid item xs="auto" style={{ margin: '10px 0 10px 0' }}>
@@ -30,7 +30,7 @@ export const KeywordsList = ({ title, list, help }) => {
                     id={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
                     data-testid={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
                 >
-                    <Typography color="secondary">{txt.keywordsList.noResultsFound}</Typography>
+                    <Typography color="secondary">{txt.partials.keywordsList.noResultsFound}</Typography>
                 </Grid>
             )}
         </Grid>

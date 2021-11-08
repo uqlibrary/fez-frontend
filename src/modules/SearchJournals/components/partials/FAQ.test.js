@@ -11,7 +11,7 @@ function setup() {
 describe('FAQ partial', () => {
     it('should render all', () => {
         const { getByText } = setup();
-        const txt = locale.components.journalSearch.FAQ;
+        const txt = locale.components.searchJournals.partials.FAQ;
         expect(getByText(txt.title)).toBeInTheDocument();
         txt.items.map(faq => {
             expect(getByText(faq.question)).toBeInTheDocument();

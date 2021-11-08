@@ -136,8 +136,8 @@ export const JournalSearchFacetsFilter = ({
 
     return (
         <StandardRighthandCard
-            title={locale.components.journalSearch.journalFacetsFilter.title}
-            help={locale.components.journalSearch.journalFacetsFilter.help}
+            title={locale.components.searchJournals.journalFacetsFilter.title}
+            help={locale.components.searchJournals.journalFacetsFilter.help}
         >
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>

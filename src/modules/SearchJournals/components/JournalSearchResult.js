@@ -23,7 +23,7 @@ import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 export const JournalSearchResult = ({ onSearch }) => {
     const location = useLocation();
     const history = useHistory();
-    const txt = locale.components.journalSearch;
+    const txt = locale.components.searchJournals;
 
     const journalsListLoading = useSelector(state => state.get('searchJournalsReducer').journalsListLoading);
     const journalsList = useSelector(state => state.get('searchJournalsReducer').journalsList);
