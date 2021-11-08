@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { HelpIcon } from '../../../SharedComponents/Toolbox/HelpDrawer';
+import locale from '../../../../locale/components';
+
+export const getId = title => `journal-search-keyword-list-${title.trim().toLowerCase()}`;
 
 export const KeywordsList = ({ title, list, help }) => {
+    const txt = locale.components.journalSearch;
     return (
-        <Grid
-            container
-            id={`journal-search-keyword-list-${title.trim().toLowerCase()}`}
-            data-testid={`journal-search-keyword-list-${title.trim().toLowerCase()}`}
-        >
+        <Grid container id={getId(title)} data-testid={getId(title)}>
             <Grid item xs="auto" style={{ margin: '10px 0 10px 0' }}>
                 <Typography variant="subtitle1" color="primary" component="h3" variant="h5">
                     {title}
@@ -30,7 +30,7 @@ export const KeywordsList = ({ title, list, help }) => {
                     id={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
                     data-testid={`journal-search-keyword-list-${title.toLowerCase().trim()}-no-matches`}
                 >
-                    <Typography color="secondary">No matches found.</Typography>
+                    <Typography color="secondary">{txt.keywordsList.noResultsFound}</Typography>
                 </Grid>
             )}
         </Grid>

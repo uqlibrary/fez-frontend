@@ -12,32 +12,32 @@ const useStyles = makeStyles(theme => ({
         fontSize: 10,
     },
     asic: {
-        backgroundColor: theme.palette.error.main,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.error?.main,
+        color: theme.palette.white?.main,
     },
     abdc: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.accent?.main,
+        color: theme.palette.white?.main,
     },
     era: {
-        backgroundColor: theme.palette.success.main,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.success?.main,
+        color: theme.palette.white?.main,
     },
     wosssci: {
-        backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.primary?.dark,
+        color: theme.palette.white?.main,
     },
     wosscie: {
-        backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.primary?.dark,
+        color: theme.palette.white?.main,
     },
     wosesci: {
-        backgroundColor: theme.palette.primary.dark,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.primary?.dark,
+        color: theme.palette.white?.main,
     },
     citescore: {
-        backgroundColor: theme.palette.accent.main,
-        color: theme.palette.white.main,
+        backgroundColor: theme.palette.accent?.main,
+        color: theme.palette.white?.main,
     },
 }));
 

@@ -33,7 +33,7 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index }
 ForCodeSearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
     onKeywordClick: PropTypes.func.isRequired,
-    sources: PropTypes.arrayOf(PropTypes.object),
+    sources: PropTypes.arrayOf(PropTypes.object).isRequired,
     index: PropTypes.number.isRequired,
 };
 

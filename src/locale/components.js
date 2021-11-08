@@ -3810,6 +3810,9 @@ export default {
             input: {
                 placeholder: 'Type at least 3 characters to start a search',
             },
+            keywordsList: {
+                noResultsFound: 'No matches found.',
+            },
             keywordsBrowser: {
                 exactMatch: {
                     title: 'Exact title match',
@@ -3828,7 +3831,7 @@ export default {
                 },
             },
             selectedKeywords: {
-                title: 'Searching for journals containing: ',
+                title: 'Searching for journals containing:',
                 combiner: ' + ',
             },
             journalSearchResult: {

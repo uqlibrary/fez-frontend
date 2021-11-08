@@ -42,7 +42,7 @@ SelectedKeywordItem.propTypes = {
     keyword: PropTypes.shape({
         type: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     onKeywordDelete: PropTypes.func.isRequired,
 };
 

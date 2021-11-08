@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        color: theme.palette.accent.main,
+        color: theme.palette.accent?.main,
         cursor: 'pointer',
     },
     default: {},
@@ -17,15 +17,20 @@ const useStyles = makeStyles(theme => ({
         },
     },
 }));
+
+export const getIdSuffix = (keyword, variant, index) => {
+    if (typeof keyword === 'string') {
+        return `${variant}-${keyword}-${index}`;
+    } else {
+        return `exact-match-${index}`;
+    }
+};
+
+export const getId = (keyword, variant, index) => `journal-search-item-${getIdSuffix(keyword, variant, index)}`;
+
 export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
     const classes = useStyles();
     const handleKeywordClick = () => onKeywordClick(keyword);
-    let formedId;
-    if (typeof keyword === 'string') {
-        formedId = `${variant}-${keyword}-${index}`;
-    } else {
-        formedId = `exact-match-${index}`;
-    }
     return (
         <Grid item xs={12}>
             <Typography
@@ -33,8 +38,8 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
                 onClick={handleKeywordClick}
-                id={`journal-search-item-${formedId}`}
-                data-testid={`journal-search-item-${formedId}`}
+                id={getId(keyword, variant, index)}
+                data-testid={getId(keyword, variant, index)}
             >
                 {keyword}
             </Typography>
