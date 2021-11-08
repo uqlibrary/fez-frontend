@@ -52,14 +52,15 @@ export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
     Object.keys(rawFacets).forEach(key => {
         const rawFacet = rawFacets[key];
         // construct facet object to display, if facet has a lookup - get display name from lookup,
-        // if facet key has a rename record, then use that
+        // if facet key has a rename record, then use that.
+        // Note use of Number.isFinite - will convert any *actual* numeric values to string
         const facetToDisplay = {
             title: renameFacetsList[key] || key,
             facetTitle: key,
             facets: rawFacet.buckets.map(item => {
                 return {
                     title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
-                    key: key.endsWith('quartile') ? String(item.key) : item.key,
+                    key: Number.isFinite(item.key) ? String(item.key) : item.key,
                     count: item.doc_count,
                 };
             }),
