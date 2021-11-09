@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterListItem';
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { useJournalSearch } from '../hooks';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -84,16 +85,47 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
     return false;
 };
 
-export const JournalSearchFacetsFilter = ({
-    facetsData,
-    activeFacets,
-    renameFacetsList,
-    disabled,
-    onFacetsChanged,
-}) => {
+export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabled, onFacetsChanged }) => {
+    const { journalSearchQueryParams } = useJournalSearch();
+    const activeFiltersQuerystringPart = JSON.stringify(journalSearchQueryParams.activeFacets?.filters);
+    const prevActiveFiltersQuerystringPart = useRef(activeFiltersQuerystringPart);
+    const keywordsQuerystringPart = JSON.stringify(journalSearchQueryParams.keywords);
+    const prevKeywordsQuerystringPart = useRef(keywordsQuerystringPart);
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
-    const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
-    const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
+    const [activeFacetsFilters, setActiveFacetsFilters] = useState({
+        ...journalSearchQueryParams.activeFacets?.filters,
+    });
+    const [activeFacetsRanges] = useState({ ...journalSearchQueryParams.activeFacets?.ranges });
+
+    /**
+     * This effect takes care of making the facets filter UI reflect updates made to the activeFacets part
+     * of the querystring.
+     *
+     * The reason why using useState above is not enough can be found
+     * in here https://stackoverflow.com/a/58877875/1463121
+     */
+    useEffect(() => {
+        if (activeFiltersQuerystringPart === prevActiveFiltersQuerystringPart.current) {
+            return;
+        }
+
+        console.log('activeFiltersQuerystringPart !== prevActiveFiltersQuerystringPart.current');
+        setActiveFacetsFilters({ ...journalSearchQueryParams.activeFacets?.filters });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeFiltersQuerystringPart]);
+
+    /**
+     * This effect takes care of resetting the facets filter whenever a keyword is removed
+     */
+    useEffect(() => {
+        if (keywordsQuerystringPart === prevKeywordsQuerystringPart.current) {
+            return;
+        }
+
+        console.log('keywordsQuerystringPart !== prevKeywordsQuerystringPart.current');
+        setActiveFacetsFilters({});
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [keywordsQuerystringPart]);
 
     useEffect(() => {
         if (isFacetFilterClicked) {
@@ -164,7 +196,6 @@ export const JournalSearchFacetsFilter = ({
 
 JournalSearchFacetsFilter.propTypes = {
     facetsData: PropTypes.object,
-    activeFacets: PropTypes.object,
     initialFacets: PropTypes.object,
     renameFacetsList: PropTypes.object,
     disabled: PropTypes.bool,

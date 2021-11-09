@@ -36,7 +36,7 @@ export const SearchJournals = () => {
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
     const fromHandleKeywordDelete = React.useRef(false);
 
-    const composedHandleKeywordDelete = keyword => {
+    const handleKeywordDeleteDecorator = keyword => {
         handleKeywordDelete(keyword);
         fromHandleKeywordDelete.current = true;
     };
@@ -97,7 +97,11 @@ export const SearchJournals = () => {
             return;
         }
         // otherwise, update the query search
-        handleSearch({ ...journalSearchQueryParams, keywords: selectedKeywords });
+        handleSearch({
+            // make sure history reflects resetting facets filter, paging and sorting when keywords are removed
+            ...(fromHandleKeywordDelete.current ? {} : journalSearchQueryParams),
+            keywords: selectedKeywords,
+        });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
 
@@ -109,6 +113,15 @@ export const SearchJournals = () => {
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
             return;
+        }
+
+        // reset facets filter, paging and sorting when keywords are removed
+        if (fromHandleKeywordDelete.current) {
+            delete journalSearchQueryParams.activeFacets;
+            delete journalSearchQueryParams.page;
+            delete journalSearchQueryParams.pageSize;
+            delete journalSearchQueryParams.sortBy;
+            delete journalSearchQueryParams.sortDirection;
         }
 
         // add a delay when keywords are being removed
@@ -130,7 +143,7 @@ export const SearchJournals = () => {
                     <JournalSearchInterface
                         key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
-                        handleKeywordDelete={composedHandleKeywordDelete}
+                        handleKeywordDelete={handleKeywordDeleteDecorator}
                         {...{
                             selectedKeywords,
                             setSelectedKeywords,

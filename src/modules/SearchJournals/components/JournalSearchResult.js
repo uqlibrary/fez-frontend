@@ -156,7 +156,6 @@ export const JournalSearchResult = ({ onSearch }) => {
                 <Grid item md={3}>
                     <JournalSearchFacetsFilter
                         key={'journal-search-facets-filter'}
-                        activeFacets={journalSearchQueryParams.activeFacets}
                         facetsData={journalsList.filters.facets}
                         onFacetsChanged={facetsChanged}
                         disabled={!journalsListLoaded}
