@@ -6,8 +6,8 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { PropTypes } from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 
+export const id = 'journal-search-keywords-voice-record';
 export const VoiceToText = ({ sendHandler }) => {
-    const elementId = 'journal-search-keywords';
     const { transcript, resetTranscript, listening } = useSpeechRecognition({
         clearTranscriptOnListen: true,
     });
@@ -17,7 +17,7 @@ export const VoiceToText = ({ sendHandler }) => {
         if (transcript && transcript.length > 3) {
             sendHandler(transcript);
         }
-        resetTranscript;
+        resetTranscript();
     };
     React.useEffect(() => {
         sendHandler(transcript);
@@ -27,15 +27,16 @@ export const VoiceToText = ({ sendHandler }) => {
         return null;
     }
     return (
-        <Grid container spacing={0} style={{ marginRight: -10 }}>
+        <Grid container spacing={0} style={{ marginRight: -10 }} id={id} data-testid={id}>
             {!listening && (
                 <Grid item xs={'auto'}>
-                    <Tooltip
-                        title={'Use your microphone to search'}
-                        id={`${elementId}-voice-record`}
-                        data-testid={`${elementId}-voice-record`}
-                    >
-                        <IconButton onClick={SpeechRecognition.startListening} size={'small'}>
+                    <Tooltip title={'Use your microphone to search'} id={`${id}-tooltip`} data-testid={`${id}-tooltip`}>
+                        <IconButton
+                            onClick={SpeechRecognition.startListening}
+                            size={'small'}
+                            id={`${id}-start-button`}
+                            data-testid={`${id}-start-button`}
+                        >
                             <MicIcon />
                         </IconButton>
                     </Tooltip>
@@ -43,12 +44,13 @@ export const VoiceToText = ({ sendHandler }) => {
             )}
             {listening && (
                 <Grid item xs={'auto'}>
-                    <Tooltip
-                        title={'Stop recording'}
-                        id={`${elementId}-voice-stop`}
-                        data-testid={`${elementId}-voice-stop`}
-                    >
-                        <IconButton onClick={sendTranscript} size={'small'}>
+                    <Tooltip title={'Stop recording'} id={`${id}-voice-stop`} data-testid={`${id}-voice-stop`}>
+                        <IconButton
+                            onClick={sendTranscript}
+                            size={'small'}
+                            id={`${id}-stop-button`}
+                            data-testid={`${id}-stop-button`}
+                        >
                             <MicIcon style={{ color: '#167b00' }} />
                         </IconButton>
                     </Tooltip>
@@ -59,8 +61,7 @@ export const VoiceToText = ({ sendHandler }) => {
 };
 
 VoiceToText.propTypes = {
-    clearSuggestions: PropTypes.func,
-    sendHandler: PropTypes.func,
+    sendHandler: PropTypes.func.isRequired,
 };
 
 VoiceToText.defaultProps = {};

@@ -11,7 +11,7 @@ context('Strategic Publishing - Search', () => {
             'Step 1. Enter a journal title, keyword, subject or field of research code.',
         );
         cy.get('[data-testid="standard-card"]').should('exist');
-        cy.get('button[data-testid="journal-search-keywords-voice-record"]').should('exist');
+        cy.get('button[data-testid="journal-search-keywords-voice-record-tooltip"]').should('exist');
         cy.get('span[data-testid="clear-journal-search-keywords"]').should('exist');
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
         cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');

@@ -3785,6 +3785,9 @@ export default {
                     noResultsFound: 'No matches found.',
                 },
                 keywordsBrowser: {
+                    titlePrefix: 'Step 2.',
+                    title:
+                        'Select at least one of the following to narrow the scope narrow the scope before searching.',
                     exactMatch: {
                         title: 'Exact title match',
                     },
@@ -3815,6 +3818,10 @@ export default {
                         },
                     },
                 },
+            },
+            journalSearchInput: {
+                titlePrefix: 'Step 1.',
+                title: 'Enter a journal title, keyword, subject or field of research code.',
             },
             journalSearchInterface: {
                 title: 'Journal search',
