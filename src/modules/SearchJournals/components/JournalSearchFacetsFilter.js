@@ -94,14 +94,6 @@ export const JournalSearchFacetsFilter = ({
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
     const [activeFacetsFilters, setActiveFacetsFilters] = useState({ ...activeFacets.filters });
     const [activeFacetsRanges] = useState({ ...activeFacets.ranges });
-    // const [hasActiveFilters, setHasActiveFilters] = useState(false);
-
-    // set active facets once querystring gets update
-    // the reason why using useState above is not enough can be found in
-    // here https://stackoverflow.com/a/58877875/1463121
-    useEffect(() => {
-        setActiveFacetsFilters({ ...activeFacets.filters });
-    }, [activeFacets.filters]);
 
     useEffect(() => {
         if (isFacetFilterClicked) {
