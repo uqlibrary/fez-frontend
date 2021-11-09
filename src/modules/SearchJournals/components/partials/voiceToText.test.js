@@ -80,7 +80,7 @@ describe('VoiceToText', () => {
         });
         fireEvent.click(getByTestId(`${id}-stop-button`));
         expect(sendHandler).toHaveBeenCalledTimes(2);
-        expect(mock.stopListening).toHaveBeenCalledTimes(1);
-        expect(mock.resetTranscript).toHaveBeenCalledTimes(1);
+        expect(mock.stopListening).toHaveBeenCalledTimes(2);
+        expect(mock.resetTranscript).toHaveBeenCalledTimes(2);
     });
 });
