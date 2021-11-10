@@ -33,7 +33,7 @@ jest.mock('react-speech-recognition', () => ({
 
 describe('VoiceToText', () => {
     beforeEach(() => {
-        mock = { resetTranscript: jest.fn(), stopListening: jest.fn(), ...initialMockState };
+        mock = { ...initialMockState, resetTranscript: jest.fn(), stopListening: jest.fn() };
     });
     it('should render empty when voice to text is not supported', () => {
         mock.browserSupportsSpeechRecognition = false;
@@ -80,7 +80,7 @@ describe('VoiceToText', () => {
         });
         fireEvent.click(getByTestId(`${id}-stop-button`));
         expect(sendHandler).toHaveBeenCalledTimes(2);
-        expect(mock.stopListening).toHaveBeenCalledTimes(2);
-        expect(mock.resetTranscript).toHaveBeenCalledTimes(2);
+        expect(mock.stopListening).toHaveBeenCalledTimes(1);
+        expect(mock.resetTranscript).toHaveBeenCalledTimes(1);
     });
 });
