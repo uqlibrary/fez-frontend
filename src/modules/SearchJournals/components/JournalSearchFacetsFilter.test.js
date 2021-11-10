@@ -3,9 +3,17 @@ import React from 'react';
 import { facets, emptyFacets } from 'mock/data/testing/facets';
 import JournalSearchFacetsFilter, { getFacetsToDisplay, showFavouritedOnlyFacet } from './JournalSearchFacetsFilter';
 
-import { renderWithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
 
-const setup = ({ filters = {}, onFacetsChangedHandler: clickHandler = undefined }) => {
+import { pathConfig } from '../../../config';
+import { createMemoryHistory } from 'history';
+import * as hooks from '../hooks';
+
+const setup = ({
+    filters = {},
+    onFacetsChangedHandler: clickHandler = undefined,
+    testHistory = createMemoryHistory({ initialEntries: ['/'] }),
+}) => {
     const { activeFacets = [], facets = {} } = filters;
     const testProps = {
         key: 'journal-search-facets-filter',
@@ -14,15 +22,52 @@ const setup = ({ filters = {}, onFacetsChangedHandler: clickHandler = undefined 
         onFacetsChanged: clickHandler || undefined,
         disabled: false,
     };
-    return renderWithRouter(
-        <WithReduxStore>
-            <JournalSearchFacetsFilter {...testProps} />
-        </WithReduxStore>,
+
+    return render(
+        <WithRouter history={testHistory}>
+            <WithReduxStore>
+                <JournalSearchFacetsFilter {...testProps} />
+            </WithReduxStore>
+        </WithRouter>,
     );
 };
 
 describe('Search Journals Facets component', () => {
-    it('should render facet categories that match the data provided', () => {
+    it('should render favourite facets if no facets are provided by the api', () => {
+        const { getByText } = setup(emptyFacets);
+
+        expect(getByText('Favourite Journals')).toBeInTheDocument();
+    });
+
+    it('should render the component categories and nested items that match the input data', () => {
+        const { getByTestId, queryByText } = setup(facets);
+
+        Object.keys(facets.filters?.facets).forEach(key => {
+            const categoryId = `facet-category-${key.replace(/ /g, '-').toLowerCase()}`;
+
+            expect(getByTestId(categoryId)).toBeInTheDocument();
+            expect(getByTestId(categoryId)).toHaveTextContent(key);
+
+            const facet = facets.filters.facets[key];
+
+            act(() => {
+                fireEvent.click(getByTestId(categoryId));
+            });
+
+            facet.buckets.forEach(item => {
+                const title = key.endsWith('quartile') ? `Q${item.key}` : item.key;
+                const count = item.doc_count || undefined;
+                const nestedItemLabel = count ? `${title} (${count})` : title;
+                expect(queryByText(nestedItemLabel)).toBeInTheDocument();
+            });
+
+            act(() => {
+                fireEvent.click(getByTestId(categoryId));
+            });
+        });
+    });
+
+    it('should render facet categories that match the internally composed data', () => {
         const { getByTestId } = setup(facets);
 
         const facetsToDisplay = getFacetsToDisplay(facets.filters.facets, {});
@@ -34,12 +79,6 @@ describe('Search Journals Facets component', () => {
 
             expect(getByTestId(categoryId)).toHaveTextContent(item.title);
         });
-    });
-
-    it('should render favourite facets if no facets are provided by the api', () => {
-        const { getByText } = setup(emptyFacets);
-
-        expect(getByText('Favourite Journals')).toBeInTheDocument();
     });
 
     it('should, when each facet category is clicked, render facet category nested list items with correct labels', () => {
@@ -60,8 +99,6 @@ describe('Search Journals Facets component', () => {
                 expect(queryByText(nestedItemLabel)).not.toBeInTheDocument();
             });
 
-            // now click (expand) each category one at a time to
-            // dynamicaly populate the nested items.
             act(() => {
                 fireEvent.click(getByTestId(categoryId));
             });
@@ -145,5 +182,92 @@ describe('Search Journals Facets component', () => {
                 fireEvent.click(getByTestId(categoryId));
             });
         });
+    });
+
+    it('should have each nested list item showing or hiding a Clear button when clicked', () => {
+        const testFacetChangeFn = jest.fn();
+        const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
+
+        const facetsToDisplay = getFacetsToDisplay(facets.filters.facets, {});
+
+        facetsToDisplay.forEach(item => {
+            const categoryId = `facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`;
+
+            expect(getByTestId(categoryId)).toBeInTheDocument();
+
+            // click (expand) each category one at a time to
+            // dynamicaly populate the nested items.
+            act(() => {
+                fireEvent.click(getByTestId(categoryId));
+            });
+
+            item.facets.forEach((facet, index) => {
+                const nestedItemLabel = facet.count ? `${facet.title} (${facet.count})` : `${facet.title}`;
+
+                const nestedButtonId = `facet-filter-nested-item-${nestedItemLabel.replace(/ /g, '-').toLowerCase()}`;
+                const nestedClearButtonId = `clear-facet-filter-nested-item-${index}`;
+
+                // should not be in the document to begin with
+                expect(queryByTestId(nestedClearButtonId)).not.toBeInTheDocument();
+
+                act(() => {
+                    fireEvent.click(getByTestId(nestedButtonId));
+                });
+
+                const nestedButton = getByTestId(nestedClearButtonId);
+                expect(nestedButton).toBeInTheDocument();
+
+                act(() => {
+                    fireEvent.click(getByTestId(nestedButtonId));
+                });
+
+                // and finally, should be gone again
+                expect(queryByTestId(nestedClearButtonId)).not.toBeInTheDocument();
+            });
+
+            // click category again to remove
+            // nested items from DOM before next iteration
+            act(() => {
+                fireEvent.click(getByTestId(categoryId));
+            });
+        });
+    });
+
+    it('should clear active facets when keywords change', () => {
+        const testFacetChangeFn = jest.fn();
+        const testQueryPart =
+            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS&activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus&activeFacets%5Bfilters%5D%5BEmbargo%5D%5B%5D=12+months&page=1';
+        const testQueryChangedKeywords =
+            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
+        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+            search: testQueryPart,
+            state: {
+                source: 'code',
+            },
+        });
+
+        const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFiltersRef');
+
+        const { queryAllByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
+
+        const nestedClearButtonId = 'clear-facet-filter-nested-item-0';
+        expect(queryAllByTestId(nestedClearButtonId)).length === 3;
+
+        // eslint-disable-next-line prettier/prettier
+        expect(mockActiveFiltersRef).toHaveBeenCalledWith('{\"Listed in\":[\"CWTS\"],\"Indexed in\":[\"Scopus\"],\"Embargo\":[\"12 months\"]}');
+
+        testHistory.push({
+            path,
+            search: testQueryChangedKeywords,
+            state: {
+                source: 'code',
+            },
+        });
+
+        expect(queryAllByTestId(nestedClearButtonId)).length === 0;
+        expect(mockActiveFiltersRef).toHaveBeenCalledWith('{}');
     });
 });
