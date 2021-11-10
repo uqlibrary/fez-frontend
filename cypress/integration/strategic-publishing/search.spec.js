@@ -6,12 +6,13 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders the search page as expected', () => {
         cy.get('h2[data-testid="page-title"]').should('contain', 'Journal search');
+        cy.get('div[data-testid="standard-card"]').should('contain', 'Step 1.');
         cy.get('div[data-testid="standard-card"]').should(
             'contain',
-            'Step 1. Enter a journal title, keyword, subject or field of research code.',
+            'Enter a journal title, keyword, subject or field of research code.',
         );
         cy.get('[data-testid="standard-card"]').should('exist');
-        cy.get('button[data-testid="journal-search-keywords-voice-record"]').should('exist');
+        cy.get('button[data-testid="journal-search-keywords-voice-record-start-button"]').should('exist');
         cy.get('span[data-testid="clear-journal-search-keywords"]').should('exist');
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
         cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
@@ -32,6 +33,24 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-keyword-list-titles containing-no-matches"]').should('exist');
         cy.get('[data-testid="journal-search-keyword-list-keyword matches-no-matches"]').should('exist');
         cy.get('[data-testid="journal-search-keyword-list-subjects & field of research-no-matches"]').should('exist');
+
+        cy.checkA11y('div.StandardPage', {
+            reportName: 'Search Journals',
+            scopeName: 'Keywords',
+            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+        });
+    });
+
+    it('Renders search input', () => {
+        cy.get('[data-testid="clear-journal-search-keywords"]')
+            .should('have.attr', 'aria-disabled')
+            .should('eq', 'true');
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('t');
+        cy.get('[data-testid="clear-journal-search-keywords"]')
+            .should('have.attr', 'aria-disabled')
+            .should('eq', 'false');
+        cy.get('[data-testid="clear-journal-search-keywords"]').click();
+        cy.get('input[data-testid="journal-search-keywords-input"]').should('have.value', '');
 
         cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',

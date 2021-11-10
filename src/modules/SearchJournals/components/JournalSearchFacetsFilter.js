@@ -97,51 +97,6 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
     });
     const [activeFacetsRanges] = useState({ ...journalSearchQueryParams.activeFacets?.ranges });
 
-    // useEffect(() => {
-    //     console.log('facetsData', facetsData);
-    // }, [facetsData]);
-    // useEffect(() => {
-    //     console.log('renameFacetsList', renameFacetsList);
-    // }, [renameFacetsList]);
-    // useEffect(() => {
-    //     console.log('disabled', disabled);
-    // }, [disabled]);
-    // useEffect(() => {
-    //     console.log('onFacetsChanged', onFacetsChanged);
-    // }, [onFacetsChanged]);
-
-    // useEffect(() => {
-    //     console.log('journalSearchQueryParams', journalSearchQueryParams);
-    // }, [journalSearchQueryParams]);
-
-    // useEffect(() => {
-    //     console.log('activeFiltersQuerystringPart', activeFiltersQuerystringPart);
-    // }, [activeFiltersQuerystringPart]);
-
-    // useEffect(() => {
-    //     console.log('prevActiveFiltersQuerystringPart', prevActiveFiltersQuerystringPart);
-    // }, [prevActiveFiltersQuerystringPart]);
-
-    // useEffect(() => {
-    //     console.log('keywordsQuerystringPart', keywordsQuerystringPart);
-    // }, [keywordsQuerystringPart]);
-
-    // useEffect(() => {
-    //     console.log('prevKeywordsQuerystringPart', prevKeywordsQuerystringPart);
-    // }, [prevKeywordsQuerystringPart]);
-
-    // useEffect(() => {
-    //     console.log('isFacetFilterClicked', isFacetFilterClicked);
-    // }, [isFacetFilterClicked]);
-
-    // useEffect(() => {
-    //     console.log('activeFacetsFilters', activeFacetsFilters);
-    // }, [activeFacetsFilters]);
-
-    // useEffect(() => {
-    //     console.log('activeFacetsRanges', activeFacetsRanges);
-    // }, [activeFacetsRanges]);
-
     /**
      * This effect takes care of making the facets filter UI reflect updates made to the activeFacets part
      * of the querystring.
@@ -154,7 +109,6 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
             return;
         }
 
-        // console.log('activeFiltersQuerystringPart !== prevActiveFiltersQuerystringPart.current');
         setActiveFacetsFilters({ ...journalSearchQueryParams.activeFacets?.filters });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeFiltersQuerystringPart]);
@@ -167,23 +121,18 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
             return;
         }
 
-        // console.log('keywordsQuerystringPart !== prevKeywordsQuerystringPart.current');
         setActiveFacetsFilters({});
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keywordsQuerystringPart]);
 
     useEffect(() => {
-        // console.log('INSIDE useEffect');
         if (isFacetFilterClicked) {
-            // console.log('Calling onFacetsChanged with:', {
-            //     filters: activeFacetsFilters,
-            //     ranges: activeFacetsRanges,
-            // });
             onFacetsChanged({
                 filters: activeFacetsFilters,
                 ranges: activeFacetsRanges,
             });
         }
+
         return () => setIsFacetFilterClicked(false);
     }, [isFacetFilterClicked, activeFacetsFilters, activeFacetsRanges, onFacetsChanged]);
 

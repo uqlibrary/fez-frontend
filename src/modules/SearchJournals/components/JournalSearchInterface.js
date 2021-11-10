@@ -10,24 +10,27 @@ import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 
+export const id = 'journal-search-interface';
 export const JournalSearchInterface = ({
     onSearch,
     selectedKeywords,
     setSelectedKeywords,
     handleKeywordAdd,
     handleKeywordDelete,
-    hasAnySelectedKeywords,
-    showInputControls,
+    hasAnySelectedKeywords = false,
+    showInputControls = true,
 }) => {
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const initialSelectedKeywords = React.useRef(selectedKeywords);
-
     const txt = locale.components.searchJournals;
 
+    /* istanbul ignore next */
+    const handleResetKeywords = () => setSelectedKeywords({});
     const handleSnackbarOpen = () => {
         setSnackbarNotify(true);
     };
     const handleSnackbarClose = (event, reason) => {
+        /* istanbul ignore next */
         if (reason === 'clickaway') {
             return;
         }
@@ -54,12 +57,12 @@ export const JournalSearchInterface = ({
             />
             <Grid container spacing={2}>
                 {showInputControls && (
-                    <Grid item xs={12}>
-                        <JournalSearchInput onReset={() => setSelectedKeywords({})} />
+                    <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
+                        <JournalSearchInput onReset={handleResetKeywords} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
-                    <Grid item xs={12}>
+                    <Grid item xs={12} id={`${id}-selected-keywords`} data-testid={`${id}-selected-keywords`}>
                         <SelectedKeywords
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
@@ -67,7 +70,7 @@ export const JournalSearchInterface = ({
                     </Grid>
                 )}
                 {showInputControls && (
-                    <Grid item xs={12}>
+                    <Grid item xs={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
                         <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />
                     </Grid>
                 )}

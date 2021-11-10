@@ -14,12 +14,12 @@ import locale from 'locale/components';
 import { VoiceToText } from './partials/voiceToText';
 import Tooltip from '@material-ui/core/Tooltip';
 
-export const JournalSearchInput = ({ onReset }) => {
+export const JournalSearchInput = ({ initialValue = '', onReset }) => {
     const txt = locale.components.searchJournals;
     const dispatch = useDispatch();
-    const [journalSearchInput, setJournalSearchInput] = React.useState('');
+    const [journalSearchInput, setJournalSearchInput] = React.useState(initialValue);
     const loadingJournalSearchKeywords = useSelector(
-        state => (state.get('journalReducer') || {}).journalSearchKeywordsLoading,
+        state => state.get('journalReducer')?.journalSearchKeywordsLoading,
     );
 
     const throttledLoadSuggestions = React.useRef(
@@ -31,6 +31,7 @@ export const JournalSearchInput = ({ onReset }) => {
      * @param {object} event keypress event object
      */
     const handleJournalSearchInput = React.useCallback(event => setJournalSearchInput(event.target.value), []);
+    /* istanbul ignore next */
     const handleJournalVoiceSearchInput = React.useCallback(value => !!value && setJournalSearchInput(value), []);
     const handleClearSearchInput = React.useCallback(() => {
         onReset();
@@ -62,7 +63,7 @@ export const JournalSearchInput = ({ onReset }) => {
         <Grid container spacing={0}>
             <Grid item xs={12} style={{ padding: '10px 0 0 0' }}>
                 <Typography>
-                    <b>Step 1.</b> Enter a journal title, keyword, subject or field of research code.
+                    <b>{txt.journalSearchInput.titlePrefix}</b>&nbsp;{txt.journalSearchInput.title}
                 </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -104,6 +105,7 @@ export const JournalSearchInput = ({ onReset }) => {
                                             aria-label="Clear search keyword input"
                                             component="span"
                                             onClick={handleClearSearchInput}
+                                            disabled={!journalSearchInput.length}
                                             id="clear-journal-search-keywords"
                                             data-testid="clear-journal-search-keywords"
                                         >

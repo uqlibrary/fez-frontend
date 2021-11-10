@@ -14,7 +14,7 @@ import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 import locale from 'locale/components';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
-    const txt = locale.components.searchJournals;
+    const txt = locale.components.searchJournals.partials.keywordsBrowser;
     const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
     const isInitialValues = useSelector(state => state.get('journalReducer').isInitialValues);
     const journalSearchKeywordsError = useSelector(state => state.get('journalReducer').journalSearchKeywordsError);
@@ -32,8 +32,13 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @param {string} keyword Keyword string
      * @returns void
      */
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleKeywordClick = React.useCallback((type, keyword) => onKeywordAdd({ type, text: keyword }), []);
+
+    /* istanbul ignore next */
+    const handleKeywordClick = React.useCallback(
+        (type, keyword) => onKeywordAdd({ type, text: keyword }),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    );
 
     /**
      * Handle click event on FoR code matching keyword
@@ -41,8 +46,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @param {string} keyword Keyword string
      * @returns void
      */
+    /* istanbul ignore next */
     const handleSubjectKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.partials.keywordsBrowser.forCodeMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.forCodeMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -53,8 +59,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @param {string} keyword Keyword string
      * @returns void
      */
+    /* istanbul ignore next */
     const handleTitleKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.partials.keywordsBrowser.titleMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.titleMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -65,8 +72,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @param {string} keyword Keyword string
      * @returns void
      */
+    /* istanbul ignore next */
     const handleKeywordsKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.partials.keywordsBrowser.keywordMatch.chipTitle, keyword),
+        keyword => handleKeywordClick(txt.keywordMatch.chipTitle, keyword),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -85,8 +93,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             )}
             <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
                 <Typography>
-                    <b>Step 2.</b> Select at least one of the following to narrow the scope narrow the scope before
-                    searching.
+                    <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px' }}>
@@ -94,15 +101,15 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     {hasExactKeywords && (
                         <Grid item xs={12}>
                             <ExactMatchSearchKeywordsList
-                                keywordsListTitle={txt.partials.keywordsBrowser.exactMatch.title}
-                                keywordsList={journalSearchKeywords.exactMatch || []}
+                                keywordsListTitle={txt.exactMatch.title}
+                                keywordsList={journalSearchKeywords.exactMatch}
                             />
                         </Grid>
                     )}
                     <Grid item xs={12}>
                         <SearchKeywordsList
-                            keywordsListTitle={txt.partials.keywordsBrowser.titleMatch.title}
-                            keywordsList={journalSearchKeywords.titleMatch || []}
+                            keywordsListTitle={txt.titleMatch.title}
+                            keywordsList={journalSearchKeywords.titleMatch}
                             onKeywordClick={handleTitleKeywordClick}
                         />
                     </Grid>
@@ -111,16 +118,16 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             {separator}
             <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <SearchKeywordsList
-                    keywordsListTitle={txt.partials.keywordsBrowser.keywordMatch.title}
-                    keywordsList={journalSearchKeywords.keywordMatch || []}
+                    keywordsListTitle={txt.keywordMatch.title}
+                    keywordsList={journalSearchKeywords.keywordMatch}
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
             {separator}
             <Grid item xs={12} sm={12} md style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <ForCodeSearchKeywordsList
-                    keywordsListTitle={txt.partials.keywordsBrowser.forCodeMatch.title}
-                    keywordsList={journalSearchKeywords.subjectMatch || []}
+                    keywordsListTitle={txt.forCodeMatch.title}
+                    keywordsList={journalSearchKeywords.subjectMatch}
                     onKeywordClick={handleSubjectKeywordClick}
                 />
             </Grid>
