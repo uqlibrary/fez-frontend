@@ -9,6 +9,8 @@ import { pathConfig } from '../../../config';
 import { createMemoryHistory } from 'history';
 import * as hooks from '../hooks';
 
+import deparam from 'can-deparam';
+
 const setup = ({
     filters = {},
     onFacetsChangedHandler: clickHandler = undefined,
@@ -237,8 +239,8 @@ describe('Search Journals Facets component', () => {
         const testFacetChangeFn = jest.fn();
         const testQueryPart =
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS&activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus&activeFacets%5Bfilters%5D%5BEmbargo%5D%5B%5D=12+months&page=1';
-        const testQueryChangedKeywords =
-            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
+        const testQueryPartNoKeywords =
+            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&page=1';
         const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
         const testHistory = createMemoryHistory({ initialEntries: [path] });
         testHistory.push({
@@ -249,19 +251,27 @@ describe('Search Journals Facets component', () => {
             },
         });
 
+        const activeFacetList = deparam(testQueryPart);
+        let activeFacetsCount = 0;
+        Object.keys(activeFacetList.activeFacets.filters).forEach(key => {
+            activeFacetsCount += Array.isArray(activeFacetList.activeFacets.filters[key])
+                ? activeFacetList.activeFacets.filters[key].length
+                : 0;
+        });
+
         const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFiltersRef');
 
         const { queryAllByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
 
         const nestedClearButtonId = 'clear-facet-filter-nested-item-0';
-        expect(queryAllByTestId(nestedClearButtonId)).length === 3;
+        expect(queryAllByTestId(nestedClearButtonId)).length === activeFacetsCount;
 
         // eslint-disable-next-line prettier/prettier
         expect(mockActiveFiltersRef).toHaveBeenCalledWith('{\"Listed in\":[\"CWTS\"],\"Indexed in\":[\"Scopus\"],\"Embargo\":[\"12 months\"]}');
 
         testHistory.push({
             path,
-            search: testQueryChangedKeywords,
+            search: testQueryPartNoKeywords,
             state: {
                 source: 'code',
             },
