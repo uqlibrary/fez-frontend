@@ -41,6 +41,24 @@ context('Strategic Publishing - Search', () => {
         });
     });
 
+    it('Renders search input', () => {
+        cy.get('[data-testid="clear-journal-search-keywords"]')
+            .should('have.attr', 'aria-disabled')
+            .should('eq', 'true');
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('t');
+        cy.get('[data-testid="clear-journal-search-keywords"]')
+            .should('have.attr', 'aria-disabled')
+            .should('eq', 'false');
+        cy.get('[data-testid="clear-journal-search-keywords"]').click();
+        cy.get('input[data-testid="journal-search-keywords-input"]').should('have.value', '');
+
+        cy.checkA11y('div.StandardPage', {
+            reportName: 'Search Journals',
+            scopeName: 'Keywords',
+            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+        });
+    });
+
     it('Renders search results', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('tech', 200);
         cy.get('[data-testid="standard-card"]').should('contain', 'Titles containing');
