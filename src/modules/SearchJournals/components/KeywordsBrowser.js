@@ -32,9 +32,13 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      * @param {string} keyword Keyword string
      * @returns void
      */
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
     /* istanbul ignore next */
-    const handleKeywordClick = React.useCallback((type, keyword) => onKeywordAdd({ type, text: keyword }), []);
+    const handleKeywordClick = React.useCallback(
+        (type, keyword) => onKeywordAdd({ type, text: keyword }),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    );
 
     /**
      * Handle click event on FoR code matching keyword
@@ -89,8 +93,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             )}
             <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
                 <Typography>
-                    <b>{txt.titlePrefix}</b>
-                    {txt.title}
+                    <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px' }}>

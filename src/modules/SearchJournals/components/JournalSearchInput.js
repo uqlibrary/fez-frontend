@@ -63,8 +63,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
         <Grid container spacing={0}>
             <Grid item xs={12} style={{ padding: '10px 0 0 0' }}>
                 <Typography>
-                    <b>{txt.journalSearchInput.titlePrefix}</b>
-                    {txt.journalSearchInput.title}
+                    <b>{txt.journalSearchInput.titlePrefix}</b>&nbsp;{txt.journalSearchInput.title}
                 </Typography>
             </Grid>
             <Grid item xs={12}>

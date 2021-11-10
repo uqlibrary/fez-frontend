@@ -6,12 +6,13 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders the search page as expected', () => {
         cy.get('h2[data-testid="page-title"]').should('contain', 'Journal search');
+        cy.get('div[data-testid="standard-card"]').should('contain', 'Step 1.');
         cy.get('div[data-testid="standard-card"]').should(
             'contain',
-            'Step 1. Enter a journal title, keyword, subject or field of research code.',
+            'Enter a journal title, keyword, subject or field of research code.',
         );
         cy.get('[data-testid="standard-card"]').should('exist');
-        cy.get('button[data-testid="journal-search-keywords-voice-record-tooltip"]').should('exist');
+        cy.get('button[data-testid="journal-search-keywords-voice-record-start-button"]').should('exist');
         cy.get('span[data-testid="clear-journal-search-keywords"]').should('exist');
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
         cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
