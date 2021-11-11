@@ -3650,6 +3650,9 @@ export default {
             },
         },
         searchJournals: {
+            snackbar: {
+                message: 'Search results updated',
+            },
             partials: {
                 FAQ: {
                     title: 'Need more help?',
@@ -3787,6 +3790,8 @@ export default {
                 keywordsBrowser: {
                     titlePrefix: 'Step 2.',
                     title: 'Select at least one of the following to narrow the scope before searching.',
+                    aria_label:
+                        'Suggested results available below. Tab out of this field and use arrow keys to move to item lists.',
                     exactMatch: {
                         title: 'Exact title match',
                     },
