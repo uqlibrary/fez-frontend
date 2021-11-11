@@ -3650,6 +3650,9 @@ export default {
             },
         },
         searchJournals: {
+            snackbar: {
+                message: 'Search results updated',
+            },
             partials: {
                 FAQ: {
                     title: 'Need more help?',
@@ -3786,8 +3789,9 @@ export default {
                 },
                 keywordsBrowser: {
                     titlePrefix: 'Step 2.',
-                    title:
-                        'Select at least one of the following to narrow the scope narrow the scope before searching.',
+                    title: 'Select at least one of the following to narrow the scope before searching.',
+                    aria_label:
+                        'Suggested results available below. Tab out of this field and use arrow keys to move to item lists.',
                     exactMatch: {
                         title: 'Exact title match',
                     },
@@ -3855,7 +3859,7 @@ export default {
                 },
             },
             input: {
-                placeholder: 'Type at least 3 characters to start a search',
+                placeholder: 'Type at least 3 characters to start journal search',
                 aria_label:
                     'This search application produces tabular results that may be problematic with a screen reader. Please contact your librarian for assistance if needed.',
             },

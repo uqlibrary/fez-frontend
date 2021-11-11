@@ -40,6 +40,8 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
                 onClick={handleKeywordClick}
                 id={getId(keyword, variant, index)}
                 data-testid={getId(keyword, variant, index)}
+                role="button"
+                tabIndex="0"
             >
                 {keyword}
             </Typography>

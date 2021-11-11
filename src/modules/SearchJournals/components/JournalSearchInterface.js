@@ -53,7 +53,8 @@ export const JournalSearchInterface = ({
                 open={snackbarNotify}
                 onClose={handleSnackbarClose}
                 autoHideDuration={1000}
-                message={<span>Search list updated</span>}
+                message={txt.snackbar.message}
+                role="alert"
             />
             <Grid container spacing={2}>
                 {showInputControls && (
