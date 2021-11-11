@@ -14,7 +14,6 @@ export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFi
     handleFacetClick,
     isFacetFilterActive,
 }) {
-    console.log('JournalFacetFilterNestedListItemsList RENDER');
     return facetCategory.facets.map((item, index) => {
         const isActive = isFacetFilterActive(activeFacets.filters, facetCategory.facetTitle, item.key);
         return (
