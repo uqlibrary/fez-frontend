@@ -3786,8 +3786,7 @@ export default {
                 },
                 keywordsBrowser: {
                     titlePrefix: 'Step 2.',
-                    title:
-                        'Select at least one of the following to narrow the scope narrow the scope before searching.',
+                    title: 'Select at least one of the following to narrow the scope before searching.',
                     exactMatch: {
                         title: 'Exact title match',
                     },
