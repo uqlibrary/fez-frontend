@@ -15,6 +15,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
     delete filteredProps.hintText;
     delete filteredProps.onRowDataChange;
     delete filteredProps.rowData;
+    delete filteredProps.ariaLabel;
     return (
         <Fragment>
             <TextField
@@ -26,7 +27,7 @@ export const TextFieldWrapper = React.forwardRef((props, ref) => {
                     id: `${props.textFieldId}-input`,
                     'data-testid': `${props.textFieldId}-input`,
                     label: filteredProps.label,
-                    'aria-label': filteredProps.ariaLabel || filteredProps.label,
+                    'aria-label': props.ariaLabel || filteredProps.label,
                     'aria-labelledby': `${props.textFieldId}-label`,
                     ...filteredProps.inputProps,
                 }}

@@ -92,7 +92,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             )}
             <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
-                <Typography>
+                <Typography role="alert" aria-label={txt.aria_label}>
                     <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
