@@ -41,6 +41,7 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
             classes={{
                 gutters: classes.listItemGutters,
             }}
+            aria-selected={isActive}
         >
             {isActive && (
                 <ListItemIcon>

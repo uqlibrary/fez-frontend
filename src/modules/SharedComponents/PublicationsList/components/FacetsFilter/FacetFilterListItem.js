@@ -37,6 +37,7 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
                     gutters: classes.listItemGutters,
                 }}
                 onClick={handleIsOpen}
+                aria-expanded={isOpen}
             >
                 <ListItemText disableTypography>
                     <Typography id={id} variant={'body2'} color={'textPrimary'} className={classes.listText}>
