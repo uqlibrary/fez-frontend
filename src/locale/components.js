@@ -3856,6 +3856,8 @@ export default {
             },
             input: {
                 placeholder: 'Type at least 3 characters to start a search',
+                aria_label:
+                    'This search application produces tabular results that may be problematic with a screen reader. Please contact your librarian for assistance if needed.',
             },
             journalSearchResult: {
                 loadingMessage: 'Loading journals list',
