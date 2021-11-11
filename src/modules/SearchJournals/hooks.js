@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { useDispatch } from 'react-redux';
 import deparam from 'can-deparam';
@@ -198,4 +198,4 @@ export const useJournalSearchControls = (onSearch, journalSearchQueryParams) => 
     return { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged };
 };
 
-export const useActiveFiltersRef = activeFiltersQuerystring => useRef(activeFiltersQuerystring);
+export const useActiveFacetFilters = state => useState(state);

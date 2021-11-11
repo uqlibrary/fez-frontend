@@ -240,7 +240,7 @@ describe('Search Journals Facets component', () => {
         const testQueryPart =
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS&activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus&activeFacets%5Bfilters%5D%5BEmbargo%5D%5B%5D=12+months&page=1';
         const testQueryPartNoKeywords =
-            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&page=1';
+            '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
         const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
         const testHistory = createMemoryHistory({ initialEntries: [path] });
         testHistory.push({
@@ -259,15 +259,19 @@ describe('Search Journals Facets component', () => {
                 : 0;
         });
 
-        const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFiltersRef');
+        const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFacetFilters');
 
         const { queryAllByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
 
         const nestedClearButtonId = 'clear-facet-filter-nested-item-0';
         expect(queryAllByTestId(nestedClearButtonId)).length === activeFacetsCount;
 
-        // eslint-disable-next-line prettier/prettier
-        expect(mockActiveFiltersRef).toHaveBeenCalledWith('{\"Listed in\":[\"CWTS\"],\"Indexed in\":[\"Scopus\"],\"Embargo\":[\"12 months\"]}');
+        expect(mockActiveFiltersRef).toHaveBeenCalledWith({
+            // eslint-disable-next-line prettier/prettier
+            'Embargo': ['12 months'],
+            'Indexed in': ['Scopus'],
+            'Listed in': ['CWTS'],
+        });
 
         testHistory.push({
             path,
@@ -278,6 +282,8 @@ describe('Search Journals Facets component', () => {
         });
 
         expect(queryAllByTestId(nestedClearButtonId)).length === 0;
-        expect(mockActiveFiltersRef).toHaveBeenCalledWith('{}');
+        // Probably a bug in the codebase, but right now the custom hook will be called twice at this point
+        // due to rerender and we're only interested in the second call to determine active facets have been cleared
+        expect(mockActiveFiltersRef).toHaveBeenNthCalledWith(2, {});
     });
 });
