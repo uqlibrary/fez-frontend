@@ -25,4 +25,17 @@ describe('Facet filter nested list item ', () => {
         expect(getByText('Test filter')).toBeInTheDocument();
         expect(getByTestId('clear-facet-filter-nested-item-0')).toBeInTheDocument();
     });
+
+    it('should render active filters with aria-selected=true', () => {
+        const { getByTestId } = setup({ primaryText: 'Test filter', isActive: true });
+
+        expect(getByTestId('facet-filter-nested-item-test-filter')).toBeInTheDocument();
+        expect(getByTestId('facet-filter-nested-item-test-filter').getAttribute('aria-selected')).toEqual('true');
+    });
+    it('should render active filters with aria-selected=false', () => {
+        const { getByTestId } = setup({ primaryText: 'Test filter', isActive: false });
+
+        expect(getByTestId('facet-filter-nested-item-test-filter')).toBeInTheDocument();
+        expect(getByTestId('facet-filter-nested-item-test-filter').getAttribute('aria-selected')).toEqual('false');
+    });
 });
