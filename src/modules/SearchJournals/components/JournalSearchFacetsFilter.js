@@ -5,7 +5,7 @@ import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/compo
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import { useJournalSearch, useActiveFiltersRef } from '../hooks';
+import { useJournalSearch, useActiveFacetFilters } from '../hooks';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -14,6 +14,7 @@ export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFi
     handleFacetClick,
     isFacetFilterActive,
 }) {
+    console.log('JournalFacetFilterNestedListItemsList RENDER');
     return facetCategory.facets.map((item, index) => {
         const isActive = isFacetFilterActive(activeFacets.filters, facetCategory.facetTitle, item.key);
         return (
@@ -88,11 +89,11 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
 export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabled, onFacetsChanged }) => {
     const { journalSearchQueryParams } = useJournalSearch();
     const activeFiltersQuerystringPart = JSON.stringify(journalSearchQueryParams.activeFacets?.filters);
-    const prevActiveFiltersQuerystringPart = useActiveFiltersRef(activeFiltersQuerystringPart);
+    const prevActiveFiltersQuerystringPart = useRef(activeFiltersQuerystringPart);
     const keywordsQuerystringPart = JSON.stringify(journalSearchQueryParams.keywords);
     const prevKeywordsQuerystringPart = useRef(keywordsQuerystringPart);
     const [isFacetFilterClicked, setIsFacetFilterClicked] = useState(false);
-    const [activeFacetsFilters, setActiveFacetsFilters] = useState({
+    const [activeFacetsFilters, setActiveFacetsFilters] = useActiveFacetFilters({
         ...journalSearchQueryParams.activeFacets?.filters,
     });
     const [activeFacetsRanges] = useState({ ...journalSearchQueryParams.activeFacets?.ranges });
