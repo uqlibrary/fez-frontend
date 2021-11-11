@@ -1821,7 +1821,7 @@ export default {
             },
         },
         export: {
-            label: 'Export results',
+            label: 'Export page results',
             format: [
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
@@ -3865,7 +3865,7 @@ export default {
                 },
             },
             export: {
-                label: 'Export results',
+                label: 'Export page results',
                 format: [{ value: 'excel', label: 'Excel File' }],
             },
             sorting: {
