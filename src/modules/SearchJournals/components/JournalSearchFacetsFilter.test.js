@@ -5,7 +5,7 @@ import JournalSearchFacetsFilter, { getFacetsToDisplay, showFavouritedOnlyFacet 
 
 import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
 
-import { pathConfig } from '../../../config';
+import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import * as hooks from '../hooks';
 
