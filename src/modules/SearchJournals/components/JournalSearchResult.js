@@ -20,6 +20,17 @@ import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 
+export const getSearchResultSortingParams = (journalSearchQueryParams, journalsListPerPage, sortingDefaults) => {
+    const { sortBy = 'score', sortDirection = 'Desc' } = {
+        ...sortingDefaults,
+        ...journalSearchQueryParams,
+    };
+    const pageSize = journalSearchQueryParams?.pageSize
+        ? Number(journalSearchQueryParams.pageSize)
+        : journalsListPerPage ?? sortingDefaults?.pageSize ?? 20;
+    return { sortBy, sortDirection, pageSize };
+};
+
 export const JournalSearchResult = ({ onSearch }) => {
     const location = useLocation();
     const history = useHistory();
@@ -61,12 +72,18 @@ export const JournalSearchResult = ({ onSearch }) => {
         !journalSearchQueryParams.keywords ||
         Object.values(journalSearchQueryParams.keywords).length === 0
     ) {
-        return <div />;
+        return <div id="journal-no-keywords" />;
     }
 
     if (!journalsList || (!!journalsList && journalsList.data.length === 0)) {
         return 'No journals found';
     }
+
+    const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
+        journalSearchQueryParams,
+        journalsList.per_page,
+        locale.components.searchJournals.sortingDefaults ?? {},
+    );
 
     return (
         <Grid container spacing={2}>
@@ -89,14 +106,12 @@ export const JournalSearchResult = ({ onSearch }) => {
                                 exportData={txt.export}
                                 pagingData={journalsList}
                                 sortingData={txt.sorting}
-                                sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
-                                sortDirection={
-                                    (journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'
-                                }
+                                sortBy={sortBy}
+                                sortDirection={sortDirection}
                                 onExportPublications={handleExport}
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
-                                pageSize={journalsList.per_page}
+                                pageSize={pageSize}
                             />
                         </Grid>
                         <Grid item xs={12}>

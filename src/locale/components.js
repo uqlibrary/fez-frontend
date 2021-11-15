@@ -3888,6 +3888,11 @@ export default {
                     { value: 'snip', label: 'SNIP' },
                 ],
             },
+            sortingDefaults: {
+                pageSize: 10,
+                sortBy: 'highest_quartile',
+                sortDirection: 'Asc',
+            },
             journalFacetsFilter: {
                 title: 'Refine results',
                 resetButtonText: 'Reset',

@@ -9,6 +9,7 @@ import {
     UNPUBLISHED,
 } from 'config/general';
 import param from 'can-param';
+import locale from 'locale/components';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -470,14 +471,23 @@ export const getKeywordsParams = keywords => {
 };
 
 export const JOURNAL_SEARCH_API = query => {
-    const searchQuery = getKeywordsParams(query.keywords);
+    const { pageSize = 20, sortBy = 'score', sortDirection = 'desc' } = {
+        ...locale.components.searchJournals.sortingDefaults,
+        ...query,
+    };
 
     return {
         apiUrl: 'journals/search',
         options: {
             params: {
-                ...searchQuery,
-                ...getStandardSearchParams({ ...query, facets: query.activeFacets }),
+                ...getKeywordsParams(query.keywords),
+                ...getStandardSearchParams({
+                    ...query,
+                    facets: query.activeFacets,
+                    pageSize,
+                    sortBy,
+                    sortDirection,
+                }),
             },
         },
     };
