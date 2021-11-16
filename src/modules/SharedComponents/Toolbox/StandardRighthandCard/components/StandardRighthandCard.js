@@ -10,6 +10,9 @@ const styles = {
     title: {
         minWidth: 1,
     },
+    icon: {
+        marginTop: -8,
+    },
     divider: {
         marginTop: 6,
         marginBottom: 12,
@@ -41,7 +44,7 @@ export class StandardRighthandCard extends React.Component {
                     )}
                 </Grid>
                 {help && help.text && (
-                    <Grid item>
+                    <Grid item className={classes.icon}>
                         <HelpIcon {...help} />
                     </Grid>
                 )}
