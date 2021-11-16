@@ -50,6 +50,7 @@ export const JournalSearchResult = ({ onSearch }) => {
         handleToggleSelectAllJournals,
     } = useSelectedJournals({ available: journalsList?.data });
     const { journalSearchQueryParams } = useJournalSearch();
+    /* istanbul ignore next */
     const { handleExport, pageSizeChanged, pageChanged, sortByChanged, facetsChanged } = useJournalSearchControls(
         params => {
             onSearch(params);
@@ -79,10 +80,13 @@ export const JournalSearchResult = ({ onSearch }) => {
         return 'No journals found';
     }
 
+    /* istanbul ignore next */
+    const sortingDefaults = locale.components.searchJournals.sortingDefaults ?? {};
+
     const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
         journalSearchQueryParams,
         journalsList.per_page,
-        locale.components.searchJournals.sortingDefaults ?? {},
+        sortingDefaults,
     );
 
     return (

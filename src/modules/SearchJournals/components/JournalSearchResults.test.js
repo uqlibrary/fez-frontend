@@ -10,11 +10,15 @@ import deparam from 'can-deparam';
 import JournalSearchResult, { getSearchResultSortingParams } from './JournalSearchResult';
 import { mockDataEmpty, mockData } from '../../../mock/data/testing/journals/journalSearchResults';
 
-const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) }) => {
+const setup = ({
+    state = {},
+    testHistory = createMemoryHistory({ initialEntries: ['/'] }),
+    onSearchFn = jest.fn(),
+}) => {
     return render(
         <WithRouter history={testHistory}>
             <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
-                <JournalSearchResult />
+                <JournalSearchResult onSearch={onSearchFn} />
             </WithReduxStore>
         </WithRouter>,
     );
@@ -127,7 +131,57 @@ describe('Search Journals Results component', () => {
 
         expect(queryByTestId('journal-no-keywords')).toBeInTheDocument();
     });
+    it('should show a message when results are loading', () => {
+        const testQueryPart =
+            'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
+        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+            search: testQueryPart,
+            state: {
+                source: 'code',
+            },
+        });
 
+        const journalsList = mockData;
+        const { getByText } = setup({
+            state: {
+                journalsListLoaded: true,
+                journalsListLoading: true,
+                journalsList,
+            },
+            testHistory,
+        });
+
+        expect(getByText('Loading journals list')).toBeInTheDocument();
+    });
+    it('should show an error message when a loading error occurs', () => {
+        const testQueryPart =
+            'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
+        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+            search: testQueryPart,
+            state: {
+                source: 'code',
+            },
+        });
+
+        const journalsList = mockData;
+        const { getByText } = setup({
+            state: {
+                journalsListLoaded: true,
+                journalsListLoading: false,
+                journalsList,
+                journalsListError: { message: 'Test error message' },
+            },
+            testHistory,
+        });
+
+        expect(getByText('Test error message')).toBeInTheDocument();
+    });
     it('should use defined default sorting values when none are explicitly provided', () => {
         const testQueryPart =
             'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
