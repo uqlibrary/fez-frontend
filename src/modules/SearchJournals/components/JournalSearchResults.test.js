@@ -25,7 +25,7 @@ const setup = ({
 };
 
 describe('Search Journals Results component', () => {
-    it("should show 'No journals found' text when no results are present", () => {
+    it("should show 'No journals found' when no results are present", () => {
         const testQueryPart =
             'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
         const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
@@ -86,7 +86,7 @@ describe('Search Journals Results component', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-no-keywords')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-results-no-keywords')).toBeInTheDocument();
     });
     it('should show an empty document when an empty keyword is present', () => {
         const testQueryPart = '?keywords%5B';
@@ -107,7 +107,7 @@ describe('Search Journals Results component', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-no-keywords')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-results-no-keywords')).toBeInTheDocument();
     });
 
     it('should show an empty document when results are not loaded', () => {
@@ -129,7 +129,7 @@ describe('Search Journals Results component', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-no-keywords')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-results-no-keywords')).toBeInTheDocument();
     });
     it('should show a message when results are loading', () => {
         const testQueryPart =
