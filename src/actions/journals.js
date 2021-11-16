@@ -131,22 +131,21 @@ export const exportJournals = searchQuery => async dispatch => {
         format: requestParams.options.params.export_to,
         page: requestParams.options.params.page,
     };
-    console.log(exportConfig);
+
     dispatch({
         type: actions.EXPORT_JOURNALS_LOADING,
         payload: exportConfig,
     });
 
     try {
-        const response = await get(requestParams);
-        console.log('export');
+        // set responseType to blob for the FileSaver.saveAs to work
+        const response = await get(requestParams, { responseType: 'blob' });
         promptForDownload(exportConfig.format, response);
         dispatch({
             type: actions.EXPORT_JOURNALS_LOADED,
             payload: exportConfig,
         });
     } catch (error) {
-        console.log(error);
         dispatch({
             type: actions.EXPORT_JOURNALS_FAILED,
             payload: {

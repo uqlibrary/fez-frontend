@@ -24,9 +24,8 @@ export const getFileName = extension =>
  */
 export function promptForDownload(format, response) {
     if (!(format in EXPORT_FORMAT_TO_EXTENSION)) {
-        console.log(format);
         throw getExceptionMessage(format);
     }
-    console.log(getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
+
     FileSaver.saveAs(response, getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
 }
