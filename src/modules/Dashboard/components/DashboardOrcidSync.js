@@ -94,7 +94,7 @@ export const DashboardOrcidSync = props => {
 
     const helpIconProps = {
         IconComponent: renderBadgeIcon(orjStatus),
-        iconSize: 20,
+        iconSize: 'small',
         showLoader: requestingOrcidSync,
         style:
             (isInProgress && {

@@ -614,7 +614,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       <span>
         <button
           aria-label="Information about uploading your eSpace works to ORCID"
-          class="MuiButtonBase-root MuiIconButton-root"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
           data-testid="help-icon-orcid"
           id="help-icon-orcid"
           tabindex="0"
@@ -625,10 +625,9 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
             class="MuiIconButton-label"
           >
             <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-3"
+              class="MuiSvgIcon-root makeStyles-helpIcon-3 MuiSvgIcon-fontSizeSmall"
               focusable="false"
               role="img"
-              size="20"
               viewBox="0 0 24 24"
             >
               <path
