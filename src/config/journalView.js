@@ -912,4 +912,31 @@ export const journalViewConfig = {
             ],
         ],
     },
+    uqData: {
+        title: 'UQ eSpace',
+        rows: [
+            [
+                {
+                    heading: globalLocale.global.authorCountWorks.heading,
+                    fieldId: 'jnl-uq-author-count',
+                    getData: journalDetails => {
+                        return {
+                            count: journalDetails.uq_author_id_count,
+                            id: journalDetails.jnl_jid,
+                        };
+                    },
+                    template: 'PrefixedLinkTemplate',
+                    templateProps: {
+                        href: item =>
+                            item.count > 0
+                                ? globalLocale.global.authorCountWorks.externalUrl.replace('[id]', item.id)
+                                : '',
+                        prefix: item => item.count,
+                        title: globalLocale.global.authorCountWorks.ariaLabel,
+                        text: item => (item.count > 0 ? 'View these articles in UQ eSpace' : ''),
+                    },
+                },
+            ],
+        ],
+    },
 };

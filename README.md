@@ -26,10 +26,39 @@ UQ's branding for Fez is UQ eSpace.
 
 ## Development
 
-This project is using `npm` for dependency management. Make sure `npm` is installed on your machine.
+- This project uses `npm` for dependency management. Make sure `npm` is installed on your machine by following the instructions at <https://docs.npmjs.com/downloading-and-installing-node-js-and-npm>
 
-- make sure to create a .env file based on example.env
-- `nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server` - initial setup
+- This project uses `nvm` for `node` version switching. To install or update `node`, run one of the installation commands detailed at <https://github.com/nvm-sh/nvm#install--update-script>. For example: 
+   
+   ```
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+   ```
+- The `nvm` installation process will update your environmental variables. You will either need to restart your terminal for the changes to take effect, or run the `export` command shown at the end of the `nvm` installation process. For example (using the curl command above):
+   
+   ```
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+   ```
+- With `nvm` installed and/or updated, install `node` version 14.7.0:
+
+   ```
+   nvm install 14.7.0 
+   ```
+
+- Switch to the `node` version just installed and begin initial setup:
+  ```
+  nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server
+  ```
+- In the root folder of `fez-frontend` install the required `npm` modules:
+
+   ```
+   npm install
+   ```
+- Finally, before starting one of the `npm run` commands shown below, ensure you have duplicated the `example.env` file in the root of `fez-frontend` and named the duplicate file `.env`
+
+You should now be able to run one of the following commands from the CLI:
+
 - `npm ci` - when weird errors happen your local npm probably doesnt match the latest project requirements, this
   clears & reinstalls npm packages
 - `npm run start`
@@ -223,7 +252,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - install jest `npm install jest -g`
 - run tests `npm test`
 
-Before committing changes, locally run tests and update stapshots (if required). To update snapshots run
+Before committing changes, locally run tests and update snapshots (if required). To update snapshots run
 `npm run test:unit:update`.
 
 [Code coverage](coverage/jest/index.html) is available (after running `npm test`)
@@ -367,6 +396,8 @@ Deployment pipelines are setup for branches: "master", "staging, "production" an
 
 Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
+
+Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline)
 
 ### Gotchas
 
