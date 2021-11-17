@@ -25,4 +25,12 @@ describe('LinkTemplate', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId('jnl-uq-author-count-link-prefix')).not.toBeInTheDocument();
     });
+    it('Should not contain a link if href is not provided', () => {
+        const { queryByTestId } = setup({ href: () => '' });
+        expect(queryByTestId('jnl-uq-author-count-link-lookup')).not.toBeInTheDocument();
+    });
+    it('Should not contain a link if link text is not provided', () => {
+        const { queryByTestId } = setup({ text: () => '' });
+        expect(queryByTestId('jnl-uq-author-count-link-lookup')).not.toBeInTheDocument();
+    });
 });

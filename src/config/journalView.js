@@ -927,10 +927,13 @@ export const journalViewConfig = {
                     },
                     template: 'PrefixedLinkTemplate',
                     templateProps: {
-                        href: item => globalLocale.global.authorCountWorks.externalUrl.replace('[id]', item.id),
+                        href: item =>
+                            item.count > 0
+                                ? globalLocale.global.authorCountWorks.externalUrl.replace('[id]', item.id)
+                                : '',
                         prefix: item => item.count,
                         title: globalLocale.global.authorCountWorks.ariaLabel,
-                        text: () => 'View these articles in UQ eSpace',
+                        text: item => (item.count > 0 ? 'View these articles in UQ eSpace' : ''),
                     },
                 },
             ],

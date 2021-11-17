@@ -17,9 +17,11 @@ export const PrefixedLinkTemplate = ({ data, templateProps, fieldId }) => {
                             &nbsp;
                         </span>
                     )}
-                    <ExternalLink href={href(data)} title={title} id={`${fieldId}-lookup`}>
-                        {text(data)}
-                    </ExternalLink>
+                    {text(data) && href(data) && (
+                        <ExternalLink href={href(data)} title={title} id={`${fieldId}-lookup`}>
+                            {text(data)}
+                        </ExternalLink>
+                    )}
                 </React.Fragment>
             }
         />
