@@ -24,7 +24,7 @@ const areKeywordsDifferent = (keywords, anotherKeywords) => {
 export const SearchJournals = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const { journalSearchQueryParams, locationKey, handleSearch } = useJournalSearch();
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch();
     const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
     const {
         selectedKeywords,
@@ -141,7 +141,6 @@ export const SearchJournals = () => {
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <JournalSearchInterface
-                        key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
                         handleKeywordDelete={handleKeywordDeleteDecorator}
                         {...{
@@ -154,9 +153,7 @@ export const SearchJournals = () => {
                     />
                 </Grid>
                 <Grid item xs>
-                    {!showInputControls && (
-                        <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
-                    )}
+                    {!showInputControls && <JournalSearchResult onSearch={handleSearch} />}
                 </Grid>
             </Grid>
         </StandardPage>
