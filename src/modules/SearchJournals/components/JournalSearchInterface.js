@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { makeStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import JournalSearchInput from './JournalSearchInput';
@@ -9,8 +10,24 @@ import KeywordsBrowser from './KeywordsBrowser';
 import Snackbar from '@material-ui/core/Snackbar';
 import locale from 'locale/components';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Tooltip from '@material-ui/core/Tooltip';
 
 export const id = 'journal-search-interface';
+
+const useStyles = makeStyles({
+    closeButtonContainer: {
+        position: 'relative',
+        paddingRight: 48,
+    },
+    closeButton: {
+        position: 'absolute',
+        top: 8,
+        right: 0,
+    },
+});
+
 export const JournalSearchInterface = ({
     onSearch,
     selectedKeywords,
@@ -23,6 +40,8 @@ export const JournalSearchInterface = ({
     const [snackbarNotify, setSnackbarNotify] = React.useState(false);
     const initialSelectedKeywords = React.useRef(selectedKeywords);
     const txt = locale.components.searchJournals;
+
+    const classes = useStyles();
 
     /* istanbul ignore next */
     const handleResetKeywords = () => setSelectedKeywords({});
@@ -56,7 +75,7 @@ export const JournalSearchInterface = ({
                 message={txt.snackbar.message}
                 role="alert"
             />
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className={classes.closeButtonContainer}>
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
                         <JournalSearchInput onReset={handleResetKeywords} />
@@ -68,6 +87,25 @@ export const JournalSearchInterface = ({
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
+                        {!showInputControls && (
+                            <Tooltip
+                                id="strategic-publishing-clear-search"
+                                data-testid="strategic-publishing-clear-search"
+                                title={'Click to clear search keywords'}
+                            >
+                                <IconButton
+                                    className={classes.closeButton}
+                                    color="secondary"
+                                    aria-label="Clear search keywords"
+                                    component="span"
+                                    onClick={handleResetKeywords}
+                                    id="journal-search-clear-keywords-button"
+                                    data-testid="journal-search-clear-keywords-button"
+                                >
+                                    <CloseIcon />
+                                </IconButton>
+                            </Tooltip>
+                        )}
                     </Grid>
                 )}
                 {showInputControls && (
