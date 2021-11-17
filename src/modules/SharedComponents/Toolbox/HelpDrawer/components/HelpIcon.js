@@ -34,8 +34,9 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick,
                 aria-label={tooltip}
                 id={`help-icon${!!testId ? `-${testId}` : ''}`}
                 data-testid={`help-icon${!!testId ? `-${testId}` : ''}`}
+                size={iconSize}
             >
-                <IconComponent className={classes.helpIcon} size={iconSize} titleAccess={tooltip} />
+                <IconComponent className={classes.helpIcon} fontSize={iconSize} titleAccess={tooltip} />
             </IconButton>
         </Tooltip>
     );

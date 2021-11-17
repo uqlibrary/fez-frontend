@@ -27,13 +27,13 @@ const JournalsListHeaderCol2Min = ({ journal }) => {
                     item
                     xs={2}
                     style={{
-                        marginTop: -45,
-                        marginRight: journal.size < 250 ? 20 : 0,
-                        paddingRight: 20,
+                        marginTop: -37,
+                        marginRight: journal.size < 250 ? 10 : 0,
+                        paddingRight: 15,
                         float: 'right',
                     }}
                 >
-                    <HelpIcon {...journal.titleHelp} testId={journal.key} />
+                    <HelpIcon {...journal.titleHelp} testId={journal.key} iconSize={'small'} />
                 </Grid>
             )}
         </Grid>
