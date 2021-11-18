@@ -153,6 +153,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -162,6 +163,13 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2383,6 +2391,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -2392,6 +2401,13 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -5488,6 +5504,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -5497,6 +5514,13 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {

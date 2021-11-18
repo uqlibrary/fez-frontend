@@ -136,6 +136,7 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -1391,6 +1399,7 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -1400,6 +1409,13 @@ exports[`VideoDocumentCitation renders  component with a mock espace record 1`] 
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -1902,6 +1918,7 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -1911,6 +1928,13 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2296,6 +2320,7 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -2305,6 +2330,13 @@ exports[`VideoDocumentCitation renders  component with empty publication 1`] = `
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
