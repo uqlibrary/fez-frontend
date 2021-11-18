@@ -49,7 +49,7 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: '',
+        key: 'highest_quartile',
         label: 'Highest quartile',
         subLabel: 'Q1 is best',
         size: 125,
