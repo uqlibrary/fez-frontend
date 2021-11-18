@@ -38,7 +38,7 @@ export class StandardRighthandCard extends React.Component {
             <Grid container {...(testId ? { 'data-testid': testId } : {})}>
                 <Grid item xs className={classes.title}>
                     {title && (
-                        <Typography variant={'h6'} color={'primary'}>
+                        <Typography variant={'h6'} component={'div'} color={'primary'}>
                             {title}
                         </Typography>
                     )}
