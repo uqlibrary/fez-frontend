@@ -38,9 +38,10 @@ const JournalsList = ({
         }
     } else {
         for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
-            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].compactSize;
+            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
         }
     }
+    const detailColStyle = minimalView ? { flexGrow: 'inherit' } : { overflowX: 'auto', overflowY: 'hidden' };
     return (
         <Grid container spacing={0} id="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
@@ -66,8 +67,8 @@ const JournalsList = ({
                         );
                     })}
             </Grid>
-            <Grid item xs style={{ overflowX: 'auto', overflowY: 'hidden', marginLeft: 4 }}>
-                <div style={{ width: !minimalView ? colWidth : '100%', paddingBottom: !minimalView ? 4 : 0 }}>
+            <Grid item xs style={{ ...detailColStyle, marginLeft: 4 }}>
+                <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
                     <Grid
                         container
                         spacing={0}
@@ -108,7 +109,7 @@ const JournalsList = ({
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
-                        return <JournalsListDataCol3 key={index} journal={item} />;
+                        return <JournalsListDataCol3 key={index} journal={item} minimalView={minimalView} />;
                     })}
             </Grid>
         </Grid>
