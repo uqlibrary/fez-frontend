@@ -24,6 +24,9 @@ import {
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
 import Hidden from '@material-ui/core/Hidden';
+import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
+
+export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
 
 export default class ClaimRecord extends PureComponent {
     static propTypes = {
@@ -123,6 +126,14 @@ export default class ClaimRecord extends PureComponent {
         };
     };
 
+    _useCustomErrorMessageIfAvailable = (error, defaultMessage) => {
+        if (error?.original?.data && isClaimPreCheckResponse(error)) {
+            return error.original.data;
+        }
+
+        return defaultMessage;
+    };
+
     render() {
         const txt = locale.forms.claimPublicationForm;
 
@@ -189,7 +200,7 @@ export default class ClaimRecord extends PureComponent {
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
                 dirty: true,
-                error: txt.errorAlert.incompleteData,
+                error: this._useCustomErrorMessageIfAvailable(this.props.error, txt.errorAlert.incompleteData),
                 alertLocale: txt,
             });
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {

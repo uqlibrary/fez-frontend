@@ -1,12 +1,13 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
 import { NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
-import { get, post, patch } from 'repositories/generic';
+import { get, patch, post } from 'repositories/generic';
 import {
+    CLAIM_PRE_CHECK,
     EXISTING_RECORD_API,
-    POSSIBLE_RECORDS_API,
     HIDE_POSSIBLE_RECORD_API,
     NEW_RECORD_API,
+    POSSIBLE_RECORDS_API,
     RECORDS_ISSUES_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
@@ -243,8 +244,9 @@ export function claimPublication(data) {
             );
         }
 
+        const isExternalRecord = !data.publication.rek_pid;
         // claim record from external source
-        const createRecordRequest = !data.publication.rek_pid
+        const createRecordRequest = isExternalRecord
             ? {
                   ...NEW_RECORD_DEFAULT_VALUES,
                   ...data.publication,
@@ -287,6 +289,8 @@ export function claimPublication(data) {
 
         return (
             Promise.resolve([])
+                // for external records, check if doesn't already exists in eSpace
+                .then(() => (isExternalRecord ? post(CLAIM_PRE_CHECK(), createRecordRequest) : null))
                 // save a new record if claiming from external source
                 .then(() => (!data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null))
                 // update pid of newly saved record
