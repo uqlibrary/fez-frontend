@@ -136,6 +136,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2191,6 +2199,7 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           },
                           "MuiFormLabel": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -2200,6 +2209,13 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                           "MuiIconButton": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                          "MuiInput": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                           "MuiMenuItem": Object {
@@ -2782,6 +2798,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -2791,6 +2808,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -4849,6 +4873,7 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           },
                           "MuiFormLabel": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -4858,6 +4883,13 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                           "MuiIconButton": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                          "MuiInput": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                           "MuiMenuItem": Object {
@@ -5440,6 +5472,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -5449,6 +5482,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -5859,6 +5899,7 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                           },
                           "MuiFormLabel": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -5868,6 +5909,13 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                           "MuiIconButton": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                          "MuiInput": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                           "MuiMenuItem": Object {

@@ -136,6 +136,7 @@ exports[`Component Links  Full mount render 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`Component Links  Full mount render 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2999,6 +3007,7 @@ exports[`Component Links  Full mount render 1`] = `
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -3008,6 +3017,13 @@ exports[`Component Links  Full mount render 1`] = `
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -7306,6 +7322,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -7315,6 +7332,13 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -12083,6 +12107,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -12092,6 +12117,13 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -15896,6 +15928,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -15905,6 +15938,13 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -20564,6 +20604,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -20573,6 +20614,13 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
