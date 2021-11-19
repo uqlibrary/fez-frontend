@@ -199,8 +199,8 @@ export default class ClaimRecord extends PureComponent {
             // display a custom error message
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
-                dirty: true,
                 error: this._useCustomErrorMessageIfAvailable(this.props.error, txt.errorAlert.incompleteData),
+                dirty: true,
                 alertLocale: txt,
             });
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
@@ -208,6 +208,7 @@ export default class ClaimRecord extends PureComponent {
         } else {
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
+                error: this.props.error?.message || this.props.error,
                 dirty: true,
                 alertLocale: txt,
             });
