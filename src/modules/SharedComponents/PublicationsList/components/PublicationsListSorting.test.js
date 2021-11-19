@@ -134,4 +134,39 @@ describe('PublicationsListSorting component', () => {
         expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
         userIsAdmin.mockRestore();
     });
+    it('renders custom sortby default based on supplied values', () => {
+        const wrapper = setup({
+            sortBy: 'test_option',
+        });
+        expect(wrapper.find('#sortBy').props().value).toEqual('test_option');
+    });
+
+    it('has the correct custom sortby options in the dropdown', () => {
+        const wrapper = setup({
+            sortingData: {
+                sortBy: [
+                    { value: 'test_1', label: 'Test Sort 1' },
+                    { value: 'test_2', label: 'Test Sort 2' },
+                    { value: 'test_3', label: 'Test Sort 3' },
+                ],
+            },
+            sortDirection: 'Asc',
+            sortBy: 'test_2',
+        });
+        // Have the correct amount of elements in dropdown
+        expect(wrapper.find('#sortBy').children().length).toEqual(3);
+        // Test first and last one
+        expect(
+            wrapper
+                .find('#sortBy')
+                .childAt(0)
+                .props().value,
+        ).toEqual('test_1');
+        expect(
+            wrapper
+                .find('#sortBy')
+                .childAt(2)
+                .props().value,
+        ).toEqual('test_3');
+    });
 });
