@@ -145,4 +145,26 @@ context('Strategic Publishing - Search', () => {
             violations => console.log(violations),
         );
     });
+
+    it('Facets', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-search-facets"]').should('be.visible');
+        cy.get('[data-testid="journal-search-facets"]')
+            .find('[data-testid="facets-filter"] nav > div')
+            .should('have.length', 9);
+        cy.get('button[data-testid="help-icon-journal-search-facets"]').should('be.visible');
+
+        cy.checkA11y(
+            '[data-testid="journal-search-facets"]',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Search Journals',
+                scopeName: 'Facets',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
+    });
 });

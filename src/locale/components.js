@@ -3925,6 +3925,7 @@ export default {
                             </p>
                         </React.Fragment>
                     ),
+                    testId: 'journal-search-facets',
                     buttonLabel: 'CLOSE',
                 },
                 renameFacetsList: {},
