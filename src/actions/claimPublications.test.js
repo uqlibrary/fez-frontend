@@ -21,7 +21,7 @@ describe('Claim publication actions tests ', () => {
         const testPid = 'UQ: 12345';
         mockApi
             .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-            .reply(200, '')
+            .reply(200, { data: '' })
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
             .reply(200, { data: { ...mockData.mockRecordToFix } });
 
@@ -430,7 +430,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...testClaimRequest.publication } })
                 .onAny()
@@ -465,7 +465,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(config => {
                     const requestObj = JSON.parse(config.data);
@@ -550,7 +550,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
@@ -572,7 +572,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
@@ -605,7 +605,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(
@@ -649,7 +649,7 @@ describe('Claim publication actions tests ', () => {
 
             mockApi
                 .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
-                .reply(200, '')
+                .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(

@@ -1,6 +1,6 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import { NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
+import { APP_URL, NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
 import { get, patch, post } from 'repositories/generic';
 import {
     CLAIM_PRE_CHECK,
@@ -235,11 +235,11 @@ export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked,
 });
 
 export const getPreCheckError = pid => {
-    const message = `The record you are trying to claim match eSpace record ${pid} with different author.`;
+    const message = `The record you are trying to claim already exists in eSpace, however, with different authors:\n${APP_URL}view/${pid}`;
     return {
         ...new Error(message),
         original: { data: message },
-        request: { responseURL: CLAIM_PRE_CHECK() },
+        request: { responseURL: CLAIM_PRE_CHECK().apiUrl },
     };
 };
 

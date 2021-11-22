@@ -11,7 +11,7 @@ const FORM_NAME = 'ClaimRecord';
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(actions.claimPublication(data)).catch(error => {
-        throw new SubmissionError({ _error: error.message });
+        throw new SubmissionError({ _error: error });
     });
 };
 
