@@ -127,7 +127,7 @@ export default class ClaimRecord extends PureComponent {
     };
 
     _useCustomErrorMessageIfAvailable = (error, defaultMessage) => {
-        if (error?.original?.data && isClaimPreCheckResponse(error)) {
+        if (error?.original?.data && typeof error?.original?.data === 'string' && isClaimPreCheckResponse(error)) {
             return error.original.data;
         }
 

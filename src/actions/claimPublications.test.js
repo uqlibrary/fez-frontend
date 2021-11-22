@@ -1,5 +1,6 @@
 import * as transformers from './transformers';
 import * as claimActions from './claimPublications';
+import { getPreCheckError } from './claimPublications';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import { possibleUnclaimedList } from 'mock/data';
@@ -19,6 +20,8 @@ describe('Claim publication actions tests ', () => {
     it('dispatches expected actions when loading a record to fix from API successfully', async () => {
         const testPid = 'UQ: 12345';
         mockApi
+            .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+            .reply(200, '')
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
             .reply(200, { data: { ...mockData.mockRecordToFix } });
 
@@ -426,6 +429,8 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...testClaimRequest.publication } })
                 .onAny()
@@ -459,6 +464,8 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(config => {
                     const requestObj = JSON.parse(config.data);
@@ -542,6 +549,8 @@ describe('Claim publication actions tests ', () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
@@ -562,6 +571,8 @@ describe('Claim publication actions tests ', () => {
             const testParams = { pid: testClaimRequest.publication.rek_pid };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(repositories.routes.RECORDS_ISSUES_API({}).apiUrl)
@@ -593,6 +604,8 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(
@@ -635,6 +648,8 @@ describe('Claim publication actions tests ', () => {
             };
 
             mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, '')
                 .onPatch(repositories.routes.EXISTING_RECORD_API(testParams).apiUrl)
                 .reply(200, {})
                 .onPost(
@@ -661,6 +676,218 @@ describe('Claim publication actions tests ', () => {
             ];
 
             await mockActionsStore.dispatch(claimActions.claimPublication({ ...testClaimRequest, ...files }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatched expected actions claiming an external publication that matches an espace record', async () => {
+            const testRequest = {
+                ...testClaimRequest,
+                authorLinking: {
+                    authors: [
+                        {
+                            rek_author_id: testClaimRequest.author.aut_id,
+                            rek_author_id_order: 1,
+                        },
+                    ],
+                },
+                publication: {
+                    ...testClaimRequest.publication,
+                    fez_record_search_key_author: [
+                        ...testClaimRequest.publication.fez_record_search_key_author,
+                        {
+                            rek_author: 'Another author',
+                            rek_author_order: testClaimRequest.publication.fez_record_search_key_author.length + 1,
+                        },
+                    ],
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: testClaimRequest.author.aut_id,
+                            rek_author_id_order: 1,
+                        },
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 2,
+                        },
+                    ],
+                    sources: [
+                        { source: 'crossref', id: 'test1' },
+                        { source: 'scopus', id: 'test2' },
+                        { source: 'wos', id: 'test3' },
+                    ],
+                    rek_pid: null,
+                },
+            };
+
+            const existingRecordPid = 'UQ:existing';
+            mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, { data: { ...testClaimRequest.publication, rek_pid: existingRecordPid } })
+                .onPost(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:1' }).apiUrl)
+                .reply(response => {
+                    const record = JSON.parse(response.data);
+                    expect(record.rek_pid).toBe(existingRecordPid);
+                    expect(
+                        record.fez_record_search_key_author_id.filter(
+                            item => item.rek_author_id === testClaimRequest.author.aut_id,
+                        ).length,
+                    ).toBe(1);
+                    return [200, { record: { ...testClaimRequest.publication } }];
+                })
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
+            ];
+
+            await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatched expected actions claiming an external publication that matches an espace record - error', async () => {
+            const testRequest = {
+                ...testClaimRequest,
+                authorLinking: {
+                    authors: [
+                        {
+                            rek_author_id: testClaimRequest.author.aut_id,
+                            rek_author_id_order: 1,
+                        },
+                    ],
+                },
+                publication: {
+                    ...testClaimRequest.publication,
+                    fez_record_search_key_author: [
+                        {
+                            rek_author: 'wrong name',
+                            rek_author_order: 1,
+                        },
+                        {
+                            rek_author: 'Another author',
+                            rek_author_order: 2,
+                        },
+                    ],
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: testClaimRequest.author.aut_id,
+                            rek_author_id_order: 1,
+                        },
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 2,
+                        },
+                    ],
+                    sources: [
+                        { source: 'crossref', id: 'test1' },
+                        { source: 'scopus', id: 'test2' },
+                        { source: 'wos', id: 'test3' },
+                    ],
+                    rek_pid: null,
+                },
+            };
+
+            const existingRecordPid = 'UQ:existing';
+            mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, { data: { ...testClaimRequest.publication, rek_pid: existingRecordPid } })
+                .onPost(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:1' }).apiUrl)
+                .reply(response => {
+                    const record = JSON.parse(response.data);
+                    expect(record.rek_pid).toBe(existingRecordPid);
+                    expect(
+                        record.fez_record_search_key_author_id.filter(
+                            item => item.rek_author_id === testClaimRequest.author.aut_id,
+                        ).length,
+                    ).toBe(1);
+                    return [200, { record: { ...testClaimRequest.publication } }];
+                })
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.CLAIM_PUBLICATION_CREATE_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                expect(e).toStrictEqual(getPreCheckError(existingRecordPid));
+            }
+        });
+
+        it('dispatched expected actions claiming an external publication that matches an espace record for contributor', async () => {
+            const testRequest = {
+                ...testClaimRequest,
+                contributorLinking: {
+                    valid: true,
+                    authors: [
+                        {
+                            rek_author_id: testClaimRequest.author.aut_id,
+                            rek_author_id_order: 1,
+                        },
+                    ],
+                },
+                publication: {
+                    ...testClaimRequest.publication,
+                    fez_record_search_key_contributor_id: [
+                        {
+                            rek_contributor_id: testClaimRequest.author.aut_id,
+                            rek_contributor_id_order: 1,
+                        },
+                    ],
+                    sources: [
+                        { source: 'crossref', id: 'test1' },
+                        { source: 'scopus', id: 'test2' },
+                        { source: 'wos', id: 'test3' },
+                    ],
+                    rek_pid: null,
+                },
+                files: {
+                    queue: [
+                        {
+                            date: '2017-12-12T13:39:12+10:00',
+                            access_condition_id: 9,
+                            name: 'test.jpg',
+                        },
+                    ],
+                },
+            };
+
+            const existingRecordPid = 'UQ:existing';
+            mockApi
+                .onPost(repositories.routes.CLAIM_PRE_CHECK().apiUrl)
+                .reply(200, { data: { ...testClaimRequest.publication, rek_pid: existingRecordPid } })
+                .onPost(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:1' }).apiUrl)
+                .reply(response => {
+                    const record = JSON.parse(response.data);
+                    expect(record.rek_pid).toBe(existingRecordPid);
+                    expect(
+                        record.fez_record_search_key_contributor_id.filter(
+                            item => item.fez_record_search_key_contributor_id === testClaimRequest.author.aut_id,
+                        ).length,
+                    ).toBe(1);
+                    return [200, { record: { ...testClaimRequest.publication } }];
+                })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {})
+                .onAny()
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.CLAIM_PUBLICATION_CREATE_PROCESSING,
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.jpg`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.jpg`,
+                actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
+            ];
+
+            await mockActionsStore.dispatch(claimActions.claimPublication(testRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 

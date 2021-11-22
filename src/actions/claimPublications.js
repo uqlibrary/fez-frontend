@@ -185,6 +185,65 @@ export function clearClaimPublication() {
 }
 
 /**
+ *
+ * @param record
+ * @param match
+ * @param searchKey
+ * @param mergedSearchKey
+ * @returns boolean
+ */
+export const updateMatchedRecordAuthoringData = (authorId, record, match, searchKey) => {
+    const idTable = `fez_record_search_key_${searchKey}_id`;
+    const idField = `rek_${searchKey}_id`;
+    const table = `fez_record_search_key_${searchKey}`;
+    const field = `rek_${searchKey}`;
+
+    // check if author/contributor can be claimed in the matched record
+    for (const [index, item] of record[idTable].entries?.()) {
+        if (item[idField] !== authorId) {
+            continue;
+        }
+
+        if (
+            match[idTable][index][idField] !== 0 ||
+            (record[table] && match[table] && record[table][index][field] !== match[table][index][field])
+        ) {
+            return false;
+        }
+
+        // if can, update the matched record
+        match[idTable][index][idField] = authorId;
+    }
+
+    return true;
+};
+
+/**
+ *
+ * @param isAuthorLinked
+ * @param isContributorLinked
+ * @param espaceMatch
+ * @returns {{}}
+ */
+export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked, espaceMatch) => ({
+    ...(isAuthorLinked && {
+        fez_record_search_key_author_id: espaceMatch.fez_record_search_key_author_id,
+    }),
+    ...(isContributorLinked && {
+        fez_record_search_key_contributor_id: espaceMatch.fez_record_search_key_contributor_id,
+    }),
+});
+
+export const getPreCheckError = pid => {
+    const message = `The record you are trying to claim match eSpace record ${pid} with different author.`;
+    return {
+        ...new Error(message),
+        original: { data: message },
+        request: { responseURL: CLAIM_PRE_CHECK() },
+    };
+};
+
+/**
  * Save a publication claim record involves up to three steps:
  * If user claims a publications from eSpace:
  *      patch record with author details, link,
@@ -244,9 +303,8 @@ export function claimPublication(data) {
             );
         }
 
-        const isExternalRecord = !data.publication.rek_pid;
         // claim record from external source
-        const createRecordRequest = isExternalRecord
+        let createRecordRequest = !data.publication.rek_pid
             ? {
                   ...NEW_RECORD_DEFAULT_VALUES,
                   ...data.publication,
@@ -265,7 +323,7 @@ export function claimPublication(data) {
             : null;
 
         // update record with author/contributor id, link, content indicators
-        const patchRecordRequest = data.publication.rek_pid
+        let patchRecordRequest = data.publication.rek_pid
             ? {
                   ...transformers.getRecordLinkSearchKey(data),
                   ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
@@ -275,7 +333,7 @@ export function claimPublication(data) {
             : null;
 
         // update record with files
-        const patchFilesRecordRequest = hasFilesToUpload
+        let patchFilesRecordRequest = hasFilesToUpload
             ? {
                   ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
               }
@@ -290,7 +348,54 @@ export function claimPublication(data) {
         return (
             Promise.resolve([])
                 // for external records, check if doesn't already exists in eSpace
-                .then(() => (isExternalRecord ? post(CLAIM_PRE_CHECK(), createRecordRequest) : null))
+                .then(() => (!data.publication.rek_pid ? post(CLAIM_PRE_CHECK(), createRecordRequest) : null))
+                // if an eSpace record has been matched
+                .then(response => {
+                    if (!response?.data) {
+                        return null;
+                    }
+
+                    const externalRecord = data.publication;
+                    const espaceMatch = response.data;
+                    // swap external record with matched record
+                    data.publication = espaceMatch;
+                    // clean create request
+                    createRecordRequest = undefined;
+
+                    if (
+                        (isAuthorLinked &&
+                            !updateMatchedRecordAuthoringData(
+                                data.author.aut_id,
+                                externalRecord,
+                                espaceMatch,
+                                'author',
+                            )) ||
+                        (isContributorLinked &&
+                            !updateMatchedRecordAuthoringData(
+                                data.author.aut_id,
+                                externalRecord,
+                                espaceMatch,
+                                'contributor',
+                            ))
+                    ) {
+                        // bail in case author/contributor can't be claimed in the matched record
+                        return Promise.reject(getPreCheckError(espaceMatch.rek_pid));
+                    }
+
+                    // update patch request
+                    patchRecordRequest = {
+                        ...patchRecordRequest,
+                        ...mergeAvailableAuthoringData(isAuthorLinked, isContributorLinked, espaceMatch),
+                    };
+                    // update file upload request
+                    patchFilesRecordRequest = hasFilesToUpload
+                        ? {
+                              ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
+                          }
+                        : null;
+
+                    return null;
+                })
                 // save a new record if claiming from external source
                 .then(() => (!data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null))
                 // update pid of newly saved record

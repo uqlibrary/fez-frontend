@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getFormSyncErrors, getFormValues, reduxForm, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
-import ClaimRecord, { isClaimPreCheckResponse } from '../components/ClaimRecord';
+import ClaimRecord from '../components/ClaimRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
@@ -11,13 +11,7 @@ const FORM_NAME = 'ClaimRecord';
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(actions.claimPublication(data)).catch(error => {
-        // ignore 404 from /external/records/claim/pre-check API endpoints
-        // this just means that the external record was not found by id in eSpace
-        if (isClaimPreCheckResponse(error) && error.status === 404) {
-            return;
-        }
-
-        throw new SubmissionError({ _error: error });
+        throw new SubmissionError({ _error: error.message });
     });
 };
 
