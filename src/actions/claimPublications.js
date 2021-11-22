@@ -223,7 +223,7 @@ export const updateMatchedRecordAuthoringData = (authorId, record, match, search
  * @param isAuthorLinked
  * @param isContributorLinked
  * @param espaceMatch
- * @returns {{}}
+ * @returns Object
  */
 export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked, espaceMatch) => ({
     ...(isAuthorLinked && {
@@ -234,8 +234,12 @@ export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked,
     }),
 });
 
+/**
+ * @param pid
+ * @returns Object
+ */
 export const getPreCheckError = pid => {
-    const message = `The record you are trying to claim already exists in eSpace, however, with different authors:\n${APP_URL}view/${pid}`;
+    const message = `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`;
     return {
         ...new Error(message),
         original: { data: message },
