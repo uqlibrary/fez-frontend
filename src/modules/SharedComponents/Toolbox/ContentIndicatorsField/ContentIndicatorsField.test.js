@@ -1,6 +1,16 @@
 import Immutable from 'immutable';
-import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
-import { CONTENT_INDICATORS, PUBLICATION_TYPE_THESIS } from 'config/general';
+import {
+    ContentIndicatorsField,
+    getContentIndicatorsItemsList,
+    showContentIndicatorsField,
+} from './ContentIndicatorsField';
+import {
+    CONTENT_INDICATORS_FOR_CONFERENCE_PAPER,
+    CONTENT_INDICATORS,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_THESIS,
+    contentIndicators,
+} from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -50,7 +60,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = true;
         expected[2].disabled = true;
-        expect(getContentIndicators(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
     it('should not mark existing indicators as disabled for admins', () => {
@@ -66,7 +76,7 @@ describe('ContentIndicatorsField component', () => {
         }));
         expected[1].disabled = false;
         expected[2].disabled = false;
-        expect(getContentIndicators(input)).toEqual(expected);
+        expect(getContentIndicatorsItemsList(contentIndicators(), input)).toEqual(expected);
     });
 
     it('should mark dropdown as disabled when all indicators have been selected', () => {
@@ -76,6 +86,47 @@ describe('ContentIndicatorsField component', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should return content indicators list items', () => {
+        const wrapper = setup();
+        const actual = wrapper.prop('itemsList');
+
+        expect(actual).toEqual(getContentIndicatorsItemsList(contentIndicators()));
+        expect(actual).toEqual(
+            expect.arrayContaining(
+                CONTENT_INDICATORS.map(item => ({
+                    ...item,
+                    disabled: false,
+                })),
+            ),
+            expect.not.arrayContaining(
+                CONTENT_INDICATORS_FOR_CONFERENCE_PAPER.map(item => ({
+                    ...item,
+                    disabled: false,
+                })),
+            ),
+        );
+    });
+
+    it('should specific should return content indicators list items for conference paper', () => {
+        const input = {
+            displayType: PUBLICATION_TYPE_CONFERENCE_PAPER,
+        };
+        const wrapper = setup(input);
+        const actual = wrapper.prop('itemsList');
+
+        expect(actual).toEqual(
+            getContentIndicatorsItemsList(contentIndicators(PUBLICATION_TYPE_CONFERENCE_PAPER), input),
+        );
+        expect(actual).toEqual(
+            expect.arrayContaining(
+                [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER].map(item => ({
+                    ...item,
+                    disabled: false,
+                })),
+            ),
+        );
     });
 
     it('should not mark dropdown as disabled when all indicators have been selected for admins', () => {

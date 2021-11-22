@@ -321,6 +321,7 @@ export default class ClaimRecord extends PureComponent {
                                                     <Grid item xs={12}>
                                                         <Field
                                                             component={ContentIndicatorsField}
+                                                            displayType={publication.rek_display_type}
                                                             disabled={this.props.submitting}
                                                             id="content-indicators"
                                                             name="contentIndicators"

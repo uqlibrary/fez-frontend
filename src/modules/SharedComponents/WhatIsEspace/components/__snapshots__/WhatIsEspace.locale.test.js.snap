@@ -9,13 +9,14 @@ exports[`Component WhatIsEspace with different locale should render external lin
     variant="body2"
   >
     what is espace intro
-    <WithStyles(ExternalLink)
+    <ExternalLink
       aria-label="mouse over and see me"
       href="https://example.com/"
+      id="what-is-espace-read-more"
       title="mouse over and see me"
     >
       click me to learn more
-    </WithStyles(ExternalLink)>
+    </ExternalLink>
   </WithStyles(ForwardRef(Typography))>
 </StandardCard>
 `;

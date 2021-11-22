@@ -208,6 +208,7 @@ export class MenuDrawer extends Component {
                                 <Grid item xs={10} sm={12} zeroMinWidth>
                                     {logoImage && logoLink && logoText && (
                                         <ExternalLink
+                                            id="main-menu-logo"
                                             href={logoLink}
                                             title={logoText}
                                             openInNewIcon={false}
@@ -256,7 +257,12 @@ export class MenuDrawer extends Component {
                         <div id="afterMenuDrawer" tabIndex={-1} />
                         <div className={classes.mainMenuFooter}>
                             {txt.cricos.prefix}
-                            <ExternalLink href={txt.cricos.link} title={txt.cricos.prefix} openInNewIcon={false}>
+                            <ExternalLink
+                                href={txt.cricos.link}
+                                title={txt.cricos.prefix}
+                                openInNewIcon={false}
+                                id="cricos"
+                            >
                                 {txt.cricos.number}
                             </ExternalLink>
                         </div>

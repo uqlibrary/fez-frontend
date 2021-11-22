@@ -76,7 +76,7 @@ context('Book admin edit', () => {
                 // Make sure the data has loaded...
                 .should('contain', 'SHERPA/RoMEO')
                 .should('contain', 'Ulrichs')
-                .get('#external-link-sherparomeo')
+                .get('#sherparomeo-link')
                 .should('have.attr', 'href', sherpaLink);
             let ulrichsID = issn.replace('-', '');
             switch (issn) {
@@ -89,7 +89,7 @@ context('Book admin edit', () => {
                 default:
                     break;
             }
-            cy.get('#external-link-ulrichs').should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
+            cy.get('#ulrichs-link').should('have.attr', 'href', `${ulrichsLinkPrefix}${ulrichsID}`);
         };
 
         cy.get('@bibliographicTab').within(() => {

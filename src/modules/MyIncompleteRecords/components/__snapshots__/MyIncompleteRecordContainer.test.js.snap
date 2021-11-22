@@ -155,8 +155,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-191 ExternalLink-externalLink-193"
+                          class="googleCitationCount CitationCountView-citationCount-191 makeStyles-externalLink-193"
+                          data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
+                          id="citation-count-link"
                           rel="noopener noreferrer"
                           tabindex="0"
                           target="_blank"
@@ -237,7 +239,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-type-&-collection"
               id="standard-card-type-&-collection"
             >
@@ -320,7 +322,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-author/creator-research-statement"
               id="standard-card-author/creator-research-statement"
             >
@@ -513,7 +515,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-ntro-data"
               id="standard-card-ntro-data"
             >
@@ -716,7 +718,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-grant-details"
               id="standard-card-grant-details"
             >
@@ -892,7 +894,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
@@ -1668,7 +1670,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
           >
             <div
-              class="MuiPaper-root-242 MuiCard-root-241 Cards-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
+              class="MuiPaper-root-242 MuiCard-root-241 makeStyles-card-236 StandardCard MuiPaper-elevation1-246 MuiPaper-rounded-243"
               data-testid="standard-card-notes"
               id="standard-card-notes"
             >

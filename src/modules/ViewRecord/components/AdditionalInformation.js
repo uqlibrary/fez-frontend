@@ -247,11 +247,9 @@ export class AdditionalInformationClass extends PureComponent {
                         <p key={`license_description_line-${index}`}>{line}</p>
                     ))}
                 {licenseLink && (
-                    <div data-testid="rek-license-link">
-                        <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
-                            {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
-                        </ExternalLink>
-                    </div>
+                    <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
+                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
+                    </ExternalLink>
                 )}
             </span>
         );
@@ -368,6 +366,10 @@ export class AdditionalInformationClass extends PureComponent {
                         value = moment(publication[field]).isSame(moment('1000-01-01T00:00:00Z'))
                             ? null
                             : publication[field];
+                        break;
+                    case 'fez_record_search_key_herdc_code':
+                        const subkey = this.transformFieldNameToSubkey(field);
+                        value = publication[field] && publication[field][subkey] !== 0 ? publication[field] : null;
                         break;
                     default:
                         value = publication[field];

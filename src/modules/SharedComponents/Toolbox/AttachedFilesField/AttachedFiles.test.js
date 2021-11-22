@@ -19,6 +19,7 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
 import { useRecordContext, useFormValuesContext } from 'context';
+import { CURRENT_LICENCES } from '../../../../config/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -136,10 +137,10 @@ describe('AttachedFiles component', () => {
     it('should render embargo date field for open access file with embargo date in future', async () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
-        useRecordContext.mockImplementation(() => ({
+        useRecordContext.mockImplementationOnce(() => ({
             record: { fez_record_search_key_oa_status: { rek_oa_status: 453695 } },
         }));
-        useFormValuesContext.mockImplementation(() => ({
+        useFormValuesContext.mockImplementationOnce(() => ({
             openAccessStatusId: 453695,
         }));
         const onDateChangeFn = jest.fn();
@@ -208,79 +209,90 @@ describe('AttachedFiles component', () => {
     });
 
     it('should toggle preview', async done => {
+        const dataStreams = [
+            {
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'test.mp4',
+                dsi_embargo_date: '2018-01-01',
+                dsi_open_access: 1,
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'video/mp4',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+            {
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'thumbnail_test.jpg',
+                dsi_embargo_date: '2018-01-01',
+                dsi_open_access: 1,
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'image/jpeg',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+            {
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'preview_test.jpg',
+                dsi_embargo_date: '2018-01-01',
+                dsi_open_access: 1,
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'image/jpeg',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+            {
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'web_test.jpg',
+                dsi_embargo_date: '2018-01-01',
+                dsi_open_access: 1,
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: '',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 587005,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+            {
+                dsi_pid: 'UQ:252236',
+                dsi_dsid: 'test_xt.mp4',
+                dsi_embargo_date: '2018-01-01',
+                dsi_open_access: 1,
+                dsi_label: 'UPO Guide v.4',
+                dsi_mimetype: 'video/mp4',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 0,
+                dsi_security_inherited: 1,
+                dsi_security_policy: 1,
+            },
+        ];
         Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                ...recordWithDatastreams,
+                fez_datastream_info: dataStreams,
+                fez_record_search_key_license: {
+                    // make sure previews works even when the record's files are license restricted
+                    rek_license: CURRENT_LICENCES[0].value,
+                },
+            },
+        }));
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const onDateChangeFn = jest.fn();
         const { getByTitle, getByTestId, queryByTestId, getByText } = setup({
             canEdit: true,
-            dataStreams: [
-                {
-                    dsi_pid: 'UQ:252236',
-                    dsi_dsid: 'test.mp4',
-                    dsi_embargo_date: '2018-01-01',
-                    dsi_open_access: 1,
-                    dsi_label: 'UPO Guide v.4',
-                    dsi_mimetype: 'video/mp4',
-                    dsi_copyright: null,
-                    dsi_state: 'A',
-                    dsi_size: 587005,
-                    dsi_security_inherited: 1,
-                    dsi_security_policy: 1,
-                },
-                {
-                    dsi_pid: 'UQ:252236',
-                    dsi_dsid: 'thumbnail_test.jpg',
-                    dsi_embargo_date: '2018-01-01',
-                    dsi_open_access: 1,
-                    dsi_label: 'UPO Guide v.4',
-                    dsi_mimetype: 'image/jpeg',
-                    dsi_copyright: null,
-                    dsi_state: 'A',
-                    dsi_size: 587005,
-                    dsi_security_inherited: 1,
-                    dsi_security_policy: 1,
-                },
-                {
-                    dsi_pid: 'UQ:252236',
-                    dsi_dsid: 'preview_test.jpg',
-                    dsi_embargo_date: '2018-01-01',
-                    dsi_open_access: 1,
-                    dsi_label: 'UPO Guide v.4',
-                    dsi_mimetype: 'image/jpeg',
-                    dsi_copyright: null,
-                    dsi_state: 'A',
-                    dsi_size: 587005,
-                    dsi_security_inherited: 1,
-                    dsi_security_policy: 1,
-                },
-                {
-                    dsi_pid: 'UQ:252236',
-                    dsi_dsid: 'web_test.jpg',
-                    dsi_embargo_date: '2018-01-01',
-                    dsi_open_access: 1,
-                    dsi_label: 'UPO Guide v.4',
-                    dsi_mimetype: '',
-                    dsi_copyright: null,
-                    dsi_state: 'A',
-                    dsi_size: 587005,
-                    dsi_security_inherited: 1,
-                    dsi_security_policy: 1,
-                },
-                {
-                    dsi_pid: 'UQ:252236',
-                    dsi_dsid: 'test_xt.mp4',
-                    dsi_embargo_date: '2018-01-01',
-                    dsi_open_access: 1,
-                    dsi_label: 'UPO Guide v.4',
-                    dsi_mimetype: 'video/mp4',
-                    dsi_copyright: null,
-                    dsi_state: 'A',
-                    dsi_size: 0,
-                    dsi_security_inherited: 1,
-                    dsi_security_policy: 1,
-                },
-            ],
+            dataStreams: dataStreams,
             onDateChange: onDateChangeFn,
         });
 
@@ -291,13 +303,19 @@ describe('AttachedFiles component', () => {
         act(() => {
             fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
         });
-
-        const previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
-
+        let previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
         act(() => {
             fireEvent.click(getByTestId('close-preview', previewEl));
         });
+        await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
+        act(() => {
+            fireEvent.click(getByTestId('file-name-0-preview'));
+        });
+        previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
+        act(() => {
+            fireEvent.click(getByTestId('close-preview', previewEl));
+        });
         await waitFor(() => expect(queryByTestId('media-preview')).not.toBeInTheDocument());
 
         done();

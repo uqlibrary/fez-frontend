@@ -92,6 +92,7 @@ export class CitationCounts extends PureComponent {
                         (counts.wos !== null || counts.scopus !== null) &&
                         !hideViewFullStatisticsLink && (
                             <ExternalLink
+                                id="full-statistics"
                                 href={`https://app.library.uq.edu.au/#/authors/view/${publication.rek_pid}`}
                                 title={publication.rek_title}
                                 className={classes.statsLink}

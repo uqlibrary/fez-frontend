@@ -37,9 +37,13 @@ export default class JournalName extends PureComponent {
         let sherpaRomeoElement = <span />;
         if (sherpaRomeoData) {
             sherpaRomeoElement = (
-                <span data-testid="rek-journal-name-sherpa-link">
+                <span>
                     {' '}
-                    <ExternalLink href={sherpaRomeoData.url} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
+                    <ExternalLink
+                        href={sherpaRomeoData.url}
+                        aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
+                        id="rek-journal-name-sherpa"
+                    >
                         {viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}
                     </ExternalLink>
                 </span>

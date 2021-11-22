@@ -15,6 +15,7 @@ import { withStyles } from '@material-ui/core/styles';
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -27,7 +28,7 @@ import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
-const styles = theme => ({
+export const styles = theme => ({
     header: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
@@ -55,17 +56,24 @@ const getSecurityAccess = (dataStream, props) => {
     );
 };
 
+export const getDownloadLicence = publication => {
+    const licence = ((publication && publication.fez_record_search_key_license) || {}).rek_license;
+    return CURRENT_LICENCES.find(item => item.value === licence);
+};
+
 export const getFileOpenAccessStatus = (publication, dataStream, props) => {
     const embargoDate = dataStream.dsi_embargo_date;
     const openAccessStatusId =
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
+    const downloadLicence = getDownloadLicence(publication);
+    const allowDownload = !downloadLicence && (dataStream.dsi_security_policy === 4 ? !!props.account : true);
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
         return {
             isOpenAccess: false,
             embargoDate: null,
             openAccessStatusId: openAccessStatusId,
-            allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+            allowDownload: allowDownload,
         };
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
@@ -80,7 +88,7 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         isOpenAccess: true,
         embargoDate: null,
         openAccessStatusId: openAccessStatusId,
-        allowDownload: dataStream.dsi_security_policy === 4 ? !!props.account : true,
+        allowDownload: allowDownload,
     };
 };
 
@@ -245,19 +253,19 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => {
+    showPreview = ({ checksums = {}, fileName, mediaUrl, mimeType, previewMediaUrl, securityStatus, webMediaUrl }) => {
         if (securityStatus) {
             this.setState({
                 preview: {
-                    fileName,
-                    mediaUrl,
-                    webMediaUrl,
-                    previewMediaUrl,
-                    mimeType,
-                    securityStatus,
                     checksums,
-                    videoLoading: true,
+                    fileName,
                     imageError: false,
+                    mediaUrl,
+                    mimeType,
+                    previewMediaUrl,
+                    securityStatus,
+                    videoLoading: true,
+                    webMediaUrl,
                 },
             });
         }
@@ -333,7 +341,10 @@ export class FilesClass extends Component {
                           pid,
                           mimeType,
                           fileName,
-                          !(!componentProps.account && dataStream.dsi_security_policy === 4) ? thumbnailFileName : null,
+                          !getDownloadLicence(publication) &&
+                              !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                              ? thumbnailFileName
+                              : null,
                           previewFileName,
                           webFileName,
                           securityAccess,
@@ -481,7 +492,12 @@ export class FilesClass extends Component {
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-dsid-${index}`}
                                 >
-                                    <FileName {...item} onFileSelect={this.showPreview} />
+                                    <FileName
+                                        {...item}
+                                        id={`file-name-${index}`}
+                                        downloadLicence={getDownloadLicence(publication)}
+                                        onFileSelect={this.showPreview}
+                                    />
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid
@@ -545,6 +561,4 @@ export class FilesClass extends Component {
     }
 }
 
-const StyledFilesClass = withStyles(styles, { withTheme: true })(FilesClass);
-const Files = props => <StyledFilesClass {...props} />;
-export default Files;
+export default withStyles(styles, { withTheme: true })(FilesClass);

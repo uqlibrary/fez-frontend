@@ -1089,7 +1089,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -1099,6 +1099,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -3282,7 +3283,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -3292,6 +3293,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -5633,7 +5635,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -5643,6 +5645,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -7046,7 +7049,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -7056,6 +7059,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -8459,7 +8463,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -8469,6 +8473,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -9872,7 +9877,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -9882,6 +9887,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -12293,7 +12299,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -12303,6 +12309,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -13706,7 +13713,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -13716,6 +13723,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -15119,7 +15127,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -15129,6 +15137,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 <Field
                   component={[Function]}
                   disabled={true}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -16551,7 +16560,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -16561,6 +16570,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -17982,7 +17992,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -17992,6 +18002,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -19414,7 +19425,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -19424,6 +19435,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 <Field
                   component={[Function]}
                   disabled={false}
+                  displayType={179}
                   fullWidth={true}
                   id="content-indicators"
                   label="Please add any relevant indicator(s)."
@@ -19731,7 +19743,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
@@ -20029,7 +20041,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 xs={12}
               >
                 <WithStyles(ForwardRef(Typography))>
-                  If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+                  If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
                 </WithStyles(ForwardRef(Typography))>
               </WithStyles(ForwardRef(Grid))>
               <WithStyles(ForwardRef(Grid))
