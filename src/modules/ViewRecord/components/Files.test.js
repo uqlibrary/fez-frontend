@@ -820,7 +820,7 @@ function setup(testProps) {
         setHideCulturalSensitivityStatement: jest.fn(),
         classes: { header: 'header' },
         authorDetails: testProps.authorDetails || mock.accounts.uqresearcher,
-        author: testProps.author || mock.currentAuthor.uqresearcher,
+        author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
     return getElement(FilesClass, props, { isShallow: true });
@@ -1654,6 +1654,15 @@ describe('Files Component ', () => {
         };
         const wrapper = setup({ publication: publication });
         expect(JSON.stringify(wrapper.instance().getFileData(publication))).toMatchSnapshot();
+    });
+
+    it('getFileData{} branch pol_id', () => {
+        const wrapper = setup({
+            publication: { ...fileDataRecord, fez_datastream_info: [] },
+            isAdmin: false,
+            author: mock.currentAuthor.uqstaff.data,
+        });
+        expect(JSON.stringify(wrapper.instance().getFileData(fileDataRecord))).toMatchSnapshot();
     });
 
     it('getDownloadLicence()', () => {
