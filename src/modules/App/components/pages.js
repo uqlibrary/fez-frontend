@@ -1,38 +1,69 @@
-import React from 'react';
+import { lazy } from 'react';
+
+const lazyRetry = (importFn, retries = 3, interval = 500) => {
+    return new Promise((resolve, reject) => {
+        importFn()
+            .then(resolve)
+            .catch(error => {
+                if (!retries) {
+                    reject(error);
+                    return;
+                }
+
+                setTimeout(() => {
+                    lazyRetry(importFn, retries - 1).then(resolve, reject);
+                }, interval);
+            });
+    });
+};
 
 // lazy loaded components
-export const AddDataCollection = React.lazy(() => import('modules/AddDataCollection/containers/AddDataCollection'));
-export const Admin = React.lazy(() => import('modules/Admin/containers/Admin'));
-export const BatchImport = React.lazy(() => import('modules/BatchImport/components/BatchImport'));
-export const BulkUpdates = React.lazy(() => import('modules/BulkUpdates'));
-export const ChangeDisplayType = React.lazy(() =>
-    import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType'),
+export const AddDataCollection = lazy(() =>
+    lazyRetry(() => import('modules/AddDataCollection/containers/AddDataCollection')),
 );
-export const ClaimRecord = React.lazy(() => import('modules/ClaimRecord/containers/ClaimRecord'));
-export const CollectionForm = React.lazy(() => import('modules/Admin/CollectionForm/containers/CollectionForm'));
-export const CommunityForm = React.lazy(() => import('modules/Admin/CommunityForm/containers/CommunityForm'));
-export const Dashboard = React.lazy(() => import('modules/Dashboard/containers/Dashboard'));
-export const DeleteRecord = React.lazy(() => import('modules/DeleteRecord/containers/DeleteRecord'));
-export const Doi = React.lazy(() => import('modules/Admin/Doi/containers/Doi'));
-export const FavouriteSearch = React.lazy(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch'));
-export const FixRecord = React.lazy(() => import('modules/FixRecord/containers/FixRecord'));
-export const GoogleScholar = React.lazy(() => import('modules/AuthorIdentifiers/components/GoogleScholar'));
-export const ViewJournal = React.lazy(() => import('modules/ViewJournal/components/ViewJournal'));
-export const ManageAuthors = React.lazy(() => import('modules/Admin/ManageAuthors'));
-export const ManageUsers = React.lazy(() => import('modules/Admin/ManageUsers'));
-export const MasterJournalListIngest = React.lazy(() =>
-    import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest'),
+export const Admin = lazy(() => lazyRetry(() => import('modules/Admin/containers/Admin')));
+export const BatchImport = lazy(() => lazyRetry(() => import('modules/BatchImport/components/BatchImport')));
+export const BulkUpdates = lazy(() => lazyRetry(() => import('modules/BulkUpdates')));
+export const ChangeDisplayType = lazy(() =>
+    lazyRetry(() => import('modules/Admin/ChangeDisplayType/containers/ChangeDisplayType')),
 );
-export const MyEditorialAppointments = React.lazy(() => import('modules/MyEditorialAppointments'));
-export const MyIncompleteRecord = React.lazy(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord'));
-export const NewViewRecord = React.lazy(() => import('modules/ViewRecord/containers/NewViewRecord'));
-export const NotFound = React.lazy(() => import('modules/NotFound/components/NotFound'));
-export const Orcid = React.lazy(() => import('modules/AuthorIdentifiers/containers/Orcid'));
-export const PossiblyMyRecords = React.lazy(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords'));
-export const SbsSubmission = React.lazy(() => import('modules/SbsSubmission/containers/SbsSubmission'));
-export const ThesisSubmission = React.lazy(() => import('modules/ThesisSubmission/containers/ThesisSubmission'));
-export const ThirdPartyLookupTool = React.lazy(() =>
-    import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool'),
+export const ClaimRecord = lazy(() => lazyRetry(() => import('modules/ClaimRecord/containers/ClaimRecord')));
+export const CollectionForm = lazy(() =>
+    lazyRetry(() => import('modules/Admin/CollectionForm/containers/CollectionForm')),
+);
+export const CommunityForm = lazy(() =>
+    lazyRetry(() => import('modules/Admin/CommunityForm/containers/CommunityForm')),
+);
+export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
+export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
+export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containers/Doi')));
+export const FavouriteSearch = lazy(() =>
+    lazyRetry(() => import('modules/Admin/FavouriteSearch/components/FavouriteSearch')),
+);
+export const FixRecord = lazy(() => lazyRetry(() => import('modules/FixRecord/containers/FixRecord')));
+export const GoogleScholar = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/components/GoogleScholar')));
+export const ViewJournal = lazy(() => lazyRetry(() => import('modules/ViewJournal/components/ViewJournal')));
+export const ManageAuthors = lazy(() => lazyRetry(() => import('modules/Admin/ManageAuthors')));
+export const ManageUsers = lazy(() => lazyRetry(() => import('modules/Admin/ManageUsers')));
+export const MasterJournalListIngest = lazy(() =>
+    lazyRetry(() => import('modules/Admin/MasterJournalListIngest/components/MasterJournalListIngest')),
+);
+export const MyEditorialAppointments = lazy(() => lazyRetry(() => import('modules/MyEditorialAppointments')));
+export const MyIncompleteRecord = lazy(() =>
+    lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
+);
+export const NewViewRecord = lazy(() => lazyRetry(() => import('modules/ViewRecord/containers/NewViewRecord')));
+export const NotFound = lazy(() => lazyRetry(() => import('modules/NotFound/components/NotFound')));
+export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/containers/Orcid')));
+export const PossiblyMyRecords = lazy(() =>
+    lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
+);
+export const SbsSubmission = lazy(() => lazyRetry(() => import('modules/SbsSubmission/containers/SbsSubmission')));
+export const ThesisSubmission = lazy(() =>
+    lazyRetry(() => import('modules/ThesisSubmission/containers/ThesisSubmission')),
+);
+export const ThirdPartyLookupTool = lazy(() =>
+    lazyRetry(() => import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')),
 );
 
 // always load components
