@@ -10,8 +10,6 @@ import deparam from 'can-deparam';
 import JournalSearchResult, { getSearchResultSortingParams } from './JournalSearchResult';
 import { mockDataEmpty, mockData } from '../../../mock/data/testing/journals/journalSearchResults';
 
-import { PublicationsListSorting } from '../../SharedComponents/PublicationsList';
-
 const setup = ({
     state = {},
     testHistory = createMemoryHistory({ initialEntries: ['/'] }),
@@ -259,33 +257,6 @@ describe('Search Journals Results component', () => {
         // compare button should update the URL path
         expect(testHistory.location.pathname).toEqual(pathConfig.journals.compare);
     });
-
-    it('should show custom values and sort order in sort dropdown if provided in props', () => {
-        const sortingProps = {
-            sortingData: {
-                sortBy: [
-                    { value: 'test_1', label: 'Test Sort 1' },
-                    { value: 'test_2', label: 'Test Sort 2' },
-                    { value: 'test_3', label: 'Test Sort 3' },
-                ],
-            },
-            pagingData: {
-                total: 20,
-            },
-            sortDirection: 'Asc',
-            sortBy: 'test_2',
-            pageSize: 10,
-        };
-        function setup(sortingProps) {
-            return getElement(PublicationsListSorting, sortingProps);
-        }
-        const wrapper = setup(sortingProps);
-        // Default sort set in props to be test_2
-        expect(wrapper.find('[data-testid="publication-list-sorting-sort-order"]').props().value).toEqual('Asc');
-        expect(wrapper.find('#sortBy').props().value).toEqual('test_2');
-        expect(wrapper.find('#sortBy').children().length).toEqual(3);
-    });
-
     it('should show dropdown values as specified in the locale configuration', () => {
         const testQueryPart =
             'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';

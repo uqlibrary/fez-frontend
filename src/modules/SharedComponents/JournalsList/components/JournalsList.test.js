@@ -5,6 +5,9 @@ import Immutable from 'immutable';
 import { mockData } from '../../../../mock/data/testing/journals/journalSearchResults';
 import { JournalsList } from '..';
 import Cookies from 'js-cookie';
+
+import { JournalFieldsMap } from '../components/partials/JournalFieldsMap';
+
 const testData = {
     journals: mockData.data,
     minimalView: true,
@@ -25,16 +28,11 @@ describe('Journal Search Results list', () => {
         });
         // Should default to minimal view
         // First three columns should be in the document
-        expect(getByText('Journal title')).toBeInTheDocument();
-        expect(getByText('Open access')).toBeInTheDocument();
-        expect(getByText('Highest quartile')).toBeInTheDocument();
-        // These columns should not be in the document
-        expect(queryByText('CiteScore')).not.toBeInTheDocument();
-        expect(queryByText('CiteScore percentile')).not.toBeInTheDocument();
-        expect(queryByText('Impact factor')).not.toBeInTheDocument();
-        expect(queryByText('Impact factor percentile')).not.toBeInTheDocument();
-        expect(queryByText('SNIP')).not.toBeInTheDocument();
-        expect(queryByText('SJR')).not.toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
     });
     it('should show more columns when more is selected', () => {
         Cookies.set('minimalView', false);
@@ -42,22 +40,19 @@ describe('Journal Search Results list', () => {
             ...testData,
         });
         // All columns should be showing
-        expect(getByText('Journal title')).toBeInTheDocument();
-        expect(getByText('Open access')).toBeInTheDocument();
-        expect(getByText('Highest quartile')).toBeInTheDocument();
-        expect(queryByText('CiteScore')).toBeInTheDocument();
-        expect(queryByText('CiteScore percentile')).toBeInTheDocument();
-        expect(queryByText('Impact factor')).toBeInTheDocument();
-        expect(queryByText('Impact factor percentile')).toBeInTheDocument();
-        expect(queryByText('SNIP')).toBeInTheDocument();
-        expect(queryByText('SJR')).toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            expect(getByText(item.label)).toBeInTheDocument();
+        });
 
         // Expanded - Click the button to show less data
         act(() => {
             fireEvent.click(getByRole('button', { name: 'Show less data' }));
         });
-        expect(queryByText('CiteScore')).not.toBeInTheDocument();
-        expect(queryByText('Impact factor percentile')).not.toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
     });
 
     it('should expand / contract the columns when more / less is clicked', () => {
@@ -73,14 +68,18 @@ describe('Journal Search Results list', () => {
         });
 
         // Expanded for more data.
-        expect(getByText('Highest quartile')).toBeInTheDocument();
-        expect(queryByText('CiteScore')).toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            expect(getByText(item.label)).toBeInTheDocument();
+        });
 
         // contracted to less data
         act(() => {
             fireEvent.click(getByRole('button', { name: 'Show less data' }));
         });
-        expect(getByText('Highest quartile')).toBeInTheDocument();
-        expect(queryByText('CiteScore')).not.toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
     });
 });
