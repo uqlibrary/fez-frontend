@@ -61,8 +61,11 @@ describe('Journal Search Results list', () => {
         });
 
         // Default at less data.
-        expect(getByText('Highest quartile')).toBeInTheDocument();
-        expect(queryByText('CiteScore')).not.toBeInTheDocument();
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
         act(() => {
             fireEvent.click(getByRole('button', { name: 'Show more data' }));
         });
