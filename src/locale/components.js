@@ -3909,19 +3909,17 @@ export default {
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
                             <h3>Embargo</h3>
-                            <p>Refine results by length of time before an article is open and freely available.</p>
+                            <p>Length of time before an article is open and freely available.</p>
                             <h3>Journal impact factor highest quartile</h3>
-                            <p>Refine results by JIF Quartile, where Q1 is best.</p>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>CiteScore highest quartile</h3>
-                            <p>Refine results by CiteScore Quartile, where Q1 is best.</p>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
                             <h3>Highest quartile</h3>
-                            <p>
-                                Refine results by the Highest quartile a journal reaches across systems and categories.
-                            </p>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
                             <h3>Publish open access</h3>
                             <p>
-                                Article processing charges (APCs) are fees paid by an author to a publisher to make a
-                                research output immediately available and openly accessible.
+                                Sort by whether charges, such as Article Processing Charges (APCs) are paid by an author
+                                to a publisher to make a research output immediately available and openly accessible.
                             </p>
                         </React.Fragment>
                     ),
