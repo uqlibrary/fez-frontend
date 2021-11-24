@@ -31,7 +31,7 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
     return { sortBy, sortDirection, pageSize };
 };
 
-export const JournalSearchResult = ({ onSearch }) => {
+export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals = false }) => {
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.searchJournals;
@@ -69,14 +69,15 @@ export const JournalSearchResult = ({ onSearch }) => {
         });
 
     if (
-        !journalsListLoaded ||
-        !journalSearchQueryParams.keywords ||
-        Object.values(journalSearchQueryParams.keywords).length === 0
+        !browseAllJournals &&
+        (!journalsListLoaded ||
+            !journalSearchQueryParams?.keywords ||
+            Object.values(journalSearchQueryParams?.keywords).length === 0)
     ) {
         return <div id="journal-search-results-no-keywords" />;
     }
 
-    if (!journalsList || (!!journalsList && journalsList.data.length === 0)) {
+    if (!browseAllJournals && (!journalsList || (!!journalsList && journalsList.data.length === 0))) {
         return 'No journals found';
     }
 
@@ -85,7 +86,8 @@ export const JournalSearchResult = ({ onSearch }) => {
 
     const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
         journalSearchQueryParams,
-        journalsList.per_page,
+        // eslint-disable-next-line camelcase
+        journalsList?.per_page,
         sortingDefaults,
     );
 
@@ -104,83 +106,91 @@ export const JournalSearchResult = ({ onSearch }) => {
                                 <Alert {...journalsListError} />
                             </Grid>
                         )}
-                        <Grid item xs={12}>
-                            <PublicationsListSorting
-                                canUseExport
-                                exportData={txt.export}
-                                pagingData={journalsList}
-                                sortingData={txt.sorting}
-                                sortBy={sortBy}
-                                sortDirection={sortDirection}
-                                onExportPublications={handleExport}
-                                onSortByChanged={sortByChanged}
-                                onPageSizeChanged={pageSizeChanged}
-                                pageSize={pageSize}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <PublicationsListPaging
-                                disabled={!journalsListLoaded}
-                                loading={!journalsListLoaded}
-                                pagingData={journalsList}
-                                onPageChanged={pageChanged}
-                                pagingId="search-journals-paging-top"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <JournalsList
-                                journals={journalsList.data}
-                                selected={selectedJournals}
-                                isAllSelected={isAllSelected}
-                                onSelectionChange={handleSelectedJournalsChange}
-                                onToggleSelectAll={handleToggleSelectAllJournals}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <PublicationsListPaging
-                                pagingData={journalsList}
-                                onPageChanged={pageChanged}
-                                pagingId="search-journals-paging-bottom"
-                            />
-                        </Grid>
+                        {!!journalsList && (
+                            <>
+                                <Grid item xs={12}>
+                                    <PublicationsListSorting
+                                        canUseExport
+                                        exportData={txt.export}
+                                        pagingData={journalsList}
+                                        sortingData={txt.sorting}
+                                        sortBy={sortBy}
+                                        sortDirection={sortDirection}
+                                        onExportPublications={handleExport}
+                                        onSortByChanged={sortByChanged}
+                                        onPageSizeChanged={pageSizeChanged}
+                                        pageSize={pageSize}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <PublicationsListPaging
+                                        disabled={!journalsListLoaded}
+                                        loading={!journalsListLoaded}
+                                        pagingData={journalsList}
+                                        onPageChanged={pageChanged}
+                                        pagingId="search-journals-paging-top"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <JournalsList
+                                        journals={journalsList.data}
+                                        selected={selectedJournals}
+                                        isAllSelected={isAllSelected}
+                                        onSelectionChange={handleSelectedJournalsChange}
+                                        onToggleSelectAll={handleToggleSelectAllJournals}
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <PublicationsListPaging
+                                        pagingData={journalsList}
+                                        onPageChanged={pageChanged}
+                                        pagingId="search-journals-paging-bottom"
+                                    />
+                                </Grid>
+                            </>
+                        )}
                     </Grid>
-                    <Grid style={{ paddingTop: 20 }} item xs={12}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm="auto">
-                                <AddToFavouritesButton
-                                    disabled={countSelectedJournals() < 1}
-                                    clearSelectedJournals={clearSelectedJournals}
-                                    selectedJournals={selectedJournals}
-                                />
+                    {!!journalsList && (
+                        <Grid style={{ paddingTop: 20 }} item xs={12}>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm="auto">
+                                    <AddToFavouritesButton
+                                        disabled={countSelectedJournals() < 1}
+                                        clearSelectedJournals={clearSelectedJournals}
+                                        selectedJournals={selectedJournals}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm="auto">
+                                    <Button
+                                        disabled={countSelectedJournals() < 2}
+                                        onClick={handleJournalsComparisonClick}
+                                        variant="contained"
+                                        children={txt.journalSearchInterface.buttons.compareJournals.title}
+                                        aria-label={txt.journalSearchInterface.buttons.compareJournals.aria}
+                                        color="primary"
+                                        id="journal-comparison-button"
+                                        data-testid="journal-comparison-button"
+                                        fullWidth
+                                    />
+                                </Grid>
+                                <CommonButtons onSearchAll={onSearchAll} browseAllJournals={browseAllJournals} />
                             </Grid>
-                            <Grid item xs={12} sm="auto">
-                                <Button
-                                    disabled={countSelectedJournals() < 2}
-                                    onClick={handleJournalsComparisonClick}
-                                    variant="contained"
-                                    children={txt.journalSearchInterface.buttons.compareJournals.title}
-                                    aria-label={txt.journalSearchInterface.buttons.compareJournals.aria}
-                                    color="primary"
-                                    id="journal-comparison-button"
-                                    data-testid="journal-comparison-button"
-                                    fullWidth
-                                />
-                            </Grid>
-                            <CommonButtons />
                         </Grid>
-                    </Grid>
+                    )}
                 </StandardCard>
             </Grid>
             <Hidden smDown>
-                <Grid item md={3}>
-                    <JournalSearchFacetsFilter
-                        key={'journal-search-facets-filter'}
-                        facetsData={journalsList.filters.facets}
-                        onFacetsChanged={facetsChanged}
-                        disabled={!journalsListLoaded}
-                    />
-                    <FAQ />
-                </Grid>
+                {!!journalsList && (
+                    <Grid item md={3}>
+                        <JournalSearchFacetsFilter
+                            key={'journal-search-facets-filter'}
+                            facetsData={journalsList.filters?.facets}
+                            onFacetsChanged={facetsChanged}
+                            disabled={!journalsListLoaded}
+                        />
+                        <FAQ />
+                    </Grid>
+                )}
             </Hidden>
         </Grid>
     );
@@ -188,6 +198,8 @@ export const JournalSearchResult = ({ onSearch }) => {
 
 JournalSearchResult.propTypes = {
     onSearch: PropTypes.func,
+    onSearchAll: PropTypes.func,
+    browseAllJournals: PropTypes.bool,
 };
 
 export default React.memo(JournalSearchResult);

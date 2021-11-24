@@ -17,12 +17,11 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const classes = useStyles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
-
     return (
         <Chip
             className={classes.chip}
-            id={`journal-search-chip-${keyword.type}-${keyword.text}`}
-            data-testid={`journal-search-chip-${keyword.type}-${keyword.text}`}
+            id={`journal-search-chip-${keyword.type}-${keyword.text.replace(/ /g, '-')}`}
+            data-testid={`journal-search-chip-${keyword.type}-${keyword.text.replace(/ /g, '-')}`}
             label={
                 <React.Fragment>
                     <Typography variant="body2" component="span" color="secondary">
