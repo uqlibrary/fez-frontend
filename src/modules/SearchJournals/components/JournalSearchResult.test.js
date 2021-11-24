@@ -257,4 +257,35 @@ describe('Search Journals Results component', () => {
         // compare button should update the URL path
         expect(testHistory.location.pathname).toEqual(pathConfig.journals.compare);
     });
+    it('should show dropdown values as specified in the locale configuration', () => {
+        const testQueryPart =
+            'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
+        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+            search: testQueryPart,
+            state: {
+                source: 'code',
+            },
+        });
+        const journalsList = mockData;
+
+        const sortBy = locale.components.searchJournals.sorting.sortBy;
+
+        const { getAllByRole, getByRole } = setup({
+            state: { journalsListLoaded: true, journalsList },
+            testHistory,
+        });
+
+        act(() => {
+            fireEvent.mouseDown(getAllByRole('button', { id: 'sortBy' })[0]);
+        });
+
+        const listItem = getByRole('listbox');
+
+        sortBy.map(sortItem => {
+            expect(listItem).toHaveTextContent(sortItem.label);
+        });
+    });
 });
