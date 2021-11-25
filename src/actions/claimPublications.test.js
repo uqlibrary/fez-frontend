@@ -60,7 +60,7 @@ describe('Claim publication actions tests ', () => {
     });
 
     it('dispatches an action to clear a publication to claim', async () => {
-        const expectedActions = [actions.PUBLICATION_TO_CLAIM_CLEAR];
+        const expectedActions = [actions.PUBLICATION_TO_CLAIM_CLEAR, actions.APP_ALERT_HIDE];
 
         await mockActionsStore.dispatch(claimActions.clearClaimPublication());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
