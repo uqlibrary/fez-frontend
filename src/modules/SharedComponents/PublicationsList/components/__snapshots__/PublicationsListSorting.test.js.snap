@@ -20,6 +20,7 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
@@ -129,6 +130,7 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
@@ -190,6 +192,7 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
@@ -299,6 +302,7 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
@@ -366,6 +370,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
@@ -475,6 +480,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
@@ -545,6 +551,7 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
@@ -654,6 +661,7 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
@@ -709,6 +717,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
@@ -818,6 +827,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}

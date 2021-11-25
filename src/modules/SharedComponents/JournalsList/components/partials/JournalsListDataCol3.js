@@ -8,6 +8,7 @@ const JournalsListDataCol3 = ({ journal, minimalView }) => {
             container
             spacing={0}
             id={`journal-list-fav-${journal.jnl_jid}`}
+            data-testid={`journal-list-fav-${journal.jnl_jid}`}
             alignItems="flex-end"
             alignContent="flex-end"
             style={{ marginTop: 0, borderBottom: minimalView ? 'none' : '1px dashed #e6e6e6', height: 44 }}

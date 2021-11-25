@@ -13,6 +13,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
             spacing={1}
             direction="row"
             id={`journal-list-data-col-1-${index}`}
+            data-testid={`journal-list-data-col-1-${index}`}
             alignItems="center"
             alignContent="center"
             style={{
@@ -34,6 +35,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                             onChange={onChange}
                             checked={checked}
                             label={`Select ${journal.jnl_title}`}
+                            inputProps={{ 'aria-label': `Select ${journal.jnl_title}` }}
                         />
                     </Tooltip>
                 </Grid>

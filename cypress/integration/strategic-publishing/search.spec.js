@@ -146,7 +146,7 @@ context('Strategic Publishing - Search', () => {
         );
     });
 
-    it('Facets', () => {
+    it('Renders journal search result facets', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
         cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
@@ -162,6 +162,158 @@ context('Strategic Publishing - Search', () => {
                 rules: { 'color-contrast': { enabled: false } },
                 reportName: 'Search Journals',
                 scopeName: 'Facets',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
+    });
+
+    it('Renders journal search result sorting and pagination', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        // pagination
+        cy.get('[data-testid="search-journals-paging-top"]').should('be.visible');
+        cy.get('[data-testid="search-journals-paging-bottom"]').should('be.visible');
+        // sort by
+        cy.get('[data-testid="publication-list-sorting-sort-by"]').should('be.visible');
+        cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Highest quartile');
+        cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
+        cy.get('[role="listbox"]')
+            .should('contain', 'CiteScore')
+            .should('contain', 'Impact factor')
+            .click();
+        // sort order
+        cy.get('[data-testid="publication-list-sorting-sort-order"]').should('be.visible');
+        cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Asc');
+        cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
+        cy.get('[role="listbox"]')
+            .should('contain', 'Desc')
+            .click();
+        // page size
+        cy.get('[data-testid="publication-list-sorting-page-size"]').should('be.visible');
+        cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '10');
+        cy.get('[data-testid="publication-list-sorting-page-size"]').click();
+        cy.get('[role="listbox"]')
+            .should('contain', '20')
+            .click();
+        // export format
+        cy.get('[data-testid="export-publications-format"]').should('be.visible');
+        cy.get('[data-testid="export-publications-format"]').click();
+        cy.get('[role="listbox"]').should('contain', 'Excel File');
+    });
+
+    it('Renders journal search result table in less view by default', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-list"]').should('be.visible');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header"] [data-testid="journal-list-header-col-1"]')
+            .should('be.visible')
+            .should('contain', 'Journal title');
+
+        // expect to see open access and highest quartile in less view
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-min-fez_journal_doaj"]')
+            .should('be.visible')
+            .should('contain', 'Open access');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-min-highest_quartile"]')
+            .should('be.visible')
+            .should('contain', 'Highest quartile');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-view-toggle"] button[title="Show more data"]')
+            .should('exist')
+            .should('contain', 'more');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-view-toggle"] button[title="Show less data"]')
+            .should('not.exist');
+
+        cy.checkA11y(
+            '[data-testid="journal-list"]',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Search Journals',
+                scopeName: 'Journal list less view',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
+    });
+
+    it('Renders journal search result table in more view', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-list"]').should('be.visible');
+        // switch to move view
+        cy.get('[data-testid="journal-list-header-view-toggle"] button[title="Show more data"]').click();
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header"] [data-testid="journal-list-header-col-1"]')
+            .should('be.visible')
+            .should('contain', 'Journal title');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-fez_journal_doaj"]')
+            .should('be.visible')
+            .should('contain', 'Open access');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-highest_quartile"]')
+            .should('be.visible')
+            .should('contain', 'Highest quartile');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-jnl_cite_score"]')
+            .should('be.visible')
+            .should('contain', 'CiteScore');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-fez_journal_cite_score"]')
+            .should('be.visible')
+            .should('contain', 'CiteScore percentile');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-highest_quartile"]')
+            .should('be.visible')
+            .should('contain', 'Highest quartile');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-jnl_jcr_scie_impact_factor"]')
+            .should('be.visible')
+            .should('contain', 'Impact factor');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-jnl_jcr_scie_category_jif_percentile"]')
+            .should('be.visible')
+            .should('contain', 'Impact factor percentile');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-jnl_cite_score_snip"]')
+            .should('be.visible')
+            .should('contain', 'SNIP');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-full-jnl_cite_score_sjr"]')
+            .should('be.visible')
+            .should('contain', 'SJR');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-view-toggle"] button')
+            .should('contain', 'less');
+
+        cy.checkA11y(
+            '[data-testid="journal-list"]',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Search Journals',
+                scopeName: 'Journal list more view',
                 includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
             },
             violations => console.log(violations),
