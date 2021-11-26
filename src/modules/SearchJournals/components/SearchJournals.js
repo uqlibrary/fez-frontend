@@ -13,9 +13,9 @@ import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
 import { KEYWORD_ALL_JOURNALS, KEYWORD_ALL_JOURNALS_ID } from './constants';
 
-const areKeywordsDifferent = (keywords, anotherKeywords) => {
-    const keywordsNames = Object.keys(keywords || {});
-    const anotherKeywordsNames = Object.keys(anotherKeywords || {});
+export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
+    const keywordsNames = Object.keys(keywords);
+    const anotherKeywordsNames = Object.keys(anotherKeywords);
     return (
         keywordsNames.filter(keyword => !anotherKeywordsNames.includes(keyword)).length > 0 ||
         anotherKeywordsNames.filter(keyword => !keywordsNames.includes(keyword)).length > 0
@@ -181,11 +181,7 @@ export const SearchJournals = () => {
 
     const txt = locale.components.searchJournals;
     return (
-        <StandardPage
-            title={txt.journalSearchInterface.title}
-            id="journal-search-page"
-            data-testid="journal-search-page"
-        >
+        <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <JournalSearchInterface

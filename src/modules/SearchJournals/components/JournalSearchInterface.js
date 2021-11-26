@@ -61,7 +61,7 @@ export const JournalSearchInterface = ({
     }, [showInputControls, hasAnySelectedKeywords, selectedKeywords]);
 
     return (
-        <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
+        <StandardCard style={{ padding: 16 }} noHeader standardCardId="journal-search-card">
             <Snackbar
                 id="journal-search-snackbar"
                 data-testid="journal-search-snackbar"

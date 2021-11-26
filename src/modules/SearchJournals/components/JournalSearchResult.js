@@ -20,6 +20,8 @@ import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 
+export const id = 'journal-search-results';
+
 export const getSearchResultSortingParams = (journalSearchQueryParams, journalsListPerPage, sortingDefaults) => {
     const { sortBy = 'score', sortDirection = 'Desc' } = {
         ...sortingDefaults,
@@ -92,7 +94,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
     );
 
     return (
-        <Grid container spacing={2}>
+        <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>
             <Grid item xs sm md={9}>
                 <StandardCard noHeader>
                     <Grid container spacing={2}>
