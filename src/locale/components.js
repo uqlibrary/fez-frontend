@@ -2130,6 +2130,18 @@ export default {
                                 }) ||
                             null,
                     },
+                    mtj_jnl_id: {
+                        order: 16,
+                        map: 'Journal ID',
+                        title: 'Journal ID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Type an journal ID to seach',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an journal ID',
+                        id: 'mtj_jnl_id',
+                        disabled: true,
+                    },
                 },
                 openAccess: {
                     title: 'Open access',
