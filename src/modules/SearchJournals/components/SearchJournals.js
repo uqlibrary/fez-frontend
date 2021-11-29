@@ -147,6 +147,7 @@ export const SearchJournals = () => {
      * Run this effect whenever url search query parameters are changed
      *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
+    let lastRequest;
     React.useEffect(() => {
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
@@ -174,7 +175,11 @@ export const SearchJournals = () => {
 
         // add a delay when keywords are being removed
         // to avoid unnecessary load on the API
-        dispatch(searchJournals(journalSearchQueryParams, fromHandleKeywordDelete.current ? 1200 : 0));
+        lastRequest && clearTimeout(lastRequest);
+        lastRequest = setTimeout(
+            () => dispatch(searchJournals(journalSearchQueryParams)),
+            fromHandleKeywordDelete.current ? 1200 : 0,
+        );
         fromHandleKeywordDelete.current = fromHandleKeywordClear.current = false;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
