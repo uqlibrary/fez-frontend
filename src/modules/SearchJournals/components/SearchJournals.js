@@ -59,6 +59,7 @@ export const SearchJournals = () => {
 
     const handleKeywordDeleteDecorator = keyword => {
         handleKeywordDelete(keyword);
+        if (keyword.id === KEYWORD_ALL_JOURNALS_ID) setShowingAllJournals(false);
         fromHandleKeywordDelete.current = true;
     };
 
