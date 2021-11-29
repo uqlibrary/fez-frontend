@@ -21,6 +21,8 @@ export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
         anotherKeywordsNames.filter(keyword => !keywordsNames.includes(keyword)).length > 0
     );
 };
+
+let lastRequest;
 export const SearchJournals = () => {
     const history = useHistory();
     const dispatch = useDispatch();
@@ -147,7 +149,6 @@ export const SearchJournals = () => {
      * Run this effect whenever url search query parameters are changed
      *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
-    let lastRequest;
     React.useEffect(() => {
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
