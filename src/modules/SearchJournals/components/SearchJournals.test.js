@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 import * as repositories from 'repositories';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
-// import { mockData } from '../../../mock/data/testing/journals/journalSearchResults';
+import { mockData } from '../../../mock/data/testing/journals/journalSearchResults';
 
 const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
     return render(
@@ -70,31 +70,30 @@ describe('SearchJournals', () => {
 
     /* Commented out test due to bug in test cases causing 404 page not found error */
 
-    // it('should show all journals if appropriate keyword detected in URL on page load', () => {
-    //     const testQuerySearchAllJournals =
-    // eslint-disable-next-line max-len
-    //         'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
-    //     const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
-    //     const testHistory = createMemoryHistory({ initialEntries: [path] });
-    //     testHistory.push({
-    //         path,
-    //         search: testQuerySearchAllJournals,
-    //         state: {
-    //             source: 'code',
-    //         },
-    //     });
+    it('should show all journals if appropriate keyword detected in URL on page load', () => {
+        const testQuerySearchAllJournals =
+            'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+            search: testQuerySearchAllJournals,
+            state: {
+                source: 'code',
+            },
+        });
 
-    //     const journalsList = mockData;
+        const journalsList = mockData;
 
-    //     const { queryByTestId } = setup({
-    //         state: { journalsListLoaded: true, journalsList },
-    //         testHistory,
-    //     });
+        const { queryByTestId } = setup({
+            state: { journalsListLoaded: true, journalsList },
+            testHistory,
+        });
 
-    //     expect(queryByTestId('journal-search-chip-Keyword-all-journals')).toBeInTheDocument();
-    //     expect(queryByTestId('13251-International Journal of Astrobiology-link')).toBeInTheDocument();
-    //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
-    // });
+        expect(queryByTestId('journal-search-chip-Keyword-all-journals')).toBeInTheDocument();
+        expect(queryByTestId('13251-International Journal of Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+    });
 
     it('should correctly update the URL with "all journals" keywords and show "all journals" keyword button on screen', () => {
         const testQuerySearchBioKeywords = '';
