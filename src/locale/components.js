@@ -2130,6 +2130,18 @@ export default {
                                 }) ||
                             null,
                     },
+                    mtj_jnl_id: {
+                        order: 16,
+                        map: 'Journal ID',
+                        title: 'Journal ID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Type an journal ID to seach',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an journal ID',
+                        id: 'mtj_jnl_id',
+                        disabled: true,
+                    },
                 },
                 openAccess: {
                     title: 'Open access',
@@ -3655,13 +3667,13 @@ export default {
             },
             partials: {
                 FAQ: {
-                    title: 'Need more help?',
+                    title: 'Learn more',
                     items: [
                         {
-                            question: 'How do I refine my shortlist?',
+                            question: 'Get detailed journal info',
                             answer: (
                                 <div>
-                                    You can further refine your journal choice by investigating:
+                                    Click on the title of the journal to explore its details like:
                                     <ul>
                                         <li>aims and scope of the journal</li>
                                         <li>journal quality</li>
@@ -3669,17 +3681,13 @@ export default {
                                         <li>publisher reputation and credibility</li>
                                         <li>promotion and availability of your article</li>
                                     </ul>
-                                    <p>Click on the title of the journal to explore these criteria in detail.</p>
                                     <p>
-                                        Read more{' < '}
                                         <a
                                             target="_blank"
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
                                         >
-                                            Strategic scholarly publishing - Library - University of Queensland
-                                            (uq.edu.au)
+                                            Read more
                                         </a>
-                                        {' >'}
                                     </p>
                                 </div>
                             ),
@@ -3690,95 +3698,80 @@ export default {
                                 <div>
                                     <p>
                                         There are different indicators used to measure journal quality. These indicators
-                                        are calculated by looking at the citations received in the most recent year, for
-                                        publications from previous 2-5 years. There are slight variations in the
+                                        are calculated by looking at the citations received in the most recent year for
+                                        publications from the previous 2-5 years. There are slight variations in the
                                         methodology used to calculate these indicators, depending on the database
-                                        provider (e.g. Journal Citation Reports, Scopus).
+                                        provider e.g. Journal Citation Reports, Scopus.
                                     </p>
                                     <p>
-                                        You can compare the different metrics for specific journals by selecting the
-                                        compare selected button. The Library also has an online metrics tutorial{' < '}
+                                        You can compare the different metrics for specific journals by selecting each
+                                        and then clicking the "Compare selected" button. Or learn more via the{' '}
                                         <a target="_blank" href="https://uq.libwizard.com/f/metrics">
-                                            https://uq.libwizard.com/f/metrics
+                                            online metrics tutorial
                                         </a>
-                                        {' >'}
-                                    </p>
-                                    <p>
-                                        Read more{' < '}
-                                        <a
-                                            target="_blank"
-                                            href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
-                                        >
-                                            Strategic scholarly publishing - Library - University of Queensland
-                                            (uq.edu.au)
-                                        </a>
-                                        {' >'}
                                     </p>
                                 </div>
                             ),
                         },
                         {
-                            question: 'How do I publish open access?',
+                            question: 'Open access and APC charges',
                             answer: (
                                 <div>
                                     <p>
-                                        Open access is free, unrestricted, online access to research output. There are
-                                        different types of open access, including green and gold open access.
+                                        There are different pathways to open access, include gold and green open access.
                                     </p>
                                     <p>
-                                        Some publishers have Article processing charges (also referred to as APCs) is a
+                                        Some publishers have{' '}
+                                        <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
+                                            Article processing charges (APCs)
+                                        </a>{' '}
                                         fee paid by an author to make a research output immediately available and openly
-                                        accessible. The Library also has agreements with some publishers, where the APC
+                                        accessible. The Library has{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/read-and-publish-agreements"
+                                            target="_blank"
+                                        >
+                                            agreements with some publishers
+                                        </a>
                                         does not apply to some journals for UQ authors.
                                     </p>
                                     <p>
                                         To find a journal with an open access policy which meets your requirements or
-                                        funder mandate, use the facets to refine your results by publish open access or
-                                        embargo facets.
+                                        funder mandate, refine your results by <b>Publish open access or Embargo</b>{' '}
+                                        filters.
                                     </p>
                                     <p>
-                                        Read more{' < '}
                                         <a
                                             target="_blank"
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
                                         >
-                                            https://web.library.uq.edu.au/library-services/services-researchers/open-access
+                                            Read more
                                         </a>
-                                        {' >'}
                                     </p>
                                 </div>
                             ),
                         },
                         {
-                            question: 'How can I find out more about a journal?',
+                            question: 'Ask Us',
                             answer: (
                                 <ul>
                                     <li>
-                                        Use the compare selected button to compare the metrics for particular journals
-                                    </li>
-                                    <li>
-                                        Click on the journal title for detailed information on a journal title, collated
-                                        by the Library
-                                    </li>
-                                    <li>
-                                        Follow the links from the detailed information to access more information on the
-                                        journal’s scope, review process, or open access policies.
-                                    </li>
-                                </ul>
-                            ),
-                        },
-                        {
-                            question: 'Talk to someone',
-                            answer: (
-                                <ul>
-                                    <li>
-                                        Ask Us {' < '}
                                         <a target="_blank" href="https://web.library.uq.edu.au/contact-us">
-                                            Contact us - Library - University of Queensland (uq.edu.au)
+                                            Contact us for help
                                         </a>
-                                        {' >'}
                                     </li>
-                                    <li>For feedback espace@library.uq.edu.au</li>
+                                    <li>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/publish-share"
+                                        >
+                                            Find out more about publishing at UQ Library
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Provide feedback on the tool (
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>)
+                                    </li>
                                 </ul>
                             ),
                         },
@@ -3909,19 +3902,17 @@ export default {
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
                             <h3>Embargo</h3>
-                            <p>Refine results by length of time before an article is open and freely available.</p>
+                            <p>Length of time before an article is open and freely available.</p>
                             <h3>Journal impact factor highest quartile</h3>
-                            <p>Refine results by JIF Quartile, where Q1 is best.</p>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>CiteScore highest quartile</h3>
-                            <p>Refine results by CiteScore Quartile, where Q1 is best.</p>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
                             <h3>Highest quartile</h3>
-                            <p>
-                                Refine results by the Highest quartile a journal reaches across systems and categories.
-                            </p>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
                             <h3>Publish open access</h3>
                             <p>
-                                Article processing charges (APCs) are fees paid by an author to a publisher to make a
-                                research output immediately available and openly accessible.
+                                Sort by whether charges, such as Article Processing Charges (APCs) are paid by an author
+                                to a publisher to make a research output immediately available and openly accessible.
                             </p>
                         </React.Fragment>
                     ),

@@ -43,7 +43,7 @@ const JournalsList = ({
     }
     const detailColStyle = minimalView ? { flexGrow: 'inherit' } : { overflowX: 'auto', overflowY: 'hidden' };
     return (
-        <Grid container spacing={0} id="journal-list" alignItems="stretch">
+        <Grid container spacing={0} id="journal-list" data-testid="journal-list" alignItems="stretch">
             <Grid item style={{ width: JournalFieldsMap[0].size }}>
                 {/* Header */}
                 <JournalsListHeaderCol1
