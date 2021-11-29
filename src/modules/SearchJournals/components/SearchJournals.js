@@ -11,7 +11,9 @@ import { searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
-import { KEYWORD_ALL_JOURNALS, KEYWORD_ALL_JOURNALS_ID } from './constants';
+
+export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
+export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
 
 export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
     const keywordsNames = Object.keys(keywords);
