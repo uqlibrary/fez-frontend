@@ -30,10 +30,11 @@ const useStyles = makeStyles({
 
 export const JournalSearchInterface = ({
     onSearch,
+    onSearchAll,
     selectedKeywords,
-    setSelectedKeywords,
     handleKeywordAdd,
     handleKeywordDelete,
+    handleKeywordReset,
     hasAnySelectedKeywords = false,
     showInputControls = true,
 }) => {
@@ -43,8 +44,6 @@ export const JournalSearchInterface = ({
 
     const classes = useStyles();
 
-    /* istanbul ignore next */
-    const handleResetKeywords = () => setSelectedKeywords({});
     const handleSnackbarOpen = () => {
         setSnackbarNotify(true);
     };
@@ -60,8 +59,9 @@ export const JournalSearchInterface = ({
             handleSnackbarOpen();
         }
     }, [showInputControls, hasAnySelectedKeywords, selectedKeywords]);
+
     return (
-        <StandardCard style={{ padding: 16 }} noHeader id="journal-search-card" data-testid="journal-search-card">
+        <StandardCard style={{ padding: 16 }} noHeader standardCardId="journal-search-card">
             <Snackbar
                 id="journal-search-snackbar"
                 data-testid="journal-search-snackbar"
@@ -78,7 +78,7 @@ export const JournalSearchInterface = ({
             <Grid container spacing={2} className={classes.closeButtonContainer}>
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
-                        <JournalSearchInput onReset={handleResetKeywords} />
+                        <JournalSearchInput onReset={handleKeywordReset} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
@@ -98,7 +98,7 @@ export const JournalSearchInterface = ({
                                     color="secondary"
                                     aria-label="Clear search keywords"
                                     component="span"
-                                    onClick={handleResetKeywords}
+                                    onClick={handleKeywordReset}
                                     id="journal-search-clear-keywords-button"
                                     data-testid="journal-search-clear-keywords-button"
                                 >
@@ -116,7 +116,7 @@ export const JournalSearchInterface = ({
                 {showInputControls && (
                     <Grid item xs={12}>
                         <Grid container spacing={2} justify="flex-end">
-                            <CommonButtons />
+                            <CommonButtons onSearchAll={onSearchAll} />
                             <Grid item xs={12} sm="auto">
                                 <Button
                                     disabled={!hasAnySelectedKeywords}
@@ -141,11 +141,12 @@ export const JournalSearchInterface = ({
 
 JournalSearchInterface.propTypes = {
     onSearch: PropTypes.func,
+    onSearchAll: PropTypes.func,
     onFavourite: PropTypes.func,
     selectedKeywords: PropTypes.object,
-    setSelectedKeywords: PropTypes.func,
     handleKeywordAdd: PropTypes.func,
     handleKeywordDelete: PropTypes.func,
+    handleKeywordReset: PropTypes.func,
     hasAnySelectedKeywords: PropTypes.bool,
     showInputControls: PropTypes.bool,
 };

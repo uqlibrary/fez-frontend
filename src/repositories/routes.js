@@ -480,10 +480,10 @@ export const JOURNAL_SEARCH_API = query => {
         apiUrl: 'journals/search',
         options: {
             params: {
-                ...getKeywordsParams(query.keywords),
+                ...getKeywordsParams(query?.keywords),
                 ...getStandardSearchParams({
                     ...query,
-                    facets: query.activeFacets,
+                    facets: query?.activeFacets,
                     pageSize,
                     sortBy,
                     sortDirection,

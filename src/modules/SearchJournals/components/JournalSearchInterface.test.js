@@ -138,12 +138,12 @@ describe('JournalSearchInterface', () => {
                 id: 'Keyword-testing',
             },
         };
-        const mockSetSelectedKeywordsFn = jest.fn();
+        const mockHandleKeywordResetFn = jest.fn();
         const { queryByTestId } = setup({
             hasAnySelectedKeywords: true,
             showInputControls: false,
             selectedKeywords: keywords,
-            setSelectedKeywords: mockSetSelectedKeywordsFn,
+            handleKeywordReset: mockHandleKeywordResetFn,
         });
         expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
 
@@ -151,6 +151,22 @@ describe('JournalSearchInterface', () => {
             fireEvent.click(queryByTestId('journal-search-clear-keywords-button'));
         });
 
-        expect(mockSetSelectedKeywordsFn).toHaveBeenCalledWith({});
+        expect(mockHandleKeywordResetFn).toHaveBeenCalled();
+    });
+
+    it('should call the Search All Journals function when button is clicked', () => {
+        const mockHandleSearchAllJournalsFn = jest.fn();
+        const { queryByTestId } = setup({
+            showInputControls: true,
+            onSearchAll: mockHandleSearchAllJournalsFn,
+        });
+
+        expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(queryByTestId('journal-search-browse-all-button'));
+        });
+
+        expect(mockHandleSearchAllJournalsFn).toHaveBeenCalled();
     });
 });
