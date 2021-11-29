@@ -19,14 +19,14 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
 };
 
 describe('SearchJournals', () => {
-    it('should render', async () => {
+    it('should render', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId('journal-search-page')).toBeInTheDocument();
         expect(queryByTestId('journal-search-card')).toBeInTheDocument();
         expect(queryByTestId('journal-search-results-container')).not.toBeInTheDocument();
     });
 
-    it('should return false when keywords are the same', async () => {
+    it('should return false when keywords are the same', () => {
         const testKeywordsSet1 = {
             'Keyword-biochemistry': {
                 type: 'Keyword',
@@ -41,13 +41,13 @@ describe('SearchJournals', () => {
         expect(testResult).toEqual(false);
     });
 
-    it('should return false when keywords are both empty', async () => {
+    it('should return false when keywords are both empty', () => {
         const testResult = areKeywordsDifferent();
 
         expect(testResult).toEqual(false);
     });
 
-    it('should return true when keywords are the different', async () => {
+    it('should return true when keywords are the different', () => {
         const testKeywordsSet1 = {
             'Keyword-biochemistry': {
                 type: 'Keyword',
@@ -68,7 +68,9 @@ describe('SearchJournals', () => {
         expect(testResult).toEqual(true);
     });
 
-    // it('should show all journals if appropriate keyword detected in URL on page load', async () => {
+    /* Commented out test due to bug in test cases causing 404 page not found error */
+
+    // it('should show all journals if appropriate keyword detected in URL on page load', () => {
     //     const testQuerySearchAllJournals =
     // eslint-disable-next-line max-len
     //         'keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
@@ -94,7 +96,7 @@ describe('SearchJournals', () => {
     //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
     // });
 
-    it('should correctly update the URL with "all journals" keywords and show "all journals" keyword button on screen', async () => {
+    it('should correctly update the URL with "all journals" keywords and show "all journals" keyword button on screen', () => {
         const testQuerySearchBioKeywords = '';
         const testQuerySearchAllJournals =
             '?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
