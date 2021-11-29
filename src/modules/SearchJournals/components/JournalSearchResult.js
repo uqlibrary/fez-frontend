@@ -72,6 +72,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
 
     if (
         !browseAllJournals &&
+        !journalsListLoading &&
         (!journalsListLoaded ||
             !journalSearchQueryParams?.keywords ||
             Object.values(journalSearchQueryParams?.keywords).length === 0)
@@ -79,19 +80,26 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
         return <div id="journal-search-results-no-keywords" />;
     }
 
-    if (!browseAllJournals && (!journalsList || (!!journalsList && journalsList.data.length === 0))) {
+    if (
+        !browseAllJournals &&
+        journalsListLoaded &&
+        !journalsListLoading &&
+        (!journalsList || (!!journalsList && journalsList.data.length === 0))
+    ) {
         return 'No journals found';
     }
 
     /* istanbul ignore next */
     const sortingDefaults = locale.components.searchJournals.sortingDefaults ?? {};
 
-    const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
-        journalSearchQueryParams,
-        // eslint-disable-next-line camelcase
-        journalsList?.per_page,
-        sortingDefaults,
-    );
+    const { sortBy, sortDirection, pageSize } = journalsListLoading
+        ? { ...sortingDefaults }
+        : getSearchResultSortingParams(
+              journalSearchQueryParams,
+              // eslint-disable-next-line camelcase
+              journalsList?.per_page,
+              sortingDefaults,
+          );
 
     return (
         <Grid container spacing={2} id={`${id}-container`} data-testid={`${id}-container`}>

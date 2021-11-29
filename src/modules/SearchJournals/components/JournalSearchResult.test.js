@@ -131,7 +131,7 @@ describe('Search Journals Results component', () => {
 
         expect(queryByTestId('journal-search-results-no-keywords')).toBeInTheDocument();
     });
-    it('should show a message when results are loading', () => {
+    it('should show a message when results are loading for the first time', () => {
         const testQueryPart =
             'keywords%5BTitle-Astrobiology%5D%5Btype%5D=Title&keywords%5BTitle-Astrobiology%5D%5Btext%5D=Astrobiology&keywords%5BTitle-Astrobiology%5D%5Bid%5D=Title-Astrobiology';
         const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
@@ -144,17 +144,16 @@ describe('Search Journals Results component', () => {
             },
         });
 
-        const journalsList = mockData;
-        const { getByText } = setup({
+        const { getByText, queryByTestId } = setup({
             state: {
-                journalsListLoaded: true,
+                journalsListLoaded: false,
                 journalsListLoading: true,
-                journalsList,
             },
             testHistory,
         });
 
         expect(getByText('Loading journals list')).toBeInTheDocument();
+        expect(queryByTestId('sortBy')).not.toBeInTheDocument();
     });
     it('should show an error message when a loading error occurs', () => {
         const testQueryPart =
