@@ -11,6 +11,7 @@ import {
     RECORDS_ISSUES_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
+import { dismissAppAlert } from './app';
 
 /**
  * Load publication to claim full record
@@ -181,6 +182,7 @@ export function clearClaimPublication() {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_CLEAR,
         });
+        dispatch(dismissAppAlert());
     };
 }
 

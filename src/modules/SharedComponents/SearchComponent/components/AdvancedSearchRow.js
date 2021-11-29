@@ -96,6 +96,8 @@ export const AdvancedSearchRow = props => {
     };
 
     const txt = locale.components.searchComponent.advancedSearch;
+    // We disable the select for a Journal ID as this is only really accessible from a canned link
+    const isJournalCannedSearch = txt.fieldTypes[searchField].id === txt.fieldTypes.mtj_jnl_id.id;
     return (
         <React.Fragment>
             <Grid container spacing={2}>
@@ -105,6 +107,7 @@ export const AdvancedSearchRow = props => {
                         <Grid item className={classes.autoWidth} style={{ minWidth: 200 }}>
                             <FormControl fullWidth error={!!selectFieldValidation()} id="field-type-select-label">
                                 <Select
+                                    disabled={isJournalCannedSearch}
                                     value={searchField}
                                     name="field-type-select"
                                     onChange={_handleSearchFieldChange}
@@ -132,6 +135,13 @@ export const AdvancedSearchRow = props => {
                                         .map((item, index) => {
                                             if (txt.fieldTypes[item].type === 'divider') {
                                                 return <Divider key={index} />;
+                                            } else if (
+                                                // Hide the "Journal ID" option on a new row,
+                                                // but display when its canned
+                                                !isJournalCannedSearch &&
+                                                txt.fieldTypes[item].id === txt.fieldTypes.mtj_jnl_id.id
+                                            ) {
+                                                return null;
                                             }
                                             return (
                                                 <MenuItem

@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
 import moment from 'moment';
+import { makeStyles } from '@material-ui/core/styles';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@material-ui/core/Typography';
@@ -39,7 +40,14 @@ export const CustomToolbar = props => {
     );
 };
 
-export const getColumns = () => {
+const useStyles = makeStyles({
+    datePicker: {
+        minWidth: 120,
+    },
+});
+
+export const GetColumns = () => {
+    const classes = useStyles();
     const {
         header: {
             columns: { journalName, role, startYear, endYear },
@@ -254,6 +262,7 @@ export const getColumns = () => {
                             'data-testid': 'eap-start-year-label',
                             htmlFor: 'eap-start-year-input',
                         }}
+                        className={classes.datePicker}
                     />
                 );
             },
@@ -337,6 +346,7 @@ export const getColumns = () => {
                             id: 'eap-end-year-button-input',
                             'data-testid': 'eap-end-year-button-input',
                         }}
+                        className={classes.datePicker}
                     />
                 );
             },
@@ -363,7 +373,7 @@ export const getColumns = () => {
 export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
     const materialTableRef = React.createRef();
     const columns = React.createRef();
-    columns.current = getColumns();
+    columns.current = GetColumns();
 
     const {
         form: {
