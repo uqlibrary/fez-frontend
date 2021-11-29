@@ -7,7 +7,6 @@ import * as repositories from 'repositories';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
 import { mockData } from '../../../mock/data/testing/journals/journalSearchResults';
-// import { mockData } from '../../../mock/data/testing/journals/journalSearchResults';
 
 const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
     return render(
