@@ -220,5 +220,11 @@ describe('Search action creators', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
+
+        it('should dispatch action on export reset', () => {
+            const expectedActions = [actions.EXPORT_JOURNALS_RESET];
+            mockActionsStore.dispatch(journalActions.resetExportJournalsStatus());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
     });
 });

@@ -1,6 +1,5 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
-import { JOURNAL_FAVOURITES_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -938,6 +937,10 @@ describe('Backend routes method', () => {
             per_page: 20,
             sort: 'score',
         };
+
+        expect(routes.JOURNAL_FAVOURITES_API()).toEqual({
+            apiUrl: 'journals/favourites',
+        });
 
         expect(routes.JOURNAL_FAVOURITES_API({ query: 'a' })).toEqual({
             apiUrl: 'journals/favourites',
