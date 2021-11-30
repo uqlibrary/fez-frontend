@@ -1,5 +1,6 @@
 import * as routes from './routes';
 import { IN_CREATION, IN_DRAFT, IN_REVIEW, UNPUBLISHED, RETRACTED, SUBMITTED_FOR_APPROVAL } from 'config/general';
+import { JOURNAL_FAVOURITES_API } from './routes';
 
 describe('Backend routes method', () => {
     it('should get zer-padded year', () => {
@@ -870,6 +871,114 @@ describe('Backend routes method', () => {
     it('should construct url for journal details api', () => {
         expect(routes.JOURNAL_API({ id: '12' })).toEqual({
             apiUrl: 'journals/12',
+        });
+    });
+
+    it('should construct url for journal search api', () => {
+        const commonQueryParams = {
+            export_to: '',
+            order_by: 'asc',
+            page: 1,
+            per_page: 10,
+            sort: 'highest_quartile',
+        };
+
+        expect(routes.JOURNAL_SEARCH_API('a')).toEqual({
+            apiUrl: 'journals/search',
+            options: {
+                params: { ...commonQueryParams },
+            },
+        });
+
+        expect(
+            routes.JOURNAL_SEARCH_API({
+                keywords: [
+                    { type: 'Title', text: 'apple' },
+                    { type: 'Keyword', text: 'apple' },
+                    { type: 'Subject', text: 'apple' },
+                ],
+            }),
+        ).toEqual({
+            apiUrl: 'journals/search',
+            options: {
+                params: {
+                    ...commonQueryParams,
+                    description: ['apple'],
+                    subject: ['apple'],
+                    title: ['apple'],
+                },
+            },
+        });
+
+        expect(
+            routes.JOURNAL_SEARCH_API({
+                keywords: [
+                    { type: 'unknown', text: 'apple' },
+                    { type: 'Title', text: 'apple' },
+                ],
+            }),
+        ).toEqual({
+            apiUrl: 'journals/search',
+            options: {
+                params: {
+                    ...commonQueryParams,
+                    description: [],
+                    subject: [],
+                    title: ['apple'],
+                },
+            },
+        });
+    });
+
+    it('should construct url for journal favourites api', () => {
+        const commonQueryParams = {
+            export_to: '',
+            order_by: 'desc',
+            page: 1,
+            per_page: 20,
+            sort: 'score',
+        };
+
+        expect(routes.JOURNAL_FAVOURITES_API({ query: 'a' })).toEqual({
+            apiUrl: 'journals/favourites',
+            options: {
+                params: { ...commonQueryParams },
+            },
+        });
+
+        expect(
+            routes.JOURNAL_FAVOURITES_API({
+                query: {
+                    keywords: [
+                        { type: 'Title', text: 'apple' },
+                        { type: 'Keyword', text: 'apple' },
+                        { type: 'Subject', text: 'apple' },
+                    ],
+                },
+            }),
+        ).toEqual({
+            apiUrl: 'journals/favourites',
+            options: {
+                params: {
+                    ...commonQueryParams,
+                    description: ['apple'],
+                    subject: ['apple'],
+                    title: ['apple'],
+                },
+            },
+        });
+
+        // with append
+        expect(
+            routes.JOURNAL_FAVOURITES_API({
+                append: 'append',
+                query: 'a',
+            }),
+        ).toEqual({
+            apiUrl: 'journals/favourites/append',
+            options: {
+                params: { ...commonQueryParams },
+            },
         });
     });
 });
