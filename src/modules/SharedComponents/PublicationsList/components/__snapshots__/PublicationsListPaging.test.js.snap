@@ -106,7 +106,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-10"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-10"
           key="10"
           onClick={[Function]}
@@ -272,7 +272,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-1"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
@@ -431,7 +431,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-3"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-3"
           key="3"
           onClick={[Function]}
@@ -548,7 +548,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-2"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-2"
           key="2"
           onClick={[Function]}
@@ -626,9 +626,10 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
 <PublicationsListPaging
   classes={
     Object {
-      "fakeDisabled": "PublicationsListPaging-fakeDisabled-4",
-      "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-2",
-      "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-3",
+      "current": "PublicationsListPaging-current-2",
+      "fakeDisabled": "PublicationsListPaging-fakeDisabled-5",
+      "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-3",
+      "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-4",
       "pageButton": "PublicationsListPaging-pageButton-1",
     }
   }
