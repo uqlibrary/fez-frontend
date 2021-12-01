@@ -23,6 +23,6 @@ describe('Facet filter nested list item ', () => {
     it('should render active filter view', () => {
         const { getByText, getByTestId } = setup({ primaryText: 'Test filter', isActive: true });
         expect(getByText('Test filter')).toBeInTheDocument();
-        expect(getByTestId('clear-facet-filter-nested-item-0')).toBeInTheDocument();
+        expect(getByTestId('clear-facet-filter-nested-item-test-filter')).toBeInTheDocument();
     });
 });

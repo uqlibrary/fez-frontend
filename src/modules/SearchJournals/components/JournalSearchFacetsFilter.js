@@ -6,6 +6,8 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useJournalSearch, useActiveFacetFilters } from '../hooks';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -157,6 +159,11 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
         setActiveFacetsFilters(newActiveFacetsFilters);
     };
 
+    const _handleResetClick = () => {
+        setActiveFacetsFilters({});
+        setIsFacetFilterClicked(true);
+    };
+
     return (
         <StandardRighthandCard
             title={locale.components.searchJournals.journalFacetsFilter.title}
@@ -189,6 +196,20 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                         );
                     })}
                 </List>
+                {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
+                    <Grid container justify="flex-end">
+                        <Grid item>
+                            <Button
+                                variant="contained"
+                                arial-label="rest facet filters"
+                                id={'reset-facet-filters'}
+                                onClick={_handleResetClick}
+                            >
+                                {locale.components.searchJournals.journalFacetsFilter.resetButtonText}
+                            </Button>
+                        </Grid>
+                    </Grid>
+                )}
             </div>
         </StandardRighthandCard>
     );
