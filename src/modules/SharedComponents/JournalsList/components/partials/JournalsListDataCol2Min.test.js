@@ -42,4 +42,14 @@ describe('JournalsListDataCol2 Min', () => {
             });
         });
     });
+
+    it('should not render content if no valid data returned from translateFn', () => {
+        // set default blank data for test coverage for one of the journal items.
+        mockData[0].fez_journal_cite_score = {
+            fez_journal_cite_score_asjc_code: [{}],
+        };
+        const { queryByText } = setup({ journal: mockData[0] });
+        expect(queryByText('Q')).not.toBeInTheDocument();
+        expect(document.querySelector('.MuiGrid-item:last-of-type p').title).toEqual('');
+    });
 });
