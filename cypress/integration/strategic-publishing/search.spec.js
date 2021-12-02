@@ -320,136 +320,148 @@ context('Strategic Publishing - Search', () => {
         );
     });
 
-    it.only("Restores a removed keyword from search results if the browser's back button is clicked", () => {
-        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
-        cy.get('[data-testid="journal-search-item-addable-Biology-1"]').click();
-        cy.get('[data-testid="journal-search-button"]').click();
-        cy.get('[data-testid="journal-list"]').should('be.visible');
+    context('Handling when the back button is clicked', () => {
+        beforeEach(() => {
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+            cy.get('[data-testid="journal-search-item-addable-Glycobiology-3"]').click();
+            cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
+            cy.get('[data-testid="journal-search-button"]').click();
+            cy.get('[data-testid="journal-list"]').should('be.visible');
 
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
-        cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
-
-        cy.location().should(location => {
-            expect(location.search).to.contain('keywords%5BTitle-Microbiology');
-            expect(location.search).to.contain('keywords%5BTitle-Biology');
-        });
-        /* check mock data */
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]')
-            .find('svg')
-            .click();
-
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('not.exist');
-        cy.location().should(location => {
-            expect(location.search).not.to.contain('keywords%5BTitle-Microbiology');
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
         });
 
-        cy.go('back');
+        it('restores results and keyword state after a keyword has been deleted', () => {
+            const resultsLengthWithOneKeyword = 8;
+            const resultsLengthWithTwoKeywords = 4;
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-Biological');
+            });
 
-        /* maybe check api call is re-made for data */
-        /* check mock data */
-        cy.location().should(location => {
-            expect(location.search).to.contain('keywords%5BTitle-Microbiology');
-            expect(location.search).to.contain('keywords%5BTitle-Biology');
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+                .find('svg')
+                .click();
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+            });
+
+            // check we have new expected number of results
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithOneKeyword);
+
+            /* maybe check api call is re-made for data */
+            cy.go('back');
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-Biological');
+            });
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+
+            // check initial number of results are shown again
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithTwoKeywords);
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    reportName: 'Search Journals',
+                    scopeName: 'Keyword history restoration',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
         });
 
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
-        cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
+        it('restores results and facet state after a keyword has been deleted', () => {
+            const resultsLengthWithKeywordOnly = 8;
+            const resultsLengthWithKeywordAndFacets = 4;
 
-        cy.checkA11y('div.StandardPage', {
-            reportName: 'Search Journals',
-            scopeName: 'Keyword history restoration',
-            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            cy.get('[data-testid="journal-search-facets"]')
+                .find('[data-testid="facets-filter"] nav > div')
+                .should('have.length', 9);
+
+            // select facets
+            cy.get('[id="clickable-facet-category-listed-in"]').click();
+            cy.get('[id="facet-filter-nested-item-cwts"]')
+                .as('facetItemCwts')
+                .click()
+                .find('svg#clear-facet-filter-nested-item-cwts')
+                .should('exist');
+            cy.get('[id="clickable-facet-category-indexed-in"]').click();
+            cy.get('[id="facet-filter-nested-item-scopus"]')
+                .as('facetItemScopus')
+                .click()
+                .find('svg#clear-facet-filter-nested-item-scopus')
+                .should('exist');
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('CWTS');
+                expect(location.search).to.contain('Scopus');
+            });
+
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithKeywordAndFacets); // /mock/index.js
+
+            // remove a keyword - this should unselect the active facets and update the URL
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+                .find('svg')
+                .click();
+
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('CWTS');
+                expect(location.search).not.to.contain('Scopus');
+            });
+
+            cy.get('@facetItemCwts')
+                .find('svg#clear-facet-filter-nested-item-cwts')
+                .should('not.exist');
+
+            cy.get('@facetItemScopus')
+                .find('svg#clear-facet-filter-nested-item-scopus')
+                .should('not.exist');
+
+            // check the number of mock results is now showing the new number of expected results (should be different)
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithKeywordOnly);
+
+            cy.go('back');
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('CWTS');
+                expect(location.search).to.contain('Scopus');
+            });
+
+            cy.get('@facetItemCwts')
+                .find('svg#clear-facet-filter-nested-item-cwts')
+                .should('exist');
+
+            cy.get('@facetItemScopus')
+                .find('svg#clear-facet-filter-nested-item-scopus')
+                .should('exist');
+
+            // check the set of mock results is the same as when we first checked
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithKeywordAndFacets);
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    reportName: 'Search Journals',
+                    scopeName: 'Facet history restoration',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
         });
     });
-
-    it("Restores a removed facet from search results if the browser's back button is clicked", () => {
-        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
-        cy.get('[data-testid="journal-search-item-addable-Biology-1"]').click();
-        cy.get('[data-testid="journal-search-button"]').click();
-
-        cy.get('[data-testid="journal-list"]').should('be.visible');
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
-        cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
-
-        cy.get('[data-testid="journal-search-facets"]')
-            .find('[data-testid="facets-filter"] nav > div')
-            .should('have.length', 9);
-
-        // select facets
-        cy.get('[id="clickable-facet-category-listed-in"]').click();
-        cy.get('[id="facet-filter-nested-item-cwts"]')
-            .click()
-            .find('svg#clear-facet-filter-nested-item-cwts')
-            .should('exist');
-        cy.get('[id="clickable-facet-category-indexed-in"]').click();
-        cy.get('[id="facet-filter-nested-item-scopus"]')
-            .click()
-            .find('svg#clear-facet-filter-nested-item-scopus')
-            .should('exist');
-
-        cy.location().should(location => {
-            expect(location.search).to.contain('CWTS');
-            expect(location.search).to.contain('Scopus');
-        });
-
-        // remove a keyword - this should unselect the active facets and update the URL
-        cy.get('[data-testid="journal-search-chip-Title-Biology"]')
-            .find('svg')
-            .click();
-
-        cy.location().should(location => {
-            expect(location.search).not.to.contain('CWTS');
-            expect(location.search).not.to.contain('Scopus');
-        });
-
-        cy.get('[id="facet-filter-nested-item-cwts"]')
-            .find('svg#clear-facet-filter-nested-item-cwts')
-            .should('not.exist');
-
-        cy.get('[id="facet-filter-nested-item-scopus"]')
-            .find('svg#clear-facet-filter-nested-item-scopus')
-            .should('not.exist');
-        /* check mock data */
-        cy.go('back');
-        /* maybe check api call is re-made for data */
-        /* check mock data */
-        cy.location().should(location => {
-            expect(location.search).to.contain('CWTS');
-            expect(location.search).to.contain('Scopus');
-        });
-
-        cy.get('[id="facet-filter-nested-item-cwts"]')
-            .find('svg#clear-facet-filter-nested-item-cwts')
-            .should('exist');
-
-        cy.get('[id="facet-filter-nested-item-scopus"]')
-            .find('svg#clear-facet-filter-nested-item-scopus')
-            .should('exist');
-
-        // cy.checkA11y('div.StandardPage', {
-        //     reportName: 'Search Journals',
-        //     scopeName: 'Facet history restoration',
-        //     includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
-        // });
-    });
-
-    // it.only('Resets the search functionality and clears results when the clear button is clicked', () => {
-    //     cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-    //     cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
-    //     cy.get('[data-testid="journal-search-item-addable-Biology-1"]').click();
-    //     cy.get('[data-testid="journal-search-button"]').click();
-
-    //     cy.get('[data-testid="journal-search-interface-search-input"]').should('not.be.visible');
-    //     cy.get('[data-testid="journal-list"]').should('be.visible');
-    //     cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
-    //     cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
-
-    //     cy.get('[data-testid="journal-search-clear-keywords-button"]').should('exist');
-
-    //     cy.get('[data-testid="journal-search-facets"]')
-    //         .find('[data-testid="facets-filter"] nav > div')
-    //         .should('have.length', 9);
-    // });
 });
