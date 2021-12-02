@@ -24,7 +24,7 @@ context('Search', () => {
 
         cy.get('[data-testid=simple-search-input]').type('cats and dogs{enter}');
         cy.get('[data-testid="search-records-results"]').should('contain', 'Displaying works 1 to 7 of 7 total works.');
-        cy.get('.StandardPage > div > div > div:nth-of-type(3) h6').should('contain', 'Refine results');
+        cy.get('.StandardPage > div > div > div:nth-of-type(3) > div > div > div').should('contain', 'Refine results');
 
         // Click through to advanced search UI
         cy.get('[data-testid=show-advanced-search]')

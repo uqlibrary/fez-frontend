@@ -12,19 +12,23 @@ import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
 
-const areKeywordsDifferent = (keywords, anotherKeywords) => {
-    const keywordsNames = Object.keys(keywords || {});
-    const anotherKeywordsNames = Object.keys(anotherKeywords || {});
+export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
+export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
+
+export const areKeywordsDifferent = (keywords = {}, anotherKeywords = {}) => {
+    const keywordsNames = Object.keys(keywords);
+    const anotherKeywordsNames = Object.keys(anotherKeywords);
     return (
         keywordsNames.filter(keyword => !anotherKeywordsNames.includes(keyword)).length > 0 ||
         anotherKeywordsNames.filter(keyword => !keywordsNames.includes(keyword)).length > 0
     );
 };
 
+let lastRequest;
 export const SearchJournals = () => {
     const history = useHistory();
     const dispatch = useDispatch();
-    const { journalSearchQueryParams, locationKey, handleSearch } = useJournalSearch();
+    const { journalSearchQueryParams, handleSearch } = useJournalSearch();
     const initialKeywords = React.useRef(filterNonValidKeywords(journalSearchQueryParams?.keywords || {}));
     const {
         selectedKeywords,
@@ -35,10 +39,37 @@ export const SearchJournals = () => {
     } = useSelectedKeywords(journalSearchQueryParams?.keywords);
     const [showInputControls, setShowInputControls] = React.useState(!hasAnySelectedKeywords);
     const fromHandleKeywordDelete = React.useRef(false);
+    const fromHandleKeywordClear = React.useRef(false);
+    const fromHandleAllJournals = React.useRef(false);
+    const [showingAllJournals, setShowingAllJournals] = React.useState(false);
+    const allJournalsPageRefresh = React.useRef(!!initialKeywords.current[KEYWORD_ALL_JOURNALS_ID]);
+
+    /**
+     * On mount, check if we're arriving from a page refresh and
+     * need to run the All Journals search - indicated
+     * by the state of "showingAllJournals" being false while
+     * the 'all keywords' keyword is actually in the URL
+     */
+    React.useEffect(() => {
+        if (!!allJournalsPageRefresh.current) {
+            setShowingAllJournals(true);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleKeywordDeleteDecorator = keyword => {
         handleKeywordDelete(keyword);
+        if (keyword.id === KEYWORD_ALL_JOURNALS_ID) setShowingAllJournals(false);
         fromHandleKeywordDelete.current = true;
+    };
+
+    /**
+     * Reset keywords and any state for All Journals
+     */
+    const handleKeywordResetClick = () => {
+        setSelectedKeywords({});
+        setShowingAllJournals(false);
+        fromHandleKeywordClear.current = true;
     };
 
     /**
@@ -51,6 +82,19 @@ export const SearchJournals = () => {
         setSelectedKeywords(selectedKeywords);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
+
+    /**
+     * Show all Journals with a click of a button. Has to:
+     * - set stage flag
+     */
+    const handleSearchAllJournalsClick = React.useCallback(() => {
+        setShowInputControls(false);
+        setShowingAllJournals(true);
+        setSelectedKeywords({});
+        handleKeywordAdd(KEYWORD_ALL_JOURNALS);
+        fromHandleAllJournals.current = true;
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     /**
      * Effect to Keep keywords update when the forward and back browser buttons are used
@@ -92,14 +136,13 @@ export const SearchJournals = () => {
      * Run this effect whenever keywords are changed
      */
     React.useEffect(() => {
-        // if we land on this page via a url with keywords, bail
-        if (!areKeywordsDifferent(initialKeywords.current, selectedKeywords)) {
-            return;
-        }
         // otherwise, update the query search
         handleSearch({
             // make sure history reflects resetting facets filter, paging and sorting when keywords are removed
-            ...(fromHandleKeywordDelete.current ? {} : journalSearchQueryParams),
+            // or if All Journals has been clicked, or keyword clear button clicked
+            ...(fromHandleAllJournals.current || fromHandleKeywordClear.current || fromHandleKeywordDelete.current
+                ? {}
+                : journalSearchQueryParams),
             keywords: selectedKeywords,
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -112,11 +155,14 @@ export const SearchJournals = () => {
     React.useEffect(() => {
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
+            fromHandleKeywordClear.current = false;
+            fromHandleAllJournals.current = false;
             return;
         }
 
         // reset facets filter, paging and sorting when keywords are removed
-        if (fromHandleKeywordDelete.current) {
+        // or the All Journals button is pressed for the first time
+        if (fromHandleKeywordDelete.current || fromHandleKeywordClear.current || fromHandleAllJournals.current) {
             delete journalSearchQueryParams.activeFacets;
             delete journalSearchQueryParams.page;
             delete journalSearchQueryParams.pageSize;
@@ -124,29 +170,37 @@ export const SearchJournals = () => {
             delete journalSearchQueryParams.sortDirection;
         }
 
+        if (showingAllJournals || allJournalsPageRefresh.current) {
+            fromHandleAllJournals.current = false;
+            delete journalSearchQueryParams.keywords;
+
+            if (allJournalsPageRefresh) allJournalsPageRefresh.current = false;
+        }
+
         // add a delay when keywords are being removed
         // to avoid unnecessary load on the API
-        dispatch(searchJournals(journalSearchQueryParams, fromHandleKeywordDelete.current ? 1200 : 0));
-        fromHandleKeywordDelete.current = false;
+        lastRequest && clearTimeout(lastRequest);
+        lastRequest = setTimeout(
+            () => dispatch(searchJournals(journalSearchQueryParams)),
+            fromHandleKeywordDelete.current ? 1200 : 0,
+        );
+        fromHandleKeywordDelete.current = fromHandleKeywordClear.current = false;
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showInputControls, hasAnySelectedKeywords, JSON.stringify(journalSearchQueryParams)]);
 
     const txt = locale.components.searchJournals;
     return (
-        <StandardPage
-            title={txt.journalSearchInterface.title}
-            id="journal-search-page"
-            data-testid="journal-search-page"
-        >
+        <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
                 <Grid item xs={12}>
                     <JournalSearchInterface
-                        key={`journal-search-interface-${locationKey}`}
                         onSearch={handleSearchJournalsClick}
+                        onSearchAll={handleSearchAllJournalsClick}
                         handleKeywordDelete={handleKeywordDeleteDecorator}
+                        handleKeywordReset={handleKeywordResetClick}
+                        browseAllJournals={showingAllJournals}
                         {...{
                             selectedKeywords,
-                            setSelectedKeywords,
                             handleKeywordAdd,
                             hasAnySelectedKeywords,
                             showInputControls,
@@ -155,7 +209,11 @@ export const SearchJournals = () => {
                 </Grid>
                 <Grid item xs>
                     {!showInputControls && (
-                        <JournalSearchResult key={`journal-search-result-${locationKey}`} onSearch={handleSearch} />
+                        <JournalSearchResult
+                            onSearch={handleSearch}
+                            onSearchAll={handleSearchAllJournalsClick}
+                            browseAllJournals={showingAllJournals}
+                        />
                     )}
                 </Grid>
             </Grid>

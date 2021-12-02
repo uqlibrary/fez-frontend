@@ -93,30 +93,40 @@ export const clearJournalSearchKeywords = () => ({
     type: actions.CLEAR_JOURNAL_SEARCH_KEYWORDS,
 });
 
-let searchJournalsTimeoutID = 0;
-export const searchJournals = (searchQuery, delay = 0) => async dispatch => {
+// let searchJournalsTimeoutID = 0;
+// export const searchJournals = (searchQuery, delay = 0) => async dispatch => {
+//     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
+//     searchJournalsTimeoutID && clearTimeout(searchJournalsTimeoutID);
+//     searchJournalsTimeoutID = setTimeout(
+//         () =>
+//             get(JOURNAL_SEARCH_API(searchQuery)).then(
+//                 response => {
+//                     dispatch({
+//                         type: actions.SEARCH_JOURNALS_LOADED,
+//                         payload: response,
+//                     });
+//                     return Promise.resolve(response);
+//                 },
+//                 error => {
+//                     dispatch({
+//                         type: actions.SEARCH_JOURNALS_FAILED,
+//                         payload: error,
+//                     });
+//                     return Promise.reject(error);
+//                 },
+//             ),
+//         delay,
+//     );
+// };
+
+export const searchJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
-    searchJournalsTimeoutID && clearTimeout(searchJournalsTimeoutID);
-    searchJournalsTimeoutID = setTimeout(
-        () =>
-            get(JOURNAL_SEARCH_API(searchQuery)).then(
-                response => {
-                    dispatch({
-                        type: actions.SEARCH_JOURNALS_LOADED,
-                        payload: response,
-                    });
-                    return Promise.resolve(response);
-                },
-                error => {
-                    dispatch({
-                        type: actions.SEARCH_JOURNALS_FAILED,
-                        payload: error,
-                    });
-                    return Promise.reject(error);
-                },
-            ),
-        delay,
-    );
+    try {
+        const searchResponse = await get(JOURNAL_SEARCH_API(searchQuery));
+        dispatch({ type: actions.SEARCH_JOURNALS_LOADED, payload: searchResponse });
+    } catch (e) {
+        dispatch({ type: actions.SEARCH_JOURNALS_FAILED, payload: e });
+    }
 };
 
 /**

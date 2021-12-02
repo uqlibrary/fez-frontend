@@ -11,6 +11,7 @@ const JournalsListHeaderCol2Min = ({ journal }) => {
             item
             key={journal.key}
             id={`journal-list-header-min-${journal.key}`}
+            data-testid={`journal-list-header-min-${journal.key}`}
             style={{ width: journal.size, height: 34 }}
         >
             <Tooltip title={journal.titleTooltip || ''}>

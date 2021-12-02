@@ -11,6 +11,7 @@ const JournalsListHeaderCol2Full = ({ journal }) => {
             item
             key={journal.key}
             id={`journal-list-header-full-${journal.key}`}
+            data-testid={`journal-list-header-full-${journal.key}`}
             style={{ width: journal.size, height: 34 }}
         >
             <Tooltip title={journal.titleTooltip || ''}>

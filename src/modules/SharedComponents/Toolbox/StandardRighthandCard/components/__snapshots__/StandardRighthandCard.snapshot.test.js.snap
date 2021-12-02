@@ -10,6 +10,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       Title
@@ -47,6 +48,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       Title
@@ -86,6 +88,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       card title

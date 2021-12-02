@@ -12,6 +12,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
             container
             spacing={0}
             id="journal-list-header"
+            data-testid="journal-list-header"
             alignItems="center"
             style={{
                 width: '101%',
@@ -30,11 +31,18 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                             style={{ padding: 2, marginTop: -8 }}
                             checked={checked}
                             label="Select All"
+                            inputProps={{ 'aria-label': 'Select All' }}
                         />
                     </Tooltip>
                 )}
             </Grid>
-            <Grid item xs id="journal-list-header-col-1" style={{ height: 32, paddingLeft: 14 }}>
+            <Grid
+                item
+                xs
+                id="journal-list-header-col-1"
+                data-testid="journal-list-header-col-1"
+                style={{ height: 32, paddingLeft: 14 }}
+            >
                 <InputLabel shrink style={{ fontWeight: 600 }}>
                     {JournalFieldsMap[0].label}
                 </InputLabel>

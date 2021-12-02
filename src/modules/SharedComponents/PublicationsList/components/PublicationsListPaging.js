@@ -17,6 +17,10 @@ const styles = theme => ({
         minHeight: 32,
         margin: '0 2px',
     },
+    current: {
+        fontWeight: 900,
+        fontSize: '1.2rem',
+    },
     nextPrevButtons: {
         height: 32,
         minHeight: 32,
@@ -66,7 +70,7 @@ export class PublicationsListPaging extends Component {
 
     renderButton = key => {
         const currentPage = this.state.current_page;
-        const isCurrentPage = !!(key === currentPage);
+        const isCurrentPage = key === currentPage;
         const totalPages =
             this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         return (
@@ -76,12 +80,12 @@ export class PublicationsListPaging extends Component {
                 size={'small'}
                 className={`${classNames(
                     this.props.classes.pageButton,
-                    isCurrentPage && this.props.classes.pageButton,
+                    isCurrentPage && this.props.classes.current,
                 )} paging-button`}
                 onClick={() => {
                     this.pageChanged(key);
                 }}
-                disabled={this.props.disabled || isCurrentPage}
+                disabled={this.props.disabled}
                 color={isCurrentPage ? 'primary' : 'default'}
                 aria-label={locale.components.paging.pageButtonAriaLabel
                     .replace('[pageNumber]', key)

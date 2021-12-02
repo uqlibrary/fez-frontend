@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithReduxStore, WithRouter, act, fireEvent } from 'test-utils';
 import { id, JournalSearchInterface } from './JournalSearchInterface';
 
 const setup = state => {
@@ -29,6 +29,7 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
         expect(queryByTestId('journal-search-button')).toBeDisabled();
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-clear-keywords-button')).not.toBeInTheDocument();
     });
 
     it('should render when there are selected keywords', () => {
@@ -53,6 +54,14 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-favourite-journals-button')).toBeInTheDocument();
         expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
         expect(queryByTestId('journal-search-button')).not.toBeDisabled();
+        expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+    });
+    it('should not render clear button when there are no selected keywords', () => {
+        const { queryByTestId } = setup({
+            hasAnySelectedKeywords: false,
+            selectedKeywords: {},
+        });
+
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
     });
 
@@ -80,6 +89,7 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
     });
 
     it('should render when keywords have been changed', () => {
@@ -114,9 +124,49 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-button')).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-snackbar')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
         // act(() => {
         jest.runAllTimers();
         // });
         expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
+    });
+    it('should call setSelectedKeywords function with empty object when clear button clicked', () => {
+        const keywords = {
+            'Keyword-testing': {
+                type: 'Keyword',
+                text: 'testing',
+                id: 'Keyword-testing',
+            },
+        };
+        const mockHandleKeywordResetFn = jest.fn();
+        const { queryByTestId } = setup({
+            hasAnySelectedKeywords: true,
+            showInputControls: false,
+            selectedKeywords: keywords,
+            handleKeywordReset: mockHandleKeywordResetFn,
+        });
+        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(queryByTestId('journal-search-clear-keywords-button'));
+        });
+
+        expect(mockHandleKeywordResetFn).toHaveBeenCalled();
+    });
+
+    it('should call the Search All Journals function when button is clicked', () => {
+        const mockHandleSearchAllJournalsFn = jest.fn();
+        const { queryByTestId } = setup({
+            showInputControls: true,
+            onSearchAll: mockHandleSearchAllJournalsFn,
+        });
+
+        expect(queryByTestId('journal-search-browse-all-button')).toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(queryByTestId('journal-search-browse-all-button'));
+        });
+
+        expect(mockHandleSearchAllJournalsFn).toHaveBeenCalled();
     });
 });

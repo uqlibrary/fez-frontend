@@ -136,6 +136,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -1567,6 +1575,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -1576,6 +1585,13 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -2165,6 +2181,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -2174,6 +2191,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -3602,6 +3626,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -3611,6 +3636,13 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -4200,6 +4232,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -4209,6 +4242,13 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -4593,6 +4633,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -4602,6 +4643,13 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {

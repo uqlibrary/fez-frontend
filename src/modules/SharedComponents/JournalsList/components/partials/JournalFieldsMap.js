@@ -26,18 +26,50 @@ export const JournalFieldsMap = [
         key: 'fez_journal_doaj',
         label: 'Open access',
         subLabel: '',
-        size: 70,
+        size: 75,
         prefix: '',
         suffix: '',
         compactView: true,
         compactSize: 2,
         titleHelp: {
             title: 'Open Access',
-            text: <p>Open access is free, online access to research</p>,
+            text: (
+                <>
+                    <p>
+                        <b>Gold Open access:</b> A freely accessible, final version of a publication is available for
+                        everyone to read immediately after publication
+                    </p>
+                    <p>
+                        For other pathways:
+                        <ul>
+                            <li>
+                                Use the <b>embargo</b> filter to sort journals by how quickly a self-archived or author
+                                accepted manuscript can be made available via UQ eSpace. (Green open access)
+                            </li>
+                            <li>
+                                Use the <b>publish open access</b> filter to include or exclude Article Processing
+                                Charges (APCs)which are paid by an author to a publisher to make a research output
+                                immediately available and openly accessible. Some APCs may be prepaid or discounted, if
+                                the Library has negotiated a{' '}
+                                <a href={'https://web.library.uq.edu.au/read-and-publish-agreements'} target={'_blank'}>
+                                    read and publish agreement
+                                </a>
+                                .
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Policies and agreements can change over time or be subject to limits. Click on the journal title
+                        for more information.
+                    </p>
+                </>
+            ),
         },
         showTooltip: true,
         toolTipLabel: data => {
-            return data.fez_journal_doaj ? 'Open access available' : 'Open access not available';
+            return data.fez_journal_doaj
+                ? 'Open access journal'
+                : 'Gold open access is not available. Use filters to find alternate pathways';
         },
         translateFn: data => {
             // Awaiting final logic for OA from MF/EA
@@ -49,10 +81,10 @@ export const JournalFieldsMap = [
         },
     },
     {
-        key: '',
+        key: 'highest_quartile',
         label: 'Highest quartile',
         subLabel: 'Q1 is best',
-        size: 120,
+        size: 125,
         prefix: 'Q',
         suffix: '',
         compactView: true,
@@ -60,17 +92,16 @@ export const JournalFieldsMap = [
         titleHelp: {
             title: 'Highest quartile',
             text: (
-                <p>
-                    Indicates the highest quartile that the journal has ranked in <b>any category</b> from Scopus or Web
-                    of Science.
-                </p>
+                <>
+                    <p>
+                        Indicates the highest quartile that the journal has ranked in <b>any subject category</b> from
+                        Scopus <b>or</b> Web of Science.
+                    </p>
+                    <p>Journals ranked Q1 (highest) to Q4 (lowest) in the same subject category</p>
+                </>
             ),
         },
-        showTooltip: true,
-        titleTooltip: 'Journals ranked Q1 (highest) to Q4 (lowest) in the same subject category',
-        toolTipLabel: () => {
-            return 'Click on a journal title to view all';
-        },
+        showTooltip: false,
         translateFn: data => {
             const quartileList = [];
 
@@ -101,7 +132,7 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score',
         label: 'CiteScore',
         subLabel: 'higher is better',
-        size: 120,
+        size: 125,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -109,9 +140,11 @@ export const JournalFieldsMap = [
             title: 'CiteScore',
             text: (
                 <>
-                    <p>Scopus metric for journal citation impact. Updated annually.</p>
+                    <p>
+                        Scopus metric for journal citation impact. Updated annually. Not comparable across subject
+                        categories.
+                    </p>
                     <p>Higher is better.</p>
-                    <p>Not comparable across categories.</p>
                 </>
             ),
         },
@@ -124,7 +157,7 @@ export const JournalFieldsMap = [
         key: 'fez_journal_cite_score',
         label: 'CiteScore percentile',
         subLabel: '100 is best',
-        size: 250,
+        size: 255,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -132,10 +165,11 @@ export const JournalFieldsMap = [
             title: 'CiteScore percentile',
             text: (
                 <>
-                    <p>CiteScore percentile indicating where a journal is ranked within a category.</p>
-                    <p>E.g. 98 indicates that the journal is in a top 2% of its category.</p>
-                    <p>Higher is better (0-99).</p>
-                    <p>Comparable across categories.</p>
+                    <p>
+                        CiteScore percentile indicating where a journal is ranked within a category. Comparable across
+                        categories.
+                    </p>
+                    <p>Higher is better e.g. 98 means journal is in the top 2% of its subject category.</p>
                 </>
             ),
         },
@@ -177,7 +211,7 @@ export const JournalFieldsMap = [
         key: 'jnl_jcr_scie_impact_factor',
         label: 'Impact factor',
         subLabel: 'higher is better',
-        size: 110,
+        size: 115,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -185,9 +219,11 @@ export const JournalFieldsMap = [
             title: 'Impact factor',
             text: (
                 <>
-                    <p>Web of Science metric for journal citation impact. Updated annually.</p>
-                    <p>Higher is better (0-99).</p>
-                    <p>Not comparable across categories.</p>
+                    <p>
+                        Web of Science metric for journal citation impact. Updated annually. Not comparable across
+                        categories.
+                    </p>
+                    <p>Higher is better.</p>
                 </>
             ),
         },
@@ -204,18 +240,21 @@ export const JournalFieldsMap = [
         key: 'jnl_jcr_scie_category_jif_percentile',
         label: 'Impact factor percentile',
         subLabel: 'higher is better',
-        size: 250,
+        size: 255,
         prefix: '',
         suffix: '',
         compactView: false,
         titleHelp: {
-            title: 'CiteScore percentile',
+            title: 'Impact factor percentile',
             text: (
                 <>
-                    <p>Impact factor percentile indicating where a journal is ranked within a category.</p>
-                    <p>E.g. So 89 indicates that the journal is in a top 11% of its category.</p>
-                    <p>Higher is better (0-99).</p>
-                    <p>Comparable across categories.</p>
+                    <p>
+                        Impact factor percentile indicating where a journal is ranked within a subject category.
+                        Comparable across subject categories.
+                    </p>
+                    <p>
+                        Higher is better e.g. 90 indicates that the journal is in the top 10% of its subject category.
+                    </p>
                 </>
             ),
         },
@@ -271,7 +310,7 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score_snip',
         label: 'SNIP',
         subLabel: 'higher is better',
-        size: 120,
+        size: 125,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -279,9 +318,14 @@ export const JournalFieldsMap = [
             title: 'SNIP',
             text: (
                 <>
-                    <p>Scopus journal citation impact metric adjusted for field-specific citation practices.</p>
-                    <p>Higher is better;1 is average.</p>
-                    <p>Designed to be comparable across categories.</p>
+                    <p>
+                        Scopus journal citation impact metric adjusted for field-specific citation practices. Comparable
+                        across subject categories.
+                    </p>
+                    <p>
+                        A journal with a SNIP of 1.0 has the median (not mean) number of citations for journals in that
+                        field.
+                    </p>
                 </>
             ),
         },
@@ -294,7 +338,7 @@ export const JournalFieldsMap = [
         key: 'jnl_cite_score_sjr',
         label: 'SJR',
         subLabel: 'higher is better',
-        size: 120,
+        size: 125,
         prefix: '',
         suffix: '',
         compactView: false,
@@ -303,13 +347,11 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        Scopus journal citation impact metric that measures the prestige of citations recevied by a
-                        journal.
+                        Scopus journal citation impact metric that measures the prestige of citations received by a
+                        journal. Comparable across subject categories. Recommended for use in Life and Health Science
+                        disciplines.
                     </p>
-                    <p>E.g. 98 indicates that the journal is in a top 2% of its category.</p>
                     <p>Higher is better.</p>
-                    <p>Comparable across categories.</p>
-                    <p>Recommended to use in Life and Health Science disciplines.</p>
                 </>
             ),
         },

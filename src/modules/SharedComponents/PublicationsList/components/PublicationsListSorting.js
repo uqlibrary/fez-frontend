@@ -65,7 +65,13 @@ const PublicationsListSorting = props => {
             <Grid item xs={12} sm={6} md={props.canUseExport ? 3 : 4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
-                    <Select id="sortBy" onChange={sortByChanged} value={sortBy} disabled={props.disabled}>
+                    <Select
+                        id="sortBy"
+                        onChange={sortByChanged}
+                        value={sortBy}
+                        disabled={props.disabled}
+                        data-testid="publication-list-sorting-sort-by"
+                    >
                         {props.sortingData.sortBy.map((item, index) => {
                             return (
                                 <MenuItem key={index} value={item.value}>
@@ -103,7 +109,13 @@ const PublicationsListSorting = props => {
             <Grid item xs={12} sm={props.canUseExport ? 6 : 12} md={props.canUseExport ? 3 : 4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
-                    <Select id="pageSize" value={pageSize} disabled={props.disabled} onChange={pageSizeChanged}>
+                    <Select
+                        id="pageSize"
+                        value={pageSize}
+                        disabled={props.disabled}
+                        onChange={pageSizeChanged}
+                        data-testid="publication-list-sorting-page-size"
+                    >
                         {pageLength.map(number => {
                             return (
                                 <MenuItem key={`records-per-page-${number}`} value={number}>

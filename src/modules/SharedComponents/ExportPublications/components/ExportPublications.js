@@ -32,6 +32,7 @@ export default class ExportPublications extends PureComponent {
                     disabled={this.props.disabled}
                     value={-1}
                     displayEmpty
+                    data-testid="export-publications-format"
                 >
                     <MenuItem key={-1} value={-1} disabled>
                         Please select

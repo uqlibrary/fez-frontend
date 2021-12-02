@@ -6,6 +6,8 @@ import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { useJournalSearch, useActiveFacetFilters } from '../hooks';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -50,25 +52,28 @@ export const showFavouritedOnlyFacet = {
 
 export const getFacetsToDisplay = (rawFacets, renameFacetsList) => {
     const facetsToDisplay = [];
-    Object.keys(rawFacets).forEach(key => {
-        const rawFacet = rawFacets[key];
-        // construct facet object to display, if facet has a lookup - get display name from lookup,
-        // if facet key has a rename record, then use that.
-        // Note use of Number.isFinite - will convert any *actual* numeric values to string
-        const facetToDisplay = {
-            title: renameFacetsList[key] || key,
-            facetTitle: key,
-            facets: rawFacet.buckets.map(item => {
-                return {
-                    title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
-                    key: Number.isFinite(item.key) ? String(item.key) : item.key,
-                    count: item.doc_count,
+    rawFacets &&
+        Object.keys(rawFacets)
+            .sort()
+            .forEach(key => {
+                const rawFacet = rawFacets[key];
+                // construct facet object to display, if facet has a lookup - get display name from lookup,
+                // if facet key has a rename record, then use that.
+                // Note use of Number.isFinite - will convert any *actual* numeric values to string
+                const facetToDisplay = {
+                    title: renameFacetsList[key] || key,
+                    facetTitle: key,
+                    facets: rawFacet.buckets.map(item => {
+                        return {
+                            title: key.endsWith('quartile') ? `Q${item.key}` : item.key,
+                            key: Number.isFinite(item.key) ? String(item.key) : item.key,
+                            count: item.doc_count,
+                        };
+                    }),
                 };
-            }),
-        };
 
-        facetsToDisplay.push(facetToDisplay);
-    });
+                facetsToDisplay.push(facetToDisplay);
+            });
 
     // add show favourite only facet
     facetsToDisplay.push(showFavouritedOnlyFacet);
@@ -156,10 +161,16 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
         setActiveFacetsFilters(newActiveFacetsFilters);
     };
 
+    const _handleResetClick = () => {
+        setActiveFacetsFilters({});
+        setIsFacetFilterClicked(true);
+    };
+
     return (
         <StandardRighthandCard
             title={locale.components.searchJournals.journalFacetsFilter.title}
             help={locale.components.searchJournals.journalFacetsFilter.help}
+            testId="journal-search-facets"
         >
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>
@@ -187,6 +198,20 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                         );
                     })}
                 </List>
+                {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
+                    <Grid container justify="flex-end">
+                        <Grid item>
+                            <Button
+                                variant="contained"
+                                arial-label="rest facet filters"
+                                id={'reset-facet-filters'}
+                                onClick={_handleResetClick}
+                            >
+                                {locale.components.searchJournals.journalFacetsFilter.resetButtonText}
+                            </Button>
+                        </Grid>
+                    </Grid>
+                )}
             </div>
         </StandardRighthandCard>
     );

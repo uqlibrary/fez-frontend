@@ -471,7 +471,7 @@ export const getKeywordsParams = keywords => {
 };
 
 export const JOURNAL_SEARCH_API = query => {
-    const { pageSize = 20, sortBy = 'score', sortDirection = 'desc' } = {
+    const { pageSize, sortBy, sortDirection } = {
         ...locale.components.searchJournals.sortingDefaults,
         ...query,
     };
@@ -480,10 +480,10 @@ export const JOURNAL_SEARCH_API = query => {
         apiUrl: 'journals/search',
         options: {
             params: {
-                ...getKeywordsParams(query.keywords),
+                ...getKeywordsParams(query?.keywords),
                 ...getStandardSearchParams({
                     ...query,
-                    facets: query.activeFacets,
+                    facets: query?.activeFacets,
                     pageSize,
                     sortBy,
                     sortDirection,

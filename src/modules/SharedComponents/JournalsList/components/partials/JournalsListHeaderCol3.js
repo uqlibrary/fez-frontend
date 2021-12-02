@@ -12,7 +12,8 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
             container
             spacing={0}
             alignItems="flex-end"
-            style={{ width: 45, height: 32, borderBottom: '1px solid #CCC', marginBottom: 6 }}
+            data-testid={'journal-list-header-view-toggle'}
+            style={{ width: 45, height: 32, borderBottom: minimalView ? 'none' : '1px solid #CCC', marginBottom: 6 }}
         >
             <Grid item xs>
                 <Tooltip title={!!minimalView ? 'Show more data' : 'Show less data'}>

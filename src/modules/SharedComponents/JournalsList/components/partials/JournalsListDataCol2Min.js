@@ -11,6 +11,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
             container
             spacing={0}
             id={`journal-list-data-col-2-min-${index}`}
+            data-testid={`journal-list-data-col-2-min-${index}`}
             style={{ borderBottom: '1px dashed #e6e6e6' }}
         >
             {JournalFieldsMap.slice(1)

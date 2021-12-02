@@ -9,8 +9,6 @@ import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import * as hooks from '../hooks';
 
-import deparam from 'can-deparam';
-
 const setup = ({
     filters = {},
     onFacetsChangedHandler: clickHandler = undefined,
@@ -32,6 +30,10 @@ const setup = ({
             </WithReduxStore>
         </WithRouter>,
     );
+};
+
+const getIdText = label => {
+    return label.replace(/ /g, '-').toLowerCase();
 };
 
 describe('Search Journals Facets component', () => {
@@ -127,7 +129,7 @@ describe('Search Journals Facets component', () => {
         const facetsToDisplay = getFacetsToDisplay(facets.filters.facets, {});
 
         facetsToDisplay.forEach(item => {
-            const categoryId = `facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`;
+            const categoryId = `facet-category-${getIdText(item.facetTitle)}`;
 
             expect(getByTestId(categoryId)).toBeInTheDocument();
 
@@ -138,9 +140,7 @@ describe('Search Journals Facets component', () => {
             });
 
             item.facets.forEach(facet => {
-                const nestedItemLabel = facet.count ? `${facet.title} (${facet.count})` : `${facet.title}`;
-
-                const nestedButtonId = `facet-filter-nested-item-${nestedItemLabel.replace(/ /g, '-').toLowerCase()}`;
+                const nestedButtonId = `facet-filter-nested-item-${getIdText(facet.title)}`;
 
                 act(() => {
                     fireEvent.click(getByTestId(nestedButtonId));
@@ -193,7 +193,7 @@ describe('Search Journals Facets component', () => {
         const facetsToDisplay = getFacetsToDisplay(facets.filters.facets, {});
 
         facetsToDisplay.forEach(item => {
-            const categoryId = `facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`;
+            const categoryId = `facet-category-${getIdText(item.facetTitle)}`;
 
             expect(getByTestId(categoryId)).toBeInTheDocument();
 
@@ -203,11 +203,10 @@ describe('Search Journals Facets component', () => {
                 fireEvent.click(getByTestId(categoryId));
             });
 
-            item.facets.forEach((facet, index) => {
-                const nestedItemLabel = facet.count ? `${facet.title} (${facet.count})` : `${facet.title}`;
-
-                const nestedButtonId = `facet-filter-nested-item-${nestedItemLabel.replace(/ /g, '-').toLowerCase()}`;
-                const nestedClearButtonId = `clear-facet-filter-nested-item-${index}`;
+            item.facets.forEach(facet => {
+                const idText = getIdText(facet.title);
+                const nestedButtonId = `facet-filter-nested-item-${idText}`;
+                const nestedClearButtonId = `clear-facet-filter-nested-item-${idText}`;
 
                 // should not be in the document to begin with
                 expect(queryByTestId(nestedClearButtonId)).not.toBeInTheDocument();
@@ -241,7 +240,7 @@ describe('Search Journals Facets component', () => {
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing&keywords%5BKeyword-testing%5D%5Btype%5D=Keyword&keywords%5BKeyword-testing%5D%5Btext%5D=testing&keywords%5BKeyword-testing%5D%5Bid%5D=Keyword-testing&activeFacets%5Bfilters%5D%5BListed+in%5D%5B%5D=CWTS&activeFacets%5Bfilters%5D%5BIndexed+in%5D%5B%5D=Scopus&activeFacets%5Bfilters%5D%5BEmbargo%5D%5B%5D=12+months&page=1';
         const testQueryPartNoKeywords =
             '?keywords%5BTitle-Testing%5D%5Btype%5D=Title&keywords%5BTitle-Testing%5D%5Btext%5D=Testing&keywords%5BTitle-Testing%5D%5Bid%5D=Title-Testing';
-        const path = `/espace/feature-strategic-publishing/#${pathConfig.journals.search}`;
+        const path = pathConfig.journals.search;
         const testHistory = createMemoryHistory({ initialEntries: [path] });
         testHistory.push({
             path,
@@ -251,24 +250,17 @@ describe('Search Journals Facets component', () => {
             },
         });
 
-        const activeFacetList = deparam(testQueryPart);
-        let activeFacetsCount = 0;
-        Object.keys(activeFacetList.activeFacets.filters).forEach(key => {
-            activeFacetsCount += Array.isArray(activeFacetList.activeFacets.filters[key])
-                ? activeFacetList.activeFacets.filters[key].length
-                : 0;
-        });
-
         const mockActiveFiltersRef = jest.spyOn(hooks, 'useActiveFacetFilters');
+        const nestedClearButtonId = 'clear-facet-filter-nested-item';
 
-        const { queryAllByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
-
-        const nestedClearButtonId = 'clear-facet-filter-nested-item-0';
-        expect(queryAllByTestId(nestedClearButtonId)).length === activeFacetsCount;
+        const { getByTestId, queryByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
+        expect(getByTestId(`${nestedClearButtonId}-cwts`)).toBeVisible();
+        expect(getByTestId(`${nestedClearButtonId}-scopus`)).toBeVisible();
+        // not in the mock api response
+        expect(queryByTestId(`${nestedClearButtonId}-12-months`)).not.toBeInTheDocument();
 
         expect(mockActiveFiltersRef).toHaveBeenCalledWith({
-            // eslint-disable-next-line prettier/prettier
-            'Embargo': ['12 months'],
+            Embargo: ['12 months'],
             'Indexed in': ['Scopus'],
             'Listed in': ['CWTS'],
         });
@@ -281,9 +273,36 @@ describe('Search Journals Facets component', () => {
             },
         });
 
-        expect(queryAllByTestId(nestedClearButtonId)).length === 0;
         // Probably a bug in the codebase, but right now the custom hook will be called twice at this point
         // due to rerender and we're only interested in the second call to determine active facets have been cleared
         expect(mockActiveFiltersRef).toHaveBeenNthCalledWith(2, {});
+    });
+
+    it('should render reset button', () => {
+        const testFacetChangeFn = jest.fn();
+        const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
+        const facetItemTestId = 'facet-filter-nested-item-cwts';
+        const clearFacetItemTestId = 'clear-facet-filter-nested-item-cwts';
+
+        // expand Listed in
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
+        });
+
+        expect(getByTestId(facetItemTestId)).toBeVisible();
+        expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByTestId(facetItemTestId));
+        });
+
+        expect(getByTestId(clearFacetItemTestId)).toBeVisible();
+
+        // rest the active filters
+        act(() => {
+            fireEvent.click(getByTestId('reset-facet-filters'));
+        });
+
+        expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
     });
 });

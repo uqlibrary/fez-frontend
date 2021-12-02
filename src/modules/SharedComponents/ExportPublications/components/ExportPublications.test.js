@@ -31,4 +31,11 @@ describe('ExportPublications component', () => {
         const wrapper = setup({ disabled: true });
         expect(wrapper.find('WithStyles(ForwardRef(Select))').props().disabled).toEqual(true);
     });
+
+    it('renders with given data', () => {
+        const wrapper = setup({ exportData: { format: [{ label: 'excel', value: 'excel' }] } });
+        expect(wrapper.find('WithStyles(ForwardRef(Select))').length).toBe(1);
+        expect(wrapper.find('WithStyles(ForwardRef(MenuItem))').length).toBe(2);
+        expect(wrapper.find('WithStyles(ForwardRef(MenuItem))').get(1).props.value).toBe('excel');
+    });
 });

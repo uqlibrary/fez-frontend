@@ -136,6 +136,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -3481,6 +3489,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -3490,6 +3499,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -6646,6 +6662,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       },
                                                                       "MuiFormLabel": Object {
                                                                         "root": Object {
+                                                                          "lineHeight": "normal",
                                                                           "overflow": "hidden",
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
@@ -6655,6 +6672,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       "MuiIconButton": Object {
                                                                         "colorInherit": Object {
                                                                           "color": "none",
+                                                                        },
+                                                                      },
+                                                                      "MuiInput": Object {
+                                                                        "formControl": Object {
+                                                                          "label + &": Object {
+                                                                            "marginTop": 17,
+                                                                          },
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
