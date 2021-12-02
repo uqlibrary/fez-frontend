@@ -463,5 +463,113 @@ context('Strategic Publishing - Search', () => {
                 violations => console.log(violations),
             );
         });
+
+        it('Resets the search functionality and clears results when the clear button is clicked', () => {
+            const resultsLengthWithKeywordAndFacets = 4;
+            const resultsLengthFullDefaultPage = 10;
+
+            cy.get('[data-testid="journal-search-clear-keywords-button"]').should('exist');
+
+            cy.get('[data-testid="journal-search-facets"]')
+                .find('[data-testid="facets-filter"] nav > div')
+                .should('have.length', 9);
+
+            // select facets
+            cy.get('[id="clickable-facet-category-listed-in"]').click();
+            cy.get('[id="facet-filter-nested-item-cwts"]')
+                .as('facetItemCwts')
+                .click()
+                .find('svg#clear-facet-filter-nested-item-cwts')
+                .should('exist');
+            cy.get('[id="clickable-facet-category-indexed-in"]').click();
+            cy.get('[id="facet-filter-nested-item-scopus"]')
+                .as('facetItemScopus')
+                .click()
+                .find('svg#clear-facet-filter-nested-item-scopus')
+                .should('exist');
+
+            // confirm two facets visible selected in the UI
+            cy.get('[id^="clear-facet-filter-nested-item').should('have.length', 2);
+
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithKeywordAndFacets); // /mock/index.js
+
+            // update sorting
+            cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
+            cy.get('[role="listbox"] > li[data-value="score"]').click();
+            cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Search relevance');
+
+            // update order
+            cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
+            cy.get('[role="listbox"] > li[data-value="Desc"]').click();
+            cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Desc');
+
+            // update page size
+            cy.get('[data-testid="publication-list-sorting-page-size"]').click();
+            cy.get('[role="listbox"] > li[data-value="20"]').click();
+            cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '20');
+
+            // assert everything selected is in the URL
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('CWTS');
+                expect(location.search).to.contain('Scopus');
+                expect(location.search).to.contain('sortBy=score');
+                expect(location.search).to.contain('sortDirection=Desc');
+                expect(location.search).to.contain('pageSize=20');
+            });
+
+            cy.get('[data-testid="journal-search-clear-keywords-button"]').click();
+
+            cy.get('[data-testid="journal-search-card"]').should('be.visible');
+
+            // assert nothing previously selected is in the URL
+            cy.location().should(location => {
+                expect(location.search).to.eq('');
+            });
+
+            // assert broadly that step 1 is visible and in default state
+            cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
+            cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
+            cy.get('button[data-testid="journal-search-favourite-journals-button"]').should(
+                'not.have.attr',
+                'disabled',
+            );
+
+            cy.get('[data-testid="journal-search-keywords-input"]')
+                .invoke('val')
+                .should('eq', '');
+
+            // as a final check, perform a new search and confirm previous search terms/facets/sorting are not present
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+            cy.get('[data-testid="journal-search-item-addable-Biology-1"]').click();
+            cy.get('[data-testid="journal-search-button"]').click();
+            cy.get('[data-testid="journal-list"]').should('be.visible');
+
+            cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
+            cy.get('@ResultTitles').should('have.length', resultsLengthFullDefaultPage);
+
+            // default sorting
+            cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Highest quartile');
+            cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Asc');
+            cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '10');
+
+            // no facets visible selected in the UI (here we check for any svg 'delete' button next to a selected facet)
+            cy.get('[id^="clear-facet-filter-nested-item').should('have.length', 0);
+
+            // nothing in the URL from the previous search
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('CWTS');
+                expect(location.search).not.to.contain('Scopus');
+                expect(location.search).not.to.contain('sortBy=score');
+                expect(location.search).not.to.contain('sortDirection=Desc');
+                expect(location.search).not.to.contain('pageSize=20');
+            });
+        });
     });
 });
