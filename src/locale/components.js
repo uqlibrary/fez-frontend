@@ -3888,7 +3888,7 @@ export default {
             },
             journalFacetsFilter: {
                 title: 'Refine results',
-                resetButtonText: 'Reset',
+                resetButtonText: 'Clear all filters',
                 favoriteFilter: {
                     displayTitle: 'Favourite Journals',
                     activeFilter: 'Show journals favourited',

@@ -146,7 +146,7 @@ describe('FacetsFilter', () => {
         expect(getByText(/Work type/)).toBeInTheDocument();
 
         fireEvent.click(getByTestId('clickable-facet-category-display-type'));
-        expect(getByTestId('clear-facet-filter-nested-item-0')).toBeInTheDocument();
+        expect(getByTestId('clear-facet-filter-nested-item-journal-article')).toBeInTheDocument();
         expect(getByText('Journal Article (2)')).toBeInTheDocument();
 
         fireEvent.click(getByText('Journal Article (2)'));
