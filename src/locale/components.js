@@ -3877,7 +3877,7 @@ export default {
                     { value: 'highest_quartile', label: 'Highest quartile' },
                     { value: 'cite_score', label: 'CiteScore' },
                     { value: 'impact_factor', label: 'Impact factor' },
-                    { value: 'sjp', label: 'SJR' },
+                    { value: 'sjr', label: 'SJR' },
                     { value: 'snip', label: 'SNIP' },
                 ],
             },

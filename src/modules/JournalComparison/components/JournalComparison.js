@@ -20,15 +20,15 @@ export const JournalComparison = () => {
                         <Grid item xs sm md={12}>
                             <StandardCard noHeader>
                                 <Grid container spacing={2}>
-                                    <JournalComparisonList journals={location.state?.journals} />
+                                    <JournalComparisonList journals={location?.state?.journals} />
                                 </Grid>
-                                <Grid style={{ paddingTop: location.state?.journals ? 20 : 25 }} item xs={12}>
+                                <Grid style={{ paddingTop: location?.state?.journals ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
                                         <Grid item xs="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
-                                                prevLocation={location.state?.prevLocation}
+                                                prevLocation={location?.state?.prevLocation}
                                             />
                                         </Grid>
                                     </Grid>
