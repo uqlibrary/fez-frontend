@@ -413,9 +413,19 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
     .reply(config => {
-        return config.params.export_to && config.params.export_to === 'excel'
-            ? [200, 'Exported', { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }]
-            : [200, { ...mockData.journalList }];
+        console.log(
+            'Returning lookup data for config:', config
+        );
+        if (config.params.export_to && config.params.export_to === 'excel'){
+            return [200, 'Exported', { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }];
+        }
+        else if(config.params.title?.includes('Biological')){
+            let maxCount = config.params.title?.includes('Glycobiology') ? 4 : 8;
+            if(config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
+            const data = mockData.journalList.data.filter( (element, index) => index < maxCount);
+            return [200, { ...mockData.journalList, ...{data}, ...{"total": maxCount}}];
+        }
+        return [200, { ...mockData.journalList }];
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
