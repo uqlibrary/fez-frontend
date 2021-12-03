@@ -52,4 +52,16 @@ describe('JournalsListDataCol2 Min', () => {
         expect(queryByText('Q')).not.toBeInTheDocument();
         expect(document.querySelector('.MuiGrid-item:last-of-type p').title).toEqual('');
     });
+    it('should render tooltip content directly if no toolTipLabel function', () => {
+        // set default blank data for test coverage for one of the journal items.
+        mockData[0].fez_journal_cite_score = {
+            fez_journal_cite_score_asjc_code: [{}],
+        };
+        const mockMapping = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
+        mockMapping.toolTipLabel = () => null;
+
+        const { queryByText } = setup({ journal: mockData[0] });
+        expect(queryByText('Q')).not.toBeInTheDocument();
+        expect(document.querySelector('.MuiGrid-item:last-of-type p').title).toEqual('');
+    });
 });

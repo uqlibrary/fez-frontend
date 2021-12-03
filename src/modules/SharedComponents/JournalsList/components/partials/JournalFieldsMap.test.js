@@ -2,126 +2,105 @@ import { mockData } from '../../../../../mock/data/testing/journals/journalSearc
 
 import { JournalFieldsMap } from './JournalFieldsMap';
 
-describe('Journal Fields Map - single item', () => {
-    const testData = mockData.data[0];
-    it('should show expected data for each translateFn', () => {
-        JournalFieldsMap.map(item => {
-            switch (item.key) {
-                case 'jnl_title':
-                    // Journal Title Mapping
-                    expect(item.translateFn(testData)).toEqual(testData.jnl_title);
-                    break;
-                case 'fez_journal_doaj':
-                    // Open Access Mapping
-                    expect(item.translateFn(testData).props.style.color).toEqual('#e5e5e5');
-                    expect(item.translateFn(testData).props.style.marginTop).toEqual(12);
-                    break;
-                case '':
-                    // Highest Quartile Mapping
-                    expect(item.translateFn(testData)).toEqual(2);
-                    break;
-                case 'jnl_cite_score':
-                    // CiteScore
-                    if (testData.fez_journal_cite_score && testData.fez_journal_cite_score.jnl_cite_score) {
-                        expect(item.translateFn(testData)).toEqual(testData.fez_journal_cite_score.jnl_cite_score);
-                    }
-                    break;
-                case 'fez_journal_cite_score':
-                    // CiteScore percentile
-                    testData.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(map => {
-                        expect(item.translateFn(testData)).toContain(map.jnl_cite_score_asjc_code_percentile);
-                        expect(item.translateFn(testData)).toContain('-');
-                        expect(item.translateFn(testData)).toContain(
-                            map.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, ''),
-                        );
-                    });
-                    break;
-                case 'jnl_jcr_scie_impact_factor':
-                    // Impact factor
-                    if (testData.fez_journal_jcr_scie && testData.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor) {
-                        expect(item.translateFn(testData)).toEqual(
-                            testData.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor,
-                        );
-                    } else {
-                        if (testData.fez_journal_jcr_ssci && testData.fez_journal_jcr_ssci.jnl_jcr_ssci_impact_factor) {
-                            expect(item.translateFn(testData)).toEqual(
-                                testData.fez_journal_jcr_ssci.jnl_jcr_ssci_impact_factor,
-                            );
-                        } else {
-                            expect(item.translateFn(testData)).toEqual(null);
-                        }
-                    }
-                    break;
-                case 'jnl_jcr_scie_category_jif_percentile':
-                    // Impact factor percentile
-                    testData.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(map => {
-                        expect(item.translateFn(testData)).toContain(map.jnl_jcr_scie_category_jif_percentile);
-                        expect(item.translateFn(testData)).toContain('-');
-                        expect(item.translateFn(testData)).toContain(map.jnl_jcr_scie_category_description_lookup);
-                    });
-                    break;
-                case 'jnl_cite_score_snip':
-                    // SNIP
-                    expect(item.translateFn(testData)).toContain(testData.fez_journal_cite_score.jnl_cite_score_snip);
-                    break;
-                case 'jnl_cite_score_sjr':
-                    // SJR
-                    expect(item.translateFn(testData)).toContain(testData.fez_journal_cite_score.jnl_cite_score_sjr);
-                    break;
-                default:
-                    break;
-            }
-        });
-    });
-    it('should show expected data for each toolTipLabel function', () => {
+describe('Journal Fields Map', () => {
+    it('should show correct information for Journal Title translateFn', () => {
         const testData = mockData.data[0];
-        JournalFieldsMap.map(item => {
-            // debug(item.key);
-            switch (item.key) {
-                case 'fez_journal_doaj':
-                    // Open Access Mapping
-                    !!testData.fez_journal_doaj
-                        ? expect(item.toolTipLabel(testData)).toEqual('Open access available')
-                        : expect(item.toolTipLabel(testData)).toEqual('Open access not available');
-                    break;
-                case '':
-                    expect(item.toolTipLabel(testData)).toEqual('Click on a journal title to view all');
-                    break;
-                case 'fez_journal_cite_score':
-                    // CiteScore percentile
-                    testData.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(map => {
-                        expect(item.toolTipLabel(testData)).toContain(map.jnl_cite_score_asjc_code_percentile);
-                        expect(item.toolTipLabel(testData)).toContain('-');
-                        expect(item.toolTipLabel(testData)).toContain(
-                            map.jnl_cite_score_asjc_code_lookup.replace(/[0-9]/g, ''),
-                        );
-                    });
-                    break;
-                case 'jnl_jcr_scie_category_jif_percentile':
-                    // Impact factor percentile
-                    testData.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(map => {
-                        expect(item.toolTipLabel(testData)).toContain(map.jnl_jcr_scie_category_jif_percentile);
-                        expect(item.toolTipLabel(testData)).toContain('-');
-                        expect(item.toolTipLabel(testData)).toContain(map.jnl_jcr_scie_category_description_lookup);
-                    });
-                    break;
-                default:
-                    break;
-            }
-        });
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_title')[0];
+        expect(testFieldMap.translateFn(testData)).toEqual(testData.jnl_title);
     });
-    // Additional Tests for code coverage checking.
-    it('should show alternative style of icon if open access allowed', () => {
+    it('should show correct information for Open Access translateFn and toolTipLabel', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
+        expect(testFieldMap.translateFn(testData).props.style.color).toEqual('#e5e5e5');
+        expect(testFieldMap.translateFn(testData).props.style.marginTop).toEqual(12);
+        !!testData.fez_journal_doaj
+            ? expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal')
+            : expect(testFieldMap.toolTipLabel(testData)).toEqual(
+                  'Gold open access is not available. Use filters to find alternate pathways',
+              );
+    });
+    it('should show alternative style of icon for Open Access allowed', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
         // Allow open access
         testData.fez_journal_doaj = true;
-        expect(testFieldMap[0].translateFn(testData).props.style.color).toEqual('orange');
-        expect(testFieldMap[0].toolTipLabel(testData)).toEqual('Open access available');
+        expect(testFieldMap.translateFn(testData).props.style.color).toEqual('orange');
+        expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal');
     });
-    it('should also consider quartile data from SSCI if exists', () => {
+
+    it('should show correct information for Highest Quartile translateFn', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.label === 'Highest quartile');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'highest_quartile')[0];
+        expect(testFieldMap.translateFn(testData)).toEqual(2);
+    });
+
+    it('should show correct information for CiteScore translateFn', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score')[0];
+        if (testData.fez_journal_cite_score && testData.fez_journal_cite_score.jnl_cite_score) {
+            expect(testFieldMap.translateFn(testData)).toEqual(testData.fez_journal_cite_score.jnl_cite_score);
+        }
+    });
+
+    it('should show correct information for CiteScore percentile translateFn', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_cite_score')[0];
+        let label = undefined;
+        label = testData.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
+            return `${item.jnl_cite_score_asjc_code_percentile} - ${item.jnl_cite_score_asjc_code_lookup.replace(
+                /[0-9]/g,
+                '',
+            )}`;
+        });
+        label = label.join(', ');
+        expect(testFieldMap.translateFn(testData)).toEqual(label);
+        expect(testFieldMap.toolTipLabel(testData)).toEqual(label);
+    });
+
+    it('should show correct information for Impact factor translateFn', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_impact_factor')[0];
+        if (testData.fez_journal_jcr_scie && testData.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor) {
+            expect(testFieldMap.translateFn(testData)).toEqual(
+                testData.fez_journal_jcr_scie.jnl_jcr_scie_impact_factor,
+            );
+        } else {
+            if (testData.fez_journal_jcr_ssci && testData.fez_journal_jcr_ssci.jnl_jcr_ssci_impact_factor) {
+                expect(testFieldMap.translateFn(testData)).toEqual(
+                    testData.fez_journal_jcr_ssci.jnl_jcr_ssci_impact_factor,
+                );
+            } else {
+                expect(testFieldMap.translateFn(testData)).toEqual(null);
+            }
+        }
+    });
+
+    it('should show correct information for Impact factor percentile translateFn and toolTipLabel', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_category_jif_percentile')[0];
+        let label = undefined;
+        label = testData.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+            return `${item.jnl_jcr_scie_category_jif_percentile} - ${item.jnl_jcr_scie_category_description_lookup}`;
+        });
+        label = label.join(', ');
+        expect(testFieldMap.translateFn(testData)).toEqual(label);
+        expect(testFieldMap.toolTipLabel(testData)).toEqual(label);
+    });
+
+    it('should show correct information for SNIP translateFn', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_snip')[0];
+        expect(testFieldMap.translateFn(testData)).toContain(testData.fez_journal_cite_score.jnl_cite_score_snip);
+    });
+
+    it('should show correct information for SJR translateFn', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_sjr')[0];
+        expect(testFieldMap.translateFn(testData)).toContain(testData.fez_journal_cite_score.jnl_cite_score_sjr);
+    });
+    it('should also consider quartile data from SSCI (if exists) in highest quartile calculation', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'highest_quartile')[0];
         // Mock record for SSCI.
         testData.fez_journal_jcr_ssci = {
             fez_journal_jcr_ssci_category: [
@@ -130,55 +109,50 @@ describe('Journal Fields Map - single item', () => {
                 },
             ],
         };
-        expect(testFieldMap[0].translateFn(testData)).toEqual(1);
+        expect(testFieldMap.translateFn(testData)).toEqual(1);
     });
-    it('should return no quartile information if none is available', () => {
+
+    it('should return no highest quartile information if none is available', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.label === 'Highest quartile');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'highest_quartile')[0];
         // removal of data used to calculate quartile information
         testData.fez_journal_jcr_ssci = undefined;
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_cite_score = undefined;
-        expect(testFieldMap[0].translateFn(testData)).toEqual(null);
-    });
-    it('should return no CiteScore if none available', () => {
-        const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score');
-        // remove data used to calculate CiteScore
-        testData.fez_journal_cite_score = undefined;
-        expect(testFieldMap[0].translateFn(testData)).toEqual('');
+        expect(testFieldMap.translateFn(testData)).toEqual(null);
     });
     it('should return no CiteScore Percentile if none available', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_cite_score');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_cite_score')[0];
         // remove data used to calculate CiteScore Percentile
         testData.fez_journal_cite_score = undefined;
-        expect(testFieldMap[0].translateFn(testData)).toEqual(undefined);
-        expect(testFieldMap[0].toolTipLabel(testData)).toEqual(undefined);
+        expect(testFieldMap.translateFn(testData)).toEqual(undefined);
+        expect(testFieldMap.toolTipLabel(testData)).toEqual(undefined);
     });
     it('should Calculate impact factor from SSCI if no SCIE, or return NULL if neither', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_impact_factor');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_impact_factor')[0];
         // calculate based on ssci
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_jcr_ssci = {
             jnl_jcr_ssci_impact_factor: 10,
         };
-        expect(testFieldMap[0].translateFn(testData)).toEqual(10);
+        expect(testFieldMap.translateFn(testData)).toEqual(10);
         // calculate basd on scie
         testData.fez_journal_jcr_ssci = undefined;
         testData.fez_journal_jcr_scie = {
             jnl_jcr_scie_impact_factor: 5,
         };
-        expect(testFieldMap[0].translateFn(testData)).toEqual(5);
+        expect(testFieldMap.translateFn(testData)).toEqual(5);
         // no factors to calclate - expect null
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_jcr_ssci = undefined;
-        expect(testFieldMap[0].translateFn(testData)).toEqual(null);
+        expect(testFieldMap.translateFn(testData)).toEqual(null);
     });
+
     it('should calculate impact factor tooltip and translateFn from ssci if no scie, or undefined if neither', () => {
         const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_category_jif_percentile');
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_jcr_scie_category_jif_percentile')[0];
         // read from ssci
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_jcr_ssci = {
@@ -189,20 +163,13 @@ describe('Journal Fields Map - single item', () => {
                 },
             ],
         };
-        expect(testFieldMap[0].toolTipLabel(testData)).toEqual('1 - test');
-        expect(testFieldMap[0].translateFn(testData)).toEqual('1 - test');
+        expect(testFieldMap.toolTipLabel(testData)).toEqual('1 - test');
+        expect(testFieldMap.translateFn(testData)).toEqual('1 - test');
         // none set.
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_jcr_ssci = undefined;
-        expect(testFieldMap[0].toolTipLabel(testData)).toEqual(undefined);
-        expect(testFieldMap[0].translateFn(testData)).toEqual(undefined);
-    });
-    it('should return no SNIP data if none available', () => {
-        const testData = mockData.data[0];
-        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_snip');
-        // remove SNIP data
-        testData.fez_journal_cite_score = undefined;
-        expect(testFieldMap[0].translateFn(testData)).toEqual(null);
+        expect(testFieldMap.toolTipLabel(testData)).toEqual(undefined);
+        expect(testFieldMap.translateFn(testData)).toEqual(undefined);
     });
     it('should return no SJR data if none available', () => {
         const testData = mockData.data[0];
@@ -210,5 +177,19 @@ describe('Journal Fields Map - single item', () => {
         // remove SJR data
         testData.fez_journal_cite_score = undefined;
         expect(testFieldMap[0].translateFn(testData)).toEqual(null);
+    });
+    it('should return no SNIP data if none available', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_snip')[0];
+        // remove SNIP data
+        testData.fez_journal_cite_score = undefined;
+        expect(testFieldMap.translateFn(testData)).toEqual(null);
+    });
+    it('should return no CiteScore if none available', () => {
+        const testData = mockData.data[0];
+        const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score')[0];
+        // remove data used to calculate CiteScore
+        testData.fez_journal_cite_score = undefined;
+        expect(testFieldMap.translateFn(testData)).toEqual('');
     });
 });
