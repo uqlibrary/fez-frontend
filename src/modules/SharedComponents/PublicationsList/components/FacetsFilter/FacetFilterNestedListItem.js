@@ -49,7 +49,7 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
             classes={{
                 gutters: classes.listItemGutters,
             }}
-            aria-label={!isActive ? 'Add filter' : 'Remove filter'}
+            aria-label={!isActive ? `${primaryText} add filter` : `${primaryText} remove filter`}
         >
             {isActive && (
                 <ListItemIcon>
