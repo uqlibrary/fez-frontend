@@ -351,7 +351,7 @@ context('Strategic Publishing - Search', () => {
             setupInitialSearchAndAssert();
         });
 
-        it.only('restores results and keyword state after a keyword has been deleted', () => {
+        it('restores results and keyword state after a keyword has been deleted', () => {
             const resultsLengthWithOneKeyword = 8;
             const resultsLengthWithTwoKeywords = 4;
 
@@ -398,7 +398,7 @@ context('Strategic Publishing - Search', () => {
             );
         });
 
-        it.only('restores results and facet state after a keyword has been deleted', () => {
+        it('restores results and facet state after a keyword has been deleted', () => {
             const resultsLengthWithKeywordOnly = 8;
             const resultsLengthWithKeywordAndFacets = 4;
 
@@ -485,7 +485,7 @@ context('Strategic Publishing - Search', () => {
         beforeEach(() => {
             setupInitialSearchAndAssert();
         });
-        it.only('resets the search functionality and clears results when the clear button is clicked', () => {
+        it('resets the search functionality and clears results when the clear button is clicked', () => {
             const resultsLengthWithKeywordAndFacets = 4;
             const resultsLengthFullDefaultPage = 10;
 
@@ -596,7 +596,7 @@ context('Strategic Publishing - Search', () => {
             );
         });
 
-        it.only('resets the search functionality and clears results when the last keyword is deleted', () => {
+        it('resets the search functionality and clears results when the last keyword is deleted', () => {
             const resultsLengthWithOneKeyword = 8;
             const resultsLengthWithTwoKeywords = 4;
 
@@ -645,7 +645,7 @@ context('Strategic Publishing - Search', () => {
     });
 
     context('Handles Browse All Journals functionality', () => {
-        it.only('shows All Journals when the Browse All Journals button is clicked in Search Results', () => {
+        it('shows All Journals when the Browse All Journals button is clicked in Search Results', () => {
             const resultsLengthWithAllResults = 10;
             const resultsLengthWithTwoKeywords = 4;
 
@@ -697,7 +697,7 @@ context('Strategic Publishing - Search', () => {
             );
         });
 
-        it.only('shows All Journals when the Browse All Journals button is clicked from the initial Journal Search page', () => {
+        it('shows All Journals when the Browse All Journals button is clicked from the initial Journal Search page', () => {
             const resultsLengthWithAllResults = 10;
             const resultsLengthWithOneKeyword = 8;
 
