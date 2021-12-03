@@ -1,5 +1,4 @@
-import { mockData } from '../../../../../mock/data/testing/journals/journalSearchResults';
-
+import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { JournalFieldsMap } from './JournalFieldsMap';
 
 describe('Journal Fields Map', () => {
@@ -70,8 +69,7 @@ describe('Journal Fields Map', () => {
     it('should show correct information for CiteScore percentile translateFn', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_cite_score')[0];
-        let label = undefined;
-        label = testData.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
+        let label = testData.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
             return `${item.jnl_cite_score_asjc_code_percentile} - ${item.jnl_cite_score_asjc_code_lookup.replace(
                 /[0-9]/g,
                 '',
@@ -116,7 +114,7 @@ describe('Journal Fields Map', () => {
             jnl_jcr_ssci_impact_factor: 10,
         };
         expect(testFieldMap.translateFn(testData)).toEqual(10);
-        // calculate basd on scie
+        // calculate based on scie
         testData.fez_journal_jcr_ssci = undefined;
         testData.fez_journal_jcr_scie = {
             jnl_jcr_scie_impact_factor: 5,
@@ -142,7 +140,7 @@ describe('Journal Fields Map', () => {
         };
         expect(testFieldMap.toolTipLabel(testData)).toEqual('1 - test');
         expect(testFieldMap.translateFn(testData)).toEqual('1 - test');
-        // none set.
+        // check for undefined return.
         testData.fez_journal_jcr_scie = undefined;
         testData.fez_journal_jcr_ssci = undefined;
         expect(testFieldMap.toolTipLabel(testData)).toEqual(undefined);
@@ -165,6 +163,7 @@ describe('Journal Fields Map', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_snip')[0];
         expect(testFieldMap.translateFn(testData)).toEqual(testData.fez_journal_cite_score.jnl_cite_score_snip);
+        // check for null return
         testData.fez_journal_cite_score = undefined;
         expect(testFieldMap.translateFn(testData)).toEqual(null);
     });
@@ -173,6 +172,7 @@ describe('Journal Fields Map', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'jnl_cite_score_sjr')[0];
         expect(testFieldMap.translateFn(testData)).toEqual(testData.fez_journal_cite_score.jnl_cite_score_sjr);
+        // check for null return
         testData.fez_journal_cite_score = undefined;
         expect(testFieldMap.translateFn(testData)).toEqual(null);
     });
