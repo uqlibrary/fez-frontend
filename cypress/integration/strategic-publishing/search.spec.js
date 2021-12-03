@@ -320,25 +320,40 @@ context('Strategic Publishing - Search', () => {
         );
     });
 
+    const setupInitialSearchAndAssert = () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-Glycobiology-3"]').click();
+        cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-list"]').should('be.visible');
+
+        cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
+        cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+
+        cy.location().should(location => {
+            expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
+            expect(location.search).to.contain('keywords%5BTitle-Biological');
+        });
+    };
+
+    const assertInitialViewVisible = () => {
+        cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
+        cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
+        cy.get('button[data-testid="journal-search-favourite-journals-button"]').should('not.have.attr', 'disabled');
+
+        cy.get('[data-testid="journal-search-keywords-input"]')
+            .invoke('val')
+            .should('eq', '');
+    };
+
     context('Handling when the back button is clicked', () => {
         beforeEach(() => {
-            cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-            cy.get('[data-testid="journal-search-item-addable-Glycobiology-3"]').click();
-            cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
-            cy.get('[data-testid="journal-search-button"]').click();
-            cy.get('[data-testid="journal-list"]').should('be.visible');
-
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+            setupInitialSearchAndAssert();
         });
 
-        it('restores results and keyword state after a keyword has been deleted', () => {
+        it.only('restores results and keyword state after a keyword has been deleted', () => {
             const resultsLengthWithOneKeyword = 8;
             const resultsLengthWithTwoKeywords = 4;
-            cy.location().should(location => {
-                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).to.contain('keywords%5BTitle-Biological');
-            });
 
             // check we have expected number of mock results
             cy.get('[id^="journal-list-data-col-1-title"]')
@@ -374,15 +389,16 @@ context('Strategic Publishing - Search', () => {
             cy.checkA11y(
                 'div.StandardPage',
                 {
+                    rules: { 'color-contrast': { enabled: false } },
                     reportName: 'Search Journals',
-                    scopeName: 'Keyword history restoration',
+                    scopeName: 'Keyword history restoration after keyword deleted',
                     includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
                 },
                 violations => console.log(violations),
             );
         });
 
-        it('restores results and facet state after a keyword has been deleted', () => {
+        it.only('restores results and facet state after a keyword has been deleted', () => {
             const resultsLengthWithKeywordOnly = 8;
             const resultsLengthWithKeywordAndFacets = 4;
 
@@ -456,15 +472,20 @@ context('Strategic Publishing - Search', () => {
             cy.checkA11y(
                 'div.StandardPage',
                 {
+                    rules: { 'color-contrast': { enabled: false } },
                     reportName: 'Search Journals',
-                    scopeName: 'Facet history restoration',
+                    scopeName: 'Facet history restoration after keyword removed',
                     includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
                 },
                 violations => console.log(violations),
             );
         });
-
-        it('Resets the search functionality and clears results when the clear button is clicked', () => {
+    });
+    context('Handling the Clear functionality', () => {
+        beforeEach(() => {
+            setupInitialSearchAndAssert();
+        });
+        it.only('resets the search functionality and clears results when the clear button is clicked', () => {
             const resultsLengthWithKeywordAndFacets = 4;
             const resultsLengthFullDefaultPage = 10;
 
@@ -522,6 +543,7 @@ context('Strategic Publishing - Search', () => {
                 expect(location.search).to.contain('pageSize=20');
             });
 
+            // clear the search
             cy.get('[data-testid="journal-search-clear-keywords-button"]').click();
 
             cy.get('[data-testid="journal-search-card"]').should('be.visible');
@@ -532,16 +554,7 @@ context('Strategic Publishing - Search', () => {
             });
 
             // assert broadly that step 1 is visible and in default state
-            cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
-            cy.get('button[data-testid="journal-search-browse-all-button"]').should('not.have.attr', 'disabled');
-            cy.get('button[data-testid="journal-search-favourite-journals-button"]').should(
-                'not.have.attr',
-                'disabled',
-            );
-
-            cy.get('[data-testid="journal-search-keywords-input"]')
-                .invoke('val')
-                .should('eq', '');
+            assertInitialViewVisible();
 
             // as a final check, perform a new search and confirm previous search terms/facets/sorting are not present
             cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
@@ -570,6 +583,198 @@ context('Strategic Publishing - Search', () => {
                 expect(location.search).not.to.contain('sortDirection=Desc');
                 expect(location.search).not.to.contain('pageSize=20');
             });
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    rules: { 'color-contrast': { enabled: false } },
+                    reportName: 'Search Journals',
+                    scopeName: 'Clear search results when Clear button clicked',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
+        });
+
+        it.only('resets the search functionality and clears results when the last keyword is deleted', () => {
+            const resultsLengthWithOneKeyword = 8;
+            const resultsLengthWithTwoKeywords = 4;
+
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+                .find('svg')
+                .click();
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+            });
+
+            // check we have new expected number of results
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithOneKeyword);
+
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]')
+                .find('svg')
+                .click();
+
+            cy.get('[data-testid="journal-search-card"]').should('be.visible');
+
+            // assert nothing previously selected is in the URL
+            cy.location().should(location => {
+                expect(location.search).to.eq('');
+            });
+
+            // assert broadly that step 1 is visible and in default state
+            assertInitialViewVisible();
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    rules: { 'color-contrast': { enabled: false } },
+                    reportName: 'Search Journals',
+                    scopeName: 'Clears results when the last keyword is deleted',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
+        });
+    });
+
+    context('Handles Browse All Journals functionality', () => {
+        it.only('shows All Journals when the Browse All Journals button is clicked in Search Results', () => {
+            const resultsLengthWithAllResults = 10;
+            const resultsLengthWithTwoKeywords = 4;
+
+            setupInitialSearchAndAssert();
+
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('keywords%5BKeyword-all-journals');
+            });
+
+            cy.get('[data-testid="journal-search-browse-all-button"]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('not.exist');
+
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BKeyword-all-journals');
+            });
+
+            cy.get('[data-testid="journal-search-browse-all-button"]').should('not.exist');
+
+            cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('exist');
+
+            // check we have new expected number of results
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithAllResults);
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    rules: { 'color-contrast': { enabled: false } },
+                    reportName: 'Search Journals',
+                    scopeName: 'Browse All Journals from search results page',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
+        });
+
+        it.only('shows All Journals when the Browse All Journals button is clicked from the initial Journal Search page', () => {
+            const resultsLengthWithAllResults = 10;
+            const resultsLengthWithOneKeyword = 8;
+
+            // assert broadly that step 1 is visible and in default state
+            assertInitialViewVisible();
+
+            cy.get('[data-testid="journal-search-browse-all-button"]')
+                .should('exist')
+                .click();
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BKeyword-all-journals');
+            });
+
+            cy.get('[data-testid="journal-search-browse-all-button"]').should('not.exist');
+
+            cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('exist');
+
+            // check we have expected number of mock results
+            cy.get('[id^="journal-list-data-col-1-title"]')
+                .as('ResultTitles')
+                .should('have.length', resultsLengthWithAllResults); // /mock/index.js
+
+            // clear the search
+            cy.get('[data-testid="journal-search-clear-keywords-button"]').click();
+
+            cy.get('[data-testid="journal-search-card"]').should('be.visible');
+
+            // assert nothing previously selected is in the URL
+            cy.location().should(location => {
+                expect(location.search).to.eq('');
+            });
+
+            // perform a normal search
+            cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+            cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
+            cy.get('[data-testid="journal-search-button"]').click();
+            cy.get('[data-testid="journal-list"]').should('be.visible');
+
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('not.exist');
+
+            cy.location().should(location => {
+                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('keywords%5BKeyword-all-journals');
+            });
+
+            // check we have new expected number of results
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithOneKeyword);
+
+            cy.get('[data-testid="journal-search-browse-all-button"]')
+                .should('exist')
+                .click();
+
+            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('exist');
+
+            cy.location().should(location => {
+                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BKeyword-all-journals');
+            });
+
+            cy.get('[data-testid="journal-search-browse-all-button"]').should('not.exist');
+
+            // check we have new expected number of results
+            cy.get('@ResultTitles').should('have.length', resultsLengthWithAllResults);
+
+            cy.checkA11y(
+                'div.StandardPage',
+                {
+                    rules: { 'color-contrast': { enabled: false } },
+                    reportName: 'Search Journals',
+                    scopeName: 'Browse All Journals from the initial search view',
+                    includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+                },
+                violations => console.log(violations),
+            );
         });
     });
 });

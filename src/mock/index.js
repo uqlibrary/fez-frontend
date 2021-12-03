@@ -419,8 +419,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         if (config.params.export_to && config.params.export_to === 'excel'){
             return [200, 'Exported', { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }];
         }
-        else if(config.params.title.includes('Biological')){
-            let maxCount = config.params.title.includes('Glycobiology') ? 4 : 8;
+        else if(config.params.title?.includes('Biological')){
+            let maxCount = config.params.title?.includes('Glycobiology') ? 4 : 8;
             if(config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
             const data = mockData.journalList.data.filter( (element, index) => index < maxCount);
             return [200, { ...mockData.journalList, ...{data}, ...{"total": maxCount}}];
