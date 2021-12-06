@@ -60,14 +60,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -436,16 +429,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -752,14 +736,7 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -1409,16 +1386,7 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_24"
             pageTitle="Page not found"
           />
@@ -1721,14 +1689,7 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -2378,16 +2339,7 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_24"
             pageTitle="Page not found"
           />
@@ -2460,14 +2412,7 @@ exports[`Application component should redirect to login page with correct return
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -2836,16 +2781,7 @@ exports[`Application component should redirect to login page with correct return
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -3148,14 +3084,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -3822,16 +3751,7 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_24"
             pageTitle="Page not found"
           />
@@ -4134,14 +4054,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -4828,16 +4741,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_24"
             pageTitle="Page not found"
           />
@@ -5140,14 +5044,7 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -5819,16 +5716,7 @@ exports[`Application component should render app for account with fez author wit
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_24"
             pageTitle="Page not found"
           />
@@ -6131,14 +6019,7 @@ exports[`Application component should render application with routing for the us
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -6460,14 +6341,7 @@ exports[`Application component should render for anon user 1`] = `
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -6799,16 +6673,7 @@ exports[`Application component should render for anon user 1`] = `
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -8244,14 +8109,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
-                            "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
-                            },
+                            "component": [Function],
                             "pageTitle": "Page not found",
                           },
                         ]
@@ -8589,14 +8447,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/journal/view/:id([0-9]+)",
                             },
                             Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
-                              },
+                              "component": [Function],
                               "pageTitle": "Page not found",
                             },
                           ]
@@ -8935,14 +8786,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/journal/view/:id([0-9]+)",
                               },
                               Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
-                                },
+                                "component": [Function],
                                 "pageTitle": "Page not found",
                               },
                             ]
@@ -10390,6 +10234,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "getBatchImportDirectories": [Function],
                                                           "getCollectionsListAPI": [Function],
                                                           "getFavouriteSearchAlias": [Function],
+                                                          "getPreCheckError": [Function],
                                                           "getSearchLookupApi": [Function],
                                                           "getSherpaFromIssn": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
@@ -10420,6 +10265,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadUserList": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
+                                                          "mergeAvailableAuthoringData": [Function],
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
@@ -10450,6 +10296,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "updateDoi": [Function],
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
+                                                          "updateMatchedRecordAuthoringData": [Function],
                                                           "updateMyEditorialAppointmentsListItem": [Function],
                                                           "updateUserListItem": [Function],
                                                         }
@@ -14288,6 +14135,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "getBatchImportDirectories": [Function],
                                                                           "getCollectionsListAPI": [Function],
                                                                           "getFavouriteSearchAlias": [Function],
+                                                                          "getPreCheckError": [Function],
                                                                           "getSearchLookupApi": [Function],
                                                                           "getSherpaFromIssn": [Function],
                                                                           "getThirdPartyLookupApiUrl": [Function],
@@ -14318,6 +14166,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadUserList": [Function],
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
+                                                                          "mergeAvailableAuthoringData": [Function],
                                                                           "requestMJLIngest": [Function],
                                                                           "requestOrcidSync": [Function],
                                                                           "resetDoi": [Function],
@@ -14348,6 +14197,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "updateDoi": [Function],
                                                                           "updateFavouriteSearchListItem": [Function],
                                                                           "updateIncompleteRecord": [Function],
+                                                                          "updateMatchedRecordAuthoringData": [Function],
                                                                           "updateMyEditorialAppointmentsListItem": [Function],
                                                                           "updateUserListItem": [Function],
                                                                         }
@@ -14454,6 +14304,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
                                                                             "getFavouriteSearchAlias": [Function],
+                                                                            "getPreCheckError": [Function],
                                                                             "getSearchLookupApi": [Function],
                                                                             "getSherpaFromIssn": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -14484,6 +14335,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadUserList": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
+                                                                            "mergeAvailableAuthoringData": [Function],
                                                                             "requestMJLIngest": [Function],
                                                                             "requestOrcidSync": [Function],
                                                                             "resetDoi": [Function],
@@ -14514,6 +14366,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateDoi": [Function],
                                                                             "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
+                                                                            "updateMatchedRecordAuthoringData": [Function],
                                                                             "updateMyEditorialAppointmentsListItem": [Function],
                                                                             "updateUserListItem": [Function],
                                                                           }
@@ -15394,6 +15247,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "getBatchImportDirectories": [Function],
                                                                                     "getCollectionsListAPI": [Function],
                                                                                     "getFavouriteSearchAlias": [Function],
+                                                                                    "getPreCheckError": [Function],
                                                                                     "getSearchLookupApi": [Function],
                                                                                     "getSherpaFromIssn": [Function],
                                                                                     "getThirdPartyLookupApiUrl": [Function],
@@ -15424,6 +15278,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadUserList": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
+                                                                                    "mergeAvailableAuthoringData": [Function],
                                                                                     "requestMJLIngest": [Function],
                                                                                     "requestOrcidSync": [Function],
                                                                                     "resetDoi": [Function],
@@ -15454,6 +15309,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "updateDoi": [Function],
                                                                                     "updateFavouriteSearchListItem": [Function],
                                                                                     "updateIncompleteRecord": [Function],
+                                                                                    "updateMatchedRecordAuthoringData": [Function],
                                                                                     "updateMyEditorialAppointmentsListItem": [Function],
                                                                                     "updateUserListItem": [Function],
                                                                                   }
@@ -15514,6 +15370,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
                                                                                       "getFavouriteSearchAlias": [Function],
+                                                                                      "getPreCheckError": [Function],
                                                                                       "getSearchLookupApi": [Function],
                                                                                       "getSherpaFromIssn": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
@@ -15544,6 +15401,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadUserList": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
+                                                                                      "mergeAvailableAuthoringData": [Function],
                                                                                       "requestMJLIngest": [Function],
                                                                                       "requestOrcidSync": [Function],
                                                                                       "resetDoi": [Function],
@@ -15574,6 +15432,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateDoi": [Function],
                                                                                       "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
+                                                                                      "updateMatchedRecordAuthoringData": [Function],
                                                                                       "updateMyEditorialAppointmentsListItem": [Function],
                                                                                       "updateUserListItem": [Function],
                                                                                     }

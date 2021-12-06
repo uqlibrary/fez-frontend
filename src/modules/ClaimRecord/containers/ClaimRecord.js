@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { getFormSyncErrors, getFormValues, reduxForm, SubmissionError } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import ClaimRecord from '../components/ClaimRecord';
 import { withRouter } from 'react-router-dom';
@@ -11,7 +11,7 @@ const FORM_NAME = 'ClaimRecord';
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(actions.claimPublication(data)).catch(error => {
-        throw new SubmissionError({ _error: error.message });
+        throw new SubmissionError({ _error: error });
     });
 };
 
