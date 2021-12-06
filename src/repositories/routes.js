@@ -157,6 +157,9 @@ export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });
 
+// create/patch record apis
+export const CLAIM_PRE_CHECK = () => ({ apiUrl: 'external/records/claim/pre-check' });
+
 export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
