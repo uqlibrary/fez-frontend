@@ -53,7 +53,6 @@ export const MyIncompleteRecord = lazy(() =>
     lazyRetry(() => import('modules/MyIncompleteRecords/containers/MyIncompleteRecord')),
 );
 export const NewViewRecord = lazy(() => lazyRetry(() => import('modules/ViewRecord/containers/NewViewRecord')));
-export const NotFound = lazy(() => lazyRetry(() => import('modules/NotFound/components/NotFound')));
 export const Orcid = lazy(() => lazyRetry(() => import('modules/AuthorIdentifiers/containers/Orcid')));
 export const PossiblyMyRecords = lazy(() =>
     lazyRetry(() => import('modules/PossiblyMyRecords/containers/PossiblyMyRecords')),
@@ -71,6 +70,7 @@ export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from '
 export { Index } from 'modules/Index';
 export { Masquerade } from 'modules/Masquerade';
 export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRecords';
+export { NotFound } from 'modules/NotFound/components/NotFound';
 export { SearchRecords } from 'modules/SearchRecords';
 export { SearchJournals } from 'modules/SearchJournals';
 export { FavouriteJournals } from 'modules/FavouriteJournals';
