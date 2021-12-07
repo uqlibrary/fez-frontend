@@ -124,6 +124,11 @@ describe('Search action creators', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
         });
+        it('should dispatch action for clear journal search keywords', async () => {
+            const expectedActions = [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS];
+            await mockActionsStore.dispatch(journalActions.clearJournalSearchKeywords());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
     });
 
     describe('loadJournalSearch', () => {
@@ -225,6 +230,78 @@ describe('Search action creators', () => {
             const expectedActions = [actions.EXPORT_JOURNALS_RESET];
             mockActionsStore.dispatch(journalActions.resetExportJournalsStatus());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+    describe('retrieveFavouriteJournals', () => {
+        it('should dispatch action for successful journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+            mockApi.onGet(apiUrl).reply(200, { data: [] });
+            const expectedActions = [actions.FAVOURITE_JOURNALS_LOADING, actions.FAVOURITE_JOURNALS_LOADED];
+            await mockActionsStore.dispatch(journalActions.retrieveFavouriteJournals());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+        it('should dispatch action for failed journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ query: 'a' });
+            mockApi.onGet(apiUrl).reply(500);
+            const expectedActions = [
+                actions.FAVOURITE_JOURNALS_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_JOURNALS_FAILED,
+            ];
+            try {
+                await mockActionsStore.dispatch(journalActions.retrieveFavouriteJournals('a'));
+            } catch {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+    describe('AddToFavourites', () => {
+        it('should dispatch action for successful adding journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+            mockApi.onPost(apiUrl).reply(200, { data: [] });
+            const expectedActions = [actions.FAVOURITE_JOURNALS_ADD_REQUESTING, actions.FAVOURITE_JOURNALS_ADD_SUCCESS];
+            await mockActionsStore.dispatch(journalActions.addToFavourites({ id: 1 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+        it('should dispatch action for failed adding journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+            mockApi.onPost(apiUrl).reply(500);
+            const expectedActions = [
+                actions.FAVOURITE_JOURNALS_ADD_REQUESTING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_JOURNALS_ADD_FAILED,
+            ];
+            try {
+                await mockActionsStore.dispatch(journalActions.addToFavourites({ id: 1 }));
+            } catch {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+    describe('RemoveFromFavourites', () => {
+        it('should dispatch action for successful removal journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ append: 'delete' });
+            mockApi.onPost(apiUrl).reply(200, { data: [] });
+            const expectedActions = [
+                actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
+                actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS,
+            ];
+            await mockActionsStore.dispatch(journalActions.removeFromFavourites({ id: 1 }));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+        it('should dispatch action for failed removal journal favourites', async () => {
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ append: 'delete' });
+            mockApi.onPost(apiUrl).reply(500);
+            const expectedActions = [
+                actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
+                actions.APP_ALERT_SHOW,
+                actions.FAVOURITE_JOURNALS_REMOVE_FAILED,
+            ];
+            try {
+                await mockActionsStore.dispatch(journalActions.removeFromFavourites({ id: 1 }));
+            } catch {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
     });
 });
