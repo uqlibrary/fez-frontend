@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
-import { pathConfig } from '../../../../config';
-
+import { pathConfig } from 'config';
 const BackToSearchButton = props => {
     const history = useHistory();
     const { prevLocation, ...otherProps } = props;
