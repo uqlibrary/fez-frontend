@@ -18,19 +18,35 @@ describe('Journal Search Keyword enhancer', () => {
         );
     });
     it('has all payload elements populated', () => {
+        const searchTerm = 'virus';
         journalSearchKeywordsEnhancer()(next)({
             type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
             payload: keywordsSearch.data,
-            query: '',
+            query: searchTerm,
         });
         expect(next).toBeCalledWith(
             expect.objectContaining({
                 payload: expect.objectContaining({
-                    exactMatch: expect.any(Object),
-                    keywordMatch: expect.any(Object),
-                    subjectMatch: expect.any(Boolean),
-                    titleMatch: expect.any(Object),
+                    exactMatch: expect.arrayContaining([
+                        expect.objectContaining({
+                            href: expect.any(String),
+                            keyword: expect.any(String),
+                            title: expect.any(String),
+                        }),
+                    ]),
+                    keywordMatch: expect.arrayContaining([
+                        expect.objectContaining({
+                            keyword: expect.any(String),
+                        }),
+                    ]),
+                    subjectMatch: false,
+                    titleMatch: expect.arrayContaining([
+                        expect.objectContaining({
+                            keyword: expect.any(String),
+                        }),
+                    ]),
                 }),
+                query: searchTerm,
                 type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
             }),
         );
