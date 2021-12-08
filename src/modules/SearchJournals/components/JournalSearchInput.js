@@ -21,6 +21,7 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
     const loadingJournalSearchKeywords = useSelector(
         state => state.get('journalReducer')?.journalSearchKeywordsLoading,
     );
+    const isInit = React.useRef(true);
 
     const throttledLoadSuggestions = React.useRef(
         throttle(2000, newValue => dispatch(loadJournalSearchKeywords(newValue))),
@@ -53,7 +54,8 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
             }, 1000);
             return () => clearTimeout(timeOutId);
         } else {
-            dispatch(clearJournalSearchKeywords());
+            !isInit && dispatch(clearJournalSearchKeywords());
+            isInit.current = false;
             return null;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
