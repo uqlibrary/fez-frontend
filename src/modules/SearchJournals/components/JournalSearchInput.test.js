@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore } from 'test-utils';
+import { fireEvent, render, WithReduxStore, act } from 'test-utils';
 import { JournalSearchInput } from './JournalSearchInput';
 import locale from 'locale/components';
 
@@ -23,7 +23,9 @@ describe('JournalSearchInput', () => {
     it('should allow to enter short text', () => {
         const input = 'a';
         const { queryByTestId } = setup();
-        fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
+        act(() => {
+            fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
+        });
         expect(queryByTestId('journal-search-keywords-input').value).toBe(input);
         expect(queryByTestId('clear-journal-search-keywords')).toHaveAttribute('aria-disabled', 'false');
     });
@@ -33,7 +35,9 @@ describe('JournalSearchInput', () => {
         global.dataLayer = { push: jest.fn() };
         const input = 'abc';
         const { queryByTestId } = setup();
-        fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
+        act(() => {
+            fireEvent.change(queryByTestId('journal-search-keywords-input'), { target: { value: input } });
+        });
         expect(queryByTestId('journal-search-keywords-input').value).toBe(input);
         jest.runAllTimers();
         expect(global.dataLayer.push).toHaveBeenCalledTimes(1);
@@ -44,6 +48,8 @@ describe('JournalSearchInput', () => {
         const { queryByTestId } = setup({ initialValue: input });
         expect(queryByTestId('journal-search-keywords-input').value).toBe(input);
         fireEvent.click(queryByTestId('clear-journal-search-keywords'));
-        expect(queryByTestId('journal-search-keywords-input').value).toBe('');
+        act(() => {
+            expect(queryByTestId('journal-search-keywords-input').value).toBe('');
+        });
     });
 });
