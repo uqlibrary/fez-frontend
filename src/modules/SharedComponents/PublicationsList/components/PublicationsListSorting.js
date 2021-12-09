@@ -12,55 +12,42 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 
-export const sanitiseSortingParams = (sortBy, sortDirection, pageSize) => {
-    /* istanbul ignore next */
-    const sortDirectionList = locale?.components?.sorting?.sortDirection ?? [];
-    /* istanbul ignore next */
-    const sortByList = locale?.components?.searchJournals?.sorting.sortBy ?? [];
-    /* istanbul ignore next */
-    const pageSizeList = locale?.components?.sorting?.recordsPerPage ?? [];
-    /* istanbul ignore next */
-    const sortDefaults = locale?.components?.searchJournals?.sortingDefaults ?? {
-        pageSize: 10,
-        sortBy: 'highest_quartile',
-        sortDirection: 'Asc',
-    };
-    return {
-        cleanSortBy: sortByList.some(sort => sort.value === sortBy) ? sortBy : sortDefaults.sortBy,
-        cleanSortDirection: sortDirectionList.some(direction => direction === sortDirection)
-            ? sortDirection
-            : sortDefaults.sortDirection,
-        // eslint-disable-next-line no-nested-ternary
-        cleanPageSize: Number.isFinite(pageSize)
-            ? pageSizeList.some(size => size === pageSize)
-                ? pageSize
-                : sortDefaults.pageSize
-            : sortDefaults.pageSize,
-    };
+export const listContainsTerm = (list, term) => {
+    return list.some(sort => (typeof sort === 'object' ? sort.value === term : sort === term));
 };
 
 const PublicationsListSorting = props => {
-    const sanitiseParameters = React.useCallback(
-        (sortBy, sortDirection, pageSize) => sanitiseSortingParams(sortBy, sortDirection, pageSize),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
-    const { cleanSortBy, cleanSortDirection, cleanPageSize } = sanitiseParameters(
-        props.sortBy || props.sortingData.sortBy[0].value,
-        props.sortDirection || locale.components.sorting.sortDirection[0],
-        props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
-    );
+    const txt = locale.components.sorting;
+    /* istanbul ignore next */
+    const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
 
-    const [sortBy, setSortBy] = React.useState(cleanSortBy);
-    const [sortDirection, setSortDirection] = React.useState(cleanSortDirection);
-    const [pageSize, setPageSize] = React.useState(cleanPageSize);
+    // get initial values from props
+    const initPropSortBy = props.sortBy || props.sortingData.sortBy[0].value;
+    const initPropSortDirection = props.sortDirection || locale.components.sorting.sortDirection[0];
+    const initPropPageSize =
+        props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
+
+    // sanitise values
+    const propSortBy = listContainsTerm(props.sortingData.sortBy, initPropSortBy)
+        ? initPropSortBy
+        : props.sortingDefaults.sortBy ?? props.sortingData.sortBy[0].value;
+    const propSortDirection = listContainsTerm(locale.components.sorting.sortDirection, initPropSortDirection)
+        ? initPropSortDirection
+        : props.sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
+    const propPageSize = listContainsTerm(pageLength, initPropPageSize)
+        ? initPropPageSize
+        : props.sortingDefaults.pageSize ?? pageLength[0];
+
+    const [sortBy, setSortBy] = React.useState(propSortBy);
+    const [sortDirection, setSortDirection] = React.useState(propSortDirection);
+    const [pageSize, setPageSize] = React.useState(propPageSize);
 
     React.useEffect(() => {
-        if (sortBy !== cleanSortBy) setSortBy(cleanSortBy);
-        if (sortDirection !== cleanSortDirection) setSortDirection(cleanSortDirection);
-        if (pageSize !== cleanPageSize) setPageSize(cleanPageSize);
+        if (sortBy !== propSortBy) setSortBy(propSortBy);
+        if (sortDirection !== propSortDirection) setSortDirection(propSortDirection);
+        if (pageSize !== propPageSize) setPageSize(propPageSize);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.sortBy, props.sortDirection, props.pageSize]);
+    }, [propSortBy, propSortDirection, propPageSize]);
 
     const pageSizeChanged = event => {
         setPageSize(event.target.value);
@@ -84,12 +71,11 @@ const PublicationsListSorting = props => {
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
     }
-    const txt = locale.components.sorting;
-    const pageLength = txt.recordsPerPage;
-    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
-        pageLength.push(props.initPageLength);
-        pageLength.sort((a, b) => a - b);
-    }
+
+    // if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
+    //     pageLength.push(props.initPageLength);
+    //     pageLength.sort((a, b) => a - b);
+    // }
 
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
@@ -207,6 +193,11 @@ PublicationsListSorting.propTypes = {
         per_page: PropTypes.number,
         current_page: PropTypes.number,
     }),
+    sortingDefaults: PropTypes.shape({
+        sortDirection: PropTypes.string,
+        sortBy: PropTypes.string,
+        pageSize: PropTypes.number,
+    }),
     sortBy: PropTypes.string,
     sortDirection: PropTypes.string,
 };
@@ -214,6 +205,7 @@ PublicationsListSorting.propTypes = {
 PublicationsListSorting.defaultProps = {
     exportData: {},
     sortingData: locale.components.sorting,
+    sortingDefaults: {},
 };
 
 export default PublicationsListSorting;

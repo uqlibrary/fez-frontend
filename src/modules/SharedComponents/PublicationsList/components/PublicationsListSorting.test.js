@@ -124,6 +124,7 @@ describe('PublicationsListSorting component', () => {
             pageSize: 5,
             pagingData: {},
         });
+
         expect(toJson(wrapper)).toMatchSnapshot();
         mockUseEffect.mockRestore();
     });
@@ -134,11 +135,36 @@ describe('PublicationsListSorting component', () => {
         expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
         userIsAdmin.mockRestore();
     });
-    it('renders custom sortby default based on supplied values', () => {
+    it('renders first item in list when an out of range sortby default is provided', () => {
         const wrapper = setup({
             sortBy: 'test_option',
         });
-        expect(wrapper.find('#sortBy').props().value).toEqual('test_option');
+
+        expect(wrapper.find('#sortBy').props().value).toEqual('published_date');
+    });
+
+    it('renders first item in list when pageSize is out of range', () => {
+        const wrapper = setup({
+            pageSize: 1,
+        });
+
+        expect(wrapper.find('#pageSize').props().value).toEqual(10);
+    });
+
+    it('updates sortBy and sortDirection state when they change after render', () => {
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        mockUseEffect.mockImplementation(f => f());
+        wrapper.setProps({
+            sortBy: 'score',
+            sortDirection: 'Asc',
+            pageSize: 20,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+        mockUseEffect.mockRestore();
     });
 
     it('has the correct custom sortby options in the dropdown', () => {

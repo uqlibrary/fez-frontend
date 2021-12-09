@@ -340,6 +340,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -564,6 +565,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -796,6 +798,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -1109,6 +1112,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -1324,6 +1328,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -1583,6 +1588,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
