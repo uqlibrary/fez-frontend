@@ -99,7 +99,6 @@ export const AdminInterface = ({
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
 
-    /* istanbul ignore next */
     const errorMessage = typeof error === 'object' ? error?.message || ' ' : null;
     alertProps.current = validation.getErrorAlertProps({
         submitting,
