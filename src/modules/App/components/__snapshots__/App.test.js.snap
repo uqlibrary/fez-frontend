@@ -19,7 +19,16 @@ exports[`Application component Should display mobile correctly 1`] = `
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -372,6 +381,18 @@ exports[`Application component Should display mobile correctly 1`] = `
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_2"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -684,7 +705,16 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -1319,6 +1349,18 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_21"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -1620,7 +1662,16 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -2255,6 +2306,18 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_21"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -2320,7 +2383,16 @@ exports[`Application component should redirect to login page with correct return
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -2673,6 +2745,18 @@ exports[`Application component should redirect to login page with correct return
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_2"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -2981,7 +3065,16 @@ exports[`Application component should render alert if user is not fez author 1`]
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -3633,6 +3726,18 @@ exports[`Application component should render alert if user is not fez author 1`]
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_21"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -3934,7 +4039,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -4606,6 +4720,18 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_21"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -4907,7 +5033,16 @@ exports[`Application component should render app for account with fez author wit
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -5564,6 +5699,18 @@ exports[`Application component should render app for account with fez author wit
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_21"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -5865,7 +6012,16 @@ exports[`Application component should render application with routing for the us
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -6174,7 +6330,16 @@ exports[`Application component should render for anon user 1`] = `
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -6490,6 +6655,18 @@ exports[`Application component should render for anon user 1`] = `
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_2"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -6580,7 +6757,16 @@ exports[`Application component should render thesis submission for HDR without m
           "render": [Function],
         },
         Object {
-          "component": undefined,
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
+            },
+            "compare": null,
+            "type": [Function],
+          },
           "exact": true,
           "pageTitle": undefined,
           "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -6824,6 +7010,18 @@ exports[`Application component should render thesis submission for HDR without m
             render={[Function]}
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_2"
             path="/view/:pid(UQ:[a-z0-9]+)"
@@ -7914,7 +8112,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "render": [Function],
                           },
                           Object {
-                            "component": undefined,
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "WrappedComponent": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": [Function],
+                                "type": [Function],
+                              },
+                              "compare": null,
+                              "type": [Function],
+                            },
                             "exact": true,
                             "pageTitle": undefined,
                             "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -8245,7 +8452,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "render": [Function],
                             },
                             Object {
-                              "component": undefined,
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "WrappedComponent": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": [Function],
+                                  "type": [Function],
+                                },
+                                "compare": null,
+                                "type": [Function],
+                              },
                               "exact": true,
                               "pageTitle": undefined,
                               "path": "/view/:pid(UQ:[a-z0-9]+)",
@@ -8577,7 +8793,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "render": [Function],
                               },
                               Object {
-                                "component": undefined,
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "WrappedComponent": Object {
+                                    "$$typeof": Symbol(react.memo),
+                                    "compare": [Function],
+                                    "type": [Function],
+                                  },
+                                  "compare": null,
+                                  "type": [Function],
+                                },
                                 "exact": true,
                                 "pageTitle": undefined,
                                 "path": "/view/:pid(UQ:[a-z0-9]+)",
