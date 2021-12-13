@@ -100,14 +100,14 @@ export const AdminInterface = ({
     const txt = React.useRef(pageLocale.pages.edit);
 
     /* istanbul ignore next */
-    const errorValue = translateFormErrorsToText(formErrors) ? null : error?.message || ' ';
+    const errorMessage = typeof error === 'object' ? error?.message || ' ' : null;
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: errorValue,
+        error: translateFormErrorsToText(formErrors) ? null : errorMessage,
     });
 
     React.useEffect(() => {

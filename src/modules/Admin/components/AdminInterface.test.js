@@ -878,4 +878,45 @@ describe('AdminInterface component', () => {
         expect(handleSubmit).toHaveBeenCalled();
         expect(onSubmit).toHaveBeenCalled();
     });
+
+    it('should render error', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementationOnce(() => true);
+        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+
+        const error = 'error';
+        const wrapper = setup({
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
+            error: { message: 'error' },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(toString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
+    });
+
+    it('should prioritize formErrors', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementationOnce(() => true);
+        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+
+        const error = 'Title is required';
+        const wrapper = setup({
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
+            formErrors: { bibliographicSection: { rek_title: error } },
+            error: { message: 'error' },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(toString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
+    });
 });
