@@ -99,13 +99,15 @@ export const AdminInterface = ({
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
 
+    /* istanbul ignore next */
+    const errorValue = translateFormErrorsToText(formErrors) ? null : error?.message || ' ';
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
         formErrors,
         alertLocale: txt.current.alerts,
         // prioritise form errors
-        error: translateFormErrorsToText(formErrors) ? null : error?.message || ' ',
+        error: errorValue,
     });
 
     React.useEffect(() => {
