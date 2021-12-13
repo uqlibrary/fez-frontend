@@ -33,6 +33,7 @@ import { pathConfig, publicationTypes, validation } from 'config';
 import { PUBLISHED, RECORD_TYPE_RECORD, RETRACTED, UNPUBLISHED } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
+import { translateFormErrorsToText } from '../../../config/validation';
 
 const AdminTab = withStyles({
     root: {
@@ -103,7 +104,8 @@ export const AdminInterface = ({
         submitSucceeded,
         formErrors,
         alertLocale: txt.current.alerts,
-        error: error?.message || ' ',
+        // prioritise form errors
+        error: translateFormErrorsToText(formErrors) ? null : error?.message || ' ',
     });
 
     React.useEffect(() => {
