@@ -169,6 +169,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -383,6 +384,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
@@ -704,6 +706,7 @@ exports[`myDatasets test renders loading screen while loading publications while
                   "sortLabel": "Sort results by",
                 }
               }
+              sortingDefaults={Object {}}
             />
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
