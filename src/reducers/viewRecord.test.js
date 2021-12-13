@@ -144,4 +144,16 @@ describe('viewRecord reducer', () => {
             isJobCreated: true,
         });
     });
+
+    it('should set isJobCreated flag to true', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.ADMIN_UPDATE_WORK_FAILED,
+            payload: {},
+        });
+
+        expect(test).toEqual({
+            ...initialState,
+            error: {},
+        });
+    });
 });
