@@ -1977,6 +1977,31 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           item={true}
           xs={12}
         >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -2314,6 +2339,31 @@ exports[`AdminInterface component should render default view as a full form view
           item={true}
           xs={12}
         >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -2641,6 +2691,31 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           item={true}
           xs={12}
         >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -2934,6 +3009,31 @@ exports[`AdminInterface component should render in create mode 1`] = `
         container={true}
         spacing={1}
       >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
@@ -3235,6 +3335,31 @@ exports[`AdminInterface component should render locked alert in edit mode 1`] = 
         container={true}
         spacing={1}
       >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
@@ -3578,6 +3703,31 @@ exports[`AdminInterface component should render locked info alert 1`] = `
           item={true}
           xs={12}
         >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
           <WithStyles(ForwardRef(Grid))
             container={true}
             spacing={1}
@@ -3861,6 +4011,31 @@ exports[`AdminInterface component should render undelete title and button 1`] = 
         container={true}
         spacing={1}
       >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <div
+            style={
+              Object {
+                "height": 16,
+              }
+            }
+          />
+          <Alert
+            alertId="alert-error"
+            allowDismiss={false}
+            customIcon={null}
+            customType={null}
+            disableAlertClick={false}
+            dismissTitle="Click to dismiss this alert"
+            message="Error has occurred during request and request cannot be processed.   Please contact eSpace administrators or try again later."
+            showLoader={false}
+            title="Error"
+            type="error_outline"
+            wiggle={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}

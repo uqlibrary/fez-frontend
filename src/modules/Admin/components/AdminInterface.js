@@ -27,10 +27,10 @@ import LockedAlert from './LockedAlert';
 import { FORM_NAME } from '../constants';
 import { onSubmit } from '../submitHandler';
 
-import { useTabbedContext, useRecordContext } from 'context';
+import { useRecordContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
-import { pathConfig, validation, publicationTypes } from 'config';
-import { RECORD_TYPE_RECORD, UNPUBLISHED, PUBLISHED, RETRACTED } from 'config/general';
+import { pathConfig, publicationTypes, validation } from 'config';
+import { PUBLISHED, RECORD_TYPE_RECORD, RETRACTED, UNPUBLISHED } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 
@@ -84,6 +84,7 @@ export const AdminInterface = ({
     submitting,
     tabs,
     unlockRecord,
+    error,
 }) => {
     const { record } = useRecordContext();
     const { tabbed, toggleTabbed } = useTabbedContext();
@@ -102,6 +103,7 @@ export const AdminInterface = ({
         submitSucceeded,
         formErrors,
         alertLocale: txt.current.alerts,
+        error: error?.message || ' ',
     });
 
     React.useEffect(() => {
@@ -440,6 +442,7 @@ AdminInterface.propTypes = {
     submitting: PropTypes.bool,
     tabs: PropTypes.object,
     unlockRecord: PropTypes.func,
+    error: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);
