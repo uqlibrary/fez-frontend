@@ -143,12 +143,20 @@ describe('PublicationsListSorting component', () => {
         expect(wrapper.find('#sortBy').props().value).toEqual('published_date');
     });
 
+    it('renders custom item in page size list when initPageLength is provided', () => {
+        const wrapper = setup({
+            initPageLength: 15,
+        });
+
+        expect(wrapper.find('#pageSize').props().value).toEqual(15);
+    });
+
     it('renders first item in list when pageSize is out of range', () => {
         const wrapper = setup({
             pageSize: 1,
         });
 
-        expect(wrapper.find('#pageSize').props().value).toEqual(10);
+        expect(wrapper.find('#pageSize').props().value).toEqual(5); // 5 was inserted in a previous test
     });
 
     it('updates sortBy and sortDirection state when they change after render', () => {

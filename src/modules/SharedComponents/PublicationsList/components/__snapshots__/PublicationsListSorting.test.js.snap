@@ -134,8 +134,14 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         disabled={false}
         id="pageSize"
         onChange={[Function]}
-        value={20}
+        value={5}
       >
+        <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-10"
           value={10}
@@ -300,8 +306,14 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         disabled={false}
         id="pageSize"
         onChange={[Function]}
-        value={10}
+        value={5}
       >
+        <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-10"
           value={10}
@@ -988,10 +1000,22 @@ exports[`PublicationsListSorting component updates sortBy and sortDirection stat
         value={20}
       >
         <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-10"
           value={10}
         >
           10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-15"
+          value={15}
+        >
+          15
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-20"
@@ -1154,10 +1178,22 @@ exports[`PublicationsListSorting component updates sortBy and sortDirection stat
         value={20}
       >
         <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-10"
           value={10}
         >
           10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          key="records-per-page-15"
+          value={15}
+        >
+          15
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-20"

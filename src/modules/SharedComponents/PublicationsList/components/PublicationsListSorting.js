@@ -21,11 +21,19 @@ const PublicationsListSorting = props => {
     /* istanbul ignore next */
     const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
 
+    // Allow cust page length if defined in props
+    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
+        pageLength.push(props.initPageLength);
+        pageLength.sort((a, b) => a - b);
+    }
+
     // get initial values from props
     const initPropSortBy = props.sortBy || props.sortingData.sortBy[0].value;
     const initPropSortDirection = props.sortDirection || locale.components.sorting.sortDirection[0];
     const initPropPageSize =
-        props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
+        props.initPageLength ||
+        props.pageSize ||
+        (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
 
     // sanitise values
     const propSortBy = listContainsTerm(props.sortingData.sortBy, initPropSortBy)
@@ -71,11 +79,6 @@ const PublicationsListSorting = props => {
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
     }
-
-    // if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
-    //     pageLength.push(props.initPageLength);
-    //     pageLength.sort((a, b) => a - b);
-    // }
 
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
