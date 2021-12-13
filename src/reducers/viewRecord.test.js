@@ -145,7 +145,7 @@ describe('viewRecord reducer', () => {
         });
     });
 
-    it('should set isJobCreated flag to true', () => {
+    it('should set error', () => {
         const test = viewRecordReducer(initialState, {
             type: actions.ADMIN_UPDATE_WORK_FAILED,
             payload: {},
