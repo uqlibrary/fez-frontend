@@ -11,6 +11,43 @@ import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    journalList: {
+        [theme.breakpoints.down('xs')]: {
+            display: 'grid',
+            gridTemplateColumns: '2fr 4fr 1fr',
+            flexWrap: 'nowrap',
+            overflowX: 'scroll',
+        },
+    },
+    titleColumn: {
+        [theme.breakpoints.up('sm')]: {
+            width: JournalFieldsMap[0].size,
+        },
+    },
+    moreColumnsWidth: {
+        marginLeft: 4,
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+            overflow: 'unset',
+        },
+        [theme.breakpoints.up('sm')]: {
+            overflow: props => (props.minimalView ? 'unset' : 'auto hidden'),
+        },
+        flexGrow: props => (props.minimalView ? 'inherit' : 1),
+    },
+    headerRow: {
+        borderBottom: '1px solid #CCC',
+        width: '100%',
+        overflowY: 'hidden',
+        height: 40,
+        [theme.breakpoints.up('sm')]: {
+            height: 32,
+        },
+    },
+}));
 
 const JournalsList = ({
     journals,
@@ -41,10 +78,23 @@ const JournalsList = ({
             colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
         }
     }
-    const detailColStyle = minimalView ? { flexGrow: 'inherit' } : { overflowX: 'auto', overflowY: 'hidden' };
+
+    const props = {
+        minimalView,
+    };
+    const classes = useStyles(props);
+
+    // const detailColStyle = minimalView ? { flexGrow: 'inherit' } : { overflowX: 'auto', overflowY: 'hidden' };
     return (
-        <Grid container spacing={0} id="journal-list" data-testid="journal-list" alignItems="stretch">
-            <Grid item style={{ width: JournalFieldsMap[0].size }}>
+        <Grid
+            container
+            spacing={0}
+            id="journal-list"
+            data-testid="journal-list"
+            alignItems="stretch"
+            className={classes.journalList}
+        >
+            <Grid item className={classes.titleColumn}>
                 {/* Header */}
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
@@ -67,14 +117,9 @@ const JournalsList = ({
                         );
                     })}
             </Grid>
-            <Grid item xs style={{ ...detailColStyle, marginLeft: 4 }}>
+            <Grid item xs className={classes.moreColumnsWidth}>
                 <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
-                    <Grid
-                        container
-                        spacing={0}
-                        alignItems="flex-end"
-                        style={{ borderBottom: '1px solid #CCC', height: 32, width: '100%', overflowY: 'hidden' }}
-                    >
+                    <Grid container spacing={0} alignItems="flex-end" className={classes.headerRow}>
                         {/* Header */}
                         {!minimalView
                             ? JournalFieldsMap.slice(1).map((item, index) => {

@@ -11,6 +11,7 @@ import classNames from 'classnames';
 
 const styles = theme => ({
     pageButton: {
+        flex: '1 0 auto',
         width: 32,
         height: 32,
         minWidth: 32,
@@ -22,16 +23,39 @@ const styles = theme => ({
         fontSize: '1.2rem',
     },
     nextPrevButtons: {
+        flex: '0 1 auto',
         height: 32,
         minHeight: 32,
         maxHeight: 32,
         overflow: 'hidden',
+        [theme.breakpoints.down('sm')]: {
+            paddingLeft: 0,
+            paddingRight: 0,
+            '& > span': {
+                lineHeight: '0.875rem',
+            },
+        },
+        '&.paging-previous': {
+            justifyContent: 'flex-start',
+        },
+        '&.paging-next': {
+            justifyContent: 'flex-end',
+        },
     },
     nextPrevIcons: {
         fontSize: '1rem',
     },
     fakeDisabled: {
         backgroundColor: theme.palette.primary.main,
+    },
+    gridContainer: {
+        flexWrap: 'nowrap',
+        justifyContent: 'space-between',
+    },
+    gridItem: {
+        display: 'flex',
+        flex: 1,
+        justifyContent: 'center',
     },
 });
 
@@ -124,11 +148,10 @@ export class PublicationsListPaging extends Component {
         return (
             <div data-testid={this.props.pagingId} id={this.props.pagingId}>
                 {totalPages > 1 && (
-                    <Grid container spacing={0}>
+                    <Grid container spacing={0} className={classes.gridContainer}>
                         {currentPage >= 1 && (
                             <Grid item>
                                 <Button
-                                    style={{ paddingLeft: 4 }}
                                     variant={'text'}
                                     className={`${classes.nextPrevButtons} paging-previous`}
                                     onClick={() => {
@@ -141,9 +164,8 @@ export class PublicationsListPaging extends Component {
                                 </Button>
                             </Grid>
                         )}
-                        <Grid item style={{ flexGrow: 1 }} />
                         <Hidden xsDown>
-                            <Grid item>
+                            <Grid item flex>
                                 {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
                                 {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
                                 {this.renderPageButtons()}
@@ -152,9 +174,8 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         </Hidden>
                         <Hidden smUp>
-                            <Grid item style={{ flexGrow: 1 }}>
+                            <Grid item className={classes.gridItem}>
                                 <Button
-                                    style={{ margin: '0 auto' }}
                                     variant={'text'}
                                     className={classes.nextPrevButtons}
                                     children={txt.pageOf
@@ -163,12 +184,10 @@ export class PublicationsListPaging extends Component {
                                 />
                             </Grid>
                         </Hidden>
-                        <Grid item style={{ flexGrow: 1 }} />
                         {currentPage <= totalPages && (
-                            <Grid item>
+                            <Grid item flex>
                                 <Button
                                     variant={'text'}
-                                    size={'small'}
                                     className={`${classes.nextPrevButtons} paging-next`}
                                     onClick={() => {
                                         this.pageChanged(currentPage + 1);
