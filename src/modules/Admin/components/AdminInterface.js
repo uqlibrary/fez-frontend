@@ -99,7 +99,7 @@ export const AdminInterface = ({
     const alertProps = React.useRef(null);
     const txt = React.useRef(pageLocale.pages.edit);
 
-    const errorMessage = error && typeof error === 'object' ? error?.message || ' ' : null;
+    const errorMessage = error && typeof error === 'object' ? ' ' : null;
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,

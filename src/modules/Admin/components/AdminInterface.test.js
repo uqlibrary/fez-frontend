@@ -5,6 +5,7 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
+import pageLocale from '../../../locale/pages';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -884,7 +885,6 @@ describe('AdminInterface component', () => {
         useIsUserSuperAdmin.mockImplementationOnce(() => true);
         useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
 
-        const error = 'error';
         const wrapper = setup({
             handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
             error: { message: 'error' },
@@ -896,7 +896,11 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(toString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
+        expect(
+            toString(wrapper.find('Alert').props().message).includes(
+                pageLocale.pages.edit.alerts.errorAlert.message(' '),
+            ),
+        ).toBe(true);
     });
 
     it('should prioritize formErrors', () => {
