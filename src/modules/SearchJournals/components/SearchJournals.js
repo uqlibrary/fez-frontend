@@ -11,6 +11,7 @@ import { searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
+import { clearJournalSearchKeywords } from 'actions';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -69,6 +70,7 @@ export const SearchJournals = () => {
     const handleKeywordResetClick = () => {
         setSelectedKeywords({});
         setShowingAllJournals(false);
+
         fromHandleKeywordClear.current = true;
     };
 
@@ -153,13 +155,18 @@ export const SearchJournals = () => {
      *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
     React.useEffect(() => {
+        if (!showInputControls && !hasAnySelectedKeywords) {
+            dispatch(clearJournalSearchKeywords());
+
+            return;
+        }
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
             fromHandleKeywordClear.current = false;
             fromHandleAllJournals.current = false;
+
             return;
         }
-
         // reset facets filter, paging and sorting when keywords are removed
         // or the All Journals button is pressed for the first time
         if (fromHandleKeywordDelete.current || fromHandleKeywordClear.current || fromHandleAllJournals.current) {
