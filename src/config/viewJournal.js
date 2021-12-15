@@ -1,7 +1,8 @@
 import globalLocale from 'locale/global';
 import moment from 'moment';
+import { default as viewJournalLocale } from 'locale/viewJournal';
 
-export const journalViewConfig = {
+export const viewJournalConfig = {
     basic: {
         rows: [
             [
@@ -917,7 +918,27 @@ export const journalViewConfig = {
         rows: [
             [
                 {
-                    heading: globalLocale.global.authorCountWorks.heading,
+                    heading: viewJournalLocale.viewJournal.readAndPublish.heading,
+                    fieldId: 'jnl-read-and-publish',
+                    getData: journalDetails => {
+                        return (
+                            !!journalDetails.fez_journal_read_and_publish &&
+                            !!journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_issn
+                        );
+                    },
+                    template: 'EnclosedLinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.externalUrl,
+                        prefix: () => viewJournalLocale.viewJournal.readAndPublish.prefixText,
+                        postfix: () => viewJournalLocale.viewJournal.readAndPublish.postfixText,
+                        title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
+                        text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.authorCountWorks.heading,
                     fieldId: 'jnl-uq-author-count',
                     getData: journalDetails => {
                         return {
@@ -925,14 +946,14 @@ export const journalViewConfig = {
                             id: journalDetails.jnl_jid,
                         };
                     },
-                    template: 'PrefixedLinkTemplate',
+                    template: 'EnclosedLinkTemplate',
                     templateProps: {
                         href: item =>
                             item.count > 0
-                                ? globalLocale.global.authorCountWorks.externalUrl.replace('[id]', item.id)
+                                ? viewJournalLocale.viewJournal.authorCountWorks.externalUrl.replace('[id]', item.id)
                                 : '',
-                        prefix: item => item.count,
-                        title: globalLocale.global.authorCountWorks.ariaLabel,
+                        prefix: item => `${item.count} `,
+                        title: viewJournalLocale.viewJournal.authorCountWorks.ariaLabel,
                         text: item => (item.count > 0 ? 'View these articles in UQ eSpace' : ''),
                     },
                 },

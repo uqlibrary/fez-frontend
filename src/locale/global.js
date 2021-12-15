@@ -203,13 +203,6 @@ export default {
             externalLinktext: 'Ulrichs',
             externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',
         },
-        authorCountWorks: {
-            heading: 'Recently published UQ authors',
-            ariaLabel: 'Click to explore articles in UQ eSpace',
-            externalUrl:
-                APP_URL +
-                'records/search?activeFacets[ranges][Year+published][from]=2016&activeFacets[ranges][Year+published][to]=2021&searchQueryParams[mtj_jnl_id][value]=[id]&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
-        },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to work',
         offlineSnackbar: {
