@@ -922,6 +922,8 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
                         return (
+                            !!journalDetails.fez_journal_doaj &&
+                            !!journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
                             !!journalDetails.fez_journal_read_and_publish &&
                             !!journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_issn
                         );
