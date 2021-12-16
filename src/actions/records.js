@@ -1,21 +1,21 @@
-import { post, patch, put } from 'repositories/generic';
+import { patch, post, put } from 'repositories/generic';
 import {
-    NEW_RECORD_API,
-    EXISTING_RECORD_API,
-    RECORDS_ISSUES_API,
-    NEW_COLLECTION_API,
     EXISTING_COLLECTION_API,
-    NEW_COMMUNITY_API,
     EXISTING_COMMUNITY_API,
+    EXISTING_RECORD_API,
+    NEW_COLLECTION_API,
+    NEW_COMMUNITY_API,
+    NEW_RECORD_API,
+    RECORDS_ISSUES_API,
     UNLOCK_RECORD_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
 import {
-    NEW_RECORD_DEFAULT_VALUES,
+    DOCUMENT_TYPES_LOOKUP,
     NEW_COLLECTION_DEFAULT_VALUES,
     NEW_COMMUNITY_DEFAULT_VALUES,
-    DOCUMENT_TYPES_LOOKUP,
+    NEW_RECORD_DEFAULT_VALUES,
 } from 'config/general';
 import * as actions from './actionTypes';
 import Raven from 'raven-js';

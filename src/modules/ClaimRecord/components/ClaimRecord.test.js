@@ -5,8 +5,6 @@ import { validation } from 'config';
 import locale from 'locale/forms';
 import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import prettyFormat from 'pretty-format';
-import renderer from 'react-test-renderer';
 
 function setup(testProps = {}) {
     const props = {
@@ -642,10 +640,6 @@ describe('Component ClaimRecord ', () => {
         };
 
         const wrapper = setup({ ...props });
-        const alert = wrapper.find(Alert);
-        const message = prettyFormat(renderer.create(alert.props().message), {
-            plugins: [prettyFormat.plugins.ReactTestComponent],
-        }).toString();
-        expect(message.includes(customErrorMessage)).toBe(true);
+        expect(toString(wrapper.find(Alert).props().message).includes(customErrorMessage)).toBe(true);
     });
 });

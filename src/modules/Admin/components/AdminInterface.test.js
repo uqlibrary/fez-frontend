@@ -5,6 +5,8 @@ import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
+import pageLocale from '../../../locale/pages';
+
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
 }));
@@ -43,6 +45,7 @@ function setup(testProps = {}) {
         },
         destroy: jest.fn(),
         unlockRecord: jest.fn(),
+        error: null,
         ...testProps,
     };
 
@@ -875,5 +878,49 @@ describe('AdminInterface component', () => {
         wrapper.find('#admin-work-retract-top').simulate('click');
         expect(handleSubmit).toHaveBeenCalled();
         expect(onSubmit).toHaveBeenCalled();
+    });
+
+    it('should render error', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementationOnce(() => true);
+        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+
+        const wrapper = setup({
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
+            error: { message: 'error' },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(
+            toString(wrapper.find('Alert').props().message).includes(
+                pageLocale.pages.edit.alerts.errorAlert.message(' '),
+            ),
+        ).toBe(true);
+    });
+
+    it('should prioritize formErrors', () => {
+        const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+        useIsUserSuperAdmin.mockImplementationOnce(() => true);
+        useTabbedContext.mockImplementationOnce(() => ({ tabbed: false }));
+
+        const error = 'Title is required';
+        const wrapper = setup({
+            handleSubmit: jest.fn(f => f({ setIn: jest.fn() })),
+            formErrors: { bibliographicSection: { rek_title: error } },
+            error: { message: 'error' },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+
+        expect(toString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
     });
 });
