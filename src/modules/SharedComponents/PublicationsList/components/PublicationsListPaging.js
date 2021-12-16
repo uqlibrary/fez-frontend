@@ -28,7 +28,7 @@ const styles = theme => ({
         minHeight: 32,
         maxHeight: 32,
         overflow: 'hidden',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             paddingLeft: 0,
             paddingRight: 0,
             '& > span': {

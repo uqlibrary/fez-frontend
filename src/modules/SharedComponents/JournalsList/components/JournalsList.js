@@ -15,25 +15,38 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             display: 'grid',
-            gridTemplateColumns: '2fr 4fr 1fr',
+            gridTemplateColumns: '80% auto 50px',
             flexWrap: 'nowrap',
             overflowX: 'scroll',
         },
+        [theme.breakpoints.down('xs')]: {
+            gridTemplateColumns: 'auto auto 50px',
+        },
     },
     titleColumn: {
+        width: JournalFieldsMap[0].size.xs,
         [theme.breakpoints.up('sm')]: {
-            width: JournalFieldsMap[0].size,
+            width: JournalFieldsMap[0].size.sm,
+        },
+        [theme.breakpoints.up('md')]: {
+            width: JournalFieldsMap[0].size.md,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: JournalFieldsMap[0].size.lg,
+        },
+        [theme.breakpoints.up('xl')]: {
+            width: JournalFieldsMap[0].size.xl,
         },
     },
     moreColumnsWidth: {
         marginLeft: 4,
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             width: '100%',
             overflow: 'unset',
         },
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             overflow: props => (props.minimalView ? 'unset' : 'auto hidden'),
         },
         flexGrow: props => (props.minimalView ? 'inherit' : 1),
@@ -43,7 +56,7 @@ const useStyles = makeStyles(theme => ({
         width: '100%',
         overflowY: 'hidden',
         height: 40,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             height: 32,
         },
     },
@@ -84,7 +97,6 @@ const JournalsList = ({
     };
     const classes = useStyles(props);
 
-    // const detailColStyle = minimalView ? { flexGrow: 'inherit' } : { overflowX: 'auto', overflowY: 'hidden' };
     return (
         <Grid
             container

@@ -12,7 +12,14 @@ export const JournalFieldsMap = [
         key: 'jnl_title',
         label: 'Journal title',
         subLabel: '',
-        size: 400, // Pixels width - can be anything.
+        size: {
+            // width - can be anything.
+            xs: 'auto',
+            sm: 'auto',
+            md: '55%',
+            lg: '60%',
+            xl: '60%',
+        },
         prefix: '',
         suffix: '',
         compactView: true, // Does this display in the minimal view?
