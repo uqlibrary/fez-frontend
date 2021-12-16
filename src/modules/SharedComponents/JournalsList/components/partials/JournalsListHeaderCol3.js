@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     gridContainer: {
         width: 45,
         height: 40,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             height: 32,
         },
         borderBottom: props => (props.minimalView ? 'none' : '1px solid #CCC'),
@@ -21,11 +21,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.8rem',
         marginLeft: 8,
         marginTop: -18,
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('md')]: {
             padding: 0,
             borderRadius: 0,
         },
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             paddingTop: 6,
             paddingLeft: 4,
             paddingRight: 4,

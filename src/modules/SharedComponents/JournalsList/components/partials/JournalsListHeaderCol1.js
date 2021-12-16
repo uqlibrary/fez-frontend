@@ -13,25 +13,25 @@ const useStyles = makeStyles(theme => ({
         borderBottom: '1px solid #CCC',
         marginBottom: 6,
         height: 40,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             height: 32,
         },
     },
     gridItem: {
         height: 40,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             height: 32,
         },
     },
     checkbox: {
         padding: 2,
         marginTop: 4,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             marginTop: -8,
         },
     },
     heading: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             display: 'flex',
             alignItems: 'center',
         },
