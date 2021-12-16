@@ -11,10 +11,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
-
-export const listContainsTerm = (list, term) => {
-    return list.some(sort => (typeof sort === 'object' ? sort.value === term : sort === term));
-};
+import { doesListContainItem } from '../../../../helpers/doesListContainItem';
 
 const PublicationsListSorting = props => {
     const txt = locale.components.sorting;
@@ -36,13 +33,13 @@ const PublicationsListSorting = props => {
         (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
 
     // sanitise values
-    const propSortBy = listContainsTerm(props.sortingData.sortBy, initPropSortBy)
+    const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
         ? initPropSortBy
         : props.sortingDefaults.sortBy ?? props.sortingData.sortBy[0].value;
-    const propSortDirection = listContainsTerm(locale.components.sorting.sortDirection, initPropSortDirection)
+    const propSortDirection = doesListContainItem(locale.components.sorting.sortDirection, initPropSortDirection)
         ? initPropSortDirection
         : props.sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
-    const propPageSize = listContainsTerm(pageLength, initPropPageSize)
+    const propPageSize = doesListContainItem(pageLength, initPropPageSize)
         ? initPropPageSize
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
