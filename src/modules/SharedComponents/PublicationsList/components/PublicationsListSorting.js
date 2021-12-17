@@ -11,7 +11,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
-import { doesListContainItem } from '../../../../helpers/doesListContainItem';
+import { doesListContainItem } from 'helpers/general';
 
 const PublicationsListSorting = props => {
     const txt = locale.components.sorting;

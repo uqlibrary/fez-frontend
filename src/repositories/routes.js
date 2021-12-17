@@ -10,7 +10,7 @@ import {
 } from 'config/general';
 import param from 'can-param';
 import locale from 'locale/components';
-import { doesListContainItem } from '../helpers/doesListContainItem';
+import { doesListContainItem } from 'helpers/general';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
