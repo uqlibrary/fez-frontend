@@ -1,5 +1,6 @@
 import locale from 'locale/components';
 import moment from 'moment';
+
 const converter = require('number-to-words');
 
 const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
@@ -796,6 +797,15 @@ export const CURRENT_LICENCES = [
             'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
             'I FURTHER AGREE TO A SHARE ALIKE RESTRICTION on this dataset, or any data included in it, which means that I Agree that I remix, transform or build upon the data, I will contributions on the same Share Alike basis as the original.',
             'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
+        ],
+    },
+    {
+        value: 456807,
+        text: 'Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.',
         ],
     },
 ];
