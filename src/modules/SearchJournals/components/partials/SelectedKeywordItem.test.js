@@ -28,4 +28,34 @@ describe('SelectedKeywordItem', () => {
         fireEvent.click(container.querySelector('[class*="deleteIcon"]'));
         expect(onKeywordDelete).toHaveBeenCalledTimes(1);
     });
+    it('should call given onKeywordDelete on removal by pressing space bar', () => {
+        const onKeywordDelete = jest.fn();
+        const { container } = setup({
+            onKeywordDelete: onKeywordDelete,
+            keyword: keyword,
+        });
+
+        fireEvent.keyPress(container.querySelector('[class*="deleteIcon"]'), { charCode: 32, code: 'Space' });
+        expect(onKeywordDelete).toHaveBeenCalledTimes(1);
+    });
+    it('should call given onKeywordDelete on removal by pressing normal enter button', () => {
+        const onKeywordDelete = jest.fn();
+        const { container } = setup({
+            onKeywordDelete: onKeywordDelete,
+            keyword: keyword,
+        });
+
+        fireEvent.keyPress(container.querySelector('[class*="deleteIcon"]'), { charCode: 13, code: 'Enter' });
+        expect(onKeywordDelete).toHaveBeenCalledTimes(1);
+    });
+    it('should call given onKeywordDelete on removal by pressing numeric pad enter button', () => {
+        const onKeywordDelete = jest.fn();
+        const { container } = setup({
+            onKeywordDelete: onKeywordDelete,
+            keyword: keyword,
+        });
+
+        fireEvent.keyPress(container.querySelector('[class*="deleteIcon"]'), { charCode: 13, code: 'NumpadEnter' });
+        expect(onKeywordDelete).toHaveBeenCalledTimes(1);
+    });
 });
