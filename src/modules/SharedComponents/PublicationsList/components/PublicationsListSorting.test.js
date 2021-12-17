@@ -159,7 +159,7 @@ describe('PublicationsListSorting component', () => {
         expect(wrapper.find('#pageSize').props().value).toEqual(5); // 5 was inserted in a previous test
     });
 
-    it('updates sortBy and sortDirection state when they change after render', () => {
+    it('updates sortBy, sortDirection and pageSize state when they change after render', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -168,7 +168,7 @@ describe('PublicationsListSorting component', () => {
         wrapper.setProps({
             sortBy: 'score',
             sortDirection: 'Asc',
-            pageSize: 20,
+            pageSize: 50,
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

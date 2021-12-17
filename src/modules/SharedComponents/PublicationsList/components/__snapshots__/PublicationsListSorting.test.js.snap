@@ -863,7 +863,7 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting component updates sortBy and sortDirection state when they change after render 1`] = `
+exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -1041,7 +1041,7 @@ exports[`PublicationsListSorting component updates sortBy and sortDirection stat
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`PublicationsListSorting component updates sortBy and sortDirection state when they change after render 2`] = `
+exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 2`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
   spacing={2}
@@ -1175,7 +1175,7 @@ exports[`PublicationsListSorting component updates sortBy and sortDirection stat
         disabled={false}
         id="pageSize"
         onChange={[Function]}
-        value={20}
+        value={50}
       >
         <WithStyles(ForwardRef(MenuItem))
           key="records-per-page-5"
