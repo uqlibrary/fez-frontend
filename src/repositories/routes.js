@@ -10,6 +10,7 @@ import {
 } from 'config/general';
 import param from 'can-param';
 import locale from 'locale/components';
+import { doesListContainItem } from 'helpers/general';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -156,6 +157,9 @@ export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
 
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });
+
+// create/patch record apis
+export const CLAIM_PRE_CHECK = () => ({ apiUrl: 'external/records/claim/pre-check' });
 
 export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
@@ -475,6 +479,9 @@ export const JOURNAL_SEARCH_API = query => {
         ...locale.components.searchJournals.sortingDefaults,
         ...query,
     };
+    const validPageSize = doesListContainItem(locale.components.sorting.recordsPerPage, +pageSize)
+        ? +pageSize
+        : locale.components.searchJournals.sortingDefaults.pageSize ?? locale.components.sorting.recordsPerPage[0];
 
     return {
         apiUrl: 'journals/search',
@@ -484,7 +491,7 @@ export const JOURNAL_SEARCH_API = query => {
                 ...getStandardSearchParams({
                     ...query,
                     facets: query?.activeFacets,
-                    pageSize,
+                    pageSize: validPageSize,
                     sortBy,
                     sortDirection,
                 }),
@@ -494,6 +501,14 @@ export const JOURNAL_SEARCH_API = query => {
 };
 
 export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
+    const { pageSize } = {
+        ...locale.components.favouriteJournals.sortingDefaults,
+        ...query,
+    };
+    const validPageSize = doesListContainItem(locale.components.sorting.recordsPerPage, +pageSize)
+        ? +pageSize
+        : locale.components.favouriteJournals.sortingDefaults.pageSize ?? locale.components.sorting.recordsPerPage[0];
+
     const params = {
         apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),
     };
@@ -502,7 +517,7 @@ export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
         params.options = {
             params: {
                 ...getKeywordsParams(query.keywords),
-                ...getStandardSearchParams({ ...query, facets: query.activeFacets }),
+                ...getStandardSearchParams({ ...query, facets: query.activeFacets, pageSize: validPageSize }),
             },
         };
     }

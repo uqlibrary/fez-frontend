@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
-import locale from '../../../../locale/components';
-import { pathConfig } from '../../../../config';
+import locale from 'locale/components';
+import { pathConfig } from 'config';
 import { useHistory, useLocation } from 'react-router';
 
 const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals = false }) => {

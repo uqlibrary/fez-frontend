@@ -8,7 +8,7 @@ const getExactMatchKeywords = keywordsResponse => {
         keywordsResponse.titleExactMatch.map(journal => ({
             keyword: journal.jnl_title,
             title: journal.jnl_title,
-            href: pathConfig.journal.view(journal.jnl_id),
+            href: pathConfig.journal.view(journal.jnl_jid),
         }));
 
     return exactMatch || [];

@@ -3648,6 +3648,11 @@ export default {
                 empty:
                     "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
             },
+            sortingDefaults: {
+                pageSize: 20,
+                sortBy: 'score', // for future use
+                sortDirection: 'Desc', // for future use
+            },
         },
         journalComparison: {
             title: 'Journal comparison',

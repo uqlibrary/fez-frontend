@@ -1,7 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { setupCache } from 'axios-cache-adapter';
-import { API_URL, SESSION_COOKIE_NAME, TOKEN_NAME, SESSION_USER_GROUP_COOKIE_NAME } from './general';
+import { API_URL, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, TOKEN_NAME } from './general';
 import { store } from 'config/store';
 import { logout } from 'actions/account';
 import { showAppAlert } from 'actions/app';
@@ -62,7 +62,7 @@ let isGet = null;
 api.interceptors.request.use(request => {
     isGet = request.method === 'get';
     if (
-        (request.url.includes('records/search') || request.url.includes('records/export')) &&
+        (request.url?.includes('records/search') || request.url?.includes('records/export')) &&
         !!request.params &&
         !!request.params.mode &&
         request.params.mode === 'advanced'
@@ -145,7 +145,12 @@ api.interceptors.response.use(
         }
 
         if (!!errorMessage) {
-            return Promise.reject({ ...errorMessage });
+            return Promise.reject({
+                request: error.request,
+                ...errorMessage,
+                // allow the original error message to be handled further down the stack
+                ...(error.response?.data ? { original: error.response.data } : {}),
+            });
         } else {
             reportToSentry(error);
             return Promise.reject(error);

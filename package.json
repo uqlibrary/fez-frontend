@@ -235,6 +235,7 @@
         "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:cpu-restricted": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest --maxWorkers=50%",
         "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
+        "test:all-cpu-restricted": "npm run test:cpu-restricted && npm run test:e2e && npm run test:cs -s",
         "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
         "pretest:e2e": "rm -rf .nyc_output",
         "test:e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
