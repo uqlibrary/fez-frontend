@@ -33,6 +33,7 @@ import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import Badge from '@material-ui/core/Badge';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
+import Toolbar from '@material-ui/core/Toolbar';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
@@ -61,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     drawerPaper: {
         width: drawerWidth,
         [theme.breakpoints.up('sm')]: {
-            top: 76,
+            zIndex: 1,
         },
     },
     drawerHeader: {
@@ -137,6 +138,7 @@ export const NewViewRecord = ({
 
     const drawer = (
         <div>
+            <Toolbar />
             <div className={classes.drawerHeader}>
                 <Typography variant={'h6'}>
                     <IconButton onClick={handleDrawerToggle}>
