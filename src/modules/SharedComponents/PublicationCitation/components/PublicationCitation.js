@@ -44,6 +44,8 @@ import VideoDocumentCitation from './citations/VideoDocumentCitation';
 import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 
+import DetailedHistory from './DetailedHistory';
+
 export const styles = theme => ({
     divider: {
         marginBottom: 12,
@@ -454,6 +456,7 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                 )}
                 <Divider className={classes.divider} />
+                <DetailedHistory isModalOpen />
             </div>
         );
     }
