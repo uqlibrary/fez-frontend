@@ -30,6 +30,7 @@ import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import clsx from 'clsx';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import Badge from '@material-ui/core/Badge';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -49,6 +50,11 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             width: drawerWidth,
             flexShrink: 0,
+        },
+    },
+    drawerMobile: {
+        [theme.breakpoints.up('sm')]: {
+            display: 'none',
         },
     },
     appBar: {
@@ -82,11 +88,20 @@ const useStyles = makeStyles(theme => ({
         marginRight: 0,
     },
     contentShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-        marginRight: drawerWidth,
+        [theme.breakpoints.up('sm')]: {
+            transition: theme.transitions.create('margin', {
+                easing: theme.transitions.easing.easeOut,
+                duration: theme.transitions.duration.enteringScreen,
+            }),
+            marginRight: drawerWidth,
+        },
+    },
+    drawerContent: {
+        padding: '20px',
+    },
+    notesField: {
+        maxHeight: '40vh',
+        overflowY: 'auto',
     },
 }));
 
@@ -138,7 +153,9 @@ export const NewViewRecord = ({
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Hidden xsDown implementation="css">
+                <Toolbar />
+            </Hidden>
             <div className={classes.drawerHeader}>
                 <Typography variant={'h6'}>
                     <IconButton onClick={handleDrawerToggle}>
@@ -148,25 +165,66 @@ export const NewViewRecord = ({
                 </Typography>
             </div>
             <Divider />
-            <Typography variant={'subtitle1'} style={{ textTransform: 'uppercase' }}>
-                Notes{' '}
-                <a href="#" style={{ textTransform: 'none' }}>
-                    [expand]
-                </a>
-            </Typography>
-            <Typography variant={'body1'}>
-                Due 28/2/2017 17/6/14 Ds Forthcoming publication - 2016. Dolly MacKinnon (86672) has supplied the
-                following correction information: This book chapter is a B1P NOT a BXP. Please fix immediately.i#1806879
-                13/3/18 - Publication details via Book Depository:
-                https://www.bookdepository.com/Material-Worlds-Childhood-North-Western-Europe-C-1350-1800-Philippa-Maddern/9781472444776
-                (MM) Issues on record :: UQ:329852 Description: Record: https://espace.library.uq.edu.au/view/UQ:329852
-                User “Dr Dolly...
-            </Typography>
+            <div className={classes.drawerContent}>
+                <Typography variant={'subtitle1'} style={{ textTransform: 'uppercase' }}>
+                    Notes
+                </Typography>
+                <Typography variant={'body2'} className={classes.notesField}>
+                    {/* eslint-disable-next-line camelcase */
+                    ReactHtmlParser(recordToView?.fez_internal_notes?.ain_detail) ?? ''}
+                </Typography>
+            </div>
             <Divider />
+            <div className={classes.drawerContent}>
+                <Typography variant={'subtitle1'}>Has Author Affiliations?</Typography>
+                <Typography variant={'body2'}>
+                    {/* eslint-disable-next-line camelcase */
+                    recordToView?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No'}
+                </Typography>
+            </div>
+            <Divider />
+            <div className={classes.drawerContent}>
+                <Typography variant={'subtitle1'}>WoS ID</Typography>
+                <Typography variant={'body2'} gutterBottom>
+                    {
+                        /* eslint-disable-next-line camelcase */
+                        recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc
+                    }
+                    {/* eslint-disable-next-line camelcase */
+                    recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc && (
+                        <FileCopyOutlinedIcon fontSize="inherit" />
+                    )}
+                </Typography>
+                <Typography variant={'subtitle1'}>WoS Doc Type</Typography>
+                <Typography variant={'body2'}>@ - Article</Typography>
+            </div>
+            <Divider />
+            <div className={classes.drawerContent}>
+                <Typography variant={'subtitle1'}>Scopus ID</Typography>
+                <Typography variant={'body2'} gutterBottom>
+                    {
+                        /* eslint-disable-next-line camelcase */
+                        recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id
+                    }
+                    {/* eslint-disable-next-line camelcase */
+                    recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id && (
+                        <FileCopyOutlinedIcon fontSize="inherit" />
+                    )}
+                </Typography>
+                <Typography variant={'subtitle1'}>Scopus Doc Type</Typography>
+                <Typography variant={'body2'}>ar - Article</Typography>
+            </div>
+            <Divider />
+            <div className={classes.drawerContent}>
+                <Typography variant={'subtitle1'}>Pubmed ID</Typography>
+                <Typography variant={'body2'} gutterBottom>
+                    353732 <FileCopyOutlinedIcon fontSize="inherit" />
+                </Typography>
+                <Typography variant={'subtitle1'}>Pubmed Doc Type</Typography>
+                <Typography variant={'body2'}>Journal Article</Typography>
+            </div>
         </div>
     );
-
-    const container = window !== undefined ? window.document.body : undefined;
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid));
@@ -204,15 +262,16 @@ export const NewViewRecord = ({
 
     const getTitleAndIcon = () => {
         const titleText = ReactHtmlParser(recordToView.rek_title);
-        return (
-            <>
-                {titleText}
+        // eslint-disable-next-line camelcase
+        const TitleIcon = () => {
+            // eslint-disable-next-line camelcase
+            return recordToView?.fez_internal_notes?.ain_detail ? (
                 <Badge
                     onClick={handleDrawerToggle}
                     color="error"
-                    overlap="circular"
-                    badgeContent=" "
-                    variant="dot"
+                    overlap="circle"
+                    badgeContent="..."
+                    variant=""
                     anchorOrigin={{
                         vertical: 'top',
                         horizontal: 'right',
@@ -221,6 +280,14 @@ export const NewViewRecord = ({
                 >
                     <DescriptionOutlinedIcon fontSize="inherit" />
                 </Badge>
+            ) : (
+                <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+            );
+        };
+        return (
+            <>
+                {titleText}
+                <TitleIcon />
             </>
         );
     };
@@ -234,7 +301,7 @@ export const NewViewRecord = ({
             <StandardPage className="viewRecord" title={getTitleAndIcon()} style={{ display: 'flex' }}>
                 <Hidden smUp implementation="css">
                     <Drawer
-                        container={container}
+                        className={classes.drawerMobile}
                         variant="temporary"
                         anchor={theme.direction === 'rtl' ? 'left' : 'right'}
                         open={mobileOpen}
@@ -319,7 +386,6 @@ export const NewViewRecord = ({
                 <Hidden xsDown implementation="css">
                     <Drawer
                         className={classes.drawer}
-                        container={container}
                         classes={{
                             paper: classes.drawerPaper,
                         }}
