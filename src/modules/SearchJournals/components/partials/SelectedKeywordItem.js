@@ -44,7 +44,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
                 </React.Fragment>
             }
             tabIndex="0"
-            aria-label={`Remove ${keyword.type.toLowerCase()} '${keyword.text}' filter button`}
+            aria-label={`Remove ${keyword.type.toLowerCase()} '${keyword.text}' filter`}
             onKeyPress={handleKeywordKeyboardPress}
             onDelete={handleDeleteKeyword}
         />
