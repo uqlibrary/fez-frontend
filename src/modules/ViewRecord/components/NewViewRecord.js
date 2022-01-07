@@ -31,7 +31,6 @@ import * as actions from 'actions';
 import clsx from 'clsx';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import Badge from '@material-ui/core/Badge';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -39,7 +38,7 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-// import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import SpeakerNotesOutlinedIcon from '@material-ui/icons/SpeakerNotesOutlined';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 const drawerWidth = 260;
@@ -80,7 +79,10 @@ const useStyles = makeStyles(theme => ({
     },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(3),
+        padding: theme.spacing(1),
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(3),
+        },
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -102,6 +104,13 @@ const useStyles = makeStyles(theme => ({
     notesField: {
         maxHeight: '40vh',
         overflowY: 'auto',
+    },
+    iconSuper: {
+        verticalAlign: 'super',
+        marginLeft: '-4px',
+    },
+    cursor: {
+        cursor: 'pointer',
     },
 }));
 
@@ -266,22 +275,13 @@ export const NewViewRecord = ({
         const TitleIcon = () => {
             // eslint-disable-next-line camelcase
             return recordToView?.fez_internal_notes?.ain_detail ? (
-                <Badge
-                    onClick={handleDrawerToggle}
-                    color="error"
-                    overlap="circle"
-                    badgeContent="..."
-                    variant=""
-                    anchorOrigin={{
-                        vertical: 'top',
-                        horizontal: 'right',
-                    }}
-                    style={{ cursor: 'pointer' }}
-                >
+                // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+                <span onClick={handleDrawerToggle} className={classes.cursor}>
                     <DescriptionOutlinedIcon fontSize="inherit" />
-                </Badge>
+                    <SpeakerNotesOutlinedIcon fontSize="small" className={classes.iconSuper} />
+                </span>
             ) : (
-                <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+                <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} className={classes.cursor} />
             );
         };
         return (
