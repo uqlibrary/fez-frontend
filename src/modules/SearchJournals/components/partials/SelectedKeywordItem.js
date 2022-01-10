@@ -44,7 +44,9 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
                 </React.Fragment>
             }
             tabIndex="0"
-            aria-label={`Remove ${keyword.type.toLowerCase()} '${keyword.text}' filter button`}
+            aria-label={`${keyword.type.toLowerCase()} '${
+                keyword.text
+            }' filter, to remove press the backspace or delete keyboard`}
             onKeyPress={handleKeywordKeyboardPress}
             onDelete={handleDeleteKeyword}
         />

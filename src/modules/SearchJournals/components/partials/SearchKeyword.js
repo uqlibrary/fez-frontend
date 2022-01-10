@@ -31,12 +31,23 @@ export const getId = (keyword, variant, index) => `journal-search-item-${getIdSu
 export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
     const classes = useStyles();
     const handleKeywordClick = () => onKeywordClick(keyword);
+    const handleKeywordKeyboardPress = key => {
+        key.preventDefault();
+        if (
+            key.code.toLowerCase() === 'space' ||
+            key.code.toLowerCase() === 'enter' ||
+            key.code.toLowerCase() === 'numpadenter'
+        ) {
+            handleKeywordClick();
+        }
+    };
     return (
         <Grid item xs={12}>
             <Typography
                 component="span"
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
+                onKeyPress={handleKeywordKeyboardPress}
                 onClick={handleKeywordClick}
                 id={getId(keyword, variant, index)}
                 data-testid={getId(keyword, variant, index)}
