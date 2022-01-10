@@ -8,6 +8,7 @@ export const initialState = {
     isRecordLocked: false,
     isDeleted: false,
     isJobCreated: false,
+    error: null,
 };
 
 const handlers = {
@@ -58,6 +59,11 @@ const handlers = {
     [actions.ADMIN_UPDATE_WORK_JOB_CREATED]: state => ({
         ...state,
         isJobCreated: true,
+    }),
+
+    [actions.ADMIN_UPDATE_WORK_FAILED]: (state, action) => ({
+        ...state,
+        error: action.payload,
     }),
 };
 

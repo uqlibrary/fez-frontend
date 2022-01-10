@@ -603,6 +603,18 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   <p>
                     The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
                   </p>
+                  <h5>
+                    Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -707,6 +719,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         ],
                         "text": "Permitted Re-Use with Share Alike Requirement",
                         "value": 454105,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "text": "Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient",
+                        "value": 456807,
                       },
                     ]
                   }
@@ -2180,6 +2201,18 @@ exports[`AddDataCollection test should render component with a valid collection 
                   <p>
                     The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
                   </p>
+                  <h5>
+                    Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -2284,6 +2317,15 @@ exports[`AddDataCollection test should render component with a valid collection 
                         ],
                         "text": "Permitted Re-Use with Share Alike Requirement",
                         "value": 454105,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "text": "Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient",
+                        "value": 456807,
                       },
                     ]
                   }
@@ -3753,6 +3795,18 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   <p>
                     The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
                   </p>
+                  <h5>
+                    Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -3857,6 +3911,15 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         ],
                         "text": "Permitted Re-Use with Share Alike Requirement",
                         "value": 454105,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "text": "Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient",
+                        "value": 456807,
                       },
                     ]
                   }
@@ -5326,6 +5389,18 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   <p>
                     The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.
                   </p>
+                  <h5>
+                    Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient
+                  </h5>
+                  <p>
+                    I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.
+                  </p>
+                  <p>
+                    I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.
+                  </p>
+                  <p>
+                    The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
+                  </p>
                   <p>
                     View more on
                      
@@ -5430,6 +5505,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                         ],
                         "text": "Permitted Re-Use with Share Alike Requirement",
                         "value": 454105,
+                      },
+                      Object {
+                        "description": Array [
+                          "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.",
+                          "I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.",
+                          "The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.",
+                        ],
+                        "text": "Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient",
+                        "value": 456807,
                       },
                     ]
                   }
