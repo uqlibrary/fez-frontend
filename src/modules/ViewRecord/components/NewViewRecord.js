@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router';
@@ -29,60 +30,20 @@ import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import clsx from 'clsx';
+// import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Toolbar from '@material-ui/core/Toolbar';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import SpeakerNotesOutlinedIcon from '@material-ui/icons/SpeakerNotesOutlined';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import AdminViewRecordDrawer from './AdminRecordDrawer';
+import { Button } from '@material-ui/core';
 
+export function redirectUserToLogin() {
+    window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+}
 const drawerWidth = 260;
 
 const useStyles = makeStyles(theme => ({
-    drawer: {
-        padding: theme.spacing(0, 1),
-        [theme.breakpoints.up('sm')]: {
-            width: drawerWidth,
-            flexShrink: 0,
-        },
-    },
-    drawerMobile: {
-        [theme.breakpoints.up('sm')]: {
-            display: 'none',
-        },
-    },
-    appBar: {
-        [theme.breakpoints.up('sm')]: {
-            width: `calc(100% - ${drawerWidth}px)`,
-            marginLeft: drawerWidth,
-        },
-    },
-    // necessary for content to be below app bar
-    toolbar: theme.mixins.toolbar,
-    drawerPaper: {
-        width: drawerWidth,
-        [theme.breakpoints.up('sm')]: {
-            zIndex: 1,
-        },
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
-        justifyContent: 'flex-start',
-    },
     content: {
         flexGrow: 1,
-        padding: theme.spacing(1),
-        [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(3),
-        },
         transition: theme.transitions.create('margin', {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -98,25 +59,14 @@ const useStyles = makeStyles(theme => ({
             marginRight: drawerWidth,
         },
     },
-    drawerContent: {
-        padding: '20px',
-    },
-    notesField: {
-        maxHeight: '40vh',
-        overflowY: 'auto',
-    },
-    iconSuper: {
-        verticalAlign: 'super',
-        marginLeft: '-4px',
+    alignSocialButtons: {
+        display: 'flex',
+        alignItems: 'center',
     },
     cursor: {
         cursor: 'pointer',
     },
 }));
-
-export function redirectUserToLogin() {
-    window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
-}
 
 export const NewViewRecord = ({
     account,
@@ -140,100 +90,70 @@ export const NewViewRecord = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
-
     const classes = useStyles();
-    const theme = useTheme();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
 
     const handleMobileDrawerToggle = () => {
+        console.log('handleMobileDrawerToggle');
         setMobileOpen(!mobileOpen);
     };
     const handleDesktopDrawerToggle = () => {
+        console.log('handleDesktopDrawerToggle', open);
         setOpen(!open);
     };
     const handleDrawerToggle = () => {
+        console.log('handleDrawerToggle');
         if (window.matchMedia('(max-width:599.96px)').matches) {
+            console.log('matchMedia');
             handleMobileDrawerToggle();
         } else {
+            console.log('not matchMedia');
             handleDesktopDrawerToggle();
         }
     };
-
-    const drawer = (
-        <div>
-            <Hidden xsDown implementation="css">
-                <Toolbar />
-            </Hidden>
-            <div className={classes.drawerHeader}>
-                <Typography variant={'h6'}>
-                    <IconButton onClick={handleDrawerToggle}>
-                        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                    </IconButton>
-                    &nbsp;Record Data
-                </Typography>
-            </div>
-            <Divider />
-            <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'} style={{ textTransform: 'uppercase' }}>
-                    Notes
-                </Typography>
-                <Typography variant={'body2'} className={classes.notesField}>
-                    {/* eslint-disable-next-line camelcase */
-                    ReactHtmlParser(recordToView?.fez_internal_notes?.ain_detail) ?? ''}
-                </Typography>
-            </div>
-            <Divider />
-            <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'}>Has Author Affiliations?</Typography>
-                <Typography variant={'body2'}>
-                    {/* eslint-disable-next-line camelcase */
-                    recordToView?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No'}
-                </Typography>
-            </div>
-            <Divider />
-            <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'}>WoS ID</Typography>
-                <Typography variant={'body2'} gutterBottom>
-                    {
-                        /* eslint-disable-next-line camelcase */
-                        recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc
-                    }
-                    {/* eslint-disable-next-line camelcase */
-                    recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc && (
-                        <FileCopyOutlinedIcon fontSize="inherit" />
-                    )}
-                </Typography>
-                <Typography variant={'subtitle1'}>WoS Doc Type</Typography>
-                <Typography variant={'body2'}>@ - Article</Typography>
-            </div>
-            <Divider />
-            <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'}>Scopus ID</Typography>
-                <Typography variant={'body2'} gutterBottom>
-                    {
-                        /* eslint-disable-next-line camelcase */
-                        recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id
-                    }
-                    {/* eslint-disable-next-line camelcase */
-                    recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id && (
-                        <FileCopyOutlinedIcon fontSize="inherit" />
-                    )}
-                </Typography>
-                <Typography variant={'subtitle1'}>Scopus Doc Type</Typography>
-                <Typography variant={'body2'}>ar - Article</Typography>
-            </div>
-            <Divider />
-            <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'}>Pubmed ID</Typography>
-                <Typography variant={'body2'} gutterBottom>
-                    353732 <FileCopyOutlinedIcon fontSize="inherit" />
-                </Typography>
-                <Typography variant={'subtitle1'}>Pubmed Doc Type</Typography>
-                <Typography variant={'body2'}>Journal Article</Typography>
-            </div>
-        </div>
-    );
+    // const recordTitle = () => {
+    // const titleText = ReactHtmlParser(recordToView.rek_title);
+    /*    if (isAdmin && !isDeleted) {
+            // eslint-disable-next-line camelcase
+            const TitleIcon = () => {
+                // eslint-disable-next-line camelcase
+                return recordToView?.fez_internal_notes?.ain_detail ? (
+                    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+                    <Badge
+                        onClick={handleDrawerToggle}
+                        color="error"
+                        overlap="circle"
+                        badgeContent="&hellip;"
+                        variant="standard"
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        <DescriptionOutlinedIcon fontSize="inherit" />
+                    </Badge>
+                ) : (
+                    <DescriptionOutlinedIcon
+                        fontSize="inherit"
+                        onClick={handleDrawerToggle}
+                        className={classes.cursor}
+                    />
+                );
+            };
+            return (
+                <>
+                    {titleText}
+                    <TitleIcon />
+                </>
+            );
+        } else {
+            return titleText;
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    };
+    */
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid));
@@ -269,53 +189,25 @@ export const NewViewRecord = ({
         return <div className="empty" />;
     }
 
-    const getTitleAndIcon = () => {
-        const titleText = ReactHtmlParser(recordToView.rek_title);
-        // eslint-disable-next-line camelcase
-        const TitleIcon = () => {
-            // eslint-disable-next-line camelcase
-            return recordToView?.fez_internal_notes?.ain_detail ? (
-                // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-                <span onClick={handleDrawerToggle} className={classes.cursor}>
-                    <DescriptionOutlinedIcon fontSize="inherit" />
-                    <SpeakerNotesOutlinedIcon fontSize="small" className={classes.iconSuper} />
-                </span>
-            ) : (
-                <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} className={classes.cursor} />
-            );
-        };
-        return (
-            <>
-                {titleText}
-                <TitleIcon />
-            </>
-        );
-    };
-
     return (
         <div
             className={clsx(classes.content, {
                 [classes.contentShift]: open,
             })}
         >
-            <StandardPage className="viewRecord" title={getTitleAndIcon()} style={{ display: 'flex' }}>
-                <Hidden smUp implementation="css">
-                    <Drawer
-                        className={classes.drawerMobile}
-                        variant="temporary"
-                        anchor={theme.direction === 'rtl' ? 'left' : 'right'}
-                        open={mobileOpen}
-                        onClose={handleDrawerToggle}
-                        classes={{
-                            paper: classes.drawerPaper,
-                        }}
-                        ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
-                        }}
-                    >
-                        {drawer}
-                    </Drawer>
-                </Hidden>
+            <StandardPage
+                className="viewRecord"
+                title={ReactHtmlParser(recordToView.rek_title)}
+                style={{ display: 'flex' }}
+            >
+                {!isDeleted && !!recordToView && (
+                    <AdminViewRecordDrawer
+                        publication={recordToView}
+                        handleDrawerToggle={handleDrawerToggle}
+                        open={open}
+                        mobileOpen={mobileOpen}
+                    />
+                )}
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
                         <PublicationCitation
@@ -330,12 +222,26 @@ export const NewViewRecord = ({
                     {!isDeleted && !!recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
+                                {isAdmin && !isDeleted && (
+                                    <Grid item>
+                                        <Button
+                                            variant="outlined"
+                                            startIcon={<DescriptionOutlinedIcon />}
+                                            color="default"
+                                            onClick={handleDrawerToggle}
+                                        >
+                                            {`View ${
+                                                recordToView?.fez_internal_notes?.ain_detail ? 'Notes \u0026' : ''
+                                            } Record Data`}
+                                        </Button>
+                                    </Grid>
+                                )}
                                 <Grid item xs>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
                                 </Grid>
-                                <Grid item>
+                                <Grid item className={classes.alignSocialButtons}>
                                     <SocialShare
                                         publication={recordToView}
                                         services={[
@@ -382,20 +288,6 @@ export const NewViewRecord = ({
                     <PublicationDetails publication={recordToView} />
                     {!isDeleted && <AvailableVersions publication={recordToView} />}
                 </Grid>
-
-                <Hidden xsDown implementation="css">
-                    <Drawer
-                        className={classes.drawer}
-                        classes={{
-                            paper: classes.drawerPaper,
-                        }}
-                        open={open}
-                        variant="persistent"
-                        anchor={theme.direction === 'rtl' ? 'left' : 'right'}
-                    >
-                        {drawer}
-                    </Drawer>
-                </Hidden>
             </StandardPage>
         </div>
     );
