@@ -24,7 +24,7 @@ export default function DetailedHistory() {
         <div className={classes.root}>
             <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                    <Typography className={classes.heading}>Detailed History</Typography>
+                    <Typography variant="h5">Detailed History</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Grid container>
