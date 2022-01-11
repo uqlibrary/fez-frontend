@@ -1,66 +1,33 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const modalStyle = {
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-};
 const useStyles = makeStyles(theme => ({
-    modal: {
-        display: 'flex',
-        spacing: 0,
-        direction: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+    root: {
+        width: '100%',
     },
-
-    paper: {
-        position: 'absolute',
-        width: 800,
-        backgroundColor: theme.palette.background.paper,
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(2, 4, 3),
+    heading: {
+        fontSize: theme.typography.pxToRem(15),
+        fontWeight: theme.typography.fontWeightRegular,
     },
 }));
 
-export const DetailedHistory = () => {
-    const [detailsModalOpen, setDetailsModalOpen] = React.useState(false);
+export default function DetailedHistory() {
     const classes = useStyles();
 
     return (
-        <React.Fragment>
-            <button
-                onClick={() => {
-                    setDetailsModalOpen(true);
-                }}
-            >
-                Detailed History
-            </button>
-
-            <Modal
-                aria-labelledby="simple-modal-title"
-                aria-describedby="simple-modal-description"
-                onClose={() => {
-                    setDetailsModalOpen(false);
-                }}
-                open={detailsModalOpen}
-            >
-                <div style={modalStyle} className={classes.paper}>
+        <div className={classes.root}>
+            <Accordion>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
+                    <Typography className={classes.heading}>Detailed History</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
                     <Grid container>
-                        {/* Header Elements */}
-                        <Grid item xs={12}>
-                            <Typography
-                                variant="h5"
-                                id="Author-Information-Details"
-                                data-testid="Author-Information-Details"
-                            >
-                                <span>Detailed History</span>
-                            </Typography>
-                        </Grid>
                         <Grid item xs={4} style={{ color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}>
                             <span>Date</span>
                         </Grid>
@@ -93,10 +60,8 @@ export const DetailedHistory = () => {
                             <span>Merged metadata from external source scopus</span>
                         </Grid>
                     </Grid>
-                </div>
-            </Modal>
-        </React.Fragment>
+                </AccordionDetails>
+            </Accordion>
+        </div>
     );
-};
-
-export default DetailedHistory;
+}

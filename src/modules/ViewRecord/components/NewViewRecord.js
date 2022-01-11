@@ -14,6 +14,8 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
+import { DetailedHistory } from 'modules/SharedComponents/DetailedHistory';
+
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
 import Files from './Files';
@@ -131,6 +133,10 @@ export const NewViewRecord = ({
                     </Grid>
                 )}
             </Grid>
+            <Grid item xs={12} style={{ marginBottom: 24 }}>
+                <DetailedHistory />
+            </Grid>
+
             {isDeleted && (
                 <Grid item xs={12} style={{ marginBottom: 24 }}>
                     <Alert {...txt.deletedAlert} />
