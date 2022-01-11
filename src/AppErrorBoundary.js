@@ -18,7 +18,7 @@ class AppErrorBoundary extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        if (process.env.ENABLE_LOG) Raven.captureException(error, errorInfo);
+        if (process.env.ENABLE_LOG) Raven.captureException(error, { extra: errorInfo });
     }
 
     render() {
