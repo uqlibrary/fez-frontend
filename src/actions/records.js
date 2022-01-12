@@ -228,7 +228,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             newRecord = response.data;
             recordCreated = !!newRecord && !!newRecord.rek_pid;
             if (!recordCreated) {
-                return Promise.reject({ message: 'API did not return valid PID' });
+                return Promise.reject(new Error('API did not return valid PID'));
             }
             return (
                 (hasFilesToUpload &&
@@ -671,11 +671,11 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
                 return Promise.resolve(true);
             })
             .then(unlockRecordCallback)
-            .catch(() => {
+            .catch(error => {
                 dispatch({
                     type: actions.UNLOCK_RECORD_FAILED,
                 });
-                return Promise.reject(false);
+                return Promise.reject(error);
             });
     };
 };
