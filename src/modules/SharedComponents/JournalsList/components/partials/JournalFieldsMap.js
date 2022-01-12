@@ -44,20 +44,21 @@ export const JournalFieldsMap = [
                 <>
                     <p>
                         <b>Gold Open access:</b> A freely accessible, final version of a publication is available for
-                        everyone to read immediately after publication
+                        everyone to read immediately after publication.
                     </p>
                     <p>
                         For other pathways:
                         <ul>
                             <li>
-                                Use the <b>embargo</b> filter to sort journals by how quickly a self-archived or author
-                                accepted manuscript can be made available via UQ eSpace. (Green open access)
+                                Use the <b>publish open access (accepted version)</b> filter to sort journals by length
+                                of embargo period after which a self-archived or author accepted manuscript can be made
+                                available via UQ eSpace. (Green open access).
                             </li>
                             <li>
-                                Use the <b>publish open access</b> filter to include or exclude Article Processing
-                                Charges (APCs)which are paid by an author to a publisher to make a research output
-                                immediately available and openly accessible. Some APCs may be prepaid or discounted, if
-                                the Library has negotiated a{' '}
+                                Use the <b>publish open access (published version)</b> filter to include or exclude
+                                Charges. (APCs) which are paid to a publisher to make a publication immediately
+                                available and openly accessible. Some APCs may be prepaid or discounted, if the Library
+                                has negotiated a{' '}
                                 <a href={'https://web.library.uq.edu.au/read-and-publish-agreements'} target={'_blank'}>
                                     read and publish agreement
                                 </a>
@@ -74,9 +75,7 @@ export const JournalFieldsMap = [
         },
         showTooltip: true,
         toolTipLabel: data => {
-            return data.fez_journal_doaj
-                ? 'Open access journal'
-                : 'Gold open access is not available. Use filters to find alternate pathways';
+            return data.fez_journal_doaj ? 'Open access journal' : 'Use filters to find alternate pathways';
         },
         translateFn: data => {
             // Awaiting final logic for OA from MF/EA
@@ -148,8 +147,8 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        Scopus metric for journal citation impact. Updated annually. Not comparable across subject
-                        categories.
+                        Scopus metric for journal citation impact. Updated annually. <b>Not</b> comparable across
+                        subject categories.
                     </p>
                     <p>Higher is better.</p>
                 </>
@@ -173,8 +172,8 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        CiteScore percentile indicating where a journal is ranked within a category. Comparable across
-                        categories.
+                        CiteScore percentile indicating where a journal is ranked within a subject category. Comparable
+                        subject categories.
                     </p>
                     <p>Higher is better e.g. 98 means journal is in the top 2% of its subject category.</p>
                 </>
@@ -227,8 +226,8 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        Web of Science metric for journal citation impact. Updated annually. Not comparable across
-                        categories.
+                        Web of Science metric for journal citation impact. Updated annually. <b>Not</b> comparable
+                        subject categories.
                     </p>
                     <p>Higher is better.</p>
                 </>
@@ -256,7 +255,7 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        Impact factor percentile indicating where a journal is ranked within a subject category.
+                        Impact factor percentile, indicating where a journal is ranked within a subject category.
                         Comparable across subject categories.
                     </p>
                     <p>
