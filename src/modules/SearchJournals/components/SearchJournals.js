@@ -12,6 +12,7 @@ import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
 import { clearJournalSearchKeywords } from 'actions';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -199,6 +200,11 @@ export const SearchJournals = () => {
     return (
         <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
+                <Grid item xs>
+                    <StandardCard noHeader standardCardId="journal-search-intro-card">
+                        {txt.journalSearchInterface.intro}
+                    </StandardCard>
+                </Grid>
                 <Grid item xs={12}>
                     <JournalSearchInterface
                         onSearch={handleSearchJournalsClick}

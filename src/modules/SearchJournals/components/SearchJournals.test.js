@@ -33,6 +33,7 @@ describe('SearchJournals', () => {
     it('should render', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId('journal-search-page')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-intro-card')).toBeInTheDocument();
         expect(queryByTestId('journal-search-card')).toBeInTheDocument();
         expect(queryByTestId('journal-search-results-container')).not.toBeInTheDocument();
     });

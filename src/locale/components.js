@@ -3678,7 +3678,7 @@ export default {
                             question: 'Get detailed journal info',
                             answer: (
                                 <div>
-                                    Click on the title of the journal to explore its details like:
+                                    Click on the title of the journal to explore its details such as:
                                     <ul>
                                         <li>aims and scope of the journal</li>
                                         <li>journal quality</li>
@@ -3691,7 +3691,7 @@ export default {
                                             target="_blank"
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
                                         >
-                                            Read more
+                                            Read more about Strategic Publishing
                                         </a>
                                     </p>
                                 </div>
@@ -3710,9 +3710,63 @@ export default {
                                     </p>
                                     <p>
                                         You can compare the different metrics for specific journals by selecting each
-                                        and then clicking the "Compare selected" button. Or learn more via the{' '}
+                                        and then clicking the <b>Compare selected</b> button. Learn more via the{' '}
                                         <a target="_blank" href="https://uq.libwizard.com/f/metrics">
                                             online metrics tutorial
+                                        </a>
+                                        .
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'What are published and accepted versions for publishing Open Access',
+                            answer: (
+                                <div>
+                                    <p>
+                                        The published version (
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            target="_blank"
+                                        >
+                                            also known as Gold Open Access
+                                        </a>
+                                        ) is where the free and permanently accessible final version of a publication,
+                                        is available for everyone to read immediately after publication. Published
+                                        versions can be made open access via Article process charges, without charges,
+                                        or through the Library's{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            target="_blank"
+                                        >
+                                            agreements with some publishers
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        The accepted version (also referred to as{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            target="_blank"
+                                        >
+                                            self-archiving or Green open access
+                                        </a>
+                                        ) is the deposit of the author's version of the manuscript accepted for
+                                        publication in a publicly accessible institutional repository, such as UQ
+                                        eSpace. An author accepted manuscript (also referred to as a post-print) is the
+                                        author's version of a manuscript that has undergone peer review and has been
+                                        accepted by the publisher.
+                                        <a href="https://www.youtube.com/watch?v=okLMBxRixFQ" target="_blank">
+                                            View the Library's video guide
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                        >
+                                            Read more about Open Access
                                         </a>
                                     </p>
                                 </div>
@@ -3730,20 +3784,20 @@ export default {
                                         <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
                                             Article processing charges (APCs)
                                         </a>{' '}
-                                        fee paid by an author to make a research output immediately available and openly
-                                        accessible. The Library has{' '}
+                                        a fee paid to make an article immediately available and openly accessible. The
+                                        Library has{' '}
                                         <a
                                             href="https://web.library.uq.edu.au/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
                                         </a>
-                                        does not apply to some journals for UQ authors.
+                                        where that APC is pre-paid or reduced to some journals for UQ corresponding
+                                        authors.
                                     </p>
                                     <p>
-                                        To find a journal with an open access policy which meets your requirements or
-                                        funder mandate, refine your results by <b>Publish open access or Embargo</b>{' '}
-                                        filters.
+                                        To find a journal which meets your requirements or funder mandate, refine your
+                                        funder mandate, refine your results by <b>Publish open access</b> filters.
                                     </p>
                                     <p>
                                         <a
@@ -3757,7 +3811,7 @@ export default {
                             ),
                         },
                         {
-                            question: 'Ask Us',
+                            question: 'More help',
                             answer: (
                                 <ul>
                                     <li>
@@ -3774,10 +3828,26 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Provide feedback on the tool (
-                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>)
+                                        Can't find a journal? Contact
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                    </li>
+                                    <li>
+                                        Email
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a> to
+                                        provide feedback on this tool.
                                     </li>
                                 </ul>
+                            ),
+                        },
+                        {
+                            question: 'Disclaimer',
+                            answer: (
+                                <p>
+                                    The Journal Selector brings together data from many sources and providers to help
+                                    you make an evidenced based decision. Every effort is undertaken to make sure data
+                                    is up to date, but you should confirm the latest information direct from sources
+                                    e.g. the publisher's website.
+                                </p>
                             ),
                         },
                     ],
@@ -3827,6 +3897,21 @@ export default {
             },
             journalSearchInterface: {
                 title: 'Journal search',
+                intro: (
+                    <React.Fragment>
+                        <p>Choosing where to publish and how to promote your research is critical.</p>
+                        <p>This Journal Selector uses UQ;s curated strategic publishing data to help you:</p>
+                        <ul>
+                            <li>
+                                search by journal titles, descriptions and Field of Research (FoR) coded subject areas
+                            </li>
+                            <li>refine and rank results by open access status, indexing and metrics</li>
+                            <li>understand metrics and other aspects of a journal</li>
+                            <li>create a list of favourite journals</li>
+                            <li>investigate journal scopes, peer review processes and publisher details</li>
+                        </ul>
+                    </React.Fragment>
+                ),
                 instructions: loremIpsum,
                 buttons: {
                     myFavouriteJournals: {
