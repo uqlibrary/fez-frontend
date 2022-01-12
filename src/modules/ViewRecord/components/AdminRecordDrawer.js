@@ -54,9 +54,9 @@ const useStyles = makeStyles(theme => ({
             padding: theme.spacing(3),
         },
     },
-    notesTitle: {
+    contentTitle: {
         textTransform: 'uppercase',
-        fontWeight: 300,
+        fontWeight: 500,
     },
     notesField: {
         maxHeight: '40vh',
@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, mobileOpen = false }) => {
+const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = false, mobileOpen = false }) => {
     const classes = useStyles();
     const theme = useTheme();
     const [copied, setCopied] = React.useState(false);
@@ -78,13 +78,13 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
         setError(null);
     };
 
-    const txt = locale.pages.viewRecord;
+    const txt = locale.pages.viewRecord.adminRecordData;
 
     const writeText = (event = null, data) => {
         event && event.stopPropagation && event.stopPropagation();
 
         if (!navigator.clipboard) {
-            setError(txt.adminRecordData.clipboard.unavailable);
+            setError(txt.clipboard.unavailable);
             return;
         }
         navigator.clipboard
@@ -97,7 +97,119 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             });
     };
 
-    const drawerContent = (
+    [
+        [
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.notes,
+            },
+            {
+                type: 'content',
+                scrollable: true,
+                value: ReactHtmlParser(recordToView?.fez_internal_notes?.ain_detail),
+            },
+        ],
+        {
+            type: 'divider',
+        },
+        [
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.authorAffiliations,
+            },
+            {
+                type: 'content',
+                value: recordToView?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No',
+            },
+        ],
+        {
+            type: 'divider',
+        },
+        [
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.wosId,
+            },
+            {
+                type: 'content',
+                value: recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc,
+                clipboard: true,
+            },
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.wosDocType,
+            },
+            {
+                type: 'content',
+                value: formattedDocTypeString(
+                    recordToView?.rek_work_doc_type,
+                    recordToView?.rek_wok_doc_type_lookup,
+                ),
+            },
+        ],
+        {
+            type: 'divider',
+        },
+        {
+            type: 'header',
+            value: txt.drawer.sectionTitles.scopusId,
+        },
+        [
+            {
+                type: 'content',
+                value: recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id,
+                clipboard: true,
+            },
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.scopusDocType,
+            },
+            {
+                type: 'content',
+                value: formattedDocTypeString(
+                    recordToView?.rek_scopus_doc_type,
+                    recordToView?.rek_scopus_doc_type_lookup,
+                ),
+            },
+        ],
+        {
+            type: 'divider',
+        },
+        [
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.pubmedId,
+            },
+            {
+                type: 'content',
+                value: recordToView?.fez_record_search_key_pubmed_id?.rek_pubmed_id,
+                clipboard: true,
+            },
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.pubmedCentralId,
+            },
+            {
+                type: 'content',
+                value: recordToView?.fez_record_search_key_pubmed_central_id?.rek_pubmed_central_id,
+                clipboard: true,
+            },
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.pubmedDocType,
+            },
+            {
+                type: 'content',
+                value: formattedDocTypeString(
+                    recordToView?.rek_pubmed_doc_type,
+                    recordToView?.rek_pubmed_doc_type_lookup,
+                ),
+            },
+        ],
+    ];
+
+    const DrawerContent = ({content}) => {
+        return (
         <div>
             <Hidden xsDown implementation="css">
                 <Toolbar className={classes.adjustedToolbarHeight} />
@@ -107,22 +219,31 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                     <IconButton onClick={handleDrawerToggle}>
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                     </IconButton>
-                    {txt.adminRecordData.drawer.title}
+                    {txt.drawer.title}
                 </Typography>
             </div>
             <Divider />
+            {content.sections.map(section => {
+                typeof section === 'object' && section.type === 'divider' && <Divider />;
+                Array.isArray(section) && (<div className={classes.drawerContent}>
+                    {
+                        section.map(block => {
+                            block.type === 'header' && <Typography variant={'subtitle2'} className={classes.contentTitle}>{block.value}</Typography>
+                        })
+                    })
+            })} <!-- HERE - trying to iterate this object to dynamically build the drawer content but nested maps are causing issues -->
             <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.notes}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.notes}
                 </Typography>
                 <Typography variant={'body2'} component={'div'} className={classes.notesField}>
-                    {ReactHtmlParser(publication?.fez_internal_notes?.ain_detail) ?? ''}
+                    {ReactHtmlParser(publication?.fez_internal_notes?.ain_detail)}
                 </Typography>
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <Typography variant={'subtitle1'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.authorAffiliations}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.authorAffiliations}
                 </Typography>
                 <Typography variant={'body2'}>
                     {publication?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No'}
@@ -130,11 +251,11 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <Typography variant={'subtitle2'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.wosId}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.wosId}
                 </Typography>
                 <Typography variant={'body2'} component="div" gutterBottom>
-                    {publication?.fez_record_search_key_isi_loc?.rek_isi_loc}
+                    {publication?.fez_record_search_key_isi_loc?.rek_isi_loc ?? '-'}
                     {publication?.fez_record_search_key_isi_loc?.rek_isi_loc && (
                         <>
                             <FileCopyOutlinedIcon
@@ -145,18 +266,20 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                         </>
                     )}
                 </Typography>
-                <Typography variant={'subtitle1'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.wosDocType}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.wosDocType}
                 </Typography>
-                <Typography variant={'body2'}>@ - Article</Typography>
+                <Typography variant={'body2'}>
+                    {formattedDocTypeString(publication?.rek_work_doc_type, publication?.rek_wok_doc_type_lookup)}
+                </Typography>
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <Typography variant={'subtitle2'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.scopusId}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.scopusId}
                 </Typography>
                 <Typography variant={'body2'} component="div" gutterBottom>
-                    {publication?.fez_record_search_key_scopus_id?.rek_scopus_id}
+                    {publication?.fez_record_search_key_scopus_id?.rek_scopus_id ?? '-'}
                     {publication?.fez_record_search_key_scopus_id?.rek_scopus_id && (
                         <>
                             <FileCopyOutlinedIcon
@@ -167,35 +290,60 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                         </>
                     )}
                 </Typography>
-                <Typography variant={'subtitle1'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.scopusDocType}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.scopusDocType}
                 </Typography>
-                <Typography variant={'body2'}>ar - Article</Typography>
+                <Typography variant={'body2'}>
+                    {formattedDocTypeString(publication?.rek_scopus_doc_type, publication?.rek_scopus_doc_type_lookup)}
+                </Typography>
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <Typography variant={'subtitle2'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.pubmedId}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.pubmedId}
                 </Typography>
                 <Typography variant={'body2'} component="div" gutterBottom>
-                    {'353732'}
-                    {'353732' && (
+                    {publication?.fez_record_search_key_pubmed_id?.rek_pubmed_id ?? '-'}
+                    {publication?.fez_record_search_key_pubmed_id?.rek_pubmed_id && (
                         <>
                             <FileCopyOutlinedIcon
                                 fontSize="inherit"
-                                onClick={e => writeText(e, '353732')}
+                                onClick={e => writeText(e, publication.fez_record_search_key_pubmed_id.rek_pubmed_id)}
                                 className={classes.cursor}
                             />
                         </>
                     )}
                 </Typography>
-                <Typography variant={'subtitle1'} className={classes.notesTitle}>
-                    {txt.adminRecordData.drawer.sectionTitles.pubmedDocType}
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.pubmedCentralId}
                 </Typography>
-                <Typography variant={'body2'}>Journal Article</Typography>
+                <Typography variant={'body2'} component="div" gutterBottom>
+                    {publication?.fez_record_search_key_pubmed_central_id?.rek_pubmed_central_id ?? '-'}
+                    {publication?.fez_record_search_key_pubmed_central_id?.rek_pubmed_central_id && (
+                        <>
+                            <FileCopyOutlinedIcon
+                                fontSize="inherit"
+                                onClick={e =>
+                                    writeText(
+                                        e,
+                                        publication.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id,
+                                    )
+                                }
+                                className={classes.cursor}
+                            />
+                        </>
+                    )}
+                </Typography>
+                <Typography variant={'subtitle2'} className={classes.contentTitle}>
+                    {txt.drawer.sectionTitles.pubmedDocType}
+                </Typography>
+                <Typography variant={'body2'}>
+                    {formattedDocTypeString(publication?.rek_pubmed_doc_type, publication?.rek_pubmed_doc_type_lookup)}
+                </Typography>
             </div>
         </div>
-    );
+        )
+                            };
 
     return (
         <>
@@ -209,7 +357,7 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                     variant="persistent"
                     anchor={theme.direction === 'rtl' ? 'left' : 'right'}
                 >
-                    {drawerContent}
+                    <DrawerContent content={content} />
                 </Drawer>
             </Hidden>
             <Hidden smUp implementation="css">
@@ -226,7 +374,7 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                         keepMounted: true, // Better open performance on mobile.
                     }}
                 >
-                    {drawerContent}
+                    <DrawerContent content={content} />
                 </Drawer>
             </Hidden>
             <Snackbar
@@ -238,7 +386,7 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                 }}
                 open={copied || error !== null}
                 onClose={handleSnackbarClose}
-                message={copied ? txt.adminRecordData.clipboard.copied : error}
+                message={copied ? txt.clipboard.copied : error}
                 autoHideDuration={2000}
             />
         </>
@@ -246,7 +394,7 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
 };
 
 AdminViewRecordDrawer.propTypes = {
-    publication: PropTypes.object,
+    content: PropTypes.object,
     handleDrawerToggle: PropTypes.func,
     open: PropTypes.bool,
     mobileOpen: PropTypes.bool,

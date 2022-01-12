@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
             marginRight: drawerWidth,
         },
     },
-    alignSocialButtons: {
+    alignVerticalAxisCentre: {
         display: 'flex',
         alignItems: 'center',
     },
@@ -162,6 +162,124 @@ export const NewViewRecord = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pid]);
 
+    const formattedDocTypeString = (type, lookup) => {
+        if (!!!type && !!!lookup) return '-';
+        return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
+    };
+
+    const drawerDescriptor = {
+        sections: [
+            [
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.notes,
+                },
+                {
+                    type: 'content',
+                    scrollable: true,
+                    value: ReactHtmlParser(recordToView?.fez_internal_notes?.ain_detail),
+                },
+            ],
+            {
+                type: 'divider',
+            },
+            [
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.authorAffiliations,
+                },
+                {
+                    type: 'content',
+                    value: recordToView?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No',
+                },
+            ],
+            {
+                type: 'divider',
+            },
+            [
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.wosId,
+                },
+                {
+                    type: 'content',
+                    value: recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc,
+                    clipboard: true,
+                },
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.wosDocType,
+                },
+                {
+                    type: 'content',
+                    value: formattedDocTypeString(
+                        recordToView?.rek_work_doc_type,
+                        recordToView?.rek_wok_doc_type_lookup,
+                    ),
+                },
+            ],
+            {
+                type: 'divider',
+            },
+            {
+                type: 'header',
+                value: txt.drawer.sectionTitles.scopusId,
+            },
+            [
+                {
+                    type: 'content',
+                    value: recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id,
+                    clipboard: true,
+                },
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.scopusDocType,
+                },
+                {
+                    type: 'content',
+                    value: formattedDocTypeString(
+                        recordToView?.rek_scopus_doc_type,
+                        recordToView?.rek_scopus_doc_type_lookup,
+                    ),
+                },
+            ],
+            {
+                type: 'divider',
+            },
+            [
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.pubmedId,
+                },
+                {
+                    type: 'content',
+                    value: recordToView?.fez_record_search_key_pubmed_id?.rek_pubmed_id,
+                    clipboard: true,
+                },
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.pubmedCentralId,
+                },
+                {
+                    type: 'content',
+                    value: recordToView?.fez_record_search_key_pubmed_central_id?.rek_pubmed_central_id,
+                    clipboard: true,
+                },
+                {
+                    type: 'header',
+                    value: txt.drawer.sectionTitles.pubmedDocType,
+                },
+                {
+                    type: 'content',
+                    value: formattedDocTypeString(
+                        recordToView?.rek_pubmed_doc_type,
+                        recordToView?.rek_pubmed_doc_type_lookup,
+                    ),
+                },
+            ],
+        ],
+    };
+
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (recordToViewError && recordToViewError.status === 404) {
@@ -202,7 +320,7 @@ export const NewViewRecord = ({
             >
                 {!isDeleted && !!recordToView && (
                     <AdminViewRecordDrawer
-                        publication={recordToView}
+                        content={drawerDescriptor}
                         handleDrawerToggle={handleDrawerToggle}
                         open={open}
                         mobileOpen={mobileOpen}
@@ -236,12 +354,12 @@ export const NewViewRecord = ({
                                         </Button>
                                     </Grid>
                                 )}
-                                <Grid item xs>
+                                <Grid item xs className={classes.alignVerticalAxisCentre}>
                                     {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
                                         <Chip label={recordToView.rek_status_lookup} variant="outlined" />
                                     )}
                                 </Grid>
-                                <Grid item className={classes.alignSocialButtons}>
+                                <Grid item className={classes.alignVerticalAxisCentre}>
                                     <SocialShare
                                         publication={recordToView}
                                         services={[

@@ -540,6 +540,7 @@ export default {
                         scopusId: 'Scopus ID',
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',
+                        pubmedCentralId: 'Pubmed Central ID',
                         pubmedDocType: 'Pubmed Doc Type,',
                     },
                 },
