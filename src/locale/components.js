@@ -3991,7 +3991,7 @@ export default {
                             <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
-                            <h3>Publish open access (accepted version)</h3>
+                            <h3>Open access: accepted version</h3>
                             <p>
                                 Sort by length of time before an author accepted or self-archived version of an article
                                 is open and freely available via UQ eSpace.
@@ -4002,7 +4002,7 @@ export default {
                             <p>Sort by CiteScore Quartile, where Q1 is best.</p>
                             <h3>Highest quartile</h3>
                             <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
-                            <h3>Publish open access</h3>
+                            <h3>Open access: published version</h3>
                             <p>
                                 Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
                                 publisher to make a publication immediately available and openly accessible.

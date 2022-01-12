@@ -50,15 +50,15 @@ export const JournalFieldsMap = [
                         For other pathways:
                         <ul>
                             <li>
-                                Use the <b>publish open access (accepted version)</b> filter to sort journals by length
-                                of embargo period after which a self-archived or author accepted manuscript can be made
+                                Use the <b>open access: accepted version</b> filter to sort journals by length of
+                                embargo period after which a self-archived or author accepted manuscript can be made
                                 available via UQ eSpace. (Green open access).
                             </li>
                             <li>
-                                Use the <b>publish open access (published version)</b> filter to include or exclude
-                                Charges. (APCs) which are paid to a publisher to make a publication immediately
-                                available and openly accessible. Some APCs may be prepaid or discounted, if the Library
-                                has negotiated a{' '}
+                                Use the <b>open access: published version</b> filter to include or exclude charges
+                                (APCs) which are paid to a publisher to make a publication immediately available and
+                                openly accessible. Some APCs may be prepaid or discounted, if the Library has negotiated
+                                a{' '}
                                 <a href={'https://web.library.uq.edu.au/read-and-publish-agreements'} target={'_blank'}>
                                     read and publish agreement
                                 </a>
