@@ -70,65 +70,31 @@ const useStyles = makeStyles(theme => ({
 const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, mobileOpen = false }) => {
     const classes = useStyles();
     const theme = useTheme();
+    const [copied, setCopied] = React.useState(false);
+    const [error, setError] = React.useState(null);
+
+    const handleSnackbarClose = () => {
+        setCopied(false);
+        setError(null);
+    };
+
     const txt = locale.pages.viewRecord;
 
-    const ContentBlockWithClipboard = ({ title, content }) => {
-        const [copied, setCopied] = React.useState(false);
-        const [error, setError] = React.useState(null);
+    const writeText = (event = null, data) => {
+        event && event.stopPropagation && event.stopPropagation();
 
-        const handleSnackbarClose = () => {
-            setCopied(false);
-            setError(null);
-        };
-
-        const writeText = (event = null, data) => {
-            event && event.stopPropagation && event.stopPropagation();
-
-            if (!navigator.clipboard) {
-                setError(txt.adminRecordData.clipboard.unavailable);
-                return;
-            }
-            navigator.clipboard
-                ?.writeText(data)
-                .then(() => {
-                    setCopied(true);
-                })
-                .catch(e => {
-                    setError(e.message);
-                });
-        };
-
-        return (
-            <>
-                <Typography variant={'subtitle2'} className={classes.notesTitle}>
-                    {title}
-                </Typography>
-                <Typography variant={'body2'} component="div" gutterBottom>
-                    {content}
-                    {content && (
-                        <>
-                            <FileCopyOutlinedIcon
-                                fontSize="inherit"
-                                onClick={e => writeText(e, content)}
-                                className={classes.cursor}
-                            />
-                            <Snackbar
-                                id="copied-text-snackbar"
-                                data-testid="copied-text-snackbar"
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'center',
-                                }}
-                                open={copied || error !== null}
-                                onClose={handleSnackbarClose}
-                                message={copied ? txt.adminRecordData.clipboard.copied : error}
-                                autoHideDuration={2000}
-                            />
-                        </>
-                    )}
-                </Typography>
-            </>
-        );
+        if (!navigator.clipboard) {
+            setError(txt.adminRecordData.clipboard.unavailable);
+            return;
+        }
+        navigator.clipboard
+            ?.writeText(data)
+            .then(() => {
+                setCopied(true);
+            })
+            .catch(e => {
+                setError(e.message);
+            });
     };
 
     const drawerContent = (
@@ -164,11 +130,21 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <ContentBlockWithClipboard
-                    title={txt.adminRecordData.drawer.sectionTitles.wosId}
-                    content={publication?.fez_record_search_key_isi_loc?.rek_isi_loc}
-                />
-
+                <Typography variant={'subtitle2'} className={classes.notesTitle}>
+                    {txt.adminRecordData.drawer.sectionTitles.wosId}
+                </Typography>
+                <Typography variant={'body2'} component="div" gutterBottom>
+                    {publication?.fez_record_search_key_isi_loc?.rek_isi_loc}
+                    {publication?.fez_record_search_key_isi_loc?.rek_isi_loc && (
+                        <>
+                            <FileCopyOutlinedIcon
+                                fontSize="inherit"
+                                onClick={e => writeText(e, publication?.fez_record_search_key_isi_loc?.rek_isi_loc)}
+                                className={classes.cursor}
+                            />
+                        </>
+                    )}
+                </Typography>
                 <Typography variant={'subtitle1'} className={classes.notesTitle}>
                     {txt.adminRecordData.drawer.sectionTitles.wosDocType}
                 </Typography>
@@ -176,11 +152,21 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <ContentBlockWithClipboard
-                    title={txt.adminRecordData.drawer.sectionTitles.scopusId}
-                    content={publication?.fez_record_search_key_scopus_id?.rek_scopus_id}
-                />
-
+                <Typography variant={'subtitle2'} className={classes.notesTitle}>
+                    {txt.adminRecordData.drawer.sectionTitles.scopusId}
+                </Typography>
+                <Typography variant={'body2'} component="div" gutterBottom>
+                    {publication?.fez_record_search_key_scopus_id?.rek_scopus_id}
+                    {publication?.fez_record_search_key_scopus_id?.rek_scopus_id && (
+                        <>
+                            <FileCopyOutlinedIcon
+                                fontSize="inherit"
+                                onClick={e => writeText(e, publication?.fez_record_search_key_scopus_id?.rek_scopus_id)}
+                                className={classes.cursor}
+                            />
+                        </>
+                    )}
+                </Typography>
                 <Typography variant={'subtitle1'} className={classes.notesTitle}>
                     {txt.adminRecordData.drawer.sectionTitles.scopusDocType}
                 </Typography>
@@ -188,8 +174,21 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             </div>
             <Divider />
             <div className={classes.drawerContent}>
-                <ContentBlockWithClipboard title={txt.adminRecordData.drawer.sectionTitles.pubmedId} content="353732" />
-
+                <Typography variant={'subtitle2'} className={classes.notesTitle}>
+                    {txt.adminRecordData.drawer.sectionTitles.pubmedId}
+                </Typography>
+                <Typography variant={'body2'} component="div" gutterBottom>
+                    {'353732'}
+                    {'353732' && (
+                        <>
+                            <FileCopyOutlinedIcon
+                                fontSize="inherit"
+                                onClick={e => writeText(e, '353732')}
+                                className={classes.cursor}
+                            />
+                        </>
+                    )}
+                </Typography>
                 <Typography variant={'subtitle1'} className={classes.notesTitle}>
                     {txt.adminRecordData.drawer.sectionTitles.pubmedDocType}
                 </Typography>
@@ -197,11 +196,6 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
             </div>
         </div>
     );
-
-    ContentBlockWithClipboard.propTypes = {
-        title: PropTypes.string,
-        content: PropTypes.string,
-    };
 
     return (
         <>
@@ -235,6 +229,18 @@ const AdminViewRecordDrawer = ({ publication, handleDrawerToggle, open = false, 
                     {drawerContent}
                 </Drawer>
             </Hidden>
+            <Snackbar
+                id="copied-text-snackbar"
+                data-testid="copied-text-snackbar"
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                open={copied || error !== null}
+                onClose={handleSnackbarClose}
+                message={copied ? txt.adminRecordData.clipboard.copied : error}
+                autoHideDuration={2000}
+            />
         </>
     );
 };
