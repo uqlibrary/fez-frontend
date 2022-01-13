@@ -13,6 +13,11 @@ class AppErrorBoundary extends React.Component {
                 environment: process.env.BRANCH,
                 release: process.env.GIT_SHA,
                 whitelistUrls: [/library\.uq\.edu\.au/],
+                ignoreErrors: [
+                    'Object Not Found Matching Id',
+                    'Non-Error exception captured',
+                    'Non-Error promise rejection captured',
+                ],
             }).install();
         }
     }
