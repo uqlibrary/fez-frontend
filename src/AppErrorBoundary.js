@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
 
 class AppErrorBoundary extends React.Component {
     static propTypes = {
@@ -9,21 +10,24 @@ class AppErrorBoundary extends React.Component {
 
     componentDidMount() {
         if (process.env.ENABLE_LOG) {
-            Raven.config('https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681', {
+            Sentry.init({
+                dns: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
+                integrations: [new Integrations.BrowserTracing()],
                 environment: process.env.BRANCH,
                 release: process.env.GIT_SHA,
-                whitelistUrls: [/library\.uq\.edu\.au/],
-                ignoreErrors: [
-                    'Object Not Found Matching Id',
-                    'Non-Error exception captured',
-                    'Non-Error promise rejection captured',
-                ],
-            }).install();
+                allowUrls: [/library\.uq\.edu\.au/],
+                ignoreErrors: ['Object Not Found Matching Id'],
+            });
         }
     }
 
     componentDidCatch(error, errorInfo) {
-        if (process.env.ENABLE_LOG) Raven.captureException(error, { extra: errorInfo });
+        if (process.env.ENABLE_LOG) {
+            Sentry.withScope(scope => {
+                scope.setExtras(errorInfo);
+                Sentry.captureException(error);
+            });
+        }
     }
 
     render() {
