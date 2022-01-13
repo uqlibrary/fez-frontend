@@ -18,7 +18,7 @@ import {
     NEW_RECORD_DEFAULT_VALUES,
 } from 'config/general';
 import * as actions from './actionTypes';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -242,7 +242,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             );
         };
         const onRecordCreationFailure = error => {
-            Raven.captureException(error);
+            Sentry.captureException(error);
             return Promise.reject(error);
         };
 
@@ -259,7 +259,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             // If created record exists, it means only upload failed.
             if (recordCreated) {
                 const record = getRecord(true);
-                Raven.captureException(error);
+                Sentry.captureException(error);
 
                 // Do not report retry failures to Eventum
                 if (!preCreatedRecord.rek_pid) {
@@ -278,7 +278,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
          */
         const onIssueReportSuccess = () => Promise.resolve(newRecord);
         const onIssueReportFailure = error => {
-            Raven.captureException(error);
+            Sentry.captureException(error);
             if (!recordCreated) {
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
