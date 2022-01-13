@@ -15,7 +15,7 @@ class AppErrorBoundary extends React.Component {
                 integrations: [new Integrations.BrowserTracing()],
                 environment: process.env.BRANCH,
                 release: process.env.GIT_SHA,
-                whitelistUrls: [/library\.uq\.edu\.au/],
+                allowUrls: [/library\.uq\.edu\.au/],
                 ignoreErrors: ['Object Not Found Matching Id'],
             });
         }
