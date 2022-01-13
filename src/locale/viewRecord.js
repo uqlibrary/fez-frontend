@@ -2914,5 +2914,19 @@ export default {
             message:
                 'You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format.',
         },
+        adminViewRecordDrawerFields: {
+            notes: 'fez_internal_notes.ain_detail',
+            authorAffiliates: 'fez_record_search_key_author_affiliation_name',
+            wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
+            wosDocType: 'rek_work_doc_type',
+            wosDocTypeLookup: 'rek_wok_doc_type_lookup',
+            scopusId: 'fez_record_search_key_scopus_id.rek_scopus_id',
+            scopusDocType: 'rek_scopus_doc_type',
+            scopusDocTypeLookup: 'rek_scopus_doc_type_lookup',
+            pubMedId: 'fez_record_search_key_pubmed_id.rek_pubmed_id',
+            pubMedCentralId: 'fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
+            pubMedDocType: 'rek_pubmed_doc_type',
+            pubMedDocTypeLookup: 'rek_pubmed_doc_type_lookup',
+        },
     },
 };

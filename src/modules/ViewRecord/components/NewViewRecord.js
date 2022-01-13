@@ -30,11 +30,13 @@ import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
 import clsx from 'clsx';
-// import Badge from '@material-ui/core/Badge';
+import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 import AdminViewRecordDrawer from './AdminRecordDrawer';
 import { Button } from '@material-ui/core';
+import fields from 'locale/viewRecord';
+import { createDefaultDrawerDescriptorObject } from './AdminRecordDrawer';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -112,48 +114,26 @@ export const NewViewRecord = ({
             handleDesktopDrawerToggle();
         }
     };
-    // const recordTitle = () => {
-    // const titleText = ReactHtmlParser(recordToView.rek_title);
-    /*    if (isAdmin && !isDeleted) {
-            // eslint-disable-next-line camelcase
-            const TitleIcon = () => {
-                // eslint-disable-next-line camelcase
-                return recordToView?.fez_internal_notes?.ain_detail ? (
-                    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-                    <Badge
-                        onClick={handleDrawerToggle}
-                        color="error"
-                        overlap="circle"
-                        badgeContent="&hellip;"
-                        variant="standard"
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'right',
-                        }}
-                        style={{ cursor: 'pointer' }}
-                    >
-                        <DescriptionOutlinedIcon fontSize="inherit" />
-                    </Badge>
-                ) : (
-                    <DescriptionOutlinedIcon
-                        fontSize="inherit"
-                        onClick={handleDrawerToggle}
-                        className={classes.cursor}
-                    />
-                );
-            };
-            return (
-                <>
-                    {titleText}
-                    <TitleIcon />
-                </>
-            );
-        } else {
-            return titleText;
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    const getAdminRecordButtonIcon = () => {
+        return recordToView?.fez_internal_notes?.ain_detail ? (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+            <Badge
+                color="error"
+                overlap="circle"
+                badgeContent=""
+                variant="dot"
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }}
+            >
+                <DescriptionOutlinedIcon fontSize="inherit" />
+            </Badge>
+        ) : (
+            <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+        );
     };
-    */
 
     React.useEffect(() => {
         !!pid && dispatch(actions.loadRecordToView(pid));
@@ -162,123 +142,17 @@ export const NewViewRecord = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pid]);
 
-    const formattedDocTypeString = (type, lookup) => {
-        if (!!!type && !!!lookup) return '-';
-        return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
-    };
-
-    const drawerDescriptor = {
-        sections: [
-            [
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.notes,
-                },
-                {
-                    type: 'content',
-                    scrollable: true,
-                    value: ReactHtmlParser(recordToView?.fez_internal_notes?.ain_detail),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.authorAffiliations,
-                },
-                {
-                    type: 'content',
-                    value: recordToView?.fez_record_search_key_author_affiliation_name?.length > 0 ? 'Yes' : 'No',
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.wosId,
-                },
-                {
-                    type: 'content',
-                    value: recordToView?.fez_record_search_key_isi_loc?.rek_isi_loc,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.wosDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        recordToView?.rek_work_doc_type,
-                        recordToView?.rek_wok_doc_type_lookup,
-                    ),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            {
-                type: 'header',
-                value: txt.drawer.sectionTitles.scopusId,
-            },
-            [
-                {
-                    type: 'content',
-                    value: recordToView?.fez_record_search_key_scopus_id?.rek_scopus_id,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.scopusDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        recordToView?.rek_scopus_doc_type,
-                        recordToView?.rek_scopus_doc_type_lookup,
-                    ),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.pubmedId,
-                },
-                {
-                    type: 'content',
-                    value: recordToView?.fez_record_search_key_pubmed_id?.rek_pubmed_id,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.pubmedCentralId,
-                },
-                {
-                    type: 'content',
-                    value: recordToView?.fez_record_search_key_pubmed_central_id?.rek_pubmed_central_id,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: txt.drawer.sectionTitles.pubmedDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        recordToView?.rek_pubmed_doc_type,
-                        recordToView?.rek_pubmed_doc_type_lookup,
-                    ),
-                },
-            ],
-        ],
-    };
+    const drawerDescriptor = React.useMemo(
+        () =>
+            recordToView &&
+            createDefaultDrawerDescriptorObject(
+                txt.adminRecordData.drawer.sectionTitles,
+                recordToView,
+                fields.viewRecord.adminViewRecordDrawerFields,
+            ),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [JSON.stringify(recordToView)],
+    );
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -344,7 +218,7 @@ export const NewViewRecord = ({
                                     <Grid item>
                                         <Button
                                             variant="outlined"
-                                            startIcon={<DescriptionOutlinedIcon />}
+                                            startIcon={getAdminRecordButtonIcon()}
                                             color="default"
                                             onClick={handleDrawerToggle}
                                         >
