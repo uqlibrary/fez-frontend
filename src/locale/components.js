@@ -3773,7 +3773,7 @@ export default {
                             ),
                         },
                         {
-                            question: 'Open access and APC charges',
+                            question: 'Open access and charges',
                             answer: (
                                 <div>
                                     <p>
@@ -3792,12 +3792,11 @@ export default {
                                         >
                                             agreements with some publishers
                                         </a>
-                                        where that APC is pre-paid or reduced to some journals for UQ corresponding
-                                        authors.
+                                        where that APC is pre-paid or reduced for UQ corresponding authors.
                                     </p>
                                     <p>
                                         To find a journal which meets your requirements or funder mandate, refine your
-                                        funder mandate, refine your results by <b>Publish open access</b> filters.
+                                        results by the open access filters.
                                     </p>
                                     <p>
                                         <a
