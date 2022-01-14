@@ -3899,16 +3899,15 @@ export default {
                 title: 'Journal search',
                 intro: (
                     <React.Fragment>
-                        <p>Choosing where to publish and how to promote your research is critical.</p>
-                        <p>This Journal Selector uses UQ;s curated strategic publishing data to help you:</p>
+                        <p>
+                            Search UQ's curated strategic publishing data as part of your critical tasks of publishing
+                            and promotion.
+                        </p>
                         <ul>
-                            <li>
-                                search by journal titles, descriptions and Field of Research (FoR) coded subject areas
-                            </li>
-                            <li>refine and rank results by open access status, indexing and metrics</li>
-                            <li>understand metrics and other aspects of a journal</li>
+                            <li>search journal titles, keywords and/or Field of Research (FoR) subject areas</li>
+                            <li>understand, refine and rank results by open access status, indexing and metrics</li>
                             <li>create a list of favourite journals</li>
-                            <li>investigate journal scopes, peer review processes and publisher details</li>
+                            <li>investigate journal scope, peer review processes and publisher details</li>
                         </ul>
                     </React.Fragment>
                 ),

@@ -200,11 +200,13 @@ export const SearchJournals = () => {
     return (
         <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
-                <Grid item xs>
-                    <StandardCard noHeader standardCardId="journal-search-intro-card">
-                        {txt.journalSearchInterface.intro}
-                    </StandardCard>
-                </Grid>
+                {!!showInputControls && (
+                    <Grid item xs>
+                        <StandardCard noHeader standardCardId="journal-search-intro-card">
+                            {txt.journalSearchInterface.intro}
+                        </StandardCard>
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <JournalSearchInterface
                         onSearch={handleSearchJournalsClick}
