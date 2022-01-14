@@ -4,7 +4,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as accountActions from './account';
 
-jest.mock('raven-js');
+jest.mock('@sentry/react');
 
 describe('Account action creators', () => {
     const MockDate = require('mockdate');
