@@ -1,11 +1,12 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import { render, WithRouter, WithReduxStore, act, fireEvent, screen } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
+import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
 
@@ -184,5 +185,19 @@ describe('NewViewRecord', () => {
         expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
 
         window.location = location;
+    });
+
+    it('should render notes in admin drawer', () => {
+        const { getByTestId } = setup({
+            recordToView: recordWithNotes,
+        });
+        screen.debug(undefined, 40000);
+        act(() => {
+            fireEvent.click(getByTestId('adminDrawerButton'));
+        });
+        expect(getByTestId('adminViewRecordDrawerDesktop')).toBeVisible();
+        expect(getByTestId('drawer-content-scrollable-0-1')).toContain(
+            'The tourism industry is a key sector that generates millions of jobs worldwide.',
+        );
     });
 });

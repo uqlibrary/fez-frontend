@@ -33,7 +33,7 @@ import clsx from 'clsx';
 import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
 import { makeStyles } from '@material-ui/core/styles';
-import AdminViewRecordDrawer from './AdminRecordDrawer';
+import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import { Button } from '@material-ui/core';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
@@ -221,6 +221,7 @@ export const NewViewRecord = ({
                                             startIcon={getAdminRecordButtonIcon()}
                                             color="default"
                                             onClick={handleDrawerToggle}
+                                            id="adminDrawerButton"
                                         >
                                             {`View ${
                                                 recordToView?.fez_internal_notes?.ain_detail ? 'Notes \u0026' : ''

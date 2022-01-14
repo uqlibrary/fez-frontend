@@ -13,7 +13,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import locale from 'locale/pages';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AdminRecordDrawerSection from './AdminRecordDrawerSection';
+import AdminRecordDrawerSection from './AdminViewRecordDrawerSection';
 
 const drawerWidth = 260;
 
@@ -134,6 +134,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     open={open}
                     variant="persistent"
                     anchor={theme.direction === 'rtl' ? 'left' : 'right'}
+                    id="adminViewRecordDrawerDesktop"
                 >
                     <DrawerContent content={content} />
                 </Drawer>
@@ -151,13 +152,13 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     ModalProps={{
                         keepMounted: true, // Better open performance on mobile.
                     }}
+                    id="adminViewRecordDrawerMobile"
                 >
                     <DrawerContent content={content} />
                 </Drawer>
             </Hidden>
             <Snackbar
                 id="copied-text-snackbar"
-                data-testid="copied-text-snackbar"
                 anchorOrigin={{
                     vertical: 'bottom',
                     horizontal: 'center',

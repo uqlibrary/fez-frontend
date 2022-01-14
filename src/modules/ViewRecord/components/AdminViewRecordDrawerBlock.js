@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const AdminRecordDrawerBlock = ({ block, index, copyToClipboard }) => {
+export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard }) => {
     const classes = useStyles();
 
     if (block.type === 'header') {
@@ -28,7 +28,8 @@ export const AdminRecordDrawerBlock = ({ block, index, copyToClipboard }) => {
             <Typography
                 variant={'subtitle2'}
                 className={classes.contentTitle}
-                key={`header-${block.value?.replace(/ /g, '-').toLowerCase()}-${index}`}
+                key={`header-${parentIndex}-${index}`}
+                id={`drawer-header-${parentIndex}-${index}`}
             >
                 {block.value}
             </Typography>
@@ -40,7 +41,8 @@ export const AdminRecordDrawerBlock = ({ block, index, copyToClipboard }) => {
                     variant={'body2'}
                     component="div"
                     gutterBottom
-                    key={`content-clipboard-${block.value?.replace(/ /g, '-').toLowerCase()}-${index}`}
+                    key={`content-clipboard-${parentIndex}-${index}`}
+                    id={`drawer-content-clipboard-${parentIndex}-${index}`}
                 >
                     {block.value ?? '-'}
                     {block.value && (
@@ -48,20 +50,31 @@ export const AdminRecordDrawerBlock = ({ block, index, copyToClipboard }) => {
                             fontSize="inherit"
                             onClick={e => copyToClipboard(e, block.value)}
                             className={classes.cursor}
-                            key={index}
+                            key={`clipboard-button-${parentIndex}-${index}`}
+                            id={`drawer-clipboard-button-${parentIndex}-${index}`}
                         />
                     )}
                 </Typography>
             );
         } else if (!!block.scrollable === true) {
             return (
-                <Typography variant={'body2'} component={'div'} className={classes.notesField} key={block.key}>
+                <Typography
+                    variant={'body2'}
+                    component={'div'}
+                    className={classes.notesField}
+                    key={`content-scrollable-${parentIndex}-${index}`}
+                    id={`drawer-content-scrollable-${parentIndex}-${index}`}
+                >
                     {block.value}
                 </Typography>
             );
         } else {
             return (
-                <Typography variant={'body2'} key={`content-${block.value?.replace(/ /g, '-').toLowerCase()}-${index}`}>
+                <Typography
+                    variant={'body2'}
+                    key={`content-value-${parentIndex}-${index}`}
+                    id={`drawer-content-value-${parentIndex}-${index}`}
+                >
                     {block.value}
                 </Typography>
             );

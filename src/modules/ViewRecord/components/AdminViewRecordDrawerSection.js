@@ -2,7 +2,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import Divider from '@material-ui/core/Divider';
-import AdminRecordDrawerBlock from './AdminRecordDrawerBlock';
+import AdminRecordDrawerBlock from './AdminViewRecordDrawerBlock';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -29,9 +29,10 @@ export const AdminRecordDrawerSection = ({ section, index, copyToClipboard }) =>
             section.map((block, blockIndex) => (
                 <AdminRecordDrawerBlock
                     block={block}
+                    parentIndex={index}
                     index={blockIndex}
                     copyToClipboard={copyToClipboard}
-                    key={`Drawer-Block-${blockIndex}`}
+                    key={`drawer-block-${blockIndex}`}
                 />
             ))}
         </div>
