@@ -36,7 +36,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AdminViewRecordDrawer from './AdminRecordDrawer';
 import { Button } from '@material-ui/core';
 import fields from 'locale/viewRecord';
-import { createDefaultDrawerDescriptorObject } from './AdminRecordDrawer';
+import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);

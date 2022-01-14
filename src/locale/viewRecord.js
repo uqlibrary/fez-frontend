@@ -2928,5 +2928,118 @@ export default {
             pubMedDocType: 'rek_pubmed_doc_type',
             pubMedDocTypeLookup: 'rek_pubmed_doc_type_lookup',
         },
+        adminViewRecordDefaultContent: {
+            index: {
+                notes: 0,
+                authors: 2,
+                wos: 4,
+                scopus: 6,
+                pubmed: 8,
+            },
+            object: {
+                sections: [
+                    [
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            scrollable: true,
+                            key: 'key-scrollable-notes-1',
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header',
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                ],
+            },
+        },
     },
 };

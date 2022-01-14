@@ -2,7 +2,6 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactHtmlParser from 'react-html-parser';
 import Snackbar from '@material-ui/core/Snackbar';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
@@ -173,145 +172,27 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 };
 
 AdminViewRecordDrawer.propTypes = {
-    content: PropTypes.object,
-    handleDrawerToggle: PropTypes.func,
-    open: PropTypes.bool,
-    mobileOpen: PropTypes.bool,
+    content: PropTypes.shape({
+        sections: PropTypes.arrayOf(
+            PropTypes.oneOfType([
+                PropTypes.arrayOf(
+                    PropTypes.shape({
+                        type: PropTypes.string.isRequired,
+                        value: PropTypes.isRequired,
+                        scrollable: PropTypes.bool,
+                        key: PropTypes.string,
+                        clipboard: PropTypes.bool,
+                    }),
+                ),
+                PropTypes.shape({
+                    type: PropTypes.oneOf(['divider']).isRequired,
+                }),
+            ]).isRequired,
+        ).isRequired,
+    }).isRequired,
+    handleDrawerToggle: PropTypes.func.isRequired,
+    open: PropTypes.bool.isRequired,
+    mobileOpen: PropTypes.bool.isRequired,
 };
 
 export default React.memo(AdminViewRecordDrawer);
-
-export const formattedDocTypeString = (type, lookup) => {
-    if (!!!type && !!!lookup) return '-';
-    return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
-};
-
-export const parseKey = (key, content) => {
-    return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
-};
-
-export const authorAffiliates = key => {
-    const authorAffiliate = parseKey(key) ?? null;
-    if (!authorAffiliate) return 'No';
-    return authorAffiliate.length > 0 ? 'Yes' : 'No';
-};
-
-export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], fields = {}) => {
-    return {
-        sections: [
-            [
-                {
-                    type: 'header',
-                    value: locale.notes,
-                },
-                {
-                    type: 'content',
-                    scrollable: true,
-                    key: 'key-scrollable-notes-1',
-                    value: ReactHtmlParser(`${parseKey(fields.notes, content) ?? ''}`),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: locale.authorAffiliations,
-                },
-                {
-                    type: 'content',
-                    value: authorAffiliates(fields.authorAffiliates),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: locale.wosId,
-                },
-                {
-                    type: 'content',
-                    value: parseKey(fields.wosId, content) ?? undefined,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: locale.wosDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        parseKey(fields.wosDocType, content) ?? undefined,
-                        parseKey(fields.wosDocTypeLookup, content) ?? undefined,
-                    ),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            {
-                type: 'header',
-                value: locale.scopusId,
-            },
-            [
-                {
-                    type: 'header',
-                    value: locale.scopusId,
-                },
-                {
-                    type: 'content',
-                    value: parseKey(fields.scopusId, content) ?? undefined,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: locale.scopusDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        parseKey(fields.scopusDocType, content) ?? undefined,
-                        parseKey(fields.scopusDocTypeLookup, content) ?? undefined,
-                    ),
-                },
-            ],
-            {
-                type: 'divider',
-            },
-            [
-                {
-                    type: 'header',
-                    value: locale.pubmedId,
-                },
-                {
-                    type: 'content',
-                    value: parseKey(fields.pubMedId, content) ?? undefined,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: locale.pubmedCentralId,
-                },
-                {
-                    type: 'content',
-                    value: parseKey(fields.pubMedCentralId, content) ?? undefined,
-                    clipboard: true,
-                },
-                {
-                    type: 'header',
-                    value: locale.pubmedDocType,
-                },
-                {
-                    type: 'content',
-                    value: formattedDocTypeString(
-                        parseKey(fields.pubMedDocType, content) ?? undefined,
-                        parseKey(fields.pubMedDocTypeLookup, content) ?? undefined,
-                    ),
-                },
-            ],
-        ],
-    };
-};
