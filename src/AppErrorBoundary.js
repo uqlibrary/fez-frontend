@@ -11,7 +11,7 @@ class AppErrorBoundary extends React.Component {
     componentDidMount() {
         if (process.env.ENABLE_LOG) {
             Sentry.init({
-                dns: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
+                dsn: 'https://2e8809106d66495ba3023139b1bcfbe5@sentry.io/301681',
                 integrations: [new Integrations.BrowserTracing()],
                 environment: process.env.BRANCH,
                 release: process.env.GIT_SHA,
