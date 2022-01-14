@@ -18,10 +18,20 @@ export const authorAffiliates = key => {
 };
 
 export const getDefaultDrawerDescriptorObject = () => {
-    return config.viewRecord.adminViewRecordDefaultContent.object ?? undefined;
+    return (
+        (config?.viewRecord?.adminViewRecordDefaultContent?.object && {
+            ...config.viewRecord.adminViewRecordDefaultContent.object,
+        }) ||
+        undefined
+    );
 };
 export const getDefaultDrawerDescriptorIndex = () => {
-    return config.viewRecord.adminViewRecordDefaultContent.index ?? undefined;
+    return (
+        (config?.viewRecord?.adminViewRecordDefaultContent?.index && {
+            ...config.viewRecord.adminViewRecordDefaultContent.index,
+        }) ||
+        undefined
+    );
 };
 
 export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], fields = {}) => {
