@@ -192,7 +192,7 @@ export const NewViewRecord = ({
                 title={ReactHtmlParser(recordToView.rek_title)}
                 style={{ display: 'flex' }}
             >
-                {!isDeleted && !!recordToView && (
+                {isAdmin && !isDeleted && !!recordToView && (
                     <AdminViewRecordDrawer
                         content={drawerDescriptor}
                         handleDrawerToggle={handleDrawerToggle}

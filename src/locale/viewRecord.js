@@ -2916,7 +2916,7 @@ export default {
         },
         adminViewRecordDrawerFields: {
             notes: 'fez_internal_notes.ain_detail',
-            authorAffiliates: 'fez_record_search_key_author_affiliation_name',
+            authorAffiliates: 'fez_author_affiliation',
             wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
             wosDocType: 'rek_work_doc_type',
             wosDocTypeLookup: 'rek_wok_doc_type_lookup',
@@ -2941,7 +2941,7 @@ export default {
                     [
                         {
                             type: 'header',
-                            value: undefined,
+                            value: undefined, // notes
                         },
                         {
                             type: 'content',
@@ -2956,6 +2956,28 @@ export default {
                     [
                         {
                             type: 'header',
+                            value: undefined, // author affiliates
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // wos ID
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // wos doc type
                             value: undefined,
                         },
                         {
@@ -2968,7 +2990,7 @@ export default {
                     },
                     [
                         {
-                            type: 'header',
+                            type: 'header', // scopus id
                             value: undefined,
                         },
                         {
@@ -2977,7 +2999,7 @@ export default {
                             clipboard: true,
                         },
                         {
-                            type: 'header',
+                            type: 'header', // scopus doc type
                             value: undefined,
                         },
                         {
@@ -2990,7 +3012,7 @@ export default {
                     },
                     [
                         {
-                            type: 'header',
+                            type: 'header', // pubmed id
                             value: undefined,
                         },
                         {
@@ -2999,20 +3021,7 @@ export default {
                             clipboard: true,
                         },
                         {
-                            type: 'header',
-                            value: undefined,
-                        },
-                        {
-                            type: 'content',
-                            value: undefined,
-                        },
-                    ],
-                    {
-                        type: 'divider',
-                    },
-                    [
-                        {
-                            type: 'header',
+                            type: 'header', // pubmed central id
                             value: undefined,
                         },
                         {
@@ -3021,16 +3030,7 @@ export default {
                             clipboard: true,
                         },
                         {
-                            type: 'header',
-                            value: undefined,
-                        },
-                        {
-                            type: 'content',
-                            value: undefined,
-                            clipboard: true,
-                        },
-                        {
-                            type: 'header',
+                            type: 'header', // pubmed doc type
                             value: undefined,
                         },
                         {

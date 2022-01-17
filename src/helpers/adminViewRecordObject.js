@@ -11,9 +11,9 @@ export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
-export const authorAffiliates = key => {
-    const authorAffiliate = parseKey(key) ?? null;
-    if (!!!authorAffiliate || !Array.isArray(authorAffiliates)) return 'No';
+export const authorAffiliates = (key, content) => {
+    const authorAffiliate = parseKey(key, content) ?? null;
+    if (!!!authorAffiliate || !Array.isArray(authorAffiliate)) return 'No';
     return !!authorAffiliate.length > 0 ? 'Yes' : 'No';
 };
 
@@ -50,7 +50,7 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
         locale.authorAffiliations;
     adminViewRecordDefaultContentObject.sections[
         adminViewRecordDefaultContentIndex.authors
-    ][1].value = authorAffiliates(fields.authorAffiliates);
+    ][1].value = authorAffiliates(fields.authorAffiliates, content);
 
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;

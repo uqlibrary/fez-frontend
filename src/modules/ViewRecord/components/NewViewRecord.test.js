@@ -7,6 +7,7 @@ import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
+// import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
 
@@ -186,18 +187,49 @@ describe('NewViewRecord', () => {
 
         window.location = location;
     });
+    describe('Admin record drawer', () => {
+        it('should not render for researcher', () => {
+            const { queryByTestId } = setup({
+                recordToView: record,
+                account: accounts.uqresearcher,
+            });
+            expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+            expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+            expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+        });
+        it('should not render for student user', () => {
+            const { queryByTestId } = setup({
+                recordToView: record,
+                account: accounts.s1111111,
+            });
+            expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+            expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+            expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+        });
+        it('should render for Admin user', () => {
+            const { getByTestId } = setup({
+                recordToView: record,
+                account: accounts.uqstaff,
+            });
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerDesktop')).not.toBeVisible();
+            expect(getByTestId('adminViewRecordDrawerMobile')).not.toBeVisible();
+        });
 
-    it('should render notes in admin drawer', () => {
-        const { getByTestId } = setup({
-            recordToView: recordWithNotes,
+        it('should render notes in admin drawer', () => {
+            const { getByTestId } = setup({
+                recordToView: recordWithNotes,
+                account: accounts.uqstaff,
+            });
+            // screen.debug(undefined, 40000);
+            act(() => {
+                fireEvent.click(getByTestId('adminDrawerButton'));
+            });
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeVisible();
+            expect(getByTestId('drawer-content-scrollable-0-1')).toContain(
+                'The tourism industry is a key sector that generates millions of jobs worldwide.',
+            );
         });
-        screen.debug(undefined, 40000);
-        act(() => {
-            fireEvent.click(getByTestId('adminDrawerButton'));
-        });
-        expect(getByTestId('adminViewRecordDrawerDesktop')).toBeVisible();
-        expect(getByTestId('drawer-content-scrollable-0-1')).toContain(
-            'The tourism industry is a key sector that generates millions of jobs worldwide.',
-        );
     });
 });

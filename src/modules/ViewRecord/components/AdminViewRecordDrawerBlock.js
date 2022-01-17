@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard }) => {
+export const AdminRecordDrawerBlock = ({ block, parentIndex = 0, index, copyToClipboard }) => {
     const classes = useStyles();
 
     if (block.type === 'header') {
@@ -84,6 +84,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
 
 AdminRecordDrawerBlock.propTypes = {
     block: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+    parentIndex: PropTypes.number,
     index: PropTypes.number.isRequired,
     copyToClipboard: PropTypes.func.isRequired,
 };

@@ -104,7 +104,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
                     <Typography variant={'h6'}>
-                        <IconButton onClick={handleDrawerToggle}>
+                        <IconButton onClick={handleDrawerToggle} id="adminRecordDrawerCloseBtn">
                             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                         </IconButton>
                         {txt.drawer.title}
