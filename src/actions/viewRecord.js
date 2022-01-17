@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import { EXISTING_RECORD_API } from 'repositories/routes';
+import { EXISTING_RECORD_API, EXISTING_RECORD_HISTORY_API } from 'repositories/routes';
 
 /**
  * Load publication
@@ -61,5 +61,27 @@ export function setHideCulturalSensitivityStatement() {
 export function unlockRecordToView() {
     return {
         type: actions.VIEW_RECORD_UNLOCK,
+    };
+}
+
+export function loadDetailedHistory(pid) {
+    return dispatch => {
+        dispatch({ type: actions.LOADING_DETAILED_HISTORY });
+
+        return get(EXISTING_RECORD_HISTORY_API({ pid: pid.replace('uq:', 'UQ:') }))
+            .then(response => {
+                dispatch({
+                    type: actions.LOADING_DETAILED_HISTORY_SUCCESS,
+                    payload: response.data,
+                });
+
+                return Promise.resolve(response.data);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.LOADING_DETAILED_HISTORY_FAILED,
+                    payload: error,
+                });
+            });
     };
 }

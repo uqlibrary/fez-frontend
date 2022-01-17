@@ -31,6 +31,8 @@ import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
 
+import { detailedHistory } from 'mock/data/detailedHistory/detailedHistory';
+
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
 }
@@ -133,9 +135,11 @@ export const NewViewRecord = ({
                     </Grid>
                 )}
             </Grid>
-            <Grid item xs={12} style={{ marginBottom: 24 }}>
-                <DetailedHistory />
-            </Grid>
+            {isAdmin && detailedHistory && detailedHistory.data.rek_detailed_history.length > 0 && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <DetailedHistory detailedHistory={detailedHistory.data.rek_detailed_history} />
+                </Grid>
+            )}
 
             {isDeleted && (
                 <Grid item xs={12} style={{ marginBottom: 24 }}>

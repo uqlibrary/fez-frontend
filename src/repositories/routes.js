@@ -167,6 +167,10 @@ export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
     apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
 });
 
+export const EXISTING_RECORD_HISTORY_API = ({ pid }) => ({
+    apiUrl: `records/${pid}$/history}`,
+});
+
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
