@@ -168,7 +168,7 @@ export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
 });
 
 export const EXISTING_RECORD_HISTORY_API = ({ pid }) => ({
-    apiUrl: `records/${pid}$/history}`,
+    apiUrl: `records/${pid}/history`,
 });
 
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });

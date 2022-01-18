@@ -7,6 +7,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import * as actions from 'actions';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -18,14 +20,25 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const DetailedHistory = ({ detailedHistory }) => {
+export const DetailedHistory = ({ record }) => {
+    const dispatch = useDispatch();
+    const detailedHistoryList = useSelector(state => state.get('viewRecordReducer').recordDetailedHistory);
+    React.useEffect(() => {
+        dispatch(actions.loadDetailedHistory(record.rek_pid));
+        //   !!record.rek_pid && !!loadDetailedHistory && loadDetailedHistory(record.rek_pid);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                    <Typography variant="h5">Detailed History</Typography>
+                    <Typography variant="h5">
+                        Detailed History{' '}
+                        {!!detailedHistoryList ? `(${detailedHistoryList.length} events)` : '(Loading...)'}
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Grid container>
@@ -44,43 +57,22 @@ export const DetailedHistory = ({ detailedHistory }) => {
                             <span>Event</span>
                         </Grid>
                         {/* Data Elements */}
-                        {console.log(detailedHistory)}
-                        {detailedHistory.map(histItem => {
-                            return (
-                                <>
-                                    <Grid item xs={4} style={{ padding: '5px' }}>
-                                        <span>{histItem.pre_date}</span>
-                                    </Grid>
-                                    <Grid item xs={8} style={{ padding: '5px' }}>
-                                        <span>{histItem.pre_detail}</span>
-                                    </Grid>
-                                </>
-                            );
-                        })}
-                        {/* <Grid item xs={4} style={{ padding: '5px' }}>
-                            <span>Thu, 30 Dec 2021, 19:41:33 EST</span>
-                        </Grid>
-                        <Grid item xs={8} style={{ padding: '5px' }}>
-                            <span>Merged metadata in external source orcid (Author Id:76019)</span>
-                        </Grid>
-                        <Grid item xs={4} style={{ padding: '5px' }}>
-                            <span>Thu, 29 Dec 2021, 19:38:01 EST</span>
-                        </Grid>
-                        <Grid item xs={8} style={{ padding: '5px' }}>
-                            <span>Merged metadata from external source scopus</span>
-                        </Grid>
-                        <Grid item xs={4} style={{ padding: '5px' }}>
-                            <span>Thu, 28 Dec 2021, 19:41:33 EST</span>
-                        </Grid>
-                        <Grid item xs={8} style={{ padding: '5px' }}>
-                            <span>Merged metadata in external source orcid (Author Id:76135)</span>
-                        </Grid>
-                        <Grid item xs={4} style={{ padding: '5px' }}>
-                            <span>Thu, 27 Dec 2021, 19:41:33 EST</span>
-                        </Grid>
-                        <Grid item xs={8} style={{ padding: '5px' }}>
-                            <span>Merged metadata from external source scopus</span>
-                        </Grid> */}
+
+                        {!!detailedHistoryList &&
+                            detailedHistoryList
+                                .sort((a, b) => b.pre_id - a.pre_id)
+                                .map(histItem => {
+                                    return (
+                                        <React.Fragment key={histItem.pre_id}>
+                                            <Grid item xs={4} style={{ padding: '5px' }}>
+                                                <span>{histItem.pre_date}</span>
+                                            </Grid>
+                                            <Grid item xs={8} style={{ padding: '5px' }}>
+                                                <span>{histItem.pre_detail}</span>
+                                            </Grid>
+                                        </React.Fragment>
+                                    );
+                                })}
                     </Grid>
                 </AccordionDetails>
             </Accordion>
@@ -90,5 +82,7 @@ export const DetailedHistory = ({ detailedHistory }) => {
 
 DetailedHistory.propTypes = {
     detailedHistory: PropTypes.array,
+    record: PropTypes.object,
+    loadDetailedHistory: PropTypes.func,
 };
 export default DetailedHistory;
