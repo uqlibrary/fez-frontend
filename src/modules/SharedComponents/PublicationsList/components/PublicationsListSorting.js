@@ -11,22 +11,48 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
+import { doesListContainItem } from 'helpers/general';
 
 const PublicationsListSorting = props => {
-    const [sortBy, setSortBy] = React.useState(props.sortBy || props.sortingData.sortBy[0].value);
-    const [sortDirection, setSortDirection] = React.useState(
-        props.sortDirection || locale.components.sorting.sortDirection[0],
-    );
-    const [pageSize, setPageSize] = React.useState(
-        props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
-    );
+    const txt = locale.components.sorting;
+    /* istanbul ignore next */
+    const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
+
+    // Allow cust page length if defined in props
+    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
+        pageLength.push(props.initPageLength);
+        pageLength.sort((a, b) => a - b);
+    }
+
+    // get initial values from props
+    const initPropSortBy = props.sortBy || props.sortingData.sortBy[0].value;
+    const initPropSortDirection = props.sortDirection || locale.components.sorting.sortDirection[0];
+    const initPropPageSize =
+        props.initPageLength ||
+        props.pageSize ||
+        (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
+
+    // sanitise values
+    const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
+        ? initPropSortBy
+        : props.sortingDefaults.sortBy ?? props.sortingData.sortBy[0].value;
+    const propSortDirection = doesListContainItem(locale.components.sorting.sortDirection, initPropSortDirection)
+        ? initPropSortDirection
+        : props.sortingDefaults.sortDirection ?? locale.components.sorting.sortDirection[0];
+    const propPageSize = doesListContainItem(pageLength, initPropPageSize)
+        ? initPropPageSize
+        : props.sortingDefaults.pageSize ?? pageLength[0];
+
+    const [sortBy, setSortBy] = React.useState(propSortBy);
+    const [sortDirection, setSortDirection] = React.useState(propSortDirection);
+    const [pageSize, setPageSize] = React.useState(propPageSize);
 
     React.useEffect(() => {
-        if (sortBy !== props.sortBy) setSortBy(props.sortBy);
-        if (sortDirection !== props.sortDirection) setSortDirection(props.sortDirection);
-        if (pageSize !== props.pageSize) setPageSize(props.pageSize);
+        if (sortBy !== propSortBy) setSortBy(propSortBy);
+        if (sortDirection !== propSortDirection) setSortDirection(propSortDirection);
+        if (pageSize !== propPageSize) setPageSize(propPageSize);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props.sortBy, props.sortDirection, props.pageSize]);
+    }, [propSortBy, propSortDirection, propPageSize]);
 
     const pageSizeChanged = event => {
         setPageSize(event.target.value);
@@ -49,12 +75,6 @@ const PublicationsListSorting = props => {
 
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
-    }
-    const txt = locale.components.sorting;
-    const pageLength = txt.recordsPerPage;
-    if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
-        pageLength.push(props.initPageLength);
-        pageLength.sort((a, b) => a - b);
     }
 
     const isAdmin = userIsAdmin();
@@ -173,6 +193,11 @@ PublicationsListSorting.propTypes = {
         per_page: PropTypes.number,
         current_page: PropTypes.number,
     }),
+    sortingDefaults: PropTypes.shape({
+        sortDirection: PropTypes.string,
+        sortBy: PropTypes.string,
+        pageSize: PropTypes.number,
+    }),
     sortBy: PropTypes.string,
     sortDirection: PropTypes.string,
 };
@@ -180,6 +205,7 @@ PublicationsListSorting.propTypes = {
 PublicationsListSorting.defaultProps = {
     exportData: {},
     sortingData: locale.components.sorting,
+    sortingDefaults: {},
 };
 
 export default PublicationsListSorting;

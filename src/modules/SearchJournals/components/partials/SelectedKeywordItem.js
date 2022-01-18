@@ -17,11 +17,22 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const classes = useStyles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
+    const handleKeywordKeyboardPress = key => {
+        key.preventDefault();
+        if (
+            key.code.toLowerCase() === 'space' ||
+            key.code.toLowerCase() === 'enter' ||
+            key.code.toLowerCase() === 'numpadenter'
+        ) {
+            handleDeleteKeyword();
+        }
+    };
+    const idValue = `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
     return (
         <Chip
             className={classes.chip}
-            id={`journal-search-chip-${keyword.type}-${keyword.text.replace(/ /g, '-')}`}
-            data-testid={`journal-search-chip-${keyword.type}-${keyword.text.replace(/ /g, '-')}`}
+            id={`journal-search-chip-${idValue}`}
+            data-testid={`journal-search-chip-${idValue}`}
             label={
                 <React.Fragment>
                     <Typography variant="body2" component="span" color="secondary">
@@ -32,6 +43,11 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
                     </Typography>
                 </React.Fragment>
             }
+            tabIndex="0"
+            aria-label={`${keyword.type.toLowerCase()} '${
+                keyword.text
+            }' filter, to remove press the backspace or delete keyboard`}
+            onKeyPress={handleKeywordKeyboardPress}
             onDelete={handleDeleteKeyword}
         />
     );

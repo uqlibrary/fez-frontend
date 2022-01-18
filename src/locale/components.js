@@ -3648,6 +3648,11 @@ export default {
                 empty:
                     "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
             },
+            sortingDefaults: {
+                pageSize: 20,
+                sortBy: 'score', // for future use
+                sortDirection: 'Desc', // for future use
+            },
         },
         journalComparison: {
             title: 'Journal comparison',
@@ -3673,7 +3678,7 @@ export default {
                             question: 'Get detailed journal info',
                             answer: (
                                 <div>
-                                    Click on the title of the journal to explore its details like:
+                                    Click on the title of the journal to explore its details such as:
                                     <ul>
                                         <li>aims and scope of the journal</li>
                                         <li>journal quality</li>
@@ -3686,7 +3691,7 @@ export default {
                                             target="_blank"
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
                                         >
-                                            Read more
+                                            Read more about Strategic Publishing
                                         </a>
                                     </p>
                                 </div>
@@ -3705,16 +3710,70 @@ export default {
                                     </p>
                                     <p>
                                         You can compare the different metrics for specific journals by selecting each
-                                        and then clicking the "Compare selected" button. Or learn more via the{' '}
+                                        and then clicking the <b>Compare selected</b> button. Learn more via the{' '}
                                         <a target="_blank" href="https://uq.libwizard.com/f/metrics">
                                             online metrics tutorial
+                                        </a>
+                                        .
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'What are published and accepted versions for publishing Open Access',
+                            answer: (
+                                <div>
+                                    <p>
+                                        The published version (
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            target="_blank"
+                                        >
+                                            also known as Gold Open Access
+                                        </a>
+                                        ) is where the free and permanently accessible final version of a publication,
+                                        is available for everyone to read immediately after publication. Published
+                                        versions can be made open access via Article process charges, without charges,
+                                        or through the Library's{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            target="_blank"
+                                        >
+                                            agreements with some publishers
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        The accepted version (also referred to as{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            target="_blank"
+                                        >
+                                            self-archiving or Green open access
+                                        </a>
+                                        ) is the deposit of the author's version of the manuscript accepted for
+                                        publication in a publicly accessible institutional repository, such as UQ
+                                        eSpace. An author accepted manuscript (also referred to as a post-print) is the
+                                        author's version of a manuscript that has undergone peer review and has been
+                                        accepted by the publisher.
+                                        <a href="https://www.youtube.com/watch?v=okLMBxRixFQ" target="_blank">
+                                            View the Library's video guide
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                        >
+                                            Read more about Open Access
                                         </a>
                                     </p>
                                 </div>
                             ),
                         },
                         {
-                            question: 'Open access and APC charges',
+                            question: 'Open access and charges',
                             answer: (
                                 <div>
                                     <p>
@@ -3725,20 +3784,19 @@ export default {
                                         <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
                                             Article processing charges (APCs)
                                         </a>{' '}
-                                        fee paid by an author to make a research output immediately available and openly
-                                        accessible. The Library has{' '}
+                                        a fee paid to make an article immediately available and openly accessible. The
+                                        Library has{' '}
                                         <a
                                             href="https://web.library.uq.edu.au/read-and-publish-agreements"
                                             target="_blank"
                                         >
                                             agreements with some publishers
                                         </a>
-                                        does not apply to some journals for UQ authors.
+                                        where that APC is pre-paid or reduced for UQ corresponding authors.
                                     </p>
                                     <p>
-                                        To find a journal with an open access policy which meets your requirements or
-                                        funder mandate, refine your results by <b>Publish open access or Embargo</b>{' '}
-                                        filters.
+                                        To find a journal which meets your requirements or funder mandate, refine your
+                                        results by the open access filters.
                                     </p>
                                     <p>
                                         <a
@@ -3752,7 +3810,7 @@ export default {
                             ),
                         },
                         {
-                            question: 'Ask Us',
+                            question: 'More help',
                             answer: (
                                 <ul>
                                     <li>
@@ -3769,10 +3827,26 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Provide feedback on the tool (
-                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>)
+                                        Can't find a journal? Contact
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                    </li>
+                                    <li>
+                                        Email
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a> to
+                                        provide feedback on this tool.
                                     </li>
                                 </ul>
+                            ),
+                        },
+                        {
+                            question: 'Disclaimer',
+                            answer: (
+                                <p>
+                                    The Journal Selector brings together data from many sources and providers to help
+                                    you make an evidenced based decision. Every effort is undertaken to make sure data
+                                    is up to date, but you should confirm the latest information direct from sources
+                                    e.g. the publisher's website.
+                                </p>
                             ),
                         },
                     ],
@@ -3822,6 +3896,20 @@ export default {
             },
             journalSearchInterface: {
                 title: 'Journal search',
+                intro: (
+                    <React.Fragment>
+                        <p>
+                            Search UQ's curated strategic publishing data as part of your critical tasks of publishing
+                            and promotion.
+                        </p>
+                        <ul>
+                            <li>search journal titles, keywords and/or Field of Research (FoR) subject areas</li>
+                            <li>understand, refine and rank results by open access status, indexing and metrics</li>
+                            <li>create a list of favourite journals</li>
+                            <li>investigate journal scope, peer review processes and publisher details</li>
+                        </ul>
+                    </React.Fragment>
+                ),
                 instructions: loremIpsum,
                 buttons: {
                     myFavouriteJournals: {
@@ -3901,18 +3989,21 @@ export default {
                             <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
-                            <h3>Embargo</h3>
-                            <p>Length of time before an article is open and freely available.</p>
+                            <h3>Open access: accepted version</h3>
+                            <p>
+                                Sort by length of time before an author accepted or self-archived version of an article
+                                is open and freely available via UQ eSpace.
+                            </p>
                             <h3>Journal impact factor highest quartile</h3>
                             <p>Sort by JIF Quartile, where Q1 is best.</p>
                             <h3>CiteScore highest quartile</h3>
                             <p>Sort by CiteScore Quartile, where Q1 is best.</p>
                             <h3>Highest quartile</h3>
                             <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
-                            <h3>Publish open access</h3>
+                            <h3>Open access: published version</h3>
                             <p>
-                                Sort by whether charges, such as Article Processing Charges (APCs) are paid by an author
-                                to a publisher to make a research output immediately available and openly accessible.
+                                Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
+                                publisher to make a publication immediately available and openly accessible.
                             </p>
                         </React.Fragment>
                     ),

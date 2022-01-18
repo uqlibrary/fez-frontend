@@ -130,6 +130,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                                         onSortByChanged={sortByChanged}
                                         onPageSizeChanged={pageSizeChanged}
                                         pageSize={pageSize}
+                                        sortingDefaults={sortingDefaults}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>

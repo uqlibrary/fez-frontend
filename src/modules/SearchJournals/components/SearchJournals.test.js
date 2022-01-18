@@ -33,6 +33,7 @@ describe('SearchJournals', () => {
     it('should render', () => {
         const { queryByTestId } = setup();
         expect(queryByTestId('journal-search-page')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-intro-card')).toBeInTheDocument();
         expect(queryByTestId('journal-search-card')).toBeInTheDocument();
         expect(queryByTestId('journal-search-results-container')).not.toBeInTheDocument();
     });
@@ -132,7 +133,7 @@ describe('SearchJournals', () => {
 
         const journalsList = mockData;
 
-        const { queryByTestId, getByText } = setup({
+        const { queryByTestId, getByText, queryByText } = setup({
             testHistory,
             state: { journalsListLoaded: true, journalsList },
             storeState: {
@@ -171,6 +172,8 @@ describe('SearchJournals', () => {
         expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).not.toBeInTheDocument();
         expect(queryByTestId('641-Astrobiology-link')).not.toBeInTheDocument();
         expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
+
+        expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
 
     it('should restore displayed search results if back button pressed', () => {
@@ -312,7 +315,7 @@ describe('SearchJournals', () => {
 
         const journalsList = mockData;
 
-        const { container, queryByTestId } = setup({
+        const { container, queryByTestId, queryByText } = setup({
             state: { journalsListLoaded: true, journalsList },
             testHistory,
         });
@@ -325,6 +328,8 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual('');
+
+        expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
 
     it('should handle invalid keywords when browser history changes', () => {
@@ -385,7 +390,7 @@ describe('SearchJournals', () => {
 
         const journalsList = mockData;
 
-        const { container, queryByTestId } = setup({
+        const { container, queryByTestId, queryByText } = setup({
             state: { journalsListLoaded: true, journalsList },
             testHistory,
         });
@@ -405,6 +410,8 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual('');
+
+        expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
     it('should handle "all journals" keyword deletion', () => {
         const testQuerySearchAllJournals =
@@ -422,7 +429,7 @@ describe('SearchJournals', () => {
 
         const journalsList = mockData;
 
-        const { container, queryByTestId } = setup({
+        const { container, queryByTestId, queryByText } = setup({
             state: { journalsListLoaded: true, journalsList },
             testHistory,
         });
@@ -435,5 +442,7 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual('');
+
+        expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
 });

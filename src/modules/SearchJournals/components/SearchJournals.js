@@ -11,6 +11,8 @@ import { searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
+import { clearJournalSearchKeywords } from 'actions';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
 export const KEYWORD_ALL_JOURNALS_ID = `${KEYWORD_ALL_JOURNALS.type}-${KEYWORD_ALL_JOURNALS.text.replace(/ /g, '-')}`;
@@ -69,6 +71,7 @@ export const SearchJournals = () => {
     const handleKeywordResetClick = () => {
         setSelectedKeywords({});
         setShowingAllJournals(false);
+
         fromHandleKeywordClear.current = true;
     };
 
@@ -153,13 +156,18 @@ export const SearchJournals = () => {
      *  -  This should run everytime any parameter has changed (keywords, facets, page, pageSize etc)
      */
     React.useEffect(() => {
+        if (!showInputControls && !hasAnySelectedKeywords) {
+            dispatch(clearJournalSearchKeywords());
+
+            return;
+        }
         if (showInputControls || !hasAnySelectedKeywords) {
             fromHandleKeywordDelete.current = false;
             fromHandleKeywordClear.current = false;
             fromHandleAllJournals.current = false;
+
             return;
         }
-
         // reset facets filter, paging and sorting when keywords are removed
         // or the All Journals button is pressed for the first time
         if (fromHandleKeywordDelete.current || fromHandleKeywordClear.current || fromHandleAllJournals.current) {
@@ -192,6 +200,13 @@ export const SearchJournals = () => {
     return (
         <StandardPage title={txt.journalSearchInterface.title} standardPageId="journal-search-page">
             <Grid container spacing={3}>
+                {!!showInputControls && (
+                    <Grid item xs>
+                        <StandardCard noHeader standardCardId="journal-search-intro-card">
+                            {txt.journalSearchInterface.intro}
+                        </StandardCard>
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <JournalSearchInterface
                         onSearch={handleSearchJournalsClick}

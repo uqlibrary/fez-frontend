@@ -51,7 +51,7 @@ export const requestMJLIngest = directory => dispatch => {
                     type: actions.MASTER_JOURNAL_LIST_INGEST_REQUEST_FAILED,
                     payload: error.message,
                 });
-                return Promise.reject(error.message);
+                return Promise.reject(error);
             },
         )
     );
@@ -92,32 +92,6 @@ export const loadJournalSearchKeywords = searchQuery => async dispatch => {
 export const clearJournalSearchKeywords = () => ({
     type: actions.CLEAR_JOURNAL_SEARCH_KEYWORDS,
 });
-
-// let searchJournalsTimeoutID = 0;
-// export const searchJournals = (searchQuery, delay = 0) => async dispatch => {
-//     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });
-//     searchJournalsTimeoutID && clearTimeout(searchJournalsTimeoutID);
-//     searchJournalsTimeoutID = setTimeout(
-//         () =>
-//             get(JOURNAL_SEARCH_API(searchQuery)).then(
-//                 response => {
-//                     dispatch({
-//                         type: actions.SEARCH_JOURNALS_LOADED,
-//                         payload: response,
-//                     });
-//                     return Promise.resolve(response);
-//                 },
-//                 error => {
-//                     dispatch({
-//                         type: actions.SEARCH_JOURNALS_FAILED,
-//                         payload: error,
-//                     });
-//                     return Promise.reject(error);
-//                 },
-//             ),
-//         delay,
-//     );
-// };
 
 export const searchJournals = searchQuery => async dispatch => {
     dispatch({ type: actions.SEARCH_JOURNALS_LOADING });

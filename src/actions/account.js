@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API } from 'repositories/routes';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
 import { sessionApi } from 'config';
 
 /**
@@ -22,7 +22,7 @@ export function loadCurrentAccount() {
             return get(CURRENT_ACCOUNT_API())
                 .then(account => {
                     if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
-                        if (process.env.ENABLE_LOG) Raven.setUserContext({ id: account.id });
+                        if (process.env.ENABLE_LOG) Sentry.setUser({ id: account.id });
                         return Promise.resolve(account);
                     } else {
                         dispatch({ type: actions.CURRENT_ACCOUNT_ANONYMOUS });
