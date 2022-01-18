@@ -24,6 +24,9 @@ import {
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
 import Hidden from '@material-ui/core/Hidden';
+import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
+
+export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
 
 export default class ClaimRecord extends PureComponent {
     static propTypes = {
@@ -123,6 +126,14 @@ export default class ClaimRecord extends PureComponent {
         };
     };
 
+    _useCustomErrorMessageIfAvailable = (error, defaultMessage) => {
+        if (error?.original?.data && typeof error?.original?.data === 'string' && isClaimPreCheckResponse(error)) {
+            return error.original.data;
+        }
+
+        return defaultMessage;
+    };
+
     render() {
         const txt = locale.forms.claimPublicationForm;
 
@@ -188,8 +199,8 @@ export default class ClaimRecord extends PureComponent {
             // display a custom error message
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
+                error: this._useCustomErrorMessageIfAvailable(this.props.error, txt.errorAlert.incompleteData),
                 dirty: true,
-                error: txt.errorAlert.incompleteData,
                 alertLocale: txt,
             });
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
@@ -197,6 +208,7 @@ export default class ClaimRecord extends PureComponent {
         } else {
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
+                error: this.props.error?.message || this.props.error,
                 dirty: true,
                 alertLocale: txt,
             });
@@ -283,6 +295,7 @@ export default class ClaimRecord extends PureComponent {
                                                 <Grid item xs={12}>
                                                     <Field
                                                         component={TextField}
+                                                        textFieldId="claim-comments"
                                                         disabled={this.props.submitting}
                                                         name="comments"
                                                         type="text"
@@ -295,6 +308,7 @@ export default class ClaimRecord extends PureComponent {
                                                 <Grid item xs={12}>
                                                     <Field
                                                         component={TextField}
+                                                        textFieldId="claim-link"
                                                         disabled={this.props.submitting}
                                                         name="rek_link"
                                                         type="text"

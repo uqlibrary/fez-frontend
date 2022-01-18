@@ -1014,6 +1014,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -1038,6 +1039,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -2059,6 +2061,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -2083,6 +2086,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -3204,6 +3208,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -3228,6 +3233,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -4199,6 +4205,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -4223,6 +4230,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -5552,6 +5560,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -5576,6 +5585,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -6964,6 +6974,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -6988,6 +6999,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -8376,6 +8388,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -8400,6 +8413,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -9788,6 +9802,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -9812,6 +9827,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -12208,6 +12224,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -12232,6 +12249,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -13620,6 +13638,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -13644,6 +13663,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -15032,6 +15052,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -15056,6 +15077,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -16463,6 +16485,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -16487,6 +16510,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -17893,6 +17917,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -17917,6 +17942,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -18018,7 +18044,20 @@ exports[`Component ClaimRecord  should return and render alert message depending
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-            message="Error has occurred during request and request cannot be processed. This is an errorPlease contact eSpace administrators or try again later."
+            message={
+              <React.Fragment>
+                Error has occurred during request and request cannot be processed.
+                <p>
+                  <span>
+                    This is an error
+                    <br />
+                  </span>
+                </p>
+                <p>
+                  Please contact eSpace administrators or try again later if applicable.
+                </p>
+              </React.Fragment>
+            }
             pushToTop={true}
             showLoader={false}
             title="Error"
@@ -19324,6 +19363,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -19348,6 +19388,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -19640,6 +19681,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -19664,6 +19706,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -19764,7 +19807,20 @@ exports[`Component ClaimRecord  should return and render alert message depending
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-            message="Error has occurred during request and request cannot be processed. The given data was invalid.Please contact eSpace administrators or try again later."
+            message={
+              <React.Fragment>
+                Error has occurred during request and request cannot be processed.
+                <p>
+                  <span>
+                    The given data was invalid.
+                    <br />
+                  </span>
+                </p>
+                <p>
+                  Please contact eSpace administrators or try again later if applicable.
+                </p>
+              </React.Fragment>
+            }
             pushToTop={true}
             showLoader={false}
             title="Error"
@@ -19936,6 +19992,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   multiline={true}
                   name="comments"
                   rows={3}
+                  textFieldId="claim-comments"
                   type="text"
                 />
               </WithStyles(ForwardRef(Grid))>
@@ -19960,6 +20017,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   fullWidth={true}
                   label="Link (URL)"
                   name="rek_link"
+                  textFieldId="claim-link"
                   type="text"
                   validate={
                     Array [
@@ -20060,7 +20118,20 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             disableAlertClick={false}
             dismissTitle="Click to dismiss this alert"
             incompleteData="The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually."
-            message="Error has occurred during request and request cannot be processed. The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.Please contact eSpace administrators or try again later."
+            message={
+              <React.Fragment>
+                Error has occurred during request and request cannot be processed.
+                <p>
+                  <span>
+                    The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.
+                    <br />
+                  </span>
+                </p>
+                <p>
+                  Please contact eSpace administrators or try again later if applicable.
+                </p>
+              </React.Fragment>
+            }
             pushToTop={true}
             showLoader={false}
             title="Error"

@@ -1,15 +1,17 @@
 import * as transformers from './transformers';
 import * as actions from './actionTypes';
-import { NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
-import { get, post, patch } from 'repositories/generic';
+import { APP_URL, NEW_RECORD_DEFAULT_VALUES, UNPROCESSED_RECORDS_COLLECTION } from 'config/general';
+import { get, patch, post } from 'repositories/generic';
 import {
+    CLAIM_PRE_CHECK,
     EXISTING_RECORD_API,
-    POSSIBLE_RECORDS_API,
     HIDE_POSSIBLE_RECORD_API,
     NEW_RECORD_API,
+    POSSIBLE_RECORDS_API,
     RECORDS_ISSUES_API,
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
+import { dismissAppAlert } from './app';
 
 /**
  * Load publication to claim full record
@@ -180,8 +182,72 @@ export function clearClaimPublication() {
         dispatch({
             type: actions.PUBLICATION_TO_CLAIM_CLEAR,
         });
+        dispatch(dismissAppAlert());
     };
 }
+
+/**
+ *
+ * @param record
+ * @param match
+ * @param searchKey
+ * @param mergedSearchKey
+ * @returns boolean
+ */
+export const updateMatchedRecordAuthoringData = (authorId, record, match, searchKey) => {
+    const idTable = `fez_record_search_key_${searchKey}_id`;
+    const idField = `rek_${searchKey}_id`;
+    const table = `fez_record_search_key_${searchKey}`;
+    const field = `rek_${searchKey}`;
+
+    // check if author/contributor can be claimed in the matched record
+    for (const [index, item] of record[idTable].entries?.()) {
+        if (item[idField] !== authorId) {
+            continue;
+        }
+
+        if (
+            match[idTable][index][idField] !== 0 ||
+            (record[table] && match[table] && record[table][index][field] !== match[table][index][field])
+        ) {
+            return false;
+        }
+
+        // if can, update the matched record
+        match[idTable][index][idField] = authorId;
+    }
+
+    return true;
+};
+
+/**
+ *
+ * @param isAuthorLinked
+ * @param isContributorLinked
+ * @param espaceMatch
+ * @returns Object
+ */
+export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked, espaceMatch) => ({
+    ...(isAuthorLinked && {
+        fez_record_search_key_author_id: espaceMatch.fez_record_search_key_author_id,
+    }),
+    ...(isContributorLinked && {
+        fez_record_search_key_contributor_id: espaceMatch.fez_record_search_key_contributor_id,
+    }),
+});
+
+/**
+ * @param pid
+ * @returns Object
+ */
+export const getPreCheckError = pid => {
+    const message = `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`;
+    return {
+        ...new Error(message),
+        original: { data: message },
+        request: { responseURL: CLAIM_PRE_CHECK().apiUrl },
+    };
+};
 
 /**
  * Save a publication claim record involves up to three steps:
@@ -244,7 +310,7 @@ export function claimPublication(data) {
         }
 
         // claim record from external source
-        const createRecordRequest = !data.publication.rek_pid
+        let createRecordRequest = !data.publication.rek_pid
             ? {
                   ...NEW_RECORD_DEFAULT_VALUES,
                   ...data.publication,
@@ -263,7 +329,7 @@ export function claimPublication(data) {
             : null;
 
         // update record with author/contributor id, link, content indicators
-        const patchRecordRequest = data.publication.rek_pid
+        let patchRecordRequest = data.publication.rek_pid
             ? {
                   ...transformers.getRecordLinkSearchKey(data),
                   ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
@@ -273,7 +339,7 @@ export function claimPublication(data) {
             : null;
 
         // update record with files
-        const patchFilesRecordRequest = hasFilesToUpload
+        let patchFilesRecordRequest = hasFilesToUpload
             ? {
                   ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
               }
@@ -287,6 +353,55 @@ export function claimPublication(data) {
 
         return (
             Promise.resolve([])
+                // for external records, check if doesn't already exists in eSpace
+                .then(() => (!data.publication.rek_pid ? post(CLAIM_PRE_CHECK(), createRecordRequest) : null))
+                // if an eSpace record has been matched
+                .then(response => {
+                    if (!response?.data) {
+                        return null;
+                    }
+
+                    const externalRecord = data.publication;
+                    const espaceMatch = response.data;
+                    // swap external record with matched record
+                    data.publication = espaceMatch;
+                    // clean create request
+                    createRecordRequest = undefined;
+
+                    if (
+                        (isAuthorLinked &&
+                            !updateMatchedRecordAuthoringData(
+                                data.author.aut_id,
+                                externalRecord,
+                                espaceMatch,
+                                'author',
+                            )) ||
+                        (isContributorLinked &&
+                            !updateMatchedRecordAuthoringData(
+                                data.author.aut_id,
+                                externalRecord,
+                                espaceMatch,
+                                'contributor',
+                            ))
+                    ) {
+                        // bail in case author/contributor can't be claimed in the matched record
+                        return Promise.reject(getPreCheckError(espaceMatch.rek_pid));
+                    }
+
+                    // update patch request
+                    patchRecordRequest = {
+                        ...patchRecordRequest,
+                        ...mergeAvailableAuthoringData(isAuthorLinked, isContributorLinked, espaceMatch),
+                    };
+                    // update file upload request
+                    patchFilesRecordRequest = hasFilesToUpload
+                        ? {
+                              ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
+                          }
+                        : null;
+
+                    return null;
+                })
                 // save a new record if claiming from external source
                 .then(() => (!data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null))
                 // update pid of newly saved record

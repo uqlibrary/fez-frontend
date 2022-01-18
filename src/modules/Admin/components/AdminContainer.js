@@ -4,12 +4,19 @@ import Cookies from 'js-cookie';
 import Immutable from 'immutable';
 
 import locale from 'locale/pages';
-import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS, SUBTYPE_NON_NTRO } from 'config/general';
+import {
+    NTRO_SUBTYPES,
+    PUBLICATION_TYPE_MANUSCRIPT,
+    PUBLICATION_TYPE_THESIS,
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_RECORD,
+    SUBTYPE_NON_NTRO,
+} from 'config/general';
 
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { ThemeProvider } from '@material-ui/core/styles';
 import { adminTheme } from 'config';
 
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -27,8 +34,7 @@ import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
-import { TabbedContext, RecordContext } from 'context';
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
+import { RecordContext, TabbedContext } from 'context';
 import { StandardPage } from '../../SharedComponents/Toolbox/StandardPage';
 
 const useStyles = makeStyles(
@@ -79,6 +85,7 @@ export const AdminContainer = ({
     submitSucceeded,
     submitting,
     unlockRecord,
+    error,
 }) => {
     const [tabbed, setTabbed] = React.useState(
         Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed',
@@ -190,6 +197,7 @@ export const AdminContainer = ({
                                 locked={locked}
                                 disabled
                                 unlockRecord={unlockRecord}
+                                error={error}
                                 tabs={{
                                     admin: {
                                         component: AdminSection,
@@ -279,6 +287,7 @@ AdminContainer.propTypes = {
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.any,
     unlockRecord: PropTypes.func,
+    error: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {

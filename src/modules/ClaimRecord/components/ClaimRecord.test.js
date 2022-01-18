@@ -1,8 +1,10 @@
 import ClaimRecord from './ClaimRecord';
 import Immutable from 'immutable';
-import { journalArticle, dataCollection } from 'mock/data/testing/records';
+import { dataCollection, journalArticle } from 'mock/data/testing/records';
 import { validation } from 'config';
 import locale from 'locale/forms';
+import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 function setup(testProps = {}) {
     const props = {
@@ -555,5 +557,89 @@ describe('Component ClaimRecord ', () => {
 
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default message error', () => {
+        const props = {
+            error: {
+                message: 'test',
+            },
+        };
+
+        const wrapper = setup({ ...props });
+        expect(wrapper.debug().includes(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBe(true);
+    });
+
+    it('should render default error message when the request failed', () => {
+        const props = {
+            submitFailed: true,
+            error: {
+                message: 'test',
+            },
+            initialValues: Immutable.Map({
+                author: Immutable.Map({ aut_id: 410 }),
+                publication: Immutable.Map({
+                    ...journalArticle,
+                    rek_pid: undefined,
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 1,
+                        },
+                    ],
+                    fez_record_search_key_author: [
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:111111',
+                            rek_author: 'Smith, A',
+                            rek_author_order: 1,
+                        },
+                    ],
+                }),
+            }),
+        };
+
+        const wrapper = setup({ ...props });
+        expect(wrapper.debug().includes(locale.forms.claimPublicationForm.errorAlert.incompleteData)).toBe(true);
+    });
+
+    it('should render custom error message when the pre check request failed', () => {
+        const customErrorMessage = 'custom error message';
+        const props = {
+            submitFailed: true,
+            error: {
+                message: 'test',
+                original: {
+                    data: customErrorMessage,
+                },
+                request: {
+                    responseURL: CLAIM_PRE_CHECK().apiUrl,
+                },
+            },
+            initialValues: Immutable.Map({
+                author: Immutable.Map({ aut_id: 410 }),
+                publication: Immutable.Map({
+                    ...journalArticle,
+                    rek_pid: undefined,
+                    fez_record_search_key_author_id: [
+                        {
+                            rek_author_id: 0,
+                            rek_author_id_order: 1,
+                        },
+                    ],
+                    fez_record_search_key_author: [
+                        {
+                            rek_author_id: null,
+                            rek_author_pid: 'UQ:111111',
+                            rek_author: 'Smith, A',
+                            rek_author_order: 1,
+                        },
+                    ],
+                }),
+            }),
+        };
+
+        const wrapper = setup({ ...props });
+        expect(toString(wrapper.find(Alert).props().message).includes(customErrorMessage)).toBe(true);
     });
 });
