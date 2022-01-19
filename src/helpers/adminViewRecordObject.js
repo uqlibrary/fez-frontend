@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import config from 'locale/viewRecord';
 
-export const formattedDocTypeString = (type, lookup) => {
+export const formattedString = (type, lookup) => {
     if (!!!type && !!!lookup) return '-';
     return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
 };
@@ -42,7 +42,7 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     // Notes
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = ReactHtmlParser(
-        `${parseKey(fields.notes, content) ?? ''}`,
+        `${parseKey(fields.notes, content) ?? '-'}`,
     );
 
     // Authors
@@ -54,42 +54,44 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
 
     // WoS
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value =
-        parseKey(fields.wosId, content) ?? undefined;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value = formattedString(
+        parseKey(fields.wosId, content) ?? undefined,
+        undefined,
+    );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][2].value = locale.wosDocType;
-    adminViewRecordDefaultContentObject.sections[
-        adminViewRecordDefaultContentIndex.wos
-    ][3].value = formattedDocTypeString(
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][3].value = formattedString(
         parseKey(fields.wosDocType, content) ?? undefined,
         parseKey(fields.wosDocTypeLookup, content) ?? undefined,
     );
 
     // Scopus
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][0].value = locale.scopusId;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][1].value =
-        parseKey(fields.scopusId, content) ?? undefined;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][1].value = formattedString(
+        parseKey(fields.scopusId, content) ?? undefined,
+        undefined,
+    );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][2].value =
         locale.scopusDocType;
-    adminViewRecordDefaultContentObject.sections[
-        adminViewRecordDefaultContentIndex.scopus
-    ][3].value = formattedDocTypeString(
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][3].value = formattedString(
         parseKey(fields.scopusDocType, content) ?? undefined,
         parseKey(fields.scopusDocTypeLookup, content) ?? undefined,
     );
 
     // Pubmed
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][0].value = locale.pubmedId;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][1].value =
-        parseKey(fields.pubMedId, content) ?? undefined;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][1].value = formattedString(
+        parseKey(fields.pubMedId, content) ?? undefined,
+        undefined,
+    );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][2].value =
         locale.pubmedCentralId;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][3].value =
-        parseKey(fields.pubMedCentralId, content) ?? undefined;
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][3].value = formattedString(
+        parseKey(fields.pubMedCentralId, content) ?? undefined,
+        undefined,
+    );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][4].value =
         locale.pubmedDocType;
-    adminViewRecordDefaultContentObject.sections[
-        adminViewRecordDefaultContentIndex.pubmed
-    ][5].value = formattedDocTypeString(
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][5].value = formattedString(
         parseKey(fields.pubMedDocType, content) ?? undefined,
         parseKey(fields.pubMedDocTypeLookup, content) ?? undefined,
     );

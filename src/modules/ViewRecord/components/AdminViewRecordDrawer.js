@@ -73,13 +73,14 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
     const [copied, setCopied] = React.useState(false);
     const [error, setError] = React.useState(null);
 
+    /* istanbul ignore next */
     const handleSnackbarClose = () => {
         setCopied(false);
         setError(null);
     };
     const txt = locale.pages.viewRecord.adminRecordData;
 
-    const writeText = (event = null, data) => {
+    const writeText = (event, data) => {
         event && event.stopPropagation && event.stopPropagation();
 
         if (!navigator.clipboard) {
@@ -105,7 +106,8 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 <div className={classes.drawerHeader} key="mainHeader">
                     <Typography variant={'h6'}>
                         <IconButton onClick={handleDrawerToggle} id="adminRecordDrawerCloseBtn">
-                            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+                            {/* istanbul ignore next */
+                            theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                         </IconButton>
                         {txt.drawer.title}
                     </Typography>
@@ -133,7 +135,10 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     }}
                     open={open}
                     variant="persistent"
-                    anchor={theme.direction === 'rtl' ? 'left' : 'right'}
+                    anchor={
+                        /* istanbul ignore next */
+                        theme.direction === 'rtl' ? 'left' : 'right'
+                    }
                     id="adminViewRecordDrawerDesktop"
                 >
                     <DrawerContent content={content} />
@@ -143,7 +148,10 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 <Drawer
                     className={classes.drawerMobile}
                     variant="temporary"
-                    anchor={theme.direction === 'rtl' ? 'left' : 'right'}
+                    anchor={
+                        /* istanbul ignore next */
+                        theme.direction === 'rtl' ? 'left' : 'right'
+                    }
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
                     classes={{

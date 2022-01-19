@@ -97,20 +97,15 @@ export const NewViewRecord = ({
     const [open, setOpen] = React.useState(false);
 
     const handleMobileDrawerToggle = () => {
-        console.log('handleMobileDrawerToggle');
         setMobileOpen(!mobileOpen);
     };
     const handleDesktopDrawerToggle = () => {
-        console.log('handleDesktopDrawerToggle', open);
         setOpen(!open);
     };
     const handleDrawerToggle = () => {
-        console.log('handleDrawerToggle');
         if (window.matchMedia('(max-width:599.96px)').matches) {
-            console.log('matchMedia');
             handleMobileDrawerToggle();
         } else {
-            console.log('not matchMedia');
             handleDesktopDrawerToggle();
         }
     };

@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const AdminRecordDrawerBlock = ({ block, parentIndex = 0, index, copyToClipboard }) => {
+export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard }) => {
     const classes = useStyles();
 
     if (block.type === 'header') {
@@ -44,8 +44,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex = 0, index, copyToCl
                     key={`content-clipboard-${parentIndex}-${index}`}
                     id={`drawer-content-clipboard-${parentIndex}-${index}`}
                 >
-                    {block.value ?? '-'}
-                    {block.value && (
+                    {block.value}
+                    {block.value && block.value !== '-' && (
                         <FileCopyOutlinedIcon
                             fontSize="inherit"
                             onClick={e => copyToClipboard(e, block.value)}
@@ -83,7 +83,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex = 0, index, copyToCl
 };
 
 AdminRecordDrawerBlock.propTypes = {
-    block: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+    block: PropTypes.object.isRequired,
     parentIndex: PropTypes.number,
     index: PropTypes.number.isRequired,
     copyToClipboard: PropTypes.func.isRequired,
