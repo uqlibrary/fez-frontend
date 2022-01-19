@@ -34,12 +34,14 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
-            key.code.toLowerCase() === 'space' ||
-            key.code.toLowerCase() === 'enter' ||
-            key.code.toLowerCase() === 'numpadenter'
+            key.code.toLowerCase() !== 'space' &&
+            key.code.toLowerCase() !== 'enter' &&
+            key.code.toLowerCase() !== 'numpadenter'
         ) {
-            handleKeywordClick();
+            return;
         }
+
+        handleKeywordClick();
     };
     return (
         <Grid item xs={12}>

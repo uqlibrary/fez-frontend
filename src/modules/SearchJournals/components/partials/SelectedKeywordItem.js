@@ -20,12 +20,14 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
-            key.code.toLowerCase() === 'space' ||
-            key.code.toLowerCase() === 'enter' ||
-            key.code.toLowerCase() === 'numpadenter'
+            key.code.toLowerCase() !== 'space' &&
+            key.code.toLowerCase() !== 'enter' &&
+            key.code.toLowerCase() !== 'numpadenter'
         ) {
-            handleDeleteKeyword();
+            return;
         }
+
+        handleDeleteKeyword();
     };
     const idValue = `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
     return (

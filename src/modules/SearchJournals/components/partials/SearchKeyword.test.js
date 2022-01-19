@@ -52,4 +52,53 @@ describe('SearchKeyword', () => {
         fireEvent.click(getByTestId(getId(keyword, variant, index)));
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
+
+    it('should call given onKeywordClick by pressing space bar', () => {
+        const onKeywordClick = jest.fn();
+        const { getByTestId } = setup({
+            onKeywordClick: onKeywordClick,
+            keyword: keyword,
+            variant,
+            index,
+        });
+
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 32, code: 'Space' });
+        expect(onKeywordClick).toHaveBeenCalledTimes(1);
+    });
+    it('should call given onKeywordClick by pressing normal enter button', () => {
+        const onKeywordClick = jest.fn();
+        const { getByTestId } = setup({
+            onKeywordClick: onKeywordClick,
+            keyword: keyword,
+            variant,
+            index,
+        });
+
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 13, code: 'Enter' });
+        expect(onKeywordClick).toHaveBeenCalledTimes(1);
+    });
+    it('should call given onKeywordClick by pressing numeric pad enter button', () => {
+        const onKeywordClick = jest.fn();
+        const { getByTestId } = setup({
+            onKeywordClick: onKeywordClick,
+            keyword: keyword,
+            variant,
+            index,
+        });
+
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 13, code: 'NumpadEnter' });
+        expect(onKeywordClick).toHaveBeenCalledTimes(1);
+    });
+    it('should NOT call given onKeywordClick when a key other than SPACE or ENTER is pressed', () => {
+        const onKeywordClick = jest.fn();
+        const { getByTestId } = setup({
+            onKeywordClick: onKeywordClick,
+            keyword: keyword,
+            variant,
+            index,
+        });
+
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 100, code: 'KeyD' });
+        expect(onKeywordClick).not.toHaveBeenCalled();
+    });
 });

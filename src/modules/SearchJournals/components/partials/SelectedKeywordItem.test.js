@@ -58,4 +58,14 @@ describe('SelectedKeywordItem', () => {
         fireEvent.keyPress(container.querySelector('[class*="deleteIcon"]'), { charCode: 13, code: 'NumpadEnter' });
         expect(onKeywordDelete).toHaveBeenCalledTimes(1);
     });
+    it('should NOT call given onKeywordDelete when a key other than SPACE or ENTER is pressed', () => {
+        const onKeywordDelete = jest.fn();
+        const { container } = setup({
+            onKeywordDelete: onKeywordDelete,
+            keyword: keyword,
+        });
+
+        fireEvent.keyPress(container.querySelector('[class*="deleteIcon"]'), { charCode: 100, code: 'KeyD' });
+        expect(onKeywordDelete).not.toHaveBeenCalled();
+    });
 });
