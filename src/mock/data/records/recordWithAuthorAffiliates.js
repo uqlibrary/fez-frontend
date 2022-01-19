@@ -816,7 +816,12 @@ export default{
         "rek_pubmed_id_xsdmf_id": null,
         "rek_pubmed_id": "27166757"
     },
-    "fez_record_search_key_pubmed_central_id": null,
+    "fez_record_search_key_pubmed_central_id": {
+        "rek_pubmed_central_id_id": 12345678901,
+        "rek_pubmed_central_id_pid": 'UQ:401868',
+        "rek_pubmed_central_id_xsdmf_id": 1234,
+        "rek_pubmed_central_id": 'PMC5179926',
+    },
     "fez_record_search_key_refereed": {
         "rek_refereed_id": 2583414,
         "rek_refereed_pid": "UQ:401868",
