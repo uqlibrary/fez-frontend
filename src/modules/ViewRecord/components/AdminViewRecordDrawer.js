@@ -105,7 +105,11 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
                     <Typography variant={'h6'} tabIndex="0">
-                        <IconButton onClick={handleDrawerToggle} id="adminRecordDrawerCloseBtn">
+                        <IconButton
+                            onClick={handleDrawerToggle}
+                            id="adminRecordDrawerCloseBtn"
+                            aria-label="Close admin record drawer"
+                        >
                             {/* istanbul ignore next */
                             theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                         </IconButton>

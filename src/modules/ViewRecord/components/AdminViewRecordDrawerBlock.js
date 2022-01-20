@@ -2,6 +2,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
+import IconButton from '@material-ui/core/IconButton';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -49,16 +50,14 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 >
                     {block.value}
                     {block.value && block.value !== '-' && (
-                        <FileCopyOutlinedIcon
-                            fontSize="inherit"
+                        <IconButton
                             onClick={e => copyToClipboard(e, block.value)}
-                            className={classes.cursor}
-                            key={`clipboard-button-${parentIndex}-${index}`}
                             id={`drawer-clipboard-button-${parentIndex}-${index}`}
-                            role="button"
-                            tabIndex="0"
-                            aria-label="Copy to clipboard button"
-                        />
+                            aria-label="Copy to clipboard"
+                            size="small"
+                        >
+                            <FileCopyOutlinedIcon fontSize="inherit" />
+                        </IconButton>
                     )}
                 </Typography>
             );
