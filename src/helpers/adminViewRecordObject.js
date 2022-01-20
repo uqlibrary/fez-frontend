@@ -7,7 +7,7 @@ export const formattedString = (type, lookup) => {
     return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
 };
 
-export const parseKey = (key, content) => {
+export const parseKey = (key, content = undefined) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
@@ -40,10 +40,12 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     if (!adminViewRecordDefaultContentObject || !adminViewRecordDefaultContentIndex) return {};
 
     // Notes
+    const parsedNotesKey = formattedString(parseKey(fields.notes, content));
+    // don't ReactHtmlParse notes if they're empty and the above function has returned '-',
+    // otherwise ReactHtmlParse will return an array and will cause issues when rendering to screen.
+    const parsedNotes = parsedNotesKey !== '-' ? ReactHtmlParser(parsedNotesKey) : parsedNotesKey;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][0].value = locale.notes;
-    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = ReactHtmlParser(
-        `${parseKey(fields.notes, content) ?? '-'}`,
-    );
+    adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.notes][1].value = parsedNotes;
 
     // Authors
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.authors][0].value =
@@ -56,7 +58,6 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][0].value = locale.wosId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][1].value = formattedString(
         parseKey(fields.wosId, content) ?? undefined,
-        undefined,
     );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][2].value = locale.wosDocType;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.wos][3].value = formattedString(
@@ -68,7 +69,6 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][0].value = locale.scopusId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][1].value = formattedString(
         parseKey(fields.scopusId, content) ?? undefined,
-        undefined,
     );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.scopus][2].value =
         locale.scopusDocType;
@@ -81,13 +81,11 @@ export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], f
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][0].value = locale.pubmedId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][1].value = formattedString(
         parseKey(fields.pubMedId, content) ?? undefined,
-        undefined,
     );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][2].value =
         locale.pubmedCentralId;
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][3].value = formattedString(
         parseKey(fields.pubMedCentralId, content) ?? undefined,
-        undefined,
     );
     adminViewRecordDefaultContentObject.sections[adminViewRecordDefaultContentIndex.pubmed][4].value =
         locale.pubmedDocType;

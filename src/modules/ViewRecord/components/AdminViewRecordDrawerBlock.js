@@ -30,6 +30,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 className={classes.contentTitle}
                 key={`header-${parentIndex}-${index}`}
                 id={`drawer-header-${parentIndex}-${index}`}
+                tabIndex="0"
             >
                 {block.value}
             </Typography>
@@ -43,6 +44,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     gutterBottom
                     key={`content-clipboard-${parentIndex}-${index}`}
                     id={`drawer-content-clipboard-${parentIndex}-${index}`}
+                    tabIndex="0"
+                    aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
                     {block.value && block.value !== '-' && (
@@ -52,6 +55,9 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                             className={classes.cursor}
                             key={`clipboard-button-${parentIndex}-${index}`}
                             id={`drawer-clipboard-button-${parentIndex}-${index}`}
+                            role="button"
+                            tabIndex="0"
+                            aria-label="Copy to clipboard button"
                         />
                     )}
                 </Typography>
@@ -64,6 +70,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     className={classes.notesField}
                     key={`content-scrollable-${parentIndex}-${index}`}
                     id={`drawer-content-scrollable-${parentIndex}-${index}`}
+                    tabIndex="0"
+                    aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
                 </Typography>
@@ -74,6 +82,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     variant={'body2'}
                     key={`content-value-${parentIndex}-${index}`}
                     id={`drawer-content-value-${parentIndex}-${index}`}
+                    tabIndex="0"
+                    aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
                 </Typography>

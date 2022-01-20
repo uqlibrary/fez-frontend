@@ -104,7 +104,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
-                    <Typography variant={'h6'}>
+                    <Typography variant={'h6'} tabIndex="0">
                         <IconButton onClick={handleDrawerToggle} id="adminRecordDrawerCloseBtn">
                             {/* istanbul ignore next */
                             theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
