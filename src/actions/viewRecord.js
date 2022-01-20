@@ -66,12 +66,12 @@ export function unlockRecordToView() {
 
 export function loadDetailedHistory(pid) {
     return dispatch => {
-        dispatch({ type: actions.LOADING_DETAILED_HISTORY });
+        dispatch({ type: actions.DETAILED_HISTORY_LOADING });
 
         return get(EXISTING_RECORD_HISTORY_API({ pid: pid.replace('uq:', 'UQ:') }))
             .then(response => {
                 dispatch({
-                    type: actions.LOADING_DETAILED_HISTORY_SUCCESS,
+                    type: actions.DETAILED_HISTORY_LOADING_SUCCESS,
                     payload: response.data,
                 });
 
@@ -79,7 +79,7 @@ export function loadDetailedHistory(pid) {
             })
             .catch(error => {
                 dispatch({
-                    type: actions.LOADING_DETAILED_HISTORY_FAILED,
+                    type: actions.DETAILED_HISTORY_LOADING_FAILED,
                     payload: error,
                 });
             });

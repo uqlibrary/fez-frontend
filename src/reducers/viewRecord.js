@@ -66,16 +66,16 @@ const handlers = {
         error: action.payload,
     }),
 
-    [actions.LOADING_DETAILED_HISTORY]: state => ({
+    [actions.DETAILED_HISTORY_LOADING]: state => ({
         ...state,
         isLoadingDetailedHistory: true,
     }),
-    [actions.LOADING_DETAILED_HISTORY_SUCCESS]: (state, action) => ({
+    [actions.DETAILED_HISTORY_LOADING_SUCCESS]: (state, action) => ({
         ...state,
         isLoadingDetailedHistory: false,
         recordDetailedHistory: action.payload,
     }),
-    [actions.LOADING_DETAILED_HISTORY_FAILED]: state => ({
+    [actions.DETAILED_HISTORY_LOADING_FAILED]: state => ({
         ...state,
         isLoadingDetailedHistory: false,
     }),
