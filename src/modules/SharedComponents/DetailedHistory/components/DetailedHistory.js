@@ -81,10 +81,14 @@ export const DetailedHistory = ({ record }) => {
                                             className={classes.detailedHistoryRow}
                                         >
                                             <Grid item xs={4} style={{ padding: '5px' }}>
-                                                <span>{eventDate}</span>
+                                                <Typography variant="body2" component={'span'}>
+                                                    {eventDate}
+                                                </Typography>
                                             </Grid>
                                             <Grid item xs={8} style={{ padding: '5px' }}>
-                                                <span>{histItem.pre_detail}</span>
+                                                <Typography variant="body2" component={'span'}>
+                                                    {histItem.pre_detail}
+                                                </Typography>
                                             </Grid>
                                         </Grid>
                                     );
