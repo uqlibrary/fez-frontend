@@ -10,6 +10,8 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import * as actions from 'actions';
 
+const moment = require('moment');
+
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
@@ -18,6 +20,11 @@ const useStyles = makeStyles(theme => ({
         fontSize: theme.typography.pxToRem(15),
         fontWeight: theme.typography.fontWeightRegular,
     },
+    detailedHistoryRow: {
+        '&:nth-child(even)': {
+            backgroundColor: '#efefef',
+        },
+    },
 }));
 
 export const DetailedHistory = ({ record }) => {
@@ -25,14 +32,13 @@ export const DetailedHistory = ({ record }) => {
     const detailedHistoryList = useSelector(state => state.get('viewRecordReducer').recordDetailedHistory);
     React.useEffect(() => {
         dispatch(actions.loadDetailedHistory(record.rek_pid));
-        //   !!record.rek_pid && !!loadDetailedHistory && loadDetailedHistory(record.rek_pid);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="Detailed-History" data-testid="Detailed-History">
             <Accordion>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
                     <Typography variant="h5">
@@ -59,18 +65,28 @@ export const DetailedHistory = ({ record }) => {
                         {/* Data Elements */}
 
                         {!!detailedHistoryList &&
+                            detailedHistoryList.length > 0 &&
                             detailedHistoryList
                                 .sort((a, b) => b.pre_id - a.pre_id)
                                 .map(histItem => {
+                                    const eventDate = moment(new Date(histItem.pre_date)).format(
+                                        'ddd MMM DD YYYY, HH:mm:ss A',
+                                    );
                                     return (
-                                        <React.Fragment key={histItem.pre_id}>
+                                        <Grid
+                                            container
+                                            key={histItem.pre_id}
+                                            id={`detailed-history-row-${histItem.pre_id}`}
+                                            data-testid={`detailed-history-row-${histItem.pre_id}`}
+                                            className={classes.detailedHistoryRow}
+                                        >
                                             <Grid item xs={4} style={{ padding: '5px' }}>
-                                                <span>{histItem.pre_date}</span>
+                                                <span>{eventDate}</span>
                                             </Grid>
                                             <Grid item xs={8} style={{ padding: '5px' }}>
                                                 <span>{histItem.pre_detail}</span>
                                             </Grid>
-                                        </React.Fragment>
+                                        </Grid>
                                     );
                                 })}
                     </Grid>
