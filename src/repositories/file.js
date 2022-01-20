@@ -8,7 +8,7 @@ import {
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
 import { post, put } from './generic';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
 import locale from 'locale/global';
 const moment = require('moment');
 
@@ -78,7 +78,7 @@ export function putUploadFile(pid, file, dispatch, formName, collections) {
                 return Promise.resolve(uploadResponse);
             })
             .catch(error => {
-                if (process.env.ENABLE_LOG) Raven.captureException(error);
+                if (process.env.ENABLE_LOG) Sentry.captureException(error);
                 if (fileUploadActions) {
                     dispatch(fileUploadActions.notifyUploadFailed(file.name));
                 }
@@ -113,7 +113,7 @@ export function putUploadFiles(pid, files, dispatch, formName = '', collections 
     };
     const duplicateFileNames = checkIfDuplicateExists(filenameList);
     if (!!duplicateFileNames) {
-        Raven.captureMessage(`Duplicate files found when uploading files for PID ${pid} : ${filenameList}`);
+        Sentry.captureMessage(`Duplicate files found when uploading files for PID ${pid} : ${filenameList}`);
     }
     dispatch(fileUploadActions.startFileUpload());
     const uploadFilesPromises = files.map(file => putUploadFile(pid, file, dispatch, formName, collections));
