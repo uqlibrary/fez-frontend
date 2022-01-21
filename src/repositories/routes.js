@@ -171,6 +171,10 @@ export const EXISTING_RECORD_HISTORY_API = ({ pid } = { pid: undefined }) => ({
     apiUrl: `records/${pid}/history`,
 });
 
+export const EXISTING_RECORD_VERSION_API = (pid, version) => ({
+    apiUrl: `records/${pid}/${version}`,
+});
+
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });

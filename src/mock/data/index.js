@@ -33,6 +33,8 @@ export {
     publicationTypeListImage,
     publicationTypeListJournal,
     publicationTypeListJournalArticle,
+    publicationTypeListJournalArticleVersion1,
+    publicationTypeListJournalArticleVersion2,
     publicationTypeListManuscript,
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
