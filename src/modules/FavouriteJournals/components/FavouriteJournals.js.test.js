@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter, act } from 'test-utils';
 import { FavouriteJournals } from '../index';
 import Immutable from 'immutable';
 import mockData from '../../../mock/data/testing/journals/journals';
@@ -20,6 +20,33 @@ describe('FavouriteJournals', () => {
     afterEach(() => {
         Object.keys(mocks).map(name => mocks[name].mockRestore());
     });
+
+    it('should toggle selection of all favourite journals', () => {
+        const selectAllCheckboxSelectorString = 'journal-list-header-col-1-select-all';
+        const checkboxSelectorString = 'input[id^="journal-list-data-col-1-checkbox-"]:checked';
+        mocks.useDispatch = jest.spyOn(redux, 'useDispatch');
+        mocks.useDispatch.mockImplementation(() => () => Promise.resolve(true));
+        const { queryByTestId, container } = setup({
+            state: { loading: false, response: { total: 1, data: mockData } },
+        });
+
+        expect(queryByTestId(selectAllCheckboxSelectorString)).toBeInTheDocument();
+
+        expect(container.querySelectorAll(checkboxSelectorString).length).toBe(0);
+
+        act(() => {
+            fireEvent.click(queryByTestId(selectAllCheckboxSelectorString));
+        });
+
+        expect(container.querySelectorAll(checkboxSelectorString).length).toBe(2);
+
+        act(() => {
+            fireEvent.click(queryByTestId(selectAllCheckboxSelectorString));
+        });
+
+        expect(container.querySelectorAll(checkboxSelectorString).length).toBe(0);
+    });
+
     it('should remove journal ', () => {
         mocks.useState = jest.spyOn(React, 'useState');
         mocks.useState
