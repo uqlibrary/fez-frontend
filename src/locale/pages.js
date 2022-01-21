@@ -528,6 +528,9 @@ export default {
                     </div>
                 ),
             },
+            version: {
+                title: 'View Version',
+            },
         },
         searchRecords: {
             title: 'eSpace search',

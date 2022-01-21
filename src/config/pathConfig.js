@@ -141,6 +141,7 @@ export const pathConfig = {
         delete: pid => `/admin/delete/${pid}`,
         doi: pid => `/admin/doi/${pid}`,
         edit: pid => `/admin/edit/${pid}`,
+        version: (pid, version) => `/admin/view/${pid}/${version}`,
         editCollection: pid => `/collections/${pid}/edit`,
         editCommunity: pid => `/communities/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,

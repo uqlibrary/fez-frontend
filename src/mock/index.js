@@ -1,8 +1,7 @@
 /* eslint-disable */
-import { api, sessionApi } from 'config';
+import { api, SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME, sessionApi } from 'config';
 import MockAdapter from 'axios-mock-adapter';
 import Cookies from 'js-cookie';
-import { SESSION_COOKIE_NAME, SESSION_USER_GROUP_COOKIE_NAME } from 'config';
 import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
@@ -242,6 +241,21 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
+    .reply(200, { ...mockData.publicationTypeListJournalArticle.data })
+    // .reply(config => {
+    //     const mockRecords = [
+    //         ...mockData.publicationTypeListJournalArticle.data,
+    //         // ...mockData.publicationTypeListJournalArticleVersion2.data,
+    //     ];
+    //     const matchedRecord = mockRecords.find(
+    //         record => config.url.indexOf(record.rek_pid) > -1, // && config.url.indexOf(record.rek_version) > -1,
+    //     );
+    //     if (matchedRecord) {
+    //         console.log(matchedRecord);
+    //         return [200, { data: { ...matchedRecord } }];
+    //     }
+    // })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [

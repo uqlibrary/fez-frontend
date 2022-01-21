@@ -1,11 +1,13 @@
 import React from 'react';
 import { locale } from 'locale';
-import { pathConfig, getSearchUrl } from './pathConfig';
+import { getSearchUrl, pathConfig } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
+// export const versionRegExp = `(?:${pidRegExp} [0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2})|[a-z0-9-]+`;
+export const versionRegExp = '[a-z0-9-]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 const isAdmin = authorDetails => {
@@ -30,6 +32,7 @@ export const flattedPathConfig = [
     '/admin/users',
     '/admin/add',
     '/admin/edit',
+    '/admin/view/UQ:228367/123',
     '/admin/delete',
     '/admin/favourite-search',
     '/admin/masquerade',
@@ -75,6 +78,7 @@ export const getRoutesConfig = ({
 }) => {
     const pid = `:pid(${pidRegExp})`;
     const id = `:id(${numericIdRegExp})`;
+    const version = `:version(${versionRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -313,6 +317,13 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.edit.record.title,
+                  },
+                  {
+                      path: pathConfig.admin.version(pid, version),
+                      render: props => <components.NewViewRecord {...{ ...props, isVersion: true }} />,
+                      exact: true,
+                      access: [roles.admin],
+                      pageTitle: locale.pages.viewRecord.version.title,
                   },
                   {
                       path: pathConfig.admin.delete(pid),

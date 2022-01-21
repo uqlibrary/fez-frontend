@@ -31,6 +31,8 @@ export { default as publicationTypeListGenericDocument } from './publicationType
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListJournalArticle } from './publicationTypeListJournalArticle';
+export { default as publicationTypeListJournalArticleVersion1 } from './publicationTypeListJournalArticleVersion1';
+export { default as publicationTypeListJournalArticleVersion2 } from './publicationTypeListJournalArticleVersion2';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';
 export { default as publicationTypeListNewspaperArticle } from './publicationTypeListNewspaperArticle';
 export { default as publicationTypeListPatent } from './publicationTypeListPatent';

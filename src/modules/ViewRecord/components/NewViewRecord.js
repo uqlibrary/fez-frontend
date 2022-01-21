@@ -24,7 +24,7 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { general, AUTH_URL_LOGIN } from 'config';
+import { AUTH_URL_LOGIN, general } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
@@ -41,9 +41,10 @@ export const NewViewRecord = ({
     loadingRecordToView,
     recordToViewError,
     recordToView,
+    isVersion,
 }) => {
     const dispatch = useDispatch();
-    const { pid } = useParams();
+    const { pid, version } = useParams();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
 
@@ -57,11 +58,11 @@ export const NewViewRecord = ({
     );
 
     React.useEffect(() => {
-        !!pid && dispatch(actions.loadRecordToView(pid));
+        !!pid && dispatch(isVersion ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pid]);
+    }, [isVersion, pid, version]);
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -170,6 +171,7 @@ NewViewRecord.propTypes = {
     loadingRecordToView: PropTypes.bool,
     recordToView: PropTypes.object,
     recordToViewError: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    isVersion: PropTypes.bool,
 };
 
 export default React.memo(
