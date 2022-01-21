@@ -39,7 +39,6 @@
         "@testing-library/react": "^10.0.1",
         "@types/enzyme": "^3.10.8",
         "@types/file-saver": "^2.0.2",
-        "@types/highcharts": "^5.0.44",
         "@types/history": "^4.7.8",
         "@types/jest": "^25.2.3",
         "@types/js-cookie": "^2.2.6",
@@ -128,7 +127,7 @@
         "webpack": "^4.44.1",
         "webpack-bundle-analyzer": "^3.6.1",
         "webpack-cli": "^4.8.0",
-        "webpack-dev-server": "^4.0.0",
+        "webpack-dev-server": "^4.7.3",
         "webpack-pwa-manifest": "^4.3.0"
     },
     "dependencies": {
@@ -161,8 +160,7 @@
         "downshift": "^5.0.3",
         "file-saver": "^2.0.2",
         "fuse.js": "^6.4.0",
-        "highcharts": "^8.1.1",
-        "highcharts-exporting": "^0.1.2",
+        "highcharts": "^9.3.2",
         "history": "^4.7.2",
         "immutable": "^3.8.2",
         "ipinfo": "^1.3.9",
