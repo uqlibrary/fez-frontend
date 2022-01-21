@@ -37,14 +37,16 @@ export const DetailedHistory = ({ record }) => {
 
     const classes = useStyles();
 
-    return (
+    return detailedHistoryList && detailedHistoryList.length > 0 ? (
         <div className={classes.root} id="Detailed-History" data-testid="Detailed-History">
             <Accordion>
-                <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
-                    <Typography variant="h5">
-                        Detailed History{' '}
-                        {!!detailedHistoryList ? `(${detailedHistoryList.length} events)` : '(Loading...)'}
-                    </Typography>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="detailed-history-content"
+                    id="detailed-history-header"
+                    data-testid="detailed-history-header"
+                >
+                    <Typography variant="h5">Detailed History ({detailedHistoryList.length} events)</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Grid container>
@@ -64,39 +66,39 @@ export const DetailedHistory = ({ record }) => {
                         </Grid>
                         {/* Data Elements */}
 
-                        {!!detailedHistoryList &&
-                            detailedHistoryList.length > 0 &&
-                            detailedHistoryList
-                                .sort((a, b) => b.pre_id - a.pre_id)
-                                .map(histItem => {
-                                    const eventDate = moment(new Date(histItem.pre_date)).format(
-                                        'ddd MMM DD YYYY, HH:mm:ss A',
-                                    );
-                                    return (
-                                        <Grid
-                                            container
-                                            key={histItem.pre_id}
-                                            id={`detailed-history-row-${histItem.pre_id}`}
-                                            data-testid={`detailed-history-row-${histItem.pre_id}`}
-                                            className={classes.detailedHistoryRow}
-                                        >
-                                            <Grid item xs={4} style={{ padding: '5px' }}>
-                                                <Typography variant="body2" component={'span'}>
-                                                    {eventDate}
-                                                </Typography>
-                                            </Grid>
-                                            <Grid item xs={8} style={{ padding: '5px' }}>
-                                                <Typography variant="body2" component={'span'}>
-                                                    {histItem.pre_detail}
-                                                </Typography>
-                                            </Grid>
+                        {detailedHistoryList
+                            .sort((a, b) => b.pre_id - a.pre_id)
+                            .map(histItem => {
+                                const eventDate = moment(new Date(histItem.pre_date)).format(
+                                    'ddd MMM DD YYYY, HH:mm:ss A',
+                                );
+                                return (
+                                    <Grid
+                                        container
+                                        key={histItem.pre_id}
+                                        id={`detailed-history-row-${histItem.pre_id}`}
+                                        data-testid={`detailed-history-row-${histItem.pre_id}`}
+                                        className={classes.detailedHistoryRow}
+                                    >
+                                        <Grid item xs={4} style={{ padding: '5px' }}>
+                                            <Typography variant="body2" component={'span'}>
+                                                {eventDate}
+                                            </Typography>
                                         </Grid>
-                                    );
-                                })}
+                                        <Grid item xs={8} style={{ padding: '5px' }}>
+                                            <Typography variant="body2" component={'span'}>
+                                                {histItem.pre_detail}
+                                            </Typography>
+                                        </Grid>
+                                    </Grid>
+                                );
+                            })}
                     </Grid>
                 </AccordionDetails>
             </Accordion>
         </div>
+    ) : (
+        <div id="Detailed-History-Empty" data-testid="Detailed-History-Empty" />
     );
 };
 
