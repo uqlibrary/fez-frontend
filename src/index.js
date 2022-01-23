@@ -42,6 +42,17 @@ if (process.env.ENABLE_LOG) {
         release: process.env.GIT_SHA,
         allowUrls: [/library\.uq\.edu\.au/],
         ignoreErrors: ['Object Not Found Matching Id'],
+        beforeBreadcrumb(breadcrumb, hint) {
+            if (breadcrumb.category === 'xhr') {
+                const data = {
+                    requestBody: hint.xhr.__sentry_xhr__.body,
+                    response: hint.xhr.response,
+                    responseUrl: hint.xhr.responseURL,
+                };
+                return { ...breadcrumb, data };
+            }
+            return breadcrumb;
+        },
     });
 }
 
