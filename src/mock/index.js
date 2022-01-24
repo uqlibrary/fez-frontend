@@ -68,8 +68,6 @@ mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config
     }
 });
 
-mock.onGet(routes.EXISTING_RECORD_HISTORY_API({ pid: 'UQ:a62a760' }).apiUrl).reply(200, ...mockData.detailedHistory);
-
 mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(() => {
         // mock account response
@@ -240,6 +238,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(routes.BULK_UPDATES_API().apiUrl))
     .reply(200, { ...mockData.bulkUpdatesList })
+    // Detailed history API check (path /view/<PID>/history)
+    .onGet(routes.EXISTING_RECORD_HISTORY_API({ pid: 'UQ:a62a760' }).apiUrl)
+    .reply(200, ...mockData.detailedHistory)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
