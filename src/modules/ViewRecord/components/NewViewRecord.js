@@ -134,7 +134,7 @@ export const NewViewRecord = ({
                     </Grid>
                 )}
             </Grid>
-            {!isAdmin && (
+            {isAdmin && (
                 <Grid item xs={12} style={{ marginBottom: 24 }}>
                     <DetailedHistory record={recordToView} />
                 </Grid>
