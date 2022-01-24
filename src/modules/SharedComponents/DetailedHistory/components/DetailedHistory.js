@@ -36,7 +36,6 @@ export const DetailedHistory = ({ record }) => {
     }, []);
 
     const classes = useStyles();
-
     return detailedHistoryList && detailedHistoryList.length > 0 ? (
         <div className={classes.root} id="Detailed-History" data-testid="Detailed-History">
             <Accordion>

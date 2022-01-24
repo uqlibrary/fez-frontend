@@ -103,7 +103,6 @@ export function unlockRecordToView() {
 export function loadDetailedHistory(pid) {
     return dispatch => {
         dispatch({ type: actions.DETAILED_HISTORY_LOADING });
-
         return get(EXISTING_RECORD_HISTORY_API({ pid: pid.replace('uq:', 'UQ:') }))
             .then(response => {
                 dispatch({
