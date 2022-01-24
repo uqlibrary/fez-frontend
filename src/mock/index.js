@@ -68,6 +68,7 @@ mock.onGet(routes.SEARCH_INTERNAL_RECORDS_API({}, 'export').apiUrl).reply(config
     }
 });
 
+console.log(test);
 // mock.onGet(routes.EXISTING_RECORD_HISTORY_API('UQ:a62a760').apiUrl)
 //    .reply(200, {});
 
