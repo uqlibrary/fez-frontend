@@ -69,11 +69,15 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { journalDetails } from './journal';
 
+
 export { bulkUpdatesList } from './bulkUpdates';
 
 // Favourite search mock data
 export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
 export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';
+
+// Detailed History Mock Data
+export { detailedHistory } from './detailedHistory';
 
 // My editorial appointments mock data
 export { default as myEditorialAppointmentsList } from './myEditorialAppointments/myEditorialAppointmentsList';
