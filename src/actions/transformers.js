@@ -1364,7 +1364,7 @@ export const getNotesSectionSearchKeys = (data = {}) => {
 };
 
 export const getThesisTypeSearchKey = type => ({
-    fez_record_search_key_theis_type: {
+    fez_record_search_key_thesis_type: {
         rek_thesis_type: type,
     },
 });
