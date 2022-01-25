@@ -54,6 +54,8 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
             }, 1000);
             return () => clearTimeout(timeOutId);
         } else {
+            // dispatch fires when component remounts i.e. from results page back to search input
+            /* istanbul ignore next */
             !isInit && dispatch(clearJournalSearchKeywords());
             isInit.current = false;
             return null;

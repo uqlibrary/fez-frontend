@@ -56,7 +56,7 @@ export const useSelectedKeywords = (initialKeywords = {}) => {
     };
 };
 
-export const useSelectedJournals = ({ state = {}, available = {} } = {}) => {
+export const useSelectedJournals = ({ state = {}, available = {} }) => {
     const [selectedJournals, setSelectedJournals] = React.useState(state);
     const [isAllSelected, setIsAllSelected] = React.useState(false);
 
@@ -86,21 +86,21 @@ export const useSelectedJournals = ({ state = {}, available = {} } = {}) => {
                     selected[e.target.value] = true;
                     return selected;
                 });
-
                 // countSelectedJournals() + 1 because selectedJournals is not instantly updated
                 // upon setSelectedJournals is called
+                /* istanbul ignore else */
                 if (available.length > 0 && available.length === countSelectedJournals() + 1) {
                     setIsAllSelected(true);
                 }
                 return;
+            } else {
+                setSelectedJournals(current => {
+                    const selected = { ...current };
+                    delete selected[e.target.value];
+                    return selected;
+                });
+                setIsAllSelected(false);
             }
-
-            setSelectedJournals(current => {
-                const selected = { ...current };
-                delete selected[e.target.value];
-                return selected;
-            });
-            setIsAllSelected(false);
         },
         [available.length, countSelectedJournals],
     );
@@ -119,13 +119,16 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     const history = useHistory();
     const location = useLocation();
     const searchQueryParams = deparam(location.search.substr(1));
+
     const journalSearchQueryParams = {
         ...searchQueryParams,
         activeFacets: {
             filters: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.filters) || {},
             ranges: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.ranges) || {},
-            ...(searchQueryParams.activeFacets && searchQueryParams.activeFacets.hasOwnProperty('showFavouritedOnly')
-                ? { showFavouritedOnly: searchQueryParams.activeFacets.showFavouritedOnly === 'true' }
+            ...(searchQueryParams.activeFacets &&
+            searchQueryParams.activeFacets.filters &&
+            searchQueryParams.activeFacets.filters.hasOwnProperty('showFavouritedOnly')
+                ? { filters: { showFavouritedOnly: searchQueryParams.activeFacets.showFavouritedOnly === 'true' } }
                 : {}),
         },
     };

@@ -182,7 +182,7 @@ export const SearchJournals = () => {
             fromHandleAllJournals.current = false;
             delete journalSearchQueryParams.keywords;
 
-            if (allJournalsPageRefresh) allJournalsPageRefresh.current = false;
+            !!allJournalsPageRefresh && (allJournalsPageRefresh.current = false);
         }
 
         // add a delay when keywords are being removed
