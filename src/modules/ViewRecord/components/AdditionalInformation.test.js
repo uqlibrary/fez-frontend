@@ -614,6 +614,16 @@ describe('Additional Information Component ', () => {
         expect(wrapper.instance().renderColumns()).toMatchSnapshot();
     });
 
+    it('should not render empty doi', () => {
+        const wrapper = setup({
+            publication: {
+                ...records.journalArticle,
+                fez_record_search_key_doi: { rek_doi: '' },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renderLicense()', () => {
         const publication = {
             rek_date: '1000-01-01T00:00:00Z',
