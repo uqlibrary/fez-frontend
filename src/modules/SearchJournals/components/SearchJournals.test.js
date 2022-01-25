@@ -1,13 +1,19 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter, screen } from 'test-utils';
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
+import mediaQuery from 'css-mediaquery';
+import * as ExportActions from 'actions/journals.js';
 
 import { initialJournalSearchKeywords, initialState } from '../../../reducers/journals';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
-import { mockData } from '../../../mock/data/testing/journals/journalSearchResults';
+import {
+    mockData,
+    mockDataWithFilterFacets,
+    mockDataWithFilterFacetsAndPagination,
+} from '../../../mock/data/testing/journals/journalSearchResults';
 
 const setup = ({ state = {}, storeState = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
     return render(
@@ -28,6 +34,14 @@ const setup = ({ state = {}, storeState = {}, testHistory = createMemoryHistory(
         </WithRouter>,
     );
 };
+
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
 describe('SearchJournals', () => {
     it('should render', () => {
@@ -444,5 +458,126 @@ describe('SearchJournals', () => {
         expect(testHistory.location.search).toEqual('');
 
         expect(queryByText('Step 2.')).not.toBeInTheDocument();
+    });
+
+    it('should update results when Favourite Journals facet clicked', () => {
+        // Note: test here to gain 100% coverage in src/modules/SearchJournals/hooks.js
+        window.matchMedia = createMatchMedia(1024);
+
+        const testQuerySearchAllJournals =
+            '?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+        const path = pathConfig.journals.search;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+
+        testHistory.push({
+            path,
+            search: testQuerySearchAllJournals,
+            state: {
+                source: 'code',
+            },
+        });
+
+        const journalsList = mockDataWithFilterFacets;
+
+        const { getByTestId, queryByTestId } = setup({
+            state: { journalsListLoaded: true, journalsList: journalsList },
+            testHistory,
+        });
+        const facetItemTestId = 'facet-filter-nested-item-show-journals-favourited';
+        const clearFacetItemTestId = 'clear-facet-filter-nested-item-show-journals-favourited';
+
+        // expand Favourite catageory
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-showfavouritedonly'));
+        });
+
+        expect(getByTestId(facetItemTestId)).toBeVisible();
+        expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
+
+        act(() => {
+            fireEvent.click(getByTestId(facetItemTestId));
+        });
+
+        expect(getByTestId(clearFacetItemTestId)).toBeVisible();
+        expect(testHistory.location.search).toContain('showFavouritedOnly%5D=true');
+    });
+
+    it('should update querystring when filters are changed', () => {
+        // Note: test here to gain 100% coverage in src/modules/SearchJournals/hooks.js
+        window.matchMedia = createMatchMedia(1024);
+
+        const testQuerySearchAllJournals =
+            '?keywords%5BKeyword-all-journals%5D%5Btype%5D=Keyword&keywords%5BKeyword-all-journals%5D%5Btext%5D=all+journals&keywords%5BKeyword-all-journals%5D%5Bid%5D=Keyword-all-journals';
+        const path = pathConfig.journals.search;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+
+        testHistory.push({
+            path,
+            search: testQuerySearchAllJournals,
+            state: {
+                source: 'code',
+            },
+        });
+
+        const journalsList = mockDataWithFilterFacetsAndPagination;
+
+        const { getByRole, queryByTestId } = setup({
+            state: { journalsListLoaded: true, journalsList: journalsList },
+            testHistory,
+        });
+
+        screen.debug(undefined, 80000);
+
+        // sortBy
+        expect(queryByTestId('sortBy')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(queryByTestId('sortBy'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(queryByTestId('publication-list-sorting-sort-by-option-0'));
+        });
+        expect(testHistory.location.search).toContain('sortBy=title');
+
+        // sortOrder
+        expect(queryByTestId('sortOrder')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(queryByTestId('sortOrder'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(queryByTestId('publication-list-sorting-sort-order-option-0'));
+        });
+        expect(testHistory.location.search).toContain('sortDirection=Desc');
+
+        // pageSize
+        expect(queryByTestId('pageSize')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(queryByTestId('pageSize'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(queryByTestId('publication-list-sorting-page-size-option-100'));
+        });
+        expect(testHistory.location.search).toContain('pageSize=100');
+
+        // export
+        const exportJournals = jest.spyOn(ExportActions, 'exportJournals');
+        expect(queryByTestId('exportPublicationsFormat')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(queryByTestId('exportPublicationsFormat'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(queryByTestId('export-publication-option-0'));
+        });
+        expect(exportJournals).toHaveBeenCalled();
+
+        // change page
+        expect(queryByTestId('search-journals-paging-top-select-page-2')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(queryByTestId('search-journals-paging-top-select-page-2'));
+        });
+        expect(testHistory.location.search).toContain('page=2');
     });
 });

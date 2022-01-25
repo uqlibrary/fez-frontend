@@ -39,7 +39,12 @@ export default class ExportPublications extends PureComponent {
                     </MenuItem>
                     {txt.format.map((item, index) => {
                         return (
-                            <MenuItem key={index} value={item.value}>
+                            <MenuItem
+                                key={index}
+                                value={item.value}
+                                data-testid={`export-publication-option-${index}`}
+                                id={`export-publication-option-${index}`}
+                            >
                                 {item.label}
                             </MenuItem>
                         );

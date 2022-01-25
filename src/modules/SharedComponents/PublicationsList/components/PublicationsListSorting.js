@@ -94,7 +94,12 @@ const PublicationsListSorting = props => {
                     >
                         {props.sortingData.sortBy.map((item, index) => {
                             return (
-                                <MenuItem key={index} value={item.value}>
+                                <MenuItem
+                                    key={index}
+                                    value={item.value}
+                                    data-testid={`publication-list-sorting-sort-by-option-${index}`}
+                                    id={`publication-list-sorting-sort-by-option-${index}`}
+                                >
                                     {item.label}
                                 </MenuItem>
                             );
@@ -118,6 +123,7 @@ const PublicationsListSorting = props => {
                                     key={index}
                                     value={item}
                                     data-testid={`publication-list-sorting-sort-order-option-${index}`}
+                                    id={`publication-list-sorting-sort-order-option-${index}`}
                                 >
                                     {item}
                                 </MenuItem>
@@ -138,7 +144,12 @@ const PublicationsListSorting = props => {
                     >
                         {pageLength.map(number => {
                             return (
-                                <MenuItem key={`records-per-page-${number}`} value={number}>
+                                <MenuItem
+                                    key={`records-per-page-${number}`}
+                                    value={number}
+                                    data-testid={`publication-list-sorting-page-size-option-${number}`}
+                                    id={`publication-list-sorting-page-size-option-${number}`}
+                                >
                                     {number}
                                 </MenuItem>
                             );
@@ -153,6 +164,7 @@ const PublicationsListSorting = props => {
                                     key={`records-per-page-${props.bulkExportSize}`}
                                     value={props.bulkExportSize}
                                     data-testid={`search-export-size-entry-${props.bulkExportSize}`}
+                                    id={`search-export-size-entry-${props.bulkExportSize}`}
                                 >
                                     {props.bulkExportSize}
                                 </MenuItem>,
