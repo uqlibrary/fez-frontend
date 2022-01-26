@@ -20,12 +20,24 @@ const useStyles = makeStyles(theme => ({
         fontSize: theme.typography.pxToRem(15),
         fontWeight: theme.typography.fontWeightRegular,
     },
+    detailedHistoryRowHeader: {
+        padding: '5px',
+        color: '#fff',
+        backgroundColor: '#51247A',
+        paddingLeft: '5px',
+    },
     detailedHistoryRow: {
         '&:nth-child(even)': {
             backgroundColor: '#efefef',
         },
     },
 }));
+
+const historyEventDate = date => {
+    return moment(new Date(!date.pre_date.includes('UTC') ? date.pre_date + ' UTC' : date.pre_date)).format(
+        'ddd MMM DD YYYY, HH:mm:ss A',
+    );
+};
 
 export const DetailedHistory = ({ record }) => {
     const dispatch = useDispatch();
@@ -37,7 +49,7 @@ export const DetailedHistory = ({ record }) => {
 
     const classes = useStyles();
     return detailedHistoryList && detailedHistoryList.length > 0 ? (
-        <div className={classes.root} id="Detailed-History" data-testid="Detailed-History">
+        <div className={classes.root} id="detailed-history" data-testid="detailed-history">
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
@@ -49,28 +61,15 @@ export const DetailedHistory = ({ record }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Grid container>
-                        <Grid
-                            item
-                            xs={4}
-                            style={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
-                        >
+                        <Grid item xs={4} className={classes.detailedHistoryRowHeader}>
                             <span>Date</span>
                         </Grid>
-                        <Grid
-                            item
-                            xs={8}
-                            style={{ padding: '5px', color: '#fff', backgroundColor: '#51247A', paddingLeft: '5px' }}
-                        >
+                        <Grid item xs={8} className={classes.detailedHistoryRowHeader}>
                             <span>Event</span>
                         </Grid>
-                        {/* Data Elements */}
-
                         {detailedHistoryList
                             .sort((a, b) => b.pre_id - a.pre_id)
                             .map(histItem => {
-                                const eventDate = moment(new Date(histItem.pre_date)).format(
-                                    'ddd MMM DD YYYY, HH:mm:ss A',
-                                );
                                 return (
                                     <Grid
                                         container
@@ -81,7 +80,7 @@ export const DetailedHistory = ({ record }) => {
                                     >
                                         <Grid item xs={4} style={{ padding: '5px' }}>
                                             <Typography variant="body2" component={'span'}>
-                                                {eventDate}
+                                                {historyEventDate(histItem)}
                                             </Typography>
                                         </Grid>
                                         <Grid item xs={8} style={{ padding: '5px' }}>
@@ -97,7 +96,7 @@ export const DetailedHistory = ({ record }) => {
             </Accordion>
         </div>
     ) : (
-        <div id="Detailed-History-Empty" data-testid="Detailed-History-Empty" />
+        <div id="detailed-history-empty" data-testid="detailed-history-empty" />
     );
 };
 

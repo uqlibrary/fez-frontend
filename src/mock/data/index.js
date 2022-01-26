@@ -69,7 +69,6 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { journalDetails } from './journal';
 
-
 export { bulkUpdatesList } from './bulkUpdates';
 
 // Favourite search mock data
