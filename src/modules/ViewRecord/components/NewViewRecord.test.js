@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, WithRouter, WithReduxStore, fireEvent } from 'test-utils';
+import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -8,6 +8,7 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
+import { recordVersion1 } from '../../../mock/data';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -80,6 +81,16 @@ describe('NewViewRecord', () => {
         userIsAdmin.mockImplementation(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
+    it('should render version', () => {
+        const pid = 'UQ:1';
+        const version = '123-456-789-1011';
+        const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
+        useParams.mockImplementation(() => ({ pid, version }));
+        const wrapper = setup({ recordToView: recordVersion1 });
+        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, version);
+        console.log(wrapper.debug());
     });
 
     it('should render deleted record correctly', () => {

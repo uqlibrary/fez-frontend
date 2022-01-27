@@ -37,12 +37,10 @@ export function loadRecordToView(pid, isEdit = false) {
 }
 
 /**
- * Remove _shadow from tables
- *
  * @param data
  * @return {{}}
  */
-export const fixRecordVersionData = data => {
+export const removeShadowSuffixFromTableNames = data => {
     const normalised = {};
     for (const [key, value] of Object.entries(data)) {
         normalised[key.replace('_shadow', '')] = value;
@@ -61,7 +59,7 @@ export function loadRecordVersionToView(pid, version) {
         dispatch({ type: actions.VIEW_RECORD_LOADING });
         return get(EXISTING_RECORD_VERSION_API(pid.replace('uq:', 'UQ:'), version.replace('uq:', 'UQ:')))
             .then(response => {
-                response.data = fixRecordVersionData(response.data);
+                response.data = removeShadowSuffixFromTableNames(response.data);
                 dispatch({
                     type: actions.VIEW_RECORD_LOADED,
                     payload: response.data,
