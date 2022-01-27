@@ -52,7 +52,6 @@ describe('Detailed History', () => {
         expect(container.getElementsByClassName('MuiCollapse-hidden').length).toBe(1);
         fireEvent.click(getByTestId('detailed-history-header'));
         expect(container.getElementsByClassName('MuiCollapse-hidden').length).toBe(0);
-        // screen.debug(undefined, 100000);
     });
     it('should contain the correct content', async () => {
         const { getByText, getByTestId } = setup({ record: { rek_pid: 'UQ:1' } });
@@ -61,6 +60,5 @@ describe('Detailed History', () => {
         expect(getByText('First Element of the mock data')).toBeInTheDocument();
         fireEvent.click(getByTestId('detailed-history-header'));
         expect(getByText('Second Element of the mock data')).toBeInTheDocument();
-        // screen.debug(undefined, 100000);
     });
 });
