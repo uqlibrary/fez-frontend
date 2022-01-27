@@ -31,8 +31,6 @@ export { default as publicationTypeListGenericDocument } from './publicationType
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListJournalArticle } from './publicationTypeListJournalArticle';
-export { default as publicationTypeListJournalArticleVersion1 } from './publicationTypeListJournalArticleVersion1';
-export { default as publicationTypeListJournalArticleVersion2 } from './publicationTypeListJournalArticleVersion2';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';
 export { default as publicationTypeListNewspaperArticle } from './publicationTypeListNewspaperArticle';
 export { default as publicationTypeListPatent } from './publicationTypeListPatent';
@@ -44,6 +42,8 @@ export { default as publicationTypeListThesis } from './publicationTypeListThesi
 export { default as publicationTypeListVideo } from './publicationTypeListVideo';
 export { default as publicationTypeListWorkingPaper } from './publicationTypeListWorkingPaper';
 export { default as record } from './record';
+export { default as recordVersion1 } from './recordVersion1';
+export { default as recordVersion2 } from './recordVersion2';
 export { default as recordsTypeList } from './recordsTypeList';
 export { default as recordWithDatastreams } from './recordWithDatastreams';
 export { default as recordWithLotOfAuthors } from './recordWithLotOfAuthors';

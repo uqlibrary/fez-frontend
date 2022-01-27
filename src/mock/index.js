@@ -245,20 +245,21 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
-    .reply(200, { ...mockData.publicationTypeListJournalArticle.data })
-    // .reply(config => {
-    //     const mockRecords = [
-    //         ...mockData.publicationTypeListJournalArticle.data,
-    //         // ...mockData.publicationTypeListJournalArticleVersion2.data,
-    //     ];
-    //     const matchedRecord = mockRecords.find(
-    //         record => config.url.indexOf(record.rek_pid) > -1, // && config.url.indexOf(record.rek_version) > -1,
-    //     );
-    //     if (matchedRecord) {
-    //         console.log(matchedRecord);
-    //         return [200, { data: { ...matchedRecord } }];
-    //     }
-    // })
+    // versions
+    .reply(config => {
+        const mockRecords = [...mockData.recordVersion1, ...mockData.recordVersion2];
+        console.log(config.url);
+        const matchedRecord = mockRecords.find(record => {
+            const tokens = config.url.split('/');
+            return (
+                tokens.pop().replace(' ', '') === record.rek_version.replace(' ', '') && tokens.pop() === record.rek_pid
+            );
+        });
+        if (matchedRecord) {
+            return [200, { data: { ...matchedRecord } }];
+        }
+        return [404, { message: 'File not found' }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
