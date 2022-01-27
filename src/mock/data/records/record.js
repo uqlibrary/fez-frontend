@@ -1088,7 +1088,7 @@
             "dsi_copyright": null,
             "dsi_state": "A",
             "dsi_size": 97786,
-            "dsi_security_policy": 1,
+            "dsi_security_policy": 5,
             "dsi_security_inherited": 0
         },
         {
@@ -1179,7 +1179,7 @@
             "dsi_copyright": null,
             "dsi_state": "A",
             "dsi_size": 186680,
-            "dsi_security_policy": 1,
+            "dsi_security_policy": 5,
             "dsi_security_inherited": 0
         },
         {

@@ -137,6 +137,18 @@ export const NewViewRecord = ({
                     <Alert {...txt.deletedAlert} />
                 </Grid>
             )}
+            {isVersion && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Alert
+                        {...{
+                            ...txt.version.alert.version,
+                            message: txt.version.alert.version.message(recordToView),
+                        }}
+                    />
+                    <br />
+                    <Alert {...txt.version.alert.warning} />
+                </Grid>
+            )}
             <Grid container spacing={3}>
                 {!isDeleted && (
                     <React.Fragment>

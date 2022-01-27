@@ -530,6 +530,26 @@ export default {
             },
             version: {
                 title: 'View Version',
+                alert: {
+                    version: {
+                        type: 'info_outline',
+                        title: '',
+                        message: record => (
+                            <>
+                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                                .
+                            </>
+                        ),
+                        alertId: 'alert-info',
+                    },
+                    warning: {
+                        type: 'warning',
+                        title: '',
+                        message:
+                            "Please note that we don't keep history of record's lookup values. Any values based on lookups are displayed with the most up to date values.",
+                        alertId: 'alert-warning',
+                    },
+                },
             },
         },
         searchRecords: {
