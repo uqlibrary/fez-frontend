@@ -14,7 +14,7 @@ import { PublicationCitation } from 'modules/SharedComponents/PublicationCitatio
 import { SocialShare } from 'modules/SharedComponents/SocialShare';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
-import { DetailedHistory } from 'modules/SharedComponents/DetailedHistory';
+import { DetailedHistory } from './DetailedHistory';
 
 import AdditionalInformation from './AdditionalInformation';
 import AvailableVersions from './AvailableVersions';
