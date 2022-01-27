@@ -541,7 +541,7 @@ export default {
                         scopusDocType: 'Scopus Doc Type',
                         pubmedId: 'Pubmed ID',
                         pubmedCentralId: 'Pubmed Central ID',
-                        pubmedDocType: 'Pubmed Doc Type,',
+                        pubmedDocType: 'Pubmed Doc Type',
                     },
                 },
                 clipboard: {
