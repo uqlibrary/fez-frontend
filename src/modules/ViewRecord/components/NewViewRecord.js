@@ -43,7 +43,6 @@ export const NewViewRecord = ({
     loadingRecordToView,
     recordToViewError,
     recordToView,
-    isVersion,
 }) => {
     const dispatch = useDispatch();
     const { pid, version } = useParams();
@@ -60,11 +59,11 @@ export const NewViewRecord = ({
     );
 
     React.useEffect(() => {
-        !!pid && dispatch(isVersion ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
+        !!pid && dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isVersion, pid, version]);
+    }, [pid, version]);
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -145,7 +144,8 @@ export const NewViewRecord = ({
                     <Alert {...txt.deletedAlert} />
                 </Grid>
             )}
-            {isVersion && (
+            {/* eslint-disable-next-line camelcase */}
+            {!!version && !!recordToView?.rek_version && (
                 <Grid item xs={12} style={{ marginBottom: 24 }}>
                     <Alert
                         {...{
@@ -191,7 +191,6 @@ NewViewRecord.propTypes = {
     loadingRecordToView: PropTypes.bool,
     recordToView: PropTypes.object,
     recordToViewError: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    isVersion: PropTypes.bool,
 };
 
 export default React.memo(

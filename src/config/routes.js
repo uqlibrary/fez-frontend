@@ -112,7 +112,7 @@ export const getRoutesConfig = ({
             ? [
                   {
                       path: pathConfig.records.version(pid, version),
-                      render: props => <components.NewViewRecord {...{ ...props, isVersion: true }} />,
+                      component: components.NewViewRecord,
                       access: [roles.admin],
                       exact: true,
                       pageTitle: locale.pages.viewRecord.version.title,
