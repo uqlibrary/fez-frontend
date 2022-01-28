@@ -8,7 +8,7 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
-import { recordVersion1 } from '../../../mock/data';
+import { recordVersionLegacy } from '../../../mock/data';
 import locale from '../../../locale/pages';
 
 jest.mock('../../../hooks');
@@ -88,9 +88,9 @@ describe('NewViewRecord', () => {
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
-        useParams.mockImplementation(() => ({ pid, version: recordVersion1.rek_version }));
-        const { getByTestId } = setup({ recordToView: recordVersion1 });
-        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersion1.rek_version);
+        useParams.mockImplementation(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        const { getByTestId } = setup({ recordToView: recordVersionLegacy });
+        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
     });
