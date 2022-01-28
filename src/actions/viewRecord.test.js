@@ -3,12 +3,12 @@ import * as repositories from 'repositories';
 import * as viewRecordActions from './viewRecord';
 import { removeShadowSuffixFromTableNames } from './viewRecord';
 import * as mockData from 'mock/data';
-import { recordVersion2 } from 'mock/data';
+import { recordVersion } from 'mock/data';
 import { locale } from 'locale';
 
 describe('View record actions', () => {
     const testPid = 'UQ:396321';
-    const testVersion = recordVersion2.rek_version;
+    const testVersion = recordVersion.rek_version;
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
@@ -21,9 +21,9 @@ describe('View record actions', () => {
 
     describe('loadRecordVersionToView action', () => {
         it('test removeShadowSuffixFromTableNames', async () => {
-            expect(mockData.recordVersion1).toHaveProperty('fez_record_search_key_author_id_shadow');
-            expect(mockData.recordVersion1).not.toHaveProperty('fez_record_search_key_author_id');
-            const record = removeShadowSuffixFromTableNames(mockData.recordVersion1);
+            expect(mockData.recordVersionLegacy).toHaveProperty('fez_record_search_key_author_id_shadow');
+            expect(mockData.recordVersionLegacy).not.toHaveProperty('fez_record_search_key_author_id');
+            const record = removeShadowSuffixFromTableNames(mockData.recordVersionLegacy);
             expect(record).not.toHaveProperty('fez_record_search_key_author_id_shadow');
             expect(record).toHaveProperty('fez_record_search_key_author_id');
         });
@@ -31,7 +31,7 @@ describe('View record actions', () => {
         it('dispatches expected actions when loading a record to view from API successfully', async () => {
             mockApi
                 .onGet(repositories.routes.EXISTING_RECORD_VERSION_API(testPid, testVersion).apiUrl)
-                .reply(200, { data: { ...mockData.recordVersion1 } });
+                .reply(200, { data: { ...mockData.recordVersionLegacy } });
 
             const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_LOADED];
 

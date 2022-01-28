@@ -247,8 +247,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
     // versions
     .reply(config => {
-        const mockRecords = [...mockData.recordVersion1, ...mockData.recordVersion2];
-        console.log(config.url);
+        const mockRecords = [...mockData.recordVersion, ...mockData.recordVersionLegacy];
         const matchedRecord = mockRecords.find(record => {
             const tokens = config.url.split('/');
             return (
