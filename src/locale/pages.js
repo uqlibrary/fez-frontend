@@ -537,7 +537,6 @@ export default {
                         message: record => (
                             <>
                                 You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
-                                .
                             </>
                         ),
                         alertId: 'alert-info',
@@ -546,7 +545,7 @@ export default {
                         type: 'warning',
                         title: '',
                         message:
-                            "Please note that we don't keep history of record's lookup values. Any values based on lookups are displayed with the most up to date values.",
+                            "Note: reference values (lookups) might not be accurate as we don't keep history of these, only for the record's data.",
                         alertId: 'alert-warning',
                     },
                 },
