@@ -54,7 +54,6 @@ export const removeShadowSuffixFromTableNames = data => {
  */
 // eslint-disable-next-line no-unused-vars
 export function loadRecordVersionToView(pid, version) {
-    console.log('loadRecordVersionToView', pid, version);
     return dispatch => {
         dispatch({ type: actions.VIEW_RECORD_LOADING });
         return get(EXISTING_RECORD_VERSION_API(pid.replace('uq:', 'UQ:'), version.replace('uq:', 'UQ:')))
