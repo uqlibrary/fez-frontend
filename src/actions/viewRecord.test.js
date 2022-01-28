@@ -3,11 +3,12 @@ import * as repositories from 'repositories';
 import * as viewRecordActions from './viewRecord';
 import { removeShadowSuffixFromTableNames } from './viewRecord';
 import * as mockData from 'mock/data';
+import { recordVersion2 } from 'mock/data';
 import { locale } from 'locale';
 
 describe('View record actions', () => {
     const testPid = 'UQ:396321';
-    const testVersion = '034f42f0-d7fe-11eb-a143-5baddc83698a';
+    const testVersion = recordVersion2.rek_version;
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
