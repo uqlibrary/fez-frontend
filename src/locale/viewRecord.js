@@ -2918,7 +2918,7 @@ export default {
             notes: 'fez_internal_notes.ain_detail',
             authorAffiliates: 'fez_author_affiliation',
             wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
-            wosDocType: 'rek_work_doc_type',
+            wosDocType: 'rek_wok_doc_type',
             wosDocTypeLookup: 'rek_wok_doc_type_lookup',
             scopusId: 'fez_record_search_key_scopus_id.rek_scopus_id',
             scopusDocType: 'rek_scopus_doc_type',
