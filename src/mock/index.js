@@ -7,7 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
-import { hydrateMockSearchList } from './hydrateMock';
+import { hydrateMock, hydrateMockSearchList } from './hydrateMock';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -246,8 +246,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
-            { ...mockData.collectionRecord },
-            { ...mockData.communityRecord },
+            { ...hydrateMock(mockData.collectionRecord) },
+            { ...hydrateMock(mockData.communityRecord) },
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
@@ -442,9 +442,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     // .reply(500, { message: ['error - failed NEW_RECORD_API'] })
     // .reply(403, {message: ['Session expired']})
     .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
-    .reply(() => [200, { data: mockData.collectionRecord }])
+    .reply(() => [200, { data: { ...hydrateMock(collectionRecord).data } }])
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
-    .reply(() => [200, { data: mockData.communityRecord }])
+    .reply(() => [200, { data: { ...hydrateMock(communityRecord).data } }])
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
@@ -495,11 +495,11 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     // .reply(500, { message: ['error - failed PUT EXISTING_RECORD_API'] })
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
-    .reply(200, { data: { ...mockData.collectionRecord } })
+    .reply(200, { data: { ...hydrateMock(collectionRecord).data } })
     // .reply(500, { message: ['error - failed PUT EXISTING_COLLECTION_API'] })
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
-    .reply(200, { data: { ...mockData.communityRecord } })
+    .reply(200, { data: { ...hydrateMock(communityRecord).data } })
     // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
 
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))
