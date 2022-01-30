@@ -15,6 +15,7 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     UQ_FULL_NAME,
 } from '../../../../config/general';
+import { hydrateMock } from 'mock/hydrateMock';
 
 const confPaperRecord = {
     ...publicationTypeListConferencePaper.data[0],
@@ -326,7 +327,7 @@ describe('DOI component', () => {
 
         const wrapper2 = setup({
             record: {
-                ...collectionRecord,
+                ...hydrateMock(collectionRecord).data,
                 rek_display_type_lookup: null,
             },
         });
