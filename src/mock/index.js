@@ -7,6 +7,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
+import { hydrateMockSearchList } from './hydrateMock';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -199,7 +200,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, mockData.collectionsByCommunity)
+    .reply(200, hydrateMockSearchList(mockData.collectionsByCommunity))
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)

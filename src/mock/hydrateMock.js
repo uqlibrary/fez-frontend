@@ -121,3 +121,10 @@ export function hydrateMock(truncatedData) {
         },
     };
 }
+
+export function hydrateMockSearchList(truncatedSearchlist) {
+    return {
+        ...truncatedSearchlist,
+        data: truncatedSearchlist.data.map(d => hydrateMock(d)),
+    };
+}
