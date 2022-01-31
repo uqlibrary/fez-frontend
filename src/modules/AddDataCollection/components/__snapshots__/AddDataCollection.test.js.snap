@@ -1470,6 +1470,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -3068,6 +3071,9 @@ exports[`AddDataCollection test should render component with a valid collection 
                         file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -4662,6 +4668,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -6254,6 +6263,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       </li>
                       <li>
                         file names contain only upper and lowercase alphanumeric characters, and underscores
+                      </li>
+                      <li>
+                        file names must not contain any spaces
                       </li>
                       <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
