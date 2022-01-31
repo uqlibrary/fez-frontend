@@ -121,6 +121,10 @@ export function hydrateMock(truncatedData) {
             rek_editing_user_lookup: null,
             rek_editing_start_date: null,
             fez_internal_notes: {},
+            fez_record_search_key_refereed: 0,
+            fez_record_search_key_roman_script_journal_name: null,
+            fez_record_search_key_roman_script_title: null,
+            fez_record_search_key_start_page: null,
             ...truncatedData,
         },
     };
