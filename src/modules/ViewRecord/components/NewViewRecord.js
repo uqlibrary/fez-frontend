@@ -84,13 +84,13 @@ export const NewViewRecord = ({
                 )}
             </StandardPage>
         );
-    } else if (recordToViewError && recordToViewError.status === 403) {
+    } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
                 <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
             </StandardPage>
         );
-    } else if (!recordToView || !recordToView.rek_pid) {
+    } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
 

@@ -12,6 +12,7 @@ import { recordVersionLegacy } from '../../../mock/data';
 import locale from '../../../locale/pages';
 import { notFound } from '../../../config/routes';
 import { stripHtml } from '../../../helpers/general';
+import globalLocale from '../../../locale/global';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -114,13 +115,14 @@ describe('NewViewRecord', () => {
 
     it('should render not found', () => {
         useParams.mockImplementationOnce(() => ({ pid: notFound }));
-        const { getByText } = setup();
-        expect(getByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
+        const { queryByText } = setup();
+        expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
         stripHtml(componentToString(locale.pages.viewRecord.notFound.message))
             .replace(/\n+/, '\n')
             .split('\n')
             .filter(line => line.trim())
-            .forEach(line => expect(getByText(line.trim())).toBeInTheDocument());
+            .forEach(line => expect(queryByText(line.trim())).toBeInTheDocument());
+        expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
     });
 
     it('should render error', () => {
