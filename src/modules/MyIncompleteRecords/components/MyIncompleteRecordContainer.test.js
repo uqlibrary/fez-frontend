@@ -9,6 +9,7 @@ import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEven
 import * as repositories from 'repositories';
 
 import { useParams } from 'react-router';
+import { hydrateMock } from 'mock/hydrateMock';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
@@ -37,7 +38,7 @@ describe('MyIncompleteRecordContainer', () => {
     it('should render default component', async () => {
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl)
-            .replyOnce(200, { data: incompleteNTRORecordUQ352045 });
+            .replyOnce(200, { data: hydrateMock(incompleteNTRORecordUQ352045).data });
 
         const { getByTestId, getByText, getByTitle, asFragment } = setup(
             {},
@@ -68,7 +69,7 @@ describe('MyIncompleteRecordContainer', () => {
             fez_record_search_key_significance,
             fez_record_search_key_creator_contribution_statement,
             ...work
-        } = incompleteNTRORecordUQ352045;
+        } = hydrateMock(incompleteNTRORecordUQ352045).data;
 
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl)
@@ -94,7 +95,7 @@ describe('MyIncompleteRecordContainer', () => {
     it('should render empty div if author is not linked', async () => {
         mockApi
             .onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl)
-            .replyOnce(200, { data: incompleteNTRORecordUQ352045 });
+            .replyOnce(200, { data: hydrateMock(incompleteNTRORecordUQ352045).data });
 
         const { getByTestId, getByText } = setup(
             {},
@@ -116,7 +117,7 @@ describe('MyIncompleteRecordContainer', () => {
     it('should load all contributor statements for logged in admin user', async () => {
         mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl).replyOnce(200, {
             data: {
-                ...incompleteNTRORecordUQ352045,
+                ...hydrateMock(incompleteNTRORecordUQ352045).data,
                 fez_record_search_key_creator_contribution_statement: [
                     {
                         rek_creator_contribution_statement: 'Test statement',

@@ -12,22 +12,25 @@ export function hydrateMock(truncatedData) {
             // eg fez_record_search_key_keywords is an array of keyword objects
             const result = [];
             field.forEach((field2, order) => {
-                let child;
-                if (!!field2[shortKey]) {
-                    child = {
+                let newEntry;
+                if (field2.hasOwnProperty(shortKey)) {
+                    newEntry = {
+                        [`${shortKey}_id`]: 547492, // any random number to mock db long unique id
+                        [`${shortKey}_pid`]: truncatedData.rek_pid,
+                        [`${shortKey}_xsdmf_id`]: null,
                         ...field2,
-                        [shortKey]: field2[shortKey],
+                        [`${shortKey}_order`]: order + 1,
                     };
                 } else {
-                    child = field2;
+                    newEntry = {
+                        [`${shortKey}_id`]: 345324, // any random number
+                        [`${shortKey}_pid`]: truncatedData.rek_pid,
+                        [`${shortKey}_xsdmf_id`]: null,
+                        [`${shortKey}`]: field2,
+                        [`${shortKey}_order`]: order + 1,
+                    };
                 }
-                result.push({
-                    [`${shortKey}_id`]: 547492, // any random number
-                    [`${shortKey}_pid`]: truncatedData.rek_pid,
-                    [`${shortKey}_xsdmf_id`]: null,
-                    [`${shortKey}`]: child,
-                    [`${shortKey}_order`]: order + 1,
-                });
+                result.push(newEntry);
             });
             updateKeyWith = result;
         } else if (key.startsWith('fez_record_search_key_')) {
@@ -37,7 +40,6 @@ export function hydrateMock(truncatedData) {
                 [`${shortKey}_pid`]: truncatedData.rek_pid,
                 [`${shortKey}_xsdmf_id`]: null,
                 [`${shortKey}`]: field,
-                [`${shortKey}_order`]: 1,
             };
         } else if (Array.isArray(field) && field.constructor !== Object) {
             // eg fez_datastream_info is an array, but doesnt have the FRSK structure
@@ -45,12 +47,11 @@ export function hydrateMock(truncatedData) {
             field.forEach(field2 => {
                 result.push({
                     ...field2,
-                    // [`${shortKey}_order`]: order + 1,
                 });
             });
             updateKeyWith = result;
         } else {
-            // a simple field eg rek_title
+            // a simple non-FRSK field eg rek_title
             updateKeyWith = field;
         }
         truncatedData[key] = updateKeyWith;
