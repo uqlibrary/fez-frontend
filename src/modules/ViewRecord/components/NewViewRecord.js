@@ -197,56 +197,7 @@ export const NewViewRecord = ({
                 )}
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
-                        <Grid container spacing={2} style={{ marginBottom: 4 }}>
-                            <Grid item xs>
-                                {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
-                                    <Chip label={recordToView.rek_status_lookup} variant="outlined" />
-                                )}
-                            </Grid>
-                            <Grid item>
-                                <SocialShare
-                                    publication={recordToView}
-                                    services={[
-                                        'facebook',
-                                        'twitter',
-                                        'linkedin',
-                                        'researchgate',
-                                        'mendeley',
-                                        'email',
-                                        'print',
-                                    ]}
-                                    spaceBetween={4}
-                                    round
-                                />
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                )}
-            </Grid>
-            {isDeleted && (
-                <Grid item xs={12} style={{ marginBottom: 24 }}>
-                    <Alert {...txt.deletedAlert} />
-                </Grid>
-            )}
-            {/* eslint-disable-next-line camelcase */}
-            {!!version && !!recordToView?.rek_version && (
-                <Grid item xs={12} style={{ marginBottom: 24 }}>
-                    <Alert
-                        {...{
-                            ...txt.version.alert.version,
-                            message: txt.version.alert.version.message(recordToView),
-                        }}
-                    />
-                    <br />
-                    <Alert {...txt.version.alert.warning} />
-                </Grid>
-            )}
-            <Grid container spacing={3}>
-                {!isDeleted && (
-                    <React.Fragment>
-                        <Files
-                            author={author}
-                            account={account}
+                        <PublicationCitation
                             publication={recordToView}
                             hideTitle
                             hideContentIndicators
@@ -301,6 +252,18 @@ export const NewViewRecord = ({
                 {isDeleted && (
                     <Grid item xs={12} style={{ marginBottom: 24 }}>
                         <Alert {...txt.deletedAlert} />
+                    </Grid>
+                )}
+                {!!version && !!recordToView?.rek_version && (
+                    <Grid item xs={12} style={{ marginBottom: 24 }}>
+                        <Alert
+                            {...{
+                                ...txt.version.alert.version,
+                                message: txt.version.alert.version.message(recordToView),
+                            }}
+                        />
+                        <br />
+                        <Alert {...txt.version.alert.warning} />
                     </Grid>
                 )}
                 <Grid container spacing={3}>
