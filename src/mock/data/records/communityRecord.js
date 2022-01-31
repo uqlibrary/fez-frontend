@@ -1,4 +1,6 @@
-export default {
+import { hydrateMock } from '../../hydrateMock';
+
+const communityRecord = {
     "rek_pid": "UQ:3883",
     "rek_title": "The University of Queensland Library",
     "rek_description": null,
@@ -11,4 +13,5 @@ export default {
     "rek_display_type_lookup": "Community",
     "rek_object_type_lookup": "Community",
     "rek_status_lookup": "Published",
-}
+};
+export default hydrateMock(communityRecord).data;

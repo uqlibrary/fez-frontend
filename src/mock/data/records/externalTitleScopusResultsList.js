@@ -1,7 +1,10 @@
-export default {
+import { hydrateMockSearchList } from '../../hydrateMock';
+
+const externalTitleScopusResultsList = {
     "total": 4,
     "data": [
         {
+            "rek_pid": 'UQ:567364',
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof": "UQ:308300",
@@ -222,6 +225,7 @@ export default {
             ]
         },
         {
+            "rek_pid": 'UQ:768456',
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof": "UQ:308300",
@@ -690,6 +694,7 @@ export default {
             }
         },
         {
+            "rek_pid": 'UQ:768457',
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof": "UQ:308300",
@@ -845,6 +850,7 @@ export default {
             ]
         },
         {
+            "rek_pid": 'UQ:768458',
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof": "UQ:308300",
@@ -1059,3 +1065,4 @@ export default {
         }
     ]
 };
+export default hydrateMockSearchList(externalTitleScopusResultsList);

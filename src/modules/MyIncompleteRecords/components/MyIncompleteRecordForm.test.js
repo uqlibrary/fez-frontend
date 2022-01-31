@@ -3,7 +3,6 @@ import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
 import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
-import { hydrateMock } from 'mock/hydrateMock';
 
 jest.mock('actions', () => ({
     updateIncompleteRecord: data =>
@@ -21,7 +20,7 @@ function setup(testProps = {}) {
 describe('MyIncompleteRecordForm', () => {
     it('should mount the component with redux-form', () => {
         const wrapper = setup({
-            recordToFix: hydrateMock(incompleteNTRORecordUQ352045).data,
+            recordToFix: incompleteNTRORecordUQ352045,
             author: { aut_id: 411 },
             isNtro: true,
             hasAnyFiles: true,

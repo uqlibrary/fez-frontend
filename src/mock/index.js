@@ -7,7 +7,6 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
-import { hydrateMock, hydrateMockSearchList } from './hydrateMock';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -133,13 +132,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
                 200,
                 // {total: 0, data: []}
                 {
-                    ...hydrateMockSearchList(mockData.myDatasetList),
+                    ...mockData.myDatasetList,
                     current_page: config.params.page,
-                    data: hydrateMockSearchList(
-                        mockData.myDatasetList.data.slice(
-                            fromRecord,
-                            totalRecords > toRecord ? toRecord : totalRecords,
-                        ),
+                    data: mockData.myDatasetList.data.slice(
+                        fromRecord,
+                        totalRecords > toRecord ? toRecord : totalRecords,
                     ),
                 },
             ];
@@ -186,7 +183,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
-            return [200, hydrateMockSearchList(mockData.internalTitleSearchList)];
+            return [200, mockData.internalTitleSearchList];
         } else if (config.params.key && !!config.params.key.rek_status) {
             return [200, mockData.unpublishedSearchList];
         }
@@ -202,7 +199,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ),
         ),
     )
-    .reply(200, hydrateMockSearchList(mockData.collectionsByCommunity))
+    .reply(200, mockData.collectionsByCommunity)
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)
@@ -248,22 +245,22 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
-            { ...hydrateMock(mockData.collectionRecord) },
-            { ...hydrateMock(mockData.communityRecord) },
+            { ...mockData.collectionRecord },
+            { ...mockData.communityRecord },
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithLotOfAuthors },
             { ...mockData.recordWithTiffAndThumbnail },
-            { ...hydrateMock(mockData.UQ716942uqagrinb) },
+            { ...mockData.UQ716942uqagrinb },
             { ...mockTestingData.dataCollection },
             ...mockData.collectionSearchList.data,
             ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
-            ...hydrateMock(mockData.internalTitleSearchList.data),
+            ...mockData.internalTitleSearchList.data,
             ...mockData.mockRecordToFix,
             ...mockData.myRecordsList.data,
-            ...hydrateMock(mockData.myDatasetList.data),
+            ...mockData.myDatasetList.data,
             ...mockData.possibleUnclaimedList.data,
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,
@@ -444,9 +441,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     // .reply(500, { message: ['error - failed NEW_RECORD_API'] })
     // .reply(403, {message: ['Session expired']})
     .onPost(new RegExp(escapeRegExp(routes.NEW_COLLECTION_API().apiUrl)))
-    .reply(() => [200, { data: { ...hydrateMock(collectionRecord).data } }])
+    .reply(() => [200, { data: mockData.collectionRecord }])
     .onPost(new RegExp(escapeRegExp(routes.NEW_COMMUNITY_API().apiUrl)))
-    .reply(() => [200, { data: { ...hydrateMock(communityRecord).data } }])
+    .reply(() => [200, { data: mockData.communityRecord }])
     .onPost(new RegExp(escapeRegExp(routes.FAVOURITE_SEARCH_LIST_API().apiUrl)))
     .reply(200, { data: { ...mockData.favouriteSearchItem } })
     .onPost(new RegExp(escapeRegExp(routes.MY_EDITORIAL_APPOINTMENT_LIST_API().apiUrl)))
@@ -497,11 +494,11 @@ mock.onPatch(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).a
     // .reply(500, { message: ['error - failed PUT EXISTING_RECORD_API'] })
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COLLECTION_API({ pid: '.*' }).apiUrl)))
-    .reply(200, { data: { ...hydrateMock(collectionRecord).data } })
+    .reply(200, { data: { ...mockData.collectionRecord } })
     // .reply(500, { message: ['error - failed PUT EXISTING_COLLECTION_API'] })
 
     .onPut(new RegExp(escapeRegExp(routes.EXISTING_COMMUNITY_API({ pid: '.*' }).apiUrl)))
-    .reply(200, { data: { ...hydrateMock(communityRecord).data } })
+    .reply(200, { data: { ...mockData.communityRecord } })
     // .reply(500, { message: ['error - failed PUT EXISTING_COMMUNITY_API'] })
 
     .onPatch(new RegExp(escapeRegExp(routes.AUTHOR_API({ authorId: '.*' }).apiUrl)))

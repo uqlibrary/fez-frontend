@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../hydrateMock';
+
+const externalTitleSearchResultsList = {
     "total": 5,
     "data":
         [
@@ -203,3 +205,4 @@ export default {
             }
         ]
 };
+export default hydrateMockSearchList(externalTitleSearchResultsList);

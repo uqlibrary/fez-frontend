@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../hydrateMock';
+
+const collectionsByCommunity = {
     "total": 3,
     "took": 1234,
     "per_page": 100,
@@ -333,3 +335,4 @@ export default {
         }
     }
 };
+export default hydrateMockSearchList(collectionsByCommunity);
