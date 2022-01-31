@@ -1,7 +1,7 @@
 import formsLocale from '../../src/locale/forms';
 // import { default as pagesLocale } from '../../src/locale/pages';
 import { myRecordsList, myDatasetList } from '../../src/mock/data/records';
-import { hydrateMock } from '../../src/mock/hydrateMock';
+import { hydrateMock } from '../../src/helpers/general';
 const record = myRecordsList.data[0];
 const uqDoiRecord = hydrateMock(myDatasetList.data[1]);
 

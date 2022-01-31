@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../../helpers/general';
+
+const internalTitleSearchList = {
     total: 7,
     per_page: 10,
     current_page: 1,
@@ -894,3 +896,4 @@ export default {
         }
     }
 };
+export default hydrateMockSearchList(internalTitleSearchList);

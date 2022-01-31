@@ -1,4 +1,4 @@
-import { hydrateMock } from '../../hydrateMock';
+import { hydrateMock } from '../../../helpers/general';
 
 const communityRecord = {
     "rek_pid": "UQ:3883",

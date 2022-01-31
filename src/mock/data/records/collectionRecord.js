@@ -1,4 +1,4 @@
-import { hydrateMock } from '../../hydrateMock';
+import { hydrateMock } from '../../../helpers/general';
 
 const collectionRecord = {
     rek_pid: 'UQ:11398',

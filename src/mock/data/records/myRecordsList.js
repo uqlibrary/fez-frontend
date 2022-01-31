@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../../helpers/general';
+
+const myRecordsList = {
     "total": 68,
     "took": 1337,
     "per_page": 20,
@@ -17024,3 +17026,5 @@ export default {
         }
     }
 };
+export default hydrateMockSearchList(myRecordsList);
+

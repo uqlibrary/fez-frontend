@@ -1,4 +1,6 @@
-export default {
+import { hydrateMock } from '../../../helpers/general';
+
+const incompleteNTRORecordUQ352045 = {
     "rek_pid": "UQ:352045",
     "rek_title": "Il Sogno: Topology and the Brodsky Quartet play Elvis Costello",
     "rek_display_type": 313,
@@ -18,8 +20,8 @@ export default {
         "The Brodsky Quartet",
     ],
     "fez_record_search_key_author_id": [{
-            "rek_author_id": 0,
-        },
+        "rek_author_id": 0,
+    },
         {
             "rek_author_id": 79324,
             "rek_author_id_lookup": "Robert Davidson"
@@ -54,16 +56,16 @@ export default {
     "fez_record_search_key_series": "Queensland Music Festival",
     "fez_record_search_key_total_pages": "1 musical performance",
     "fez_datastream_info": [{
-            "dsi_pid": "UQ:352045",
-            "dsi_dsid": "ERAUQ352045_il_Sogno.mp3",
-            "dsi_embargo_date": null,
-            "dsi_open_access": null,
-            "dsi_label": "Full-text - not publicly available",
-            "dsi_mimetype": "audio\/mpeg",
-            "dsi_copyright": null,
-            "dsi_state": "A",
-            "dsi_size": 21457982
-        },
+        "dsi_pid": "UQ:352045",
+        "dsi_dsid": "ERAUQ352045_il_Sogno.mp3",
+        "dsi_embargo_date": null,
+        "dsi_open_access": null,
+        "dsi_label": "Full-text - not publicly available",
+        "dsi_mimetype": "audio\/mpeg",
+        "dsi_copyright": null,
+        "dsi_state": "A",
+        "dsi_size": 21457982
+    },
         {
             "dsi_pid": "UQ:352045",
             "dsi_dsid": "ERAUQ352045_InterimFile.mp3",
@@ -263,4 +265,5 @@ export default {
             "dsi_size": 14727673
         }
     ],
-}
+};
+export default hydrateMock(incompleteNTRORecordUQ352045);

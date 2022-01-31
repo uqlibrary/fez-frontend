@@ -1,4 +1,6 @@
-export default {
+import { hydrateMock } from '../../../helpers/general';
+
+const incompleteNTROrecord = {
     "rek_pid": "UQ:692945",
     "rek_title": "Joh for PM",
     "rek_description": null,
@@ -17,14 +19,14 @@ export default {
     "rek_copyright": "on",
     "fez_record_search_key_author": [ "Carleton, Stephen", "Hodge, Paul" ],
     "fez_record_search_key_author_id": [
-      {
-        "rek_author_id": 410,
-        "rek_author_id_lookup": "Carleton, Stephen James"
-      },
-      {
-        "rek_author_id": 77910,
-        "rek_author_id_lookup": "Paul Hodge"
-      }
+        {
+            "rek_author_id": 410,
+            "rek_author_id_lookup": "Carleton, Stephen James"
+        },
+        {
+            "rek_author_id": 77910,
+            "rek_author_id_lookup": "Paul Hodge"
+        }
     ],
     "fez_record_search_key_date_available": "2017-01-01T00:00:00Z",
     "fez_record_search_key_end_date": "2017-08-19T00:00:00Z",
@@ -34,96 +36,96 @@ export default {
         "johforpmreviewguardianaustralia.pdf",
     ],
     "fez_record_search_key_herdc_code": {
-      "rek_herdc_code": 454029,
-      "rek_herdc_code_lookup": "CW2"
+        "rek_herdc_code": 454029,
+        "rek_herdc_code_lookup": "CW2"
     },
     "fez_record_search_key_herdc_status": {
-      "rek_herdc_status": 453220,
-      "rek_herdc_status_lookup": "Provisional Code"
+        "rek_herdc_status": 453220,
+        "rek_herdc_status_lookup": "Provisional Code"
     },
     "fez_record_search_key_institutional_status": {
-      "rek_institutional_status": 453224,
-      "rek_institutional_status_lookup": "Non-UQ"
+        "rek_institutional_status": 453224,
+        "rek_institutional_status_lookup": "Non-UQ"
     },
     "fez_record_search_key_ismemberof": [
-      {
-        "rek_ismemberof": "UQ:3803",
-        "rek_ismemberof_lookup": "School of Communication and Arts Publications"
-      }
+        {
+            "rek_ismemberof": "UQ:3803",
+            "rek_ismemberof_lookup": "School of Communication and Arts Publications"
+        }
     ],
     "fez_record_search_key_language": [ "eng" ],
     "fez_record_search_key_notes": "https://brisbanepowerhouse.org/events/2017/07/07/joh-for-pm/",
     "fez_record_search_key_oa_status": {
-      "rek_oa_status": 453698,
-      "rek_oa_status_lookup": "Not Open Access"
+        "rek_oa_status": 453698,
+        "rek_oa_status_lookup": "Not Open Access"
     },
     "fez_record_search_key_place_of_publication": "Brisbane, Australia and Cairns, Qld, Australia",
     "fez_record_search_key_publisher": "Brisbane Powerhouse and JUTE Theatre Company",
     "fez_record_search_key_refereed": 0,
     "fez_record_search_key_refereed_source": {
-      "rek_refereed_source": "453636",
-      "rek_refereed_source_lookup": "Other"
+        "rek_refereed_source": "453636",
+        "rek_refereed_source_lookup": "Other"
     },
     "fez_record_search_key_total_pages": "90 minutes duration, 6 week season",
     "fez_datastream_info": [
-      {
-        "dsi_pid": "UQ:692945",
-        "dsi_dsid": "FezACML_johforpmreviewguardianaustralia.pdf.xml",
-        "dsi_embargo_date": null,
-        "dsi_open_access": null,
-        "dsi_label": "FezACML security for datastream - johforpmreviewguardianaustralia.pdf",
-        "dsi_mimetype": "text/xml",
-        "dsi_copyright": null,
-        "dsi_state": "A",
-        "dsi_size": 359
-      },
-      {
-        "dsi_pid": "UQ:692945",
-        "dsi_dsid": "FezACML_UQ_692945.xml",
-        "dsi_embargo_date": null,
-        "dsi_open_access": null,
-        "dsi_label": "FezACML security for PID - UQ:692945",
-        "dsi_mimetype": "text/xml",
-        "dsi_copyright": null,
-        "dsi_state": "A",
-        "dsi_size": 3660
-      },
-      {
-        "dsi_pid": "UQ:692945",
-        "dsi_dsid": "johforpmreviewguardianaustralia.pdf",
-        "dsi_embargo_date": null,
-        "dsi_open_access": null,
-        "dsi_label": "HERDC evidence - not publicly available",
-        "dsi_mimetype": "application/pdf",
-        "dsi_copyright": null,
-        "dsi_state": "A",
-        "dsi_size": 751553
-      }
+        {
+            "dsi_pid": "UQ:692945",
+            "dsi_dsid": "FezACML_johforpmreviewguardianaustralia.pdf.xml",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "FezACML security for datastream - johforpmreviewguardianaustralia.pdf",
+            "dsi_mimetype": "text/xml",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 359
+        },
+        {
+            "dsi_pid": "UQ:692945",
+            "dsi_dsid": "FezACML_UQ_692945.xml",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "FezACML security for PID - UQ:692945",
+            "dsi_mimetype": "text/xml",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 3660
+        },
+        {
+            "dsi_pid": "UQ:692945",
+            "dsi_dsid": "johforpmreviewguardianaustralia.pdf",
+            "dsi_embargo_date": null,
+            "dsi_open_access": null,
+            "dsi_label": "HERDC evidence - not publicly available",
+            "dsi_mimetype": "application/pdf",
+            "dsi_copyright": null,
+            "dsi_state": "A",
+            "dsi_size": 751553
+        }
     ],
     "rek_display_type_lookup": "Creative Work",
     "rek_object_type_lookup": "Record",
     "rek_status_lookup": "Published",
     "fez_record_search_key_audience_size": {
-      "rek_audience_size": 453993,
-      "rek_audience_size_lookup": "100 – 500"
+        "rek_audience_size": 453993,
+        "rek_audience_size_lookup": "100 – 500"
     },
     "fez_record_search_key_quality_indicator": [
-      {
-        "rek_quality_indicator": 453996,
-        "rek_quality_indicator_lookup": "Disseminated via nationally recognised outlet or entity"
-      },
-      {
-        "rek_quality_indicator": 454033,
-        "rek_quality_indicator_lookup": "Association with recognised national entities, distinct from co-creation"
-      },
-      {
-        "rek_quality_indicator": 454036,
-        "rek_quality_indicator_lookup": "Commissioned by external body"
-      },
-      {
-        "rek_quality_indicator": 454038,
-        "rek_quality_indicator_lookup": "Selected for use by nationally recognised outlet or entity"
-      }
+        {
+            "rek_quality_indicator": 453996,
+            "rek_quality_indicator_lookup": "Disseminated via nationally recognised outlet or entity"
+        },
+        {
+            "rek_quality_indicator": 454033,
+            "rek_quality_indicator_lookup": "Association with recognised national entities, distinct from co-creation"
+        },
+        {
+            "rek_quality_indicator": 454036,
+            "rek_quality_indicator_lookup": "Commissioned by external body"
+        },
+        {
+            "rek_quality_indicator": 454038,
+            "rek_quality_indicator_lookup": "Selected for use by nationally recognised outlet or entity"
+        }
     ],
     "fez_record_search_key_author_affiliation_name": [ "The University of Queensland", "" ],
     "fez_record_search_key_creator_contribution_statement": [
@@ -131,12 +133,13 @@ export default {
         "",
     ],
     "fez_record_search_key_significance": [
-      {
-        "rek_significance": 454026,
-        "rek_significance_lookup": "Major"
-      },
-      {
-        "rek_significance": "",
-      }
+        {
+            "rek_significance": 454026,
+            "rek_significance_lookup": "Major"
+        },
+        {
+            "rek_significance": "",
+        }
     ]
-  };
+};
+export default hydrateMock(incompleteNTROrecord);

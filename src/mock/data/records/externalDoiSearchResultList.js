@@ -1,4 +1,4 @@
-import { hydrateMockSearchList } from '../../hydrateMock';
+import { hydrateMockSearchList } from '../../../helpers/general';
 
 const externalDoiSearchResultList = {
     "total": 1,
