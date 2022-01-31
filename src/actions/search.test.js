@@ -4,6 +4,7 @@ import * as searchActions from './search';
 import * as mockData from 'mock/data';
 import * as ExportPublicationsActions from './exportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { hydrateMockSearchList } from '../mock/hydrateMock';
 
 describe('Search action creators', () => {
     const testTitleSearchParam = 'global';
@@ -40,7 +41,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .options,
             )
-            .reply(200, mockData.externalTitleSearchResultsList)
+            .reply(200, hydrateMockSearchList(mockData.externalTitleSearchResultsList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
@@ -110,7 +111,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .options,
             )
-            .reply(200, mockData.externalTitleSearchResultsList)
+            .reply(200, hydrateMockSearchList(mockData.externalTitleSearchResultsList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
@@ -256,7 +257,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .options,
             )
-            .reply(200, mockData.externalTitleSearchResultsList)
+            .reply(200, hydrateMockSearchList(mockData.externalTitleSearchResultsList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,

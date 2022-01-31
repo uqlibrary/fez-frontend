@@ -1,6 +1,6 @@
 export function hydrateMock(truncatedData) {
     if (!truncatedData.rek_pid) {
-        throw Error('missing PID in data ' + JSON.encode(truncatedData));
+        throw Error('missing PID in data ' + JSON.stringify(truncatedData));
     }
 
     Object.keys(truncatedData).forEach(key => {
@@ -125,6 +125,7 @@ export function hydrateMock(truncatedData) {
             fez_record_search_key_roman_script_journal_name: null,
             fez_record_search_key_roman_script_title: null,
             fez_record_search_key_start_page: null,
+            fez_record_search_key_license: null,
             ...truncatedData,
         },
     };
@@ -133,6 +134,6 @@ export function hydrateMock(truncatedData) {
 export function hydrateMockSearchList(truncatedSearchlist) {
     return {
         ...truncatedSearchlist,
-        data: truncatedSearchlist.data.map(d => hydrateMock(d)),
+        data: truncatedSearchlist.data.map(d => hydrateMock(d).data),
     };
 }
