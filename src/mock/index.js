@@ -253,7 +253,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithLotOfAuthors },
             { ...mockData.recordWithTiffAndThumbnail },
-            { ...mockData.UQ716942uqagrinb },
+            { ...hydrateMock(mockData.UQ716942uqagrinb) },
             { ...mockTestingData.dataCollection },
             ...mockData.collectionSearchList.data,
             ...mockData.communitySearchList.data,
