@@ -8,6 +8,7 @@ export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
 export const versionRegExp = `${pidRegExp}\\s[0-9]{4}-[0-9]{2}-[0-9]{2}\\s[0-9]{2}:[0-9]{2}:[0-9]{2}|[a-z0-9-]+`;
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
+export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
@@ -58,8 +59,6 @@ export const flattedPathConfig = [
     '/view',
 ];
 
-export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
-
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
@@ -77,7 +76,6 @@ export const getRoutesConfig = ({
     isHdrStudent = false,
 }) => {
     const pid = `:pid(${pidRegExp})`;
-    const pidOrNotFoundRoute = `:pid(${pidRegExp}|${notFound}})`;
     const id = `:id(${numericIdRegExp})`;
     const version = `:version(${versionRegExp})`;
     const publicPages = [
@@ -93,11 +91,11 @@ export const getRoutesConfig = ({
             pageTitle: locale.pages.contact.title,
         },
         {
-            path: pathConfig.records.view(pidOrNotFoundRoute),
+            path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
             component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view(pidOrNotFoundRoute),
+            regExPath: pathConfig.records.view(`(${pidRegExp}|${notFound})`),
         },
         {
             path: pathConfig.records.search,
