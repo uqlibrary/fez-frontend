@@ -133,11 +133,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
                 200,
                 // {total: 0, data: []}
                 {
-                    ...mockData.myDatasetList,
+                    ...hydrateMockSearchList(mockData.myDatasetList),
                     current_page: config.params.page,
-                    data: mockData.myDatasetList.data.slice(
-                        fromRecord,
-                        totalRecords > toRecord ? toRecord : totalRecords,
+                    data: hydrateMockSearchList(
+                        mockData.myDatasetList.data.slice(
+                            fromRecord,
+                            totalRecords > toRecord ? toRecord : totalRecords,
+                        ),
                     ),
                 },
             ];
@@ -261,7 +263,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...hydrateMock(mockData.internalTitleSearchList.data),
             ...mockData.mockRecordToFix,
             ...mockData.myRecordsList.data,
-            ...mockData.myDatasetList.data,
+            ...hydrateMock(mockData.myDatasetList.data),
             ...mockData.possibleUnclaimedList.data,
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,

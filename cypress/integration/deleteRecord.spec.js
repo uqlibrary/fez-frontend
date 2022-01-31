@@ -1,8 +1,9 @@
 import formsLocale from '../../src/locale/forms';
 // import { default as pagesLocale } from '../../src/locale/pages';
 import { myRecordsList, myDatasetList } from '../../src/mock/data/records';
+import { hydrateMock } from '../../src/mock/hydrateMock';
 const record = myRecordsList.data[0];
-const uqDoiRecord = myDatasetList.data[1];
+const uqDoiRecord = hydrateMock(myDatasetList.data[1]);
 
 context('Delete work form', () => {
     const baseUrl = Cypress.config('baseUrl');
