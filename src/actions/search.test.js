@@ -34,7 +34,7 @@ describe('Search action creators', () => {
                     sortDirection: 'desc',
                 }).options,
             )
-            .reply(200, mockData.internalTitleSearchList)
+            .reply(200, hydrateMockSearchList(mockData.internalTitleSearchList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
@@ -104,7 +104,7 @@ describe('Search action creators', () => {
                     sortDirection: 'desc',
                 }).options,
             )
-            .reply(200, mockData.internalTitleSearchList)
+            .reply(200, hydrateMockSearchList(mockData.internalTitleSearchList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
@@ -250,7 +250,7 @@ describe('Search action creators', () => {
                     sortDirection: 'desc',
                 }).options,
             )
-            .reply(200, mockData.internalTitleSearchList)
+            .reply(200, hydrateMockSearchList(mockData.internalTitleSearchList))
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
@@ -386,7 +386,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
             )
-            .reply(200, mockData.internalTitleSearchList);
+            .reply(200, hydrateMockSearchList(mockData.internalTitleSearchList));
 
         const expectedActions = [actions.SET_SEARCH_QUERY, actions.SEARCH_LOADING, actions.SEARCH_LOADED];
 
@@ -402,7 +402,7 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
             )
-            .reply(500, mockData.internalTitleSearchList);
+            .reply(500, hydrateMockSearchList(mockData.internalTitleSearchList));
 
         const expectedActions = [
             actions.SET_SEARCH_QUERY,

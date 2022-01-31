@@ -1,6 +1,3 @@
-// import { default as componentsLocale } from '../../src/locale/components';
-// import internalTitleSearchList from '../../src/mock/data/records/internalTitleSearchList.js';
-
 context('Scroll to top module', () => {
     beforeEach(() => {
         cy.visit('/');

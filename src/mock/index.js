@@ -184,7 +184,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
-            return [200, mockData.internalTitleSearchList];
+            return [200, hydrateMockSearchList(mockData.internalTitleSearchList)];
         } else if (config.params.key && !!config.params.key.rek_status) {
             return [200, mockData.unpublishedSearchList];
         }
@@ -258,7 +258,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.collectionSearchList.data,
             ...mockData.communitySearchList.data,
             ...mockData.incompleteNTROlist.data,
-            ...mockData.internalTitleSearchList.data,
+            ...hydrateMock(mockData.internalTitleSearchList.data),
             ...mockData.mockRecordToFix,
             ...mockData.myRecordsList.data,
             ...mockData.myDatasetList.data,
