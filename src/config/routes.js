@@ -67,6 +67,8 @@ export const roles = {
     digiteam: 'digiteam',
 };
 
+export const notFound = 'not-found';
+
 export const getRoutesConfig = ({
     components = {},
     account = null,
@@ -75,6 +77,7 @@ export const getRoutesConfig = ({
     isHdrStudent = false,
 }) => {
     const pid = `:pid(${pidRegExp})`;
+    const pidOrNotFoundRoute = `:pid(${pidRegExp}|${notFound}})`;
     const id = `:id(${numericIdRegExp})`;
     const version = `:version(${versionRegExp})`;
     const publicPages = [
@@ -90,11 +93,11 @@ export const getRoutesConfig = ({
             pageTitle: locale.pages.contact.title,
         },
         {
-            path: pathConfig.records.view(pid),
+            path: pathConfig.records.view(pidOrNotFoundRoute),
             component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view(`(${pidRegExp})`),
+            regExPath: pathConfig.records.view(pidOrNotFoundRoute),
         },
         {
             path: pathConfig.records.search,
