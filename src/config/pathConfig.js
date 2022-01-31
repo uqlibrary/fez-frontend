@@ -56,6 +56,7 @@ export const pathConfig = {
         possible: '/records/possible',
         search: '/records/search',
         view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
+        version: (pid, version) => `/view/${pid}/${version}`,
     },
     dataset: {
         mine: '/data-collections/mine',

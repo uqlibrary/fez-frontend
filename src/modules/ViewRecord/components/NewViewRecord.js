@@ -80,7 +80,7 @@ export const NewViewRecord = ({
     recordToView,
 }) => {
     const dispatch = useDispatch();
-    const { pid } = useParams();
+    const { pid, version } = useParams();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
 
@@ -131,11 +131,11 @@ export const NewViewRecord = ({
     };
 
     React.useEffect(() => {
-        !!pid && dispatch(actions.loadRecordToView(pid));
+        !!pid && dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pid]);
+    }, [pid, version]);
 
     const drawerDescriptor = React.useMemo(
         () =>
@@ -197,7 +197,56 @@ export const NewViewRecord = ({
                 )}
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
-                        <PublicationCitation
+                        <Grid container spacing={2} style={{ marginBottom: 4 }}>
+                            <Grid item xs>
+                                {isAdmin && recordToView.rek_status !== general.PUBLISHED && (
+                                    <Chip label={recordToView.rek_status_lookup} variant="outlined" />
+                                )}
+                            </Grid>
+                            <Grid item>
+                                <SocialShare
+                                    publication={recordToView}
+                                    services={[
+                                        'facebook',
+                                        'twitter',
+                                        'linkedin',
+                                        'researchgate',
+                                        'mendeley',
+                                        'email',
+                                        'print',
+                                    ]}
+                                    spaceBetween={4}
+                                    round
+                                />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                )}
+            </Grid>
+            {isDeleted && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Alert {...txt.deletedAlert} />
+                </Grid>
+            )}
+            {/* eslint-disable-next-line camelcase */}
+            {!!version && !!recordToView?.rek_version && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Alert
+                        {...{
+                            ...txt.version.alert.version,
+                            message: txt.version.alert.version.message(recordToView),
+                        }}
+                    />
+                    <br />
+                    <Alert {...txt.version.alert.warning} />
+                </Grid>
+            )}
+            <Grid container spacing={3}>
+                {!isDeleted && (
+                    <React.Fragment>
+                        <Files
+                            author={author}
+                            account={account}
                             publication={recordToView}
                             hideTitle
                             hideContentIndicators

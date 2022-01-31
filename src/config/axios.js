@@ -6,7 +6,7 @@ import { store } from 'config/store';
 import { logout } from 'actions/account';
 import { showAppAlert } from 'actions/app';
 import locale from 'locale/global';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
 import param from 'can-param';
 import { pathConfig } from 'config/pathConfig';
 
@@ -83,7 +83,11 @@ const reportToSentry = error => {
     } else {
         detailedError = `Something happened in setting up the request that triggered an Error: ${error.message}`;
     }
-    Raven.captureException(error, { extra: { error: detailedError } });
+
+    Sentry.withScope(scope => {
+        scope.setExtras({ error: detailedError });
+        Sentry.captureException(error);
+    });
 };
 
 api.interceptors.response.use(

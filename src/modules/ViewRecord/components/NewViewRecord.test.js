@@ -8,6 +8,8 @@ import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
 import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
+import { recordVersionLegacy } from '../../../mock/data';
+import locale from '../../../locale/pages';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 
@@ -82,6 +84,17 @@ describe('NewViewRecord', () => {
         userIsAdmin.mockImplementation(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
+    });
+
+    it('should render version', () => {
+        const txt = locale.pages.viewRecord.version;
+        const pid = 'UQ:1';
+        const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
+        useParams.mockImplementation(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        const { getByTestId } = setup({ recordToView: recordVersionLegacy });
+        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
+        expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
+        expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
     });
 
     it('should render deleted record correctly', () => {

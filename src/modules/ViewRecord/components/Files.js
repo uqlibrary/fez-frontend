@@ -369,7 +369,7 @@ export class FilesClass extends Component {
     isViewableByUser = (publication, dataStreams) => {
         const { files } = viewRecordsConfig;
         // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
+        const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
             files.blacklist.collections.includes(collection.rek_ismemberof),
         );
         return (
