@@ -170,7 +170,6 @@ export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
 export const EXISTING_RECORD_HISTORY_API = ({ pid }) => ({
     apiUrl: `records/${pid}/history`,
 });
-
 export const EXISTING_RECORD_VERSION_API = (pid, version) => ({
     apiUrl: `records/${pid}/${version}`,
 });
