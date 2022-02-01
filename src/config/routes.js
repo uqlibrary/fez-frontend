@@ -266,6 +266,7 @@ export const getRoutesConfig = ({
                   {
                       path: pathConfig.authorIdentifiers.orcid.link,
                       component: components.Orcid,
+                      access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.orcidLink.title,
                   },
