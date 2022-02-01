@@ -299,7 +299,4 @@ const publicationTypeListAudio = {
         }
     ]
 };
-const hydrateMockSearchList1 = hydrateMockSearchList(publicationTypeListAudio);
-console.log('hydrateMockSearchList1 = ', hydrateMockSearchList1.data.find(d => d.rek_pid === 'UQ:358319'));
-export default hydrateMockSearchList1;
-
+export default hydrateMockSearchList(publicationTypeListAudio);

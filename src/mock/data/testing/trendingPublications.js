@@ -575,7 +575,6 @@ export const trendingPublications = {
                 "mtj_jnl_id": 3283,
                 "mtj_status": "A"
             },
-            "fez_record_search_key_file_hashdataset": [],
             "rek_status_lookup": "Published",
             "rek_object_type_lookup": "Record",
             "rek_wok_doc_type_lookup": null,
@@ -1290,7 +1289,6 @@ export const trendingPublications = {
                 "mtj_jnl_id": 7532,
                 "mtj_status": "A"
             },
-            "fez_record_search_key_file_hashdataset": [],
             "rek_status_lookup": "Published",
             "rek_object_type_lookup": "Record",
             "rek_wok_doc_type_lookup": null,
