@@ -630,6 +630,10 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -1254,6 +1258,12 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
+            access={
+              Array [
+                "researcher",
+                "admin",
+              ]
+            }
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -1587,6 +1597,10 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -2211,6 +2225,12 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
+            access={
+              Array [
+                "researcher",
+                "admin",
+              ]
+            }
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -2990,6 +3010,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -3631,6 +3655,12 @@ exports[`Application component should render alert if user is not fez author 1`]
             render={[Function]}
           />
           <Route
+            access={
+              Array [
+                "researcher",
+                "admin",
+              ]
+            }
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -3964,6 +3994,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -4625,6 +4659,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             render={[Function]}
           />
           <Route
+            access={
+              Array [
+                "researcher",
+                "admin",
+              ]
+            }
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -4958,6 +4998,10 @@ exports[`Application component should render app for account with fez author wit
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -5604,6 +5648,12 @@ exports[`Application component should render app for account with fez author wit
             render={[Function]}
           />
           <Route
+            access={
+              Array [
+                "researcher",
+                "admin",
+              ]
+            }
             component={
               Object {
                 "$$typeof": Symbol(react.lazy),
@@ -5937,6 +5987,10 @@ exports[`Application component should render application with routing for the us
           "render": [Function],
         },
         Object {
+          "access": Array [
+            "researcher",
+            "admin",
+          ],
           "component": Object {
             "$$typeof": Symbol(react.lazy),
             "_init": [Function],
@@ -8037,6 +8091,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "render": [Function],
                           },
                           Object {
+                            "access": Array [
+                              "researcher",
+                              "admin",
+                            ],
                             "component": Object {
                               "$$typeof": Symbol(react.lazy),
                               "_init": [Function],
@@ -8377,6 +8435,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "render": [Function],
                             },
                             Object {
+                              "access": Array [
+                                "researcher",
+                                "admin",
+                              ],
                               "component": Object {
                                 "$$typeof": Symbol(react.lazy),
                                 "_init": [Function],
@@ -8718,6 +8780,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "render": [Function],
                               },
                               Object {
+                                "access": Array [
+                                  "researcher",
+                                  "admin",
+                                ],
                                 "component": Object {
                                   "$$typeof": Symbol(react.lazy),
                                   "_init": [Function],
