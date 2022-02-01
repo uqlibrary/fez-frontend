@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {
+    FacetsFilter,
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
-    FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -179,6 +179,10 @@ export default class PossiblyMyRecords extends PureComponent {
             },
             this.pushPageHistory,
         );
+    };
+
+    handleExportPublications = exportFormat => {
+        this.props.actions.exportAuthorPossiblePublications({ ...exportFormat, ...this.state });
     };
 
     render() {

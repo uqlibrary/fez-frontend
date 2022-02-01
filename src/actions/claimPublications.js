@@ -12,6 +12,8 @@ import {
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import { dismissAppAlert } from './app';
+import { exportPublications } from './exportPublications';
+import * as routes from '../repositories/routes';
 
 /**
  * Load publication to claim full record
@@ -470,4 +472,33 @@ export function claimPublication(data) {
                 })
         );
     };
+}
+
+/**
+ * Export publications list
+ * @param {array} publication list
+ * @param {string} format
+ * @returns {action}
+ */
+export function exportAuthorPossiblePublications({
+    exportPublicationsFormat = '',
+    page = 1,
+    pageSize = 20,
+    sortBy = 'score',
+    sortDirection = 'Desc',
+    activeFacets = { filters: {}, ranges: {} },
+}) {
+    return exportPublications(
+        routes.POSSIBLE_RECORDS_API(
+            {
+                exportPublicationsFormat: exportPublicationsFormat,
+                page: page,
+                pageSize: pageSize,
+                sortBy: sortBy,
+                sortDirection: sortDirection,
+                facets: activeFacets,
+            },
+            'export',
+        ),
+    );
 }

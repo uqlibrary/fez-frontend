@@ -178,8 +178,8 @@ export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` }
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
 // search/list records apis
-export const POSSIBLE_RECORDS_API = values => ({
-    apiUrl: 'records/search',
+export const POSSIBLE_RECORDS_API = (values, route = 'search') => ({
+    apiUrl: `records/${route}`,
     options: {
         params: {
             rule: 'possible',
