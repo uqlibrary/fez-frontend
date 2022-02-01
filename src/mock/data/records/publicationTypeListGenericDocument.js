@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../../helpers/general';
+
+const publicationTypeListGenericDocument = {
     "total": 1,
     "took": 1,
     "per_page": 999,
@@ -8,65 +10,38 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:151480",
-            "rek_title_xsdmf_id": null,
             "rek_title": "Minutes Project Team Meetings",
-            "rek_description_xsdmf_id": null,
             "rek_description": null,
-            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 202,
-            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": null,
             "rek_date": "2008-06-19T00:00:00Z",
-            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 2101,
-            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2008-06-19T16:00:09Z",
-            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-24T13:43:01Z",
             "rek_file_downloads": 78,
             "rek_citation": "",
-            "rek_genre_xsdmf_id": null,
             "rek_genre": "Generic Document",
-            "rek_genre_type_xsdmf_id": null,
             "rek_genre_type": null,
-            "rek_formatted_title_xsdmf_id": null,
             "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": null,
             "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": null,
             "rek_thomson_citation_count": null,
-            "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": null,
             "rek_subtype": null,
             "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": null,
             "rek_herdc_notes": null,
-            "rek_scopus_doc_type_xsdmf_id": null,
             "rek_scopus_doc_type": null,
-            "rek_wok_doc_type_xsdmf_id": null,
             "rek_wok_doc_type": null,
-            "rek_pubmed_doc_type_xsdmf_id": null,
             "rek_pubmed_doc_type": null,
             "rek_security_inherited": 1,
             "rek_altmetric_score": null,
-            "rek_altmetric_score_xsdmf_id": null,
             "rek_altmetric_id": null,
-            "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_ismemberof": [
                 {
-                    "rek_ismemberof_id": 11520694,
-                    "rek_ismemberof_pid": "UQ:151480",
-                    "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:151282",
-                    "rek_ismemberof_order": 1,
                     "parent": {
                         "rek_pid": "UQ:151282",
                         "rek_security_policy": 5,
@@ -75,44 +50,16 @@ export default {
                     "rek_ismemberof_lookup": "A National Entomology Curriculum for Australia Project (A project funded by the Carrick Institute)"
                 }
             ],
-            "fez_record_search_key_issn": [],
-            "fez_record_search_key_doi": null,
-            "fez_record_search_key_isi_loc": null,
-            "fez_record_search_key_keywords": [{
-                "rek_keywords_id": 30800253,
-                "rek_keywords_pid": "UQ:151480",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "University of Queensland. Library",
-                "rek_keywords_order": 1
-            }, {
-                "rek_keywords_id": 30800256,
-                "rek_keywords_pid": "UQ:151480",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "University of Queensland. Library -- Exhibitions",
-                "rek_keywords_order": 2
-            }],
+            "fez_record_search_key_keywords": ["University of Queensland. Library", "University of Queensland. Library -- Exhibitions"],
             "fez_record_search_key_license": {
-                "rek_license_id": 28752,
-                "rek_license_pid": "UQ:151480",
-                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
             "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 694142,
-                "rek_oa_status_pid": "UQ:151480",
-                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453698,
                 "rek_oa_status_lookup": "Not Open Access"
             },
-            "fez_record_search_key_oa_status_type": null,
-            "fez_record_search_key_notes": {
-                "rek_notes_id": 1185841,
-                "rek_notes_pid": "UQ:692945",
-                "rek_notes_xsdmf_id": null,
-                "rek_notes": "https://brisbanepowerhouse.org/events/2017/07/07/joh-for-pm/"
-            },
-            "fez_record_search_key_scopus_id": null,
+            "fez_record_search_key_notes": "https://brisbanepowerhouse.org/events/2017/07/07/joh-for-pm/",
             "fez_datastream_info": [
                 {
                     "dsi_pid": "UQ:151480",
@@ -216,3 +163,4 @@ export default {
         }
     ]
 }
+export default hydrateMockSearchList(publicationTypeListGenericDocument);
