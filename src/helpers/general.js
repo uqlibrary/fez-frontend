@@ -29,7 +29,7 @@ export function hydrateMock(truncatedData) {
             const result = [];
             field.forEach((field2, order) => {
                 let newEntry;
-                if (field2.hasOwnProperty(shortKey)) {
+                if (!!field2 && field2.hasOwnProperty(shortKey)) {
                     newEntry = {
                         [`${shortKey}_id`]: 547492, // any random number to mock db long unique id
                         [`${shortKey}_pid`]: truncatedData.rek_pid,
