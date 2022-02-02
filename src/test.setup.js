@@ -79,7 +79,7 @@ const getElement = (component, props, args = {}) => {
     );
 };
 
-global.toString = component => {
+global.componentToString = component => {
     return prettyFormat(renderer.create(component), {
         plugins: [prettyFormat.plugins.ReactTestComponent],
     }).toString();
