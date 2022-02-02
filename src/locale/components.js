@@ -3791,7 +3791,7 @@ export default {
                                             target="_blank"
                                         >
                                             agreements with some publishers
-                                        </a>
+                                        </a>{' '}
                                         where that APC is pre-paid or reduced for UQ corresponding authors.
                                     </p>
                                     <p>
@@ -3827,13 +3827,8 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Can't find a journal? Contact
+                                        Have feedback or can't find a journal? Contact
                                         <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
-                                    </li>
-                                    <li>
-                                        Email
-                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a> to
-                                        provide feedback on this tool.
                                     </li>
                                 </ul>
                             ),
@@ -3842,10 +3837,10 @@ export default {
                             question: 'Disclaimer',
                             answer: (
                                 <p>
-                                    The Journal Selector brings together data from many sources and providers to help
-                                    you make an evidenced based decision. Every effort is undertaken to make sure data
-                                    is up to date, but you should confirm the latest information direct from sources
-                                    e.g. the publisher's website.
+                                    The journal search brings together data from many sources and providers to help you
+                                    make an evidenced based decision. Every effort is undertaken to make sure data is up
+                                    to date, but you should confirm the latest information direct from sources e.g. the
+                                    publisher's website.
                                 </p>
                             ),
                         },
@@ -3904,7 +3899,8 @@ export default {
                         </p>
                         <ul>
                             <li>search journal titles, keywords and/or Field of Research (FoR) subject areas</li>
-                            <li>understand, refine and rank results by open access status, indexing and metrics</li>
+                            <li>identify journals with open access or prepaid charges</li>
+                            <li>understand, refine and rank results by indexing and a range of metrics</li>
                             <li>create a list of favourite journals</li>
                             <li>investigate journal scope, peer review processes and publisher details</li>
                         </ul>
