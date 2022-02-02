@@ -1,7 +1,6 @@
 import React from 'react';
 import DetailedHistory from './DetailedHistory';
-import { detailedHistory as mockData } from 'mock/data/detailedHistory';
-import { render, WithReduxStore, waitFor, fireEvent, screen } from 'test-utils';
+import { render, WithReduxStore, waitFor, fireEvent } from 'test-utils';
 import * as viewRecordActions from 'actions/viewRecord';
 
 const setup = (testProps = {}) => {
