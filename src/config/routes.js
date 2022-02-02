@@ -6,6 +6,7 @@ import { default as formLocale } from 'locale/publicationForm';
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
+export const versionRegExp = `${pidRegExp}\\s[0-9]{4}-[0-9]{2}-[0-9]{2}\\s[0-9]{2}:[0-9]{2}:[0-9]{2}|[a-z0-9-]+`;
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 const isAdmin = authorDetails => {
@@ -79,6 +80,7 @@ export const getRoutesConfig = ({
 }) => {
     const pid = `:pid(${pidRegExp})`;
     const id = `:id(${numericIdRegExp})`;
+    const version = `:version(${versionRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -110,6 +112,17 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
+        ...(authorDetails && isSuperAdmin(authorDetails)
+            ? [
+                  {
+                      path: pathConfig.records.version(pid, version),
+                      component: components.NewViewRecord,
+                      access: [roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.viewRecord.version.title,
+                  },
+              ]
+            : []),
         ...(!account
             ? [
                   {

@@ -1,6 +1,6 @@
 import * as routes from './routes';
-import { accounts, currentAuthor, authorDetails } from 'mock/data/account';
-import { pathConfig, getDatastreamVersionQueryString } from './pathConfig';
+import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
+import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
 
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for anon user', () => {
@@ -188,7 +188,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(49);
+        expect(testRoutes.length).toEqual(50);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {

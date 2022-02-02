@@ -284,7 +284,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     renderDoi = doi => {
-        return <DoiCitationView key="additional-information-doi" doi={doi} />;
+        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
     };
 
     // title/description/abstract have been sanitized in middleware
@@ -389,7 +389,9 @@ export class AdditionalInformationClass extends PureComponent {
                         data = this.renderContent(field, value);
                     }
 
-                    rows.push(this.renderRow(heading, data, index, subkey || field));
+                    if (data) {
+                        rows.push(this.renderRow(heading, data, index, subkey || field));
+                    }
                 }
             });
 

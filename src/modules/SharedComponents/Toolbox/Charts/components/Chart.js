@@ -1,7 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import Highcharts from 'highcharts';
-import 'highcharts-exporting';
 
 class Chart extends React.Component {
     static propTypes = {

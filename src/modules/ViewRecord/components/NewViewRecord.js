@@ -24,7 +24,7 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { general, AUTH_URL_LOGIN } from 'config';
+import { AUTH_URL_LOGIN, general } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
@@ -43,7 +43,7 @@ export const NewViewRecord = ({
     recordToView,
 }) => {
     const dispatch = useDispatch();
-    const { pid } = useParams();
+    const { pid, version } = useParams();
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
 
@@ -57,11 +57,11 @@ export const NewViewRecord = ({
     );
 
     React.useEffect(() => {
-        !!pid && dispatch(actions.loadRecordToView(pid));
+        !!pid && dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pid]);
+    }, [pid, version]);
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
@@ -134,6 +134,19 @@ export const NewViewRecord = ({
             {isDeleted && (
                 <Grid item xs={12} style={{ marginBottom: 24 }}>
                     <Alert {...txt.deletedAlert} />
+                </Grid>
+            )}
+            {/* eslint-disable-next-line camelcase */}
+            {!!version && !!recordToView?.rek_version && (
+                <Grid item xs={12} style={{ marginBottom: 24 }}>
+                    <Alert
+                        {...{
+                            ...txt.version.alert.version,
+                            message: txt.version.alert.version.message(recordToView),
+                        }}
+                    />
+                    <br />
+                    <Alert {...txt.version.alert.warning} />
                 </Grid>
             )}
             <Grid container spacing={3}>

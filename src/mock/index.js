@@ -242,6 +242,21 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_VERSION_API('.*', '.*').apiUrl)))
+    // versions
+    .reply(config => {
+        const mockRecords = [...mockData.recordVersion, ...mockData.recordVersionLegacy];
+        const matchedRecord = mockRecords.find(record => {
+            const tokens = config.url.split('/');
+            return (
+                tokens.pop().replace(' ', '') === record.rek_version.replace(' ', '') && tokens.pop() === record.rek_pid
+            );
+        });
+        if (matchedRecord) {
+            return [200, { data: { ...matchedRecord } }];
+        }
+        return [404, { message: 'File not found' }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
@@ -413,17 +428,18 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
     .reply(config => {
-        console.log(
-            'Returning lookup data for config:', config
-        );
-        if (config.params.export_to && config.params.export_to === 'excel'){
-            return [200, 'Exported', { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }];
-        }
-        else if(config.params.title?.includes('Biological')){
+        console.log('Returning lookup data for config:', config);
+        if (config.params.export_to && config.params.export_to === 'excel') {
+            return [
+                200,
+                'Exported',
+                { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            ];
+        } else if (config.params.title?.includes('Biological')) {
             let maxCount = config.params.title?.includes('Glycobiology') ? 4 : 8;
-            if(config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
-            const data = mockData.journalList.data.filter( (element, index) => index < maxCount);
-            return [200, { ...mockData.journalList, ...{data}, ...{"total": maxCount}}];
+            if (config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
+            const data = mockData.journalList.data.filter((element, index) => index < maxCount);
+            return [200, { ...mockData.journalList, ...{ data }, ...{ total: maxCount } }];
         }
         return [200, { ...mockData.journalList }];
     })

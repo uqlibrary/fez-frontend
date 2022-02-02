@@ -18,11 +18,11 @@ exports[`Dashboard Article Count test Render the authors article counts as expec
   <WithStyles(ForwardRef(Grid))
     item={true}
   >
-    1970
+    1975
     <span>
        to 
     </span>
-    2054
+    2018
   </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;
