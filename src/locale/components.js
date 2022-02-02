@@ -3755,7 +3755,7 @@ export default {
                                         publication in a publicly accessible institutional repository, such as UQ
                                         eSpace. An author accepted manuscript (also referred to as a post-print) is the
                                         author's version of a manuscript that has undergone peer review and has been
-                                        accepted by the publisher.
+                                        accepted by the publisher.{' '}
                                         <a href="https://www.youtube.com/watch?v=okLMBxRixFQ" target="_blank">
                                             View the Library's video guide
                                         </a>
@@ -3827,7 +3827,7 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Have feedback or can't find a journal? Contact
+                                        Have feedback or can't find a journal? Contact{' '}
                                         <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
                                     </li>
                                 </ul>
