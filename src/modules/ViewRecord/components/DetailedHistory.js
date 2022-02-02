@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 
 const historyEventDate = date => {
     return moment(new Date(!date.pre_date.includes('UTC') ? date.pre_date + ' UTC' : date.pre_date)).format(
-        'ddd MMM DD YYYY, HH:mm:ss A',
+        'ddd MMM DD YYYY, hh:mm:ss A',
     );
 };
 
@@ -80,7 +80,12 @@ export const DetailedHistory = ({ record }) => {
                                             className={classes.detailedHistoryRow}
                                         >
                                             <Grid item xs={4} style={{ padding: '5px' }}>
-                                                <Typography variant="body2" component={'span'}>
+                                                <Typography
+                                                    variant="body2"
+                                                    component={'span'}
+                                                    data-testid={`detailed-history-date-${histItem.pre_id}`}
+                                                    id={`detailed-history-date-${histItem.pre_id}`}
+                                                >
                                                     {historyEventDate(histItem)}
                                                 </Typography>
                                             </Grid>

@@ -1,6 +1,7 @@
 import React from 'react';
 import DetailedHistory from './DetailedHistory';
-import { render, WithReduxStore, waitFor, fireEvent } from 'test-utils';
+import { detailedHistory as mockData } from 'mock/data/detailedHistory';
+import { render, WithReduxStore, waitFor, fireEvent, screen } from 'test-utils';
 import * as viewRecordActions from 'actions/viewRecord';
 
 const setup = (testProps = {}) => {
@@ -16,12 +17,12 @@ describe('Detailed History', () => {
             data: [
                 {
                     pre_id: 1,
-                    pre_date: 'Mon, 1 Jan 2020, 01:00:00 EST',
+                    pre_date: '2020-01-01 00:00:00',
                     pre_detail: 'First Element of the mock data',
                 },
                 {
                     pre_id: 2,
-                    pre_date: 'Tue, 2 Jan 2020, 02:00:00 EST',
+                    pre_date: '2020-01-02 14:00:00',
                     pre_detail: 'Second Element of the mock data',
                 },
             ],
@@ -60,5 +61,12 @@ describe('Detailed History', () => {
         expect(getByText('First Element of the mock data')).toBeInTheDocument();
         fireEvent.click(getByTestId('detailed-history-header'));
         expect(getByText('Second Element of the mock data')).toBeInTheDocument();
+    });
+
+    it('should render the correct dates for the timezone', async () => {
+        const { getByText, getByTestId } = setup({ record: { rek_pid: 'UQ:1' } });
+        await waitFor(() => getByText('First Element of the mock data'));
+        expect(getByTestId('detailed-history-date-1')).toHaveTextContent('Wed Jan 01 2020, 10:00:00 AM');
+        expect(getByTestId('detailed-history-date-2')).toHaveTextContent('Fri Jan 03 2020, 12:00:00 AM');
     });
 });
