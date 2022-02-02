@@ -3690,7 +3690,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     "rek_file_attachment_name_xsdmf_id": null,
                   },
                 ],
-                "fez_record_search_key_file_hasdatasets": Array [],
                 "fez_record_search_key_geographic_area": Array [],
                 "fez_record_search_key_grant_acronym": Array [
                   Object {
@@ -4218,7 +4217,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "rek_scopus_doc_type_lookup": null,
                 "rek_scopus_doc_type_xsdmf_id": null,
                 "rek_security_inherited": 1,
-                "rek_security_policy": 1,
+                "rek_security_policy": null,
                 "rek_status": 2,
                 "rek_status_lookup": "Published",
                 "rek_status_xsdmf_id": null,
@@ -4626,7 +4625,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "rek_file_attachment_name_xsdmf_id": null,
                     },
                   ],
-                  "fez_record_search_key_file_hasdatasets": Array [],
                   "fez_record_search_key_geographic_area": Array [],
                   "fez_record_search_key_grant_acronym": Array [
                     Object {
@@ -5154,7 +5152,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "rek_scopus_doc_type_lookup": null,
                   "rek_scopus_doc_type_xsdmf_id": null,
                   "rek_security_inherited": 1,
-                  "rek_security_policy": 1,
+                  "rek_security_policy": null,
                   "rek_status": 2,
                   "rek_status_lookup": "Published",
                   "rek_status_xsdmf_id": null,

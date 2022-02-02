@@ -495,8 +495,10 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "fez_record_search_key_grant_id": Array [],
       "fez_record_search_key_grant_text": Array [],
       "fez_record_search_key_grant_type": Array [],
+      "fez_record_search_key_has_datasets": Array [],
       "fez_record_search_key_has_derivations": Array [],
       "fez_record_search_key_has_related_datasets": Array [],
+      "fez_record_search_key_institutional_status": null,
       "fez_record_search_key_isbn": Array [],
       "fez_record_search_key_isdatasetof": Array [],
       "fez_record_search_key_isderivationof": Array [],
@@ -570,7 +572,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "fez_record_search_key_seo_code": Array [],
       "fez_record_search_key_series": Object {
         "rek_series": "Queensland Music Festival",
-        "rek_series_id": 547492,
+        "rek_series_id": 8967845,
         "rek_series_pid": "UQ:352045",
         "rek_series_xsdmf_id": null,
       },
@@ -583,7 +585,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "fez_record_search_key_total_chapters": null,
       "fez_record_search_key_total_pages": Object {
         "rek_total_pages": "1 musical performance",
-        "rek_total_pages_id": 547492,
+        "rek_total_pages_id": 8967845,
         "rek_total_pages_pid": "UQ:352045",
         "rek_total_pages_xsdmf_id": null,
       },
@@ -641,7 +643,7 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "rek_scopus_doc_type_lookup": null,
       "rek_scopus_doc_type_xsdmf_id": null,
       "rek_security_inherited": 1,
-      "rek_security_policy": 1,
+      "rek_security_policy": null,
       "rek_status": 2,
       "rek_status_lookup": "Published",
       "rek_status_xsdmf_id": null,
@@ -654,8 +656,9 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "rek_updated_date": "2019-02-16T01:44:50Z",
       "rek_updated_date_xsdmf_id": null,
       "rek_wok_doc_type": null,
-      "rek_wok_doc_type_lookup": "Abstract of Published Item",
+      "rek_wok_doc_type_lookup": "",
       "rek_wok_doc_type_xsdmf_id": null,
+      "sources": Array [],
     }
   }
   shouldAsyncValidate={[Function]}

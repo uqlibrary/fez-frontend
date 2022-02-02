@@ -298,7 +298,6 @@ export function hydrateMock(truncatedData) {
         fez_record_search_key_has_datasets: [],
         sources: [],
         fez_record_search_key_total_pages: null,
-        fez_record_search_key_file_hasdatasets: [],
         ...truncatedData,
     };
 }

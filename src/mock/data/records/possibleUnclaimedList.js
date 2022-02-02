@@ -1,3 +1,4 @@
+// this is not de-hydrated because the claimFromPossible test wouldnt pass :(
 export default {
     "total": 6,
     "per_page": 10,
@@ -6151,7 +6152,6 @@ export default {
             "rek_display_type_lookup": "Book",
             "rek_scopus_doc_type_lookup": null,
             "rek_pubmed_doc_type_lookup": null,
-            "fez_record_search_key_file_hasdatasets": []
         },
         {
             "rek_pid": "UQ:795333",
@@ -6368,7 +6368,6 @@ export default {
             "rek_display_type_lookup": "Book",
             "rek_scopus_doc_type_lookup": null,
             "rek_pubmed_doc_type_lookup": null,
-            "fez_record_search_key_file_hasdatasets": []
         },
         {
             "rek_pid": "UQ:795334",
@@ -6557,7 +6556,6 @@ export default {
             "rek_display_type_lookup": "Book",
             "rek_scopus_doc_type_lookup": null,
             "rek_pubmed_doc_type_lookup": null,
-            "fez_record_search_key_file_hasdatasets": []
         },
     ],
     "filters": {
