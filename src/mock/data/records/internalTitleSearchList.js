@@ -2917,23 +2917,51 @@ export default {
                   "rek_conference_name":"22nd Australasian Fluid Mechanics Conference AFMC2020"
                },
                "fez_record_search_key_contributor":[
-                  {
-                     "rek_contributor_id":3251361,
-                     "rek_contributor_pid":"UQ:66e9f53",
-                     "rek_contributor_xsdmf_id":null,
-                     "rek_contributor":"Hubert Chanson",
-                     "rek_contributor_order":1
-                  },
-                  {
-                     "rek_contributor_id":3251362,
-                     "rek_contributor_pid":"UQ:66e9f53",
-                     "rek_contributor_xsdmf_id":null,
-                     "rek_contributor":"Richard Brown",
-                     "rek_contributor_order":2
-                  }
+                {
+                    "rek_contributor_id": 3234726,
+                    "rek_contributor_pid": "UQ:07ee065",
+                    "rek_contributor_xsdmf_id": null,
+                    "rek_contributor": "Abel, Gillian",
+                    "rek_contributor_order": 1
+                },
+                {
+                    "rek_contributor_id": 3234727,
+                    "rek_contributor_pid": "UQ:07ee065",
+                    "rek_contributor_xsdmf_id": null,
+                    "rek_contributor": "Fitzgerald, Lisa",
+                    "rek_contributor_order": 2
+                },
+                {
+                    "rek_contributor_id": 3234728,
+                    "rek_contributor_pid": "UQ:07ee065",
+                    "rek_contributor_xsdmf_id": null,
+                    "rek_contributor": "Healy, Catherine",
+                    "rek_contributor_order": 3
+                }
                ],
                "fez_record_search_key_contributor_id":[
-                  
+                {
+                    "rek_contributor_id_id": 2406372,
+                    "rek_contributor_id_pid": "UQ:07ee065",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 0,
+                    "rek_contributor_id_order": 1
+                },
+                {
+                    "rek_contributor_id_id": 2406373,
+                    "rek_contributor_id_pid": "UQ:07ee065",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 74066,
+                    "rek_contributor_id_order": 2,
+                    "rek_contributor_id_lookup": "Fitzgerald, Lisa J."
+                },
+                {
+                    "rek_contributor_id_id": 2406374,
+                    "rek_contributor_id_pid": "UQ:07ee065",
+                    "rek_contributor_id_xsdmf_id": null,
+                    "rek_contributor_id": 0,
+                    "rek_contributor_id_order": 3
+                }
                ],
                "fez_record_search_key_convener":null,
                "fez_record_search_key_corresponding_country":[
