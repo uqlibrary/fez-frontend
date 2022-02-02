@@ -897,7 +897,7 @@ describe('AdminInterface component', () => {
         });
 
         expect(
-            toString(wrapper.find('Alert').props().message).includes(
+            componentToString(wrapper.find('Alert').props().message).includes(
                 pageLocale.pages.edit.alerts.errorAlert.message(' '),
             ),
         ).toBe(true);
@@ -921,6 +921,6 @@ describe('AdminInterface component', () => {
             },
         });
 
-        expect(toString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
+        expect(componentToString(wrapper.find('Alert').props().message).includes(error)).toBe(true);
     });
 });
