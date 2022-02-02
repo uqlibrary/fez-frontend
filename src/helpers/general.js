@@ -137,7 +137,7 @@ export function hydrateMock(truncatedData) {
         rek_altmetric_id_xsdmf_id: null,
         rek_copyright_xsdmf_id: null,
         rek_copyright: 'off',
-        rek_security_policy: 1,
+        rek_security_policy: null,
         rek_datastream_policy: null,
         fez_datastream_info: [],
         fez_matched_journals: [],
