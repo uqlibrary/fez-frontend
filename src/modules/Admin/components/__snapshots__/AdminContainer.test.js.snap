@@ -1474,7 +1474,6 @@ exports[`AdminContainer component should render default view 1`] = `
             "rek_wok_doc_type": null,
             "rek_wok_doc_type_lookup": "",
             "rek_wok_doc_type_xsdmf_id": null,
-            "sources": Array [],
           },
         }
       }
@@ -2935,7 +2934,6 @@ exports[`AdminContainer component should render memoized component with styles 1
             "rek_wok_doc_type": null,
             "rek_wok_doc_type_lookup": "",
             "rek_wok_doc_type_xsdmf_id": null,
-            "sources": Array [],
           },
         }
       }
@@ -4383,7 +4381,6 @@ exports[`AdminContainer component should render mobile view 1`] = `
             "rek_wok_doc_type": null,
             "rek_wok_doc_type_lookup": "",
             "rek_wok_doc_type_xsdmf_id": null,
-            "sources": Array [],
           },
         }
       }

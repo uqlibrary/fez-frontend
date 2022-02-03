@@ -749,7 +749,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -1735,7 +1734,6 @@ exports[`ChangeDisplayType form should display confirmation box after successful
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -2814,7 +2812,6 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               "rek_wok_doc_type": "@",
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -3893,7 +3890,6 @@ exports[`ChangeDisplayType form should have an disabled submit button when user 
               "rek_wok_doc_type": "@",
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -4694,7 +4690,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "Abstract of Published Item",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -5495,7 +5490,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "Abstract of Published Item",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -6574,7 +6568,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               "rek_wok_doc_type": "@",
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -7653,7 +7646,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               "rek_wok_doc_type": "@",
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -8732,7 +8724,6 @@ exports[`ChangeDisplayType form should have an enabled submit button when user h
               "rek_wok_doc_type": "@",
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -9724,7 +9715,6 @@ exports[`ChangeDisplayType form should render form loaded with submit button dis
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />
@@ -10710,7 +10700,6 @@ exports[`ChangeDisplayType form should render lightbox upon submit 1`] = `
               "rek_wok_doc_type": null,
               "rek_wok_doc_type_lookup": "",
               "rek_wok_doc_type_xsdmf_id": null,
-              "sources": Array [],
             }
           }
         />

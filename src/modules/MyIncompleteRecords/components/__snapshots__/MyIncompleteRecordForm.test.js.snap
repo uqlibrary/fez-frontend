@@ -658,7 +658,6 @@ exports[`MyIncompleteRecordForm should mount the component with redux-form 1`] =
       "rek_wok_doc_type": null,
       "rek_wok_doc_type_lookup": "",
       "rek_wok_doc_type_xsdmf_id": null,
-      "sources": Array [],
     }
   }
   shouldAsyncValidate={[Function]}
