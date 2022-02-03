@@ -25,3 +25,4 @@ export { default as seminarPaperFields, validateSeminarPaper } from './seminarPa
 export { default as thesisFields, validateThesis } from './thesisFields';
 export { default as videoFields, validateVideo } from './videoFields';
 export { default as workingPaperFields, validateWorkingPaper } from './workingPaperFields';
+export { default as communityFields, validateCommunity } from './communityFields';
