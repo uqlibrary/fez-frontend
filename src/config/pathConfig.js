@@ -56,6 +56,7 @@ export const pathConfig = {
         possible: '/records/possible',
         search: '/records/search',
         view: (pid, includeFullPath = false) => `${includeFullPath ? fullPath : ''}/view/${pid}`,
+        version: (pid, version) => `/view/${pid}/${version}`,
     },
     dataset: {
         mine: '/data-collections/mine',
@@ -101,7 +102,25 @@ export const pathConfig = {
         journalName: journalName => getSearchUrl({ searchQuery: { rek_journal_name: { value: journalName } } }),
         bookTitle: bookTitle => getSearchUrl({ searchQuery: { rek_book_title: { value: bookTitle } } }),
         collection: collectionId => getSearchUrl({ searchQuery: { rek_ismemberof: { value: [collectionId] } } }),
-        contributor: contributor => getSearchUrl({ searchQuery: { rek_contributor: { value: contributor } } }),
+        contributor: (contributor, contributorId) =>
+            getSearchUrl(
+                contributorId
+                    ? {
+                          searchQuery: {
+                              rek_contributor_id: {
+                                  value: contributorId,
+                                  label: `${contributorId} (${contributor})`,
+                              },
+                          },
+                      }
+                    : {
+                          searchQuery: {
+                              rek_contributor: {
+                                  value: contributor,
+                              },
+                          },
+                      },
+            ),
         conferenceName: conferenceName =>
             getSearchUrl({ searchQuery: { rek_conference_name: { value: conferenceName } } }),
         orgUnitName: orgUnitName => getSearchUrl({ searchQuery: { rek_org_unit_name: { value: orgUnitName } } }),

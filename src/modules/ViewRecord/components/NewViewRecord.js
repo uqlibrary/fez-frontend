@@ -25,10 +25,11 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { general, AUTH_URL_LOGIN } from 'config';
+import { AUTH_URL_LOGIN, general } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
+import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
 import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
@@ -80,7 +81,8 @@ export const NewViewRecord = ({
     recordToView,
 }) => {
     const dispatch = useDispatch();
-    const { pid } = useParams();
+    const { pid, version } = useParams();
+    const isNotFoundRoute = !!pid && pid === notFound;
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
 
@@ -131,11 +133,13 @@ export const NewViewRecord = ({
     };
 
     React.useEffect(() => {
-        !!pid && dispatch(actions.loadRecordToView(pid));
+        !!pid &&
+            !isNotFoundRoute &&
+            dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pid]);
+    }, [isNotFoundRoute, pid, version]);
 
     const drawerDescriptor = React.useMemo(
         () =>
@@ -151,7 +155,7 @@ export const NewViewRecord = ({
 
     if (loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (recordToViewError && recordToViewError.status === 404) {
+    } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -166,13 +170,13 @@ export const NewViewRecord = ({
                 )}
             </StandardPage>
         );
-    } else if (recordToViewError && recordToViewError.status === 403) {
+    } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
                 <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
             </StandardPage>
         );
-    } else if (!recordToView || !recordToView.rek_pid) {
+    } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
 

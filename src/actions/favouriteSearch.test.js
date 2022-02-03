@@ -118,7 +118,7 @@ describe('favouriteSearch actions', () => {
                         { fvs_id: 1, fvs_alias: 'testing' },
                     ),
                 ),
-            ).rejects.toEqual({ message: 'Alias found' });
+            ).rejects.toEqual(new Error('Alias found'));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
@@ -178,7 +178,7 @@ describe('favouriteSearch actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(checkForExistingFavouriteSearchAlias({ fvs_id: 1, fvs_alias: 'test' })),
-            ).rejects.toEqual({ message: 'Alias found' });
+            ).rejects.toEqual(new Error('Alias found'));
 
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });

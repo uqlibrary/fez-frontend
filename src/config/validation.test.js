@@ -3,6 +3,7 @@ import { locale } from 'locale';
 import { APP_URL } from 'config';
 import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
+import { isAuthorOrEditorSelected } from './validation';
 
 describe('Validation method', () => {
     it('should validate required', () => {
@@ -185,6 +186,17 @@ describe('Validation method', () => {
                 }),
             ),
         ).toEqual(undefined);
+    });
+});
+
+describe('isAuthorOrEditorSelected', () => {
+    it('should return onlyOneOfAuthorOrEditor error message when both authors and editors exist', () => {
+        const testMessage = validation.isAuthorOrEditorSelected(
+            { authors: ['author 1', 'author 2'], editors: ['editor 1', 'editor 2'] },
+            true,
+            true,
+        );
+        expect(testMessage.onlyOneOfAuthorOrEditor).toEqual(locale.validationErrors.onlyOneOfAuthorOrEditor);
     });
 });
 

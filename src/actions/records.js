@@ -18,7 +18,7 @@ import {
     NEW_RECORD_DEFAULT_VALUES,
 } from 'config/general';
 import * as actions from './actionTypes';
-import Raven from 'raven-js';
+import * as Sentry from '@sentry/react';
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -146,13 +146,13 @@ const prepareThesisSubmission = data => {
         ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
         ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
         ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+        ...transformers.getThesisTypeSearchKey(data.isHdrThesis ? 'hdr' : 'sbs'),
         rek_title: data.thesisTitle.plainText,
         rek_formatted_title: data.thesisTitle.htmlText,
         rek_description: data.thesisAbstract.plainText,
         rek_formatted_abstract: data.thesisAbstract.htmlText,
         rek_subtype: data.rek_genre_type,
         rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
-        _thesis_submission_type: data.isHdrThesis ? 'hdr' : 'sbs',
     };
 
     // delete extra form values from request object
@@ -228,7 +228,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             newRecord = response.data;
             recordCreated = !!newRecord && !!newRecord.rek_pid;
             if (!recordCreated) {
-                return Promise.reject({ message: 'API did not return valid PID' });
+                return Promise.reject(new Error('API did not return valid PID'));
             }
             return (
                 (hasFilesToUpload &&
@@ -242,7 +242,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             );
         };
         const onRecordCreationFailure = error => {
-            Raven.captureException(error);
+            Sentry.captureException(error);
             return Promise.reject(error);
         };
 
@@ -259,7 +259,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
             // If created record exists, it means only upload failed.
             if (recordCreated) {
                 const record = getRecord(true);
-                Raven.captureException(error);
+                Sentry.captureException(error);
 
                 // Do not report retry failures to Eventum
                 if (!preCreatedRecord.rek_pid) {
@@ -278,7 +278,7 @@ export function submitThesis(data, preCreatedRecord = {}, formName = '', fullyUp
          */
         const onIssueReportSuccess = () => Promise.resolve(newRecord);
         const onIssueReportFailure = error => {
-            Raven.captureException(error);
+            Sentry.captureException(error);
             if (!recordCreated) {
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
@@ -671,11 +671,11 @@ export const unlockRecord = (pid, unlockRecordCallback) => {
                 return Promise.resolve(true);
             })
             .then(unlockRecordCallback)
-            .catch(() => {
+            .catch(error => {
                 dispatch({
                     type: actions.UNLOCK_RECORD_FAILED,
                 });
-                return Promise.reject(false);
+                return Promise.reject(error);
             });
     };
 };

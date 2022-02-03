@@ -1,5 +1,5 @@
 import { DashboardArticleCount, styles } from './DashboardArticleCount';
-import { currentAuthorStats } from 'mock/data';
+import { currentAuthorStats, authorDetails } from 'mock/data';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -13,8 +13,8 @@ function setup(testProps = {}) {
 describe('Dashboard Article Count test', () => {
     it('Render the authors article counts as expected for a UQ researcher)', () => {
         const articleCount = currentAuthorStats.total;
-        const articleFirstYear = currentAuthorStats.filters.facets.min_date_year_t.value_as_string;
-        const articleLastYear = currentAuthorStats.filters.facets.max_date_year_t.value_as_string;
+        const articleFirstYear = authorDetails.uqresearcher.espace.first_year;
+        const articleLastYear = authorDetails.uqresearcher.espace.last_year;
         const wrapper = setup({
             articleCount,
             articleFirstYear,

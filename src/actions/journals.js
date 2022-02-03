@@ -43,7 +43,7 @@ export const requestMJLIngest = directory => dispatch => {
                     type: actions.MASTER_JOURNAL_LIST_INGEST_REQUEST_FAILED,
                     payload: error.message,
                 });
-                return Promise.reject(error.message);
+                return Promise.reject(error);
             },
         )
     );

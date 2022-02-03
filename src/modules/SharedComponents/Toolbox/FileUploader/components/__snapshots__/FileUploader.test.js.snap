@@ -507,6 +507,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -950,6 +953,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       file names contain only upper and lowercase alphanumeric characters, and underscores
                                     </li>
                                     <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                       <br />
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -1054,6 +1060,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </li>
                                       <li>
                                         file names contain only upper and lowercase alphanumeric characters, and underscores
+                                      </li>
+                                      <li>
+                                        file names must not contain any spaces
                                       </li>
                                       <li>
                                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -1478,6 +1487,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             file names contain only upper and lowercase alphanumeric characters, and underscores
                                                           </li>
                                                           <li>
+                                                            file names must not contain any spaces
+                                                          </li>
+                                                          <li>
                                                             file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                             <br />
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -1580,6 +1592,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             </li>
                                                             <li>
                                                               file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                            </li>
+                                                            <li>
+                                                              file names must not contain any spaces
                                                             </li>
                                                             <li>
                                                               file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -1948,6 +1963,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                     </li>
                                                                     <li>
                                                                       file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                                    </li>
+                                                                    <li>
+                                                                      file names must not contain any spaces
                                                                     </li>
                                                                     <li>
                                                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -3066,6 +3084,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
+                        file names must not contain any spaces
+                      </li>
+                      <li>
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -3509,6 +3530,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       file names contain only upper and lowercase alphanumeric characters, and underscores
                                     </li>
                                     <li>
+                                      file names must not contain any spaces
+                                    </li>
+                                    <li>
                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                       <br />
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -3613,6 +3637,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </li>
                                       <li>
                                         file names contain only upper and lowercase alphanumeric characters, and underscores
+                                      </li>
+                                      <li>
+                                        file names must not contain any spaces
                                       </li>
                                       <li>
                                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -4037,6 +4064,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             file names contain only upper and lowercase alphanumeric characters, and underscores
                                                           </li>
                                                           <li>
+                                                            file names must not contain any spaces
+                                                          </li>
+                                                          <li>
                                                             file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                             <br />
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -4139,6 +4169,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             </li>
                                                             <li>
                                                               file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                            </li>
+                                                            <li>
+                                                              file names must not contain any spaces
                                                             </li>
                                                             <li>
                                                               file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -4507,6 +4540,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                     </li>
                                                                     <li>
                                                                       file names contain only upper and lowercase alphanumeric characters, and underscores
+                                                                    </li>
+                                                                    <li>
+                                                                      file names must not contain any spaces
                                                                     </li>
                                                                     <li>
                                                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -5148,6 +5184,9 @@ exports[`Component FileUploader should render default component 1`] = `
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -5315,6 +5354,9 @@ exports[`Component FileUploader should render disabled component 1`] = `
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -5479,6 +5521,9 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -5650,6 +5695,9 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -5979,6 +6027,9 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -6248,6 +6299,9 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -6412,6 +6466,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -6583,6 +6640,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -6912,6 +6972,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -7081,6 +7144,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -7411,6 +7477,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -7739,6 +7808,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
@@ -8081,6 +8153,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -8416,6 +8491,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
+                file names must not contain any spaces
+              </li>
+              <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
@@ -8585,6 +8663,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               </li>
               <li>
                 file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
               </li>
               <li>
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
