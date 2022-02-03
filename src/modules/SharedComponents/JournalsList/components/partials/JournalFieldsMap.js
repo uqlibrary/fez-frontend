@@ -43,7 +43,7 @@ export const JournalFieldsMap = [
             text: (
                 <>
                     <p>
-                        <b>Gold Open access:</b> A freely accessible, final version of a publication is available for
+                        <b>Gold open access:</b> A freely accessible, final version of a publication is available for
                         everyone to read immediately after publication.
                     </p>
                     <p>
@@ -57,8 +57,8 @@ export const JournalFieldsMap = [
                             <li>
                                 Use the <b>open access: published version</b> filter to include or exclude charges
                                 (APCs) which are paid to a publisher to make a publication immediately available and
-                                openly accessible. Some APCs may be prepaid or discounted, if the Library has negotiated
-                                a{' '}
+                                openly accessible. Some APCs may be pre-paid or discounted, if the Library has
+                                negotiated a{' '}
                                 <a href={'https://web.library.uq.edu.au/read-and-publish-agreements'} target={'_blank'}>
                                     read and publish agreement
                                 </a>
@@ -173,7 +173,7 @@ export const JournalFieldsMap = [
                 <>
                     <p>
                         CiteScore percentile indicating where a journal is ranked within a subject category. Comparable
-                        subject categories.
+                        across subject categories.
                     </p>
                     <p>Higher is better e.g. 98 means journal is in the top 2% of its subject category.</p>
                 </>
@@ -227,7 +227,7 @@ export const JournalFieldsMap = [
                 <>
                     <p>
                         Web of Science metric for journal citation impact. Updated annually. <b>Not</b> comparable
-                        subject categories.
+                        across subject categories.
                     </p>
                     <p>Higher is better.</p>
                 </>

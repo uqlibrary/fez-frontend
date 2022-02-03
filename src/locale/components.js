@@ -3720,7 +3720,7 @@ export default {
                             ),
                         },
                         {
-                            question: 'What are published and accepted versions for publishing Open Access',
+                            question: 'What are published and accepted versions for publishing open access?',
                             answer: (
                                 <div>
                                     <p>
@@ -3729,7 +3729,7 @@ export default {
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
                                             target="_blank"
                                         >
-                                            also known as Gold Open Access
+                                            also known as Gold open access
                                         </a>
                                         ) is where the free and permanently accessible final version of a publication,
                                         is available for everyone to read immediately after publication. Published
@@ -3766,7 +3766,7 @@ export default {
                                             target="_blank"
                                             href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
                                         >
-                                            Read more about Open Access
+                                            Read more about open access
                                         </a>
                                     </p>
                                 </div>
@@ -3895,14 +3895,14 @@ export default {
                     <React.Fragment>
                         <p>
                             Search UQ's curated strategic publishing data as part of your critical tasks of publishing
-                            and promotion.
+                            and promotion:
                         </p>
                         <ul>
-                            <li>search journal titles, keywords and/or Field of Research (FoR) subject areas</li>
-                            <li>identify journals with open access or prepaid charges</li>
-                            <li>understand, refine and rank results by indexing and a range of metrics</li>
-                            <li>create a list of favourite journals</li>
-                            <li>investigate journal scope, peer review processes and publisher details</li>
+                            <li>Search journal titles, keywords and subject areas</li>
+                            <li>Identify journals with open access or pre-paid charges</li>
+                            <li>Understand, refine and rank results by indexing and a range of metrics</li>
+                            <li>Create a list of favourite journals</li>
+                            <li>Investigate journal scope, peer review processes and publisher details</li>
                         </ul>
                     </React.Fragment>
                 ),
