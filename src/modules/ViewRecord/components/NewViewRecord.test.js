@@ -10,6 +10,9 @@ import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
 import locale from '../../../locale/pages';
+import { notFound } from '../../../config/routes';
+import { stripHtml } from '../../../helpers/general';
+import globalLocale from '../../../locale/global';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -79,7 +82,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default view with admin menu', () => {
-        userIsAdmin.mockImplementation(() => true);
+        userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
@@ -88,7 +91,7 @@ describe('NewViewRecord', () => {
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
-        useParams.mockImplementation(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
         const { getByTestId } = setup({ recordToView: recordVersionLegacy });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
@@ -110,6 +113,18 @@ describe('NewViewRecord', () => {
         expect(getByText('Loading work')).toBeInTheDocument();
     });
 
+    it('should render not found', () => {
+        useParams.mockImplementationOnce(() => ({ pid: notFound }));
+        const { queryByText } = setup();
+        expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
+        stripHtml(componentToString(locale.pages.viewRecord.notFound.message))
+            .replace(/\n+/, '\n')
+            .split('\n')
+            .filter(line => line.trim())
+            .forEach(line => expect(queryByText(line.trim())).toBeInTheDocument());
+        expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
+    });
+
     it('should render error', () => {
         const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 403 } });
         expect(getByText('You are not logged in -')).toBeInTheDocument();
@@ -123,7 +138,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should have status prop in the header for admins', () => {
-        userIsAdmin.mockImplementation(() => true);
+        userIsAdmin.mockImplementationOnce(() => true);
         const { getByText } = setup({
             recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' },
         });
@@ -132,7 +147,7 @@ describe('NewViewRecord', () => {
 
     it('should load record to view', () => {
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordToView');
-        useParams.mockImplementation(() => ({ pid: 'UQ:111111' }));
+        useParams.mockImplementationOnce(() => ({ pid: 'UQ:111111' }));
         setup({});
         expect(loadRecordToViewFn).toHaveBeenCalledWith('UQ:111111');
     });

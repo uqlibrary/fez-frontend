@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import { collectionRecord, communityRecord, record } from 'mock/data';
+import { record } from 'mock/data';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -1086,9 +1086,7 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi
-                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
-                .reply(200, { data: { ...collectionRecord } });
+            mockApi.onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl).reply(200, { data: {} });
 
             const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
 
@@ -1178,9 +1176,7 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi
-                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
-                .reply(200, { data: { ...communityRecord } });
+            mockApi.onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl).reply(200, { data: {} });
 
             const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
 

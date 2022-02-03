@@ -28,6 +28,7 @@ import { AUTH_URL_LOGIN, general } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
+import { notFound } from '../../../config/routes';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -44,6 +45,7 @@ export const NewViewRecord = ({
 }) => {
     const dispatch = useDispatch();
     const { pid, version } = useParams();
+    const isNotFoundRoute = !!pid && pid === notFound;
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
 
@@ -57,15 +59,17 @@ export const NewViewRecord = ({
     );
 
     React.useEffect(() => {
-        !!pid && dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
+        !!pid &&
+            !isNotFoundRoute &&
+            dispatch(version ? actions.loadRecordVersionToView(pid, version) : actions.loadRecordToView(pid));
 
         return () => dispatch(actions.clearRecordToView());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [pid, version]);
+    }, [isNotFoundRoute, pid, version]);
 
-    if (loadingRecordToView) {
+    if (!isNotFoundRoute && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (recordToViewError && recordToViewError.status === 404) {
+    } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -80,13 +84,13 @@ export const NewViewRecord = ({
                 )}
             </StandardPage>
         );
-    } else if (recordToViewError && recordToViewError.status === 403) {
+    } else if (!isNotFoundRoute && recordToViewError && recordToViewError.status === 403) {
         return (
             <StandardPage>
                 <Alert {...globalLocale.global.loginAlert} action={redirectUserToLogin} />
             </StandardPage>
         );
-    } else if (!recordToView || !recordToView.rek_pid) {
+    } else if (!isNotFoundRoute && (!recordToView || !recordToView.rek_pid)) {
         return <div className="empty" />;
     }
 

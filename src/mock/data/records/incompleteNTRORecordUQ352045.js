@@ -17,12 +17,12 @@ export default {
     "fez_record_search_key_advisory_statement": null,
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author": [{
-            "rek_author_id": 32023928,
-            "rek_author_pid": "UQ:352045",
-            "rek_author_xsdmf_id": null,
-            "rek_author": "Topology",
-            "rek_author_order": 1
-        },
+        "rek_author_id": 32023928,
+        "rek_author_pid": "UQ:352045",
+        "rek_author_xsdmf_id": null,
+        "rek_author": "Topology",
+        "rek_author_order": 1
+    },
         {
             "rek_author_id": 32023929,
             "rek_author_pid": "UQ:352045",
@@ -48,12 +48,12 @@ export default {
     "fez_record_search_key_author_affiliation_name": [],
     "fez_record_search_key_author_affiliation_type": [],
     "fez_record_search_key_author_id": [{
-            "rek_author_id_id": 32030542,
-            "rek_author_id_pid": "UQ:352045",
-            "rek_author_id_xsdmf_id": null,
-            "rek_author_id": 0,
-            "rek_author_id_order": 1
-        },
+        "rek_author_id_id": 32030542,
+        "rek_author_id_pid": "UQ:352045",
+        "rek_author_id_xsdmf_id": null,
+        "rek_author_id": 0,
+        "rek_author_id_order": 1
+    },
         {
             "rek_author_id_id": 32030543,
             "rek_author_id_pid": "UQ:352045",
@@ -82,12 +82,12 @@ export default {
     "fez_record_search_key_contributor_id": [],
     "fez_record_search_key_creator_contribution_statement": [],
     "fez_record_search_key_file_attachment_name": [{
-            "rek_file_attachment_name_id": 4434701,
-            "rek_file_attachment_name_pid": "UQ:352045",
-            "rek_file_attachment_name_xsdmf_id": null,
-            "rek_file_attachment_name": "ERAUQ352045_il_Sogno.mp3",
-            "rek_file_attachment_name_order": 1
-        },
+        "rek_file_attachment_name_id": 4434701,
+        "rek_file_attachment_name_pid": "UQ:352045",
+        "rek_file_attachment_name_xsdmf_id": null,
+        "rek_file_attachment_name": "ERAUQ352045_il_Sogno.mp3",
+        "rek_file_attachment_name_order": 1
+    },
         {
             "rek_file_attachment_name_id": 4434702,
             "rek_file_attachment_name_pid": "UQ:352045",
@@ -223,16 +223,16 @@ export default {
         "rek_total_pages": "1 musical performance"
     },
     "fez_datastream_info": [{
-            "dsi_pid": "UQ:352045",
-            "dsi_dsid": "ERAUQ352045_il_Sogno.mp3",
-            "dsi_embargo_date": null,
-            "dsi_open_access": null,
-            "dsi_label": "Full-text - not publicly available",
-            "dsi_mimetype": "audio\/mpeg",
-            "dsi_copyright": null,
-            "dsi_state": "A",
-            "dsi_size": 21457982
-        },
+        "dsi_pid": "UQ:352045",
+        "dsi_dsid": "ERAUQ352045_il_Sogno.mp3",
+        "dsi_embargo_date": null,
+        "dsi_open_access": null,
+        "dsi_label": "Full-text - not publicly available",
+        "dsi_mimetype": "audio\/mpeg",
+        "dsi_copyright": null,
+        "dsi_state": "A",
+        "dsi_size": 21457982
+    },
         {
             "dsi_pid": "UQ:352045",
             "dsi_dsid": "ERAUQ352045_InterimFile.mp3",

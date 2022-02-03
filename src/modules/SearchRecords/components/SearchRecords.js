@@ -155,29 +155,15 @@ const SearchRecords = ({
     }, []);
 
     React.useEffect(() => {
-        // handle browser back button - set state from location/dispatch action for this state
-        if (history.action === 'POP' && location.pathname === pathConfig.records.search) {
-            !!location.state &&
-                setState(
-                    parseSearchQueryStringFromUrl(
-                        param(location.state),
-                        isResearcher || isAdmin,
-                        isUnpublishedBufferPage,
-                    ),
-                );
-
-            actions.searchEspacePublications(state);
-        } else {
-            !!location.search &&
-                location.search.length > 1 &&
-                setState(
-                    parseSearchQueryStringFromUrl(
-                        location.search.substr(1),
-                        isResearcher || isAdmin,
-                        isUnpublishedBufferPage,
-                    ),
-                );
-        }
+        !!location.search &&
+            location.search.length > 1 &&
+            setState(
+                parseSearchQueryStringFromUrl(
+                    location.search.substr(1),
+                    isResearcher || isAdmin,
+                    isUnpublishedBufferPage,
+                ),
+            );
 
         actions.resetExportPublicationsStatus();
 

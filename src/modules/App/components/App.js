@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import Cookies from 'js-cookie';
 import {
-    routes,
-    pathConfig,
+    APP_URL,
     AUTH_URL_LOGIN,
     AUTH_URL_LOGOUT,
-    APP_URL,
+    pathConfig,
+    routes,
     SESSION_COOKIE_NAME,
     SESSION_USER_GROUP_COOKIE_NAME,
 } from 'config';
@@ -15,10 +15,8 @@ import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 
 // application components
-import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { AppLoader, ContentLoader, InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
-import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { AuthButton } from 'modules/SharedComponents/Toolbox/AuthButton';
@@ -190,7 +188,10 @@ export class AppClass extends PureComponent {
     isPublicPage = menuItems => {
         return (
             menuItems.filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public).length >
-                0 || new RegExp(pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
+                0 ||
+            new RegExp(pathConfig.records.view(`(${routes.pidRegExp}|${routes.notFound})`)).test(
+                this.props.location.pathname,
+            )
         );
     };
 
