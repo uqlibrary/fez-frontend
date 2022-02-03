@@ -3902,7 +3902,7 @@ export default {
                             <li>Identify journals with open access or pre-paid charges</li>
                             <li>Understand, refine and rank results by indexing and a range of metrics</li>
                             <li>Create a list of favourite journals</li>
-                            <li>Investigate journal scope, peer review processes and publisher details</li>
+                            <li>Investigate journal scope, peer review processes and publisher details.</li>
                         </ul>
                     </React.Fragment>
                 ),
