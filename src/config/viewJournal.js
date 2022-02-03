@@ -921,18 +921,17 @@ export const viewJournalConfig = {
                     heading: viewJournalLocale.viewJournal.readAndPublish.heading,
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
-                        return (
-                            !!journalDetails.fez_journal_doaj &&
-                            !!journalDetails.fez_journal_doaj.jnl_doaj_apc_average_price &&
-                            !!journalDetails.fez_journal_read_and_publish &&
-                            !!journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_issn
-                        );
+                        return {
+                            inRnb:
+                                !!journalDetails.fez_journal_read_and_publish &&
+                                !!journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_issn,
+                        };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
-                        href: () => viewJournalLocale.viewJournal.readAndPublish.externalUrl,
-                        prefix: () => viewJournalLocale.viewJournal.readAndPublish.prefixText,
-                        postfix: () => viewJournalLocale.viewJournal.readAndPublish.postfixText,
+                        href: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : ''),
+                        prefix: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.prefixText : 'No'),
+                        postfix: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.postfixText : ''),
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
                     },
