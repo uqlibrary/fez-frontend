@@ -63,6 +63,8 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
+const alwaysActivatedForRecordTypesList = [RECORD_TYPE_RECORD];
+
 export const AdminContainer = ({
     authorDetails,
     clearRecordToView,
@@ -154,9 +156,12 @@ export const AdminContainer = ({
         return <div className="empty" />;
     }
 
-    const isActivated = () => {
+    const isActivated = (recordType = []) => {
+        if (!Array.isArray(recordType)) return false;
+
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+            const filterArray = [...alwaysActivatedForRecordTypesList, ...recordType];
+            return filterArray.indexOf(recordToView.rek_object_type_lookup.toLowerCase()) > -1;
         }
         return false;
     };
@@ -201,7 +206,7 @@ export const AdminContainer = ({
                                 tabs={{
                                     admin: {
                                         component: AdminSection,
-                                        activated: isActivated(),
+                                        activated: isActivated([RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY]),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
                                     bibliographic: {
@@ -242,7 +247,7 @@ export const AdminContainer = ({
                                     },
                                     notes: {
                                         component: NotesSection,
-                                        activated: isActivated(),
+                                        activated: isActivated([RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY]),
                                     },
                                     files: {
                                         component: FilesSection,
