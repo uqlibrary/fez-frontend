@@ -217,6 +217,7 @@ export const NewViewRecord = ({
                                             color="default"
                                             onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
+                                            data-testid="btnAdminToggleDrawerVisibility"
                                         >
                                             {`View ${
                                                 recordToView?.fez_internal_notes?.ain_detail ? 'Notes \u0026' : ''

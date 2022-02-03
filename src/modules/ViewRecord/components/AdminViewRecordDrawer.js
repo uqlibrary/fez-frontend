@@ -99,7 +99,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     const DrawerContent = ({ content }) => {
         return (
-            <div key="drawContainer1">
+            <div key="drawContainer1" id="adminDrawerContentContainer" data-testid="adminDrawerContentContainer">
                 <Hidden xsDown implementation="css" key="toolbarMobile">
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
@@ -144,6 +144,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         theme.direction === 'rtl' ? 'left' : 'right'
                     }
                     id="adminViewRecordDrawerDesktop"
+                    data-testid="adminViewRecordDrawerDesktop"
                 >
                     <DrawerContent content={content} />
                 </Drawer>
@@ -165,6 +166,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     id="adminViewRecordDrawerMobile"
+                    data-testid="adminViewRecordDrawerMobile"
                 >
                     <DrawerContent content={content} />
                 </Drawer>

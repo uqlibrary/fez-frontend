@@ -7,7 +7,7 @@ export const formattedString = (type, lookup) => {
     return `${type ?? ''}${type && lookup ? ' - ' : ''}${lookup ?? ''}`;
 };
 
-export const parseKey = (key, content = undefined) => {
+export const parseKey = (key, content) => {
     return key.split('.').reduce((prev, curr) => prev && prev[curr], content);
 };
 
@@ -22,6 +22,7 @@ export const getDefaultDrawerDescriptorObject = () => {
         (config?.viewRecord?.adminViewRecordDefaultContent?.object && {
             ...config.viewRecord.adminViewRecordDefaultContent.object,
         }) ||
+        /* istanbul ignore next */
         undefined
     );
 };
@@ -30,10 +31,12 @@ export const getDefaultDrawerDescriptorIndex = () => {
         (config?.viewRecord?.adminViewRecordDefaultContent?.index && {
             ...config.viewRecord.adminViewRecordDefaultContent.index,
         }) ||
+        /* istanbul ignore next */
         undefined
     );
 };
 
+/* istanbul ignore next */
 export const createDefaultDrawerDescriptorObject = (locale = {}, content = [], fields = {}) => {
     const adminViewRecordDefaultContentObject = getDefaultDrawerDescriptorObject();
     const adminViewRecordDefaultContentIndex = getDefaultDrawerDescriptorIndex();
