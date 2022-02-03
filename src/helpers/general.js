@@ -58,7 +58,7 @@ export function hydrateMock(truncatedData) {
                     [`${shortKey}_xsdmf_id`]: null,
                     ...field,
                 };
-            } else {
+            } else if (field !== null) {
                 updateKeyWith = {
                     [`${shortKey}_id`]: 8967845, // any random number
                     [`${shortKey}_pid`]: truncatedData.rek_pid,
