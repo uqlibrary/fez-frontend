@@ -2,8 +2,8 @@ import locale from 'locale/global';
 import templates from 'locale/templates';
 import {
     FILE_ACCESS_CONDITION_CLOSED,
-    FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_INHERIT,
+    FILE_ACCESS_CONDITION_OPEN,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { contentIndicators } from '../config';
 
@@ -1362,6 +1362,12 @@ export const getNotesSectionSearchKeys = (data = {}) => {
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
     };
 };
+
+export const getThesisTypeSearchKey = type => ({
+    fez_record_search_key_thesis_type: {
+        rek_thesis_type: type,
+    },
+});
 
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;

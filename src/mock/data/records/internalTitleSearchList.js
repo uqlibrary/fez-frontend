@@ -494,7 +494,17 @@ const internalTitleSearchList = {
             fez_record_search_key_conference_dates: '7-10 December 2020',
             fez_record_search_key_conference_location: 'Brisbane, Australia',
             fez_record_search_key_conference_name: '22nd Australasian Fluid Mechanics Conference AFMC2020',
-            fez_record_search_key_contributor: ['Hubert Chanson', 'Richard Brown'],
+            fez_record_search_key_contributor: ['Abel, Gillian', 'Fitzgerald, Lisa', 'Healy, Catherine'],
+            fez_record_search_key_contributor_id: [
+                {
+                    "rek_contributor_id": 0,
+                }, {
+                    "rek_contributor_id": 74066,
+                    "rek_contributor_id_lookup": "Fitzgerald, Lisa J."
+                }, {
+                    "rek_contributor_id": 0,
+                }
+            ],
             fez_record_search_key_doi: '10.14264/66e9f53',
             fez_record_search_key_file_attachment_name: ['placeholder_2020xt.txt'],
             fez_record_search_key_herdc_code: {

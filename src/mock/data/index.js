@@ -44,6 +44,8 @@ export {
     publicationTypeListVideo,
     publicationTypeListWorkingPaper,
     record,
+    recordVersionLegacy,
+    recordVersion,
     recordsTypeList,
     recordWithDatastreams,
     recordWithLotOfAuthors,
