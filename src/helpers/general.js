@@ -15,6 +15,7 @@ export const stripHtml = html => {
 };
 
 export function hydrateMock(truncatedData) {
+    /* istanbul ignore next */
     if (!truncatedData.rek_pid) {
         throw Error('missing PID in data ' + JSON.stringify(truncatedData));
     }
