@@ -153,7 +153,7 @@ export const NewViewRecord = ({
         [JSON.stringify(recordToView)],
     );
 
-    if (loadingRecordToView) {
+    if (!isNotFoundRoute && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
