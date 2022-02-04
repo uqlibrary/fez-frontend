@@ -236,62 +236,59 @@ describe('NewViewRecord', () => {
     });
 
     describe('Admin record drawer for admins', () => {
-        const DESKTOP = 0;
-        const MOBILE = 1;
-
         beforeEach(() => {
             userIsAdmin.mockImplementation(() => true);
         });
 
         it('should render for Admin user', () => {
-            const { getByTestId, getAllByTestId } = setup({
+            const { getByTestId } = setup({
                 recordToView: record,
                 account: accounts.uqstaff,
             });
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[DESKTOP]).not.toBeVisible();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[MOBILE]).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
         });
 
         it('should open desktop admin drawer when button pressed', () => {
-            const { getByTestId, getAllByTestId } = setup({
+            const { getByTestId } = setup({
                 recordToView: recordWithNotes,
                 account: accounts.uqstaff,
             });
 
             expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[DESKTOP]).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
 
             act(() => {
                 fireEvent.click(getByTestId('adminDrawerButton'));
             });
 
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[DESKTOP]).toBeVisible();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[MOBILE]).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
         });
 
         it('should open mobile admin drawer when button pressed', () => {
             window.matchMedia = createMatchMedia(320);
 
-            const { getByTestId, getAllByTestId } = setup({
+            const { getByTestId } = setup({
                 recordToView: recordWithNotes,
                 account: accounts.uqstaff,
             });
 
             expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[MOBILE]).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
 
             act(() => {
                 fireEvent.click(getByTestId('adminDrawerButton'));
             });
 
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[DESKTOP]).not.toBeVisible();
-            expect(getAllByTestId('adminRecordDrawerCloseBtn')[MOBILE]).toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).toBeVisible();
         });
 
         it('should render data in both admin drawers', () => {
-            const { getByTestId, getAllByTestId } = setup({
+            const { getByTestId } = setup({
                 recordToView: recordWithAuthorAffiliates,
                 account: accounts.uqstaff,
             });
@@ -301,61 +298,61 @@ describe('NewViewRecord', () => {
 
             // DESKTOP
             // Notes
-            expect(getAllByTestId('drawer-content-scrollable-0-1')[DESKTOP]).toHaveTextContent(
+            expect(getByTestId('drawer-Desktop-content-scrollable-0-1')).toHaveTextContent(
                 'Some internal notes for testing',
             );
 
             // Author affiliations
-            expect(getAllByTestId('drawer-content-value-2-1')[DESKTOP]).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
 
             // WoS ID
-            expect(getAllByTestId('drawer-content-clipboard-4-1')[DESKTOP]).toHaveTextContent('000381303000009');
+            expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
             // WoS DocType
-            expect(getAllByTestId('drawer-content-value-4-3')[DESKTOP]).toHaveTextContent('Article');
+            expect(getByTestId('drawer-Desktop-content-value-4-3')).toHaveTextContent('Article');
 
             // Scopus ID
-            expect(getAllByTestId('drawer-content-clipboard-6-1')[DESKTOP]).toHaveTextContent('2-s2.0-84975764277');
+            expect(getByTestId('drawer-Desktop-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
             // Scopus DocType
-            expect(getAllByTestId('drawer-content-value-6-3')[DESKTOP]).toHaveTextContent(
+            expect(getByTestId('drawer-Desktop-content-value-6-3')).toHaveTextContent(
                 'ar - Article (original research)',
             );
 
             // PubMed ID
-            expect(getAllByTestId('drawer-content-clipboard-8-1')[DESKTOP]).toHaveTextContent('27166757');
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-1')).toHaveTextContent('27166757');
             // PubMed Central ID
-            expect(getAllByTestId('drawer-content-clipboard-8-3')[DESKTOP]).toHaveTextContent('PMC5179926');
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
             // PubMed DocType
-            expect(getAllByTestId('drawer-content-value-8-5')[DESKTOP]).toHaveTextContent(
+            expect(getByTestId('drawer-Desktop-content-value-8-5')).toHaveTextContent(
                 'Journal Article - Article (original research)',
             );
 
             // MOBILE
             // Notes
-            expect(getAllByTestId('drawer-content-scrollable-0-1')[MOBILE]).toHaveTextContent(
+            expect(getByTestId('drawer-Mobile-content-scrollable-0-1')).toHaveTextContent(
                 'Some internal notes for testing',
             );
 
             // Author affiliations
-            expect(getAllByTestId('drawer-content-value-2-1')[MOBILE]).toHaveTextContent('Yes');
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
 
             // WoS ID
-            expect(getAllByTestId('drawer-content-clipboard-4-1')[MOBILE]).toHaveTextContent('000381303000009');
+            expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');
             // WoS DocType
-            expect(getAllByTestId('drawer-content-value-4-3')[MOBILE]).toHaveTextContent('Article');
+            expect(getByTestId('drawer-Mobile-content-value-4-3')).toHaveTextContent('Article');
 
             // Scopus ID
-            expect(getAllByTestId('drawer-content-clipboard-6-1')[MOBILE]).toHaveTextContent('2-s2.0-84975764277');
+            expect(getByTestId('drawer-Mobile-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
             // Scopus DocType
-            expect(getAllByTestId('drawer-content-value-6-3')[MOBILE]).toHaveTextContent(
+            expect(getByTestId('drawer-Mobile-content-value-6-3')).toHaveTextContent(
                 'ar - Article (original research)',
             );
 
             // PubMed ID
-            expect(getAllByTestId('drawer-content-clipboard-8-1')[MOBILE]).toHaveTextContent('27166757');
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-1')).toHaveTextContent('27166757');
             // PubMed Central ID
-            expect(getAllByTestId('drawer-content-clipboard-8-3')[MOBILE]).toHaveTextContent('PMC5179926');
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
             // PubMed DocType
-            expect(getAllByTestId('drawer-content-value-8-5')[MOBILE]).toHaveTextContent(
+            expect(getByTestId('drawer-Mobile-content-value-8-5')).toHaveTextContent(
                 'Journal Article - Article (original research)',
             );
         });

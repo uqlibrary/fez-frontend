@@ -7,6 +7,7 @@ const setup = (props = {}, renderer = render) => {
         parentIndex: 0,
         index: 1,
         copyToClipboard: jest.fn(),
+        variant: 'Desktop',
         ...props,
     };
 
@@ -32,7 +33,7 @@ describe('AdminViewRecordDrawerBlock', () => {
             parentIndex: 1,
             index: 0,
         });
-        expect(getByTestId('drawer-content-value-1-0')).toHaveTextContent('test content');
+        expect(getByTestId('drawer-Desktop-content-value-1-0')).toHaveTextContent('test content');
     });
     it('should render a scrollable content block', () => {
         const { getByTestId } = setup({
@@ -40,7 +41,7 @@ describe('AdminViewRecordDrawerBlock', () => {
             parentIndex: 2,
             index: 2,
         });
-        expect(getByTestId('drawer-content-scrollable-2-2')).toHaveTextContent('test content');
+        expect(getByTestId('drawer-Desktop-content-scrollable-2-2')).toHaveTextContent('test content');
     });
     it('should render a cliboard copy-able content block', () => {
         const mockClipboardFn = jest.fn();
@@ -50,10 +51,10 @@ describe('AdminViewRecordDrawerBlock', () => {
             index: 0,
             copyToClipboard: mockClipboardFn,
         });
-        expect(getByTestId('drawer-content-clipboard-4-0')).toHaveTextContent('123');
-        expect(getByTestId('drawer-clipboard-button-4-0')).toBeInTheDocument();
+        expect(getByTestId('drawer-Desktop-content-clipboard-4-0')).toHaveTextContent('123');
+        expect(getByTestId('drawer-Desktop-clipboard-button-4-0')).toBeInTheDocument();
         act(() => {
-            fireEvent.click(getByTestId('drawer-clipboard-button-4-0'));
+            fireEvent.click(getByTestId('drawer-Desktop-clipboard-button-4-0'));
         });
 
         expect(mockClipboardFn).toHaveBeenCalledWith(expect.anything(), '123');

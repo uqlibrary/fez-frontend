@@ -6,6 +6,7 @@ const setup = (props = {}, renderer = render) => {
         section: {},
         index: 1,
         copyToClipboard: jest.fn(),
+        variant: 'Desktop',
         ...props,
     };
 
@@ -34,7 +35,7 @@ describe('AdminViewRecordDrawerSection', () => {
                 { type: 'content', value: 'test content' },
             ],
         });
-        expect(queryByTestId('drawer-header-1-0')).toHaveTextContent('test header');
-        expect(queryByTestId('drawer-content-value-1-1')).toHaveTextContent('test content');
+        expect(queryByTestId('drawer-Desktop-header-1-0')).toHaveTextContent('test header');
+        expect(queryByTestId('drawer-Desktop-content-value-1-1')).toHaveTextContent('test content');
     });
 });
