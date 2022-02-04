@@ -34,9 +34,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const historyEventDate = date => {
-    return moment(new Date(!date.pre_date.includes('UTC') ? date.pre_date + ' UTC' : date.pre_date)).format(
-        'ddd MMM DD YYYY, hh:mm:ss A',
-    );
+    return moment
+        .utc(date.pre_date)
+        .local()
+        .format('ddd MMM DD YYYY, hh:mm:ss A');
 };
 
 export const DetailedHistory = ({ record }) => {
