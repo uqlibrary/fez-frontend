@@ -62,7 +62,7 @@ export const DetailedHistory = ({ record }) => {
                         <Typography variant="h5">Detailed History ({detailedHistoryList.length} events)</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Grid container>
+                        <Grid container data-testid={'detailed-history-grid'}>
                             <Grid item xs={4} className={classes.detailedHistoryRowHeader}>
                                 <span>Date</span>
                             </Grid>
