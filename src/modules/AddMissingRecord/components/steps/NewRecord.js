@@ -61,7 +61,8 @@ export default class NewRecord extends PureComponent {
             currentAuthor: [
                 {
                     nameAsPublished: this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
-                    authorId: this.props.author.aut_id ? this.props.author.aut_id : '',
+                    // eslint-disable-next-line camelcase
+                    authorId: this.props.author?.aut_id,
                 },
             ],
             rek_title: rawSearchQuery || '',
