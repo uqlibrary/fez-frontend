@@ -411,7 +411,7 @@ export const getRoutesConfig = ({
             ? [
                   {
                       path: pathConfig.admin.masquerade,
-                      component: components.Masquerade,
+                      render: props => components.Masquerade({ ...props, isAuthor: !!authorDetails }),
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.pages.masquerade.title,

@@ -1,9 +1,8 @@
 import Masquerade from './Masquerade';
+import { pathConfig } from '../../../config';
 
 function setup(testProps = {}) {
     const props = {
-        author: null,
-        actions: {},
         history: {
             push: jest.fn(),
         },
@@ -83,5 +82,41 @@ describe('Component Masquerade', () => {
         const wrapper = setup();
         wrapper.instance()._masqueradeAs({ type: 'Click' });
         expect(wrapper.state('loading')).toBeFalsy();
+    });
+
+    it('should redirect to /dashboard when user is an author', () => {
+        const wrapper = setup({ isAuthor: true });
+        wrapper.instance()._usernameChanged({
+            target: {
+                value: 'uqtest',
+            },
+        });
+        wrapper
+            .update()
+            .instance()
+            ._masqueradeAs({
+                key: 'Enter',
+            });
+
+        const url = wrapper.instance().__redirectUrl();
+        expect(url.indexOf(pathConfig.dashboard) > -1).toBe(true);
+    });
+
+    it('should redirect to / when user is not an author', () => {
+        const wrapper = setup();
+        wrapper.instance()._usernameChanged({
+            target: {
+                value: 'uqtest',
+            },
+        });
+        wrapper
+            .update()
+            .instance()
+            ._masqueradeAs({
+                key: 'Enter',
+            });
+
+        const url = wrapper.instance().__redirectUrl();
+        expect(url.indexOf(pathConfig.dashboard) === -1).toBe(true);
     });
 });
