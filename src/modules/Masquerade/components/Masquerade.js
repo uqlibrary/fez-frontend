@@ -12,11 +12,6 @@ import { pathConfig } from 'config';
 export default class Masquerade extends PureComponent {
     static propTypes = {
         account: PropTypes.object.isRequired,
-        isAuthor: PropTypes.bool.isRequired,
-    };
-
-    static defaultProps = {
-        isAuthor: false,
     };
 
     constructor(props) {
@@ -34,15 +29,11 @@ export default class Masquerade extends PureComponent {
             loading: true,
         });
 
+        const redirectUrl = `${window.location.protocol}//${window.location.hostname}${pathConfig.dashboard}`;
         window.location.assign(
-            `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(
-                this.__redirectUrl(),
-            )}`,
+            `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`,
         );
     };
-
-    __redirectUrl = () =>
-        `${window.location.protocol}//${window.location.hostname}${this.props.isAuthor ? pathConfig.dashboard : ''}`;
 
     _usernameChanged = event => {
         this.setState({
