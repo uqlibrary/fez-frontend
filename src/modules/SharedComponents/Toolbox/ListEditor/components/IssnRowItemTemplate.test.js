@@ -76,12 +76,12 @@ describe('IssnRowItemTemplate', () => {
                 },
             });
 
-            const sherpaRomeo = getByTestId('external-link-sherparomeo');
+            const sherpaRomeo = getByTestId('sherparomeo-link');
             expect(sherpaRomeo).toHaveTextContent('SHERPA/RoMEO');
             expect(sherpaRomeo.href).toEqual('http://example.com/sherpa?issn=1234-1234');
             expect(sherpaRomeo.title).toEqual("Check publisher's OA archiving policy");
 
-            const ulrichs = getByTestId('external-link-ulrichs');
+            const ulrichs = getByTestId('ulrichs-link');
             expect(ulrichs).toHaveTextContent('Ulrichs');
             expect(ulrichs.href).toEqual('http://example.com/ulrichs?id=1234');
             expect(ulrichs.title).toEqual('Link to http://example.com/ulrichs?id=1234 will open in a new window.');

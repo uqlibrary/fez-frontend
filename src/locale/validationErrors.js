@@ -96,6 +96,7 @@ export default {
         fez_record_search_key_keywords: 'Keywords are required',
         contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
         authorLinking: 'You are required to select a author from the list, then confirm that it is you',
+        onlyOneOfAuthorOrEditor: 'Please provide either authors/creators or editors/contributors, not both',
         comments: 'Comments are required',
         fixRecordAnyField: 'Please provide additional information, corrections or upload file(s).',
         contactName: 'Contact name is required',

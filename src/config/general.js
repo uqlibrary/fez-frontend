@@ -1,5 +1,6 @@
 import locale from 'locale/components';
 import moment from 'moment';
+
 const converter = require('number-to-words');
 
 const getKeyValue = value => (process.env.NODE_ENV === 'production' ? `?key=${value}&` : '?');
@@ -15,11 +16,13 @@ export const SESSION_USER_GROUP_COOKIE_NAME = 'UQLID_USER_GROUP';
 export const TOKEN_NAME = 'X-Uql-Token';
 export const BASE_DN = 'ou=Staff,ou=People,o=The University of Queensland,c=AU';
 export const GENERIC_DATE_FORMAT = 'DD/MM/YYYY';
+export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
+export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -118,6 +121,7 @@ export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
 export const DOCUMENT_TYPES_EDIT_ONLY = [PUBLICATION_TYPE_REFERENCE_ENTRY];
 
 export const PUBLICATION_TYPES_WITH_DOI = [
+    PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_DATA_COLLECTION,
@@ -126,6 +130,21 @@ export const PUBLICATION_TYPES_WITH_DOI = [
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_WORKING_PAPER,
+];
+
+export const CSV_INGEST_DOCUMENT_TYPES = [
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_DIGILIB_IMAGE,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_MANUSCRIPT,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_VIDEO_DOCUMENT,
 ];
 
 export const DOCUMENT_TYPES_LOOKUP = {
@@ -780,6 +799,15 @@ export const CURRENT_LICENCES = [
             'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this record for this dataset.',
         ],
     },
+    {
+        value: 456807,
+        text: 'Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient',
+        description: [
+            'I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.',
+            'I FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.',
+            'The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.',
+        ],
+    },
 ];
 
 export const CCL_BY_3_0_ID = 453608;
@@ -1151,6 +1179,19 @@ export const CONTENT_INDICATORS = [
     { value: 454080, text: 'Protocol' },
     { value: 454081, text: 'Case Study' },
 ];
+
+export const CONTENT_INDICATORS_FOR_CONFERENCE_PAPER = [
+    { value: 456746, text: 'Plenary' },
+    { value: 456747, text: 'Invited' },
+];
+
+export const CONTENT_INDICATORS_DOCTYPE_MAP = {
+    default: CONTENT_INDICATORS,
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: [...CONTENT_INDICATORS, ...CONTENT_INDICATORS_FOR_CONFERENCE_PAPER],
+};
+
+export const contentIndicators = displayType =>
+    CONTENT_INDICATORS_DOCTYPE_MAP[(displayType === PUBLICATION_TYPE_CONFERENCE_PAPER && displayType) || 'default'];
 
 export const AUDIENCE_SIZE = [
     { value: 453992, text: 'Less than 100' },
@@ -1595,7 +1636,10 @@ export const ANDS_COLLECTION_TYPE_OPTIONS = [
 export const AFFILIATION_TYPE_NOT_UQ = 'NotUQ';
 export const AFFILIATION_TYPE_UQ = 'UQ';
 
-export const UQ_DOI_PREFIX = '10.14264/';
+export const DOI_CROSSREF_NAME = 'Crossref';
+export const DOI_CROSSREF_PREFIX = '10.14264';
+export const DOI_DATACITE_NAME = 'DataCite';
+export const DOI_DATACITE_PREFIX = IS_PRODUCTION ? '10.48610' : '10.23643';
 
 export const PLACEHOLDER_DATE = '1000-01-01T00:00:00Z';
 
@@ -1638,6 +1682,9 @@ export const EDITORIAL_ROLE_MAP = {
     [EDITORIAL_ROLE_SINGLE_ISSUE_EDITOR]: 'Single Issue Editor',
     [EDITORIAL_ROLE_OTHER]: 'Other',
 };
+export const EDITORIAL_APPOINTMENT_MIN_YEAR = 1900;
+export const EDITORIAL_APPOINTMENT_MAX_YEAR = 2100;
+
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const DATASET_ACCESS_CONDITIONS_OPTIONS = [

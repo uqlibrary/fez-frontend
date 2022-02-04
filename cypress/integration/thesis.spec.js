@@ -5,9 +5,9 @@ context('Thesis', () => {
         cy.killWindowUnloadHandler();
     });
 
-    it('is prompted that theses could be added elsewhere', () => {
-        cy.visit(`${baseUrl}/rhdsubmission?user=s2222222`);
-        cy.get('[data-testid="alert-warning-rdm-redirect"]')
+    it('shows rdm redirect message to non-whitelisted users', () => {
+        cy.visit(`${baseUrl}/rhdsubmission?user=s3333333`);
+        cy.get('[data-testid="alert-info-rdm-redirect"]')
             .should('exist')
             .should('be.visible');
     });
@@ -172,7 +172,7 @@ context('Thesis', () => {
 
         uploadFile('test three.jpg');
 
-        cy.get('div.Alert').should('have.length', 3);
+        cy.get('div.Alert').should('have.length', 2);
 
         uploadFile('test.jpg');
         uploadFile('test_two.jpg');

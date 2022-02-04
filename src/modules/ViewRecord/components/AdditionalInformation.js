@@ -247,11 +247,9 @@ export class AdditionalInformationClass extends PureComponent {
                         <p key={`license_description_line-${index}`}>{line}</p>
                     ))}
                 {licenseLink && (
-                    <div data-testid="rek-license-link">
-                        <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText}>
-                            {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
-                        </ExternalLink>
-                    </div>
+                    <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
+                        {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
+                    </ExternalLink>
                 )}
             </span>
         );
@@ -286,7 +284,7 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     renderDoi = doi => {
-        return <DoiCitationView key="additional-information-doi" doi={doi} />;
+        return doi ? <DoiCitationView key="additional-information-doi" doi={doi} /> : null;
     };
 
     // title/description/abstract have been sanitized in middleware
@@ -369,6 +367,10 @@ export class AdditionalInformationClass extends PureComponent {
                             ? null
                             : publication[field];
                         break;
+                    case 'fez_record_search_key_herdc_code':
+                        const subkey = this.transformFieldNameToSubkey(field);
+                        value = publication[field] && publication[field][subkey] !== 0 ? publication[field] : null;
+                        break;
                     default:
                         value = publication[field];
                 }
@@ -387,7 +389,9 @@ export class AdditionalInformationClass extends PureComponent {
                         data = this.renderContent(field, value);
                     }
 
-                    rows.push(this.renderRow(heading, data, index, subkey || field));
+                    if (data) {
+                        rows.push(this.renderRow(heading, data, index, subkey || field));
+                    }
                 }
             });
 

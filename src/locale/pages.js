@@ -8,7 +8,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import locale from 'locale/components';
 
 import { pathConfig } from 'config/pathConfig';
-import { DOI_ORG_PREFIX } from 'config/doi';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
 /*
 
 NOTE:
@@ -528,17 +528,48 @@ export default {
                     </div>
                 ),
             },
+            version: {
+                title: 'View Version',
+                alert: {
+                    version: {
+                        type: 'info_outline',
+                        title: '',
+                        message: record => (
+                            <>
+                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                            </>
+                        ),
+                        alertId: 'alert-info',
+                    },
+                    warning: {
+                        type: 'warning',
+                        title: '',
+                        message:
+                            "Note: reference values (lookups) might not be accurate as we don't keep history of these, only for the record's data.",
+                        alertId: 'alert-warning',
+                    },
+                },
+            },
         },
         searchRecords: {
             title: 'eSpace search',
             loadingMessage: 'Searching for works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
             bulkExportSizeMessage: 'The export will have the first [bulkExportSize] works.',
+            bulkExport: {
+                buttonText: 'Bulk Export',
+                sizeMessage: 'Each export will have [bulkExportSize] works. Use the links below to queue exports.',
+                successMessage:
+                    'Bulk export requests have been queued. When the requests have been processed, ' +
+                    'you will receive an email for each request with the exported file as an attachment.',
+                rowLabel: 'Export works [start] to [end]',
+            },
             loadingPagingMessage: 'Searching for works',
             exportPublicationsLoadingMessage: 'Exporting search results',
             noResultsFound: {
                 title: 'No works found',
                 text: <div>We were unable to find any results.</div>,
+                standardCardId: 'search-records-no-results',
             },
             facetsFilter: {
                 ...locale.components.facetsFilter,
@@ -880,7 +911,10 @@ export default {
                 hasDoi: 'DOI (Existing)',
                 noDoi: 'DOI (Preview)',
             },
-            doiTemplate: pid => `${DOI_ORG_PREFIX}/${pid.slice(3)}`,
+            doiTemplate: (pid, displayType) =>
+                displayType === PUBLICATION_TYPE_DATA_COLLECTION
+                    ? `${DOI_DATACITE_PREFIX}/${pid.slice(3)}`
+                    : `${DOI_CROSSREF_PREFIX}/${pid.slice(3)}`,
             depositorNameTitle: 'Name',
             depositorEmailTitle: 'Email',
             alertMessages: {
@@ -893,9 +927,14 @@ export default {
                 missingRequiredField: 'Required field [FIELDNAME] is either missing or invalid.',
                 unsupportedMessage: 'Sorry, type [TYPE] is not currently supported.',
                 uqCheckMessage: '[FIELDNAME] should contain "The University of Queensland".',
-                uqIsNotPublisher: 'This work does not appear to be published by The University of Queensland.',
+                uqIsNotPublisher: '[SUBJECT] does not appear to be have an UQ DOI',
                 warningTitle: 'Please note:',
                 wrongSubtype: 'Sorry, only the following subytypes are supported for [TYPE]: [SUBTYPES]',
+                bookChapter: {
+                    parent: {
+                        missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
+                    },
+                },
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
@@ -921,7 +960,7 @@ export default {
             successConfirmation: {
                 confirmationTitle: 'Request successful',
                 confirmationMessage:
-                    'The request to create/update DOI has been submitted. You will receive an email indicating whether the DOI is successfully generated.',
+                    'The request to create/update DOI has been submitted to Crossref. You will receive an email indicating whether the DOI is successfully generated.',
                 confirmButtonLabel: 'View work',
             },
         },
@@ -990,7 +1029,7 @@ export default {
             },
             loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
-            retractedMessage: 'This article has been retracted',
+            retractedMessage: 'This work has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',

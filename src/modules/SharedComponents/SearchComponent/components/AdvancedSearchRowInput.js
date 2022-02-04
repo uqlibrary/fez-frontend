@@ -190,7 +190,7 @@ export const AdvancedSearchRowInput = ({ AdvancedSearchField, value, label, onCh
             InputComponent={InputComponent}
             inputProps={inputProps}
             value={value}
-            disabled={searchField === '0'}
+            disabled={searchField === '0' || searchField === 'mtj_jnl_id'}
         />
     );
 };
@@ -207,6 +207,7 @@ AdvancedSearchRowInput.propTypes = {
         label: PropTypes.string,
         id: PropTypes.string,
         multiple: PropTypes.bool,
+        disabled: PropTypes.bool,
         errorHint: PropTypes.string,
         loadingHint: PropTypes.string,
         ariaLabel: PropTypes.string,

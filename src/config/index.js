@@ -18,7 +18,7 @@ export {
 export { api, generateCancelToken, cache, sessionApi } from './axios';
 export * as validation from './validation';
 export * as general from './general';
-export { publicationTypes, numberToWords } from './general';
+export { publicationTypes, contentIndicators, numberToWords } from './general';
 export * as routes from './routes';
 export * as openAccessConfig from './openAccess';
 export { default as incompleteRecord } from './incompleteRecord';
@@ -30,3 +30,4 @@ export { history } from './history';
 export * as BULK_UPDATES from './bulkUpdates';
 export { pathConfig } from './pathConfig';
 export { journalViewConfig } from './journalView';
+export { TRANSITION_COHORT } from './thesisSubmissionTransition';

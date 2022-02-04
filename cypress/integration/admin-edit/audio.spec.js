@@ -143,10 +143,7 @@ context('Audio admin edit', () => {
                     .should('contain', 'Advisory statement');
                 cy.get('#cke_rek-advisory-statement-editor').should('exist');
                 cy.readCKEditor('rek-advisory-statement').should(text => {
-                    // prettier-ignore
-                    expect(text).to.contain(
-                        record.fez_record_search_key_advisory_statement.rek_advisory_statement
-                    );
+                    expect(text).to.contain(record.fez_record_search_key_advisory_statement.rek_advisory_statement);
                 });
             });
     });

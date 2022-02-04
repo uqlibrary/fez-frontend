@@ -1,4 +1,5 @@
 import { AuthorsCitationView, styles } from './AuthorsCitationView';
+import { pathConfig } from 'config/pathConfig';
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
@@ -692,5 +693,47 @@ describe('AuthorsCitationView', () => {
                 },
             ],
         });
+    });
+
+    it('should render component with link containing contributor id', () => {
+        const testObject = {
+            fez_record_search_key_contributor: [
+                {
+                    rek_contributor_id: 3234727,
+                    rek_contributor_pid: 'UQ:07ee065',
+                    rek_contributor_xsdmf_id: null,
+                    rek_contributor: 'Fitzgerald, Lisa',
+                    rek_contributor_order: 2,
+                },
+            ],
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id_id: 2406373,
+                    rek_contributor_id_pid: 'UQ:07ee065',
+                    rek_contributor_id_xsdmf_id: null,
+                    rek_contributor_id: 74066,
+                    rek_contributor_id_order: 2,
+                    rek_contributor_id_lookup: 'Fitzgerald, Lisa J.',
+                },
+            ],
+        };
+        const wrapper = setup({
+            publication: testObject,
+            getLink: pathConfig.list.contributor,
+            searchKey: {
+                key: 'fez_record_search_key_contributor',
+                subkey: 'rek_contributor',
+                order: 'rek_contributor_order',
+            },
+            idSearchKey: {
+                idKey: 'fez_record_search_key_contributor_id',
+                idSubkey: 'rek_contributor_id',
+                idOrder: 'rek_contributor_id_order',
+            },
+            showLink: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find({ 'data-testid': 'rek-contributor-0-link' }).length).toEqual(3);
+        expect(wrapper.find('a').prop('href')).toContain('rek_contributor_id%5D%5Blabel%5D=74066+(Fitzgerald%2C+Lisa)');
     });
 });

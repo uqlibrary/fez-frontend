@@ -18,6 +18,7 @@ exports[`ThesisSubmission should display confirmation box before submission 1`] 
 
 exports[`ThesisSubmission should display successfull submission screen 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -81,6 +82,7 @@ Object {
 
 exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Higher degree by research thesis deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -136,6 +138,7 @@ exports[`ThesisSubmission should render hdr thesis submission acknowledgement 1`
 
 exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 <StandardPage
+  standardPageId="rhd-submission"
   title="Higher degree by research thesis deposit"
 >
   <ConfirmDiscardFormChanges
@@ -171,47 +174,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <Alert
-            alertId="alert-warning-rdm-redirect"
-            allowDismiss={false}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message={
-              <ul>
-                <li>
-                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
-                   
-                  <a
-                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
-                  >
-                    this process
-                  </a>
-                  . Please see the
-                   
-                  <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
-                  >
-                    UQRDM thesis submission guide
-                  </a>
-                   
-                  for more information.
-                </li>
-                <li>
-                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
-                </li>
-              </ul>
-            }
-            showLoader={false}
-            type="warning"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
@@ -285,7 +247,6 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
                   ariaLabel="Select a thesis type"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
@@ -677,6 +638,7 @@ exports[`ThesisSubmission should render hdr thesis submission form 1`] = `
 
 exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))
@@ -732,6 +694,7 @@ exports[`ThesisSubmission should render sbs thesis submission acknowledgement 1`
 
 exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
 <StandardPage
+  standardPageId="rhd-submission"
   title="Professional doctorate deposit"
 >
   <ConfirmDiscardFormChanges
@@ -767,47 +730,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={12}
-        >
-          <Alert
-            alertId="alert-warning-rdm-redirect"
-            allowDismiss={false}
-            customIcon={null}
-            customType={null}
-            disableAlertClick={false}
-            dismissTitle="Click to dismiss this alert"
-            message={
-              <ul>
-                <li>
-                  If you are submitting your thesis for the first time, please submit via UQ Research Data Manager (UQRDM) following
-                   
-                  <a
-                    href="https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission"
-                  >
-                    this process
-                  </a>
-                  . Please see the
-                   
-                  <a
-                    href="https://guides.library.uq.edu.au/for-researchers/uq-research-data-manager/help-for-hdrs#s-lg-box-21905376"
-                  >
-                    UQRDM thesis submission guide
-                  </a>
-                   
-                  for more information.
-                </li>
-                <li>
-                  If you currently have a thesis already under examination and submitted your original thesis via UQ eSpace please use the form below.
-                </li>
-              </ul>
-            }
-            showLoader={false}
-            type="warning"
-            wiggle={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
           xs={12}
@@ -881,7 +803,6 @@ exports[`ThesisSubmission should render sbs thesis submission form 1`] = `
                   ariaLabel="Select a thesis type"
                   component={[Function]}
                   disabled={false}
-                  genericSelectFieldId="rek-genre-type"
                   id="thesis-subtype"
                   itemsList={
                     Array [
@@ -1285,6 +1206,7 @@ Array [
 
 exports[`ThesisSubmission should show the file upload failure alert 1`] = `
 <StandardPage
+  standardPageId="rhd-submission-succeeded"
   title="Professional doctorate deposit"
 >
   <WithStyles(ForwardRef(Grid))

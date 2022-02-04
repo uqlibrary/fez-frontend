@@ -7776,14 +7776,15 @@ exports[`PublicationCitation  should render component with publication from mult
             variant="caption"
           >
             Found in: 
-            <WithStyles(ExternalLink)
+            <ExternalLink
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+              id="publication-source-espace"
               key="source_0"
             >
               eSpace
-            </WithStyles(ExternalLink)>
+            </ExternalLink>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -8702,14 +8703,15 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             variant="caption"
           >
             Found in: 
-            <WithStyles(ExternalLink)
+            <ExternalLink
               aria-label="Link to eSpace will open in a new window."
               className="publicationSource"
               href="https://fez-staging.library.uq.edu.au/view/UQ:224457"
+              id="publication-source-espace"
               key="source_0"
             >
               eSpace
-            </WithStyles(ExternalLink)>
+            </ExternalLink>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -8762,9 +8764,10 @@ Array [
 `;
 
 exports[`PublicationCitation  should render publication with citation metric 1`] = `
-<WithStyles(ExternalLink)
+<ExternalLink
   aria-label="Full citation in Altmetric will open in a new window"
   href="http://www.test.com"
+  id="my-trending-pubs-altmetric"
   openInNewIcon={false}
   title="Full citation in Altmetric will open in a new window"
 >
@@ -8797,7 +8800,7 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       </WithStyles(ForwardRef(Typography))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
-</WithStyles(ExternalLink)>
+</ExternalLink>
 `;
 
 exports[`PublicationCitation  should render publication with citation metric 2`] = `null`;

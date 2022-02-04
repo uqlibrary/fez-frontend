@@ -18,6 +18,12 @@ context('As an admin,', () => {
             .should('exist')
             .click();
 
+        // Confirm that alert badges are present when in tabbed mode
+        cy.adminEditTabbedView();
+        cy.adminEditCheckTabErrorBadge('bibliographic', 3);
+        cy.adminEditCheckTabErrorBadge('files');
+        cy.adminEditTabbedView(false);
+
         // Fill required fields
         cy.typeCKEditor('rek-title', 'Test title');
         cy.get('[data-testid=rek-date-year-input]').type('2020');

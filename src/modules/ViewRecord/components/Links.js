@@ -15,7 +15,7 @@ import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig } from 'config';
-import { DOI_ORG_PREFIX } from 'config/doi';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import moment from 'moment';
 
 const styles = theme => ({
@@ -60,7 +60,7 @@ export class LinksClass extends PureComponent {
     );
 
     getDOILink = (doi, openAccessStatus) => {
-        if (doi.indexOf(DOI_ORG_PREFIX) === -1) {
+        if (doi.indexOf(DOI_CROSSREF_PREFIX) === -1 && doi.indexOf(DOI_DATACITE_PREFIX) === -1) {
             return {
                 index: 'doi',
                 link: <DoiCitationView doi={doi} />,
@@ -86,6 +86,7 @@ export class LinksClass extends PureComponent {
             index: 'google',
             link: (
                 <ExternalLink
+                    id="google-scholar"
                     href={locale.viewRecord.sections.links.googleScholar.linkPrefix.replace('[title]', title)}
                     title={locale.viewRecord.sections.links.googleScholar.linkDescription}
                 >
@@ -148,7 +149,7 @@ export class LinksClass extends PureComponent {
         return {
             index: index,
             link: (
-                <ExternalLink href={link.rek_link} title={linkDescription}>
+                <ExternalLink href={link.rek_link} title={linkDescription} id={`publication-${index}`}>
                     {link.rek_link}
                 </ExternalLink>
             ),
@@ -234,9 +235,12 @@ export class LinksClass extends PureComponent {
                         </Grid>
                     </Hidden>
                     {// if record has a PubMedCentral Id - display link, should be always OA
-                    // prettier-ignore
-                    !!pubmedCentralId &&
-                        <this.LinkRow linkId="rek-pubmed-central-id" {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
+                    !!pubmedCentralId && (
+                        <this.LinkRow
+                            linkId="rek-pubmed-central-id"
+                            {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)}
+                        />
+                    )}
                     {// if record has a DOI - display a link, should be OA or OA with a date
                     !!doi && <this.LinkRow linkId="rek-doi" {...this.getDOILink(doi, doiOpenAccessStatus)} />}
                     {// record has OA status of "Link (no DOI)" and has no actual links of its own

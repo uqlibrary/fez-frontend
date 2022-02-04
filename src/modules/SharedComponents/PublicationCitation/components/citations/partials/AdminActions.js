@@ -7,7 +7,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { debounce } from 'throttle-debounce';
 
 import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
-import { DOI_ORG_PREFIX } from 'config/doi';
+import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     let fullUri = uri;
@@ -32,7 +32,7 @@ export const AdminActions = ({
     const recordType = (publication.rek_object_type_lookup && publication.rek_object_type_lookup.toLowerCase()) || '';
     const isTypeRecord = recordType === RECORD_TYPE_RECORD;
     const doi = !!publication.fez_record_search_key_doi && publication.fez_record_search_key_doi.rek_doi;
-    const hasUQDoi = !!doi && doi.indexOf(DOI_ORG_PREFIX) === 0;
+    const hasUQDoi = !!doi && (doi.indexOf(DOI_CROSSREF_PREFIX) === 0 || doi.indexOf(DOI_DATACITE_PREFIX) === 0);
 
     const handleClick = event => {
         setAnchorEl(event.currentTarget);

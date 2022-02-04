@@ -2118,6 +2118,18 @@ export default {
                                 }) ||
                             null,
                     },
+                    mtj_jnl_id: {
+                        order: 16,
+                        map: 'Journal ID',
+                        title: 'Journal ID',
+                        combiner: 'is',
+                        type: 'TextField',
+                        hint: 'Type an journal ID to seach',
+                        validation: ['required'],
+                        ariaLabel: 'Begin typing an journal ID',
+                        id: 'mtj_jnl_id',
+                        disabled: true,
+                    },
                 },
                 openAccess: {
                     title: 'Open access',
@@ -2267,6 +2279,15 @@ export default {
                 openInNewWindow: 'Open/Download file in a new window',
                 close: 'Close',
             },
+            downloadButtonLabel: 'Download file',
+            licenceConfirmation: licence =>
+                (!!licence && {
+                    confirmationTitle: licence.text,
+                    confirmationMessage: licence?.description?.join(' '),
+                    confirmButtonLabel: 'I agree',
+                    cancelButtonLabel: 'Cancel',
+                }) ||
+                {},
         },
         digiTeam: {
             batchImport: {
@@ -2986,6 +3007,37 @@ export default {
                 confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
             }),
             bulkUpdatesForms: {
+                createOrUpdateDoiForm: {
+                    formLabels: {
+                        doi: 'DOIs',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Confirm',
+                    },
+                    alert: {
+                        message: 'Would you like to create or update existing DOIs for the selected records?',
+                        type: 'info',
+                    },
+                    collectionAlert: {
+                        title: 'Note:',
+                        message:
+                            'There are one or more collections among the selected records. The changes will be apply to child records too.',
+                        type: 'warning',
+                    },
+                    submittingAlert: {
+                        title: 'Bulk create/update DOIs',
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    },
+                    successAlert: {
+                        title: 'Bulk create/update DOIs',
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    },
+                    errorAlert: {
+                        title: 'Bulk create/update DOIs',
+                        type: 'error',
+                    },
+                },
                 copyToOrRemoveFromCollectionForm: {
                     formLabels: {
                         collection: 'Collection(s)',
@@ -3153,7 +3205,7 @@ export default {
             infoTextAlert: {
                 type: 'info',
                 message:
-                    'Please record your current editorial appointment on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You should only record your current editorial appointments.',
+                    'Please record your editorial appointments on this page. This information will be made available to downstream systems such as the Individual Activity Profile (IAP). You only need to record your current editorial appointments.',
             },
             header: {
                 columns: {
@@ -3181,11 +3233,11 @@ export default {
                     otherRoleHint: 'Please specify the other role name',
                     startYearLabel: 'Start year',
                     startYearHint: 'Please type in start year',
-                    startYearErrorMessage: 'Year must be current or previous year',
+                    startYearErrorMessage: 'Year must be before or the same as the current year',
                     endYearLabel: 'End year',
                     endYearCurrentYearLabel: 'Current',
                     endYearHint: 'Current or future year only',
-                    endYearErrorMessage: 'Year must be current or future year',
+                    endYearErrorMessage: 'Year must be after or the same as the start year',
                     addButtonTooltip: 'Add new editorial appointment',
                     editButtonTooltip: 'Edit this editorial appointment',
                     deleteButtonTooltip: 'Delete this editorial appointment',

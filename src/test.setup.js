@@ -1,7 +1,7 @@
 /* eslint-env jest */
 import React from 'react';
 
-import Enzyme, { shallow, render, mount } from 'enzyme';
+import Enzyme, { mount, render, shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import toJson from 'enzyme-to-json';
 import '@babel/polyfill';
@@ -16,6 +16,8 @@ import { mui1theme } from 'config';
 import { api, sessionApi } from 'config/axios';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import prettyFormat from 'pretty-format';
+import renderer from 'react-test-renderer';
 
 // jest.mock('@date-io/moment');
 import MomentUtils from '@date-io/moment';
@@ -77,6 +79,12 @@ const getElement = (component, props, args = {}) => {
     );
 };
 
+global.componentToString = component => {
+    return prettyFormat(renderer.create(component), {
+        plugins: [prettyFormat.plugins.ReactTestComponent],
+    }).toString();
+};
+
 // React Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -106,3 +114,4 @@ const MockDate = require('mockdate');
 MockDate.set('6/30/2017');
 
 global.mockDate = MockDate;
+global.d = console.log;

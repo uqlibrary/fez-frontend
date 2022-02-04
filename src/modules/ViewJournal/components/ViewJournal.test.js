@@ -88,11 +88,11 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('ulr-title-header')).toHaveTextContent('View journal in Ulrichs');
         expect(getByTestId('ulr-title-0-value')).toHaveTextContent('American Journal of Public Health');
-        expect(getByTestId('ulr-title-0-lookup')).toHaveAttribute(
+        expect(getByTestId('ulr-title-0-lookup-link')).toHaveAttribute(
             'href',
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41698',
         );
-        expect(getByTestId('ulr-title-1-lookup')).toHaveAttribute(
+        expect(getByTestId('ulr-title-1-lookup-link')).toHaveAttribute(
             'href',
             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/41699',
         );
@@ -109,7 +109,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-doaj-homepage-url-header')).toHaveTextContent('Journal home page');
         expect(getByTestId('jnl-doaj-homepage-url-value')).toHaveTextContent('https://www.hindawi.com/journals/aaa');
-        expect(getByTestId('jnl-doaj-homepage-url-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-homepage-url-lookup-link')).toHaveAttribute(
             'href',
             'https://www.hindawi.com/journals/aaa',
         );
@@ -121,7 +121,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
             'Creative Commons Attribution 4.0 International (CC BY 4.0)',
         );
-        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup-link')).toHaveAttribute(
             'href',
             'https://creativecommons.org/licenses/by/4.0/deed.en',
         );
@@ -134,7 +134,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('ulr-open-access-jnl-issn-header')).toHaveTextContent('View in DOAJ');
         expect(getByTestId('ulr-open-access-jnl-issn-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('ulr-open-access-jnl-issn-lookup')).toHaveAttribute(
+        expect(getByTestId('ulr-open-access-jnl-issn-lookup-link')).toHaveAttribute(
             'href',
             'https://doaj.org/toc/0090-0036',
         );
@@ -143,12 +143,12 @@ describe('ViewJournal', () => {
             'Sherpa Romeo open access and archiving policies',
         );
         expect(getByTestId('srm-journal-link-0-value')).toHaveTextContent('0090-0036');
-        expect(getByTestId('srm-journal-link-0-lookup')).toHaveAttribute(
+        expect(getByTestId('srm-journal-link-0-lookup-link')).toHaveAttribute(
             'href',
             'https://v2.sherpa.ac.uk/id/publication/10303',
         );
         expect(getByTestId('srm-journal-link-1-value')).toHaveTextContent('1541-0048');
-        expect(getByTestId('srm-journal-link-1-lookup')).toHaveAttribute(
+        expect(getByTestId('srm-journal-link-1-lookup-link')).toHaveAttribute(
             'href',
             'https://v2.sherpa.ac.uk/id/publication/10303',
         );
@@ -170,14 +170,14 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jcr-home-page-scie-header')).toHaveTextContent('JCR home page');
         expect(getByTestId('jcr-home-page-scie-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-scie-lookup')).toHaveAttribute(
+        expect(getByTestId('jcr-home-page-scie-lookup-link')).toHaveAttribute(
             'href',
             'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
         );
 
         expect(getByTestId('jcr-more-info-scie-header')).toHaveTextContent('JCR more info');
         expect(getByTestId('jcr-more-info-scie-value')).toHaveTextContent('More info about JCR SCIE');
-        expect(getByTestId('jcr-more-info-scie-lookup')).toHaveAttribute(
+        expect(getByTestId('jcr-more-info-scie-lookup-link')).toHaveAttribute(
             'href',
             'https://clarivate.com/webofsciencegroup/solutions/webofscience-scie',
         );
@@ -195,6 +195,9 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q1');
 
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(getByTestId('jnl-jcr-scie-category-jif-percentile-value')).toHaveTextContent('89.99');
+
         fireEvent.click(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-1-heading'));
 
         expect(getByTestId('jnl-jcr-scie-category-ranking-header')).toHaveTextContent('Ranking');
@@ -202,6 +205,9 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-jcr-scie-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-scie-category-quartile-value')).toHaveTextContent('Q2');
+
+        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-jcr-scie-category-jif-percentile-value')).not.toBeInTheDocument();
 
         // ******************************************************************
         // Clarivate Journal Citation Reports - Social Science Citation index
@@ -220,14 +226,14 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jcr-home-page-ssci-header')).toHaveTextContent('JCR home page');
         expect(getByTestId('jcr-home-page-ssci-value')).toHaveTextContent('Go to JCR website');
-        expect(getByTestId('jcr-home-page-ssci-lookup')).toHaveAttribute(
+        expect(getByTestId('jcr-home-page-ssci-lookup-link')).toHaveAttribute(
             'href',
             'https://jcr-clarivate-com.ezproxy.library.uq.edu.au',
         );
 
         expect(getByTestId('jcr-more-info-ssci-header')).toHaveTextContent('JCR more info');
         expect(getByTestId('jcr-more-info-ssci-value')).toHaveTextContent('More info about JCR SSCI');
-        expect(getByTestId('jcr-more-info-ssci-lookup')).toHaveAttribute(
+        expect(getByTestId('jcr-more-info-ssci-lookup-link')).toHaveAttribute(
             'href',
             'https://clarivate.com/webofsciencegroup/solutions/webofscience-ssci',
         );
@@ -242,6 +248,9 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-jcr-ssci-category-quartile-header')).toHaveTextContent('Quartile');
         expect(getByTestId('jnl-jcr-ssci-category-quartile-value')).toHaveTextContent('Q1');
 
+        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-header')).toHaveTextContent('JIF Percentile');
+        expect(getByTestId('jnl-jcr-ssci-category-jif-percentile-value')).toHaveTextContent('99.00');
+
         // ******************************************************************
         // Elsevier CiteScore
         // ******************************************************************
@@ -253,7 +262,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-cite-score-source-id-header')).toHaveTextContent('CiteScore score');
         expect(getByTestId('jnl-cite-score-source-id-value')).toHaveTextContent('Go to record in CiteScore');
-        expect(getByTestId('jnl-cite-score-source-id-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-cite-score-source-id-lookup-link')).toHaveAttribute(
             'href',
             'https://www-scopus-com.ezproxy.library.uq.edu.au/sourceid/19561',
         );
@@ -263,7 +272,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('jnl-cite-score-more-info-header')).toHaveTextContent('CiteScore more info');
         expect(getByTestId('jnl-cite-score-more-info-value')).toHaveTextContent('More info about CiteScore');
-        expect(getByTestId('jnl-cite-score-more-info-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-cite-score-more-info-lookup-link')).toHaveAttribute(
             'href',
             'https://service.elsevier.com/app/answers/detail/a_id/14880/supporthub/scopus/',
         );
@@ -341,9 +350,14 @@ describe('ViewJournal', () => {
         // ******************************************************************
         // Listed in
         // ******************************************************************
-        expect(queryByTestId('jnl-abdc-rating-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).not.toBeInTheDocument();
-        expect(queryByTestId('jnl-abdc-source-date-header')).not.toBeInTheDocument();
+        expect(queryByTestId('jnl-abdc-rating-header')).toHaveTextContent(
+            'Australian Business Deans Council (ABDC) Quality Rating',
+        );
+        expect(queryByTestId('jnl-abdc-rating-value')).toHaveTextContent('A*');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-header')).toHaveTextContent('ABDC Field of Research');
+        expect(queryByTestId('jnl-abdc-for-code-lookup-value')).toHaveTextContent('1503 Business and Management');
+        expect(queryByTestId('jnl-abdc-source-date-header')).toHaveTextContent('ABDC Listed Year');
+        expect(queryByTestId('jnl-abdc-source-date-value')).toHaveTextContent('2019');
 
         expect(getByTestId('jnl-cwts-source-year-header')).toHaveTextContent('CWTS Leiden Ranking');
         expect(getByTestId('jnl-cwts-source-year-value')).toHaveTextContent('Yes, 2020');
@@ -367,7 +381,7 @@ describe('ViewJournal', () => {
         );
 
         expect(getByTestId('jnl-nature-index-source-date-header')).toHaveTextContent('Nature Index');
-        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('No');
+        expect(getByTestId('jnl-nature-index-source-date-value')).toHaveTextContent('Yes, 2019');
     });
 
     it('should render correct creative licenses (BY-ND)', async () => {
@@ -389,7 +403,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
             'Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)',
         );
-        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup-link')).toHaveAttribute(
             'href',
             'https://creativecommons.org/licenses/by-nd/4.0/deed.en',
         );
@@ -414,7 +428,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
             'Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)',
         );
-        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup-link')).toHaveAttribute(
             'href',
             'https://creativecommons.org/licenses/by-nc/4.0/deed.en',
         );
@@ -439,7 +453,7 @@ describe('ViewJournal', () => {
         expect(getByTestId('jnl-doaj-by-sa-nd-nc-value')).toHaveTextContent(
             'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
         );
-        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup')).toHaveAttribute(
+        expect(getByTestId('jnl-doaj-by-sa-nd-nc-lookup-link')).toHaveAttribute(
             'href',
             'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
         );
@@ -497,5 +511,20 @@ describe('ViewJournal', () => {
             'Public, Environmental & Occupational Health (0090-0036)',
         );
         expect(getByTestId('jnl-wos-category-ssci-0-1-value')).toHaveTextContent('Mental & Dental Health');
+    });
+    // Test for title change
+    it('Should correctly show required title change', async () => {
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        // Regex: Exact pattern Match (between start and end) - Must match exactly.
+        expect(getByTestId('journal-details-uqData-header')).toHaveTextContent(/^UQ eSpace$/);
     });
 });

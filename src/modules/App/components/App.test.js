@@ -1,8 +1,6 @@
-import { AppClass } from './App';
-import App from './App';
+import App, { AppClass } from './App';
 import { accounts, authorDetails, currentAuthor } from 'mock/data';
-import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, pathConfig } from 'config';
-import mui1theme from 'config';
+import mui1theme, { AUTH_URL_LOGIN, AUTH_URL_LOGOUT, pathConfig, routes } from 'config';
 import Cookies from 'js-cookie';
 
 function setup(testProps = {}) {
@@ -511,6 +509,10 @@ describe('Application component', () => {
             },
             {
                 pathname: '/view/UQ:123432',
+                isPublic: true,
+            },
+            {
+                pathname: `/view/${routes.notFound}`,
                 isPublic: true,
             },
             {

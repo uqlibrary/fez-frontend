@@ -40,7 +40,7 @@ exports[`BookChapterForm renders  component 1`] = `
             multiline={true}
             name="rek_title"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [
@@ -768,7 +768,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
             multiline={true}
             name="rek_title"
             required={true}
-            rows={1}
+            rows={3}
             type="text"
             validate={
               Array [

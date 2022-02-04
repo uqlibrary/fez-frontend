@@ -19,7 +19,7 @@ describe('Component SocialShare', () => {
     it('should fire print method on click', () => {
         global.print = jest.fn();
         const wrapper = setup({});
-        wrapper.find('WithStyles(ExternalLink)#print').simulate('click');
+        wrapper.find('ExternalLink#print').simulate('click');
         expect(global.print).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

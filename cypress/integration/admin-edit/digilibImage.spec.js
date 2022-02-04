@@ -90,9 +90,8 @@ context('Digilib Image admin edit', () => {
                     .eq(5)
                     .within(() => {
                         cy.get('h4').should('contain', 'Structural system(s)');
-                        // prettier-ignore
                         const pubs = record.fez_record_search_key_structural_systems.map(
-                            pub => pub.rek_structural_systems
+                            pub => pub.rek_structural_systems,
                         );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -132,9 +131,8 @@ context('Digilib Image admin edit', () => {
                     .eq(8)
                     .within(() => {
                         cy.get('h4').should('contain', 'Surrounding feature(s)');
-                        // prettier-ignore
                         const pubs = record.fez_record_search_key_surrounding_features.map(
-                            pub => pub.rek_surrounding_features
+                            pub => pub.rek_surrounding_features,
                         );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -148,9 +146,8 @@ context('Digilib Image admin edit', () => {
                     .eq(9)
                     .within(() => {
                         cy.get('h4').should('contain', 'Interior feature(s)');
-                        // prettier-ignore
                         const pubs = record.fez_record_search_key_interior_features.map(
-                            pub => pub.rek_interior_features
+                            pub => pub.rek_interior_features,
                         );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -164,9 +161,8 @@ context('Digilib Image admin edit', () => {
                     .eq(10)
                     .within(() => {
                         cy.get('h4').should('contain', 'Building material(s)');
-                        // prettier-ignore
                         const pubs = record.fez_record_search_key_building_materials.map(
-                            pub => pub.rek_building_materials
+                            pub => pub.rek_building_materials,
                         );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -206,9 +202,8 @@ context('Digilib Image admin edit', () => {
                     .eq(13)
                     .within(() => {
                         cy.get('h4').should('contain', 'Alternative title(s)');
-                        // prettier-ignore
                         const pubs = record.fez_record_search_key_alternative_title.map(
-                            pub => pub.rek_alternative_title
+                            pub => pub.rek_alternative_title,
                         );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -244,9 +239,8 @@ context('Digilib Image admin edit', () => {
                     .eq(0)
                     .within(() => {
                         cy.get('h4').should('contain', 'Architects');
-                        // prettier-ignore
                         const architects = record.fez_record_search_key_architect_name.map(
-                            item => item.rek_architect_name
+                            item => item.rek_architect_name,
                         );
                         architects.forEach((author, index) => {
                             cy.get(`[data-testid=rek-architect-name-list-row-${index}-name-as-published]`).should(

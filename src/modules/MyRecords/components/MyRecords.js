@@ -256,6 +256,7 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                pagingId="my-records-paging-top"
                                             />
                                         </Grid>
                                         <Grid item xs={12}>
@@ -294,6 +295,7 @@ export default class MyRecords extends PureComponent {
                                                 pagingData={pagingData}
                                                 onPageChanged={this.pageChanged}
                                                 disabled={isLoadingOrExporting || this.state.bulkExportSelected}
+                                                pagingId="my-records-paging-bottom"
                                             />
                                         </Grid>
                                     </Grid>
@@ -301,37 +303,31 @@ export default class MyRecords extends PureComponent {
                             </Grid>
                         )}
                     {// show available filters or selected filters (even if there are no results)
-                    /* prettier-ignore */
-                    ((
-                            this.props.publicationsListFacets &&
-                            Object.keys(this.props.publicationsListFacets).length > 0
-                        ) ||
+                    ((this.props.publicationsListFacets && Object.keys(this.props.publicationsListFacets).length > 0) ||
                         (this.state.activeFacets && this.hasDisplayableFilters(this.state.activeFacets.filters)) ||
                         (this.state.activeFacets &&
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0) ||
                         (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                            <Hidden smDown>
-                                <Grid item md={3}>
-                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                        <FacetsFilter
-                                            facetsData={this.props.publicationsListFacets}
-                                            onFacetsChanged={this.facetsChanged}
-                                            activeFacets={this.state.activeFacets}
-                                            initialFacets={this.props.initialFacets}
-                                            disabled={isLoadingOrExporting}
-                                            excludeFacetsList={txt.facetsFilter.excludeFacetsList}
-                                            isMyDataSetPage={
-                                                this.props.location.pathname === pathConfig.dataset.mine
-                                            }
-                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                            showOpenAccessFilter
-                                        />
-                                    </StandardRighthandCard>
-                                </Grid>
-                            </Hidden>
-                        )}
+                        <Hidden smDown>
+                            <Grid item md={3}>
+                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                    <FacetsFilter
+                                        facetsData={this.props.publicationsListFacets}
+                                        onFacetsChanged={this.facetsChanged}
+                                        activeFacets={this.state.activeFacets}
+                                        initialFacets={this.props.initialFacets}
+                                        disabled={isLoadingOrExporting}
+                                        excludeFacetsList={txt.facetsFilter.excludeFacetsList}
+                                        isMyDataSetPage={this.props.location.pathname === pathConfig.dataset.mine}
+                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                        showOpenAccessFilter
+                                    />
+                                </StandardRighthandCard>
+                            </Grid>
+                        </Hidden>
+                    )}
                 </Grid>
             </StandardPage>
         );

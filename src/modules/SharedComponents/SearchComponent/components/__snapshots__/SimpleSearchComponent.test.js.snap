@@ -97,7 +97,7 @@ exports[`SimpleSearchComponent should render default view 1`] = `
           data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
-          id="simpleSearchButton"
+          id="simple-search-button"
           onClick={[Function]}
           variant="contained"
         >
@@ -190,7 +190,7 @@ exports[`SimpleSearchComponent should render show prefix icon in the search box 
           data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
-          id="simpleSearchButton"
+          id="simple-search-button"
           onClick={[Function]}
           variant="contained"
         >
@@ -355,7 +355,7 @@ exports[`SimpleSearchComponent should set search value from prop 1`] = `
           data-testid="simple-search-button"
           disabled={false}
           fullWidth={true}
-          id="simpleSearchButton"
+          id="simple-search-button"
           onClick={[Function]}
           variant="contained"
         >

@@ -1,11 +1,11 @@
 import locale from 'locale/global';
 import templates from 'locale/templates';
-import { CONTENT_INDICATORS } from 'config/general';
 import {
     FILE_ACCESS_CONDITION_CLOSED,
-    FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_INHERIT,
+    FILE_ACCESS_CONDITION_OPEN,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { contentIndicators } from '../config';
 
 const moment = require('moment');
 
@@ -20,10 +20,15 @@ export const getIssueValues = data => {
     const newContentIndicators =
         !!data.contentIndicators &&
         data.contentIndicators.filter(item => initialContentIndicators.indexOf(item) === -1);
+    const availableContentIndicators = contentIndicators(
+        (data.publication && data.publication.rek_display_type) || null,
+    );
     return {
         contentIndicators:
             (newContentIndicators &&
-                newContentIndicators.map(id => CONTENT_INDICATORS.find(item => item.value === id).text).join('; ')) ||
+                newContentIndicators
+                    .map(id => availableContentIndicators.find(item => item.value === id).text)
+                    .join('; ')) ||
             null,
         comments: data.comments || null,
         files:
@@ -127,7 +132,9 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     }));
     const attachmentEmbargoDates = files
         .map((item, index) => {
-            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
+            if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) {
+                return null;
+            }
             return {
                 rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
                 rek_file_attachment_embargo_date_order: initialCount + index + 1,
@@ -180,7 +187,12 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
  * @returns {Object} formatted {fez_record_search_key_author} for record request
  */
 export const getRecordAuthorsSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author: [],
+        };
+    }
+
     return {
         fez_record_search_key_author: authors.map((item, index) => ({
             rek_author: item.nameAsPublished,
@@ -230,7 +242,11 @@ export const getRecordSupervisorsSearchKey = supervisors => {
  */
 export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
     // return empty object if all parameters are null
-    if ((!authors || authors.length === 0) && !defaultAuthorId) return {};
+    if ((!authors || authors.length === 0) && !defaultAuthorId) {
+        return {
+            fez_record_search_key_author_id: [],
+        };
+    }
 
     // return default author if provided
     if ((!authors || authors.length === 0) && defaultAuthorId) {
@@ -260,7 +276,14 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
 };
 
 export const getRecordAuthorAffiliationSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_affiliation_id: [],
+            fez_record_search_key_author_affiliation_name: [],
+            fez_record_search_key_author_affiliation_country: [],
+            fez_record_search_key_author_affiliation_full_address: [],
+        };
+    }
 
     return {
         fez_record_search_key_author_affiliation_name: authors.map((item, index) => ({
@@ -271,7 +294,11 @@ export const getRecordAuthorAffiliationSearchKey = authors => {
 };
 
 export const getRecordAuthorAffiliationTypeSearchKey = authors => {
-    if (!authors || authors.length === 0) return {};
+    if (!authors || authors.length === 0) {
+        return {
+            fez_record_search_key_author_affiliation_type: [],
+        };
+    }
 
     return {
         fez_record_search_key_author_affiliation_type: authors.map((item, index) => ({
@@ -701,7 +728,9 @@ export const getSearchKey = (searchKey, currentAuthorOrder, initialValues = [], 
                   if (initialValue[searchKey.value.orderKey] === currentAuthorOrder) {
                       authorOrderMatched = true;
                       return currentAuthorSearchKeyObject;
-                  } else return initialValue;
+                  } else {
+                      return initialValue;
+                  }
               })
             : [currentAuthorSearchKeyObject];
 
@@ -1134,7 +1163,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
 export const getHerdcCodeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_herdc_code && record.rek_herdc_code.value === null) {
+    if (record.rek_herdc_code === '0' || (!!record.rek_herdc_code && record.rek_herdc_code.value === null)) {
         return {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
@@ -1168,9 +1197,12 @@ export const getHerdcStatusSearchKey = record => {
 
 export const getOpenAccessStatusTypeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null) {
+    if (
+        record.rek_oa_status_type === '0' ||
+        (!!record.rek_oa_status_type && record.rek_oa_status_type.value === null)
+    ) {
         return {
-            fez_record_search_key_oa_status_type: {},
+            fez_record_search_key_oa_status_type: null,
         };
     }
 
@@ -1331,6 +1363,12 @@ export const getNotesSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const getThesisTypeSearchKey = type => ({
+    fez_record_search_key_thesis_type: {
+        rek_thesis_type: type,
+    },
+});
+
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;
     const [primaryKey, subKey] = searchKey.split('.');
@@ -1421,6 +1459,17 @@ export const getCopyToCollectionData = (records, data) => {
                         rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
                     })),
             ],
+        };
+    });
+};
+
+export const createOrUpdateDoi = records => {
+    return records.map(record => {
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_doi: {
+                rek_doi: true,
+            },
         };
     });
 };
