@@ -48,7 +48,8 @@ export default class NewRecord extends PureComponent {
 
     render() {
         // wait for author to load before rendering
-        if (!this.props.author) {
+        // eslint-disable-next-line camelcase
+        if (!this.props.author?.aut_id) {
             return <span />;
         }
 

@@ -8,8 +8,10 @@ import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import { AuthorsPublicationsPerYearChart } from 'modules/SharedComponents/Toolbox/Charts';
-import { AuthorsPublicationTypesCountChart } from 'modules/SharedComponents/Toolbox/Charts';
+import {
+    AuthorsPublicationsPerYearChart,
+    AuthorsPublicationTypesCountChart,
+} from 'modules/SharedComponents/Toolbox/Charts';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';

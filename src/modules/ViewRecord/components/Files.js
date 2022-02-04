@@ -374,7 +374,8 @@ export class FilesClass extends Component {
         );
         return (
             (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin)) ||
-            (this.props.author && this.props.author.pol_id === 1)
+            // eslint-disable-next-line camelcase
+            this.props.author?.pol_id === 1
         );
     };
 

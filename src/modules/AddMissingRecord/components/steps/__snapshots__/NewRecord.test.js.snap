@@ -65,7 +65,7 @@ exports[`Add new record should render alert about file uploading or issue error 
       Object {
         "currentAuthor": Array [
           Object {
-            "authorId": "",
+            "authorId": 1,
             "nameAsPublished": "",
           },
         ],
