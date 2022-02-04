@@ -108,6 +108,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         <IconButton
                             onClick={handleDrawerToggle}
                             id="adminRecordDrawerCloseBtn"
+                            data-testid="btnAdminRecordDrawerCloseBtn"
                             aria-label="Close admin record drawer"
                         >
                             {/* istanbul ignore next */
