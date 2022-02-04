@@ -26,7 +26,7 @@ describe('general helpers', () => {
         expect(stripHtml('hello<br/> there')).toEqual('hello there');
     });
 
-    it('should hydrate data properly', () => {
+    it('should hydrate mock data properly', () => {
         const testdata = {
             total: 2,
             took: 1,
@@ -178,5 +178,22 @@ describe('general helpers', () => {
                 rek_subject_order: 2,
             },
         ]);
+    });
+
+    it('should handle hydration of bad mock data properly', () => {
+        const testdata = {
+            total: 2,
+            took: 1,
+            per_page: 999,
+            current_page: 1,
+            from: 1,
+            to: 2,
+            data: [
+                {
+                    rek_title: 'I dont have a PID',
+                },
+            ],
+        };
+        expect(() => hydrateMockSearchList(testdata)).toThrow('missing PID in data {"rek_title":"I dont have a PID"}');
     });
 });

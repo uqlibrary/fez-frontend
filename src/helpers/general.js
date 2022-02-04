@@ -15,7 +15,6 @@ export const stripHtml = html => {
 };
 
 export function hydrateMock(truncatedData) {
-    /* istanbul ignore next */
     if (!truncatedData.rek_pid) {
         throw Error('missing PID in data ' + JSON.stringify(truncatedData));
     }
@@ -59,7 +58,7 @@ export function hydrateMock(truncatedData) {
                     [`${shortKey}_xsdmf_id`]: null,
                     ...field,
                 };
-            } else {
+            } else if (field !== null) {
                 updateKeyWith = {
                     [`${shortKey}_id`]: 8967845, // any random number
                     [`${shortKey}_pid`]: truncatedData.rek_pid,
