@@ -24,6 +24,11 @@ describe('Detailed History', () => {
                     pre_date: '2020-01-02 14:00:00',
                     pre_detail: 'Second Element of the mock data',
                 },
+                {
+                    pre_id: 3,
+                    pre_date: '2020-01-03 10:00:00 UTC',
+                    pre_detail: 'Third Element of the mock data',
+                },
             ],
         });
     });
