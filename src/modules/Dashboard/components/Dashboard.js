@@ -113,6 +113,7 @@ export class DashboardClass extends PureComponent {
 
     constructor(props) {
         super(props);
+
         this.state = {
             dashboardPubsTabs: 1,
             orcidSyncStatusRefreshCount: 0,
@@ -120,7 +121,9 @@ export class DashboardClass extends PureComponent {
     }
 
     componentDidMount() {
-        if (this.props.account && this.props.account.id) {
+        if (this.props.account && this.props.account.id && this.props.author?.aut_id) {
+            // eslint-disable-next-line camelcase
+            // don't call the api for non author users since the api call requires an author
             this.props.actions.countPossiblyYourPublications(this.props.account.id);
             this.props.actions.loadAuthorPublicationsStats(this.props.account.id, this.props.authorDetails);
             !this.props.incomplete.publicationsList.length &&
@@ -217,9 +220,12 @@ export class DashboardClass extends PureComponent {
         const { classes } = this.props;
         const txt = locale.pages.dashboard;
         const loading =
-            this.props.loadingPublicationsByYear ||
-            this.props.accountAuthorDetailsLoading ||
-            this.props.loadingPublicationsStats;
+            // nothing to load for non author users
+            // eslint-disable-next-line camelcase
+            !!this.props.author?.aut_id &&
+            (this.props.loadingPublicationsByYear ||
+                this.props.accountAuthorDetailsLoading ||
+                this.props.loadingPublicationsStats);
         const userHasPublications =
             this.props.authorDetails &&
             this.props.authorDetails.espace &&

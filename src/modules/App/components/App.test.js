@@ -538,6 +538,7 @@ describe('Application component', () => {
         const testMethod = jest.fn();
         const wrapper = setup({
             account: { name: 'test1' },
+            author: { aut_id: 1 },
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),

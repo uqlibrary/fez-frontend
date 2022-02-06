@@ -3582,19 +3582,130 @@ exports[`Dashboard test publicationStats should not render stats 2 1`] = `
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      xs={true}
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
+      xs={12}
     >
-      <WithStyles(InlineLoader)
-        message="Loading your dashboard"
-      />
+      <ContextProvider
+        value={
+          Object {
+            "orcidSyncProps": Object {
+              "author": Object {
+                "data": Object {
+                  "aut_created_date": null,
+                  "aut_description": "",
+                  "aut_display_name": "Researcher, J",
+                  "aut_email": "",
+                  "aut_external_id": "0000040357",
+                  "aut_fname": "J",
+                  "aut_google_scholar_id": "kUemDfMAAAAJ",
+                  "aut_homepage_link": "",
+                  "aut_id": 410,
+                  "aut_is_orcid_sync_enabled": 1,
+                  "aut_is_scopus_id_authenticated": 1,
+                  "aut_lname": "Researcher",
+                  "aut_mname": "",
+                  "aut_mypub_url": "",
+                  "aut_orcid_id": "0000-0001-1111-1111",
+                  "aut_org_staff_id": "0001952",
+                  "aut_org_student_id": null,
+                  "aut_org_username": "uqresearcher",
+                  "aut_people_australia_id": "",
+                  "aut_position": "",
+                  "aut_publons_id": null,
+                  "aut_ref_num": "",
+                  "aut_researcher_id": "A-1137-2007",
+                  "aut_rid_last_updated": "2013-05-17",
+                  "aut_rid_password": "",
+                  "aut_scopus_id": "35478294000",
+                  "aut_student_username": null,
+                  "aut_title": "Professor",
+                  "aut_update_date": "2017-07-23",
+                  "pol_id": 3,
+                },
+              },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "data": Object {
+                "aut_created_date": null,
+                "aut_description": "",
+                "aut_display_name": "Researcher, J",
+                "aut_email": "",
+                "aut_external_id": "0000040357",
+                "aut_fname": "J",
+                "aut_google_scholar_id": "kUemDfMAAAAJ",
+                "aut_homepage_link": "",
+                "aut_id": 410,
+                "aut_is_orcid_sync_enabled": 1,
+                "aut_is_scopus_id_authenticated": 1,
+                "aut_lname": "Researcher",
+                "aut_mname": "",
+                "aut_mypub_url": "",
+                "aut_orcid_id": "0000-0001-1111-1111",
+                "aut_org_staff_id": "0001952",
+                "aut_org_student_id": null,
+                "aut_org_username": "uqresearcher",
+                "aut_people_australia_id": "",
+                "aut_position": "",
+                "aut_publons_id": null,
+                "aut_ref_num": "",
+                "aut_researcher_id": "A-1137-2007",
+                "aut_rid_last_updated": "2013-05-17",
+                "aut_rid_password": "",
+                "aut_scopus_id": "35478294000",
+                "aut_student_username": null,
+                "aut_title": "Professor",
+                "aut_update_date": "2017-07-23",
+                "pol_id": 3,
+              },
+            }
+          }
+          authorDetails={
+            Object {
+              "espace": Object {
+                "doc_count": 32,
+                "first_year": "1998",
+                "last_year": "2000",
+              },
+              "is_administrator": 0,
+              "is_super_administrator": 0,
+            }
+          }
+          history={Object {}}
+        />
+      </ContextProvider>
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
-      xs={true}
-    />
+      style={
+        Object {
+          "marginTop": -27,
+        }
+      }
+      xs={12}
+    >
+      <Alert
+        action={[Function]}
+        actionButtonLabel="Add a missing work"
+        allowDismiss={false}
+        customIcon={null}
+        customType={null}
+        disableAlertClick={false}
+        dismissTitle="Click to dismiss this alert"
+        message="We found nothing new for you to claim, but you may add a work any time."
+        showLoader={false}
+        title="Add your work to eSpace"
+        type="info_outline"
+        wiggle={null}
+      />
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </StandardPage>
 `;
@@ -6278,56 +6389,10 @@ exports[`Dashboard test should get styles for full render 1`] = `
             accountAuthorDetailsLoading={false}
             actions={
               Object {
-                "countPossiblyYourPublications": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "uqresearcher",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "type": "return",
-                      "value": undefined,
-                    },
-                  ],
-                },
-                "loadAuthorPublicationsStats": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      "uqresearcher",
-                      Object {
-                        "espace": Object {
-                          "doc_count": 32,
-                          "first_year": "1998",
-                          "last_year": "2000",
-                        },
-                        "is_administrator": 0,
-                        "is_super_administrator": 0,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "type": "return",
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "countPossiblyYourPublications": [MockFunction],
+                "loadAuthorPublicationsStats": [MockFunction],
                 "loadOrcidSyncStatus": [MockFunction],
-                "searchAuthorPublications": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {},
-                      "incomplete",
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "type": "return",
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "searchAuthorPublications": [MockFunction],
               }
             }
             author={

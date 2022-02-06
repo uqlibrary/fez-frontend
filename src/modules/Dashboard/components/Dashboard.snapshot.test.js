@@ -1,4 +1,4 @@
-import { DashboardClass, styles, fibonacci } from './Dashboard';
+import { DashboardClass, fibonacci, styles } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 
@@ -204,7 +204,7 @@ describe('Dashboard test', () => {
 
     it('handleTabChange method', () => {
         const value = 'test';
-        const wrapper = setup();
+        const wrapper = setup({ author: { aut_id: 1 } });
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
         expect(wrapper.state()).toEqual({

@@ -145,7 +145,15 @@ export class AppClass extends PureComponent {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
-        if (nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
+        if (
+            nextProps.account &&
+            this.props.account !== nextProps.account &&
+            !nextProps.accountLoading &&
+            // don't call the api for non author users since the api call requires an author
+            !nextProps.accountAuthorLoading &&
+            // eslint-disable-next-line camelcase
+            nextProps.author?.aut_id
+        ) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
