@@ -5656,6 +5656,31 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 </StandardPage>
 `;
 
+exports[`Dashboard test renders loading for authors 1`] = `
+<StandardPage>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(InlineLoader)
+        message="Loading your dashboard"
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;
+
 exports[`Dashboard test renders possibly your publications lure but not the add a record lure 1`] = `
 <StandardPage>
   <WithStyles(ForwardRef(Grid))
