@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 // forms & custom components
 import {
+    FacetsFilter,
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
-    FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -281,11 +281,10 @@ export default class PossiblyMyRecords extends PureComponent {
                                                                     pagingData={pagingData}
                                                                     onSortByChanged={this.sortByChanged}
                                                                     onPageSizeChanged={this.pageSizeChanged}
-                                                                    onExportPublications={this.handleExportPublications}
                                                                     disabled={
                                                                         this.props.loadingPossiblePublicationsList
                                                                     }
-                                                                    canUseExport={this.props.canUseExport}
+                                                                    canUseExport={false}
                                                                 />
                                                             </Grid>
                                                             <Grid item xs>

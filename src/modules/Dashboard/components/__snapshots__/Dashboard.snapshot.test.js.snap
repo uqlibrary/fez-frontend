@@ -6388,6 +6388,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 "publicationsListPagingData": Object {},
               }
             }
+            loadOrcidSyncDelay={5}
             loadingIncompleteRecordData={false}
             loadingOrcidSyncStatus={false}
             loadingPublicationsByYear={false}

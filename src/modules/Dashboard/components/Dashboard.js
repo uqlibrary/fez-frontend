@@ -8,8 +8,10 @@ import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import { AuthorsPublicationsPerYearChart } from 'modules/SharedComponents/Toolbox/Charts';
-import { AuthorsPublicationTypesCountChart } from 'modules/SharedComponents/Toolbox/Charts';
+import {
+    AuthorsPublicationsPerYearChart,
+    AuthorsPublicationTypesCountChart,
+} from 'modules/SharedComponents/Toolbox/Charts';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -52,9 +54,9 @@ export const styles = theme => ({
  *
  * @param {number} iteration
  */
-export const fibonacci = iteration => {
+export const fibonacci = (iteration, from = 0) => {
     let a = 1;
-    let b = 0;
+    let b = from;
     let temp;
     let num = iteration;
 
@@ -107,6 +109,7 @@ export class DashboardClass extends PureComponent {
         orcidSyncStatus: PropTypes.object,
         requestingOrcidSync: PropTypes.bool,
         orcidSyncEnabled: PropTypes.bool,
+        loadOrcidSyncDelay: PropTypes.number,
     };
 
     constructor(props) {
@@ -147,18 +150,23 @@ export class DashboardClass extends PureComponent {
             {
                 orcidSyncStatusRefreshCount: this.state.orcidSyncStatusRefreshCount + 1,
             },
-            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount) * 1000),
+            () => this._loadOrcidSync(fibonacci(this.state.orcidSyncStatusRefreshCount, 1)),
         );
 
-    _loadOrcidSync = (waitTime = 0) =>
-        global.setTimeout(() => {
-            !this.props.loadingOrcidSyncStatus &&
-                this.props.orcidSyncEnabled &&
-                (this.props.orcidSyncStatus === null || !!waitTime) &&
-                this.props.actions &&
-                this.props.actions.loadOrcidSyncStatus &&
-                this.props.actions.loadOrcidSyncStatus();
-        }, waitTime);
+    _loadOrcidSync = (waitTime = 1) => {
+        // considering loadOrcidSyncDelay props, we have to clear any previously scheduled requests
+        !!this.state.lastOrcidSyncScheduledRequest && global.clearTimeout(this.state.lastOrcidSyncScheduledRequest);
+        this.setState({
+            lastOrcidSyncScheduledRequest: global.setTimeout(() => {
+                !this.props.loadingOrcidSyncStatus &&
+                    this.props.orcidSyncEnabled &&
+                    (this.props.orcidSyncStatus === null || !!waitTime) &&
+                    this.props.actions &&
+                    this.props.actions.loadOrcidSyncStatus &&
+                    this.props.actions.loadOrcidSyncStatus();
+            }, waitTime * this.props.loadOrcidSyncDelay * 1000),
+        });
+    };
 
     _claimYourPublications = () => {
         this.props.history.push(pathConfig.records.possible);
@@ -469,6 +477,10 @@ export class DashboardClass extends PureComponent {
         );
     }
 }
+
+DashboardClass.defaultProps = {
+    loadOrcidSyncDelay: 5,
+};
 
 const Dashboard = withStyles(styles, { withTheme: true })(DashboardClass);
 export default Dashboard;
