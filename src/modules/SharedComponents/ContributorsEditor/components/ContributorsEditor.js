@@ -192,7 +192,7 @@ export class ContributorsEditor extends PureComponent {
                     ...item,
                     selected: !item.selected && index === itemIndex,
                     // eslint-disable-next-line camelcase
-                    authorId: index === itemIndex && (this.props.author?.aut_id || null),
+                    authorId: (index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
             this.state.contributors;
 
