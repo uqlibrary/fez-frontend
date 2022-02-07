@@ -1,12 +1,12 @@
-import { validation, openAccessConfig } from 'config';
+import { openAccessConfig, validation } from 'config';
 import {
     IN_CREATION,
     IN_DRAFT,
     IN_REVIEW,
-    UNPUBLISHED,
+    PUB_SEARCH_BULK_EXPORT_SIZE,
     RETRACTED,
     SUBMITTED_FOR_APPROVAL,
-    PUB_SEARCH_BULK_EXPORT_SIZE,
+    UNPUBLISHED,
 } from 'config/general';
 import param from 'can-param';
 
@@ -156,12 +156,19 @@ export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });
 
+// create/patch record apis
+export const CLAIM_PRE_CHECK = () => ({ apiUrl: 'external/records/claim/pre-check' });
+
 export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
 
 export const EXISTING_RECORD_API = ({ pid, isEdit }) => ({
     apiUrl: `records/${pid}${isEdit ? '?from=admin-form' : ''}`,
+});
+
+export const EXISTING_RECORD_VERSION_API = (pid, version) => ({
+    apiUrl: `records/${pid}/${version}`,
 });
 
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });

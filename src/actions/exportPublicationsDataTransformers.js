@@ -19,12 +19,13 @@ export const getFileName = extension =>
 /**
  * For a given response data that should be treated as binary, trigger a file download dialog
  *
- * @param {Object} data - binary data response
+ * @param {string} format
+ * @param {Object} response - binary data response
  * @returns void
  */
 export function promptForDownload(format, response) {
     if (!(format in EXPORT_FORMAT_TO_EXTENSION)) {
-        throw getExceptionMessage(format);
+        throw new Error(getExceptionMessage(format));
     }
     FileSaver.saveAs(response, getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
 }

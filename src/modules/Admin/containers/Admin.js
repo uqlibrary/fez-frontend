@@ -1,10 +1,10 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { destroy, reduxForm, getFormValues, getFormSyncErrors, change } from 'redux-form/immutable';
+import { change, destroy, getFormSyncErrors, getFormValues, reduxForm } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { withRouter } from 'react-router';
-import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
+import { adminInterfaceConfig, validate, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import {
@@ -17,7 +17,7 @@ import {
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { onSubmit } from '../submitHandler';
-import { identifiersParams, bibliographicParams, authorsParams } from 'modules/Admin/helpers';
+import { authorsParams, bibliographicParams, identifiersParams } from 'modules/Admin/helpers';
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
@@ -43,7 +43,6 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
-
     return {
         initialValues: {
             pid: recordToView.rek_pid,
@@ -109,23 +108,22 @@ const PrototypeContainer = reduxForm({
 const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
-    const newRecord = state.get('createAdminRecordReducer') && state.get('createAdminRecordReducer').newRecord;
     let initialFormValues = {};
     let recordToView = {};
     let locked = false;
 
     if (props.createMode) {
+        const newRecord = state.get('createAdminRecordReducer') && state.get('createAdminRecordReducer').newRecord;
         const displayType = formValues && formValues.get('rek_display_type');
         const selectedSubType =
             formValues &&
             ((!!formValues.get('adminSection') && formValues.get('adminSection').toJS()) || {}).rek_subtype;
-        const recordType = RECORD_TYPE_RECORD;
 
         recordToView = {
             rek_pid: (newRecord && newRecord.rek_pid) || null,
             rek_display_type: displayType,
             rek_subtype: selectedSubType,
-            rek_object_type_lookup: recordType,
+            rek_object_type_lookup: RECORD_TYPE_RECORD,
         };
         initialFormValues = {
             initialValues: {
@@ -160,6 +158,7 @@ const mapStateToProps = (state, props) => {
         recordToViewError: state.get('viewRecordReducer').recordToViewError,
         ...initialFormValues,
         locked,
+        error: state.get('viewRecordReducer').error,
     };
 };
 

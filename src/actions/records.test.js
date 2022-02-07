@@ -1,8 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import { record, collectionRecord, communityRecord } from 'mock/data';
-import { createOrUpdateDoi } from './records';
+import { record } from 'mock/data';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -111,6 +110,32 @@ describe('Record action creators', () => {
 
             await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure save with files', async () => {
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(422, { data: {} })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.CREATE_RECORD_SAVING,
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
+                actions.CREATE_RECORD_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.createNewRecord(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
         });
 
         it('dispatches expected actions on successful save with files api failure', async () => {
@@ -743,6 +768,56 @@ describe('Record action creators', () => {
             expect(requestFailed).toBe(true);
         });
 
+        it('dispatches expected actions on edit record failure with file upload', async () => {
+            mockApi
+                .onPut(repositories.routes.EXISTING_RECORD_API(testInput).apiUrl)
+                .replyOnce(422, { data: record })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
+                actions.ADMIN_UPDATE_WORK_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.adminUpdate({
+                        rek_display_type: 174,
+                        adminSection: {
+                            rek_subtype: 'Textbook',
+                        },
+                        publication: {
+                            rek_pid: 'UQ:396321',
+                        },
+                        securitySection: {
+                            rek_security_policy: 2,
+                        },
+
+                        filesSection: {
+                            files: {
+                                queue: [
+                                    {
+                                        name: 'test.txt',
+                                        fileData: {
+                                            name: 'test.txt',
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    }),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions on edit record successfully with file upload', async () => {
             const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
 
@@ -875,6 +950,32 @@ describe('Record action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
+        it('dispatches expected actions on create record failure with file upload', async () => {
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(422, { data: {} })
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
+                .reply(200, 's3-ap-southeast-2.amazonaws.com')
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
+                .reply(200, {});
+
+            const expectedActions = [
+                actions.ADMIN_CREATE_RECORD_SAVING,
+                actions.FILE_UPLOAD_STARTED,
+                `${actions.FILE_UPLOAD_PROGRESS}@test.txt`,
+                `${actions.FILE_UPLOAD_COMPLETE}@test.txt`,
+                actions.ADMIN_CREATE_RECORD_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+
         it('dispatches expected actions on create record successfully with failed file upload', async () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
@@ -985,9 +1086,7 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi
-                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
-                .reply(200, { data: { ...collectionRecord } });
+            mockApi.onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl).reply(200, { data: {} });
 
             const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
 
@@ -1077,9 +1176,7 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi
-                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
-                .reply(200, { data: { ...communityRecord } });
+            mockApi.onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl).reply(200, { data: {} });
 
             const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
 

@@ -21,7 +21,7 @@ export const FORM_NAME = 'MasterJournalListIngest';
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(requestMJLIngest(data)).catch(error => {
-        throw new SubmissionError({ _error: (error && error.message) || error });
+        throw new SubmissionError({ _error: error.message });
     });
 };
 

@@ -1,6 +1,6 @@
 import * as routes from './routes';
-import { accounts, currentAuthor, authorDetails } from 'mock/data/account';
-import { pathConfig, getDatastreamVersionQueryString } from './pathConfig';
+import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
+import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
 
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for anon user', () => {
@@ -169,7 +169,11 @@ describe('Routes getRoutesConfig method', () => {
     });
 
     it('should return a list of routes for researcher', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqresearcher });
+        const testRoutes = routes.getRoutesConfig({
+            components: {},
+            account: accounts.uqresearcher,
+            authorDetails: authorDetails.uqresearcher,
+        });
         expect(testRoutes.length).toEqual(25);
     });
 
@@ -188,7 +192,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(45);
+        expect(testRoutes.length).toEqual(46);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -207,6 +211,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.s2222222,
             forceOrcidRegistration: false,
             isHdrStudent: true,
+            authorDetails: authorDetails.uqresearcher,
         });
         expect(testRoutes.length).toEqual(25);
     });

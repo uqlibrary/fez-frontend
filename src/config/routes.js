@@ -1,12 +1,14 @@
 import React from 'react';
 import { locale } from 'locale';
-import { pathConfig, getSearchUrl } from './pathConfig';
+import { getSearchUrl, pathConfig } from './pathConfig';
 import { default as formLocale } from 'locale/publicationForm';
 
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
+export const versionRegExp = `${pidRegExp}\\s[0-9]{4}-[0-9]{2}-[0-9]{2}\\s[0-9]{2}:[0-9]{2}:[0-9]{2}|[a-z0-9-]+`;
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
+export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
@@ -57,14 +59,14 @@ export const flattedPathConfig = [
     '/view',
 ];
 
-export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
-
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin',
     digiteam: 'digiteam',
 };
+
+export const notFound = 'not-found';
 
 export const getRoutesConfig = ({
     components = {},
@@ -75,6 +77,7 @@ export const getRoutesConfig = ({
 }) => {
     const pid = `:pid(${pidRegExp})`;
     const id = `:id(${numericIdRegExp})`;
+    const version = `:version(${versionRegExp})`;
     const publicPages = [
         {
             path: pathConfig.index,
@@ -88,11 +91,11 @@ export const getRoutesConfig = ({
             pageTitle: locale.pages.contact.title,
         },
         {
-            path: pathConfig.records.view(pid),
+            path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
             component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view(`(${pidRegExp})`),
+            regExPath: pathConfig.records.view(`(${pidRegExp}|${notFound})`),
         },
         {
             path: pathConfig.records.search,
@@ -106,6 +109,17 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
+        ...(authorDetails && isSuperAdmin(authorDetails)
+            ? [
+                  {
+                      path: pathConfig.records.version(pid, version),
+                      component: components.NewViewRecord,
+                      access: [roles.admin],
+                      exact: true,
+                      pageTitle: locale.pages.viewRecord.version.title,
+                  },
+              ]
+            : []),
         ...(!account
             ? [
                   {
@@ -250,12 +264,17 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.addRecord.title,
                   },
-                  {
-                      path: pathConfig.authorIdentifiers.orcid.link,
-                      component: components.Orcid,
-                      exact: true,
-                      pageTitle: locale.pages.orcidLink.title,
-                  },
+                  ...(authorDetails
+                      ? [
+                            {
+                                path: pathConfig.authorIdentifiers.orcid.link,
+                                component: components.Orcid,
+                                access: [roles.researcher, roles.admin],
+                                exact: true,
+                                pageTitle: locale.pages.orcidLink.title,
+                            },
+                        ]
+                      : []),
                   {
                       path: pathConfig.authorIdentifiers.googleScholar.link,
                       component: components.GoogleScholar,
@@ -622,7 +641,3 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...publicPages,
     ];
 };
-
-export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${
-    !!window.location.hash ? '#' : ''
-}${pathConfig.authorIdentifiers.orcid.link}`;

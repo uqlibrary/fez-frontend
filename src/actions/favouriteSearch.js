@@ -76,7 +76,7 @@ export function checkForExistingFavouriteSearchAlias(newData) {
             });
 
             // reject the promise to indicate that it's not OK to go ahead with saving favourite search
-            return Promise.reject({ message: 'Alias found' });
+            return Promise.reject(new Error('Alias found'));
         } catch (e) {
             // api returns 404 if alias has not found
             if (e.status === 404) {

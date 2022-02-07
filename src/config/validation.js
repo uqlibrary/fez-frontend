@@ -382,9 +382,7 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false, allowOnlyOne = f
         }
         errors.editors = isAdmin ? locale.validationErrors.editorRequiredAdmin : locale.validationErrors.editorRequired;
     } else if (allowOnlyOne && data.authors && data.authors.length > 0 && data.editors && data.editors.length > 0) {
-        errors.authors = locale.validationErrors.onlyOneOfAuthorOrEditor;
-        errors.editors = locale.validationErrors.onlyOneOfAuthorOrEditor;
+        errors.onlyOneOfAuthorOrEditor = locale.validationErrors.onlyOneOfAuthorOrEditor;
     }
-
     return errors;
 };

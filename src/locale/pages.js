@@ -528,6 +528,28 @@ export default {
                     </div>
                 ),
             },
+            version: {
+                title: 'View Version',
+                alert: {
+                    version: {
+                        type: 'info_outline',
+                        title: '',
+                        message: record => (
+                            <>
+                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                            </>
+                        ),
+                        alertId: 'alert-info',
+                    },
+                    warning: {
+                        type: 'warning',
+                        title: '',
+                        message:
+                            "Note: reference values (lookups) might not be accurate as we don't keep history of these, only for the record's data.",
+                        alertId: 'alert-warning',
+                    },
+                },
+            },
         },
         searchRecords: {
             title: 'eSpace search',
@@ -1007,7 +1029,7 @@ export default {
             },
             loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
-            retractedMessage: 'This article has been retracted',
+            retractedMessage: 'This work has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',

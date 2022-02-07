@@ -20,17 +20,19 @@ exports[`Application component Should display mobile correctly 1`] = `
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -60,14 +62,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -388,18 +383,20 @@ exports[`Application component Should display mobile correctly 1`] = `
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
             key="route_2"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
@@ -436,16 +433,7 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -642,19 +630,6 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -718,17 +693,19 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -752,14 +729,7 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -1271,22 +1241,6 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -1304,7 +1258,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -1326,7 +1280,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -1348,19 +1302,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1368,23 +1322,25 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
-            key="route_21"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            key="route_20"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1404,22 +1360,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_24"
+            component={[Function]}
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1611,19 +1558,6 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -1687,17 +1621,19 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -1721,14 +1657,7 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -2240,22 +2169,6 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -2273,7 +2186,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -2295,7 +2208,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -2317,19 +2230,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2337,23 +2250,25 @@ exports[`Application component should determine if it has incomplete works from 
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
-            key="route_21"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            key="route_20"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2373,22 +2288,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_24"
+            component={[Function]}
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2420,17 +2326,19 @@ exports[`Application component should redirect to login page with correct return
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -2460,14 +2368,7 @@ exports[`Application component should redirect to login page with correct return
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -2788,18 +2689,20 @@ exports[`Application component should redirect to login page with correct return
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
             key="route_2"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
@@ -2836,16 +2739,7 @@ exports[`Application component should redirect to login page with correct return
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -3038,19 +2932,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -3114,17 +2995,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -3148,14 +3031,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -3684,22 +3560,6 @@ exports[`Application component should render alert if user is not fez author 1`]
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -3717,7 +3577,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -3739,7 +3599,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -3761,19 +3621,19 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3781,23 +3641,25 @@ exports[`Application component should render alert if user is not fez author 1`]
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
-            key="route_21"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            key="route_20"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3817,22 +3679,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_24"
+            component={[Function]}
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4024,19 +3877,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -4100,17 +3940,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -4134,14 +3976,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -4690,22 +4525,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -4723,7 +4542,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -4745,7 +4564,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -4767,19 +4586,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4787,23 +4606,25 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
-            key="route_21"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            key="route_20"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4823,22 +4644,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_24"
+            component={[Function]}
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5030,19 +4842,6 @@ exports[`Application component should render app for account with fez author wit
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -5106,17 +4905,19 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -5140,14 +4941,7 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -5681,22 +5475,6 @@ exports[`Application component should render app for account with fez author wit
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -5714,7 +5492,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -5736,7 +5514,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -5758,19 +5536,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5778,23 +5556,25 @@ exports[`Application component should render app for account with fez author wit
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
-            key="route_21"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            key="route_20"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -5814,22 +5594,13 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            key="route_24"
+            component={[Function]}
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6021,19 +5792,6 @@ exports[`Application component should render application with routing for the us
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -6097,17 +5855,19 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -6131,14 +5891,7 @@ exports[`Application component should render application with routing for the us
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -6420,17 +6173,19 @@ exports[`Application component should render for anon user 1`] = `
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -6460,14 +6215,7 @@ exports[`Application component should render for anon user 1`] = `
           "path": "/dashboard",
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
+          "component": [Function],
           "pageTitle": "Page not found",
         },
       ]
@@ -6751,18 +6499,20 @@ exports[`Application component should render for anon user 1`] = `
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
             key="route_2"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
@@ -6799,16 +6549,7 @@ exports[`Application component should render for anon user 1`] = `
             path="/dashboard"
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
+            component={[Function]}
             key="route_6"
             pageTitle="Page not found"
           />
@@ -6859,17 +6600,19 @@ exports[`Application component should render thesis submission for HDR without m
         },
         Object {
           "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": Object {
+              "$$typeof": Symbol(react.memo),
+              "compare": [Function],
+              "type": [Function],
             },
+            "compare": null,
+            "type": [Function],
           },
           "exact": true,
           "pageTitle": undefined,
-          "path": "/view/:pid(UQ:[a-z0-9]+)",
-          "regExPath": "/view/(UQ:[a-z0-9]+)",
+          "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+          "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
         },
         Object {
           "component": [Function],
@@ -7111,18 +6854,20 @@ exports[`Application component should render thesis submission for HDR without m
           <Route
             component={
               Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": [Function],
+                  "type": [Function],
                 },
+                "compare": null,
+                "type": [Function],
               }
             }
             exact={true}
             key="route_2"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
+            path="/view/:pid(UQ:[a-z0-9]+|not-found)"
+            regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
@@ -8134,19 +7879,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "render": [Function],
                           },
                           Object {
-                            "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
-                            },
-                            "exact": true,
-                            "pageTitle": "Link ORCID ID to UQ eSpace",
-                            "path": "/author-identifiers/orcid/link",
-                          },
-                          Object {
                             "access": Array [
                               "researcher",
                               "admin",
@@ -8210,17 +7942,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           },
                           Object {
                             "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
+                              "$$typeof": Symbol(react.memo),
+                              "WrappedComponent": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": [Function],
+                                "type": [Function],
                               },
+                              "compare": null,
+                              "type": [Function],
                             },
                             "exact": true,
                             "pageTitle": undefined,
-                            "path": "/view/:pid(UQ:[a-z0-9]+)",
-                            "regExPath": "/view/(UQ:[a-z0-9]+)",
+                            "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+                            "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
                           },
                           Object {
                             "component": [Function],
@@ -8244,14 +7978,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
-                            "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
-                            },
+                            "component": [Function],
                             "pageTitle": "Page not found",
                           },
                         ]
@@ -8479,19 +8206,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "render": [Function],
                             },
                             Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
-                              },
-                              "exact": true,
-                              "pageTitle": "Link ORCID ID to UQ eSpace",
-                              "path": "/author-identifiers/orcid/link",
-                            },
-                            Object {
                               "access": Array [
                                 "researcher",
                                 "admin",
@@ -8555,17 +8269,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             },
                             Object {
                               "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
+                                "$$typeof": Symbol(react.memo),
+                                "WrappedComponent": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": [Function],
+                                  "type": [Function],
                                 },
+                                "compare": null,
+                                "type": [Function],
                               },
                               "exact": true,
                               "pageTitle": undefined,
-                              "path": "/view/:pid(UQ:[a-z0-9]+)",
-                              "regExPath": "/view/(UQ:[a-z0-9]+)",
+                              "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+                              "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
                             },
                             Object {
                               "component": [Function],
@@ -8589,14 +8305,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/journal/view/:id([0-9]+)",
                             },
                             Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
-                              },
+                              "component": [Function],
                               "pageTitle": "Page not found",
                             },
                           ]
@@ -8825,19 +8534,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "render": [Function],
                               },
                               Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
-                                },
-                                "exact": true,
-                                "pageTitle": "Link ORCID ID to UQ eSpace",
-                                "path": "/author-identifiers/orcid/link",
-                              },
-                              Object {
                                 "access": Array [
                                   "researcher",
                                   "admin",
@@ -8901,17 +8597,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               Object {
                                 "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
+                                  "$$typeof": Symbol(react.memo),
+                                  "WrappedComponent": Object {
+                                    "$$typeof": Symbol(react.memo),
+                                    "compare": [Function],
+                                    "type": [Function],
                                   },
+                                  "compare": null,
+                                  "type": [Function],
                                 },
                                 "exact": true,
                                 "pageTitle": undefined,
-                                "path": "/view/:pid(UQ:[a-z0-9]+)",
-                                "regExPath": "/view/(UQ:[a-z0-9]+)",
+                                "path": "/view/:pid(UQ:[a-z0-9]+|not-found)",
+                                "regExPath": "/view/(UQ:[a-z0-9]+|not-found)",
                               },
                               Object {
                                 "component": [Function],
@@ -8935,14 +8633,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/journal/view/:id([0-9]+)",
                               },
                               Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
-                                },
+                                "component": [Function],
                                 "pageTitle": "Page not found",
                               },
                             ]
@@ -10390,6 +10081,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "getBatchImportDirectories": [Function],
                                                           "getCollectionsListAPI": [Function],
                                                           "getFavouriteSearchAlias": [Function],
+                                                          "getPreCheckError": [Function],
                                                           "getSearchLookupApi": [Function],
                                                           "getSherpaFromIssn": [Function],
                                                           "getThirdPartyLookupApiUrl": [Function],
@@ -10415,11 +10107,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadRecordToDelete": [Function],
                                                           "loadRecordToFix": [Function],
                                                           "loadRecordToView": [Function],
+                                                          "loadRecordVersionToView": [Function],
                                                           "loadSearchKeyList": [Function],
                                                           "loadThirdPartyResults": [Function],
                                                           "loadUserList": [Function],
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
+                                                          "mergeAvailableAuthoringData": [Function],
+                                                          "removeShadowSuffixFromTableNames": [Function],
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
@@ -10450,6 +10145,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "updateDoi": [Function],
                                                           "updateFavouriteSearchListItem": [Function],
                                                           "updateIncompleteRecord": [Function],
+                                                          "updateMatchedRecordAuthoringData": [Function],
                                                           "updateMyEditorialAppointmentsListItem": [Function],
                                                           "updateUserListItem": [Function],
                                                         }
@@ -14288,6 +13984,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "getBatchImportDirectories": [Function],
                                                                           "getCollectionsListAPI": [Function],
                                                                           "getFavouriteSearchAlias": [Function],
+                                                                          "getPreCheckError": [Function],
                                                                           "getSearchLookupApi": [Function],
                                                                           "getSherpaFromIssn": [Function],
                                                                           "getThirdPartyLookupApiUrl": [Function],
@@ -14313,11 +14010,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadRecordToDelete": [Function],
                                                                           "loadRecordToFix": [Function],
                                                                           "loadRecordToView": [Function],
+                                                                          "loadRecordVersionToView": [Function],
                                                                           "loadSearchKeyList": [Function],
                                                                           "loadThirdPartyResults": [Function],
                                                                           "loadUserList": [Function],
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
+                                                                          "mergeAvailableAuthoringData": [Function],
+                                                                          "removeShadowSuffixFromTableNames": [Function],
                                                                           "requestMJLIngest": [Function],
                                                                           "requestOrcidSync": [Function],
                                                                           "resetDoi": [Function],
@@ -14348,6 +14048,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "updateDoi": [Function],
                                                                           "updateFavouriteSearchListItem": [Function],
                                                                           "updateIncompleteRecord": [Function],
+                                                                          "updateMatchedRecordAuthoringData": [Function],
                                                                           "updateMyEditorialAppointmentsListItem": [Function],
                                                                           "updateUserListItem": [Function],
                                                                         }
@@ -14454,6 +14155,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "getBatchImportDirectories": [Function],
                                                                             "getCollectionsListAPI": [Function],
                                                                             "getFavouriteSearchAlias": [Function],
+                                                                            "getPreCheckError": [Function],
                                                                             "getSearchLookupApi": [Function],
                                                                             "getSherpaFromIssn": [Function],
                                                                             "getThirdPartyLookupApiUrl": [Function],
@@ -14479,11 +14181,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadRecordToDelete": [Function],
                                                                             "loadRecordToFix": [Function],
                                                                             "loadRecordToView": [Function],
+                                                                            "loadRecordVersionToView": [Function],
                                                                             "loadSearchKeyList": [Function],
                                                                             "loadThirdPartyResults": [Function],
                                                                             "loadUserList": [Function],
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
+                                                                            "mergeAvailableAuthoringData": [Function],
+                                                                            "removeShadowSuffixFromTableNames": [Function],
                                                                             "requestMJLIngest": [Function],
                                                                             "requestOrcidSync": [Function],
                                                                             "resetDoi": [Function],
@@ -14514,6 +14219,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "updateDoi": [Function],
                                                                             "updateFavouriteSearchListItem": [Function],
                                                                             "updateIncompleteRecord": [Function],
+                                                                            "updateMatchedRecordAuthoringData": [Function],
                                                                             "updateMyEditorialAppointmentsListItem": [Function],
                                                                             "updateUserListItem": [Function],
                                                                           }
@@ -15394,6 +15100,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "getBatchImportDirectories": [Function],
                                                                                     "getCollectionsListAPI": [Function],
                                                                                     "getFavouriteSearchAlias": [Function],
+                                                                                    "getPreCheckError": [Function],
                                                                                     "getSearchLookupApi": [Function],
                                                                                     "getSherpaFromIssn": [Function],
                                                                                     "getThirdPartyLookupApiUrl": [Function],
@@ -15419,11 +15126,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadRecordToDelete": [Function],
                                                                                     "loadRecordToFix": [Function],
                                                                                     "loadRecordToView": [Function],
+                                                                                    "loadRecordVersionToView": [Function],
                                                                                     "loadSearchKeyList": [Function],
                                                                                     "loadThirdPartyResults": [Function],
                                                                                     "loadUserList": [Function],
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
+                                                                                    "mergeAvailableAuthoringData": [Function],
+                                                                                    "removeShadowSuffixFromTableNames": [Function],
                                                                                     "requestMJLIngest": [Function],
                                                                                     "requestOrcidSync": [Function],
                                                                                     "resetDoi": [Function],
@@ -15454,6 +15164,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "updateDoi": [Function],
                                                                                     "updateFavouriteSearchListItem": [Function],
                                                                                     "updateIncompleteRecord": [Function],
+                                                                                    "updateMatchedRecordAuthoringData": [Function],
                                                                                     "updateMyEditorialAppointmentsListItem": [Function],
                                                                                     "updateUserListItem": [Function],
                                                                                   }
@@ -15514,6 +15225,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "getBatchImportDirectories": [Function],
                                                                                       "getCollectionsListAPI": [Function],
                                                                                       "getFavouriteSearchAlias": [Function],
+                                                                                      "getPreCheckError": [Function],
                                                                                       "getSearchLookupApi": [Function],
                                                                                       "getSherpaFromIssn": [Function],
                                                                                       "getThirdPartyLookupApiUrl": [Function],
@@ -15539,11 +15251,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadRecordToDelete": [Function],
                                                                                       "loadRecordToFix": [Function],
                                                                                       "loadRecordToView": [Function],
+                                                                                      "loadRecordVersionToView": [Function],
                                                                                       "loadSearchKeyList": [Function],
                                                                                       "loadThirdPartyResults": [Function],
                                                                                       "loadUserList": [Function],
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
+                                                                                      "mergeAvailableAuthoringData": [Function],
+                                                                                      "removeShadowSuffixFromTableNames": [Function],
                                                                                       "requestMJLIngest": [Function],
                                                                                       "requestOrcidSync": [Function],
                                                                                       "resetDoi": [Function],
@@ -15574,6 +15289,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "updateDoi": [Function],
                                                                                       "updateFavouriteSearchListItem": [Function],
                                                                                       "updateIncompleteRecord": [Function],
+                                                                                      "updateMatchedRecordAuthoringData": [Function],
                                                                                       "updateMyEditorialAppointmentsListItem": [Function],
                                                                                       "updateUserListItem": [Function],
                                                                                     }
