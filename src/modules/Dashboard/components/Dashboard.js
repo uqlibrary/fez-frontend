@@ -121,6 +121,7 @@ export class DashboardClass extends PureComponent {
     }
 
     componentDidMount() {
+        // eslint-disable-next-line camelcase
         if (this.props.account && this.props.account.id && this.props.author?.aut_id) {
             // eslint-disable-next-line camelcase
             // don't call the api for non author users since the api call requires an author
