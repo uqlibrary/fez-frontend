@@ -20,7 +20,7 @@ function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
-        author: mock.currentAuthor.uqresearcher,
+        author: mock.currentAuthor.uqresearcher.data,
         account: mock.accounts.uqresearcher,
         authorDetails: {
             is_administrator: 0,
@@ -213,7 +213,7 @@ describe('Dashboard test', () => {
 
     it('handleTabChange method', () => {
         const value = 'test';
-        const wrapper = setup({ author: { aut_id: 1 } });
+        const wrapper = setup();
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
         const { dashboardPubsTabs, orcidSyncStatusRefreshCount, lastOrcidSyncScheduledRequest } = wrapper.state();
