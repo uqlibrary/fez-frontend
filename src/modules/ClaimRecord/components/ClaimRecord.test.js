@@ -640,6 +640,6 @@ describe('Component ClaimRecord ', () => {
         };
 
         const wrapper = setup({ ...props });
-        expect(toString(wrapper.find(Alert).props().message).includes(customErrorMessage)).toBe(true);
+        expect(componentToString(wrapper.find(Alert).props().message).includes(customErrorMessage)).toBe(true);
     });
 });

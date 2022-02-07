@@ -1,6 +1,3 @@
-// import { default as componentsLocale } from '../../src/locale/components';
-// import internalTitleSearchList from '../../src/mock/data/records/internalTitleSearchList.js';
-
 context('Search', () => {
     // const searchLocale = componentsLocale.components.searchComponent;
     const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ').trim();

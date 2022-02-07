@@ -8317,7 +8317,6 @@ export const referenceEntry = {
     "fez_record_search_key_volume_number": null,
     "fez_record_search_key_issn": [],
     "fez_matched_journals": null,
-    "fez_record_search_key_file_hashdataset": [],
     "rek_status_lookup": "Published",
     "rek_object_type_lookup": "Record",
     "rek_wok_doc_type_lookup": null,
