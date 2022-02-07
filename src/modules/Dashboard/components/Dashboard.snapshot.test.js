@@ -216,10 +216,12 @@ describe('Dashboard test', () => {
         const wrapper = setup({ author: { aut_id: 1 } });
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
-        expect(wrapper.state()).toEqual({
+        const { dashboardPubsTabs, orcidSyncStatusRefreshCount, lastOrcidSyncScheduledRequest } = wrapper.state();
+        expect({ dashboardPubsTabs, orcidSyncStatusRefreshCount }).toEqual({
             dashboardPubsTabs: value,
             orcidSyncStatusRefreshCount: 1,
         });
+        expect(lastOrcidSyncScheduledRequest).not.toBeUndefined();
     });
 
     it('should get styles for full render', () => {
