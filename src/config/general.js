@@ -1370,7 +1370,7 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
 export const DATA_STREAM_SECURITY_POLICIES = TOP_LEVEL_SECURITY_POLICIES;
 
 export const RECORD_TYPE_COMMUNITY_ID = 11;
-export const RECORD_TYPE_COLLECTION_ID = 12;
+export const RECORD_TYPE_COLLECTION_ID = 9;
 export const RECORD_TYPE_COMMUNITY = 'community';
 export const RECORD_TYPE_COLLECTION = 'collection';
 export const RECORD_TYPE_LOOKUP = {

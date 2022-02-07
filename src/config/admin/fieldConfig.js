@@ -76,6 +76,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 
 export default {
     default: {
@@ -235,6 +236,19 @@ export default {
                 validate: [validation.required],
                 allowPartial: true,
                 partialDateFieldId: 'rek-date',
+            },
+        },
+        communities: {
+            component: CommunityField,
+            componentProps: {
+                floatingLabelText: 'Member of communities',
+                hintText: 'Begin typing to select and add communities',
+                name: 'adminSection.communities',
+                id: 'member-of-communities-input',
+                required: true,
+                fullwidth: true,
+                validate: [validation.requiredList],
+                collectionFieldId: 'rek-ismemberof',
             },
         },
         collections: {

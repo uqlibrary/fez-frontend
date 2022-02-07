@@ -30,7 +30,14 @@ import { onSubmit } from '../submitHandler';
 import { useRecordContext, useTabbedContext } from 'context';
 import pageLocale from 'locale/pages';
 import { pathConfig, publicationTypes, validation } from 'config';
-import { PUBLISHED, RECORD_TYPE_RECORD, RETRACTED, UNPUBLISHED } from 'config/general';
+import {
+    PUBLISHED,
+    RECORD_TYPE_RECORD,
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_COLLECTION,
+    RETRACTED,
+    UNPUBLISHED,
+} from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from '../../../config/validation';
@@ -88,6 +95,7 @@ export const AdminInterface = ({
     error,
 }) => {
     const { record } = useRecordContext();
+    console.log('AdminInterface', record);
     const { tabbed, toggleTabbed } = useTabbedContext();
     const isSuperAdmin = useIsUserSuperAdmin();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();
@@ -243,20 +251,23 @@ export const AdminInterface = ({
                     onClick={handleCancel}
                 />
             </Grid>
-            {!!isSuperAdmin && record.rek_status !== RETRACTED && (
-                <Grid item xs={12} sm={3}>
-                    <Button
-                        id={`admin-work-retract${placement}`}
-                        data-testid={`retract-admin${placement}`}
-                        disabled={!!submitting || !!disableSubmit}
-                        variant="contained"
-                        color="secondary"
-                        fullWidth
-                        children="Retract"
-                        onClick={setPublicationStatusAndSubmit(RETRACTED)}
-                    />
-                </Grid>
-            )}
+            {!!isSuperAdmin &&
+                record.rek_status !== RETRACTED &&
+                objectType !== RECORD_TYPE_COMMUNITY &&
+                objectType !== RECORD_TYPE_COLLECTION && (
+                    <Grid item xs={12} sm={3}>
+                        <Button
+                            id={`admin-work-retract${placement}`}
+                            data-testid={`retract-admin${placement}`}
+                            disabled={!!submitting || !!disableSubmit}
+                            variant="contained"
+                            color="secondary"
+                            fullWidth
+                            children="Retract"
+                            onClick={setPublicationStatusAndSubmit(RETRACTED)}
+                        />
+                    </Grid>
+                )}
             {!!record.rek_pid && objectType === RECORD_TYPE_RECORD && record.rek_status !== PUBLISHED && !isDeleted && (
                 <Grid item xs={12} sm={3}>
                     <Button

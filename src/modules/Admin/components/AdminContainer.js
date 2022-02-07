@@ -63,8 +63,6 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
-const alwaysActivatedForRecordTypesList = [RECORD_TYPE_RECORD];
-
 export const AdminContainer = ({
     authorDetails,
     clearRecordToView,
@@ -109,14 +107,14 @@ export const AdminContainer = ({
 
     // Collections and Communities admin edit currently only has the Security tab, so don't act on errors in other tabs
     const reducedFormErrors = formErrors => {
-        if (
-            !!recordToView &&
-            recordToView.rek_display_type_lookup &&
-            (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
-                recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
-        ) {
-            return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
-        }
+        // if (
+        //     !!recordToView &&
+        //     recordToView.rek_display_type_lookup &&
+        //     (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
+        //         recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
+        // ) {
+        //     return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
+        // }
         return formErrors;
     };
 
@@ -156,12 +154,9 @@ export const AdminContainer = ({
         return <div className="empty" />;
     }
 
-    const isActivated = (recordType = []) => {
-        if (!Array.isArray(recordType)) return false;
-
+    const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            const filterArray = [...alwaysActivatedForRecordTypesList, ...recordType];
-            return filterArray.indexOf(recordToView.rek_object_type_lookup.toLowerCase()) > -1;
+            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
         }
         return false;
     };
@@ -206,12 +201,20 @@ export const AdminContainer = ({
                                 tabs={{
                                     admin: {
                                         component: AdminSection,
-                                        activated: isActivated([RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY]),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION].includes(
+                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                            ),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
                                     bibliographic: {
                                         component: BibliographicSection,
-                                        activated: isActivated(),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                            ),
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
                                     },
                                     authors: {
@@ -247,7 +250,11 @@ export const AdminContainer = ({
                                     },
                                     notes: {
                                         component: NotesSection,
-                                        activated: isActivated([RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY]),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                            ),
                                     },
                                     files: {
                                         component: FilesSection,

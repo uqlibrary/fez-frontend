@@ -11,8 +11,9 @@ import {
     DOCUMENT_TYPES_LOOKUP,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_THESIS,
-    RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
+    RECORD_TYPE_COMMUNITY,
+    RECORD_TYPE_COLLECTION,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
@@ -43,6 +44,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
+
     return {
         initialValues: {
             pid: recordToView.rek_pid,
@@ -55,7 +57,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                 {},
             securitySection: {
                 rek_security_policy: recordToView.rek_security_policy,
-                ...(recordType === RECORD_TYPE_COLLECTION
+                ...(recordType === RECORD_TYPE_COLLECTION || recordType === RECORD_TYPE_COMMUNITY
                     ? {
                           rek_datastream_policy: recordToView.rek_datastream_policy,
                       }
@@ -68,7 +70,9 @@ const getInitialFormValues = (recordToView, recordType) => {
                     : []),
             },
             bibliographicSection:
-                (recordType === RECORD_TYPE_RECORD &&
+                ((recordType === RECORD_TYPE_RECORD ||
+                    recordType === RECORD_TYPE_COMMUNITY ||
+                    recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
                 {},
             authorsSection:
@@ -79,7 +83,12 @@ const getInitialFormValues = (recordToView, recordType) => {
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
             filesSection:
                 (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
-            notesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'notes')) || {},
+            notesSection:
+                ((recordType === RECORD_TYPE_RECORD ||
+                    recordType === RECORD_TYPE_COMMUNITY ||
+                    recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'notes')) ||
+                {},
         },
     };
 };

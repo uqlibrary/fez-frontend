@@ -53,6 +53,7 @@ import {
     videoFields,
     workingPaperFields,
     communityFields,
+    collectionFields,
 } from './fields';
 
 export default {
@@ -81,5 +82,5 @@ export default {
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: videoFields,
     [PUBLICATION_TYPE_WORKING_PAPER]: workingPaperFields,
     [RECORD_TYPE_COMMUNITY_ID]: communityFields,
-    [RECORD_TYPE_COLLECTION_ID]: genericDocumentFields,
+    [RECORD_TYPE_COLLECTION_ID]: collectionFields,
 };

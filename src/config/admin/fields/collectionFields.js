@@ -4,11 +4,11 @@ export default {
     ...commonFields,
     bibliographic: () => [
         {
-            title: 'Community Title',
+            title: 'Collection Title',
             groups: [['rek_title']],
         },
         {
-            title: 'Community Description',
+            title: 'Collection Description',
             groups: [['rek_description']],
         },
         {
@@ -16,6 +16,12 @@ export default {
             groups: [['fez_record_search_key_keywords']],
         },
     ],
+    admin: () => [
+        {
+            title: 'Member of Communities',
+            groups: [['communities']],
+        },
+    ],
 };
 
-export const validateCommunity = () => ({});
+export const validateCollection = () => ({});
