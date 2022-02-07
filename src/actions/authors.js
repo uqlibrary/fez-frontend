@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { get, patch } from 'repositories/generic';
-import { SEARCH_AUTHOR_LOOKUP_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API } from 'repositories/routes';
+import { AUTHOR_API, AUTHOR_ORCID_DETAILS_API, SEARCH_AUTHOR_LOOKUP_API } from 'repositories/routes';
 import { pathConfig } from 'config/pathConfig';
 import { getAuthorIdentifierOrcidPatchRequest } from './transformers';
 
@@ -69,6 +69,15 @@ export function updateCurrentAuthor(authorId, data) {
  */
 export function linkAuthorOrcidId(userId, authorId, orcidCode) {
     return dispatch => {
+        if (!userId || !authorId || !orcidCode) {
+            return Promise.reject(new Error(' ')).catch(error => {
+                dispatch({
+                    type: actions.CURRENT_AUTHOR_SAVE_FAILED,
+                    payload: error.message,
+                });
+            });
+        }
+
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
 
         let orcidId = null;
@@ -87,7 +96,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 
                 // response should contain orcid id
                 if (!orcidId) {
-                    return Promise.reject(new Error('ORCID id is missing in API response. '));
+                    return Promise.reject(new Error('ORCID id is missing in API response.'));
                 }
 
                 // patch author record with corresponding ORCID id
