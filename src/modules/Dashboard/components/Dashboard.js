@@ -114,7 +114,6 @@ export class DashboardClass extends PureComponent {
 
     constructor(props) {
         super(props);
-
         this.state = {
             dashboardPubsTabs: 1,
             orcidSyncStatusRefreshCount: 0,
