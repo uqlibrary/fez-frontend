@@ -13,7 +13,7 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
 import locale from 'locale/pages';
-import { pathConfig, ORCID_CLIENT_ID, ORCID_AUTHORIZATION_URL } from 'config';
+import { ORCID_AUTHORIZATION_URL, ORCID_CLIENT_ID, pathConfig } from 'config';
 
 export default class Orcid extends Component {
     static propTypes = {
@@ -79,7 +79,8 @@ export default class Orcid extends Component {
     UNSAFE_componentWillMount() {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
-        if (!this.props.accountAuthorLoading && (!this.props.author || this.props.author.aut_orcid_id)) {
+        // eslint-disable-next-line camelcase
+        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
             this._navigateToDashboard();
         }
     }
@@ -89,8 +90,8 @@ export default class Orcid extends Component {
         // (url contains required parameters)
         if (
             this.props.account &&
-            this.props.author &&
-            !this.props.author.aut_orcid_id &&
+            // eslint-disable-next-line camelcase
+            !this.props.author?.aut_orcid_id &&
             this.state.orcidResponse.code &&
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
@@ -220,7 +221,8 @@ export default class Orcid extends Component {
 
     render() {
         // wait for author and account to be loaded
-        if (!this.props.author || !this.props.account) {
+        // eslint-disable-next-line camelcase
+        if (!this.props.author?.aut_id || !this.props.account) {
             return <div />;
         }
 

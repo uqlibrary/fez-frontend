@@ -488,7 +488,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
     ];
-    const isAuthor = author && Object.keys(author).length > 1;
+    // eslint-disable-next-line camelcase
+    const isAuthor = author?.aut_id;
     const incompletePage =
         (hasIncompleteWorks && [
             {

@@ -98,7 +98,7 @@ describe('Add new record', () => {
 
     it('should render alert about file uploading or issue error', () => {
         const wrapper = setup({
-            author: {},
+            author: { aut_id: 1 },
             newRecordFileUploadingOrIssueError: true,
             newRecord: {
                 rek_pid: 'UQ:111111',

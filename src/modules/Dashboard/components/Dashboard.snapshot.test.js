@@ -20,7 +20,7 @@ function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
-        author: mock.currentAuthor.uqresearcher,
+        author: mock.currentAuthor.uqresearcher.data,
         account: mock.accounts.uqresearcher,
         authorDetails: {
             is_administrator: 0,
@@ -62,6 +62,15 @@ describe('Dashboard test', () => {
 
     it('renders alert for non-authors', () => {
         const wrapper = setup({ account: mock.accounts.uqstaff });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders loading for authors', () => {
+        const wrapper = setup({
+            account: mock.accounts.uqstaff,
+            author: { aut_id: 1 },
+            loadingPublicationsByYear: true,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
