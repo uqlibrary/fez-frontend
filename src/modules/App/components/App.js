@@ -145,17 +145,13 @@ export class AppClass extends PureComponent {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
+        // don't call the api for non author users since the api call requires an author
         if (
-            nextProps.account &&
-            !nextProps.accountLoading &&
-            this.props.account !== nextProps.account
-            // &&
-            // don't call the api for non author users since the api call requires an author
-            // !nextProps.accountAuthorLoading &&
-            // // eslint-disable-next-line camelcase
-            // nextProps.author?.aut_id &&
-            // // eslint-disable-next-line camelcase
-            // this.props.author?.aut_id !== nextProps.author?.aut_id
+            !nextProps.accountAuthorLoading &&
+            // eslint-disable-next-line camelcase
+            nextProps.author?.aut_id &&
+            // eslint-disable-next-line camelcase
+            this.props.author?.aut_id !== nextProps.author?.aut_id
         ) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
