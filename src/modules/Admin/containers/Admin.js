@@ -25,7 +25,6 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
-    // collections and communities dont have this setup
     if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
@@ -77,7 +76,10 @@ const getInitialFormValues = (recordToView, recordType) => {
                 {},
             authorsSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
-            adminSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'admin')) || {},
+            adminSection:
+                (recordType === (RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'admin')) ||
+                {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
             grantInformationSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},

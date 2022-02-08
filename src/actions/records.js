@@ -342,6 +342,7 @@ export const updateCollection = ({ pid, date, updated }) => {
         });
         const patchRecordRequest = {
             rek_date: date,
+            ...updated,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
@@ -406,6 +407,7 @@ export const updateCommunity = ({ pid, date, updated }) => {
         });
         const patchRecordRequest = {
             rek_date: date,
+            updated: { ...updated },
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])

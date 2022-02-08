@@ -16,6 +16,16 @@ export default {
             groups: [['fez_record_search_key_keywords']],
         },
     ],
+    notes: () => [
+        {
+            title: 'Additional notes',
+            groups: [['additionalNotes']],
+        },
+        {
+            title: 'Internal notes',
+            groups: [['internalNotes']],
+        },
+    ],
     admin: () => [
         {
             title: 'Member of Communities',

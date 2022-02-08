@@ -1,7 +1,14 @@
-import commonFields from './commonFields';
+// /import commonFields from './commonFields';
 
 export default {
-    ...commonFields,
+    // ...commonFields,
+    // eslint-disable-next-line no-unused-vars
+    files: ({ isDataset } = { isDataset: false }) => [
+        {
+            title: 'Files',
+            groups: [['files']],
+        },
+    ],
     bibliographic: () => [
         {
             title: 'Community Title',
@@ -14,6 +21,16 @@ export default {
         {
             title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
+        },
+    ],
+    notes: () => [
+        {
+            title: 'Additional notes',
+            groups: [['additionalNotes']],
+        },
+        {
+            title: 'Internal notes',
+            groups: [['internalNotes']],
         },
     ],
 };
