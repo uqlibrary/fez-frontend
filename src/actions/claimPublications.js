@@ -236,23 +236,20 @@ export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked,
     }),
 });
 
-class PreCheckError extends Error {
-    constructor(message) {
-        super(message);
-        this.original = { data: message };
-        this.request = { responseURL: CLAIM_PRE_CHECK().apiUrl };
-    }
-}
-
 /**
  * @param pid
  * @returns Object
  */
-export const getPreCheckError = pid => {
-    return new PreCheckError(
+export const getPreCheckError = pid =>
+    new (class extends Error {
+        constructor(message) {
+            super(message);
+            this.original = { data: message };
+            this.request = { responseURL: CLAIM_PRE_CHECK().apiUrl };
+        }
+    })(
         `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`,
     );
-};
 
 /**
  * Save a publication claim record involves up to three steps:
