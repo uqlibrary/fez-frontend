@@ -26,6 +26,8 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    RECORD_TYPE_COLLECTION_ID,
+    RECORD_TYPE_COMMUNITY_ID,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -52,6 +54,8 @@ import {
     validateThesis,
     validateVideo,
     validateWorkingPaper,
+    validateCollection,
+    validateCommunity,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -61,8 +65,8 @@ export default values => {
     const summary = locale.validationErrorsSummary;
     let errors = {
         bibliographicSection: {},
-        adminSection: {},
         filesSection: {},
+        adminSection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
@@ -183,6 +187,19 @@ export default values => {
             const workingPaperErrors = validateWorkingPaper(data, locale);
             errors = deepmerge(errors, workingPaperErrors);
             break;
+        case RECORD_TYPE_COMMUNITY_ID:
+            delete errors.adminSection;
+            delete errors.filesSection;
+            const communityErrors = validateCommunity(data, locale);
+            errors = deepmerge(errors, communityErrors);
+            break;
+        case RECORD_TYPE_COLLECTION_ID:
+            delete errors.adminSection.collections;
+            delete errors.filesSection;
+            const collectionErrors = validateCollection(data, locale);
+            errors = deepmerge(errors, collectionErrors);
+            break;
+
         default:
             break;
     }

@@ -1,14 +1,7 @@
-// /import commonFields from './commonFields';
+import commonFields from './commonFields';
 
 export default {
-    // ...commonFields,
-    // eslint-disable-next-line no-unused-vars
-    files: ({ isDataset } = { isDataset: false }) => [
-        {
-            title: 'Files',
-            groups: [['files']],
-        },
-    ],
+    ...commonFields,
     bibliographic: () => [
         {
             title: 'Community Title',

@@ -4,7 +4,6 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading } = state.get('communitiesReducer') || {};
-
     const hasForm = !!((props || {}).meta || {}).form;
     const defaultValue = hasForm
         ? (!!props.input.value && !!props.input.value.toJS && props.input.value.toJS()) ||
