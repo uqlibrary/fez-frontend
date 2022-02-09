@@ -236,17 +236,22 @@ export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked,
     }),
 });
 
+class PreCheckError extends Error {
+    constructor(message) {
+        super(message);
+        this.original = { data: message };
+        this.request = { responseURL: CLAIM_PRE_CHECK().apiUrl };
+    }
+}
+
 /**
  * @param pid
  * @returns Object
  */
 export const getPreCheckError = pid => {
-    const message = `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`;
-    return {
-        ...new Error(message),
-        original: { data: message },
-        request: { responseURL: CLAIM_PRE_CHECK().apiUrl },
-    };
+    return new PreCheckError(
+        `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`,
+    );
 };
 
 /**
