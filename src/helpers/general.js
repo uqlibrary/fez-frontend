@@ -16,7 +16,7 @@ export const stripHtml = html => {
 
 export function hydrateMock(truncatedData) {
     if (!truncatedData.rek_pid) {
-        throw Error('missing PID in data ' + JSON.stringify(truncatedData));
+        throw new Error('missing PID in data ' + JSON.stringify(truncatedData));
     }
 
     Object.keys(truncatedData).forEach(key => {
