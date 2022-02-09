@@ -1,29 +1,30 @@
 import {
-    AUTHOR_ADDING,
-    AUTHOR_ADD_SUCCESS,
     AUTHOR_ADD_FAILED,
-    AUTHOR_LIST_LOADING,
-    AUTHOR_LIST_LOADED,
-    AUTHOR_LIST_FAILED,
-    AUTHOR_ITEM_UPDATING,
-    AUTHOR_ITEM_UPDATE_SUCCESS,
-    AUTHOR_ITEM_UPDATE_FAILED,
-    AUTHOR_ITEM_DELETING,
-    AUTHOR_ITEM_DELETE_SUCCESS,
+    AUTHOR_ADD_SUCCESS,
+    AUTHOR_ADDING,
     AUTHOR_ITEM_DELETE_FAILED,
+    AUTHOR_ITEM_DELETE_SUCCESS,
+    AUTHOR_ITEM_DELETING,
+    AUTHOR_ITEM_UPDATE_FAILED,
+    AUTHOR_ITEM_UPDATE_SUCCESS,
+    AUTHOR_ITEM_UPDATING,
+    AUTHOR_LIST_FAILED,
+    AUTHOR_LIST_LOADED,
+    AUTHOR_LIST_LOADING,
+    BULK_AUTHOR_ITEMS_DELETE_FAILED,
+    BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
+    BULK_AUTHOR_ITEMS_DELETING,
     CHECKING_EXISTING_AUTHOR,
     CHECKING_EXISTING_AUTHOR_FAILED,
     EXISTING_AUTHOR_FOUND,
     EXISTING_AUTHOR_NOT_FOUND,
-    BULK_AUTHOR_ITEMS_DELETING,
-    BULK_AUTHOR_ITEMS_DELETE_SUCCESS,
-    BULK_AUTHOR_ITEMS_DELETE_FAILED,
-    SCOPUS_INGEST_REQUESTING,
-    SCOPUS_INGEST_REQUEST_SUCCESS,
     SCOPUS_INGEST_REQUEST_FAILED,
+    SCOPUS_INGEST_REQUEST_SUCCESS,
+    SCOPUS_INGEST_REQUESTING,
 } from './actionTypes';
-import { get, put, destroy, post } from 'repositories/generic';
-import { AUTHOR_API, MANAGE_AUTHORS_LIST_API, AUTHORS_SEARCH_API, INGEST_WORKS_API } from 'repositories/routes';
+import { destroy, get, post, put } from 'repositories/generic';
+import { AUTHOR_API, AUTHORS_SEARCH_API, INGEST_WORKS_API, MANAGE_AUTHORS_LIST_API } from 'repositories/routes';
+import { createSentryFriendlyError } from '../config/axios';
 
 export function loadAuthorList({ page, pageSize, search }) {
     return async dispatch => {
@@ -158,7 +159,12 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
                     dispatch({
                         type: EXISTING_AUTHOR_FOUND,
                     });
-                    return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
+                    return Promise.reject(
+                        createSentryFriendlyError(validation[searchField], {
+                            ...asyncErrors,
+                            [searchField]: validation[searchField],
+                        }),
+                    );
                 } else {
                     dispatch({
                         type: EXISTING_AUTHOR_NOT_FOUND,
@@ -166,7 +172,9 @@ export function checkForExistingAuthor(search, searchField, id, validation, asyn
                     if (!!asyncErrors && Object.keys(asyncErrors).length > 0) {
                         // eslint-disable-next-line no-unused-vars
                         const { [searchField]: discardKey, ...restAsyncErrors } = asyncErrors;
-                        return Promise.reject({ ...restAsyncErrors });
+                        return Promise.reject(
+                            createSentryFriendlyError(validation[searchField], { ...restAsyncErrors }),
+                        );
                     } else {
                         return Promise.resolve();
                     }
