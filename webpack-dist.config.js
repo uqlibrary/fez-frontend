@@ -227,6 +227,7 @@ const webpackConfig = {
         alias: {
             '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
             'react-dom$': resolve(__dirname, 'node_modules', 'react-dom/profiling'),
+            'scheduler/tracing': resolve(__dirname, 'node_modules', 'scheduler/tracing-profiling'),
         },
     },
     performance: {
@@ -254,8 +255,9 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
 
 // enable profiler
 if (!!process.env.ENABLE_PROFILING) {
-    console.log('ENABLE_PROFILING=true, enabling profiling');
-    webpackConfig.resolve.alias['react-dom$'] = resolve(__dirname, 'node_modules', 'react-dom/profiling');
+    // webpackConfig.resolve.alias['react-dom$'] = resolve(__dirname, 'node_modules', 'react-dom/profiling');
+    // eslint-disable-next-line max-len
+    // webpackConfig.resolve.alias['scheduler/tracing'] = resolve(__dirname, 'node_modules', 'scheduler/tracing-profiling');
 }
 
 module.exports = webpackConfig;
