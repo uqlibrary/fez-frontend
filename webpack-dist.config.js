@@ -226,6 +226,7 @@ const webpackConfig = {
         modules: ['src', 'node_modules', 'custom_modules'],
         alias: {
             '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
+            'react-dom$': resolve(__dirname, 'node_modules', 'react-dom/profiling'),
         },
     },
     performance: {
@@ -252,9 +253,9 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
 }
 
 // enable profiler
-if (!!process.env.ENABLE_PROFILER) {
-    webpackConfig.resolve.alias['react-dom$'] = 'react-dom/profiling';
-    webpackConfig.resolve.alias['scheduler/tracing'] = 'scheduler/tracing-profiling';
+if (!!process.env.ENABLE_PROFILING) {
+    console.log('ENABLE_PROFILING=true, enabling profiling');
+    webpackConfig.resolve.alias['react-dom$'] = resolve(__dirname, 'node_modules', 'react-dom/profiling');
 }
 
 module.exports = webpackConfig;
