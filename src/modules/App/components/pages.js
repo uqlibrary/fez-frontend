@@ -16,6 +16,9 @@ const lazyRetry = (importFn, retries = 3, interval = 500) => {
             });
     });
 };
+export const CommunityList = lazy(() =>
+    lazyRetry(() => import('modules/Admin/CommunityList/components/CommunityList')),
+);
 
 // lazy loaded components
 export const AddDataCollection = lazy(() =>
