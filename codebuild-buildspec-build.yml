@@ -44,7 +44,7 @@ phases:
   build:
     commands:
       set &&
-      npm run build &&
+      npm run build -- --profile &&
       ls dist
   post_build:
     commands:
