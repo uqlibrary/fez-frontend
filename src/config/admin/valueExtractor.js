@@ -251,17 +251,17 @@ export default {
     },
     communities: {
         getValue: record => {
-            const uniqueCollections = [];
-            record.fez_record_search_key_ismemberof.forEach(collection => {
-                if (!uniqueCollections.find(uniqueItem => collection.rek_ismemberof === uniqueItem.rek_ismemberof)) {
-                    uniqueCollections.push(collection);
+            const uniqueCommunities = [];
+            record.fez_record_search_key_ismemberof.forEach(community => {
+                if (!uniqueCommunities.find(uniqueItem => community.rek_ismemberof === uniqueItem.rek_ismemberof)) {
+                    uniqueCommunities.push(community);
                 }
             });
-            const returnValue = uniqueCollections.map(collection => ({
-                rek_pid: collection.rek_ismemberof,
-                rek_title: collection.rek_ismemberof_lookup,
-                id: collection.rek_ismemberof,
-                value: collection.rek_ismemberof_lookup,
+            const returnValue = uniqueCommunities.map(community => ({
+                rek_pid: community.rek_ismemberof,
+                rek_title: community.rek_ismemberof_lookup,
+                id: community.rek_ismemberof,
+                value: community.rek_ismemberof_lookup,
             }));
 
             // delete record.fez_record_search_key_ismemberof;
