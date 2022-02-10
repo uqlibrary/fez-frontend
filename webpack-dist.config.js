@@ -252,7 +252,7 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
 }
 
 // enable profiler
-if (!!process.env.ENABLE_PROFILING) {
+if (process.env.CI_BRANCH === 'feature-strategic-publishing') {
     webpackConfig.resolve.alias['react-dom$'] = resolve(__dirname, 'node_modules', 'react-dom/profiling');
     webpackConfig.resolve.alias['scheduler/tracing'] = resolve(
         __dirname,

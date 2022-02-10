@@ -44,7 +44,7 @@ phases:
   build:
     commands:
       set &&
-      if [[ "$CI_BRANCH" == "feature-strategic-publishing" ]]; then ENABLE_PROFILING=true npm run build; else npm run build; fi &&
+      npm run build &&
       ls dist
   post_build:
     commands:
