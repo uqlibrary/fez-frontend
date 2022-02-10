@@ -251,4 +251,10 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
     );
 }
 
+// enable profiler
+if (!!process.env.ENABLE_PROFILER) {
+    webpackConfig.resolve.alias['react-dom$'] = 'react-dom/profiling';
+    webpackConfig.resolve.alias['scheduler/tracing'] = 'scheduler/tracing-profiling';
+}
+
 module.exports = webpackConfig;
