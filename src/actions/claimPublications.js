@@ -12,6 +12,7 @@ import {
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import { dismissAppAlert } from './app';
+import { createSentryFriendlyError } from '../config/axios';
 
 /**
  * Load publication to claim full record
@@ -242,11 +243,10 @@ export const mergeAvailableAuthoringData = (isAuthorLinked, isContributorLinked,
  */
 export const getPreCheckError = pid => {
     const message = `The record you are trying to claim is already exists in eSpace, however, with different authors/contributors:\n${APP_URL}view/${pid}`;
-    return {
-        ...new Error(message),
+    return createSentryFriendlyError(message, {
         original: { data: message },
         request: { responseURL: CLAIM_PRE_CHECK().apiUrl },
-    };
+    });
 };
 
 /**

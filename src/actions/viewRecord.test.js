@@ -53,11 +53,11 @@ describe('View record actions', () => {
             ];
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordVersionToView(testPid, testVersion));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[500],
-            });
+            const result = mockActionsStore.getActions();
+            expect(result).toHaveDispatchedActions(expectedActions);
+            expect(
+                result.filter(action => action.type === actions.VIEW_RECORD_LOAD_FAILED).pop().payload,
+            ).toHaveProperty('message', locale.global.errorMessages[500].message);
         });
 
         it('dispatches expected actions when loading a deleted record to view', async () => {
@@ -104,11 +104,11 @@ describe('View record actions', () => {
             ];
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[500],
-            });
+            const result = mockActionsStore.getActions();
+            expect(result).toHaveDispatchedActions(expectedActions);
+            expect(
+                result.filter(action => action.type === actions.VIEW_RECORD_LOAD_FAILED).pop().payload,
+            ).toHaveProperty('message', locale.global.errorMessages[500].message);
         });
 
         it('dispatches expected actions when loading a deleted record to view', async () => {
@@ -151,11 +151,11 @@ describe('View record actions', () => {
             ];
 
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_LOAD_FAILED,
-                payload: locale.global.errorMessages[403],
-            });
+            const result = mockActionsStore.getActions();
+            expect(result).toHaveDispatchedActions(expectedActions);
+            expect(
+                result.filter(action => action.type === actions.VIEW_RECORD_LOAD_FAILED).pop().payload,
+            ).toHaveProperty('message', locale.global.errorMessages[403].message);
         });
 
         it('dispatches expected actions when loading a non-exist record to view from API', async () => {
