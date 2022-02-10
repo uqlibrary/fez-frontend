@@ -249,6 +249,26 @@ export default {
     fez_record_search_key_total_pages: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_total_pages'),
     },
+    communities: {
+        getValue: record => {
+            const uniqueCollections = [];
+            record.fez_record_search_key_ismemberof.forEach(collection => {
+                if (!uniqueCollections.find(uniqueItem => collection.rek_ismemberof === uniqueItem.rek_ismemberof)) {
+                    uniqueCollections.push(collection);
+                }
+            });
+            const returnValue = uniqueCollections.map(collection => ({
+                rek_pid: collection.rek_ismemberof,
+                rek_title: collection.rek_ismemberof_lookup,
+                id: collection.rek_ismemberof,
+                value: collection.rek_ismemberof_lookup,
+            }));
+
+            // delete record.fez_record_search_key_ismemberof;
+
+            return returnValue;
+        },
+    },
     collections: {
         getValue: record => {
             const uniqueCollections = [];

@@ -77,7 +77,7 @@ const getInitialFormValues = (recordToView, recordType) => {
             authorsSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors', authorsParams)) || {},
             adminSection:
-                (recordType === (RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
+                ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'admin')) ||
                 {},
             ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
