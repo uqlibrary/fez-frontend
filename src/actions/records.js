@@ -340,13 +340,13 @@ export const updateCollection = ({ pid, date, updated }) => {
         dispatch({
             type: actions.COLLECTION_UPDATING,
         });
-        const patchRecordRequest = {
+        const putRecordRequest = {
             rek_date: date,
             ...updated,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
-            .then(() => patch(EXISTING_COLLECTION_API({ pid }), patchRecordRequest))
+            .then(() => put(EXISTING_COLLECTION_API({ pid }), putRecordRequest))
             .then(response => {
                 dispatch({
                     type: actions.COLLECTION_UPDATE_SUCCESS,
@@ -405,13 +405,13 @@ export const updateCommunity = ({ pid, date, updated }) => {
         dispatch({
             type: actions.COMMUNITY_UPDATING,
         });
-        const patchRecordRequest = {
+        const putRecordRequest = {
             rek_date: date,
             updated: { ...updated },
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
-            .then(() => patch(EXISTING_COMMUNITY_API({ pid }), patchRecordRequest))
+            .then(() => put(EXISTING_COMMUNITY_API({ pid }), putRecordRequest))
             .then(response => {
                 dispatch({
                     type: actions.COMMUNITY_UPDATE_SUCCESS,

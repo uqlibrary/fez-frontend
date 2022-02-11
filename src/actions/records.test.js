@@ -1087,7 +1087,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on successful save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(200, { data: { ...collectionRecord } });
 
             const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
@@ -1098,7 +1098,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
@@ -1179,7 +1179,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on successful save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
                 .reply(200, { data: { ...communityRecord } });
 
             const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
@@ -1190,7 +1190,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
