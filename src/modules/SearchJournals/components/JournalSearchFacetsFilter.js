@@ -96,6 +96,7 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
  */
 export const filterOutNonActiveFacets = facets =>
     Object.keys(facets)
+        /* istanbul ignore next */
         .filter(key => (Array.isArray(facets[key]) ? facets[key].length > 0 : facets[key]))
         .reduce((filtered, key) => {
             filtered[key] = facets[key];
