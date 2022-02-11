@@ -401,7 +401,6 @@ export function createCommunity(data, authorId) {
 }
 
 export const updateCommunity = ({ pid, date, ...updated }) => {
-    console.log('updateCommunity', pid, date, updated);
     return dispatch => {
         dispatch({
             type: actions.COMMUNITY_UPDATING,

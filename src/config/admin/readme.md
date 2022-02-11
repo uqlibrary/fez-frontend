@@ -77,3 +77,8 @@ To fix this, head to `src/config/admin/valueExtractor.js` and create a definitio
 Finally, if you're _not_ using the commonField sections, or if you only required a subsection, you may discover your Admin Edit page is showing an error message referring to fields you aren't using. This is because certain sections were hard coded in to the system as requiring validation and as such, all new Admin Edit pages will likely run afoul of this issue.
 To fix, open up `src/config/admin/validate.js` and include a new section in the main `switch` block for your field. For example the record type `RECORD_TYPE_COMMUNITY_ID` did not require an admin section or a `files` section, and so these were deleted from the general validation object in the `switch` block to remove the error messages. Remember to include your record type if it's not already available, and your page config's `validation<Name>` method.
 
+## Submitting to an API
+
+Currently all Admin Edit form requests are channeled through a single `submitHandler` found in `src/modules/Admin/submitHandler/index.js`. If you are working with a record type that is not the default `RECORD_TYPE_RECORD` then you will likely need to look at this file, in particular the switch statement within.
+
+Ultimately the `submitHandler` will fire a function you have created in `src/actions/records.js` via a Redux action that you have defined in `src/actions/actionTypes.js`, to handle the actual sumission to the API point; be sure to add your new route to `src/repositories/routes.js` in order for the API call to succeed.
