@@ -335,7 +335,7 @@ export function createCollection(data, authorId) {
     };
 }
 
-export const updateCollection = ({ pid, date, updated }) => {
+export const updateCollection = ({ pid, date, ...updated }) => {
     return dispatch => {
         dispatch({
             type: actions.COLLECTION_UPDATING,
