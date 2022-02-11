@@ -1,9 +1,13 @@
 import React from 'react';
 
-import { facets, emptyFacets } from 'mock/data/testing/facets';
-import JournalSearchFacetsFilter, { getFacetsToDisplay, showFavouritedOnlyFacet } from './JournalSearchFacetsFilter';
+import { emptyFacets, facets } from 'mock/data/testing/facets';
+import JournalSearchFacetsFilter, {
+    getFacetsToDisplay,
+    getResetFacetFiltersButtonId,
+    showFavouritedOnlyFacet,
+} from './JournalSearchFacetsFilter';
 
-import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
@@ -298,11 +302,69 @@ describe('Search Journals Facets component', () => {
 
         expect(getByTestId(clearFacetItemTestId)).toBeVisible();
 
-        // rest the active filters
+        // reset the active filters
         act(() => {
             fireEvent.click(getByTestId('reset-facet-filters'));
         });
 
         expect(queryByTestId(clearFacetItemTestId)).not.toBeInTheDocument();
+    });
+
+    it('should hide the reset button when removing the last active filter', () => {
+        const testFacetChangeFn = jest.fn();
+        const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
+
+        // make sure the reset facet filter button is NOT visible
+        expect(queryByTestId(getResetFacetFiltersButtonId())).not.toBeInTheDocument();
+        // 1. activate on facet filter
+        const cwtsFacetFilterTestId = 'facet-filter-nested-item-cwts';
+        const clearCwtsFacetFilterTestId = 'clear-facet-filter-nested-item-cwts';
+        // expand the facet parent
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
+        });
+        // make sure the filter is not active
+        expect(getByTestId(cwtsFacetFilterTestId)).toBeVisible();
+        expect(queryByTestId(clearCwtsFacetFilterTestId)).not.toBeInTheDocument();
+        // make the filter active
+        act(() => {
+            fireEvent.click(getByTestId(cwtsFacetFilterTestId));
+        });
+        expect(getByTestId(clearCwtsFacetFilterTestId)).toBeVisible();
+        // make sure the reset facet filter button is visible
+        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+
+        // 2. activate a second facet filter
+        const scieFacetFilterTestId = 'facet-filter-nested-item-scie';
+        const clearScieFacetFilterTestId = 'clear-facet-filter-nested-item-scie';
+        // expand the facet parent
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
+        });
+        // make sure the filter is not active
+        expect(getByTestId(scieFacetFilterTestId)).toBeVisible();
+        expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
+        // make the filter active
+        act(() => {
+            fireEvent.click(getByTestId(scieFacetFilterTestId));
+        });
+        expect(getByTestId(clearScieFacetFilterTestId)).toBeVisible();
+        // make sure the reset facet filter button is visible
+        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+
+        // deactivate the first filter
+        act(() => {
+            fireEvent.click(getByTestId(clearCwtsFacetFilterTestId));
+        });
+        expect(queryByTestId(clearCwtsFacetFilterTestId)).not.toBeInTheDocument();
+        // make sure the reset facet filter button is visible
+        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+        // deactivate the second filter
+        act(() => {
+            fireEvent.click(getByTestId(clearScieFacetFilterTestId));
+        });
+        expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
+        // make sure the reset facet filter button is NOT visible
+        expect(queryByTestId(getResetFacetFiltersButtonId())).not.toBeInTheDocument();
     });
 });

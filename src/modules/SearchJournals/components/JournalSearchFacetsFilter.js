@@ -5,7 +5,7 @@ import FacetFilterListItem from 'modules/SharedComponents/PublicationsList/compo
 import FacetFilterNestedListItem from 'modules/SharedComponents/PublicationsList/components/FacetsFilter/FacetFilterNestedListItem';
 import locale from 'locale/components';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import { useJournalSearch, useActiveFacetFilters } from '../hooks';
+import { useActiveFacetFilters, useJournalSearch } from '../hooks';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
@@ -90,6 +90,20 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
     return false;
 };
 
+/**
+ * @param {}
+ * @return {{}}
+ */
+export const filterOutNonActiveFacets = facets =>
+    Object.keys(facets)
+        .filter(key => (Array.isArray(facets[key]) ? facets[key].length > 0 : facets[key]))
+        .reduce((filtered, key) => {
+            filtered[key] = facets[key];
+            return filtered;
+        }, {});
+
+export const getResetFacetFiltersButtonId = () => 'reset-facet-filters';
+
 export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabled, onFacetsChanged }) => {
     const { journalSearchQueryParams } = useJournalSearch();
     const activeFiltersQuerystringPart = JSON.stringify(journalSearchQueryParams.activeFacets?.filters);
@@ -144,13 +158,14 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
     const facetsToDisplay = getFacetsToDisplay(facetsData, renameFacetsList);
 
     const _handleFacetClick = (category, facet) => () => {
-        const newActiveFacetsFilters = { ...activeFacetsFilters };
+        let newActiveFacetsFilters = { ...activeFacetsFilters };
         if (isFacetFilterActive(newActiveFacetsFilters, category, facet)) {
             if (category === showFavouritedOnlyFacet.facetTitle) {
                 delete newActiveFacetsFilters[category];
             } else {
                 newActiveFacetsFilters[category] = newActiveFacetsFilters[category].filter(item => item !== facet);
             }
+            newActiveFacetsFilters = filterOutNonActiveFacets(newActiveFacetsFilters);
         } else if (newActiveFacetsFilters.hasOwnProperty(category)) {
             newActiveFacetsFilters[category].push(facet);
         } else {
@@ -204,7 +219,8 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                             <Button
                                 variant="contained"
                                 arial-label="rest facet filters"
-                                id={'reset-facet-filters'}
+                                id={getResetFacetFiltersButtonId()}
+                                data-testid={getResetFacetFiltersButtonId()}
                                 onClick={_handleResetClick}
                             >
                                 {locale.components.searchJournals.journalFacetsFilter.resetButtonText}
