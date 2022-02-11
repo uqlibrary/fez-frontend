@@ -96,14 +96,20 @@ const isFacetFilterActive = (activeFacetsFilters, category, value) => {
  */
 export const filterOutNonActiveFacets = facets =>
     Object.keys(facets)
-        /* istanbul ignore next */
-        .filter(key => (Array.isArray(facets[key]) ? facets[key].length > 0 : facets[key]))
+        .filter(key => {
+            /* istanbul ignore else */
+            if (Array.isArray(facets[key])) {
+                return facets[key].length;
+            }
+            /* istanbul ignore next */
+            return facets[key];
+        })
         .reduce((filtered, key) => {
             filtered[key] = facets[key];
             return filtered;
         }, {});
 
-export const getResetFacetFiltersButtonId = () => 'reset-facet-filters';
+export const resetFacetFiltersButtonId = 'reset-facet-filters';
 
 export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabled, onFacetsChanged }) => {
     const { journalSearchQueryParams } = useJournalSearch();
@@ -220,8 +226,8 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                             <Button
                                 variant="contained"
                                 arial-label="rest facet filters"
-                                id={getResetFacetFiltersButtonId()}
-                                data-testid={getResetFacetFiltersButtonId()}
+                                id={resetFacetFiltersButtonId}
+                                data-testid={resetFacetFiltersButtonId}
                                 onClick={_handleResetClick}
                             >
                                 {locale.components.searchJournals.journalFacetsFilter.resetButtonText}

@@ -3,7 +3,7 @@ import React from 'react';
 import { emptyFacets, facets } from 'mock/data/testing/facets';
 import JournalSearchFacetsFilter, {
     getFacetsToDisplay,
-    getResetFacetFiltersButtonId,
+    resetFacetFiltersButtonId,
     showFavouritedOnlyFacet,
 } from './JournalSearchFacetsFilter';
 
@@ -315,7 +315,7 @@ describe('Search Journals Facets component', () => {
         const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
 
         // make sure the reset facet filter button is NOT visible
-        expect(queryByTestId(getResetFacetFiltersButtonId())).not.toBeInTheDocument();
+        expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
         // 1. activate on facet filter
         const cwtsFacetFilterTestId = 'facet-filter-nested-item-cwts';
         const clearCwtsFacetFilterTestId = 'clear-facet-filter-nested-item-cwts';
@@ -332,7 +332,7 @@ describe('Search Journals Facets component', () => {
         });
         expect(getByTestId(clearCwtsFacetFilterTestId)).toBeVisible();
         // make sure the reset facet filter button is visible
-        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+        expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
 
         // 2. activate a second facet filter
         const scieFacetFilterTestId = 'facet-filter-nested-item-scie';
@@ -350,7 +350,7 @@ describe('Search Journals Facets component', () => {
         });
         expect(getByTestId(clearScieFacetFilterTestId)).toBeVisible();
         // make sure the reset facet filter button is visible
-        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+        expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
 
         // deactivate the first filter
         act(() => {
@@ -358,13 +358,13 @@ describe('Search Journals Facets component', () => {
         });
         expect(queryByTestId(clearCwtsFacetFilterTestId)).not.toBeInTheDocument();
         // make sure the reset facet filter button is visible
-        expect(queryByTestId(getResetFacetFiltersButtonId())).toBeInTheDocument();
+        expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
         // deactivate the second filter
         act(() => {
             fireEvent.click(getByTestId(clearScieFacetFilterTestId));
         });
         expect(queryByTestId(clearScieFacetFilterTestId)).not.toBeInTheDocument();
         // make sure the reset facet filter button is NOT visible
-        expect(queryByTestId(getResetFacetFiltersButtonId())).not.toBeInTheDocument();
+        expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
     });
 });
