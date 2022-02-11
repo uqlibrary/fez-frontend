@@ -1,9 +1,11 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
     collectionRecord,
+    collectionRecordWithExtraData,
     collectionSearchList,
     collectionsByCommunity,
     communityRecord,
+    communityRecordWithExtraData,
     communitySearchList,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
