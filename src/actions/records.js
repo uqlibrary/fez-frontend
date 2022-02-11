@@ -341,8 +341,8 @@ export const updateCollection = ({ pid, date, updated }) => {
             type: actions.COLLECTION_UPDATING,
         });
         const putRecordRequest = {
-            rek_date: date,
             ...updated,
+            rek_date: date,
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])
@@ -400,14 +400,15 @@ export function createCommunity(data, authorId) {
     };
 }
 
-export const updateCommunity = ({ pid, date, updated }) => {
+export const updateCommunity = ({ pid, date, ...updated }) => {
+    console.log('updateCommunity', pid, date, updated);
     return dispatch => {
         dispatch({
             type: actions.COMMUNITY_UPDATING,
         });
         const putRecordRequest = {
+            ...updated,
             rek_date: date,
-            updated: { ...updated },
             ...transformers.getSecuritySectionSearchKeys(updated.securitySection),
         };
         return Promise.resolve([])

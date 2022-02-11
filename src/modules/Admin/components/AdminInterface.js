@@ -95,7 +95,6 @@ export const AdminInterface = ({
     error,
 }) => {
     const { record } = useRecordContext();
-    console.log('AdminInterface', record);
     const { tabbed, toggleTabbed } = useTabbedContext();
     const isSuperAdmin = useIsUserSuperAdmin();
     const objectType = ((record || {}).rek_object_type_lookup || '').toLowerCase();

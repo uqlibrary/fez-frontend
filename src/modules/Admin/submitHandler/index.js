@@ -45,7 +45,7 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
             break;
     }
 
-    return dispatch(action(requestObject)).catch(error => {
+    return dispatch(action({ ...requestObject })).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
