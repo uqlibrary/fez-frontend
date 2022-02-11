@@ -143,6 +143,7 @@ const rows = [
     },
 ];
 export const CommunityList = () => {
+    const [pageSize, setPageSize] = React.useState(5);
     const columns = [
         { field: 'id', headerName: 'ID', width: 0 },
         {
@@ -235,8 +236,9 @@ export const CommunityList = () => {
                     }}
                     rows={rows}
                     columns={columns}
-                    pageSize={5}
-                    rowsPerPageOptions={[5]}
+                    pageSize={pageSize}
+                    rowsPerPageOptions={[5, 10, 20, 50]}
+                    onPageSizeChange={newSize => setPageSize(newSize)}
                     checkboxSelection
                     disableSelectionOnClick
                 />
