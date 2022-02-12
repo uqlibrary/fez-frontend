@@ -111,6 +111,12 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
+        {
+            path: pathConfig.communityList,
+            component: components.CommunityList,
+            exact: true,
+            pageTitle: locale.pages.communityList.title,
+        },
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
@@ -119,12 +125,6 @@ export const getRoutesConfig = ({
                       access: [roles.admin],
                       exact: true,
                       pageTitle: locale.pages.viewRecord.version.title,
-                  },
-                  {
-                      path: pathConfig.communityList,
-                      component: components.CommunityList,
-                      exact: true,
-                      pageTitle: locale.pages.communityList.title,
                   },
               ]
             : []),
