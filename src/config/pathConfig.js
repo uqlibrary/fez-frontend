@@ -37,6 +37,7 @@ export const getDatastreamVersionQueryString = (fileName, checksum) => {
 
 export const pathConfig = {
     index: '/',
+    communityList: '/communitylist',
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',
