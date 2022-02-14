@@ -56,6 +56,19 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -426,15 +439,31 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_6"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_7"
             pageTitle="Page not found"
           />
         </Switch>
@@ -729,6 +758,19 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -1365,8 +1407,24 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_23"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            key="route_24"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1657,6 +1715,19 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -2293,8 +2364,24 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_23"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            key="route_24"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2360,6 +2447,19 @@ exports[`Application component should redirect to login page with correct return
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -2732,15 +2832,31 @@ exports[`Application component should redirect to login page with correct return
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_6"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_7"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3029,6 +3145,19 @@ exports[`Application component should render alert if user is not fez author 1`]
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -3684,8 +3813,24 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_23"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            key="route_24"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3974,6 +4119,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -4649,8 +4807,24 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_23"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            key="route_24"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4939,6 +5113,19 @@ exports[`Application component should render app for account with fez author wit
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -5599,8 +5786,24 @@ exports[`Application component should render app for account with fez author wit
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_23"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            key="route_24"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5889,6 +6092,19 @@ exports[`Application component should render application with routing for the us
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -6207,6 +6423,19 @@ exports[`Application component should render for anon user 1`] = `
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "component": [Function],
@@ -6542,15 +6771,31 @@ exports[`Application component should render for anon user 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_6"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_7"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6634,6 +6879,19 @@ exports[`Application component should render thesis submission for HDR without m
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -6897,13 +7155,29 @@ exports[`Application component should render thesis submission for HDR without m
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            key="route_6"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_7"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -6919,7 +7193,7 @@ exports[`Application component should render thesis submission for HDR without m
                 },
               }
             }
-            key="route_7"
+            key="route_8"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -7978,6 +8252,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "exact": true,
+                            "pageTitle": "List of Communities",
+                            "path": "/communities",
+                          },
+                          Object {
                             "component": [Function],
                             "pageTitle": "Page not found",
                           },
@@ -8303,6 +8590,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               "pageTitle": "Journal details",
                               "path": "/journal/view/:id([0-9]+)",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "exact": true,
+                              "pageTitle": "List of Communities",
+                              "path": "/communities",
                             },
                             Object {
                               "component": [Function],
@@ -8631,6 +8931,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                                 "pageTitle": "Journal details",
                                 "path": "/journal/view/:id([0-9]+)",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "exact": true,
+                                "pageTitle": "List of Communities",
+                                "path": "/communities",
                               },
                               Object {
                                 "component": [Function],
