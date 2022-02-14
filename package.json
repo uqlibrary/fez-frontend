@@ -142,6 +142,13 @@
         "@material-ui/pickers": "^3.3.10",
         "@material-ui/styles": "^4.11.4",
         "@material/animation": "0.34.0",
+<<<<<<< Updated upstream
+=======
+        "@mui/icons-material": "^5.4.1",
+        "@mui/material": "^5.4.1",
+        "@mui/styles": "^5.4.1",
+        "@mui/x-data-grid": "^5.5.0",
+>>>>>>> Stashed changes
         "@react-google-maps/api": "^2.2.0",
         "@sentry/react": "^6.17.1",
         "@sentry/tracing": "^6.17.1",
@@ -174,6 +181,7 @@
         "material-table": "^1.69.2",
         "moment": "^2.22.1",
         "moment-timezone": "^0.5.16",
+        "mui-datatables": "^4.0.0",
         "number-to-words": "^1.2.4",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
