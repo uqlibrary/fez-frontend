@@ -57,6 +57,7 @@ export const flattedPathConfig = [
     '/records/possible',
     '/records/search',
     '/view',
+    '/communitylist',
 ];
 
 // TODO: will we even have roles?
@@ -85,6 +86,7 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.index.title,
         },
+
         {
             path: pathConfig.contact,
             render: () => components.StandardPage({ ...locale.pages.contact }),
@@ -108,6 +110,12 @@ export const getRoutesConfig = ({
             component: components.ViewJournal,
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
+        },
+        {
+            path: pathConfig.communityList,
+            component: components.CommunityList,
+            exact: true,
+            pageTitle: locale.pages.communityList.title,
         },
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [

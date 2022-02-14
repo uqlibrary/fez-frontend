@@ -65,9 +65,9 @@ const columns = [
         options: {
             filter: false,
             sort: true,
-            customBodyRender: value => {
-                return <AdminActions record={rowArrayData.rowData[0]} />;
-            },
+            // customBodyRender: value => {
+            //     return <AdminActions record={rowArrayData.rowData[0]} />;
+            // },
         },
     },
     {
