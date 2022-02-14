@@ -1,12 +1,12 @@
 import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import MUIDataTable from 'mui-datatables';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@material-ui/core/Typography';
 import AdminActions from './AdminActions';
 import { communitySearchList } from 'mock/data';
 import moment from 'moment';
-const theme = createTheme();
+// const theme = createTheme();
 
 const communityList = communitySearchList.data.filter(object => object.rek_display_type === 11);
 
@@ -115,15 +115,13 @@ export const CommunityList = () => {
     };
     return (
         <StandardPage title={txt.title}>
-            <ThemeProvider theme={theme}>
-                <MUIDataTable
-                    title={txt.title}
-                    data={communityList}
-                    columns={columns}
-                    options={options}
-                    rowsPerPageOptions={[10, 20, 50, 100]}
-                />
-            </ThemeProvider>
+            <MUIDataTable
+                title={txt.title}
+                data={communityList}
+                columns={columns}
+                options={options}
+                rowsPerPageOptions={[10, 20, 50, 100]}
+            />
         </StandardPage>
     );
 };
