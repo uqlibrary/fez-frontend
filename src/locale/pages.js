@@ -600,6 +600,9 @@ export default {
                 confirmButtonLabel: 'Yes',
             },
         },
+        communityList: {
+            title: 'List of Communities',
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
