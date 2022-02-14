@@ -14,7 +14,7 @@ export default {
             ariaLabel: 'Click to view read and publish agreement',
             prefixText: 'This title may be subject to a ',
             postfixText: ' : Article Processing Charges may be pre-paid or discounted',
-            linkText: 'Read and Publish agreement',
+            linkText: 'Read and Publish Agreement',
             externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
         },
     },
