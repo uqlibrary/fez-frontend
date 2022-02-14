@@ -363,7 +363,17 @@ exports[`AdminContainer component should not render non-security errors for comm
             }
           }
           disabled={true}
-          formErrors={false}
+          formErrors={
+            Immutable.Map {
+              "bibliographicSection": Object {
+                "rek_date": "Publication date is required",
+                "rek_title": "Title is required",
+              },
+              "securitySection": Object {
+                "rek_security_policy": "Policy is required",
+              },
+            }
+          }
           handleSubmit={[MockFunction]}
           location={
             Location {

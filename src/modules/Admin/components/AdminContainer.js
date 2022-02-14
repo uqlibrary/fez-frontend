@@ -156,7 +156,7 @@ export const AdminContainer = ({
 
     const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+            return recordToView && recordToView.rek_object_type_lookup?.toLowerCase() === RECORD_TYPE_RECORD;
         }
         return false;
     };
@@ -204,7 +204,7 @@ export const AdminContainer = ({
                                         activated:
                                             isActivated() ||
                                             [RECORD_TYPE_COLLECTION].includes(
-                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
                                             ),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
@@ -213,7 +213,7 @@ export const AdminContainer = ({
                                         activated:
                                             isActivated() ||
                                             [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
                                             ),
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
                                     },
@@ -253,7 +253,7 @@ export const AdminContainer = ({
                                         activated:
                                             isActivated() ||
                                             [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
-                                                recordToView && recordToView.rek_object_type_lookup.toLowerCase(),
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
                                             ),
                                     },
                                     files: {
