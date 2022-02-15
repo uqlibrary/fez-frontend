@@ -1,10 +1,10 @@
 import {
-    deleteUserListItem,
-    loadUserList,
-    updateUserListItem,
     addUser,
     bulkDeleteUserListItems,
     checkForExistingUser,
+    deleteUserListItem,
+    loadUserList,
+    updateUserListItem,
 } from './manageUsers';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -64,7 +64,7 @@ describe('user list actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(loadUserList({ page: 1, pageSize: 20, search: '' })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -94,7 +94,9 @@ describe('user list actions', () => {
                 actions.USER_ITEM_UPDATE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(updateUserListItem({ usr_id: 1 }, { usr_id: 1 }))).rejects.toEqual({
+            await expect(
+                mockActionsStore.dispatch(updateUserListItem({ usr_id: 1 }, { usr_id: 1 })),
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -137,7 +139,7 @@ describe('user list actions', () => {
                 actions.USER_ITEM_DELETE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(deleteUserListItem({ usr_id: 1 }))).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(deleteUserListItem({ usr_id: 1 }))).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -165,7 +167,7 @@ describe('user list actions', () => {
                 actions.BULK_USER_ITEMS_DELETE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(bulkDeleteUserListItems([{ usr_id: 1 }]))).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(bulkDeleteUserListItems([{ usr_id: 1 }]))).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -205,7 +207,7 @@ describe('user list actions', () => {
                         aut_fname: 'Test',
                     }),
                 ),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -227,7 +229,7 @@ describe('user list actions', () => {
                 mockActionsStore.dispatch(
                     checkForExistingUser('test', 'usr_username', 1, { usr_username: 'Some error' }),
                 ),
-            ).rejects.toEqual({ usr_username: 'Some error' });
+            ).rejects.toMatchObject({ usr_username: 'Some error' });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -255,7 +257,7 @@ describe('user list actions', () => {
                 mockActionsStore.dispatch(
                     checkForExistingUser('test', 'usr_username', 1, { usr_username: 'Some error' }),
                 ),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

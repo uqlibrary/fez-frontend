@@ -48,7 +48,8 @@ export default class NewRecord extends PureComponent {
 
     render() {
         // wait for author to load before rendering
-        if (!this.props.author) {
+        // eslint-disable-next-line camelcase
+        if (!this.props.author?.aut_id) {
             return <span />;
         }
 
@@ -60,7 +61,8 @@ export default class NewRecord extends PureComponent {
             currentAuthor: [
                 {
                     nameAsPublished: this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
-                    authorId: this.props.author.aut_id ? this.props.author.aut_id : '',
+                    // eslint-disable-next-line camelcase
+                    authorId: this.props.author?.aut_id,
                 },
             ],
             rek_title: rawSearchQuery || '',

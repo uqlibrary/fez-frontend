@@ -53,7 +53,7 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
                 dispatch(
                     showAppAlert({
                         ...locale.pages.googleScholarLink.successAlert,
-                        dismissAction /* istanbul ignore next */: () => dispatch(dismissAppAlert()),
+                        dismissAction: /* istanbul ignore next */ () => dispatch(dismissAppAlert()),
                     }),
                 );
                 navigateToDashboard(history);

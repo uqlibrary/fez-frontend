@@ -1,11 +1,11 @@
-import { putUploadFile, getFileUploadMetadata } from './file';
+import { getFileUploadMetadata, putUploadFile } from './file';
 import * as repositories from 'repositories';
 import { locale } from 'locale';
 import * as actions from 'actions/actionTypes';
 import {
     FILE_ACCESS_CONDITION_CLOSED,
-    FILE_ACCESS_CONDITION_OPEN,
     FILE_ACCESS_CONDITION_INHERIT,
+    FILE_ACCESS_CONDITION_OPEN,
 } from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import MockDate from 'mockdate';
 
@@ -79,7 +79,7 @@ describe('File repository', () => {
             `${actions.FILE_UPLOAD_FAILED}@a.txt`,
         ];
 
-        await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).rejects.toEqual(
+        await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).rejects.toMatchObject(
             locale.global.errorMessages[500],
         );
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

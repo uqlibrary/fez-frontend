@@ -43,7 +43,7 @@ describe('myEditorialAppointments actions', () => {
                 actions.MY_EDITORIAL_APPOINTMENT_LIST_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(loadMyEditorialAppointmentsList())).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(loadMyEditorialAppointmentsList())).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -78,7 +78,7 @@ describe('myEditorialAppointments actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(updateMyEditorialAppointmentsListItem({ eap_id: 1 }, { eap_id: 1 })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -132,7 +132,7 @@ describe('myEditorialAppointments actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(deleteMyEditorialAppointmentsListItem({ eap_id: 1 })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -181,7 +181,7 @@ describe('myEditorialAppointments actions', () => {
                         eap_role_cvo_id: '12345',
                     }),
                 ),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

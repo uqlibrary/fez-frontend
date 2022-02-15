@@ -1,26 +1,27 @@
 import {
-    USER_ADDING,
-    USER_ADD_SUCCESS,
-    USER_ADD_FAILED,
-    USER_LIST_LOADING,
-    USER_LIST_LOADED,
-    USER_LIST_FAILED,
-    USER_ITEM_UPDATING,
-    USER_ITEM_UPDATE_SUCCESS,
-    USER_ITEM_UPDATE_FAILED,
-    USER_ITEM_DELETING,
-    USER_ITEM_DELETE_SUCCESS,
-    USER_ITEM_DELETE_FAILED,
-    BULK_USER_ITEMS_DELETING,
-    BULK_USER_ITEMS_DELETE_SUCCESS,
     BULK_USER_ITEMS_DELETE_FAILED,
+    BULK_USER_ITEMS_DELETE_SUCCESS,
+    BULK_USER_ITEMS_DELETING,
     CHECKING_EXISTING_USER,
+    CHECKING_EXISTING_USER_FAILED,
     EXISTING_USER_FOUND,
     EXISTING_USER_NOT_FOUND,
-    CHECKING_EXISTING_USER_FAILED,
+    USER_ADD_FAILED,
+    USER_ADD_SUCCESS,
+    USER_ADDING,
+    USER_ITEM_DELETE_FAILED,
+    USER_ITEM_DELETE_SUCCESS,
+    USER_ITEM_DELETING,
+    USER_ITEM_UPDATE_FAILED,
+    USER_ITEM_UPDATE_SUCCESS,
+    USER_ITEM_UPDATING,
+    USER_LIST_FAILED,
+    USER_LIST_LOADED,
+    USER_LIST_LOADING,
 } from './actionTypes';
-import { get, put, destroy, post } from 'repositories/generic';
-import { USER_API, MANAGE_USERS_LIST_API, USERS_SEARCH_API } from 'repositories/routes';
+import { destroy, get, post, put } from 'repositories/generic';
+import { MANAGE_USERS_LIST_API, USER_API, USERS_SEARCH_API } from 'repositories/routes';
+import { createSentryFriendlyError } from '../config/axios';
 
 /*
 "usr_id"
@@ -178,7 +179,12 @@ export function checkForExistingUser(search, searchField, id, validation, asyncE
                     dispatch({
                         type: EXISTING_USER_FOUND,
                     });
-                    return Promise.reject({ ...asyncErrors, [searchField]: validation[searchField] });
+                    return Promise.reject(
+                        createSentryFriendlyError(validation[searchField], {
+                            ...asyncErrors,
+                            [searchField]: validation[searchField],
+                        }),
+                    );
                 } else {
                     dispatch({
                         type: EXISTING_USER_NOT_FOUND,

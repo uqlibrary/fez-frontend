@@ -630,19 +630,6 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -1254,22 +1241,6 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -1287,7 +1258,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -1309,7 +1280,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -1331,19 +1302,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1362,14 +1333,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1389,13 +1360,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-            key="route_24"
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1587,19 +1558,6 @@ exports[`Application component should determine if it has incomplete works from 
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -2211,22 +2169,6 @@ exports[`Application component should determine if it has incomplete works from 
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -2244,7 +2186,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -2266,7 +2208,7 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -2288,19 +2230,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2319,14 +2261,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2346,13 +2288,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-            key="route_24"
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2990,19 +2932,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "render": [Function],
         },
         Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
           "access": Array [
             "researcher",
             "admin",
@@ -3631,22 +3560,6 @@ exports[`Application component should render alert if user is not fez author 1`]
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -3664,7 +3577,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -3686,7 +3599,7 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -3708,19 +3621,19 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3739,14 +3652,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3766,13 +3679,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-            key="route_24"
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3962,19 +3875,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
         },
         Object {
           "access": Array [
@@ -4625,22 +4525,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -4658,7 +4542,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -4680,7 +4564,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -4702,19 +4586,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4733,14 +4617,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4760,13 +4644,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-            key="route_24"
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4956,19 +4840,6 @@ exports[`Application component should render app for account with fez author wit
           "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
         },
         Object {
           "access": Array [
@@ -5604,22 +5475,6 @@ exports[`Application component should render app for account with fez author wit
             render={[Function]}
           />
           <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.lazy),
-                "_init": [Function],
-                "_payload": Object {
-                  "_result": [Function],
-                  "_status": -1,
-                },
-              }
-            }
-            exact={true}
-            key="route_15"
-            pageTitle="Link ORCID ID to UQ eSpace"
-            path="/author-identifiers/orcid/link"
-          />
-          <Route
             access={
               Array [
                 "researcher",
@@ -5637,7 +5492,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_16"
+            key="route_15"
             pageTitle="Google Scholar identifier"
             path="/author-identifiers/google-scholar/link"
           />
@@ -5659,7 +5514,7 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_17"
+            key="route_16"
             pageTitle="My editorial appointments"
             path="/editorial-appointments"
           />
@@ -5681,19 +5536,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_18"
+            key="route_17"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_19"
+            key="route_18"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5712,14 +5567,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_21"
+            key="route_20"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_22"
+            key="route_21"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -5739,13 +5594,13 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-            key="route_23"
+            key="route_22"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-            key="route_24"
+            key="route_23"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5935,19 +5790,6 @@ exports[`Application component should render application with routing for the us
           "pageTitle": "Add a missing work to eSpace",
           "path": "/records/add/new",
           "render": [Function],
-        },
-        Object {
-          "component": Object {
-            "$$typeof": Symbol(react.lazy),
-            "_init": [Function],
-            "_payload": Object {
-              "_result": [Function],
-              "_status": -1,
-            },
-          },
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
         },
         Object {
           "access": Array [
@@ -8037,19 +7879,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "render": [Function],
                           },
                           Object {
-                            "component": Object {
-                              "$$typeof": Symbol(react.lazy),
-                              "_init": [Function],
-                              "_payload": Object {
-                                "_result": [Function],
-                                "_status": -1,
-                              },
-                            },
-                            "exact": true,
-                            "pageTitle": "Link ORCID ID to UQ eSpace",
-                            "path": "/author-identifiers/orcid/link",
-                          },
-                          Object {
                             "access": Array [
                               "researcher",
                               "admin",
@@ -8375,19 +8204,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "pageTitle": "Add a missing work to eSpace",
                               "path": "/records/add/new",
                               "render": [Function],
-                            },
-                            Object {
-                              "component": Object {
-                                "$$typeof": Symbol(react.lazy),
-                                "_init": [Function],
-                                "_payload": Object {
-                                  "_result": [Function],
-                                  "_status": -1,
-                                },
-                              },
-                              "exact": true,
-                              "pageTitle": "Link ORCID ID to UQ eSpace",
-                              "path": "/author-identifiers/orcid/link",
                             },
                             Object {
                               "access": Array [
@@ -8716,19 +8532,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "pageTitle": "Add a missing work to eSpace",
                                 "path": "/records/add/new",
                                 "render": [Function],
-                              },
-                              Object {
-                                "component": Object {
-                                  "$$typeof": Symbol(react.lazy),
-                                  "_init": [Function],
-                                  "_payload": Object {
-                                    "_result": [Function],
-                                    "_status": -1,
-                                  },
-                                },
-                                "exact": true,
-                                "pageTitle": "Link ORCID ID to UQ eSpace",
-                                "path": "/author-identifiers/orcid/link",
                               },
                               Object {
                                 "access": Array [
