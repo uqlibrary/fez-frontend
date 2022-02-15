@@ -5,11 +5,16 @@ import MUIDataTable from 'mui-datatables';
 import { useIsUserSuperAdmin } from 'hooks';
 import Typography from '@material-ui/core/Typography';
 import AdminActions from './AdminActions';
-import { communitySearchList } from 'mock/data';
-import moment from 'moment';
+import * as actions from 'actions';
+
+// import { communitySearchList } from 'mock/data';
+
+import { useDispatch, useSelector } from 'react-redux';
+
+const moment = require('moment');
 // const theme = createTheme();
 
-const communityList = communitySearchList.data.filter(object => object.rek_display_type === 11);
+// const communityList = communitySearchList.data.filter(object => object.rek_display_type === 11);
 
 const options = {
     filterType: 'checkbox',
@@ -17,10 +22,20 @@ const options = {
     serverSide: false,
     viewColumns: false,
     onTableChange: (action, tableState) => {
-        console.log(action, tableState);
+        console.log(action);
+        console.log(tableState);
+        // this.xhrRequest('my.api.com/tableData', result => {
+        // this.setState({ data: [] });
+        // });
     },
 };
 export const CommunityList = () => {
+    const dispatch = useDispatch();
+    const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
+    React.useEffect(() => {
+        dispatch(actions.loadCommunitiesList());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
     const isSuperAdmin = useIsUserSuperAdmin();
     const columns = [
         {
@@ -42,13 +57,13 @@ export const CommunityList = () => {
                     return !!tableMeta.rowData[2] ? (
                         <div>
                             <Typography variant="body2">
-                                <a href="#">{value}</a>
+                                <a href={`#/view/${tableMeta.rowData[0]}`}>{value}</a>
                             </Typography>
                             <Typography variant="caption">{tableMeta.rowData[2]}</Typography>
                         </div>
                     ) : (
                         <Typography variant="body2">
-                            <a href={`/view/${tableMeta.rowData[0]}`}>{value}</a>
+                            <a href={`#/view/${tableMeta.rowData[0]}`}>{value}</a>
                         </Typography>
                     );
                 },
@@ -98,7 +113,6 @@ export const CommunityList = () => {
                 sort: false,
                 display: isSuperAdmin,
                 customBodyRender: (value, rowArrayData) => {
-                    console.log('ISSUPERADMIN', isSuperAdmin);
                     return isSuperAdmin ? <AdminActions record={rowArrayData.rowData[0]} /> : '';
                 },
             },
