@@ -264,12 +264,17 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.addRecord.title,
                   },
-                  {
-                      path: pathConfig.authorIdentifiers.orcid.link,
-                      component: components.Orcid,
-                      exact: true,
-                      pageTitle: locale.pages.orcidLink.title,
-                  },
+                  ...(authorDetails
+                      ? [
+                            {
+                                path: pathConfig.authorIdentifiers.orcid.link,
+                                component: components.Orcid,
+                                access: [roles.researcher, roles.admin],
+                                exact: true,
+                                pageTitle: locale.pages.orcidLink.title,
+                            },
+                        ]
+                      : []),
                   {
                       path: pathConfig.authorIdentifiers.googleScholar.link,
                       component: components.GoogleScholar,
@@ -483,7 +488,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
     ];
-    const isAuthor = author && Object.keys(author).length > 1;
+    // eslint-disable-next-line camelcase
+    const isAuthor = author?.aut_id;
     const incompletePage =
         (hasIncompleteWorks && [
             {
@@ -636,7 +642,3 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...publicPages,
     ];
 };
-
-export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${
-    !!window.location.hash ? '#' : ''
-}${pathConfig.authorIdentifiers.orcid.link}`;

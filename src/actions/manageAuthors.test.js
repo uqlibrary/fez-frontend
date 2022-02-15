@@ -1,11 +1,11 @@
 import {
-    deleteAuthorListItem,
+    addAuthor,
     bulkDeleteAuthorListItems,
+    checkForExistingAuthor,
+    deleteAuthorListItem,
+    ingestFromScopus,
     loadAuthorList,
     updateAuthorListItem,
-    addAuthor,
-    checkForExistingAuthor,
-    ingestFromScopus,
 } from './manageAuthors';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -42,7 +42,7 @@ describe('author list actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(loadAuthorList({ page: 1, pageSize: 20, search: '' })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -72,13 +72,13 @@ describe('author list actions', () => {
                 actions.AUTHOR_ITEM_UPDATE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(updateAuthorListItem({ aut_id: 1 }, { aut_id: 1 }))).rejects.toEqual(
-                {
-                    status: 500,
-                    message:
-                        'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-                },
-            );
+            await expect(
+                mockActionsStore.dispatch(updateAuthorListItem({ aut_id: 1 }, { aut_id: 1 })),
+            ).rejects.toMatchObject({
+                status: 500,
+                message:
+                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+            });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -120,7 +120,7 @@ describe('author list actions', () => {
                 actions.AUTHOR_ITEM_DELETE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(deleteAuthorListItem({ aut_id: 1 }))).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(deleteAuthorListItem({ aut_id: 1 }))).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -148,7 +148,7 @@ describe('author list actions', () => {
                 actions.BULK_AUTHOR_ITEMS_DELETE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]))).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(bulkDeleteAuthorListItems([{ aut_id: 1 }]))).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -190,7 +190,7 @@ describe('author list actions', () => {
                         aut_fname: 'Test',
                     }),
                 ),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -212,7 +212,7 @@ describe('author list actions', () => {
                 mockActionsStore.dispatch(
                     checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
                 ),
-            ).rejects.toEqual({ aut_org_username: 'Some error' });
+            ).rejects.toMatchObject({ aut_org_username: 'Some error' });
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
@@ -242,7 +242,7 @@ describe('author list actions', () => {
                         { aut_org_staff_id: 'Previous error' },
                     ),
                 ),
-            ).rejects.toEqual({ aut_org_staff_id: 'Previous error' });
+            ).rejects.toMatchObject({ aut_org_staff_id: 'Previous error' });
 
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -260,7 +260,7 @@ describe('author list actions', () => {
                 mockActionsStore.dispatch(
                     checkForExistingAuthor('test', 'aut_org_username', 1, { aut_org_username: 'Some error' }),
                 ),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -285,7 +285,7 @@ describe('author list actions', () => {
 
             const expectedActions = [actions.SCOPUS_INGEST_REQUESTING, actions.SCOPUS_INGEST_REQUEST_FAILED];
 
-            await expect(mockActionsStore.dispatch(ingestFromScopus(111))).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(ingestFromScopus(111))).rejects.toMatchObject({
                 status: 422,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

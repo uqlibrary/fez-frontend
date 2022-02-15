@@ -213,6 +213,28 @@ describe('Action creators for authors', () => {
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
+    it('dispatches expected actions if orcid linking fails pre-check', async () => {
+        const userId = 'uqresearcher';
+        const authorId = 1234;
+        const orcidCode = '123ABC';
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(null, authorId, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions([actions.CURRENT_AUTHOR_SAVE_FAILED]);
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, null, orcidCode));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+            actions.CURRENT_AUTHOR_SAVE_FAILED,
+            actions.CURRENT_AUTHOR_SAVE_FAILED,
+        ]);
+
+        await mockActionsStore.dispatch(authorsActions.linkAuthorOrcidId(userId, authorId, null));
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+            actions.CURRENT_AUTHOR_SAVE_FAILED,
+            actions.CURRENT_AUTHOR_SAVE_FAILED,
+            actions.CURRENT_AUTHOR_SAVE_FAILED,
+        ]);
+    });
+
     it('dispatches expected actions resetting author saving state', async () => {
         const expectedActions = [actions.CURRENT_AUTHOR_SAVE_RESET];
 

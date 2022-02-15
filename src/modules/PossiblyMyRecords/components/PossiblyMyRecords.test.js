@@ -1,7 +1,7 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
 import { pathConfig } from 'config';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, args = {}) {
     const props = {
         possiblePublicationsList: testProps.possiblePublicationsList || [],
         possiblePublicationsFacets: testProps.possiblePublicationsFacets || {},
@@ -30,7 +30,7 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return getElement(PossiblyMyRecords, props);
+    return getElement(PossiblyMyRecords, props, args);
 }
 
 describe('Component PossiblyMyRecords', () => {
@@ -323,5 +323,25 @@ describe('Component PossiblyMyRecords', () => {
         expect(
             wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListPaging)').length,
         ).toBe(2);
+    });
+
+    it('should not enable export functionality', () => {
+        const wrapper = setup(
+            {
+                accountLoading: false,
+                possibleCounts: 21,
+                loadingPossibleCounts: false,
+                possiblePublicationsList: [
+                    { rek_pid: 'UQ:111111', rek_title: 'test', rek_date: '2000-01-01 00:00:00' },
+                    { rek_pid: 'UQ:111112', rek_title: 'test 2', rek_date: '2000-01-02 00:00:00' },
+                ],
+                loadingPossiblePublicationsList: false,
+                hasPublications: true,
+            },
+            { isShallow: false },
+        );
+        const pagerProps = wrapper.find('PublicationsListSorting').props();
+        expect(pagerProps).toHaveProperty('canUseExport', false);
+        expect(pagerProps).not.toHaveProperty('onExportPublications');
     });
 });
