@@ -65,6 +65,20 @@ const handlers = {
         ...state,
         error: action.payload,
     }),
+
+    [actions.DETAILED_HISTORY_LOADING]: state => ({
+        ...state,
+        isLoadingDetailedHistory: true,
+    }),
+    [actions.DETAILED_HISTORY_LOADING_SUCCESS]: (state, action) => ({
+        ...state,
+        isLoadingDetailedHistory: false,
+        recordDetailedHistory: action.payload,
+    }),
+    [actions.DETAILED_HISTORY_LOADING_FAILED]: state => ({
+        ...state,
+        isLoadingDetailedHistory: false,
+    }),
 };
 
 export default function viewRecordReducer(state = { ...initialState }, action) {

@@ -75,6 +75,9 @@ export { bulkUpdatesList } from './bulkUpdates';
 export { default as favouriteSearchList } from './favouriteSearch/favouriteSearchList';
 export { default as favouriteSearchItem } from './favouriteSearch/favouriteSearchItem';
 
+// Detailed History Mock Data
+export { detailedHistory } from './detailedHistory';
+
 // My editorial appointments mock data
 export { default as myEditorialAppointmentsList } from './myEditorialAppointments/myEditorialAppointmentsList';
 export { default as myEditorialAppointmentItem } from './myEditorialAppointments/myEditorialAppointmentItem';
