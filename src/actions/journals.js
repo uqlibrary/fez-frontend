@@ -1,6 +1,6 @@
 import { get, post } from 'repositories/generic';
 import * as actions from './actionTypes';
-import { JOURNAL_LOOKUP_API, JOURNAL_API, MASTER_JOURNAL_LIST_INGEST_API } from 'repositories/routes';
+import { JOURNAL_API, JOURNAL_LOOKUP_API, MASTER_JOURNAL_LIST_INGEST_API } from 'repositories/routes';
 
 export const loadJournalLookup = searchText => dispatch => {
     dispatch({ type: actions.JOURNAL_LOOKUP_LOADING, payload: searchText });
@@ -20,7 +20,6 @@ export const loadJournalLookup = searchText => dispatch => {
                     type: actions.JOURNAL_LOOKUP_FAILED,
                     payload: error.message,
                 });
-                // return Promise.reject(error.message);
             },
         )
     );

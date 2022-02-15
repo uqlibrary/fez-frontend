@@ -8,6 +8,7 @@
 .idea/dbnavigator.xml
 .idea/markdown-navigator.xml
 .idea/shelf/
+.idea/sonarlint/
 node_modules
 dist
 npm-debug.log*

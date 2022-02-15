@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import Cookies from 'js-cookie';
 import {
-    routes,
-    pathConfig,
+    APP_URL,
     AUTH_URL_LOGIN,
     AUTH_URL_LOGOUT,
-    APP_URL,
+    pathConfig,
+    routes,
     SESSION_COOKIE_NAME,
     SESSION_USER_GROUP_COOKIE_NAME,
 } from 'config';
@@ -15,10 +15,8 @@ import locale from 'locale/global';
 import { isFileUrl } from 'config/routes';
 
 // application components
-import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { AppLoader, ContentLoader, InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
-import { ContentLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { AuthButton } from 'modules/SharedComponents/Toolbox/AuthButton';
@@ -147,7 +145,14 @@ export class AppClass extends PureComponent {
         if (nextProps.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
-        if (nextProps.account && this.props.account !== nextProps.account && !nextProps.accountLoading) {
+        // don't call the api for non author users since the api call requires an author
+        if (
+            !nextProps.accountAuthorLoading &&
+            // eslint-disable-next-line camelcase
+            nextProps.author?.aut_id &&
+            // eslint-disable-next-line camelcase
+            this.props.author?.aut_id !== nextProps.author?.aut_id
+        ) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
@@ -190,7 +195,10 @@ export class AppClass extends PureComponent {
     isPublicPage = menuItems => {
         return (
             menuItems.filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public).length >
-                0 || new RegExp(pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname)
+                0 ||
+            new RegExp(pathConfig.records.view(`(${routes.pidRegExp}|${routes.notFound})`)).test(
+                this.props.location.pathname,
+            )
         );
     };
 
@@ -221,8 +229,8 @@ export class AppClass extends PureComponent {
             this.props.authorDetails &&
             this.props.authorDetails.is_administrator !== 1 &&
             this.props.authorDetails.is_super_administrator !== 1 &&
-            this.props.author &&
-            Object.keys(this.props.author).length > 1 &&
+            // eslint-disable-next-line camelcase
+            this.props.author?.aut_id &&
             !this.props.author.aut_orcid_id &&
             this.props.location.pathname !== pathConfig.authorIdentifiers.orcid.link;
         const isHdrStudent =
@@ -231,11 +239,8 @@ export class AppClass extends PureComponent {
             this.props.account.class &&
             this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
             this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
-        const isAuthor =
-            !isAuthorLoading &&
-            !!this.props.account &&
-            !!this.props.author &&
-            Object.keys(this.props.author).length > 1;
+        // eslint-disable-next-line camelcase
+        const isAuthor = !isAuthorLoading && !!this.props.account && this.props.author?.aut_id;
         const hasIncompleteWorks = !!(
             this.props.incompleteRecordList &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
@@ -270,7 +275,8 @@ export class AppClass extends PureComponent {
                 ...locale.global.loginAlert,
                 action: this.redirectUserToLogin(),
             };
-        } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
+            // eslint-disable-next-line camelcase
+        } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author?.aut_id) {
             // user is logged in, but doesn't have eSpace author identifier
             userStatusAlert = {
                 ...locale.global.notRegisteredAuthorAlert,

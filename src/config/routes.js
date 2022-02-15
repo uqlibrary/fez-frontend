@@ -8,6 +8,7 @@ export const pidRegExp = 'UQ:[a-z0-9]+';
 export const numericIdRegExp = '[0-9]+';
 export const versionRegExp = `${pidRegExp}\\s[0-9]{4}-[0-9]{2}-[0-9]{2}\\s[0-9]{2}:[0-9]{2}:[0-9]{2}|[a-z0-9-]+`;
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
+export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 const isAdmin = authorDetails => {
     return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
@@ -58,14 +59,14 @@ export const flattedPathConfig = [
     '/view',
 ];
 
-export const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
-
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin',
     digiteam: 'digiteam',
 };
+
+export const notFound = 'not-found';
 
 export const getRoutesConfig = ({
     components = {},
@@ -90,11 +91,11 @@ export const getRoutesConfig = ({
             pageTitle: locale.pages.contact.title,
         },
         {
-            path: pathConfig.records.view(pid),
+            path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
             component: components.NewViewRecord,
             exact: true,
             pageTitle: locale.pages.viewRecord.title,
-            regExPath: pathConfig.records.view(`(${pidRegExp})`),
+            regExPath: pathConfig.records.view(`(${pidRegExp}|${notFound})`),
         },
         {
             path: pathConfig.records.search,
@@ -263,12 +264,17 @@ export const getRoutesConfig = ({
                       exact: true,
                       pageTitle: locale.pages.addRecord.title,
                   },
-                  {
-                      path: pathConfig.authorIdentifiers.orcid.link,
-                      component: components.Orcid,
-                      exact: true,
-                      pageTitle: locale.pages.orcidLink.title,
-                  },
+                  ...(authorDetails
+                      ? [
+                            {
+                                path: pathConfig.authorIdentifiers.orcid.link,
+                                component: components.Orcid,
+                                access: [roles.researcher, roles.admin],
+                                exact: true,
+                                pageTitle: locale.pages.orcidLink.title,
+                            },
+                        ]
+                      : []),
                   {
                       path: pathConfig.authorIdentifiers.googleScholar.link,
                       component: components.GoogleScholar,
@@ -482,7 +488,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
     ];
-    const isAuthor = author && Object.keys(author).length > 1;
+    // eslint-disable-next-line camelcase
+    const isAuthor = author?.aut_id;
     const incompletePage =
         (hasIncompleteWorks && [
             {
@@ -635,7 +642,3 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...publicPages,
     ];
 };
-
-export const ORCID_REDIRECT_URL = `${window.location.origin}${window.location.pathname}${
-    !!window.location.hash ? '#' : ''
-}${pathConfig.authorIdentifiers.orcid.link}`;

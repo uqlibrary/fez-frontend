@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const AdminRecordDrawerSection = ({ section, index, copyToClipboard }) => {
+export const AdminRecordDrawerSection = ({ section, index, copyToClipboard, variant }) => {
     const classes = useStyles();
 
     if (typeof section === 'object' && section.type === 'divider') {
@@ -33,6 +33,7 @@ export const AdminRecordDrawerSection = ({ section, index, copyToClipboard }) =>
                     index={blockIndex}
                     copyToClipboard={copyToClipboard}
                     key={`drawer-block-${blockIndex}`}
+                    variant={variant}
                 />
             ))}
         </div>
@@ -43,6 +44,7 @@ AdminRecordDrawerSection.propTypes = {
     section: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
     index: PropTypes.number.isRequired,
     copyToClipboard: PropTypes.func.isRequired,
+    variant: PropTypes.oneOf(['Desktop', 'Mobile']),
 };
 
 export default React.memo(AdminRecordDrawerSection);

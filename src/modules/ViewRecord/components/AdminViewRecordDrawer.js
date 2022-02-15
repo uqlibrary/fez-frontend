@@ -97,9 +97,13 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
             });
     };
 
-    const DrawerContent = ({ content }) => {
+    const DrawerContent = ({ content, variant = 'Desktop' }) => {
         return (
-            <div key="drawContainer1">
+            <div
+                key="drawContainer1"
+                id={`adminDrawerContentContainer${variant}`}
+                data-testid={`adminDrawerContentContainer${variant}`}
+            >
                 <Hidden xsDown implementation="css" key="toolbarMobile">
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
@@ -107,7 +111,8 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     <Typography variant={'h6'} tabIndex="0">
                         <IconButton
                             onClick={handleDrawerToggle}
-                            id="adminRecordDrawerCloseBtn"
+                            id={`adminRecordDrawerCloseBtn${variant}`}
+                            data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             aria-label="Close admin record drawer"
                         >
                             {/* istanbul ignore next */
@@ -123,6 +128,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         index={sectionIndex}
                         copyToClipboard={writeText}
                         key={`Drawer-Section-${sectionIndex}`}
+                        variant={variant}
                     />
                 ))}
             </div>
@@ -144,6 +150,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         theme.direction === 'rtl' ? 'left' : 'right'
                     }
                     id="adminViewRecordDrawerDesktop"
+                    data-testid="adminViewRecordDrawerDesktop"
                 >
                     <DrawerContent content={content} />
                 </Drawer>
@@ -165,8 +172,9 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     id="adminViewRecordDrawerMobile"
+                    data-testid="adminViewRecordDrawerMobile"
                 >
-                    <DrawerContent content={content} />
+                    <DrawerContent content={content} variant="Mobile" />
                 </Drawer>
             </Hidden>
             <Snackbar

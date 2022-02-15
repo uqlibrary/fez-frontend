@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     },
 });
 
-export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard }) => {
+export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipboard, variant }) => {
     const classes = useStyles();
 
     if (block.type === 'header') {
@@ -30,7 +30,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 variant={'subtitle2'}
                 className={classes.contentTitle}
                 key={`header-${parentIndex}-${index}`}
-                id={`drawer-header-${parentIndex}-${index}`}
+                id={`drawer-${variant}-header-${parentIndex}-${index}`}
+                data-testid={`drawer-${variant}-header-${parentIndex}-${index}`}
                 tabIndex="0"
             >
                 {block.value}
@@ -44,7 +45,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     component="div"
                     gutterBottom
                     key={`content-clipboard-${parentIndex}-${index}`}
-                    id={`drawer-content-clipboard-${parentIndex}-${index}`}
+                    id={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
+                    data-testid={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
                     tabIndex="0"
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
@@ -52,7 +54,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     {block.value && block.value !== '-' && (
                         <IconButton
                             onClick={e => copyToClipboard(e, block.value)}
-                            id={`drawer-clipboard-button-${parentIndex}-${index}`}
+                            id={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
+                            data-testid={`drawer-${variant}-clipboard-button-${parentIndex}-${index}`}
                             aria-label="Copy to clipboard"
                             size="small"
                         >
@@ -68,7 +71,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     component={'div'}
                     className={classes.notesField}
                     key={`content-scrollable-${parentIndex}-${index}`}
-                    id={`drawer-content-scrollable-${parentIndex}-${index}`}
+                    id={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
+                    data-testid={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
                     tabIndex="0"
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
@@ -80,7 +84,8 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                 <Typography
                     variant={'body2'}
                     key={`content-value-${parentIndex}-${index}`}
-                    id={`drawer-content-value-${parentIndex}-${index}`}
+                    id={`drawer-${variant}-content-value-${parentIndex}-${index}`}
+                    data-testid={`drawer-${variant}-content-value-${parentIndex}-${index}`}
                     tabIndex="0"
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
@@ -96,6 +101,7 @@ AdminRecordDrawerBlock.propTypes = {
     parentIndex: PropTypes.number,
     index: PropTypes.number.isRequired,
     copyToClipboard: PropTypes.func.isRequired,
+    variant: PropTypes.oneOf(['Desktop', 'Mobile']),
 };
 
 export default React.memo(AdminRecordDrawerBlock);

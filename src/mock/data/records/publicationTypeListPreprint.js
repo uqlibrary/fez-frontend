@@ -1,4 +1,6 @@
-export default {
+import { hydrateMockSearchList } from '../../../helpers/general';
+
+const publicationTypeListPreprint = {
     "total": 2,
     "took": 1,
     "per_page": 999,
@@ -8,126 +10,33 @@ export default {
     "data": [
         {
             "rek_pid": "UQ:154936",
-            "rek_title_xsdmf_id": null,
             "rek_title": "Sport, War and Democracy in Classical Athens",
-            "rek_description_xsdmf_id": null,
             "rek_description": "This article concerns the paradox of athletics in classical Athens. Democracy may have opened up politics to every class of Athenian but it had little impact on sporting participation. The city\u2019s athletes continued to drawn predominantly from the upper class. It comes as a surprise then that lower-class Athenians actually esteemed athletes above every other group in the public eye, honoured them very generously when they won, and directed a great deal of public and private money to sporting competitions and facilities. In addition athletics escaped the otherwise persistent criticism of upper-class activities in the popular culture of the democracy. The research of social scientists on sport and aggression suggests this paradox may have been due to the cultural overlap between athletics and war under the Athenian democracy. The article concludes that the practical and ideological democratization of war by classical Athens legitimized and supported upper-class sport.",
-            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 204,
-            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": null,
             "rek_date": "2009-01-01T00:00:00Z",
-            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 2206,
-            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2008-09-01T13:54:12Z",
-            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-05-19T02:31:36Z",
             "rek_file_downloads": 2239,
-            "rek_citation": "",
-            "rek_genre_xsdmf_id": null,
             "rek_genre": "Preprint",
-            "rek_genre_type_xsdmf_id": null,
-            "rek_genre_type": null,
-            "rek_formatted_title_xsdmf_id": null,
-            "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": null,
-            "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 824,
-            "rek_thomson_citation_count": null,
-            "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": null,
-            "rek_subtype": null,
-            "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": null,
-            "rek_scopus_doc_type_xsdmf_id": null,
-            "rek_scopus_doc_type": null,
-            "rek_wok_doc_type_xsdmf_id": null,
-            "rek_wok_doc_type": null,
-            "rek_pubmed_doc_type_xsdmf_id": null,
-            "rek_pubmed_doc_type": null,
             "rek_security_inherited": 1,
-            "rek_altmetric_score": null,
-            "rek_altmetric_score_xsdmf_id": null,
-            "rek_altmetric_id": null,
-            "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
-            "rek_datastream_policy": null,
-            "fez_record_search_key_article_number": null,
-            "fez_record_search_key_assigned_group_id": [],
-            "fez_record_search_key_assigned_user_id": [],
-            "fez_record_search_key_author": [{
-                "rek_author_id": 28888264,
-                "rek_author_pid": "UQ:154936",
-                "rek_author_xsdmf_id": null,
-                "rek_author": "Pritchard, David M.",
-                "rek_author_order": 1
-            }],
-            "fez_record_search_key_author_affiliation_country": [],
-            "fez_record_search_key_author_affiliation_full_address": [],
-            "fez_record_search_key_author_affiliation_id": [],
-            "fez_record_search_key_author_affiliation_name": [],
-            "fez_record_search_key_author_affiliation_type": [],
+            "fez_record_search_key_author": ["Pritchard, David M."],
             "fez_record_search_key_author_id": [{
-                "rek_author_id_id": 28258774,
-                "rek_author_id_pid": "UQ:154936",
-                "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 75287,
-                "rek_author_id_order": 1,
                 "rek_author_id_lookup": "David Pritchard"
             }],
-            "fez_record_search_key_content_indicator": [],
-            "fez_record_search_key_contributor": [{
-                "rek_contributor_id": 3085550,
-                "rek_contributor_pid": "UQ:154936",
-                "rek_contributor_xsdmf_id": null,
-                "rek_contributor": "Zinon Papakonstantinou",
-                "rek_contributor_order": 1
-            }],
-            "fez_record_search_key_contributor_id": [],
-            "fez_record_search_key_corresponding_country": [],
-            "fez_record_search_key_corresponding_email": [],
-            "fez_record_search_key_corresponding_name": [],
-            "fez_record_search_key_corresponding_organisation": [],
-            "fez_record_search_key_datastream_policy": null,
-            "fez_record_search_key_file_attachment_access_condition": [],
-            "fez_record_search_key_file_attachment_embargo_date": [],
-            "fez_record_search_key_file_attachment_name": [{
-                "rek_file_attachment_name_id": 3888059,
-                "rek_file_attachment_name_pid": "UQ:154936",
-                "rek_file_attachment_name_xsdmf_id": null,
-                "rek_file_attachment_name": "PRITCHARD_Sport__War_and_Democracy_PREPRINT_8.08.pdf",
-                "rek_file_attachment_name_order": 1
-            }, {
-                "rek_file_attachment_name_id": 3888060,
-                "rek_file_attachment_name_pid": "UQ:154936",
-                "rek_file_attachment_name_xsdmf_id": null,
-                "rek_file_attachment_name": "presmd_PRITCHARD_Sport__War_and_Democracy_PREPRINT_8.08.xml",
-                "rek_file_attachment_name_order": 2
-            }],
-            "fez_record_search_key_grant_acronym": [],
-            "fez_record_search_key_grant_agency": [],
-            "fez_record_search_key_grant_agency_id": [],
-            "fez_record_search_key_grant_agency_type": [],
-            "fez_record_search_key_grant_id": [],
-            "fez_record_search_key_grant_text": [],
-            "fez_record_search_key_grant_type": [],
-            "fez_record_search_key_herdc_code": null,
-            "fez_record_search_key_herdc_status": null,
-            "fez_record_search_key_institutional_status": null,
-            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_contributor": ["Zinon Papakonstantinou"],
+            "fez_record_search_key_file_attachment_name": [
+                "PRITCHARD_Sport__War_and_Democracy_PREPRINT_8.08.pdf",
+                "presmd_PRITCHARD_Sport__War_and_Democracy_PREPRINT_8.08.xml",
+            ],
             "fez_record_search_key_ismemberof": [{
-                "rek_ismemberof_id": 11520542,
-                "rek_ismemberof_pid": "UQ:154936",
-                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:152015",
-                "rek_ismemberof_order": 1,
                 "parent": {
                     "rek_pid": "UQ:152015",
                     "rek_security_policy": 5,
@@ -135,141 +44,42 @@ export default {
                 },
                 "rek_ismemberof_lookup": "UQ Cultural History Project"
             }],
-            "fez_record_search_key_keywords": [{
-                "rek_keywords_id": 29168238,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "sport",
-                "rek_keywords_order": 1
-            }, {
-                "rek_keywords_id": 29168239,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "war",
-                "rek_keywords_order": 2
-            }, {
-                "rek_keywords_id": 29168240,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "democracy",
-                "rek_keywords_order": 3
-            }, {
-                "rek_keywords_id": 29168241,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "Athens",
-                "rek_keywords_order": 4
-            }, {
-                "rek_keywords_id": 29168242,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "ancient history",
-                "rek_keywords_order": 5
-            }, {
-                "rek_keywords_id": 29168243,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "sports history",
-                "rek_keywords_order": 6
-            }, {
-                "rek_keywords_id": 29168244,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "cultural history",
-                "rek_keywords_order": 7
-            }, {
-                "rek_keywords_id": 29168245,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "cultural pattern model",
-                "rek_keywords_order": 8
-            }, {
-                "rek_keywords_id": 29168246,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "Ancient Olympic Games",
-                "rek_keywords_order": 9
-            }, {
-                "rek_keywords_id": 29168247,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "Olympic Games",
-                "rek_keywords_order": 10
-            }, {
-                "rek_keywords_id": 29168248,
-                "rek_keywords_pid": "UQ:154936",
-                "rek_keywords_xsdmf_id": null,
-                "rek_keywords": "UQ Cultural History Project",
-                "rek_keywords_order": 11
-            }],
-            "fez_record_search_key_license": null,
-            "fez_record_search_key_link": [{
-                "rek_link_id": 3192039,
-                "rek_link_pid": "UQ:154936",
-                "rek_link_xsdmf_id": null,
-                "rek_link": "http:\/\/www.uq.edu.au\/hprc\/index.html?page=86488",
-                "rek_link_order": 1
-            }, {
-                "rek_link_id": 3192040,
-                "rek_link_pid": "UQ:154936",
-                "rek_link_xsdmf_id": null,
-                "rek_link": "http:\/\/www.arts.uq.edu.au\/index.html?page=82701",
-                "rek_link_order": 2
-            }],
-            "fez_record_search_key_link_description": [{
-                "rek_link_description_id": 3192008,
-                "rek_link_description_pid": "UQ:154936",
-                "rek_link_description_xsdmf_id": null,
-                "rek_link_description": "Staff page of David Pritchard",
-                "rek_link_description_order": 1
-            }, {
-                "rek_link_description_id": 3192009,
-                "rek_link_description_pid": "UQ:154936",
-                "rek_link_description_xsdmf_id": null,
-                "rek_link_description": "UQ Cultural History Project",
-                "rek_link_description_order": 2
-            }],
-            "fez_record_search_key_notes": {
-                "rek_notes_id": 1111296,
-                "rek_notes_pid": "UQ:154936",
-                "rek_notes_xsdmf_id": null,
-                "rek_notes": "This is an author-produced version of a peer-reviewed and revised chapter, which will be published in Z. Papakonstantinou (ed.), Sport in the Cultures of the Ancient World, special issue of The International Journal of the History of Sport, London and New York (Routledge, 2009). Your use of this item is governed by the Attribution Non-Commercial No Derivatives (by-nc-nd) License of the Creative Commons (http:\/\/creativecommons.org\/). You are free to copy, distribute and transmit the work under the following conditions. You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work). You may not use this work for commercial purposes. You may not alter, transform or build upon this work. For any reuse or distribution you must make clear to others the license terms of this work. The best way to do this is with a link to this web page. Any of the above conditions can be waived if you get permission from the copyright holder. Nothing in this license impairs or restricts the author's moral rights."
-            },
+            "fez_record_search_key_keywords": [
+                "sport",
+                "war",
+                "democracy",
+                "Athens",
+                "ancient history",
+                "sports history",
+                "cultural history",
+                "cultural pattern model",
+                "Ancient Olympic Games",
+                "Olympic Games",
+                "UQ Cultural History Project",
+            ],
+            "fez_record_search_key_link": [
+                "http:\/\/www.uq.edu.au\/hprc\/index.html?page=86488",
+                "http:\/\/www.arts.uq.edu.au\/index.html?page=82701",
+            ],
+            "fez_record_search_key_link_description": [
+                "Staff page of David Pritchard",
+                "UQ Cultural History Project",
+            ],
+            "fez_record_search_key_notes":
+                "This is an author-produced version of a peer-reviewed and revised chapter, which will be published in Z. Papakonstantinou (ed.), Sport in the Cultures of the Ancient World, special issue of The International Journal of the History of Sport, London and New York (Routledge, 2009). Your use of this item is governed by the Attribution Non-Commercial No Derivatives (by-nc-nd) License of the Creative Commons (http:\/\/creativecommons.org\/). You are free to copy, distribute and transmit the work under the following conditions. You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work). You may not use this work for commercial purposes. You may not alter, transform or build upon this work. For any reuse or distribution you must make clear to others the license terms of this work. The best way to do this is with a link to this web page. Any of the above conditions can be waived if you get permission from the copyright holder. Nothing in this license impairs or restricts the author's moral rights.",
             "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 321756,
-                "rek_oa_status_pid": "UQ:154936",
-                "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453697,
                 "rek_oa_status_lookup": "Other"
             },
-            "fez_record_search_key_oa_status_type": null,
-            "fez_record_search_key_possible_author_id": [],
-            "fez_record_search_key_publisher": {
-                "rek_publisher_id": 4433447,
-                "rek_publisher_pid": "UQ:154936",
-                "rek_publisher_xsdmf_id": null,
-                "rek_publisher": "International Journal of the History of Sport"
-            },
-            "fez_record_search_key_refereed": null,
+            "fez_record_search_key_publisher": "International Journal of the History of Sport",
             "fez_record_search_key_refereed_source": {
-                "rek_refereed_source_id": 1184135,
-                "rek_refereed_source_pid": "UQ:154936",
-                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453636",
                 "rek_refereed_source_lookup": "Other"
             },
             "fez_record_search_key_subject": [{
-                "rek_subject_id": 9096430,
-                "rek_subject_pid": "UQ:154936",
-                "rek_subject_xsdmf_id": null,
                 "rek_subject": 453154,
-                "rek_subject_order": 1,
                 "rek_subject_lookup": "210306 Classical Greek and Roman History"
             }],
-            "fez_record_search_key_issn": [],
-            "fez_record_search_key_doi": null,
-            "fez_record_search_key_isi_loc": null,
-            "fez_record_search_key_scopus_id": null,
             "fez_datastream_info": [{
                 "dsi_pid": "UQ:154936",
                 "dsi_dsid": "presmd_PRITCHARD_IJHS_26_2009.xml",
@@ -329,162 +139,41 @@ export default {
         },
         {
             "rek_pid": "UQ:245064",
-            "rek_title_xsdmf_id": null,
             "rek_title": "Gender and masculinities in South Asia",
-            "rek_description_xsdmf_id": null,
-            "rek_description": null,
-            "rek_display_type_xsdmf_id": null,
             "rek_display_type": 204,
-            "rek_status_xsdmf_id": null,
             "rek_status": 2,
-            "rek_date_xsdmf_id": null,
-            "rek_date": null,
-            "rek_object_type_xsdmf_id": null,
             "rek_object_type": 3,
-            "rek_depositor_xsdmf_id": null,
             "rek_depositor": 8974,
-            "rek_created_date_xsdmf_id": null,
             "rek_created_date": "2011-08-07T20:46:32Z",
-            "rek_updated_date_xsdmf_id": null,
             "rek_updated_date": "2019-02-22T13:18:32Z",
-            "rek_file_downloads": 0,
-            "rek_citation": "",
-            "rek_genre_xsdmf_id": null,
             "rek_genre": "Preprint",
-            "rek_genre_type_xsdmf_id": null,
-            "rek_genre_type": null,
-            "rek_formatted_title_xsdmf_id": null,
-            "rek_formatted_title": null,
-            "rek_formatted_abstract_xsdmf_id": null,
-            "rek_formatted_abstract": null,
-            "rek_depositor_affiliation_xsdmf_id": null,
             "rek_depositor_affiliation": 851,
-            "rek_thomson_citation_count": null,
-            "rek_thomson_citation_count_xsdmf_id": null,
-            "rek_subtype_xsdmf_id": null,
-            "rek_subtype": null,
-            "rek_scopus_citation_count": null,
-            "rek_herdc_notes_xsdmf_id": null,
-            "rek_scopus_doc_type_xsdmf_id": null,
-            "rek_scopus_doc_type": null,
-            "rek_wok_doc_type_xsdmf_id": null,
-            "rek_wok_doc_type": null,
-            "rek_pubmed_doc_type_xsdmf_id": null,
-            "rek_pubmed_doc_type": null,
             "rek_security_inherited": 1,
-            "rek_altmetric_score": null,
-            "rek_altmetric_score_xsdmf_id": null,
-            "rek_altmetric_id": null,
-            "rek_altmetric_id_xsdmf_id": null,
-            "rek_copyright_xsdmf_id": null,
             "rek_copyright": "on",
             "rek_security_policy": 1,
-            "rek_datastream_policy": null,
-            "fez_record_search_key_article_number": null,
-            "fez_record_search_key_assigned_group_id": [],
-            "fez_record_search_key_assigned_user_id": [],
-            "fez_record_search_key_author": [{
-                "rek_author_id": 29052098,
-                "rek_author_pid": "UQ:245064",
-                "rek_author_xsdmf_id": null,
-                "rek_author": "Doron, Assa",
-                "rek_author_order": 1
-            }, {
-                "rek_author_id": 29052099,
-                "rek_author_pid": "UQ:245064",
-                "rek_author_xsdmf_id": null,
-                "rek_author": "Broom, Alex",
-                "rek_author_order": 2
-            }],
-            "fez_record_search_key_author_affiliation_country": [],
-            "fez_record_search_key_author_affiliation_full_address": [],
-            "fez_record_search_key_author_affiliation_id": [],
-            "fez_record_search_key_author_affiliation_name": [],
-            "fez_record_search_key_author_affiliation_type": [],
+            "fez_record_search_key_author": ["Doron, Assa", "Broom, Alex"],
             "fez_record_search_key_author_id": [{
-                "rek_author_id_id": 28420066,
-                "rek_author_id_pid": "UQ:245064",
-                "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 0,
-                "rek_author_id_order": 1
             }, {
-                "rek_author_id_id": 28420067,
-                "rek_author_id_pid": "UQ:245064",
-                "rek_author_id_xsdmf_id": null,
                 "rek_author_id": 4213,
-                "rek_author_id_order": 2,
                 "rek_author_id_lookup": "Broom, Alexander F."
             }],
-            "fez_record_search_key_content_indicator": [],
-            "fez_record_search_key_contributor": [{
-                "rek_contributor_id": 3115545,
-                "rek_contributor_pid": "UQ:245064",
-                "rek_contributor_xsdmf_id": null,
-                "rek_contributor": "Assa Doron",
-                "rek_contributor_order": 1
-            }, {
-                "rek_contributor_id": 3115546,
-                "rek_contributor_pid": "UQ:245064",
-                "rek_contributor_xsdmf_id": null,
-                "rek_contributor": "Alex Broom",
-                "rek_contributor_order": 2
-            }],
-            "fez_record_search_key_contributor_id": [{
-                "rek_contributor_id_id": 2324194,
-                "rek_contributor_id_pid": "UQ:245064",
-                "rek_contributor_id_xsdmf_id": null,
-                "rek_contributor_id": 0,
-                "rek_contributor_id_order": 1
-            }, {
-                "rek_contributor_id_id": 2324195,
-                "rek_contributor_id_pid": "UQ:245064",
-                "rek_contributor_id_xsdmf_id": null,
-                "rek_contributor_id": 0,
-                "rek_contributor_id_order": 2
-            }],
-            "fez_record_search_key_corresponding_country": [],
-            "fez_record_search_key_corresponding_email": [],
-            "fez_record_search_key_corresponding_name": [],
-            "fez_record_search_key_corresponding_organisation": [],
-            "fez_record_search_key_datastream_policy": null,
-            "fez_record_search_key_file_attachment_access_condition": [],
-            "fez_record_search_key_file_attachment_embargo_date": [],
-            "fez_record_search_key_file_attachment_name": [],
-            "fez_record_search_key_grant_acronym": [],
-            "fez_record_search_key_grant_agency": [],
-            "fez_record_search_key_grant_agency_id": [],
-            "fez_record_search_key_grant_agency_type": [],
-            "fez_record_search_key_grant_id": [],
-            "fez_record_search_key_grant_text": [],
-            "fez_record_search_key_grant_type": [],
+            "fez_record_search_key_contributor": ["Assa Doron", "Alex Broom"],
+            "fez_record_search_key_contributor_id": [0, 0],
             "fez_record_search_key_herdc_code": {
-                "rek_herdc_code_id": 4697302,
-                "rek_herdc_code_pid": "UQ:245064",
-                "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450008,
                 "rek_herdc_code_lookup": "BX"
             },
             "fez_record_search_key_herdc_status": {
-                "rek_herdc_status_id": 3606056,
-                "rek_herdc_status_pid": "UQ:245064",
-                "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
             },
             "fez_record_search_key_institutional_status": {
-                "rek_institutional_status_id": 3265144,
-                "rek_institutional_status_pid": "UQ:245064",
-                "rek_institutional_status_xsdmf_id": null,
                 "rek_institutional_status": 453223,
                 "rek_institutional_status_lookup": "UQ"
             },
-            "fez_record_search_key_isderivationof": [],
             "fez_record_search_key_ismemberof": [{
-                "rek_ismemberof_id": 11605067,
-                "rek_ismemberof_pid": "UQ:245064",
-                "rek_ismemberof_xsdmf_id": null,
                 "rek_ismemberof": "UQ:3854",
-                "rek_ismemberof_order": 1,
                 "parent": {
                     "rek_pid": "UQ:3854",
                     "rek_security_policy": 5,
@@ -492,54 +181,23 @@ export default {
                 },
                 "rek_ismemberof_lookup": "School of Social Science Publications"
             }],
-            "fez_record_search_key_keywords": [],
             "fez_record_search_key_license": {
-                "rek_license_id": 28752,
-                "rek_license_pid": "UQ:245064",
-                "rek_license_xsdmf_id": null,
                 "rek_license": 454104,
                 "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
-            "fez_record_search_key_link": [],
-            "fez_record_search_key_link_description": [],
-            "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": null,
-            "fez_record_search_key_oa_status_type": null,
-            "fez_record_search_key_possible_author_id": [],
-            "fez_record_search_key_publisher": {
-                "rek_publisher_id": 4471270,
-                "rek_publisher_pid": "UQ:245064",
-                "rek_publisher_xsdmf_id": null,
-                "rek_publisher": "Routledge"
-            },
-            "fez_record_search_key_refereed": null,
+            "fez_record_search_key_publisher": "Routledge",
             "fez_record_search_key_refereed_source": {
-                "rek_refereed_source_id": 1227385,
-                "rek_refereed_source_pid": "UQ:245064",
-                "rek_refereed_source_xsdmf_id": null,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_subject": [{
-                "rek_subject_id": 9142788,
-                "rek_subject_pid": "UQ:245064",
-                "rek_subject_xsdmf_id": null,
                 "rek_subject": 452933,
-                "rek_subject_order": 1,
                 "rek_subject_lookup": "1699 Other Studies in Human Society"
             }],
-            "fez_record_search_key_issn": [],
-            "fez_record_search_key_doi": null,
-            "fez_record_search_key_isi_loc": null,
-            "fez_record_search_key_scopus_id": null,
-            "fez_datastream_info": [],
-            "fez_matched_journals": null,
             "rek_display_type_lookup": "Preprint",
-            "rek_pubmed_doc_type_lookup": null,
             "rek_object_type_lookup": "Record",
-            "rek_scopus_doc_type_lookup": null,
             "rek_status_lookup": "Published",
-            "rek_wok_doc_type_lookup": null
         }
     ]
 }
+export default hydrateMockSearchList(publicationTypeListPreprint);

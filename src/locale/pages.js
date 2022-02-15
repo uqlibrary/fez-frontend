@@ -1050,7 +1050,7 @@ export default {
             },
             loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
-            retractedMessage: 'This article has been retracted',
+            retractedMessage: 'This work has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',
