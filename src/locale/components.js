@@ -3619,5 +3619,37 @@ export default {
                 message: 'A user could not be deleted.',
             },
         },
+        communitiesCollections: {
+            snackbar: {
+                message: 'Search results updated',
+            },
+            searchResult: {
+                loadingMessage: 'Loading journals list',
+                noResultsFound: {
+                    title: 'No journals found',
+                    text: <div>We were unable to find any results.</div>,
+                },
+            },
+            export: {
+                label: 'Export page results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
+            sorting: {
+                pageSize: 'Records per page',
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'title', label: 'Title' },
+                    { value: 'createdDate', label: 'Created Date' },
+                    { value: 'updatedDate', label: 'Updated Date' },
+                    { value: 'citationScore', label: 'Citation Count' },
+                ],
+            },
+            sortingDefaults: {
+                pageSize: 10,
+                sortBy: 'highest_quartile',
+                sortDirection: 'Asc',
+            },
+        },
     },
 };

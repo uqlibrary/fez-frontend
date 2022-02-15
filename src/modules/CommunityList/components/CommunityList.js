@@ -2,19 +2,17 @@ import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import MUIDataTable from 'mui-datatables';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Grid from '@material-ui/core/Grid';
 import { useIsUserSuperAdmin } from 'hooks';
 import Typography from '@material-ui/core/Typography';
 import AdminActions from './AdminActions';
 import * as actions from 'actions';
-
-// import { communitySearchList } from 'mock/data';
-
+import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
-const moment = require('moment');
-// const theme = createTheme();
+import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 
-// const communityList = communitySearchList.data.filter(object => object.rek_display_type === 11);
+const moment = require('moment');
 
 const options = {
     filterType: 'checkbox',
@@ -30,12 +28,6 @@ const options = {
     },
 };
 export const CommunityList = () => {
-    const dispatch = useDispatch();
-    const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
-    React.useEffect(() => {
-        dispatch(actions.loadCommunitiesList());
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
     const isSuperAdmin = useIsUserSuperAdmin();
     const columns = [
         {
@@ -127,15 +119,56 @@ export const CommunityList = () => {
             },
         },
     ];
+    const dispatch = useDispatch();
+    const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
+    React.useEffect(() => {
+        dispatch(actions.loadCommunitiesList());
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    const txt = {
+    // 15FEB New Approach
+    const txt = locale.components.communitiesCollections;
+
+    const conf = {
         title: 'List of Communities',
         headings: 'none',
     };
+    const tempPagingData = {
+        from: 1,
+        to: 20,
+        total: 100,
+        per_page: 20,
+        current_page: 1,
+    };
+    const sortingDefaults = txt.sortingDefaults ?? {};
+    // const { sortBy, sortDirection, pageSize } = journalsListLoading
+    //     ? { ...sortingDefaults }
+    //     : getSearchResultSortingParams(
+    //           journalSearchQueryParams,
+    //           // eslint-disable-next-line camelcase
+    //           journalsList?.per_page,
+    //           sortingDefaults,
+    //       );
+    const { sortBy, sortDirection, pageSize } = { ...sortingDefaults };
     return (
-        <StandardPage title={txt.title}>
+        <StandardPage title={conf.title}>
+            <Grid item xs={12}>
+                <PublicationsListSorting
+                    canUseExport
+                    exportData={txt.export}
+                    pagingData={tempPagingData}
+                    sortingData={locale.components.communitiesCollections.sorting}
+                    sortBy={sortBy}
+                    sortDirection={sortDirection}
+                    // onExportPublications={handleExport}
+                    // onSortByChanged={sortByChanged}
+                    // onPageSizeChanged={pageSizeChanged}
+                    pageSize={pageSize}
+                    sortingDefaults={sortingDefaults}
+                />
+            </Grid>
             <MUIDataTable
-                title={txt.title}
+                title={conf.title}
                 data={communityList}
                 columns={columns}
                 options={options}
