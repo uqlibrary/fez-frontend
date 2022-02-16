@@ -176,7 +176,9 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 // Communities and Collections
-export const COMMUNITY_LIST_API = ({ pageSize }) => ({ apiUrl: `communities?per_page=${pageSize}` });
+export const COMMUNITY_LIST_API = params => {
+    return { apiUrl: `communities?per_page=${params.pageSize}` };
+};
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 

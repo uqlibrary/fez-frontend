@@ -23,7 +23,7 @@ export const AdminActions = ({
     adminActions = [
         {
             label: 'Edit selected record',
-            url: pid => `admin/edit/${pid}`,
+            url: pid => `#/admin/edit/${pid}`,
             inApp: true,
             showInDeleted: true,
             options: null,
@@ -31,7 +31,7 @@ export const AdminActions = ({
         },
         {
             label: 'Change security for record',
-            url: pid => `admin/edit/${pid}`,
+            url: pid => `#/admin/edit/${pid}`,
             inApp: true,
             showInDeleted: true,
             options: null,
@@ -39,7 +39,7 @@ export const AdminActions = ({
         },
         {
             label: 'Other Actions',
-            url: pid => `admin/edit/${pid}`,
+            url: pid => `#${pid}`,
             inApp: true,
             showInDeleted: true,
             options: null,
@@ -125,7 +125,7 @@ AdminActions.propTypes = {
     adminActions: PropTypes.array,
     isRecordDeleted: PropTypes.bool,
     navigatedFrom: PropTypes.string,
-    record: PropTypes.number,
+    record: PropTypes.string,
 };
 
 export default React.memo(AdminActions);

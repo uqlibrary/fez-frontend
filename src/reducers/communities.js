@@ -1,4 +1,5 @@
 import * as actions from 'actions/actionTypes';
+// import { record } from 'mock/data';
 
 export const initialState = {
     communityList: [],
@@ -33,6 +34,9 @@ const handlers = {
         loadingcommunities: false,
         loadingCommunitiesError: action.payload,
     }),
+    // [actions.VIEW_COMMUNITIES_SORT_CHANGE]: state => ({
+    //     ...state,
+    // }),
 };
 
 export default function viewCommunitiesReducer(state = { ...initialState }, action) {

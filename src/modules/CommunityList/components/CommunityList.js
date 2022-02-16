@@ -1,16 +1,31 @@
 import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
-import MUIDataTable from 'mui-datatables';
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
-import { useIsUserSuperAdmin } from 'hooks';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 import AdminActions from './AdminActions';
+import { useIsUserSuperAdmin } from 'hooks';
+const useStyles = makeStyles({
+    table: {
+        minWidth: 650,
+    },
+    dateCell: {
+        minWidth: 120,
+    },
+});
+
 import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useCommunityCollectionsSearch, useCommunityCollectionsSearchControls } from '../hooks';
+
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 
 const moment = require('moment');
@@ -25,108 +40,11 @@ export const getSearchResultSortingParams = (searchQueryParams, listPerPage, sor
         : listPerPage ?? sortingDefaults?.pageSize ?? 20;
     return { sortBy, sortDirection, pageSize };
 };
-const options = {
-    filterType: 'checkbox',
-    serverSide: false,
-    viewColumns: false,
-};
+
 export const CommunityList = () => {
     const isSuperAdmin = useIsUserSuperAdmin();
-    const columns = [
-        {
-            name: 'rek_pid',
-            label: 'ID',
-            options: {
-                filter: false,
-                sort: false,
-                display: 'excluded',
-            },
-        },
-        {
-            name: 'rek_title',
-            label: 'Title',
-            options: {
-                filter: true,
-                sort: true,
-                customBodyRender: (value, tableMeta) => {
-                    return !!tableMeta.rowData[2] ? (
-                        <div>
-                            <Typography variant="body2">
-                                <a href={`#/view/${tableMeta.rowData[0]}`}>{value}</a>
-                            </Typography>
-                            <Typography variant="caption">{tableMeta.rowData[2]}</Typography>
-                        </div>
-                    ) : (
-                        <Typography variant="body2">
-                            <a href={`#/view/${tableMeta.rowData[0]}`}>{value}</a>
-                        </Typography>
-                    );
-                },
-            },
-        },
-
-        {
-            name: 'rek_description',
-            label: 'Description',
-            options: {
-                display: 'excluded',
-                filter: false,
-            },
-        },
-
-        {
-            name: 'rek_created_date',
-            label: 'Created Date',
-            options: {
-                filter: false,
-                sort: true,
-                customBodyRender: value => {
-                    return moment(value)
-                        .local()
-                        .format('ddd MMM DD YYYY, hh:mm:ss A');
-                },
-            },
-        },
-        {
-            name: 'rek_updated_date',
-            label: 'Updated Date',
-            options: {
-                filter: false,
-                sort: true,
-                customBodyRender: value => {
-                    return moment(value)
-                        .local()
-                        .format('ddd MMM DD YYYY, hh:mm:ss A');
-                },
-            },
-        },
-        {
-            name: 'actions',
-            label: 'Actions',
-            options: {
-                filter: false,
-                sort: false,
-                display: isSuperAdmin,
-                customBodyRender: (value, rowArrayData) => {
-                    return isSuperAdmin ? <AdminActions record={rowArrayData.rowData[0]} /> : '';
-                },
-            },
-        },
-        {
-            name: 'citationCount',
-            label: 'Citation Count',
-            options: {
-                display: 'excluded',
-                filter: false,
-                sort: false,
-            },
-        },
-    ];
+    const classes = useStyles();
     const dispatch = useDispatch();
-    const pageSizeChanged = pageSize => {
-        console.log('PAGE SIZE CHANGED', pageSize);
-        dispatch(actions.loadCommunitiesList(pageSize));
-    };
 
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
     const totalRecords = useSelector(state => state.get('viewCommunitiesReducer').totalRecords);
@@ -134,8 +52,17 @@ export const CommunityList = () => {
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
     const currentPage = useSelector(state => state.get('viewCommunitiesReducer').currentPage);
     const perPage = useSelector(state => state.get('viewCommunitiesReducer').perPage);
+
+    const pageSizeChanged = pageSize => {
+        dispatch(actions.loadCommunitiesList({ pageSize: pageSize }));
+    };
+    const sortByChanged = list => {
+        console.log('SORTING CHANGED', list);
+        // dispatch(actions.sortCommunitiesList({ direction: direction, sortBy: sortby, list }));
+    };
+
     React.useEffect(() => {
-        dispatch(actions.loadCommunitiesList());
+        dispatch(actions.loadCommunitiesList({ pageSize: 10, direction: 'asc', sortBy: 'Title' }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -143,7 +70,7 @@ export const CommunityList = () => {
     const txt = locale.components.communitiesCollections;
 
     const conf = {
-        title: 'List of Communities',
+        title: 'Communities',
         headings: 'none',
     };
     const tempPagingData = {
@@ -154,43 +81,80 @@ export const CommunityList = () => {
         current_page: currentPage,
     };
     const sortingDefaults = txt.sortingDefaults ?? {};
-    // const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
-    // searchQueryParams,
-    // perPage,
-    //    sortingDefaults,
-    // );
 
-    // console.log('PROPERTIES', sortingDefaults);
-
-    // const { sortBy, sortDirection, pageSize } = journalsListLoading
-    //     ? { ...sortingDefaults }
-    //     : getSearchResultSortingParams(
-    //           journalSearchQueryParams,
-    //           // eslint-disable-next-line camelcase
-    //           journalsList?.per_page,
-    //           sortingDefaults,
-    //       );
-    // const { sortBy, sortDirection, pageSize } = { ...sortingDefaults };
-    console.log('COMMUNITY LIST', communityList);
-    console.log('PER PAGE', perPage);
     return (
         <StandardPage title={conf.title}>
-            <Grid item xs={12}>
-                <CommunityCollectionsSorting
-                    // canUseExport
-                    exportData={txt.export}
-                    pagingData={tempPagingData}
-                    sortingData={locale.components.communitiesCollections.sorting}
-                    sortBy={'title'}
-                    sortDirection={'Asc'}
-                    // onExportPublications={handleExport}
-                    // onSortByChanged={sortByChanged}
-                    onPageSizeChanged={pageSizeChanged}
-                    pageSize={'10'}
-                    sortingDefaults={sortingDefaults}
-                />
-            </Grid>
-            <MUIDataTable data={communityList} columns={columns} options={options} />
+            <StandardCard noHeader>
+                <Grid item xs={12}>
+                    <CommunityCollectionsSorting
+                        // canUseExport
+                        exportData={txt.export}
+                        pagingData={tempPagingData}
+                        sortingData={locale.components.communitiesCollections.sorting}
+                        sortBy={'title'}
+                        sortDirection={'Asc'}
+                        // onExportPublications={handleExport}
+                        onSortByChanged={sortByChanged}
+                        onPageSizeChanged={pageSizeChanged}
+                        pageSize={perPage}
+                        sortingDefaults={sortingDefaults}
+                    />
+                </Grid>
+
+                <TableContainer component={Paper}>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Title</TableCell>
+                                <TableCell className={classes.dateCell} align="right">
+                                    Date Created
+                                </TableCell>
+                                <TableCell className={classes.dateCell} align="right">
+                                    Date Modified
+                                </TableCell>
+                                {!!isSuperAdmin && <TableCell align="right">Actions</TableCell>}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {communityList.length > 0 ? (
+                                communityList.map(row => (
+                                    <TableRow key={row.rek_pid}>
+                                        <TableCell component="th" scope="row">
+                                            <Typography variant="body2">
+                                                <a href={`#/view/${row.rek_pid}`}>{row.rek_title}</a>
+                                            </Typography>
+                                            {!!row.rek_description && (
+                                                <Typography variant="caption">{row.rek_description}</Typography>
+                                            )}
+                                        </TableCell>
+                                        <TableCell align="right" className={classes.dateCell}>
+                                            {moment(row.rek_created_date)
+                                                .local()
+                                                .format('ddd MMM DD, YYYY')}
+                                        </TableCell>
+                                        <TableCell align="right" className={classes.dateCell}>
+                                            {moment(row.rek_updated_date)
+                                                .local()
+                                                .format('ddd MMM DD, YYYY')}
+                                        </TableCell>
+                                        {!!isSuperAdmin && (
+                                            <TableCell align="right">
+                                                <AdminActions record={row.rek_pid} />
+                                            </TableCell>
+                                        )}
+                                    </TableRow>
+                                ))
+                            ) : (
+                                <TableRow key={0}>
+                                    <TableCell component="th" scope="row">
+                                        ...Data Loading...
+                                    </TableCell>
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </StandardCard>
         </StandardPage>
     );
 };

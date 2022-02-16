@@ -11,13 +11,14 @@ import { COMMUNITY_LIST_API } from 'repositories/routes';
  * @param {object}
  * @returns {action}
  */
-export function loadCommunitiesList(pageSize = 10) {
+export function loadCommunitiesList(params = {}) {
+    const { pageSize, direction, sortBy } = params;
+
     return dispatch => {
         dispatch({ type: actions.VIEW_COMMUNITIES_LOADING });
 
-        return get(COMMUNITY_LIST_API({ pageSize: pageSize }))
+        return get(COMMUNITY_LIST_API({ pageSize: pageSize, direction: direction, sortBy: sortBy }))
             .then(response => {
-                console.log('CAPTURED THE DATASET', response.data);
                 dispatch({
                     type: actions.VIEW_COMMUNITIES_LOADED,
                     payload: response,
@@ -31,5 +32,17 @@ export function loadCommunitiesList(pageSize = 10) {
                     payload: error,
                 });
             });
+    };
+}
+export function sortCommunitiesList(params = {}, list) {
+    console.log('The SORT PARAMS ARE', params, list);
+    //     const { direction, sortBy } = params;
+    //     // Do the sorting in here...
+    //     const sortedList = {};
+    //     return dispatch => {
+    //         dispatch({ type: actions.VIEW_COMMUNITIES_SORT_CHANGE, payload: sortedList });
+    //     };
+    return dispatch => {
+        dispatch({ type: actions.VIEW_COMMUNITIES_SORT_CHANGE });
     };
 }

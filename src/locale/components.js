@@ -3640,9 +3640,9 @@ export default {
                 sortDirectionLabel: 'Sort order',
                 sortBy: [
                     { value: 'title', label: 'Title' },
-                    { value: 'createdDate', label: 'Created Date' },
-                    { value: 'updatedDate', label: 'Updated Date' },
-                    { value: 'citationScore', label: 'Citation Count' },
+                    { value: 'created_date', label: 'Created Date' },
+                    { value: 'updated_date', label: 'Updated Date' },
+                    { value: 'citation', label: 'Citation Count' },
                 ],
                 sortDirection: ['Desc', 'Asc'],
                 recordsPerPage: [10, 20, 50, 100],
