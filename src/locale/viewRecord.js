@@ -2914,5 +2914,132 @@ export default {
             message:
                 'You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format.',
         },
+        adminViewRecordDrawerFields: {
+            notes: 'fez_internal_notes.ain_detail',
+            authorAffiliates: 'fez_author_affiliation',
+            wosId: 'fez_record_search_key_isi_loc.rek_isi_loc',
+            wosDocType: 'rek_wok_doc_type',
+            wosDocTypeLookup: 'rek_wok_doc_type_lookup',
+            scopusId: 'fez_record_search_key_scopus_id.rek_scopus_id',
+            scopusDocType: 'rek_scopus_doc_type',
+            scopusDocTypeLookup: 'rek_scopus_doc_type_lookup',
+            pubMedId: 'fez_record_search_key_pubmed_id.rek_pubmed_id',
+            pubMedCentralId: 'fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
+            pubMedDocType: 'rek_pubmed_doc_type',
+            pubMedDocTypeLookup: 'rek_pubmed_doc_type_lookup',
+        },
+        adminViewRecordDefaultContent: {
+            index: {
+                notes: 0,
+                authors: 2,
+                wos: 4,
+                scopus: 6,
+                pubmed: 8,
+            },
+            object: {
+                sections: [
+                    [
+                        {
+                            type: 'header',
+                            value: undefined, // notes
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            scrollable: true,
+                            key: 'key-scrollable-notes-1',
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header',
+                            value: undefined, // author affiliates
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // wos ID
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // wos doc type
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // scopus id
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // scopus doc type
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                    {
+                        type: 'divider',
+                    },
+                    [
+                        {
+                            type: 'header', // pubmed id
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // pubmed central id
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                            clipboard: true,
+                        },
+                        {
+                            type: 'header', // pubmed doc type
+                            value: undefined,
+                        },
+                        {
+                            type: 'content',
+                            value: undefined,
+                        },
+                    ],
+                ],
+            },
+        },
     },
 };
