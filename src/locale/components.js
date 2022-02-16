@@ -3623,13 +3623,6 @@ export default {
             snackbar: {
                 message: 'Search results updated',
             },
-            searchResult: {
-                loadingMessage: 'Loading journals list',
-                noResultsFound: {
-                    title: 'No journals found',
-                    text: <div>We were unable to find any results.</div>,
-                },
-            },
             export: {
                 label: 'Export page results',
                 format: [{ value: 'excel', label: 'Excel File' }],
