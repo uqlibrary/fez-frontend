@@ -3645,7 +3645,7 @@ export default {
                     { value: 'citationScore', label: 'Citation Count' },
                 ],
                 sortDirection: ['Desc', 'Asc'],
-                recordsPerPage: [20, 50, 100],
+                recordsPerPage: [10, 20, 50, 100],
                 exportOnlyLabel: 'Export Only:',
                 bulkExportConfirmation: {
                     confirmationTitle: 'Export queued successfully',
@@ -3660,7 +3660,7 @@ export default {
             },
             sortingDefaults: {
                 pageSize: 10,
-                sortBy: 'highest_quartile',
+                sortBy: 'title',
                 sortDirection: 'Asc',
             },
         },

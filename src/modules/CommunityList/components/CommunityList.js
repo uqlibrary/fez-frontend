@@ -10,22 +10,14 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
+import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 
 const moment = require('moment');
 
 const options = {
     filterType: 'checkbox',
-    rowsPerPageOptions: [10, 20, 50, 100],
     serverSide: false,
     viewColumns: false,
-    onTableChange: (action, tableState) => {
-        console.log(action);
-        console.log(tableState);
-        // this.xhrRequest('my.api.com/tableData', result => {
-        // this.setState({ data: [] });
-        // });
-    },
 };
 export const CommunityList = () => {
     const isSuperAdmin = useIsUserSuperAdmin();
@@ -141,6 +133,8 @@ export const CommunityList = () => {
         current_page: 1,
     };
     const sortingDefaults = txt.sortingDefaults ?? {};
+    console.log('PROPERTIES', sortingDefaults);
+
     // const { sortBy, sortDirection, pageSize } = journalsListLoading
     //     ? { ...sortingDefaults }
     //     : getSearchResultSortingParams(
@@ -153,7 +147,7 @@ export const CommunityList = () => {
     return (
         <StandardPage title={conf.title}>
             <Grid item xs={12}>
-                <PublicationsListSorting
+                <CommunityCollectionsSorting
                     canUseExport
                     exportData={txt.export}
                     pagingData={tempPagingData}
