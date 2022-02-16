@@ -20,12 +20,12 @@ const handlers = {
     [actions.VIEW_COMMUNITIES_LOADED]: (state, action) => ({
         ...initialState,
         loadingcommunities: false,
-        communityList: action.payload,
-        // totalPages: action.payload.totalPages,
-        // startPage: action.payload.startPage,
-        // endPage: action.payload.endPage,
-        // currentPage: action.payload.currentPage,
-        // perPage: action.payload.perPage,
+        communityList: action.payload.data,
+        totalRecords: action.payload.total,
+        startRecord: action.payload.from,
+        endRecord: action.payload.to,
+        currentPage: action.payload.current_page,
+        perPage: action.payload.per_page,
     }),
 
     [actions.VIEW_COMMUNITIES_LOAD_FAILED]: (state, action) => ({

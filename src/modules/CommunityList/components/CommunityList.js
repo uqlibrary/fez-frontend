@@ -2,6 +2,7 @@ import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import MUIDataTable from 'mui-datatables';
 // import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 import Grid from '@material-ui/core/Grid';
 import { useIsUserSuperAdmin } from 'hooks';
 import Typography from '@material-ui/core/Typography';
@@ -9,11 +10,21 @@ import AdminActions from './AdminActions';
 import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
-
+// import { useCommunityCollectionsSearch, useCommunityCollectionsSearchControls } from '../hooks';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 
 const moment = require('moment');
 
+export const getSearchResultSortingParams = (searchQueryParams, listPerPage, sortingDefaults) => {
+    const { sortBy = 'title', sortDirection = 'Asc' } = {
+        ...sortingDefaults,
+        ...searchQueryParams,
+    };
+    const pageSize = searchQueryParams?.pageSize
+        ? Number(searchQueryParams.pageSize)
+        : listPerPage ?? sortingDefaults?.pageSize ?? 20;
+    return { sortBy, sortDirection, pageSize };
+};
 const options = {
     filterType: 'checkbox',
     serverSide: false,
@@ -112,7 +123,17 @@ export const CommunityList = () => {
         },
     ];
     const dispatch = useDispatch();
+    const pageSizeChanged = pageSize => {
+        console.log('PAGE SIZE CHANGED', pageSize);
+        dispatch(actions.loadCommunitiesList(pageSize));
+    };
+
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
+    const totalRecords = useSelector(state => state.get('viewCommunitiesReducer').totalRecords);
+    const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
+    const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
+    const currentPage = useSelector(state => state.get('viewCommunitiesReducer').currentPage);
+    const perPage = useSelector(state => state.get('viewCommunitiesReducer').perPage);
     React.useEffect(() => {
         dispatch(actions.loadCommunitiesList());
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -126,14 +147,20 @@ export const CommunityList = () => {
         headings: 'none',
     };
     const tempPagingData = {
-        from: 1,
-        to: 20,
-        total: 100,
-        per_page: 20,
-        current_page: 1,
+        from: startRecord,
+        to: endRecord,
+        total: totalRecords,
+        per_page: perPage,
+        current_page: currentPage,
     };
     const sortingDefaults = txt.sortingDefaults ?? {};
-    console.log('PROPERTIES', sortingDefaults);
+    // const { sortBy, sortDirection, pageSize } = getSearchResultSortingParams(
+    // searchQueryParams,
+    // perPage,
+    //    sortingDefaults,
+    // );
+
+    // console.log('PROPERTIES', sortingDefaults);
 
     // const { sortBy, sortDirection, pageSize } = journalsListLoading
     //     ? { ...sortingDefaults }
@@ -143,31 +170,27 @@ export const CommunityList = () => {
     //           journalsList?.per_page,
     //           sortingDefaults,
     //       );
-    const { sortBy, sortDirection, pageSize } = { ...sortingDefaults };
+    // const { sortBy, sortDirection, pageSize } = { ...sortingDefaults };
+    console.log('COMMUNITY LIST', communityList);
+    console.log('PER PAGE', perPage);
     return (
         <StandardPage title={conf.title}>
             <Grid item xs={12}>
                 <CommunityCollectionsSorting
-                    canUseExport
+                    // canUseExport
                     exportData={txt.export}
                     pagingData={tempPagingData}
                     sortingData={locale.components.communitiesCollections.sorting}
-                    sortBy={sortBy}
-                    sortDirection={sortDirection}
+                    sortBy={'title'}
+                    sortDirection={'Asc'}
                     // onExportPublications={handleExport}
                     // onSortByChanged={sortByChanged}
-                    // onPageSizeChanged={pageSizeChanged}
-                    pageSize={pageSize}
+                    onPageSizeChanged={pageSizeChanged}
+                    pageSize={'10'}
                     sortingDefaults={sortingDefaults}
                 />
             </Grid>
-            <MUIDataTable
-                title={conf.title}
-                data={communityList}
-                columns={columns}
-                options={options}
-                rowsPerPageOptions={[10, 20, 50, 100]}
-            />
+            <MUIDataTable data={communityList} columns={columns} options={options} />
         </StandardPage>
     );
 };

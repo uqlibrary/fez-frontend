@@ -11,16 +11,16 @@ import { COMMUNITY_LIST_API } from 'repositories/routes';
  * @param {object}
  * @returns {action}
  */
-export function loadCommunitiesList() {
+export function loadCommunitiesList(pageSize = 10) {
     return dispatch => {
         dispatch({ type: actions.VIEW_COMMUNITIES_LOADING });
 
-        return get(COMMUNITY_LIST_API())
+        return get(COMMUNITY_LIST_API({ pageSize: pageSize }))
             .then(response => {
                 console.log('CAPTURED THE DATASET', response.data);
                 dispatch({
                     type: actions.VIEW_COMMUNITIES_LOADED,
-                    payload: response.data,
+                    payload: response,
                 });
 
                 return Promise.resolve(response);
