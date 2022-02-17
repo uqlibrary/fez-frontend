@@ -257,7 +257,9 @@ export default {
     "rek_editing_user": null,
     "rek_editing_user_lookup": null,
     "rek_editing_start_date": null,
-    "fez_internal_notes": "Test internal notes",
+    "fez_internal_notes":{
+        "ain_detail": "Test internal notes",
+     },
     "fez_record_search_key_audience_size": null,
     "fez_record_search_key_author_affiliation_id": [],
     "fez_record_search_key_author_affiliation_country": [],
@@ -282,7 +284,4 @@ export default {
         "rek_notes_xsdmf_id": null,
         "rek_notes": "Test notes"
     },
-    "fez_internal_notes":{
-        "ain_detail": "Test internal notes",
-     },
 };
