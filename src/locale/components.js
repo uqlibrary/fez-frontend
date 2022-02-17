@@ -3620,8 +3620,24 @@ export default {
             },
         },
         communitiesCollections: {
+            title: {
+                communities: 'Communities',
+                collections: 'Collections',
+            },
             snackbar: {
                 message: 'Search results updated',
+            },
+            dateFormat: 'ddd MMM DD, YYYY',
+            loading: {
+                message: '...Loading Data...',
+            },
+            columns: {
+                labels: {
+                    title: 'Title',
+                    creation_date: 'Creation Date',
+                    updated_date: 'Updated Date',
+                    actions: 'Actions',
+                },
             },
             export: {
                 label: 'Export page results',
@@ -3640,16 +3656,6 @@ export default {
                 sortDirection: ['Desc', 'Asc'],
                 recordsPerPage: [10, 20, 50, 100],
                 exportOnlyLabel: 'Export Only:',
-                bulkExportConfirmation: {
-                    confirmationTitle: 'Export queued successfully',
-                    confirmationMessage: (
-                        <span style={{ display: 'block', margin: '1em 0' }}>
-                            Bulk export request has been queued. When the request has been processed, you will receive
-                            an email with the exported file as an attachment.
-                        </span>
-                    ),
-                    confirmButtonLabel: 'Close',
-                },
             },
             sortingDefaults: {
                 pageSize: 10,

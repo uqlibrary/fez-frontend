@@ -78,11 +78,8 @@ export const CommunityList = () => {
 
     // 15FEB New Approach
     const txt = locale.components.communitiesCollections;
+    const labels = txt.columns.labels;
 
-    const conf = {
-        title: 'Communities',
-        headings: 'none',
-    };
     const tempPagingData = {
         from: startRecord,
         to: endRecord,
@@ -105,21 +102,19 @@ export const CommunityList = () => {
             sortedList.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
             sortDirection === 'Asc' && sortedList.reverse();
             break;
-        // case 'citation':
-
         default:
             break;
     }
 
     return (
-        <StandardPage title={conf.title}>
+        <StandardPage title={txt.title.communities}>
             <StandardCard noHeader>
                 <Grid item xs={12}>
                     <CommunityCollectionsSorting
                         // canUseExport
                         exportData={txt.export}
                         pagingData={tempPagingData}
-                        sortingData={locale.components.communitiesCollections.sorting}
+                        sortingData={txt.sorting}
                         sortBy={sortBy}
                         sortDirection={sortDirection}
                         // onExportPublications={handleExport}
@@ -143,14 +138,14 @@ export const CommunityList = () => {
                     <Table aria-label="simple table">
                         <TableHead>
                             <TableRow>
-                                <TableCell>Title</TableCell>
+                                <TableCell>{labels.title}</TableCell>
                                 <TableCell className={classes.dateCell} align="right">
-                                    Date Created
+                                    {labels.creation_date}
                                 </TableCell>
                                 <TableCell className={classes.dateCell} align="right">
-                                    Date Modified
+                                    {labels.updated_date}
                                 </TableCell>
-                                {!!isSuperAdmin && <TableCell align="right">Actions</TableCell>}
+                                {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -168,12 +163,12 @@ export const CommunityList = () => {
                                         <TableCell align="right" className={classes.dateCell}>
                                             {moment(row.rek_created_date)
                                                 .local()
-                                                .format('ddd MMM DD, YYYY')}
+                                                .format(txt.dateFormat)}
                                         </TableCell>
                                         <TableCell align="right" className={classes.dateCell}>
                                             {moment(row.rek_updated_date)
                                                 .local()
-                                                .format('ddd MMM DD, YYYY')}
+                                                .format(txt.dateFormat)}
                                         </TableCell>
                                         {!!isSuperAdmin && (
                                             <TableCell align="right">
@@ -185,7 +180,7 @@ export const CommunityList = () => {
                             ) : (
                                 <TableRow key={0}>
                                     <TableCell component="th" scope="row">
-                                        ...Data Loading...
+                                        {txt.loading.message}
                                     </TableCell>
                                 </TableRow>
                             )}
