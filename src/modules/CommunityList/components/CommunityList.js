@@ -27,21 +27,14 @@ import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
+import { CommunityCollectionsPaging } from './CommunityCollectionsPaging';
 
 const moment = require('moment');
 
-export const getSearchResultSortingParams = (searchQueryParams, listPerPage, sortingDefaults) => {
-    const { sortBy = 'title', sortDirection = 'Asc' } = {
-        ...sortingDefaults,
-        ...searchQueryParams,
-    };
-    const pageSize = searchQueryParams?.pageSize
-        ? Number(searchQueryParams.pageSize)
-        : listPerPage ?? sortingDefaults?.pageSize ?? 20;
-    return { sortBy, sortDirection, pageSize };
-};
-
 export const CommunityList = () => {
+    const [sortDirection, setSortDirection] = React.useState('Asc');
+    const [sortBy, setSortBy] = React.useState('title');
+
     const isSuperAdmin = useIsUserSuperAdmin();
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -54,15 +47,32 @@ export const CommunityList = () => {
     const perPage = useSelector(state => state.get('viewCommunitiesReducer').perPage);
 
     const pageSizeChanged = pageSize => {
-        dispatch(actions.loadCommunitiesList({ pageSize: pageSize }));
+        dispatch(
+            actions.loadCommunitiesList({
+                pageSize: pageSize,
+                page: 1,
+                direction: sortDirection,
+                sortBy: sortBy,
+            }),
+        );
     };
-    const sortByChanged = list => {
-        console.log('SORTING CHANGED', list);
-        // dispatch(actions.sortCommunitiesList({ direction: direction, sortBy: sortby, list }));
+    const pageChanged = page => {
+        console.log(page);
+        dispatch(
+            actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
+        );
+    };
+
+    const sortByChanged = (sortby, direction) => {
+        setSortDirection(direction);
+        setSortBy(sortby);
+        dispatch(
+            actions.loadCommunitiesList({ pageSize: perPage, page: currentPage, direction: direction, sortBy: sortby }),
+        );
     };
 
     React.useEffect(() => {
-        dispatch(actions.loadCommunitiesList({ pageSize: 10, direction: 'asc', sortBy: 'Title' }));
+        dispatch(actions.loadCommunitiesList({ pageSize: 10, page: 1, direction: 'asc', sortBy: 'Title' }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -81,6 +91,25 @@ export const CommunityList = () => {
         current_page: currentPage,
     };
     const sortingDefaults = txt.sortingDefaults ?? {};
+    const sortedList = [...communityList];
+    switch (sortBy) {
+        case 'title':
+            sortedList.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
+            sortDirection === 'Asc' && sortedList.reverse();
+            break;
+        case 'created_date':
+            sortedList.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
+            sortDirection === 'Asc' && sortedList.reverse();
+            break;
+        case 'updated_date':
+            sortedList.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
+            sortDirection === 'Asc' && sortedList.reverse();
+            break;
+        // case 'citation':
+
+        default:
+            break;
+    }
 
     return (
         <StandardPage title={conf.title}>
@@ -91,13 +120,22 @@ export const CommunityList = () => {
                         exportData={txt.export}
                         pagingData={tempPagingData}
                         sortingData={locale.components.communitiesCollections.sorting}
-                        sortBy={'title'}
-                        sortDirection={'Asc'}
+                        sortBy={sortBy}
+                        sortDirection={sortDirection}
                         // onExportPublications={handleExport}
                         onSortByChanged={sortByChanged}
                         onPageSizeChanged={pageSizeChanged}
                         pageSize={perPage}
                         sortingDefaults={sortingDefaults}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <CommunityCollectionsPaging
+                        loading={false}
+                        pagingData={tempPagingData}
+                        onPageChanged={pageChanged}
+                        disabled={false}
+                        pagingId="my-records-paging-top"
                     />
                 </Grid>
 
@@ -116,8 +154,8 @@ export const CommunityList = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {communityList.length > 0 ? (
-                                communityList.map(row => (
+                            {sortedList.length > 0 ? (
+                                sortedList.map(row => (
                                     <TableRow key={row.rek_pid}>
                                         <TableCell component="th" scope="row">
                                             <Typography variant="body2">
@@ -154,6 +192,15 @@ export const CommunityList = () => {
                         </TableBody>
                     </Table>
                 </TableContainer>
+                <Grid item xs={12}>
+                    <CommunityCollectionsPaging
+                        loading={false}
+                        pagingData={tempPagingData}
+                        onPageChanged={pageChanged}
+                        disabled={false}
+                        pagingId="my-records-paging-bottom"
+                    />
+                </Grid>
             </StandardCard>
         </StandardPage>
     );

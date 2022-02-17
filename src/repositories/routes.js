@@ -180,7 +180,7 @@ export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` }
 
 // Communities and Collections
 export const COMMUNITY_LIST_API = params => {
-    return { apiUrl: `communities?per_page=${params.pageSize}` };
+    return { apiUrl: `communities?per_page=${params.pageSize}&page=${params.page}` };
 };
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });

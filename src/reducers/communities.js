@@ -8,8 +8,8 @@ export const initialState = {
     totalPages: 0,
     startPage: 0,
     endPage: 0,
-    currentPage: 0,
-    perPage: 0,
+    currentPage: 1,
+    perPage: 10,
 };
 
 const handlers = {
@@ -34,9 +34,6 @@ const handlers = {
         loadingcommunities: false,
         loadingCommunitiesError: action.payload,
     }),
-    // [actions.VIEW_COMMUNITIES_SORT_CHANGE]: state => ({
-    //     ...state,
-    // }),
 };
 
 export default function viewCommunitiesReducer(state = { ...initialState }, action) {
