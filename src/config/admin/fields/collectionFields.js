@@ -2,6 +2,12 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
+    admin: () => [
+        {
+            title: 'Member of Communities',
+            groups: [['communities']],
+        },
+    ],
     bibliographic: () => [
         {
             title: 'Collection Title',
@@ -18,18 +24,12 @@ export default {
     ],
     notes: () => [
         {
-            title: 'Additional notes',
-            groups: [['additionalNotes']],
-        },
-        {
-            title: 'Internal notes',
+            title: 'Internal Notes',
             groups: [['internalNotes']],
         },
-    ],
-    admin: () => [
         {
-            title: 'Member of Communities',
-            groups: [['communities']],
+            title: 'Reason for Edit',
+            groups: [['reasonForEdit']],
         },
     ],
 };

@@ -251,6 +251,16 @@ export default {
                 communityFieldId: 'rek-ismemberof',
             },
         },
+        reasonForEdit: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'reason-edit',
+                name: 'noteSection.reason-edit',
+                fullWidth: true,
+                label: 'Reason for Edit (optional - will be added to object history)',
+                placeholder: 'Reason for Edit',
+            },
+        },
         collections: {
             component: CollectionField,
             componentProps: {

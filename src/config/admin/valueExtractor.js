@@ -593,6 +593,9 @@ export default {
     files: {
         getValue: () => [],
     },
+    reasonForEdit: {
+        getValue: () => '',
+    },
     fez_datastream_info: {
         getValue: record => {
             return (record.fez_datastream_info || []).filter(validation.isFileValid(viewRecordsConfig, true));

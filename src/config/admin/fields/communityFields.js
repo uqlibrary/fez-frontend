@@ -18,12 +18,12 @@ export default {
     ],
     notes: () => [
         {
-            title: 'Additional notes',
-            groups: [['additionalNotes']],
+            title: 'Internal Notes',
+            groups: [['internalNotes']],
         },
         {
-            title: 'Internal notes',
-            groups: [['internalNotes']],
+            title: 'Reason for Edit',
+            groups: [['reasonForEdit']],
         },
     ],
 };

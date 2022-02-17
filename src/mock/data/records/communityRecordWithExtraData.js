@@ -1,7 +1,7 @@
 export default {
     "rek_pid": "UQ:3883",
     "rek_title_xsdmf_id": null,
-    "rek_title": "The University of Queensland Library",
+    "rek_title": "The University of Queensland Library With Extra Data",
     "rek_description_xsdmf_id": null,
     "rek_description": "Test collection description",
     "rek_display_type_xsdmf_id": null,

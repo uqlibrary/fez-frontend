@@ -173,6 +173,10 @@ export const AdminInterface = ({
         }
     };
 
+    const handleDelete = event => {
+        event.preventDefault?.();
+    };
+
     const setSuccessConfirmationRef = React.useCallback(node => {
         successConfirmationRef.current = node; // TODO: Add check that this worked
     }, []);
@@ -250,6 +254,21 @@ export const AdminInterface = ({
                     onClick={handleCancel}
                 />
             </Grid>
+
+            {!isDeleted && (objectType === RECORD_TYPE_COMMUNITY || objectType === RECORD_TYPE_COLLECTION) && (
+                <Grid item xs={12} sm={3}>
+                    <Button
+                        id={`admin-work-delete${placement}`}
+                        data-testid={`delete-admin${placement}`}
+                        disabled={!!submitting || !!disableSubmit}
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        children="Delete"
+                        onClick={handleDelete}
+                    />
+                </Grid>
+            )}
             {!!isSuperAdmin &&
                 record.rek_status !== RETRACTED &&
                 objectType !== RECORD_TYPE_COMMUNITY &&
