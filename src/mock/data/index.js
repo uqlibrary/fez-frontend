@@ -68,7 +68,7 @@ export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { journalDetails } from './journal';
-
+export { communityList } from './CommunityList'
 export { bulkUpdatesList } from './bulkUpdates';
 
 // Favourite search mock data
