@@ -1774,6 +1774,10 @@ export default {
                     },
                 },
             },
+            internalNotes: {
+                label: 'Internal Notes (admin)',
+                placeholder: 'Optionally enter internal notes',
+            },
         },
         submit: 'Add collection',
         cancel: 'Return to the homepage',
@@ -1839,6 +1843,10 @@ export default {
                         },
                     },
                 },
+            },
+            internalNotes: {
+                label: 'Internal Notes (admin)',
+                placeholder: 'Optionally enter internal notes',
             },
         },
         submit: 'Add community',
