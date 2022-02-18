@@ -872,4 +872,10 @@ describe('Backend routes method', () => {
             apiUrl: 'journals/12',
         });
     });
+    // COMMUNITY_LIST_API
+    it('should construct url for community list api', () => {
+        expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1 })).toEqual({
+            apiUrl: 'communities?per_page=20&page=1',
+        });
+    });
 });

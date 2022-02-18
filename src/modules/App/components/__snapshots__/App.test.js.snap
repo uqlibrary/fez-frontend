@@ -4361,6 +4361,11 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "Author statistics",
         },
         Object {
+          "linkTo": "/communities",
+          "primaryText": "Communities List",
+          "public": true,
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -5353,6 +5358,11 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Communities List",
+          "public": true,
         },
         Object {
           "divider": true,
@@ -10408,6 +10418,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadAuthorPublicationsStats": [Function],
                                                           "loadBulkUpdatesList": [Function],
                                                           "loadCollectionsList": [Function],
+                                                          "loadCommunitiesList": [Function],
                                                           "loadCurrentAccount": [Function],
                                                           "loadDetailedHistory": [Function],
                                                           "loadFavouriteSearchList": [Function],
@@ -14312,6 +14323,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadAuthorPublicationsStats": [Function],
                                                                           "loadBulkUpdatesList": [Function],
                                                                           "loadCollectionsList": [Function],
+                                                                          "loadCommunitiesList": [Function],
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadDetailedHistory": [Function],
                                                                           "loadFavouriteSearchList": [Function],
@@ -14484,6 +14496,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadBulkUpdatesList": [Function],
                                                                             "loadCollectionsList": [Function],
+                                                                            "loadCommunitiesList": [Function],
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadDetailedHistory": [Function],
                                                                             "loadFavouriteSearchList": [Function],
@@ -15430,6 +15443,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadAuthorPublicationsStats": [Function],
                                                                                     "loadBulkUpdatesList": [Function],
                                                                                     "loadCollectionsList": [Function],
+                                                                                    "loadCommunitiesList": [Function],
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadDetailedHistory": [Function],
                                                                                     "loadFavouriteSearchList": [Function],
@@ -15556,6 +15570,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadBulkUpdatesList": [Function],
                                                                                       "loadCollectionsList": [Function],
+                                                                                      "loadCommunitiesList": [Function],
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadDetailedHistory": [Function],
                                                                                       "loadFavouriteSearchList": [Function],

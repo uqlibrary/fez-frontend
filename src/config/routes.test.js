@@ -14,7 +14,7 @@ describe('Routes getMenuConfig method', () => {
             currentAuthor.uqresearcher.data,
             authorDetails.uqresearcher,
         );
-        expect(testRoutes.length).toEqual(13);
+        expect(testRoutes.length).toEqual(14);
     });
 
     it('should return a list of menus including incomplete menu item for researcher (uqresearcher)', () => {
@@ -25,7 +25,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(14);
+        expect(testRoutes.length).toEqual(15);
     });
 
     it('should return menus for a user with dashboard only (eg HDR student without ORCID) (uqnoauthid)', () => {
@@ -62,7 +62,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testRoutes.length).toEqual(15);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
@@ -73,7 +73,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should not return Switch to old interface menu item for public view page', () => {
@@ -106,7 +106,7 @@ describe('Routes getMenuConfig method', () => {
             currentAuthor.uqmasquerade.data,
             authorDetails.uqmasquerade,
         );
-        expect(testRoutes.length).toEqual(15);
+        expect(testRoutes.length).toEqual(16);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
@@ -117,7 +117,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testRoutes.length).toEqual(16);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should not return Switch to old interface menu item for public view page', () => {
@@ -136,7 +136,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             true,
         );
-        expect(testMenuItems.length).toEqual(14);
+        expect(testMenuItems.length).toEqual(15);
     });
 
     it('should return list of menus for a student with an author account', () => {
@@ -147,7 +147,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testMenuItems.length).toEqual(13);
+        expect(testMenuItems.length).toEqual(14);
     });
 
     it('should return list of menus for a student with an author account', () => {
