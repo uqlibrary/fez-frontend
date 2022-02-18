@@ -2,6 +2,7 @@ import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -13,6 +14,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import AdminActions from './AdminActions';
 import { useIsUserSuperAdmin } from 'hooks';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
@@ -108,6 +110,11 @@ export const CommunityList = () => {
 
     return (
         <StandardPage title={txt.title.communities}>
+            {!!isSuperAdmin && (
+                <Grid item xs={12} sm={3}>
+                    <Button href="/#/admin/community">Add a Missing Community</Button>
+                </Grid>
+            )}
             <StandardCard noHeader>
                 <Grid item xs={12}>
                     <CommunityCollectionsSorting
@@ -133,24 +140,24 @@ export const CommunityList = () => {
                         pagingId="my-records-paging-top"
                     />
                 </Grid>
+                {sortedList.length > 0 ? (
+                    <TableContainer component={Paper}>
+                        <Table aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>{labels.title}</TableCell>
+                                    <TableCell className={classes.dateCell} align="right">
+                                        {labels.creation_date}
+                                    </TableCell>
+                                    <TableCell className={classes.dateCell} align="right">
+                                        {labels.updated_date}
+                                    </TableCell>
+                                    {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
+                                </TableRow>
+                            </TableHead>
 
-                <TableContainer component={Paper}>
-                    <Table aria-label="simple table">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>{labels.title}</TableCell>
-                                <TableCell className={classes.dateCell} align="right">
-                                    {labels.creation_date}
-                                </TableCell>
-                                <TableCell className={classes.dateCell} align="right">
-                                    {labels.updated_date}
-                                </TableCell>
-                                {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {sortedList.length > 0 ? (
-                                sortedList.map(row => (
+                            <TableBody>
+                                {sortedList.map(row => (
                                     <TableRow key={row.rek_pid}>
                                         <TableCell component="th" scope="row">
                                             <Typography variant="body2">
@@ -176,17 +183,13 @@ export const CommunityList = () => {
                                             </TableCell>
                                         )}
                                     </TableRow>
-                                ))
-                            ) : (
-                                <TableRow key={0}>
-                                    <TableCell component="th" scope="row">
-                                        {txt.loading.message}
-                                    </TableCell>
-                                </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                ) : (
+                    <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
+                )}
                 <Grid item xs={12}>
                     <CommunityCollectionsPaging
                         loading={false}

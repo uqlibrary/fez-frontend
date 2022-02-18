@@ -3624,6 +3624,7 @@ export default {
                 communities: 'Communities',
                 collections: 'Collections',
             },
+            addCommunityText: 'Add Missing Community',
             snackbar: {
                 message: 'Search results updated',
             },
