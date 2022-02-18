@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [{
+        'exactMatch': [{
             'jnl_jid': 10409,
             'jnl_title': 'Lung Cancer',
             'jnl_publisher': 'Elsevier Ireland Ltd.',

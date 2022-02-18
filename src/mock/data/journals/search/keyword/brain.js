@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [], 'titleFuzzyMatch': [{
+        'exactMatch': [], 'titleFuzzyMatch': [{
             'jnl_jid': 1521,
             'jnl_title': 'Brain Cell Biology',
             'jnl_publisher': null,

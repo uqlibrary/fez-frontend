@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [{
+        'exactMatch': [{
             'jnl_jid': 32030,
             'jnl_title': 'Virus',
             'jnl_publisher': 'Nomads.usp',

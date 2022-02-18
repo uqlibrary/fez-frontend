@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [],
+        'exactMatch': [],
         'titleFuzzyMatch': [{
             'jnl_jid': 9840,
             'jnl_title': 'Canadian Journal of Infectious Diseases and Medical Microbiology',

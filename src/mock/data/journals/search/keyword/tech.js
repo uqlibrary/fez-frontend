@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [],
+        'exactMatch': [],
         'titleFuzzyMatch': [{
             'jnl_jid': 9995,
             'jnl_title': 'Echocardiography: a journal of cardiovascular ultrasound and allied techniques',

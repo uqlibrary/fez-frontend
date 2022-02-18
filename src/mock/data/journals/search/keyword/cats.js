@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [], 'titleFuzzyMatch': [{
+        'exactMatch': [], 'titleFuzzyMatch': [{
             'jnl_jid': 8022,
             'jnl_title': 'The Scriblerian and the Kit-Cats',
             'jnl_publisher': 'The Scriblerian and the Kit-Cats',

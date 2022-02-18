@@ -3,9 +3,9 @@ import { pathConfig } from 'config/pathConfig';
 
 const getExactMatchKeywords = keywordsResponse => {
     const exactMatch =
-        !!keywordsResponse.titleExactMatch &&
-        keywordsResponse.titleExactMatch.length > 0 &&
-        keywordsResponse.titleExactMatch.map(journal => ({
+        !!keywordsResponse.exactMatch &&
+        keywordsResponse.exactMatch.length > 0 &&
+        keywordsResponse.exactMatch.map(journal => ({
             keyword: journal.jnl_title,
             title: journal.jnl_title,
             href: pathConfig.journal.view(journal.jnl_jid),

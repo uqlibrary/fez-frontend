@@ -142,10 +142,10 @@ describe('Journal Search Keyword enhancer', () => {
         });
         expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
     });
-    it('has no exactMatch value if no titleExactMatch data available', () => {
+    it('has no exactMatch value if no exactMatch data available', () => {
         const mockSearchData = {
             ...keywordsSearch.data,
-            titleExactMatch: null,
+            exactMatch: null,
         };
         const mockReferenceObject = {
             ...referenceObject,

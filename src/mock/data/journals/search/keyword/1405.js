@@ -1,6 +1,6 @@
 export const keywordsSearch = {
     'data': {
-        'titleExactMatch': [],
+        'exactMatch': [],
         'titleFuzzyMatch': [],
         'descriptionFuzzyMatch': [],
         'subjectFuzzyMatch': [{
