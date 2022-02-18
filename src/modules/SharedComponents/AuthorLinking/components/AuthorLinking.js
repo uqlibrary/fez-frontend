@@ -207,8 +207,12 @@ export const AuthorLinking = ({
     return (
         <div className={className}>
             <Grid container>
-                <Grid item className={classes.infiniteContainer}>
-                    <div style={{ height: scrollHeight(), overflowY: overflowType() }}>{authorsToRender}</div>
+                <Grid
+                    item
+                    className={classes.infiniteContainer}
+                    style={{ height: scrollHeight(), overflowY: overflowType() }}
+                >
+                    {authorsToRender}
                 </Grid>
             </Grid>
             {selectedAuthor !== null && (
