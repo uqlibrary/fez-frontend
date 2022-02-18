@@ -14,7 +14,11 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import AdminActions from './AdminActions';
 import { useIsUserSuperAdmin } from 'hooks';
+import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import ReactHtmlParser from 'react-html-parser';
+import { pathConfig } from 'config';
+
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
@@ -161,7 +165,10 @@ export const CommunityList = () => {
                                     <TableRow key={row.rek_pid}>
                                         <TableCell component="th" scope="row">
                                             <Typography variant="body2">
-                                                <a href={`#/view/${row.rek_pid}`}>{row.rek_title}</a>
+                                                <Link to={pathConfig.records.view(row.rek_pid)}>
+                                                    {ReactHtmlParser(row.rek_title)}
+                                                </Link>
+                                                {/* <a href={`#/view/${row.rek_pid}`}>{row.rek_title}</a> */}
                                             </Typography>
                                             {!!row.rek_description && (
                                                 <Typography variant="caption">{row.rek_description}</Typography>
