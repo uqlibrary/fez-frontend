@@ -37,10 +37,15 @@ import {
     RECORD_TYPE_COLLECTION,
     RETRACTED,
     UNPUBLISHED,
+    RECORD_ACTION_URLS as adminActions,
+    DELETE_SELECTED_RECORD_LABEL,
 } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from '../../../config/validation';
+import { navigateToUrl } from 'modules/SharedComponents/Toolbox/helpers';
+
+// import { debounce } from 'throttle-debounce';
 
 const AdminTab = withStyles({
     root: {
@@ -175,6 +180,16 @@ export const AdminInterface = ({
 
     const handleDelete = event => {
         event.preventDefault?.();
+        const deleteAction = adminActions.filter(action => action.label === DELETE_SELECTED_RECORD_LABEL)[0];
+        const linkTarget = deleteAction.inApp ? '_self' : '_blank';
+        const options = deleteAction.options || null;
+        const url = deleteAction.url(record.rek_pid);
+        const navigatedFrom =
+            (location.hash && location.hash.replace('#', '')) || `${location.pathname}${location.search}`;
+        // debounce(300, true, () => {
+        console.log(url, linkTarget, !!deleteAction.isRecordEdit && navigatedFrom, options);
+        navigateToUrl(url, linkTarget, !!deleteAction.isRecordEdit && navigatedFrom, options);
+        // });
     };
 
     const setSuccessConfirmationRef = React.useCallback(node => {
