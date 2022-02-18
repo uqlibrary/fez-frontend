@@ -189,17 +189,17 @@ export const AuthorLinking = ({
     const numRowsToShow = 4;
     const allRowsDisplayed = authorsToRender.length <= numRowsToShow;
     const scrollHeight = () => {
-        const rowHeight = 62;
-
         if (authorsToRender.length === 0) {
-            return rowHeight;
+            return 120;
         }
+
+        const multiRowHeight = 65;
 
         if (!!allRowsDisplayed) {
-            return authorsToRender.length * rowHeight;
+            return (authorsToRender.length + 1) * multiRowHeight;
         }
 
-        return numRowsToShow * rowHeight;
+        return numRowsToShow * multiRowHeight;
     };
     const overflowType = () => {
         return allRowsDisplayed ? 'auto' : 'scroll';
