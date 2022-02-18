@@ -363,12 +363,7 @@ export class ContributorsEditor extends PureComponent {
                                     }`,
                                 }}
                             >
-                                {// istanbul ignore next
-                                contributors.length > 20 ? (
-                                    <div>{this.renderContributorRows()}</div>
-                                ) : (
-                                    this.renderContributorRows()
-                                )}
+                                {this.renderContributorRows()}
                             </List>
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>
