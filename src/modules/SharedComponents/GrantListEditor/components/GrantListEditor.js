@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import GrantListEditorHeader from './GrantListEditorHeader';
@@ -222,4 +221,4 @@ export const styles = () => ({
     },
 });
 
-export default compose(withStyles(styles))(GrantListEditor);
+export default withStyles(styles)(GrantListEditor);
