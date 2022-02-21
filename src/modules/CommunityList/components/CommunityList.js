@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactHtmlParser from 'react-html-parser';
 import { pathConfig } from 'config';
-
+import { communityCollectionsConfig } from 'config';
 const useStyles = makeStyles({
     table: {
         minWidth: 650,
@@ -82,7 +82,6 @@ export const CommunityList = () => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // 15FEB New Approach
     const txt = locale.components.communitiesCollections;
     const labels = txt.columns.labels;
 
@@ -115,13 +114,21 @@ export const CommunityList = () => {
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (
-                <Grid item xs={12} sm={3}>
-                    <Button href="/#/admin/community">Add a Missing Community</Button>
+                <Grid item xs={12} sm={3} spacing={2} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
+                    <Button
+                        component={Link}
+                        variant="outlined"
+                        to={pathConfig.admin.community}
+                        data-test-id="admin-add-community-button"
+                    >
+                        {communityCollectionsConfig.addNewCommunityText}
+                    </Button>
                 </Grid>
             )}
             <StandardCard noHeader>
-                <Grid item xs={12}>
+                <Grid item xs={12} style={{ marginBottom: 10 }}>
                     <CommunityCollectionsSorting
+                        data-testid="community-collections-sorting-top"
                         // canUseExport
                         exportData={txt.export}
                         pagingData={tempPagingData}
@@ -141,14 +148,15 @@ export const CommunityList = () => {
                         pagingData={tempPagingData}
                         onPageChanged={pageChanged}
                         disabled={false}
-                        pagingId="my-records-paging-top"
+                        pagingId="community-collections-paging-top"
+                        data-testid="community-collections-paging-top"
                     />
                 </Grid>
                 {sortedList.length > 0 ? (
                     <TableContainer component={Paper}>
                         <Table aria-label="simple table">
                             <TableHead>
-                                <TableRow>
+                                <TableRow data-testid="community-collections-primary-header">
                                     <TableCell>{labels.title}</TableCell>
                                     <TableCell className={classes.dateCell} align="right">
                                         {labels.creation_date}
@@ -160,9 +168,9 @@ export const CommunityList = () => {
                                 </TableRow>
                             </TableHead>
 
-                            <TableBody>
+                            <TableBody data-testid="community-collections-primary-body">
                                 {sortedList.map(row => (
-                                    <TableRow key={row.rek_pid}>
+                                    <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
                                         <TableCell component="th" scope="row">
                                             <Typography variant="body2">
                                                 <Link to={pathConfig.records.view(row.rek_pid)}>
@@ -197,13 +205,14 @@ export const CommunityList = () => {
                 ) : (
                     <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
                 )}
-                <Grid item xs={12}>
+                <Grid item xs={12} style={{ marginTop: 10 }}>
                     <CommunityCollectionsPaging
+                        data-testid="community-collections-paging-bottom"
                         loading={false}
                         pagingData={tempPagingData}
                         onPageChanged={pageChanged}
                         disabled={false}
-                        pagingId="my-records-paging-bottom"
+                        pagingId="community-collections-paging-bottom"
                     />
                 </Grid>
             </StandardCard>
