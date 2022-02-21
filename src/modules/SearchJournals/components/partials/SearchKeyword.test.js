@@ -53,6 +53,16 @@ describe('SearchKeyword', () => {
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
 
+    it('should call not throw error when onKeywordClick is not given and when clicked', () => {
+        const { getByTestId } = setup({
+            keyword: keyword,
+            onKeywordClick: undefined,
+            variant,
+            index,
+        });
+        fireEvent.click(getByTestId(getId(keyword, variant, index)));
+    });
+
     it('should call given onKeywordClick by pressing space bar', () => {
         const onKeywordClick = jest.fn();
         const { getByTestId } = setup({

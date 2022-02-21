@@ -30,7 +30,7 @@ export const getId = (keyword, variant, index) => `journal-search-item-${getIdSu
 
 export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
     const classes = useStyles();
-    const handleKeywordClick = () => onKeywordClick(keyword);
+    const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword);
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
