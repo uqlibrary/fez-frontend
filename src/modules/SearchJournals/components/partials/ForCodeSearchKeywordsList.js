@@ -34,7 +34,7 @@ ForCodeSearchKeywordsList.propTypes = {
             keyword: PropTypes.string.isRequired,
             sources: PropTypes.array.isRequired,
         }),
-    ).isRequired,
+    ),
     onKeywordClick: PropTypes.func.isRequired,
 };
 
