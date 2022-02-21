@@ -3855,7 +3855,7 @@ export default {
                     aria_label:
                         'Suggested results available below. Tab out of this field and use arrow keys to move to item lists.',
                     exactMatch: {
-                        title: 'Exact title match',
+                        title: 'Exact match',
                     },
                     titleMatch: {
                         title: 'Titles containing',
