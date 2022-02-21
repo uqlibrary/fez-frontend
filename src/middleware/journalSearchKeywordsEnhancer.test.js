@@ -5,7 +5,7 @@ const referenceObject = {
     payload: {
         exactMatch: [{ href: '/journal/view/32030', keyword: 'Virus', title: 'Virus' }],
         keywordMatch: [{ keyword: 'viruses' }, { keyword: 'virus' }],
-        subjectMatch: false,
+        subjectMatch: [],
         titleMatch: [
             { keyword: 'Virusologia' },
             { keyword: 'Arbovirus' },
