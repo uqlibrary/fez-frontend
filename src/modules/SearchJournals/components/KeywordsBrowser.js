@@ -127,9 +127,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             <Grid item xs={12} sm={12} md style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
-                    {...(journalSearchKeywords.subjectMatch && {
-                        keywordsList: journalSearchKeywords.subjectMatch || {},
-                    })}
+                    keywordsList={journalSearchKeywords.subjectMatch}
                     onKeywordClick={handleSubjectKeywordClick}
                 />
             </Grid>
