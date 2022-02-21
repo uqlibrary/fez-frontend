@@ -181,9 +181,9 @@ export default class CollectionForm extends Component {
                                                     <Typography>{txt.formLabels.internalNotes.label}</Typography>
                                                     <Field
                                                         component={RichEditorField}
-                                                        richEditorId="rek-internal-notes"
+                                                        richEditorId="internalNotes"
                                                         disabled={this.props.submitting}
-                                                        name="rek_internal_notes"
+                                                        name="internalNotes"
                                                         fullWidth
                                                         multiline
                                                         rows={5}
