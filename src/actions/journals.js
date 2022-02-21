@@ -28,7 +28,6 @@ export const loadJournalLookup = searchText => dispatch => {
                     type: actions.JOURNAL_LOOKUP_FAILED,
                     payload: error.message,
                 });
-                // return Promise.reject(error.message);
             },
         )
     );

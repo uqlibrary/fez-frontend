@@ -1,10 +1,10 @@
 import {
+    addFavouriteSearch,
     checkForExistingFavouriteSearchAlias,
     deleteFavouriteSearchListItem,
+    getFavouriteSearchAlias,
     loadFavouriteSearchList,
     updateFavouriteSearchListItem,
-    addFavouriteSearch,
-    getFavouriteSearchAlias,
 } from './favouriteSearch';
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
@@ -41,7 +41,7 @@ describe('favouriteSearch actions', () => {
                 actions.FAVOURITE_SEARCH_LIST_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(loadFavouriteSearchList())).rejects.toEqual({
+            await expect(mockActionsStore.dispatch(loadFavouriteSearchList())).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -76,7 +76,7 @@ describe('favouriteSearch actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(updateFavouriteSearchListItem({ fvs_id: 1 }, { fvs_id: 1 })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
@@ -147,11 +147,13 @@ describe('favouriteSearch actions', () => {
                 actions.FAVOURITE_SEARCH_ITEM_DELETE_FAILED,
             ];
 
-            await expect(mockActionsStore.dispatch(deleteFavouriteSearchListItem({ fvs_id: 1 }))).rejects.toEqual({
-                status: 500,
-                message:
-                    'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
-            });
+            await expect(mockActionsStore.dispatch(deleteFavouriteSearchListItem({ fvs_id: 1 }))).rejects.toMatchObject(
+                {
+                    status: 500,
+                    message:
+                        'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',
+                },
+            );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
@@ -193,7 +195,7 @@ describe('favouriteSearch actions', () => {
 
             await expect(
                 mockActionsStore.dispatch(checkForExistingFavouriteSearchAlias({ fvs_id: 1, fvs_alias: 'test' })),
-            ).rejects.toEqual({
+            ).rejects.toMatchObject({
                 status: 500,
                 message:
                     'Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later.',

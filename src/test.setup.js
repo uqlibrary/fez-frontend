@@ -4,7 +4,8 @@ import React from 'react';
 import Enzyme, { mount, render, shallow } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import toJson from 'enzyme-to-json';
-import '@babel/polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 import { Provider } from 'react-redux';
 import Immutable from 'immutable';
@@ -79,7 +80,7 @@ const getElement = (component, props, args = {}) => {
     );
 };
 
-global.toString = component => {
+global.componentToString = component => {
     return prettyFormat(renderer.create(component), {
         plugins: [prettyFormat.plugins.ReactTestComponent],
     }).toString();

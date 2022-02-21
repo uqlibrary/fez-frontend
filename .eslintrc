@@ -15,6 +15,7 @@
     "Cypress": true,
     "expect": true,
     "getElement": true,
+    "componentToString": true,
     "jasmine": true,
     "jest": true,
     "mockActionsStore": true,

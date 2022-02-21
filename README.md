@@ -211,7 +211,8 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
-- if you cant get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
+- if you can't get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
+- The eSpace API always returns a 200 for a GET request to /fez-author. For this reason, checking for the presence of the ```author``` (e.g. ```this.props.author```) is not enough to determine if the logged-in user is an author or not. This can be done the following check: ```this.props.autho?.aut_id``` or by checking for the response of author details API endpoint e.g. ```this.props.authorDetails```
 
 #### Optimisation Guidelines
 

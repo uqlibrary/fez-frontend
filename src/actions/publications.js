@@ -78,7 +78,7 @@ function searchAuthorPublicationsApiEndpoint(type) {
         case 'incomplete':
             return routes.INCOMPLETE_RECORDS_API;
         default:
-            throw Error('Please provide valid type');
+            throw new Error('Please provide valid type');
     }
 }
 

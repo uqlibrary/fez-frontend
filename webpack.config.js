@@ -6,7 +6,6 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const InjectPreloader = require('preloader-html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const port = 3000;
@@ -127,7 +126,6 @@ module.exports = {
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
-        new InjectPreloader(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.LoaderOptionsPlugin({
             options: {

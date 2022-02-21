@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -10,6 +10,11 @@ import { accounts } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
 import locale from '../../../locale/pages';
+import { notFound } from '../../../config/routes';
+import { stripHtml } from '../../../helpers/general';
+import globalLocale from '../../../locale/global';
+import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
+import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -79,7 +84,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should render default view with admin menu', () => {
-        userIsAdmin.mockImplementation(() => true);
+        userIsAdmin.mockImplementationOnce(() => true);
         const { getByTestId } = setup({ recordToView: record });
         expect(getByTestId('admin-actions-button')).toBeInTheDocument();
     });
@@ -88,7 +93,7 @@ describe('NewViewRecord', () => {
         const txt = locale.pages.viewRecord.version;
         const pid = 'UQ:1';
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
-        useParams.mockImplementation(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
         const { getByTestId } = setup({ recordToView: recordVersionLegacy });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
@@ -110,6 +115,18 @@ describe('NewViewRecord', () => {
         expect(getByText('Loading work')).toBeInTheDocument();
     });
 
+    it('should render not found', () => {
+        useParams.mockImplementationOnce(() => ({ pid: notFound }));
+        const { queryByText } = setup();
+        expect(queryByText(locale.pages.viewRecord.notFound.title)).toBeInTheDocument();
+        stripHtml(componentToString(locale.pages.viewRecord.notFound.message))
+            .replace(/\n+/, '\n')
+            .split('\n')
+            .filter(line => line.trim())
+            .forEach(line => expect(queryByText(line.trim())).toBeInTheDocument());
+        expect(queryByText(globalLocale.global.loginAlert.title)).not.toBeInTheDocument();
+    });
+
     it('should render error', () => {
         const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 403 } });
         expect(getByText('You are not logged in -')).toBeInTheDocument();
@@ -123,7 +140,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should have status prop in the header for admins', () => {
-        userIsAdmin.mockImplementation(() => true);
+        userIsAdmin.mockImplementationOnce(() => true);
         const { getByText } = setup({
             recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' },
         });
@@ -132,7 +149,7 @@ describe('NewViewRecord', () => {
 
     it('should load record to view', () => {
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordToView');
-        useParams.mockImplementation(() => ({ pid: 'UQ:111111' }));
+        useParams.mockImplementationOnce(() => ({ pid: 'UQ:111111' }));
         setup({});
         expect(loadRecordToViewFn).toHaveBeenCalledWith('UQ:111111');
     });
@@ -197,5 +214,147 @@ describe('NewViewRecord', () => {
         expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
 
         window.location = location;
+    });
+
+    it('should not render for researcher', () => {
+        const { queryByTestId } = setup({
+            recordToView: record,
+            account: accounts.uqresearcher,
+        });
+        expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+        expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+        expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+    });
+    it('should not render for student user', () => {
+        const { queryByTestId } = setup({
+            recordToView: record,
+            account: accounts.s1111111,
+        });
+        expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+        expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+        expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+    });
+
+    describe('Admin record drawer for admins', () => {
+        beforeEach(() => {
+            userIsAdmin.mockImplementation(() => true);
+        });
+
+        it('should render for Admin user', () => {
+            const { getByTestId } = setup({
+                recordToView: record,
+                account: accounts.uqstaff,
+            });
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        });
+
+        it('should open desktop admin drawer when button pressed', () => {
+            const { getByTestId } = setup({
+                recordToView: recordWithNotes,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+
+            act(() => {
+                fireEvent.click(getByTestId('adminDrawerButton'));
+            });
+
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        });
+
+        it('should open mobile admin drawer when button pressed', () => {
+            window.matchMedia = createMatchMedia(320);
+
+            const { getByTestId } = setup({
+                recordToView: recordWithNotes,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+
+            act(() => {
+                fireEvent.click(getByTestId('adminDrawerButton'));
+            });
+
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).toBeVisible();
+        });
+
+        it('should render data in both admin drawers', () => {
+            const { getByTestId } = setup({
+                recordToView: recordWithAuthorAffiliates,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+
+            // DESKTOP
+            // Notes
+            expect(getByTestId('drawer-Desktop-content-scrollable-0-1')).toHaveTextContent(
+                'Some internal notes for testing',
+            );
+
+            // Author affiliations
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
+
+            // WoS ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
+            // WoS DocType
+            expect(getByTestId('drawer-Desktop-content-value-4-3')).toHaveTextContent('Article');
+
+            // Scopus ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
+            // Scopus DocType
+            expect(getByTestId('drawer-Desktop-content-value-6-3')).toHaveTextContent(
+                'ar - Article (original research)',
+            );
+
+            // PubMed ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-1')).toHaveTextContent('27166757');
+            // PubMed Central ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
+            // PubMed DocType
+            expect(getByTestId('drawer-Desktop-content-value-8-5')).toHaveTextContent(
+                'Journal Article - Article (original research)',
+            );
+
+            // MOBILE
+            // Notes
+            expect(getByTestId('drawer-Mobile-content-scrollable-0-1')).toHaveTextContent(
+                'Some internal notes for testing',
+            );
+
+            // Author affiliations
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+
+            // WoS ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');
+            // WoS DocType
+            expect(getByTestId('drawer-Mobile-content-value-4-3')).toHaveTextContent('Article');
+
+            // Scopus ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
+            // Scopus DocType
+            expect(getByTestId('drawer-Mobile-content-value-6-3')).toHaveTextContent(
+                'ar - Article (original research)',
+            );
+
+            // PubMed ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-1')).toHaveTextContent('27166757');
+            // PubMed Central ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
+            // PubMed DocType
+            expect(getByTestId('drawer-Mobile-content-value-8-5')).toHaveTextContent(
+                'Journal Article - Article (original research)',
+            );
+        });
     });
 });

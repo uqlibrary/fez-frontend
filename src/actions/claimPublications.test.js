@@ -815,7 +815,10 @@ describe('Claim publication actions tests ', () => {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-                expect(e).toStrictEqual(getPreCheckError(existingRecordPid));
+                const expected = getPreCheckError(existingRecordPid);
+                expect(e.message).toStrictEqual(expected.message);
+                expect(e.original).toStrictEqual(expected.original);
+                expect(e.request).toStrictEqual(expected.request);
             }
         });
 

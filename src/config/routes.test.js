@@ -169,7 +169,11 @@ describe('Routes getRoutesConfig method', () => {
     });
 
     it('should return a list of routes for researcher', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqresearcher });
+        const testRoutes = routes.getRoutesConfig({
+            components: {},
+            account: accounts.uqresearcher,
+            authorDetails: authorDetails.uqresearcher,
+        });
         expect(testRoutes.length).toEqual(29);
     });
 
@@ -207,6 +211,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.s2222222,
             forceOrcidRegistration: false,
             isHdrStudent: true,
+            authorDetails: authorDetails.uqresearcher,
         });
         expect(testRoutes.length).toEqual(29);
     });

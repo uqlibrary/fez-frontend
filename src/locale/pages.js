@@ -550,6 +550,27 @@ export default {
                     },
                 },
             },
+            adminRecordData: {
+                drawer: {
+                    title: 'Record Data',
+
+                    sectionTitles: {
+                        notes: 'Notes',
+                        authorAffiliations: 'Has Author Affiliations?',
+                        wosId: 'WoS ID',
+                        wosDocType: 'WoS Doc Type',
+                        scopusId: 'Scopus ID',
+                        scopusDocType: 'Scopus Doc Type',
+                        pubmedId: 'Pubmed ID',
+                        pubmedCentralId: 'Pubmed Central ID',
+                        pubmedDocType: 'Pubmed Doc Type',
+                    },
+                },
+                clipboard: {
+                    unavailable: 'Clipboard unavailable',
+                    copied: 'Copied to clipboard',
+                },
+            },
         },
         searchRecords: {
             title: 'eSpace search',
@@ -1039,7 +1060,7 @@ export default {
             },
             loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
-            retractedMessage: 'This article has been retracted',
+            retractedMessage: 'This work has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',
