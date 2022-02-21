@@ -282,6 +282,41 @@ describe('Search Journals Facets component', () => {
         expect(mockActiveFiltersRef).toHaveBeenNthCalledWith(2, {});
     });
 
+    it('should allow multi select for indexed in', () => {
+        const testFacetChangeFn = jest.fn();
+        const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
+        const scieFacetItemTestId = 'facet-filter-nested-item-scie';
+        const scieClearFacetItemTestId = 'clear-facet-filter-nested-item-scie';
+        const scopusFacetItemTestId = 'facet-filter-nested-item-scopus';
+        const scopusClearFacetItemTestId = 'clear-facet-filter-nested-item-scopus';
+
+        // expand Listed in
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));
+        });
+
+        expect(getByTestId(scieFacetItemTestId)).toBeVisible();
+        expect(queryByTestId(scieClearFacetItemTestId)).not.toBeInTheDocument();
+        expect(getByTestId(scopusFacetItemTestId)).toBeVisible();
+        expect(queryByTestId(scopusClearFacetItemTestId)).not.toBeInTheDocument();
+
+        // clicks on scie facet
+        act(() => {
+            fireEvent.click(getByTestId(scieFacetItemTestId));
+        });
+
+        expect(getByTestId(scieClearFacetItemTestId)).toBeVisible();
+        expect(queryByTestId(scopusClearFacetItemTestId)).not.toBeInTheDocument();
+
+        // clicks on scopus facet
+        act(() => {
+            fireEvent.click(getByTestId(scopusFacetItemTestId));
+        });
+
+        expect(getByTestId(scieClearFacetItemTestId)).toBeVisible();
+        expect(getByTestId(scopusClearFacetItemTestId)).toBeVisible();
+    });
+
     it('should render reset button', () => {
         const testFacetChangeFn = jest.fn();
         const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });

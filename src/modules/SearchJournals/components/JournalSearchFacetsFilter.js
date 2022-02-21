@@ -166,6 +166,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
 
     const _handleFacetClick = (category, facet) => () => {
         let newActiveFacetsFilters = { ...activeFacetsFilters };
+        // remove facet filter
         if (isFacetFilterActive(newActiveFacetsFilters, category, facet)) {
             if (category === showFavouritedOnlyFacet.facetTitle) {
                 delete newActiveFacetsFilters[category];
@@ -173,8 +174,12 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                 newActiveFacetsFilters[category] = newActiveFacetsFilters[category].filter(item => item !== facet);
             }
             newActiveFacetsFilters = filterOutNonActiveFacets(newActiveFacetsFilters);
+
+            // support multi select e.g. index in
         } else if (newActiveFacetsFilters.hasOwnProperty(category)) {
             newActiveFacetsFilters[category].push(facet);
+
+            // add an active facet filter
         } else {
             newActiveFacetsFilters[category] = category === showFavouritedOnlyFacet.facetTitle ? true : [facet];
         }
