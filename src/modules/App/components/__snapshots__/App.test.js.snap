@@ -1348,13 +1348,12 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_19"
+            key="route_18"
             pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Strategic publishing results"
             path="/journals/results/"
           />
@@ -1366,7 +1365,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "type": [Function],
               }
             }
-            key="route_21"
+            key="route_20"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
           />
@@ -1378,26 +1377,19 @@ exports[`Application component should determine if it has incomplete works from 
                 "type": [Function],
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_23"
-=======
-            key="route_18"
->>>>>>> master
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-<<<<<<< HEAD
-            key="route_24"
-=======
-            key="route_19"
->>>>>>> master
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1416,24 +1408,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_25"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
-=======
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
->>>>>>> master
           />
           <Route
             component={[Function]}
             exact={true}
-<<<<<<< HEAD
-            key="route_26"
-=======
-            key="route_21"
->>>>>>> master
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1453,21 +1435,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-<<<<<<< HEAD
-            key="route_27"
-=======
-            key="route_22"
->>>>>>> master
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-<<<<<<< HEAD
-            key="route_28"
-=======
-            key="route_23"
->>>>>>> master
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2377,13 +2351,12 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_19"
+            key="route_18"
             pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Strategic publishing results"
             path="/journals/results/"
           />
@@ -2395,7 +2368,7 @@ exports[`Application component should determine if it has incomplete works from 
                 "type": [Function],
               }
             }
-            key="route_21"
+            key="route_20"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
           />
@@ -2407,26 +2380,19 @@ exports[`Application component should determine if it has incomplete works from 
                 "type": [Function],
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_23"
-=======
-            key="route_18"
->>>>>>> master
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-<<<<<<< HEAD
-            key="route_24"
-=======
-            key="route_19"
->>>>>>> master
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2445,24 +2411,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_25"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
-=======
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
->>>>>>> master
           />
           <Route
             component={[Function]}
             exact={true}
-<<<<<<< HEAD
-            key="route_26"
-=======
-            key="route_21"
->>>>>>> master
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2482,21 +2438,13 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-<<<<<<< HEAD
-            key="route_27"
-=======
-            key="route_22"
->>>>>>> master
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-<<<<<<< HEAD
-            key="route_28"
-=======
-            key="route_23"
->>>>>>> master
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3869,13 +3817,12 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_19"
+            key="route_18"
             pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Strategic publishing results"
             path="/journals/results/"
           />
@@ -3887,7 +3834,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "type": [Function],
               }
             }
-            key="route_21"
+            key="route_20"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
           />
@@ -3899,26 +3846,19 @@ exports[`Application component should render alert if user is not fez author 1`]
                 "type": [Function],
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_23"
-=======
-            key="route_18"
->>>>>>> master
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-<<<<<<< HEAD
-            key="route_24"
-=======
-            key="route_19"
->>>>>>> master
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3937,24 +3877,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_25"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
-=======
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
->>>>>>> master
           />
           <Route
             component={[Function]}
             exact={true}
-<<<<<<< HEAD
-            key="route_26"
-=======
-            key="route_21"
->>>>>>> master
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3974,21 +3904,13 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-<<<<<<< HEAD
-            key="route_27"
-=======
-            key="route_22"
->>>>>>> master
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-<<<<<<< HEAD
-            key="route_28"
-=======
-            key="route_23"
->>>>>>> master
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4939,13 +4861,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_19"
+            key="route_18"
             pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Strategic publishing results"
             path="/journals/results/"
           />
@@ -4957,7 +4878,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "type": [Function],
               }
             }
-            key="route_21"
+            key="route_20"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
           />
@@ -4969,26 +4890,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 "type": [Function],
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_23"
-=======
-            key="route_18"
->>>>>>> master
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-<<<<<<< HEAD
-            key="route_24"
-=======
-            key="route_19"
->>>>>>> master
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5007,24 +4921,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_25"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
-=======
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
->>>>>>> master
           />
           <Route
             component={[Function]}
             exact={true}
-<<<<<<< HEAD
-            key="route_26"
-=======
-            key="route_21"
->>>>>>> master
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -5044,21 +4948,13 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-<<<<<<< HEAD
-            key="route_27"
-=======
-            key="route_22"
->>>>>>> master
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-<<<<<<< HEAD
-            key="route_28"
-=======
-            key="route_23"
->>>>>>> master
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5994,13 +5890,12 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_19"
+            key="route_18"
             pageTitle="Journal search"
             path="/journals/search/"
           />
           <Route
-            key="route_20"
+            key="route_19"
             pageTitle="Strategic publishing results"
             path="/journals/results/"
           />
@@ -6012,7 +5907,7 @@ exports[`Application component should render app for account with fez author wit
                 "type": [Function],
               }
             }
-            key="route_21"
+            key="route_20"
             pageTitle="Strategic publishing compare"
             path="/journals/compare/"
           />
@@ -6024,26 +5919,19 @@ exports[`Application component should render app for account with fez author wit
                 "type": [Function],
               }
             }
-            key="route_22"
+            key="route_21"
             pageTitle="Strategic publishing favourites"
             path="/journals/favourites/"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_23"
-=======
-            key="route_18"
->>>>>>> master
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-<<<<<<< HEAD
-            key="route_24"
-=======
-            key="route_19"
->>>>>>> master
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -6062,24 +5950,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-<<<<<<< HEAD
-            key="route_25"
-            path="/view/:pid(UQ:[a-z0-9]+)"
-            regExPath="/view/(UQ:[a-z0-9]+)"
-=======
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
->>>>>>> master
           />
           <Route
             component={[Function]}
             exact={true}
-<<<<<<< HEAD
-            key="route_26"
-=======
-            key="route_21"
->>>>>>> master
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -6099,21 +5977,13 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-<<<<<<< HEAD
-            key="route_27"
-=======
-            key="route_22"
->>>>>>> master
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
           <Route
             component={[Function]}
-<<<<<<< HEAD
-            key="route_28"
-=======
-            key="route_23"
->>>>>>> master
+            key="route_27"
             pageTitle="Page not found"
           />
         </Switch>
