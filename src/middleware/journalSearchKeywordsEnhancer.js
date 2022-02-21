@@ -94,7 +94,7 @@ const getSubjectMatchKeywords = subjectFuzzyMatch => {
             };
         });
 
-    return subjectMatch;
+    return subjectMatch || [];
 };
 
 const getKeywords = (keywordsResponse, query) => {
