@@ -41,7 +41,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
             return;
         }
 
-        handleKeywordClick();
+        onKeywordClick && handleKeywordClick();
     };
     return (
         <Grid item xs={12}>
@@ -50,7 +50,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
                 onKeyPress={handleKeywordKeyboardPress}
-                onClick={handleKeywordClick}
+                {...((onKeywordClick && { onClick: handleKeywordClick }) || {})}
                 id={getId(keyword, variant, index)}
                 data-testid={getId(keyword, variant, index)}
                 role="button"
