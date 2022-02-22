@@ -27,7 +27,7 @@ export const AdminActions = ({
         },
         {
             label: 'Change security for record',
-            url: pid => `#/admin/edit/${pid}`,
+            url: pid => `#/admin/edit/${pid}?tab=security`,
             inApp: true,
             showInDeleted: true,
             options: null,
