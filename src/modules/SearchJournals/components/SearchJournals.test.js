@@ -526,8 +526,6 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
-        screen.debug(undefined, 80000);
-
         // sortBy
         expect(queryByTestId('sortBy')).toBeInTheDocument();
         act(() => {
