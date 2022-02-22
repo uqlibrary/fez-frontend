@@ -65,7 +65,7 @@ describe('Collection form', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
