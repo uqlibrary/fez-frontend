@@ -5,9 +5,9 @@ export const initialState = {
     communityList: [],
     loadingcommunities: false,
     loadingCommunitiesError: null,
-    totalPages: 0,
-    startPage: 0,
-    endPage: 0,
+    totalRecords: 0,
+    startRecord: 0,
+    endRecord: 0,
     currentPage: 1,
     perPage: 10,
 };
