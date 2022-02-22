@@ -29,7 +29,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        flex={true}
         item={true}
       >
         <WithStyles(ForwardRef(Button))
@@ -176,7 +175,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
-      flex={true}
       item={true}
     >
       <WithStyles(ForwardRef(Button))
@@ -222,7 +220,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        flex={true}
         item={true}
       >
         <WithStyles(ForwardRef(Button))
@@ -283,7 +280,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
-      flex={true}
       item={true}
     >
       <WithStyles(ForwardRef(Button))
@@ -323,7 +319,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        flex={true}
         item={true}
       >
         <WithStyles(ForwardRef(Button))
@@ -384,7 +379,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
-      flex={true}
       item={true}
     >
       <WithStyles(ForwardRef(Button))
@@ -424,7 +418,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        flex={true}
         item={true}
       >
         <WithStyles(ForwardRef(Button))
@@ -485,7 +478,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
-      flex={true}
       item={true}
     >
       <WithStyles(ForwardRef(Button))

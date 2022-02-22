@@ -165,7 +165,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         )}
                         <Hidden xsDown>
-                            <Grid item flex>
+                            <Grid item>
                                 {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
                                 {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
                                 {this.renderPageButtons()}
@@ -185,7 +185,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         </Hidden>
                         {currentPage <= totalPages && (
-                            <Grid item flex>
+                            <Grid item>
                                 <Button
                                     variant={'text'}
                                     className={`${classes.nextPrevButtons} paging-next`}
