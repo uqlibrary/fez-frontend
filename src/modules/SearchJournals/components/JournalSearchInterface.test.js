@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, WithReduxStore, WithRouter, act, fireEvent } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import { id, JournalSearchInterface } from './JournalSearchInterface';
 
 const setup = state => {
@@ -18,6 +18,45 @@ const mocks = {};
 describe('JournalSearchInterface', () => {
     afterEach(() => {
         Object.keys(mocks).map(name => mocks[name].mockRestore());
+    });
+
+    it('should render when keywords have been changed', () => {
+        jest.useFakeTimers();
+        const keywords = {
+            'Keyword-testing': {
+                type: 'Keyword',
+                text: 'testing',
+                id: 'Keyword-testing',
+            },
+        };
+        mocks.useRef = jest.spyOn(React, 'useRef');
+        mocks.useRef.mockImplementation(() => ({
+            current: {
+                ...keywords,
+                'Title-Testing': {
+                    type: 'Title',
+                    text: 'Testing',
+                    id: 'Title-Testing',
+                },
+            },
+        }));
+        const { queryByTestId } = setup({
+            hasAnySelectedKeywords: true,
+            showInputControls: false,
+            selectedKeywords: keywords,
+        });
+        expect(queryByTestId(`${id}-search-input`)).not.toBeInTheDocument();
+        expect(queryByTestId(`${id}-selected-keywords`)).toBeInTheDocument();
+        expect(queryByTestId(`${id}-keywords-browser`)).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-favourite-journals-button')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-button')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-snackbar')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
+        act(() => {
+            jest.runAllTimers();
+        });
+        expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
     });
 
     it('should render', () => {
@@ -92,44 +131,6 @@ describe('JournalSearchInterface', () => {
         expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
     });
 
-    it('should render when keywords have been changed', () => {
-        jest.useFakeTimers();
-        const keywords = {
-            'Keyword-testing': {
-                type: 'Keyword',
-                text: 'testing',
-                id: 'Keyword-testing',
-            },
-        };
-        mocks.useRef = jest.spyOn(React, 'useRef');
-        mocks.useRef.mockImplementation(() => ({
-            current: {
-                ...keywords,
-                'Title-Testing': {
-                    type: 'Title',
-                    text: 'Testing',
-                    id: 'Title-Testing',
-                },
-            },
-        }));
-        const { queryByTestId } = setup({
-            hasAnySelectedKeywords: true,
-            showInputControls: false,
-            selectedKeywords: keywords,
-        });
-        expect(queryByTestId(`${id}-search-input`)).not.toBeInTheDocument();
-        expect(queryByTestId(`${id}-selected-keywords`)).toBeInTheDocument();
-        expect(queryByTestId(`${id}-keywords-browser`)).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-favourite-journals-button')).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-button')).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-snackbar')).toBeInTheDocument();
-        expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
-        // act(() => {
-        jest.runAllTimers();
-        // });
-        expect(queryByTestId('journal-search-snackbar')).not.toBeInTheDocument();
-    });
     it('should call setSelectedKeywords function with empty object when clear button clicked', () => {
         const keywords = {
             'Keyword-testing': {
