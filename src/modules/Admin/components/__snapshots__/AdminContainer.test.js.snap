@@ -497,6 +497,14 @@ exports[`AdminContainer component should not render non-security errors for comm
                   "type": [Function],
                 },
               },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
               "security": Object {
                 "activated": true,
                 "component": Object {
@@ -1846,6 +1854,14 @@ exports[`AdminContainer component should render default view 1`] = `
                     "compare": null,
                     "type": [Function],
                   },
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
                   "compare": null,
                   "type": [Function],
                 },
@@ -3208,6 +3224,14 @@ exports[`AdminContainer component should render memoized component with styles 1
                   "type": [Function],
                 },
               },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
               "security": Object {
                 "activated": true,
                 "component": Object {
@@ -4551,6 +4575,14 @@ exports[`AdminContainer component should render mobile view 1`] = `
                     "compare": null,
                     "type": [Function],
                   },
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
                   "compare": null,
                   "type": [Function],
                 },
