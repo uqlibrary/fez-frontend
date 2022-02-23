@@ -1363,6 +1363,13 @@ export const getNotesSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const getReasonSectionSearchKeys = (data = {}) => {
+    const { reason } = data;
+    return {
+        ...(!!reason ? { reason: reason } : {}),
+    };
+};
+
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;
     const [primaryKey, subKey] = searchKey.split('.');

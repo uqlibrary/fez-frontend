@@ -14,9 +14,6 @@ export const onSubmit = (values, dispatch, { initialValues, match }) => {
     // unlike other record types we want to send all of the record across
     if (recType === 'Collection' || recType === 'Community') {
         recValues = { ...data };
-        // ordinarily when doing a diff, this node would automatically be removed from the request
-        // JSON as it doesn't change, however since we're not doing a diff for C&C we need to delete ourselves
-        delete recValues.publication;
     } else {
         const initialData = (initialValues && initialValues.toJS()) || null;
         const changes = detailedDiff(initialData, data);
