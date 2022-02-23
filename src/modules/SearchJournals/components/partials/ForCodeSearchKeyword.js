@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import SearchKeyword from './SearchKeyword';
 import ForCodeSource from './ForCodeSource';
 
-export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index }) => {
+export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index, cvoId }) => {
     return (
         <Grid container spacing={1}>
             <Grid item xs="auto">
@@ -14,6 +14,7 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index }
                     index={index}
                     title="subject & field of research"
                     keyword={keyword}
+                    cvoId={cvoId}
                     variant="addable"
                     onKeywordClick={onKeywordClick}
                 />
@@ -32,6 +33,7 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index }
 
 ForCodeSearchKeyword.propTypes = {
     keyword: PropTypes.string.isRequired,
+    cvoId: PropTypes.number.isRequired,
     onKeywordClick: PropTypes.func.isRequired,
     sources: PropTypes.arrayOf(PropTypes.object).isRequired,
     index: PropTypes.number.isRequired,

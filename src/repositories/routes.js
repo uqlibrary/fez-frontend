@@ -465,7 +465,7 @@ export const getKeywordsParams = keywords => {
                     description.push(keywords[item].text);
                     break;
                 case 'Subject':
-                    subject.push(keywords[item].text);
+                    subject.push(keywords[item].cvoId);
                     break;
                 default:
                     break;

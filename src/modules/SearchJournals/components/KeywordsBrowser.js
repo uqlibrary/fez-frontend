@@ -35,7 +35,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
 
     /* istanbul ignore next */
     const handleKeywordClick = React.useCallback(
-        (type, keyword) => onKeywordAdd({ type, text: keyword }),
+        (type, keyword, cvoId) => onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) }),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -48,7 +48,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      */
     /* istanbul ignore next */
     const handleSubjectKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.forCodeMatch.chipTitle, keyword),
+        (keyword, cvoId) => {
+            handleKeywordClick(txt.forCodeMatch.chipTitle, keyword, cvoId);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );

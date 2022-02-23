@@ -7,6 +7,7 @@ const setup = state => {
 };
 
 const keyword = 'test';
+const cvoId = 12345;
 const sources = [
     {
         index: 'source-index-0',
@@ -21,6 +22,7 @@ describe('ForCodeSearchKeyword', () => {
     it('should render', () => {
         const { getByText } = setup({
             keyword,
+            cvoId,
             sources,
         });
         expect(getByText(keyword)).toBeInTheDocument();
@@ -29,6 +31,7 @@ describe('ForCodeSearchKeyword', () => {
     it('should display all given sources', () => {
         const { getByText } = setup({
             keyword,
+            cvoId,
             sources,
         });
         sources.forEach(source => {

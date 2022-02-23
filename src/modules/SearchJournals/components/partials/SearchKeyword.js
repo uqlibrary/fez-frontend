@@ -28,9 +28,9 @@ export const getIdSuffix = (keyword, variant, index) => {
 
 export const getId = (keyword, variant, index) => `journal-search-item-${getIdSuffix(keyword, variant, index)}`;
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
+export const SearchKeyword = ({ keyword, onKeywordClick, variant, index, cvoId }) => {
     const classes = useStyles();
-    const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword);
+    const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
@@ -65,6 +65,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index }) => {
 SearchKeyword.propTypes = {
     keyword: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
     index: PropTypes.number.isRequired,
+    cvoId: PropTypes.number,
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
 };

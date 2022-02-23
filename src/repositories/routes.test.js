@@ -894,7 +894,7 @@ describe('Backend routes method', () => {
                 keywords: [
                     { type: 'Title', text: 'apple' },
                     { type: 'Keyword', text: 'apple' },
-                    { type: 'Subject', text: 'apple' },
+                    { type: 'Subject', text: 'apple', cvoId: 12345 },
                 ],
             }),
         ).toEqual({
@@ -903,7 +903,7 @@ describe('Backend routes method', () => {
                 params: {
                     ...commonQueryParams,
                     description: ['apple'],
-                    subject: ['apple'],
+                    subject: [12345],
                     title: ['apple'],
                 },
             },
@@ -955,7 +955,7 @@ describe('Backend routes method', () => {
                     keywords: [
                         { type: 'Title', text: 'apple' },
                         { type: 'Keyword', text: 'apple' },
-                        { type: 'Subject', text: 'apple' },
+                        { type: 'Subject', text: 'apple', cvoId: 12345 },
                     ],
                 },
             }),
@@ -965,7 +965,7 @@ describe('Backend routes method', () => {
                 params: {
                     ...commonQueryParams,
                     description: ['apple'],
-                    subject: ['apple'],
+                    subject: [12345],
                     title: ['apple'],
                 },
             },

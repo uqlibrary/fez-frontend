@@ -92,6 +92,7 @@ describe('KeywordsBrowser', () => {
                     subjectMatch: [
                         {
                             keyword: `subjectMatch ${keyword}`,
+                            cvoId: 12345,
                             sources: [],
                         },
                     ],

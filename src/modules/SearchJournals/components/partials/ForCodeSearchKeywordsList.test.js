@@ -25,10 +25,12 @@ describe('ForCodeSearchKeywordsList', () => {
         const keywordsList = [
             {
                 keyword: 'Materials Science, Characterization & Testing',
+                cvoId: 12345,
                 sources: [],
             },
             {
                 keyword: 'Materials Science, Characterization & Testing 2',
+                cvoId: 12345,
                 sources: [],
             },
         ];

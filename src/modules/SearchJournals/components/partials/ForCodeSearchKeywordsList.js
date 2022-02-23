@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import KeywordsList from './KeywordsList';
 import ForCodeSearchKeyword from './ForCodeSearchKeyword';
-import { locale } from '../../../../locale';
+import locale from 'locale/components';
 
 export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
     const txt = locale.components.searchJournals.partials.forCodeSearchKeywordsList;
@@ -32,6 +32,7 @@ ForCodeSearchKeywordsList.propTypes = {
     keywordsList: PropTypes.arrayOf(
         PropTypes.shape({
             keyword: PropTypes.string.isRequired,
+            cvoId: PropTypes.number.isRequired,
             sources: PropTypes.array.isRequired,
         }),
     ).isRequired,

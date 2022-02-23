@@ -90,6 +90,7 @@ const getSubjectMatchKeywords = subjectFuzzyMatch => {
             }));
             return {
                 keyword: subject.jnl_subject_title,
+                cvoId: subject.jnl_subject_cvo_id,
                 sources: combinedSources,
             };
         });

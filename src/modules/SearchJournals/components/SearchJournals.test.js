@@ -6,14 +6,14 @@ import Immutable from 'immutable';
 import mediaQuery from 'css-mediaquery';
 import * as ExportActions from 'actions/journals.js';
 
-import { initialJournalSearchKeywords, initialState } from '../../../reducers/journals';
+import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
 
 import SearchJournals, { areKeywordsDifferent } from './SearchJournals';
 import {
     mockData,
     mockDataWithFilterFacets,
     mockDataWithFilterFacetsAndPagination,
-} from '../../../mock/data/testing/journals/journalSearchResults';
+} from 'mock/data/testing/journals/journalSearchResults';
 
 const setup = ({ state = {}, storeState = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = {}) => {
     return render(
@@ -96,7 +96,8 @@ describe('SearchJournals', () => {
 
     it('should render set of results via selecting a keyword and clicking the "Step 3: Search" button', () => {
         const testQuerySearchAstrobiology =
-            '?keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology';
+            '?keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology' +
+            '&keywords%5BSubject-451926%5D%5Btype%5D=Subject&keywords%5BSubject-451926%5D%5Btext%5D=0304+Medicinal+and+Biomolecular+Chemistry&keywords%5BSubject-451926%5D%5BcvoId%5D=451926&keywords%5BSubject-451926%5D%5Bid%5D=Subject-451926';
 
         const path = pathConfig.journals.search;
         const testHistory = createMemoryHistory({ initialEntries: [path] });
@@ -113,13 +114,28 @@ describe('SearchJournals', () => {
                 journalSearchKeywords: {
                     exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
                     keywordMatch: [{ keyword: 'astrobiology' }],
+                    subjectMatch: [
+                        {
+                            keyword: '0304 Medicinal and Biomolecular Chemistry',
+                            cvoId: 451926,
+                            sources: [{ name: 'ERA', index: 'ERA' }],
+                        },
+                    ],
                 },
             },
         });
 
         expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
+        expect(
+            queryByTestId('journal-search-item-addable-0304 Medicinal and Biomolecular Chemistry-0'),
+        ).toBeInTheDocument();
+
         act(() => {
             fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
+        });
+
+        act(() => {
+            fireEvent.click(queryByTestId('journal-search-item-addable-0304 Medicinal and Biomolecular Chemistry-0'));
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
@@ -131,6 +147,9 @@ describe('SearchJournals', () => {
         });
 
         expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(
+            queryByTestId('journal-search-chip-Subject-0304-Medicinal-and-Biomolecular-Chemistry'),
+        ).toBeInTheDocument();
 
         expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
     });

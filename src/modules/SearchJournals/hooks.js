@@ -3,8 +3,8 @@ import { useHistory, useLocation } from 'react-router';
 import { useDispatch } from 'react-redux';
 import deparam from 'can-deparam';
 import param from 'can-param';
-import { exportJournals } from '../../actions';
-import { pathConfig } from '../../config';
+import { exportJournals } from 'actions/journals';
+import { pathConfig } from 'config';
 
 export const isValidKeyword = keyword => typeof keyword === 'object' && keyword.id && keyword.type && keyword.text;
 export const filterNonValidKeywords = keywords => {
@@ -24,16 +24,15 @@ export const filterNonValidKeywords = keywords => {
 export const useSelectedKeywords = (initialKeywords = {}) => {
     const [selectedKeywords, setSelectedKeywords] = React.useState(filterNonValidKeywords(initialKeywords));
 
-    const getKeywordKey = keyword => `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
+    const getKeywordKey = keyword =>
+        keyword.cvoId ? `${keyword.type}-${keyword.cvoId}` : `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
 
-    const handleKeywordAdd = React.useCallback(
-        keyword =>
-            setSelectedKeywords(prevSelectedKeywords => ({
-                ...prevSelectedKeywords,
-                [getKeywordKey(keyword)]: { ...keyword, id: getKeywordKey(keyword) },
-            })),
-        [],
-    );
+    const handleKeywordAdd = React.useCallback(keyword => {
+        setSelectedKeywords(prevSelectedKeywords => ({
+            ...prevSelectedKeywords,
+            [getKeywordKey(keyword)]: { ...keyword, id: getKeywordKey(keyword) },
+        }));
+    }, []);
 
     const handleKeywordDelete = React.useCallback(
         keyword =>
