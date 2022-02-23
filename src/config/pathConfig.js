@@ -44,6 +44,9 @@ export const pathConfig = {
         collectionListAPI: 'communities',
     },
     communityList: '/communities',
+    collectionList: {
+        path: pid => `/communities/${pid}/collections`,
+    },
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',

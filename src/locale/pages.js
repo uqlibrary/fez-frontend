@@ -624,6 +624,9 @@ export default {
         communityList: {
             title: 'List of Communities',
         },
+        collectionList: {
+            title: 'List of Collections',
+        },
         masquerade: {
             title: 'Masquerade',
             help: {

@@ -35,7 +35,7 @@ export const AdminActions = ({
         },
         {
             label: 'More options',
-            url: pid => `#${pid}`,
+            url: pid => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}&href=%2Fbrowse`,
             inApp: true,
             showInDeleted: true,
             options: null,

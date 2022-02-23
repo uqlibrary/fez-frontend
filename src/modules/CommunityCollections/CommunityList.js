@@ -3,46 +3,28 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import AdminActions from './AdminActions';
+
 import { useIsUserSuperAdmin } from 'hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import ReactHtmlParser from 'react-html-parser';
+
 import { pathConfig } from 'config';
 import { communityCollectionsConfig } from 'config';
-const useStyles = makeStyles({
-    table: {
-        minWidth: 650,
-    },
-    dateCell: {
-        minWidth: 120,
-    },
-});
 
 import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
-import CommunityCollectionsSorting from './CommunityCollectionsSorting';
-import { CommunityCollectionsPaging } from './CommunityCollectionsPaging';
-
-const moment = require('moment');
+import CommunityCollectionsSorting from './components/CommunityCollectionsSorting';
+import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
+import { CommunityTable } from './components/CommunityTable';
 
 export const CommunityList = () => {
     const [sortDirection, setSortDirection] = React.useState('Asc');
     const [sortBy, setSortBy] = React.useState('title');
 
     const isSuperAdmin = useIsUserSuperAdmin();
-    const classes = useStyles();
+
     const dispatch = useDispatch();
 
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
@@ -83,6 +65,7 @@ export const CommunityList = () => {
     }, []);
 
     const txt = locale.components.communitiesCollections;
+
     const labels = txt.columns.labels;
 
     const tempPagingData = {
@@ -114,7 +97,7 @@ export const CommunityList = () => {
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (
-                <Grid item xs={12} sm={3} spacing={2} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
+                <Grid item xs={12} sm={3} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
                     <Button
                         component={Link}
                         variant="outlined"
@@ -153,55 +136,7 @@ export const CommunityList = () => {
                     />
                 </Grid>
                 {sortedList.length > 0 ? (
-                    <TableContainer component={Paper}>
-                        <Table aria-label="simple table">
-                            <TableHead>
-                                <TableRow data-testid="community-collections-primary-header">
-                                    <TableCell>{labels.title}</TableCell>
-                                    <TableCell className={classes.dateCell} align="right">
-                                        {labels.creation_date}
-                                    </TableCell>
-                                    <TableCell className={classes.dateCell} align="right">
-                                        {labels.updated_date}
-                                    </TableCell>
-                                    {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
-                                </TableRow>
-                            </TableHead>
-
-                            <TableBody data-testid="community-collections-primary-body">
-                                {sortedList.map(row => (
-                                    <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                                        <TableCell component="th" scope="row">
-                                            <Typography variant="body2">
-                                                <Link to={pathConfig.records.view(row.rek_pid)}>
-                                                    {ReactHtmlParser(row.rek_title)}
-                                                </Link>
-                                                {/* <a href={`#/view/${row.rek_pid}`}>{row.rek_title}</a> */}
-                                            </Typography>
-                                            {!!row.rek_description && (
-                                                <Typography variant="caption">{row.rek_description}</Typography>
-                                            )}
-                                        </TableCell>
-                                        <TableCell align="right" className={classes.dateCell}>
-                                            {moment(row.rek_created_date)
-                                                .local()
-                                                .format(txt.dateFormat)}
-                                        </TableCell>
-                                        <TableCell align="right" className={classes.dateCell}>
-                                            {moment(row.rek_updated_date)
-                                                .local()
-                                                .format(txt.dateFormat)}
-                                        </TableCell>
-                                        {!!isSuperAdmin && (
-                                            <TableCell align="right">
-                                                <AdminActions record={row.rek_pid} />
-                                            </TableCell>
-                                        )}
-                                    </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                    <CommunityTable records={sortedList} labels={labels} conf={txt} />
                 ) : (
                     <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
                 )}

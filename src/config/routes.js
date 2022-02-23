@@ -117,6 +117,13 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.communityList.title,
         },
+        {
+            path: pathConfig.collectionList.path(pid),
+            component: components.CollectionList,
+            exact: true,
+            pageTitle: locale.pages.collectionList.title,
+        },
+
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {

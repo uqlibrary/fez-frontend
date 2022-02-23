@@ -182,6 +182,9 @@ export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` }
 export const COMMUNITY_LIST_API = params => {
     return { apiUrl: `communities?per_page=${params.pageSize}&page=${params.page}` };
 };
+export const COLLECTION_LIST_API = params => {
+    return { apiUrl: `communities/${params.pid}/collections?per_page=${params.pageSize}&page=${params.page}` };
+};
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 

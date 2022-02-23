@@ -6,13 +6,11 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ListSubheader from '@material-ui/core/ListSubheader';
 
-import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
-import { userIsAdmin, userIsResearcher } from 'hooks';
+// import { userIsAdmin, userIsResearcher } from 'hooks';
 
 const CommunityCollectionsSorting = props => {
+    console.log('PROPS', props.sortBy, props.sortDirection, props.pageSize);
     const [sortBy, setSortBy] = React.useState(props.sortBy || locale.components.sorting.sortBy[0].value);
     const [sortDirection, setSortDirection] = React.useState(
         props.sortDirection || locale.components.sorting.sortDirection[0],
@@ -20,6 +18,8 @@ const CommunityCollectionsSorting = props => {
     const [pageSize, setPageSize] = React.useState(
         props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
     );
+    console.log('PROPS', props.sortBy, props.sortDirection, props.pageSize);
+    console.log('vars', sortBy, sortDirection, pageSize);
 
     React.useEffect(() => {
         if (sortBy !== props.sortBy) setSortBy(props.sortBy);
@@ -42,11 +42,6 @@ const CommunityCollectionsSorting = props => {
         setSortBy(event.target.value);
         props.onSortByChanged(event.target.value, sortDirection);
     };
-
-    const exportPublicationsFormatChanged = value => {
-        props.onExportPublications({ exportPublicationsFormat: value });
-    };
-
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
     }
@@ -57,8 +52,8 @@ const CommunityCollectionsSorting = props => {
         pageLength.sort((a, b) => a - b);
     }
 
-    const isAdmin = userIsAdmin();
-    const isResearcher = userIsResearcher();
+    // const isAdmin = userIsAdmin();
+    // const isResearcher = userIsResearcher();
 
     return (
         <Grid container spacing={2}>
@@ -106,30 +101,9 @@ const CommunityCollectionsSorting = props => {
                                 </MenuItem>
                             );
                         })}
-                        {props.canUseExport &&
-                            (isAdmin || isResearcher) &&
-                            !!props.bulkExportSize && [
-                                <ListSubheader key="export-heading" data-testid="search-export-size-heading">
-                                    {txt.exportOnlyLabel}
-                                </ListSubheader>,
-                                <MenuItem
-                                    key={`records-per-page-${props.bulkExportSize}`}
-                                    value={props.bulkExportSize}
-                                    data-testid={`search-export-size-entry-${props.bulkExportSize}`}
-                                >
-                                    {props.bulkExportSize}
-                                </MenuItem>,
-                            ]}
                     </Select>
                 </FormControl>
             </Grid>
-            {props.canUseExport && (
-                <Hidden xsDown>
-                    <Grid item sm={6} md={3}>
-                        <ExportPublications onChange={exportPublicationsFormatChanged} disabled={props.disabled} />
-                    </Grid>
-                </Hidden>
-            )}
         </Grid>
     );
 };
