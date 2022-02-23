@@ -187,7 +187,6 @@ export const AdminInterface = ({
         const navigatedFrom =
             (location.hash && location.hash.replace('#', '')) || `${location.pathname}${location.search}`;
         // debounce(300, true, () => {
-        console.log(url, linkTarget, !!deleteAction.isRecordEdit && navigatedFrom, options);
         navigateToUrl(url, linkTarget, !!deleteAction.isRecordEdit && navigatedFrom, options);
         // });
     };
