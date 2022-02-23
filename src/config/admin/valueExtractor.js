@@ -593,7 +593,7 @@ export default {
     files: {
         getValue: () => [],
     },
-    reasonForEdit: {
+    reason: {
         getValue: () => '',
     },
     fez_datastream_info: {

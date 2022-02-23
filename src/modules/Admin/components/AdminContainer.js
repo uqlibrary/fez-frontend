@@ -32,6 +32,7 @@ import FilesSection from './files/FilesSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
+import ReasonSection from './reason/ReasonSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import { RecordContext, TabbedContext } from 'context';
@@ -264,6 +265,14 @@ export const AdminContainer = ({
                                     security: {
                                         component: SecuritySection,
                                         activated: !createMode, // true,
+                                    },
+                                    reason: {
+                                        component: ReasonSection,
+                                        activated:
+                                            !createMode &&
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
                                     },
                                 }}
                             />

@@ -21,9 +21,11 @@ export default {
             title: 'Internal Notes',
             groups: [['internalNotes']],
         },
+    ],
+    reason: () => [
         {
             title: 'Reason for Edit',
-            groups: [['reasonForEdit']],
+            groups: [['reason']],
         },
     ],
 };

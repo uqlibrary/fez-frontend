@@ -91,6 +91,10 @@ const getInitialFormValues = (recordToView, recordType) => {
                     recordType === RECORD_TYPE_COLLECTION) &&
                     getInitialValues(recordToView, 'notes')) ||
                 {},
+            reasonSection:
+                ((recordType === RECORD_TYPE_COMMUNITY || recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'reason')) ||
+                {},
         },
     };
 };
