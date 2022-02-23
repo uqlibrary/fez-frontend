@@ -254,8 +254,8 @@ export default {
         reasonForEdit: {
             component: GenericTextField,
             componentProps: {
-                textFieldId: 'reason-edit',
-                name: 'notesSection.reasonForEdit',
+                textFieldId: 'reason',
+                name: 'reason',
                 fullWidth: true,
                 label: 'Reason for Edit (optional - will be added to object history)',
                 placeholder: 'Reason for Edit',
