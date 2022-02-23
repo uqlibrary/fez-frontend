@@ -90,6 +90,7 @@ export class AuthorItem extends PureComponent {
                             variant="button"
                             id={`${this.props.authorItemId}-name`}
                             data-testid={`${this.props.authorItemId}-name`}
+                            align="left"
                         >
                             {author[`rek_${this.props.type}`]}
                         </Typography>
