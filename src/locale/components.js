@@ -3877,9 +3877,24 @@ export default {
                 forCodeSearchKeywordsList: {
                     help: {
                         KeywordSearchFORSubject: {
-                            tooltip: 'Test title',
-                            title: 'Title',
-                            text: <p>This is a test</p>,
+                            tooltip: 'Click for more information',
+                            title: 'Subjects & Fields of research',
+                            text: (
+                                <React.Fragment>
+                                    <p>Search journals by their assigned:</p>
+                                    <ul>
+                                        <li>field of research code from the ERA process (ERA);</li>
+                                        <li>
+                                            subject areas from the All Science Journal Classification (CiteScore); or
+                                        </li>
+                                        <li>
+                                            subjects from the Web of Science. For example: Science Citation Index
+                                            Expanded (WOSSCIE) or Web of Science: Emerging Sources Citation Index
+                                            (WOSESCI); Arts & Humanities Citation Index (WOSAHCI).
+                                        </li>
+                                    </ul>
+                                </React.Fragment>
+                            ),
                             buttonLabel: 'Close',
                         },
                     },
