@@ -88,6 +88,26 @@ export const getSearchType = searchQuery => {
     return { title: searchQuery };
 };
 
+export const getValidPageSize = (defaultSize, pageSize) => {
+    let validPageSize = 10;
+    if (doesListContainItem(defaultSize, +pageSize)) {
+        validPageSize = +pageSize;
+    } else {
+        /* istanbul ignore else */
+        if (!!locale.components?.favouriteJournals?.sortingDefaults?.pageSize) {
+            validPageSize = locale.components.favouriteJournals.sortingDefaults.pageSize;
+        } else {
+            // last chance to get a value from config
+            try {
+                validPageSize = defaultSize[0];
+            } catch (e) {
+                validPageSize = 10;
+            }
+        }
+    }
+    return validPageSize;
+};
+
 export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
@@ -486,9 +506,8 @@ export const JOURNAL_SEARCH_API = query => {
         ...locale.components.searchJournals.sortingDefaults,
         ...query,
     };
-    const validPageSize = doesListContainItem(locale.components.sorting.recordsPerPage, +pageSize)
-        ? +pageSize
-        : locale.components.searchJournals.sortingDefaults.pageSize ?? locale.components.sorting.recordsPerPage[0];
+
+    const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
 
     return {
         apiUrl: 'journals/search',
@@ -512,9 +531,8 @@ export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
         ...locale.components.favouriteJournals.sortingDefaults,
         ...query,
     };
-    const validPageSize = doesListContainItem(locale.components.sorting.recordsPerPage, +pageSize)
-        ? +pageSize
-        : locale.components.favouriteJournals.sortingDefaults.pageSize ?? locale.components.sorting.recordsPerPage[0];
+
+    const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
 
     const params = {
         apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),

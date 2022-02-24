@@ -927,6 +927,18 @@ describe('Backend routes method', () => {
                 },
             },
         });
+
+        expect(
+            routes.JOURNAL_SEARCH_API({
+                keywords: [{ type: 'Title', text: 'apple' }],
+                pageSize: 1,
+            }),
+        ).toEqual({
+            apiUrl: 'journals/search',
+            options: {
+                params: { ...commonQueryParams, description: [], subject: [], title: ['apple'], per_page: 20 }, // per_page should be 20, not 1
+            },
+        });
     });
 
     it('should construct url for journal favourites api', () => {
