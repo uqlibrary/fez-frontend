@@ -335,7 +335,8 @@ const getAdminRecordRequest = data => {
             ...data.publication,
             ...{
                 rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
-                rek_genre_type: data.adminSection.rek_subtype,
+                // eslint-disable-next-line camelcase
+                rek_genre_type: data.adminSection?.rek_subtype ?? null,
             },
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),

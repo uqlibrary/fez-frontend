@@ -1087,7 +1087,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on successful save', async () => {
             mockApi
-                .onPut(repositories.routes.EXISTING_COLLECTION_API(testInput).apiUrl)
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(200, { data: { ...collectionRecord } });
 
             const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
@@ -1098,7 +1098,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             mockApi
-                .onPut(repositories.routes.EXISTING_COLLECTION_API(testInput).apiUrl)
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
@@ -1168,7 +1168,7 @@ describe('Record action creators', () => {
     describe('updateCommunity()', () => {
         const pid = 'UQ:123456';
         const testInput = {
-            pid,
+            publication: { rek_pid: pid },
             date: '2020-04-07',
             updated: {
                 securitySection: {
