@@ -43,7 +43,31 @@ describe('Journal Search Keyword enhancer', () => {
         });
         expect(next).toBeCalledWith(expect.objectContaining(referenceObject));
     });
-
+    it('returns title fuzzy match values without dups', () => {
+        const mockSearchData = {
+            titleFuzzyMatch: [
+                {
+                    jnl_title: 'virus to',
+                },
+            ],
+        };
+        const expectedObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [],
+                subjectMatch: [],
+                titleMatch: [{ keyword: 'virus' }],
+            },
+            query: 'virus to & vir',
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: 'virus to & vir',
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+    });
     it('has no KeywordMatch values if no journal_issn data available', () => {
         const mockSearchData = {
             ...keywordsSearch.data,
@@ -101,6 +125,23 @@ describe('Journal Search Keyword enhancer', () => {
             ...referenceObject,
             payload: {
                 ...referenceObject.payload,
+                titleMatch: [],
+            },
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: 'virus',
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
+    });
+    it('return empty arrays when API returned empty body', () => {
+        const mockSearchData = {};
+        const mockReferenceObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [],
+                subjectMatch: [],
                 titleMatch: [],
             },
         };

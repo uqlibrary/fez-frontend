@@ -21,20 +21,23 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
         const titleMatch =
             !!titleFuzzyMatch &&
             titleFuzzyMatch.length > 0 &&
-            titleFuzzyMatch.reduce((matches, journal) => [...matches, ...journal.jnl_title.match(regex)], []);
-        if (titleMatch) {
-            return [
-                ...titleMatches,
-                ...Array.from(new Set(titleMatch))
-                    .filter(keyword => !!keyword)
-                    .map(keyword => ({ keyword })),
-            ];
-        } else {
-            return [];
-        }
+            titleFuzzyMatch.reduce((matches, journal) => {
+                const matchedKeywords = journal.jnl_title.match(regex);
+                return (
+                    (matchedKeywords && [
+                        ...matches,
+                        ...matchedKeywords.filter(matched => matched && matched.length > 3),
+                    ]) ||
+                    []
+                );
+            }, []);
+
+        return (titleMatch && [...titleMatches, ...titleMatch]) || [];
     }, []);
 
-    return titleMatchKeywords;
+    return Array.from(new Set(titleMatchKeywords))
+        .filter(keyword => !!keyword)
+        .map(keyword => ({ keyword }));
 };
 
 const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
@@ -64,19 +67,12 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
                 [],
             );
 
-        if (keywordMatch) {
-            return [
-                ...keywordMatches,
-                ...Array.from(new Set(keywordMatch))
-                    .filter(keyword => !!keyword)
-                    .map(keyword => ({ keyword })),
-            ];
-        } else {
-            return [];
-        }
+        return (keywordMatch && [...keywordMatches, ...keywordMatch]) || [];
     }, []);
 
-    return keywordMatchKeywords;
+    return Array.from(new Set(keywordMatchKeywords))
+        .filter(keyword => !!keyword)
+        .map(keyword => ({ keyword }));
 };
 
 const getSubjectMatchKeywords = subjectFuzzyMatch => {
@@ -100,9 +96,14 @@ const getSubjectMatchKeywords = subjectFuzzyMatch => {
 
 const getKeywords = (keywordsResponse, query) => {
     const exactMatch = getExactMatchKeywords(keywordsResponse);
-    const titleMatch = getTitleMatchKeywords([...keywordsResponse.titleFuzzyMatch], query);
-    const keywordMatch = getKeywordMatchKeywords([...keywordsResponse.descriptionFuzzyMatch], query);
-    const subjectMatch = getSubjectMatchKeywords([...keywordsResponse.subjectFuzzyMatch]);
+    const titleMatch =
+        (keywordsResponse.titleFuzzyMatch && getTitleMatchKeywords([...keywordsResponse.titleFuzzyMatch], query)) || [];
+    const keywordMatch =
+        (keywordsResponse.descriptionFuzzyMatch &&
+            getKeywordMatchKeywords([...keywordsResponse.descriptionFuzzyMatch], query)) ||
+        [];
+    const subjectMatch =
+        (keywordsResponse.subjectFuzzyMatch && getSubjectMatchKeywords([...keywordsResponse.subjectFuzzyMatch])) || [];
 
     return {
         exactMatch,
