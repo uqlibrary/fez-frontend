@@ -78,6 +78,7 @@ export const NewViewRecord = ({
     author,
     hideCulturalSensitivityStatement,
     isDeleted,
+    isDeletedVersion,
     loadingRecordToView,
     recordToViewError,
     recordToView,
@@ -272,7 +273,7 @@ export const NewViewRecord = ({
                         <Alert
                             {...{
                                 ...txt.version.alert.version,
-                                message: txt.version.alert.version.message(recordToView),
+                                message: txt.version.alert.version.message(recordToView, isDeletedVersion),
                             }}
                         />
                         <br />
@@ -311,6 +312,7 @@ NewViewRecord.propTypes = {
     author: PropTypes.object,
     hideCulturalSensitivityStatement: PropTypes.bool,
     isDeleted: PropTypes.bool,
+    isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,
     recordToView: PropTypes.object,
     recordToViewError: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

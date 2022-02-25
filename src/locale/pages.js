@@ -534,9 +534,10 @@ export default {
                     version: {
                         type: 'info_outline',
                         title: '',
-                        message: record => (
+                        message: (record, isDeletedVersion = false) => (
                             <>
-                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                                You are looking at version <b>{record.rek_version}</b> of{' '}
+                                {isDeletedVersion ? <b>deleted</b> : ''} record <b>{record.rek_pid}</b>
                             </>
                         ),
                         alertId: 'alert-info',
