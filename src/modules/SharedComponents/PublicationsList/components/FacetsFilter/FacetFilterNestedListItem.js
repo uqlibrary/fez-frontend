@@ -31,8 +31,17 @@ const useStyles = makeStyles(
 
 export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, primaryText, isActive }) {
     const classes = useStyles();
+    const idText =
+        primaryText.indexOf('(') > 0
+            ? primaryText
+                  .slice(0, primaryText.indexOf('('))
+                  .trim()
+                  .replace(/ /g, '-')
+                  .toLowerCase()
+            : primaryText.replace(/ /g, '-').toLowerCase();
     return (
         <ListItem
+            id={`facet-filter-nested-item-${idText}`}
             key={`facet-filter-nested-item-${index}`}
             button
             onClick={onFacetClick}
@@ -40,10 +49,14 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
             classes={{
                 gutters: classes.listItemGutters,
             }}
+            aria-label={!isActive ? `${primaryText} add filter` : `${primaryText} remove filter`}
         >
             {isActive && (
                 <ListItemIcon>
-                    <Clear id={`clear-facet-filter-nested-item-${index}`} disabled={disabled} />
+                    <Clear
+                        id={`clear-facet-filter-nested-item-${typeof index === 'string' ? index : idText}`}
+                        disabled={disabled}
+                    />
                 </ListItemIcon>
             )}
             <ListItemText

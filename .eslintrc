@@ -25,7 +25,8 @@
     "setupSessionMockAdapter": true,
     "setupStoreForActions": true,
     "sinon": true,
-    "toJson": true
+    "toJson": true,
+    "d": true
   },
   "settings": {
     "react": {

@@ -21,6 +21,7 @@ export { default as fileUploadReducer } from './fileUpload';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as issnLinksReducer } from './issnLinks';
 export { default as journalReducer } from './journals';
+export { default as exportJournalsReducer } from './exportJournals';
 export { default as manageAuthorsReducer } from './manageAuthors';
 export { default as manageUsersReducer } from './manageUsers';
 export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
@@ -29,6 +30,8 @@ export { default as myTrendingPublicationsReducer } from './myTrendingPublicatio
 export { default as newsFeedReducer } from './newsFeed';
 export { default as orcidSyncReducer } from './orcidSync';
 export { default as publicationsReducer } from './publications';
+export { default as searchJournalsReducer } from './searchJournals';
+export { default as favouriteJournalsReducer } from './favouriteJournals';
 export { default as searchKeysReducer } from './searchKeys';
 export { default as searchRecordsReducer } from './searchRecords';
 export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';

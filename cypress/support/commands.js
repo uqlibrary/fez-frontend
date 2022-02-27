@@ -102,3 +102,11 @@ Cypress.Commands.add('setPartialDate', (id, { day, month, year }) => {
 Cypress.Commands.add('store', () => {
     return cy.window().its('__store__');
 });
+
+Cypress.Commands.add('axeViolationParser', errors => {
+    errors.map(error => {
+        const elements = [];
+        error.nodes.map(node => elements.push(Cypress.$(node.target).get(0) || console.log(node.target)));
+        console.log(`${error.impact} : ${error.description}`, elements);
+    });
+});

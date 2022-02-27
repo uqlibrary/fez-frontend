@@ -10,6 +10,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       Title
@@ -47,6 +48,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       Title
@@ -86,6 +88,7 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
   >
     <WithStyles(ForwardRef(Typography))
       color="primary"
+      component="div"
       variant="h6"
     >
       card title
@@ -101,5 +104,46 @@ exports[`Snapshot tests for StandardRighthandCard component renders with title a
     item={true}
     xs={12}
   />
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Snapshot tests for StandardRighthandCard component renders with title, help button, testid and some content 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  data-testid="testid"
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={true}
+  >
+    <WithStyles(ForwardRef(Typography))
+      color="primary"
+      component="div"
+      variant="h6"
+    >
+      Title
+    </WithStyles(ForwardRef(Typography))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+  >
+    <Connect(HelpIcon)
+      buttonLabel="OK"
+      text="Some help text"
+      title="Help text"
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(Divider)) />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    Some content
+  </WithStyles(ForwardRef(Grid))>
 </WithStyles(ForwardRef(Grid))>
 `;

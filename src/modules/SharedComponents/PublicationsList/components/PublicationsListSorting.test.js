@@ -124,6 +124,7 @@ describe('PublicationsListSorting component', () => {
             pageSize: 5,
             pagingData: {},
         });
+
         expect(toJson(wrapper)).toMatchSnapshot();
         mockUseEffect.mockRestore();
     });
@@ -133,5 +134,73 @@ describe('PublicationsListSorting component', () => {
         const wrapper = setup({ canUseExport: true, bulkExportSize: 1000 });
         expect(wrapper.find('[data-testid="search-export-size-entry-1000"]').text()).toBe('1000');
         userIsAdmin.mockRestore();
+    });
+    it('renders first item in list when an out of range sortby default is provided', () => {
+        const wrapper = setup({
+            sortBy: 'test_option',
+        });
+
+        expect(wrapper.find('#sortBy').props().value).toEqual('published_date');
+    });
+
+    it('renders custom item in page size list when initPageLength is provided', () => {
+        const wrapper = setup({
+            initPageLength: 15,
+        });
+
+        expect(wrapper.find('#pageSize').props().value).toEqual(15);
+    });
+
+    it('renders first item in list when pageSize is out of range', () => {
+        const wrapper = setup({
+            pageSize: 1,
+        });
+
+        expect(wrapper.find('#pageSize').props().value).toEqual(5); // 5 was inserted in a previous test
+    });
+
+    it('updates sortBy, sortDirection and pageSize state when they change after render', () => {
+        const mockUseEffect = jest.spyOn(React, 'useEffect');
+        const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        mockUseEffect.mockImplementation(f => f());
+        wrapper.setProps({
+            sortBy: 'score',
+            sortDirection: 'Asc',
+            pageSize: 50,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+        mockUseEffect.mockRestore();
+    });
+
+    it('has the correct custom sortby options in the dropdown', () => {
+        const wrapper = setup({
+            sortingData: {
+                sortBy: [
+                    { value: 'test_1', label: 'Test Sort 1' },
+                    { value: 'test_2', label: 'Test Sort 2' },
+                    { value: 'test_3', label: 'Test Sort 3' },
+                ],
+            },
+            sortDirection: 'Asc',
+            sortBy: 'test_2',
+        });
+        // Have the correct amount of elements in dropdown
+        expect(wrapper.find('#sortBy').children().length).toEqual(3);
+        // Test first and last one
+        expect(
+            wrapper
+                .find('#sortBy')
+                .childAt(0)
+                .props().value,
+        ).toEqual('test_1');
+        expect(
+            wrapper
+                .find('#sortBy')
+                .childAt(2)
+                .props().value,
+        ).toEqual('test_3');
     });
 });

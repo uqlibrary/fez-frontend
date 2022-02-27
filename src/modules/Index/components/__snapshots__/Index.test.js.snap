@@ -182,6 +182,7 @@ exports[`Index page should render placeholders 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -191,6 +192,13 @@ exports[`Index page should render placeholders 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -544,6 +552,7 @@ exports[`Index page should render placeholders 1`] = `
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -553,6 +562,13 @@ exports[`Index page should render placeholders 1`] = `
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -909,6 +925,7 @@ exports[`Index page should render placeholders 1`] = `
                             },
                             "MuiFormLabel": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -918,6 +935,13 @@ exports[`Index page should render placeholders 1`] = `
                             "MuiIconButton": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                            "MuiInput": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                             "MuiMenuItem": Object {
@@ -1857,6 +1881,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "addAuthor": [Function],
                                                         "addFavouriteSearch": [Function],
                                                         "addMyEditorialAppointments": [Function],
+                                                        "addToFavourites": [Function],
                                                         "addUser": [Function],
                                                         "adminCreate": [Function],
                                                         "adminReset": [Function],
@@ -1875,6 +1900,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "clearClaimPublication": [Function],
                                                         "clearDeleteRecord": [Function],
                                                         "clearFixRecord": [Function],
+                                                        "clearJournalSearchKeywords": [Function],
                                                         "clearMyEditorialAppointmentsAddStatus": [Function],
                                                         "clearNewRecord": [Function],
                                                         "clearRecordToView": [Function],
@@ -1901,6 +1927,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "dismissAppAlert": [Function],
                                                         "exportAuthorPublications": [Function],
                                                         "exportEspacePublications": [Function],
+                                                        "exportJournals": [Function],
                                                         "exportPublications": [Function],
                                                         "fixRecord": [Function],
                                                         "getBatchImportDirectories": [Function],
@@ -1926,6 +1953,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadFullRecordToClaim": [Function],
                                                         "loadJournal": [Function],
                                                         "loadJournalLookup": [Function],
+                                                        "loadJournalSearchKeywords": [Function],
                                                         "loadMyEditorialAppointmentsList": [Function],
                                                         "loadNewsFeed": [Function],
                                                         "loadOrcidSyncStatus": [Function],
@@ -1940,15 +1968,19 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadVocabulariesList": [Function],
                                                         "logout": [Function],
                                                         "mergeAvailableAuthoringData": [Function],
+                                                        "removeFromFavourites": [Function],
                                                         "removeShadowSuffixFromTableNames": [Function],
                                                         "requestMJLIngest": [Function],
                                                         "requestOrcidSync": [Function],
                                                         "resetDoi": [Function],
+                                                        "resetExportJournalsStatus": [Function],
                                                         "resetExportPublicationsStatus": [Function],
                                                         "resetSavingAuthorState": [Function],
+                                                        "retrieveFavouriteJournals": [Function],
                                                         "searchAuthorPublications": [Function],
                                                         "searchAuthors": [Function],
                                                         "searchEspacePublications": [Function],
+                                                        "searchJournals": [Function],
                                                         "searchLatestPublications": [Function],
                                                         "searchPossiblyYourPublications": [Function],
                                                         "searchPublications": [Function],
@@ -2029,6 +2061,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "addAuthor": [Function],
                                                           "addFavouriteSearch": [Function],
                                                           "addMyEditorialAppointments": [Function],
+                                                          "addToFavourites": [Function],
                                                           "addUser": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
@@ -2047,6 +2080,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "clearClaimPublication": [Function],
                                                           "clearDeleteRecord": [Function],
                                                           "clearFixRecord": [Function],
+                                                          "clearJournalSearchKeywords": [Function],
                                                           "clearMyEditorialAppointmentsAddStatus": [Function],
                                                           "clearNewRecord": [Function],
                                                           "clearRecordToView": [Function],
@@ -2073,6 +2107,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
                                                           "exportEspacePublications": [Function],
+                                                          "exportJournals": [Function],
                                                           "exportPublications": [Function],
                                                           "fixRecord": [Function],
                                                           "getBatchImportDirectories": [Function],
@@ -2098,6 +2133,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadJournal": [Function],
                                                           "loadJournalLookup": [Function],
+                                                          "loadJournalSearchKeywords": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
                                                           "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
@@ -2112,15 +2148,19 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
                                                           "mergeAvailableAuthoringData": [Function],
+                                                          "removeFromFavourites": [Function],
                                                           "removeShadowSuffixFromTableNames": [Function],
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
+                                                          "resetExportJournalsStatus": [Function],
                                                           "resetExportPublicationsStatus": [Function],
                                                           "resetSavingAuthorState": [Function],
+                                                          "retrieveFavouriteJournals": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
                                                           "searchEspacePublications": [Function],
+                                                          "searchJournals": [Function],
                                                           "searchLatestPublications": [Function],
                                                           "searchPossiblyYourPublications": [Function],
                                                           "searchPublications": [Function],
@@ -2975,6 +3015,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "addAuthor": [Function],
                                                                   "addFavouriteSearch": [Function],
                                                                   "addMyEditorialAppointments": [Function],
+                                                                  "addToFavourites": [Function],
                                                                   "addUser": [Function],
                                                                   "adminCreate": [Function],
                                                                   "adminReset": [Function],
@@ -2993,6 +3034,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "clearClaimPublication": [Function],
                                                                   "clearDeleteRecord": [Function],
                                                                   "clearFixRecord": [Function],
+                                                                  "clearJournalSearchKeywords": [Function],
                                                                   "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                   "clearNewRecord": [Function],
                                                                   "clearRecordToView": [Function],
@@ -3019,6 +3061,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "dismissAppAlert": [Function],
                                                                   "exportAuthorPublications": [Function],
                                                                   "exportEspacePublications": [Function],
+                                                                  "exportJournals": [Function],
                                                                   "exportPublications": [Function],
                                                                   "fixRecord": [Function],
                                                                   "getBatchImportDirectories": [Function],
@@ -3044,6 +3087,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadFullRecordToClaim": [Function],
                                                                   "loadJournal": [Function],
                                                                   "loadJournalLookup": [Function],
+                                                                  "loadJournalSearchKeywords": [Function],
                                                                   "loadMyEditorialAppointmentsList": [Function],
                                                                   "loadNewsFeed": [Function],
                                                                   "loadOrcidSyncStatus": [Function],
@@ -3058,15 +3102,19 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadVocabulariesList": [Function],
                                                                   "logout": [Function],
                                                                   "mergeAvailableAuthoringData": [Function],
+                                                                  "removeFromFavourites": [Function],
                                                                   "removeShadowSuffixFromTableNames": [Function],
                                                                   "requestMJLIngest": [Function],
                                                                   "requestOrcidSync": [Function],
                                                                   "resetDoi": [Function],
+                                                                  "resetExportJournalsStatus": [Function],
                                                                   "resetExportPublicationsStatus": [Function],
                                                                   "resetSavingAuthorState": [Function],
+                                                                  "retrieveFavouriteJournals": [Function],
                                                                   "searchAuthorPublications": [Function],
                                                                   "searchAuthors": [Function],
                                                                   "searchEspacePublications": [Function],
+                                                                  "searchJournals": [Function],
                                                                   "searchLatestPublications": [Function],
                                                                   "searchPossiblyYourPublications": [Function],
                                                                   "searchPublications": [Function],
@@ -3101,6 +3149,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "addAuthor": [Function],
                                                                     "addFavouriteSearch": [Function],
                                                                     "addMyEditorialAppointments": [Function],
+                                                                    "addToFavourites": [Function],
                                                                     "addUser": [Function],
                                                                     "adminCreate": [Function],
                                                                     "adminReset": [Function],
@@ -3119,6 +3168,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "clearClaimPublication": [Function],
                                                                     "clearDeleteRecord": [Function],
                                                                     "clearFixRecord": [Function],
+                                                                    "clearJournalSearchKeywords": [Function],
                                                                     "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                     "clearNewRecord": [Function],
                                                                     "clearRecordToView": [Function],
@@ -3145,6 +3195,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "dismissAppAlert": [Function],
                                                                     "exportAuthorPublications": [Function],
                                                                     "exportEspacePublications": [Function],
+                                                                    "exportJournals": [Function],
                                                                     "exportPublications": [Function],
                                                                     "fixRecord": [Function],
                                                                     "getBatchImportDirectories": [Function],
@@ -3170,6 +3221,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadFullRecordToClaim": [Function],
                                                                     "loadJournal": [Function],
                                                                     "loadJournalLookup": [Function],
+                                                                    "loadJournalSearchKeywords": [Function],
                                                                     "loadMyEditorialAppointmentsList": [Function],
                                                                     "loadNewsFeed": [Function],
                                                                     "loadOrcidSyncStatus": [Function],
@@ -3184,15 +3236,19 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadVocabulariesList": [Function],
                                                                     "logout": [Function],
                                                                     "mergeAvailableAuthoringData": [Function],
+                                                                    "removeFromFavourites": [Function],
                                                                     "removeShadowSuffixFromTableNames": [Function],
                                                                     "requestMJLIngest": [Function],
                                                                     "requestOrcidSync": [Function],
                                                                     "resetDoi": [Function],
+                                                                    "resetExportJournalsStatus": [Function],
                                                                     "resetExportPublicationsStatus": [Function],
                                                                     "resetSavingAuthorState": [Function],
+                                                                    "retrieveFavouriteJournals": [Function],
                                                                     "searchAuthorPublications": [Function],
                                                                     "searchAuthors": [Function],
                                                                     "searchEspacePublications": [Function],
+                                                                    "searchJournals": [Function],
                                                                     "searchLatestPublications": [Function],
                                                                     "searchPossiblyYourPublications": [Function],
                                                                     "searchPublications": [Function],
@@ -3284,6 +3340,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                       },
                                                                       "MuiFormLabel": Object {
                                                                         "root": Object {
+                                                                          "lineHeight": "normal",
                                                                           "overflow": "hidden",
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
@@ -3293,6 +3350,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "MuiIconButton": Object {
                                                                         "colorInherit": Object {
                                                                           "color": "none",
+                                                                        },
+                                                                      },
+                                                                      "MuiInput": Object {
+                                                                        "formControl": Object {
+                                                                          "label + &": Object {
+                                                                            "marginTop": 17,
+                                                                          },
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {

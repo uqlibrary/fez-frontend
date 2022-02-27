@@ -249,4 +249,14 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
     );
 }
 
+// enable profiler
+if (process.env.CI_BRANCH === 'your-branch') {
+    webpackConfig.resolve.alias['react-dom$'] = resolve(__dirname, 'node_modules', 'react-dom/profiling');
+    webpackConfig.resolve.alias['scheduler/tracing'] = resolve(
+        __dirname,
+        'node_modules',
+        'scheduler/tracing-profiling',
+    );
+}
+
 module.exports = webpackConfig;

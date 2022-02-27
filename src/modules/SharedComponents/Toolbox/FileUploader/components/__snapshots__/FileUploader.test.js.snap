@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component FileUploader should mount and unmount container and clear file uploader 1`] = `
+exports[`Component FileUploader should mount and unmount containers and clear file uploader 1`] = `
 <Provider
   store={
     Object {
@@ -153,6 +153,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -162,6 +163,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2563,7 +2571,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
 </Provider>
 `;
 
-exports[`Component FileUploader should mount and unmount container and clear file uploader 2`] = `
+exports[`Component FileUploader should mount and unmount containers and clear file uploader 2`] = `
 <Provider
   store={
     Object {
@@ -2730,6 +2738,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -2739,6 +2748,13 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {

@@ -604,6 +604,16 @@ export default {
                 alertId: 'alert-error',
             },
         },
+        searchJournals: {
+            title: 'Journal search',
+            loadingMessage: 'Searching for journals',
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message => message,
+                alertId: 'alert-error',
+            },
+        },
         collection: {
             title: 'Add a missing collection',
             cancelWorkflowConfirmation: {
@@ -1204,6 +1214,20 @@ export default {
         users: {
             title: 'Manage users',
             loadingMessage: 'Loading users',
+        },
+        journals: {
+            search: {
+                title: 'Strategic publishing search',
+            },
+            results: {
+                title: 'Strategic publishing results',
+            },
+            compare: {
+                title: 'Strategic publishing compare',
+            },
+            favourites: {
+                title: 'Strategic publishing favourites',
+            },
         },
     },
 };

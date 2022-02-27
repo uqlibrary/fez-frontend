@@ -8,7 +8,7 @@ function setup(testProps, isShallow = true) {
     return getElement(ThirdPartyLookupTool, props, isShallow);
 }
 
-describe('ThirdPartyLookupTool container', () => {
+describe('ThirdPartyLookupTool containers', () => {
     it('should mount', () => {
         setup({}, false);
     });
