@@ -14,6 +14,10 @@ export const stripHtml = html => {
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
 };
 
+export const doesListContainItem = (list, term) => {
+    return list.some(sort => (typeof sort === 'object' ? sort.value === term : sort === term));
+};
+
 export function hydrateMock(truncatedData) {
     if (!truncatedData.rek_pid) {
         throw new Error('missing PID in data ' + JSON.stringify(truncatedData));

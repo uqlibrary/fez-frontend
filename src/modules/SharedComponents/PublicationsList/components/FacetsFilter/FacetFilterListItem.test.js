@@ -35,4 +35,18 @@ describe('Facet filter list item ', () => {
         expect(getByTestId('expand-less-test')).toBeInTheDocument();
         expect(getByText('Testing')).toBeInTheDocument();
     });
+
+    it('should set correct aria-expanded value when items are clicked', () => {
+        const nestedItems = 'Testing';
+        const { getByTestId } = setup({ nestedItems });
+        expect(getByTestId('clickable-test')).toBeInTheDocument();
+
+        expect(getByTestId('clickable-test').getAttribute('aria-expanded')).toEqual('false');
+
+        fireEvent.click(getByTestId('clickable-test'));
+        expect(getByTestId('clickable-test').getAttribute('aria-expanded')).toEqual('true');
+
+        fireEvent.click(getByTestId('clickable-test'));
+        expect(getByTestId('clickable-test').getAttribute('aria-expanded')).toEqual('false');
+    });
 });

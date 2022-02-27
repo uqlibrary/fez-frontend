@@ -136,6 +136,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {

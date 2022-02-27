@@ -9,7 +9,7 @@ import BooleanTemplate from './BooleanTemplate';
 import DateTimeTemplate from './DateTimeTemplate';
 import DefaultTemplate from './DefaultTemplate';
 import LinkTemplate from './LinkTemplate';
-import PrefixedLinkTemplate from './PrefixedLinkTemplate';
+import EnclosedLinkTemplate from './EnclosedLinkTemplate';
 import MultiLinkTemplate from './MultiLinkTemplate';
 import MultiValueTemplate from './MultiValueTemplate';
 import WosCategoriesTemplate from './WosCategoriesTemplate';
@@ -61,8 +61,8 @@ export const useTemplate = (template, props) => {
     switch (template) {
         case 'LinkTemplate':
             return [LinkTemplate, props];
-        case 'PrefixedLinkTemplate':
-            return [PrefixedLinkTemplate, props];
+        case 'EnclosedLinkTemplate':
+            return [EnclosedLinkTemplate, props];
         case 'MultiValueTemplate':
             return [MultiValueTemplate, props];
         case 'MultiLinkTemplate':

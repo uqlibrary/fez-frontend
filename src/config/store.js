@@ -2,8 +2,7 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import { routerMiddleware } from 'connected-react-router/immutable';
 import Immutable from 'immutable';
 import thunk from 'redux-thunk';
-import { publicationEnhancer } from 'middleware';
-import { saveReducerOnSessionExpired } from 'middleware';
+import { publicationEnhancer, saveReducerOnSessionExpired, journalSearchKeywordsEnhancer } from 'middleware';
 import rootReducer from '../reducer';
 import { history } from './history';
 
@@ -14,7 +13,13 @@ export const getStore = (initialState = Immutable.Map()) => {
         rootReducer,
         initialState,
         composeEnhancer(
-            applyMiddleware(routerMiddleware(history), thunk, publicationEnhancer, saveReducerOnSessionExpired),
+            applyMiddleware(
+                routerMiddleware(history),
+                thunk,
+                publicationEnhancer,
+                saveReducerOnSessionExpired,
+                journalSearchKeywordsEnhancer,
+            ),
         ),
     );
 

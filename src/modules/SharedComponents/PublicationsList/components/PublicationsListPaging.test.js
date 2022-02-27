@@ -1,5 +1,8 @@
 import { PublicationsListPaging } from './PublicationsListPaging';
 import PublicationsListPagingWithStyles from './PublicationsListPaging';
+import React from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+import { render } from 'test-utils';
 
 const getProps = (testProps = {}) => ({
     classes: {},
@@ -245,5 +248,42 @@ describe('PublicationsListPaging renders ', () => {
         });
         expect(wrapper.instance().renderButton('test')).toMatchSnapshot();
         expect(wrapper.instance().renderPageButtons()).toEqual([]);
+    });
+});
+describe('PublicationsListPaging responsive rendering ', () => {
+    const testProps = {
+        pagingData: {
+            total: 20,
+            took: 10,
+            per_page: 10,
+            current_page: 1,
+            from: 1,
+            to: 10,
+        },
+        classes: {
+            nextPrevButtons: '',
+        },
+        pagingId: 'test-button',
+    };
+    const setup = (theme, testProps) => {
+        return render(
+            <MuiThemeProvider theme={theme}>
+                <PublicationsListPaging {...testProps} />
+            </MuiThemeProvider>,
+        );
+    };
+    it('Should render page buttons at sm and above screen sizes ', () => {
+        const themeSm = createMuiTheme({ props: { MuiWithWidth: { initialWidth: 'sm' } } });
+        const { getByTestId } = setup(themeSm, getProps(testProps));
+        expect(getByTestId(`${testProps.pagingId}-select-page-1`)).toBeInTheDocument();
+        expect(getByTestId(`${testProps.pagingId}-select-page-2`)).toBeInTheDocument();
+    });
+
+    it('Should not render page buttons at xs and below screen sizes ', () => {
+        const themeXs = createMuiTheme({ props: { MuiWithWidth: { initialWidth: 'xs' } } });
+        const { queryByTestId } = setup(themeXs, getProps(testProps));
+
+        expect(queryByTestId(`${testProps.pagingId}-select-page-1`)).not.toBeInTheDocument();
+        expect(queryByTestId(`${testProps.pagingId}-select-page-2`)).not.toBeInTheDocument();
     });
 });

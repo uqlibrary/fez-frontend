@@ -26,7 +26,7 @@ const onSubmit = (values, dispatch, state) => {
     // set default values for a new unapproved record
     return dispatch(createNewRecord({ ...cleanValues }))
         .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
+            // once this promise is resolved form is submitted successfully and will call parent containers
             // setTimeout(() => {
             //     dispatch(reset(FORM_NAME));
             // }, 100);

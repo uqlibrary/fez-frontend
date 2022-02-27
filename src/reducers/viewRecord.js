@@ -7,6 +7,7 @@ export const initialState = {
     hideCulturalSensitivityStatement: false,
     isRecordLocked: false,
     isDeleted: false,
+    isDeletedVersion: false,
     isJobCreated: false,
     error: null,
 };
@@ -19,6 +20,15 @@ const handlers = {
 
     [actions.VIEW_RECORD_LOADED]: (state, action) => ({
         ...initialState,
+        loadingRecordToView: false,
+        recordToView: action.payload,
+        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        isRecordLocked: !!action.payload.rek_editing_user,
+    }),
+
+    [actions.VIEW_RECORD_VERSION_DELETED_LOADED]: (state, action) => ({
+        ...initialState,
+        isDeletedVersion: true,
         loadingRecordToView: false,
         recordToView: action.payload,
         hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,

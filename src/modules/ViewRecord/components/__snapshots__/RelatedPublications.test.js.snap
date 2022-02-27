@@ -226,6 +226,7 @@ exports[`Related publications Component  should render component 2`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -235,6 +236,13 @@ exports[`Related publications Component  should render component 2`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2906,6 +2914,7 @@ exports[`Related publications Component  should render component 2`] = `
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -2915,6 +2924,13 @@ exports[`Related publications Component  should render component 2`] = `
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -3830,6 +3846,7 @@ exports[`Related publications Component  should render with a publication title 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -3839,6 +3856,13 @@ exports[`Related publications Component  should render with a publication title 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -6536,6 +6560,7 @@ exports[`Related publications Component  should render with a publication title 
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -6545,6 +6570,13 @@ exports[`Related publications Component  should render with a publication title 
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -7517,6 +7549,7 @@ exports[`Related publications Component  should render without a child search ke
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -7526,6 +7559,13 @@ exports[`Related publications Component  should render without a child search ke
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -10245,6 +10285,7 @@ exports[`Related publications Component  should render without a child search ke
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -10254,6 +10295,13 @@ exports[`Related publications Component  should render without a child search ke
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -11169,6 +11217,7 @@ exports[`Related publications Component  should render without a parent search k
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -11178,6 +11227,13 @@ exports[`Related publications Component  should render without a parent search k
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -22057,6 +22113,7 @@ exports[`Related publications Component  should render without a parent search k
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -22066,6 +22123,13 @@ exports[`Related publications Component  should render without a parent search k
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {

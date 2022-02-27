@@ -223,6 +223,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -232,6 +233,13 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -618,6 +626,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -627,6 +636,13 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -1306,6 +1322,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                   aria-describedby={null}
                                   aria-label="Click for more information"
                                   className=""
+                                  data-testid="help-icon"
                                   id="help-icon"
                                   onBlur={[Function]}
                                   onClick={[Function]}
@@ -1333,6 +1350,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                         "sizeSmall": "MuiIconButton-sizeSmall",
                                       }
                                     }
+                                    data-testid="help-icon"
                                     id="help-icon"
                                     onBlur={[Function]}
                                     onClick={[Function]}
@@ -1348,6 +1366,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                       aria-label="Click for more information"
                                       centerRipple={true}
                                       className="MuiIconButton-root"
+                                      data-testid="help-icon"
                                       disabled={false}
                                       focusRipple={true}
                                       id="help-icon"
@@ -1372,6 +1391,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                             "root": "MuiButtonBase-root",
                                           }
                                         }
+                                        data-testid="help-icon"
                                         disabled={false}
                                         focusRipple={true}
                                         id="help-icon"
@@ -1388,6 +1408,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                           aria-describedby={null}
                                           aria-label="Click for more information"
                                           className="MuiButtonBase-root MuiIconButton-root"
+                                          data-testid="help-icon"
                                           disabled={false}
                                           id="help-icon"
                                           onBlur={[Function]}
@@ -1490,6 +1511,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                     <button
                                       aria-label="Click for more information"
                                       class="MuiButtonBase-root MuiIconButton-root"
+                                      data-testid="help-icon"
                                       id="help-icon"
                                       tabindex="0"
                                       title="Click for more information"

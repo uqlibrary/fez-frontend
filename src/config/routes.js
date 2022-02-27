@@ -45,6 +45,10 @@ export const flattedPathConfig = [
     '/data-collections/mine',
     '/editorial-appointments',
     '/journal/view',
+    '/journals/search',
+    '/journals/results',
+    '/journals/compare',
+    '/journals/favourites',
     '/rhdsubmission',
     '/sbslodge_new',
     '/tool/lookup',
@@ -295,6 +299,27 @@ export const getRoutesConfig = ({
                       access: [roles.researcher, roles.admin],
                       exact: true,
                       pageTitle: locale.pages.journal.view.title,
+                  },
+                  {
+                      path: pathConfig.journals.search,
+                      component: components.SearchJournals,
+                      exact: true,
+                      pageTitle: locale.pages.searchJournals.title,
+                  },
+                  {
+                      path: pathConfig.journals.results,
+                      component: components.JournalsResults,
+                      pageTitle: locale.pages.journals.results.title,
+                  },
+                  {
+                      path: pathConfig.journals.compare,
+                      component: components.JournalComparison,
+                      pageTitle: locale.pages.journals.compare.title,
+                  },
+                  {
+                      path: pathConfig.journals.favourites,
+                      component: components.FavouriteJournals,
+                      pageTitle: locale.pages.journals.favourites.title,
                   },
               ]
             : []),
@@ -552,6 +577,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   {
                       linkTo: pathConfig.editorialAppointments.list,
                       ...locale.menu.myEditorialAppointments,
+                  },
+                  {
+                      linkTo: pathConfig.journals.search,
+                      ...locale.menu.journals.search,
                   },
                   {
                       linkTo: pathConfig.authorStatistics.url(account.id),

@@ -43,7 +43,7 @@ describe('View record actions', () => {
             }
         });
 
-        it('dispatches expected actions when loading a record to view from API failed', async () => {
+        it('dispatches expected actions when loading a record version to view from API failed', async () => {
             mockApi.onAny().reply(500);
 
             const expectedActions = [
@@ -60,14 +60,14 @@ describe('View record actions', () => {
             ).toHaveProperty('message', locale.global.errorMessages[500].message);
         });
 
-        it('dispatches expected actions when loading a deleted record to view', async () => {
+        it('dispatches expected actions when loading a deleted record version to view', async () => {
             mockApi.onGet(repositories.routes.EXISTING_RECORD_VERSION_API(testPid, testVersion).apiUrl).reply(410, {
                 status: 410,
                 message: 'Some test message',
                 data: { ...mockData.record },
             });
 
-            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_DELETED];
+            const expectedActions = [actions.VIEW_RECORD_LOADING, actions.VIEW_RECORD_VERSION_DELETED_LOADED];
 
             try {
                 await mockActionsStore.dispatch(viewRecordActions.loadRecordVersionToView(testPid, testVersion));

@@ -20,54 +20,71 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
         value="published_date"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
           key="0"
           value="published_date"
         >
           Published date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
           key="1"
           value="score"
         >
           Search relevance
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
           key="2"
           value="title"
         >
           Title
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
           key="3"
           value="created_date"
         >
           Created date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
           key="4"
           value="updated_date"
         >
           Updated date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
           key="5"
           value="altmetric_score"
         >
           Altmetric score
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
           key="6"
           value="scopus_citation_count"
         >
           Scopus citation count
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
           key="7"
           value="thomson_citation_count"
         >
@@ -91,18 +108,23 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort order
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
         disabled={false}
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
           key="0"
           value="Desc"
         >
           Desc
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
           key="1"
           value="Asc"
         >
@@ -126,30 +148,47 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
-        value={20}
+        value={5}
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-5"
+          id="publication-list-sorting-page-size-option-5"
           key="records-per-page-5"
           value={5}
         >
           5
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
           key="records-per-page-20"
           value={20}
         >
           20
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
           key="records-per-page-50"
           value={50}
         >
           50
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
           key="records-per-page-100"
           value={100}
         >
@@ -181,54 +220,71 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
-        value="Publication date"
+        value="published_date"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
           key="0"
           value="published_date"
         >
           Published date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
           key="1"
           value="score"
         >
           Search relevance
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
           key="2"
           value="title"
         >
           Title
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
           key="3"
           value="created_date"
         >
           Created date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
           key="4"
           value="updated_date"
         >
           Updated date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
           key="5"
           value="altmetric_score"
         >
           Altmetric score
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
           key="6"
           value="scopus_citation_count"
         >
           Scopus citation count
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
           key="7"
           value="thomson_citation_count"
         >
@@ -252,18 +308,23 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Sort order
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
         disabled={false}
         id="sortOrder"
         onChange={[Function]}
-        value="test"
+        value="Desc"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
           key="0"
           value="Desc"
         >
           Desc
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
           key="1"
           value="Asc"
         >
@@ -287,30 +348,47 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
         value={5}
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-5"
+          id="publication-list-sorting-page-size-option-5"
           key="records-per-page-5"
           value={5}
         >
           5
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
           key="records-per-page-20"
           value={20}
         >
           20
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
           key="records-per-page-50"
           value={50}
         >
           50
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
           key="records-per-page-100"
           value={100}
         >
@@ -348,54 +426,71 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
         value="published_date"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
           key="0"
           value="published_date"
         >
           Published date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
           key="1"
           value="score"
         >
           Search relevance
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
           key="2"
           value="title"
         >
           Title
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
           key="3"
           value="created_date"
         >
           Created date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
           key="4"
           value="updated_date"
         >
           Updated date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
           key="5"
           value="altmetric_score"
         >
           Altmetric score
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
           key="6"
           value="scopus_citation_count"
         >
           Scopus citation count
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
           key="7"
           value="thomson_citation_count"
         >
@@ -419,18 +514,23 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         Sort order
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
         disabled={false}
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
           key="0"
           value="Desc"
         >
           Desc
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
           key="1"
           value="Asc"
         >
@@ -454,24 +554,39 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
         value={20}
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
           key="records-per-page-20"
           value={20}
         >
           20
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
           key="records-per-page-50"
           value={50}
         >
           50
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
           key="records-per-page-100"
           value={100}
         >
@@ -490,6 +605,7 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
     >
       <ExportPublications
         disabled={false}
+        exportData={Object {}}
         onChange={[Function]}
       />
     </WithStyles(ForwardRef(Grid))>
@@ -517,54 +633,71 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
         value="published_date"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
           key="0"
           value="published_date"
         >
           Published date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
           key="1"
           value="score"
         >
           Search relevance
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
           key="2"
           value="title"
         >
           Title
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
           key="3"
           value="created_date"
         >
           Created date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
           key="4"
           value="updated_date"
         >
           Updated date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
           key="5"
           value="altmetric_score"
         >
           Altmetric score
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
           key="6"
           value="scopus_citation_count"
         >
           Scopus citation count
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
           key="7"
           value="thomson_citation_count"
         >
@@ -588,18 +721,23 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         Sort order
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
         disabled={false}
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
           key="0"
           value="Desc"
         >
           Desc
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
           key="1"
           value="Asc"
         >
@@ -623,24 +761,39 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
         value={20}
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
           key="records-per-page-20"
           value={20}
         >
           20
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
           key="records-per-page-50"
           value={50}
         >
           50
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
           key="records-per-page-100"
           value={100}
         >
@@ -672,54 +825,71 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         Sort results by
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
         disabled={false}
         id="sortBy"
         onChange={[Function]}
         value="published_date"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
           key="0"
           value="published_date"
         >
           Published date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
           key="1"
           value="score"
         >
           Search relevance
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
           key="2"
           value="title"
         >
           Title
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
           key="3"
           value="created_date"
         >
           Created date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
           key="4"
           value="updated_date"
         >
           Updated date
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
           key="5"
           value="altmetric_score"
         >
           Altmetric score
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
           key="6"
           value="scopus_citation_count"
         >
           Scopus citation count
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
           key="7"
           value="thomson_citation_count"
         >
@@ -743,18 +913,23 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         Sort order
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
         disabled={false}
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
           key="0"
           value="Desc"
         >
           Desc
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
           key="1"
           value="Asc"
         >
@@ -778,24 +953,455 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         Works per page
       </WithStyles(ForwardRef(InputLabel))>
       <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
         disabled={false}
         id="pageSize"
         onChange={[Function]}
         value={20}
       >
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
           key="records-per-page-20"
           value={20}
         >
           20
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
           key="records-per-page-50"
           value={50}
         >
           50
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
+          key="records-per-page-100"
+          value={100}
+        >
+          100
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Sort results by
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
+        disabled={false}
+        id="sortBy"
+        onChange={[Function]}
+        value="published_date"
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
+          key="0"
+          value="published_date"
+        >
+          Published date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
+          key="1"
+          value="score"
+        >
+          Search relevance
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
+          key="2"
+          value="title"
+        >
+          Title
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
+          key="3"
+          value="created_date"
+        >
+          Created date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
+          key="4"
+          value="updated_date"
+        >
+          Updated date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
+          key="5"
+          value="altmetric_score"
+        >
+          Altmetric score
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
+          key="6"
+          value="scopus_citation_count"
+        >
+          Scopus citation count
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
+          key="7"
+          value="thomson_citation_count"
+        >
+          Web of Science citation count
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Sort order
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
+        disabled={false}
+        id="sortOrder"
+        onChange={[Function]}
+        value="Desc"
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
+          key="0"
+          value="Desc"
+        >
+          Desc
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
+          key="1"
+          value="Asc"
+        >
+          Asc
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={12}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Works per page
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
+        disabled={false}
+        id="pageSize"
+        onChange={[Function]}
+        value={20}
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-5"
+          id="publication-list-sorting-page-size-option-5"
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-15"
+          id="publication-list-sorting-page-size-option-15"
+          key="records-per-page-15"
+          value={15}
+        >
+          15
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
+          key="records-per-page-20"
+          value={20}
+        >
+          20
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
+          key="records-per-page-50"
+          value={50}
+        >
+          50
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
+          key="records-per-page-100"
+          value={100}
+        >
+          100
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`PublicationsListSorting component updates sortBy, sortDirection and pageSize state when they change after render 2`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Sort results by
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-by"
+        disabled={false}
+        id="sortBy"
+        onChange={[Function]}
+        value="score"
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-0"
+          id="publication-list-sorting-sort-by-option-0"
+          key="0"
+          value="published_date"
+        >
+          Published date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-1"
+          id="publication-list-sorting-sort-by-option-1"
+          key="1"
+          value="score"
+        >
+          Search relevance
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-2"
+          id="publication-list-sorting-sort-by-option-2"
+          key="2"
+          value="title"
+        >
+          Title
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-3"
+          id="publication-list-sorting-sort-by-option-3"
+          key="3"
+          value="created_date"
+        >
+          Created date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-4"
+          id="publication-list-sorting-sort-by-option-4"
+          key="4"
+          value="updated_date"
+        >
+          Updated date
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-5"
+          id="publication-list-sorting-sort-by-option-5"
+          key="5"
+          value="altmetric_score"
+        >
+          Altmetric score
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-6"
+          id="publication-list-sorting-sort-by-option-6"
+          key="6"
+          value="scopus_citation_count"
+        >
+          Scopus citation count
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-by-option-7"
+          id="publication-list-sorting-sort-by-option-7"
+          key="7"
+          value="thomson_citation_count"
+        >
+          Web of Science citation count
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Sort order
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-sort-order"
+        disabled={false}
+        id="sortOrder"
+        onChange={[Function]}
+        value="Asc"
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-0"
+          id="publication-list-sorting-sort-order-option-0"
+          key="0"
+          value="Desc"
+        >
+          Desc
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-sort-order-option-1"
+          id="publication-list-sorting-sort-order-option-1"
+          key="1"
+          value="Asc"
+        >
+          Asc
+        </WithStyles(ForwardRef(MenuItem))>
+      </WithStyles(ForwardRef(Select))>
+    </WithStyles(ForwardRef(FormControl))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    md={4}
+    sm={12}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(FormControl))
+      fullWidth={true}
+    >
+      <WithStyles(ForwardRef(InputLabel))
+        shrink={true}
+      >
+        Works per page
+      </WithStyles(ForwardRef(InputLabel))>
+      <WithStyles(ForwardRef(Select))
+        data-testid="publication-list-sorting-page-size"
+        disabled={false}
+        id="pageSize"
+        onChange={[Function]}
+        value={50}
+      >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-5"
+          id="publication-list-sorting-page-size-option-5"
+          key="records-per-page-5"
+          value={5}
+        >
+          5
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-10"
+          id="publication-list-sorting-page-size-option-10"
+          key="records-per-page-10"
+          value={10}
+        >
+          10
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-15"
+          id="publication-list-sorting-page-size-option-15"
+          key="records-per-page-15"
+          value={15}
+        >
+          15
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-20"
+          id="publication-list-sorting-page-size-option-20"
+          key="records-per-page-20"
+          value={20}
+        >
+          20
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-50"
+          id="publication-list-sorting-page-size-option-50"
+          key="records-per-page-50"
+          value={50}
+        >
+          50
+        </WithStyles(ForwardRef(MenuItem))>
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-list-sorting-page-size-option-100"
+          id="publication-list-sorting-page-size-option-100"
           key="records-per-page-100"
           value={100}
         >

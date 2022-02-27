@@ -136,6 +136,7 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`DoiCitationView test  should render component with doi 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -650,6 +658,7 @@ exports[`DoiCitationView test  should render component with empty span 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -659,6 +668,13 @@ exports[`DoiCitationView test  should render component with empty span 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -1102,6 +1118,7 @@ exports[`DoiCitationView test  should render doi without external link 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -1111,6 +1128,13 @@ exports[`DoiCitationView test  should render doi without external link 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {

@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { render, WithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -37,6 +37,7 @@ const setup = (testProps = {}, renderer = render) => {
         author: null,
         hideCulturalSensitivityStatement: true,
         isDeleted: false,
+        isDeletedVersion: false,
         loadingRecordToView: false,
         recordToViewError: null,
         recordToView: null,
@@ -95,6 +96,17 @@ describe('NewViewRecord', () => {
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
         useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
         const { getByTestId } = setup({ recordToView: recordVersionLegacy });
+        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
+        expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
+        expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
+    });
+
+    it('should render deleted version', () => {
+        const txt = locale.pages.viewRecord.version;
+        const pid = 'UQ:1';
+        const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
+        useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        const { getByTestId } = setup({ recordToView: recordVersionLegacy, isDeletedVersion: true });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();

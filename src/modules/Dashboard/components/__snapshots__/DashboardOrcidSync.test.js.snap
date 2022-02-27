@@ -2,9 +2,9 @@
 
 exports[`DashboardOrcidSync should render Done status, and be able to click the sync button 1`] = `
 <Connect(HelpIcon)
-  iconSize={20}
+  iconSize="small"
   style={Object {}}
-  testId="orcid-help-icon"
+  testId="orcid"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -62,9 +62,9 @@ exports[`DashboardOrcidSync should render Error status 1`] = `
       },
     }
   }
-  iconSize={20}
+  iconSize="small"
   style={Object {}}
-  testId="orcid-help-icon"
+  testId="orcid"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -441,14 +441,14 @@ exports[`DashboardOrcidSync should render Pending status 1`] = `
       "useStyles": [Function],
     }
   }
-  iconSize={20}
+  iconSize="small"
   style={
     Object {
       "marginBottom": "2px",
       "marginLeft": "2px",
     }
   }
-  testId="orcid-help-icon"
+  testId="orcid"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -1122,14 +1122,14 @@ exports[`DashboardOrcidSync should render Pending status 2`] = `
       "useStyles": [Function],
     }
   }
-  iconSize={20}
+  iconSize="small"
   style={
     Object {
       "marginBottom": "2px",
       "marginLeft": "2px",
     }
   }
-  testId="orcid-help-icon"
+  testId="orcid"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={
@@ -1485,9 +1485,9 @@ exports[`DashboardOrcidSync should render Pending status 2`] = `
 
 exports[`DashboardOrcidSync should render properly 1`] = `
 <Connect(HelpIcon)
-  iconSize={20}
+  iconSize="small"
   style={Object {}}
-  testId="orcid-help-icon"
+  testId="orcid"
   text={
     <DashboardOrcidSyncMessage
       StatusIcon={

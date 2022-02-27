@@ -18,12 +18,19 @@ import 'cypress-file-upload';
 import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
+import 'cypress-axe';
 
 // Custom
 import './adminEdit';
 import './ckeditor';
 import './commands';
 
+export const A11YOptions = {
+    runOnly: {
+        type: 'tag',
+        values: ['wcag2a', 'wcag2aa', 'section508'],
+    },
+};
 // Ignore uncaught exceptions
 // https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
 // Cypress has flagged handling of uncaught app exceptions as WIP.

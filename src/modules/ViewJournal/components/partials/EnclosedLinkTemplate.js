@@ -4,17 +4,16 @@ import PropTypes from 'prop-types';
 import DefaultTemplate from './DefaultTemplate';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
-export const PrefixedLinkTemplate = ({ data, templateProps, fieldId }) => {
-    const { href, title, text, prefix } = templateProps;
+export const EnclosedLinkTemplate = ({ data, templateProps, fieldId }) => {
+    const { href, title, text, prefix, postfix } = templateProps;
     return (
         <DefaultTemplate
             fieldId={fieldId}
             data={
                 <React.Fragment>
-                    {typeof prefix === 'function' && (
+                    {typeof prefix === 'function' && prefix(data) && (
                         <span data-testid={`${fieldId}-link-prefix`} id={`${fieldId}-link-prefix`}>
                             {prefix(data)}
-                            &nbsp;
                         </span>
                     )}
                     {text(data) && href(data) && (
@@ -22,16 +21,21 @@ export const PrefixedLinkTemplate = ({ data, templateProps, fieldId }) => {
                             {text(data)}
                         </ExternalLink>
                     )}
+                    {typeof postfix === 'function' && postfix(data) && (
+                        <span data-testid={`${fieldId}-link-postfix`} id={`${fieldId}-link-postfix`}>
+                            {postfix(data)}
+                        </span>
+                    )}
                 </React.Fragment>
             }
         />
     );
 };
 
-PrefixedLinkTemplate.propTypes = {
-    data: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+EnclosedLinkTemplate.propTypes = {
+    data: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
     templateProps: PropTypes.object,
     fieldId: PropTypes.string,
 };
 
-export default React.memo(PrefixedLinkTemplate);
+export default React.memo(EnclosedLinkTemplate);
