@@ -7,12 +7,12 @@ const referenceObject = {
         keywordMatch: [{ keyword: 'viruses' }, { keyword: 'virus' }],
         subjectMatch: [],
         titleMatch: [
-            { keyword: 'virusologia' },
-            { keyword: 'arbovirus' },
-            { keyword: 'viruses' },
-            { keyword: 'virus' },
-            { keyword: 'virusdisease' },
-            { keyword: 'papillomavirus' },
+            { keyword: 'Virusologia' },
+            { keyword: 'Arbovirus' },
+            { keyword: 'Viruses' },
+            { keyword: 'Virus' },
+            { keyword: 'VirusDisease' },
+            { keyword: 'Papillomavirus' },
         ],
     },
     query: 'virus',
@@ -88,25 +88,6 @@ describe('Journal Search Keyword enhancer', () => {
 
         expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
     });
-    it('has no KeywordMatch values if theres no match', () => {
-        const mockSearchData = {
-            ...keywordsSearch.data,
-        };
-        const mockReferenceObject = {
-            ...referenceObject,
-            payload: {
-                ...referenceObject.payload,
-                keywordMatch: [],
-            },
-        };
-        journalSearchKeywordsEnhancer()(next)({
-            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
-            payload: mockSearchData,
-            query: 'empty',
-        });
-
-        expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
-    });
     it('has no KeywordMatch values if no fez_ulrichs data available', () => {
         const mockSearchData = {
             ...keywordsSearch.data,
@@ -115,7 +96,7 @@ describe('Journal Search Keyword enhancer', () => {
                     ...keywordsSearch.data.descriptionFuzzyMatch,
                     fez_journal_issn: [
                         {
-                            fez_ulrichs: null,
+                            fez_ulrichs: {},
                         },
                     ],
                 },
@@ -212,8 +193,8 @@ describe('Journal Search Keyword enhancer', () => {
             payload: {
                 ...referenceObject.payload,
                 exactMatch: [],
-                keywordMatch: [{ keyword: 'descriptiontest' }],
-                titleMatch: [{ keyword: 'titletest' }],
+                keywordMatch: [{ keyword: 'descriptionTest' }],
+                titleMatch: [{ keyword: 'titleTest' }],
             },
             query: '',
         };
@@ -242,7 +223,7 @@ describe('Journal Search Keyword enhancer', () => {
             payload: {
                 ...referenceObject.payload,
                 keywordMatch: [],
-                titleMatch: [{ keyword: 'titletest' }],
+                titleMatch: [{ keyword: 'titleTest' }],
             },
             query: '',
         };
