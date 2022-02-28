@@ -7,6 +7,7 @@ const setup = state => {
 };
 
 const keyword = 'test';
+const type = 'title';
 const variant = 'default';
 const index = 0;
 
@@ -16,6 +17,7 @@ describe('SearchKeyword', () => {
             keyword,
             onKeywordClick: () => {},
             variant,
+            type,
             index,
         });
         expect(getByText(keyword)).toBeInTheDocument();
@@ -25,6 +27,7 @@ describe('SearchKeyword', () => {
         const { getByText } = setup({
             keyword,
             onKeywordClick: () => {},
+            type,
             index,
         });
         expect(getByText(keyword)).toBeInTheDocument();
@@ -36,6 +39,7 @@ describe('SearchKeyword', () => {
             keyword: element,
             onKeywordClick: () => {},
             variant,
+            type,
             index,
         });
         expect(getByText(keyword)).toBeInTheDocument();
@@ -47,9 +51,10 @@ describe('SearchKeyword', () => {
             keyword: keyword,
             onKeywordClick: onKeywordClick,
             variant,
+            type,
             index,
         });
-        fireEvent.click(getByTestId(getId(keyword, variant, index)));
+        fireEvent.click(getByTestId(getId(keyword, variant, type, index)));
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
 
@@ -58,9 +63,10 @@ describe('SearchKeyword', () => {
             keyword: keyword,
             onKeywordClick: undefined,
             variant,
+            type,
             index,
         });
-        fireEvent.click(getByTestId(getId(keyword, variant, index)));
+        fireEvent.click(getByTestId(getId(keyword, variant, type, index)));
     });
 
     it('should call given onKeywordClick by pressing space bar', () => {
@@ -69,10 +75,11 @@ describe('SearchKeyword', () => {
             onKeywordClick: onKeywordClick,
             keyword: keyword,
             variant,
+            type,
             index,
         });
 
-        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 32, code: 'Space' });
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, type, index)), { charCode: 32, code: 'Space' });
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
     it('should call given onKeywordClick by pressing normal enter button', () => {
@@ -81,10 +88,11 @@ describe('SearchKeyword', () => {
             onKeywordClick: onKeywordClick,
             keyword: keyword,
             variant,
+            type,
             index,
         });
 
-        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 13, code: 'Enter' });
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, type, index)), { charCode: 13, code: 'Enter' });
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
     it('should call given onKeywordClick by pressing numeric pad enter button', () => {
@@ -93,10 +101,11 @@ describe('SearchKeyword', () => {
             onKeywordClick: onKeywordClick,
             keyword: keyword,
             variant,
+            type,
             index,
         });
 
-        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 13, code: 'NumpadEnter' });
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, type, index)), { charCode: 13, code: 'NumpadEnter' });
         expect(onKeywordClick).toHaveBeenCalledTimes(1);
     });
     it('should NOT call given onKeywordClick when a key other than SPACE or ENTER is pressed', () => {
@@ -105,10 +114,11 @@ describe('SearchKeyword', () => {
             onKeywordClick: onKeywordClick,
             keyword: keyword,
             variant,
+            type,
             index,
         });
 
-        fireEvent.keyPress(getByTestId(getId(keyword, variant, index)), { charCode: 100, code: 'KeyD' });
+        fireEvent.keyPress(getByTestId(getId(keyword, variant, type, index)), { charCode: 100, code: 'KeyD' });
         expect(onKeywordClick).not.toHaveBeenCalled();
     });
 });

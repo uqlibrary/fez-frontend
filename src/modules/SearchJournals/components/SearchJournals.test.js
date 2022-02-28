@@ -125,17 +125,19 @@ describe('SearchJournals', () => {
             },
         });
 
-        expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
         expect(
-            queryByTestId('journal-search-item-addable-0304 Medicinal and Biomolecular Chemistry-0'),
+            queryByTestId('journal-search-item-addable-subject-0304 Medicinal and Biomolecular Chemistry-0'),
         ).toBeInTheDocument();
 
         act(() => {
-            fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
+            fireEvent.click(queryByTestId('journal-search-item-addable-keyword-astrobiology-0'));
         });
 
         act(() => {
-            fireEvent.click(queryByTestId('journal-search-item-addable-0304 Medicinal and Biomolecular Chemistry-0'));
+            fireEvent.click(
+                queryByTestId('journal-search-item-addable-subject-0304 Medicinal and Biomolecular Chemistry-0'),
+            );
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
@@ -177,9 +179,9 @@ describe('SearchJournals', () => {
             },
         });
 
-        expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
         act(() => {
-            fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
+            fireEvent.click(queryByTestId('journal-search-item-addable-keyword-astrobiology-0'));
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
@@ -232,9 +234,9 @@ describe('SearchJournals', () => {
             },
         });
 
-        expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
         act(() => {
-            fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
+            fireEvent.click(queryByTestId('journal-search-item-addable-keyword-astrobiology-0'));
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);

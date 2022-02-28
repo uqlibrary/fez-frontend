@@ -112,6 +112,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                         <SearchKeywordsList
                             keywordsListTitle={txt.titleMatch.title}
                             keywordsList={journalSearchKeywords.titleMatch}
+                            keywordsType={'title'}
                             onKeywordClick={handleTitleKeywordClick}
                         />
                     </Grid>
@@ -122,6 +123,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
+                    keywordsType={'keyword'}
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>

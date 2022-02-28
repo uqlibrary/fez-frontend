@@ -68,7 +68,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-titles containing"]')
             .find('span')
-            .should('have.length', 4);
+            .should('have.length', 3);
 
         cy.get('div[data-testid="journal-search-keyword-list-keyword matches"]')
             .find('span')
@@ -110,12 +110,12 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-chip-Title-microbiology"]').should('exist');
 
         cy.get('button[data-testid="journal-search-button"]').should('not.have.attr', 'disabled');
 
-        cy.get('[data-testid="journal-search-chip-Title-Microbiology"]')
+        cy.get('[data-testid="journal-search-chip-Title-microbiology"]')
             .find('svg')
             .click();
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
@@ -129,7 +129,7 @@ context('Strategic Publishing - Search', () => {
 
     it('FAQ', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="search-journals-faq"]', { timeout: 1000 }).should('be.visible');
         cy.get('[data-testid="faq-summary-0"]').click();
@@ -148,7 +148,7 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders journal search result facets', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-search-facets"]').should('be.visible');
         cy.get('[data-testid="journal-search-facets"]')
@@ -170,7 +170,7 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders journal search result sorting and pagination', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         // pagination
         cy.get('[data-testid="search-journals-paging-top"]').should('be.visible');
@@ -205,7 +205,7 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders journal search result table in less view by default', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
 
@@ -248,7 +248,7 @@ context('Strategic Publishing - Search', () => {
 
     it('Renders journal search result table in more view', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
         // switch to move view
@@ -322,17 +322,17 @@ context('Strategic Publishing - Search', () => {
 
     const setupInitialSearchAndAssert = () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        cy.get('[data-testid="journal-search-item-addable-Glycobiology-3"]').click();
-        cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-glycobiology-3"]').click();
+        cy.get('[data-testid="journal-search-item-addable-title-biological-4"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
 
-        cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
-        cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+        cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('exist');
+        cy.get('[data-testid="journal-search-chip-Title-biological"]').should('exist');
 
         cy.location().should(location => {
-            expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
-            expect(location.search).to.contain('keywords%5BTitle-Biological');
+            expect(location.search).to.contain('keywords%5BTitle-glycobiology');
+            expect(location.search).to.contain('keywords%5BTitle-biological');
         });
     };
 
@@ -360,13 +360,13 @@ context('Strategic Publishing - Search', () => {
                 .as('ResultTitles')
                 .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]')
                 .find('svg')
                 .click();
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('not.exist');
             cy.location().should(location => {
-                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-glycobiology');
             });
 
             // check we have new expected number of results
@@ -376,12 +376,12 @@ context('Strategic Publishing - Search', () => {
             cy.go('back');
 
             cy.location().should(location => {
-                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BTitle-glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-biological');
             });
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-biological"]').should('exist');
 
             // check initial number of results are shown again
             cy.get('@ResultTitles').should('have.length', resultsLengthWithTwoKeywords);
@@ -431,7 +431,7 @@ context('Strategic Publishing - Search', () => {
                 .should('have.length', resultsLengthWithKeywordAndFacets); // /mock/index.js
 
             // remove a keyword - this should unselect the active facets and update the URL
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]')
                 .find('svg')
                 .click();
 
@@ -534,8 +534,8 @@ context('Strategic Publishing - Search', () => {
 
             // assert everything selected is in the URL
             cy.location().should(location => {
-                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BTitle-glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-biological');
                 expect(location.search).to.contain('CWTS');
                 expect(location.search).to.contain('Scopus');
                 expect(location.search).to.contain('sortBy=score');
@@ -558,11 +558,11 @@ context('Strategic Publishing - Search', () => {
 
             // as a final check, perform a new search and confirm previous search terms/facets/sorting are not present
             cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-            cy.get('[data-testid="journal-search-item-addable-Biology-1"]').click();
+            cy.get('[data-testid="journal-search-item-addable-title-biology-1"]').click();
             cy.get('[data-testid="journal-search-button"]').click();
             cy.get('[data-testid="journal-list"]').should('be.visible');
 
-            cy.get('[data-testid="journal-search-chip-Title-Biology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-biology"]').should('exist');
             cy.get('@ResultTitles').should('have.length', resultsLengthFullDefaultPage);
 
             // default sorting
@@ -575,8 +575,8 @@ context('Strategic Publishing - Search', () => {
 
             // nothing in the URL from the previous search
             cy.location().should(location => {
-                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('keywords%5BTitle-glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-biological');
                 expect(location.search).not.to.contain('CWTS');
                 expect(location.search).not.to.contain('Scopus');
                 expect(location.search).not.to.contain('sortBy=score');
@@ -605,19 +605,19 @@ context('Strategic Publishing - Search', () => {
                 .as('ResultTitles')
                 .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]')
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]')
                 .find('svg')
                 .click();
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('not.exist');
             cy.location().should(location => {
-                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-glycobiology');
             });
 
             // check we have new expected number of results
             cy.get('@ResultTitles').should('have.length', resultsLengthWithOneKeyword);
 
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]')
+            cy.get('[data-testid="journal-search-chip-Title-biological"]')
                 .find('svg')
                 .click();
 
@@ -656,12 +656,12 @@ context('Strategic Publishing - Search', () => {
                 .as('ResultTitles')
                 .should('have.length', resultsLengthWithTwoKeywords); // /mock/index.js
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('exist');
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-biological"]').should('exist');
 
             cy.location().should(location => {
-                expect(location.search).to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BTitle-glycobiology');
+                expect(location.search).to.contain('keywords%5BTitle-biological');
                 expect(location.search).not.to.contain('keywords%5BKeyword-all-journals');
             });
 
@@ -669,12 +669,12 @@ context('Strategic Publishing - Search', () => {
                 .should('exist')
                 .click();
 
-            cy.get('[data-testid="journal-search-chip-Title-Glycobiology"]').should('not.exist');
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-glycobiology"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-biological"]').should('not.exist');
 
             cy.location().should(location => {
-                expect(location.search).not.to.contain('keywords%5BTitle-Glycobiology');
-                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('keywords%5BTitle-glycobiology');
+                expect(location.search).not.to.contain('keywords%5BTitle-biological');
                 expect(location.search).to.contain('keywords%5BKeyword-all-journals');
             });
 
@@ -733,15 +733,15 @@ context('Strategic Publishing - Search', () => {
 
             // perform a normal search
             cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-            cy.get('[data-testid="journal-search-item-addable-Biological-4"]').click();
+            cy.get('[data-testid="journal-search-item-addable-title-biological-4"]').click();
             cy.get('[data-testid="journal-search-button"]').click();
             cy.get('[data-testid="journal-list"]').should('be.visible');
 
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('exist');
+            cy.get('[data-testid="journal-search-chip-Title-biological"]').should('exist');
             cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('not.exist');
 
             cy.location().should(location => {
-                expect(location.search).to.contain('keywords%5BTitle-Biological');
+                expect(location.search).to.contain('keywords%5BTitle-biological');
                 expect(location.search).not.to.contain('keywords%5BKeyword-all-journals');
             });
 
@@ -752,11 +752,11 @@ context('Strategic Publishing - Search', () => {
                 .should('exist')
                 .click();
 
-            cy.get('[data-testid="journal-search-chip-Title-Biological"]').should('not.exist');
+            cy.get('[data-testid="journal-search-chip-Title-biological"]').should('not.exist');
             cy.get('[data-testid="journal-search-chip-Keyword-all-journals"]').should('exist');
 
             cy.location().should(location => {
-                expect(location.search).not.to.contain('keywords%5BTitle-Biological');
+                expect(location.search).not.to.contain('keywords%5BTitle-biological');
                 expect(location.search).to.contain('keywords%5BKeyword-all-journals');
             });
 
