@@ -3,7 +3,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     communityList: [],
-    loadingcommunities: false,
+    loadingCommunities: false,
     loadingCommunitiesError: null,
     totalRecords: 0,
     startRecord: 0,
@@ -15,12 +15,12 @@ export const initialState = {
 const handlers = {
     [actions.VIEW_COMMUNITIES_LOADING]: () => ({
         ...initialState,
-        loadingcommunities: true,
+        loadingCommunities: true,
     }),
 
     [actions.VIEW_COMMUNITIES_LOADED]: (state, action) => ({
         ...initialState,
-        loadingcommunities: false,
+        loadingCommunities: false,
         communityList: action.payload.data,
         totalRecords: action.payload.total,
         startRecord: action.payload.from,
@@ -31,7 +31,7 @@ const handlers = {
 
     [actions.VIEW_COMMUNITIES_LOAD_FAILED]: (state, action) => ({
         ...initialState,
-        loadingcommunities: false,
+        loadingCommunities: false,
         loadingCommunitiesError: action.payload,
     }),
 };

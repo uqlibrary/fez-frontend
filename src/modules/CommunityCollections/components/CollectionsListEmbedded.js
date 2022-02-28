@@ -18,7 +18,7 @@ import ReactHtmlParser from 'react-html-parser';
 import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
-
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import CommunityCollectionsPaging from './CommunityCollectionsPaging';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 
@@ -52,10 +52,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     }, [open]);
 
     const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
+    const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
+
     const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
-    const finalList = filteredData.length > 0 ? filteredData[0].data : [];
+    const finalList = filteredData.length > 0 ? filteredData[0].data : { data: [] };
 
     if (finalList && finalList.data && finalList.data.length > 0) {
         switch (sortBy) {
@@ -98,89 +100,99 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
         //     }),
         // );
     };
-
+    console.log('COLLECTION LIST LOADING', collectionListLoading);
     return (
         <>
-            <TableCell colSpan={5} style={{ backgroundColor: '#eee' }}>
-                {!!finalList.data && finalList.data.length > 0 && (
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <p>
-                            {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
-                        </p>
-                        <Box style={{ backgroundColor: 'white', padding: 10 }}>
-                            <CommunityCollectionsSorting
-                                data-testid="community-collections-sorting-top"
-                                // canUseExport
-                                exportData={conf.export}
-                                pagingData={PagingData}
-                                sortingData={conf.sorting}
-                                sortBy={sortBy}
-                                sortDirection={sortDirection}
-                                // onExportPublications={handleExport}
-                                onSortByChanged={sortByChanged}
-                                // onPageSizeChanged={pageSizeChanged}
-                                pageSize={PagingData.per_page}
-                                // sortingDefaults={sortingDefaults}
-                            />
+            {collectionListLoading && (
+                <TableCell colSpan={5}>
+                    <InlineLoader loaderId="communities-page-loading" message={conf.loading.message} />
+                </TableCell>
+            )}
+            {!!!collectionListLoading && (
+                <TableCell colSpan={5} style={{ backgroundColor: '#eee' }}>
+                    {finalList.data.length > 0 && (
+                        <Collapse in={open} timeout="auto" unmountOnExit>
+                            <Typography variant="caption">
+                                {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
+                            </Typography>
+                            <Box style={{ backgroundColor: 'white', padding: 10 }}>
+                                <CommunityCollectionsSorting
+                                    data-testid="community-collections-sorting-top"
+                                    // canUseExport
+                                    exportData={conf.export}
+                                    pagingData={PagingData}
+                                    sortingData={conf.sorting}
+                                    sortBy={sortBy}
+                                    sortDirection={sortDirection}
+                                    // onExportPublications={handleExport}
+                                    onSortByChanged={sortByChanged}
+                                    // onPageSizeChanged={pageSizeChanged}
+                                    pageSize={PagingData.per_page}
+                                    // sortingDefaults={sortingDefaults}
+                                />
 
-                            <CommunityCollectionsPaging
-                                loading={false}
-                                pagingData={PagingData}
-                                // onPageChanged={pageChanged}
-                                disabled={false}
-                                pagingId="community-collections-paging-top"
-                                data-testid="community-collections-paging-top"
-                            />
-                            <Table aria-label="simple table">
-                                <TableHead>
-                                    <TableRow data-testid="community-collections-primary-header">
-                                        <TableCell>{labels.title}</TableCell>
-                                        <TableCell className={classes.dateCell} align="right">
-                                            {labels.creation_date}
-                                        </TableCell>
-                                        <TableCell className={classes.dateCell} align="right">
-                                            {labels.updated_date}
-                                        </TableCell>
-                                        {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
-                                    </TableRow>
-                                </TableHead>
-
-                                <TableBody data-testid="community-collections-primary-body">
-                                    {finalList.data.map(row => (
-                                        <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                                            <TableCell component="th" scope="row">
-                                                <Typography variant="body2">
-                                                    <Link to={pathConfig.records.view(row.rek_pid)}>
-                                                        {ReactHtmlParser(row.rek_title)}
-                                                    </Link>
-                                                </Typography>
-                                                {!!row.rek_description && (
-                                                    <Typography variant="caption">{row.rek_description}</Typography>
-                                                )}
+                                <CommunityCollectionsPaging
+                                    loading={false}
+                                    pagingData={PagingData}
+                                    // onPageChanged={pageChanged}
+                                    disabled={false}
+                                    pagingId="community-collections-paging-top"
+                                    data-testid="community-collections-paging-top"
+                                />
+                                <Table aria-label="simple table">
+                                    <TableHead>
+                                        <TableRow data-testid="community-collections-primary-header">
+                                            <TableCell>{labels.title}</TableCell>
+                                            <TableCell className={classes.dateCell} align="right">
+                                                {labels.creation_date}
                                             </TableCell>
-                                            <TableCell align="right" className={classes.dateCell}>
-                                                {moment(row.rek_created_date)
-                                                    .local()
-                                                    .format(conf.dateFormat)}
+                                            <TableCell className={classes.dateCell} align="right">
+                                                {labels.updated_date}
                                             </TableCell>
-                                            <TableCell align="right" className={classes.dateCell}>
-                                                {moment(row.rek_updated_date)
-                                                    .local()
-                                                    .format(conf.dateFormat)}
-                                            </TableCell>
-                                            {!!isSuperAdmin && (
-                                                <TableCell align="right">
-                                                    <AdminActions record={row.rek_pid} />
-                                                </TableCell>
-                                            )}
+                                            {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
                                         </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
-                        </Box>
-                    </Collapse>
-                )}
-            </TableCell>
+                                    </TableHead>
+
+                                    <TableBody data-testid="community-collections-primary-body">
+                                        {finalList.data.map(row => (
+                                            <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
+                                                <TableCell component="th" scope="row">
+                                                    <Typography variant="body2">
+                                                        <Link to={pathConfig.records.view(row.rek_pid)}>
+                                                            {ReactHtmlParser(row.rek_title)}
+                                                        </Link>
+                                                    </Typography>
+                                                    {!!row.rek_description && (
+                                                        <Typography variant="caption">{row.rek_description}</Typography>
+                                                    )}
+                                                </TableCell>
+                                                <TableCell align="right" className={classes.dateCell}>
+                                                    {moment(row.rek_created_date)
+                                                        .local()
+                                                        .format(conf.dateFormat)}
+                                                </TableCell>
+                                                <TableCell align="right" className={classes.dateCell}>
+                                                    {moment(row.rek_updated_date)
+                                                        .local()
+                                                        .format(conf.dateFormat)}
+                                                </TableCell>
+                                                {!!isSuperAdmin && (
+                                                    <TableCell align="right">
+                                                        <AdminActions record={row.rek_pid} />
+                                                    </TableCell>
+                                                )}
+                                            </TableRow>
+                                        ))}
+                                    </TableBody>
+                                </Table>
+                            </Box>
+                        </Collapse>
+                    )}
+                    {!finalList.data.length > 0 && (
+                        <Typography variant="caption">{'No collections found for this community'}</Typography>
+                    )}
+                </TableCell>
+            )}
         </>
     );
 };
