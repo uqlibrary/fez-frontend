@@ -1,8 +1,5 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
-// import IconButton from '@material-ui/core/IconButton';
-// import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-// import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
 import Table from '@material-ui/core/Table';
@@ -89,18 +86,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     const sortByChanged = (sortby, direction) => {
         setSortDirection(direction);
         setSortBy(sortby);
-        // console.log('INNER SORT CHANGED', sortby, direction);
-        // dispatch(
-        //     actions.loadCCCollectionsList({
-        //         pid: pid,
-        //         pageSize: PagingData.per_page,
-        //         page: PagingData.current_page,
-        //         direction: direction,
-        //         sortBy: sortby,
-        //     }),
-        // );
     };
-    console.log('COLLECTION LIST LOADING', collectionListLoading);
     return (
         <>
             {collectionListLoading && (
@@ -109,13 +95,13 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                 </TableCell>
             )}
             {!!!collectionListLoading && (
-                <TableCell colSpan={5} style={{ backgroundColor: '#eee' }}>
+                <TableCell colSpan={5} style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}>
                     {finalList.data.length > 0 && (
                         <Collapse in={open} timeout="auto" unmountOnExit>
-                            <Typography variant="caption">
-                                {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
-                            </Typography>
                             <Box style={{ backgroundColor: 'white', padding: 10 }}>
+                                <Typography variant="caption">
+                                    {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
+                                </Typography>
                                 <CommunityCollectionsSorting
                                     data-testid="community-collections-sorting-top"
                                     // canUseExport
@@ -189,7 +175,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                         </Collapse>
                     )}
                     {!finalList.data.length > 0 && (
-                        <Typography variant="caption">{'No collections found for this community'}</Typography>
+                        <Typography variant="caption">{conf.loading.noCollections}</Typography>
                     )}
                 </TableCell>
             )}

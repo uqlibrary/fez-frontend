@@ -3631,6 +3631,8 @@ export default {
             dateFormat: 'ddd MMM DD, YYYY',
             loading: {
                 message: '...Loading Data...',
+                noCollections: 'No collections found for this community',
+                noCommunities: 'No communities found.',
             },
             columns: {
                 labels: {

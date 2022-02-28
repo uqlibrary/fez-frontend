@@ -42,7 +42,13 @@ export const CommunityTable = ({ records, labels, conf }) => {
 
                 <TableBody data-testid="community-collections-primary-body">
                     {records.map(row => (
-                        <CommunityDataRow conf={conf} row={row} isSuperAdmin={isSuperAdmin} labels={labels} />
+                        <CommunityDataRow
+                            key={row.rek_pid}
+                            conf={conf}
+                            row={row}
+                            isSuperAdmin={isSuperAdmin}
+                            labels={labels}
+                        />
                     ))}
                 </TableBody>
             </Table>

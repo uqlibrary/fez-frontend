@@ -45,7 +45,6 @@ export const CommunityList = () => {
         );
     };
     const pageChanged = page => {
-        console.log(page);
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
         );
@@ -94,7 +93,6 @@ export const CommunityList = () => {
         default:
             break;
     }
-    // console.log('Sorted list in the component', sortedList);
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (
