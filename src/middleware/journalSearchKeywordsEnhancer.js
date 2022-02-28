@@ -61,7 +61,7 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
                                           return (
                                               (matchedKeywords && [
                                                   ...matchFromEachIssn,
-                                                  ...matchedKeywords.filter(matched => matched && matched.length > 3),
+                                                  ...matchedKeywords.filter(matched => matched && matched.length > 2),
                                               ]) || [...matchFromEachIssn]
                                           );
                                       } else {
