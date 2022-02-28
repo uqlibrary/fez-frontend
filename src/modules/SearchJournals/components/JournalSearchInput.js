@@ -82,7 +82,6 @@ export const JournalSearchInput = ({ initialValue = '', onReset }) => {
                     value={journalSearchInput}
                     fullWidth
                     InputProps={{
-                        'data-testid': 'journal-search-keywords-input',
                         ...((!!loadingJournalSearchKeywords && {
                             endAdornment: (
                                 <InputAdornment position="end">

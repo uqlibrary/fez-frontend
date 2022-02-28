@@ -14,6 +14,7 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index, 
                     index={index}
                     title="subject & field of research"
                     keyword={keyword}
+                    type={'subject'}
                     cvoId={cvoId}
                     variant="addable"
                     onKeywordClick={onKeywordClick}

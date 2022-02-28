@@ -18,17 +18,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const getIdSuffix = (keyword, variant, index) => {
+export const getIdSuffix = (keyword, variant, type, index) => {
     if (typeof keyword === 'string') {
-        return `${variant}-${keyword}-${index}`;
+        return `${variant}-${type}-${keyword}-${index}`;
     } else {
         return `exact-match-${index}`;
     }
 };
 
-export const getId = (keyword, variant, index) => `journal-search-item-${getIdSuffix(keyword, variant, index)}`;
+export const getId = (keyword, variant, type, index) =>
+    `journal-search-item-${getIdSuffix(keyword, variant, type, index)}`;
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant, index, cvoId }) => {
+export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, cvoId }) => {
     const classes = useStyles();
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
     const handleKeywordKeyboardPress = key => {
@@ -51,8 +52,8 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index, cvoId }
                 className={classes[variant || 'default']}
                 onKeyPress={handleKeywordKeyboardPress}
                 onClick={handleKeywordClick}
-                id={getId(keyword, variant, index)}
-                data-testid={getId(keyword, variant, index)}
+                id={getId(keyword, variant, type, index)}
+                data-testid={getId(keyword, variant, type, index)}
                 role="button"
                 tabIndex="0"
             >
@@ -64,6 +65,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, index, cvoId }
 
 SearchKeyword.propTypes = {
     keyword: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+    type: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
     cvoId: PropTypes.number,
     onKeywordClick: PropTypes.func,

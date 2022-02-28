@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import KeywordsList from './KeywordsList';
 import SearchKeyword from './SearchKeyword';
-export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick, help }) => (
+export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick, keywordsType, help }) => (
     <KeywordsList
         title={keywordsListTitle}
         list={
@@ -13,6 +13,7 @@ export const SearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordC
                         index={index}
                         key={keywordItem.keyword}
                         keyword={keywordItem.keyword}
+                        type={keywordsType}
                         title={keywordsListTitle}
                         variant="addable"
                         onKeywordClick={onKeywordClick}
@@ -31,6 +32,7 @@ SearchKeywordsList.propTypes = {
             keyword: PropTypes.string.isRequired,
         }),
     ).isRequired,
+    keywordsType: PropTypes.string.isRequired,
     onKeywordClick: PropTypes.func.isRequired,
     help: PropTypes.object,
 };

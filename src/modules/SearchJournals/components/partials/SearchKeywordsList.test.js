@@ -7,10 +7,12 @@ const setup = state => {
 };
 
 const keywordsListTitle = 'test';
+const keywordsType = 'title';
 describe('SearchKeywordsList', () => {
     it('should render with given title', () => {
         const { getByText } = setup({
             keywordsListTitle,
+            keywordsType,
             keywordsList: [],
         });
         expect(getByText(keywordsListTitle)).toBeInTheDocument();
@@ -28,6 +30,7 @@ describe('SearchKeywordsList', () => {
         const { getByText } = setup({
             keywordsListTitle,
             keywordsList,
+            keywordsType,
         });
         keywordsList.forEach(keyword => {
             expect(getByText(keyword.keyword)).toBeInTheDocument();
