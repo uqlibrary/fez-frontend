@@ -10,7 +10,6 @@ import Grid from '@material-ui/core/Grid';
 // import { userIsAdmin, userIsResearcher } from 'hooks';
 
 const CommunityCollectionsSorting = props => {
-    console.log('PROPS', props.sortBy, props.sortDirection, props.pageSize);
     const [sortBy, setSortBy] = React.useState(props.sortBy || locale.components.sorting.sortBy[0].value);
     const [sortDirection, setSortDirection] = React.useState(
         props.sortDirection || locale.components.sorting.sortDirection[0],
@@ -18,8 +17,6 @@ const CommunityCollectionsSorting = props => {
     const [pageSize, setPageSize] = React.useState(
         props.pageSize || (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20),
     );
-    console.log('PROPS', props.sortBy, props.sortDirection, props.pageSize);
-    console.log('vars', sortBy, sortDirection, pageSize);
 
     React.useEffect(() => {
         if (sortBy !== props.sortBy) setSortBy(props.sortBy);

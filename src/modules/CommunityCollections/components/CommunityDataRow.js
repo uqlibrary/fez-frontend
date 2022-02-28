@@ -8,11 +8,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import ReactHtmlParser from 'react-html-parser';
 import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import * as actions from 'actions';
+// import * as actions from 'actions';
 const moment = require('moment');
 
 const useStyles = makeStyles({
@@ -27,20 +27,20 @@ import { Link } from 'react-router-dom';
 
 export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels }) => {
     const [open, setOpen] = React.useState(false);
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const handleSetOpen = openState => {
         /* I can fire the component get data here */
-        if (openState) {
-            dispatch(
-                actions.loadCCCollectionsList({
-                    pid: row.rek_pid,
-                    pageSize: 10,
-                    page: 1,
-                    direction: 'Asc',
-                    sortBy: 'title',
-                }),
-            );
-        }
+        // if (openState) {
+        //     dispatch(
+        //         actions.loadCCCollectionsList({
+        //             pid: row.rek_pid,
+        //             pageSize: 10,
+        //             page: 1,
+        //             direction: 'Asc',
+        //             sortBy: 'title',
+        //         }),
+        //     );
+        // }
         setOpen(openState);
     };
 
@@ -78,6 +78,7 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels }) => {
             {!!open && (
                 <TableRow>
                     <CollectionsListEmbedded
+                        title={row.rek_title}
                         key={row.rek_pid}
                         pid={row.rek_pid}
                         labels={labels}

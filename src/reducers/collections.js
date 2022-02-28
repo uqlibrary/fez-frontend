@@ -21,6 +21,7 @@ const handlers = {
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {
         // console.log('STATE IS', state);
+
         const uniqueValues = new Set();
         const collectionList = [...state.collectionList, action.payload];
         const filteredList = collectionList.filter(obj => {

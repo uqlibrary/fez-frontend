@@ -77,6 +77,7 @@ export const CommunityList = () => {
     };
     const sortingDefaults = txt.sortingDefaults ?? {};
     const sortedList = [...communityList];
+
     switch (sortBy) {
         case 'title':
             sortedList.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
@@ -93,7 +94,7 @@ export const CommunityList = () => {
         default:
             break;
     }
-
+    // console.log('Sorted list in the component', sortedList);
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (

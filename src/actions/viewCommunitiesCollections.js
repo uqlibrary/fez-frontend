@@ -2,12 +2,6 @@ import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import { COMMUNITY_LIST_API, COLLECTION_LIST_API } from 'repositories/routes';
 
-// export const VIEW_COMMUNITIES_LOADING = 'VIEW_COMMUNITIES_LOADING';
-// export const VIEW_COMMUNITIES_LOADED = 'VIEW_COMMUNITIES_LOADED';
-// export const VIEW_COMMUNITIES_LOAD_FAILED = 'VIEW_COMMUNITIES_LOAD_FAILED';
-// export const VIEW_COLLECTIONS_LOADING = 'VIEW_COLLECTIONS_LOADING';
-// export const VIEW_COLLECTIONS_LOADED = 'VIEW_COLLECTIONS_LOADED';
-// export const VIEW_COLLECTIONS_LOAD_FAILED = 'VIEW_COLLECTIONS_LOAD_FAILED';
 /**
  * Load Communities List
  * @param {object}
@@ -39,7 +33,6 @@ export function loadCCCollectionsList(params = {}) {
     const { pid, pageSize, page } = params;
     return dispatch => {
         dispatch({ type: actions.VIEW_COLLECTIONS_LOADING });
-
         return get(COLLECTION_LIST_API({ pid: pid, pageSize: pageSize, page: page }))
             .then(response => {
                 dispatch({

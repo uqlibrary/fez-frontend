@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import Box from '@material-ui/core/Box';
-import IconButton from '@material-ui/core/IconButton';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+// import IconButton from '@material-ui/core/IconButton';
+// import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+// import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
 import Table from '@material-ui/core/Table';
@@ -19,6 +18,10 @@ import ReactHtmlParser from 'react-html-parser';
 import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
+
+import CommunityCollectionsPaging from './CommunityCollectionsPaging';
+import CommunityCollectionsSorting from './CommunityCollectionsSorting';
+
 const moment = require('moment');
 
 const useStyles = makeStyles({
@@ -29,9 +32,10 @@ const useStyles = makeStyles({
         minWidth: 120,
     },
 });
-export const CollectionsListEmbedded = ({ pid, labels, conf, isSuperAdmin, open }) => {
+export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin, open }) => {
     const dispatch = useDispatch();
-
+    const [sortDirection, setSortDirection] = React.useState('Asc');
+    const [sortBy, setSortBy] = React.useState('title');
     React.useEffect(() => {
         if (open) {
             dispatch(
@@ -53,12 +57,80 @@ export const CollectionsListEmbedded = ({ pid, labels, conf, isSuperAdmin, open 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
     const finalList = filteredData.length > 0 ? filteredData[0].data : [];
 
+    if (finalList && finalList.data && finalList.data.length > 0) {
+        switch (sortBy) {
+            case 'title':
+                finalList.data.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
+                sortDirection === 'Asc' && finalList.data.reverse();
+                break;
+            case 'created_date':
+                finalList.data.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
+                sortDirection === 'Asc' && finalList.data.reverse();
+                break;
+            case 'updated_date':
+                finalList.data.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
+                sortDirection === 'Asc' && finalList.data.reverse();
+                break;
+            default:
+                break;
+        }
+    }
+
+    const PagingData = {
+        from: finalList.from,
+        to: finalList.to,
+        total: finalList.total,
+        per_page: finalList.per_page,
+        current_page: finalList.current_page,
+    };
+
+    const sortByChanged = (sortby, direction) => {
+        setSortDirection(direction);
+        setSortBy(sortby);
+        // console.log('INNER SORT CHANGED', sortby, direction);
+        // dispatch(
+        //     actions.loadCCCollectionsList({
+        //         pid: pid,
+        //         pageSize: PagingData.per_page,
+        //         page: PagingData.current_page,
+        //         direction: direction,
+        //         sortBy: sortby,
+        //     }),
+        // );
+    };
+
     return (
         <>
-            <TableCell colSpan={4}>
+            <TableCell colSpan={5} style={{ backgroundColor: '#eee' }}>
                 {!!finalList.data && finalList.data.length > 0 && (
                     <Collapse in={open} timeout="auto" unmountOnExit>
-                        <Box>
+                        <p>
+                            {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
+                        </p>
+                        <Box style={{ backgroundColor: 'white', padding: 10 }}>
+                            <CommunityCollectionsSorting
+                                data-testid="community-collections-sorting-top"
+                                // canUseExport
+                                exportData={conf.export}
+                                pagingData={PagingData}
+                                sortingData={conf.sorting}
+                                sortBy={sortBy}
+                                sortDirection={sortDirection}
+                                // onExportPublications={handleExport}
+                                onSortByChanged={sortByChanged}
+                                // onPageSizeChanged={pageSizeChanged}
+                                pageSize={PagingData.per_page}
+                                // sortingDefaults={sortingDefaults}
+                            />
+
+                            <CommunityCollectionsPaging
+                                loading={false}
+                                pagingData={PagingData}
+                                // onPageChanged={pageChanged}
+                                disabled={false}
+                                pagingId="community-collections-paging-top"
+                                data-testid="community-collections-paging-top"
+                            />
                             <Table aria-label="simple table">
                                 <TableHead>
                                     <TableRow data-testid="community-collections-primary-header">
@@ -113,6 +185,7 @@ export const CollectionsListEmbedded = ({ pid, labels, conf, isSuperAdmin, open 
     );
 };
 CollectionsListEmbedded.propTypes = {
+    title: PropTypes.string,
     records: PropTypes.array,
     labels: PropTypes.object,
     conf: PropTypes.object,
