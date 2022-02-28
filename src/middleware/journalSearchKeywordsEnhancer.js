@@ -35,7 +35,7 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
         return (titleMatch && [...titleMatches, ...titleMatch]) || [];
     }, []);
 
-    return Array.from(new Set(titleMatchKeywords.map(keyword => keyword.toLowerCase())))
+    return Array.from(new Set(titleMatchKeywords))
         .filter(keyword => !!keyword)
         .map(keyword => ({ keyword }));
 };
@@ -55,19 +55,11 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
                               ...matches,
                               ...journal.fez_journal_issn.reduce(
                                   // Loop through each journal issn object
-                                  (matchFromEachIssn, issn) => {
-                                      if (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_description) {
-                                          const matchedKeywords = issn.fez_ulrichs.ulr_description.match(regex);
-                                          return (
-                                              (matchedKeywords && [
-                                                  ...matchFromEachIssn,
-                                                  ...matchedKeywords.filter(matched => matched && matched.length > 3),
-                                              ]) || [...matchFromEachIssn]
-                                          );
-                                      } else {
-                                          return [...matchFromEachIssn];
-                                      }
-                                  },
+                                  (matchFromEachIssn, issn) =>
+                                      (!!issn.fez_ulrichs.ulr_description && [
+                                          ...matchFromEachIssn,
+                                          ...issn.fez_ulrichs.ulr_description.match(regex),
+                                      ]) || [...matchFromEachIssn],
                                   [],
                               ),
                           ]
@@ -78,7 +70,7 @@ const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
         return (keywordMatch && [...keywordMatches, ...keywordMatch]) || [];
     }, []);
 
-    return Array.from(new Set(keywordMatchKeywords.map(keyword => keyword.toLowerCase())))
+    return Array.from(new Set(keywordMatchKeywords))
         .filter(keyword => !!keyword)
         .map(keyword => ({ keyword }));
 };
