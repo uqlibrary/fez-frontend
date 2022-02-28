@@ -863,7 +863,7 @@ describe('Backend routes method', () => {
 
     it('should construct url for journal lookup api', () => {
         expect(routes.JOURNAL_LOOKUP_API({ query: 'test' })).toEqual({
-            apiUrl: 'journals/search?query=test',
+            apiUrl: 'journals/search?rule=lookup&query=test',
         });
     });
 
