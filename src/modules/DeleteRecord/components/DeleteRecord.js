@@ -87,6 +87,31 @@ export default class DeleteRecord extends PureComponent {
         event && event.preventDefault();
     };
 
+    _getErrorAlertProps = (rekType, errorResponse) => {
+        const defaultProps = {
+            ...this.props,
+            alertLocale: formsLocale.forms.deleteRecordForm,
+            error: errorResponse.message,
+        };
+
+        if (rekType !== 'Collection' && rekType !== 'Community') return defaultProps;
+        if (errorResponse.status !== 409) return defaultProps;
+
+        // if we're working with a collection or community and have received a 409 status error,
+        // we know for sure the reason for the failure is because the community contains collections,
+        // or the collection contains records. Therefore modify the object to be passed to
+        // validation.getErrorAlertProps to change the error message shown to the admin user.
+        return {
+            ...defaultProps,
+            error: rekType,
+            alertLocale: {
+                errorAlert: {
+                    ...formsLocale.forms.deleteRecordForm.errorCommunityCollection409Alert,
+                },
+            },
+        };
+    };
+
     render() {
         const txt = pagesLocale.pages.deleteRecord;
         const txtDeleteForm = formsLocale.forms.deleteRecordForm;
@@ -101,7 +126,14 @@ export default class DeleteRecord extends PureComponent {
 
         const hasUQDOI = this._hasUQDOI();
         const saveConfirmationLocale = { ...txtDeleteForm.successWorkflowConfirmation };
-        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txtDeleteForm });
+
+        const errorResponse = this.props.error && JSON.parse(this.props.error);
+        const errorAlertProps =
+            !!errorResponse &&
+            this._getErrorAlertProps(this.props.recordToDelete.rek_display_type_lookup, errorResponse);
+
+        const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
+        console.log(errorResponse, errorAlertProps, alertProps, this.props, txtDeleteForm);
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
