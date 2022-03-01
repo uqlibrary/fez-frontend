@@ -1,8 +1,6 @@
 import { TOKEN_NAME } from './general';
 import Cookies from 'js-cookie';
-
 import { api, sessionApi, setupDefaults } from './axios';
-import axios from 'axios';
 
 const mocks = {};
 describe('Axios', () => {
