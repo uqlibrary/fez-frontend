@@ -520,7 +520,7 @@ describe('SearchJournals', () => {
         });
 
         expect(getByTestId(clearFacetItemTestId)).toBeVisible();
-        expect(testHistory.location.search).toContain('showFavouritedOnly%5D=true');
+        expect(testHistory.location.search).toContain('ShowFavouritedOnly%5D=true');
     });
 
     it('should update querystring when filters are changed', () => {
