@@ -91,7 +91,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
         <>
             {collectionListLoading && (
                 <TableCell colSpan={5}>
-                    <InlineLoader loaderId="communities-page-loading" message={conf.loading.message} />
+                    <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
                 </TableCell>
             )}
             {!!!collectionListLoading && (
@@ -103,7 +103,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                     {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
                                 </Typography>
                                 <CommunityCollectionsSorting
-                                    data-testid="community-collections-sorting-top"
+                                    data-testid="embedded-collections-sorting-top"
                                     // canUseExport
                                     exportData={conf.export}
                                     pagingData={PagingData}
@@ -122,12 +122,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                     pagingData={PagingData}
                                     // onPageChanged={pageChanged}
                                     disabled={false}
-                                    pagingId="community-collections-paging-top"
-                                    data-testid="community-collections-paging-top"
+                                    pagingId="embedded-collections-paging-top"
+                                    data-testid="embedded-collections-paging-top"
                                 />
                                 <Table aria-label="simple table">
                                     <TableHead>
-                                        <TableRow data-testid="community-collections-primary-header">
+                                        <TableRow data-testid="embedded-collections-primary-header">
                                             <TableCell>{labels.title}</TableCell>
                                             <TableCell className={classes.dateCell} align="right">
                                                 {labels.creation_date}
@@ -139,7 +139,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                         </TableRow>
                                     </TableHead>
 
-                                    <TableBody data-testid="community-collections-primary-body">
+                                    <TableBody data-testid="embedded-collections-primary-body">
                                         {finalList.data.map(row => (
                                             <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
                                                 <TableCell component="th" scope="row">
