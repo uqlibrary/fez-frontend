@@ -49,12 +49,14 @@ export const generateCancelToken = () => {
 export const setupDefaults = () => {
     // If there is a local cookie available, then set the api headers for x-uql-token
     if (!!Cookies.get(SESSION_COOKIE_NAME) && !!Cookies.get(SESSION_USER_GROUP_COOKIE_NAME)) {
-        axios.defaults.headers.common[TOKEN_NAME] = Cookies.get(SESSION_COOKIE_NAME);
+        api.defaults.headers.common[TOKEN_NAME] = sessionApi.defaults.headers.common[TOKEN_NAME] = Cookies.get(
+            SESSION_COOKIE_NAME,
+        );
     }
-
     // allow us to safely force a given SESSION_COOKIE_NAME during development
     if (process.env.NODE_ENV === 'development' && !!process.env.SESSION_COOKIE_NAME) {
-        axios.defaults.headers.common[TOKEN_NAME] = process.env.SESSION_COOKIE_NAME;
+        api.defaults.headers.common[TOKEN_NAME] = sessionApi.defaults.headers.common[TOKEN_NAME] =
+            process.env.SESSION_COOKIE_NAME;
     }
 };
 setupDefaults();
