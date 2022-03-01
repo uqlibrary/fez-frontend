@@ -40,15 +40,15 @@ UQ's branding for Fez is UQ eSpace.
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version 14.7.0:
+- With `nvm` installed and/or updated, install `node` version of at least 16.13.2:
 
    ```
-   nvm install 14.7.0 
+   nvm install 16.13.2 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server
+  nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
   ```
 - In the root folder of `fez-frontend` install the required `npm` modules:
 

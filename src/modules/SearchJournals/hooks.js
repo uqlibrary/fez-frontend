@@ -124,11 +124,6 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
         activeFacets: {
             filters: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.filters) || {},
             ranges: (searchQueryParams.activeFacets && searchQueryParams.activeFacets.ranges) || {},
-            ...(searchQueryParams.activeFacets &&
-            searchQueryParams.activeFacets.filters &&
-            searchQueryParams.activeFacets.filters.hasOwnProperty('showFavouritedOnly')
-                ? { filters: { showFavouritedOnly: searchQueryParams.activeFacets.showFavouritedOnly === 'true' } }
-                : {}),
         },
     };
 

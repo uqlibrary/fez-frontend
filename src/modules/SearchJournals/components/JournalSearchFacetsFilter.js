@@ -39,13 +39,16 @@ JournalFacetFilterNestedListItemsList.propTypes = {
     isFacetFilterActive: PropTypes.func,
 };
 
+/**
+ * ShowFavouritedOnly is the key recognised by API - case sensitive
+ */
 export const showFavouritedOnlyFacet = {
     title: 'Favourite Journals',
-    facetTitle: 'showFavouritedOnly',
+    facetTitle: 'ShowFavouritedOnly',
     facets: [
         {
             title: 'Show journals favourited',
-            key: 'showFavouritedOnly',
+            key: 'ShowFavouritedOnly',
         },
     ],
 };
