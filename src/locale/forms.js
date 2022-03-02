@@ -296,13 +296,16 @@ export default {
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message}. Please contact eSpace administrators or try again later.`,
             },
-            errorCommunityCollection409Alert: {
-                type: 'error_outline',
-                title: 'Error',
-                message: rekType =>
-                    `Error occurred during request and request cannot be processed. The ${rekType} contains ${
-                        rekType === 'Community' ? 'Collections' : 'records'
-                    } that must be manually unlinked first.`,
+            errorCustom: {
+                communityCollection: [
+                    {
+                        httpStatus: 409,
+                        message: rekType =>
+                            `Error occurred during request and request cannot be processed. The ${rekType} contains ${
+                                rekType === 'Community' ? 'Collections' : 'records'
+                            } that must be manually unlinked first.`,
+                    },
+                ],
             },
             progressAlert: {
                 type: 'info_outline',

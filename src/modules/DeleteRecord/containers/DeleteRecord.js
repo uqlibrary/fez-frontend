@@ -9,7 +9,6 @@ const FORM_NAME = 'DeleteRecord';
 
 const onSubmit = (values, dispatch) => {
     return dispatch(actions.deleteRecord({ ...values.toJS() })).catch(error => {
-        console.log('onSubmit', error);
         throw new SubmissionError({ _error: JSON.stringify(error) });
     });
 };

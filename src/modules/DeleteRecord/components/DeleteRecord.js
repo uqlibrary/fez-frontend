@@ -57,6 +57,8 @@ export default class DeleteRecord extends PureComponent {
         this.props.actions.clearDeleteRecord();
     }
 
+    #COMMUNITY_COLLECTION_KEY = 'communityCollection';
+
     _hasUQDOI = () => {
         return (
             this.props.recordToDelete &&
@@ -87,6 +89,14 @@ export default class DeleteRecord extends PureComponent {
         event && event.preventDefault();
     };
 
+    _getCustomAlertMessage = (key, statusCode) => {
+        const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
+            return customError.httpStatus === statusCode;
+        });
+        const message = !!errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
+        return message; // could be string or function
+    };
+
     _getErrorAlertProps = (rekType, errorResponse) => {
         const defaultProps = {
             ...this.props,
@@ -101,12 +111,14 @@ export default class DeleteRecord extends PureComponent {
         // we know for sure the reason for the failure is because the community contains collections,
         // or the collection contains records. Therefore modify the object to be passed to
         // validation.getErrorAlertProps to change the error message shown to the admin user.
+        const errorMessage = this._getCustomAlertMessage(this.#COMMUNITY_COLLECTION_KEY, errorResponse.status);
         return {
             ...defaultProps,
             error: rekType,
             alertLocale: {
                 errorAlert: {
-                    ...formsLocale.forms.deleteRecordForm.errorCommunityCollection409Alert,
+                    ...formsLocale.forms.deleteRecordForm.errorAlert,
+                    message: errorMessage,
                 },
             },
         };
@@ -133,7 +145,6 @@ export default class DeleteRecord extends PureComponent {
             this._getErrorAlertProps(this.props.recordToDelete.rek_display_type_lookup, errorResponse);
 
         const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
-        console.log(errorResponse, errorAlertProps, alertProps, this.props, txtDeleteForm);
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
