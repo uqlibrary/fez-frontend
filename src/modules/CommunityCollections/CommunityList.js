@@ -59,7 +59,9 @@ export const CommunityList = () => {
     };
 
     React.useEffect(() => {
+        dispatch(actions.clearCCCollectionsList());
         dispatch(actions.loadCommunitiesList({ pageSize: 10, page: 1, direction: 'asc', sortBy: 'Title' }));
+        // console.log('USE EFFECT FIRED');
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

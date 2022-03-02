@@ -61,10 +61,14 @@ const handlers = {
         loadingCollections: false,
         loadingCollectionsError: action.payload,
     }),
+    [actions.VIEW_COLLECTIONS_CLEARED]: () => ({
+        ...initialState,
+        loadingCollections: false,
+    }),
 };
 
 export default function viewCollectionsReducer(state = { ...initialState }, action) {
-    // console.log('STATE:', state, 'ACTION', action);
+    console.log('STATE:', state, 'ACTION', action);
     const handler = handlers[action.type];
     if (!handler) {
         return state;
