@@ -50,10 +50,6 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error, formErrors, submitSucceeded, submitting]);
 
-    useEffect(() => {
-        document.title = `${txt.title}: ${document.title}`;
-    }, [txt]);
-
     const cancelIngest = () => {
         history.push(pathConfig.index);
     };
