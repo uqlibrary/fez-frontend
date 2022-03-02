@@ -136,6 +136,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2828,6 +2836,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -2837,6 +2846,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record 1`]
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -3485,6 +3501,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -3494,6 +3511,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -6177,6 +6201,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -6186,6 +6211,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -6830,6 +6862,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -6839,6 +6872,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -9522,6 +9562,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -9531,6 +9572,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -10175,6 +10223,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -10184,6 +10233,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -12759,6 +12815,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -12768,6 +12825,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -13335,6 +13399,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -13344,6 +13409,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -16027,6 +16099,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -16036,6 +16109,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -16680,6 +16760,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -16689,6 +16770,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -19357,6 +19445,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -19366,6 +19455,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -19953,6 +20049,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -19962,6 +20059,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -22630,6 +22734,7 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -22639,6 +22744,13 @@ exports[`DataCollectionCitation renders  component with a mock espace record wit
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -23283,6 +23395,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -23292,6 +23405,13 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -23677,6 +23797,7 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -23686,6 +23807,13 @@ exports[`DataCollectionCitation renders  component with empty publication 1`] = 
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {

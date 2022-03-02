@@ -74,4 +74,7 @@ export { MyRecords, MyDataCollections, MyIncompleteRecords } from 'modules/MyRec
 export { default as NewViewRecord } from 'modules/ViewRecord/containers/NewViewRecord';
 export { NotFound } from 'modules/NotFound/components/NotFound';
 export { SearchRecords } from 'modules/SearchRecords';
+export { SearchJournals } from 'modules/SearchJournals';
+export { FavouriteJournals } from 'modules/FavouriteJournals';
+export { JournalComparison } from 'modules/JournalComparison';
 export { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

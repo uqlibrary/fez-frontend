@@ -136,6 +136,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -1168,6 +1176,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -1177,6 +1186,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -1724,6 +1740,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -1733,6 +1750,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -2771,6 +2795,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -2780,6 +2805,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -3327,6 +3359,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -3336,6 +3369,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -3720,6 +3760,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -3729,6 +3770,13 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {

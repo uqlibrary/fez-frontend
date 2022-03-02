@@ -9,12 +9,14 @@ import {
     UNPUBLISHED,
 } from 'config/general';
 import param from 'can-param';
+import locale from 'locale/components';
+import { doesListContainItem } from 'helpers/general';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
 /**
  * Translate selected facets to query string parameters
- * @param {object} selected facets
+ * @param {object}  facets
  * @returns {object}
  */
 export const getFacetsParams = facets => {
@@ -84,6 +86,26 @@ export const getSearchType = searchQuery => {
     }
 
     return { title: searchQuery };
+};
+
+export const getValidPageSize = (defaultSize, pageSize) => {
+    let validPageSize = 10;
+    if (doesListContainItem(defaultSize, +pageSize)) {
+        validPageSize = +pageSize;
+    } else {
+        /* istanbul ignore else */
+        if (!!locale.components?.favouriteJournals?.sortingDefaults?.pageSize) {
+            validPageSize = locale.components.favouriteJournals.sortingDefaults.pageSize;
+        } else {
+            // last chance to get a value from config
+            try {
+                validPageSize = defaultSize[0];
+            } catch (e) {
+                validPageSize = 10;
+            }
+        }
+    }
+    return validPageSize;
 };
 
 export const CURRENT_ACCOUNT_API = () => ({
@@ -445,4 +467,93 @@ export const USER_API = ({ userId, userIds } = { userId: undefined, userIds: und
     }
 
     return { apiUrl: 'fez-users' };
+};
+
+export const JOURNAL_KEYWORDS_LOOKUP_API = ({ query }) => ({
+    apiUrl: `journals/search?query=${query}`,
+});
+
+/**
+ * Construct keywords query as per API requirement
+ *
+ * @param {Object} keywords
+ * @returns
+ */
+export const getKeywordsParams = keywords => {
+    if (!!keywords && Object.values(keywords).length > 0) {
+        const title = [];
+        const description = [];
+        const subject = [];
+        Object.keys(keywords).map(item => {
+            switch (keywords[item].type) {
+                case 'Title':
+                    title.push(keywords[item].text);
+                    break;
+                case 'Keyword':
+                    description.push(keywords[item].text);
+                    break;
+                case 'Subject':
+                    subject.push(keywords[item].cvoId);
+                    break;
+                default:
+                    break;
+            }
+        });
+        return {
+            title: [...title],
+            description: [...description],
+            subject: [...subject],
+        };
+    } else {
+        return {};
+    }
+};
+
+export const JOURNAL_SEARCH_API = query => {
+    const { pageSize, sortBy, sortDirection } = {
+        ...locale.components.searchJournals.sortingDefaults,
+        ...query,
+    };
+
+    const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
+
+    return {
+        apiUrl: 'journals/search',
+        options: {
+            params: {
+                ...getKeywordsParams(query?.keywords),
+                ...getStandardSearchParams({
+                    ...query,
+                    facets: query?.activeFacets,
+                    pageSize: validPageSize,
+                    sortBy,
+                    sortDirection,
+                }),
+            },
+        },
+    };
+};
+
+export const JOURNAL_FAVOURITES_API = ({ append, query } = {}) => {
+    const { pageSize } = {
+        ...locale.components.favouriteJournals.sortingDefaults,
+        ...query,
+    };
+
+    const validPageSize = getValidPageSize(locale.components.sorting.recordsPerPage, pageSize);
+
+    const params = {
+        apiUrl: 'journals/favourites' + (!!append ? `/${append}` : ''),
+    };
+
+    if (query) {
+        params.options = {
+            params: {
+                ...getKeywordsParams(query.keywords),
+                ...getStandardSearchParams({ ...query, facets: query.activeFacets, pageSize: validPageSize }),
+            },
+        };
+    }
+
+    return params;
 };

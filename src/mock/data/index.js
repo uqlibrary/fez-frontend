@@ -67,8 +67,12 @@ export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
 export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
+export { keywordsSearch } from './journals/search/keyword/bio';
 export { journalDetails } from './journal';
 export { communityList } from './communityList'
+export { journalsList } from './journals';
+export { journalList } from './journalList';
+
 export { bulkUpdatesList } from './bulkUpdates';
 
 // Favourite search mock data

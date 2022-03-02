@@ -534,9 +534,10 @@ export default {
                     version: {
                         type: 'info_outline',
                         title: '',
-                        message: record => (
+                        message: (record, isDeletedVersion = false) => (
                             <>
-                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                                You are looking at version <b>{record.rek_version}</b> of{' '}
+                                {isDeletedVersion ? <b>deleted</b> : ''} record <b>{record.rek_pid}</b>
                             </>
                         ),
                         alertId: 'alert-info',
@@ -596,6 +597,16 @@ export default {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Scopus document type', 'Genre', 'Year published', 'Published year range'],
             },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message => message,
+                alertId: 'alert-error',
+            },
+        },
+        searchJournals: {
+            title: 'Journal search',
+            loadingMessage: 'Searching for journals',
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
@@ -1209,6 +1220,20 @@ export default {
         users: {
             title: 'Manage users',
             loadingMessage: 'Loading users',
+        },
+        journals: {
+            search: {
+                title: 'Strategic publishing search',
+            },
+            results: {
+                title: 'Strategic publishing results',
+            },
+            compare: {
+                title: 'Strategic publishing compare',
+            },
+            favourites: {
+                title: 'Strategic publishing favourites',
+            },
         },
     },
 };

@@ -88,6 +88,11 @@ export default {
         manageUsers: {
             primaryText: 'Manage users',
         },
+        journals: {
+            search: {
+                primaryText: 'Strategic publishing tool',
+            },
+        },
     },
     footer: {
         cricos: {

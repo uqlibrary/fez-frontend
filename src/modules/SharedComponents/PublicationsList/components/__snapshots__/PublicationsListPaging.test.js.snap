@@ -19,25 +19,12 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         className="undefined paging-previous"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "paddingLeft": 4,
-          }
-        }
         variant="text"
       >
         <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
     <Hidden
       xsDown={true}
     >
@@ -106,7 +93,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-10"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-10"
           key="10"
           onClick={[Function]}
@@ -179,18 +166,8 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
       >
         <WithStyles(ForwardRef(Button))
-          style={
-            Object {
-              "margin": "0 auto",
-            }
-          }
           variant="text"
         >
           Page 10 of 50
@@ -199,20 +176,11 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
         disabled={false}
         onClick={[Function]}
-        size="small"
         variant="text"
       >
         Next
@@ -242,25 +210,12 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
         className="undefined paging-previous"
         disabled={true}
         onClick={[Function]}
-        style={
-          Object {
-            "paddingLeft": 4,
-          }
-        }
         variant="text"
       >
         <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
     <Hidden
       xsDown={true}
     >
@@ -272,7 +227,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-1"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-1"
           key="1"
           onClick={[Function]}
@@ -316,18 +271,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
       >
         <WithStyles(ForwardRef(Button))
-          style={
-            Object {
-              "margin": "0 auto",
-            }
-          }
           variant="text"
         >
           Page 1 of 3
@@ -336,20 +281,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
         disabled={false}
         onClick={[Function]}
-        size="small"
         variant="text"
       >
         Next
@@ -373,25 +309,12 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
         className="undefined paging-previous"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "paddingLeft": 4,
-          }
-        }
         variant="text"
       >
         <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
     <Hidden
       xsDown={true}
     >
@@ -431,7 +354,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-3"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-3"
           key="3"
           onClick={[Function]}
@@ -447,18 +370,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
       >
         <WithStyles(ForwardRef(Button))
-          style={
-            Object {
-              "margin": "0 auto",
-            }
-          }
           variant="text"
         >
           Page 3 of 3
@@ -467,20 +380,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
         disabled={true}
         onClick={[Function]}
-        size="small"
         variant="text"
       >
         Next
@@ -504,25 +408,12 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
         className="undefined paging-previous"
         disabled={false}
         onClick={[Function]}
-        style={
-          Object {
-            "paddingLeft": 4,
-          }
-        }
         variant="text"
       >
         <Memo(ForwardRef(ChevronLeftIcon)) />
         Previous
       </WithStyles(ForwardRef(Button))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
     <Hidden
       xsDown={true}
     >
@@ -548,7 +439,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
           className=" paging-button"
           color="primary"
           data-testid="undefined-select-page-2"
-          disabled={true}
+          disabled={false}
           id="undefined-select-page-2"
           key="2"
           onClick={[Function]}
@@ -578,18 +469,8 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        style={
-          Object {
-            "flexGrow": 1,
-          }
-        }
       >
         <WithStyles(ForwardRef(Button))
-          style={
-            Object {
-              "margin": "0 auto",
-            }
-          }
           variant="text"
         >
           Page 2 of 3
@@ -598,20 +479,11 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
-      style={
-        Object {
-          "flexGrow": 1,
-        }
-      }
-    />
-    <WithStyles(ForwardRef(Grid))
-      item={true}
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
         disabled={false}
         onClick={[Function]}
-        size="small"
         variant="text"
       >
         Next
@@ -626,9 +498,12 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
 <PublicationsListPaging
   classes={
     Object {
-      "fakeDisabled": "PublicationsListPaging-fakeDisabled-4",
-      "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-2",
-      "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-3",
+      "current": "PublicationsListPaging-current-2",
+      "fakeDisabled": "PublicationsListPaging-fakeDisabled-5",
+      "gridContainer": "PublicationsListPaging-gridContainer-6",
+      "gridItem": "PublicationsListPaging-gridItem-7",
+      "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-3",
+      "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-4",
       "pageButton": "PublicationsListPaging-pageButton-1",
     }
   }

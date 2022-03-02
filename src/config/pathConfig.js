@@ -205,4 +205,10 @@ export const pathConfig = {
     journal: {
         view: id => `/journal/view/${id}`,
     },
+    journals: {
+        search: '/journals/search/',
+        results: '/journals/results/',
+        compare: '/journals/compare/',
+        favourites: '/journals/favourites/',
+    },
 };

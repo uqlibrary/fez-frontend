@@ -6,6 +6,18 @@ import { selectFields } from 'locale/selectFields';
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+export const loremIpsum =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'Duis turpis risus, mollis in sem id, auctor tempus tellus. ' +
+    'Praesent maximus tempor tellus pellentesque tincidunt. ' +
+    'Integer maximus accumsan tellus ac aliquet. Nam sollicitudin ' +
+    'odio a leo euismod, quis pharetra arcu laoreet. Mauris malesuada ' +
+    'id diam dignissim aliquet. Aliquam rhoncus non urna in hendrerit. ' +
+    'Pellentesque leo nibh, ornare non metus consequat, tincidunt ' +
+    'scelerisque massa. Curabitur at pellentesque quam. Nulla facilisi. ' +
+    'Nullam sit amet mattis est, ut finibus orci.';
+
 export default {
     components: {
         publicationsList: {
@@ -1735,7 +1747,7 @@ export default {
                 { value: 'thomson_citation_count', label: 'Web of Science citation count' },
             ],
             sortDirection: ['Desc', 'Asc'],
-            recordsPerPage: [20, 50, 100],
+            recordsPerPage: [10, 20, 50, 100],
             exportOnlyLabel: 'Export Only:',
             bulkExportConfirmation: {
                 confirmationTitle: 'Export queued successfully',
@@ -1809,7 +1821,7 @@ export default {
             },
         },
         export: {
-            label: 'Export results',
+            label: 'Export page results',
             format: [
                 { value: 'excel', label: 'Excel File' },
                 { value: 'endnote', label: 'Endnote File' },
@@ -3664,6 +3676,399 @@ export default {
                 pageSize: 10,
                 sortBy: 'title',
                 sortDirection: 'Asc',
+            },
+        },
+        favouriteJournals: {
+            title: 'My Favourite Journals',
+            buttons: {
+                removeFromFavourites: {
+                    title: 'REMOVE FROM FAVOURITES',
+                    aria: 'Remove from favourites',
+                },
+                returnToSearch: {
+                    title: 'RETURN TO JOURNAL SEARCH',
+                    aria: 'Return to Journal Search',
+                },
+            },
+            favouriteJournalsList: {
+                loading: 'Loading ...',
+                empty:
+                    "You haven't added any journals to this list. Use the checkboxes on the results page to add favourites.",
+            },
+            sortingDefaults: {
+                pageSize: 20,
+                sortBy: 'score', // for future use
+                sortDirection: 'Desc', // for future use
+            },
+        },
+        journalComparison: {
+            title: 'Journal comparison',
+            buttons: {
+                returnToSearch: {
+                    title: 'RETURN TO SEARCH RESULTS',
+                    aria: 'Return to search results',
+                },
+            },
+            journalComparisonList: {
+                empty: 'No journals were selected for comparison',
+            },
+        },
+        searchJournals: {
+            snackbar: {
+                message: 'Search results updated',
+            },
+            partials: {
+                FAQ: {
+                    title: 'Learn more',
+                    items: [
+                        {
+                            question: 'Get detailed journal info',
+                            answer: (
+                                <div>
+                                    Click on the title of the journal to explore its details such as:
+                                    <ul>
+                                        <li>aims and scope of the journal</li>
+                                        <li>journal quality</li>
+                                        <li>peer review process</li>
+                                        <li>publisher reputation and credibility</li>
+                                        <li>promotion and availability of your article</li>
+                                    </ul>
+                                    <p>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/strategic-scholarly-publishing?p=1#1"
+                                        >
+                                            Read more about Strategic Publishing
+                                        </a>
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'What are journal level metrics?',
+                            answer: (
+                                <div>
+                                    <p>
+                                        There are different indicators used to measure journal quality. These indicators
+                                        are calculated by looking at the citations received in the most recent year for
+                                        publications from the previous 2-5 years. There are slight variations in the
+                                        methodology used to calculate these indicators, depending on the database
+                                        provider e.g. Journal Citation Reports, Scopus.
+                                    </p>
+                                    <p>
+                                        You can compare the different metrics for specific journals by selecting each
+                                        and then clicking the <b>Compare selected</b> button. Learn more via the{' '}
+                                        <a target="_blank" href="https://uq.libwizard.com/f/metrics">
+                                            online metrics tutorial
+                                        </a>
+                                        .
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'What are published and accepted versions for publishing open access?',
+                            answer: (
+                                <div>
+                                    <p>
+                                        The published version (
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=0#0"
+                                            target="_blank"
+                                        >
+                                            also known as Gold open access
+                                        </a>
+                                        ) is where the free and permanently accessible final version of a publication,
+                                        is available for everyone to read immediately after publication. Published
+                                        versions can be made open access via Article process charges, without charges,
+                                        or through the Library's{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/researchers/publish-and-share/read-and-publish-agreements-2022"
+                                            target="_blank"
+                                        >
+                                            agreements with some publishers
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        The accepted version (also referred to as{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access?p=2#2"
+                                            target="_blank"
+                                        >
+                                            self-archiving or Green open access
+                                        </a>
+                                        ) is the deposit of the author's version of the manuscript accepted for
+                                        publication in a publicly accessible institutional repository, such as UQ
+                                        eSpace. An author accepted manuscript (also referred to as a post-print) is the
+                                        author's version of a manuscript that has undergone peer review and has been
+                                        accepted by the publisher.{' '}
+                                        <a href="https://www.youtube.com/watch?v=okLMBxRixFQ" target="_blank">
+                                            View the Library's video guide
+                                        </a>
+                                        .
+                                    </p>
+                                    <p>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                        >
+                                            Read more about open access
+                                        </a>
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'Open access and charges',
+                            answer: (
+                                <div>
+                                    <p>
+                                        There are different pathways to open access, include gold and green open access.
+                                    </p>
+                                    <p>
+                                        Some publishers have{' '}
+                                        <a href="https://web.library.uq.edu.au/node/4488/3" target="_blank">
+                                            Article processing charges (APCs)
+                                        </a>{' '}
+                                        a fee paid to make an article immediately available and openly accessible. The
+                                        Library has{' '}
+                                        <a
+                                            href="https://web.library.uq.edu.au/read-and-publish-agreements"
+                                            target="_blank"
+                                        >
+                                            agreements with some publishers
+                                        </a>{' '}
+                                        where that APC is pre-paid or reduced for UQ corresponding authors.
+                                    </p>
+                                    <p>
+                                        To find a journal which meets your requirements or funder mandate, refine your
+                                        results by the open access filters.
+                                    </p>
+                                    <p>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/open-access"
+                                        >
+                                            Read more
+                                        </a>
+                                    </p>
+                                </div>
+                            ),
+                        },
+                        {
+                            question: 'More help',
+                            answer: (
+                                <ul>
+                                    <li>
+                                        <a target="_blank" href="https://web.library.uq.edu.au/contact-us">
+                                            Contact us for help
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            target="_blank"
+                                            href="https://web.library.uq.edu.au/library-services/services-researchers/publish-share"
+                                        >
+                                            Find out more about publishing at UQ Library
+                                        </a>
+                                    </li>
+                                    <li>
+                                        Have feedback or can't find a journal? Contact{' '}
+                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                    </li>
+                                </ul>
+                            ),
+                        },
+                        {
+                            question: 'Disclaimer',
+                            answer: (
+                                <p>
+                                    The journal search brings together data from many sources and providers to help you
+                                    make an evidenced based decision. Every effort is undertaken to make sure data is up
+                                    to date, but you should confirm the latest information direct from sources e.g. the
+                                    publisher's website.
+                                </p>
+                            ),
+                        },
+                    ],
+                },
+                keywordsList: {
+                    noResultsFound: 'No matches found.',
+                },
+                keywordsBrowser: {
+                    titlePrefix: 'Step 2.',
+                    title: 'Select at least one of the following to narrow the scope before searching.',
+                    aria_label:
+                        'Suggested results available below. Tab out of this field and use arrow keys to move to item lists.',
+                    exactMatch: {
+                        title: 'Exact match',
+                    },
+                    titleMatch: {
+                        title: 'Titles containing',
+                        chipTitle: 'Title',
+                    },
+                    keywordMatch: {
+                        title: 'Keyword matches',
+                        chipTitle: 'Keyword',
+                    },
+                    forCodeMatch: {
+                        title: 'Subjects & Field of research',
+                        chipTitle: 'Subject',
+                    },
+                },
+                selectedKeywords: {
+                    title: 'Searching for journals containing:',
+                    combiner: ' + ',
+                },
+                forCodeSearchKeywordsList: {
+                    help: {
+                        KeywordSearchFORSubject: {
+                            tooltip: 'Click for more information',
+                            title: 'Subjects & Fields of research',
+                            text: (
+                                <React.Fragment>
+                                    <p>Search journals by their assigned:</p>
+                                    <ul>
+                                        <li>field of research code from the ERA process (ERA);</li>
+                                        <li>
+                                            subject areas from the All Science Journal Classification (CiteScore); or
+                                        </li>
+                                        <li>
+                                            subjects from the Web of Science. For example: Science Citation Index
+                                            Expanded (WOSSCIE) or Web of Science: Emerging Sources Citation Index
+                                            (WOSESCI); Arts & Humanities Citation Index (WOSAHCI).
+                                        </li>
+                                    </ul>
+                                </React.Fragment>
+                            ),
+                            buttonLabel: 'Close',
+                        },
+                    },
+                },
+            },
+            journalSearchInput: {
+                titlePrefix: 'Step 1.',
+                title: 'Enter a journal title, keyword, subject or field of research code.',
+            },
+            journalSearchInterface: {
+                title: 'Journal search',
+                intro: (
+                    <React.Fragment>
+                        <p>
+                            Search UQ's curated strategic publishing data as part of your critical tasks of publishing
+                            and promotion:
+                        </p>
+                        <ul>
+                            <li>Search journal titles, keywords and subject areas</li>
+                            <li>Identify journals with open access or pre-paid charges</li>
+                            <li>Understand, refine and rank results by indexing and a range of metrics</li>
+                            <li>Create a list of favourite journals</li>
+                            <li>Investigate journal scope, peer review processes and publisher details.</li>
+                        </ul>
+                    </React.Fragment>
+                ),
+                instructions: loremIpsum,
+                buttons: {
+                    myFavouriteJournals: {
+                        title: 'My favourite journals',
+                        aria: 'My favourite journals',
+                    },
+                    browseAllJournals: {
+                        title: 'Browse all journals',
+                        aria: 'Browse all journals',
+                    },
+                    searchJournals: {
+                        title: 'Step 3. Search',
+                        aria: 'Search',
+                    },
+                    compareJournals: {
+                        title: 'COMPARE SELECTED',
+                        aria: 'Compare Selected',
+                    },
+                    addToFavourites: {
+                        title: 'ADD TO FAVOURITES',
+                        aria: 'Add to favourites',
+                    },
+                },
+                confirmations: {
+                    addToFavourites: {
+                        confirmationMessage: 'COUNT item(s) have been added.',
+                    },
+                },
+            },
+            input: {
+                placeholder: 'Type at least 3 characters to start journal search',
+                aria_label:
+                    'This search application produces tabular results that may be problematic with a screen reader. Please contact your librarian for assistance if needed.',
+            },
+            journalSearchResult: {
+                loadingMessage: 'Loading journals list',
+                noResultsFound: {
+                    title: 'No journals found',
+                    text: <div>We were unable to find any results.</div>,
+                },
+            },
+            export: {
+                label: 'Export page results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
+            sorting: {
+                pageSize: 'Journals per page',
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'title', label: 'Title' },
+                    { value: 'score', label: 'Search relevance' },
+                    { value: 'highest_quartile', label: 'Highest quartile' },
+                    { value: 'cite_score', label: 'CiteScore' },
+                    { value: 'impact_factor', label: 'Impact factor' },
+                    { value: 'sjr', label: 'SJR' },
+                    { value: 'snip', label: 'SNIP' },
+                ],
+            },
+            sortingDefaults: {
+                pageSize: 10,
+                sortBy: 'highest_quartile',
+                sortDirection: 'Asc',
+            },
+            journalFacetsFilter: {
+                title: 'Refine results',
+                resetButtonText: 'Clear all filters',
+                favoriteFilter: {
+                    displayTitle: 'Favourite Journals',
+                    activeFilter: 'Show journals favourited',
+                },
+                help: {
+                    title: 'Refine results',
+                    text: (
+                        <React.Fragment>
+                            <h3>Listed in</h3>
+                            <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
+                            <h3>Indexed in</h3>
+                            <p>Indicates database providers which index the journal.</p>
+                            <h3>Open access: accepted version</h3>
+                            <p>
+                                Sort by length of time before an author accepted or self-archived version of an article
+                                is open and freely available via UQ eSpace.
+                            </p>
+                            <h3>Journal impact factor highest quartile</h3>
+                            <p>Sort by JIF Quartile, where Q1 is best.</p>
+                            <h3>CiteScore highest quartile</h3>
+                            <p>Sort by CiteScore Quartile, where Q1 is best.</p>
+                            <h3>Highest quartile</h3>
+                            <p>Sort by the highest quartile a journal reaches across systems and subject categories.</p>
+                            <h3>Open access: published version</h3>
+                            <p>
+                                Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
+                                publisher to make a publication immediately available and openly accessible.
+                            </p>
+                        </React.Fragment>
+                    ),
+                    testId: 'journal-search-facets',
+                    buttonLabel: 'CLOSE',
+                },
+                renameFacetsList: {},
             },
         },
     },

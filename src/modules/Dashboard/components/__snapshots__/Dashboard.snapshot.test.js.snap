@@ -5885,6 +5885,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -5894,6 +5895,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -6429,6 +6437,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -6438,6 +6447,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -7476,6 +7492,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     },
                                                     "MuiFormLabel": Object {
                                                       "root": Object {
+                                                        "lineHeight": "normal",
                                                         "overflow": "hidden",
                                                         "textOverflow": "ellipsis",
                                                         "whiteSpace": "nowrap",
@@ -7485,6 +7502,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     "MuiIconButton": Object {
                                                       "colorInherit": Object {
                                                         "color": "none",
+                                                      },
+                                                    },
+                                                    "MuiInput": Object {
+                                                      "formControl": Object {
+                                                        "label + &": Object {
+                                                          "marginTop": 17,
+                                                        },
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
@@ -8374,6 +8398,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           },
                                                                                           "MuiFormLabel": Object {
                                                                                             "root": Object {
+                                                                                              "lineHeight": "normal",
                                                                                               "overflow": "hidden",
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
@@ -8383,6 +8408,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           "MuiIconButton": Object {
                                                                                             "colorInherit": Object {
                                                                                               "color": "none",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiInput": Object {
+                                                                                            "formControl": Object {
+                                                                                              "label + &": Object {
+                                                                                                "marginTop": 17,
+                                                                                              },
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -9307,6 +9339,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           },
                                                                                           "MuiFormLabel": Object {
                                                                                             "root": Object {
+                                                                                              "lineHeight": "normal",
                                                                                               "overflow": "hidden",
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
@@ -9316,6 +9349,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           "MuiIconButton": Object {
                                                                                             "colorInherit": Object {
                                                                                               "color": "none",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiInput": Object {
+                                                                                            "formControl": Object {
+                                                                                              "label + &": Object {
+                                                                                                "marginTop": 17,
+                                                                                              },
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {

@@ -1,5 +1,5 @@
 context('As an admin,', () => {
-    it('I can add a missing record', () => {
+    it('I can add a video', () => {
         cy.visit('/admin/add?user=uqstaff');
 
         // Choose a collection

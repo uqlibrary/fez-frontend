@@ -41,6 +41,7 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
         scrollableContainer.onscroll = () => {
             const scrollTopButton = document.getElementById('scrolltopbtn');
             if (!scrollTopButton) {
+                console.log('not found scroll');
                 return;
             }
             if (scrollableContainer.scrollTop > showAfter) {

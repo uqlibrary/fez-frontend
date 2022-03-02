@@ -42,4 +42,19 @@ describe('Snapshot tests for StandardRighthandCard component', () => {
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
+
+    it('renders with title, help button, testid and some content', () => {
+        const wrapper = setup({
+            title: 'Title',
+            testId: 'testid',
+            help: {
+                title: 'Help text',
+                text: 'Some help text',
+                buttonLabel: 'OK',
+            },
+            children: 'Some content',
+        });
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
 });
