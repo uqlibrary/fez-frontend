@@ -21,9 +21,8 @@ const handlers = {
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {
         const uniqueValues = new Set();
-        const collectionList = [...state.collectionList, action.payload];
-        // Latest addition is always the last element of the list - reverse so it remains the primary for duplicates.
-        collectionList.reverse();
+        const collectionList = [action.payload, ...state.collectionList];
+        // collectionList.reverse();
         const filteredList = collectionList.filter(obj => {
             const isPresent = uniqueValues.has(obj.parent);
             uniqueValues.add(obj.parent);
