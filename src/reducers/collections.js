@@ -20,55 +20,35 @@ const handlers = {
     }),
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {
-        // console.log('STATE IS', state);
-
         const uniqueValues = new Set();
         const collectionList = [...state.collectionList, action.payload];
+        // Latest addition is always the last element of the list - reverse so it remains the primary for duplicates.
+        collectionList.reverse();
         const filteredList = collectionList.filter(obj => {
             const isPresent = uniqueValues.has(obj.parent);
             uniqueValues.add(obj.parent);
             return !isPresent;
         });
         return {
+            ...initialState,
             collectionList: [...filteredList],
             loadingCollections: false,
         };
     },
-
-    // [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => ({
-    //     collectionList: [...state.collectionList, action.payload],
-    // }),
-
-    // [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => (
-    //     console.log(state);
-    //     return ({
-    //     ...initialState,
-    //     collectionList: {
-    //         ...state.collectionList,
-
-    //     }
-    //     loadingCollections: false,
-    //     // collectionList: action.payload.data,
-    //     totalRecords: action.payload.total,
-    //     startRecord: action.payload.from,
-    //     endRecord: action.payload.to,
-    //     currentPage: action.payload.current_page,
-    //     perPage: action.payload.per_page,
-    // })),
 
     [actions.VIEW_COLLECTIONS_LOAD_FAILED]: (state, action) => ({
         ...initialState,
         loadingCollections: false,
         loadingCollectionsError: action.payload,
     }),
-    [actions.VIEW_COLLECTIONS_CLEARED]: () => ({
+    [actions.VIEW_COLLECTIONS_CLEARED]: state => ({
         ...initialState,
+        collectionList: state.collectionList,
         loadingCollections: false,
     }),
 };
 
 export default function viewCollectionsReducer(state = { ...initialState }, action) {
-    console.log('STATE:', state, 'ACTION', action);
     const handler = handlers[action.type];
     if (!handler) {
         return state;

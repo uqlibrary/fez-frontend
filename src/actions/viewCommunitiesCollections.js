@@ -54,7 +54,6 @@ export function loadCCCollectionsList(params = {}) {
     };
 }
 export function clearCCCollectionsList() {
-    console.log('CLEAR COLLECTIONS LIST');
     return dispatch => {
         dispatch({ type: actions.VIEW_COLLECTIONS_CLEARED });
     };
