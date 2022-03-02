@@ -4,7 +4,7 @@ import viewCommunitiesReducer from './communities';
 
 const initialState = {
     communityList: [],
-    loadingcommunities: false,
+    loadingCommunities: false,
     loadingCommunitiesError: null,
     totalRecords: 0,
     startRecord: 0,
@@ -20,7 +20,7 @@ describe('viewCommunities reducer', () => {
         };
         const expected = {
             ...previousState,
-            loadingcommunities: true,
+            loadingCommunities: true,
         };
         const test = viewCommunitiesReducer(previousState, { type: VIEW_COMMUNITIES_LOADING, payload: 'test1' });
         expect(test).toEqual(expected);
@@ -29,12 +29,12 @@ describe('viewCommunities reducer', () => {
     it('sets community loaded state', () => {
         const previousState = {
             ...initialState,
-            loadingcommunities: true,
+            loadingCommunities: true,
         };
         const expected = {
             ...previousState,
             communityList: [{ item: 'test' }],
-            loadingcommunities: false,
+            loadingCommunities: false,
             startRecord: 1,
             endRecord: 10,
             totalRecords: 10,
@@ -57,11 +57,11 @@ describe('viewCommunities reducer', () => {
     it('sets community failed state', () => {
         const previousState = {
             ...initialState,
-            loadingcommunities: true,
+            loadingCommunities: true,
         };
         const expected = {
             ...previousState,
-            loadingcommunities: false,
+            loadingCommunities: false,
             loadingCommunitiesError: { error: true },
         };
         const test = viewCommunitiesReducer(previousState, {

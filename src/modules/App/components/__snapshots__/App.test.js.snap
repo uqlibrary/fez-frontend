@@ -69,6 +69,12 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/communities",
         },
         Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -455,15 +461,21 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/communities"
           />
           <Route
-            component={[Function]}
             exact={true}
             key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_7"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -710,6 +722,39 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -769,6 +814,12 @@ exports[`Application component should determine if it has incomplete works from 
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -1349,14 +1400,56 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_18"
+            pageTitle="Journal search"
+            path="/journals/search/"
+          />
+          <Route
+            key="route_19"
+            pageTitle="Strategic publishing results"
+            path="/journals/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing compare"
+            path="/journals/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing favourites"
+            path="/journals/favourites/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_19"
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -1375,14 +1468,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -1402,7 +1495,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_22"
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
@@ -1418,13 +1511,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_23"
+            key="route_27"
             pageTitle="List of Communities"
             path="/communities"
           />
           <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
             component={[Function]}
-            key="route_24"
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1667,6 +1766,39 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -1726,6 +1858,12 @@ exports[`Application component should determine if it has incomplete works from 
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -2306,14 +2444,56 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_18"
+            pageTitle="Journal search"
+            path="/journals/search/"
+          />
+          <Route
+            key="route_19"
+            pageTitle="Strategic publishing results"
+            path="/journals/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing compare"
+            path="/journals/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing favourites"
+            path="/journals/favourites/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_19"
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -2332,14 +2512,14 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -2359,7 +2539,7 @@ exports[`Application component should determine if it has incomplete works from 
                 },
               }
             }
-            key="route_22"
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
@@ -2375,13 +2555,19 @@ exports[`Application component should determine if it has incomplete works from 
               }
             }
             exact={true}
-            key="route_23"
+            key="route_27"
             pageTitle="List of Communities"
             path="/communities"
           />
           <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
             component={[Function]}
-            key="route_24"
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2460,6 +2646,12 @@ exports[`Application component should redirect to login page with correct return
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -2848,15 +3040,21 @@ exports[`Application component should redirect to login page with correct return
             path="/communities"
           />
           <Route
-            component={[Function]}
             exact={true}
             key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_7"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3099,6 +3297,39 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -3158,6 +3389,12 @@ exports[`Application component should render alert if user is not fez author 1`]
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -3755,14 +3992,56 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_18"
+            pageTitle="Journal search"
+            path="/journals/search/"
+          />
+          <Route
+            key="route_19"
+            pageTitle="Strategic publishing results"
+            path="/journals/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing compare"
+            path="/journals/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing favourites"
+            path="/journals/favourites/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_19"
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -3781,14 +4060,14 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -3808,7 +4087,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                 },
               }
             }
-            key="route_22"
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
@@ -3824,13 +4103,19 @@ exports[`Application component should render alert if user is not fez author 1`]
               }
             }
             exact={true}
-            key="route_23"
+            key="route_27"
             pageTitle="List of Communities"
             path="/communities"
           />
           <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
             component={[Function]}
-            key="route_24"
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4073,6 +4358,39 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -4132,6 +4450,12 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -4355,6 +4679,10 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         Object {
           "linkTo": "/editorial-appointments",
           "primaryText": "My editorial appointments",
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Strategic publishing tool",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
@@ -4754,14 +5082,56 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_18"
+            pageTitle="Journal search"
+            path="/journals/search/"
+          />
+          <Route
+            key="route_19"
+            pageTitle="Strategic publishing results"
+            path="/journals/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing compare"
+            path="/journals/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing favourites"
+            path="/journals/favourites/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_19"
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -4780,14 +5150,14 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -4807,7 +5177,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                 },
               }
             }
-            key="route_22"
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
@@ -4823,13 +5193,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
               }
             }
             exact={true}
-            key="route_23"
+            key="route_27"
             pageTitle="List of Communities"
             path="/communities"
           />
           <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
             component={[Function]}
-            key="route_24"
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5072,6 +5448,39 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -5131,6 +5540,12 @@ exports[`Application component should render app for account with fez author wit
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -5354,6 +5769,10 @@ exports[`Application component should render app for account with fez author wit
         Object {
           "linkTo": "/editorial-appointments",
           "primaryText": "My editorial appointments",
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Strategic publishing tool",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -5738,14 +6157,56 @@ exports[`Application component should render app for account with fez author wit
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
             exact={true}
             key="route_18"
+            pageTitle="Journal search"
+            path="/journals/search/"
+          />
+          <Route
+            key="route_19"
+            pageTitle="Strategic publishing results"
+            path="/journals/results/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_20"
+            pageTitle="Strategic publishing compare"
+            path="/journals/compare/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            key="route_21"
+            pageTitle="Strategic publishing favourites"
+            path="/journals/favourites/"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_22"
             pageTitle="eSpace"
             path="/"
           />
           <Route
-            key="route_19"
+            key="route_23"
             pageTitle="Contact UQ eSpace"
             path="/contact"
             render={[Function]}
@@ -5764,14 +6225,14 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_20"
+            key="route_24"
             path="/view/:pid(UQ:[a-z0-9]+|not-found)"
             regExPath="/view/(UQ:[a-z0-9]+|not-found)"
           />
           <Route
             component={[Function]}
             exact={true}
-            key="route_21"
+            key="route_25"
             pageTitle="eSpace search"
             path="/records/search"
           />
@@ -5791,7 +6252,7 @@ exports[`Application component should render app for account with fez author wit
                 },
               }
             }
-            key="route_22"
+            key="route_26"
             pageTitle="Journal details"
             path="/journal/view/:id([0-9]+)"
           />
@@ -5807,13 +6268,19 @@ exports[`Application component should render app for account with fez author wit
               }
             }
             exact={true}
-            key="route_23"
+            key="route_27"
             pageTitle="List of Communities"
             path="/communities"
           />
           <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
             component={[Function]}
-            key="route_24"
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6056,6 +6523,39 @@ exports[`Application component should render application with routing for the us
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "exact": true,
+          "pageTitle": "Journal search",
+          "path": "/journals/search/",
+        },
+        Object {
+          "component": undefined,
+          "pageTitle": "Strategic publishing results",
+          "path": "/journals/results/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing compare",
+          "path": "/journals/compare/",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.memo),
+            "compare": null,
+            "type": [Function],
+          },
+          "pageTitle": "Strategic publishing favourites",
+          "path": "/journals/favourites/",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -6115,6 +6615,12 @@ exports[`Application component should render application with routing for the us
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -6446,6 +6952,12 @@ exports[`Application component should render for anon user 1`] = `
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -6797,15 +7309,21 @@ exports[`Application component should render for anon user 1`] = `
             path="/communities"
           />
           <Route
-            component={[Function]}
             exact={true}
             key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_7"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6902,6 +7420,12 @@ exports[`Application component should render thesis submission for HDR without m
           "exact": true,
           "pageTitle": "List of Communities",
           "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -7181,13 +7705,19 @@ exports[`Application component should render thesis submission for HDR without m
             path="/communities"
           />
           <Route
+            exact={true}
             key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            key="route_7"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_7"
+            key="route_8"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -7203,7 +7733,7 @@ exports[`Application component should render thesis submission for HDR without m
                 },
               }
             }
-            key="route_8"
+            key="route_9"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -7465,6 +7995,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -7474,6 +8005,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -8214,6 +8752,39 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
+                            },
+                            "exact": true,
+                            "pageTitle": "Journal search",
+                            "path": "/journals/search/",
+                          },
+                          Object {
+                            "component": undefined,
+                            "pageTitle": "Strategic publishing results",
+                            "path": "/journals/results/",
+                          },
+                          Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
+                            },
+                            "pageTitle": "Strategic publishing compare",
+                            "path": "/journals/compare/",
+                          },
+                          Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.memo),
+                              "compare": null,
+                              "type": [Function],
+                            },
+                            "pageTitle": "Strategic publishing favourites",
+                            "path": "/journals/favourites/",
+                          },
+                          Object {
                             "component": [Function],
                             "exact": true,
                             "pageTitle": "eSpace",
@@ -8273,6 +8844,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "exact": true,
                             "pageTitle": "List of Communities",
                             "path": "/communities",
+                          },
+                          Object {
+                            "component": undefined,
+                            "exact": true,
+                            "pageTitle": "List of Collections",
+                            "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
                           },
                           Object {
                             "component": [Function],
@@ -8554,6 +9131,39 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "path": "/journal/view/:id([0-9]+)",
                             },
                             Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
+                              },
+                              "exact": true,
+                              "pageTitle": "Journal search",
+                              "path": "/journals/search/",
+                            },
+                            Object {
+                              "component": undefined,
+                              "pageTitle": "Strategic publishing results",
+                              "path": "/journals/results/",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
+                              },
+                              "pageTitle": "Strategic publishing compare",
+                              "path": "/journals/compare/",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.memo),
+                                "compare": null,
+                                "type": [Function],
+                              },
+                              "pageTitle": "Strategic publishing favourites",
+                              "path": "/journals/favourites/",
+                            },
+                            Object {
                               "component": [Function],
                               "exact": true,
                               "pageTitle": "eSpace",
@@ -8613,6 +9223,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "exact": true,
                               "pageTitle": "List of Communities",
                               "path": "/communities",
+                            },
+                            Object {
+                              "component": undefined,
+                              "exact": true,
+                              "pageTitle": "List of Collections",
+                              "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
                             },
                             Object {
                               "component": [Function],
@@ -8895,6 +9511,39 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "path": "/journal/view/:id([0-9]+)",
                               },
                               Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
+                                },
+                                "exact": true,
+                                "pageTitle": "Journal search",
+                                "path": "/journals/search/",
+                              },
+                              Object {
+                                "component": undefined,
+                                "pageTitle": "Strategic publishing results",
+                                "path": "/journals/results/",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
+                                },
+                                "pageTitle": "Strategic publishing compare",
+                                "path": "/journals/compare/",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.memo),
+                                  "compare": null,
+                                  "type": [Function],
+                                },
+                                "pageTitle": "Strategic publishing favourites",
+                                "path": "/journals/favourites/",
+                              },
+                              Object {
                                 "component": [Function],
                                 "exact": true,
                                 "pageTitle": "eSpace",
@@ -8954,6 +9603,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "exact": true,
                                 "pageTitle": "List of Communities",
                                 "path": "/communities",
+                              },
+                              Object {
+                                "component": undefined,
+                                "exact": true,
+                                "pageTitle": "List of Collections",
+                                "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
                               },
                               Object {
                                 "component": [Function],
@@ -10355,6 +11010,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "addAuthor": [Function],
                                                           "addFavouriteSearch": [Function],
                                                           "addMyEditorialAppointments": [Function],
+                                                          "addToFavourites": [Function],
                                                           "addUser": [Function],
                                                           "adminCreate": [Function],
                                                           "adminReset": [Function],
@@ -10373,6 +11029,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "clearClaimPublication": [Function],
                                                           "clearDeleteRecord": [Function],
                                                           "clearFixRecord": [Function],
+                                                          "clearJournalSearchKeywords": [Function],
                                                           "clearMyEditorialAppointmentsAddStatus": [Function],
                                                           "clearNewRecord": [Function],
                                                           "clearRecordToView": [Function],
@@ -10399,6 +11056,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
                                                           "exportEspacePublications": [Function],
+                                                          "exportJournals": [Function],
                                                           "exportPublications": [Function],
                                                           "fixRecord": [Function],
                                                           "getBatchImportDirectories": [Function],
@@ -10417,6 +11075,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadAuthorList": [Function],
                                                           "loadAuthorPublicationsStats": [Function],
                                                           "loadBulkUpdatesList": [Function],
+                                                          "loadCCCollectionsList": [Function],
                                                           "loadCollectionsList": [Function],
                                                           "loadCommunitiesList": [Function],
                                                           "loadCurrentAccount": [Function],
@@ -10425,6 +11084,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadFullRecordToClaim": [Function],
                                                           "loadJournal": [Function],
                                                           "loadJournalLookup": [Function],
+                                                          "loadJournalSearchKeywords": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
                                                           "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
@@ -10439,15 +11099,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadVocabulariesList": [Function],
                                                           "logout": [Function],
                                                           "mergeAvailableAuthoringData": [Function],
+                                                          "removeFromFavourites": [Function],
                                                           "removeShadowSuffixFromTableNames": [Function],
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
+                                                          "resetExportJournalsStatus": [Function],
                                                           "resetExportPublicationsStatus": [Function],
                                                           "resetSavingAuthorState": [Function],
+                                                          "retrieveFavouriteJournals": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
                                                           "searchEspacePublications": [Function],
+                                                          "searchJournals": [Function],
                                                           "searchLatestPublications": [Function],
                                                           "searchPossiblyYourPublications": [Function],
                                                           "searchPublications": [Function],
@@ -10627,6 +11291,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
+                                                                    "lineHeight": "normal",
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
@@ -10636,6 +11301,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 "MuiIconButton": Object {
                                                                   "colorInherit": Object {
                                                                     "color": "none",
+                                                                  },
+                                                                },
+                                                                "MuiInput": Object {
+                                                                  "formControl": Object {
+                                                                    "label + &": Object {
+                                                                      "marginTop": 17,
+                                                                    },
                                                                   },
                                                                 },
                                                                 "MuiMenuItem": Object {
@@ -11620,6 +12292,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               "MuiFormLabel": Object {
                                 "root": Object {
+                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -11629,6 +12302,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "MuiIconButton": Object {
                                 "colorInherit": Object {
                                   "color": "none",
+                                },
+                              },
+                              "MuiInput": Object {
+                                "formControl": Object {
+                                  "label + &": Object {
+                                    "marginTop": 17,
+                                  },
                                 },
                               },
                               "MuiMenuItem": Object {
@@ -12947,6 +13627,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         },
                                         "MuiFormLabel": Object {
                                           "root": Object {
+                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -12956,6 +13637,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         "MuiIconButton": Object {
                                           "colorInherit": Object {
                                             "color": "none",
+                                          },
+                                        },
+                                        "MuiInput": Object {
+                                          "formControl": Object {
+                                            "label + &": Object {
+                                              "marginTop": 17,
+                                            },
                                           },
                                         },
                                         "MuiMenuItem": Object {
@@ -13312,6 +14000,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               },
                                               "MuiFormLabel": Object {
                                                 "root": Object {
+                                                  "lineHeight": "normal",
                                                   "overflow": "hidden",
                                                   "textOverflow": "ellipsis",
                                                   "whiteSpace": "nowrap",
@@ -13321,6 +14010,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               "MuiIconButton": Object {
                                                 "colorInherit": Object {
                                                   "color": "none",
+                                                },
+                                              },
+                                              "MuiInput": Object {
+                                                "formControl": Object {
+                                                  "label + &": Object {
+                                                    "marginTop": 17,
+                                                  },
                                                 },
                                               },
                                               "MuiMenuItem": Object {
@@ -14260,6 +14956,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "addAuthor": [Function],
                                                                           "addFavouriteSearch": [Function],
                                                                           "addMyEditorialAppointments": [Function],
+                                                                          "addToFavourites": [Function],
                                                                           "addUser": [Function],
                                                                           "adminCreate": [Function],
                                                                           "adminReset": [Function],
@@ -14278,6 +14975,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "clearClaimPublication": [Function],
                                                                           "clearDeleteRecord": [Function],
                                                                           "clearFixRecord": [Function],
+                                                                          "clearJournalSearchKeywords": [Function],
                                                                           "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                           "clearNewRecord": [Function],
                                                                           "clearRecordToView": [Function],
@@ -14304,6 +15002,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "dismissAppAlert": [Function],
                                                                           "exportAuthorPublications": [Function],
                                                                           "exportEspacePublications": [Function],
+                                                                          "exportJournals": [Function],
                                                                           "exportPublications": [Function],
                                                                           "fixRecord": [Function],
                                                                           "getBatchImportDirectories": [Function],
@@ -14322,6 +15021,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadAuthorList": [Function],
                                                                           "loadAuthorPublicationsStats": [Function],
                                                                           "loadBulkUpdatesList": [Function],
+                                                                          "loadCCCollectionsList": [Function],
                                                                           "loadCollectionsList": [Function],
                                                                           "loadCommunitiesList": [Function],
                                                                           "loadCurrentAccount": [Function],
@@ -14330,6 +15030,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadFullRecordToClaim": [Function],
                                                                           "loadJournal": [Function],
                                                                           "loadJournalLookup": [Function],
+                                                                          "loadJournalSearchKeywords": [Function],
                                                                           "loadMyEditorialAppointmentsList": [Function],
                                                                           "loadNewsFeed": [Function],
                                                                           "loadOrcidSyncStatus": [Function],
@@ -14344,15 +15045,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadVocabulariesList": [Function],
                                                                           "logout": [Function],
                                                                           "mergeAvailableAuthoringData": [Function],
+                                                                          "removeFromFavourites": [Function],
                                                                           "removeShadowSuffixFromTableNames": [Function],
                                                                           "requestMJLIngest": [Function],
                                                                           "requestOrcidSync": [Function],
                                                                           "resetDoi": [Function],
+                                                                          "resetExportJournalsStatus": [Function],
                                                                           "resetExportPublicationsStatus": [Function],
                                                                           "resetSavingAuthorState": [Function],
+                                                                          "retrieveFavouriteJournals": [Function],
                                                                           "searchAuthorPublications": [Function],
                                                                           "searchAuthors": [Function],
                                                                           "searchEspacePublications": [Function],
+                                                                          "searchJournals": [Function],
                                                                           "searchLatestPublications": [Function],
                                                                           "searchPossiblyYourPublications": [Function],
                                                                           "searchPublications": [Function],
@@ -14433,6 +15138,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "addAuthor": [Function],
                                                                             "addFavouriteSearch": [Function],
                                                                             "addMyEditorialAppointments": [Function],
+                                                                            "addToFavourites": [Function],
                                                                             "addUser": [Function],
                                                                             "adminCreate": [Function],
                                                                             "adminReset": [Function],
@@ -14451,6 +15157,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "clearClaimPublication": [Function],
                                                                             "clearDeleteRecord": [Function],
                                                                             "clearFixRecord": [Function],
+                                                                            "clearJournalSearchKeywords": [Function],
                                                                             "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                             "clearNewRecord": [Function],
                                                                             "clearRecordToView": [Function],
@@ -14477,6 +15184,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "dismissAppAlert": [Function],
                                                                             "exportAuthorPublications": [Function],
                                                                             "exportEspacePublications": [Function],
+                                                                            "exportJournals": [Function],
                                                                             "exportPublications": [Function],
                                                                             "fixRecord": [Function],
                                                                             "getBatchImportDirectories": [Function],
@@ -14495,6 +15203,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadAuthorList": [Function],
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadBulkUpdatesList": [Function],
+                                                                            "loadCCCollectionsList": [Function],
                                                                             "loadCollectionsList": [Function],
                                                                             "loadCommunitiesList": [Function],
                                                                             "loadCurrentAccount": [Function],
@@ -14503,6 +15212,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadJournal": [Function],
                                                                             "loadJournalLookup": [Function],
+                                                                            "loadJournalSearchKeywords": [Function],
                                                                             "loadMyEditorialAppointmentsList": [Function],
                                                                             "loadNewsFeed": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
@@ -14517,15 +15227,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadVocabulariesList": [Function],
                                                                             "logout": [Function],
                                                                             "mergeAvailableAuthoringData": [Function],
+                                                                            "removeFromFavourites": [Function],
                                                                             "removeShadowSuffixFromTableNames": [Function],
                                                                             "requestMJLIngest": [Function],
                                                                             "requestOrcidSync": [Function],
                                                                             "resetDoi": [Function],
+                                                                            "resetExportJournalsStatus": [Function],
                                                                             "resetExportPublicationsStatus": [Function],
                                                                             "resetSavingAuthorState": [Function],
+                                                                            "retrieveFavouriteJournals": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
                                                                             "searchEspacePublications": [Function],
+                                                                            "searchJournals": [Function],
                                                                             "searchLatestPublications": [Function],
                                                                             "searchPossiblyYourPublications": [Function],
                                                                             "searchPublications": [Function],
@@ -15380,6 +16094,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "addAuthor": [Function],
                                                                                     "addFavouriteSearch": [Function],
                                                                                     "addMyEditorialAppointments": [Function],
+                                                                                    "addToFavourites": [Function],
                                                                                     "addUser": [Function],
                                                                                     "adminCreate": [Function],
                                                                                     "adminReset": [Function],
@@ -15398,6 +16113,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "clearClaimPublication": [Function],
                                                                                     "clearDeleteRecord": [Function],
                                                                                     "clearFixRecord": [Function],
+                                                                                    "clearJournalSearchKeywords": [Function],
                                                                                     "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                                     "clearNewRecord": [Function],
                                                                                     "clearRecordToView": [Function],
@@ -15424,6 +16140,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "dismissAppAlert": [Function],
                                                                                     "exportAuthorPublications": [Function],
                                                                                     "exportEspacePublications": [Function],
+                                                                                    "exportJournals": [Function],
                                                                                     "exportPublications": [Function],
                                                                                     "fixRecord": [Function],
                                                                                     "getBatchImportDirectories": [Function],
@@ -15442,6 +16159,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadAuthorList": [Function],
                                                                                     "loadAuthorPublicationsStats": [Function],
                                                                                     "loadBulkUpdatesList": [Function],
+                                                                                    "loadCCCollectionsList": [Function],
                                                                                     "loadCollectionsList": [Function],
                                                                                     "loadCommunitiesList": [Function],
                                                                                     "loadCurrentAccount": [Function],
@@ -15450,6 +16168,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadFullRecordToClaim": [Function],
                                                                                     "loadJournal": [Function],
                                                                                     "loadJournalLookup": [Function],
+                                                                                    "loadJournalSearchKeywords": [Function],
                                                                                     "loadMyEditorialAppointmentsList": [Function],
                                                                                     "loadNewsFeed": [Function],
                                                                                     "loadOrcidSyncStatus": [Function],
@@ -15464,15 +16183,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadVocabulariesList": [Function],
                                                                                     "logout": [Function],
                                                                                     "mergeAvailableAuthoringData": [Function],
+                                                                                    "removeFromFavourites": [Function],
                                                                                     "removeShadowSuffixFromTableNames": [Function],
                                                                                     "requestMJLIngest": [Function],
                                                                                     "requestOrcidSync": [Function],
                                                                                     "resetDoi": [Function],
+                                                                                    "resetExportJournalsStatus": [Function],
                                                                                     "resetExportPublicationsStatus": [Function],
                                                                                     "resetSavingAuthorState": [Function],
+                                                                                    "retrieveFavouriteJournals": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
                                                                                     "searchEspacePublications": [Function],
+                                                                                    "searchJournals": [Function],
                                                                                     "searchLatestPublications": [Function],
                                                                                     "searchPossiblyYourPublications": [Function],
                                                                                     "searchPublications": [Function],
@@ -15507,6 +16230,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "addAuthor": [Function],
                                                                                       "addFavouriteSearch": [Function],
                                                                                       "addMyEditorialAppointments": [Function],
+                                                                                      "addToFavourites": [Function],
                                                                                       "addUser": [Function],
                                                                                       "adminCreate": [Function],
                                                                                       "adminReset": [Function],
@@ -15525,6 +16249,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "clearClaimPublication": [Function],
                                                                                       "clearDeleteRecord": [Function],
                                                                                       "clearFixRecord": [Function],
+                                                                                      "clearJournalSearchKeywords": [Function],
                                                                                       "clearMyEditorialAppointmentsAddStatus": [Function],
                                                                                       "clearNewRecord": [Function],
                                                                                       "clearRecordToView": [Function],
@@ -15551,6 +16276,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "dismissAppAlert": [Function],
                                                                                       "exportAuthorPublications": [Function],
                                                                                       "exportEspacePublications": [Function],
+                                                                                      "exportJournals": [Function],
                                                                                       "exportPublications": [Function],
                                                                                       "fixRecord": [Function],
                                                                                       "getBatchImportDirectories": [Function],
@@ -15569,6 +16295,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadAuthorList": [Function],
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadBulkUpdatesList": [Function],
+                                                                                      "loadCCCollectionsList": [Function],
                                                                                       "loadCollectionsList": [Function],
                                                                                       "loadCommunitiesList": [Function],
                                                                                       "loadCurrentAccount": [Function],
@@ -15577,6 +16304,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadJournal": [Function],
                                                                                       "loadJournalLookup": [Function],
+                                                                                      "loadJournalSearchKeywords": [Function],
                                                                                       "loadMyEditorialAppointmentsList": [Function],
                                                                                       "loadNewsFeed": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
@@ -15591,15 +16319,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadVocabulariesList": [Function],
                                                                                       "logout": [Function],
                                                                                       "mergeAvailableAuthoringData": [Function],
+                                                                                      "removeFromFavourites": [Function],
                                                                                       "removeShadowSuffixFromTableNames": [Function],
                                                                                       "requestMJLIngest": [Function],
                                                                                       "requestOrcidSync": [Function],
                                                                                       "resetDoi": [Function],
+                                                                                      "resetExportJournalsStatus": [Function],
                                                                                       "resetExportPublicationsStatus": [Function],
                                                                                       "resetSavingAuthorState": [Function],
+                                                                                      "retrieveFavouriteJournals": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
                                                                                       "searchEspacePublications": [Function],
+                                                                                      "searchJournals": [Function],
                                                                                       "searchLatestPublications": [Function],
                                                                                       "searchPossiblyYourPublications": [Function],
                                                                                       "searchPublications": [Function],
@@ -15691,6 +16423,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         },
                                                                                         "MuiFormLabel": Object {
                                                                                           "root": Object {
+                                                                                            "lineHeight": "normal",
                                                                                             "overflow": "hidden",
                                                                                             "textOverflow": "ellipsis",
                                                                                             "whiteSpace": "nowrap",
@@ -15700,6 +16433,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         "MuiIconButton": Object {
                                                                                           "colorInherit": Object {
                                                                                             "color": "none",
+                                                                                          },
+                                                                                        },
+                                                                                        "MuiInput": Object {
+                                                                                          "formControl": Object {
+                                                                                            "label + &": Object {
+                                                                                              "marginTop": 17,
+                                                                                            },
                                                                                           },
                                                                                         },
                                                                                         "MuiMenuItem": Object {
@@ -16095,6 +16835,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                                 "MuiFormLabel": Object {
                                   "root": Object {
+                                    "lineHeight": "normal",
                                     "overflow": "hidden",
                                     "textOverflow": "ellipsis",
                                     "whiteSpace": "nowrap",
@@ -16104,6 +16845,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "MuiIconButton": Object {
                                   "colorInherit": Object {
                                     "color": "none",
+                                  },
+                                },
+                                "MuiInput": Object {
+                                  "formControl": Object {
+                                    "label + &": Object {
+                                      "marginTop": 17,
+                                    },
                                   },
                                 },
                                 "MuiMenuItem": Object {
@@ -16822,6 +17570,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               "MuiFormLabel": Object {
                                 "root": Object {
+                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -16831,6 +17580,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "MuiIconButton": Object {
                                 "colorInherit": Object {
                                   "color": "none",
+                                },
+                              },
+                              "MuiInput": Object {
+                                "formControl": Object {
+                                  "label + &": Object {
+                                    "marginTop": 17,
+                                  },
                                 },
                               },
                               "MuiMenuItem": Object {
