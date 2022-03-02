@@ -15,51 +15,6 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -91,6 +46,47 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -261,51 +257,6 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -337,6 +288,47 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -832,51 +824,6 @@ exports[`Dashboard test Should only render barChart 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -908,6 +855,47 @@ exports[`Dashboard test Should only render barChart 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -1245,51 +1233,6 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -1321,6 +1264,47 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -1515,51 +1499,6 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -1591,6 +1530,47 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -1701,51 +1681,6 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -1777,6 +1712,47 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -1863,51 +1839,6 @@ exports[`Dashboard test does render latest and trending publications tabs correc
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -1939,6 +1870,47 @@ exports[`Dashboard test does render latest and trending publications tabs correc
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -2086,51 +2058,6 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -2162,6 +2089,47 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -2293,51 +2261,6 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -2369,6 +2292,47 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -2780,51 +2744,6 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -2856,6 +2775,47 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -2989,51 +2949,6 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -3065,6 +2980,47 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -3127,51 +3083,6 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -3203,6 +3114,47 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -3289,51 +3241,6 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -3365,6 +3272,47 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -3427,51 +3375,6 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -3503,6 +3406,47 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -3614,51 +3558,6 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -3690,6 +3589,47 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -4098,51 +4038,6 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -4174,6 +4069,47 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -4257,51 +4193,6 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -4333,6 +4224,47 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -4416,51 +4348,6 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -4492,6 +4379,47 @@ exports[`Dashboard test publicationStats should render stats with ancient date 1
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -5262,51 +5190,6 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -5338,6 +5221,47 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -5398,51 +5322,6 @@ exports[`Dashboard test renders dashboard header only 1`] = `
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -5474,6 +5353,47 @@ exports[`Dashboard test renders dashboard header only 1`] = `
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -5545,6 +5465,31 @@ exports[`Dashboard test renders dashboard header only 1`] = `
 </StandardPage>
 `;
 
+exports[`Dashboard test renders loading for authors 1`] = `
+<StandardPage>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    />
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(InlineLoader)
+        message="Loading your dashboard"
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={true}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;
+
 exports[`Dashboard test renders possibly your publications lure but not the add a record lure 1`] = `
 <StandardPage>
   <WithStyles(ForwardRef(Grid))
@@ -5560,51 +5505,6 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
           Object {
             "orcidSyncProps": Object {
               "author": Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
-              },
-              "orcidSyncStatus": null,
-              "requestOrcidSync": [Function],
-              "requestingOrcidSync": false,
-            },
-            "showSyncUI": undefined,
-          }
-        }
-      >
-        <WithStyles(DashboardAuthorProfile)
-          author={
-            Object {
-              "data": Object {
                 "aut_created_date": null,
                 "aut_description": "",
                 "aut_display_name": "Researcher, J",
@@ -5636,6 +5536,47 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
                 "aut_update_date": "2017-07-23",
                 "pol_id": 3,
               },
+              "orcidSyncStatus": null,
+              "requestOrcidSync": [Function],
+              "requestingOrcidSync": false,
+            },
+            "showSyncUI": undefined,
+          }
+        }
+      >
+        <WithStyles(DashboardAuthorProfile)
+          author={
+            Object {
+              "aut_created_date": null,
+              "aut_description": "",
+              "aut_display_name": "Researcher, J",
+              "aut_email": "",
+              "aut_external_id": "0000040357",
+              "aut_fname": "J",
+              "aut_google_scholar_id": "kUemDfMAAAAJ",
+              "aut_homepage_link": "",
+              "aut_id": 410,
+              "aut_is_orcid_sync_enabled": 1,
+              "aut_is_scopus_id_authenticated": 1,
+              "aut_lname": "Researcher",
+              "aut_mname": "",
+              "aut_mypub_url": "",
+              "aut_orcid_id": "0000-0001-1111-1111",
+              "aut_org_staff_id": "0001952",
+              "aut_org_student_id": null,
+              "aut_org_username": "uqresearcher",
+              "aut_people_australia_id": "",
+              "aut_position": "",
+              "aut_publons_id": null,
+              "aut_ref_num": "",
+              "aut_researcher_id": "A-1137-2007",
+              "aut_rid_last_updated": "2013-05-17",
+              "aut_rid_password": "",
+              "aut_scopus_id": "35478294000",
+              "aut_student_username": null,
+              "aut_title": "Professor",
+              "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             }
           }
           authorDetails={
@@ -5717,51 +5658,6 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
       Object {
         "orcidSyncProps": Object {
           "author": Object {
-            "data": Object {
-              "aut_created_date": null,
-              "aut_description": "",
-              "aut_display_name": "Researcher, J",
-              "aut_email": "",
-              "aut_external_id": "0000040357",
-              "aut_fname": "J",
-              "aut_google_scholar_id": "kUemDfMAAAAJ",
-              "aut_homepage_link": "",
-              "aut_id": 410,
-              "aut_is_orcid_sync_enabled": 1,
-              "aut_is_scopus_id_authenticated": 1,
-              "aut_lname": "Researcher",
-              "aut_mname": "",
-              "aut_mypub_url": "",
-              "aut_orcid_id": "0000-0001-1111-1111",
-              "aut_org_staff_id": "0001952",
-              "aut_org_student_id": null,
-              "aut_org_username": "uqresearcher",
-              "aut_people_australia_id": "",
-              "aut_position": "",
-              "aut_publons_id": null,
-              "aut_ref_num": "",
-              "aut_researcher_id": "A-1137-2007",
-              "aut_rid_last_updated": "2013-05-17",
-              "aut_rid_password": "",
-              "aut_scopus_id": "35478294000",
-              "aut_student_username": null,
-              "aut_title": "Professor",
-              "aut_update_date": "2017-07-23",
-              "pol_id": 3,
-            },
-          },
-          "orcidSyncStatus": null,
-          "requestOrcidSync": [Function],
-          "requestingOrcidSync": false,
-        },
-        "showSyncUI": true,
-      }
-    }
-  >
-    <WithStyles(DashboardAuthorProfile)
-      author={
-        Object {
-          "data": Object {
             "aut_created_date": null,
             "aut_description": "",
             "aut_display_name": "Researcher, J",
@@ -5793,6 +5689,47 @@ exports[`Dashboard test sets context for showing ORCID sync UI 1`] = `
             "aut_update_date": "2017-07-23",
             "pol_id": 3,
           },
+          "orcidSyncStatus": null,
+          "requestOrcidSync": [Function],
+          "requestingOrcidSync": false,
+        },
+        "showSyncUI": true,
+      }
+    }
+  >
+    <WithStyles(DashboardAuthorProfile)
+      author={
+        Object {
+          "aut_created_date": null,
+          "aut_description": "",
+          "aut_display_name": "Researcher, J",
+          "aut_email": "",
+          "aut_external_id": "0000040357",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": "",
+          "aut_id": 410,
+          "aut_is_orcid_sync_enabled": 1,
+          "aut_is_scopus_id_authenticated": 1,
+          "aut_lname": "Researcher",
+          "aut_mname": "",
+          "aut_mypub_url": "",
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0001952",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": "",
+          "aut_position": "",
+          "aut_publons_id": null,
+          "aut_ref_num": "",
+          "aut_researcher_id": "A-1137-2007",
+          "aut_rid_last_updated": "2013-05-17",
+          "aut_rid_password": "",
+          "aut_scopus_id": "35478294000",
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": "2017-07-23",
+          "pol_id": 3,
         }
       }
       authorDetails={
@@ -5948,6 +5885,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -5957,6 +5895,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -6332,38 +6277,36 @@ exports[`Dashboard test should get styles for full render 1`] = `
             }
             author={
               Object {
-                "data": Object {
-                  "aut_created_date": null,
-                  "aut_description": "",
-                  "aut_display_name": "Researcher, J",
-                  "aut_email": "",
-                  "aut_external_id": "0000040357",
-                  "aut_fname": "J",
-                  "aut_google_scholar_id": "kUemDfMAAAAJ",
-                  "aut_homepage_link": "",
-                  "aut_id": 410,
-                  "aut_is_orcid_sync_enabled": 1,
-                  "aut_is_scopus_id_authenticated": 1,
-                  "aut_lname": "Researcher",
-                  "aut_mname": "",
-                  "aut_mypub_url": "",
-                  "aut_orcid_id": "0000-0001-1111-1111",
-                  "aut_org_staff_id": "0001952",
-                  "aut_org_student_id": null,
-                  "aut_org_username": "uqresearcher",
-                  "aut_people_australia_id": "",
-                  "aut_position": "",
-                  "aut_publons_id": null,
-                  "aut_ref_num": "",
-                  "aut_researcher_id": "A-1137-2007",
-                  "aut_rid_last_updated": "2013-05-17",
-                  "aut_rid_password": "",
-                  "aut_scopus_id": "35478294000",
-                  "aut_student_username": null,
-                  "aut_title": "Professor",
-                  "aut_update_date": "2017-07-23",
-                  "pol_id": 3,
-                },
+                "aut_created_date": null,
+                "aut_description": "",
+                "aut_display_name": "Researcher, J",
+                "aut_email": "",
+                "aut_external_id": "0000040357",
+                "aut_fname": "J",
+                "aut_google_scholar_id": "kUemDfMAAAAJ",
+                "aut_homepage_link": "",
+                "aut_id": 410,
+                "aut_is_orcid_sync_enabled": 1,
+                "aut_is_scopus_id_authenticated": 1,
+                "aut_lname": "Researcher",
+                "aut_mname": "",
+                "aut_mypub_url": "",
+                "aut_orcid_id": "0000-0001-1111-1111",
+                "aut_org_staff_id": "0001952",
+                "aut_org_student_id": null,
+                "aut_org_username": "uqresearcher",
+                "aut_people_australia_id": "",
+                "aut_position": "",
+                "aut_publons_id": null,
+                "aut_ref_num": "",
+                "aut_researcher_id": "A-1137-2007",
+                "aut_rid_last_updated": "2013-05-17",
+                "aut_rid_password": "",
+                "aut_scopus_id": "35478294000",
+                "aut_student_username": null,
+                "aut_title": "Professor",
+                "aut_update_date": "2017-07-23",
+                "pol_id": 3,
               }
             }
             authorDetails={
@@ -6388,6 +6331,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 "publicationsListPagingData": Object {},
               }
             }
+            loadOrcidSyncDelay={5}
             loadingIncompleteRecordData={false}
             loadingOrcidSyncStatus={false}
             loadingPublicationsByYear={false}
@@ -6493,6 +6437,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         },
                         "MuiFormLabel": Object {
                           "root": Object {
+                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -6502,6 +6447,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                         "MuiIconButton": Object {
                           "colorInherit": Object {
                             "color": "none",
+                          },
+                        },
+                        "MuiInput": Object {
+                          "formControl": Object {
+                            "label + &": Object {
+                              "marginTop": 17,
+                            },
                           },
                         },
                         "MuiMenuItem": Object {
@@ -7387,7 +7339,54 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                           <WithStyles(DashboardAuthorProfile)
                                             author={
                                               Object {
-                                                "data": Object {
+                                                "aut_created_date": null,
+                                                "aut_description": "",
+                                                "aut_display_name": "Researcher, J",
+                                                "aut_email": "",
+                                                "aut_external_id": "0000040357",
+                                                "aut_fname": "J",
+                                                "aut_google_scholar_id": "kUemDfMAAAAJ",
+                                                "aut_homepage_link": "",
+                                                "aut_id": 410,
+                                                "aut_is_orcid_sync_enabled": 1,
+                                                "aut_is_scopus_id_authenticated": 1,
+                                                "aut_lname": "Researcher",
+                                                "aut_mname": "",
+                                                "aut_mypub_url": "",
+                                                "aut_orcid_id": "0000-0001-1111-1111",
+                                                "aut_org_staff_id": "0001952",
+                                                "aut_org_student_id": null,
+                                                "aut_org_username": "uqresearcher",
+                                                "aut_people_australia_id": "",
+                                                "aut_position": "",
+                                                "aut_publons_id": null,
+                                                "aut_ref_num": "",
+                                                "aut_researcher_id": "A-1137-2007",
+                                                "aut_rid_last_updated": "2013-05-17",
+                                                "aut_rid_password": "",
+                                                "aut_scopus_id": "35478294000",
+                                                "aut_student_username": null,
+                                                "aut_title": "Professor",
+                                                "aut_update_date": "2017-07-23",
+                                                "pol_id": 3,
+                                              }
+                                            }
+                                            authorDetails={
+                                              Object {
+                                                "espace": Object {
+                                                  "doc_count": 32,
+                                                  "first_year": "1998",
+                                                  "last_year": "2000",
+                                                },
+                                                "is_administrator": 0,
+                                                "is_super_administrator": 0,
+                                              }
+                                            }
+                                            history={Object {}}
+                                          >
+                                            <DashboardAuthorProfile
+                                              author={
+                                                Object {
                                                   "aut_created_date": null,
                                                   "aut_description": "",
                                                   "aut_display_name": "Researcher, J",
@@ -7418,57 +7417,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   "aut_title": "Professor",
                                                   "aut_update_date": "2017-07-23",
                                                   "pol_id": 3,
-                                                },
-                                              }
-                                            }
-                                            authorDetails={
-                                              Object {
-                                                "espace": Object {
-                                                  "doc_count": 32,
-                                                  "first_year": "1998",
-                                                  "last_year": "2000",
-                                                },
-                                                "is_administrator": 0,
-                                                "is_super_administrator": 0,
-                                              }
-                                            }
-                                            history={Object {}}
-                                          >
-                                            <DashboardAuthorProfile
-                                              author={
-                                                Object {
-                                                  "data": Object {
-                                                    "aut_created_date": null,
-                                                    "aut_description": "",
-                                                    "aut_display_name": "Researcher, J",
-                                                    "aut_email": "",
-                                                    "aut_external_id": "0000040357",
-                                                    "aut_fname": "J",
-                                                    "aut_google_scholar_id": "kUemDfMAAAAJ",
-                                                    "aut_homepage_link": "",
-                                                    "aut_id": 410,
-                                                    "aut_is_orcid_sync_enabled": 1,
-                                                    "aut_is_scopus_id_authenticated": 1,
-                                                    "aut_lname": "Researcher",
-                                                    "aut_mname": "",
-                                                    "aut_mypub_url": "",
-                                                    "aut_orcid_id": "0000-0001-1111-1111",
-                                                    "aut_org_staff_id": "0001952",
-                                                    "aut_org_student_id": null,
-                                                    "aut_org_username": "uqresearcher",
-                                                    "aut_people_australia_id": "",
-                                                    "aut_position": "",
-                                                    "aut_publons_id": null,
-                                                    "aut_ref_num": "",
-                                                    "aut_researcher_id": "A-1137-2007",
-                                                    "aut_rid_last_updated": "2013-05-17",
-                                                    "aut_rid_password": "",
-                                                    "aut_scopus_id": "35478294000",
-                                                    "aut_student_username": null,
-                                                    "aut_title": "Professor",
-                                                    "aut_update_date": "2017-07-23",
-                                                    "pol_id": 3,
-                                                  },
                                                 }
                                               }
                                               authorDetails={
@@ -7544,6 +7492,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     },
                                                     "MuiFormLabel": Object {
                                                       "root": Object {
+                                                        "lineHeight": "normal",
                                                         "overflow": "hidden",
                                                         "textOverflow": "ellipsis",
                                                         "whiteSpace": "nowrap",
@@ -7553,6 +7502,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     "MuiIconButton": Object {
                                                       "colorInherit": Object {
                                                         "color": "none",
+                                                      },
+                                                    },
+                                                    "MuiInput": Object {
+                                                      "formControl": Object {
+                                                        "label + &": Object {
+                                                          "marginTop": 17,
+                                                        },
                                                       },
                                                     },
                                                     "MuiMenuItem": Object {
@@ -8374,9 +8330,9 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                 className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                                               >
                                                                                 <WithStyles(DashboardAuthorDetails)
-                                                                                  familyName=""
-                                                                                  givenName=""
-                                                                                  title=""
+                                                                                  familyName="Researcher"
+                                                                                  givenName="J"
+                                                                                  title="Professor"
                                                                                 >
                                                                                   <DashboardAuthorDetails
                                                                                     classes={
@@ -8384,8 +8340,8 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                         "authorDetails": "DashboardAuthorDetails-authorDetails-5",
                                                                                       }
                                                                                     }
-                                                                                    familyName=""
-                                                                                    givenName=""
+                                                                                    familyName="Researcher"
+                                                                                    givenName="J"
                                                                                     theme={
                                                                                       Object {
                                                                                         "breakpoints": Object {
@@ -8442,6 +8398,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           },
                                                                                           "MuiFormLabel": Object {
                                                                                             "root": Object {
+                                                                                              "lineHeight": "normal",
                                                                                               "overflow": "hidden",
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
@@ -8451,6 +8408,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           "MuiIconButton": Object {
                                                                                             "colorInherit": Object {
                                                                                               "color": "none",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiInput": Object {
+                                                                                            "formControl": Object {
+                                                                                              "label + &": Object {
+                                                                                                "marginTop": 17,
+                                                                                              },
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -8740,7 +8704,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                         Symbol(mui.nested): false,
                                                                                       }
                                                                                     }
-                                                                                    title=""
+                                                                                    title="Professor"
                                                                                   >
                                                                                     <WithStyles(ForwardRef(Grid))
                                                                                       container={true}
@@ -9023,8 +8987,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                     <h6
                                                                                                       className="MuiTypography-root DashboardAuthorDetails-authorDetails-5 MuiTypography-h6"
                                                                                                     >
+                                                                                                      Professor
                                                                                                        
+                                                                                                      J
                                                                                                        
+                                                                                                      Researcher
                                                                                                     </h6>
                                                                                                   </ForwardRef(Typography)>
                                                                                                 </WithStyles(ForwardRef(Typography))>
@@ -9280,32 +9247,32 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                 <WithStyles(DashboardResearcherIdsClass)
                                                                                   authenticated={
                                                                                     Object {
-                                                                                      "google_scholar": false,
-                                                                                      "orcid": false,
+                                                                                      "google_scholar": true,
+                                                                                      "orcid": true,
                                                                                       "publons": false,
-                                                                                      "researcher": false,
-                                                                                      "scopus": false,
+                                                                                      "researcher": true,
+                                                                                      "scopus": true,
                                                                                     }
                                                                                   }
                                                                                   history={Object {}}
                                                                                   values={
                                                                                     Object {
-                                                                                      "google_scholar": undefined,
-                                                                                      "orcid": undefined,
-                                                                                      "publons": undefined,
-                                                                                      "researcher": undefined,
-                                                                                      "scopus": "",
+                                                                                      "google_scholar": "kUemDfMAAAAJ",
+                                                                                      "orcid": "0000-0001-1111-1111",
+                                                                                      "publons": null,
+                                                                                      "researcher": "A-1137-2007",
+                                                                                      "scopus": "35478294000",
                                                                                     }
                                                                                   }
                                                                                 >
                                                                                   <DashboardResearcherIdsClass
                                                                                     authenticated={
                                                                                       Object {
-                                                                                        "google_scholar": false,
-                                                                                        "orcid": false,
+                                                                                        "google_scholar": true,
+                                                                                        "orcid": true,
                                                                                         "publons": false,
-                                                                                        "researcher": false,
-                                                                                        "scopus": false,
+                                                                                        "researcher": true,
+                                                                                        "scopus": true,
                                                                                       }
                                                                                     }
                                                                                     classes={
@@ -9372,6 +9339,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           },
                                                                                           "MuiFormLabel": Object {
                                                                                             "root": Object {
+                                                                                              "lineHeight": "normal",
                                                                                               "overflow": "hidden",
                                                                                               "textOverflow": "ellipsis",
                                                                                               "whiteSpace": "nowrap",
@@ -9381,6 +9349,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                           "MuiIconButton": Object {
                                                                                             "colorInherit": Object {
                                                                                               "color": "none",
+                                                                                            },
+                                                                                          },
+                                                                                          "MuiInput": Object {
+                                                                                            "formControl": Object {
+                                                                                              "label + &": Object {
+                                                                                                "marginTop": 17,
+                                                                                              },
                                                                                             },
                                                                                           },
                                                                                           "MuiMenuItem": Object {
@@ -9672,11 +9647,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                     }
                                                                                     values={
                                                                                       Object {
-                                                                                        "google_scholar": undefined,
-                                                                                        "orcid": undefined,
-                                                                                        "publons": undefined,
-                                                                                        "researcher": undefined,
-                                                                                        "scopus": "",
+                                                                                        "google_scholar": "kUemDfMAAAAJ",
+                                                                                        "orcid": "0000-0001-1111-1111",
+                                                                                        "publons": null,
+                                                                                        "researcher": "A-1137-2007",
+                                                                                        "scopus": "35478294000",
                                                                                       }
                                                                                     }
                                                                                   >
@@ -10136,21 +10111,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
+                                                                                                  href="http://www.researcherid.com/rid/A-1137-2007"
                                                                                                   id="researcher"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
                                                                                                     data-testid="researcher-link"
-                                                                                                    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/researcherid"
+                                                                                                    href="http://www.researcherid.com/rid/A-1137-2007"
                                                                                                     id="researcher-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="You are not linked to Researcher (ISI) - Click for more information"
+                                                                                                      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -10168,11 +10143,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="You are not linked to Researcher (ISI) - Click for more information"
+                                                                                                        title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon researcher error"
+                                                                                                          className="fez-icon researcher ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -10186,14 +10161,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="You are not linked to Researcher (ISI) - Click for more information"
+                                                                                                          title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon researcher error"
+                                                                                                              class="fez-icon researcher ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="You are not linked to Researcher (ISI) - Click for more information"
+                                                                                                              title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10338,21 +10313,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
+                                                                                                  href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
                                                                                                   id="scopus"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
                                                                                                     data-testid="scopus-link"
-                                                                                                    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid"
+                                                                                                    href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
                                                                                                     id="scopus-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="You are not linked to Scopus - Click for more information"
+                                                                                                      title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -10370,11 +10345,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="You are not linked to Scopus - Click for more information"
+                                                                                                        title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon scopus error"
+                                                                                                          className="fez-icon scopus ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -10388,14 +10363,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="You are not linked to Scopus - Click for more information"
+                                                                                                          title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon scopus error"
+                                                                                                              class="fez-icon scopus ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="You are not linked to Scopus - Click for more information"
+                                                                                                              title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10540,21 +10515,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
+                                                                                                  href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
                                                                                                   id="google_scholar"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
                                                                                                     data-testid="google_scholar-link"
-                                                                                                    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/google-scholar-profile"
+                                                                                                    href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
                                                                                                     id="google_scholar-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="You are not linked to Google Scholar - Click for more information"
+                                                                                                      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -10572,11 +10547,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="You are not linked to Google Scholar - Click for more information"
+                                                                                                        title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon google_scholar error"
+                                                                                                          className="fez-icon google_scholar ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -10590,14 +10565,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="You are not linked to Google Scholar - Click for more information"
+                                                                                                          title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon google_scholar error"
+                                                                                                              class="fez-icon google_scholar ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="You are not linked to Google Scholar - Click for more information"
+                                                                                                              title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10740,18 +10715,264 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               <div
                                                                                                 className="MuiGrid-root MuiGrid-item"
                                                                                               >
-                                                                                                <a
+                                                                                                <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
+                                                                                                  href="https://orcid.org/0000-0001-1111-1111"
                                                                                                   id="orcid"
-                                                                                                  onClick={[Function]}
-                                                                                                  onKeyPress={[Function]}
-                                                                                                  tabIndex="0"
-                                                                                                  title="You are not linked to ORCID - Click for more information"
+                                                                                                  openInNewIcon={false}
                                                                                                 >
-                                                                                                  <div
-                                                                                                    className="fez-icon orcid dashboard error"
-                                                                                                    title="You are not linked to ORCID - Click for more information"
-                                                                                                  />
+                                                                                                  <a
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    data-testid="orcid-link"
+                                                                                                    href="https://orcid.org/0000-0001-1111-1111"
+                                                                                                    id="orcid-link"
+                                                                                                    rel="noopener noreferrer"
+                                                                                                    tabIndex="0"
+                                                                                                    target="_blank"
+                                                                                                  >
+                                                                                                    <WithStyles(ForwardRef(Tooltip))
+                                                                                                      title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                                                                                                    >
+                                                                                                      <ForwardRef(Tooltip)
+                                                                                                        classes={
+                                                                                                          Object {
+                                                                                                            "arrow": "MuiTooltip-arrow",
+                                                                                                            "popper": "MuiTooltip-popper",
+                                                                                                            "popperArrow": "MuiTooltip-popperArrow",
+                                                                                                            "popperInteractive": "MuiTooltip-popperInteractive",
+                                                                                                            "tooltip": "MuiTooltip-tooltip",
+                                                                                                            "tooltipArrow": "MuiTooltip-tooltipArrow",
+                                                                                                            "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                                                                                                            "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                                                                                                            "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                                                                                                            "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                                                                                                            "touch": "MuiTooltip-touch",
+                                                                                                          }
+                                                                                                        }
+                                                                                                        title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                                                                                                      >
+                                                                                                        <div
+                                                                                                          aria-describedby={null}
+                                                                                                          className="fez-icon orcid ok"
+                                                                                                          onBlur={[Function]}
+                                                                                                          onFocus={[Function]}
+                                                                                                          onMouseLeave={[Function]}
+                                                                                                          onMouseOver={[Function]}
+                                                                                                          onTouchEnd={[Function]}
+                                                                                                          onTouchStart={[Function]}
+                                                                                                          style={
+                                                                                                            Object {
+                                                                                                              "borderRadius": 32,
+                                                                                                              "height": 32,
+                                                                                                              "width": 32,
+                                                                                                            }
+                                                                                                          }
+                                                                                                          title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                                                                                                        />
+                                                                                                        <ForwardRef(Popper)
+                                                                                                          anchorEl={
+                                                                                                            <div
+                                                                                                              class="fez-icon orcid ok"
+                                                                                                              style="width: 32px; height: 32px; border-radius: 32px;"
+                                                                                                              title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
+                                                                                                            />
+                                                                                                          }
+                                                                                                          className="MuiTooltip-popper"
+                                                                                                          id={null}
+                                                                                                          open={false}
+                                                                                                          placement="bottom"
+                                                                                                          popperOptions={
+                                                                                                            Object {
+                                                                                                              "modifiers": Object {
+                                                                                                                "arrow": Object {
+                                                                                                                  "element": null,
+                                                                                                                  "enabled": false,
+                                                                                                                },
+                                                                                                              },
+                                                                                                            }
+                                                                                                          }
+                                                                                                          transition={true}
+                                                                                                        />
+                                                                                                      </ForwardRef(Tooltip)>
+                                                                                                    </WithStyles(ForwardRef(Tooltip))>
+                                                                                                  </a>
+                                                                                                </ExternalLink>
+                                                                                              </div>
+                                                                                            </ForwardRef(Grid)>
+                                                                                          </WithStyles(ForwardRef(Grid))>
+                                                                                          <WithStyles(ForwardRef(Grid))
+                                                                                            item={true}
+                                                                                          >
+                                                                                            <ForwardRef(Grid)
+                                                                                              classes={
+                                                                                                Object {
+                                                                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                                                                  "container": "MuiGrid-container",
+                                                                                                  "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                                                                  "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                                                                  "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                                                                  "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                                                                  "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                                                                  "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                                                                  "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                                                                  "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                                                                  "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                                                                  "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                                                                  "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                                                                  "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                                                                  "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                                                                  "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                                                                  "grid-md-1": "MuiGrid-grid-md-1",
+                                                                                                  "grid-md-10": "MuiGrid-grid-md-10",
+                                                                                                  "grid-md-11": "MuiGrid-grid-md-11",
+                                                                                                  "grid-md-12": "MuiGrid-grid-md-12",
+                                                                                                  "grid-md-2": "MuiGrid-grid-md-2",
+                                                                                                  "grid-md-3": "MuiGrid-grid-md-3",
+                                                                                                  "grid-md-4": "MuiGrid-grid-md-4",
+                                                                                                  "grid-md-5": "MuiGrid-grid-md-5",
+                                                                                                  "grid-md-6": "MuiGrid-grid-md-6",
+                                                                                                  "grid-md-7": "MuiGrid-grid-md-7",
+                                                                                                  "grid-md-8": "MuiGrid-grid-md-8",
+                                                                                                  "grid-md-9": "MuiGrid-grid-md-9",
+                                                                                                  "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                                                                  "grid-md-true": "MuiGrid-grid-md-true",
+                                                                                                  "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                                                                  "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                                                                  "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                                                                  "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                                                                  "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                                                                  "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                                                                  "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                                                                  "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                                                                  "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                                                                  "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                                                                  "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                                                                  "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                                                                  "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                                                                  "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                                                                  "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                                                                  "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                                                                  "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                                                                  "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                                                                  "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                                                                  "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                                                                  "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                                                                  "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                                                                  "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                                                                  "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                                                                  "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                                                                  "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                                                                  "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                                                                  "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                                                                  "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                                                                  "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                                                                  "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                                                                  "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                                                                  "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                                                                  "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                                                                  "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                                                                  "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                                                                  "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                                                                  "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                                                                  "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                                                                  "item": "MuiGrid-item",
+                                                                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
+                                                                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
+                                                                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
+                                                                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
+                                                                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                                                  "root": "MuiGrid-root",
+                                                                                                  "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                                                                  "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                                                                  "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                                                                  "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                                                                  "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                                                                  "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                                                                  "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                                                                  "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                                                                  "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                                                                }
+                                                                                              }
+                                                                                              item={true}
+                                                                                            >
+                                                                                              <div
+                                                                                                className="MuiGrid-root MuiGrid-item"
+                                                                                              >
+                                                                                                <a
+                                                                                                  aria-label="Click to visit your ORCID profile"
+                                                                                                  href="https://orcid.org/0000-0001-1111-1111"
+                                                                                                  id="orcid"
+                                                                                                  tabIndex="0"
+                                                                                                  target="_blank"
+                                                                                                  title="Click to visit your ORCID profile"
+                                                                                                >
+                                                                                                  <WithStyles(ForwardRef(Typography))
+                                                                                                    className="DashboardResearcherIdsClass-orcidLink-8"
+                                                                                                    variant="caption"
+                                                                                                  >
+                                                                                                    <ForwardRef(Typography)
+                                                                                                      className="DashboardResearcherIdsClass-orcidLink-8"
+                                                                                                      classes={
+                                                                                                        Object {
+                                                                                                          "alignCenter": "MuiTypography-alignCenter",
+                                                                                                          "alignJustify": "MuiTypography-alignJustify",
+                                                                                                          "alignLeft": "MuiTypography-alignLeft",
+                                                                                                          "alignRight": "MuiTypography-alignRight",
+                                                                                                          "body1": "MuiTypography-body1",
+                                                                                                          "body2": "MuiTypography-body2",
+                                                                                                          "button": "MuiTypography-button",
+                                                                                                          "caption": "MuiTypography-caption",
+                                                                                                          "colorError": "MuiTypography-colorError",
+                                                                                                          "colorInherit": "MuiTypography-colorInherit",
+                                                                                                          "colorPrimary": "MuiTypography-colorPrimary",
+                                                                                                          "colorSecondary": "MuiTypography-colorSecondary",
+                                                                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                                                                          "displayBlock": "MuiTypography-displayBlock",
+                                                                                                          "displayInline": "MuiTypography-displayInline",
+                                                                                                          "gutterBottom": "MuiTypography-gutterBottom",
+                                                                                                          "h1": "MuiTypography-h1",
+                                                                                                          "h2": "MuiTypography-h2",
+                                                                                                          "h3": "MuiTypography-h3",
+                                                                                                          "h4": "MuiTypography-h4",
+                                                                                                          "h5": "MuiTypography-h5",
+                                                                                                          "h6": "MuiTypography-h6",
+                                                                                                          "noWrap": "MuiTypography-noWrap",
+                                                                                                          "overline": "MuiTypography-overline",
+                                                                                                          "paragraph": "MuiTypography-paragraph",
+                                                                                                          "root": "MuiTypography-root",
+                                                                                                          "srOnly": "MuiTypography-srOnly",
+                                                                                                          "subtitle1": "MuiTypography-subtitle1",
+                                                                                                          "subtitle2": "MuiTypography-subtitle2",
+                                                                                                        }
+                                                                                                      }
+                                                                                                      variant="caption"
+                                                                                                    >
+                                                                                                      <span
+                                                                                                        className="MuiTypography-root DashboardResearcherIdsClass-orcidLink-8 MuiTypography-caption"
+                                                                                                      >
+                                                                                                         orcid.org/0000-0001-1111-1111
+                                                                                                      </span>
+                                                                                                    </ForwardRef(Typography)>
+                                                                                                  </WithStyles(ForwardRef(Typography))>
                                                                                                 </a>
                                                                                               </div>
                                                                                             </ForwardRef(Grid)>

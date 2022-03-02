@@ -90,6 +90,20 @@ const reportToSentry = error => {
     });
 };
 
+/**
+ * Return an instance of an alike in built-in Error class with a public message param and additional given properties
+ *
+ * @param error
+ * @param extras
+ * @return {{}}
+ */
+export const createSentryFriendlyError = (message, extras = {}) =>
+    new (class {
+        constructor(message) {
+            Object.assign(this, { ...extras, message, stack: new Error(message).stack });
+        }
+    })(message);
+
 api.interceptors.response.use(
     response => {
         if (!isGet) {
@@ -149,12 +163,14 @@ api.interceptors.response.use(
         }
 
         if (!!errorMessage) {
-            return Promise.reject({
-                request: error.request,
-                ...errorMessage,
-                // allow the original error message to be handled further down the stack
-                ...(error.response?.data ? { original: error.response.data } : {}),
-            });
+            return Promise.reject(
+                createSentryFriendlyError(errorMessage?.message || null, {
+                    request: error.request,
+                    ...errorMessage,
+                    // allow the original error message to be handled further down the stack
+                    ...(error.response?.data ? { original: error.response.data } : {}),
+                }),
+            );
         } else {
             reportToSentry(error);
             return Promise.reject(error);

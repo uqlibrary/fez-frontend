@@ -296,6 +296,13 @@ export const journalDetails = {
             'jnl_pubmed_title': 'American journal of public health',
             'jnl_pubmed_issn': '0090-0036',
         },
+        'fez_journal_read_and_publish': {
+            'jnl_read_and_publish_source_date': '2021-01-28',
+            'jnl_read_and_publish_publisher': 'Publisher',
+            'jnl_read_and_publish_title': 'American journal of public health',
+            'jnl_read_and_publish_is_capped': false,
+            'jnl_read_and_publish_issn': '0090-0036',
+        },
         'fez_journal_wos_category': [{
             'jnl_wos_category_title': 'AMERICAN JOURNAL OF PUBLIC HEALTH',
             'jnl_wos_category': '456676',

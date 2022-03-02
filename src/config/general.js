@@ -1306,13 +1306,6 @@ export const RECORD_ACTION_URLS = [
         options: null,
     },
     {
-        label: 'Detailed history',
-        url: pid => `${APP_URL}${PATH_PREFIX}history.php?pid=${pid}`,
-        inApp: false,
-        showInDeleted: true,
-        options: 'menubar=no,location=no,width=300,height=300,resizable=yes,scrollbars=yes,status=no',
-    },
-    {
         label: 'Change display type',
         url: pid => `${APP_URL}${PATH_PREFIX}admin/change-display-type/${pid}`,
         inApp: true,

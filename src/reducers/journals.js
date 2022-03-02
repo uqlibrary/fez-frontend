@@ -1,12 +1,23 @@
 import * as actions from 'actions/actionTypes';
 
-export const initState = {
+export const initialJournalSearchKeywords = {
+    exactMatch: [],
+    titleMatch: [],
+    keywordMatch: [],
+    subjectMatch: [],
+};
+
+export const initialState = {
     itemsList: [],
     itemsLoading: false,
     itemsLoadingError: false,
     journalDetails: false,
     journalLoading: false,
     journalLoadingError: false,
+    journalSearchKeywordsLoading: false,
+    journalSearchKeywords: { ...initialJournalSearchKeywords },
+    journalSearchKeywordsError: null,
+    isInitialValues: true,
 };
 
 const handlers = {
@@ -44,9 +55,30 @@ const handlers = {
         journalLoading: false,
         journalLoadingError: true,
     }),
+    [actions.JOURNAL_SEARCH_KEYWORDS_LOADING]: state => ({
+        ...state,
+        journalSearchKeywordsLoading: true,
+        journalSearchKeywordsError: null,
+    }),
+    [actions.JOURNAL_SEARCH_KEYWORDS_LOADED]: (state, action) => ({
+        journalSearchKeywordsLoading: false,
+        journalSearchKeywords: action.payload,
+        journalSearchKeywordsError: null,
+        isInitialValues: false,
+    }),
+    [actions.JOURNAL_SEARCH_KEYWORDS_FAILED]: (state, action) => ({
+        journalSearchKeywordsLoading: false,
+        journalSearchKeywords: { ...initialJournalSearchKeywords },
+        journalSearchKeywordsError: action.payload,
+    }),
+    [actions.CLEAR_JOURNAL_SEARCH_KEYWORDS]: state => ({
+        ...state,
+        journalSearchKeywords: { ...initialJournalSearchKeywords },
+        isInitialValues: true,
+    }),
 };
 
-export default function journalReducer(state = {}, action) {
+export default function journalReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

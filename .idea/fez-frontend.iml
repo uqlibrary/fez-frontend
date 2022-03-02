@@ -4,9 +4,24 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/coverage" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@types/react" level="application" />
+    <orderEntry type="library" name="@types/react-dom" level="application" />
+    <orderEntry type="library" name="@types/react-dropzone" level="application" />
+    <orderEntry type="library" name="@types/react-event-listener" level="application" />
+    <orderEntry type="library" name="@types/react-infinite" level="application" />
+    <orderEntry type="library" name="@types/react-json-tree" level="application" />
+    <orderEntry type="library" name="@types/react-json-tree" level="application" />
+    <orderEntry type="library" name="@types/react-redux" level="application" />
+    <orderEntry type="library" name="@types/react-router" level="application" />
+    <orderEntry type="library" name="@types/react-router-dom" level="application" />
+    <orderEntry type="library" name="@types/react-rte" level="application" />
+    <orderEntry type="library" name="@types/redux-form" level="application" />
+    <orderEntry type="library" name="@types/recompose" level="application" />
+    <orderEntry type="library" name="@types/redux-immutable" level="application" />
+    <orderEntry type="library" name="@types/material-ui" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>

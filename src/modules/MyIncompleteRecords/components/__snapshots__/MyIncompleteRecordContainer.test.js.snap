@@ -22,6 +22,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <button
         aria-label="Click for more information"
         class="MuiButtonBase-root-173 MuiIconButton-root-165"
+        data-testid="help-icon"
         id="help-icon"
         tabindex="0"
         title="Click for more information"
@@ -346,6 +347,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
                     title="Click for more information"
@@ -539,6 +541,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
                     title="Click for more information"
@@ -918,6 +921,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   <button
                     aria-label="Click for more information"
                     class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
                     title="Click for more information"

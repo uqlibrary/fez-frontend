@@ -1,4 +1,4 @@
-import { DashboardClass, styles, fibonacci } from './Dashboard';
+import { DashboardClass, fibonacci, styles } from './Dashboard';
 import * as mock from 'mock/data';
 import { initialState as orcidSyncInitialState } from 'reducers/orcidSync';
 
@@ -20,7 +20,7 @@ function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
-        author: mock.currentAuthor.uqresearcher,
+        author: mock.currentAuthor.uqresearcher.data,
         account: mock.accounts.uqresearcher,
         authorDetails: {
             is_administrator: 0,
@@ -62,6 +62,15 @@ describe('Dashboard test', () => {
 
     it('renders alert for non-authors', () => {
         const wrapper = setup({ account: mock.accounts.uqstaff });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('renders loading for authors', () => {
+        const wrapper = setup({
+            account: mock.accounts.uqstaff,
+            author: { aut_id: 1 },
+            loadingPublicationsByYear: true,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -207,10 +216,12 @@ describe('Dashboard test', () => {
         const wrapper = setup();
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
-        expect(wrapper.state()).toEqual({
+        const { dashboardPubsTabs, orcidSyncStatusRefreshCount, lastOrcidSyncScheduledRequest } = wrapper.state();
+        expect({ dashboardPubsTabs, orcidSyncStatusRefreshCount }).toEqual({
             dashboardPubsTabs: value,
             orcidSyncStatusRefreshCount: 1,
         });
+        expect(lastOrcidSyncScheduledRequest).not.toBeUndefined();
     });
 
     it('should get styles for full render', () => {

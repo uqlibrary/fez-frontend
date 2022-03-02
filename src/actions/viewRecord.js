@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import { EXISTING_RECORD_API, EXISTING_RECORD_VERSION_API } from 'repositories/routes';
+import { EXISTING_RECORD_API, EXISTING_RECORD_HISTORY_API, EXISTING_RECORD_VERSION_API } from 'repositories/routes';
 
 /**
  * Load publication
@@ -68,8 +68,8 @@ export function loadRecordVersionToView(pid, version) {
             .catch(error => {
                 if (error.status === 410) {
                     dispatch({
-                        type: actions.VIEW_RECORD_DELETED,
-                        payload: error.data,
+                        type: actions.VIEW_RECORD_VERSION_DELETED_LOADED,
+                        payload: removeShadowSuffixFromTableNames(error.data),
                     });
                 } else {
                     dispatch({
@@ -106,5 +106,26 @@ export function setHideCulturalSensitivityStatement() {
 export function unlockRecordToView() {
     return {
         type: actions.VIEW_RECORD_UNLOCK,
+    };
+}
+
+export function loadDetailedHistory(pid) {
+    return dispatch => {
+        dispatch({ type: actions.DETAILED_HISTORY_LOADING });
+        return get(EXISTING_RECORD_HISTORY_API({ pid: pid.replace('uq:', 'UQ:') }))
+            .then(response => {
+                dispatch({
+                    type: actions.DETAILED_HISTORY_LOADING_SUCCESS,
+                    payload: response.data,
+                });
+
+                return Promise.resolve(response.data);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.DETAILED_HISTORY_LOADING_FAILED,
+                    payload: error,
+                });
+            });
     };
 }

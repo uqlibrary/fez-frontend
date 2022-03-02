@@ -136,6 +136,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
               },
               "MuiFormLabel": Object {
                 "root": Object {
+                  "lineHeight": "normal",
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
@@ -145,6 +146,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
               "MuiIconButton": Object {
                 "colorInherit": Object {
                   "color": "none",
+                },
+              },
+              "MuiInput": Object {
+                "formControl": Object {
+                  "label + &": Object {
+                    "marginTop": 17,
+                  },
                 },
               },
               "MuiMenuItem": Object {
@@ -3481,6 +3489,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                       },
                       "MuiFormLabel": Object {
                         "root": Object {
+                          "lineHeight": "normal",
                           "overflow": "hidden",
                           "textOverflow": "ellipsis",
                           "whiteSpace": "nowrap",
@@ -3490,6 +3499,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                       "MuiIconButton": Object {
                         "colorInherit": Object {
                           "color": "none",
+                        },
+                      },
+                      "MuiInput": Object {
+                        "formControl": Object {
+                          "label + &": Object {
+                            "marginTop": 17,
+                          },
                         },
                       },
                       "MuiMenuItem": Object {
@@ -6646,6 +6662,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       },
                                                                       "MuiFormLabel": Object {
                                                                         "root": Object {
+                                                                          "lineHeight": "normal",
                                                                           "overflow": "hidden",
                                                                           "textOverflow": "ellipsis",
                                                                           "whiteSpace": "nowrap",
@@ -6655,6 +6672,13 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                       "MuiIconButton": Object {
                                                                         "colorInherit": Object {
                                                                           "color": "none",
+                                                                        },
+                                                                      },
+                                                                      "MuiInput": Object {
+                                                                        "formControl": Object {
+                                                                          "label + &": Object {
+                                                                            "marginTop": 17,
+                                                                          },
                                                                         },
                                                                       },
                                                                       "MuiMenuItem": Object {
@@ -54693,7 +54717,6 @@ exports[`Additional Information Component  should render component with referenc
                   "fez_record_search_key_file_attachment_access_condition": Array [],
                   "fez_record_search_key_file_attachment_embargo_date": Array [],
                   "fez_record_search_key_file_attachment_name": Array [],
-                  "fez_record_search_key_file_hashdataset": Array [],
                   "fez_record_search_key_grant_acronym": Array [],
                   "fez_record_search_key_grant_agency": Array [],
                   "fez_record_search_key_grant_agency_id": Array [],
@@ -55293,7 +55316,6 @@ exports[`Additional Information Component  should render component with referenc
                   "fez_record_search_key_file_attachment_access_condition": Array [],
                   "fez_record_search_key_file_attachment_embargo_date": Array [],
                   "fez_record_search_key_file_attachment_name": Array [],
-                  "fez_record_search_key_file_hashdataset": Array [],
                   "fez_record_search_key_grant_acronym": Array [],
                   "fez_record_search_key_grant_agency": Array [],
                   "fez_record_search_key_grant_agency_id": Array [],

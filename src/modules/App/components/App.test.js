@@ -534,18 +534,17 @@ describe('Application component', () => {
         });
     });
 
-    it('should load the incomplete publications list when the account is loaded', () => {
+    it('should load the incomplete publications list when the author is loaded', () => {
         const testMethod = jest.fn();
         const wrapper = setup({
             account: { name: 'test1' },
-            accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
                 searchAuthorPublications: testMethod,
             },
         });
         wrapper.update();
-        wrapper.setProps({ account: { name: 'test2' } });
+        wrapper.setProps({ author: { aut_id: 1 } });
         expect(testMethod).toHaveBeenCalled();
     });
 

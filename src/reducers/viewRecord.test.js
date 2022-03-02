@@ -14,6 +14,7 @@ describe('viewRecord reducer', () => {
             loadingRecordToView: true,
             isRecordLocked: false,
             isDeleted: false,
+            isDeletedVersion: false,
             recordToView: null,
             recordToViewError: null,
             error: null,
@@ -31,6 +32,7 @@ describe('viewRecord reducer', () => {
             loadingRecordToView: true,
             isRecordLocked: false,
             isDeleted: false,
+            isDeletedVersion: false,
             recordToView: null,
             recordToViewError: null,
             error: null,
@@ -48,7 +50,7 @@ describe('viewRecord reducer', () => {
         expect(test.recordToViewError).toBeNull();
     });
 
-    it("should return a record to be viewed and keep hidden cultural statemet if it's hidden", () => {
+    it("should return a record to be viewed and keep hidden cultural statement if it's hidden", () => {
         const test = viewRecordReducer(
             { ...initialState, hideCulturalSensitivityStatement: true },
             { type: actions.VIEW_RECORD_LOADED, payload: mockRecord },
@@ -154,6 +156,22 @@ describe('viewRecord reducer', () => {
         expect(test).toEqual({
             ...initialState,
             error: {},
+        });
+    });
+
+    it('should set isDeletedVersion', () => {
+        const test = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_VERSION_DELETED_LOADED,
+            payload: { data: {} },
+        });
+
+        expect(test).toEqual({
+            ...initialState,
+            isDeletedVersion: true,
+            loadingRecordToView: false,
+            recordToView: {
+                data: {},
+            },
         });
     });
 });

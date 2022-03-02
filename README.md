@@ -40,15 +40,15 @@ UQ's branding for Fez is UQ eSpace.
    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
    ```
-- With `nvm` installed and/or updated, install `node` version 14.7.0:
+- With `nvm` installed and/or updated, install `node` version of at least 16.13.2:
 
    ```
-   nvm install 14.7.0 
+   nvm install 16.13.2 
    ```
 
 - Switch to the `node` version just installed and begin initial setup:
   ```
-  nvm use 14.7.0 && npm i -g npm@6 jest webpack-dev-server
+  nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
   ```
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
@@ -211,7 +211,8 @@ To keep initial load to a minimum, the following optimisations have been added t
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
-- if you cant get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
+- if you can't get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
+- The eSpace API always returns a 200 for a GET request to /fez-author. For this reason, checking for the presence of the ```author``` (e.g. ```this.props.author```) is not enough to determine if the logged-in user is an author or not. This can be done the following check: ```this.props.autho?.aut_id``` or by checking for the response of author details API endpoint e.g. ```this.props.authorDetails```
 
 #### Optimisation Guidelines
 

@@ -168,7 +168,7 @@ export const NewGenericSelectField = ({
                     'data-testid': `${genericSelectFieldId}-select`,
                 }}
                 value={selectValue}
-                {...(hideLabel && multiple ? { renderValue /* istanbul ignore next */: () => selectPrompt } : {})}
+                {...(hideLabel && multiple ? { renderValue: /* istanbul ignore next */ () => selectPrompt } : {})}
                 {...(!!selectProps ? { ...selectProps } : {})}
             >
                 {itemsLoading ? renderMenuItems([loadingMenuItem]) : renderMenuItems([promptMenuItem, ...itemsList])}

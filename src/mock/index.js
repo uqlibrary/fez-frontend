@@ -6,6 +6,7 @@ import * as routes from 'repositories/routes';
 import * as mockData from './data';
 import * as mockTestingData from './data/testing/records';
 import { PUB_LIST_BULK_EXPORT_SIZES } from 'config/general';
+import * as journalsSearch from './data/journals/search';
 
 const queryString = require('query-string');
 const mock = new MockAdapter(api, { delayResponse: 200 });
@@ -238,6 +239,9 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.lookupToolIncites)
     .onGet(new RegExp(routes.BULK_UPDATES_API().apiUrl))
     .reply(200, { ...mockData.bulkUpdatesList })
+    // Detailed history API check (path /view/<PID>/history)
+    .onGet(routes.EXISTING_RECORD_HISTORY_API({ pid: 'UQ:a62a760' }).apiUrl)
+    .reply(200, ...mockData.detailedHistory)
     // This tests the "Record not found" message on viewRecord and adminEdit
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:abc123' }).apiUrl)))
     .reply(404, { message: 'File not found' })
@@ -506,8 +510,58 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [200, { data }];
     })
+    // Journal main search
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_LOOKUP_API({ query: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalLookup })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_KEYWORDS_LOOKUP_API({ query: '.*' }).apiUrl)))
+    .reply(config => {
+        console.log(
+            'Returning lookup data for:',
+            config.url.replace('https://api.library.uq.edu.au/staging/journals/search?rule=keywords&query=', '') ||
+                'NA',
+        );
+        if (config.url.indexOf('query=null') > -1) {
+            return [200, { data: {} }];
+        } else if (config.url.indexOf('query=bio') > -1) {
+            return [200, { ...journalsSearch.keywords.bio }];
+        } else if (config.url.indexOf('query=brain') > -1) {
+            return [200, { ...journalsSearch.keywords.brain }];
+        } else if (config.url.indexOf('query=tech') > -1) {
+            return [200, { ...journalsSearch.keywords.tech }];
+        } else if (config.url.indexOf('query=cats') > -1) {
+            return [200, { ...journalsSearch.keywords.cats }];
+        } else if (config.url.indexOf('query=lung cancer') > -1) {
+            return [200, { ...journalsSearch.keywords.lungCancer }];
+        } else if (config.url.indexOf('query=1405') > -1) {
+            return [200, { ...journalsSearch.keywords.forCode }];
+        } else if (config.url.indexOf('query=virus') > -1) {
+            return [200, { ...journalsSearch.keywords.virus }];
+        }
+        return [200, { ...journalsSearch.keywords.none }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
+    .reply(200, { ...journalsSearch.favourites })
+    .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
+    .reply(200)
+    .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({ append: 'delete' }).apiUrl)))
+    .reply(200)
+    .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
+    .reply(config => {
+        console.log('Returning lookup data for config:', config);
+        if (config.params.export_to && config.params.export_to === 'excel') {
+            return [
+                200,
+                'Exported',
+                { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            ];
+        } else if (config.params.title?.includes('biological')) {
+            let maxCount = config.params.title?.includes('glycobiology') ? 4 : 8;
+            if (config.params.filters && config.params.filters[facets].length > 0) maxCount /= 2;
+            const data = mockData.journalList.data.filter((element, index) => index < maxCount);
+            return [200, { ...mockData.journalList, ...{ data }, ...{ total: maxCount } }];
+        }
+        return [200, { ...mockData.journalList }];
+    })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))

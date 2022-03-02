@@ -12,7 +12,7 @@ import { JournalDetailsContext } from './JournalDataContext';
 import Section from './Section';
 
 import locale from 'locale/pages';
-import { journalViewConfig } from 'config';
+import { viewJournalConfig } from 'config/viewJournal';
 import * as actions from 'actions';
 
 export const ViewJournal = () => {
@@ -54,7 +54,7 @@ export const ViewJournal = () => {
                 }}
             >
                 <Grid container spacing={3}>
-                    {Object.entries(journalViewConfig)
+                    {Object.entries(viewJournalConfig)
                         // eslint-disable-next-line no-unused-vars
                         .filter(([_, sectionConfig]) => {
                             if (!!sectionConfig.key) {

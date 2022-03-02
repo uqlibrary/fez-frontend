@@ -7,6 +7,7 @@ export const initialState = {
     hideCulturalSensitivityStatement: false,
     isRecordLocked: false,
     isDeleted: false,
+    isDeletedVersion: false,
     isJobCreated: false,
     error: null,
 };
@@ -19,6 +20,15 @@ const handlers = {
 
     [actions.VIEW_RECORD_LOADED]: (state, action) => ({
         ...initialState,
+        loadingRecordToView: false,
+        recordToView: action.payload,
+        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        isRecordLocked: !!action.payload.rek_editing_user,
+    }),
+
+    [actions.VIEW_RECORD_VERSION_DELETED_LOADED]: (state, action) => ({
+        ...initialState,
+        isDeletedVersion: true,
         loadingRecordToView: false,
         recordToView: action.payload,
         hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
@@ -64,6 +74,20 @@ const handlers = {
     [actions.ADMIN_UPDATE_WORK_FAILED]: (state, action) => ({
         ...state,
         error: action.payload,
+    }),
+
+    [actions.DETAILED_HISTORY_LOADING]: state => ({
+        ...state,
+        isLoadingDetailedHistory: true,
+    }),
+    [actions.DETAILED_HISTORY_LOADING_SUCCESS]: (state, action) => ({
+        ...state,
+        isLoadingDetailedHistory: false,
+        recordDetailedHistory: action.payload,
+    }),
+    [actions.DETAILED_HISTORY_LOADING_FAILED]: state => ({
+        ...state,
+        isLoadingDetailedHistory: false,
     }),
 };
 

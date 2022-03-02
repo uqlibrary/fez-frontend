@@ -1,6 +1,6 @@
 import React from 'react';
 import NewViewRecord from './NewViewRecord';
-import { fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import * as ViewRecordActions from 'actions/viewRecord';
 import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
@@ -13,6 +13,8 @@ import locale from '../../../locale/pages';
 import { notFound } from '../../../config/routes';
 import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
+import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
+import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -35,6 +37,7 @@ const setup = (testProps = {}, renderer = render) => {
         author: null,
         hideCulturalSensitivityStatement: true,
         isDeleted: false,
+        isDeletedVersion: false,
         loadingRecordToView: false,
         recordToViewError: null,
         recordToView: null,
@@ -93,6 +96,17 @@ describe('NewViewRecord', () => {
         const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
         useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
         const { getByTestId } = setup({ recordToView: recordVersionLegacy });
+        expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
+        expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
+        expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
+    });
+
+    it('should render deleted version', () => {
+        const txt = locale.pages.viewRecord.version;
+        const pid = 'UQ:1';
+        const loadRecordToViewFn = jest.spyOn(ViewRecordActions, 'loadRecordVersionToView');
+        useParams.mockImplementationOnce(() => ({ pid, version: recordVersionLegacy.rek_version }));
+        const { getByTestId } = setup({ recordToView: recordVersionLegacy, isDeletedVersion: true });
         expect(loadRecordToViewFn).toHaveBeenCalledWith(pid, recordVersionLegacy.rek_version);
         expect(getByTestId(txt.alert.version.alertId)).toBeInTheDocument();
         expect(getByTestId(txt.alert.warning.alertId)).toBeInTheDocument();
@@ -212,5 +226,147 @@ describe('NewViewRecord', () => {
         expect(assignFn).toHaveBeenCalledWith('https://fez-staging.library.uq.edu.au/login.php?url=dW5kZWZpbmVk');
 
         window.location = location;
+    });
+
+    it('should not render for researcher', () => {
+        const { queryByTestId } = setup({
+            recordToView: record,
+            account: accounts.uqresearcher,
+        });
+        expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+        expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+        expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+    });
+    it('should not render for student user', () => {
+        const { queryByTestId } = setup({
+            recordToView: record,
+            account: accounts.s1111111,
+        });
+        expect(queryByTestId('adminViewRecordDrawerDesktop')).not.toBeInTheDocument();
+        expect(queryByTestId('adminViewRecordDrawerMobile')).not.toBeInTheDocument();
+        expect(queryByTestId('adminDrawerButton')).not.toBeInTheDocument();
+    });
+
+    describe('Admin record drawer for admins', () => {
+        beforeEach(() => {
+            userIsAdmin.mockImplementation(() => true);
+        });
+
+        it('should render for Admin user', () => {
+            const { getByTestId } = setup({
+                recordToView: record,
+                account: accounts.uqstaff,
+            });
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        });
+
+        it('should open desktop admin drawer when button pressed', () => {
+            const { getByTestId } = setup({
+                recordToView: recordWithNotes,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+
+            act(() => {
+                fireEvent.click(getByTestId('adminDrawerButton'));
+            });
+
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+        });
+
+        it('should open mobile admin drawer when button pressed', () => {
+            window.matchMedia = createMatchMedia(320);
+
+            const { getByTestId } = setup({
+                recordToView: recordWithNotes,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).not.toBeVisible();
+
+            act(() => {
+                fireEvent.click(getByTestId('adminDrawerButton'));
+            });
+
+            expect(getByTestId('adminRecordDrawerCloseBtnDesktop')).not.toBeVisible();
+            expect(getByTestId('adminRecordDrawerCloseBtnMobile')).toBeVisible();
+        });
+
+        it('should render data in both admin drawers', () => {
+            const { getByTestId } = setup({
+                recordToView: recordWithAuthorAffiliates,
+                account: accounts.uqstaff,
+            });
+
+            expect(getByTestId('adminViewRecordDrawerDesktop')).toBeInTheDocument();
+            expect(getByTestId('adminViewRecordDrawerMobile')).toBeInTheDocument();
+
+            // DESKTOP
+            // Notes
+            expect(getByTestId('drawer-Desktop-content-scrollable-0-1')).toHaveTextContent(
+                'Some internal notes for testing',
+            );
+
+            // Author affiliations
+            expect(getByTestId('drawer-Desktop-content-value-2-1')).toHaveTextContent('Yes');
+
+            // WoS ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-4-1')).toHaveTextContent('000381303000009');
+            // WoS DocType
+            expect(getByTestId('drawer-Desktop-content-value-4-3')).toHaveTextContent('Article');
+
+            // Scopus ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
+            // Scopus DocType
+            expect(getByTestId('drawer-Desktop-content-value-6-3')).toHaveTextContent(
+                'ar - Article (original research)',
+            );
+
+            // PubMed ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-1')).toHaveTextContent('27166757');
+            // PubMed Central ID
+            expect(getByTestId('drawer-Desktop-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
+            // PubMed DocType
+            expect(getByTestId('drawer-Desktop-content-value-8-5')).toHaveTextContent(
+                'Journal Article - Article (original research)',
+            );
+
+            // MOBILE
+            // Notes
+            expect(getByTestId('drawer-Mobile-content-scrollable-0-1')).toHaveTextContent(
+                'Some internal notes for testing',
+            );
+
+            // Author affiliations
+            expect(getByTestId('drawer-Mobile-content-value-2-1')).toHaveTextContent('Yes');
+
+            // WoS ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-4-1')).toHaveTextContent('000381303000009');
+            // WoS DocType
+            expect(getByTestId('drawer-Mobile-content-value-4-3')).toHaveTextContent('Article');
+
+            // Scopus ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-6-1')).toHaveTextContent('2-s2.0-84975764277');
+            // Scopus DocType
+            expect(getByTestId('drawer-Mobile-content-value-6-3')).toHaveTextContent(
+                'ar - Article (original research)',
+            );
+
+            // PubMed ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-1')).toHaveTextContent('27166757');
+            // PubMed Central ID
+            expect(getByTestId('drawer-Mobile-content-clipboard-8-3')).toHaveTextContent('PMC5179926');
+            // PubMed DocType
+            expect(getByTestId('drawer-Mobile-content-value-8-5')).toHaveTextContent(
+                'Journal Article - Article (original research)',
+            );
+        });
     });
 });

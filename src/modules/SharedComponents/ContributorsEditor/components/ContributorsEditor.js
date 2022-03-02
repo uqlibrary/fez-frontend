@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
 
-import Infinite from 'react-infinite';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -191,7 +190,8 @@ export class ContributorsEditor extends PureComponent {
                 this.state.contributors.map((item, itemIndex) => ({
                     ...item,
                     selected: !item.selected && index === itemIndex,
-                    authorId: index === itemIndex && this.props.author ? this.props.author.aut_id : null,
+                    // eslint-disable-next-line camelcase
+                    authorId: (index === itemIndex && this.props.author?.aut_id) || null,
                 }))) ||
             this.state.contributors;
 
@@ -363,14 +363,7 @@ export class ContributorsEditor extends PureComponent {
                                     }`,
                                 }}
                             >
-                                {// istanbul ignore next
-                                contributors.length > 20 ? (
-                                    <Infinite containerHeight={200} elementHeight={73} infiniteLoadBeginEdgeOffset={50}>
-                                        {this.renderContributorRows()}
-                                    </Infinite>
-                                ) : (
-                                    this.renderContributorRows()
-                                )}
+                                {this.renderContributorRows()}
                             </List>
                             {editMode && contributorIndexSelectedToEdit !== null && (
                                 <div style={{ marginTop: 24 }}>

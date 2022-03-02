@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AuthorItem from './AuthorItem';
-import Infinite from 'react-infinite';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -187,13 +186,33 @@ export const AuthorLinking = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedAuthor, authorLinkingConfirmed]);
 
+    const numRowsToShow = 4;
+    const allRowsDisplayed = authorsToRender.length <= numRowsToShow;
+    const scrollHeight = () => {
+        if (authorsToRender.length === 0) {
+            return 120;
+        }
+
+        const multiRowHeight = 65;
+
+        if (!!allRowsDisplayed) {
+            return (authorsToRender.length + 1) * multiRowHeight;
+        }
+
+        return numRowsToShow * multiRowHeight;
+    };
+    const overflowType = () => {
+        return allRowsDisplayed ? 'auto' : 'scroll';
+    };
     return (
         <div className={className}>
             <Grid container>
-                <Grid item className={classes.infiniteContainer}>
-                    <Infinite containerHeight={250} elementHeight={50} infiniteLoadBeginEdgeOffset={50}>
-                        {authorsToRender}
-                    </Infinite>
+                <Grid
+                    item
+                    className={classes.infiniteContainer}
+                    style={{ height: scrollHeight(), overflowY: overflowType() }}
+                >
+                    {authorsToRender}
                 </Grid>
             </Grid>
             {selectedAuthor !== null && (

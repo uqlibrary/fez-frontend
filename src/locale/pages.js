@@ -534,9 +534,10 @@ export default {
                     version: {
                         type: 'info_outline',
                         title: '',
-                        message: record => (
+                        message: (record, isDeletedVersion = false) => (
                             <>
-                                You are looking at version <b>{record.rek_version}</b> of record <b>{record.rek_pid}</b>
+                                You are looking at version <b>{record.rek_version}</b> of{' '}
+                                {isDeletedVersion ? <b>deleted</b> : ''} record <b>{record.rek_pid}</b>
                             </>
                         ),
                         alertId: 'alert-info',
@@ -548,6 +549,27 @@ export default {
                             "Note: reference values (lookups) might not be accurate as we don't keep history of these, only for the record's data.",
                         alertId: 'alert-warning',
                     },
+                },
+            },
+            adminRecordData: {
+                drawer: {
+                    title: 'Record Data',
+
+                    sectionTitles: {
+                        notes: 'Notes',
+                        authorAffiliations: 'Has Author Affiliations?',
+                        wosId: 'WoS ID',
+                        wosDocType: 'WoS Doc Type',
+                        scopusId: 'Scopus ID',
+                        scopusDocType: 'Scopus Doc Type',
+                        pubmedId: 'Pubmed ID',
+                        pubmedCentralId: 'Pubmed Central ID',
+                        pubmedDocType: 'Pubmed Doc Type',
+                    },
+                },
+                clipboard: {
+                    unavailable: 'Clipboard unavailable',
+                    copied: 'Copied to clipboard',
                 },
             },
         },
@@ -575,6 +597,16 @@ export default {
                 ...locale.components.facetsFilter,
                 excludeFacetsList: ['Scopus document type', 'Genre', 'Year published', 'Published year range'],
             },
+            errorAlert: {
+                type: 'error_outline',
+                title: 'Error',
+                message: message => message,
+                alertId: 'alert-error',
+            },
+        },
+        searchJournals: {
+            title: 'Journal search',
+            loadingMessage: 'Searching for journals',
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
@@ -1032,7 +1064,7 @@ export default {
             },
             loadingMessage: 'Loading work',
             notSupportedMessage: 'Editing of [pubType] is not yet supported.',
-            retractedMessage: 'This article has been retracted',
+            retractedMessage: 'This work has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',
@@ -1185,6 +1217,20 @@ export default {
         users: {
             title: 'Manage users',
             loadingMessage: 'Loading users',
+        },
+        journals: {
+            search: {
+                title: 'Strategic publishing search',
+            },
+            results: {
+                title: 'Strategic publishing results',
+            },
+            compare: {
+                title: 'Strategic publishing compare',
+            },
+            favourites: {
+                title: 'Strategic publishing favourites',
+            },
         },
     },
 };

@@ -146,13 +146,13 @@ const prepareThesisSubmission = data => {
         ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
         ...transformers.getRecordSubjectSearchKey(data.fieldOfResearch),
         ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
+        ...transformers.getThesisTypeSearchKey(data.isHdrThesis ? 'hdr' : 'sbs'),
         rek_title: data.thesisTitle.plainText,
         rek_formatted_title: data.thesisTitle.htmlText,
         rek_description: data.thesisAbstract.plainText,
         rek_formatted_abstract: data.thesisAbstract.htmlText,
         rek_subtype: data.rek_genre_type,
         rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
-        _thesis_submission_type: data.isHdrThesis ? 'hdr' : 'sbs',
     };
 
     // delete extra form values from request object

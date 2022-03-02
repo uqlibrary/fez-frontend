@@ -183,6 +183,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
         <button
           aria-label="Click for more information"
           class="MuiButtonBase-root MuiIconButton-root"
+          data-testid="help-icon"
           id="help-icon"
           tabindex="0"
           title="Click for more information"

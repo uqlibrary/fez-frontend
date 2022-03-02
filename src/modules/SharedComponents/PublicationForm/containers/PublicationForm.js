@@ -41,7 +41,7 @@ const onSubmit = (values, dispatch, state) => {
     // set default values for a new unapproved record
     return dispatch(createNewRecord({ ...cleanValues }))
         .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
+            // once this promise is resolved form is submitted successfully and will call parent containers
             // reported bug to redux-form:
             // reset form after success action was dispatched:
             // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
