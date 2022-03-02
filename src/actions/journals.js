@@ -1,4 +1,4 @@
-import { get, post } from 'repositories/generic';
+import { destroy, get, post } from 'repositories/generic';
 import * as actions from './actionTypes';
 import {
     JOURNAL_API,
@@ -187,7 +187,7 @@ export const addToFavourites = ids => async dispatch => {
 export const removeFromFavourites = ids => async dispatch => {
     dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING });
     await randomWait(50, 100);
-    return post(JOURNAL_FAVOURITES_API({ append: 'delete' }), { ids: ids }).then(
+    return destroy(JOURNAL_FAVOURITES_API(), { ids: ids }).then(
         response => {
             dispatch({ type: actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS });
             return Promise.resolve(response);
