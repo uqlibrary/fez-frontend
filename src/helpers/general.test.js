@@ -1,4 +1,4 @@
-import { hydrateMockSearchList, leftJoin, stripHtml } from './general';
+import { hydrateMockSearchList, leftJoin, stripHtml, sanitiseId } from './general';
 
 describe('general helpers', () => {
     it('leftJoin', () => {
@@ -195,5 +195,13 @@ describe('general helpers', () => {
             ],
         };
         expect(() => hydrateMockSearchList(testdata)).toThrow('missing PID in data {"rek_title":"I dont have a PID"}');
+    });
+
+    it('should sanitise the given id/testid', () => {
+        expect(sanitiseId('subject, testing & code')).toEqual('subject-testing-code');
+        expect(sanitiseId('subject--code')).toEqual('subject-code');
+        expect(sanitiseId('subject-code abc')).toEqual('subject-code-abc');
+        expect(sanitiseId('search-subject-1111 Abc-0')).toEqual('search-subject-1111-abc-0');
+        expect(sanitiseId('help-icon-fez_journal_doaj')).toEqual('help-icon-fez-journal-doaj');
     });
 });
