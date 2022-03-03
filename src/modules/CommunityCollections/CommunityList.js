@@ -19,23 +19,41 @@ import CommunityCollectionsSorting from './components/CommunityCollectionsSortin
 import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
 
+import queryString from 'query-string';
+import { useHistory } from 'react-router-dom';
+
 export const CommunityList = () => {
-    const [sortDirection, setSortDirection] = React.useState('Asc');
-    const [sortBy, setSortBy] = React.useState('title');
+    const history = useHistory();
+    let sortDirection = 'Asc';
+    let sortBy = 'title';
 
     const isSuperAdmin = useIsUserSuperAdmin();
 
     const dispatch = useDispatch();
 
+    const queryStringObject = queryString.parse(
+        location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+        { ignoreQueryPrefix: true },
+    );
+
+    sortDirection = queryStringObject.sortDirection ? queryStringObject.sortDirection : sortDirection;
+    sortBy = queryStringObject.sortBy ? queryStringObject.sortBy : sortBy;
+
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
     const totalRecords = useSelector(state => state.get('viewCommunitiesReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
-    const currentPage = useSelector(state => state.get('viewCommunitiesReducer').currentPage);
-    const perPage = useSelector(state => state.get('viewCommunitiesReducer').perPage);
+    const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
+    const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
+
+    const pushHistory = (pageSize, currentPage, sortBy, sortDirection) => {
+        history.push({
+            pathname: '/communities',
+            search: `?pageSize=${pageSize}&page=${currentPage}&sortBy=${sortBy}&sortDirection=${sortDirection}`,
+        });
+    };
 
     const pageSizeChanged = pageSize => {
-        console.log('PAGE SIZE CHANGED', pageSize, sortDirection, sortBy);
         dispatch(
             actions.loadCommunitiesList({
                 pageSize: pageSize,
@@ -44,25 +62,34 @@ export const CommunityList = () => {
                 sortBy: sortBy,
             }),
         );
+        pushHistory(pageSize, 1, sortBy, sortDirection);
     };
     const pageChanged = page => {
+        pushHistory(perPage, page, sortBy, sortDirection);
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
         );
     };
 
     const sortByChanged = (sortby, direction) => {
-        setSortDirection(direction);
-        setSortBy(sortby);
+        sortDirection = direction;
+        sortBy = sortby;
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: currentPage, direction: direction, sortBy: sortby }),
         );
+        pushHistory(perPage, currentPage, sortby, direction);
     };
 
     React.useEffect(() => {
-        dispatch(actions.clearCCCollectionsList());
-        dispatch(actions.loadCommunitiesList({ pageSize: 10, page: 1, direction: 'asc', sortBy: 'title' }));
-        // console.log('USE EFFECT FIRED');
+        dispatch(
+            actions.loadCommunitiesList({
+                pageSize: perPage,
+                page: currentPage,
+                direction: sortDirection,
+                sortBy: sortBy,
+            }),
+        );
+        pushHistory(perPage, currentPage, sortBy, sortDirection);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -80,22 +107,6 @@ export const CommunityList = () => {
     const sortingDefaults = txt.sortingDefaults ?? {};
     const sortedList = [...communityList];
 
-    // switch (sortBy) {
-    //     case 'title':
-    //         sortedList.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
-    //         sortDirection === 'Asc' && sortedList.reverse();
-    //         break;
-    //     case 'created_date':
-    //         sortedList.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
-    //         sortDirection === 'Asc' && sortedList.reverse();
-    //         break;
-    //     case 'updated_date':
-    //         sortedList.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
-    //         sortDirection === 'Asc' && sortedList.reverse();
-    //         break;
-    //     default:
-    //         break;
-    // }
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (

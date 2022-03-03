@@ -57,6 +57,7 @@ export const CommunityTable = ({ records, labels, conf }) => {
 };
 CommunityTable.propTypes = {
     records: PropTypes.array,
+    location: PropTypes.object,
     labels: PropTypes.object,
     conf: PropTypes.object,
 };
