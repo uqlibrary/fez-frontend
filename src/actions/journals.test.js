@@ -280,8 +280,8 @@ describe('Search action creators', () => {
     });
     describe('RemoveFromFavourites', () => {
         it('should dispatch action for successful removal journal favourites', async () => {
-            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ append: 'delete' });
-            mockApi.onPost(apiUrl).reply(200, { data: [] });
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+            mockApi.onDelete(apiUrl).reply(200, { data: [] });
             const expectedActions = [
                 actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
                 actions.FAVOURITE_JOURNALS_REMOVE_SUCCESS,
@@ -290,8 +290,8 @@ describe('Search action creators', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
         it('should dispatch action for failed removal journal favourites', async () => {
-            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({ append: 'delete' });
-            mockApi.onPost(apiUrl).reply(500);
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API();
+            mockApi.onDelete(apiUrl).reply(500);
             const expectedActions = [
                 actions.FAVOURITE_JOURNALS_REMOVE_REQUESTING,
                 actions.APP_ALERT_SHOW,
