@@ -498,14 +498,12 @@ describe('SearchJournals', () => {
             },
         });
 
-        const journalsList = mockDataWithFilterFacets;
-
         const { getByTestId, queryByTestId } = setup({
-            state: { journalsListLoaded: true, journalsList: journalsList },
+            state: { journalsListLoaded: true, journalsList: mockDataWithFilterFacets },
             testHistory,
         });
-        const facetItemTestId = 'facet-filter-nested-item-show-journals-favourited';
-        const clearFacetItemTestId = 'clear-facet-filter-nested-item-show-journals-favourited';
+        const facetItemTestId = 'facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
+        const clearFacetItemTestId = 'clear-facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
 
         // expand Favourite catageory
         act(() => {
