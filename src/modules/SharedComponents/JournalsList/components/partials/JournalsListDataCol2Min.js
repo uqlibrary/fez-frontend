@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
-import { sanitiseId } from '../../../../../helpers/general';
+import { sanitiseId } from 'helpers/general';
 
 const JournalsListDataCol2Min = ({ journal, index }) => {
     return (
