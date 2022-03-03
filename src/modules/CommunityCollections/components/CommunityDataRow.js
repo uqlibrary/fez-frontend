@@ -4,6 +4,7 @@ import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
+import * as actions from 'actions';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactHtmlParser from 'react-html-parser';
 import { pathConfig } from 'config';
@@ -11,6 +12,7 @@ import CollectionsListEmbedded from './CollectionsListEmbedded';
 import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { useSelector, useDispatch } from 'react-redux';
 
 const moment = require('moment');
 
@@ -25,9 +27,16 @@ const useStyles = makeStyles({
 import { Link } from 'react-router-dom';
 
 export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels }) => {
-    const [open, setOpen] = React.useState(false);
+    const dispatch = useDispatch();
+    const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
+
+    const open = collectionsOpen.indexOf(row.rek_pid) > -1;
+
+    // const [open, setOpen] = React.useState(false);
     const handleSetOpen = openState => {
-        setOpen(openState);
+        // setOpen(openState);
+        // Store the rek id here in the redux store.
+        dispatch(actions.setCollectionsArray({ pid: row.rek_pid, open: openState }));
     };
 
     const classes = useStyles();

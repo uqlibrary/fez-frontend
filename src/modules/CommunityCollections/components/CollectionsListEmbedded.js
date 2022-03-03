@@ -50,7 +50,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
 
     const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
     const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
-
+    const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
     const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
@@ -87,14 +87,15 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
         setSortDirection(direction);
         setSortBy(sortby);
     };
+
     return (
         <>
-            {collectionListLoading && (
+            {collectionListLoading && loadingCollectionsPid === pid && (
                 <TableCell colSpan={5}>
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
                 </TableCell>
             )}
-            {!!!collectionListLoading && (
+            {loadingCollectionsPid !== pid && (
                 <TableCell colSpan={5} style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}>
                     {finalList.data.length > 0 && (
                         <Collapse in={open} timeout="auto" unmountOnExit>

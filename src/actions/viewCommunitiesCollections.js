@@ -8,11 +8,11 @@ import { COMMUNITY_LIST_API, COLLECTION_LIST_API } from 'repositories/routes';
  * @returns {action}
  */
 export function loadCommunitiesList(params = {}) {
-    const { pageSize, page } = params;
+    const { pageSize, page, direction, sortBy } = params;
     return dispatch => {
         dispatch({ type: actions.VIEW_COMMUNITIES_LOADING });
 
-        return get(COMMUNITY_LIST_API({ pageSize: pageSize, page: page }))
+        return get(COMMUNITY_LIST_API({ pageSize: pageSize, page: page, direction: direction, sortBy: sortBy }))
             .then(response => {
                 dispatch({
                     type: actions.VIEW_COMMUNITIES_LOADED,
@@ -32,7 +32,7 @@ export function loadCommunitiesList(params = {}) {
 export function loadCCCollectionsList(params = {}) {
     const { pid, pageSize, page } = params;
     return dispatch => {
-        dispatch({ type: actions.VIEW_COLLECTIONS_LOADING });
+        dispatch({ type: actions.VIEW_COLLECTIONS_LOADING, payload: { pid: pid } });
         return get(COLLECTION_LIST_API({ pid: pid, pageSize: pageSize, page: page }))
             .then(response => {
                 dispatch({
@@ -56,5 +56,17 @@ export function loadCCCollectionsList(params = {}) {
 export function clearCCCollectionsList() {
     return dispatch => {
         dispatch({ type: actions.VIEW_COLLECTIONS_CLEARED });
+    };
+}
+export function setCollectionsArray(rowObject) {
+    // console.log('Dispatcher', pid, open);
+    return dispatch => {
+        dispatch({
+            type: actions.SET_COLLECTIONS_ARRAY,
+            payload: {
+                pid: rowObject.pid,
+                open: rowObject.open,
+            },
+        });
     };
 }

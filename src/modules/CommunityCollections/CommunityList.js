@@ -35,6 +35,7 @@ export const CommunityList = () => {
     const perPage = useSelector(state => state.get('viewCommunitiesReducer').perPage);
 
     const pageSizeChanged = pageSize => {
+        console.log('PAGE SIZE CHANGED', pageSize, sortDirection, sortBy);
         dispatch(
             actions.loadCommunitiesList({
                 pageSize: pageSize,
@@ -60,7 +61,7 @@ export const CommunityList = () => {
 
     React.useEffect(() => {
         dispatch(actions.clearCCCollectionsList());
-        dispatch(actions.loadCommunitiesList({ pageSize: 10, page: 1, direction: 'asc', sortBy: 'Title' }));
+        dispatch(actions.loadCommunitiesList({ pageSize: 10, page: 1, direction: 'asc', sortBy: 'title' }));
         // console.log('USE EFFECT FIRED');
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -79,22 +80,22 @@ export const CommunityList = () => {
     const sortingDefaults = txt.sortingDefaults ?? {};
     const sortedList = [...communityList];
 
-    switch (sortBy) {
-        case 'title':
-            sortedList.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
-            sortDirection === 'Asc' && sortedList.reverse();
-            break;
-        case 'created_date':
-            sortedList.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
-            sortDirection === 'Asc' && sortedList.reverse();
-            break;
-        case 'updated_date':
-            sortedList.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
-            sortDirection === 'Asc' && sortedList.reverse();
-            break;
-        default:
-            break;
-    }
+    // switch (sortBy) {
+    //     case 'title':
+    //         sortedList.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
+    //         sortDirection === 'Asc' && sortedList.reverse();
+    //         break;
+    //     case 'created_date':
+    //         sortedList.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
+    //         sortDirection === 'Asc' && sortedList.reverse();
+    //         break;
+    //     case 'updated_date':
+    //         sortedList.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
+    //         sortDirection === 'Asc' && sortedList.reverse();
+    //         break;
+    //     default:
+    //         break;
+    // }
     return (
         <StandardPage title={txt.title.communities}>
             {!!isSuperAdmin && (
