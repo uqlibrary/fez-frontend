@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
+import { sanitiseId } from 'helpers/general';
 
 const JournalsListDataCol2Full = ({ journal, index }) => {
     return (
@@ -15,11 +16,12 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
             alignItems="center"
             style={{ borderBottom: '1px dashed #e6e6e6' }}
         >
-            {JournalFieldsMap.slice(1).map((item, index) => {
+            {JournalFieldsMap.slice(1).map(item => {
                 const itemData = (journal && item.translateFn(journal)) || '';
+                const id = sanitiseId(`journal-list-data-col-2-full-${item.key}-${index}`);
                 return (
                     <Grid
-                        key={index}
+                        key={`${item.key}-${index}`}
                         item
                         style={{
                             height: 43,
@@ -29,6 +31,8 @@ const JournalsListDataCol2Full = ({ journal, index }) => {
                             marginBottom: 0,
                             paddingLeft: 12,
                         }}
+                        id={id}
+                        data-testid={id}
                     >
                         <Tooltip
                             title={
