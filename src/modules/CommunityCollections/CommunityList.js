@@ -37,6 +37,7 @@ export const CommunityList = () => {
     );
 
     sortDirection = queryStringObject.sortDirection ? queryStringObject.sortDirection : sortDirection;
+    sortDirection = sortDirection.charAt(0).toUpperCase() + sortDirection.slice(1);
     sortBy = queryStringObject.sortBy ? queryStringObject.sortBy : sortBy;
 
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
