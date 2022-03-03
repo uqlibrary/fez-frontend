@@ -997,8 +997,8 @@ describe('Backend routes method', () => {
         });
     });
     it('should construct url for community list api', () => {
-        expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1 })).toEqual({
-            apiUrl: 'communities?per_page=20&page=1',
+        expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' })).toEqual({
+            apiUrl: 'communities?per_page=20&page=1&order_by=Asc&sort=title',
         });
     });
 
