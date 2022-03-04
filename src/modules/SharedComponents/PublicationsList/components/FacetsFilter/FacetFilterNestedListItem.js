@@ -7,6 +7,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import { makeStyles } from '@material-ui/styles';
 import Clear from '@material-ui/icons/Clear';
 import Typography from '@material-ui/core/Typography';
+import { sanitiseId } from 'helpers/general';
 
 const useStyles = makeStyles(
     theme => ({
@@ -29,19 +30,14 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
-export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, primaryText, isActive }) {
+export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, facet, primaryText, isActive }) {
     const classes = useStyles();
-    const idText =
-        primaryText.indexOf('(') > 0
-            ? primaryText
-                  .slice(0, primaryText.indexOf('('))
-                  .trim()
-                  .replace(/ /g, '-')
-                  .toLowerCase()
-            : primaryText.replace(/ /g, '-').toLowerCase();
+    const itemText = primaryText.indexOf('(') > 0 ? primaryText.slice(0, primaryText.indexOf('(')) : primaryText;
+    const idText = sanitiseId(`${facet}-${itemText}`);
     return (
         <ListItem
             id={`facet-filter-nested-item-${idText}`}
+            data-testid={`facet-filter-nested-item-${idText}`}
             key={`facet-filter-nested-item-${index}`}
             button
             onClick={onFacetClick}
@@ -75,7 +71,8 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
 
 FacetsFilterNestedListItem.propTypes = {
     index: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    primaryText: PropTypes.string,
+    facet: PropTypes.string,
+    primaryText: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     isActive: PropTypes.bool,
     onFacetClick: PropTypes.func.isRequired,
