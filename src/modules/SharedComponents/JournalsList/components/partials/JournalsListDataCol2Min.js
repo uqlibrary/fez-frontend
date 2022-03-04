@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
+import { sanitiseId } from 'helpers/general';
 
 const JournalsListDataCol2Min = ({ journal, index }) => {
     return (
@@ -16,11 +17,12 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
         >
             {JournalFieldsMap.slice(1)
                 .filter(item => item.compactView)
-                .map((item, index) => {
+                .map(item => {
                     const itemData = (journal && item.translateFn(journal)) || '';
+                    const id = sanitiseId(`journal-list-data-col-2-min-${item.key}-${index}`);
                     return (
                         <Grid
-                            key={index}
+                            key={`${item.key}-${index}`}
                             item
                             style={{
                                 width: item.size,
@@ -31,6 +33,8 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                                 marginBottom: 0,
                                 paddingLeft: 12,
                             }}
+                            id={id}
+                            data-testid={id}
                         >
                             <Tooltip
                                 title={

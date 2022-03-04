@@ -23,8 +23,8 @@ export const ForCodeSearchKeyword = ({ keyword, onKeywordClick, sources, index, 
             {sources.map(source => {
                 return (
                     <Grid item xs="auto" key={source.name}>
-                        <ForCodeSource source={source.name} />
-                        {!!source.index && <ForCodeSource source={source.index} />}
+                        <ForCodeSource source={source.name} index={index} />
+                        {!!source.index && <ForCodeSource source={source.index} index={index} />}
                     </Grid>
                 );
             })}

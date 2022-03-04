@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Typography from '@material-ui/core/Typography';
+import { sanitiseId } from 'helpers/general';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -41,10 +42,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const ForCodeSource = ({ source }) => {
+export const ForCodeSource = ({ source, index }) => {
     const classes = useStyles();
+    const id = sanitiseId(`journal-search-item-subject-source-${source}-${index}`);
     return (
-        <Typography variant="caption" component="span" classes={{ root: classes.root }} className={classes[source]}>
+        <Typography
+            variant="caption"
+            component="span"
+            classes={{ root: classes.root }}
+            className={classes[source]}
+            id={id}
+            data-testid={id}
+        >
             {source}
         </Typography>
     );
@@ -52,6 +61,7 @@ export const ForCodeSource = ({ source }) => {
 
 ForCodeSource.propTypes = {
     source: PropTypes.string.isRequired,
+    index: PropTypes.number.isRequired,
 };
 
 export default React.memo(ForCodeSource);
