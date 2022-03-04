@@ -16,17 +16,19 @@ import Tooltip from '@material-ui/core/Tooltip';
 
 export const id = 'journal-search-interface';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     closeButtonContainer: {
         position: 'relative',
-        paddingRight: 48,
+        [theme.breakpoints.up('sm')]: {
+            paddingRight: 48,
+        },
     },
     closeButton: {
         position: 'absolute',
         top: 8,
         right: 0,
     },
-});
+}));
 
 export const JournalSearchInterface = ({
     onSearch,
