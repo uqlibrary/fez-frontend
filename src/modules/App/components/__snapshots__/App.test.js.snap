@@ -4690,7 +4690,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Communities List",
+          "primaryText": "Communities list",
           "public": true,
         },
         Object {
@@ -5780,7 +5780,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Communities List",
+          "primaryText": "Communities list",
           "public": true,
         },
         Object {

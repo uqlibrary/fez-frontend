@@ -61,7 +61,6 @@ export function clearCCCollectionsList() {
     };
 }
 export function setCollectionsArray(rowObject) {
-    // console.log('Dispatcher', pid, open);
     return dispatch => {
         dispatch({
             type: actions.SET_COLLECTIONS_ARRAY,

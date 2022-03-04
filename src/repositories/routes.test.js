@@ -1003,8 +1003,10 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for collection list api', () => {
-        expect(routes.COLLECTION_LIST_API({ pid: 'UQ:12345', pageSize: 20, page: 1 })).toEqual({
-            apiUrl: 'communities/UQ:12345/collections?per_page=20&page=1',
+        expect(
+            routes.COLLECTION_LIST_API({ pid: 'UQ:12345', pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' }),
+        ).toEqual({
+            apiUrl: 'communities/UQ:12345/collections?per_page=20&page=1&order_by=Asc&sort=title',
         });
     });
 });
