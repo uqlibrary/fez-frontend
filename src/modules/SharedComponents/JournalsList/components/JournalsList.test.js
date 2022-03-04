@@ -2,11 +2,12 @@ import React from 'react';
 import { render, WithReduxStore, act, fireEvent } from 'test-utils';
 
 import Immutable from 'immutable';
-import { mockData } from '../../../../mock/data/testing/journals/journalSearchResults';
-import { JournalsList } from '..';
+import { mockData } from 'mock/data/testing/journals/journalSearchResults';
+import { default as JournalsList } from './JournalsList';
 import Cookies from 'js-cookie';
 
-import { JournalFieldsMap } from '../components/partials/JournalFieldsMap';
+import { JournalFieldsMap } from './partials/JournalFieldsMap';
+import { sanitiseId } from 'helpers/general';
 
 const testData = {
     journals: mockData.data,
@@ -100,7 +101,7 @@ describe('Journal Search Results list', () => {
             };
 
             // Make sure the title of the Journal is in the document as per the data.
-            const titlesElement = getByTestId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`);
+            const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
             expect(titlesElement).toBeInTheDocument();
             expect(titlesElement).toHaveTextContent(dataItem.jnl_title);
             const dataElement = getByTestId(`journal-list-data-col-2-min-${index}`);
@@ -127,7 +128,7 @@ describe('Journal Search Results list', () => {
         });
         mockData.data.map((dataItem, index) => {
             // Make sure the title of the Journal is in the document as per the data.
-            const titlesElement = getByTestId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`);
+            const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
             expect(titlesElement).toBeInTheDocument();
             expect(titlesElement).toHaveTextContent(JournalFieldsMap[0].translateFn(dataItem));
 

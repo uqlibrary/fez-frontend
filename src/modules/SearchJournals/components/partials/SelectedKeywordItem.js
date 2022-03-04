@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { makeStyles } from '@material-ui/core/styles';
+import { sanitiseId } from 'helpers/general';
 
 const useStyles = makeStyles(theme => ({
     chip: {
@@ -29,12 +30,12 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
 
         handleDeleteKeyword();
     };
-    const idValue = `${keyword.type}-${keyword.text.replace(/ /g, '-')}`;
+    const idValue = sanitiseId(`journal-search-chip-${keyword.type}-${keyword.text}`);
     return (
         <Chip
             className={classes.chip}
-            id={`journal-search-chip-${idValue}`}
-            data-testid={`journal-search-chip-${idValue}`}
+            id={idValue}
+            data-testid={idValue}
             label={
                 <React.Fragment>
                     <Typography variant="body2" component="span" color="secondary">
