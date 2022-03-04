@@ -68,6 +68,7 @@ const handlers = {
 };
 
 export default function viewCollectionsReducer(state = { ...initialState }, action) {
+    console.log(action.type);
     const handler = handlers[action.type];
     if (!handler) {
         return state;

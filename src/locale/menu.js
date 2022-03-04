@@ -60,7 +60,7 @@ export default {
             primaryText: 'Add a missing community',
         },
         communityList: {
-            primaryText: 'Communities List',
+            primaryText: 'Communities list',
         },
         unpublished: {
             primaryText: 'Unpublished buffer',

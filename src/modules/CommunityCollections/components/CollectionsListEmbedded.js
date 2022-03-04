@@ -56,24 +56,24 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     const filteredData = collectionList.filter(obj => obj.parent === pid);
     const finalList = filteredData.length > 0 ? filteredData[0].data : { data: [] };
 
-    if (finalList && finalList.data && finalList.data.length > 0) {
-        switch (sortBy) {
-            case 'title':
-                finalList.data.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
-                sortDirection === 'Asc' && finalList.data.reverse();
-                break;
-            case 'created_date':
-                finalList.data.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
-                sortDirection === 'Asc' && finalList.data.reverse();
-                break;
-            case 'updated_date':
-                finalList.data.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
-                sortDirection === 'Asc' && finalList.data.reverse();
-                break;
-            default:
-                break;
-        }
-    }
+    // if (finalList && finalList.data && finalList.data.length > 0) {
+    //     switch (sortBy) {
+    //         case 'title':
+    //             finalList.data.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
+    //             sortDirection === 'Asc' && finalList.data.reverse();
+    //             break;
+    //         case 'created_date':
+    //             finalList.data.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
+    //             sortDirection === 'Asc' && finalList.data.reverse();
+    //             break;
+    //         case 'updated_date':
+    //             finalList.data.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
+    //             sortDirection === 'Asc' && finalList.data.reverse();
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }
 
     const PagingData = {
         from: finalList.from,
@@ -86,6 +86,38 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     const sortByChanged = (sortby, direction) => {
         setSortDirection(direction);
         setSortBy(sortby);
+        dispatch(
+            actions.loadCCCollectionsList({
+                pid: pid,
+                pageSize: PagingData.per_page,
+                page: PagingData.current_page,
+                direction: direction,
+                sortBy: sortby,
+            }),
+        );
+    };
+
+    const pageSizeChanged = pageSize => {
+        dispatch(
+            actions.loadCCCollectionsList({
+                pid: pid,
+                pageSize: pageSize,
+                page: 1,
+                direction: 'Asc',
+                sortBy: 'title',
+            }),
+        );
+    };
+    const pageChanged = page => {
+        dispatch(
+            actions.loadCCCollectionsList({
+                pid: pid,
+                pageSize: PagingData.per_page,
+                page: page,
+                direction: 'Asc',
+                sortBy: 'title',
+            }),
+        );
     };
 
     return (
@@ -98,10 +130,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
             {loadingCollectionsPid !== pid && (
                 <TableCell colSpan={5} style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}>
                     {finalList.data.length > 0 && (
-                        <Collapse in={open} timeout="auto" unmountOnExit>
-                            <Box style={{ backgroundColor: 'white', padding: 10 }}>
-                                <Typography variant="caption">
-                                    {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} Collections for '${title}'`}
+                        <Collapse in={open} timeout={200} unmountOnExit>
+                            <Box style={{ minHeight: 200, backgroundColor: 'white', padding: 10 }}>
+                                <Typography variant="caption" style={{ fontWeight: 600 }}>
+                                    {`Displaying ${PagingData.from} to ${PagingData.to} of ${PagingData.total} collections for '${title}'`}
                                 </Typography>
                                 <CommunityCollectionsSorting
                                     data-testid="embedded-collections-sorting-top"
@@ -113,7 +145,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                     sortDirection={sortDirection}
                                     // onExportPublications={handleExport}
                                     onSortByChanged={sortByChanged}
-                                    // onPageSizeChanged={pageSizeChanged}
+                                    onPageSizeChanged={pageSizeChanged}
                                     pageSize={PagingData.per_page}
                                     // sortingDefaults={sortingDefaults}
                                 />
@@ -121,7 +153,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                 <CommunityCollectionsPaging
                                     loading={false}
                                     pagingData={PagingData}
-                                    // onPageChanged={pageChanged}
+                                    onPageChanged={pageChanged}
                                     disabled={false}
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
@@ -172,6 +204,14 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                                         ))}
                                     </TableBody>
                                 </Table>
+                                <CommunityCollectionsPaging
+                                    loading={false}
+                                    pagingData={PagingData}
+                                    onPageChanged={pageChanged}
+                                    disabled={false}
+                                    pagingId="embedded-collections-paging-bottom"
+                                    data-testid="embedded-collections-paging-bottom"
+                                />
                             </Box>
                         </Collapse>
                     )}

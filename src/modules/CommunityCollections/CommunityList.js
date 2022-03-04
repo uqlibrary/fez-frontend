@@ -4,10 +4,13 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
+import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 import { useIsUserSuperAdmin } from 'hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-
+import Typography from '@material-ui/core/Typography';
 import { pathConfig } from 'config';
 import { communityCollectionsConfig } from 'config';
 
@@ -23,6 +26,11 @@ import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 
 export const CommunityList = () => {
+    const [autoCollapse, setAutoCollapse] = React.useState(false);
+    const handleSwitchChange = event => {
+        setAutoCollapse(event.target.checked);
+    };
+
     const history = useHistory();
     let sortDirection = 'Asc';
     let sortBy = 'title';
@@ -41,9 +49,11 @@ export const CommunityList = () => {
     sortBy = queryStringObject.sortBy ? queryStringObject.sortBy : sortBy;
 
     const communityList = useSelector(state => state.get('viewCommunitiesReducer').communityList);
+    const loadingCommunities = useSelector(state => state.get('viewCommunitiesReducer').loadingCommunities);
     const totalRecords = useSelector(state => state.get('viewCommunitiesReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
+
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
 
@@ -110,19 +120,48 @@ export const CommunityList = () => {
 
     return (
         <StandardPage title={txt.title.communities}>
-            {!!isSuperAdmin && (
-                <Grid item xs={12} sm={3} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
-                    <Button
-                        component={Link}
-                        variant="outlined"
-                        to={pathConfig.admin.community}
-                        data-test-id="admin-add-community-button"
-                    >
-                        {communityCollectionsConfig.addNewCommunityText}
-                    </Button>
-                </Grid>
-            )}
+            <Grid container>
+                {!!isSuperAdmin && (
+                    <>
+                        <Grid item xs={6} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
+                            <Button
+                                component={Link}
+                                variant="outlined"
+                                to={pathConfig.admin.community}
+                                data-test-id="admin-add-community-button"
+                            >
+                                {communityCollectionsConfig.addNewCommunityText}
+                            </Button>
+                        </Grid>
+                        <Grid
+                            item
+                            xs={6}
+                            style={{ textAlign: 'right', marginBottom: 10 }}
+                            data-test-id="admin-add-community"
+                        >
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={autoCollapse}
+                                        onChange={handleSwitchChange}
+                                        name="collection-auto-collapse"
+                                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                                    />
+                                }
+                                label={communityCollectionsConfig.collapseSwitchText}
+                            />
+                        </Grid>
+                    </>
+                )}
+            </Grid>
+
             <StandardCard noHeader>
+                {!!!loadingCommunities && (
+                    <Typography variant="body2" style={{ fontWeight: 600 }}>
+                        Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
+                    </Typography>
+                )}
+
                 <Grid item xs={12} style={{ marginBottom: 10 }}>
                     <CommunityCollectionsSorting
                         data-testid="community-collections-sorting-top"
@@ -150,7 +189,7 @@ export const CommunityList = () => {
                     />
                 </Grid>
                 {sortedList.length > 0 ? (
-                    <CommunityTable records={sortedList} labels={labels} conf={txt} />
+                    <CommunityTable records={sortedList} labels={labels} conf={txt} autoCollapse={autoCollapse} />
                 ) : (
                     <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
                 )}

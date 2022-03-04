@@ -20,7 +20,7 @@ const useStyles = makeStyles({
         minWidth: 120,
     },
 });
-export const CommunityTable = ({ records, labels, conf }) => {
+export const CommunityTable = ({ records, labels, conf, autoCollapse }) => {
     const isSuperAdmin = useIsUserSuperAdmin();
     const classes = useStyles();
     return (
@@ -48,6 +48,7 @@ export const CommunityTable = ({ records, labels, conf }) => {
                             row={row}
                             isSuperAdmin={isSuperAdmin}
                             labels={labels}
+                            autoCollapse={autoCollapse}
                         />
                     ))}
                 </TableBody>
@@ -60,5 +61,6 @@ CommunityTable.propTypes = {
     location: PropTypes.object,
     labels: PropTypes.object,
     conf: PropTypes.object,
+    autoCollapse: PropTypes.bool,
 };
 export default CommunityTable;

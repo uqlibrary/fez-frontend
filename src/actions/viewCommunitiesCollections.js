@@ -30,10 +30,12 @@ export function loadCommunitiesList(params = {}) {
     };
 }
 export function loadCCCollectionsList(params = {}) {
-    const { pid, pageSize, page } = params;
+    const { pid, pageSize, page, direction, sortBy } = params;
     return dispatch => {
-        dispatch({ type: actions.VIEW_COLLECTIONS_LOADING, payload: { pid: pid } });
-        return get(COLLECTION_LIST_API({ pid: pid, pageSize: pageSize, page: page }))
+        dispatch({ type: actions.VIEW_COLLECTIONS_LOADING, payload: { pid: pid, pageSize: pageSize } });
+        return get(
+            COLLECTION_LIST_API({ pid: pid, pageSize: pageSize, page: page, direction: direction, sortBy: sortBy }),
+        )
             .then(response => {
                 dispatch({
                     type: actions.VIEW_COLLECTIONS_LOADED,

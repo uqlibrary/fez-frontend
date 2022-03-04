@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 });
 import { Link } from 'react-router-dom';
 
-export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels }) => {
+export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse }) => {
     const dispatch = useDispatch();
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
@@ -36,6 +36,10 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels }) => {
     const handleSetOpen = openState => {
         // setOpen(openState);
         // Store the rek id here in the redux store.
+        // if autoCollapse is set to on, clear the array.
+        if (autoCollapse) {
+            dispatch(actions.clearCCCollectionsList());
+        }
         dispatch(actions.setCollectionsArray({ pid: row.rek_pid, open: openState }));
     };
 
@@ -91,5 +95,6 @@ CommunityDataRow.propTypes = {
     row: PropTypes.object,
     isSuperAdmin: PropTypes.bool,
     labels: PropTypes.object,
+    autoCollapse: PropTypes.bool,
 };
 export default CommunityDataRow;
