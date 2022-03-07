@@ -108,7 +108,7 @@ export const CommunityList = () => {
 
     const labels = txt.columns.labels;
 
-    const tempPagingData = {
+    const PagindData = {
         from: startRecord,
         to: endRecord,
         total: totalRecords,
@@ -167,7 +167,7 @@ export const CommunityList = () => {
                         data-testid="community-collections-sorting-top"
                         // canUseExport
                         exportData={txt.export}
-                        pagingData={tempPagingData}
+                        pagingData={PagindData}
                         sortingData={txt.sorting}
                         sortBy={sortBy}
                         sortDirection={sortDirection}
@@ -181,7 +181,7 @@ export const CommunityList = () => {
                 <Grid item xs={12}>
                     <CommunityCollectionsPaging
                         loading={false}
-                        pagingData={tempPagingData}
+                        pagingData={PagindData}
                         onPageChanged={pageChanged}
                         disabled={false}
                         pagingId="community-collections-paging-top"
@@ -197,7 +197,7 @@ export const CommunityList = () => {
                     <CommunityCollectionsPaging
                         data-testid="community-collections-paging-bottom"
                         loading={false}
-                        pagingData={tempPagingData}
+                        pagingData={PagindData}
                         onPageChanged={pageChanged}
                         disabled={false}
                         pagingId="community-collections-paging-bottom"
