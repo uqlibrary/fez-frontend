@@ -61,9 +61,18 @@ export class PublicationDetailsClass extends PureComponent {
 
         const headings = locale.viewRecord.headings.default.publicationDetails;
 
+        // Some record types require a different header text (e.g. collections),
+        // so attempt to get a new
+        // header value from the publicationDetailsCustom object and if nothing
+        // there, fallback to standard header
+        const sectionTitle =
+            locale.viewRecord.sections.publicationDetailsCustom[
+                this.props.publication.rek_display_type_lookup.toLowerCase()
+            ] ?? locale.viewRecord.sections.publicationDetails;
+
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.publicationDetails}>
+                <StandardCard title={sectionTitle}>
                     {this.props.publication.rek_display_type_lookup && (
                         <this.ViewRecordRow
                             heading={headings.rek_display_type}
@@ -99,7 +108,9 @@ export class PublicationDetailsClass extends PureComponent {
                     {this.props.publication.fez_record_search_key_ismemberof &&
                         this.props.publication.fez_record_search_key_ismemberof.length > 0 && (
                             <this.ViewRecordRow
-                                heading={headings.fez_record_search_key_ismemberof}
+                                heading={headings.fez_record_search_key_ismemberof(
+                                    this.props.publication.fez_record_search_key_ismemberof.length > 1,
+                                )}
                                 data={
                                     <ul className={this.props.classes.ul}>
                                         {this.props.publication.fez_record_search_key_ismemberof.map(

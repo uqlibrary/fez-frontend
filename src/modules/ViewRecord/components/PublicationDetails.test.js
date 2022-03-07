@@ -65,4 +65,10 @@ describe('Publication Details Component ', () => {
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('Renders the Type & Collection title for collections', () => {
+        publicationDetails.rek_display_type_lookup = 'Collection';
+        const wrapper = setup({ publication: publicationDetails });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
