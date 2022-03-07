@@ -18,6 +18,8 @@ import Collapse from '@material-ui/core/Collapse';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import CommunityCollectionsPaging from './CommunityCollectionsPaging';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
+import Button from '@material-ui/core/Button';
+import { communityCollectionsConfig } from 'config';
 
 const moment = require('moment');
 
@@ -218,6 +220,14 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                     {!finalList.data.length > 0 && (
                         <Typography variant="caption">{conf.loading.noCollections}</Typography>
                     )}
+                    <Button
+                        component={Link}
+                        variant="outlined"
+                        to={pathConfig.admin.collection}
+                        data-test-id="admin-add-community-button"
+                    >
+                        {communityCollectionsConfig.addNewCollectionText}
+                    </Button>
                 </TableCell>
             )}
         </>
