@@ -6,9 +6,9 @@ export const initialState = {
     loadingCollections: false,
     loadingCollectionsPid: null,
     loadingCollectionsError: null,
-    totalRecords: 0,
-    startRecord: 0,
-    endRecord: 0,
+    // totalRecords: 0,
+    // startRecord: 0,
+    // endRecord: 0,
     currentPage: 1,
     perPage: 10,
     collectionsOpened: [],
@@ -49,11 +49,12 @@ const handlers = {
         loadingCollectionsError: action.payload,
         collectionsOpened: state.collectionsOpened,
     }),
-    [actions.VIEW_COLLECTIONS_CLEARED]: state => ({
+    [actions.VIEW_COLLECTIONS_CLEARED]: () => ({
         ...initialState,
-        collectionList: state.collectionList,
+        collectionList: [],
         loadingCollections: false,
         loadingCollectionsPid: null,
+        // collectionsOpened: [],
     }),
     [actions.SET_COLLECTIONS_ARRAY]: (state, action) => {
         let collectionArray = [...state.collectionsOpened];
