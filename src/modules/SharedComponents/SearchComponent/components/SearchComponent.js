@@ -6,15 +6,16 @@ import Snackbar from '@material-ui/core/Snackbar';
 import { pathConfig } from 'config';
 import {
     DEFAULT_QUERY_PARAMS,
+    GENERIC_DATE_FORMAT,
     UNPUBLISHED_STATUS_MAP,
     UNPUBLISHED_STATUS_TEXT_MAP,
-    GENERIC_DATE_FORMAT,
 } from 'config/general';
 import { locale } from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
+import hash from 'hash-sum';
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
@@ -89,36 +90,41 @@ export default class SearchComponent extends PureComponent {
     // eslint-disable-next-line camelcase
     UNSAFE_componentWillReceiveProps(nextProps) {
         if (
-            Object.keys(nextProps.searchQueryParams).length !== Object.keys(this.props.searchQueryParams).length ||
-            nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised
+            hash(nextProps.searchQueryParams) === hash(this.props.searchQueryParams) &&
+            nextProps.isAdvancedSearchMinimised === this.props.isAdvancedSearchMinimised
         ) {
-            this.setState(
-                {
-                    isAdvancedSearch: nextProps.isAdvancedSearch,
-                    simpleSearch: {
-                        searchText:
-                            (nextProps.searchQueryParams.all || {}).value ||
-                            (typeof nextProps.searchQueryParams.all === 'string' && nextProps.searchQueryParams.all) ||
-                            '',
-                    },
-                    advancedSearch: {
-                        fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
-                        isMinimised: (this.context.isMobile && nextProps.isAdvancedSearchMinimised) || false,
-                        isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
-                        docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
-                        yearFilter: {
-                            from: this.state.advancedSearch.yearFilter.from,
-                            to: this.state.advancedSearch.yearFilter.to,
-                        },
-                        ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
-                    },
-                },
-                () => {
-                    // Update the excluded facets in SearchRecords to hide from facetFilter
-                    this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
-                },
-            );
+            return;
         }
+
+        console.log(nextProps.searchQueryParams);
+        console.log(this.props.searchQueryParams);
+        this.setState(
+            {
+                isAdvancedSearch: nextProps.isAdvancedSearch,
+                simpleSearch: {
+                    searchText:
+                        (nextProps.searchQueryParams.all || {}).value ||
+                        (typeof nextProps.searchQueryParams.all === 'string' && nextProps.searchQueryParams.all) ||
+                        '',
+                },
+                advancedSearch: {
+                    fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
+                    isMinimised: (this.context.isMobile && nextProps.isAdvancedSearchMinimised) || false,
+                    isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
+                    yearFilter: {
+                        from: this.state.advancedSearch.yearFilter.from,
+                        to: this.state.advancedSearch.yearFilter.to,
+                    },
+                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
+                },
+            },
+            () => {
+                // Update the excluded facets in SearchRecords to hide from facetFilter
+                nextProps.isAdvancedSearch &&
+                    this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
+            },
+        );
     }
 
     getFieldRowsFromSearchQuery = searchQueryParams => {
@@ -239,6 +245,7 @@ export default class SearchComponent extends PureComponent {
             !this.props.isInHeader && this.props.actions.searchEspacePublications(searchQuery);
 
             // navigate to search results page
+            console.log('this.props.history');
             this.props.history.push({
                 pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
                 search: param(searchQuery),

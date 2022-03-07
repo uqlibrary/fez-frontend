@@ -205,6 +205,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
  * @return {function(*): Promise<any>}
  */
 export function searchEspacePublications(searchParams) {
+    console.log('API CALL');
     return dispatch => {
         dispatch({
             type: actions.SET_SEARCH_QUERY,

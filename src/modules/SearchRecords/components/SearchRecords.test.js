@@ -1,18 +1,15 @@
 import React from 'react';
-import { default as SearchRecords, parseSearchQueryStringFromUrl, getAdvancedSearchFields } from './SearchRecords';
+import { default as SearchRecords } from './SearchRecords';
 import { pathConfig } from 'config';
-// import { locale } from 'locale';
-import { renderWithRouter, WithReduxStore, fireEvent, act } from 'test-utils';
+import { act, fireEvent, renderWithRouter, WithReduxStore } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
+import * as actions from 'actions';
+import * as UserIsAdminHook from 'hooks/userIsAdmin';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 jest.mock('actions', () => ({
     searchEspacePublications: jest.fn(() => ({ type: '' })),
 }));
-import * as actions from 'actions';
-
-import * as UserIsAdminHook from 'hooks/userIsAdmin';
-
-import { EXPORT_FORMAT_TO_EXTENSION, PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 
 /**
  * Unhide items hidden by MaterialUI based on screen size
@@ -37,6 +34,7 @@ const setup = (testProps = {}) => {
         },
         history: {
             push: jest.fn(),
+            listen: jest.fn(),
         },
         ...testProps,
         actions: {
@@ -263,6 +261,7 @@ describe('SearchRecords page', () => {
             },
             history: {
                 push: testPushFn,
+                listen: jest.fn(),
             },
         });
 
@@ -300,6 +299,7 @@ describe('SearchRecords page', () => {
             },
             history: {
                 push: testPushFn,
+                listen: jest.fn(),
             },
         });
 
@@ -333,6 +333,7 @@ describe('SearchRecords page', () => {
             },
             history: {
                 push: testPushFn,
+                listen: jest.fn(),
             },
         });
 
@@ -429,6 +430,7 @@ describe('SearchRecords page', () => {
             },
             history: {
                 push: testPushFn,
+                listen: jest.fn(),
             },
         });
 
@@ -475,6 +477,7 @@ describe('SearchRecords page', () => {
         const { getByTestId, getAllByRole } = setup({
             history: {
                 push: testFn,
+                listen: jest.fn(),
             },
             location: {
                 pathname: pathConfig.admin.unpublished,
@@ -666,221 +669,5 @@ describe('SearchRecords page', () => {
         });
         unmount();
         expect(clearSearchQueryFn).toHaveBeenCalled();
-    });
-});
-
-describe('parseSearchQueryStringFromUrl helper', () => {
-    it('should correctly parse search query string from location search (default filters + title', () => {
-        const result = parseSearchQueryStringFromUrl(
-            'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata',
-        );
-
-        expect(result).toEqual({
-            activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: false,
-            page: 1,
-            pageSize: 20,
-            searchQueryParams: { title: 'sometestdata' },
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-        });
-    });
-
-    it('should parse properly when activeFacets.showOpenAccessOnly is not present in url', () => {
-        const result = parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
-        expect(result).toEqual({
-            activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: false,
-            page: 1,
-            pageSize: 20,
-            sortBy: 'score',
-            sortDirection: 'Desc',
-        });
-    });
-
-    it(
-        'should correctly parse search query string from location search ' +
-            '(default filters + publication type facet + title',
-        () => {
-            const result = parseSearchQueryStringFromUrl(
-                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
-                    'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5B' +
-                    'title%5D=some+test+data',
-            );
-
-            expect(result).toEqual({
-                activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: false },
-                bulkExportSelected: false,
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: { title: 'some test data' },
-                sortBy: 'published_date',
-                sortDirection: 'Desc',
-            });
-        },
-    );
-
-    it(
-        'should correctly parse search query string from location search ' +
-            '(changed filters + publication type + open access)',
-        () => {
-            const result = parseSearchQueryStringFromUrl(
-                'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
-                    'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5B' +
-                    'title%5D=some+test+data',
-            );
-
-            expect(result).toEqual({
-                activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: true },
-                bulkExportSelected: false,
-                page: 2,
-                pageSize: 50,
-                searchQueryParams: { title: 'some test data' },
-                sortBy: 'published_date',
-                sortDirection: 'Desc',
-            });
-        },
-    );
-
-    it('should correctly parse search query string from location search (published year)', () => {
-        const result = parseSearchQueryStringFromUrl(
-            'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
-                'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
-                'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&' +
-                'searchQueryParams%5Btitle%5D=some+test+data',
-        );
-
-        expect(result).toEqual({
-            activeFacets: {
-                filters: {},
-                ranges: { 'Year published': { from: '2008', to: '2023' } },
-                showOpenAccessOnly: false,
-            },
-            bulkExportSelected: false,
-            page: 1,
-            pageSize: 20,
-            searchQueryParams: { title: 'some test data' },
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-        });
-    });
-
-    it(
-        'should correctly parse search query string from location search and ' +
-            'reset pageSize if not in valid values (20, 50, 100)',
-        () => {
-            const result = parseSearchQueryStringFromUrl(
-                'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5B' +
-                    'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-            );
-
-            expect(result).toEqual({
-                activeFacets: {
-                    filters: {},
-                    ranges: { 'Year published': { from: '2008', to: '2023' } },
-                    showOpenAccessOnly: false,
-                },
-                bulkExportSelected: false,
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: { title: 'some test data' },
-                sortBy: 'published_date',
-                sortDirection: 'Desc',
-            });
-        },
-    );
-
-    it(
-        'should correctly parse search query string from location search and ' +
-            'reset sortDirection if not in valid values (Desc, Asc)',
-        () => {
-            const result = parseSearchQueryStringFromUrl(
-                'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
-                    'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-            );
-
-            expect(result).toEqual({
-                activeFacets: {
-                    filters: {},
-                    ranges: { 'Year published': { from: '2008', to: '2023' } },
-                    showOpenAccessOnly: false,
-                },
-                bulkExportSelected: false,
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: { title: 'some test data' },
-                sortBy: 'published_date',
-                sortDirection: 'Desc',
-            });
-        },
-    );
-
-    it('should correctly parse search query string from location search & reset sortBy if not in valid values', () => {
-        const result = parseSearchQueryStringFromUrl(
-            'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5B' +
-                'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
-        );
-
-        expect(result).toEqual({
-            activeFacets: {
-                filters: {},
-                ranges: { 'Year published': { from: '2008', to: '2023' } },
-                showOpenAccessOnly: false,
-            },
-            bulkExportSelected: false,
-            page: 1,
-            pageSize: 100,
-            searchQueryParams: { title: 'some test data' },
-            sortBy: 'published_date',
-            sortDirection: 'Asc',
-        });
-    });
-
-    it('should handle empty search query string', () => {
-        const expected = {
-            activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: false,
-            page: 1,
-            pageSize: 20,
-            sortBy: 'score',
-            sortDirection: 'Desc',
-        };
-        const result = parseSearchQueryStringFromUrl('');
-        expect(result).toEqual(expected);
-    });
-
-    it('sets bulkExportSelected to true if specific page size is detected', () => {
-        const searchQuery = `pageSize=${PUB_SEARCH_BULK_EXPORT_SIZE}&page=1&activeFacets`;
-        const canBulkExport = true;
-        const isUnpublishedBufferPage = false;
-        expect(parseSearchQueryStringFromUrl(searchQuery, canBulkExport, isUnpublishedBufferPage)).toStrictEqual({
-            activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: true,
-            page: 1,
-            pageSize: PUB_SEARCH_BULK_EXPORT_SIZE,
-            sortBy: 'score',
-            sortDirection: 'Desc',
-        });
-    });
-});
-
-describe('getAdvancedSearchFields helper', () => {
-    it('should add specified search field names to the returned list', () => {
-        const input = [
-            {
-                searchField: 'rek_title',
-                value: 'test title',
-            },
-            {
-                searchField: 'all',
-                value: 'test',
-            },
-            {},
-        ];
-        const expected = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title'];
-        expect(getAdvancedSearchFields(input)).toStrictEqual(expected);
     });
 });
