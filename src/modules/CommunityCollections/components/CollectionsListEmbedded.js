@@ -220,14 +220,17 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                     {!finalList.data.length > 0 && (
                         <Typography variant="caption">{conf.loading.noCollections}</Typography>
                     )}
-                    <Button
-                        component={Link}
-                        variant="outlined"
-                        to={pathConfig.admin.collection}
-                        data-test-id="admin-add-community-button"
-                    >
-                        {communityCollectionsConfig.addNewCollectionText}
-                    </Button>
+                    {!!isSuperAdmin && (
+                        <Button
+                            style={{ marginTop: 10 }}
+                            component={Link}
+                            variant="outlined"
+                            to={pathConfig.admin.collection}
+                            data-test-id="admin-add-community-button"
+                        >
+                            {communityCollectionsConfig.addNewCollectionText}
+                        </Button>
+                    )}
                 </TableCell>
             )}
         </>

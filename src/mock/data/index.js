@@ -70,6 +70,7 @@ export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journals/search/keyword/bio';
 export { journalDetails } from './journal';
 export { communityList } from './communityList'
+export { collectionList } from './collectionList'
 export { journalsList } from './journals';
 export { journalList } from './journalList';
 
