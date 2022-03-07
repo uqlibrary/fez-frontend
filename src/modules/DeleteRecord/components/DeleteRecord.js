@@ -93,6 +93,8 @@ export default class DeleteRecord extends PureComponent {
         const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
             return customError.httpStatus === statusCode;
         });
+
+        /* istanbul ignore next */
         const message = !!errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
         return message; // could be string or function
     };

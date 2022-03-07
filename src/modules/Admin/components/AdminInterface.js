@@ -181,14 +181,18 @@ export const AdminInterface = ({
     const handleDelete = event => {
         event.preventDefault?.();
         const deleteAction = adminActions.filter(action => action.label === DELETE_SELECTED_RECORD_LABEL)[0];
+        /* istanbul ignore next */
         const linkTarget = deleteAction.inApp ? '_self' : '_blank';
         const options = deleteAction.options || null;
         const url = deleteAction.url(record.rek_pid);
+
         const navigatedFrom =
             (location.hash && location.hash.replace('#', '')) || `${location.pathname}${location.search}`;
-        // debounce(300, true, () => {
-        navigateToUrl(url, linkTarget, !!deleteAction.isRecordEdit && navigatedFrom, options);
-        // });
+
+        /* istanbul ignore next */
+        const navFrom = !!deleteAction.isRecordEdit && navigatedFrom;
+
+        navigateToUrl(url, linkTarget, navFrom, options);
     };
 
     const setSuccessConfirmationRef = React.useCallback(node => {

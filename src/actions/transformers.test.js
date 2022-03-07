@@ -5122,3 +5122,13 @@ describe('createOrUpdateDoi', () => {
         ]);
     });
 });
+
+describe('reasonForEdit', () => {
+    it('should correctly transform data', () => {
+        const record = { reason: 'This is a test reason' };
+        expect(transformers.getReasonSectionSearchKeys(record)).toEqual({
+            ...record,
+        });
+        expect(transformers.getReasonSectionSearchKeys({})).toEqual({});
+    });
+});
