@@ -26,8 +26,8 @@ describe('JournalsListHeaderCol2 Min', () => {
         const { queryByTestId } = setup({
             ...testProps,
         });
-        expect(queryByTestId('help-icon-test_record')).toBeInTheDocument();
-        const dataElement = queryByTestId('journal-list-header-min-test_record');
+        expect(queryByTestId('help-icon-test-record')).toBeInTheDocument();
+        const dataElement = queryByTestId('journal-list-header-min-test-record');
         expect(dataElement.querySelector('div.MuiGrid-grid-xs-2').style.marginRight).toEqual('10px');
     });
     it('Should show a title help if one provided, no margin', () => {
@@ -38,8 +38,8 @@ describe('JournalsListHeaderCol2 Min', () => {
                 size: 260,
             },
         });
-        expect(queryByTestId('help-icon-test_record')).toBeInTheDocument();
-        const dataElement = queryByTestId('journal-list-header-min-test_record');
+        expect(queryByTestId('help-icon-test-record')).toBeInTheDocument();
+        const dataElement = queryByTestId('journal-list-header-min-test-record');
         expect(dataElement.querySelector('div.MuiGrid-grid-xs-2').style.marginRight).toEqual('0px');
     });
 
@@ -50,6 +50,6 @@ describe('JournalsListHeaderCol2 Min', () => {
                 size: 255,
             },
         });
-        expect(queryByTestId('help-icon-test_record')).not.toBeInTheDocument();
+        expect(queryByTestId('help-icon-test-record')).not.toBeInTheDocument();
     });
 });

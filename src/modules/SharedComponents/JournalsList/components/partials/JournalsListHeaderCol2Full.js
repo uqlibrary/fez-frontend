@@ -4,16 +4,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Tooltip from '@material-ui/core/Tooltip';
 import PropTypes from 'prop-types';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { sanitiseId } from 'helpers/general';
 
 const JournalsListHeaderCol2Full = ({ journal }) => {
+    const id = sanitiseId(`journal-list-header-full-${journal.key}`);
     return (
-        <Grid
-            item
-            key={journal.key}
-            id={`journal-list-header-full-${journal.key}`}
-            data-testid={`journal-list-header-full-${journal.key}`}
-            style={{ width: journal.size, height: 34 }}
-        >
+        <Grid item key={journal.key} id={id} data-testid={id} style={{ width: journal.size, height: 34 }}>
             <Tooltip title={journal.titleTooltip || ''}>
                 <InputLabel
                     shrink

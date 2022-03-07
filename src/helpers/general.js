@@ -312,3 +312,16 @@ export function hydrateMockSearchList(truncatedSearchlist) {
         data: truncatedSearchlist.data.map(d => hydrateMock(d)),
     };
 }
+
+/**
+ * Only allow 0-9 a-z and hyphen in the id/test id
+ *
+ * @param id
+ * @returns string
+ */
+export const sanitiseId = id =>
+    id
+        .trim()
+        .replace(/[^0-9a-z\s-_]+/gi, '')
+        .replace(/[-_\s]+/g, '-')
+        .toLowerCase();

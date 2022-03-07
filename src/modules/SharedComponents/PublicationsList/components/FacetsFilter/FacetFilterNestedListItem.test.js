@@ -4,6 +4,7 @@ import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
 function setup(testProps = {}) {
     const props = {
+        facet: 'Facet',
         index: 0,
         primaryText: 'Test facet filter',
         disabled: false,
@@ -23,6 +24,6 @@ describe('Facet filter nested list item ', () => {
     it('should render active filter view', () => {
         const { getByText, getByTestId } = setup({ primaryText: 'Test filter', isActive: true });
         expect(getByText('Test filter')).toBeInTheDocument();
-        expect(getByTestId('clear-facet-filter-nested-item-test-filter')).toBeInTheDocument();
+        expect(getByTestId('clear-facet-filter-nested-item-facet-test-filter')).toBeInTheDocument();
     });
 });

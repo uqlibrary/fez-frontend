@@ -23,6 +23,7 @@ export const FacetFilterNestedListItemsList = React.memo(function FacetFilterNes
         const isActive = isFacetFilterActive(activeFacets.filters, facetCategory.facetTitle, item.key);
         return (
             <FacetFilterNestedListItem
+                facet={facetCategory.facetTitle}
                 key={index}
                 index={index}
                 onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}

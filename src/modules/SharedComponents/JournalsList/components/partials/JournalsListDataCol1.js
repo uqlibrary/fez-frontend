@@ -5,6 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
+import { sanitiseId } from 'helpers/general';
 
 const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSelectable = true }) => {
     return (
@@ -63,7 +64,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
                         <ExternalLink
                             href={`/journal/view/${journal.jnl_jid}`}
                             title={journal.jnl_title}
-                            id={`${journal.jnl_jid}-${journal.jnl_title}`}
+                            id={sanitiseId(`${journal.jnl_jid}-${journal.jnl_title}`)}
                         >
                             {journal.jnl_title}
                         </ExternalLink>

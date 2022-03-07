@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
+import { sanitiseId } from 'helpers/general';
 
 const useStyles = makeStyles(
     theme => ({
@@ -26,16 +27,11 @@ export const HelpIcon = ({ title, text, buttonLabel, iconSize, tooltip, onClick,
     const setDrawerContent = () => {
         onClick(title, text, buttonLabel);
     };
+    const id = sanitiseId(`help-icon${!!testId ? `-${testId}` : ''}`);
 
     return (
         <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
-            <IconButton
-                onClick={setDrawerContent}
-                aria-label={tooltip}
-                id={`help-icon${!!testId ? `-${testId}` : ''}`}
-                data-testid={`help-icon${!!testId ? `-${testId}` : ''}`}
-                size={iconSize}
-            >
+            <IconButton onClick={setDrawerContent} aria-label={tooltip} id={id} data-testid={id} size={iconSize}>
                 <IconComponent className={classes.helpIcon} fontSize={iconSize} titleAccess={tooltip} />
             </IconButton>
         </Tooltip>

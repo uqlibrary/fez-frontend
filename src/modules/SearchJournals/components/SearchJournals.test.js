@@ -127,7 +127,7 @@ describe('SearchJournals', () => {
 
         expect(queryByTestId('journal-search-item-addable-keyword-astrobiology-0')).toBeInTheDocument();
         expect(
-            queryByTestId('journal-search-item-addable-subject-0304 Medicinal and Biomolecular Chemistry-0'),
+            queryByTestId('journal-search-item-addable-subject-0304-medicinal-and-biomolecular-chemistry-0'),
         ).toBeInTheDocument();
 
         act(() => {
@@ -136,7 +136,7 @@ describe('SearchJournals', () => {
 
         act(() => {
             fireEvent.click(
-                queryByTestId('journal-search-item-addable-subject-0304 Medicinal and Biomolecular Chemistry-0'),
+                queryByTestId('journal-search-item-addable-subject-0304-medicinal-and-biomolecular-chemistry-0'),
             );
         });
 
@@ -148,12 +148,12 @@ describe('SearchJournals', () => {
             fireEvent.click(queryByTestId('journal-search-button'));
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
         expect(
-            queryByTestId('journal-search-chip-Subject-0304-Medicinal-and-Biomolecular-Chemistry'),
+            queryByTestId('journal-search-chip-subject-0304-medicinal-and-biomolecular-chemistry'),
         ).toBeInTheDocument();
 
-        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
     });
 
     it('should clear a set of results via the clear all "X" button', () => {
@@ -192,9 +192,9 @@ describe('SearchJournals', () => {
             fireEvent.click(queryByTestId('journal-search-button'));
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
 
-        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
 
         expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
 
@@ -204,8 +204,8 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual('');
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).not.toBeInTheDocument();
-        expect(queryByTestId('641-Astrobiology-link')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).not.toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).not.toBeInTheDocument();
         expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
 
         expect(queryByText('Step 2.')).not.toBeInTheDocument();
@@ -247,9 +247,9 @@ describe('SearchJournals', () => {
             fireEvent.click(queryByTestId('journal-search-button'));
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
 
-        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
 
         expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
 
@@ -259,8 +259,8 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual('');
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).not.toBeInTheDocument();
-        expect(queryByTestId('641-Astrobiology-link')).not.toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).not.toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).not.toBeInTheDocument();
         expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
 
         act(() => {
@@ -271,8 +271,8 @@ describe('SearchJournals', () => {
         expect(
             queryByText('Enter a journal title, keyword, subject or field of research code.'),
         ).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
-        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
     });
 
     /* Commented out test due to bug in test cases causing 404 page not found error */
@@ -298,9 +298,9 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-all-journals')).toBeInTheDocument();
-        expect(queryByTestId('13251-International Journal of Astrobiology-link')).toBeInTheDocument();
-        expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-all-journals')).toBeInTheDocument();
+        expect(queryByTestId('13251-international-journal-of-astrobiology-link')).toBeInTheDocument();
+        expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();
     });
 
     it('should correctly update the URL with "all journals" keywords and show "all journals" keyword button on screen', () => {
@@ -331,7 +331,7 @@ describe('SearchJournals', () => {
         expect(testHistory.location.pathname).toEqual(path);
         expect(testHistory.location.search).toEqual(testQuerySearchAllJournals);
         expect(queryByTestId('journal-search-browse-all-button')).not.toBeInTheDocument();
-        expect(queryByTestId('journal-search-chip-Keyword-all-journals')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-all-journals')).toBeInTheDocument();
     });
 
     it('should handle regular keyword deletion', () => {
@@ -355,10 +355,10 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
 
         act(() => {
-            fireEvent.click(container.querySelector('#journal-search-chip-Keyword-astrobiology > svg'));
+            fireEvent.click(container.querySelector('#journal-search-chip-keyword-astrobiology > svg'));
         });
 
         expect(testHistory.location.pathname).toEqual(path);
@@ -391,7 +391,7 @@ describe('SearchJournals', () => {
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchBioKeywords);
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
 
         // move back twice as react will insert adiditonal history when the component renders
         act(() => {
@@ -404,7 +404,7 @@ describe('SearchJournals', () => {
 
         // should expect same keywords as before,
         // as the code will ignore invalid keywords when browser history is being navigated
-        expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
     });
 
     it('should handle regular multiple keyword deletion', () => {
@@ -430,17 +430,17 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-search-chip-Title-Microbiology')).toBeInTheDocument();
-        expect(queryByTestId('journal-search-chip-Title-Biology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-title-microbiology')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-title-biology')).toBeInTheDocument();
 
         act(() => {
-            fireEvent.click(container.querySelector('#journal-search-chip-Title-Biology > svg'));
+            fireEvent.click(container.querySelector('#journal-search-chip-title-biology > svg'));
         });
 
         expect(testHistory.location.search).toEqual(testQuerySearchKeywordsSingle);
 
         act(() => {
-            fireEvent.click(container.querySelector('#journal-search-chip-Title-Microbiology > svg'));
+            fireEvent.click(container.querySelector('#journal-search-chip-title-microbiology > svg'));
         });
 
         expect(testHistory.location.pathname).toEqual(path);
@@ -469,10 +469,10 @@ describe('SearchJournals', () => {
             testHistory,
         });
 
-        expect(queryByTestId('journal-search-chip-Keyword-all-journals')).toBeInTheDocument();
+        expect(queryByTestId('journal-search-chip-keyword-all-journals')).toBeInTheDocument();
 
         act(() => {
-            fireEvent.click(container.querySelector('#journal-search-chip-Keyword-all-journals > svg'));
+            fireEvent.click(container.querySelector('#journal-search-chip-keyword-all-journals > svg'));
         });
 
         expect(testHistory.location.pathname).toEqual(path);
@@ -498,14 +498,12 @@ describe('SearchJournals', () => {
             },
         });
 
-        const journalsList = mockDataWithFilterFacets;
-
         const { getByTestId, queryByTestId } = setup({
-            state: { journalsListLoaded: true, journalsList: journalsList },
+            state: { journalsListLoaded: true, journalsList: mockDataWithFilterFacets },
             testHistory,
         });
-        const facetItemTestId = 'facet-filter-nested-item-show-journals-favourited';
-        const clearFacetItemTestId = 'clear-facet-filter-nested-item-show-journals-favourited';
+        const facetItemTestId = 'facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
+        const clearFacetItemTestId = 'clear-facet-filter-nested-item-showfavouritedonly-show-journals-favourited';
 
         // expand Favourite catageory
         act(() => {
@@ -540,10 +538,8 @@ describe('SearchJournals', () => {
             },
         });
 
-        const journalsList = mockDataWithFilterFacetsAndPagination;
-
         const { getByRole, queryByTestId } = setup({
-            state: { journalsListLoaded: true, journalsList: journalsList },
+            state: { journalsListLoaded: true, journalsList: mockDataWithFilterFacetsAndPagination },
             testHistory,
         });
 

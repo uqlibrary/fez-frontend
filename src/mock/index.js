@@ -543,7 +543,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, { ...journalsSearch.favourites })
     .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
     .reply(200)
-    .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({ append: 'delete' }).apiUrl)))
+    .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
     .reply(200)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_SEARCH_API({}).apiUrl)))
     .reply(config => {
