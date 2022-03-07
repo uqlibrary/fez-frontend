@@ -12,6 +12,7 @@ UQ's branding for Fez is UQ eSpace.
 - Legacy eSpace application <https://espace.library.uq.edu.au/>
 - eSpace production <https://espace.library.uq.edu.au/dashboard>
 - eSpace staging <https://fez-staging.library.uq.edu.au/dashboard>
+- eSpace prodtest <https://fez-testing.library.uq.edu.au/dashboard>
 - Current build <https://development.library.uq.edu.au/espace/master> (or your feature branch)
 
 ## Technology
@@ -388,14 +389,15 @@ Ask for review from team-mates if you'd like other eyes on your changes.
 ## Deployment
 
 Application deployment is 100% automated using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Cypress, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
-Deployment pipelines are setup for branches: "master", "staging, "production" and several key branches starting with "feature-".
+Deployment pipelines are setup for branches: "master", "staging", "prodtest", "production" and several key branches starting with "feature-".
 
 - Master branch is always deployed to staging/production
 - Deployments to production are hosted on <https://espace.library.uq.edu.au/>
 - Deployments to staging are hosted on <https://fez-staging.library.uq.edu.au/>
+- Deployments to prodtest are hosted on <https://fez-testing.library.uq.edu.au/>
 - All other branches are deployed on <https://development.library.uq.edu/espace/branchName/>.
 
-Staging/production build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
+Staging/production/prodtest build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
 
 Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline)
