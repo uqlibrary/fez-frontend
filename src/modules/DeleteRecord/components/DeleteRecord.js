@@ -103,11 +103,11 @@ export default class DeleteRecord extends PureComponent {
         const defaultProps = {
             ...this.props,
             alertLocale: formsLocale.forms.deleteRecordForm,
-            error: errorResponse.message,
+            error: errorResponse?.message,
         };
 
         if (rekType !== 'Collection' && rekType !== 'Community') return defaultProps;
-        if (errorResponse.status !== 409) return defaultProps;
+        if (errorResponse?.status !== 409) return defaultProps;
 
         // if we're working with a collection or community and have received a 409 status error,
         // we know for sure the reason for the failure is because the community contains collections,
@@ -142,9 +142,11 @@ export default class DeleteRecord extends PureComponent {
         const saveConfirmationLocale = { ...txtDeleteForm.successWorkflowConfirmation };
 
         const errorResponse = this.props.error && JSON.parse(this.props.error);
-        const errorAlertProps =
-            !!errorResponse &&
-            this._getErrorAlertProps(this.props.recordToDelete.rek_display_type_lookup, errorResponse);
+        const errorAlertProps = this._getErrorAlertProps(
+            // eslint-disable-next-line camelcase
+            this.props?.recordToDelete?.rek_display_type_lookup,
+            errorResponse,
+        );
 
         const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
         return (
