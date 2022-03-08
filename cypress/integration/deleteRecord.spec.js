@@ -28,12 +28,10 @@ context('Delete work form', () => {
         cy.get('button#submit-delete-record')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert"] .alert-text')
-            .should('contain', deleteFormLocale.progressAlert.title)
-            .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[class*="Alert"] .alert-text')
-            .should('contain', deleteFormLocale.successAlert.title)
-            .should('contain', deleteFormLocale.successAlert.message);
+        cy.get('[data-testid="message-title"]').should(
+            'contain',
+            deleteFormLocale.successWorkflowConfirmation.confirmationTitle,
+        );
         cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
         cy.contains('button', deleteFormLocale.successWorkflowConfirmation.confirmButtonLabel).click();
         cy.url().should('equal', `${baseUrl}/view/${record.rek_pid}`);
@@ -45,12 +43,10 @@ context('Delete work form', () => {
         cy.get('button#submit-delete-record')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert"] .alert-text')
-            .should('contain', deleteFormLocale.progressAlert.title)
-            .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[class*="Alert"] .alert-text')
-            .should('contain', deleteFormLocale.successAlert.title)
-            .should('contain', deleteFormLocale.successAlert.message);
+        cy.get('[data-testid="message-title"]').should(
+            'contain',
+            deleteFormLocale.successWorkflowConfirmation.confirmationTitle,
+        );
         cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
         cy.contains('button', deleteFormLocale.successWorkflowConfirmation.cancelButtonLabel).click();
         cy.url().should('equal', `${baseUrl}/records/search`);
