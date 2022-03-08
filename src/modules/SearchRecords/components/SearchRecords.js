@@ -41,6 +41,8 @@ const SearchRecords = ({
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
+        history,
+        location,
         searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
         canBulkExport,
         isUnpublishedBufferPage,
@@ -63,7 +65,6 @@ const SearchRecords = ({
      * - it will dispatch a request to the API
      */
     React.useEffect(() => {
-        console.log(`page load ${hasQueryParamsChangedSincePageLoad}`);
         if (hasQueryParamsChangedSincePageLoad) {
             return;
         }
@@ -84,7 +85,6 @@ const SearchRecords = ({
                 canBulkExport,
                 isUnpublishedBufferPage,
             );
-            console.log('handle history updates');
             setSearchParams(queryParams);
             actions.searchEspacePublications(queryParams);
             actions.resetExportPublicationsStatus();

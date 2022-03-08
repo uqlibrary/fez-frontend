@@ -277,14 +277,7 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=50&sortDirection=Desc&sortBy=score&page=1',
-            state: {
-                ...searchQuery,
-                pageSize: 50,
-                searchQueryParams: {
-                    all: 'test',
-                },
-            },
+                'bulkExportSelected=false&page=1&pageSize=50&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -311,14 +304,7 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=20&sortDirection=Desc&sortBy=score&page=2',
-            state: {
-                ...searchQuery,
-                page: 2,
-                searchQueryParams: {
-                    all: 'test',
-                },
-            },
+                'bulkExportSelected=false&page=2&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -349,14 +335,7 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                'searchQueryParams%5Ball%5D=test&bulkExportSelected=false&pageSize=20&sortDirection=Asc&sortBy=score&page=1',
-            state: {
-                ...searchQuery,
-                sortDirection: 'Asc',
-                searchQueryParams: {
-                    all: 'test',
-                },
-            },
+                'bulkExportSelected=false&page=1&pageSize=20&sortBy=score&sortDirection=Asc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -445,26 +424,7 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                'searchQueryParams%5Ball%5D=test&activeFacets%5Bfilters%5D%5BAuthor%5D=745&' +
-                'activeFacets%5BshowOpenAccessOnly%5D=false&bulkExportSelected=false&pageSize=20' +
-                '&sortDirection=Desc&sortBy=score&page=1',
-            state: {
-                activeFacets: {
-                    filters: {
-                        Author: 745,
-                    },
-                    ranges: {},
-                    showOpenAccessOnly: false,
-                },
-                bulkExportSelected: false,
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: {
-                    all: 'test',
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
+                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&bulkExportSelected=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -504,18 +464,6 @@ describe('SearchRecords page', () => {
         expect(testFn).toHaveBeenCalledWith({
             pathname: pathConfig.admin.unpublished,
             search: 'bulkExportSelected=false&page=1&pageSize=50&sortBy=score&sortDirection=Desc',
-            state: {
-                activeFacets: {
-                    filters: {},
-                    ranges: {},
-                },
-                advancedSearchFields: [],
-                bulkExportSelected: false,
-                page: 1,
-                pageSize: 50,
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
         userIsAdmin.mockRestore();
     });

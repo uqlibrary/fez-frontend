@@ -1,4 +1,3 @@
-import { useHistory, useLocation } from 'react-router';
 import deparam from 'can-deparam';
 import param from 'can-param';
 import { pathConfig } from 'config';
@@ -86,7 +85,7 @@ export const queryParamsDefaults = showOpenAccessOnly => ({
     activeFacets: {
         filters: {},
         ranges: {},
-        showOpenAccessOnly: showOpenAccessOnly,
+        ...(showOpenAccessOnly ? { showOpenAccessOnly: true } : {}),
     },
     advancedSearchFields: [],
     bulkExportSelected: false,
@@ -115,10 +114,7 @@ export const getQueryParams = (showOpenAccessOnly, queryString, canBulkExport, i
  * @param isUnpublishedBufferPage
  * @return Object
  */
-export const useQueryStringParams = (showOpenAccessOnly, canBulkExport, isUnpublishedBufferPage) => {
-    const history = useHistory();
-    const location = useLocation();
-
+export const useQueryStringParams = (history, location, showOpenAccessOnly, canBulkExport, isUnpublishedBufferPage) => {
     const queryParams = getQueryParams(
         showOpenAccessOnly,
         location.search.substr(1),
@@ -127,7 +123,6 @@ export const useQueryStringParams = (showOpenAccessOnly, canBulkExport, isUnpubl
     );
 
     const updateQueryString = queryParams => {
-        console.log('updateQueryString:' + param(queryParams));
         history.push({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
@@ -144,38 +139,38 @@ export const useQueryStringParams = (showOpenAccessOnly, canBulkExport, isUnpubl
 };
 
 /**
- * @param searchQueryParams
- * @param updateQueryParamsState
+ * @param queryParams
+ * @param updateQueryString
  * @param actions
  * @return Object
  */
-export const useSearchRecordsControls = (searchQueryParams, updateQueryParamsState, actions) => {
+export const useSearchRecordsControls = (queryParams, updateQueryString, actions) => {
     const pageSizeChanged = pageSize => {
-        updateQueryParamsState({
-            ...searchQueryParams,
+        updateQueryString({
+            ...queryParams,
             pageSize,
             page: 1,
         });
     };
 
     const pageChanged = page => {
-        updateQueryParamsState({
-            ...searchQueryParams,
+        updateQueryString({
+            ...queryParams,
             page,
         });
     };
 
     const sortByChanged = (sortBy, sortDirection) => {
-        updateQueryParamsState({
-            ...searchQueryParams,
+        updateQueryString({
+            ...queryParams,
             sortBy,
             sortDirection,
         });
     };
 
     const facetsChanged = activeFacets => {
-        updateQueryParamsState({
-            ...searchQueryParams,
+        updateQueryString({
+            ...queryParams,
             activeFacets,
             page: 1,
         });
@@ -183,14 +178,14 @@ export const useSearchRecordsControls = (searchQueryParams, updateQueryParamsSta
 
     const handleExport = exportFormat =>
         actions.exportEspacePublications({
-            ...searchQueryParams,
+            ...queryParams,
             ...exportFormat,
         });
 
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
-            updateQueryParamsState({
-                ...searchQueryParams,
+            updateQueryString({
+                ...queryParams,
                 advancedSearchFields: getAdvancedSearchFields(searchFields),
             });
     };
