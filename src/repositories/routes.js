@@ -207,6 +207,7 @@ export const COMMUNITY_LIST_API = params => {
     };
 };
 export const COLLECTION_LIST_API = params => {
+    // console.log(params);
     return {
         apiUrl: `communities/${params.pid}/collections?per_page=${params.pageSize}&page=${params.page}&order_by=${params.direction}&sort=${params.sortBy}`,
     };

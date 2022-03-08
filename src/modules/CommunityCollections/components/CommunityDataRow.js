@@ -31,7 +31,7 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
-
+    // console.log('AUTO COLLAPSE', autoCollapse);
     // const [open, setOpen] = React.useState(false);
     const handleSetOpen = openState => {
         // setOpen(openState);
@@ -48,7 +48,13 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
         <React.Fragment key={row.rek_pid}>
             <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
                 <TableCell>
-                    <IconButton aria-label="expand row" size="small" onClick={() => handleSetOpen(!open)}>
+                    <IconButton
+                        aria-label="expand row"
+                        size="small"
+                        onClick={() => handleSetOpen(!open)}
+                        id={`expand-row-${row.rek_pid}`}
+                        data-testid={`expand-row-${row.rek_pid}`}
+                    >
                         {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                     </IconButton>
                 </TableCell>

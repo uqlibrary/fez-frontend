@@ -115,44 +115,47 @@ export const CommunityList = () => {
         per_page: perPage,
         current_page: currentPage,
     };
-    const sortingDefaults = txt.sortingDefaults ?? {};
+    const sortingDefaults = txt.sortingDefaults;
     const sortedList = [...communityList];
 
     return (
         <StandardPage title={txt.title.communities}>
             <Grid container>
-                {!!isSuperAdmin && (
-                    <>
-                        <Grid item xs={6} style={{ marginBottom: 10 }} data-test-id="admin-add-community">
+                <>
+                    <Grid item xs={6} style={{ marginBottom: 10 }} data-testid="admin-add-community">
+                        {!!isSuperAdmin && (
                             <Button
                                 component={Link}
                                 variant="outlined"
                                 to={pathConfig.admin.community}
-                                data-test-id="admin-add-community-button"
+                                data-testid="admin-add-community-button"
                             >
                                 {communityCollectionsConfig.addNewCommunityText}
                             </Button>
-                        </Grid>
-                        <Grid
-                            item
-                            xs={6}
-                            style={{ textAlign: 'right', marginBottom: 10 }}
-                            data-test-id="admin-add-community"
-                        >
-                            <FormControlLabel
-                                control={
-                                    <Switch
-                                        checked={autoCollapse}
-                                        onChange={handleSwitchChange}
-                                        name="collection-auto-collapse"
-                                        inputProps={{ 'aria-label': 'primary checkbox' }}
-                                    />
-                                }
-                                label={communityCollectionsConfig.collapseSwitchText}
-                            />
-                        </Grid>
-                    </>
-                )}
+                        )}
+                    </Grid>
+                    <Grid
+                        item
+                        xs={6}
+                        style={{ textAlign: 'right', marginBottom: 10 }}
+                        id="autoclose-community"
+                        data-testid="autoclose-community"
+                    >
+                        <FormControlLabel
+                            control={
+                                <Switch
+                                    checked={autoCollapse}
+                                    onChange={handleSwitchChange}
+                                    name="collection-auto-collapse"
+                                    id="collection-auto-collapse"
+                                    data-testid="collection-auto-collapse"
+                                    inputProps={{ 'aria-label': 'primary checkbox' }}
+                                />
+                            }
+                            label={communityCollectionsConfig.collapseSwitchText}
+                        />
+                    </Grid>
+                </>
             </Grid>
 
             <StandardCard noHeader>

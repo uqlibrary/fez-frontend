@@ -130,7 +130,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                 </TableCell>
             )}
             {loadingCollectionsPid !== pid && (
-                <TableCell colSpan={5} style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}>
+                <TableCell
+                    colSpan={5}
+                    style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}
+                    data-testid={`collection-records-${pid}`}
+                    id={`collection-records-${pid}`}
+                >
                     {finalList.data.length > 0 && (
                         <Collapse in={open} timeout={200} unmountOnExit>
                             <Box style={{ minHeight: 200, backgroundColor: 'white', padding: 10 }}>

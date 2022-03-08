@@ -49,12 +49,12 @@ const handlers = {
         loadingCollectionsError: action.payload,
         collectionsOpened: state.collectionsOpened,
     }),
-    [actions.VIEW_COLLECTIONS_CLEARED]: () => ({
+    [actions.VIEW_COLLECTIONS_CLEARED]: state => ({
         ...initialState,
-        collectionList: [],
+        collectionList: [...state.collectionList],
         loadingCollections: false,
         loadingCollectionsPid: null,
-        // collectionsOpened: [],
+        collectionsOpened: [],
     }),
     [actions.SET_COLLECTIONS_ARRAY]: (state, action) => {
         let collectionArray = [...state.collectionsOpened];
