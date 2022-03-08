@@ -144,7 +144,7 @@ describe('Search Journals Facets component', () => {
             });
 
             item.facets.forEach(facet => {
-                const nestedButtonId = `facet-filter-nested-item-${getIdText(facet.title)}`;
+                const nestedButtonId = `facet-filter-nested-item-${getIdText(`${item.facetTitle}-${facet.title}`)}`;
 
                 act(() => {
                     fireEvent.click(getByTestId(nestedButtonId));
@@ -208,7 +208,7 @@ describe('Search Journals Facets component', () => {
             });
 
             item.facets.forEach(facet => {
-                const idText = getIdText(facet.title);
+                const idText = getIdText(`${item.facetTitle}-${facet.title}`);
                 const nestedButtonId = `facet-filter-nested-item-${idText}`;
                 const nestedClearButtonId = `clear-facet-filter-nested-item-${idText}`;
 
@@ -258,10 +258,10 @@ describe('Search Journals Facets component', () => {
         const nestedClearButtonId = 'clear-facet-filter-nested-item';
 
         const { getByTestId, queryByTestId } = setup({ ...facets, testFacetChangeFn, testHistory });
-        expect(getByTestId(`${nestedClearButtonId}-cwts`)).toBeVisible();
-        expect(getByTestId(`${nestedClearButtonId}-scopus`)).toBeVisible();
+        expect(getByTestId(`${nestedClearButtonId}-listed-in-cwts`)).toBeVisible();
+        expect(getByTestId(`${nestedClearButtonId}-indexed-in-scopus`)).toBeVisible();
         // not in the mock api response
-        expect(queryByTestId(`${nestedClearButtonId}-12-months`)).not.toBeInTheDocument();
+        expect(queryByTestId(`${nestedClearButtonId}-embargo-12-months`)).not.toBeInTheDocument();
 
         expect(mockActiveFiltersRef).toHaveBeenCalledWith({
             Embargo: ['12 months'],
@@ -285,10 +285,10 @@ describe('Search Journals Facets component', () => {
     it('should allow multi select for indexed in', () => {
         const testFacetChangeFn = jest.fn();
         const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
-        const scieFacetItemTestId = 'facet-filter-nested-item-scie';
-        const scieClearFacetItemTestId = 'clear-facet-filter-nested-item-scie';
-        const scopusFacetItemTestId = 'facet-filter-nested-item-scopus';
-        const scopusClearFacetItemTestId = 'clear-facet-filter-nested-item-scopus';
+        const scieFacetItemTestId = 'facet-filter-nested-item-indexed-in-scie';
+        const scieClearFacetItemTestId = 'clear-facet-filter-nested-item-indexed-in-scie';
+        const scopusFacetItemTestId = 'facet-filter-nested-item-indexed-in-scopus';
+        const scopusClearFacetItemTestId = 'clear-facet-filter-nested-item-indexed-in-scopus';
 
         // expand Listed in
         act(() => {
@@ -320,8 +320,8 @@ describe('Search Journals Facets component', () => {
     it('should render reset button', () => {
         const testFacetChangeFn = jest.fn();
         const { getByTestId, queryByTestId } = setup({ ...facets, onFacetsChangedHandler: testFacetChangeFn });
-        const facetItemTestId = 'facet-filter-nested-item-cwts';
-        const clearFacetItemTestId = 'clear-facet-filter-nested-item-cwts';
+        const facetItemTestId = 'facet-filter-nested-item-listed-in-cwts';
+        const clearFacetItemTestId = 'clear-facet-filter-nested-item-listed-in-cwts';
 
         // expand Listed in
         act(() => {
@@ -352,8 +352,8 @@ describe('Search Journals Facets component', () => {
         // make sure the reset facet filter button is NOT visible
         expect(queryByTestId(resetFacetFiltersButtonId)).not.toBeInTheDocument();
         // 1. activate on facet filter
-        const cwtsFacetFilterTestId = 'facet-filter-nested-item-cwts';
-        const clearCwtsFacetFilterTestId = 'clear-facet-filter-nested-item-cwts';
+        const cwtsFacetFilterTestId = 'facet-filter-nested-item-listed-in-cwts';
+        const clearCwtsFacetFilterTestId = 'clear-facet-filter-nested-item-listed-in-cwts';
         // expand the facet parent
         act(() => {
             fireEvent.click(getByTestId('clickable-facet-category-listed-in'));
@@ -370,8 +370,8 @@ describe('Search Journals Facets component', () => {
         expect(queryByTestId(resetFacetFiltersButtonId)).toBeInTheDocument();
 
         // 2. activate a second facet filter
-        const scieFacetFilterTestId = 'facet-filter-nested-item-scie';
-        const clearScieFacetFilterTestId = 'clear-facet-filter-nested-item-scie';
+        const scieFacetFilterTestId = 'facet-filter-nested-item-indexed-in-scie';
+        const clearScieFacetFilterTestId = 'clear-facet-filter-nested-item-indexed-in-scie';
         // expand the facet parent
         act(() => {
             fireEvent.click(getByTestId('clickable-facet-category-indexed-in'));

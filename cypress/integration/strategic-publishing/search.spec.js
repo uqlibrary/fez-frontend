@@ -408,16 +408,16 @@ context('Strategic Publishing - Search', () => {
 
             // select facets
             cy.get('[id="clickable-facet-category-listed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-cwts"]')
+            cy.get('[id="facet-filter-nested-item-listed-in-cwts"]')
                 .as('facetItemCwts')
                 .click()
-                .find('svg#clear-facet-filter-nested-item-cwts')
+                .find('svg#clear-facet-filter-nested-item-listed-in-cwts')
                 .should('exist');
             cy.get('[id="clickable-facet-category-indexed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-scopus"]')
+            cy.get('[id="facet-filter-nested-item-indexed-in-scopus"]')
                 .as('facetItemScopus')
                 .click()
-                .find('svg#clear-facet-filter-nested-item-scopus')
+                .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('exist');
 
             cy.location().should(location => {
@@ -441,11 +441,11 @@ context('Strategic Publishing - Search', () => {
             });
 
             cy.get('@facetItemCwts')
-                .find('svg#clear-facet-filter-nested-item-cwts')
+                .find('svg#clear-facet-filter-nested-item-listed-in-cwts')
                 .should('not.exist');
 
             cy.get('@facetItemScopus')
-                .find('svg#clear-facet-filter-nested-item-scopus')
+                .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('not.exist');
 
             // check the number of mock results is now showing the new number of expected results (should be different)
@@ -459,11 +459,11 @@ context('Strategic Publishing - Search', () => {
             });
 
             cy.get('@facetItemCwts')
-                .find('svg#clear-facet-filter-nested-item-cwts')
+                .find('svg#clear-facet-filter-nested-item-listed-in-cwts')
                 .should('exist');
 
             cy.get('@facetItemScopus')
-                .find('svg#clear-facet-filter-nested-item-scopus')
+                .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('exist');
 
             // check the set of mock results is the same as when we first checked
@@ -497,16 +497,16 @@ context('Strategic Publishing - Search', () => {
 
             // select facets
             cy.get('[id="clickable-facet-category-listed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-cwts"]')
+            cy.get('[id="facet-filter-nested-item-listed-in-cwts"]')
                 .as('facetItemCwts')
                 .click()
-                .find('svg#clear-facet-filter-nested-item-cwts')
+                .find('svg#clear-facet-filter-nested-item-listed-in-cwts')
                 .should('exist');
             cy.get('[id="clickable-facet-category-indexed-in"]').click();
-            cy.get('[id="facet-filter-nested-item-scopus"]')
+            cy.get('[id="facet-filter-nested-item-indexed-in-scopus"]')
                 .as('facetItemScopus')
                 .click()
-                .find('svg#clear-facet-filter-nested-item-scopus')
+                .find('svg#clear-facet-filter-nested-item-indexed-in-scopus')
                 .should('exist');
 
             // confirm two facets visible selected in the UI

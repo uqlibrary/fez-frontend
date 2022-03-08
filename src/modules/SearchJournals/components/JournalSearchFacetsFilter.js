@@ -8,6 +8,7 @@ import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/Standard
 import { useActiveFacetFilters, useJournalSearch } from '../hooks';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import { sanitiseId } from 'helpers/general';
 
 export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFilterNestedListItemsList({
     facetCategory,
@@ -20,6 +21,7 @@ export const JournalFacetFilterNestedListItemsList = React.memo(function FacetFi
         const isActive = isFacetFilterActive(activeFacets.filters, facetCategory.facetTitle, item.key);
         return (
             <FacetFilterNestedListItem
+                facet={facetCategory.facetTitle}
                 key={index}
                 index={index}
                 onFacetClick={handleFacetClick(facetCategory.facetTitle, item.key)}
@@ -205,10 +207,11 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
             <div className="facetsFilter" id="facets-filter" data-testid="facets-filter">
                 <List component="nav" dense>
                     {facetsToDisplay.map(item => {
+                        const id = sanitiseId(`facet-category-${item.facetTitle}`);
                         return (
                             <FacetFilterListItem
-                                id={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
-                                key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
+                                id={id}
+                                key={id}
                                 title={item.title}
                                 disabled={disabled}
                                 isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
