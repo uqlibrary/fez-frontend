@@ -595,7 +595,6 @@ exports[`Add new record should render the confirm dialog with an alert for faile
           }
           className="MuiDialog-root"
           closeAfterTransition={true}
-          disableBackdropClick={false}
           disableEscapeKeyDown={false}
           open={false}
           style={

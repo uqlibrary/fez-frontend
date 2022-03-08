@@ -145,7 +145,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
             >
               <div
                 class="MuiGrid-root MuiGrid-item"
@@ -240,7 +240,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
             >
               <div
                 class="MuiGrid-root MuiGrid-item"
@@ -469,7 +469,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
             >
               <div
                 class="MuiGrid-root MuiGrid-item"
@@ -564,7 +564,7 @@ exports[`NewListEditorField component should render new list editor component wi
             class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
             >
               <div
                 class="MuiGrid-root MuiGrid-item"
