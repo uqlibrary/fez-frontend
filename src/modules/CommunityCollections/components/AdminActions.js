@@ -7,11 +7,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { debounce } from 'throttle-debounce';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
-    let fullUri = uri;
-    if (navigatedFrom) {
-        const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
-        fullUri = `${uri}${queryStringGlue}navigatedFrom=${encodeURIComponent(navigatedFrom)}`;
-    }
+    const fullUri = uri;
+    // if (navigatedFrom) {
+    //     const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
+    //     fullUri = `${uri}${queryStringGlue}navigatedFrom=${encodeURIComponent(navigatedFrom)}`;
+    // }
     window.open(fullUri, target, options);
 };
 
@@ -36,10 +36,10 @@ export const AdminActions = ({
         {
             label: 'More options',
             url: pid => `https://espace.library.uq.edu.au/workflow/list_workflows2.php?pid=${pid}&href=%2Fbrowse`,
-            inApp: true,
+            inApp: false,
             showInDeleted: true,
             options: null,
-            isRecordEdit: true,
+            isRecordEdit: false,
         },
     ],
     record,
