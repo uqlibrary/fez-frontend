@@ -257,18 +257,15 @@ export default class SearchComponent extends PureComponent {
     };
 
     handleSearch = searchQuery => {
-        if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
-            // If in header, the page will redirect to a new route,
-            // which means search results from API call will be lost.
-            !this.props.isInHeader && this.props.actions.searchEspacePublications(searchQuery);
-
-            // navigate to search results page
-            this.props.history.push({
-                pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
-                search: param(searchQuery),
-                state: { ...searchQuery },
-            });
+        if (!searchQuery) {
+            return;
         }
+
+        this.props.history.push({
+            pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
+            search: param(searchQuery),
+            state: { ...searchQuery },
+        });
     };
 
     _toggleSearchMode = () => {

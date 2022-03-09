@@ -2,7 +2,7 @@ import React from 'react';
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
 
-import { render, WithRouter, fireEvent } from 'test-utils';
+import { fireEvent, render, WithRouter } from 'test-utils';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -139,7 +139,7 @@ describe('SearchComponent', () => {
         wrapper.instance().handleSearch(searchQuery);
         wrapper.update();
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledTimes(0);
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
@@ -184,7 +184,7 @@ describe('SearchComponent', () => {
         wrapper.instance().handleSearch(searchQuery);
         wrapper.update();
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledTimes(0);
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/admin/unpublished',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_status%5D=3',
@@ -251,7 +251,7 @@ describe('SearchComponent', () => {
 
         wrapper.instance()._handleAdvancedSearch();
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledTimes(0);
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
@@ -287,7 +287,7 @@ describe('SearchComponent', () => {
             },
         });
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledTimes(0);
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
@@ -366,7 +366,7 @@ describe('SearchComponent', () => {
 
             wrapper.instance()._handleAdvancedSearch();
 
-            expect(testMethod).toHaveBeenCalled();
+            expect(testMethod).toHaveBeenCalledTimes(0);
             expect(testHistoryPushMethod).toHaveBeenCalledWith({
                 pathname: '/records/search',
                 search:
@@ -430,7 +430,7 @@ describe('SearchComponent', () => {
 
         wrapper.instance()._handleSimpleSearch();
 
-        expect(testMethod).toHaveBeenCalled();
+        expect(testMethod).toHaveBeenCalledTimes(0);
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',

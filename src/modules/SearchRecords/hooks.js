@@ -181,23 +181,11 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
             ...exportFormat,
         });
 
-    const handleFacetExcludesFromSearchFields = searchFields => {
-        !!searchFields &&
-            updateQueryString(
-                {
-                    ...queryParams,
-                    advancedSearchFields: getAdvancedSearchFields(searchFields),
-                },
-                true,
-            );
-    };
-
     return {
         pageSizeChanged,
         pageChanged,
         sortByChanged,
         facetsChanged,
         handleExport,
-        handleFacetExcludesFromSearchFields,
     };
 };

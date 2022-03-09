@@ -19,7 +19,7 @@ import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
-import { getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 
 const SearchRecords = ({
@@ -49,19 +49,22 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
-    const {
-        pageSizeChanged,
-        pageChanged,
-        sortByChanged,
-        facetsChanged,
-        handleExport,
-        handleFacetExcludesFromSearchFields,
-    } = useSearchRecordsControls(queryParams, updateQueryString, actions);
+    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, handleExport } = useSearchRecordsControls(
+        queryParams,
+        updateQueryString,
+        actions,
+        setSearchParams,
+    );
+    const handleFacetExcludesFromSearchFields = searchFields => {
+        !!searchFields &&
+            setSearchParams({
+                ...queryParams,
+                advancedSearchFields: getAdvancedSearchFields(searchFields),
+            });
+    };
 
     /**
-     * Effect to handle initial render:
-     * - it will dispatch a request to the API
-     * - it will dispatch a clear search query
+     * Effect to handle initial render
      */
     React.useEffect(() => {
         actions.searchEspacePublications(queryParams);
