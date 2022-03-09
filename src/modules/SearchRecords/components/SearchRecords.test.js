@@ -8,7 +8,6 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
-import { Router } from 'react-router-dom';
 import { renderWithRouter } from '../../../../utils/test-utils';
 
 jest.mock('actions', () => ({
@@ -26,7 +25,7 @@ const createMatchMedia = width => {
     });
 };
 
-const history = createMemoryHistory();
+const memoryHistory = createMemoryHistory();
 const getTestProps = props => ({
     publicationsList: [],
     searchLoading: false,
@@ -36,7 +35,7 @@ const getTestProps = props => ({
     location: {
         search: '?searchQueryParams%5Ball%5D=test',
     },
-    history: history,
+    history: memoryHistory,
     ...props,
     actions: {
         clearSearchQuery: jest.fn(),
@@ -47,15 +46,12 @@ const getTestProps = props => ({
     },
 });
 
-const renderWithMemoryRouter = (component, renderMethod = render) => {
-    return renderMethod(<Router history={history}>{component}</Router>);
-};
-
-const setup = (props = {}, wrapper = renderWithRouter) => {
-    return wrapper(
+const setup = (props = {}, { history = memoryHistory, renderMethod = render } = {}) => {
+    return renderWithRouter(
         <WithReduxStore>
             <SearchRecords {...getTestProps(props)} />
         </WithReduxStore>,
+        { history, renderMethod },
     );
 };
 
@@ -152,39 +148,68 @@ describe('SearchRecords page', () => {
         expect(getByText('Another Facet')).toBeInTheDocument();
     });
 
-    /** TODO: fix this test when fixing back/forward button clicks */
-    /* it('should get publications when user clicks back and state is set', () => {
-        const history = { action: 'POP' };
-        const location = { pathname: pathConfig.records.search, state: { page: 2 }, search: 'something' };
-
-        const mockUseEffect = jest.spyOn(React, 'useEffect');
-        let called = false;
-        mockUseEffect.mockImplementation((f, dependencies) => {
-            if (
-                !called &&
-                JSON.stringify(dependencies[0]) === JSON.stringify(location) &&
-                dependencies[1] === history.action
-            ) {
-                called = true;
-                f();
-            }
-        });
-
-        const testAction = jest.fn();
-        setup({
-            actions: { searchEspacePublications: testAction },
-            history,
-            location,
-        });
-        expect(testAction).toHaveBeenCalled();
-        mockUseEffect.mockRestore();
-    }); */
-
-    // it('should get publications when user clicks back and state is not set', () => {
-    //     const testAction = jest.fn();
-    //     const { debug } = setup({ actions: { searchEspacePublications: testAction } });
-    //     expect(testAction).toHaveBeenCalled();
-    //     expect(wrapper.state().page).toEqual(1);
+    // it('should restore displayed search results if back button pressed', () => {
+    //     const testQuerySearchAstrobiology =
+    //         '?keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology';
+    //
+    //     const path = pathConfig.journals.search;
+    //     const testHistory = createMemoryHistory({ initialEntries: [path] });
+    //     testHistory.push({
+    //         path,
+    //     });
+    //
+    //     const journalsList = mockData;
+    //
+    //     const { queryByTestId, getByText, queryByText } = setup({
+    //         testHistory,
+    //         state: { journalsListLoaded: true, journalsList },
+    //         storeState: {
+    //             journalSearchKeywords: {
+    //                 exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
+    //                 keywordMatch: [{ keyword: 'astrobiology' }],
+    //             },
+    //         },
+    //     });
+    //
+    //     expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
+    //     act(() => {
+    //         fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
+    //     });
+    //
+    //     expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
+    //
+    //     expect(queryByTestId('journal-search-button')).not.toHaveAttribute('disabled');
+    //
+    //     act(() => {
+    //         fireEvent.click(queryByTestId('journal-search-button'));
+    //     });
+    //
+    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+    //
+    //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
+    //
+    //     expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
+    //
+    //     act(() => {
+    //         fireEvent.click(queryByTestId('journal-search-clear-keywords-button'));
+    //     });
+    //
+    //     expect(testHistory.location.pathname).toEqual(path);
+    //     expect(testHistory.location.search).toEqual('');
+    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).not.toBeInTheDocument();
+    //     expect(queryByTestId('641-Astrobiology-link')).not.toBeInTheDocument();
+    //     expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
+    //
+    //     act(() => {
+    //         testHistory.goBack();
+    //     });
+    //
+    //     expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
+    //     expect(
+    //         queryByText('Enter a journal title, keyword, subject or field of research code.'),
+    //     ).not.toBeInTheDocument();
+    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
+    //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
     // });
 
     const searchQuery = {
@@ -375,7 +400,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
-        const { getByTestId, getAllByRole } = setup(props);
+        const { getByTestId, getAllByRole } = setup(props, { history: createMemoryHistory() });
 
         // Do one advanced search
         act(() => {
@@ -545,7 +570,7 @@ describe('SearchRecords page', () => {
             searchQuery,
         };
 
-        const { getAllByRole, getByTestId, rerender } = setup(testProps, renderWithMemoryRouter);
+        const { getAllByRole, getByTestId, rerender } = setup(testProps);
         act(() => {
             fireEvent.mouseDown(getByTestId('pageSize'));
         });
@@ -555,18 +580,14 @@ describe('SearchRecords page', () => {
             fireEvent.click(pageSizeOptionElement);
         });
 
-        renderWithMemoryRouter(
-            <WithReduxStore>
-                <SearchRecords
-                    {...getTestProps({
-                        ...testProps,
-                        location: {
-                            search: queryString.replace('pageSize=20', `pageSize=${pageSizeOptionElement.textContent}`),
-                        },
-                    })}
-                />
-            </WithReduxStore>,
-            rerender,
+        setup(
+            {
+                ...testProps,
+                location: {
+                    search: queryString.replace('pageSize=20', `pageSize=${pageSizeOptionElement.textContent}`),
+                },
+            },
+            { renderMethod: rerender },
         );
         act(() => {
             fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));

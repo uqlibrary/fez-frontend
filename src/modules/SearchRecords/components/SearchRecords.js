@@ -47,8 +47,6 @@ const SearchRecords = ({
         canBulkExport,
         isUnpublishedBufferPage,
     );
-    const initialQueryParams = React.useRef(queryParams);
-    const hasQueryParamsChangedSincePageLoad = initialQueryParams.current !== queryParams;
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
     const {
@@ -61,13 +59,12 @@ const SearchRecords = ({
     } = useSearchRecordsControls(queryParams, updateQueryString, actions);
 
     /**
-     * Effect to handle page loadings:
+     * Effect to handle initial render:
      * - it will dispatch a request to the API
+     * - it will dispatch a clear search query
      */
     React.useEffect(() => {
-        if (!hasQueryParamsChangedSincePageLoad) {
-            actions.searchEspacePublications(queryParams);
-        }
+        actions.searchEspacePublications(queryParams);
         return actions.clearSearchQuery();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -87,6 +84,7 @@ const SearchRecords = ({
             );
             setSearchParams(queryParams);
             actions.searchEspacePublications(queryParams);
+            actions.clearSearchQuery();
             actions.resetExportPublicationsStatus();
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
