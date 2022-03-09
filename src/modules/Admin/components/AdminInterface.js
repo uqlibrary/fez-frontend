@@ -37,13 +37,10 @@ import {
     RECORD_TYPE_COLLECTION,
     RETRACTED,
     UNPUBLISHED,
-    RECORD_ACTION_URLS as adminActions,
-    DELETE_SELECTED_RECORD_LABEL,
 } from 'config/general';
 import { adminInterfaceConfig } from 'config/admin';
 import { useIsUserSuperAdmin } from 'hooks';
 import { translateFormErrorsToText } from '../../../config/validation';
-import { navigateToUrl } from 'modules/SharedComponents/Toolbox/helpers';
 
 // import { debounce } from 'throttle-debounce';
 
@@ -178,23 +175,6 @@ export const AdminInterface = ({
         }
     };
 
-    const handleDelete = event => {
-        event.preventDefault?.();
-        const deleteAction = adminActions.filter(action => action.label === DELETE_SELECTED_RECORD_LABEL)[0];
-        /* istanbul ignore next */
-        const linkTarget = deleteAction.inApp ? '_self' : '_blank';
-        const options = deleteAction.options || null;
-        const url = deleteAction.url(record.rek_pid);
-
-        const navigatedFrom =
-            (location.hash && location.hash.replace('#', '')) || `${location.pathname}${location.search}`;
-
-        /* istanbul ignore next */
-        const navFrom = !!deleteAction.isRecordEdit && navigatedFrom;
-
-        navigateToUrl(url, linkTarget, navFrom, options);
-    };
-
     const setSuccessConfirmationRef = React.useCallback(node => {
         successConfirmationRef.current = node; // TODO: Add check that this worked
     }, []);
@@ -273,20 +253,6 @@ export const AdminInterface = ({
                 />
             </Grid>
 
-            {!isDeleted && (objectType === RECORD_TYPE_COMMUNITY || objectType === RECORD_TYPE_COLLECTION) && (
-                <Grid item xs={12} sm={3}>
-                    <Button
-                        id={`admin-work-delete${placement}`}
-                        data-testid={`delete-admin${placement}`}
-                        disabled={!!submitting || !!disableSubmit}
-                        variant="contained"
-                        color="secondary"
-                        fullWidth
-                        children="Delete"
-                        onClick={handleDelete}
-                    />
-                </Grid>
-            )}
             {!!isSuperAdmin &&
                 record.rek_status !== RETRACTED &&
                 objectType !== RECORD_TYPE_COMMUNITY &&

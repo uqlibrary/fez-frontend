@@ -2,11 +2,10 @@ import React from 'react';
 import { AdminInterface, navigateToSearchResult } from './AdminInterface';
 import { useRecordContext, useTabbedContext } from 'context';
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
-import { RECORD_TYPE_RECORD, RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY } from 'config/general';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
 import { onSubmit } from '../submitHandler';
 import pageLocale from '../../../locale/pages';
-import { String } from 'core-js';
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -737,69 +736,6 @@ describe('AdminInterface component', () => {
                 preventDefault: jest.fn(),
             });
         expect(push).toHaveBeenCalledWith('/view/UQ:111111');
-    });
-
-    it('should call method to handle delete button for a Community or Collection', () => {
-        global.open = jest.fn();
-
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 11,
-                rek_object_type_lookup: RECORD_TYPE_COMMUNITY,
-                rek_pid: 'UQ:111111',
-                rek_editing_user: 'noone',
-            },
-        }));
-        const push = jest.fn();
-
-        const wrapper = setup({
-            history: {
-                push,
-            },
-        });
-
-        wrapper
-            .find('WithStyles(ForwardRef(Button))')
-            .get(1)
-            .props.onClick({
-                preventDefault: jest.fn(),
-            });
-        expect(global.open).toHaveBeenCalledWith(
-            expect.stringContaining('admin/delete/UQ:111111'),
-            expect.any(String),
-            null,
-        );
-        push.mockClear();
-
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_display_type: 9,
-                rek_object_type_lookup: RECORD_TYPE_COLLECTION,
-                rek_pid: 'UQ:222222',
-                rek_editing_user: 'noone',
-            },
-        }));
-
-        const wrapper2 = setup({
-            history: {
-                push,
-            },
-            location: {
-                hash: 'security',
-            },
-        });
-        wrapper2
-            .find('WithStyles(ForwardRef(Button))')
-            .get(1)
-            .props.onClick({
-                preventDefault: jest.fn(),
-            });
-        expect(global.open).toHaveBeenCalledWith(
-            expect.stringContaining('admin/delete/UQ:222222'),
-            expect.any(String),
-            null,
-        );
     });
 
     it('should handle cancel action of submit confirmation', () => {
