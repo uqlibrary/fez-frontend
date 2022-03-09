@@ -2423,7 +2423,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
-              hideCitationText={false}
+              hideCitationText={true}
               publication={
                 Object {
                   "fez_author_affiliation": Array [],
