@@ -20,6 +20,9 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { pathConfig, validation } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { doesListContainItem } from 'helpers/general';
+
+import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
 
 export default class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -149,6 +152,11 @@ export default class DeleteRecord extends PureComponent {
         );
 
         const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
+
+        // eslint-disable-next-line camelcase
+        const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
+        const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
+
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
@@ -159,6 +167,7 @@ export default class DeleteRecord extends PureComponent {
                                     <PublicationCitation
                                         publication={this.props.recordToDelete}
                                         citationStyle={'header'}
+                                        hideCitationText={hideCitationText}
                                     />
                                 </StandardCard>
                             </Grid>

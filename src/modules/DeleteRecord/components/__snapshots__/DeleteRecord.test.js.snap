@@ -24,6 +24,7 @@ exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -593,6 +594,7 @@ exports[`Component DeleteRecord should display alert and disable delete button o
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -1091,6 +1093,7 @@ exports[`Component DeleteRecord should display alert and disable delete button o
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -1589,6 +1592,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={true}
               publication={
                 Object {
                   "fez_author_affiliation": Array [],
@@ -1849,6 +1853,7 @@ exports[`Component DeleteRecord should display general alert if trying to delete
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_datastream_info": Array [],
@@ -2418,6 +2423,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_author_affiliation": Array [],
@@ -2693,6 +2699,7 @@ exports[`Component DeleteRecord should display specific alert if trying to delet
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={true}
               publication={
                 Object {
                   "fez_author_affiliation": Array [],
@@ -2953,6 +2960,7 @@ exports[`Component DeleteRecord should render delete record form with record cit
           >
             <withRouter(Connect(WithStyles(PublicationCitation)))
               citationStyle="header"
+              hideCitationText={false}
               publication={
                 Object {
                   "fez_datastream_info": Array [],
