@@ -102,13 +102,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
             label="Start page"
             name="fez_record_search_key_start_page.rek_start_page"
             placeholder=""
-            required={true}
             type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -134,13 +128,7 @@ exports[`NewspaperArticleForm renders  component 1`] = `
             label="End page"
             name="fez_record_search_key_end_page.rek_end_page"
             placeholder=""
-            required={true}
             type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
