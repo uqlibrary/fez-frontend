@@ -38,7 +38,6 @@ export default class SearchComponent extends PureComponent {
         isAdmin: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
-        actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         location: PropTypes.object,
     };
@@ -264,7 +263,6 @@ export default class SearchComponent extends PureComponent {
         this.props.history.push({
             pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
             search: param(searchQuery),
-            state: { ...searchQuery },
         });
     };
 

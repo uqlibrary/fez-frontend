@@ -3,16 +3,11 @@ import { default as SearchRecords } from './SearchRecords';
 import { pathConfig } from 'config';
 import { act, fireEvent, WithReduxStore } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
-import * as actions from 'actions';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
 import { renderWithRouter } from '../../../../utils/test-utils';
-
-jest.mock('actions', () => ({
-    searchEspacePublications: jest.fn(() => ({ type: '' })),
-}));
 
 /**
  * Unhide items hidden by MaterialUI based on screen size
@@ -372,7 +367,13 @@ describe('SearchRecords page', () => {
     });
 
     it('should search records when advanced search options are updated', () => {
-        const { getByTestId } = setup(props);
+        const testAction = jest.fn();
+        const { getByTestId } = setup({
+            ...props,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+        });
 
         act(() => {
             fireEvent.click(getByTestId('show-advanced-search'));
@@ -385,16 +386,19 @@ describe('SearchRecords page', () => {
             fireEvent.click(getByTestId('advanced-search'));
         });
 
-        expect(actions.searchEspacePublications).toHaveBeenCalledWith({
+        expect(testAction).toHaveBeenNthCalledWith(1, {
             ...searchQuery,
-            bulkExportSelected: undefined,
-            searchMode: 'advanced',
             searchQueryParams: {
-                rek_display_type: [],
+                all: 'test',
             },
+        });
+
+        expect(testAction).toHaveBeenNthCalledWith(2, {
+            ...searchQuery,
+            searchMode: 'advanced',
             activeFacets: {
                 filters: {},
-                ranges: { 'Year published': { from: 2015, to: 2018 } },
+                ranges: { 'Year published': { from: '2015', to: '2018' } },
             },
         });
     });

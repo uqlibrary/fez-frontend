@@ -79,6 +79,8 @@ const SearchRecords = ({
      */
     React.useEffect(() => {
         return history.listen(location => {
+            // we can't use location.state to send state around,
+            // as state changes are async and might not be up-to-date
             const queryParams = getQueryParams(
                 searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
                 location.search.substr(1),
