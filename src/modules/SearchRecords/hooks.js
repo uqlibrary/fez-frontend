@@ -87,7 +87,6 @@ export const queryParamsDefaults = showOpenAccessOnly => ({
         ranges: {},
         ...(showOpenAccessOnly ? { showOpenAccessOnly: true } : {}),
     },
-    advancedSearchFields: [],
     bulkExportSelected: false,
     page: 1,
     pageSize: 20,
@@ -122,8 +121,8 @@ export const useQueryStringParams = (history, location, showOpenAccessOnly, canB
         isUnpublishedBufferPage,
     );
 
-    const updateQueryString = queryParams => {
-        history.push({
+    const updateQueryString = (queryParams, replace = false) => {
+        history[replace ? 'replace' : 'push']({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
                     ? pathConfig.admin.unpublished
@@ -184,10 +183,13 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
 
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
-            updateQueryString({
-                ...queryParams,
-                advancedSearchFields: getAdvancedSearchFields(searchFields),
-            });
+            updateQueryString(
+                {
+                    ...queryParams,
+                    advancedSearchFields: getAdvancedSearchFields(searchFields),
+                },
+                true,
+            );
     };
 
     return {

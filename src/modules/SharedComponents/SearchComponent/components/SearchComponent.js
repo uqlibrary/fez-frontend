@@ -92,9 +92,16 @@ export default class SearchComponent extends PureComponent {
         const isOpenAccessInAdvancedModeChanged =
             nextProps.isOpenAccessInAdvancedMode !== this.props.isOpenAccessInAdvancedMode;
         const isAdvancedSearchChanged = nextProps.isAdvancedSearch !== this.props.isAdvancedSearch;
+        const isAdvancedSearchMinimisedChanged =
+            this.context.isMobile && nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised;
         const searchQueryChanged = hash(nextProps.searchQueryParams) !== hash(this.props.searchQueryParams);
 
-        if (!isOpenAccessInAdvancedModeChanged && !isAdvancedSearchChanged && !searchQueryChanged) {
+        if (
+            !isOpenAccessInAdvancedModeChanged &&
+            !isAdvancedSearchChanged &&
+            !isAdvancedSearchMinimisedChanged &&
+            !searchQueryChanged
+        ) {
             return;
         }
 
@@ -103,8 +110,8 @@ export default class SearchComponent extends PureComponent {
             ...(isAdvancedSearchChanged ? { isAdvancedSearch: nextProps.isAdvancedSearch } : {}),
             advancedSearch: {
                 ...this.state.advancedSearch,
-                isMinimised: (this.context.isMobile && nextProps.isAdvancedSearchMinimised) || false,
                 ...(isOpenAccessInAdvancedModeChanged ? { isOpenAccess: nextProps.isOpenAccessInAdvancedMode } : {}),
+                ...(isAdvancedSearchMinimisedChanged ? { isMinimised: nextProps.isAdvancedSearchMinimised } : {}),
             },
         };
 

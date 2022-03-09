@@ -1,11 +1,15 @@
 import React from 'react';
 import { default as SearchRecords } from './SearchRecords';
 import { pathConfig } from 'config';
-import { act, fireEvent, renderWithRouter, WithReduxStore } from 'test-utils';
+import { act, fireEvent, WithReduxStore } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
 import * as actions from 'actions';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { createMemoryHistory } from 'history';
+import { render } from '@testing-library/react';
+import { Router } from 'react-router-dom';
+import { renderWithRouter } from '../../../../utils/test-utils';
 
 jest.mock('actions', () => ({
     searchEspacePublications: jest.fn(() => ({ type: '' })),
@@ -22,32 +26,35 @@ const createMatchMedia = width => {
     });
 };
 
-const setup = (testProps = {}) => {
-    const props = {
-        publicationsList: [],
-        searchLoading: false,
-        exportPublicationsLoading: false,
-        isAdvancedSearch: false,
-        isUnpublishedBufferPage: false,
-        location: {
-            search: '?searchQueryParams%5Ball%5D=test',
-        },
-        history: {
-            push: jest.fn(),
-            listen: jest.fn(),
-        },
-        ...testProps,
-        actions: {
-            clearSearchQuery: jest.fn(),
-            exportEspacePublications: jest.fn(),
-            resetExportPublicationsStatus: jest.fn(),
-            searchEspacePublications: jest.fn(),
-            ...testProps.actions,
-        },
-    };
-    return renderWithRouter(
+const history = createMemoryHistory();
+const getTestProps = props => ({
+    publicationsList: [],
+    searchLoading: false,
+    exportPublicationsLoading: false,
+    isAdvancedSearch: false,
+    isUnpublishedBufferPage: false,
+    location: {
+        search: '?searchQueryParams%5Ball%5D=test',
+    },
+    history: history,
+    ...props,
+    actions: {
+        clearSearchQuery: jest.fn(),
+        exportEspacePublications: jest.fn(),
+        resetExportPublicationsStatus: jest.fn(),
+        searchEspacePublications: jest.fn(),
+        ...props.actions,
+    },
+});
+
+const renderWithMemoryRouter = (component, renderMethod = render) => {
+    return renderMethod(<Router history={history}>{component}</Router>);
+};
+
+const setup = (props = {}, wrapper = renderWithRouter) => {
+    return wrapper(
         <WithReduxStore>
-            <SearchRecords {...props} />
+            <SearchRecords {...getTestProps(props)} />
         </WithReduxStore>,
     );
 };
@@ -514,8 +521,11 @@ describe('SearchRecords page', () => {
             },
             bulkExportSelected: false,
         };
-
-        const { getByTestId, getAllByRole } = setup({
+        const queryString =
+            'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
+            'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
+            'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false';
+        const testProps = {
             actions: {
                 exportEspacePublications: testExportAction,
                 searchEspacePublications: jest.fn(),
@@ -529,23 +539,35 @@ describe('SearchRecords page', () => {
                 total: 100,
             },
             location: {
-                search:
-                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
-                    'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
-                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false',
+                search: queryString,
             },
             canUseExport: true,
             searchQuery,
-        });
+        };
 
+        const { getAllByRole, getByTestId, rerender } = setup(testProps, renderWithMemoryRouter);
         act(() => {
             fireEvent.mouseDown(getByTestId('pageSize'));
         });
         expect(getAllByRole('option').length).toBe(4);
+        const pageSizeOptionElement = getAllByRole('option')[2];
         act(() => {
-            fireEvent.click(getAllByRole('option')[2]);
+            fireEvent.click(pageSizeOptionElement);
         });
 
+        renderWithMemoryRouter(
+            <WithReduxStore>
+                <SearchRecords
+                    {...getTestProps({
+                        ...testProps,
+                        location: {
+                            search: queryString.replace('pageSize=20', `pageSize=${pageSizeOptionElement.textContent}`),
+                        },
+                    })}
+                />
+            </WithReduxStore>,
+            rerender,
+        );
         act(() => {
             fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
         });

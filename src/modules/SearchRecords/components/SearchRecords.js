@@ -65,10 +65,10 @@ const SearchRecords = ({
      * - it will dispatch a request to the API
      */
     React.useEffect(() => {
-        if (hasQueryParamsChangedSincePageLoad) {
-            return;
+        if (!hasQueryParamsChangedSincePageLoad) {
+            actions.searchEspacePublications(queryParams);
         }
-        actions.searchEspacePublications(queryParams);
+        return actions.clearSearchQuery();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
