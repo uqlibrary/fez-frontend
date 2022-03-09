@@ -25,6 +25,8 @@ import { CommunityTable } from './components/CommunityTable';
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 
+import { pushHistory } from './components/functions';
+
 export const CommunityList = () => {
     const [autoCollapse, setAutoCollapse] = React.useState(false);
     const handleSwitchChange = event => {
@@ -57,12 +59,12 @@ export const CommunityList = () => {
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
 
-    const pushHistory = (pageSize, currentPage, sortBy, sortDirection) => {
-        history.push({
-            pathname: '/communities',
-            search: `?pageSize=${pageSize}&page=${currentPage}&sortBy=${sortBy}&sortDirection=${sortDirection}`,
-        });
-    };
+    // const pushHistory = (pageSize, currentPage, sortBy, sortDirection) => {
+    //     history.push({
+    //         pathname: '/communities',
+    //         search: `?pageSize=${pageSize}&page=${currentPage}&sortBy=${sortBy}&sortDirection=${sortDirection}`,
+    //     });
+    // };
 
     const pageSizeChanged = pageSize => {
         dispatch(
@@ -73,10 +75,10 @@ export const CommunityList = () => {
                 sortBy: sortBy,
             }),
         );
-        pushHistory(pageSize, 1, sortBy, sortDirection);
+        pushHistory(history, pageSize, 1, sortBy, sortDirection);
     };
     const pageChanged = page => {
-        pushHistory(perPage, page, sortBy, sortDirection);
+        pushHistory(history, perPage, page, sortBy, sortDirection);
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
         );
@@ -88,7 +90,7 @@ export const CommunityList = () => {
         dispatch(
             actions.loadCommunitiesList({ pageSize: perPage, page: currentPage, direction: direction, sortBy: sortby }),
         );
-        pushHistory(perPage, currentPage, sortby, direction);
+        pushHistory(history, perPage, currentPage, sortby, direction);
     };
 
     React.useEffect(() => {
@@ -100,7 +102,7 @@ export const CommunityList = () => {
                 sortBy: sortBy,
             }),
         );
-        pushHistory(perPage, currentPage, sortBy, sortDirection);
+        pushHistory(history, perPage, currentPage, sortBy, sortDirection);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

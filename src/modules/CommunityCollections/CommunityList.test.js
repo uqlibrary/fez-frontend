@@ -13,6 +13,8 @@ import {
 
 import * as mockData from 'mock/data';
 
+import * as PushHistory from './components/functions';
+
 import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
@@ -20,6 +22,7 @@ import Immutable from 'immutable';
 import { Route } from 'react-router';
 import CommunityList from './CommunityList';
 import * as repositories from 'repositories';
+import { object } from 'prop-types';
 
 const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] }) } = ({} = {})) => {
     return render(
@@ -122,8 +125,55 @@ describe('CommunityList form', () => {
     it('should render the community list page using page parameters', async () => {
         useIsUserSuperAdmin.mockImplementation(() => false);
         window.history.pushState({}, 'Test Title', '/communities?pageSize=10&page=1&sortBy=title&sortDirection=Asc');
-        const { getByText, queryByText } = setup();
+        const { getByText, queryByText, getByTestId } = setup();
         await waitFor(() => getByText('Sort results by'));
         expect(queryByText('Add New Community')).not.toBeInTheDocument();
+        console.log(window.location.hash);
+        console.log(window.location.search);
+        const element = getByTestId('community-collections-paging-bottom');
+        const button = element.querySelector('.paging-next');
+        act(() => {
+            fireEvent.click(button);
+        });
+        console.log(window.location.hash);
+        console.log(window.location.search);
+        console.log(window.history.state);
+    });
+    it('should allow page changing', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.COMMUNITY_LIST_API({
+                    pageSize: pageSize,
+                    page: 2,
+                    sortBy: sortBy,
+                    direction: direction,
+                }).apiUrl,
+            )
+            .reply(200, mockData.communityList);
+        // useIsUserSuperAdmin.mockImplementation(() => false);
+        // // const mockFn = jest.spyOn(CommunityList, 'pageChanged');
+        const { getByText, getByTestId } = setup();
+        // const wrapper = setup();
+        // const shallo = shallow(wrapper.find('.paging-next'));
+
+        // console.log(shallo);
+        const testFn = jest.spyOn(PushHistory, 'pushHistory');
+        await waitFor(() => getByText('Sort results by'));
+        // // expect(queryByText('Add New Community')).not.toBeInTheDocument();
+        // screen.debug(undefined, 1000000);
+        const firstTestElement = getByTestId('community-collections-paging-bottom');
+        const buttonNext = firstTestElement.querySelector('.paging-next');
+        //
+        buttonNext.click();
+        await waitFor(() => getByText('Sort results by'));
+        expect(testFn).toHaveBeenCalled();
+        // expect(testFn).toHaveReturnedWith(2);
+
+        const secondTestElement = getByTestId('community-collections-paging-bottom');
+        const buttonPrev = secondTestElement.querySelector('.paging-previous');
+        buttonPrev.click();
+        await waitFor(() => getByText('Sort results by'));
+        expect(testFn).toHaveBeenCalled();
+        // screen.debug(undefined, 100000);
     });
 });
