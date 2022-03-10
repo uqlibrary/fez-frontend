@@ -9,7 +9,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
 
         expect(result).toEqual({
             activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: false,
             page: 1,
             pageSize: 20,
             searchQueryParams: { title: 'sometestdata' },
@@ -22,7 +21,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
         const result = parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
         expect(result).toEqual({
             activeFacets: { filters: {}, ranges: {} },
-            bulkExportSelected: false,
             page: 1,
             pageSize: 20,
             sortBy: 'score',
@@ -42,7 +40,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
 
             expect(result).toEqual({
                 activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: false },
-                bulkExportSelected: false,
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: { title: 'some test data' },
@@ -64,7 +61,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
 
             expect(result).toEqual({
                 activeFacets: { filters: { 'Display type': '130' }, ranges: {}, showOpenAccessOnly: true },
-                bulkExportSelected: false,
                 page: 2,
                 pageSize: 50,
                 searchQueryParams: { title: 'some test data' },
@@ -88,7 +84,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
                 ranges: { 'Year published': { from: '2008', to: '2023' } },
                 showOpenAccessOnly: false,
             },
-            bulkExportSelected: false,
             page: 1,
             pageSize: 20,
             searchQueryParams: { title: 'some test data' },
@@ -113,7 +108,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
                     ranges: { 'Year published': { from: '2008', to: '2023' } },
                     showOpenAccessOnly: false,
                 },
-                bulkExportSelected: false,
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: { title: 'some test data' },
@@ -139,7 +133,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
                     ranges: { 'Year published': { from: '2008', to: '2023' } },
                     showOpenAccessOnly: false,
                 },
-                bulkExportSelected: false,
                 page: 1,
                 pageSize: 20,
                 searchQueryParams: { title: 'some test data' },
@@ -162,7 +155,6 @@ describe('parseSearchQueryStringFromUrl helper', () => {
                 ranges: { 'Year published': { from: '2008', to: '2023' } },
                 showOpenAccessOnly: false,
             },
-            bulkExportSelected: false,
             page: 1,
             pageSize: 100,
             searchQueryParams: { title: 'some test data' },
