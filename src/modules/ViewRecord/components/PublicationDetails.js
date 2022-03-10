@@ -70,6 +70,16 @@ export class PublicationDetailsClass extends PureComponent {
                 this.props.publication.rek_display_type_lookup.toLowerCase()
             ] ?? locale.viewRecord.sections.publicationDetails;
 
+        // Similarly to above, if a Collection is being viewed we want the row title to read
+        // 'Community' or 'Communities'. All other record types should continue to show 'Collections'.
+        // Note in this implementation that Collections are the only record type requiring a different
+        // row title, so here the call to get the header text is expected to be a function accepting
+        // a boolean argument.
+        const recordTypeHeading =
+            headings.fez_record_search_key_ismemberof_custom[this.props.publication.rek_display_type_lookup]?.(
+                this.props.publication.fez_record_search_key_ismemberof.length > 1,
+            ) ?? headings.fez_record_search_key_ismemberof;
+
         return (
             <Grid item xs={12}>
                 <StandardCard title={sectionTitle}>
@@ -108,9 +118,7 @@ export class PublicationDetailsClass extends PureComponent {
                     {this.props.publication.fez_record_search_key_ismemberof &&
                         this.props.publication.fez_record_search_key_ismemberof.length > 0 && (
                             <this.ViewRecordRow
-                                heading={headings.fez_record_search_key_ismemberof(
-                                    this.props.publication.fez_record_search_key_ismemberof.length > 1,
-                                )}
+                                heading={recordTypeHeading}
                                 data={
                                     <ul className={this.props.classes.ul}>
                                         {this.props.publication.fez_record_search_key_ismemberof.map(

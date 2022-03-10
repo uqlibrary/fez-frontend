@@ -236,7 +236,10 @@ export default {
                 publicationDetails: {
                     rek_display_type: 'Type of work',
                     rek_subtype: 'Sub-type',
-                    fez_record_search_key_ismemberof: plural => `${plural ? 'Communities' : 'Community'}`,
+                    fez_record_search_key_ismemberof: 'Collections',
+                    fez_record_search_key_ismemberof_custom: {
+                        Collection: plural => `${plural ? 'Communities' : 'Community'}`,
+                    },
                 },
             },
             'Audio Document': {
