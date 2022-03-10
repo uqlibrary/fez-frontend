@@ -176,4 +176,74 @@ describe('CommunityList form', () => {
         expect(testFn).toHaveBeenCalled();
         // screen.debug(undefined, 100000);
     });
+    it('should allow perPage changing', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.COMMUNITY_LIST_API({
+                    pageSize: 100,
+                    page: 1,
+                    sortBy: sortBy,
+                    direction: direction,
+                }).apiUrl,
+            )
+            .reply(200, mockData.communityList);
+        // useIsUserSuperAdmin.mockImplementation(() => false);
+        // // const mockFn = jest.spyOn(CommunityList, 'pageChanged');
+        const { getByText, getByTestId, getByRole, getAllByRole } = setup();
+        // const wrapper = setup();
+        // const shallo = shallow(wrapper.find('.paging-next'));
+
+        // console.log(shallo);
+        // / const testFn = jest.spyOn(PushHistory, 'pushHistory');
+        await waitFor(() => getByText('Sort results by'));
+        expect(getByTestId('pageSize').innerHTML).toBe('10');
+        // // expect(queryByText('Add New Community')).not.toBeInTheDocument();
+        // screen.debug(undefined, 1000000);
+        const element = getByTestId('pageSize');
+        fireEvent.mouseDown(element);
+        expect(getByRole('listbox')).not.toEqual(null);
+        act(() => {
+            const options = getAllByRole('option');
+            // screen.debug(getAllByRole("option"));
+            fireEvent.mouseDown(options[3]);
+            options[3].click();
+        });
+        await waitFor(() => getByText('Sort results by'));
+        // screen.debug(undefined, 1000000);
+        expect(getByTestId('pageSize').innerHTML).toBe('100');
+    });
+    it('should allow sortBy changing', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.COMMUNITY_LIST_API({
+                    pageSize: 10,
+                    page: 1,
+                    sortBy: 'updated_date',
+                    direction: direction,
+                }).apiUrl,
+            )
+            .reply(200, mockData.communityList);
+        const { getByText, getByTestId, getByRole, getAllByRole } = setup();
+
+        await waitFor(() => getByText('Sort results by'));
+        // screen.debug(undefined, 100000);
+
+        expect(getByTestId('sortBy').innerHTML).toBe('Title');
+
+        const element = getByTestId('sortBy');
+        fireEvent.mouseDown(element);
+        expect(getByRole('listbox')).not.toEqual(null);
+        act(() => {
+            const options = getAllByRole('option');
+
+            // console.log('OPTIONS', options);
+
+            fireEvent.mouseDown(options[2]);
+            options[2].click();
+        });
+
+        await waitFor(() => getByText('Sort results by'));
+        // screen.debug(undefined, 100000);
+        expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
+    });
 });
