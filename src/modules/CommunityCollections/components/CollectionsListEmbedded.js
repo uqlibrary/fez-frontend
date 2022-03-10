@@ -124,16 +124,15 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     };
 
     return (
-        <>
+        <div>
             {collectionListLoading && loadingCollectionsPid === pid && (
-                <TableCell colSpan={5}>
+                <div data-testid="collections-page-loading">
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
-                </TableCell>
+                </div>
             )}
             {loadingCollectionsPid !== pid && (
-                <TableCell
-                    colSpan={5}
-                    style={{ backgroundColor: '#eee', paddingLeft: 20, paddingRight: 20 }}
+                <div
+                    style={{ backgroundColor: '#eee', padding: 20 }}
                     data-testid={`collection-records-${pid}`}
                     id={`collection-records-${pid}`}
                 >
@@ -237,9 +236,9 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                             {communityCollectionsConfig.addNewCollectionText}
                         </Button>
                     )}
-                </TableCell>
+                </div>
             )}
-        </>
+        </div>
     );
 };
 CollectionsListEmbedded.propTypes = {

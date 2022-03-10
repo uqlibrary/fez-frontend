@@ -82,15 +82,17 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
             </TableRow>
             {!!open && (
                 <TableRow>
-                    <CollectionsListEmbedded
-                        title={row.rek_title}
-                        key={row.rek_pid}
-                        pid={row.rek_pid}
-                        labels={labels}
-                        conf={conf}
-                        isSuperAdmin={isSuperAdmin}
-                        open={open}
-                    />
+                    <TableCell colSpan={6}>
+                        <CollectionsListEmbedded
+                            title={row.rek_title}
+                            key={row.rek_pid}
+                            pid={row.rek_pid}
+                            labels={labels}
+                            conf={conf}
+                            isSuperAdmin={isSuperAdmin}
+                            open={open}
+                        />
+                    </TableCell>
                 </TableRow>
             )}
         </React.Fragment>
