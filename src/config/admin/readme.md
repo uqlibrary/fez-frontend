@@ -72,7 +72,7 @@ Each collection of fields as per above should define a validation function (`val
 Now that you have a definition for how the Admin Edit page should look, be sure to check the tabs defined in `src/modules/Admin/components/AdminContainer.js` and confirm or update any conditional statements around each tab type so that your particular _record type_ that you intend to edit will be considered. Typically a record type of `RECORD_TYPE_RECORD` will be included without further work but study the code, as there are expectations that you should be aware of. All Record types can be found in `src/config/general.js`.
 
 If you were to check your new Admin Edit page now you should see your fields appearing as expected, however if you've created new fields there's a good chance there'll be no values pre-populating from your record. 
-To fix this, head to `src/config/admin/valueExtractor.js` and create a definition for the name of your new field ensuring the names match. This file defines the relationship between a field and the actual Record key/value and it's here were `src/modules/Admin/containers/Admin.js` (`getInitialValues` function) will populate your field. Also be sure to check `src/modules/Admin/containers/Admin.js`, specifically the `getInitialFormValues` function, as it is from here where `valueExtractor` is called.
+To fix this, head to `src/config/admin/valueExtractor.js` and create a definition for the name of your new field ensuring the names match. This file defines the relationship between a field and the actual Record key/value and it's here where `src/modules/Admin/containers/Admin.js` (`getInitialValues` function) will populate your field. Also be sure to check `src/modules/Admin/containers/Admin.js`, specifically the `getInitialFormValues` function, as it is from here where `valueExtractor` is called.
 
 Finally, if you're _not_ using the commonField sections, or if you only required a subsection, you may discover your Admin Edit page is showing an error message referring to fields you aren't using. This is because certain sections were hard coded in to the system as requiring validation and as such, all new Admin Edit pages will likely run afoul of this issue.
 To fix, open up `src/config/admin/validate.js` and include a new section in the main `switch` block for your field. For example the record type `RECORD_TYPE_COMMUNITY_ID` did not require an admin section or a `files` section, and so these were deleted from the general validation object in the `switch` block to remove the error messages. Remember to include your record type if it's not already available, and your page config's `validation<Name>` method.
@@ -144,4 +144,38 @@ notesSection: {
 
 Currently all Admin Edit form requests are channeled through a single `submitHandler` found in `src/modules/Admin/submitHandler/index.js`. If you are working with a record type that is not the default `RECORD_TYPE_RECORD` then you will likely need to look at this file, in particular the switch statement within.
 
-Ultimately the `submitHandler` will fire a function you have created in `src/actions/records.js` via a Redux action that you have defined in `src/actions/actionTypes.js`, to handle the actual sumission to the API point; be sure to add your new route to `src/repositories/routes.js` in order for the API call to succeed.
+Ultimately the `submitHandler` will fire a function you have created in `src/actions/records.js` via a Redux action that you have defined in `src/actions/actionTypes.js`, to handle the actual submission to the API point; be sure to add your new route to `src/repositories/routes.js` in order for the API call to succeed.
+
+### Note ###
+Before your submit request is fired, all data being sent will be passed through a _transformer_ function that will take the data provided and transform it in to a version of the data that the API will accept. The call originates in the `src/actions/records.js` file, with the exact name/location depending upon the section you are working on e.g. if _updating_ a record through the admin interface, the `adminUpdate` will be called and from here `getAdminRecordRequest`; this latter function being responsible for calling the actual transformers.
+
+Transformers are defined in the `src/actions/transformers.js` file, and if you are using non-standard names for your components/fields then you'll want to update this file in order to transform the name you are using to a name the API is expecting.
+
+In the above example:
+
+```
+reasonForEdit: {
+    component: GenericTextField,
+    componentProps: {
+        textFieldId: 'reasonForEdit',
+        name: 'notesSection.reasonForEdit',
+        fullWidth: true,
+        label: 'Reason for Edit (optional - will be added to object history)',
+        placeholder: 'Reason for Edit',
+    },
+},
+```
+
+the name of the field in the API request would take the name of the component, here `reasonForEdit`. Using a transformer function this can be changed to suit the API:
+
+```
+export const getReasonSectionSearchKeys = (data = {}) => {
+    const { reasonForEdit } = data;
+    return {
+        ...(!!reasonForEdit ? { reason: reasonForEdit } : {}),
+    };
+};
+```
+
+where the actual name of the data being sent has been transformed to `reason`.
+Likewise if you add a new field to an existing selection, e.g. `adminSection`, be sure to update the appropriate transformer function (e.g. `getAdminSectionSearchKeys`) to handle the desired data mapping.

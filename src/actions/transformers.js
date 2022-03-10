@@ -1246,6 +1246,7 @@ export const getOpenAccessStatusSearchKey = record => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
+        communities,
         contentIndicators,
         contactName,
         contactNameId,
@@ -1259,8 +1260,8 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_end_date: endDate,
         ...rest
     } = data;
-
     return {
+        ...getRecordIsMemberOfSearchKey(communities),
         ...getRecordIsMemberOfSearchKey(collections),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
