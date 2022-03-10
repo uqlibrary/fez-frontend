@@ -59,13 +59,6 @@ export const CommunityList = () => {
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
 
-    // const pushHistory = (pageSize, currentPage, sortBy, sortDirection) => {
-    //     history.push({
-    //         pathname: '/communities',
-    //         search: `?pageSize=${pageSize}&page=${currentPage}&sortBy=${sortBy}&sortDirection=${sortDirection}`,
-    //     });
-    // };
-
     const pageSizeChanged = pageSize => {
         dispatch(
             actions.loadCommunitiesList({

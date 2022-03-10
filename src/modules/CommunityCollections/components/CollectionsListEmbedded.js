@@ -59,25 +59,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
     const filteredData = collectionList.filter(obj => obj.parent === pid);
     const finalList = filteredData.length > 0 ? filteredData[0].data : { data: [] };
 
-    // if (finalList && finalList.data && finalList.data.length > 0) {
-    //     switch (sortBy) {
-    //         case 'title':
-    //             finalList.data.sort((a, b) => (a.rek_title < b.rek_title ? 1 : -1));
-    //             sortDirection === 'Asc' && finalList.data.reverse();
-    //             break;
-    //         case 'created_date':
-    //             finalList.data.sort((a, b) => (a.rek_created_date < b.rek_created_date ? 1 : -1));
-    //             sortDirection === 'Asc' && finalList.data.reverse();
-    //             break;
-    //         case 'updated_date':
-    //             finalList.data.sort((a, b) => (a.rek_updated_date < b.rek_updated_date ? 1 : -1));
-    //             sortDirection === 'Asc' && finalList.data.reverse();
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
-
     const PagingData = {
         from: finalList.from,
         to: finalList.to,

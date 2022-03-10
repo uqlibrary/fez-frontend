@@ -6,9 +6,6 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
-
-// import { userIsAdmin, userIsResearcher } from 'hooks';
-
 const CommunityCollectionsSorting = props => {
     const [sortBy, setSortBy] = React.useState(props.sortBy || locale.components.sorting.sortBy[0].value);
     const [sortDirection, setSortDirection] = React.useState(
@@ -48,9 +45,6 @@ const CommunityCollectionsSorting = props => {
         pageLength.push(props.initPageLength);
         pageLength.sort((a, b) => a - b);
     }
-
-    // const isAdmin = userIsAdmin();
-    // const isResearcher = userIsResearcher();
 
     return (
         <Grid container spacing={2}>

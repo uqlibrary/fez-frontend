@@ -62,13 +62,11 @@ describe('CollectionsListEmbedded form', () => {
         await waitFor(() => getByText('Sort results by'));
         expect(getByText('Sort results by')).toBeInTheDocument();
         expect(queryByText('Add New Collection')).not.toBeInTheDocument();
-        // screen.debug(undefined, 100000);
     });
     it('should render the admin collections embedded element', async () => {
         const { getByText } = setup({ ...testProps, isSuperAdmin: true });
 
         await waitFor(() => getByText('Sort results by'));
-        // screen.debug(undefined, 100000);
         expect(getByText('Sort results by')).toBeInTheDocument();
         expect(getByText('Add New Collection')).toBeInTheDocument();
     });
@@ -95,22 +93,6 @@ describe('CollectionsListEmbedded form', () => {
 
         buttonNext.click();
         await waitFor(() => getByText('Sort results by'));
-
-        // screen.debug(
-        //     getByTestId('embedded-collections-paging-bottom').querySelector('.paging-next.Mui-disabled'),
-        //     10000,
-        // );
-        // expect(
-        //     getByTestId('embedded-collections-paging-bottom').querySelector('.paging-next.Mui-disabled'),
-        // ).toBeInTheDocument();
-
-        // const secondTestElement = getByTestId('embedded-collections-paging-bottom');
-        // const buttonPrev = secondTestElement.querySelector('.paging-previous');
-        // buttonPrev.click();
-        // await waitFor(() => getByText('Sort results by'));
-        // expect(
-        //     getByTestId('embedded-collections-paging-bottom').querySelector('.paging-previous.Mui-disabled'),
-        // ).toBeInTheDocument();
     });
 
     it('should allow perPage changing', async () => {

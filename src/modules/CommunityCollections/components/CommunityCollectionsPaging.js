@@ -106,7 +106,6 @@ export class CommunityCollectionsPaging extends Component {
     };
 
     render() {
-        // const { classes } = this.props;
         const txt = locale.components.paging;
         const totalPages =
             this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;

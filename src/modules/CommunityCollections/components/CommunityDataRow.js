@@ -31,12 +31,8 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
-    // console.log('AUTO COLLAPSE', autoCollapse);
-    // const [open, setOpen] = React.useState(false);
+
     const handleSetOpen = openState => {
-        // setOpen(openState);
-        // Store the rek id here in the redux store.
-        // if autoCollapse is set to on, clear the array.
         if (autoCollapse) {
             dispatch(actions.clearCCCollectionsList());
         }

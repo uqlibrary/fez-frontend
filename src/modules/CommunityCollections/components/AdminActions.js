@@ -6,12 +6,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { debounce } from 'throttle-debounce';
 
+const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     const fullUri = uri;
-    // if (navigatedFrom) {
-    //     const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
-    //     fullUri = `${uri}${queryStringGlue}navigatedFrom=${encodeURIComponent(navigatedFrom)}`;
-    // }
     window.open(fullUri, target, options);
 };
 
@@ -19,7 +17,7 @@ export const AdminActions = ({
     adminActions = [
         {
             label: 'Edit selected record',
-            url: pid => `#/admin/edit/${pid}`,
+            url: pid => `/${PATH_PREFIX}admin/edit/${pid}`,
             inApp: true,
             showInDeleted: true,
             options: null,
@@ -27,7 +25,7 @@ export const AdminActions = ({
         },
         {
             label: 'Change security for record',
-            url: pid => `#/admin/edit/${pid}?tab=security`,
+            url: pid => `/${PATH_PREFIX}/admin/edit/${pid}?tab=security`,
             inApp: true,
             showInDeleted: true,
             options: null,
