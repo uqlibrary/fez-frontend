@@ -66,9 +66,23 @@ describe('Publication Details Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('Renders the Type & Collection title for collections', () => {
-        publicationDetails.rek_display_type_lookup = 'Collection';
-        const wrapper = setup({ publication: publicationDetails });
+    it('Renders the Type & Collection title for collections with one community', () => {
+        const wrapper = setup({
+            publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: 'Collection',
+                fez_record_search_key_ismemberof: [{ ...publicationDetails.fez_record_search_key_ismemberof[0] }],
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('Renders the Type & Collection title for collections with multiple communities', () => {
+        const wrapper = setup({
+            publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: 'Collection',
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

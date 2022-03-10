@@ -6055,7 +6055,7 @@ exports[`Publication Details Component  Renders full mount 1`] = `
 
 exports[`Publication Details Component  Renders nothing for no display type lookup 1`] = `""`;
 
-exports[`Publication Details Component  Renders the Type & Collection title for collections 1`] = `
+exports[`Publication Details Component  Renders the Type & Collection title for collections with multiple communities 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
   xs={12}
@@ -6085,6 +6085,50 @@ exports[`Publication Details Component  Renders the Type & Collection title for 
       }
       heading="Content Indicators"
       rowId="rek-content-indicator"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Publication Details Component  Renders the Type & Collection title for collections with one community 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Type & Community"
+  >
+    <Component
+      data="Collection"
+      heading="Type of work"
+      rowId="rek-display-type"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+      rowId="rek-content-indicator"
+    />
+    <Component
+      data={
+        <ul
+          className="ul"
+        />
+      }
+      heading="Community"
+      rowId="rek-ismemberof"
     />
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
@@ -6191,7 +6235,7 @@ exports[`Publication Details Component  should render component 1`] = `
           </li>
         </ul>
       }
-      heading="Community"
+      heading="Collections"
       rowId="rek-ismemberof"
     />
   </StandardCard>
@@ -6325,7 +6369,7 @@ exports[`Publication Details Component  should render with publication without s
           </li>
         </ul>
       }
-      heading="Community"
+      heading="Collections"
       rowId="rek-ismemberof"
     />
   </StandardCard>
