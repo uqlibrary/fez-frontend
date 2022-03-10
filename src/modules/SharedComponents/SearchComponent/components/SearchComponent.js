@@ -87,7 +87,7 @@ export default class SearchComponent extends PureComponent {
     }
 
     // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    /* istanbul ignore next */ UNSAFE_componentWillReceiveProps(nextProps) {
         const isOpenAccessInAdvancedModeChanged =
             nextProps.isOpenAccessInAdvancedMode !== this.props.isOpenAccessInAdvancedMode;
         const isAdvancedSearchChanged = nextProps.isAdvancedSearch !== this.props.isAdvancedSearch;
