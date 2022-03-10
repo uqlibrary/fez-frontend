@@ -39,6 +39,17 @@ describe('SearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes', () => {
+        const wrapper = setup({
+            isAdvancedSearch: true,
+        });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
+            isOpenAccessInAdvancedMode: true,
+        });
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should set default prop method as expected', () => {
         const wrapper = getElement(SearchComponent, {
             history: {

@@ -120,8 +120,8 @@ export const useQueryStringParams = (history, location, showOpenAccessOnly, canB
         showOpenAccessOnly,
     );
 
-    const updateQueryString = (queryParams, replace = false) => {
-        history[replace ? 'replace' : 'push']({
+    const updateQueryString = queryParams => {
+        history.push({
             pathname:
                 location.pathname === pathConfig.admin.unpublished
                     ? pathConfig.admin.unpublished
