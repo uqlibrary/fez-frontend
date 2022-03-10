@@ -53,7 +53,6 @@ const SearchRecords = ({
         queryParams,
         updateQueryString,
         actions,
-        setSearchParams,
     );
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
@@ -82,10 +81,10 @@ const SearchRecords = ({
             // we can't use location.state to send state around,
             // as state changes are async and might not be up-to-date
             const queryParams = getQueryParams(
-                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
                 location.search.substr(1),
                 canBulkExport,
                 isUnpublishedBufferPage,
+                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
             );
             setSearchParams(queryParams);
             actions.searchEspacePublications(queryParams);

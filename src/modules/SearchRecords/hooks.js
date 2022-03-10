@@ -34,7 +34,7 @@ export const parseSearchQueryStringFromUrl = (queryString, canBulkExport = false
         providedSearchQuery.bulkExportSelected = true;
         providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
     } else {
-        providedSearchQuery.bulkExportSelected = false;
+        delete providedSearchQuery.bulkExportSelected;
         providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
     }
 
@@ -87,7 +87,6 @@ export const queryParamsDefaults = showOpenAccessOnly => ({
         ranges: {},
         ...(showOpenAccessOnly ? { showOpenAccessOnly: true } : {}),
     },
-    bulkExportSelected: false,
     page: 1,
     pageSize: 20,
     sortBy: locale.components.sorting.sortBy[1].value,
@@ -102,7 +101,7 @@ export const queryParamsDefaults = showOpenAccessOnly => ({
  * @param isUnpublishedBufferPage
  * @return Object
  */
-export const getQueryParams = (showOpenAccessOnly, queryString, canBulkExport, isUnpublishedBufferPage) => ({
+export const getQueryParams = (queryString, canBulkExport, isUnpublishedBufferPage, showOpenAccessOnly) => ({
     ...queryParamsDefaults(showOpenAccessOnly),
     ...parseSearchQueryStringFromUrl(queryString, canBulkExport, isUnpublishedBufferPage),
 });
@@ -115,10 +114,10 @@ export const getQueryParams = (showOpenAccessOnly, queryString, canBulkExport, i
  */
 export const useQueryStringParams = (history, location, showOpenAccessOnly, canBulkExport, isUnpublishedBufferPage) => {
     const queryParams = getQueryParams(
-        showOpenAccessOnly,
         location.search.substr(1),
         canBulkExport,
         isUnpublishedBufferPage,
+        showOpenAccessOnly,
     );
 
     const updateQueryString = (queryParams, replace = false) => {

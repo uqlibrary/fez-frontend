@@ -8,6 +8,8 @@ import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
 import { renderWithRouter } from '../../../../utils/test-utils';
+import { queryParamsDefaults } from '../hooks';
+import param from 'can-param';
 
 /**
  * Unhide items hidden by MaterialUI based on screen size
@@ -20,33 +22,37 @@ const createMatchMedia = width => {
     });
 };
 
-const memoryHistory = createMemoryHistory();
-const getTestProps = props => ({
-    publicationsList: [],
-    searchLoading: false,
-    exportPublicationsLoading: false,
-    isAdvancedSearch: false,
-    isUnpublishedBufferPage: false,
-    location: {
-        search: '?searchQueryParams%5Ball%5D=test',
-    },
-    history: memoryHistory,
-    ...props,
-    actions: {
-        clearSearchQuery: jest.fn(),
-        exportEspacePublications: jest.fn(),
-        resetExportPublicationsStatus: jest.fn(),
-        searchEspacePublications: jest.fn(),
-        ...props.actions,
-    },
-});
-
-const setup = (props = {}, { history = memoryHistory, renderMethod = render } = {}) => {
+/**
+ * @param props
+ * @param history
+ * @param renderMethod
+ * @return {*}
+ */
+const setup = (props = {}, renderMethod = render) => {
+    const testProps = {
+        publicationsList: [],
+        searchLoading: false,
+        exportPublicationsLoading: false,
+        isAdvancedSearch: false,
+        isUnpublishedBufferPage: false,
+        location: {
+            search: '?searchQueryParams%5Ball%5D=test',
+        },
+        history: createMemoryHistory(),
+        ...props,
+        actions: {
+            clearSearchQuery: jest.fn(),
+            exportEspacePublications: jest.fn(),
+            resetExportPublicationsStatus: jest.fn(),
+            searchEspacePublications: jest.fn(),
+            ...props.actions,
+        },
+    };
     return renderWithRouter(
         <WithReduxStore>
-            <SearchRecords {...getTestProps(props)} />
+            <SearchRecords {...testProps} />
         </WithReduxStore>,
-        { history, renderMethod },
+        { history: testProps.history, renderMethod },
     );
 };
 
@@ -143,70 +149,6 @@ describe('SearchRecords page', () => {
         expect(getByText('Another Facet')).toBeInTheDocument();
     });
 
-    // it('should restore displayed search results if back button pressed', () => {
-    //     const testQuerySearchAstrobiology =
-    //         '?keywords%5BKeyword-astrobiology%5D%5Btype%5D=Keyword&keywords%5BKeyword-astrobiology%5D%5Btext%5D=astrobiology&keywords%5BKeyword-astrobiology%5D%5Bid%5D=Keyword-astrobiology';
-    //
-    //     const path = pathConfig.journals.search;
-    //     const testHistory = createMemoryHistory({ initialEntries: [path] });
-    //     testHistory.push({
-    //         path,
-    //     });
-    //
-    //     const journalsList = mockData;
-    //
-    //     const { queryByTestId, getByText, queryByText } = setup({
-    //         testHistory,
-    //         state: { journalsListLoaded: true, journalsList },
-    //         storeState: {
-    //             journalSearchKeywords: {
-    //                 exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
-    //                 keywordMatch: [{ keyword: 'astrobiology' }],
-    //             },
-    //         },
-    //     });
-    //
-    //     expect(queryByTestId('journal-search-item-addable-astrobiology-0')).toBeInTheDocument();
-    //     act(() => {
-    //         fireEvent.click(queryByTestId('journal-search-item-addable-astrobiology-0'));
-    //     });
-    //
-    //     expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
-    //
-    //     expect(queryByTestId('journal-search-button')).not.toHaveAttribute('disabled');
-    //
-    //     act(() => {
-    //         fireEvent.click(queryByTestId('journal-search-button'));
-    //     });
-    //
-    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
-    //
-    //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
-    //
-    //     expect(queryByTestId('journal-search-clear-keywords-button')).toBeInTheDocument();
-    //
-    //     act(() => {
-    //         fireEvent.click(queryByTestId('journal-search-clear-keywords-button'));
-    //     });
-    //
-    //     expect(testHistory.location.pathname).toEqual(path);
-    //     expect(testHistory.location.search).toEqual('');
-    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).not.toBeInTheDocument();
-    //     expect(queryByTestId('641-Astrobiology-link')).not.toBeInTheDocument();
-    //     expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
-    //
-    //     act(() => {
-    //         testHistory.goBack();
-    //     });
-    //
-    //     expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
-    //     expect(
-    //         queryByText('Enter a journal title, keyword, subject or field of research code.'),
-    //     ).not.toBeInTheDocument();
-    //     expect(queryByTestId('journal-search-chip-Keyword-astrobiology')).toBeInTheDocument();
-    //     expect(queryByTestId('641-Astrobiology-link')).toBeInTheDocument();
-    // });
-
     const searchQuery = {
         page: 1,
         pageSize: 20,
@@ -216,7 +158,6 @@ describe('SearchRecords page', () => {
             filters: {},
             ranges: {},
         },
-        bulkExportSelected: false,
     };
 
     const props = {
@@ -277,19 +218,17 @@ describe('SearchRecords page', () => {
         },
     };
 
-    it('should update history and search records when page size is changed', () => {
+    it('should update the queryString and make API call when page size is changed', () => {
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
-        const testPushFn = jest.fn();
 
         const { getByTestId, getAllByRole } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
             },
-            history: {
-                push: testPushFn,
-                listen: jest.fn(),
-            },
+            history: historyMock,
         });
 
         act(() => {
@@ -303,24 +242,21 @@ describe('SearchRecords page', () => {
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'bulkExportSelected=false&page=1&pageSize=50&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+            search: 'page=1&pageSize=50&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
-    it('should update history and search records when page is changed', () => {
+    it('should update the queryString and make API call when page is changed', () => {
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
-        const testPushFn = jest.fn();
 
         const { getByTestId } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
             },
-            history: {
-                push: testPushFn,
-                listen: jest.fn(),
-            },
+            history: historyMock,
         });
 
         act(() => {
@@ -330,24 +266,21 @@ describe('SearchRecords page', () => {
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'bulkExportSelected=false&page=2&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+            search: 'page=2&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
-    it('should update history and search records when sort direction is changed', () => {
+    it('should update the queryString and make API call when sort direction is changed', () => {
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
-        const testPushFn = jest.fn();
 
         const { getByTestId, getAllByRole } = setup({
             ...props,
             actions: {
                 searchEspacePublications: testAction,
             },
-            history: {
-                push: testPushFn,
-                listen: jest.fn(),
-            },
+            history: historyMock,
         });
 
         act(() => {
@@ -361,8 +294,7 @@ describe('SearchRecords page', () => {
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
-            search:
-                'bulkExportSelected=false&page=1&pageSize=20&sortBy=score&sortDirection=Asc&searchQueryParams%5Ball%5D=test',
+            search: 'page=1&pageSize=20&sortBy=score&sortDirection=Asc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -404,7 +336,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
-        const { getByTestId, getAllByRole } = setup(props, { history: createMemoryHistory() });
+        const { getByTestId, getAllByRole } = setup(props);
 
         // Do one advanced search
         act(() => {
@@ -433,9 +365,10 @@ describe('SearchRecords page', () => {
         expect(getByTestId('facets-filter')).not.toHaveTextContent('Author');
     });
 
-    it('should update history and search records when facet is changed', () => {
+    it('should update the queryString and make API call when facet is changed', () => {
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
         const testAction = jest.fn();
-        const testPushFn = jest.fn();
 
         const { getByTestId, getByText } = setup({
             ...props,
@@ -443,10 +376,7 @@ describe('SearchRecords page', () => {
             actions: {
                 searchEspacePublications: testAction,
             },
-            history: {
-                push: testPushFn,
-                listen: jest.fn(),
-            },
+            history: historyMock,
         });
 
         act(() => {
@@ -460,21 +390,18 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&bulkExportSelected=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
     it('should set history to unpublished path if pathname matches it', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
-
-        const testFn = jest.fn();
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
 
         const { getByTestId, getAllByRole } = setup({
-            history: {
-                push: testFn,
-                listen: jest.fn(),
-            },
+            history: historyMock,
             location: {
                 pathname: pathConfig.admin.unpublished,
                 search: '',
@@ -497,9 +424,9 @@ describe('SearchRecords page', () => {
             fireEvent.click(getAllByRole('option')[2]);
         });
 
-        expect(testFn).toHaveBeenCalledWith({
+        expect(testPushFn).toHaveBeenCalledWith({
             pathname: pathConfig.admin.unpublished,
-            search: 'bulkExportSelected=false&page=1&pageSize=50&sortBy=score&sortDirection=Desc',
+            search: 'page=1&pageSize=50&sortBy=score&sortDirection=Desc',
         });
         userIsAdmin.mockRestore();
     });
@@ -548,7 +475,6 @@ describe('SearchRecords page', () => {
                 },
                 showOpenAccessOnly: false,
             },
-            bulkExportSelected: false,
         };
         const queryString =
             'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5B' +
@@ -591,7 +517,7 @@ describe('SearchRecords page', () => {
                     search: queryString.replace('pageSize=20', `pageSize=${pageSizeOptionElement.textContent}`),
                 },
             },
-            { renderMethod: rerender },
+            rerender,
         );
         act(() => {
             fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
@@ -664,5 +590,313 @@ describe('SearchRecords page', () => {
         });
         unmount();
         expect(clearSearchQueryFn).toHaveBeenCalled();
+    });
+
+    const assertQueryString = (history, params) => {
+        const { activeFacets } = params;
+        expect(history.location.search.substr(1)).toEqual(param({ activeFacets, ...params }));
+    };
+    const doSearch = (getByTestId, api, history, params) => {
+        fireEvent.change(getByTestId('simple-search-input'), { target: { value: params.searchQueryParams.all } });
+        act(() => {
+            fireEvent.click(getByTestId('simple-search-button'));
+        });
+        assertQueryString(history, params);
+        expect(api).toHaveBeenLastCalledWith(params);
+    };
+
+    it('should update the queryString and make API call when going back and forward on a search', () => {
+        const apiMock = jest.fn();
+        const historyMock = createMemoryHistory();
+        const { getByTestId } = setup({ history: historyMock, actions: { searchEspacePublications: apiMock } });
+
+        const getParams = term => ({
+            searchQueryParams: {
+                all: term,
+            },
+            ...queryParamsDefaults(),
+        });
+
+        // make a couple of searches
+        const terms = ['cats', 'dogs'];
+        doSearch(getByTestId, apiMock, historyMock, getParams(terms[0]));
+        doSearch(getByTestId, apiMock, historyMock, getParams(terms[1]));
+        // go back
+        act(() => {
+            historyMock.goBack();
+        });
+        assertQueryString(historyMock, getParams(terms[0]));
+        // go forward
+        act(() => {
+            historyMock.goForward();
+        });
+        assertQueryString(historyMock, getParams(terms[1]));
+    });
+
+    it('should update the queryString and make API call when going back and forward on page', () => {
+        const getParams = (page = searchQuery.page) => ({
+            ...searchQuery,
+            page,
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+        const apiMock = jest.fn();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(getParams())}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // select page 2
+        act(() => {
+            fireEvent.click(getByTestId('search-records-paging-top-select-page-2'));
+        });
+        assertQueryString(historyMock, getParams(2));
+        expect(apiMock).toHaveBeenLastCalledWith(getParams(2));
+
+        // go back
+        act(() => {
+            historyMock.goBack();
+        });
+        assertQueryString(historyMock, getParams());
+        expect(apiMock).toHaveBeenLastCalledWith(getParams());
+
+        // go forward
+        act(() => {
+            historyMock.goForward();
+        });
+        assertQueryString(historyMock, getParams(2));
+        expect(apiMock).toHaveBeenLastCalledWith(getParams(2));
+    });
+
+    it('should update the queryString and make API call when going back and forward on page size', () => {
+        const getParams = (pageSize = searchQuery.pageSize) => ({
+            ...searchQuery,
+            pageSize,
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+        const apiMock = jest.fn();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(getParams())}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId, getAllByRole } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // change pageSize
+        act(() => {
+            fireEvent.mouseDown(getByTestId('pageSize'));
+        });
+        expect(getAllByRole('option').length).toBe(4);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[2]);
+            const newValue = parseInt(getAllByRole('option')[2].textContent, 10);
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+
+            // go back
+            act(() => {
+                historyMock.goBack();
+            });
+            assertQueryString(historyMock, getParams());
+            expect(apiMock).toHaveBeenLastCalledWith(getParams());
+
+            // go forward
+            act(() => {
+                historyMock.goForward();
+            });
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+        });
+    });
+
+    it('should update the queryString and make API call when going back and forward on sort direction', () => {
+        const getParams = (sortDirection = searchQuery.sortDirection) => ({
+            ...searchQuery,
+            sortDirection,
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+        const apiMock = jest.fn();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(getParams())}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId, getAllByRole } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // change sort direction
+        act(() => {
+            fireEvent.mouseDown(getByTestId('sortOrder'));
+        });
+        expect(getAllByRole('option').length).toBe(2);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[1]);
+            const newValue = getAllByRole('option')[1].textContent;
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+
+            // go back
+            act(() => {
+                historyMock.goBack();
+            });
+            assertQueryString(historyMock, getParams());
+            expect(apiMock).toHaveBeenLastCalledWith(getParams());
+
+            // go forward
+            act(() => {
+                historyMock.goForward();
+            });
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+        });
+    });
+
+    it('should update the queryString and make API call when going back and forward on sort', () => {
+        const getParams = (sortBy = searchQuery.sortBy) => ({
+            ...searchQuery,
+            sortBy,
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+        const apiMock = jest.fn();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(getParams())}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId, getAllByRole } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // change sort
+        act(() => {
+            fireEvent.mouseDown(getByTestId('sortBy'));
+        });
+        expect(getAllByRole('option').length).toBe(8);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[2]);
+            const newValue = getAllByRole('option')[2].textContent.toLowerCase();
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+
+            // go back
+            act(() => {
+                historyMock.goBack();
+            });
+            assertQueryString(historyMock, getParams());
+            expect(apiMock).toHaveBeenLastCalledWith(getParams());
+
+            // go forward
+            act(() => {
+                historyMock.goForward();
+            });
+            assertQueryString(historyMock, getParams(newValue));
+            expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+        });
+    });
+
+    it('should update the queryString and make API call when going back and forward on facet filtering', () => {
+        const getParams = (activeFacets = {}) => ({
+            ...searchQuery,
+            activeFacets: {
+                ...searchQuery.activeFacets,
+                ...activeFacets,
+            },
+            searchQueryParams: {
+                all: 'test',
+            },
+        });
+        const apiMock = jest.fn();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(getParams())}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId, getByText } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // face filter it
+        act(() => {
+            fireEvent.click(getByTestId('clickable-facet-category-author'));
+        });
+        act(() => {
+            fireEvent.click(getByText('Martin, Sally (68)'));
+        });
+        const newValue = {
+            showOpenAccessOnly: false,
+            filters: {
+                Author: '745',
+            },
+        };
+        assertQueryString(historyMock, getParams(newValue));
+        expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+
+        // go back
+        act(() => {
+            historyMock.goBack();
+        });
+        assertQueryString(historyMock, getParams());
+        expect(apiMock).toHaveBeenLastCalledWith(getParams());
+
+        // go forward
+        act(() => {
+            historyMock.goForward();
+        });
+        assertQueryString(historyMock, getParams(newValue));
+        expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
     });
 });
