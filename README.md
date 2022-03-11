@@ -12,8 +12,16 @@ UQ's branding for Fez is UQ eSpace.
 - Legacy eSpace application <https://espace.library.uq.edu.au/>
 - eSpace production <https://espace.library.uq.edu.au/dashboard>
 - eSpace staging <https://fez-staging.library.uq.edu.au/dashboard>
-- eSpace prodtest <https://fez-testing.library.uq.edu.au/dashboard>
+- eSpace prodtest <https://fez-testing.library.uq.edu.au/dashboard> (see notes below)
 - Current build <https://development.library.uq.edu.au/espace/master> (or your feature branch)
+
+### IMPORTANT NOTE
+
+**eSpace prodtest is a production environment**
+
+This means that it's exactly like production, except for the git branch that uses. This is useful for **carefully*** testing anything that might break production before pushing to the actual branch.
+
+***carefully**: any actions (e.g. creating, editing, deleting records) performed in eSpace prodtest will reflect in changes made to production. This includes **email notifications, 3rd party services integrations and everything else**.   
 
 ## Technology
 
