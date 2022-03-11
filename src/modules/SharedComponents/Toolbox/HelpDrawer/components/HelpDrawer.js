@@ -9,11 +9,13 @@ import Typography from '@material-ui/core/Typography';
 const styles = theme => ({
     paper: {
         width: 320,
-        paddingTop: 40,
-        paddingRight: 40,
-        paddingLeft: 40,
+        padding: theme.spacing(3),
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(5),
+        },
         paddingBottom: 0,
         maxHeight: '100%',
+        boxSizing: 'border-box',
     },
     title: {
         color: theme.palette.primary.main,
