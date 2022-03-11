@@ -204,7 +204,9 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                         </Collapse>
                     )}
                     {!finalList.data.length > 0 && (
-                        <Typography variant="caption">{conf.loading.noCollections}</Typography>
+                        <div>
+                            <Typography variant="caption">{conf.loading.noCollections}</Typography>
+                        </div>
                     )}
                     {!!isSuperAdmin && (
                         <Button
