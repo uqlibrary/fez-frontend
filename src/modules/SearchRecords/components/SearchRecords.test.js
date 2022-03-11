@@ -12,6 +12,81 @@ import { queryParamsDefaults } from '../hooks';
 import param from 'can-param';
 
 /**
+ * @type Object
+ */
+const searchQuery = {
+    page: 1,
+    pageSize: 20,
+    sortBy: 'score',
+    sortDirection: 'Desc',
+    activeFacets: {
+        filters: {},
+        ranges: {},
+    },
+};
+
+/**
+ * @type Object
+ */
+const props = {
+    publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
+    publicationsListPagingData: {
+        from: 10,
+        to: 30,
+        total: 100,
+        per_page: 20,
+        current_page: 1,
+    },
+    searchQuery,
+    publicationsListFacets: {
+        'Author (lookup)': {
+            doc_count_error_upper_bound: 0,
+            sum_other_doc_count: 185,
+            buckets: [
+                { key: 'Martin, Sally', doc_count: 68 },
+                { key: 'Parton, Robert G.', doc_count: 22 },
+                { key: 'Meunier, Frederic A.', doc_count: 13 },
+                { key: 'Andreas Papadopulos', doc_count: 9 },
+                { key: 'Rachel Sarah Gormal', doc_count: 8 },
+            ],
+        },
+        Subject: {
+            doc_count_error_upper_bound: 0,
+            sum_other_doc_count: 66,
+            buckets: [
+                { key: 450009, doc_count: 19 },
+                { key: 453239, doc_count: 9 },
+                { key: 270104, doc_count: 8 },
+                { key: 450774, doc_count: 8 },
+                { key: 453253, doc_count: 7 },
+            ],
+        },
+        Author: {
+            doc_count_error_upper_bound: 0,
+            sum_other_doc_count: 185,
+            buckets: [
+                { key: 745, doc_count: 68 },
+                { key: 824, doc_count: 22 },
+                { key: 2746, doc_count: 13 },
+                { key: 89985, doc_count: 9 },
+                { key: 10992, doc_count: 8 },
+            ],
+        },
+        Subtype: {
+            doc_count_error_upper_bound: 0,
+            sum_other_doc_count: 2,
+            buckets: [
+                { key: 'Article (original research)', doc_count: 50 },
+                { key: 'Published abstract', doc_count: 9 },
+                { key: 'Critical review of research, literature review, critical commentary', doc_count: 3 },
+                { key: 'Fully published paper', doc_count: 2 },
+                { key: 'Editorial', doc_count: 1 },
+            ],
+        },
+    },
+};
+
+/**
  * Unhide items hidden by MaterialUI based on screen size
  */
 const createMatchMedia = width => {
@@ -20,6 +95,30 @@ const createMatchMedia = width => {
         addListener: () => {},
         removeListener: () => {},
     });
+};
+
+/**
+ * @param history
+ * @param params
+ */
+const assertQueryString = (history, params) => {
+    const { activeFacets } = params;
+    expect(history.location.search.substr(1)).toEqual(param({ activeFacets, ...params }));
+};
+
+/**
+ * @param getByTestId
+ * @param api
+ * @param history
+ * @param params
+ */
+const doSimpleSearch = (getByTestId, api, history, params) => {
+    fireEvent.change(getByTestId('simple-search-input'), { target: { value: params.searchQueryParams.all } });
+    act(() => {
+        fireEvent.click(getByTestId('simple-search-button'));
+    });
+    assertQueryString(history, params);
+    expect(api).toHaveBeenLastCalledWith(params);
 };
 
 /**
@@ -148,75 +247,6 @@ describe('SearchRecords page', () => {
         expect(getByText('Some Facet')).toBeInTheDocument();
         expect(getByText('Another Facet')).toBeInTheDocument();
     });
-
-    const searchQuery = {
-        page: 1,
-        pageSize: 20,
-        sortBy: 'score',
-        sortDirection: 'Desc',
-        activeFacets: {
-            filters: {},
-            ranges: {},
-        },
-    };
-
-    const props = {
-        publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
-        publicationsListPagingData: {
-            from: 10,
-            to: 30,
-            total: 100,
-            per_page: 20,
-            current_page: 1,
-        },
-        searchQuery,
-        publicationsListFacets: {
-            'Author (lookup)': {
-                doc_count_error_upper_bound: 0,
-                sum_other_doc_count: 185,
-                buckets: [
-                    { key: 'Martin, Sally', doc_count: 68 },
-                    { key: 'Parton, Robert G.', doc_count: 22 },
-                    { key: 'Meunier, Frederic A.', doc_count: 13 },
-                    { key: 'Andreas Papadopulos', doc_count: 9 },
-                    { key: 'Rachel Sarah Gormal', doc_count: 8 },
-                ],
-            },
-            Subject: {
-                doc_count_error_upper_bound: 0,
-                sum_other_doc_count: 66,
-                buckets: [
-                    { key: 450009, doc_count: 19 },
-                    { key: 453239, doc_count: 9 },
-                    { key: 270104, doc_count: 8 },
-                    { key: 450774, doc_count: 8 },
-                    { key: 453253, doc_count: 7 },
-                ],
-            },
-            Author: {
-                doc_count_error_upper_bound: 0,
-                sum_other_doc_count: 185,
-                buckets: [
-                    { key: 745, doc_count: 68 },
-                    { key: 824, doc_count: 22 },
-                    { key: 2746, doc_count: 13 },
-                    { key: 89985, doc_count: 9 },
-                    { key: 10992, doc_count: 8 },
-                ],
-            },
-            Subtype: {
-                doc_count_error_upper_bound: 0,
-                sum_other_doc_count: 2,
-                buckets: [
-                    { key: 'Article (original research)', doc_count: 50 },
-                    { key: 'Published abstract', doc_count: 9 },
-                    { key: 'Critical review of research, literature review, critical commentary', doc_count: 3 },
-                    { key: 'Fully published paper', doc_count: 2 },
-                    { key: 'Editorial', doc_count: 1 },
-                ],
-            },
-        },
-    };
 
     it('should update the queryString and make API call when page size is changed', () => {
         const historyMock = createMemoryHistory();
@@ -592,19 +622,6 @@ describe('SearchRecords page', () => {
         expect(clearSearchQueryFn).toHaveBeenCalled();
     });
 
-    const assertQueryString = (history, params) => {
-        const { activeFacets } = params;
-        expect(history.location.search.substr(1)).toEqual(param({ activeFacets, ...params }));
-    };
-    const doSearch = (getByTestId, api, history, params) => {
-        fireEvent.change(getByTestId('simple-search-input'), { target: { value: params.searchQueryParams.all } });
-        act(() => {
-            fireEvent.click(getByTestId('simple-search-button'));
-        });
-        assertQueryString(history, params);
-        expect(api).toHaveBeenLastCalledWith(params);
-    };
-
     it('should update the queryString and make API call when going back and forward on a search', () => {
         const apiMock = jest.fn();
         const historyMock = createMemoryHistory();
@@ -619,8 +636,8 @@ describe('SearchRecords page', () => {
 
         // make a couple of searches
         const terms = ['cats', 'dogs'];
-        doSearch(getByTestId, apiMock, historyMock, getParams(terms[0]));
-        doSearch(getByTestId, apiMock, historyMock, getParams(terms[1]));
+        doSimpleSearch(getByTestId, apiMock, historyMock, getParams(terms[0]));
+        doSimpleSearch(getByTestId, apiMock, historyMock, getParams(terms[1]));
         // go back
         act(() => {
             historyMock.goBack();
