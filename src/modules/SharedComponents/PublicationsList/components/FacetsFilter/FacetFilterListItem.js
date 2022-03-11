@@ -32,6 +32,7 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
                 button
                 disabled={disabled}
                 id={`clickable-${id}`}
+                data-testid={`clickable-${id}`}
                 key={`facet_filter_${id}`}
                 classes={{
                     gutters: classes.listItemGutters,
@@ -40,11 +41,21 @@ export const FacetsFilterListItem = ({ title, disabled, nestedItems, id, isActiv
                 aria-expanded={isOpen}
             >
                 <ListItemText disableTypography>
-                    <Typography id={id} variant={'body2'} color={'textPrimary'} className={classes.listText}>
+                    <Typography
+                        id={id}
+                        data-testid={id}
+                        variant={'body2'}
+                        color={'textPrimary'}
+                        className={classes.listText}
+                    >
                         {title}
                     </Typography>
                 </ListItemText>
-                {isOpen ? <ExpandLess id={`expand-less-${id}`} /> : <ExpandMore id={`expand-more-${id}`} />}
+                {isOpen ? (
+                    <ExpandLess id={`expand-less-${id}`} data-testid={`expand-less-${id}`} />
+                ) : (
+                    <ExpandMore id={`expand-more-${id}`} data-testid={`expand-more-${id}`} />
+                )}
             </ListItem>
             {isOpen && (
                 <Collapse in={isOpen} timeout="auto" unmountOnExit>
