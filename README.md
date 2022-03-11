@@ -338,8 +338,6 @@ When running ```npm test``` and related scripts natively in linux (without using
 
 One way to avoid this is to restrict the number of CPU cores through jest's [--maxWorkers](https://jestjs.io/docs/cli#--maxworkersnumstring) option.
 
-You can either use ```test:cpu-restricted``` or the following if additional options are required:
-
 ```bash
 NODE_ENV=test FULL_PATH=http://localhost node --expose-gc ./node_modules/.bin/jest --logHeapUsage --maxWorkers=50%
 ```
