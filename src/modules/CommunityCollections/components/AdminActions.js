@@ -5,7 +5,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { debounce } from 'throttle-debounce';
-import { PATH_PREFIX } from 'config';
+import { PATH_PREFIX, APP_URL } from 'config';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     const fullUri = uri;
@@ -16,7 +16,7 @@ export const AdminActions = ({
     adminActions = [
         {
             label: 'Edit selected record',
-            url: pid => `/${PATH_PREFIX}admin/edit/${pid}`,
+            url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
             inApp: true,
             showInDeleted: true,
             options: null,
@@ -24,7 +24,7 @@ export const AdminActions = ({
         },
         {
             label: 'Change security for record',
-            url: pid => `/${PATH_PREFIX}admin/edit/${pid}?tab=security`,
+            url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
             inApp: true,
             showInDeleted: true,
             options: null,
