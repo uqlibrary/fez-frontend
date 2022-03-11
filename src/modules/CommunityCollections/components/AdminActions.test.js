@@ -1,11 +1,12 @@
 import React from 'react';
 import AdminActions from './AdminActions';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
+import { PATH_PREFIX, APP_URL } from 'config';
 
 const testActions = [
     {
         label: 'Edit selected record',
-        url: pid => `/admin/edit/${pid}`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}`,
         inApp: true,
         showInDeleted: true,
         options: null,
@@ -13,7 +14,7 @@ const testActions = [
     },
     {
         label: 'Change security for record',
-        url: pid => `/admin/edit/${pid}?tab=security`,
+        url: pid => `${APP_URL}${PATH_PREFIX}admin/edit/${pid}?tab=security`,
         inApp: true,
         showInDeleted: true,
         options: null,
@@ -77,7 +78,7 @@ describe('AdminActions component', () => {
         });
     });
 
-    it('should handle admin actions with additional elements', () => {
+    it('should handle admin actions with correct end point URLs', () => {
         const testProps = { record: 'UQ:123ZZ' };
         const { getByTestId, getByText } = setup(testProps);
 
