@@ -17,16 +17,21 @@ import Tooltip from '@material-ui/core/Tooltip';
 export const id = 'journal-search-interface';
 
 const useStyles = makeStyles(theme => ({
+    gridContainerSelectedKeywords: {
+        width: '100%',
+        display: 'grid',
+        alignItems: 'center',
+        gridTemplateColumns: '1fr 40px',
+        padding: theme.spacing(1),
+    },
     closeButtonContainer: {
-        position: 'relative',
-        [theme.breakpoints.up('sm')]: {
-            paddingRight: 48,
-        },
+        display: 'flex',
+        justifyContent: 'flex-end',
     },
     closeButton: {
-        position: 'absolute',
-        top: 8,
-        right: 0,
+        [theme.breakpoints.down('sm')]: {
+            padding: theme.spacing(1),
+        },
     },
 }));
 
@@ -77,38 +82,42 @@ export const JournalSearchInterface = ({
                 message={txt.snackbar.message}
                 role="alert"
             />
-            <Grid container spacing={2} className={classes.closeButtonContainer}>
+            <Grid container spacing={2}>
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-search-input`} data-testid={`${id}-search-input`}>
                         <JournalSearchInput onReset={handleKeywordReset} />
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
-                    <Grid item xs={12} id={`${id}-selected-keywords`} data-testid={`${id}-selected-keywords`}>
-                        <SelectedKeywords
-                            onKeywordDelete={handleKeywordDelete}
-                            keywords={Object.values(selectedKeywords)}
-                        />
+                    <div className={classes.gridContainerSelectedKeywords}>
+                        <Grid item xs={12} id={`${id}-selected-keywords`} data-testid={`${id}-selected-keywords`}>
+                            <SelectedKeywords
+                                onKeywordDelete={handleKeywordDelete}
+                                keywords={Object.values(selectedKeywords)}
+                            />
+                        </Grid>
                         {!showInputControls && (
-                            <Tooltip
-                                id="strategic-publishing-clear-search"
-                                data-testid="strategic-publishing-clear-search"
-                                title={'Click to clear search keywords'}
-                            >
-                                <IconButton
-                                    className={classes.closeButton}
-                                    color="secondary"
-                                    aria-label="Clear search keywords"
-                                    component="span"
-                                    onClick={handleKeywordReset}
-                                    id="journal-search-clear-keywords-button"
-                                    data-testid="journal-search-clear-keywords-button"
+                            <Grid item xs={12} className={classes.closeButtonContainer}>
+                                <Tooltip
+                                    id="strategic-publishing-clear-search"
+                                    data-testid="strategic-publishing-clear-search"
+                                    title={'Click to clear search keywords'}
                                 >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Tooltip>
+                                    <IconButton
+                                        className={classes.closeButton}
+                                        color="secondary"
+                                        aria-label="Clear search keywords"
+                                        component="span"
+                                        onClick={handleKeywordReset}
+                                        id="journal-search-clear-keywords-button"
+                                        data-testid="journal-search-clear-keywords-button"
+                                    >
+                                        <CloseIcon />
+                                    </IconButton>
+                                </Tooltip>
+                            </Grid>
                         )}
-                    </Grid>
+                    </div>
                 )}
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
