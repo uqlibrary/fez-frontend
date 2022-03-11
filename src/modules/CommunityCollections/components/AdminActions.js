@@ -5,8 +5,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { debounce } from 'throttle-debounce';
-
-const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+import { PATH_PREFIX } from 'config';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     const fullUri = uri;
@@ -25,7 +24,7 @@ export const AdminActions = ({
         },
         {
             label: 'Change security for record',
-            url: pid => `/${PATH_PREFIX}/admin/edit/${pid}?tab=security`,
+            url: pid => `/${PATH_PREFIX}admin/edit/${pid}?tab=security`,
             inApp: true,
             showInDeleted: true,
             options: null,

@@ -5,7 +5,7 @@ import { rtlRender, fireEvent, cleanup } from 'test-utils';
 const testActions = [
     {
         label: 'Edit selected record',
-        url: pid => `#/admin/edit/${pid}`,
+        url: pid => `/admin/edit/${pid}`,
         inApp: true,
         showInDeleted: true,
         options: null,
@@ -13,7 +13,7 @@ const testActions = [
     },
     {
         label: 'Change security for record',
-        url: pid => `#/admin/edit/${pid}?tab=security`,
+        url: pid => `/admin/edit/${pid}?tab=security`,
         inApp: true,
         showInDeleted: true,
         options: null,
