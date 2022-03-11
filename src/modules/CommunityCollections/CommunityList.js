@@ -55,6 +55,7 @@ export const CommunityList = () => {
     const totalRecords = useSelector(state => state.get('viewCommunitiesReducer').totalRecords);
     const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
+    const loadingCommunitiesError = useSelector(state => state.get('viewCommunitiesReducer').loadingCommunitiesError);
 
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
@@ -113,95 +114,106 @@ export const CommunityList = () => {
     const sortingDefaults = txt.sortingDefaults;
     const sortedList = [...communityList];
 
+    console.log('LOAD COMMUNITIES ERROR', loadingCommunitiesError);
+
     return (
         <StandardPage title={txt.title.communities}>
-            <Grid container>
-                <>
-                    <Grid item xs={6} style={{ marginBottom: 10 }} data-testid="admin-add-community">
-                        {!!isSuperAdmin && (
-                            <Button
-                                component={Link}
-                                variant="outlined"
-                                to={pathConfig.admin.community}
-                                data-testid="admin-add-community-button"
+            {!!!loadingCommunitiesError && (
+                <React.Fragment>
+                    <Grid container>
+                        <>
+                            <Grid item xs={6} style={{ marginBottom: 10 }} data-testid="admin-add-community">
+                                {!!isSuperAdmin && (
+                                    <Button
+                                        component={Link}
+                                        variant="outlined"
+                                        to={pathConfig.admin.community}
+                                        data-testid="admin-add-community-button"
+                                    >
+                                        {communityCollectionsConfig.addNewCommunityText}
+                                    </Button>
+                                )}
+                            </Grid>
+                            <Grid
+                                item
+                                xs={6}
+                                style={{ textAlign: 'right', marginBottom: 10 }}
+                                id="autoclose-community"
+                                data-testid="autoclose-community"
                             >
-                                {communityCollectionsConfig.addNewCommunityText}
-                            </Button>
-                        )}
-                    </Grid>
-                    <Grid
-                        item
-                        xs={6}
-                        style={{ textAlign: 'right', marginBottom: 10 }}
-                        id="autoclose-community"
-                        data-testid="autoclose-community"
-                    >
-                        <FormControlLabel
-                            control={
-                                <Switch
-                                    checked={autoCollapse}
-                                    onChange={handleSwitchChange}
-                                    name="collection-auto-collapse"
-                                    id="collection-auto-collapse"
-                                    data-testid="collection-auto-collapse"
-                                    inputProps={{ 'aria-label': 'primary checkbox' }}
+                                <FormControlLabel
+                                    control={
+                                        <Switch
+                                            checked={autoCollapse}
+                                            onChange={handleSwitchChange}
+                                            name="collection-auto-collapse"
+                                            id="collection-auto-collapse"
+                                            data-testid="collection-auto-collapse"
+                                            inputProps={{ 'aria-label': 'primary checkbox' }}
+                                        />
+                                    }
+                                    label={communityCollectionsConfig.collapseSwitchText}
                                 />
-                            }
-                            label={communityCollectionsConfig.collapseSwitchText}
-                        />
+                            </Grid>
+                        </>
                     </Grid>
-                </>
-            </Grid>
 
-            <StandardCard noHeader>
-                {!!!loadingCommunities && (
-                    <Typography variant="body2" style={{ fontWeight: 600 }}>
-                        Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
-                    </Typography>
-                )}
+                    <StandardCard noHeader>
+                        {!!!loadingCommunities && (
+                            <Typography variant="body2" style={{ fontWeight: 600 }}>
+                                Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
+                            </Typography>
+                        )}
 
-                <Grid item xs={12} style={{ marginBottom: 10 }}>
-                    <CommunityCollectionsSorting
-                        data-testid="community-collections-sorting-top"
-                        // canUseExport
-                        exportData={txt.export}
-                        pagingData={PagindData}
-                        sortingData={txt.sorting}
-                        sortBy={sortBy}
-                        sortDirection={sortDirection}
-                        // onExportPublications={handleExport}
-                        onSortByChanged={sortByChanged}
-                        onPageSizeChanged={pageSizeChanged}
-                        pageSize={perPage}
-                        sortingDefaults={sortingDefaults}
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <CommunityCollectionsPaging
-                        loading={false}
-                        pagingData={PagindData}
-                        onPageChanged={pageChanged}
-                        disabled={false}
-                        pagingId="community-collections-paging-top"
-                        data-testid="community-collections-paging-top"
-                    />
-                </Grid>
-                {sortedList.length > 0 ? (
-                    <CommunityTable records={sortedList} labels={labels} conf={txt} autoCollapse={autoCollapse} />
-                ) : (
-                    <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
-                )}
-                <Grid item xs={12} style={{ marginTop: 10 }}>
-                    <CommunityCollectionsPaging
-                        data-testid="community-collections-paging-bottom"
-                        loading={false}
-                        pagingData={PagindData}
-                        onPageChanged={pageChanged}
-                        disabled={false}
-                        pagingId="community-collections-paging-bottom"
-                    />
-                </Grid>
-            </StandardCard>
+                        <Grid item xs={12} style={{ marginBottom: 10 }}>
+                            <CommunityCollectionsSorting
+                                data-testid="community-collections-sorting-top"
+                                // canUseExport
+                                exportData={txt.export}
+                                pagingData={PagindData}
+                                sortingData={txt.sorting}
+                                sortBy={sortBy}
+                                sortDirection={sortDirection}
+                                // onExportPublications={handleExport}
+                                onSortByChanged={sortByChanged}
+                                onPageSizeChanged={pageSizeChanged}
+                                pageSize={perPage}
+                                sortingDefaults={sortingDefaults}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <CommunityCollectionsPaging
+                                loading={false}
+                                pagingData={PagindData}
+                                onPageChanged={pageChanged}
+                                disabled={false}
+                                pagingId="community-collections-paging-top"
+                                data-testid="community-collections-paging-top"
+                            />
+                        </Grid>
+                        {sortedList.length > 0 ? (
+                            <CommunityTable
+                                records={sortedList}
+                                labels={labels}
+                                conf={txt}
+                                autoCollapse={autoCollapse}
+                            />
+                        ) : (
+                            <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
+                        )}
+                        <Grid item xs={12} style={{ marginTop: 10 }}>
+                            <CommunityCollectionsPaging
+                                data-testid="community-collections-paging-bottom"
+                                loading={false}
+                                pagingData={PagindData}
+                                onPageChanged={pageChanged}
+                                disabled={false}
+                                pagingId="community-collections-paging-bottom"
+                            />
+                        </Grid>
+                    </StandardCard>
+                </React.Fragment>
+            )}
         </StandardPage>
     );
 };
