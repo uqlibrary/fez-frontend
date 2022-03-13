@@ -129,6 +129,10 @@ export const CommunityList = () => {
                                         variant="outlined"
                                         to={pathConfig.admin.community}
                                         data-testid="admin-add-community-button"
+                                        style={{
+                                            backgroundColor: '#51247A',
+                                            color: 'white',
+                                        }}
                                     >
                                         {communityCollectionsConfig.addNewCommunityText}
                                     </Button>
@@ -158,7 +162,7 @@ export const CommunityList = () => {
                         </>
                     </Grid>
 
-                    <StandardCard noHeader>
+                    <StandardCard noHeader style={{ marginTop: 10 }}>
                         {!!!loadingCommunities && (
                             <Typography variant="body2" style={{ fontWeight: 600 }}>
                                 Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities

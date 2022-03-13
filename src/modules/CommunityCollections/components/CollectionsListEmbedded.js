@@ -210,7 +210,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, isSuperAdmin
                     )}
                     {!!isSuperAdmin && (
                         <Button
-                            style={{ marginTop: 10 }}
+                            style={{ marginTop: 10, backgroundColor: '#51247A', color: 'white' }}
                             component={Link}
                             variant="outlined"
                             to={pathConfig.admin.collection}
