@@ -13,7 +13,8 @@ export default {
         sections: {
             publicationDetails: 'Type & Collection',
             publicationDetailsCustom: {
-                collection: 'Type & Community',
+                Community: 'Type',
+                Collection: 'Type & Community',
             },
             grantInformation: 'Grant information',
             additionalInformation: {

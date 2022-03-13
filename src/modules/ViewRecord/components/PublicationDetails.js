@@ -66,9 +66,8 @@ export class PublicationDetailsClass extends PureComponent {
         // header value from the publicationDetailsCustom object and if nothing
         // there, fallback to standard header
         const sectionTitle =
-            locale.viewRecord.sections.publicationDetailsCustom[
-                this.props.publication.rek_display_type_lookup.toLowerCase()
-            ] ?? locale.viewRecord.sections.publicationDetails;
+            locale.viewRecord.sections.publicationDetailsCustom[this.props.publication.rek_display_type_lookup] ??
+            locale.viewRecord.sections.publicationDetails;
 
         // Similarly to above, if a Collection is being viewed we want the row title to read
         // 'Community' or 'Communities'. All other record types should continue to show 'Collections'.
