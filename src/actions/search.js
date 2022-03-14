@@ -2,11 +2,11 @@ import locale from 'locale/global';
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
 import {
-    SEARCH_INTERNAL_RECORDS_API,
-    SEARCH_EXTERNAL_RECORDS_API,
-    SEARCH_KEY_LOOKUP_API,
-    SEARCH_AUTHOR_LOOKUP_API,
     COLLECTIONS_BY_COMMUNITY_LOOKUP_API,
+    SEARCH_AUTHOR_LOOKUP_API,
+    SEARCH_EXTERNAL_RECORDS_API,
+    SEARCH_INTERNAL_RECORDS_API,
+    SEARCH_KEY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
