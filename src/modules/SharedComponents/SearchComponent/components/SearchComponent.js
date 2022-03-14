@@ -124,7 +124,7 @@ export default class SearchComponent extends PureComponent {
                     ...newState.simpleSearch,
                     searchText:
                         /* istanbul ignore next */
-                        (nextProps.searchQueryParams.all || {}).value ||
+                        nextProps.searchQueryParams?.all?.value ||
                         (typeof nextProps.searchQueryParams.all === 'string' && nextProps.searchQueryParams.all) ||
                         '',
                 },
