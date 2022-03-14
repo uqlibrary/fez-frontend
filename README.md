@@ -21,7 +21,7 @@ UQ's branding for Fez is UQ eSpace.
 
 This means that it's exactly like production, except for the git branch that uses. This is useful for **carefully*** testing anything that might break production before pushing to the actual branch.
 
-***carefully**: any actions (e.g. creating, editing, deleting records) performed in eSpace prodtest will reflect in changes made to production. This includes **email notifications, 3rd party services integrations and everything else**.   
+***carefully**: any actions (e.g. creating, editing, deleting records) performed in eSpace prodtest will result in changes to production. This includes **email notifications, 3rd party services integrations and everything else**.   
 
 ## Technology
 
