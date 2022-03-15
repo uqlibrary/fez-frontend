@@ -12,6 +12,7 @@ import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
 import locale from 'locale/components';
+import Hidden from '@material-ui/core/Hidden';
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.searchJournals.partials.keywordsBrowser;
@@ -84,7 +85,18 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
-    const separator = <div style={{ width: 1, borderRight: '1px dashed #CCC', marginTop: 12 }} />;
+    const separator = (
+        <Hidden xsDown>
+            <div
+                style={{
+                    borderRight: '1px dashed #CCC',
+                    marginTop: 12,
+                    marginLeft: 6,
+                    marginRight: 12,
+                }}
+            />
+        </Hidden>
+    );
 
     return (
         <Grid container spacing={0}>
@@ -98,7 +110,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px' }}>
+            <Grid item xs={12} sm={3} style={{ margin: '0 -1px 0 -1px' }}>
                 <Grid container>
                     {hasExactKeywords && (
                         <Grid item xs={12}>
@@ -119,7 +131,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 </Grid>
             </Grid>
             {separator}
-            <Grid item xs={12} sm={6} md={3} style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
+            <Grid item xs={12} sm={3} style={{ margin: '0 -1px 0 -1px' }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
@@ -128,7 +140,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                 />
             </Grid>
             {separator}
-            <Grid item xs={12} sm={12} md style={{ margin: '0 -1px 0 -1px', paddingLeft: 24 }}>
+            <Grid item xs={12} sm={5} style={{ margin: '0 -1px 0 -1px' }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
