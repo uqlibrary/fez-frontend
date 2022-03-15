@@ -8,7 +8,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import { useIsUserSuperAdmin } from 'hooks';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
 
@@ -20,8 +19,7 @@ const useStyles = makeStyles({
         minWidth: 120,
     },
 });
-export const CommunityTable = ({ records, labels, conf, autoCollapse }) => {
-    const isSuperAdmin = useIsUserSuperAdmin();
+export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
     const classes = useStyles();
     return (
         <TableContainer component={Paper}>
@@ -36,7 +34,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse }) => {
                         <TableCell className={classes.dateCell} align="right">
                             {labels.updated_date}
                         </TableCell>
-                        {!!isSuperAdmin && <TableCell align="right">{labels.actions}</TableCell>}
+                        {!!adminUser && <TableCell align="right">{labels.actions}</TableCell>}
                     </TableRow>
                 </TableHead>
 
@@ -46,7 +44,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse }) => {
                             key={row.rek_pid}
                             conf={conf}
                             row={row}
-                            isSuperAdmin={isSuperAdmin}
+                            adminUser={adminUser}
                             labels={labels}
                             autoCollapse={autoCollapse}
                         />
@@ -62,5 +60,6 @@ CommunityTable.propTypes = {
     labels: PropTypes.object,
     conf: PropTypes.object,
     autoCollapse: PropTypes.bool,
+    adminUser: PropTypes.bool,
 };
 export default CommunityTable;

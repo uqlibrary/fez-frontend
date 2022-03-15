@@ -26,7 +26,7 @@ const useStyles = makeStyles({
 });
 import { Link } from 'react-router-dom';
 
-export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse }) => {
+export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
@@ -70,7 +70,7 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
                         .local()
                         .format(conf.dateFormat)}
                 </TableCell>
-                {!!isSuperAdmin && (
+                {!!adminUser && (
                     <TableCell align="right">
                         <AdminActions record={row.rek_pid} />
                     </TableCell>
@@ -85,7 +85,7 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
                             pid={row.rek_pid}
                             labels={labels}
                             conf={conf}
-                            isSuperAdmin={isSuperAdmin}
+                            adminUser={adminUser}
                             open={open}
                         />
                     </TableCell>
@@ -97,7 +97,7 @@ export const CommunityDataRow = ({ conf, row, isSuperAdmin, labels, autoCollapse
 CommunityDataRow.propTypes = {
     conf: PropTypes.object,
     row: PropTypes.object,
-    isSuperAdmin: PropTypes.bool,
+    adminUser: PropTypes.bool,
     labels: PropTypes.object,
     autoCollapse: PropTypes.bool,
 };

@@ -3,11 +3,11 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
-import { useIsUserSuperAdmin } from 'hooks';
+import { userIsAdmin } from 'hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@material-ui/core/Typography';
@@ -37,7 +37,7 @@ export const CommunityList = () => {
     let sortDirection = 'Asc';
     let sortBy = 'title';
 
-    const isSuperAdmin = useIsUserSuperAdmin();
+    const adminUser = userIsAdmin();
 
     const dispatch = useDispatch();
 
@@ -123,7 +123,7 @@ export const CommunityList = () => {
                     <Grid container>
                         <>
                             <Grid item xs={6} style={{ marginBottom: 10 }} data-testid="admin-add-community">
-                                {!!isSuperAdmin && (
+                                {!!adminUser && (
                                     <Button
                                         component={Link}
                                         variant="outlined"
@@ -201,6 +201,7 @@ export const CommunityList = () => {
                                 labels={labels}
                                 conf={txt}
                                 autoCollapse={autoCollapse}
+                                adminUser={adminUser}
                             />
                         ) : (
                             <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
@@ -217,6 +218,15 @@ export const CommunityList = () => {
                         </Grid>
                     </StandardCard>
                 </React.Fragment>
+            )}
+            {!!loadingCommunitiesError && (
+                <Grid item xs={12} style={{ marginTop: 10 }}>
+                    <Alert
+                        title="An Error has occurred"
+                        message={loadingCommunitiesError.message}
+                        type="info_outline"
+                    />
+                </Grid>
             )}
         </StandardPage>
     );
