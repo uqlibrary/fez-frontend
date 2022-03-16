@@ -19,7 +19,6 @@ export const id = 'journal-search-interface';
 const useStyles = makeStyles({
     closeButtonContainer: {
         position: 'relative',
-        paddingRight: 48,
     },
     closeButton: {
         position: 'absolute',
@@ -82,31 +81,37 @@ export const JournalSearchInterface = ({
                     </Grid>
                 )}
                 {hasAnySelectedKeywords && (
-                    <Grid item xs={12} id={`${id}-selected-keywords`} data-testid={`${id}-selected-keywords`}>
+                    <Grid
+                        item
+                        xs={12}
+                        id={`${id}-selected-keywords`}
+                        data-testid={`${id}-selected-keywords`}
+                        style={{ paddingRight: 48 }}
+                    >
                         <SelectedKeywords
                             onKeywordDelete={handleKeywordDelete}
                             keywords={Object.values(selectedKeywords)}
                         />
-                        {!showInputControls && (
-                            <Tooltip
-                                id="strategic-publishing-clear-search"
-                                data-testid="strategic-publishing-clear-search"
-                                title={'Click to clear search keywords'}
-                            >
-                                <IconButton
-                                    className={classes.closeButton}
-                                    color="secondary"
-                                    aria-label="Clear search keywords"
-                                    component="span"
-                                    onClick={handleKeywordReset}
-                                    id="journal-search-clear-keywords-button"
-                                    data-testid="journal-search-clear-keywords-button"
-                                >
-                                    <CloseIcon />
-                                </IconButton>
-                            </Tooltip>
-                        )}
                     </Grid>
+                )}
+                {hasAnySelectedKeywords && !showInputControls && (
+                    <Tooltip
+                        id="strategic-publishing-clear-search"
+                        data-testid="strategic-publishing-clear-search"
+                        title={'Click to clear search keywords'}
+                    >
+                        <IconButton
+                            className={classes.closeButton}
+                            color="secondary"
+                            aria-label="Clear search keywords"
+                            component="span"
+                            onClick={handleKeywordReset}
+                            id="journal-search-clear-keywords-button"
+                            data-testid="journal-search-clear-keywords-button"
+                        >
+                            <CloseIcon />
+                        </IconButton>
+                    </Tooltip>
                 )}
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
