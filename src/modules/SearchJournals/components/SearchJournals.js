@@ -105,7 +105,7 @@ export const SearchJournals = () => {
      */
     React.useEffect(() => {
         return history.listen(location => {
-            // in case the
+            // in case it's not a browser back/forward button click
             if (history.action !== 'POP') {
                 return;
             }

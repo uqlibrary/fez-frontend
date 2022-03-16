@@ -40,9 +40,9 @@ export const rtlRender = (ui, options) => render(ui, { wrapper: AllTheProviders,
 
 export const renderWithRouter = (
     ui,
-    { route = '/', history = createMemoryHistory({ initialEntries: [route] }) } = {},
+    { route = '/', history = createMemoryHistory({ initialEntries: [route] }), renderMethod = render } = {},
 ) => {
-    return render(
+    return renderMethod(
         <AllTheProviders>
             <Router history={history}>{ui}</Router>
         </AllTheProviders>,
