@@ -6,15 +6,16 @@ import Snackbar from '@material-ui/core/Snackbar';
 import { pathConfig } from 'config';
 import {
     DEFAULT_QUERY_PARAMS,
+    GENERIC_DATE_FORMAT,
     UNPUBLISHED_STATUS_MAP,
     UNPUBLISHED_STATUS_TEXT_MAP,
-    GENERIC_DATE_FORMAT,
 } from 'config/general';
 import { locale } from 'locale';
 
 import SimpleSearchComponent from './SimpleSearchComponent';
 import AdvancedSearchComponent from './AdvancedSearchComponent';
 import moment from 'moment';
+import hash from 'hash-sum';
 
 export default class SearchComponent extends PureComponent {
     static propTypes = {
@@ -37,7 +38,6 @@ export default class SearchComponent extends PureComponent {
         isAdmin: PropTypes.bool,
         isUnpublishedBufferPage: PropTypes.bool,
 
-        actions: PropTypes.object,
         history: PropTypes.object.isRequired,
         location: PropTypes.object,
     };
@@ -88,37 +88,64 @@ export default class SearchComponent extends PureComponent {
 
     // eslint-disable-next-line camelcase
     UNSAFE_componentWillReceiveProps(nextProps) {
+        const isOpenAccessInAdvancedModeChanged =
+            nextProps.isOpenAccessInAdvancedMode !== this.props.isOpenAccessInAdvancedMode;
+        const isAdvancedSearchChanged = nextProps.isAdvancedSearch !== this.props.isAdvancedSearch;
+        const isAdvancedSearchMinimisedChanged =
+            this.context.isMobile && nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised;
+        const searchQueryChanged =
+            nextProps.searchQueryParams &&
+            this.props.searchQueryParams &&
+            hash(nextProps.searchQueryParams) !== hash(this.props.searchQueryParams);
+
         if (
-            Object.keys(nextProps.searchQueryParams).length !== Object.keys(this.props.searchQueryParams).length ||
-            nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised
+            !isOpenAccessInAdvancedModeChanged &&
+            !isAdvancedSearchChanged &&
+            !isAdvancedSearchMinimisedChanged &&
+            !searchQueryChanged
         ) {
-            this.setState(
-                {
-                    isAdvancedSearch: nextProps.isAdvancedSearch,
-                    simpleSearch: {
-                        searchText:
-                            (nextProps.searchQueryParams.all || {}).value ||
-                            (typeof nextProps.searchQueryParams.all === 'string' && nextProps.searchQueryParams.all) ||
-                            '',
-                    },
-                    advancedSearch: {
-                        fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
-                        isMinimised: (this.context.isMobile && nextProps.isAdvancedSearchMinimised) || false,
-                        isOpenAccess: nextProps.isOpenAccessInAdvancedMode || false,
-                        docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
-                        yearFilter: {
-                            from: this.state.advancedSearch.yearFilter.from,
-                            to: this.state.advancedSearch.yearFilter.to,
-                        },
-                        ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
-                    },
-                },
-                () => {
-                    // Update the excluded facets in SearchRecords to hide from facetFilter
-                    this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
-                },
-            );
+            return;
         }
+
+        let newState = {
+            ...this.state,
+            ...(isAdvancedSearchChanged ? { isAdvancedSearch: nextProps.isAdvancedSearch } : {}),
+            advancedSearch: {
+                ...this.state.advancedSearch,
+                ...(isOpenAccessInAdvancedModeChanged ? { isOpenAccess: nextProps.isOpenAccessInAdvancedMode } : {}),
+                ...(isAdvancedSearchMinimisedChanged ? { isMinimised: nextProps.isAdvancedSearchMinimised } : {}),
+            },
+        };
+
+        if (searchQueryChanged) {
+            newState = {
+                ...newState,
+                simpleSearch: {
+                    ...newState.simpleSearch,
+                    searchText:
+                        /* istanbul ignore next */
+                        nextProps.searchQueryParams?.all?.value ||
+                        (typeof nextProps.searchQueryParams?.all === 'string' && nextProps.searchQueryParams?.all) ||
+                        '',
+                },
+                advancedSearch: {
+                    ...newState.advancedSearch,
+                    fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
+                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
+                    yearFilter: {
+                        from: this.state.advancedSearch.yearFilter.from,
+                        to: this.state.advancedSearch.yearFilter.to,
+                    },
+                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
+                },
+            };
+        }
+
+        this.setState(newState, () => {
+            // Update the excluded facets in SearchRecords to hide from facetFilter
+            nextProps.isAdvancedSearch &&
+                this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
+        });
     }
 
     getFieldRowsFromSearchQuery = searchQueryParams => {
@@ -233,18 +260,14 @@ export default class SearchComponent extends PureComponent {
     };
 
     handleSearch = searchQuery => {
-        if (searchQuery && this.props.actions && this.props.actions.searchEspacePublications) {
-            // If in header, the page will redirect to a new route,
-            // which means search results from API call will be lost.
-            !this.props.isInHeader && this.props.actions.searchEspacePublications(searchQuery);
-
-            // navigate to search results page
-            this.props.history.push({
-                pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
-                search: param(searchQuery),
-                state: { ...searchQuery },
-            });
+        if (!searchQuery) {
+            return;
         }
+
+        this.props.history.push({
+            pathname: this.props.isUnpublishedBufferPage ? pathConfig.admin.unpublished : pathConfig.records.search,
+            search: param(searchQuery),
+        });
     };
 
     _toggleSearchMode = () => {

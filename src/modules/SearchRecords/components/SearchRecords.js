@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import param from 'can-param';
-import deparam from 'can-deparam';
-
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -13,86 +9,18 @@ import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import {
+    FacetsFilter,
     PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
-    FacetsFilter,
 } from 'modules/SharedComponents/PublicationsList';
 import { BulkExport } from 'modules/BulkExport';
-
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
-import { pathConfig } from 'config';
-
-/**
- * Parse provided query string and return active filters, facets etc
- * @returns object
- */
-export const parseSearchQueryStringFromUrl = (searchQuery, canBulkExport, isUnpublishedBufferPage) => {
-    const providedSearchQuery = deparam(searchQuery);
-
-    if (providedSearchQuery.hasOwnProperty('activeFacets')) {
-        providedSearchQuery.activeFacets = {
-            filters: providedSearchQuery.activeFacets.filters || {},
-            ranges: providedSearchQuery.activeFacets.ranges || {},
-            ...(providedSearchQuery.activeFacets.hasOwnProperty('showOpenAccessOnly')
-                ? { showOpenAccessOnly: providedSearchQuery.activeFacets.showOpenAccessOnly === 'true' }
-                : {}),
-        };
-    } else {
-        providedSearchQuery.activeFacets = {
-            filters: {},
-            ranges: {},
-        };
-    }
-
-    const pageSize = parseInt(providedSearchQuery.pageSize, 10);
-
-    if (canBulkExport && pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
-        providedSearchQuery.bulkExportSelected = true;
-        providedSearchQuery.pageSize = PUB_SEARCH_BULK_EXPORT_SIZE;
-    } else {
-        providedSearchQuery.bulkExportSelected = false;
-        providedSearchQuery.pageSize = locale.components.sorting.recordsPerPage.indexOf(pageSize) < 0 ? 20 : pageSize;
-    }
-
-    providedSearchQuery.sortDirection =
-        locale.components.sorting.sortDirection.indexOf(providedSearchQuery.sortDirection) < 0
-            ? locale.components.sorting.sortDirection[0]
-            : providedSearchQuery.sortDirection;
-
-    providedSearchQuery.sortBy =
-        locale.components.sorting.sortBy.map(sortBy => sortBy.value).indexOf(providedSearchQuery.sortBy) < 0
-            ? locale.components.sorting.sortBy[1].value
-            : providedSearchQuery.sortBy;
-
-    if (!isUnpublishedBufferPage && !!providedSearchQuery.searchQueryParams) {
-        delete providedSearchQuery.searchQueryParams.rek_status;
-        delete providedSearchQuery.searchQueryParams.rek_created_date;
-        delete providedSearchQuery.searchQueryParams.rek_updated_date;
-    }
-
-    providedSearchQuery.page = (providedSearchQuery.page && parseInt(providedSearchQuery.page, 10)) || 1;
-
-    return providedSearchQuery;
-};
-
-export const getAdvancedSearchFields = searchFields => {
-    const excludesFromLocale = locale.pages.searchRecords.facetsFilter.excludeFacetsList;
-    // Iterate the searchfields and add their map from locale into the excluded facets array
-    const importedFacetExcludes = [];
-    searchFields.map(searchFieldItem => {
-        if (searchFieldItem.searchField) {
-            const fieldType = locale.components.searchComponent.advancedSearch.fieldTypes[searchFieldItem.searchField];
-            if (fieldType.map) {
-                importedFacetExcludes.push(fieldType.map);
-            }
-        }
-    });
-    return excludesFromLocale.concat(importedFacetExcludes);
-};
+import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+import hash from 'hash-sum';
 
 const SearchRecords = ({
     actions,
@@ -111,138 +39,60 @@ const SearchRecords = ({
 }) => {
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
-
-    const [state, setState] = React.useState({
-        activeFacets: {
-            filters: {},
-            ranges: {},
-            ...{
-                ...(((searchQuery || {}).activeFacets || {}).showOpenAccessOnly === 'true'
-                    ? { showOpenAccessOnly: true }
-                    : {}),
-            },
-        },
-        advancedSearchFields: [],
-        bulkExportSelected: false,
-        page: 1,
-        pageSize: 20,
-        sortBy: locale.components.sorting.sortBy[1].value,
-        sortDirection: locale.components.sorting.sortDirection[0],
-        ...((!!location &&
-            location.search.indexOf('?') >= 0 &&
-            parseSearchQueryStringFromUrl(
-                location.search.substr(1),
-                isResearcher || isAdmin,
-                isUnpublishedBufferPage,
-            )) ||
-            {}),
-    });
-
-    const updateSemaphore = React.useRef(false);
-
-    React.useEffect(() => {
-        if (!!location.search && location.search.length > 1) {
-            updateSemaphore.current = true;
-            setState(
-                parseSearchQueryStringFromUrl(
-                    location.search.substr(1),
-                    isResearcher || isAdmin,
-                    isUnpublishedBufferPage,
-                ),
-            );
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
-    React.useEffect(() => {
-        !!location.search &&
-            location.search.length > 1 &&
-            setState(
-                parseSearchQueryStringFromUrl(
-                    location.search.substr(1),
-                    isResearcher || isAdmin,
-                    isUnpublishedBufferPage,
-                ),
-            );
-
-        actions.resetExportPublicationsStatus();
-
-        return actions.clearSearchQuery();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [location, history.action]);
-
-    const updateSearch = () => {
-        actions.searchEspacePublications({ ...searchQuery, ...state });
-        actions.resetExportPublicationsStatus();
-    };
-
-    const updateHistoryAndSearch = () => {
-        history.push({
-            pathname:
-                location.pathname === pathConfig.admin.unpublished
-                    ? pathConfig.admin.unpublished
-                    : pathConfig.records.search,
-            search: param(state),
-            state,
-        });
-
-        updateSearch();
-    };
-
-    React.useEffect(() => {
-        updateSemaphore.current && updateHistoryAndSearch();
-        updateSemaphore.current = false;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state]);
-
-    const pageSizeChanged = pageSize => {
-        updateSemaphore.current = true;
-        setState({
-            ...state,
-            pageSize,
-            page: 1,
-        });
-    };
-
-    const pageChanged = page => {
-        updateSemaphore.current = true;
-        setState({
-            ...state,
-            page,
-        });
-    };
-
-    const sortByChanged = (sortBy, sortDirection) => {
-        updateSemaphore.current = true;
-        setState({
-            ...state,
-            sortBy,
-            sortDirection,
-        });
-    };
-
-    const facetsChanged = activeFacets => {
-        updateSemaphore.current = true;
-        setState({
-            ...state,
-            activeFacets,
-            page: 1,
-        });
-    };
-
-    const handleExportPublications = exportFormat =>
-        actions.exportEspacePublications({
-            ...state,
-            ...exportFormat,
-        });
-
+    const canBulkExport = isResearcher || isAdmin;
+    const { queryParams, updateQueryString } = useQueryStringParams(
+        history,
+        location,
+        searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
+        canBulkExport,
+        isUnpublishedBufferPage,
+    );
+    const queryParamsHash = hash(queryParams);
+    const [searchParams, setSearchParams] = useState(queryParams);
+    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, handleExport } = useSearchRecordsControls(
+        queryParams,
+        updateQueryString,
+        actions,
+    );
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
-            setState({
-                ...state,
+            setSearchParams({
+                ...queryParams,
                 advancedSearchFields: getAdvancedSearchFields(searchFields),
             });
     };
+
+    /**
+     * Effect to handle initial render
+     */
+    React.useEffect(() => {
+        actions.searchEspacePublications(queryParams);
+        return actions.clearSearchQuery();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    /**
+     * Effect handle history updates:
+     * - it will save the state of the URI's query params
+     * - it will dispatch a request to the API on changes
+     */
+    React.useEffect(() => {
+        return history.listen(location => {
+            // we can't use location.state to send state around,
+            // as state changes are async and might not be up-to-date
+            const queryParams = getQueryParams(
+                location.search.substr(1),
+                canBulkExport,
+                isUnpublishedBufferPage,
+                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
+            );
+            setSearchParams(queryParams);
+            actions.searchEspacePublications(queryParams);
+            actions.clearSearchQuery();
+            actions.resetExportPublicationsStatus();
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [queryParamsHash]);
 
     const txt = locale.pages.searchRecords;
     const pagingData = publicationsListPagingData;
@@ -259,7 +109,7 @@ const SearchRecords = ({
                 <Grid item xs={12}>
                     <StandardCard className="searchComponent" noHeader standardCardId="search-records-queries">
                         <SearchComponent
-                            activeFacets={state.activeFacets}
+                            activeFacets={searchParams.activeFacets}
                             clearSearchQuery={actions.clearSearchQuery}
                             isAdmin={isAdmin}
                             isAdvancedSearch={isAdvancedSearch}
@@ -309,7 +159,7 @@ const SearchRecords = ({
                                 <Grid item xs="auto">
                                     {(isAdmin || isResearcher) && (
                                         <BulkExport
-                                            exportPublications={handleExportPublications}
+                                            exportPublications={handleExport}
                                             locale={txt.bulkExport}
                                             pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                             totalMatches={publicationsListPagingData.total}
@@ -320,13 +170,13 @@ const SearchRecords = ({
                                     <PublicationsListSorting
                                         canUseExport={canUseExport}
                                         disabled={isLoadingOrExporting}
-                                        onExportPublications={handleExportPublications}
+                                        onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
-                                        pageSize={state.pageSize}
+                                        pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
-                                        sortBy={state.sortBy}
-                                        sortDirection={state.sortDirection}
+                                        sortBy={searchParams.sortBy}
+                                        sortDirection={searchParams.sortDirection}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -387,12 +237,12 @@ const SearchRecords = ({
                         <Grid item md={3} id="refine-results-facets" data-testid="refine-results-facets">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter
-                                    activeFacets={state.activeFacets}
+                                    activeFacets={searchParams.activeFacets}
                                     disabled={isLoadingOrExporting}
                                     excludeFacetsList={
-                                        (state.advancedSearchFields &&
-                                            state.advancedSearchFields.length &&
-                                            state.advancedSearchFields) ||
+                                        (searchParams.advancedSearchFields &&
+                                            searchParams.advancedSearchFields.length &&
+                                            searchParams.advancedSearchFields) ||
                                         locale.pages.searchRecords.facetsFilter.excludeFacetsList
                                     }
                                     facetsData={publicationsListFacets}

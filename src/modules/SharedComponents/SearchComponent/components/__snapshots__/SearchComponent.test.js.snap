@@ -402,6 +402,34 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
 </Fragment>
 `;
 
+exports[`SearchComponent should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes 1`] = `
+<Fragment>
+  <WithStyles(SimpleSearchComponent)
+    isInHeader={false}
+    onInvalidSearch={[Function]}
+    onSearch={[Function]}
+    onSearchTextChange={[Function]}
+    onToggleSearchMode={[Function]}
+    searchText=""
+    showAdvancedSearchButton={false}
+    showMobileSearchButton={false}
+    showPrefixIcon={false}
+    showSearchButton={false}
+  />
+  <WithStyles(ForwardRef(Snackbar))
+    anchorOrigin={
+      Object {
+        "horizontal": "left",
+        "vertical": "bottom",
+      }
+    }
+    autoHideDuration={5000}
+    message=""
+    open={false}
+  />
+</Fragment>
+`;
+
 exports[`SearchComponent should render simple search even if it says is advanced, if in header 1`] = `
 <Fragment>
   <WithStyles(SimpleSearchComponent)
