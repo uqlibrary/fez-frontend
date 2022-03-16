@@ -22078,7 +22078,7 @@ exports[`Additional Information Component  should render component with a collec
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Abstract"
+        key="additional-info-Abstract/Description"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -22096,7 +22096,7 @@ exports[`Additional Information Component  should render component with a collec
             data-testid="rek-description-label"
             variant="body2"
           >
-            Abstract
+            Abstract/Description
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -22214,7 +22214,7 @@ exports[`Additional Information Component  should render component with a commun
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Keywords"
+        key="additional-info-Keyword(s)"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -22232,7 +22232,7 @@ exports[`Additional Information Component  should render component with a commun
             data-testid="rek-keywords-label"
             variant="body2"
           >
-            Keywords
+            Keyword(s)
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
