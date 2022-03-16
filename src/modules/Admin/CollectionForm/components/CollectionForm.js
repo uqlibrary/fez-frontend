@@ -129,7 +129,12 @@ export default class CollectionForm extends Component {
                             {!!!hasParams && (
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.title} help={txt.help}>
-                                        <Grid container spacing={3}>
+                                        <Grid
+                                            container
+                                            spacing={3}
+                                            id="community-selector"
+                                            data-testid="community-selector"
+                                        >
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={CommunitySelectField}

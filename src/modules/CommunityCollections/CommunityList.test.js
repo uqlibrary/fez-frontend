@@ -211,4 +211,22 @@ describe('CommunityList form', () => {
         await waitFor(() => getByText('Sort results by'));
         expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
     });
+    it('should show relevant error message', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.COMMUNITY_LIST_API({
+                    pageSize: pageSize,
+                    page: page,
+                    sortBy: sortBy,
+                    direction: direction,
+                }).apiUrl,
+            )
+            .reply(500, { error: 'Error' });
+
+        userIsAdmin.mockImplementation(() => false);
+
+        const { getByText } = setup();
+        await waitFor(() => getByText(/An error has occurred/));
+        expect(getByText(/An error has occurred/)).toBeInTheDocument();
+    });
 });
