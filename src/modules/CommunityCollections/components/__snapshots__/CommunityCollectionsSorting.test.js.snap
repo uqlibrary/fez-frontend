@@ -43,12 +43,6 @@ exports[`Community Collections component renders will set state on receiving new
         >
           Updated Date
         </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          key="3"
-          value="citation"
-        >
-          Citation Count
-        </WithStyles(ForwardRef(MenuItem))>
       </WithStyles(ForwardRef(Select))>
     </WithStyles(ForwardRef(FormControl))>
   </WithStyles(ForwardRef(Grid))>
@@ -185,12 +179,6 @@ exports[`Community Collections component renders will set state on receiving new
           value="updated_date"
         >
           Updated Date
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          key="3"
-          value="citation"
-        >
-          Citation Count
         </WithStyles(ForwardRef(MenuItem))>
       </WithStyles(ForwardRef(Select))>
     </WithStyles(ForwardRef(FormControl))>
@@ -335,12 +323,6 @@ exports[`Community Collections component renders with export dropdown for admin 
         >
           Updated Date
         </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          key="3"
-          value="citation"
-        >
-          Citation Count
-        </WithStyles(ForwardRef(MenuItem))>
       </WithStyles(ForwardRef(Select))>
     </WithStyles(ForwardRef(FormControl))>
   </WithStyles(ForwardRef(Grid))>
@@ -472,12 +454,6 @@ exports[`Community Collections component renders with export dropdown hidden 1`]
         >
           Updated Date
         </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          key="3"
-          value="citation"
-        >
-          Citation Count
-        </WithStyles(ForwardRef(MenuItem))>
       </WithStyles(ForwardRef(Select))>
     </WithStyles(ForwardRef(FormControl))>
   </WithStyles(ForwardRef(Grid))>
@@ -608,12 +584,6 @@ exports[`Community Collections component renders with non-empty community paging
           value="updated_date"
         >
           Updated Date
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          key="3"
-          value="citation"
-        >
-          Citation Count
         </WithStyles(ForwardRef(MenuItem))>
       </WithStyles(ForwardRef(Select))>
     </WithStyles(ForwardRef(FormControl))>

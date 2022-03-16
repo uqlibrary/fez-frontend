@@ -77,7 +77,6 @@ export const CommunityList = () => {
             actions.loadCommunitiesList({ pageSize: perPage, page: page, direction: sortDirection, sortBy: sortBy }),
         );
     };
-
     const sortByChanged = (sortby, direction) => {
         sortDirection = direction;
         sortBy = sortby;
@@ -113,8 +112,6 @@ export const CommunityList = () => {
     };
     const sortingDefaults = txt.sortingDefaults;
     const sortedList = [...communityList];
-
-    console.log('LOAD COMMUNITIES ERROR', loadingCommunitiesError);
 
     return (
         <StandardPage title={txt.title.communities}>
@@ -222,7 +219,7 @@ export const CommunityList = () => {
             {!!loadingCommunitiesError && (
                 <Grid item xs={12} style={{ marginTop: 10 }}>
                     <Alert
-                        title="An Error has occurred"
+                        title="An error has occurred"
                         message={loadingCommunitiesError.message}
                         type="info_outline"
                     />

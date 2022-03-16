@@ -6,7 +6,7 @@ import * as mockData from 'mock/data';
 
 import * as PushHistory from './components/functions';
 
-import * as UseIsUserSuperAdmin from 'hooks/useIsUserSuperAdmin';
+import * as UserIsAdmin from 'hooks/userIsAdmin';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
 
@@ -41,16 +41,16 @@ describe('CommunityList form', () => {
         )
         .reply(200, mockData.communityList);
 
-    const useIsUserSuperAdmin = jest.spyOn(UseIsUserSuperAdmin, 'useIsUserSuperAdmin');
+    const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
     it('should render the community list page as admin', async () => {
-        useIsUserSuperAdmin.mockImplementation(() => true);
+        userIsAdmin.mockImplementation(() => true);
 
         const { getByText } = setup();
         await waitFor(() => getByText('Sort results by'));
         expect(getByText('Add New Community')).toBeInTheDocument();
     });
     it('should render the community list page as non admin', async () => {
-        useIsUserSuperAdmin.mockImplementation(() => false);
+        userIsAdmin.mockImplementation(() => false);
 
         const { getByText, queryByText } = setup();
         await waitFor(() => getByText('Sort results by'));
@@ -80,7 +80,7 @@ describe('CommunityList form', () => {
             )
             .reply(200, mockData.collectionList);
 
-        useIsUserSuperAdmin.mockImplementation(() => false);
+        userIsAdmin.mockImplementation(() => false);
 
         const { getByTestId, getByText, queryAllByText } = setup();
         await waitFor(() => getByText('Sort results by'));
@@ -112,7 +112,7 @@ describe('CommunityList form', () => {
         expect(queryAllByText(/Displaying 1 to 3 of 3 collections/).length).toBe(2);
     });
     it('should render the community list page using page parameters', async () => {
-        useIsUserSuperAdmin.mockImplementation(() => false);
+        userIsAdmin.mockImplementation(() => false);
         window.history.pushState({}, 'Test Title', '/communities?pageSize=10&page=1&sortBy=title&sortDirection=Asc');
         const { getByText, queryByText, getByTestId } = setup();
         await waitFor(() => getByText('Sort results by'));

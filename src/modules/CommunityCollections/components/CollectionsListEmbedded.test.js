@@ -64,7 +64,7 @@ describe('CollectionsListEmbedded form', () => {
         expect(queryByText('Add New Collection')).not.toBeInTheDocument();
     });
     it('should render the admin collections embedded element', async () => {
-        const { getByText } = setup({ ...testProps, isSuperAdmin: true });
+        const { getByText } = setup({ ...testProps, adminUser: true });
 
         await waitFor(() => getByText('Sort results by'));
         expect(getByText('Sort results by')).toBeInTheDocument();

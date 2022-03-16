@@ -3666,7 +3666,6 @@ export default {
                     { value: 'title', label: 'Title' },
                     { value: 'created_date', label: 'Created Date' },
                     { value: 'updated_date', label: 'Updated Date' },
-                    { value: 'citation', label: 'Citation Count' },
                 ],
                 sortDirection: ['Desc', 'Asc'],
                 recordsPerPage: [10, 20, 50, 100],
