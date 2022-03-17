@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     helpGrid: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             flexShrink: 1,
             flexGrow: 0,
         },
@@ -28,23 +28,21 @@ export const KeywordsList = ({ title, list, help }) => {
     const txt = locale.components.searchJournals;
     const componentId = sanitiseId(`journal-search-keyword-list-${title}`);
 
-    const isBreakpointXs = useMediaQuery(theme => theme.breakpoints.down('xs'));
+    // const isBreakpointXs = useMediaQuery(theme => theme.breakpoints.down('xs'));
+    const isBreakpointSm = useMediaQuery(theme => theme.breakpoints.down('sm'));
     const typographyProps = {
         color: 'primary',
         component: 'h3',
-        variant: isBreakpointXs ? 'h6' : 'h5',
-    };
-    const helpGridProps = {
-        xs: isBreakpointXs ? 'true' : 'auto',
+        variant: isBreakpointSm ? 'h6' : 'h5',
     };
 
     return (
         <Grid container id={componentId} data-testid={componentId} className={classes.root}>
-            <Grid item style={{ margin: '10px 0 10px 0' }} {...helpGridProps}>
+            <Grid item xs={!!help ? 11 : 12} style={{ margin: '10px 0 10px 0' }}>
                 <Typography {...typographyProps}>{title}</Typography>
             </Grid>
             {!!help && (
-                <Grid item xs className={classes.helpGrid}>
+                <Grid item xs={1} className={classes.helpGrid}>
                     <HelpIcon {...help} />
                 </Grid>
             )}
