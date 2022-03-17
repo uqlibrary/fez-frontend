@@ -7,13 +7,13 @@ import { bindActionCreators } from 'redux';
 
 import queryString from 'query-string';
 
-const queryStringObject = queryString.parse(
-    location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
-    { ignoreQueryPrefix: true },
-);
 const FORM_NAME = 'Collection';
 
 const onSubmit = (values, dispatch, props) => {
+    const queryStringObject = queryString.parse(
+        location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+        { ignoreQueryPrefix: true },
+    );
     const currentAuthor = props.author || null;
     let parentPID = {};
 
