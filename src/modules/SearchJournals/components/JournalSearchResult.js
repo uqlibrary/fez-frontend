@@ -21,6 +21,8 @@ import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
 import { makeStyles } from '@material-ui/styles';
 
+import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
+
 export const id = 'journal-search-results';
 
 export const getSearchResultSortingParams = (journalSearchQueryParams, journalsListPerPage, sortingDefaults) => {
@@ -227,6 +229,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     </Grid>
                 )}
             </Hidden>
+            <ScrollToTop selector={'#content-container'} />
         </Grid>
     );
 };
