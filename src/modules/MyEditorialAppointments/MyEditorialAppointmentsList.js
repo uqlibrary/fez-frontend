@@ -132,6 +132,7 @@ export const GetColumns = () => {
             cellStyle: {
                 width: '45%',
                 maxWidth: '45%',
+                verticalAlign: 'top',
             },
             headerStyle: {
                 width: '45%',
@@ -219,6 +220,7 @@ export const GetColumns = () => {
             cellStyle: {
                 width: '25%',
                 maxWidth: '25%',
+                verticalAlign: 'top',
             },
             headerStyle: {
                 width: '25%',
@@ -287,6 +289,7 @@ export const GetColumns = () => {
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
+                verticalAlign: 'top',
             },
             headerStyle: {
                 width: '15%',
@@ -371,6 +374,7 @@ export const GetColumns = () => {
             cellStyle: {
                 width: '15%',
                 maxWidth: '15%',
+                verticalAlign: 'top',
             },
             headerStyle: {
                 width: '15%',
