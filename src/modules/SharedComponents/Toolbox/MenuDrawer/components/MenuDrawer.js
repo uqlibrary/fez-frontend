@@ -80,6 +80,9 @@ const styles = theme => {
         },
         ListItemTextSecondary: {
             ...theme.typography.caption,
+            textOverflow: 'ellipsis',
+            overflowX: 'hidden',
+            whiteSpace: 'nowrap',
         },
         mainMenuFooter: {
             textAlign: 'center',
@@ -159,6 +162,7 @@ export class MenuDrawer extends Component {
                         button
                         onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}
                         id={`menu-item-${index}`}
+                        className={this.props.classes.ListItem}
                     >
                         <ListItemText
                             classes={{
@@ -167,6 +171,7 @@ export class MenuDrawer extends Component {
                             }}
                             primary={menuItem.primaryText}
                             secondary={menuItem.secondaryText}
+                            id={`menu-itemText-${menuItem.elementId ?? index}`}
                         />
                     </ListItem>
                 </span>
