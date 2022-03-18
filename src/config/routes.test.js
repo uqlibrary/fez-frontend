@@ -5,7 +5,7 @@ import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
 describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
-        expect(testRoutes.length).toEqual(4);
+        expect(testRoutes.length).toEqual(5);
     });
 
     it('should return a list of menus for researcher (uqresearcher)', () => {
@@ -35,7 +35,7 @@ describe('Routes getMenuConfig method', () => {
             authorDetails.uqnoauthid,
             true,
         );
-        expect(testRoutes.length).toEqual(6);
+        expect(testRoutes.length).toEqual(7);
     });
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
@@ -78,7 +78,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should not return Switch to old interface menu item for public view page', () => {
         const testMenuItems = routes.getMenuConfig(null, null, false, true);
-        expect(testMenuItems.length).toEqual(4);
+        expect(testMenuItems.length).toEqual(5);
 
         const contactMenuItem = testMenuItems.pop();
         expect(contactMenuItem.primaryText).toEqual('Contact');
@@ -122,7 +122,7 @@ describe('Routes getMenuConfig method', () => {
 
     it('should not return Switch to old interface menu item for public view page', () => {
         const testMenuItems = routes.getMenuConfig(null, null, false, true);
-        expect(testMenuItems.length).toEqual(4);
+        expect(testMenuItems.length).toEqual(5);
 
         const contactMenuItem = testMenuItems.pop();
         expect(contactMenuItem.primaryText).toEqual('Contact');
@@ -158,7 +158,7 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testMenuItems.length).toEqual(4);
+        expect(testMenuItems.length).toEqual(5);
     });
 });
 
