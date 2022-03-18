@@ -1,4 +1,5 @@
 import DateCitationView from './DateCitationView';
+import { PLACEHOLDER_ISO8601_ZULU_DATE } from '../../../../../../config/general';
 
 function setup(testProps = {}) {
     // build full props list required by the component
@@ -16,7 +17,7 @@ describe('DateCitationView test', () => {
     });
 
     it('should render empty component with a placeholder date', () => {
-        const wrapper = setup({ date: '1000-01-01T00:00:00Z' });
+        const wrapper = setup({ date: PLACEHOLDER_ISO8601_ZULU_DATE });
         expect(wrapper.find('span.citationDate.empty').text()).toBe('');
     });
 

@@ -2,6 +2,7 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import { record } from 'mock/data';
+import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from '../config/general';
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -1016,6 +1017,69 @@ describe('Record action creators', () => {
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
+        });
+    });
+
+    describe('adminCreate() for design/Arch type', () => {
+        const testInput = {
+            rek_display_type: 174,
+            adminSection: {
+                rek_subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            },
+            authorsSection: {
+                authors: [
+                    {
+                        nameAsPublished: 'test',
+                        disabled: false,
+                        selected: true,
+                        authorId: 410,
+                    },
+                ],
+            },
+            bibliographicSection: {
+                rek_title: 'test',
+                rek_display_type: 179,
+                fez_record_search_key_journal_name: {
+                    rek_journal_name: 'test',
+                },
+                rek_date: '2017-01-01',
+                rek_subtype: 'test',
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: '2020-01-01',
+                },
+            },
+            filesSection: {
+                files: {
+                    queue: [
+                        {
+                            name: 'test.txt',
+                            fileData: {
+                                name: 'test.txt',
+                            },
+                        },
+                    ],
+                },
+            },
+        };
+        const pidRequest = { pid: 'UQ:396321' };
+
+        it('dispatches expected actions on create record successfully', async () => {
+            const testInput1 = {
+                ...testInput,
+                filesSection: {},
+            };
+            const pidRequest = { pid: 'UQ:396321' };
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(200, { data: { ...record } })
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(200, { data: { ...record } });
+
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
+
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 
