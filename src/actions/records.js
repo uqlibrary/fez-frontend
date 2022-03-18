@@ -11,6 +11,7 @@ import {
 } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
+import { getRekDate } from './transformers';
 import {
     DOCUMENT_TYPES_LOOKUP,
     NEW_COLLECTION_DEFAULT_VALUES,
@@ -19,6 +20,19 @@ import {
 } from 'config/general';
 import * as actions from './actionTypes';
 import * as Sentry from '@sentry/react';
+
+/**
+ * @param data
+ * @param replacer
+ * @return {any}
+ */
+export const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+
+/**
+ * @param keys
+ * @return {function(*, *): undefined|*}
+ */
+const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 /**
  * Save a new record involves up to three steps: create a new record, upload files, update record with uploaded files.
@@ -32,7 +46,7 @@ export function createNewRecord(data) {
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
-            ...JSON.parse(JSON.stringify(data)),
+            ...sanitiseData(data),
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordAuthorsSearchKey(
                 data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null,
@@ -55,6 +69,7 @@ export function createNewRecord(data) {
             ...transformers.getLanguageSearchKey((data.isNtro && data.languages) || null),
             ...transformers.getQualityIndicatorSearchKey((data.isNtro && data.qualityIndicators) || null),
             ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
+            rek_date: getRekDate(data, data.rek_subtype),
         };
 
         // delete extra form values from request object
@@ -140,7 +155,7 @@ export function createNewRecord(data) {
 const prepareThesisSubmission = data => {
     // set default values, links
     const recordRequest = {
-        ...JSON.parse(JSON.stringify(data)),
+        ...sanitiseData(data),
         ...transformers.getRecordAuthorsSearchKey(data.currentAuthor),
         ...transformers.getRecordAuthorsIdSearchKey(data.currentAuthor),
         ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
@@ -307,7 +322,7 @@ export function createCollection(data, authorId) {
         // set default values, links
         const recordRequest = {
             ...NEW_COLLECTION_DEFAULT_VALUES,
-            ...JSON.parse(JSON.stringify(data)),
+            ...sanitiseData(data),
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: data.fez_record_search_key_ismemberof,
@@ -377,7 +392,7 @@ export function createCommunity(data, authorId) {
         // set default values, links
         const recordRequest = {
             ...NEW_COMMUNITY_DEFAULT_VALUES,
-            ...JSON.parse(JSON.stringify(data)),
+            ...sanitiseData(data),
             rek_depositor: authorId,
         };
         return post(NEW_COMMUNITY_API(), recordRequest)
@@ -440,9 +455,6 @@ export function clearNewRecord() {
         });
     };
 }
-
-const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
-const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 const getAdminRecordRequest = data => {
     const { files, ...restFilesSection } = data.filesSection || {};

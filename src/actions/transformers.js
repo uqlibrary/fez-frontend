@@ -966,7 +966,12 @@ export const getFezMatchedJournalsKey = matchedJournal => {
     };
 };
 
-const getRekDate = (data, rekSubtype) => {
+/**
+ * @param data
+ * @param rekSubtype
+ * @return {string|string}
+ */
+export const getRekDate = (data, rekSubtype) => {
     if (
         // eslint-disable-next-line camelcase
         rekSubtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK &&

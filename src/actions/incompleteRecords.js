@@ -3,6 +3,7 @@ import * as transformers from './transformers';
 import { patch, post } from 'repositories/generic';
 import { EXISTING_RECORD_API, RECORDS_ISSUES_API } from 'repositories/routes';
 import { putUploadFiles } from 'repositories';
+import { sanitiseData } from './records';
 
 /**
  * Update incomplete record request: patch record, send issue to espace admins:
@@ -52,7 +53,7 @@ export function updateIncompleteRecord(data) {
         let patchRecordRequest = null;
         patchRecordRequest = {
             rek_pid: data.publication.rek_pid,
-            ...JSON.parse(JSON.stringify(data)),
+            ...sanitiseData(data),
             ...transformers.getRecordAbstractDescriptionSearchKey(data.ntroAbstract),
             ...transformers.getLanguageSearchKey(data.languages),
             ...transformers.getQualityIndicatorSearchKey(data.qualityIndicators),
