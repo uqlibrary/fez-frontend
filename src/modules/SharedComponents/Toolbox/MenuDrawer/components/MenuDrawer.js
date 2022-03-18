@@ -20,7 +20,6 @@ const styles = theme => {
     return {
         paper: {
             width: 260,
-            overflowX: 'hidden',
         },
         docked: {
             '& $paper': {
@@ -83,7 +82,7 @@ const styles = theme => {
             ...theme.typography.caption,
         },
         mainMenuFooter: {
-            paddingLeft: '12px',
+            textAlign: 'center',
             paddingBottom: '12px',
             fontSize: theme.typography.caption.fontSize,
             color: theme.palette.secondary.main,
@@ -226,7 +225,11 @@ export class MenuDrawer extends Component {
                                 </Grid>
                                 <Hidden smUp>
                                     <Grid item xs={2}>
-                                        <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
+                                        <IconButton
+                                            onClick={onToggleDrawer}
+                                            aria-label={locale.closeMenuLabel}
+                                            size="small"
+                                        >
                                             <KeyboardArrowLeft className={classes.iconButton} />
                                         </IconButton>
                                     </Grid>
