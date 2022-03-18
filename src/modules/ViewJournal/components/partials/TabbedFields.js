@@ -10,15 +10,29 @@ import TabContainer from 'modules/Admin/components/TabContainer';
 
 import { JournalDetailsContext } from '../JournalDataContext';
 import ViewRow from './ViewRow';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
+    const theme = useTheme();
+    const isXsDown = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmDown = useMediaQuery(theme.breakpoints.down('sm'));
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-
+    const multipleData = data.length > 1;
+    // eslint-disable-next-line no-nested-ternary
+    const tabStyle = isSmDown && { maxWidth: multipleData ? 'calc((100vw - 68px) * 0.67)' : isXsDown ? '100%' : '50%' };
     return (
         <Grid container style={{ marginTop: 8 }}>
             <Grid item xs={12}>
-                <Tabs indicatorColor="primary" onChange={handleTabChange} textColor="primary" value={currentTabValue}>
+                <Tabs
+                    indicatorColor="primary"
+                    onChange={handleTabChange}
+                    textColor="primary"
+                    value={currentTabValue}
+                    scrollButtons={isSmDown && multipleData ? 'on' : 'off'}
+                    variant={isSmDown && multipleData ? 'scrollable' : 'standard'}
+                >
                     {data.map((tab, index) => (
                         <Tab
                             data-testid={`${tabId}-${index}-heading`}
@@ -26,6 +40,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                             key={`${tabId}-${index}`}
                             label={tab[tabTitle]}
                             value={String(index)}
+                            style={{ ...tabStyle }}
                         />
                     ))}
                 </Tabs>
