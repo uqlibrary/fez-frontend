@@ -21,7 +21,7 @@ UQ's branding for Fez is UQ eSpace.
 
 This means that it's exactly like production, except for the git branch that uses. This is useful for **carefully*** testing anything that might break production before pushing to the actual branch.
 
-***carefully**: any actions (e.g. creating, editing, deleting records) performed in eSpace prodtest will reflect in changes made to production. This includes **email notifications, 3rd party services integrations and everything else**.   
+***carefully**: any actions (e.g. creating, editing, deleting records) performed in eSpace prodtest will result in changes to production. This includes **email notifications, 3rd party services integrations and everything else**
 
 ## Technology
 
@@ -59,6 +59,67 @@ This means that it's exactly like production, except for the git branch that use
   ```
   nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
   ```
+  
+  **A word of caution**
+  Be aware that nvm will use the default version of node whenever a new terminal window is opened. This may catch you out if you are updating environmental variables and closing/opening Terminal as mentioned earlier.
+  
+  To check what version is in use:
+  ```
+  nvm ls
+  ```
+  
+  will display similair to:
+  
+  ```
+  v14.7.0
+  ->     v16.13.2
+  default -> 14.7.0 (-> v14.7.0)
+  iojs -> N/A (default)
+  unstable -> N/A (default)
+  node -> stable (-> v16.13.2) (default)
+  stable -> 16.13 (-> v16.13.2) (default)
+  lts/* -> lts/gallium (-> N/A)
+  lts/argon -> v4.9.1 (-> N/A)
+  lts/boron -> v6.17.1 (-> N/A)
+  lts/carbon -> v8.17.0 (-> N/A)
+  lts/dubnium -> v10.24.1 (-> N/A)
+  lts/erbium -> v12.22.10 (-> N/A)
+  lts/fermium -> v14.19.0 (-> N/A)
+  lts/gallium -> v16.14.0 (-> N/A)
+  ```
+  
+  **Note the default value above (14.7.0)**
+  
+  To ensure you're always using the correct version of Node, you can set the default nvm will use with:
+  
+  ```
+  nvm alias default 16.13.2
+  ```
+  
+  which when checked should give you something like this:
+  
+  ```
+  nvm ls
+  
+  v14.7.0
+  ->     v16.13.2
+  default -> 16.13.2 (-> v16.13.2)
+  iojs -> N/A (default)
+  unstable -> N/A (default)
+  node -> stable (-> v16.13.2) (default)
+  stable -> 16.13 (-> v16.13.2) (default)
+  lts/* -> lts/gallium (-> N/A)
+  lts/argon -> v4.9.1 (-> N/A)
+  lts/boron -> v6.17.1 (-> N/A)
+  lts/carbon -> v8.17.0 (-> N/A)
+  lts/dubnium -> v10.24.1 (-> N/A)
+  lts/erbium -> v12.22.10 (-> N/A)
+  lts/fermium -> v14.19.0 (-> N/A)
+  lts/gallium -> v16.14.0 (-> N/A)
+  ```
+  
+  Be sure to check your nvm node version if your unit tests fail to run (this typically will happen if you change your repo from package-lock.json version 1 to 2, including updating the node and npm versions as mentioned above).
+  
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
    ```
@@ -394,7 +455,7 @@ Ask for review from team-mates if you'd like other eyes on your changes.
 
 ## Deployment
 
-Application deployment is 100% automated using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Cypress, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
+Application deployment is 100% automated (except for prodtest) using AWS Codebuild (and Codepipeline), and is hosted in S3. All testing and deployment commands and configuration are stored in the buildspec yaml files in the repo. All secrets (access keys and tokens for PT, Cypress, Sentry and Google) are stored in AWS Parameter Store, and then populated into ENV variables in those buildspec yaml files. 
 Deployment pipelines are setup for branches: "master", "staging", "prodtest", "production" and several key branches starting with "feature-".
 
 - Master branch is always deployed to staging/production
@@ -406,7 +467,9 @@ Deployment pipelines are setup for branches: "master", "staging", "prodtest", "p
 Staging/production/prodtest build has routing based on `createBrowserHistory()`, other branches rely on `createHashHistory()` due
 to URL/Cloudfront restrictions
 
-Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline)
+Should you need to find your feature branch files on S3, they are [here](https://s3.console.aws.amazon.com/s3/buckets/uql-dev-frontend?region=ap-southeast-2&prefix=espace/&showversions=false) (most common use is to cleanup after you finish with a feature branch: remove the S3 sub-folder from this location, the git branch, and the AWS pipeline).
+
+Note: prodtest requires a manual click for its deployment to happen: go to [this](https://ap-southeast-2.console.aws.amazon.com/codesuite/codepipeline/pipelines/fez-frontend-prodtest/view?region=ap-southeast-2) link and click the orange release changes button.
 
 ### Gotchas
 

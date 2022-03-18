@@ -2,7 +2,7 @@ import React from 'react';
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
 
-import { render, WithRouter, fireEvent } from 'test-utils';
+import { fireEvent, render, WithRouter } from 'test-utils';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -24,9 +24,6 @@ function setup(testProps = {}, args = {}) {
         history: {
             push: jest.fn(),
         },
-        actions: {
-            searchEspacePublications: jest.fn(),
-        },
         location: {
             pathname: '',
         },
@@ -39,6 +36,17 @@ function setup(testProps = {}, args = {}) {
 describe('SearchComponent', () => {
     it('should render default view', () => {
         const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes', () => {
+        const wrapper = setup({
+            isAdvancedSearch: true,
+        });
+        wrapper.instance().UNSAFE_componentWillReceiveProps({
+            isOpenAccessInAdvancedMode: true,
+        });
+        wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -115,10 +123,8 @@ describe('SearchComponent', () => {
     });
 
     it('should submit search for given search query params', () => {
-        const testMethod = jest.fn();
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: { searchEspacePublications: testMethod },
             history: { push: testHistoryPushMethod },
         });
 
@@ -139,28 +145,15 @@ describe('SearchComponent', () => {
         wrapper.instance().handleSearch(searchQuery);
         wrapper.update();
 
-        expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=i+feel+lucky',
-            state: {
-                activeFacets: { filters: {}, ranges: {} },
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: {
-                    all: 'i feel lucky',
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
     });
 
     it('should submit search for given search query params for unpublished buffer', () => {
-        const testMethod = jest.fn();
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: { searchEspacePublications: testMethod },
             history: { push: testHistoryPushMethod },
             location: { pathname: '/admin/unpublished' },
             isAdmin: true,
@@ -184,20 +177,9 @@ describe('SearchComponent', () => {
         wrapper.instance().handleSearch(searchQuery);
         wrapper.update();
 
-        expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/admin/unpublished',
             search: 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_status%5D=3',
-            state: {
-                activeFacets: { filters: {}, ranges: {} },
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: {
-                    rek_status: 3,
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
 
         wrapper.setState({
@@ -208,20 +190,14 @@ describe('SearchComponent', () => {
 
     it('should not search is searchQuery is empty', () => {
         const testFn = jest.fn();
-        const wrapper = setup({
-            actions: {
-                searchEspacePublications: testFn,
-            },
-        });
+        const wrapper = setup();
         wrapper.instance().handleSearch('');
         expect(testFn).not.toBeCalled();
     });
 
     it('should handle advanced search', () => {
-        const testMethod = jest.fn();
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: { searchEspacePublications: testMethod },
             history: { push: testHistoryPushMethod },
         });
 
@@ -251,26 +227,12 @@ describe('SearchComponent', () => {
 
         wrapper.instance()._handleAdvancedSearch();
 
-        expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
                 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D' +
                 '=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
                 'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-            state: {
-                activeFacets: { filters: {}, ranges: {} },
-                page: 1,
-                pageSize: 20,
-                searchMode: 'advanced',
-                searchQueryParams: {
-                    all: { value: 'i feel lucky', label: '' },
-                    rek_display_type: [],
-                    rek_title: { value: 'global warming', label: '' },
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
 
         wrapper.setProps({
@@ -287,26 +249,12 @@ describe('SearchComponent', () => {
             },
         });
 
-        expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
                 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D' +
                 '=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
                 'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-            state: {
-                activeFacets: { filters: {}, ranges: {} },
-                page: 1,
-                pageSize: 20,
-                searchMode: 'advanced',
-                searchQueryParams: {
-                    all: { value: 'i feel lucky', label: '' },
-                    rek_display_type: [],
-                    rek_title: { value: 'global warming', label: '' },
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
     });
 
@@ -314,10 +262,8 @@ describe('SearchComponent', () => {
         'should handle advanced search with year range, rek_status, ' +
             'rek_created_date and rek_updated_date key set for an admin',
         () => {
-            const testMethod = jest.fn();
             const testHistoryPushMethod = jest.fn();
             const wrapper = setup({
-                actions: { searchEspacePublications: testMethod },
                 history: { push: testHistoryPushMethod },
                 isAdmin: true,
             });
@@ -366,59 +312,18 @@ describe('SearchComponent', () => {
 
             wrapper.instance()._handleAdvancedSearch();
 
-            expect(testMethod).toHaveBeenCalled();
             expect(testHistoryPushMethod).toHaveBeenCalledWith({
                 pathname: '/records/search',
                 search:
                     /* eslint-disable-next-line max-len */
                     'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced',
-                state: {
-                    activeFacets: {
-                        filters: {},
-                        ranges: {
-                            'Created date': '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
-                            'Updated date': '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
-                            'Year published': {
-                                from: 2000,
-                                to: 2008,
-                            },
-                        },
-                    },
-                    page: 1,
-                    pageSize: 20,
-                    searchMode: 'advanced',
-                    searchQueryParams: {
-                        all: {
-                            value: 'i feel lucky',
-                            label: '',
-                        },
-                        rek_display_type: [],
-                        rek_title: {
-                            value: 'global warming',
-                            label: '',
-                        },
-                        rek_status: { value: 7 },
-                        rek_created_date: {
-                            label: '[09/10/1982 to 10/10/1985]',
-                            value: '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
-                        },
-                        rek_updated_date: {
-                            label: '[09/10/1980 to 10/10/1982]',
-                            value: '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
-                        },
-                    },
-                    sortBy: 'score',
-                    sortDirection: 'Desc',
-                },
             });
         },
     );
 
     it('should handle simple search', () => {
-        const testMethod = jest.fn();
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
-            actions: { searchEspacePublications: testMethod },
             history: { push: testHistoryPushMethod },
         });
 
@@ -430,23 +335,9 @@ describe('SearchComponent', () => {
 
         wrapper.instance()._handleSimpleSearch();
 
-        expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMethod).toHaveBeenCalledWith({
             pathname: '/records/search',
             search: 'searchQueryParams%5Ball%5D=i+feel+lucky&page=1&pageSize=20&sortBy=score&sortDirection=Desc',
-            state: {
-                activeFacets: {
-                    filters: {},
-                    ranges: {},
-                },
-                page: 1,
-                pageSize: 20,
-                searchQueryParams: {
-                    all: 'i feel lucky',
-                },
-                sortBy: 'score',
-                sortDirection: 'Desc',
-            },
         });
     });
 
