@@ -908,22 +908,55 @@ describe('Record action creators', () => {
             },
         };
         const pidRequest = { pid: 'UQ:396321' };
+        const assertPayloadsRekDateAndReturnMockedData = expectedRekDate => request => {
+            expect(JSON.parse(request.data).rek_date).toBe(expectedRekDate);
+            return [200, { data: { ...record } }];
+        };
 
         it('dispatches expected actions on create record successfully', async () => {
             const testInput1 = {
                 ...testInput,
                 filesSection: {},
             };
-            const pidRequest = { pid: 'UQ:396321' };
+            const expectedRekDate = `${testInput.bibliographicSection.rek_date} 00:00:00`;
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } });
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
 
             const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
 
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on create record successfully for design/Arch type', async () => {
+            const startDate = '2020-01-01';
+            expect(startDate).not.toBe(testInput.bibliographicSection.rek_date);
+            const testInput1 = {
+                ...testInput,
+                filesSection: {},
+                adminSection: {
+                    rek_subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+                },
+                bibliographicSection: {
+                    ...testInput.bibliographicSection,
+                    fez_record_search_key_project_start_date: {
+                        rek_project_start_date: startDate,
+                    },
+                },
+            };
+            const expectedRekDate = `${startDate} 00:00:00`;
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
+
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
             await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -1017,69 +1050,6 @@ describe('Record action creators', () => {
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
-        });
-    });
-
-    describe('adminCreate() for design/Arch type', () => {
-        const testInput = {
-            rek_display_type: 174,
-            adminSection: {
-                rek_subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
-            },
-            authorsSection: {
-                authors: [
-                    {
-                        nameAsPublished: 'test',
-                        disabled: false,
-                        selected: true,
-                        authorId: 410,
-                    },
-                ],
-            },
-            bibliographicSection: {
-                rek_title: 'test',
-                rek_display_type: 179,
-                fez_record_search_key_journal_name: {
-                    rek_journal_name: 'test',
-                },
-                rek_date: '2017-01-01',
-                rek_subtype: 'test',
-                fez_record_search_key_project_start_date: {
-                    rek_project_start_date: '2020-01-01',
-                },
-            },
-            filesSection: {
-                files: {
-                    queue: [
-                        {
-                            name: 'test.txt',
-                            fileData: {
-                                name: 'test.txt',
-                            },
-                        },
-                    ],
-                },
-            },
-        };
-        const pidRequest = { pid: 'UQ:396321' };
-
-        it('dispatches expected actions on create record successfully', async () => {
-            const testInput1 = {
-                ...testInput,
-                filesSection: {},
-            };
-            const pidRequest = { pid: 'UQ:396321' };
-
-            mockApi
-                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
-                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } });
-
-            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
-
-            await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
 

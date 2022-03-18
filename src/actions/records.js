@@ -473,7 +473,11 @@ const getAdminRecordRequest = data => {
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
-            ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+            ...transformers.getBibliographicSectionSearchKeys(
+                data.bibliographicSection,
+                // eslint-disable-next-line camelcase
+                data.adminSection?.rek_subtype,
+            ),
             ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
