@@ -20,6 +20,7 @@ const styles = theme => {
     return {
         paper: {
             width: 260,
+            overflowX: 'hidden',
         },
         docked: {
             '& $paper': {
