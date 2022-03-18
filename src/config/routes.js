@@ -518,6 +518,11 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
         {
+            linkTo: pathConfig.communityList,
+            ...locale.menu.communityList,
+            public: true,
+        },
+        {
             linkTo: pathConfig.help,
             ...locale.menu.help,
             public: true,
@@ -601,11 +606,11 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
-                  {
-                      linkTo: pathConfig.communityList,
-                      ...locale.menu.communityList,
-                      public: true,
-                  },
+                  //   {
+                  //       linkTo: pathConfig.communityList,
+                  //       ...locale.menu.communityList,
+                  //       public: true,
+                  //   },
                   {
                       divider: true,
                       path: '/234234234242',
