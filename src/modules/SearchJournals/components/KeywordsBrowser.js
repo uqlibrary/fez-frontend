@@ -140,7 +140,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
-            <Grid item xs={12} sm={6} className={classes.border} style={{ marginTop: '10px' }}>
+            <Grid item xs={12} sm={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
