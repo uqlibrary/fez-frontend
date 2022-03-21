@@ -28,7 +28,6 @@ export const KeywordsList = ({ title, list, help }) => {
     const txt = locale.components.searchJournals;
     const componentId = sanitiseId(`journal-search-keyword-list-${title}`);
 
-    // const isBreakpointXs = useMediaQuery(theme => theme.breakpoints.down('xs'));
     const isBreakpointSm = useMediaQuery(theme => theme.breakpoints.down('sm'));
     const typographyProps = {
         color: 'primary',

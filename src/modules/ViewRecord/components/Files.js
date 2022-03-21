@@ -42,6 +42,12 @@ export const styles = theme => ({
     thumbIconCentered: {
         textAlign: 'center',
     },
+    containerPadding: {
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
+    },
 });
 
 const getSecurityAccess = (dataStream, props) => {
@@ -416,7 +422,7 @@ export class FilesClass extends Component {
         if (fileData.length === 0) return null;
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.files.title}>
+                <StandardCard title={locale.viewRecord.sections.files.title} responsiveMobileTitle>
                     {!!publication.fez_record_search_key_advisory_statement &&
                         !this.props.hideCulturalSensitivityStatement && (
                             <Alert
@@ -433,7 +439,7 @@ export class FilesClass extends Component {
                     ).length > 0 && (
                         <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
                     )}
-                    <div style={{ padding: 8 }}>
+                    <div className={this.props.classes.containerPadding}>
                         <Grid
                             container
                             direction="row"
@@ -469,7 +475,7 @@ export class FilesClass extends Component {
                         </Grid>
                     </div>
                     {fileData.map((item, index) => (
-                        <div style={{ padding: 8 }} key={index}>
+                        <div className={this.props.classes.containerPadding} key={index}>
                             <Grid
                                 container
                                 direction="row"

@@ -25,6 +25,12 @@ const styles = theme => ({
             marginTop: 0,
         },
     },
+    containerPadding: {
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
+    },
 });
 
 export class NtroDetailsClass extends PureComponent {
@@ -35,7 +41,7 @@ export class NtroDetailsClass extends PureComponent {
     };
 
     ViewNtroRow = ({ heading, subheading, className, data, rowId }) => (
-        <div style={{ padding: 8 }}>
+        <div className={this.props.classes.containerPadding}>
             <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3} data-testid={`${rowId}-label`}>
                     <Typography
@@ -75,7 +81,7 @@ export class NtroDetailsClass extends PureComponent {
         }
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.ntro.title}>
+                <StandardCard title={locale.viewRecord.sections.ntro.title} responsiveMobileTitle>
                     {/* Significance */}
                     {publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&

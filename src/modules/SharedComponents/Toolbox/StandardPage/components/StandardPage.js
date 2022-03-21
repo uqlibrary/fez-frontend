@@ -11,6 +11,9 @@ const styles = theme => ({
         margin: '24px auto',
         width: '90%',
         padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '12px auto',
+        },
     },
     layoutTitle: {
         overflowWrap: 'break-word !important',
@@ -36,9 +39,36 @@ export class Page extends Component {
         classes: PropTypes.object,
         standardPageId: PropTypes.string,
     };
+    constructor(props) {
+        super(props);
+        this.state = {
+            matches: window.matchMedia('(max-width: 599.96px)').matches,
+            mediaQuery: window.matchMedia('(max-width: 599.96px)'),
+        };
+    }
+
+    componentDidMount() {
+        this.handleResize();
+        this.state.mediaQuery?.addEventListener
+            ? this.state.mediaQuery?.addEventListener('change', this.handleResize)
+            : this.state.mediaQuery?.addListener(this.handleResize);
+    }
+
+    componentWillUnmount() {
+        this.state.mediaQuery?.removeEventListener
+            ? this.state.mediaQuery?.removeEventListener('change', this.handleResize)
+            : this.state.mediaQuery?.removeListener(this.handleResize);
+    }
+
+    handleResize = () => {
+        this.setState({
+            matches: this.state.mediaQuery.matches,
+        });
+    };
 
     render() {
         const { classes, title, children, help, standardPageId } = this.props;
+
         return (
             <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
                 {title && (
@@ -49,7 +79,7 @@ export class Page extends Component {
                             component="h2"
                             id="page-title"
                             data-testid="page-title"
-                            variant="h4"
+                            variant={!this.state.matches ? 'h4' : 'h5'}
                         >
                             {title}
                         </Typography>

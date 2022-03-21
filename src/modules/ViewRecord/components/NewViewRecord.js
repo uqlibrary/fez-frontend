@@ -35,11 +35,12 @@ import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
 import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import { Button } from '@material-ui/core';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -107,13 +108,16 @@ export const NewViewRecord = ({
     const handleDesktopDrawerToggle = () => {
         setOpen(!open);
     };
-    const handleDrawerToggle = () => {
-        if (window.matchMedia('(max-width:599.96px)').matches) {
+    const HandleDrawerToggle = () => {
+        if (useMediaQuery('(max-width:599.96px)')) {
             handleMobileDrawerToggle();
         } else {
             handleDesktopDrawerToggle();
         }
     };
+
+    const theme = useTheme();
+    const isXsDown = useMediaQuery(theme.breakpoints.down('sm'));
 
     const getAdminRecordButtonIcon = () => {
         return recordToView?.fez_internal_notes?.ain_detail ? (
@@ -131,7 +135,7 @@ export const NewViewRecord = ({
                 <DescriptionOutlinedIcon fontSize="inherit" />
             </Badge>
         ) : (
-            <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
+            <DescriptionOutlinedIcon fontSize="inherit" onClick={HandleDrawerToggle} />
         );
     };
 
@@ -161,7 +165,7 @@ export const NewViewRecord = ({
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <Grid container style={{ marginTop: -24 }}>
+                <Grid container style={{ marginTop: isXsDown ? -12 : -24 }}>
                     <Grid item xs={12}>
                         {locale.pages.viewRecord.notFound.message}
                     </Grid>
@@ -197,12 +201,12 @@ export const NewViewRecord = ({
                 {isAdmin && !isDeleted && !!recordToView && (
                     <AdminViewRecordDrawer
                         content={drawerDescriptor}
-                        handleDrawerToggle={handleDrawerToggle}
+                        HandleDrawerToggle={HandleDrawerToggle}
                         open={open}
                         mobileOpen={mobileOpen}
                     />
                 )}
-                <Grid container style={{ marginTop: -24 }}>
+                <Grid container style={{ marginTop: isXsDown ? -12 : -24 }}>
                     <Grid item xs={12}>
                         <PublicationCitation
                             publication={recordToView}
@@ -222,7 +226,7 @@ export const NewViewRecord = ({
                                             variant="outlined"
                                             startIcon={getAdminRecordButtonIcon()}
                                             color="default"
-                                            onClick={handleDrawerToggle}
+                                            onClick={HandleDrawerToggle}
                                             id="adminDrawerButton"
                                             data-testid="btnAdminToggleDrawerVisibility"
                                         >

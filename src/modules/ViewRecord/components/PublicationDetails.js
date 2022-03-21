@@ -24,6 +24,12 @@ const styles = theme => ({
             content: `"${componentLocale.components.contentIndicators.divider}"`,
         },
     },
+    containerPadding: {
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
+    },
 });
 
 export class PublicationDetailsClass extends PureComponent {
@@ -33,7 +39,7 @@ export class PublicationDetailsClass extends PureComponent {
     };
 
     ViewRecordRow = ({ heading, data, rowId }) => (
-        <div style={{ padding: 8 }}>
+        <div className={this.props.classes.containerPadding}>
             <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography
@@ -63,7 +69,7 @@ export class PublicationDetailsClass extends PureComponent {
 
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.publicationDetails}>
+                <StandardCard title={locale.viewRecord.sections.publicationDetails} responsiveMobileTitle>
                     {this.props.publication.rek_display_type_lookup && (
                         <this.ViewRecordRow
                             heading={headings.rek_display_type}

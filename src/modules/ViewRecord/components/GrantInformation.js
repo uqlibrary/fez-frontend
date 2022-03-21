@@ -15,6 +15,12 @@ const useStyles = makeStyles(
         data: {
             paddingRight: 4,
         },
+        containerPadding: {
+            padding: `${theme.spacing(1)}px 0`,
+            [theme.breakpoints.up('sm')]: {
+                padding: theme.spacing(1),
+            },
+        },
     }),
     { withTheme: true },
 );
@@ -33,7 +39,7 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
         hasGrantId && grantId.rek_grant_id !== ORG_TYPES_LOOKUP[ORG_TYPE_NOT_SET] ? grantId.rek_grant_id : '';
 
     return (
-        <div style={{ padding: 8 }} key={index}>
+        <div className={classes.containerPadding} key={index}>
             <Grid container spacing={2} key={order} className={classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" data-testid={`rek-grant-label-${index}`}>
@@ -97,7 +103,7 @@ export const GrantInformation = ({ publication }) => {
 
     return (
         <Grid item xs={12}>
-            <StandardCard title={locale.viewRecord.sections.grantInformation}>
+            <StandardCard title={locale.viewRecord.sections.grantInformation} responsiveMobileTitle>
                 {fundingText && (
                     <Typography id="grantInformation" variant="body2" gutterBottom data-testid="rek-grant-text">
                         {fundingText}

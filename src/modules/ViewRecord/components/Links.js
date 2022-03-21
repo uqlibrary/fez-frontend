@@ -20,12 +20,16 @@ import moment from 'moment';
 
 const styles = theme => ({
     header: {
-        marginTop: 8,
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: `${theme.spacing(2)}px ${theme.spacing(1)}px ${theme.spacing(1)}px ${theme.spacing(1)}px`,
+        },
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     description: {
         whiteSpace: 'nowrap',
         textOverflow: 'ellipsis',
+        overflowX: 'hidden',
     },
     body2: {
         ...theme.typography.body2,
@@ -41,19 +45,23 @@ export class LinksClass extends PureComponent {
     LinkRow = ({ link, linkId, description, openAccessStatus }) => (
         <Grid
             container
-            spacing={4}
+            spacing={2}
             className={this.props.classes.header}
             alignItems={'center'}
             alignContent={'center'}
             justify={'center'}
         >
             <Grid item xs={12} sm={6} data-testid={`${linkId}-link`}>
-                <Typography variant={'body2'}>{link}</Typography>
+                <Typography variant={'body2'} component={'span'}>
+                    {link}
+                </Typography>
             </Grid>
-            <Grid item xs={10} sm={4} className={this.props.classes.description} data-testid={`${linkId}-description`}>
-                <Typography variant={'body2'}>{description}</Typography>
+            <Grid item xs={11} sm={4} className={this.props.classes.description} data-testid={`${linkId}-description`}>
+                <Typography variant={'body2'} component={'span'}>
+                    {description}
+                </Typography>
             </Grid>
-            <Grid item xs={2} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
+            <Grid item xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
                 <OpenAccessIcon {...openAccessStatus} />
             </Grid>
         </Grid>
@@ -208,32 +216,32 @@ export class LinksClass extends PureComponent {
         }
         return (
             <Grid item xs={12}>
-                <StandardCard title={txt.title}>
-                    <Hidden xsDown>
-                        <Grid
-                            container
-                            direction="row"
-                            alignItems="center"
-                            spacing={2}
-                            className={this.props.classes.header}
-                        >
-                            <Grid item sm={6} data-testid="link-label">
-                                <Typography variant="caption" gutterBottom>
-                                    {txt.headerTitles.link}
-                                </Typography>
-                            </Grid>
+                <StandardCard title={txt.title} responsiveMobileTitle>
+                    <Grid
+                        container
+                        direction="row"
+                        alignItems="center"
+                        spacing={2}
+                        className={this.props.classes.header}
+                    >
+                        <Grid item sm={6} data-testid="link-label">
+                            <Typography variant="caption" gutterBottom>
+                                {txt.headerTitles.link}
+                            </Typography>
+                        </Grid>
+                        <Hidden xsDown>
                             <Grid item sm={4} data-testid="description-label">
                                 <Typography variant="caption" gutterBottom>
                                     {txt.headerTitles.description}
                                 </Typography>
                             </Grid>
-                            <Grid item sm={2} data-testid="oa-status-label">
-                                <Typography variant="caption" gutterBottom>
-                                    {txt.headerTitles.oaStatus}
-                                </Typography>
-                            </Grid>
+                        </Hidden>
+                        <Grid item sm={2} data-testid="oa-status-label">
+                            <Typography variant="caption" gutterBottom>
+                                {txt.headerTitles.oaStatus}
+                            </Typography>
                         </Grid>
-                    </Hidden>
+                    </Grid>
                     {// if record has a PubMedCentral Id - display link, should be always OA
                     !!pubmedCentralId && (
                         <this.LinkRow
