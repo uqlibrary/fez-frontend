@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
         textTransform: 'uppercase',
         padding: 3,
         fontSize: 10,
+        marginLeft: 5,
     },
     asic: {
         backgroundColor: theme.palette.error?.main,
@@ -53,6 +54,7 @@ export const ForCodeSource = ({ source, index }) => {
             className={classes[source]}
             id={id}
             data-testid={id}
+            noWrap
         >
             {source}
         </Typography>

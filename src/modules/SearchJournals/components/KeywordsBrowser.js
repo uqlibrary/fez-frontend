@@ -12,7 +12,20 @@ import SearchKeywordsList from './partials/SearchKeywordsList';
 import ForCodeSearchKeywordsList from './partials/ForCodeSearchKeywordsList';
 
 import locale from 'locale/components';
-import Hidden from '@material-ui/core/Hidden';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    border: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: '5px',
+            paddingRight: '5px',
+            borderStyle: 'dashed',
+            borderColor: '#CCC',
+            borderWidth: '0 0 0 1px',
+            marginTop: '10px',
+        },
+    },
+}));
 
 export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const txt = locale.components.searchJournals.partials.keywordsBrowser;
@@ -25,6 +38,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const hasKeywordKeywords = journalSearchKeywords.keywordMatch.length > 0;
     const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
     const hasAnyKeywordsLoaded = hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords;
+    const classes = useStyles();
 
     /**
      * Handle click event on keyword
@@ -85,18 +99,6 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
-    const separator = (
-        <Hidden xsDown>
-            <div
-                style={{
-                    borderRight: '1px dashed #CCC',
-                    marginTop: 12,
-                    marginLeft: 6,
-                    marginRight: 12,
-                }}
-            />
-        </Hidden>
-    );
 
     return (
         <Grid container spacing={0}>
@@ -105,12 +107,12 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     <Alert {...journalSearchKeywordsError} />
                 </Grid>
             )}
-            <Grid item xs={12} style={{ padding: '10px 0 10px 0' }}>
+            <Grid item xs={12} style={{ padding: '10px 0' }}>
                 <Typography role="alert" aria-label={txt.aria_label}>
                     <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={3} style={{ margin: '0 -1px 0 -1px' }}>
+            <Grid item xs={12} sm={3} style={{ marginTop: '10px' }}>
                 <Grid container>
                     {hasExactKeywords && (
                         <Grid item xs={12}>
@@ -130,8 +132,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            {separator}
-            <Grid item xs={12} sm={3} style={{ margin: '0 -1px 0 -1px' }}>
+            <Grid item xs={12} sm={3} className={classes.border} style={{ marginTop: '10px' }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
@@ -139,8 +140,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
-            {separator}
-            <Grid item xs={12} sm={5} style={{ margin: '0 -1px 0 -1px' }}>
+            <Grid item xs={12} sm={6} className={classes.border} style={{ marginTop: '10px' }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
