@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { withStyles } from '@material-ui/core/styles';
-import { PLACEHOLDER_DATE } from 'config/general';
+import { PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 
 import moment from 'moment';
 
@@ -101,7 +101,7 @@ export class PartialDateForm extends Component {
             (props.input && props.input.value && moment(props.input.value)) ||
             (props.meta && props.meta.initial && moment(props.meta.initial)) ||
             null;
-        if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_DATE)) {
+        if (!!dateValue && dateValue.isValid() && !dateValue.isSame(PLACEHOLDER_ISO8601_ZULU_DATE)) {
             this.state = {
                 day: dateValue.date(),
                 month: dateValue.month(),

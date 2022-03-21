@@ -6,6 +6,7 @@ import {
     FILE_ACCESS_CONDITION_OPEN,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { contentIndicators } from '../config';
+import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
 
 const moment = require('moment');
 
@@ -965,7 +966,30 @@ export const getFezMatchedJournalsKey = matchedJournal => {
     };
 };
 
-export const getBibliographicSectionSearchKeys = (data = {}) => {
+/**
+ * @param data
+ * @param rekSubtype
+ * @return {string|string}
+ */
+export const getRekDate = (data, rekSubtype) => {
+    if (
+        // eslint-disable-next-line camelcase
+        rekSubtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK &&
+        // eslint-disable-next-line camelcase
+        data.fez_record_search_key_project_start_date?.rek_project_start_date
+    ) {
+        // sync rek_date with rek_project_start_date
+        return moment(data.fez_record_search_key_project_start_date.rek_project_start_date).format(
+            'YYYY-MM-DD 00:00:00',
+        );
+    }
+    // eslint-disable-next-line camelcase
+    return !data.rek_date || !moment(data.rek_date).isValid()
+        ? PLACEHOLDER_ISO8601_DATE
+        : moment(data.rek_date).format('YYYY-MM-DD 00:00:00');
+};
+
+export const getBibliographicSectionSearchKeys = (data = {}, rekSubtype) => {
     const {
         rek_title: title,
         rek_description: description,
@@ -1004,10 +1028,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                   },
               }
             : {}),
-        rek_date:
-            !data.rek_date || !moment(data.rek_date).isValid()
-                ? '1000-01-01 00:00:00'
-                : moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
+        rek_date: getRekDate(data, rekSubtype),
         ...(!!data.rek_genre_type ? { rek_subtype: data.rek_genre_type } : {}),
         ...(!!title && title.hasOwnProperty('plainText') ? { rek_title: title.plainText } : {}),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_formatted_title: title.htmlText } : {}),
