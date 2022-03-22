@@ -26,7 +26,7 @@ const styles = theme => ({
         },
     },
     helpIcon: {
-        position: 'absolute',
+        position: 'relative',
         right: '10px',
     },
 });
