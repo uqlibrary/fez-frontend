@@ -115,7 +115,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
             <Grid item xs={12} md={3} style={{ marginTop: '10px' }}>
                 <Grid container>
                     {hasExactKeywords && (
-                        <Grid item xs={12}>
+                        <Grid item xs={12} style={{ marginBottom: '10px' }}>
                             <ExactMatchSearchKeywordsList
                                 keywordsListTitle={txt.exactMatch.title}
                                 keywordsList={journalSearchKeywords.exactMatch}
