@@ -35,6 +35,7 @@ export const styles = theme => ({
     dataWrapper: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
     },
     fileIcon: {
         opacity: 0.5,
@@ -447,7 +448,7 @@ export class FilesClass extends Component {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={2} sm={1}>
                                 &nbsp;
                             </Grid>
                             <Grid item sm={4} data-testid="dsi-dsid-label">
@@ -456,7 +457,7 @@ export class FilesClass extends Component {
                                 </Typography>
                             </Grid>
                             <Hidden xsDown>
-                                <Grid item sm={4} data-testid="dsi-label-label">
+                                <Grid item sm={6} md={4} data-testid="dsi-label-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.description}
                                     </Typography>
@@ -487,7 +488,8 @@ export class FilesClass extends Component {
                             >
                                 <Grid
                                     item
-                                    xs={1}
+                                    xs={2}
+                                    sm={1}
                                     className={this.props.classes.thumbIconCentered}
                                     data-testid={`dsi-mimetype-${index}`}
                                 >
@@ -509,7 +511,8 @@ export class FilesClass extends Component {
                                 <Hidden xsDown>
                                     <Grid
                                         item
-                                        sm={4}
+                                        sm={6}
+                                        md={4}
                                         className={this.props.classes.dataWrapper}
                                         data-testid={`dsi-label-${index}`}
                                     >
@@ -521,7 +524,7 @@ export class FilesClass extends Component {
                                 <Hidden smDown>
                                     <Grid
                                         item
-                                        sm={2}
+                                        md={2}
                                         className={this.props.classes.dataWrapper}
                                         data-testid={`dsi-size-${index}`}
                                     >
