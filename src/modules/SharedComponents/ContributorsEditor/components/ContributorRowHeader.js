@@ -127,7 +127,7 @@ export class ContributorRowHeader extends PureComponent {
                                 secondaryTypographyProps={{ variant: 'caption' }}
                                 classes={{
                                     secondary: `${classes.right} ${
-                                        isInfinite ? classes.paddingRight36 : classes.paddingRight24
+                                        isInfinite ? classes.paddingRight36 : classes.paddingRight78
                                     }`,
                                 }}
                             />
@@ -165,8 +165,8 @@ export const styles = () => ({
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         marginTop: 8,
     },
-    paddingRight24: {
-        paddingRight: 24,
+    paddingRight78: {
+        paddingRight: 78,
     },
     paddingRight36: {
         paddingRight: 36,
