@@ -16,7 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     border: {
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             paddingLeft: '5px',
             paddingRight: '5px',
             borderStyle: 'dashed',
@@ -112,7 +112,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     <b>{txt.titlePrefix}</b>&nbsp;{txt.title}
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={3} style={{ marginTop: '10px' }}>
+            <Grid item xs={12} md={3} style={{ marginTop: '10px' }}>
                 <Grid container>
                     {hasExactKeywords && (
                         <Grid item xs={12}>
@@ -132,7 +132,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={12} sm={3} className={classes.border} style={{ marginTop: '10px' }}>
+            <Grid item xs={12} md={3} className={classes.border} style={{ marginTop: '10px' }}>
                 <SearchKeywordsList
                     keywordsListTitle={txt.keywordMatch.title}
                     keywordsList={journalSearchKeywords.keywordMatch}
@@ -140,7 +140,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     onKeywordClick={handleKeywordsKeywordClick}
                 />
             </Grid>
-            <Grid item xs={12} sm={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
+            <Grid item xs={12} md={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
                 <ForCodeSearchKeywordsList
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
