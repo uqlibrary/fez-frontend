@@ -220,7 +220,11 @@ export default class ClaimRecord extends PureComponent {
                     <form onSubmit={this._handleDefaultSubmit}>
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
-                                <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
+                                <StandardCard
+                                    title={txt.claimingInformation.title}
+                                    help={txt.claimingInformation.help}
+                                    responsiveMobileTitle
+                                >
                                     <PublicationCitation publication={publication} citationStyle={'header'} />
                                 </StandardCard>
                             </Grid>
@@ -246,6 +250,7 @@ export default class ClaimRecord extends PureComponent {
                                                     title={txt.authorLinking.title}
                                                     help={txt.authorLinking.help}
                                                     className="requiredField"
+                                                    responsiveMobileTitle
                                                 >
                                                     <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
                                                     <Field
@@ -270,6 +275,7 @@ export default class ClaimRecord extends PureComponent {
                                                     title={txt.contributorLinking.title}
                                                     help={txt.contributorLinking.help}
                                                     className={contributorClassName}
+                                                    responsiveMobileTitle
                                                 >
                                                     <label htmlFor="contributorLinking">
                                                         {txt.contributorLinking.text}
@@ -290,7 +296,11 @@ export default class ClaimRecord extends PureComponent {
                                             </Grid>
                                         )}
                                     <Grid item xs={12}>
-                                        <StandardCard title={txt.comments.title} help={txt.comments.help}>
+                                        <StandardCard
+                                            title={txt.comments.title}
+                                            help={txt.comments.help}
+                                            responsiveMobileTitle
+                                        >
                                             <Grid container spacing={2}>
                                                 <Grid item xs={12}>
                                                     <Field
@@ -325,6 +335,7 @@ export default class ClaimRecord extends PureComponent {
                                             <StandardCard
                                                 title={txt.contentIndicators.title}
                                                 help={txt.contentIndicators.help}
+                                                responsiveMobileTitle
                                             >
                                                 <Grid container spacing={3}>
                                                     <Grid item xs={12}>
@@ -347,7 +358,11 @@ export default class ClaimRecord extends PureComponent {
                                         </Grid>
                                     )}
                                     <Grid item xs={12}>
-                                        <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
+                                        <StandardCard
+                                            title={txt.fileUpload.title}
+                                            help={txt.fileUpload.help}
+                                            responsiveMobileTitle
+                                        >
                                             <Field
                                                 name="files"
                                                 component={FileUploadField}
