@@ -81,7 +81,7 @@ export class NtroDetailsClass extends PureComponent {
         }
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.ntro.title} responsiveMobileTitle>
+                <StandardCard title={locale.viewRecord.sections.ntro.title}>
                     {/* Significance */}
                     {publication.fez_record_search_key_significance &&
                         publication.fez_record_search_key_significance.length > 0 &&

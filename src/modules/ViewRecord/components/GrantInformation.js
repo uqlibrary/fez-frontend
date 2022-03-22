@@ -103,7 +103,7 @@ export const GrantInformation = ({ publication }) => {
 
     return (
         <Grid item xs={12}>
-            <StandardCard title={locale.viewRecord.sections.grantInformation} responsiveMobileTitle>
+            <StandardCard title={locale.viewRecord.sections.grantInformation}>
                 {fundingText && (
                     <Typography id="grantInformation" variant="body2" gutterBottom data-testid="rek-grant-text">
                         {fundingText}

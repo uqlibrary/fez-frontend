@@ -216,7 +216,7 @@ export class LinksClass extends PureComponent {
         }
         return (
             <Grid item xs={12}>
-                <StandardCard title={txt.title} responsiveMobileTitle>
+                <StandardCard title={txt.title}>
                     <Grid
                         container
                         direction="row"

@@ -93,7 +93,7 @@ export class RelatedPublicationsClass extends PureComponent {
 
         return (
             <Grid item xs={12}>
-                <StandardCard title={title} className="relatedPublications" responsiveMobileTitle>
+                <StandardCard title={title} className="relatedPublications">
                     {this.renderList(publication, parentSearchKey, childrenSearchKey, showPublicationTitle)}
                 </StandardCard>
             </Grid>

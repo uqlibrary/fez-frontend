@@ -69,7 +69,7 @@ export class PublicationDetailsClass extends PureComponent {
 
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.publicationDetails} responsiveMobileTitle>
+                <StandardCard title={locale.viewRecord.sections.publicationDetails}>
                     {this.props.publication.rek_display_type_lookup && (
                         <this.ViewRecordRow
                             heading={headings.rek_display_type}

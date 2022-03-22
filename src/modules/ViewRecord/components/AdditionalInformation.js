@@ -410,7 +410,7 @@ export class AdditionalInformationClass extends PureComponent {
         }
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.additionalInformation.title} responsiveMobileTitle>
+                <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
                     {this.renderColumns()}
                 </StandardCard>
             </Grid>

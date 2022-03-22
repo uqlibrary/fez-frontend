@@ -423,7 +423,7 @@ export class FilesClass extends Component {
         if (fileData.length === 0) return null;
         return (
             <Grid item xs={12}>
-                <StandardCard title={locale.viewRecord.sections.files.title} responsiveMobileTitle>
+                <StandardCard title={locale.viewRecord.sections.files.title}>
                     {!!publication.fez_record_search_key_advisory_statement &&
                         !this.props.hideCulturalSensitivityStatement && (
                             <Alert
