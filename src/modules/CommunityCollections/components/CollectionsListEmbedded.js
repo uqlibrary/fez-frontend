@@ -113,7 +113,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
             )}
             {loadingCollectionsPid !== pid && (
                 <div
-                    style={{ backgroundColor: '#eee', padding: 20 }}
+                    style={{ backgroundColor: '#eee', padding: 20, boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)' }}
                     data-testid={`collection-records-${pid}`}
                     id={`collection-records-${pid}`}
                 >

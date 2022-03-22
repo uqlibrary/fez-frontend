@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
     const classes = useStyles();
     return (
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{ margin: 0, padding: 0 }}>
             <Table aria-label="simple table">
                 <TableHead>
                     <TableRow data-testid="community-collections-primary-header">

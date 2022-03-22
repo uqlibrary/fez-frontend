@@ -78,7 +78,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
             </TableRow>
             {!!open && (
                 <TableRow>
-                    <TableCell colSpan={6}>
+                    <TableCell colSpan={6} style={{ padding: 0, margin: 0 }}>
                         <CollectionsListEmbedded
                             title={row.rek_title}
                             key={row.rek_pid}
