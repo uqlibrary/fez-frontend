@@ -10,6 +10,17 @@ const keyword = 'test';
 const type = 'title';
 const variant = 'default';
 const index = 0;
+const cvoId = 12345;
+const sources = [
+    {
+        index: 'source-index-0',
+        name: 'source-name-0',
+    },
+    {
+        index: 'source-index-1',
+        name: 'source-name-1',
+    },
+];
 
 describe('SearchKeyword', () => {
     it('should render', () => {
@@ -43,6 +54,27 @@ describe('SearchKeyword', () => {
             index,
         });
         expect(getByText(keyword)).toBeInTheDocument();
+    });
+
+    it('should render for code subjects', () => {
+        const { getByText } = setup({
+            keyword,
+            cvoId,
+            sources,
+        });
+        expect(getByText(keyword)).toBeInTheDocument();
+    });
+
+    it('should display all given sources for for code subjects', () => {
+        const { getByText } = setup({
+            keyword,
+            cvoId,
+            sources,
+        });
+        sources.forEach(source => {
+            expect(getByText(source.index)).toBeInTheDocument();
+            expect(getByText(source.name)).toBeInTheDocument();
+        });
     });
 
     it('should call given onKeywordClick when clicked', () => {

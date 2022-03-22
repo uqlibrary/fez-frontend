@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import KeywordsList from './KeywordsList';
-import ForCodeSearchKeyword from './ForCodeSearchKeyword';
+import SearchKeyword from './SearchKeyword';
+
 import locale from 'locale/components';
 
 export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
@@ -13,11 +14,13 @@ export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onK
                 (!!keywordsList &&
                     keywordsList.length > 0 &&
                     keywordsList.map((keywordItem, index) => (
-                        <ForCodeSearchKeyword
+                        <SearchKeyword
                             index={index}
-                            key={keywordItem.keyword}
+                            key={`${keywordItem.keyword}-${index}`}
                             {...keywordItem}
                             onKeywordClick={onKeywordClick}
+                            type={'subject'}
+                            variant={'addable'}
                         />
                     ))) ||
                 []

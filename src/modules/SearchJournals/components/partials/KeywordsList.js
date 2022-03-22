@@ -12,16 +12,17 @@ export const KeywordsList = ({ title, list, help }) => {
 
     return (
         <Grid container id={componentId} data-testid={componentId}>
-            <Grid item xs="auto" style={{ margin: '10px 0 10px 0' }}>
-                <Typography color="primary" component="h3" variant="h5">
+            <Grid item xs="auto" style={{ marginBottom: '10px' }}>
+                <Typography
+                    color="primary"
+                    component="h3"
+                    variant="h6"
+                    style={{ display: 'inline', fontSize: '1.1rem' }}
+                >
                     {title}
                 </Typography>
+                {!!help && <HelpIcon {...help} iconSize={'small'} style={{ marginTop: '-6px' }} />}
             </Grid>
-            {!!help && (
-                <Grid item xs>
-                    <HelpIcon {...help} />
-                </Grid>
-            )}
             {!!list && list.length > 0 ? (
                 list
             ) : (
