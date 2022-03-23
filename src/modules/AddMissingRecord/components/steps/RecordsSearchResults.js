@@ -167,7 +167,7 @@ export default class RecordsSearchResults extends PureComponent {
                             <Grid item sm={12}>
                                 <Grid container spacing={2} style={{ marginTop: 12 }}>
                                     <Grid item xs />
-                                    <Grid item xs={12} sm="auto">
+                                    <Grid item xs={12} md="auto">
                                         <Button
                                             fullWidth
                                             // variant={'contained'}
@@ -176,7 +176,7 @@ export default class RecordsSearchResults extends PureComponent {
                                             {searchResultsTxt.cancel}
                                         </Button>
                                     </Grid>
-                                    <Grid item xs={12} sm="auto">
+                                    <Grid item xs={12} md="auto">
                                         <Button
                                             fullWidth
                                             variant={'contained'}
