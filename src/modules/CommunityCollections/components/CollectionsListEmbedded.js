@@ -107,7 +107,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     const encodeLink = pid => {
         return `searchQueryParams${encodeURIComponent('[rek_ismemberof][value][]')}=${encodeURIComponent(
             pid,
-        )}&searchMode=advanced`;
+        )}&searchMode=advanced&commColl=true`;
     };
 
     return (
