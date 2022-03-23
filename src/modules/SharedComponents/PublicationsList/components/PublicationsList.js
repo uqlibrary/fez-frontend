@@ -120,7 +120,7 @@ export const PublicationsList = ({
             <Grid item xs={12}>
                 {publicationsList.map((publication, index) => (
                     <Grid container spacing={0} alignItems="flex-start" key={`publication-${index}`}>
-                        <Grid item xs={1}>
+                        <Grid item xs={2} sm={1}>
                             <Checkbox
                                 inputProps={{
                                     'data-testid': `select-publication-${index}-input`,
@@ -132,7 +132,7 @@ export const PublicationsList = ({
                                 checked={recordsSelected.hasOwnProperty(publication.rek_pid)}
                             />
                         </Grid>
-                        <Grid item xs={11}>
+                        <Grid item xs={10} sm={11}>
                             {renderPublicationCitation(index, publication)}
                         </Grid>
                     </Grid>
