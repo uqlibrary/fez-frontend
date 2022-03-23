@@ -10,6 +10,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 import { default as globalLocale } from 'locale/global';
+import { makeStyles } from '@material-ui/core/styles';
 
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -17,6 +18,14 @@ import {
     DATA_COLLECTION_CREATOR_ROLES,
     ORG_TYPE_ID_UNIVERSITY,
 } from 'config/general';
+
+const useStyles = makeStyles(theme => ({
+    contributorFormButton: {
+        [theme.breakpoints.down('xs')]: {
+            height: '100%',
+        },
+    },
+}));
 
 const initialContributorState = {
     nameAsPublished: '',
@@ -44,6 +53,7 @@ export const ContributorForm = ({
     showIdentifierLookup: initialShowIdentifierLookup,
     showRoleInput,
 }) => {
+    const classes = useStyles();
     const [contributor, setContributor] = useState({ ...initialContributorState, ...initialContributor });
     const [clearRoleInput, setClearRoleInput] = useState(true);
     const [showIdentifierLookup, setShowIdentifierLookup] = useState(initialShowIdentifierLookup);
@@ -309,6 +319,7 @@ export const ContributorForm = ({
                         onClick={_onSubmit}
                         id={`${contributorFormId}-add`}
                         data-testid={`${contributorFormId}-add`}
+                        className={classes.contributorFormButton}
                     >
                         {addButtonLabel}
                     </Button>
@@ -323,6 +334,7 @@ export const ContributorForm = ({
                             onClick={_onCancel}
                             id={`${contributorFormId}-cancel`}
                             data-testid={`${contributorFormId}-cancel`}
+                            className={classes.contributorFormButton}
                         >
                             {locale.cancelButton || 'Cancel'}
                         </Button>
