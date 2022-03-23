@@ -3649,7 +3649,7 @@ export default {
             columns: {
                 labels: {
                     title: 'Title',
-                    creation_date: 'Creation Date',
+                    creation_date: 'Created Date',
                     updated_date: 'Updated Date',
                     actions: 'Actions',
                 },

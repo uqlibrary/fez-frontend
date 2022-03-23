@@ -104,6 +104,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         );
     };
 
+    const encodeLink = pid => {
+        return `searchQueryParams${encodeURIComponent('[rek_ismemberof][value][]')}=${encodeURIComponent(
+            pid,
+        )}&searchMode=advanced`;
+    };
+
     return (
         <div>
             {collectionListLoading && loadingCollectionsPid === pid && (
@@ -117,6 +123,17 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                     data-testid={`collection-records-${pid}`}
                     id={`collection-records-${pid}`}
                 >
+                    {!!adminUser && (
+                        <Button
+                            style={{ marginBottom: 10, backgroundColor: '#51247A', color: 'white' }}
+                            component={Link}
+                            variant="outlined"
+                            to={`${pathConfig.admin.collection}?pid=${pid}&name=${title}`}
+                            data-test-id="admin-add-community-button"
+                        >
+                            {communityCollectionsConfig.addNewCollectionText}
+                        </Button>
+                    )}
                     {finalList.data.length > 0 && (
                         <Collapse in={open} timeout={200} unmountOnExit>
                             <Box style={{ minHeight: 200, backgroundColor: 'white', padding: 10 }}>
@@ -156,6 +173,9 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                             <TableCell className={classes.dateCell} align="right">
                                                 {labels.updated_date}
                                             </TableCell>
+                                            <TableCell className={classes.dateCell} align="right">
+                                                Explore
+                                            </TableCell>
                                             {!!adminUser && <TableCell align="right">{labels.actions}</TableCell>}
                                         </TableRow>
                                     </TableHead>
@@ -183,6 +203,9 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         .local()
                                                         .format(conf.dateFormat)}
                                                 </TableCell>
+                                                <TableCell align="right">
+                                                    <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>View</Link>
+                                                </TableCell>
                                                 {!!adminUser && (
                                                     <TableCell align="right">
                                                         <AdminActions record={row.rek_pid} />
@@ -207,17 +230,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                         <div>
                             <Typography variant="caption">{conf.loading.noCollections}</Typography>
                         </div>
-                    )}
-                    {!!adminUser && (
-                        <Button
-                            style={{ marginTop: 10, backgroundColor: '#51247A', color: 'white' }}
-                            component={Link}
-                            variant="outlined"
-                            to={`${pathConfig.admin.collection}?pid=${pid}&name=${title}`}
-                            data-test-id="admin-add-community-button"
-                        >
-                            {communityCollectionsConfig.addNewCollectionText}
-                        </Button>
                     )}
                 </div>
             )}
