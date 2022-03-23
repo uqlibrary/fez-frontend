@@ -51,7 +51,7 @@ const useStyles = makeStyles(
             padding: '6px 0',
             textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
 
-            '& ul': {
+            '& ul, & ol': {
                 [theme.breakpoints.down('xs')]: {
                     paddingInlineStart: 0,
                 },
