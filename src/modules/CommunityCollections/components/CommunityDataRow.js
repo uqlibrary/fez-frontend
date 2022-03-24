@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
-import Checkbox from '@material-ui/core/Checkbox';
+// import Checkbox from '@material-ui/core/Checkbox';
 const moment = require('moment');
 
 const useStyles = makeStyles({
@@ -25,14 +25,12 @@ const useStyles = makeStyles({
     },
 });
 
-// const checkedSet = ['UQ:7556'];
-
 import { Link } from 'react-router-dom';
 
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
-    const communitiesSelected = useSelector(state => state.get('viewCommunitiesReducer').communitiesSelected);
+    // const communitiesSelected = useSelector(state => state.get('viewCommunitiesReducer').communitiesSelected);
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
 
     const handleSetOpen = openState => {
@@ -42,15 +40,15 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
         dispatch(actions.setCollectionsArray({ pid: row.rek_pid, open: openState }));
     };
 
-    const onCheckboxClick = () => {
-        dispatch(actions.setCommunitiesSelected({ pid: row.rek_pid }));
-    };
+    // const onCheckboxClick = () => {
+    //     dispatch(actions.setCommunitiesSelected({ pid: row.rek_pid }));
+    // };
 
     const classes = useStyles();
     return (
         <React.Fragment key={row.rek_pid}>
             <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                <TableCell>
+                {/* <TableCell>
                     <Checkbox
                         color="primary"
                         value={row.rek_pid}
@@ -60,7 +58,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                             'aria-label': `select row ${row.rek_pid}`,
                         }}
                     />
-                </TableCell>
+                </TableCell> */}
                 <TableCell>
                     <IconButton
                         aria-label="expand row"

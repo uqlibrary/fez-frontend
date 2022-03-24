@@ -21,7 +21,7 @@ import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
 import Checkbox from '@material-ui/core/Checkbox';
-
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 const moment = require('moment');
 
 const useStyles = makeStyles({
@@ -31,7 +31,17 @@ const useStyles = makeStyles({
     dateCell: {
         minWidth: 120,
     },
+    disabledButton: {
+        backgroundColor: 'grey',
+    },
+    enabledButton: {
+        backgroundColor: '#51247A',
+        '&:hover': {
+            backgroundColor: '#71449A',
+        },
+    },
 });
+
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
     const dispatch = useDispatch();
     const [sortDirection, setSortDirection] = React.useState('Asc');
@@ -279,7 +289,26 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     pagingId="embedded-collections-paging-bottom"
                                     data-testid="embedded-collections-paging-bottom"
                                 />
+                                {/* This is where the bulk actions button will go */}
                             </Box>
+                            <Button
+                                id={`bulk-actions-button-${pid}`}
+                                style={{ marginTop: 10, color: 'white' }}
+                                // aria-controls={open ? 'demo-customized-menu' : undefined}
+                                // aria-haspopup="true"
+                                // aria-expanded={open ? 'true' : undefined}
+                                variant="contained"
+                                disableElevation
+                                disabled={!!collectionsSelected?.length < 1}
+                                // // onClick={handleClick}
+                                classes={{
+                                    root: classes.enabledButton,
+                                    disabled: classes.disabledButton,
+                                }}
+                                endIcon={<KeyboardArrowDownIcon />}
+                            >
+                                Bulk Actions
+                            </Button>
                         </Collapse>
                     )}
                     {!finalList.data.length > 0 && (
