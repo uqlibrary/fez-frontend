@@ -3997,7 +3997,16 @@ export default {
                     text: (
                         <React.Fragment>
                             <h3>Listed in</h3>
-                            <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
+                            <p>
+                                Indicates a journal has met the quality indicators/requirements for a list compiled by a
+                                specific group.
+                            </p>
+                            <p>The following lists are available:</p>
+                            <ul>
+                                <li>ABDC (Australian Business Deans Council)</li>
+                                <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
+                                <li>ERA (Excellence in Research Australia)</li>
+                            </ul>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
                             <h3>Open access: accepted version</h3>
