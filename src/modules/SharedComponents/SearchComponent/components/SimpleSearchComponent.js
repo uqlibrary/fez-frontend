@@ -7,7 +7,8 @@ import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import Search from '@material-ui/icons/Search';
-import ArrowBack from '@material-ui/icons/ArrowBack';
+import Close from '@material-ui/icons/Close';
+import ArrowForward from '@material-ui/icons/ArrowForward';
 
 import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
 import { locale } from 'locale';
@@ -30,15 +31,9 @@ export const styles = theme => ({
     searchIconMobile: {
         fill: theme.palette.white.main,
     },
-    mobileBackArrow: {
-        height: 50,
-        width: 50,
+    mobileCloseButton: {
         fill: theme.palette.secondary.main,
         opacity: 0.5,
-    },
-    mobileBackArrowButton: {
-        height: 70,
-        width: 70,
     },
     mobileHeader: {
         zIndex: 100,
@@ -52,11 +47,13 @@ export const styles = theme => ({
     mobileSearchInput: {
         width: '99%',
         height: 70,
+        '& > div': {
+            height: '100%',
+        },
         '& input': {
             overflow: 'hidden',
             textOverflow: 'ellipsis',
-            marginTop: 10,
-            fontSize: 32,
+            fontSize: 24,
             lineHeight: 1.2,
             fontWeight: theme.typography.fontWeightNormal,
         },
@@ -99,6 +96,7 @@ export class SimpleSearchComponent extends PureComponent {
         super(props);
         this.state = {
             showMobile: false,
+            searchTerm: this.props.searchText ?? '',
         };
     }
 
@@ -118,15 +116,16 @@ export class SimpleSearchComponent extends PureComponent {
             },
             () => {
                 if (this.state.showMobile) {
-                    document.getElementById('mobileSearchField') &&
+                    document.getElementById('mobile-search-input') &&
                         /* istanbul ignore next */
-                        document.getElementById('mobileSearchField').focus();
+                        document.getElementById('mobile-search-input').focus();
                 }
             },
         );
     };
 
     _handleSearchTextChange = event => {
+        this.setState({ searchTerm: event.target.value });
         this.props.onSearchTextChange(event.target.value);
     };
 
@@ -136,6 +135,7 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSearch = event => {
         if (event && event.key && event.key !== 'Enter') return;
+        if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
 
         if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {
             this.props.onInvalidSearch(
@@ -226,18 +226,21 @@ export class SimpleSearchComponent extends PureComponent {
                                             spacing={0}
                                             direction={'row'}
                                             wrap={'nowrap'}
-                                            alignItems={'stretch'}
+                                            alignItems={'center'}
                                             justify={'center'}
                                         >
                                             {this.props.showMobileSearchButton && (
                                                 <Hidden smUp>
                                                     <Grid item>
-                                                        <Button
+                                                        <IconButton
                                                             onClick={this._handleToggleMobile}
-                                                            className={classes.mobileBackArrowButton}
+                                                            className={classes.mobileSearchButtons}
                                                         >
-                                                            <ArrowBack className={classes.mobileBackArrow} />
-                                                        </Button>
+                                                            <Close
+                                                                className={classes.mobileCloseButton}
+                                                                fontSize="inherit"
+                                                            />
+                                                        </IconButton>
                                                     </Grid>
                                                 </Hidden>
                                             )}
@@ -253,11 +256,24 @@ export class SimpleSearchComponent extends PureComponent {
                                                     inputProps={ariaLabel}
                                                     onChange={this._handleSearchTextChange}
                                                     onKeyPress={this._handleSearch}
-                                                    value={this.props.searchText}
+                                                    value={this.state.searchTerm}
                                                     InputProps={{ disableUnderline: true }}
                                                     error={this.searchTextValidationMessage(this.props.searchText)}
                                                 />
                                             </Grid>
+                                            {this.props.showMobileSearchButton && (
+                                                <Hidden smUp>
+                                                    <Grid item>
+                                                        <IconButton
+                                                            onClick={this._handleSearch}
+                                                            disabled={this.state.searchTerm.trim().length === 0}
+                                                            className={classes.mobileSearchButtons}
+                                                        >
+                                                            <ArrowForward fontSize="inherit" />
+                                                        </IconButton>
+                                                    </Grid>
+                                                </Hidden>
+                                            )}
                                         </Grid>
                                     </div>
                                 )}
