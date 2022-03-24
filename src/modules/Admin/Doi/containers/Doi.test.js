@@ -1,10 +1,10 @@
 import { onSubmit } from './Doi';
+import * as actions from 'actions';
 
 jest.mock('actions', () => ({
+    ...jest.requireActual('actions'),
     updateDoi: jest.fn(() => Promise.resolve({})),
 }));
-
-import * as actions from 'actions';
 
 describe('Doi containers', () => {
     it('should call action on submit', async () => {

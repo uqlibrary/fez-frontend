@@ -2,20 +2,20 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import locale from 'locale/viewRecord';
-import { viewRecordsConfig, pathConfig } from 'config';
+import { pathConfig, viewRecordsConfig } from 'config';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import {
     AuthorsCitationView,
+    DateCitationView,
     DoiCitationView,
     EditorsCitationView,
-    DateCitationView,
 } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK } from 'config/general';
+import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -369,7 +369,7 @@ export class AdditionalInformationClass extends PureComponent {
                         value = this.getAbstract(publication);
                         break;
                     case 'rek_date':
-                        value = moment(publication[field]).isSame(moment('1000-01-01T00:00:00Z'))
+                        value = moment(publication[field]).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))
                             ? null
                             : publication[field];
                         break;

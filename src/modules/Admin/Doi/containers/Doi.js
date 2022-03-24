@@ -11,7 +11,7 @@ const API_REQUEST_SOURCE = 'doi_preview';
 
 export const onSubmit = (record, dispatch) => {
     const doi = !!record && !!record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi;
-    const updatedRecord = JSON.parse(JSON.stringify(record));
+    const updatedRecord = actions.sanitiseData(record);
 
     if (!doi) {
         updatedRecord.fez_record_search_key_doi = {
