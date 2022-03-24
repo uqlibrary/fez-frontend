@@ -3810,6 +3810,15 @@ export default {
                             ),
                         },
                         {
+                            question: "Can't find a journal?",
+                            answer: (
+                                <p>
+                                    Contact us at{' '}
+                                    <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                </p>
+                            ),
+                        },
+                        {
                             question: 'More help',
                             answer: (
                                 <ul>
@@ -3827,8 +3836,8 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Have feedback or can't find a journal? Contact{' '}
-                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                        Contact <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>{' '}
+                                        to let us know your feedback.
                                     </li>
                                 </ul>
                             ),
