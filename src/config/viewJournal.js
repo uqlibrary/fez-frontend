@@ -922,16 +922,23 @@ export const viewJournalConfig = {
                     fieldId: 'jnl-read-and-publish',
                     getData: journalDetails => {
                         return {
-                            inRnb:
-                                !!journalDetails.fez_journal_read_and_publish &&
-                                !!journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_issn,
+                            publisher:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
                         };
                     },
                     template: 'EnclosedLinkTemplate',
                     templateProps: {
-                        href: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : ''),
-                        prefix: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.prefixText : 'No'),
-                        postfix: data => (data.inRnb ? viewJournalLocale.viewJournal.readAndPublish.postfixText : ''),
+                        href: data =>
+                            !!data.publisher ? viewJournalLocale.viewJournal.readAndPublish.externalUrl : '',
+                        prefix: data =>
+                            !!data.publisher
+                                ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
+                                      '<publisher>',
+                                      `<${data.publisher}>`,
+                                  )
+                                : 'No',
+                        postfix: () => '',
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
                     },
