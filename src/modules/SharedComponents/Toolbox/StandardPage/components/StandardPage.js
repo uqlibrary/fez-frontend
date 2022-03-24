@@ -16,6 +16,7 @@ const styles = theme => ({
         },
     },
     layoutTitle: {
+        ...theme.typography.h5,
         overflowWrap: 'break-word !important',
         maxWidth: 1200,
         width: '90%',
@@ -23,6 +24,9 @@ const styles = theme => ({
         padding: 0,
         [theme.breakpoints.down('sm')]: {
             margin: '0 auto 12px auto',
+        },
+        [theme.breakpoints.up('sm')]: {
+            ...theme.typography.h4,
         },
     },
     helpIcon: {
@@ -39,32 +43,6 @@ export class Page extends Component {
         classes: PropTypes.object,
         standardPageId: PropTypes.string,
     };
-    constructor(props) {
-        super(props);
-        this.state = {
-            matches: window.matchMedia('(max-width: 599.96px)').matches,
-            mediaQuery: window.matchMedia('(max-width: 599.96px)'),
-        };
-    }
-
-    componentDidMount() {
-        this.handleResize();
-        this.state.mediaQuery?.addEventListener
-            ? this.state.mediaQuery?.addEventListener('change', this.handleResize)
-            : this.state.mediaQuery?.addListener(this.handleResize);
-    }
-
-    componentWillUnmount() {
-        this.state.mediaQuery?.removeEventListener
-            ? this.state.mediaQuery?.removeEventListener('change', this.handleResize)
-            : this.state.mediaQuery?.removeListener(this.handleResize);
-    }
-
-    handleResize = () => {
-        this.setState({
-            matches: this.state.mediaQuery.matches,
-        });
-    };
 
     render() {
         const { classes, title, children, help, standardPageId } = this.props;
@@ -79,7 +57,6 @@ export class Page extends Component {
                             component="h2"
                             id="page-title"
                             data-testid="page-title"
-                            variant={!this.state.matches ? 'h4' : 'h5'}
                         >
                             {title}
                         </Typography>
