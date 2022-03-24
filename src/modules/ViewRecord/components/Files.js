@@ -44,7 +44,7 @@ export const styles = theme => ({
         textAlign: 'center',
     },
     containerPadding: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: '8px 0',
         [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(1),
         },
