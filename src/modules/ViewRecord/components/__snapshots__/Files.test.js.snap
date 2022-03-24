@@ -8,13 +8,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -24,7 +18,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -46,7 +41,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -84,11 +80,6 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -102,7 +93,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -172,7 +164,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -188,7 +181,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -234,13 +227,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -250,7 +237,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -272,7 +260,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -310,11 +299,6 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -328,7 +312,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -382,7 +367,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -398,7 +384,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -454,13 +440,7 @@ exports[`Files Component  should not render cultural message 1`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -470,7 +450,8 @@ exports[`Files Component  should not render cultural message 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -492,7 +473,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -530,11 +512,6 @@ exports[`Files Component  should not render cultural message 1`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -548,7 +525,8 @@ exports[`Files Component  should not render cultural message 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -618,7 +596,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -634,7 +613,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -670,11 +649,6 @@ exports[`Files Component  should not render cultural message 1`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -688,7 +662,8 @@ exports[`Files Component  should not render cultural message 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -742,7 +717,8 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -758,7 +734,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -804,13 +780,7 @@ exports[`Files Component  should not render cultural message 2`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -820,7 +790,8 @@ exports[`Files Component  should not render cultural message 2`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -842,7 +813,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -880,11 +852,6 @@ exports[`Files Component  should not render cultural message 2`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -898,7 +865,8 @@ exports[`Files Component  should not render cultural message 2`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -968,7 +936,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -984,7 +953,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1020,11 +989,6 @@ exports[`Files Component  should not render cultural message 2`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1038,7 +1002,8 @@ exports[`Files Component  should not render cultural message 2`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -1092,7 +1057,8 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1108,7 +1074,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1166,13 +1132,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
       type="info"
       wiggle={null}
     />
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -1182,7 +1142,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -1204,7 +1165,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -1242,11 +1204,6 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1260,7 +1217,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -1330,7 +1288,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1346,7 +1305,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1382,11 +1341,6 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1400,7 +1354,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -1454,7 +1409,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1470,7 +1426,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1516,13 +1472,7 @@ exports[`Files Component  should render an image as the original filename with n
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -1532,7 +1482,8 @@ exports[`Files Component  should render an image as the original filename with n
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -1554,7 +1505,8 @@ exports[`Files Component  should render an image as the original filename with n
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -1592,11 +1544,6 @@ exports[`Files Component  should render an image as the original filename with n
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1610,7 +1557,8 @@ exports[`Files Component  should render an image as the original filename with n
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -1664,7 +1612,8 @@ exports[`Files Component  should render an image as the original filename with n
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1680,7 +1629,7 @@ exports[`Files Component  should render an image as the original filename with n
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1726,13 +1675,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -1742,7 +1685,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -1764,7 +1708,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -1802,11 +1747,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1820,7 +1760,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(VolumeUpIcon))
             color="secondary"
@@ -1874,7 +1815,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1890,7 +1832,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -1926,11 +1868,6 @@ exports[`Files Component  should render audio files with _xt in their filename f
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -1944,7 +1881,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(VolumeUpIcon))
             color="secondary"
@@ -1998,7 +1936,8 @@ exports[`Files Component  should render audio files with _xt in their filename f
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2014,7 +1953,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2060,13 +1999,7 @@ exports[`Files Component  should render component 1`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -2076,7 +2009,8 @@ exports[`Files Component  should render component 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -2098,7 +2032,8 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -2136,11 +2071,6 @@ exports[`Files Component  should render component 1`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -2154,7 +2084,8 @@ exports[`Files Component  should render component 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -2224,7 +2155,8 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2240,7 +2172,7 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2276,11 +2208,6 @@ exports[`Files Component  should render component 1`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -2294,7 +2221,8 @@ exports[`Files Component  should render component 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -2348,7 +2276,8 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2364,7 +2293,7 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2422,13 +2351,7 @@ exports[`Files Component  should render cultural message 1`] = `
       type="info"
       wiggle={null}
     />
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -2438,7 +2361,8 @@ exports[`Files Component  should render cultural message 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -2460,7 +2384,8 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -2498,11 +2423,6 @@ exports[`Files Component  should render cultural message 1`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -2516,7 +2436,8 @@ exports[`Files Component  should render cultural message 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -2586,7 +2507,8 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2602,7 +2524,7 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2638,11 +2560,6 @@ exports[`Files Component  should render cultural message 1`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -2656,7 +2573,8 @@ exports[`Files Component  should render cultural message 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -2710,7 +2628,8 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2726,7 +2645,7 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2772,13 +2691,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -2788,7 +2701,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -2810,7 +2724,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -2848,11 +2763,6 @@ exports[`Files Component  should render icon for mimeType 1`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -2866,7 +2776,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -2936,7 +2847,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2952,7 +2864,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -2988,11 +2900,6 @@ exports[`Files Component  should render icon for mimeType 1`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3006,7 +2913,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -3060,7 +2968,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3076,7 +2985,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3122,13 +3031,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -3138,7 +3041,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -3160,7 +3064,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -3198,11 +3103,6 @@ exports[`Files Component  should render icon for mimeType 2`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3216,7 +3116,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -3286,7 +3187,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3302,7 +3204,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3338,11 +3240,6 @@ exports[`Files Component  should render icon for mimeType 2`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3356,7 +3253,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -3410,7 +3308,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3426,7 +3325,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3472,13 +3371,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -3488,7 +3381,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -3510,7 +3404,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -3548,11 +3443,6 @@ exports[`Files Component  should render icon for mimeType 3`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3566,7 +3456,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -3636,7 +3527,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3652,7 +3544,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3688,11 +3580,6 @@ exports[`Files Component  should render icon for mimeType 3`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3706,7 +3593,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -3760,7 +3648,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3776,7 +3665,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -3822,13 +3711,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -3838,7 +3721,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -3860,7 +3744,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -3898,11 +3783,6 @@ exports[`Files Component  should render icon for mimeType 4`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -3916,7 +3796,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -3986,7 +3867,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4002,7 +3884,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4038,11 +3920,6 @@ exports[`Files Component  should render icon for mimeType 4`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4056,7 +3933,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -4110,7 +3988,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4126,7 +4005,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4172,13 +4051,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -4188,7 +4061,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -4210,7 +4084,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -4248,11 +4123,6 @@ exports[`Files Component  should render icon for mimeType 5`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4266,7 +4136,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -4336,7 +4207,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4352,7 +4224,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4388,11 +4260,6 @@ exports[`Files Component  should render icon for mimeType 5`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4406,7 +4273,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -4460,7 +4328,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4476,7 +4345,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4522,13 +4391,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -4538,7 +4401,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -4560,7 +4424,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -4598,11 +4463,6 @@ exports[`Files Component  should render icon for mimeType 6`] = `
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4616,7 +4476,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -4686,7 +4547,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4702,7 +4564,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4738,11 +4600,6 @@ exports[`Files Component  should render icon for mimeType 6`] = `
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4756,7 +4613,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -4810,7 +4668,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4826,7 +4685,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -4962,13 +4821,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -4978,7 +4831,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -5000,7 +4854,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -5038,11 +4893,6 @@ exports[`Files Component  should show a blacklisted collection member when the u
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -5056,7 +4906,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -5110,7 +4961,8 @@ exports[`Files Component  should show a blacklisted collection member when the u
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -5126,7 +4978,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -5172,13 +5024,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
   <StandardCard
     title="Files"
   >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
+    <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
         className="header"
@@ -5188,7 +5034,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
            
         </WithStyles(ForwardRef(Grid))>
@@ -5210,7 +5057,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-label"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               gutterBottom={true}
@@ -5248,11 +5096,6 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
     </div>
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -5266,7 +5109,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-0"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <WithStyles(Thumbnail)
             fileName="image.jpg"
@@ -5336,7 +5180,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-0"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -5352,7 +5197,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-0"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -5388,11 +5233,6 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -5406,7 +5246,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
         <WithStyles(ForwardRef(Grid))
           data-testid="dsi-mimetype-1"
           item={true}
-          xs={1}
+          sm={1}
+          xs={2}
         >
           <Memo(ForwardRef(ImageIcon))
             color="secondary"
@@ -5460,7 +5301,8 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-label-1"
             item={true}
-            sm={4}
+            md={4}
+            sm={6}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}
@@ -5476,7 +5318,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(ForwardRef(Grid))
             data-testid="dsi-size-1"
             item={true}
-            sm={2}
+            md={2}
           >
             <WithStyles(ForwardRef(Typography))
               noWrap={true}

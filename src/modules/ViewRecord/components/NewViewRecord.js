@@ -108,8 +108,8 @@ export const NewViewRecord = ({
     const handleDesktopDrawerToggle = () => {
         setOpen(!open);
     };
-    const HandleDrawerToggle = () => {
-        if (useMediaQuery('(max-width:599.96px)')) {
+    const handleDrawerToggle = () => {
+        if (window.matchMedia('(max-width:599.96px)').matches) {
             handleMobileDrawerToggle();
         } else {
             handleDesktopDrawerToggle();
@@ -135,7 +135,7 @@ export const NewViewRecord = ({
                 <DescriptionOutlinedIcon fontSize="inherit" />
             </Badge>
         ) : (
-            <DescriptionOutlinedIcon fontSize="inherit" onClick={HandleDrawerToggle} />
+            <DescriptionOutlinedIcon fontSize="inherit" onClick={handleDrawerToggle} />
         );
     };
 
@@ -165,7 +165,12 @@ export const NewViewRecord = ({
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <Grid container style={{ marginTop: isXsDown ? -12 : -24 }}>
+                <Grid
+                    container
+                    style={{ marginTop: isXsDown ? -12 : -24 }}
+                    id="notFoundGridContainer"
+                    data-testid="notFoundGridContainer"
+                >
                     <Grid item xs={12}>
                         {locale.pages.viewRecord.notFound.message}
                     </Grid>
@@ -201,7 +206,7 @@ export const NewViewRecord = ({
                 {isAdmin && !isDeleted && !!recordToView && (
                     <AdminViewRecordDrawer
                         content={drawerDescriptor}
-                        HandleDrawerToggle={HandleDrawerToggle}
+                        handleDrawerToggle={handleDrawerToggle}
                         open={open}
                         mobileOpen={mobileOpen}
                     />
@@ -226,7 +231,7 @@ export const NewViewRecord = ({
                                             variant="outlined"
                                             startIcon={getAdminRecordButtonIcon()}
                                             color="default"
-                                            onClick={HandleDrawerToggle}
+                                            onClick={handleDrawerToggle}
                                             id="adminDrawerButton"
                                             data-testid="btnAdminToggleDrawerVisibility"
                                         >

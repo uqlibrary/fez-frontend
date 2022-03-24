@@ -3313,11 +3313,11 @@ exports[`Related publications Component  should render component 2`] = `
                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                         "grid-xs-true": "MuiGrid-grid-xs-true",
                         "item": "MuiGrid-item",
-                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                         "root": "MuiGrid-root",
                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3418,6 +3418,7 @@ exports[`Related publications Component  should render component 2`] = `
                                     classes={
                                       Object {
                                         "root": undefined,
+                                        "title": "makeStyles-responsiveHeader-7",
                                       }
                                     }
                                     style={Object {}}
@@ -3441,7 +3442,7 @@ exports[`Related publications Component  should render component 2`] = `
                                           "content": "MuiCardHeader-content",
                                           "root": "MuiCardHeader-root",
                                           "subheader": "MuiCardHeader-subheader",
-                                          "title": "MuiCardHeader-title",
+                                          "title": "MuiCardHeader-title makeStyles-responsiveHeader-7",
                                         }
                                       }
                                       style={Object {}}
@@ -3464,7 +3465,7 @@ exports[`Related publications Component  should render component 2`] = `
                                           className="MuiCardHeader-content"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiCardHeader-title"
+                                            className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                             color="inherit"
                                             component="h3"
                                             data-testid="standard-card-title-header"
@@ -3473,7 +3474,7 @@ exports[`Related publications Component  should render component 2`] = `
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiCardHeader-title"
+                                              className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -3516,7 +3517,7 @@ exports[`Related publications Component  should render component 2`] = `
                                               variant="h5"
                                             >
                                               <h3
-                                                className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-7 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-title-header"
                                                 id="standard-card-title-header"
                                               >
@@ -6959,11 +6960,11 @@ exports[`Related publications Component  should render with a publication title 
                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                         "grid-xs-true": "MuiGrid-grid-xs-true",
                         "item": "MuiGrid-item",
-                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                         "root": "MuiGrid-root",
                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -7064,6 +7065,7 @@ exports[`Related publications Component  should render with a publication title 
                                     classes={
                                       Object {
                                         "root": undefined,
+                                        "title": "makeStyles-responsiveHeader-7",
                                       }
                                     }
                                     style={Object {}}
@@ -7087,7 +7089,7 @@ exports[`Related publications Component  should render with a publication title 
                                           "content": "MuiCardHeader-content",
                                           "root": "MuiCardHeader-root",
                                           "subheader": "MuiCardHeader-subheader",
-                                          "title": "MuiCardHeader-title",
+                                          "title": "MuiCardHeader-title makeStyles-responsiveHeader-7",
                                         }
                                       }
                                       style={Object {}}
@@ -7110,7 +7112,7 @@ exports[`Related publications Component  should render with a publication title 
                                           className="MuiCardHeader-content"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiCardHeader-title"
+                                            className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                             color="inherit"
                                             component="h3"
                                             data-testid="standard-card-a-test-title-header"
@@ -7119,7 +7121,7 @@ exports[`Related publications Component  should render with a publication title 
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiCardHeader-title"
+                                              className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -7162,7 +7164,7 @@ exports[`Related publications Component  should render with a publication title 
                                               variant="h5"
                                             >
                                               <h3
-                                                className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-7 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-a-test-title-header"
                                                 id="standard-card-a-test-title-header"
                                               >
@@ -10684,11 +10686,11 @@ exports[`Related publications Component  should render without a child search ke
                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                         "grid-xs-true": "MuiGrid-grid-xs-true",
                         "item": "MuiGrid-item",
-                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                         "root": "MuiGrid-root",
                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -10789,6 +10791,7 @@ exports[`Related publications Component  should render without a child search ke
                                     classes={
                                       Object {
                                         "root": undefined,
+                                        "title": "makeStyles-responsiveHeader-7",
                                       }
                                     }
                                     style={Object {}}
@@ -10812,7 +10815,7 @@ exports[`Related publications Component  should render without a child search ke
                                           "content": "MuiCardHeader-content",
                                           "root": "MuiCardHeader-root",
                                           "subheader": "MuiCardHeader-subheader",
-                                          "title": "MuiCardHeader-title",
+                                          "title": "MuiCardHeader-title makeStyles-responsiveHeader-7",
                                         }
                                       }
                                       style={Object {}}
@@ -10835,7 +10838,7 @@ exports[`Related publications Component  should render without a child search ke
                                           className="MuiCardHeader-content"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiCardHeader-title"
+                                            className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                             color="inherit"
                                             component="h3"
                                             data-testid="standard-card-title-header"
@@ -10844,7 +10847,7 @@ exports[`Related publications Component  should render without a child search ke
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiCardHeader-title"
+                                              className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -10887,7 +10890,7 @@ exports[`Related publications Component  should render without a child search ke
                                               variant="h5"
                                             >
                                               <h3
-                                                className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-7 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-title-header"
                                                 id="standard-card-title-header"
                                               >
@@ -22512,11 +22515,11 @@ exports[`Related publications Component  should render without a parent search k
                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                         "grid-xs-true": "MuiGrid-grid-xs-true",
                         "item": "MuiGrid-item",
-                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                         "root": "MuiGrid-root",
                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -22617,6 +22620,7 @@ exports[`Related publications Component  should render without a parent search k
                                     classes={
                                       Object {
                                         "root": undefined,
+                                        "title": "makeStyles-responsiveHeader-7",
                                       }
                                     }
                                     style={Object {}}
@@ -22640,7 +22644,7 @@ exports[`Related publications Component  should render without a parent search k
                                           "content": "MuiCardHeader-content",
                                           "root": "MuiCardHeader-root",
                                           "subheader": "MuiCardHeader-subheader",
-                                          "title": "MuiCardHeader-title",
+                                          "title": "MuiCardHeader-title makeStyles-responsiveHeader-7",
                                         }
                                       }
                                       style={Object {}}
@@ -22663,7 +22667,7 @@ exports[`Related publications Component  should render without a parent search k
                                           className="MuiCardHeader-content"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiCardHeader-title"
+                                            className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                             color="inherit"
                                             component="h3"
                                             data-testid="standard-card-title-header"
@@ -22672,7 +22676,7 @@ exports[`Related publications Component  should render without a parent search k
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiCardHeader-title"
+                                              className="MuiCardHeader-title makeStyles-responsiveHeader-7"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -22715,7 +22719,7 @@ exports[`Related publications Component  should render without a parent search k
                                               variant="h5"
                                             >
                                               <h3
-                                                className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-7 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-title-header"
                                                 id="standard-card-title-header"
                                               >

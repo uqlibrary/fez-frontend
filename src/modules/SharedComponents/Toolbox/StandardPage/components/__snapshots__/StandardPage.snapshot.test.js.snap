@@ -14,7 +14,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with hel
       component="h2"
       data-testid="page-title"
       id="page-title"
-      variant="h4"
     >
       Test
     </WithStyles(ForwardRef(Typography))>
@@ -52,7 +51,6 @@ exports[`Snapshot tests for StandardPage component renders StandardPage with tit
       component="h2"
       data-testid="page-title"
       id="page-title"
-      variant="h4"
     >
       standard page title
     </WithStyles(ForwardRef(Typography))>
@@ -1026,11 +1024,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                         "grid-xs-true": "MuiGrid-grid-xs-true",
                         "item": "MuiGrid-item",
-                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                         "root": "MuiGrid-root",
                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1143,11 +1141,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                               "grid-xs-true": "MuiGrid-grid-xs-true",
                               "item": "MuiGrid-item",
-                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                               "root": "MuiGrid-root",
                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1176,7 +1174,6 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               component="h2"
                               data-testid="page-title"
                               id="page-title"
-                              variant="h4"
                             >
                               <ForwardRef(Typography)
                                 className="Page-layoutTitle-2"
@@ -1218,10 +1215,9 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                                 component="h2"
                                 data-testid="page-title"
                                 id="page-title"
-                                variant="h4"
                               >
                                 <h2
-                                  className="MuiTypography-root Page-layoutTitle-2 MuiTypography-h4 MuiTypography-colorPrimary"
+                                  className="MuiTypography-root Page-layoutTitle-2 MuiTypography-body1 MuiTypography-colorPrimary"
                                   data-testid="page-title"
                                   id="page-title"
                                 >
@@ -1651,11 +1647,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                               "grid-xs-true": "MuiGrid-grid-xs-true",
                               "item": "MuiGrid-item",
-                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                               "root": "MuiGrid-root",
                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1772,11 +1768,11 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                               "grid-xs-true": "MuiGrid-grid-xs-true",
                               "item": "MuiGrid-item",
-                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                               "root": "MuiGrid-root",
                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                               "spacing-xs-10": "MuiGrid-spacing-xs-10",

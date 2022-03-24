@@ -91,7 +91,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right paddingRight24",
+              "secondary": "right undefined",
             }
           }
           secondary="Reorder records"
@@ -196,7 +196,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right paddingRight24",
+              "secondary": "right undefined",
             }
           }
           secondary="Reorder records"
@@ -301,7 +301,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right paddingRight24",
+              "secondary": "right undefined",
             }
           }
           secondary="Reorder records"
@@ -419,7 +419,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right paddingRight24",
+              "secondary": "right undefined",
             }
           }
           secondary="Reorder records"
@@ -524,7 +524,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "undefined test-class-1",
+              "secondary": "undefined undefined",
             }
           }
           secondary="Reorder records"
@@ -564,11 +564,14 @@ Object {
     "borderBottom": "1px solid rgba(0, 0, 0, 0.2)",
     "marginTop": 8,
   },
-  "paddingRight24": Object {
-    "paddingRight": 24,
-  },
-  "paddingRight36": Object {
+  "infinitePaddingRight": Object {
     "paddingRight": 36,
+  },
+  "paddingRight": Object {
+    "paddingRight": 40,
+  },
+  "paddingRightEdit": Object {
+    "paddingRight": 78,
   },
   "right": Object {
     "textAlign": "right",

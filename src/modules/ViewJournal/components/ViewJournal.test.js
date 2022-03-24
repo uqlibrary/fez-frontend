@@ -4,10 +4,19 @@ import { journalDetails } from 'mock/data/journal';
 
 import { render, waitForElementToBeRemoved, WithReduxStore, fireEvent } from 'test-utils';
 import ViewJournal from './ViewJournal';
+import mediaQuery from 'css-mediaquery';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ id: 1 })),
 }));
+
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
 const setup = () => {
     return render(
@@ -526,5 +535,50 @@ describe('ViewJournal', () => {
 
         // Regex: Exact pattern Match (between start and end) - Must match exactly.
         expect(getByTestId('journal-details-uqData-header')).toHaveTextContent(/^UQ eSpace$/);
+    });
+
+    it('should display journal details Tab width in tablet size when >1 tab shown', async () => {
+        window.matchMedia = createMatchMedia(950);
+
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
+            'style',
+            'max-width: calc((100vw - 68px) * 0.67);',
+        );
+    });
+
+    it('should display journal details Tab width in phone size when 1 tab shown', async () => {
+        window.matchMedia = createMatchMedia(590);
+
+        mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+            data: {
+                ...journalDetails.data,
+                fez_journal_jcr_scie: {
+                    fez_journal_jcr_scie_category: [
+                        {
+                            ...journalDetails.data.fez_journal_jcr_scie.fez_journal_jcr_scie_category[0],
+                        },
+                    ],
+                },
+            },
+        });
+
+        const { getByTestId, getByText } = setup();
+
+        await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+        expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
+            'style',
+            'max-width: 100%;',
+        );
     });
 });

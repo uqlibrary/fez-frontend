@@ -62,6 +62,11 @@ describe('NewViewRecord', () => {
         userIsAuthor.mockImplementation(() => true);
     });
 
+    afterEach(() => {
+        userIsAdmin.mockReset();
+        userIsAuthor.mockReset();
+    });
+
     it('should render default empty view', () => {
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
@@ -145,6 +150,14 @@ describe('NewViewRecord', () => {
         expect(getByText('Login to UQ eSpace for full search results and more services.')).toBeInTheDocument();
     });
 
+    it('should render error at phone breakpoint', () => {
+        window.matchMedia = createMatchMedia(590);
+        const { getByTestId, getByText } = setup({ recordToViewError: { message: 'PID not found', status: 404 } });
+        expect(getByText('Work not found')).toBeInTheDocument();
+        expect(getByText('(404 - PID not found)')).toBeInTheDocument();
+        expect(getByTestId('notFoundGridContainer')).toHaveAttribute('style', 'margin-top: -12px;');
+    });
+
     it('should render human readable message record not found', () => {
         const { getByText } = setup({ recordToViewError: { message: 'PID not found', status: 404 } });
         expect(getByText('Work not found')).toBeInTheDocument();
@@ -152,6 +165,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should have status prop in the header for admins', () => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByText } = setup({
             recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' },

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
-export default function ScrollToPos({ selector = window, x = 0, y = 0 } = {}) {
+export default function ScrollToPos({ selector = window, x = 0, y = 0 }) {
     const { pathname } = useLocation();
 
     useEffect(() => {

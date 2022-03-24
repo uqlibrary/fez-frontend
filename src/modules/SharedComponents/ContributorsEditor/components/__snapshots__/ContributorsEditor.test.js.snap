@@ -151,6 +151,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={true}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -275,6 +276,7 @@ exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={true}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -472,6 +474,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={true}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -596,6 +599,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={true}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -912,6 +916,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={false}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -1110,6 +1115,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={false}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -1257,6 +1263,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={true}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -1890,11 +1897,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                       "grid-xs-true": "MuiGrid-grid-xs-true",
                       "item": "MuiGrid-item",
-                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                       "root": "MuiGrid-root",
                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2008,11 +2015,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                             "grid-xs-true": "MuiGrid-grid-xs-true",
                             "item": "MuiGrid-item",
-                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                             "root": "MuiGrid-root",
                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2209,11 +2216,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2340,11 +2347,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2826,11 +2833,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -4000,11 +4007,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -4133,11 +4140,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -4171,6 +4178,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                         }
                                       >
                                         <WithStyles(ForwardRef(Button))
+                                          className="makeStyles-contributorFormButton-1"
                                           color="primary"
                                           data-testid="test-add"
                                           disabled={true}
@@ -4180,6 +4188,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           variant="contained"
                                         >
                                           <ForwardRef(Button)
+                                            className="makeStyles-contributorFormButton-1"
                                             classes={
                                               Object {
                                                 "colorInherit": "MuiButton-colorInherit",
@@ -4222,7 +4231,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             variant="contained"
                                           >
                                             <WithStyles(ForwardRef(ButtonBase))
-                                              className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                              className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                               component="button"
                                               data-testid="test-add"
                                               disabled={true}
@@ -4233,7 +4242,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               type="button"
                                             >
                                               <ForwardRef(ButtonBase)
-                                                className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                                className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                                 classes={
                                                   Object {
                                                     "disabled": "Mui-disabled",
@@ -4251,7 +4260,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-add"
                                                   disabled={true}
                                                   id="test-add"
@@ -4379,11 +4388,11 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -4417,6 +4426,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                         }
                                       >
                                         <WithStyles(ForwardRef(Button))
+                                          className="makeStyles-contributorFormButton-1"
                                           color="primary"
                                           data-testid="test-cancel"
                                           disabled={true}
@@ -4426,6 +4436,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                           variant="contained"
                                         >
                                           <ForwardRef(Button)
+                                            className="makeStyles-contributorFormButton-1"
                                             classes={
                                               Object {
                                                 "colorInherit": "MuiButton-colorInherit",
@@ -4468,7 +4479,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             variant="contained"
                                           >
                                             <WithStyles(ForwardRef(ButtonBase))
-                                              className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                              className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                               component="button"
                                               data-testid="test-cancel"
                                               disabled={true}
@@ -4479,7 +4490,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                               type="button"
                                             >
                                               <ForwardRef(ButtonBase)
-                                                className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                                className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                                 classes={
                                                   Object {
                                                     "disabled": "Mui-disabled",
@@ -4497,7 +4508,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-cancel"
                                                   disabled={true}
                                                   id="test-cancel"
@@ -5134,11 +5145,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                       "grid-xs-true": "MuiGrid-grid-xs-true",
                       "item": "MuiGrid-item",
-                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                       "root": "MuiGrid-root",
                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -5252,11 +5263,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                             "grid-xs-true": "MuiGrid-grid-xs-true",
                             "item": "MuiGrid-item",
-                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                             "root": "MuiGrid-root",
                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -5453,11 +5464,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -5584,11 +5595,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -6466,6 +6477,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                           },
                                                                         }
                                                                       }
+                                                                      TransitionProps={
+                                                                        Object {
+                                                                          "onEntering": [Function],
+                                                                        }
+                                                                      }
                                                                       anchorEl={
                                                                         <div
                                                                           aria-haspopup="listbox"
@@ -6491,7 +6507,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                       getContentAnchorEl={[Function]}
                                                                       id="org-affiliation-options"
                                                                       onClose={[Function]}
-                                                                      onEntering={[Function]}
                                                                       open={false}
                                                                       transformOrigin={
                                                                         Object {
@@ -6510,6 +6525,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                             "style": Object {
                                                                               "minWidth": undefined,
                                                                             },
+                                                                          }
+                                                                        }
+                                                                        TransitionProps={
+                                                                          Object {
+                                                                            "onEntering": [Function],
                                                                           }
                                                                         }
                                                                         anchorEl={
@@ -6543,7 +6563,6 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                                         getContentAnchorEl={[Function]}
                                                                         id="org-affiliation-options"
                                                                         onClose={[Function]}
-                                                                        onEntering={[Function]}
                                                                         open={false}
                                                                         transformOrigin={
                                                                           Object {
@@ -6677,11 +6696,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -7163,11 +7182,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -8103,11 +8122,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -8236,11 +8255,11 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -8274,6 +8293,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                         }
                                       >
                                         <WithStyles(ForwardRef(Button))
+                                          className="makeStyles-contributorFormButton-1"
                                           color="primary"
                                           data-testid="test-add"
                                           disabled={true}
@@ -8283,6 +8303,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                           variant="contained"
                                         >
                                           <ForwardRef(Button)
+                                            className="makeStyles-contributorFormButton-1"
                                             classes={
                                               Object {
                                                 "colorInherit": "MuiButton-colorInherit",
@@ -8325,7 +8346,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                             variant="contained"
                                           >
                                             <WithStyles(ForwardRef(ButtonBase))
-                                              className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                              className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                               component="button"
                                               data-testid="test-add"
                                               disabled={true}
@@ -8336,7 +8357,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                               type="button"
                                             >
                                               <ForwardRef(ButtonBase)
-                                                className="MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
+                                                className="MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth"
                                                 classes={
                                                   Object {
                                                     "disabled": "Mui-disabled",
@@ -8354,7 +8375,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+                                                  className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-contributorFormButton-1 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
                                                   data-testid="test-add"
                                                   disabled={true}
                                                   id="test-add"
@@ -9014,6 +9035,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={false}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}
@@ -9200,6 +9222,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         }
       >
         <WithStyles(ContributorRowHeader)
+          canEdit={false}
           hideDelete={false}
           isInfinite={false}
           isNtro={false}

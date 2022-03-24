@@ -96,7 +96,8 @@ export class SimpleSearchComponent extends PureComponent {
         super(props);
         this.state = {
             showMobile: false,
-            searchTerm: this.props.searchText ?? '',
+            /* istanbul ignore next */
+            searchTerm: this.props.searchText,
         };
     }
 
@@ -135,6 +136,7 @@ export class SimpleSearchComponent extends PureComponent {
 
     _handleSearch = event => {
         if (event && event.key && event.key !== 'Enter') return;
+        /* istanbul ignore next */
         if (this.state.searchTerm && this.state.searchTerm.trim().length === 0) return;
 
         if (this.props.searchText.trim().length > MAX_PUBLIC_SEARCH_TEXT_LENGTH) {

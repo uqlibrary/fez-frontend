@@ -1324,11 +1324,11 @@ exports[`Index page should render placeholders 1`] = `
                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                               "grid-xs-true": "MuiGrid-grid-xs-true",
                               "item": "MuiGrid-item",
-                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                               "root": "MuiGrid-root",
                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1441,11 +1441,11 @@ exports[`Index page should render placeholders 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1562,11 +1562,11 @@ exports[`Index page should render placeholders 1`] = `
                                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                     "grid-xs-true": "MuiGrid-grid-xs-true",
                                     "item": "MuiGrid-item",
-                                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                     "root": "MuiGrid-root",
                                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1679,11 +1679,11 @@ exports[`Index page should render placeholders 1`] = `
                                           "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                           "grid-xs-true": "MuiGrid-grid-xs-true",
                                           "item": "MuiGrid-item",
-                                          "justify-xs-center": "MuiGrid-justify-xs-center",
-                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                          "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                          "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                          "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                          "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                          "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                           "root": "MuiGrid-root",
                                           "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                           "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1798,11 +1798,11 @@ exports[`Index page should render placeholders 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2342,11 +2342,11 @@ exports[`Index page should render placeholders 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2461,11 +2461,11 @@ exports[`Index page should render placeholders 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2579,11 +2579,11 @@ exports[`Index page should render placeholders 1`] = `
                                                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                             "grid-xs-true": "MuiGrid-grid-xs-true",
                                                             "item": "MuiGrid-item",
-                                                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                             "root": "MuiGrid-root",
                                                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2685,6 +2685,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                           classes={
                                                                             Object {
                                                                               "root": "makeStyles-cardHeaderPrimary-9",
+                                                                              "title": "makeStyles-responsiveHeader-12",
                                                                             }
                                                                           }
                                                                           style={Object {}}
@@ -2708,7 +2709,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                 "content": "MuiCardHeader-content",
                                                                                 "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-9",
                                                                                 "subheader": "MuiCardHeader-subheader",
-                                                                                "title": "MuiCardHeader-title",
+                                                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-12",
                                                                               }
                                                                             }
                                                                             style={Object {}}
@@ -2731,7 +2732,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                 className="MuiCardHeader-content"
                                                                               >
                                                                                 <WithStyles(ForwardRef(Typography))
-                                                                                  className="MuiCardHeader-title"
+                                                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-12"
                                                                                   color="inherit"
                                                                                   component="h3"
                                                                                   data-testid="standard-card-what-is-espace?-header"
@@ -2740,7 +2741,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                   variant="h5"
                                                                                 >
                                                                                   <ForwardRef(Typography)
-                                                                                    className="MuiCardHeader-title"
+                                                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-12"
                                                                                     classes={
                                                                                       Object {
                                                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -2783,7 +2784,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     variant="h5"
                                                                                   >
                                                                                     <h3
-                                                                                      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-12 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                                                       data-testid="standard-card-what-is-espace?-header"
                                                                                       id="standard-card-what-is-espace?-header"
                                                                                     >
@@ -2983,11 +2984,11 @@ exports[`Index page should render placeholders 1`] = `
                                                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                             "grid-xs-true": "MuiGrid-grid-xs-true",
                                                             "item": "MuiGrid-item",
-                                                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                             "root": "MuiGrid-root",
                                                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3282,7 +3283,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 }
                                                                 classes={
                                                                   Object {
-                                                                    "newsItem": "NewsFeed-newsItem-12",
+                                                                    "newsItem": "NewsFeed-newsItem-13",
                                                                   }
                                                                 }
                                                                 loadingNewsFeedList={true}
