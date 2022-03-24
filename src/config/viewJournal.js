@@ -935,7 +935,7 @@ export const viewJournalConfig = {
                             !!data.publisher
                                 ? viewJournalLocale.viewJournal.readAndPublish.prefixText.replace(
                                       '<publisher>',
-                                      `<${data.publisher}>`,
+                                      `${data.publisher}`,
                                   )
                                 : 'No',
                         postfix: () => '',
