@@ -12,22 +12,21 @@ export const initialState = {
     currentPage: 1,
     perPage: 10,
     collectionsOpened: [],
+    collectionsSelected: [],
 };
 
 const handlers = {
     [actions.VIEW_COLLECTIONS_LOADING]: (state, action) => ({
-        // collectionList: [...state.collectionList],
         loadingCollections: true,
         loadingCollectionsPid: action.payload.pid,
         collectionList: state.collectionList,
         collectionsOpened: state.collectionsOpened,
+        collectionsSelected: [],
     }),
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {
-        // console.log('COLLECTIONS LOADED', state);
         const uniqueValues = new Set();
         const collectionList = [action.payload, ...state.collectionList];
-        // collectionList.reverse();
         const filteredList = collectionList.filter(obj => {
             const isPresent = uniqueValues.has(obj.parent);
             uniqueValues.add(obj.parent);
@@ -39,6 +38,7 @@ const handlers = {
             loadingCollectionsPid: null,
             loadingCollections: false,
             collectionsOpened: state.collectionsOpened,
+            collectionsSelected: [],
         };
     },
 

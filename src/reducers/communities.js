@@ -3,6 +3,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     communityList: [],
+    communitiesSelected: [],
     loadingCommunities: false,
     loadingCommunitiesError: null,
     totalRecords: 0,
@@ -34,6 +35,24 @@ const handlers = {
         loadingCommunities: false,
         loadingCommunitiesError: action.payload,
     }),
+    [actions.SET_COMMUNITIES_SELECTED]: (state, action) => {
+        let selectedArray = [...state.communitiesSelected];
+        if (selectedArray.indexOf(action.payload.pid) === -1) {
+            selectedArray.push(action.payload.pid);
+        } else {
+            selectedArray = selectedArray.filter(val => val !== action.payload.pid);
+        }
+        return {
+            ...state,
+            communitiesSelected: selectedArray,
+        };
+    },
+    [actions.SET_ALL_COMMUNITIES_SELECTED]: (state, action) => {
+        return {
+            ...state,
+            communitiesSelected: action.payload.pids,
+        };
+    },
 };
 
 export default function viewCommunitiesReducer(state = { ...initialState }, action) {

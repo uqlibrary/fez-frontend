@@ -71,3 +71,24 @@ export function setCollectionsArray(rowObject) {
         });
     };
 }
+
+export function setCommunitiesSelected(rowObject) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_COMMUNITIES_SELECTED,
+            payload: {
+                pid: rowObject.pid,
+            },
+        });
+    };
+}
+export function setAllCommunitiesSelected(pidObject) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_ALL_COMMUNITIES_SELECTED,
+            payload: {
+                pids: pidObject.pids,
+            },
+        });
+    };
+}

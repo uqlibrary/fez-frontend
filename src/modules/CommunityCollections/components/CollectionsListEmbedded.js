@@ -20,6 +20,7 @@ import CommunityCollectionsPaging from './CommunityCollectionsPaging';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const moment = require('moment');
 
@@ -35,6 +36,8 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     const dispatch = useDispatch();
     const [sortDirection, setSortDirection] = React.useState('Asc');
     const [sortBy, setSortBy] = React.useState('title');
+
+    const [collectionsSelected, setCollectionsSelected] = React.useState([]);
     React.useEffect(() => {
         /* istanbul ignore else */
         if (open) {
@@ -104,6 +107,27 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         );
     };
 
+    const onSelectRowChange = e => {
+        let selectedArray = [...collectionsSelected];
+        if (selectedArray.indexOf(e.target.value) === -1) {
+            selectedArray.push(e.target.value);
+        } else {
+            selectedArray = selectedArray.filter(val => val !== e.target.value);
+        }
+        setCollectionsSelected(selectedArray);
+    };
+
+    const onSelectAllChange = e => {
+        if (!e.target.checked) {
+            setCollectionsSelected([]);
+        } else {
+            const allRecords = [];
+            finalList.data.map(record => {
+                allRecords.push(record.rek_pid);
+            });
+            setCollectionsSelected(allRecords);
+        }
+    };
     const encodeLink = pid => {
         return `searchQueryParams${encodeURIComponent('[rek_ismemberof][value][]')}=${encodeURIComponent(
             pid,
@@ -166,6 +190,23 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                 <Table aria-label="simple table">
                                     <TableHead>
                                         <TableRow data-testid="embedded-collections-primary-header">
+                                            <TableCell>
+                                                <Checkbox
+                                                    color="primary"
+                                                    indeterminate={
+                                                        collectionsSelected.length > 0 &&
+                                                        collectionsSelected.length < finalList.data.length
+                                                    }
+                                                    checked={
+                                                        finalList.data.length > 0 &&
+                                                        collectionsSelected.length === finalList.data.length
+                                                    }
+                                                    onChange={onSelectAllChange}
+                                                    // inputProps={{
+                                                    //     'aria-label': 'select all rows',
+                                                    // }}
+                                                />
+                                            </TableCell>
                                             <TableCell>{labels.title}</TableCell>
                                             <TableCell className={classes.dateCell} align="right">
                                                 {labels.creation_date}
@@ -183,7 +224,22 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     <TableBody data-testid="embedded-collections-primary-body">
                                         {finalList.data.map(row => (
                                             <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                                                <TableCell component="th" scope="row">
+                                                <TableCell>
+                                                    <Checkbox
+                                                        color="primary"
+                                                        value={row.rek_pid}
+                                                        // indeterminate={
+                                                        //     communitiesSelected.length > 0 &&
+                                                        //     communitiesSelected.length < records.length
+                                                        // }
+                                                        checked={collectionsSelected.indexOf(row.rek_pid) !== -1}
+                                                        onChange={onSelectRowChange}
+                                                        // inputProps={{
+                                                        //     'aria-label': 'select all rows',
+                                                        // }}
+                                                    />
+                                                </TableCell>
+                                                <TableCell>
                                                     <Typography variant="body2">
                                                         <Link to={pathConfig.records.view(row.rek_pid)}>
                                                             {ReactHtmlParser(row.rek_title)}
