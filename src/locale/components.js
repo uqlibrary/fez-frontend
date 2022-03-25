@@ -3813,7 +3813,7 @@ export default {
                             question: "Can't find a journal?",
                             answer: (
                                 <p>
-                                    Contact us at{' '}
+                                    Contact us for help at{' '}
                                     <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
                                 </p>
                             ),
