@@ -35,12 +35,11 @@ import { notFound } from '../../../config/routes';
 import clsx from 'clsx';
 import Badge from '@material-ui/core/Badge';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import { Button } from '@material-ui/core';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -71,6 +70,12 @@ const useStyles = makeStyles(theme => ({
     },
     cursor: {
         cursor: 'pointer',
+    },
+    marginVariableTop: {
+        marginTop: -12,
+        [theme.breakpoints.up('sm')]: {
+            marginTop: -24,
+        },
     },
 }));
 
@@ -115,9 +120,6 @@ export const NewViewRecord = ({
             handleDesktopDrawerToggle();
         }
     };
-
-    const theme = useTheme();
-    const isXsDown = useMediaQuery(theme.breakpoints.down('sm'));
 
     const getAdminRecordButtonIcon = () => {
         return recordToView?.fez_internal_notes?.ain_detail ? (
@@ -167,7 +169,7 @@ export const NewViewRecord = ({
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
                 <Grid
                     container
-                    style={{ marginTop: isXsDown ? -12 : -24 }}
+                    className={classes.marginVariableTop}
                     id="notFoundGridContainer"
                     data-testid="notFoundGridContainer"
                 >
@@ -211,7 +213,7 @@ export const NewViewRecord = ({
                         mobileOpen={mobileOpen}
                     />
                 )}
-                <Grid container style={{ marginTop: isXsDown ? -12 : -24 }}>
+                <Grid container className={classes.marginVariableTop}>
                     <Grid item xs={12}>
                         <PublicationCitation
                             publication={recordToView}
