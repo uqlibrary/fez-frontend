@@ -20,6 +20,7 @@ import CommunityCollectionsPaging from './CommunityCollectionsPaging';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
+import Add from '@material-ui/icons/Add';
 
 const moment = require('moment');
 
@@ -130,6 +131,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                             variant="outlined"
                             to={`${pathConfig.admin.collection}?pid=${pid}&name=${title}`}
                             data-test-id="admin-add-community-button"
+                            startIcon={<Add />}
                         >
                             {communityCollectionsConfig.addNewCollectionText}
                         </Button>

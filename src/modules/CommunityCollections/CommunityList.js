@@ -24,6 +24,7 @@ import { CommunityTable } from './components/CommunityTable';
 
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
+import Add from '@material-ui/icons/Add';
 
 import { pushHistory } from './components/functions';
 
@@ -126,6 +127,7 @@ export const CommunityList = () => {
                                         variant="outlined"
                                         to={pathConfig.admin.community}
                                         data-testid="admin-add-community-button"
+                                        startIcon={<Add />}
                                         style={{
                                             backgroundColor: '#51247A',
                                             color: 'white',
