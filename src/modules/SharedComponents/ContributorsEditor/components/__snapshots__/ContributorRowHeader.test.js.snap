@@ -91,7 +91,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right undefined",
+              "secondary": "right paddingRight40",
             }
           }
           secondary="Reorder records"
@@ -196,7 +196,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right undefined",
+              "secondary": "right paddingRight40",
             }
           }
           secondary="Reorder records"
@@ -301,7 +301,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right undefined",
+              "secondary": "right paddingRight40",
             }
           }
           secondary="Reorder records"
@@ -419,7 +419,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "right undefined",
+              "secondary": "right paddingRight40",
             }
           }
           secondary="Reorder records"
@@ -524,7 +524,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         <WithStyles(ForwardRef(ListItemText))
           classes={
             Object {
-              "secondary": "undefined undefined",
+              "secondary": "undefined test-class-1",
             }
           }
           secondary="Reorder records"
@@ -577,4 +577,109 @@ Object {
     "textAlign": "right",
   },
 }
+`;
+
+exports[`Component ContributorRowHeader should use extra padding if row is editable 1`] = `
+<Fragment>
+  <WithStyles(ConfirmDialogBox)
+    locale={
+      Object {
+        "cancelButtonLabel": "No",
+        "confirmButtonLabel": "Yes",
+        "confirmationMessage": "Are you sure you want to delete all records?",
+        "confirmationTitle": "Delete all",
+      }
+    }
+    onAction={[MockFunction]}
+    onRef={[Function]}
+  />
+  <WithStyles(ForwardRef(ListItem))
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+  >
+    <Hidden
+      xsDown={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <Memo(ForwardRef(PeopleIcon)) />
+      </WithStyles(ForwardRef(ListItemIcon))>
+    </Hidden>
+    <WithStyles(ForwardRef(Grid))
+      classes={
+        Object {
+          "container": undefined,
+        }
+      }
+      container={true}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ForwardRef(ListItemText))
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
+          }
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
+      />
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    >
+      <Hidden
+        xsDown={true}
+      >
+        <WithStyles(ForwardRef(ListItemText))
+          classes={
+            Object {
+              "secondary": "undefined test-class-1",
+            }
+          }
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
+          }
+        />
+      </Hidden>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+    <WithStyles(ForwardRef(ListItemSecondaryAction))>
+      <WithStyles(ForwardRef(Tooltip))
+        disableFocusListener={false}
+        disableHoverListener={false}
+        disableTouchListener={false}
+        title="Remove all records"
+      >
+        <span>
+          <WithStyles(ForwardRef(IconButton))
+            aria-label="Remove all records"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <Memo(ForwardRef(DeleteForeverIcon)) />
+          </WithStyles(ForwardRef(IconButton))>
+        </span>
+      </WithStyles(ForwardRef(Tooltip))>
+    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+  </WithStyles(ForwardRef(ListItem))>
+</Fragment>
 `;
