@@ -87,7 +87,7 @@ export default {
         },
         journals: {
             search: {
-                primaryText: 'Strategic publishing tool',
+                primaryText: 'Journal search',
             },
         },
     },
