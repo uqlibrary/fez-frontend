@@ -20,8 +20,11 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
     const multipleData = data.length > 1;
-    // eslint-disable-next-line no-nested-ternary
-    const tabStyle = isSmDown && { maxWidth: multipleData ? 'calc((100vw - 68px) * 0.67)' : isXsDown ? '100%' : '50%' };
+    const tabStyle = isSmDown && {
+        // eslint-disable-next-line no-nested-ternary
+        maxWidth: multipleData ? 'calc((100vw - 68px) * 0.67)' : isXsDown ? '100%' : '50%',
+        width: '100%',
+    };
     return (
         <Grid container style={{ marginTop: 8 }}>
             <Grid item xs={12}>
