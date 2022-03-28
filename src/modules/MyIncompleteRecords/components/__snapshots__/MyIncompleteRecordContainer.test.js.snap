@@ -200,13 +200,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
               style="padding: 12px;"
             >
               <div
-                class="MuiGrid-root-1 makeStyles-info_outline-234 makeStyles-common-220 MuiGrid-container-2 MuiGrid-spacing-xs-3-26 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-xs-center-19"
+                class="MuiGrid-root-1 makeStyles-info_outline-234 makeStyles-common-220 MuiGrid-container-2 MuiGrid-spacing-xs-3-26 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-content-xs-center-19"
               >
                 <div
                   class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-true-49"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-xs-center-19"
+                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-content-xs-center-19"
                   >
                     <div
                       class="MuiGrid-root-1 makeStyles-icon-223 alert-icon  MuiGrid-item-3"
