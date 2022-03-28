@@ -638,6 +638,9 @@ export default {
         collectionList: {
             title: 'List of Collections',
         },
+        collectionBulkMove: {
+            title: 'Bulk move collections',
+        },
         masquerade: {
             title: 'Masquerade',
             help: {

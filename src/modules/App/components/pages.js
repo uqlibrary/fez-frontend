@@ -36,6 +36,8 @@ export const CommunityForm = lazy(() =>
 );
 export const CommunityList = lazy(() => lazyRetry(() => import('modules/CommunityCollections/CommunityList')));
 
+export const BulkCollections = lazy(() => lazyRetry(() => import('modules/CommunityCollections/BulkCollections')));
+
 export const Dashboard = lazy(() => lazyRetry(() => import('modules/Dashboard/containers/Dashboard')));
 export const DeleteRecord = lazy(() => lazyRetry(() => import('modules/DeleteRecord/containers/DeleteRecord')));
 export const Doi = lazy(() => lazyRetry(() => import('modules/Admin/Doi/containers/Doi')));

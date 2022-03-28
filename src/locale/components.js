@@ -3636,6 +3636,10 @@ export default {
                 communities: 'Communities',
                 collections: 'Collections',
             },
+            bulkActionsText: 'Bulk Actions',
+            bulkMoveCollections: {
+                title: 'Bulk Move collections',
+            },
             addCommunityText: 'Add Missing Community',
             snackbar: {
                 message: 'Search results updated',

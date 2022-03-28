@@ -22,6 +22,12 @@ import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
 import Checkbox from '@material-ui/core/Checkbox';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import { ccBulkActions } from 'config/communityCollections';
+// import { debounce } from 'throttle-debounce';
+// import { useDispatch, useSelector } from 'react-redux';
+
 const moment = require('moment');
 
 const useStyles = makeStyles({
@@ -41,13 +47,52 @@ const useStyles = makeStyles({
         },
     },
 });
+export const navigateToUrl = (uri, target, options) => {
+    const fullUri = uri;
+    console.log('OPENING WINDOW PAGE');
+    window.open(fullUri, target, options);
+};
 
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
+    const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
+    const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
+    const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
+
+    const collectionsSelected = useSelector(state => state.get('viewCollectionsReducer').collectionsSelected);
+
     const dispatch = useDispatch();
+
     const [sortDirection, setSortDirection] = React.useState('Asc');
     const [sortBy, setSortBy] = React.useState('title');
+    // const [collectionsSelected, setCollectionsSelected] = React.useState([]);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const bulkOpen = Boolean(anchorEl);
 
-    const [collectionsSelected, setCollectionsSelected] = React.useState([]);
+    const menuOptions = ccBulkActions.map(action => {
+        // const linkTarget = action.inApp ? '_self' : '_blank';
+        const options = action.options || null;
+        const url = action.url(pid);
+        // const api = action.api(pid);
+        const clickHandler = () => {
+            // console.log('IS URL', url);
+            // if (url) {
+            console.log('DEBOUNCING');
+
+            navigateToUrl(url + '&user=uqstaff', '_self', options);
+
+            // } else {
+            // dispatch here
+            // console.log(api);
+            // }
+        };
+
+        const label = action.label;
+        return {
+            label,
+            clickHandler,
+        };
+    });
+
     React.useEffect(() => {
         /* istanbul ignore else */
         if (open) {
@@ -64,9 +109,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
-    const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
-    const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
-    const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
     const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
@@ -118,24 +160,28 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     };
 
     const onSelectRowChange = e => {
-        let selectedArray = [...collectionsSelected];
-        if (selectedArray.indexOf(e.target.value) === -1) {
-            selectedArray.push(e.target.value);
-        } else {
-            selectedArray = selectedArray.filter(val => val !== e.target.value);
-        }
-        setCollectionsSelected(selectedArray);
+        // let selectedArray = [...collectionsSelected];
+        // if (selectedArray.indexOf(e.target.value) === -1) {
+        //     selectedArray.push(e.target.value);
+        // } else {
+        //     selectedArray = selectedArray.filter(val => val !== e.target.value);
+        // }
+        // setCollectionsSelected(selectedArray);
+        console.log('ON SELECT ROW CHANGE', e.target.value);
+        dispatch(actions.setCollectionsSelected({ parent: pid, pid: e.target.value }));
     };
 
     const onSelectAllChange = e => {
         if (!e.target.checked) {
-            setCollectionsSelected([]);
+            // setCollectionsSelected([]);
+            dispatch(actions.setAllCollectionsSelected({ parent: pid, pids: [] }));
         } else {
             const allRecords = [];
             finalList.data.map(record => {
                 allRecords.push(record.rek_pid);
             });
-            setCollectionsSelected(allRecords);
+            // setCollectionsSelected(allRecords);
+            dispatch(actions.setAllCollectionsSelected({ parent: pid, pids: allRecords }));
         }
     };
     const encodeLink = pid => {
@@ -144,8 +190,18 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         )}&searchMode=advanced&commColl=true`;
     };
 
+    const handleBulkClick = event => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    /* istanbul ignore next */
+    const handleBulkClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <div>
+            {console.log('THE CHECKED LIST', collectionsSelected)}
             {collectionListLoading && loadingCollectionsPid === pid && (
                 <div data-testid="collections-page-loading">
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
@@ -300,15 +356,36 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                 variant="contained"
                                 disableElevation
                                 disabled={!!collectionsSelected?.length < 1}
-                                // // onClick={handleClick}
+                                onClick={handleBulkClick}
                                 classes={{
                                     root: classes.enabledButton,
                                     disabled: classes.disabledButton,
                                 }}
                                 endIcon={<KeyboardArrowDownIcon />}
                             >
-                                Bulk Actions
+                                {conf.bulkActionsText}
                             </Button>
+                            <Menu id="admin-actions-menu" anchorEl={anchorEl} open={bulkOpen} onClose={handleBulkClose}>
+                                {menuOptions.map((option, index) => (
+                                    <MenuItem
+                                        key={index}
+                                        onClick={() => {
+                                            setAnchorEl(false);
+                                            option.clickHandler();
+                                        }}
+                                        onContextMenu={() => {
+                                            setAnchorEl(false);
+                                            option.clickHandler(true);
+                                        }}
+                                        onAuxClick={() => {
+                                            setAnchorEl(false);
+                                            option.clickHandler(true);
+                                        }}
+                                    >
+                                        {option.label}
+                                    </MenuItem>
+                                ))}
+                            </Menu>
                         </Collapse>
                     )}
                     {!finalList.data.length > 0 && (

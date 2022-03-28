@@ -92,3 +92,25 @@ export function setAllCommunitiesSelected(pidObject) {
         });
     };
 }
+
+export function setCollectionsSelected(rowObject) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_COLLECTIONS_SELECTED,
+            payload: {
+                pid: rowObject.pid,
+                selectedParent: rowObject.parent,
+            },
+        });
+    };
+}
+export function setAllCollectionsSelected(pidObject) {
+    return dispatch => {
+        dispatch({
+            type: actions.SET_ALL_COLLECTIONS_SELECTED,
+            payload: {
+                pids: pidObject.pids,
+            },
+        });
+    };
+}

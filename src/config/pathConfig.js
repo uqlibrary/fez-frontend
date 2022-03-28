@@ -42,6 +42,7 @@ export const pathConfig = {
         collectionsListUrl: '/collections',
         communityListAPI: 'communities',
         collectionListAPI: 'communities',
+        collectionsBulkMove: '/collections/bulk/move',
     },
     communityList: '/communities',
     collectionList: {

@@ -62,6 +62,7 @@ export const flattedPathConfig = [
     '/records/search',
     '/view',
     '/communitylist',
+    '/collections/bulk/move',
 ];
 
 // TODO: will we even have roles?
@@ -492,6 +493,12 @@ export const getRoutesConfig = ({
                       exact: true,
                       access: [roles.admin],
                       pageTitle: locale.components.MasterJournalListIngest.title,
+                  },
+                  {
+                      path: pathConfig.communityCollections.collectionsBulkMove,
+                      component: components.BulkCollections,
+                      exact: true,
+                      pageTitle: locale.pages.collectionBulkMove.title,
                   },
               ]
             : []),
