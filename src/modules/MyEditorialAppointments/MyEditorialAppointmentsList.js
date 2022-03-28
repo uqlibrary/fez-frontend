@@ -46,11 +46,17 @@ const useStyles = makeStyles(theme => ({
     },
     adjustSpacingXs: {
         [theme.breakpoints.down('xs')]: {
-            '& [class*="MTableToolbar-root-"]': {
-                paddingLeft: '14px',
+            '& [class*="MuiToolbar-root-"]': {
+                padding: 0,
+                display: 'block',
+
+                '& > div:first-child': {
+                    display: 'none',
+                },
             },
-            '& [class^="MTableToolbar-spacer-"]': {
-                display: 'none',
+
+            '& button#my-editorial-appointments-add-new-editorial-appointment': {
+                width: '100%',
             },
         },
     },
