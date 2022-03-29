@@ -4458,7 +4458,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/journals/search/",
-          "primaryText": "Strategic publishing tool",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
@@ -5502,7 +5502,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/journals/search/",
-          "primaryText": "Strategic publishing tool",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
