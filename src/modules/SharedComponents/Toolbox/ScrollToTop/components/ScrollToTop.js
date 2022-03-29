@@ -9,7 +9,11 @@ export class ScrollToTop extends Component {
     };
     /* istanbul ignore next */
     componentDidUpdate(prevProps) {
-        if (this.props.location !== prevProps.location && document.getElementById('content-container')) {
+        if (
+            this.props.location?.state?.scrollToTop !== false &&
+            this.props.location !== prevProps.location &&
+            document.getElementById('content-container')
+        ) {
             document.getElementById('content-container').scrollTop = 0;
         }
     }
