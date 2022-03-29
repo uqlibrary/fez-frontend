@@ -24,6 +24,7 @@ export const ConfirmationBox = ({
     actionButtonColor,
     actionButtonVariant,
     cancelButtonColor,
+    classes,
     confirmationBoxId,
     InputForm,
     hideActionButton,
@@ -37,8 +38,7 @@ export const ConfirmationBox = ({
     showAlternateActionButton,
     showInputForm,
 }) => {
-    const classes = useStyles();
-
+    const classesInternal = useStyles();
     const _onAction = () => {
         onClose();
         onAction();
@@ -55,7 +55,13 @@ export const ConfirmationBox = ({
     };
 
     return (
-        <Dialog style={{ padding: 6 }} open={isOpen} id={confirmationBoxId} data-testid={confirmationBoxId}>
+        <Dialog
+            style={{ padding: 6 }}
+            open={isOpen}
+            id={confirmationBoxId}
+            data-testid={confirmationBoxId}
+            classes={classes}
+        >
             <DialogTitle data-testid="message-title">{locale.confirmationTitle}</DialogTitle>
             <DialogContent>
                 <DialogContentText data-testid="message-content">{locale.confirmationMessage}</DialogContentText>
@@ -85,7 +91,7 @@ export const ConfirmationBox = ({
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
-                                className={classes.alternateActionButtonClass}
+                                className={classesInternal.alternateActionButtonClass}
                                 children={locale.alternateActionButtonLabel}
                                 fullWidth
                                 onClick={_onAlternateAction}
@@ -117,6 +123,7 @@ ConfirmationBox.propTypes = {
     actionButtonColor: PropTypes.string,
     actionButtonVariant: PropTypes.string,
     cancelButtonColor: PropTypes.string,
+    classes: PropTypes.object,
     confirmationBoxId: PropTypes.string.isRequired,
     hideActionButton: PropTypes.bool,
     hideCancelButton: PropTypes.bool,
@@ -132,6 +139,7 @@ ConfirmationBox.propTypes = {
 };
 
 ConfirmationBox.defaultProps = {
+    classes: {},
     hideActionButton: false,
     hideCancelButton: false,
     isOpen: false,

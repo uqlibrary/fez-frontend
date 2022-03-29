@@ -73,7 +73,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                         />
                     </Grid>
                 )}
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.cancelButtonLabel}
@@ -85,7 +85,7 @@ export const ChangeDisplayTypeForm = ({ error, handleSubmit, submitting, submitS
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
                         children={txt.changeDisplayTypeForm.formLabels.submitButtonLabel}
