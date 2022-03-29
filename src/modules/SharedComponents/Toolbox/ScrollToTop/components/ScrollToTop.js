@@ -7,7 +7,7 @@ export class ScrollToTop extends Component {
         children: PropTypes.any,
         location: PropTypes.object,
     };
-    /* istanbul ignore next */
+
     componentDidUpdate(prevProps) {
         const element = document.getElementById('content-container');
         if (
