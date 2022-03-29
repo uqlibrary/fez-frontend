@@ -1,3 +1,18 @@
+const scrollToBottom = () =>
+    cy
+        .get('#content-container')
+        .scrollTo('bottom')
+        .then($el => {
+            // make sure it has been scrolled to the bottom
+            const clientHeight = $el.get(0).clientHeight;
+            expect(clientHeight).to.be.greaterThan(500);
+            return clientHeight;
+        });
+const assertScrollPosition = position =>
+    cy.get('#content-container').should($bar => {
+        expect($bar.get(0)).to.have.property('clientHeight', position);
+    });
+
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
         cy.visit('localhost:3000/journals/search/');
@@ -125,6 +140,41 @@ context('Strategic Publishing - Search', () => {
             scopeName: 'Keywords chips',
             includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
         });
+    });
+
+    it('Selecting keyword should not change scroll position', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        scrollToBottom().then(currentClientHeight => {
+            // select a keyword
+            cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+            cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
+            // make sure the scroll hasn't changed
+            assertScrollPosition(currentClientHeight);
+        });
+    });
+
+    it('Removing keyword should not change scroll position', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('#content-container')
+            .scrollTo('bottom')
+            .then($el => {
+                // make sure it has been scrolled to the bottom
+                const clientHeight = $el.get(0).clientHeight;
+                expect(clientHeight).to.be.greaterThan(500);
+                // select a keyword
+                cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+                // and remove the selected
+                cy.get('[data-testid="journal-search-chip-keyword-bioe"]')
+                    .find('svg')
+                    .click()
+                    .then(() => {
+                        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
+                        // make sure the scroll hasn't changed
+                        cy.get('#content-container').should($bar => {
+                            expect($bar.get(0)).to.have.property('clientHeight', clientHeight);
+                        });
+                    });
+            });
     });
 
     it('FAQ', () => {
@@ -518,19 +568,25 @@ context('Strategic Publishing - Search', () => {
                 .should('have.length', resultsLengthWithKeywordAndFacets); // /mock/index.js
 
             // update sorting
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
             cy.get('[role="listbox"] > li[data-value="score"]').click();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Search relevance');
+            assertScrollPosition(0);
 
             // update order
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
             cy.get('[role="listbox"] > li[data-value="Desc"]').click();
             cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Desc');
+            assertScrollPosition(0);
 
             // update page size
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-page-size"]').click();
             cy.get('[role="listbox"] > li[data-value="20"]').click();
             cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '20');
+            assertScrollPosition(0);
 
             // assert everything selected is in the URL
             cy.location().should(location => {
@@ -545,8 +601,11 @@ context('Strategic Publishing - Search', () => {
 
             // clear the search
             cy.get('[data-testid="journal-search-clear-keywords-button"]').click();
-
             cy.get('[data-testid="journal-search-card"]').should('be.visible');
+            // should scroll up
+            cy.get('#content-container').should($bar => {
+                expect($bar.get(0)).to.have.property('clientHeight', 0);
+            });
 
             // assert nothing previously selected is in the URL
             cy.location().should(location => {
