@@ -552,7 +552,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
             'style',
-            'max-width: calc((100vw - 68px) * 0.67);',
+            'max-width: calc((100vw - 68px) * 0.67); width: 100%;',
         );
     });
 
@@ -578,7 +578,7 @@ describe('ViewJournal', () => {
 
         expect(getByTestId('journal-details-tab-fez-journal-jcr-scie-category-0-heading')).toHaveAttribute(
             'style',
-            'max-width: 100%;',
+            'max-width: 100%; width: 100%;',
         );
     });
 });
