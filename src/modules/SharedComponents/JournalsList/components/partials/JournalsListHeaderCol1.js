@@ -6,6 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import PropTypes from 'prop-types';
 import { Tooltip } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
 
 const useStyles = makeStyles(theme => ({
     gridContainer: {
@@ -39,7 +40,10 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             height: 32,
         },
-        paddingLeft: 14,
+        paddingLeft: theme.spacing(1),
+    },
+    headingPadding: {
+        paddingLeft: theme.spacing(2),
     },
 }));
 
@@ -75,7 +79,7 @@ const JournalsListHeaderCol1 = ({ onChange, isSelectable = true, checked }) => {
                 xs
                 id="journal-list-header-col-1"
                 data-testid="journal-list-header-col-1"
-                className={classes.heading}
+                className={clsx({ [classes.heading]: true, [classes.headingPadding]: isSelectable })}
             >
                 <InputLabel shrink style={{ fontWeight: 600 }}>
                     {JournalFieldsMap[0].label}

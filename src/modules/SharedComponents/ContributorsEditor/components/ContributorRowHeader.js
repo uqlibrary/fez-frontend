@@ -24,6 +24,7 @@ export class ContributorRowHeader extends PureComponent {
         showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
+        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -74,6 +75,7 @@ export class ContributorRowHeader extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            canEdit,
         } = this.props;
 
         return (
@@ -127,7 +129,12 @@ export class ContributorRowHeader extends PureComponent {
                                 secondaryTypographyProps={{ variant: 'caption' }}
                                 classes={{
                                     secondary: `${classes.right} ${
-                                        isInfinite ? classes.paddingRight36 : classes.paddingRight24
+                                        // eslint-disable-next-line no-nested-ternary
+                                        isInfinite
+                                            ? classes.infinitePaddingRight
+                                            : canEdit
+                                            ? classes.paddingRightEdit
+                                            : classes.paddingRight
                                     }`,
                                 }}
                             />
@@ -165,10 +172,11 @@ export const styles = () => ({
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         marginTop: 8,
     },
-    paddingRight24: {
-        paddingRight: 24,
+    paddingRightEdit: {
+        paddingRight: 78,
     },
-    paddingRight36: {
+    paddingRight: { paddingRight: 40 },
+    infinitePaddingRight: {
         paddingRight: 36,
     },
 });

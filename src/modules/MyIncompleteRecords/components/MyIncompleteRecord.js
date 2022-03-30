@@ -134,11 +134,11 @@ export const MyIncompleteRecord = props => {
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
-                                <Grid container spacing={1} className={classes.GridType}>
+                                <Grid container className={classes.GridType}>
                                     {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
-                                        <Grid container spacing={2} alignItems="flex-start">
+                                        <Grid container alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2">
+                                                <Typography>
                                                     {
                                                         viewRecordLocale.viewRecord.headings.default.publicationDetails
                                                             .rek_display_type
@@ -146,18 +146,16 @@ export const MyIncompleteRecord = props => {
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2">
-                                                    {recordToFix.rek_display_type_lookup}
-                                                </Typography>
+                                                <Typography>{recordToFix.rek_display_type_lookup}</Typography>
                                             </Grid>
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid container spacing={1} className={classes.GridSubType}>
+                                <Grid container className={classes.GridSubType}>
                                     {!!recordToFix && !!recordToFix.rek_subtype && (
-                                        <Grid container spacing={2} alignItems="flex-start">
+                                        <Grid container alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2">
+                                                <Typography>
                                                     {
                                                         viewRecordLocale.viewRecord.headings.default.publicationDetails
                                                             .rek_subtype
@@ -165,7 +163,7 @@ export const MyIncompleteRecord = props => {
                                                 </Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2">{recordToFix.rek_subtype}</Typography>
+                                                <Typography>{recordToFix.rek_subtype}</Typography>
                                             </Grid>
                                         </Grid>
                                     )}

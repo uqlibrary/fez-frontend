@@ -35,12 +35,19 @@ export const styles = theme => ({
     dataWrapper: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
     },
     fileIcon: {
         opacity: 0.5,
     },
     thumbIconCentered: {
         textAlign: 'center',
+    },
+    containerPadding: {
+        padding: '8px 0',
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
     },
 });
 
@@ -433,7 +440,7 @@ export class FilesClass extends Component {
                     ).length > 0 && (
                         <Alert {...{ ...globalLocale.global.loginAlertForFiles, action: redirectUserToLogin() }} />
                     )}
-                    <div style={{ padding: 8 }}>
+                    <div className={this.props.classes.containerPadding}>
                         <Grid
                             container
                             direction="row"
@@ -441,7 +448,7 @@ export class FilesClass extends Component {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={2} sm={1}>
                                 &nbsp;
                             </Grid>
                             <Grid item sm={4} data-testid="dsi-dsid-label">
@@ -450,7 +457,7 @@ export class FilesClass extends Component {
                                 </Typography>
                             </Grid>
                             <Hidden xsDown>
-                                <Grid item sm={4} data-testid="dsi-label-label">
+                                <Grid item sm={6} md={4} data-testid="dsi-label-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.description}
                                     </Typography>
@@ -469,7 +476,7 @@ export class FilesClass extends Component {
                         </Grid>
                     </div>
                     {fileData.map((item, index) => (
-                        <div style={{ padding: 8 }} key={index}>
+                        <div className={this.props.classes.containerPadding} key={index}>
                             <Grid
                                 container
                                 direction="row"
@@ -481,7 +488,8 @@ export class FilesClass extends Component {
                             >
                                 <Grid
                                     item
-                                    xs={1}
+                                    xs={2}
+                                    sm={1}
                                     className={this.props.classes.thumbIconCentered}
                                     data-testid={`dsi-mimetype-${index}`}
                                 >
@@ -503,7 +511,8 @@ export class FilesClass extends Component {
                                 <Hidden xsDown>
                                     <Grid
                                         item
-                                        sm={4}
+                                        sm={6}
+                                        md={4}
                                         className={this.props.classes.dataWrapper}
                                         data-testid={`dsi-label-${index}`}
                                     >
@@ -515,7 +524,7 @@ export class FilesClass extends Component {
                                 <Hidden smDown>
                                     <Grid
                                         item
-                                        sm={2}
+                                        md={2}
                                         className={this.props.classes.dataWrapper}
                                         data-testid={`dsi-size-${index}`}
                                     >

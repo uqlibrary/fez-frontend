@@ -11,8 +11,12 @@ const styles = theme => ({
         margin: '24px auto',
         width: '90%',
         padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            margin: '12px auto',
+        },
     },
     layoutTitle: {
+        ...theme.typography.h5,
         overflowWrap: 'break-word !important',
         maxWidth: 1200,
         width: '90%',
@@ -21,9 +25,12 @@ const styles = theme => ({
         [theme.breakpoints.down('sm')]: {
             margin: '0 auto 12px auto',
         },
+        [theme.breakpoints.up('sm')]: {
+            ...theme.typography.h4,
+        },
     },
     helpIcon: {
-        position: 'absolute',
+        position: 'relative',
         right: '10px',
     },
 });
@@ -39,6 +46,7 @@ export class Page extends Component {
 
     render() {
         const { classes, title, children, help, standardPageId } = this.props;
+
         return (
             <Grid container className="StandardPage" id={standardPageId} data-testid={standardPageId}>
                 {title && (
@@ -49,7 +57,6 @@ export class Page extends Component {
                             component="h2"
                             id="page-title"
                             data-testid="page-title"
-                            variant="h4"
                         >
                             {title}
                         </Typography>

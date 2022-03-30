@@ -3,7 +3,7 @@
 exports[`StandardCard component renders given ID for standard card 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-32 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-38 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="test-card"
     id="test-card"
   >
@@ -14,7 +14,7 @@ exports[`StandardCard component renders given ID for standard card 1`] = `
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-43 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="test-card-header"
           id="test-card-header"
         >
@@ -34,20 +34,20 @@ exports[`StandardCard component renders given ID for standard card 1`] = `
 exports[`StandardCard component renders with custom colours and full height 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-17 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-20 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="standard-card-card-title"
     id="standard-card-card-title"
     style="background-color: rgb(255, 204, 204); color: rgb(17, 17, 17); height: 100%;"
   >
     <div
-      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-19"
+      class="MuiCardHeader-root makeStyles-cardHeaderPrimary-22"
       style="background-color: rgb(204, 204, 204);"
     >
       <div
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-25 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -56,7 +56,7 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
       </div>
     </div>
     <div
-      class="MuiCardContent-root makeStyles-cardContentNoPadding-18"
+      class="MuiCardContent-root makeStyles-cardContentNoPadding-21"
       data-testid="standard-card-card-title-content"
       id="standard-card-card-title-content"
     />
@@ -67,7 +67,7 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
 exports[`StandardCard component renders with no title 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-6 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-7 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="standard-card-"
     id="standard-card-"
   >
@@ -78,7 +78,7 @@ exports[`StandardCard component renders with no title 1`] = `
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-12 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card--header"
           id="standard-card--header"
         />
@@ -96,7 +96,7 @@ exports[`StandardCard component renders with no title 1`] = `
 exports[`StandardCard component renders with small title and as a subcard 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-27 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-32 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="standard-card-card-title"
     id="standard-card-card-title"
   >
@@ -107,7 +107,7 @@ exports[`StandardCard component renders with small title and as a subcard 1`] = 
         class="MuiCardHeader-content"
       >
         <h4
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h6 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-37 MuiTypography-h6 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -127,19 +127,19 @@ exports[`StandardCard component renders with small title and as a subcard 1`] = 
 exports[`StandardCard component renders with square top and accent header 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-22 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-26 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="standard-card-card-title"
     id="standard-card-card-title"
   >
     <div
-      class="MuiCardHeader-root makeStyles-cardHeaderAccent-25"
+      class="MuiCardHeader-root makeStyles-cardHeaderAccent-29"
       style="border-top-left-radius: 0; border-top-right-radius: 0;"
     >
       <div
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-31 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -159,7 +159,7 @@ exports[`StandardCard component renders with square top and accent header 1`] = 
 exports[`StandardCard component renders with title and help button 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root MuiCard-root makeStyles-card-11 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root MuiCard-root makeStyles-card-13 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
     data-testid="standard-card-card-title"
     id="standard-card-card-title"
   >
@@ -170,7 +170,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-18 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >
@@ -193,7 +193,7 @@ exports[`StandardCard component renders with title and help button 1`] = `
             class="MuiIconButton-label"
           >
             <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-16"
+              class="MuiSvgIcon-root makeStyles-helpIcon-19"
               focusable="false"
               role="img"
               viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ exports[`StandardCard component renders with title and no help icon 1`] = `
         class="MuiCardHeader-content"
       >
         <h3
-          class="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+          class="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
           data-testid="standard-card-card-title-header"
           id="standard-card-card-title-header"
         >

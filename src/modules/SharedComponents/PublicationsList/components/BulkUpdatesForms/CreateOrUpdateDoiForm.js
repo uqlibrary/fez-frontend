@@ -56,7 +56,7 @@ export const CreateOrUpdateDoiForm = ({
                         />
                     </Grid>
                 )}
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.cancelButtonLabel}
@@ -68,7 +68,7 @@ export const CreateOrUpdateDoiForm = ({
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}
                         children={txt.createOrUpdateDoiForm.formLabels.submitButtonLabel}

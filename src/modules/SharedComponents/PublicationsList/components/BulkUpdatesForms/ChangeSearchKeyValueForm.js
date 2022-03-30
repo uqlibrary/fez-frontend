@@ -78,7 +78,7 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         </Grid>
                     </React.Fragment>
                 )}
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.cancelButtonLabel}
@@ -90,7 +90,7 @@ export const ChangeSearchKeyValueForm = ({ error, handleSubmit, submitting, subm
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}
                         children={txt.changeSearchKeyValueForm.formLabels.submitButtonLabel}

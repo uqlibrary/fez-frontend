@@ -842,14 +842,25 @@ describe('Files Component ', () => {
     });
 
     it('should have a style helper', () => {
-        const theme = { palette: { secondary: { light: 'red' } } };
+        const theme = {
+            palette: { secondary: { light: 'red' } },
+            breakpoints: { up: () => '@media (min-width: 600px)' },
+            spacing: num => num * 8,
+        };
         expect(styles(theme)).toStrictEqual({
             header: {
                 borderBottom: '1px solid red',
             },
+            containerPadding: {
+                '@media (min-width: 600px)': {
+                    padding: 8,
+                },
+                padding: '8px 0',
+            },
             dataWrapper: {
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
             },
             fileIcon: {
                 opacity: 0.5,

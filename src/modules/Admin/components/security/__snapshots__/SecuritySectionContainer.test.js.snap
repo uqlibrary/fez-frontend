@@ -801,6 +801,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                           classes={
                                             Object {
                                               "root": "makeStyles-cardHeaderAccent-4",
+                                              "title": "makeStyles-responsiveHeader-6",
                                             }
                                           }
                                           style={Object {}}
@@ -832,7 +833,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 "content": "MuiCardHeader-content",
                                                 "root": "MuiCardHeader-root makeStyles-cardHeaderAccent-4",
                                                 "subheader": "MuiCardHeader-subheader",
-                                                "title": "MuiCardHeader-title",
+                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                               }
                                             }
                                             style={Object {}}
@@ -863,7 +864,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 className="MuiCardHeader-content"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
-                                                  className="MuiCardHeader-title"
+                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                   color="inherit"
                                                   component="h4"
                                                   data-testid="record-security-card-header"
@@ -872,7 +873,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                   variant="h5"
                                                 >
                                                   <ForwardRef(Typography)
-                                                    className="MuiCardHeader-title"
+                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                     classes={
                                                       Object {
                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -915,7 +916,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                     variant="h5"
                                                   >
                                                     <h4
-                                                      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                       data-testid="record-security-card-header"
                                                       id="record-security-card-header"
                                                     >
@@ -3039,6 +3040,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                           classes={
                                             Object {
                                               "root": "makeStyles-cardHeaderAccent-4",
+                                              "title": "makeStyles-responsiveHeader-6",
                                             }
                                           }
                                           style={Object {}}
@@ -3070,7 +3072,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                 "content": "MuiCardHeader-content",
                                                 "root": "MuiCardHeader-root makeStyles-cardHeaderAccent-4",
                                                 "subheader": "MuiCardHeader-subheader",
-                                                "title": "MuiCardHeader-title",
+                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                               }
                                             }
                                             style={Object {}}
@@ -3101,7 +3103,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                 className="MuiCardHeader-content"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
-                                                  className="MuiCardHeader-title"
+                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                   color="inherit"
                                                   component="h4"
                                                   data-testid="record-security-card-header"
@@ -3110,7 +3112,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                   variant="h5"
                                                 >
                                                   <ForwardRef(Typography)
-                                                    className="MuiCardHeader-title"
+                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                     classes={
                                                       Object {
                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -3153,7 +3155,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                     variant="h5"
                                                   >
                                                     <h4
-                                                      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                       data-testid="record-security-card-header"
                                                       id="record-security-card-header"
                                                     >
@@ -6166,6 +6168,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           classes={
                                             Object {
                                               "root": "makeStyles-cardHeaderAccent-4",
+                                              "title": "makeStyles-responsiveHeader-6",
                                             }
                                           }
                                           style={Object {}}
@@ -6197,7 +6200,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 "content": "MuiCardHeader-content",
                                                 "root": "MuiCardHeader-root makeStyles-cardHeaderAccent-4",
                                                 "subheader": "MuiCardHeader-subheader",
-                                                "title": "MuiCardHeader-title",
+                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                               }
                                             }
                                             style={Object {}}
@@ -6228,7 +6231,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 className="MuiCardHeader-content"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
-                                                  className="MuiCardHeader-title"
+                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                   color="inherit"
                                                   component="h4"
                                                   data-testid="record-security-card-header"
@@ -6237,7 +6240,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                   variant="h5"
                                                 >
                                                   <ForwardRef(Typography)
-                                                    className="MuiCardHeader-title"
+                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                     classes={
                                                       Object {
                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -6280,7 +6283,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     variant="h5"
                                                   >
                                                     <h4
-                                                      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                       data-testid="record-security-card-header"
                                                       id="record-security-card-header"
                                                     >
@@ -7780,6 +7783,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                           classes={
                                             Object {
                                               "root": "makeStyles-cardHeaderAccent-4",
+                                              "title": "makeStyles-responsiveHeader-6",
                                             }
                                           }
                                           style={Object {}}
@@ -7811,7 +7815,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 "content": "MuiCardHeader-content",
                                                 "root": "MuiCardHeader-root makeStyles-cardHeaderAccent-4",
                                                 "subheader": "MuiCardHeader-subheader",
-                                                "title": "MuiCardHeader-title",
+                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                               }
                                             }
                                             style={Object {}}
@@ -7842,7 +7846,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 className="MuiCardHeader-content"
                                               >
                                                 <WithStyles(ForwardRef(Typography))
-                                                  className="MuiCardHeader-title"
+                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                   color="inherit"
                                                   component="h4"
                                                   data-testid="datastream-security-card-header"
@@ -7851,7 +7855,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                   variant="h5"
                                                 >
                                                   <ForwardRef(Typography)
-                                                    className="MuiCardHeader-title"
+                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                     classes={
                                                       Object {
                                                         "alignCenter": "MuiTypography-alignCenter",
@@ -7894,7 +7898,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     variant="h5"
                                                   >
                                                     <h4
-                                                      className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                       data-testid="datastream-security-card-header"
                                                       id="datastream-security-card-header"
                                                     >

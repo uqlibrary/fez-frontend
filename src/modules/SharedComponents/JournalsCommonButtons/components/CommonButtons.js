@@ -5,8 +5,18 @@ import Button from '@material-ui/core/Button';
 import locale from 'locale/components';
 import { pathConfig } from 'config';
 import { useHistory, useLocation } from 'react-router';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles(theme => ({
+    buttonContainer: {
+        [theme.breakpoints.up('md')]: {
+            display: 'inline-flex',
+        },
+    },
+}));
 
 const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals = false }) => {
+    const classes = useStyles();
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.searchJournals;
@@ -18,7 +28,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
     };
     return (
         <>
-            <Grid item xs={12} sm="auto">
+            <Grid item xs={12} sm={6} md={3} alignItems="stretch" className={classes.buttonContainer}>
                 <Button
                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
@@ -29,7 +39,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                 />
             </Grid>
             {!isBrowsingAllJournals && (
-                <Grid item xs={12} sm="auto">
+                <Grid item xs={12} sm={6} md={3} alignItems="stretch" className={classes.buttonContainer}>
                     <Button
                         id="journal-search-browse-all-button"
                         data-testid="journal-search-browse-all-button"

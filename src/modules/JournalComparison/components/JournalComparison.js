@@ -8,8 +8,18 @@ import locale from 'locale/components';
 import JournalComparisonList from './JournalComparisonList';
 import { useLocation } from 'react-router';
 import { BackToSearchButton } from '../../SharedComponents/JournalsCommonButtons';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    buttonWidth: {
+        [theme.breakpoints.down('xs')]: {
+            width: '100%',
+        },
+    },
+}));
 
 export const JournalComparison = () => {
+    const classes = useStyles();
     const location = useLocation();
     const txt = locale.components.journalComparison;
     return (
@@ -24,11 +34,12 @@ export const JournalComparison = () => {
                                 </Grid>
                                 <Grid style={{ paddingTop: location?.state?.journals ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
-                                        <Grid item xs="auto">
+                                        <Grid item xs={12} sm="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
                                                 prevLocation={location?.state?.prevLocation}
+                                                className={classes.buttonWidth}
                                             />
                                         </Grid>
                                     </Grid>
