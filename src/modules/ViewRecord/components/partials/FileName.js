@@ -22,6 +22,9 @@ export const useStyles = makeStyles(
             ...theme.typography.body2,
             cursor: 'pointer',
             placeSelf: 'center',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
         },
         fileDownloadIcon: {
             textAlign: 'right',
@@ -89,7 +92,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs>
+            <Grid item xs sm={10}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -142,7 +145,7 @@ const FileName = ({
             </Grid>
             <Hidden xsDown>
                 {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                    <Grid item sm>
+                    <Grid item sm={2}>
                         <AudioPlayer
                             pid={pid}
                             fileName={

@@ -289,6 +289,7 @@ export class ContributorsEditor extends PureComponent {
             classes,
             contributorEditorId,
             disabled,
+            canEdit,
             editMode,
             hideDelete,
             isNtro,
@@ -345,6 +346,7 @@ export class ContributorsEditor extends PureComponent {
                                 <ContributorRowHeader
                                     {...(this.props.locale.header || {})}
                                     disabled={disabled}
+                                    canEdit={canEdit}
                                     hideDelete={hideDelete}
                                     isInfinite={contributors.length > 20}
                                     isNtro={isNtro}

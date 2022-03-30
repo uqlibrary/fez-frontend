@@ -2158,7 +2158,7 @@ export default {
                     aria: 'Click to reset the advanced search',
                 },
                 simpleSearch: {
-                    title: 'Simple search',
+                    title: 'Back To Simple search',
                     aria: 'Click to return to the simple search',
                 },
                 favouriteSearch: {

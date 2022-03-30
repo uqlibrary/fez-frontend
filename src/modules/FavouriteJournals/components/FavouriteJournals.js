@@ -77,7 +77,7 @@ export const FavouriteJournals = () => {
                                 <Grid style={{ paddingTop: !!response?.total ? 20 : 25 }} item xs={12}>
                                     <Grid container spacing={2}>
                                         {!!response?.total && (
-                                            <Grid item xs="auto">
+                                            <Grid item xs={12} sm={6} md="auto">
                                                 <LoadingButton
                                                     variant="contained"
                                                     type="submit"
@@ -89,14 +89,16 @@ export const FavouriteJournals = () => {
                                                     aria-label={txt.buttons.removeFromFavourites.aria}
                                                     children={txt.buttons.removeFromFavourites.title}
                                                     onClick={handleRemoveFromFavouritesClick}
+                                                    fullWidth
                                                 />
                                             </Grid>
                                         )}
-                                        <Grid item xs="auto">
+                                        <Grid item xs={12} sm={6} md="auto">
                                             <BackToSearchButton
                                                 children={txt.buttons.returnToSearch.title}
                                                 aria-label={txt.buttons.returnToSearch.aria}
                                                 prevLocation={prevLocation.current}
+                                                fullWidth
                                             />
                                         </Grid>
                                     </Grid>

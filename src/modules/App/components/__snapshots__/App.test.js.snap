@@ -10761,10 +10761,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           classes={
                                                             Object {
                                                               "inHeader": "SimpleSearchComponent-inHeader-7",
-                                                              "mobileBackArrow": "SimpleSearchComponent-mobileBackArrow-9",
-                                                              "mobileBackArrowButton": "SimpleSearchComponent-mobileBackArrowButton-10",
-                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-11",
-                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-12",
+                                                              "mobileCloseButton": "SimpleSearchComponent-mobileCloseButton-9",
+                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-10",
+                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-11",
                                                               "searchIconMobile": "SimpleSearchComponent-searchIconMobile-8",
                                                               "searchIconPrefix": "SimpleSearchComponent-searchIconPrefix-6",
                                                             }
@@ -11528,15 +11527,15 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     className="MuiIconButton-label"
                                                                   >
                                                                     <ForwardRef(PersonIcon)
-                                                                      className="makeStyles-iconButton-13"
+                                                                      className="makeStyles-iconButton-12"
                                                                       id="logged-in-icon"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="makeStyles-iconButton-13"
+                                                                        className="makeStyles-iconButton-12"
                                                                         id="logged-in-icon"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="makeStyles-iconButton-13"
+                                                                          className="makeStyles-iconButton-12"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -11554,7 +11553,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="MuiSvgIcon-root makeStyles-iconButton-13"
+                                                                            className="MuiSvgIcon-root makeStyles-iconButton-12"
                                                                             focusable="false"
                                                                             id="logged-in-icon"
                                                                             viewBox="0 0 24 24"
@@ -11614,7 +11613,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               >
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-iconButton-13"
+                                                                  class="MuiSvgIcon-root makeStyles-iconButton-12"
                                                                   focusable="false"
                                                                   id="logged-in-icon"
                                                                   viewBox="0 0 24 24"
@@ -11718,16 +11717,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <MenuDrawer
                         classes={
                           Object {
-                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-20",
-                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-21",
-                            "docked": "MenuDrawer-docked-15",
-                            "header": "MenuDrawer-header-17",
-                            "iconButton": "MenuDrawer-iconButton-23",
-                            "mainMenu": "MenuDrawer-mainMenu-19",
-                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-22",
-                            "paper": "MenuDrawer-paper-14",
-                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
-                            "skipNav": "MenuDrawer-skipNav-18",
+                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-19",
+                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-20",
+                            "docked": "MenuDrawer-docked-14",
+                            "header": "MenuDrawer-header-16",
+                            "iconButton": "MenuDrawer-iconButton-22",
+                            "mainMenu": "MenuDrawer-mainMenu-18",
+                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-21",
+                            "paper": "MenuDrawer-paper-13",
+                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-15",
+                            "skipNav": "MenuDrawer-skipNav-17",
                           }
                         }
                         docked={false}
@@ -12147,9 +12146,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           anchor="left"
                           classes={
                             Object {
-                              "docked": "MenuDrawer-docked-15",
-                              "paper": "MenuDrawer-paper-14",
-                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
+                              "docked": "MenuDrawer-docked-14",
+                              "paper": "MenuDrawer-paper-13",
+                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-15",
                             }
                           }
                           id="menudrawer"
@@ -12161,12 +12160,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             anchor="left"
                             classes={
                               Object {
-                                "docked": "MuiDrawer-docked MenuDrawer-docked-15",
+                                "docked": "MuiDrawer-docked MenuDrawer-docked-14",
                                 "modal": "MuiDrawer-modal",
-                                "paper": "MuiDrawer-paper MenuDrawer-paper-14",
+                                "paper": "MuiDrawer-paper MenuDrawer-paper-13",
                                 "paperAnchorBottom": "MuiDrawer-paperAnchorBottom",
                                 "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom",
-                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-16",
+                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-15",
                                 "paperAnchorDockedRight": "MuiDrawer-paperAnchorDockedRight",
                                 "paperAnchorDockedTop": "MuiDrawer-paperAnchorDockedTop",
                                 "paperAnchorLeft": "MuiDrawer-paperAnchorLeft",
@@ -12549,7 +12548,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         <ConfirmDialogBox
                           classes={
                             Object {
-                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-24",
+                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-23",
                             }
                           }
                           confirmDialogBoxId="dialog-box"
@@ -13482,9 +13481,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       <Page
                                         classes={
                                           Object {
-                                            "helpIcon": "Page-helpIcon-27",
-                                            "layoutCard": "Page-layoutCard-25",
-                                            "layoutTitle": "Page-layoutTitle-26",
+                                            "helpIcon": "Page-helpIcon-26",
+                                            "layoutCard": "Page-layoutCard-24",
+                                            "layoutTitle": "Page-layoutTitle-25",
                                           }
                                         }
                                         theme={
@@ -14089,11 +14088,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 </ForwardRef(Grid)>
                                               </WithStyles(ForwardRef(Grid))>
                                               <WithStyles(ForwardRef(Grid))
-                                                className="Page-layoutCard-25"
+                                                className="Page-layoutCard-24"
                                                 item={true}
                                               >
                                                 <ForwardRef(Grid)
-                                                  className="Page-layoutCard-25"
+                                                  className="Page-layoutCard-24"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -14204,7 +14203,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   item={true}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root Page-layoutCard-25 MuiGrid-item"
+                                                    className="MuiGrid-root Page-layoutCard-24 MuiGrid-item"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       container={true}
@@ -14810,9 +14809,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         }
                                                                         classes={
                                                                           Object {
-                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-29",
-                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-30",
-                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-28",
+                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-28",
+                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-29",
+                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-27",
                                                                           }
                                                                         }
                                                                         history={
@@ -15230,13 +15229,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 title="What is eSpace?"
                                                                               >
                                                                                 <WithStyles(ForwardRef(Card))
-                                                                                  className="makeStyles-card-31 StandardCard"
+                                                                                  className="makeStyles-card-30 StandardCard"
                                                                                   data-testid="standard-card-what-is-espace?"
                                                                                   id="standard-card-what-is-espace?"
                                                                                   style={Object {}}
                                                                                 >
                                                                                   <ForwardRef(Card)
-                                                                                    className="makeStyles-card-31 StandardCard"
+                                                                                    className="makeStyles-card-30 StandardCard"
                                                                                     classes={
                                                                                       Object {
                                                                                         "root": "MuiCard-root",
@@ -15247,14 +15246,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     style={Object {}}
                                                                                   >
                                                                                     <WithStyles(ForwardRef(Paper))
-                                                                                      className="MuiCard-root makeStyles-card-31 StandardCard"
+                                                                                      className="MuiCard-root makeStyles-card-30 StandardCard"
                                                                                       data-testid="standard-card-what-is-espace?"
                                                                                       elevation={1}
                                                                                       id="standard-card-what-is-espace?"
                                                                                       style={Object {}}
                                                                                     >
                                                                                       <ForwardRef(Paper)
-                                                                                        className="MuiCard-root makeStyles-card-31 StandardCard"
+                                                                                        className="MuiCard-root makeStyles-card-30 StandardCard"
                                                                                         classes={
                                                                                           Object {
                                                                                             "elevation0": "MuiPaper-elevation0",
@@ -15293,7 +15292,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         style={Object {}}
                                                                                       >
                                                                                         <div
-                                                                                          className="MuiPaper-root MuiCard-root makeStyles-card-31 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                                          className="MuiPaper-root MuiCard-root makeStyles-card-30 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                                           data-testid="standard-card-what-is-espace?"
                                                                                           id="standard-card-what-is-espace?"
                                                                                           style={Object {}}
@@ -15302,7 +15301,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             action={false}
                                                                                             classes={
                                                                                               Object {
-                                                                                                "root": "makeStyles-cardHeaderPrimary-33",
+                                                                                                "root": "makeStyles-cardHeaderPrimary-32",
+                                                                                                "title": "makeStyles-responsiveHeader-35",
                                                                                               }
                                                                                             }
                                                                                             style={Object {}}
@@ -15324,9 +15324,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   "action": "MuiCardHeader-action",
                                                                                                   "avatar": "MuiCardHeader-avatar",
                                                                                                   "content": "MuiCardHeader-content",
-                                                                                                  "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-33",
+                                                                                                  "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-32",
                                                                                                   "subheader": "MuiCardHeader-subheader",
-                                                                                                  "title": "MuiCardHeader-title",
+                                                                                                  "title": "MuiCardHeader-title makeStyles-responsiveHeader-35",
                                                                                                 }
                                                                                               }
                                                                                               style={Object {}}
@@ -15342,14 +15342,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="MuiCardHeader-root makeStyles-cardHeaderPrimary-33"
+                                                                                                className="MuiCardHeader-root makeStyles-cardHeaderPrimary-32"
                                                                                                 style={Object {}}
                                                                                               >
                                                                                                 <div
                                                                                                   className="MuiCardHeader-content"
                                                                                                 >
                                                                                                   <WithStyles(ForwardRef(Typography))
-                                                                                                    className="MuiCardHeader-title"
+                                                                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-35"
                                                                                                     color="inherit"
                                                                                                     component="h3"
                                                                                                     data-testid="standard-card-what-is-espace?-header"
@@ -15358,7 +15358,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     variant="h5"
                                                                                                   >
                                                                                                     <ForwardRef(Typography)
-                                                                                                      className="MuiCardHeader-title"
+                                                                                                      className="MuiCardHeader-title makeStyles-responsiveHeader-35"
                                                                                                       classes={
                                                                                                         Object {
                                                                                                           "alignCenter": "MuiTypography-alignCenter",
@@ -15401,7 +15401,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       variant="h5"
                                                                                                     >
                                                                                                       <h3
-                                                                                                        className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                                                        className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-35 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                                                                         data-testid="standard-card-what-is-espace?-header"
                                                                                                         id="standard-card-what-is-espace?-header"
                                                                                                       >

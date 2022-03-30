@@ -137,7 +137,7 @@ export const AdvancedSearchComponent = ({
     return (
         <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch} style={{ padding: 12 }}>
             <Grid container spacing={3}>
-                <Grid container spacing={5}>
+                <Grid container spacing={5} alignItems={'center'}>
                     <Grid item style={{ flexGrow: 1, width: 1 }}>
                         <Typography variant="h5">{txt.advancedSearch.title}</Typography>
                     </Grid>

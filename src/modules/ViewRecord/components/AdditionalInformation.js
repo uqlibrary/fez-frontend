@@ -29,6 +29,12 @@ const styles = theme => ({
         padding: 0,
         margin: 0,
     },
+    containerPadding: {
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
+    },
 });
 
 export const renderAuthors = (publication, props = {}) => {
@@ -67,7 +73,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderRow = (heading, data, index, field) => {
         const labelTestId = `${field.replace(/_/g, '-')}-label`;
         return (
-            <div style={{ padding: 8 }} key={index}>
+            <div className={this.props.classes.containerPadding} key={index}>
                 <Grid
                     container
                     spacing={2}

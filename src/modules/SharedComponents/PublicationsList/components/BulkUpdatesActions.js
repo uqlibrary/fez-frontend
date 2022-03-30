@@ -10,8 +10,21 @@ import { useConfirmationState } from 'hooks';
 import { locale } from 'locale';
 
 import BulkUpdatesForm from './BulkUpdatesForm';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(
+    theme => ({
+        paper: {
+            [theme.breakpoints.down('xs')]: {
+                margin: theme.spacing(1),
+            },
+        },
+    }),
+    { withTheme: true },
+);
 
 export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
+    const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const [selectedAction, setSelectedAction] = React.useState(null);
 
@@ -52,6 +65,7 @@ export const BulkUpdatesActions = ({ recordsSelected, shouldDisplay }) => {
                             onCancel={handleHideConfirmation}
                         />
                     )}
+                    classes={classes}
                 />
             )}
             <NewGenericSelectField

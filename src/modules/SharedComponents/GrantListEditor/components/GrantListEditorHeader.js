@@ -68,8 +68,8 @@ export class GrantListEditorHeader extends PureComponent {
                 />
                 <ListItem classes={{ root: classes.header }}>
                     <Grid container spacing={0}>
-                        <Grid item xs={this.props.width === 'xs' ? 11 : 9}>
-                            <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
+                        <Grid item xs={this.props.width === 'xs' ? 10 : 9}>
+                            <Grid container spacing={0}>
                                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
                                     <ListItemText
                                         secondary={GrantAgencyName}
@@ -78,7 +78,7 @@ export class GrantListEditorHeader extends PureComponent {
                                     />
                                 </Grid>
                                 <Hidden xsDown>
-                                    <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
+                                    <Grid item sm={4}>
                                         <ListItemText
                                             secondary={GrantID}
                                             secondaryTypographyProps={{ variant: 'caption' }}
@@ -86,7 +86,7 @@ export class GrantListEditorHeader extends PureComponent {
                                         />
                                     </Grid>
                                     {!this.props.hideType && (
-                                        <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
+                                        <Grid item sm={3}>
                                             <ListItemText
                                                 secondary={GrantAgencyType}
                                                 secondaryTypographyProps={{ variant: 'caption' }}
@@ -97,24 +97,26 @@ export class GrantListEditorHeader extends PureComponent {
                                 </Hidden>
                             </Grid>
                         </Grid>
-                        <Grid item xs={this.props.width === 'xs' ? 1 : 3}>
-                            <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
-                                <Hidden smDown>
-                                    <Grid item xs={8}>
-                                        <ListItemText
-                                            secondary={reorderColumn}
-                                            secondaryTypographyProps={{ variant: 'caption' }}
-                                            style={{ padding: 0 }}
-                                            classes={{ root: classes.right }}
-                                        />
-                                    </Grid>
-                                </Hidden>
-                                <Grid
-                                    item
-                                    xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4}
-                                    style={{ textAlign: 'right' }}
-                                >
-                                    <ListItemSecondaryAction style={{ smarginTop: -4 }}>
+                        <Grid item xs={this.props.width === 'xs' ? 2 : 3}>
+                            <ListItemSecondaryAction
+                                style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
+                            >
+                                <Grid container spacing={0}>
+                                    <Hidden smDown>
+                                        <Grid item xs={8}>
+                                            <ListItemText
+                                                secondary={reorderColumn}
+                                                secondaryTypographyProps={{ variant: 'caption' }}
+                                                style={{ padding: 0 }}
+                                                classes={{ root: classes.right }}
+                                            />
+                                        </Grid>
+                                    </Hidden>
+                                    <Grid
+                                        item
+                                        xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4}
+                                        style={{ textAlign: 'right' }}
+                                    >
                                         <Tooltip
                                             title={deleteAll}
                                             disableFocusListener={this.props.disabled}
@@ -131,9 +133,9 @@ export class GrantListEditorHeader extends PureComponent {
                                                 </IconButton>
                                             </div>
                                         </Tooltip>
-                                    </ListItemSecondaryAction>
+                                    </Grid>
                                 </Grid>
-                            </Grid>
+                            </ListItemSecondaryAction>
                         </Grid>
                     </Grid>
                 </ListItem>
