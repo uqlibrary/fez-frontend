@@ -4,13 +4,18 @@ const scrollToBottom = () =>
         .scrollTo('bottom')
         .then($el => {
             // make sure it has been scrolled to the bottom
-            const clientHeight = $el.get(0).clientHeight;
-            expect(clientHeight).to.be.greaterThan(500);
-            return clientHeight;
+            expect($el.get(0).scrollTop).to.be.greaterThan(0);
+            return $el.get(0).scrollTop;
         });
-const assertScrollPosition = position =>
-    cy.get('#content-container').should($bar => {
-        expect($bar.get(0)).to.have.property('clientHeight', position);
+
+const assertScrollIsNotOnTop = () =>
+    cy.get('#content-container').should($el => {
+        expect($el.get(0).scrollTop).to.be.greaterThan(0);
+    });
+
+const assertScrollIsOnTop = () =>
+    cy.get('#content-container').should($el => {
+        expect($el.get(0).scrollTop).to.be.equals(0);
     });
 
 context('Strategic Publishing - Search', () => {
@@ -149,7 +154,7 @@ context('Strategic Publishing - Search', () => {
             cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
             cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
             // make sure the scroll hasn't changed
-            assertScrollPosition(currentClientHeight);
+            assertScrollIsNotOnTop(currentClientHeight);
         });
     });
 
@@ -165,7 +170,7 @@ context('Strategic Publishing - Search', () => {
                 .then(() => {
                     cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
                     // make sure the scroll hasn't changed
-                    assertScrollPosition(currentClientHeight);
+                    assertScrollIsNotOnTop(currentClientHeight);
                 });
         });
     });
@@ -561,19 +566,25 @@ context('Strategic Publishing - Search', () => {
                 .should('have.length', resultsLengthWithKeywordAndFacets); // /mock/index.js
 
             // update sorting
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').click();
             cy.get('[role="listbox"] > li[data-value="score"]').click();
             cy.get('[data-testid="publication-list-sorting-sort-by"]').should('contain', 'Search relevance');
+            assertScrollIsOnTop();
 
             // update order
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
             cy.get('[role="listbox"] > li[data-value="Desc"]').click();
             cy.get('[data-testid="publication-list-sorting-sort-order"]').should('contain', 'Desc');
+            assertScrollIsOnTop();
 
             // update page size
+            scrollToBottom();
             cy.get('[data-testid="publication-list-sorting-page-size"]').click();
             cy.get('[role="listbox"] > li[data-value="20"]').click();
             cy.get('[data-testid="publication-list-sorting-page-size"]').should('contain', '20');
+            assertScrollIsOnTop();
 
             // assert everything selected is in the URL
             cy.location().should(location => {
