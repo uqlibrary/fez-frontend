@@ -1713,6 +1713,12 @@ export default {
                 },
             },
         },
+        cancelWorkflowConfirmation: {
+            confirmationTitle: 'Cancel data collection',
+            confirmationMessage: 'Are you sure you want to cancel adding this data collection?',
+            cancelButtonLabel: 'No',
+            confirmButtonLabel: 'Yes',
+        },
     },
     addACollection: {
         title: 'Add a missing collection',

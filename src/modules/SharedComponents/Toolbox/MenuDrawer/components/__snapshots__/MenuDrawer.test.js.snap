@@ -88,6 +88,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
           <WithStyles(ForwardRef(IconButton))
             aria-label="Close menu"
             onClick={[MockFunction]}
+            size="small"
           >
             <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
@@ -110,6 +111,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
               "secondary": undefined,
             }
           }
+          id="menu-itemText-0"
           primary="Primary text 0"
           secondary="secondary text 0"
         />
@@ -134,6 +136,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
               "secondary": undefined,
             }
           }
+          id="menu-itemText-2"
           primary="Primary text 1"
           secondary="secondary text 1"
         />
@@ -227,6 +230,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           <WithStyles(ForwardRef(IconButton))
             aria-label="Close menu"
             onClick={[MockFunction]}
+            size="small"
           >
             <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
@@ -267,6 +271,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               "secondary": undefined,
             }
           }
+          id="menu-itemText-0"
           primary="Primary text 0"
           secondary="secondary text 0"
         />
@@ -291,6 +296,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               "secondary": undefined,
             }
           }
+          id="menu-itemText-2"
           primary="Primary text 1"
           secondary="secondary text 1"
         />
@@ -384,6 +390,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
           <WithStyles(ForwardRef(IconButton))
             aria-label="Close menu"
             onClick={[MockFunction]}
+            size="small"
           >
             <Memo(ForwardRef(KeyboardArrowLeftIcon)) />
           </WithStyles(ForwardRef(IconButton))>
@@ -424,6 +431,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               "secondary": undefined,
             }
           }
+          id="menu-itemText-0"
           primary="Primary text 0"
           secondary="secondary text 0"
         />
@@ -448,6 +456,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
               "secondary": undefined,
             }
           }
+          id="menu-itemText-2"
           primary="Primary text 1"
           secondary="secondary text 1"
         />

@@ -40,11 +40,32 @@ export const CustomToolbar = props => {
     );
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     datePicker: {
         minWidth: 120,
     },
-});
+    adjustSpacingXs: {
+        [theme.breakpoints.down('xs')]: {
+            '& [class*="MuiToolbar-root-"]': {
+                padding: 0,
+                display: 'block',
+
+                '& > div:first-child': {
+                    display: 'none',
+                },
+            },
+
+            '& button#my-editorial-appointments-add-new-editorial-appointment': {
+                width: '100%',
+            },
+        },
+    },
+    editTableRow: {
+        '& td:not(:last-of-type)': {
+            verticalAlign: 'top',
+        },
+    },
+}));
 
 export const GetColumns = () => {
     const classes = useStyles();
@@ -371,6 +392,7 @@ export const GetColumns = () => {
 };
 
 export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowDelete, handleRowUpdate, list }) => {
+    const classes = useStyles();
     const materialTableRef = React.createRef();
     const columns = React.createRef();
     columns.current = GetColumns();
@@ -398,7 +420,12 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
             columns={columns.current}
             components={{
                 Container: props => (
-                    <div {...props} id="my-editorial-appointments-list" data-testid="my-editorial-appointments-list" />
+                    <div
+                        {...props}
+                        id="my-editorial-appointments-list"
+                        data-testid="my-editorial-appointments-list"
+                        className={classes.adjustSpacingXs}
+                    />
                 ),
                 Row: props => (
                     <MTableBodyRow
@@ -413,6 +440,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         id={`my-editorial-appointments-list-${props.mode}-row`}
                         data-testid={`my-editorial-appointments-list-${props.mode}-row`}
                         onEditingApproved={handleEditingApproved(props)}
+                        className={classes.editTableRow}
                     />
                 ),
                 Action: props => {

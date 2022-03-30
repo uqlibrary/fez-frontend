@@ -8,15 +8,9 @@ Object {
     },
     "backgroundColor": "test2",
   },
-  "mobileBackArrow": Object {
+  "mobileCloseButton": Object {
     "fill": "test1",
-    "height": 50,
     "opacity": 0.5,
-    "width": 50,
-  },
-  "mobileBackArrowButton": Object {
-    "height": 70,
-    "width": 70,
   },
   "mobileHeader": Object {
     "backgroundColor": "test2",
@@ -28,11 +22,13 @@ Object {
     "zIndex": 100,
   },
   "mobileSearchInput": Object {
+    "& > div": Object {
+      "height": "100%",
+    },
     "& input": Object {
-      "fontSize": 32,
+      "fontSize": 24,
       "fontWeight": "test3",
       "lineHeight": 1.2,
-      "marginTop": 10,
       "overflow": "hidden",
       "textOverflow": "ellipsis",
     },
@@ -127,19 +123,39 @@ exports[`SimpleSearchComponent should render default view 1`] = `
 `;
 
 exports[`SimpleSearchComponent should render mobile view 1`] = `
-<Hidden
-  smUp={true}
->
-  <WithStyles(ForwardRef(Grid))
-    item={true}
+Array [
+  <Hidden
+    smUp={true}
   >
-    <WithStyles(ForwardRef(Button))
-      onClick={[Function]}
+    <WithStyles(ForwardRef(Grid))
+      item={true}
     >
-      <Memo(ForwardRef(ArrowBackIcon)) />
-    </WithStyles(ForwardRef(Button))>
-  </WithStyles(ForwardRef(Grid))>
-</Hidden>
+      <WithStyles(ForwardRef(IconButton))
+        onClick={[Function]}
+      >
+        <Memo(ForwardRef(CloseIcon))
+          fontSize="inherit"
+        />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </Hidden>,
+  <Hidden
+    smUp={true}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+        onClick={[Function]}
+      >
+        <Memo(ForwardRef(ArrowForwardIcon))
+          fontSize="inherit"
+        />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </Hidden>,
+]
 `;
 
 exports[`SimpleSearchComponent should render show prefix icon in the search box 1`] = `

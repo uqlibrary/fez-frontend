@@ -1405,6 +1405,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                 }
                 classes={
                   Object {
+                    "containerPadding": "NtroDetailsClass-containerPadding-3",
                     "gridRow": "NtroDetailsClass-gridRow-1",
                     "richTextParagraphFix": "NtroDetailsClass-richTextParagraphFix-2",
                   }
@@ -1927,13 +1928,13 @@ exports[`NtroDetails  rendered full mount 1`] = `
                         title="Non-traditional research output metadata"
                       >
                         <WithStyles(ForwardRef(Card))
-                          className="makeStyles-card-3 StandardCard"
+                          className="makeStyles-card-4 StandardCard"
                           data-testid="standard-card-non-traditional-research-output-metadata"
                           id="standard-card-non-traditional-research-output-metadata"
                           style={Object {}}
                         >
                           <ForwardRef(Card)
-                            className="makeStyles-card-3 StandardCard"
+                            className="makeStyles-card-4 StandardCard"
                             classes={
                               Object {
                                 "root": "MuiCard-root",
@@ -1944,14 +1945,14 @@ exports[`NtroDetails  rendered full mount 1`] = `
                             style={Object {}}
                           >
                             <WithStyles(ForwardRef(Paper))
-                              className="MuiCard-root makeStyles-card-3 StandardCard"
+                              className="MuiCard-root makeStyles-card-4 StandardCard"
                               data-testid="standard-card-non-traditional-research-output-metadata"
                               elevation={1}
                               id="standard-card-non-traditional-research-output-metadata"
                               style={Object {}}
                             >
                               <ForwardRef(Paper)
-                                className="MuiCard-root makeStyles-card-3 StandardCard"
+                                className="MuiCard-root makeStyles-card-4 StandardCard"
                                 classes={
                                   Object {
                                     "elevation0": "MuiPaper-elevation0",
@@ -1990,7 +1991,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                 style={Object {}}
                               >
                                 <div
-                                  className="MuiPaper-root MuiCard-root makeStyles-card-3 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                  className="MuiPaper-root MuiCard-root makeStyles-card-4 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                   data-testid="standard-card-non-traditional-research-output-metadata"
                                   id="standard-card-non-traditional-research-output-metadata"
                                   style={Object {}}
@@ -2000,6 +2001,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                     classes={
                                       Object {
                                         "root": undefined,
+                                        "title": "makeStyles-responsiveHeader-9",
                                       }
                                     }
                                     style={Object {}}
@@ -2023,7 +2025,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           "content": "MuiCardHeader-content",
                                           "root": "MuiCardHeader-root",
                                           "subheader": "MuiCardHeader-subheader",
-                                          "title": "MuiCardHeader-title",
+                                          "title": "MuiCardHeader-title makeStyles-responsiveHeader-9",
                                         }
                                       }
                                       style={Object {}}
@@ -2046,7 +2048,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           className="MuiCardHeader-content"
                                         >
                                           <WithStyles(ForwardRef(Typography))
-                                            className="MuiCardHeader-title"
+                                            className="MuiCardHeader-title makeStyles-responsiveHeader-9"
                                             color="inherit"
                                             component="h3"
                                             data-testid="standard-card-non-traditional-research-output-metadata-header"
@@ -2055,7 +2057,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                             variant="h5"
                                           >
                                             <ForwardRef(Typography)
-                                              className="MuiCardHeader-title"
+                                              className="MuiCardHeader-title makeStyles-responsiveHeader-9"
                                               classes={
                                                 Object {
                                                   "alignCenter": "MuiTypography-alignCenter",
@@ -2098,7 +2100,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                               variant="h5"
                                             >
                                               <h3
-                                                className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-9 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                 data-testid="standard-card-non-traditional-research-output-metadata-header"
                                                 id="standard-card-non-traditional-research-output-metadata-header"
                                               >
@@ -2138,11 +2140,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           subheading="(Ky Lane)"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -2694,11 +2692,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           subheading="(Someone else)"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -3257,11 +3251,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           subheading="(Ky Lane)"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -3824,11 +3814,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           subheading="(Someone else)"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -4387,11 +4373,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-formatted-abstract"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -4898,11 +4880,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-ismn"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -5400,11 +5378,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-description"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -5897,11 +5871,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-issue-number"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -6394,11 +6364,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-total-pages"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -6917,11 +6883,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-language"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -7440,11 +7402,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-original-format"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"
@@ -7963,11 +7921,7 @@ exports[`NtroDetails  rendered full mount 1`] = `
                                           rowId="rek-quality-indicator"
                                         >
                                           <div
-                                            style={
-                                              Object {
-                                                "padding": 8,
-                                              }
-                                            }
+                                            className="NtroDetailsClass-containerPadding-3"
                                           >
                                             <WithStyles(ForwardRef(Grid))
                                               alignItems="flex-start"

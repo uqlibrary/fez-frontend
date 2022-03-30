@@ -3935,6 +3935,7 @@ exports[`Publication Details Component  Renders full mount 1`] = `
               <PublicationDetailsClass
                 classes={
                   Object {
+                    "containerPadding": "PublicationDetailsClass-containerPadding-4",
                     "contentIndicator": "PublicationDetailsClass-contentIndicator-3",
                     "gridRow": "PublicationDetailsClass-gridRow-1",
                     "ul": "PublicationDetailsClass-ul-2",

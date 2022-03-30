@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render, WithReduxStore, WithRouter, screen } from 'test-utils';
+import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
 import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
