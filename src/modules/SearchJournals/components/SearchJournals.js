@@ -7,11 +7,10 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import JournalSearchInterface from './JournalSearchInterface';
 import JournalSearchResult from './JournalSearchResult';
 import { filterNonValidKeywords, useJournalSearch, useSelectedKeywords } from '../hooks';
-import { searchJournals } from 'actions';
+import { clearJournalSearchKeywords, searchJournals } from 'actions';
 import locale from 'locale/components';
 import deparam from 'can-deparam';
 import { useHistory } from 'react-router';
-import { clearJournalSearchKeywords } from 'actions';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 export const KEYWORD_ALL_JOURNALS = { type: 'Keyword', text: 'all journals' };
@@ -140,14 +139,19 @@ export const SearchJournals = () => {
      */
     React.useEffect(() => {
         // otherwise, update the query search
-        handleSearch({
-            // make sure history reflects resetting facets filter, paging and sorting when keywords are removed
-            // or if All Journals has been clicked, or keyword clear button clicked
-            ...(fromHandleAllJournals.current || fromHandleKeywordClear.current || fromHandleKeywordDelete.current
-                ? {}
-                : journalSearchQueryParams),
-            keywords: selectedKeywords,
-        });
+        handleSearch(
+            {
+                // make sure history reflects resetting facets filter, paging and sorting when keywords are removed
+                // or if All Journals has been clicked, or keyword clear button clicked
+                ...(fromHandleAllJournals.current || fromHandleKeywordClear.current || fromHandleKeywordDelete.current
+                    ? {}
+                    : journalSearchQueryParams),
+                keywords: selectedKeywords,
+            },
+            {
+                scrollToTop: false,
+            },
+        );
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKeywords]);
 

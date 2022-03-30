@@ -3792,11 +3792,11 @@ export default {
                                         >
                                             agreements with some publishers
                                         </a>{' '}
-                                        where that APC is pre-paid or reduced for UQ corresponding authors.
+                                        where that APC is pre-paid or discounted for UQ corresponding authors.
                                     </p>
                                     <p>
                                         To find a journal which meets your requirements or funder mandate, refine your
-                                        results by the open access filters.
+                                        results by Open access: accepted version or Open access: published version.
                                     </p>
                                     <p>
                                         <a
