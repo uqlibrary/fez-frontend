@@ -149,18 +149,18 @@ context('Strategic Publishing - Search', () => {
 
     it('Selecting keyword should not change scroll position', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        scrollToBottom().then(currentClientHeight => {
+        scrollToBottom().then(() => {
             // select a keyword
             cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
             cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
             // make sure the scroll hasn't changed
-            assertScrollIsNotOnTop(currentClientHeight);
+            assertScrollIsNotOnTop();
         });
     });
 
     it('Removing keyword should not change scroll position', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
-        scrollToBottom().then(currentClientHeight => {
+        scrollToBottom().then(() => {
             // select a keyword
             cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
             // and remove it
@@ -170,7 +170,7 @@ context('Strategic Publishing - Search', () => {
                 .then(() => {
                     cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
                     // make sure the scroll hasn't changed
-                    assertScrollIsNotOnTop(currentClientHeight);
+                    assertScrollIsNotOnTop();
                 });
         });
     });
