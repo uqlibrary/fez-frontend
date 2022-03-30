@@ -14,6 +14,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-previous"
@@ -29,7 +30,10 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        justifyContent="center"
+        sm="auto"
       >
         <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 1 of 50 result pages"
@@ -165,17 +169,26 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        xs={true}
       >
-        <WithStyles(ForwardRef(Button))
-          variant="text"
+        <Styled(MuiBox)
+          paddingLeft={1}
+          paddingRight={1}
+          textAlign="center"
         >
-          Page 10 of 50
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            variant="text"
+          >
+            Page 10 of 50
+          </WithStyles(ForwardRef(Button))>
+        </Styled(MuiBox)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
@@ -205,6 +218,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-previous"
@@ -220,7 +234,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        justifyContent="center"
+        sm="auto"
       >
         <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 1 of 3 result pages"
@@ -270,17 +287,26 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        xs={true}
       >
-        <WithStyles(ForwardRef(Button))
-          variant="text"
+        <Styled(MuiBox)
+          paddingLeft={1}
+          paddingRight={1}
+          textAlign="center"
         >
-          Page 1 of 3
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            variant="text"
+          >
+            Page 1 of 3
+          </WithStyles(ForwardRef(Button))>
+        </Styled(MuiBox)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
@@ -304,6 +330,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-previous"
@@ -319,7 +346,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        justifyContent="center"
+        sm="auto"
       >
         <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 1 of 3 result pages"
@@ -369,17 +399,26 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        xs={true}
       >
-        <WithStyles(ForwardRef(Button))
-          variant="text"
+        <Styled(MuiBox)
+          paddingLeft={1}
+          paddingRight={1}
+          textAlign="center"
         >
-          Page 3 of 3
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            variant="text"
+          >
+            Page 3 of 3
+          </WithStyles(ForwardRef(Button))>
+        </Styled(MuiBox)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
@@ -403,6 +442,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-previous"
@@ -418,7 +458,10 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        justifyContent="center"
+        sm="auto"
       >
         <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 1 of 3 result pages"
@@ -468,17 +511,26 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
+        alignItems="center"
         item={true}
+        xs={true}
       >
-        <WithStyles(ForwardRef(Button))
-          variant="text"
+        <Styled(MuiBox)
+          paddingLeft={1}
+          paddingRight={1}
+          textAlign="center"
         >
-          Page 2 of 3
-        </WithStyles(ForwardRef(Button))>
+          <WithStyles(ForwardRef(Button))
+            variant="text"
+          >
+            Page 2 of 3
+          </WithStyles(ForwardRef(Button))>
+        </Styled(MuiBox)>
       </WithStyles(ForwardRef(Grid))>
     </Hidden>
     <WithStyles(ForwardRef(Grid))
       item={true}
+      xs="auto"
     >
       <WithStyles(ForwardRef(Button))
         className="undefined paging-next"
@@ -501,7 +553,6 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
       "current": "PublicationsListPaging-current-2",
       "fakeDisabled": "PublicationsListPaging-fakeDisabled-5",
       "gridContainer": "PublicationsListPaging-gridContainer-6",
-      "gridItem": "PublicationsListPaging-gridItem-7",
       "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-3",
       "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-4",
       "pageButton": "PublicationsListPaging-pageButton-1",
