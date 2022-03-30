@@ -4,6 +4,7 @@ import viewCommunitiesReducer from './communities';
 
 const initialState = {
     communityList: [],
+    communitiesSelected: [],
     loadingCommunities: false,
     loadingCommunitiesError: null,
     totalRecords: 0,

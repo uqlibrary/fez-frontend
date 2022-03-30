@@ -24,6 +24,7 @@ const handlers = {
         collectionList: state.collectionList,
         collectionsOpened: state.collectionsOpened,
         collectionsSelected: [],
+        collectionsSelectedParent: null,
     }),
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {

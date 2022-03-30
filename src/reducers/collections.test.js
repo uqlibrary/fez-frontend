@@ -13,6 +13,8 @@ const initialState = {
     loadingCollectionsPid: 'UQ:123',
     collectionList: [],
     collectionsOpened: [],
+    collectionsSelected: [],
+    collectionsSelectedParent: null,
 };
 
 describe('viewCollections reducer', () => {
@@ -35,10 +37,11 @@ describe('viewCollections reducer', () => {
     it('sets collecton loaded state', () => {
         const previousState = {
             ...initialState,
-            loadingCommunities: false,
+            loadingCollections: false,
             loadingCollectionsPid: 'UQ:123',
         };
         const expected = {
+            ...previousState,
             collectionList: [
                 {
                     pid: 'UQ:1234',
@@ -100,6 +103,7 @@ describe('viewCollections reducer', () => {
             loadingCollections: false,
         };
         const expected = {
+            ...previousState,
             loadingCollections: false,
             loadingCollectionsPid: 'UQ:123',
             collectionList: ['test'],
@@ -119,6 +123,7 @@ describe('viewCollections reducer', () => {
             collectionsOpened: ['UQ:12345', 'UQ:98765'],
         };
         const expected = {
+            ...previousState,
             loadingCollections: false,
             loadingCollectionsPid: 'UQ:123',
             collectionList: ['test'],
@@ -138,6 +143,7 @@ describe('viewCollections reducer', () => {
             collectionsOpened: [],
         };
         const expected = {
+            ...previousState,
             collectionList: [],
             loadingCollections: false,
             loadingCollectionsPid: null,
