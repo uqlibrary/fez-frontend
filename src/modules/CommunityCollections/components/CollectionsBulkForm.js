@@ -34,6 +34,7 @@ export default class CollectionsBulkForm extends Component {
         formValues: PropTypes.object,
         formErrors: PropTypes.object,
         collectionsSelected: PropTypes.array,
+        collectionsSelectedParent: PropTypes.string,
         newCollectionSaving: PropTypes.bool,
         newCollectionError: PropTypes.bool,
         newRecord: PropTypes.object,
@@ -89,48 +90,41 @@ export default class CollectionsBulkForm extends Component {
         // const detailsTitle = !!hasParams
         //     ? `New collection in community '${queryStringObject.name}'`
         //     : txt.details.title;
-        if (this.props.submitSucceeded && this.props.newRecord) {
+        if (!this.props.collectionsSelected || this.props.collectionsSelected.length < 1) {
             return (
                 <StandardPage title={txt.title}>
-                    <Grid container spacing={3}>
-                        <Grid item xs={12}>
-                            <StandardCard title={txt.afterSubmitTitle}>
-                                <Typography>{txt.afterSubmitText}</Typography>
-                            </StandardCard>
-                        </Grid>
-                    </Grid>
-                    <Grid container spacing={2}>
-                        <Grid item xs />
-                        <Grid item>
-                            <Button variant="contained" fullWidth onClick={this.reloadForm}>
-                                {txt.reloadFormButton}
-                            </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button variant="contained" color="primary" fullWidth onClick={this.afterSubmit}>
-                                {txt.afterSubmitButton}
-                            </Button>
-                        </Grid>
-                    </Grid>
+                    <Typography>You cannot navigate to this page directly</Typography>
                 </StandardPage>
             );
         }
-        // customise error for thesis submission
-        // const alertProps = validation.getErrorAlertProps({
-        //     ...this.props,
-        //     alertLocale: {
-        //         validationAlert: { ...formLocale.validationAlert },
-        //         progressAlert: { ...formLocale.progressAlert },
-        //         successAlert: { ...formLocale.successAlert },
-        //         errorAlert: {
-        //             ...formLocale.errorAlert,
-        //             message: formLocale.addACollection.addFailedMessage,
-        //         },
-        //     },
-        // });
+        if (this.props.submitSucceeded) {
+            <StandardPage title={txt.title}>
+                <Grid container spacing={3}>
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.afterSubmitTitle}>
+                            <Typography>{txt.afterSubmitText}</Typography>
+                        </StandardCard>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs />
+                    <Grid item>
+                        <Button variant="contained" fullWidth onClick={this.reloadForm}>
+                            {txt.reloadFormButton}
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button variant="contained" color="primary" fullWidth onClick={this.afterSubmit}>
+                            {txt.afterSubmitButton}
+                        </Button>
+                    </Grid>
+                </Grid>
+            </StandardPage>;
+        }
+        // const collectionString =
+        //    this.props.collectionsSelected.length > 0 && this.props.collectionsSelected.map(e => e.title).join(', ');
         return (
             <StandardPage title={txt.title}>
-                {console.log('This Props', this.props)}
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
                     <form>
                         <NavigationDialogBox
@@ -140,6 +134,12 @@ export default class CollectionsBulkForm extends Component {
                         <Grid container spacing={3}>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.title} help={txt.help}>
+                                    <Typography>Moving the following collections:</Typography>
+                                    <ul>
+                                        {this.props.collectionsSelected.map(e => (
+                                            <li>{e.title}</li>
+                                        ))}
+                                    </ul>
                                     <Grid
                                         container
                                         spacing={3}

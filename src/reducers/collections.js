@@ -13,6 +13,7 @@ export const initialState = {
     perPage: 10,
     collectionsOpened: [],
     collectionsSelected: [],
+    // collectionsSelectedTitles: [],
     collectionsSelectedParent: null,
 };
 
@@ -67,16 +68,41 @@ const handlers = {
         };
     },
     [actions.SET_COLLECTIONS_SELECTED]: (state, action) => {
+        // let selectedArray =
+        //     action.payload.selectedParent !== state.collectionsSelectedParent ? [] : [...state.collectionsSelected];
+        // let selectedTitleArray =
+        //     action.payload.selectedParent !== state.collectionsSelectedParent
+        //         ? []
+        //         : [...state.collectionsSelectedTitles];
+        // // action.payload.selectedParent !== state.selectedParent ?
+        // if (selectedArray.indexOf(action.payload.pid) === -1) {
+        //     selectedArray.push(action.payload.pid);
+        //     selectedTitleArray.push(action.payload.title);
+        // } else {
+        //     selectedArray = selectedArray.filter(val => val !== action.payload.pid);
+        //     selectedTitleArray = selectedTitleArray.filter(val => val !== action.payload.title);
+        // }
+        // console.log('SELECTED PARENT IS', action.payload.selectedParent, state.collectionsSelectedParent);
+        // console.log('SELECTED ARRAY IS', selectedArray);
+        // console.log('SELECTED TITLE ARRAY IS', selectedTitleArray);
+        // return {
+        //     ...state,
+        //     collectionsSelected: selectedArray,
+        //     collectionsSelectedTitles: selectedTitleArray,
+        //     collectionsSelectedParent: action.payload.selectedParent,
+        // };
+
         let selectedArray =
             action.payload.selectedParent !== state.collectionsSelectedParent ? [] : [...state.collectionsSelected];
-        // action.payload.selectedParent !== state.selectedParent ?
-        if (selectedArray.indexOf(action.payload.pid) === -1) {
-            selectedArray.push(action.payload.pid);
+        // console.log(selectedArray.findIndex(object => object.pid === action.payload.pid));
+        if (selectedArray.findIndex(object => object.pid === action.payload.pid) >= 0) {
+            // console.log('filtering');
+            selectedArray = selectedArray.filter(object => object.pid !== action.payload.pid);
         } else {
-            selectedArray = selectedArray.filter(val => val !== action.payload.pid);
+            // console.log('pushing');
+            selectedArray.push({ pid: action.payload.pid, title: action.payload.title });
         }
-        console.log('SELECTED PARENT IS', action.payload.selectedParent, state.collectionsSelectedParent);
-        console.log('SELECTED ARRAY IS', selectedArray);
+        // console.log('SELECTED ARRAY', selectedArray);
         return {
             ...state,
             collectionsSelected: selectedArray,
@@ -84,9 +110,12 @@ const handlers = {
         };
     },
     [actions.SET_ALL_COLLECTIONS_SELECTED]: (state, action) => {
+        // console.log('SELECTED TITLE ARRAY (ALL) IS', action.payload.titles);
         return {
             ...state,
             collectionsSelected: action.payload.pids,
+            collectionsSelectedParent: action.payload.selectedParent,
+            // collectionsSelectedTitles: action.payload.titles,
         };
     },
 };

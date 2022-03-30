@@ -26,7 +26,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { ccBulkActions } from 'config/communityCollections';
 // import { debounce } from 'throttle-debounce';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const moment = require('moment');
 
@@ -47,18 +47,17 @@ const useStyles = makeStyles({
         },
     },
 });
-export const navigateToUrl = (uri, target, options) => {
-    const fullUri = uri;
-    console.log('OPENING WINDOW PAGE');
-    window.open(fullUri, target, options);
-};
 
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
+    const history = useHistory();
     const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
     const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
     const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
 
     const collectionsSelected = useSelector(state => state.get('viewCollectionsReducer').collectionsSelected);
+    // const collectionsSelectedTitles = useSelector(
+    //     state => state.get('viewCollectionsReducer').collectionsSelectedTitles,
+    // );
 
     const dispatch = useDispatch();
 
@@ -70,15 +69,15 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
 
     const menuOptions = ccBulkActions.map(action => {
         // const linkTarget = action.inApp ? '_self' : '_blank';
-        const options = action.options || null;
+        // const options = action.options || null;
         const url = action.url(pid);
         // const api = action.api(pid);
         const clickHandler = () => {
             // console.log('IS URL', url);
             // if (url) {
-            console.log('DEBOUNCING');
 
-            navigateToUrl(url + '&user=uqstaff', '_self', options);
+            history.push(url);
+            // navigateToUrl(url + '&user=uqstaff', '_self', options);
 
             // } else {
             // dispatch here
@@ -167,8 +166,13 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         //     selectedArray = selectedArray.filter(val => val !== e.target.value);
         // }
         // setCollectionsSelected(selectedArray);
-        console.log('ON SELECT ROW CHANGE', e.target.value);
-        dispatch(actions.setCollectionsSelected({ parent: pid, pid: e.target.value }));
+        dispatch(
+            actions.setCollectionsSelected({
+                parent: pid,
+                pid: e.target.value,
+                title: e.target.getAttribute('data-title'),
+            }),
+        );
     };
 
     const onSelectAllChange = e => {
@@ -177,8 +181,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
             dispatch(actions.setAllCollectionsSelected({ parent: pid, pids: [] }));
         } else {
             const allRecords = [];
+            // const allRecordsTitles = [];
             finalList.data.map(record => {
-                allRecords.push(record.rek_pid);
+                allRecords.push({ pid: record.rek_pid, title: record.rek_title });
+                //    allRecordsTitles.push(record.rek_title);
             });
             // setCollectionsSelected(allRecords);
             dispatch(actions.setAllCollectionsSelected({ parent: pid, pids: allRecords }));
@@ -201,7 +207,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
 
     return (
         <div>
-            {console.log('THE CHECKED LIST', collectionsSelected)}
             {collectionListLoading && loadingCollectionsPid === pid && (
                 <div data-testid="collections-page-loading">
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
@@ -256,23 +261,25 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                 <Table aria-label="simple table">
                                     <TableHead>
                                         <TableRow data-testid="embedded-collections-primary-header">
-                                            <TableCell>
-                                                <Checkbox
-                                                    color="primary"
-                                                    indeterminate={
-                                                        collectionsSelected.length > 0 &&
-                                                        collectionsSelected.length < finalList.data.length
-                                                    }
-                                                    checked={
-                                                        finalList.data.length > 0 &&
-                                                        collectionsSelected.length === finalList.data.length
-                                                    }
-                                                    onChange={onSelectAllChange}
-                                                    // inputProps={{
-                                                    //     'aria-label': 'select all rows',
-                                                    // }}
-                                                />
-                                            </TableCell>
+                                            {!!adminUser && (
+                                                <TableCell>
+                                                    <Checkbox
+                                                        color="primary"
+                                                        indeterminate={
+                                                            collectionsSelected.length > 0 &&
+                                                            collectionsSelected.length < finalList.data.length
+                                                        }
+                                                        checked={
+                                                            finalList.data.length > 0 &&
+                                                            collectionsSelected.length === finalList.data.length
+                                                        }
+                                                        onChange={onSelectAllChange}
+                                                        // inputProps={{
+                                                        //     'aria-label': 'select all rows',
+                                                        // }}
+                                                    />
+                                                </TableCell>
+                                            )}
                                             <TableCell>{labels.title}</TableCell>
                                             <TableCell className={classes.dateCell} align="right">
                                                 {labels.creation_date}
@@ -290,21 +297,29 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     <TableBody data-testid="embedded-collections-primary-body">
                                         {finalList.data.map(row => (
                                             <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                                                <TableCell>
-                                                    <Checkbox
-                                                        color="primary"
-                                                        value={row.rek_pid}
-                                                        // indeterminate={
-                                                        //     communitiesSelected.length > 0 &&
-                                                        //     communitiesSelected.length < records.length
-                                                        // }
-                                                        checked={collectionsSelected.indexOf(row.rek_pid) !== -1}
-                                                        onChange={onSelectRowChange}
-                                                        // inputProps={{
-                                                        //     'aria-label': 'select all rows',
-                                                        // }}
-                                                    />
-                                                </TableCell>
+                                                {!!adminUser && (
+                                                    <TableCell>
+                                                        <Checkbox
+                                                            color="primary"
+                                                            value={row.rek_pid}
+                                                            // indeterminate={
+                                                            //     communitiesSelected.length > 0 &&
+                                                            //     communitiesSelected.length < records.length
+                                                            // } findIndex(object => object.pid === action.payload.pid)
+                                                            // >= 0)
+                                                            checked={
+                                                                collectionsSelected.findIndex(
+                                                                    object => row.rek_pid === object.pid,
+                                                                ) >= 0
+                                                            }
+                                                            onChange={onSelectRowChange}
+                                                            inputProps={{
+                                                                'aria-label': 'select all rows',
+                                                                'data-title': row.rek_title,
+                                                            }}
+                                                        />
+                                                    </TableCell>
+                                                )}
                                                 <TableCell>
                                                     <Typography variant="body2">
                                                         <Link to={pathConfig.records.view(row.rek_pid)}>
@@ -347,45 +362,54 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                 />
                                 {/* This is where the bulk actions button will go */}
                             </Box>
-                            <Button
-                                id={`bulk-actions-button-${pid}`}
-                                style={{ marginTop: 10, color: 'white' }}
-                                // aria-controls={open ? 'demo-customized-menu' : undefined}
-                                // aria-haspopup="true"
-                                // aria-expanded={open ? 'true' : undefined}
-                                variant="contained"
-                                disableElevation
-                                disabled={!!collectionsSelected?.length < 1}
-                                onClick={handleBulkClick}
-                                classes={{
-                                    root: classes.enabledButton,
-                                    disabled: classes.disabledButton,
-                                }}
-                                endIcon={<KeyboardArrowDownIcon />}
-                            >
-                                {conf.bulkActionsText}
-                            </Button>
-                            <Menu id="admin-actions-menu" anchorEl={anchorEl} open={bulkOpen} onClose={handleBulkClose}>
-                                {menuOptions.map((option, index) => (
-                                    <MenuItem
-                                        key={index}
-                                        onClick={() => {
-                                            setAnchorEl(false);
-                                            option.clickHandler();
+                            {!!adminUser && (
+                                <React.Fragment>
+                                    <Button
+                                        id={`bulk-actions-button-${pid}`}
+                                        style={{ marginTop: 10, color: 'white' }}
+                                        // aria-controls={open ? 'demo-customized-menu' : undefined}
+                                        // aria-haspopup="true"
+                                        // aria-expanded={open ? 'true' : undefined}
+                                        variant="contained"
+                                        disableElevation
+                                        disabled={!!collectionsSelected?.length < 1}
+                                        onClick={handleBulkClick}
+                                        classes={{
+                                            root: classes.enabledButton,
+                                            disabled: classes.disabledButton,
                                         }}
-                                        onContextMenu={() => {
-                                            setAnchorEl(false);
-                                            option.clickHandler(true);
-                                        }}
-                                        onAuxClick={() => {
-                                            setAnchorEl(false);
-                                            option.clickHandler(true);
-                                        }}
+                                        endIcon={<KeyboardArrowDownIcon />}
                                     >
-                                        {option.label}
-                                    </MenuItem>
-                                ))}
-                            </Menu>
+                                        {conf.bulkActionsText}
+                                    </Button>
+                                    <Menu
+                                        id="admin-actions-menu"
+                                        anchorEl={anchorEl}
+                                        open={bulkOpen}
+                                        onClose={handleBulkClose}
+                                    >
+                                        {menuOptions.map((option, index) => (
+                                            <MenuItem
+                                                key={index}
+                                                onClick={() => {
+                                                    setAnchorEl(false);
+                                                    option.clickHandler();
+                                                }}
+                                                onContextMenu={() => {
+                                                    setAnchorEl(false);
+                                                    option.clickHandler(true);
+                                                }}
+                                                onAuxClick={() => {
+                                                    setAnchorEl(false);
+                                                    option.clickHandler(true);
+                                                }}
+                                            >
+                                                {option.label}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </React.Fragment>
+                            )}
                         </Collapse>
                     )}
                     {!finalList.data.length > 0 && (

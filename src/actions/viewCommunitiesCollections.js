@@ -100,6 +100,7 @@ export function setCollectionsSelected(rowObject) {
             payload: {
                 pid: rowObject.pid,
                 selectedParent: rowObject.parent,
+                title: rowObject.title,
             },
         });
     };
@@ -110,6 +111,8 @@ export function setAllCollectionsSelected(pidObject) {
             type: actions.SET_ALL_COLLECTIONS_SELECTED,
             payload: {
                 pids: pidObject.pids,
+                selectedParent: pidObject.parent,
+                titles: pidObject.titles,
             },
         });
     };

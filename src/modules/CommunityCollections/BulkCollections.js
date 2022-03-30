@@ -28,7 +28,7 @@ const onSubmit = (values, dispatch, props) => {
     //     throw new SubmissionError({ _error: error });
     // });
 
-    alert('This is a submission');
+    alert('This is where the dispatch for submission will go');
     console.log('THE values', values);
     console.log('THE dispatch', dispatch);
     console.log('THE props values', props);
@@ -41,12 +41,18 @@ const CollectionContainer = reduxForm({
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    // console.log('Reducer', state.get('viewCollectionsReducer'));
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         collectionsSelected:
             (state && state.get('viewCollectionsReducer') && state.get('viewCollectionsReducer').collectionsSelected) ||
+            null,
+        collectionsSelectedParent:
+            (state &&
+                state.get('viewCollectionsReducer') &&
+                state.get('viewCollectionsReducer').collectionsSelectedParent) ||
             null,
         // author: (state && state.get('accountReducer') && state.get('accountReducer').author) || null,
         // newRecord:
