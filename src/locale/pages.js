@@ -40,13 +40,20 @@ export default {
                 <StandardCard noHeader>
                     <h3>General Enquiries</h3>
                     <p>
-                        Tel: 07 334 69981 <br />
-                        Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
+                        For assistance or technical issues please email:{' '}
+                        <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                         <br />
                     </p>
                     <p>
-                        Due to COVID-19 measures the phones may not always be monitored by on-site staff. Please email
-                        us for assistance if you are unable to reach us.
+                        You can also view our{' '}
+                        <a
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                            target="_blank"
+                        >
+                            {' '}
+                            online guide
+                        </a>
+                        .
                     </p>
                     <h3>About UQ eSpace</h3>
                     The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
