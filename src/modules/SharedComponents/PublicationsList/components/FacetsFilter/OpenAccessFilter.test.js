@@ -20,9 +20,18 @@ describe('OpenAccessFilter ', () => {
         expect(getByTestId('expand-more-facet-category-open-access')).toBeInTheDocument();
     });
 
-    it('should render selected component', () => {
+    it('should render expanded facet when clicked', () => {
+        const { getByText, getByTestId } = setup({});
+        expect(getByText('Open access status')).toBeInTheDocument();
+        expect(getByTestId('expand-more-facet-category-open-access')).toBeInTheDocument();
+        fireEvent.click(getByTestId('expand-more-facet-category-open-access'));
+
+        expect(getByText('Show open access only')).toBeInTheDocument();
+    });
+
+    it('should render selected facet already open if active', () => {
         const { getByText, getByTestId } = setup({ isActive: true });
-        fireEvent.click(getByTestId('clickable-facet-category-open-access'));
+
         expect(getByText('Show open access only')).toBeInTheDocument();
         expect(getByTestId('clear-facet-filter-nested-item-open-access')).toBeInTheDocument();
     });
@@ -30,7 +39,9 @@ describe('OpenAccessFilter ', () => {
     it('should call onChange if value has changed', () => {
         const onChange = jest.fn();
         const { getByText, getByTestId } = setup({ isActive: true, onChange });
-        fireEvent.click(getByTestId('clickable-facet-category-open-access'));
+
+        expect(getByText('Show open access only')).toBeInTheDocument();
+        expect(getByTestId('clear-facet-filter-nested-item-open-access')).toBeInTheDocument();
         fireEvent.click(getByText('Show open access only'));
         expect(onChange).toBeCalledWith(false);
     });
