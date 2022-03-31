@@ -4,6 +4,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import OpenInNew from '@material-ui/icons/OpenInNew';
 
 import locale from 'locale/components';
 
@@ -27,6 +28,9 @@ help: {
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
 
+[LS 31-3-22] Inlined external link styles because the ExternalLink component would not compile in this context.
+As the contact details changes are only temporary I think this is an ok (not great) approach to display the external link icon.
+
 */
 /* eslint-disable max-len */
 export default {
@@ -49,8 +53,26 @@ export default {
                         <a
                             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
                             target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                overflowWrap: 'break-word',
+                                wordBreak: 'break-word',
+                                maxWidth: '100% !important',
+                                minWidth: 0,
+                                display: 'inline-block',
+                                verticalAlign: 'bottom',
+                                cursor: 'pointer',
+                            }}
                         >
-                            {' '}
+                            <OpenInNew
+                                style={{
+                                    color: 'inherit',
+                                    fontSize: '0.66rem',
+                                    display: 'inline-block',
+                                    float: 'right',
+                                    marginLeft: '0.25rem',
+                                }}
+                            />{' '}
                             online guide
                         </a>
                         .
