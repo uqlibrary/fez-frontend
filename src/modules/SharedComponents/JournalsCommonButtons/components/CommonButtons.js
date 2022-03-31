@@ -28,7 +28,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
     };
     return (
         <>
-            <Grid item xs={12} sm={6} md={3} alignItems="stretch" className={classes.buttonContainer}>
+            <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
                 <Button
                     children={txt.journalSearchInterface.buttons.myFavouriteJournals.title}
                     aria-label={txt.journalSearchInterface.buttons.myFavouriteJournals.aria}
@@ -39,7 +39,7 @@ const CommonButtons = ({ onSearchAll, browseAllJournals: isBrowsingAllJournals =
                 />
             </Grid>
             {!isBrowsingAllJournals && (
-                <Grid item xs={12} sm={6} md={3} alignItems="stretch" className={classes.buttonContainer}>
+                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
                     <Button
                         id="journal-search-browse-all-button"
                         data-testid="journal-search-browse-all-button"
