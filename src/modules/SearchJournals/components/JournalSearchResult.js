@@ -216,19 +216,19 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     )}
                 </StandardCard>
             </Grid>
-            <Hidden smDown>
-                {!!journalsList && (
-                    <Grid item md={3}>
+            {!!journalsList && (
+                <Grid item xs={12} md={3}>
+                    <Hidden smDown>
                         <JournalSearchFacetsFilter
                             key={'journal-search-facets-filter'}
                             facetsData={journalsList.filters?.facets}
                             onFacetsChanged={facetsChanged}
                             disabled={!journalsListLoaded}
                         />
-                        <FAQ />
-                    </Grid>
-                )}
-            </Hidden>
+                    </Hidden>
+                    <FAQ />
+                </Grid>
+            )}
             <ScrollToTop selector={'#content-container'} />
         </Grid>
     );
