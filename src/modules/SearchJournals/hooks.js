@@ -127,13 +127,11 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
         },
     };
 
-    const handleSearch = searchQuery => {
+    const handleSearch = (searchQuery, state = {}) => {
         history.push({
             pathname: path,
             search: param(searchQuery),
-            state: {
-                source: 'code',
-            },
+            state: state,
         });
     };
 

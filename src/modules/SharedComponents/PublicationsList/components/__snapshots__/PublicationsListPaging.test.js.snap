@@ -30,9 +30,7 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
-        justifyContent="center"
         sm="auto"
       >
         <WithStyles(ForwardRef(Button))
@@ -169,7 +167,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
         xs={true}
       >
@@ -234,9 +231,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
-        justifyContent="center"
         sm="auto"
       >
         <WithStyles(ForwardRef(Button))
@@ -287,7 +282,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, f
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
         xs={true}
       >
@@ -346,9 +340,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
-        justifyContent="center"
         sm="auto"
       >
         <WithStyles(ForwardRef(Button))
@@ -399,7 +391,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, l
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
         xs={true}
       >
@@ -458,9 +449,7 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       xsDown={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
-        justifyContent="center"
         sm="auto"
       >
         <WithStyles(ForwardRef(Button))
@@ -511,7 +500,6 @@ exports[`PublicationsListPaging renders  component with non-empty paging data, s
       smUp={true}
     >
       <WithStyles(ForwardRef(Grid))
-        alignItems="center"
         item={true}
         xs={true}
       >

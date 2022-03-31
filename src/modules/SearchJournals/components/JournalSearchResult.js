@@ -176,28 +176,14 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     {!!journalsList && (
                         <Grid style={{ paddingTop: 20 }} item xs={12}>
                             <Grid container spacing={2}>
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={6}
-                                    md={3}
-                                    alignItems="stretch"
-                                    className={classes.buttonContainer}
-                                >
+                                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
                                     <AddToFavouritesButton
                                         disabled={countSelectedJournals() < 1}
                                         clearSelectedJournals={clearSelectedJournals}
                                         selectedJournals={selectedJournals}
                                     />
                                 </Grid>
-                                <Grid
-                                    item
-                                    xs={12}
-                                    sm={6}
-                                    md={3}
-                                    alignItems="stretch"
-                                    className={classes.buttonContainer}
-                                >
+                                <Grid item xs={12} sm={6} md={3} className={classes.buttonContainer}>
                                     <Button
                                         disabled={countSelectedJournals() < 2}
                                         onClick={handleJournalsComparisonClick}
@@ -216,19 +202,19 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     )}
                 </StandardCard>
             </Grid>
-            <Hidden smDown>
-                {!!journalsList && (
-                    <Grid item md={3}>
+            {!!journalsList && (
+                <Grid item xs={12} md={3}>
+                    <Hidden smDown>
                         <JournalSearchFacetsFilter
                             key={'journal-search-facets-filter'}
                             facetsData={journalsList.filters?.facets}
                             onFacetsChanged={facetsChanged}
                             disabled={!journalsListLoaded}
                         />
-                        <FAQ />
-                    </Grid>
-                )}
-            </Hidden>
+                    </Hidden>
+                    <FAQ />
+                </Grid>
+            )}
             <ScrollToTop selector={'#content-container'} />
         </Grid>
     );

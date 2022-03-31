@@ -7,10 +7,15 @@ export class ScrollToTop extends Component {
         children: PropTypes.any,
         location: PropTypes.object,
     };
-    /* istanbul ignore next */
+
     componentDidUpdate(prevProps) {
-        if (this.props.location !== prevProps.location && document.getElementById('content-container')) {
-            document.getElementById('content-container').scrollTop = 0;
+        const element = document.getElementById('content-container');
+        if (
+            this.props.location?.state?.scrollToTop !== false &&
+            this.props.location !== prevProps.location &&
+            element
+        ) {
+            element.scrollTop = 0;
         }
     }
 
