@@ -9162,20 +9162,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ]
                           }
                         >
-                          <HelmetWrapper
-                            defer={true}
-                            encodeSpecialCharacters={true}
-                            link={
-                              Array [
-                                Object {
-                                  "href": "http://purl.org/DC/elements/1.0/",
-                                  "rel": "schema.DC",
-                                },
-                              ]
+                          <HelmetProvider
+                            context={
+                              Object {
+                                "helmet": null,
+                              }
                             }
-                            title="UQ eSpace "
                           >
-                            <SideEffect(NullComponent)
+                            <Helmet
                               defer={true}
                               encodeSpecialCharacters={true}
                               link={
@@ -9186,9 +9180,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 ]
                               }
+                              prioritizeSeoTags={true}
                               title="UQ eSpace "
                             >
-                              <NullComponent
+                              <HelmetDispatcher
+                                context={
+                                  Object {
+                                    "helmetInstances": Object {
+                                      "add": [Function],
+                                      "get": [Function],
+                                      "remove": [Function],
+                                    },
+                                    "setHelmet": [Function],
+                                  }
+                                }
                                 defer={true}
                                 encodeSpecialCharacters={true}
                                 link={
@@ -9199,10 +9204,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     },
                                   ]
                                 }
+                                prioritizeSeoTags={true}
                                 title="UQ eSpace "
                               />
-                            </SideEffect(NullComponent)>
-                          </HelmetWrapper>
+                            </Helmet>
+                          </HelmetProvider>
                         </Meta>
                       </Connect(Meta)>
                     </withRouter(Connect(Meta))>
