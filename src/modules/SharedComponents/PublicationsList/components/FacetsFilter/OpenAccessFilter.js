@@ -16,6 +16,7 @@ export const OpenAccessFilter = ({ onChange, disabled, isActive, locale }) => {
             key="open-access"
             title={txt.displayTitle}
             disabled={disabled}
+            isActive={isActive}
             nestedItems={
                 <FacetFilterNestedListItem
                     onFacetClick={updateFilter}
