@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 import { viewRecordsConfig } from 'config/viewRecord';
 import { locale } from 'locale';
@@ -175,11 +175,14 @@ export default class Meta extends PureComponent {
             {};
 
         return (
-            <Helmet
-                title={`${pageTitle ? `${pageTitle} - ` : ''}${locale.global.title}`}
-                {...linkProps}
-                {...metaTagsProps}
-            />
+            <HelmetProvider>
+                <Helmet
+                    prioritizeSeoTags
+                    title={`${pageTitle ? `${pageTitle} - ` : ''}${locale.global.title}`}
+                    {...linkProps}
+                    {...metaTagsProps}
+                />
+            </HelmetProvider>
         );
     }
 }
