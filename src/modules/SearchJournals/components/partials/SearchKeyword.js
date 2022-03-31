@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { sanitiseId } from 'helpers/general';
 import ForCodeSource from './ForCodeSource';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -65,10 +66,10 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, c
             {sources &&
                 sources.map(source => {
                     return (
-                        <>
+                        <Box key={`keyword-code-source-${source.name}-${index}`}>
                             <ForCodeSource source={source.name} index={index} />
                             {!!source.index && <ForCodeSource source={source.index} index={index} />}
-                        </>
+                        </Box>
                     );
                 })}
         </Grid>

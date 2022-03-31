@@ -162,7 +162,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         )}
                         <Hidden xsDown>
-                            <Grid item sm={'auto'} alignItems={'center'} justifyContent={'center'}>
+                            <Grid item sm={'auto'}>
                                 {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
                                 {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
                                 {this.renderPageButtons()}
@@ -171,7 +171,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         </Hidden>
                         <Hidden smUp>
-                            <Grid item xs alignItems={'center'}>
+                            <Grid item xs>
                                 <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
                                     <Button
                                         variant={'text'}
