@@ -428,7 +428,7 @@ exports[`Search record results should render a single claimable item with no aut
           />
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -440,7 +440,7 @@ exports[`Search record results should render a single claimable item with no aut
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -686,7 +686,7 @@ exports[`Search record results should render a single unclaimable item with no a
           />
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -698,7 +698,7 @@ exports[`Search record results should render a single unclaimable item with no a
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -1755,6 +1755,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             classes={
                                               Object {
                                                 "root": undefined,
+                                                "title": "makeStyles-responsiveHeader-6",
                                               }
                                             }
                                             style={Object {}}
@@ -1778,7 +1779,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   "content": "MuiCardHeader-content",
                                                   "root": "MuiCardHeader-root",
                                                   "subheader": "MuiCardHeader-subheader",
-                                                  "title": "MuiCardHeader-title",
+                                                  "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                                 }
                                               }
                                               style={Object {}}
@@ -1801,7 +1802,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   className="MuiCardHeader-content"
                                                 >
                                                   <WithStyles(ForwardRef(Typography))
-                                                    className="MuiCardHeader-title"
+                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                     color="inherit"
                                                     component="h3"
                                                     data-testid="standard-card-possible-matches-found-header"
@@ -1810,7 +1811,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     variant="h5"
                                                   >
                                                     <ForwardRef(Typography)
-                                                      className="MuiCardHeader-title"
+                                                      className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                                       classes={
                                                         Object {
                                                           "alignCenter": "MuiTypography-alignCenter",
@@ -1853,7 +1854,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                       variant="h5"
                                                     >
                                                       <h3
-                                                        className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                        className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                         data-testid="standard-card-possible-matches-found-header"
                                                         id="standard-card-possible-matches-found-header"
                                                       >
@@ -2646,7 +2647,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     </WithStyles(ForwardRef(Grid))>
                                     <WithStyles(ForwardRef(Grid))
                                       item={true}
-                                      sm="auto"
+                                      md="auto"
                                       xs={12}
                                     >
                                       <ForwardRef(Grid)
@@ -2758,11 +2759,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                           }
                                         }
                                         item={true}
-                                        sm="auto"
+                                        md="auto"
                                         xs={12}
                                       >
                                         <div
-                                          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
+                                          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-auto"
                                         >
                                           <WithStyles(ForwardRef(Button))
                                             fullWidth={true}
@@ -2891,7 +2892,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     </WithStyles(ForwardRef(Grid))>
                                     <WithStyles(ForwardRef(Grid))
                                       item={true}
-                                      sm="auto"
+                                      md="auto"
                                       xs={12}
                                     >
                                       <ForwardRef(Grid)
@@ -3003,11 +3004,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                           }
                                         }
                                         item={true}
-                                        sm="auto"
+                                        md="auto"
                                         xs={12}
                                       >
                                         <div
-                                          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto"
+                                          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-auto"
                                         >
                                           <WithStyles(ForwardRef(Button))
                                             buttonRef={[Function]}
@@ -3359,7 +3360,7 @@ exports[`Search record results should render publications list with one publicat
           />
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -3371,7 +3372,7 @@ exports[`Search record results should render publications list with one publicat
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -3543,7 +3544,7 @@ exports[`Search record results should render stepper and no results 1`] = `
           />
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))
@@ -3555,7 +3556,7 @@ exports[`Search record results should render stepper and no results 1`] = `
           </WithStyles(ForwardRef(Grid))>
           <WithStyles(ForwardRef(Grid))
             item={true}
-            sm="auto"
+            md="auto"
             xs={12}
           >
             <WithStyles(ForwardRef(Button))

@@ -9,8 +9,18 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles(theme => ({
+    containerPadding: {
+        padding: `${theme.spacing(1)}px 0`,
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing(1),
+        },
+    },
+}));
 
 const MediaPreviewButtons = React.memo(({ ...props }) => {
+    const classes = useStyles();
     const { openOriginal, openWeb, close } = locale.viewRecord.sections.files.preview;
     const { mediaUrl, fileName, webMediaUrl, onClose, id } = props;
 
@@ -23,7 +33,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
     }, [webMediaUrl]);
 
     return (
-        <div style={{ padding: 8 }} id={id}>
+        <div className={classes.containerPadding} id={id}>
             <Grid container spacing={2} justify="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">

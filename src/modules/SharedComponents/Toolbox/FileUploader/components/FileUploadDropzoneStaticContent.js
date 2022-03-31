@@ -27,14 +27,23 @@ FileUploadDropzoneStaticContent.propTypes = {
     classes: PropTypes.object,
 };
 
-const styles = () => ({
+const styles = theme => ({
     dropzone: {
         marginTop: 16,
-        padding: '16px 32px 16px 32px',
+        padding: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            padding: `${theme.spacing(2)}px ${theme.spacing(4)}px`,
+        },
         backgroundColor: '#f2f2f2',
         border: '2px dashed #8c8c8c',
         fontSize: '12px',
         lineHeight: '16px',
+
+        '& ul': {
+            [theme.breakpoints.down('xs')]: {
+                paddingInlineStart: theme.spacing(2),
+            },
+        },
     },
     heading: {
         fontSize: 14,
@@ -52,4 +61,4 @@ const styles = () => ({
     },
 });
 
-export default withStyles(styles)(FileUploadDropzoneStaticContent);
+export default withStyles(styles, { withTheme: true })(FileUploadDropzoneStaticContent);

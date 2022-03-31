@@ -71,6 +71,12 @@ const useStyles = makeStyles(theme => ({
     cursor: {
         cursor: 'pointer',
     },
+    marginVariableTop: {
+        marginTop: -12,
+        [theme.breakpoints.up('sm')]: {
+            marginTop: -24,
+        },
+    },
 }));
 
 export const NewViewRecord = ({
@@ -161,7 +167,12 @@ export const NewViewRecord = ({
     } else if (isNotFoundRoute || (recordToViewError && recordToViewError.status === 404)) {
         return (
             <StandardPage className="viewRecord" title={locale.pages.viewRecord.notFound.title}>
-                <Grid container style={{ marginTop: -24 }}>
+                <Grid
+                    container
+                    className={classes.marginVariableTop}
+                    id="notFoundGridContainer"
+                    data-testid="notFoundGridContainer"
+                >
                     <Grid item xs={12}>
                         {locale.pages.viewRecord.notFound.message}
                     </Grid>
@@ -202,7 +213,7 @@ export const NewViewRecord = ({
                         mobileOpen={mobileOpen}
                     />
                 )}
-                <Grid container style={{ marginTop: -24 }}>
+                <Grid container className={classes.marginVariableTop}>
                     <Grid item xs={12}>
                         <PublicationCitation
                             publication={recordToView}

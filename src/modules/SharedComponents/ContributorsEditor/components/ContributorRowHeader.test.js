@@ -7,13 +7,14 @@ function setup(testProps = {}) {
         showRoleInput: false,
         showContributorAssignment: false,
         disabled: false,
+        canEdit: false,
         classes: {
             right: 'right',
             header: 'header',
             text: 'text',
-            paddingRight24: 'paddingRight24',
-            paddingRight36: 'paddingRight36',
-            paddingRight14: 'paddingRight14',
+            infinitePaddingRight: 'paddingRight36',
+            paddingRight: 'paddingRight40',
+            paddingRightEdit: 'paddingRight78',
         },
         ...testProps,
     };
@@ -70,8 +71,16 @@ describe('Component ContributorRowHeader', () => {
         const wrapper = setup({
             isInfinite: true,
             classes: {
-                paddingRight36: 'test-class-1',
-                paddingRight14: 'test-class-2',
+                infinitePaddingRight: 'test-class-1',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('should use extra padding if row is editable', () => {
+        const wrapper = setup({
+            canEdit: true,
+            classes: {
+                paddingRightEdit: 'test-class-1',
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

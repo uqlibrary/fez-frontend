@@ -6,11 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(() => ({
     externalLink: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
         overflowWrap: 'break-word',
-        wordBreak: 'break-all',
-        whiteSpace: 'nowrap',
+        wordBreak: 'break-word',
         maxWidth: '100% !important',
         minWidth: 0,
         display: 'inline-block',

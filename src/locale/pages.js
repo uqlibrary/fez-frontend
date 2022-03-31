@@ -37,7 +37,7 @@ export default {
         contact: {
             title: 'Contact UQ eSpace',
             children: (
-                <StandardCard>
+                <StandardCard noHeader>
                     <h3>General Enquiries</h3>
                     <p>
                         Tel: 07 334 69981 <br />

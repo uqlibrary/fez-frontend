@@ -59,72 +59,15 @@ This means that it's exactly like production, except for the git branch that use
   ```
   nvm use 16.13.2 && npm i -g npm@8.4 jest webpack-dev-server
   ```
+  See [gotchas](#gotchas) below for watchouts regarding `nvm` versions
   
-  **A word of caution**
-  Be aware that nvm will use the default version of node whenever a new terminal window is opened. This may catch you out if you are updating environmental variables and closing/opening Terminal as mentioned earlier.
-  
-  To check what version is in use:
-  ```
-  nvm ls
-  ```
-  
-  will display similair to:
-  
-  ```
-  v14.7.0
-  ->     v16.13.2
-  default -> 14.7.0 (-> v14.7.0)
-  iojs -> N/A (default)
-  unstable -> N/A (default)
-  node -> stable (-> v16.13.2) (default)
-  stable -> 16.13 (-> v16.13.2) (default)
-  lts/* -> lts/gallium (-> N/A)
-  lts/argon -> v4.9.1 (-> N/A)
-  lts/boron -> v6.17.1 (-> N/A)
-  lts/carbon -> v8.17.0 (-> N/A)
-  lts/dubnium -> v10.24.1 (-> N/A)
-  lts/erbium -> v12.22.10 (-> N/A)
-  lts/fermium -> v14.19.0 (-> N/A)
-  lts/gallium -> v16.14.0 (-> N/A)
-  ```
-  
-  **Note the default value above (14.7.0)**
-  
-  To ensure you're always using the correct version of Node, you can set the default nvm will use with:
-  
-  ```
-  nvm alias default 16.13.2
-  ```
-  
-  which when checked should give you something like this:
-  
-  ```
-  nvm ls
-  
-  v14.7.0
-  ->     v16.13.2
-  default -> 16.13.2 (-> v16.13.2)
-  iojs -> N/A (default)
-  unstable -> N/A (default)
-  node -> stable (-> v16.13.2) (default)
-  stable -> 16.13 (-> v16.13.2) (default)
-  lts/* -> lts/gallium (-> N/A)
-  lts/argon -> v4.9.1 (-> N/A)
-  lts/boron -> v6.17.1 (-> N/A)
-  lts/carbon -> v8.17.0 (-> N/A)
-  lts/dubnium -> v10.24.1 (-> N/A)
-  lts/erbium -> v12.22.10 (-> N/A)
-  lts/fermium -> v14.19.0 (-> N/A)
-  lts/gallium -> v16.14.0 (-> N/A)
-  ```
-  
-  Be sure to check your nvm node version if your unit tests fail to run (this typically will happen if you change your repo from package-lock.json version 1 to 2, including updating the node and npm versions as mentioned above).
   
 - In the root folder of `fez-frontend` install the required `npm` modules:
 
    ```
    npm install
    ```
+
 - Finally, before starting one of the `npm run` commands shown below, ensure you have duplicated the `example.env` file in the root of `fez-frontend` and named the duplicate file `.env`
 
 You should now be able to run one of the following commands from the CLI:
@@ -277,12 +220,70 @@ To keep initial load to a minimum, the following optimisations have been added t
   new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/);
   ```
 
-### Gotchas
+### <a name="gotchas" id="gotchas"></a>Gotchas
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
 - if you can't get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
 - The eSpace API always returns a 200 for a GET request to /fez-author. For this reason, checking for the presence of the ```author``` (e.g. ```this.props.author```) is not enough to determine if the logged-in user is an author or not. This can be done the following check: ```this.props.autho?.aut_id``` or by checking for the response of author details API endpoint e.g. ```this.props.authorDetails```
+- Be aware that `nvm` will use the default version of node whenever a new terminal window is opened. This may catch you out if you are updating environmental variables and closing/opening Terminal as mentioned earlier.
+  
+  To check what version is in use:
+  ```
+  nvm ls
+  ```
+  
+  will display similair to:
+  
+  ```
+  v14.7.0
+  ->     v16.13.2
+  default -> 14.7.0 (-> v14.7.0)
+  iojs -> N/A (default)
+  unstable -> N/A (default)
+  node -> stable (-> v16.13.2) (default)
+  stable -> 16.13 (-> v16.13.2) (default)
+  lts/* -> lts/gallium (-> N/A)
+  lts/argon -> v4.9.1 (-> N/A)
+  lts/boron -> v6.17.1 (-> N/A)
+  lts/carbon -> v8.17.0 (-> N/A)
+  lts/dubnium -> v10.24.1 (-> N/A)
+  lts/erbium -> v12.22.10 (-> N/A)
+  lts/fermium -> v14.19.0 (-> N/A)
+  lts/gallium -> v16.14.0 (-> N/A)
+  ```
+  
+  **Note the default value above (14.7.0)**
+  
+  To ensure you're always using the correct version of Node, you can set the default nvm will use with:
+  
+  ```
+  nvm alias default 16.13.2
+  ```
+  
+  which when checked should give you something like this:
+  
+  ```
+  nvm ls
+  
+  v14.7.0
+  ->     v16.13.2
+  default -> 16.13.2 (-> v16.13.2)
+  iojs -> N/A (default)
+  unstable -> N/A (default)
+  node -> stable (-> v16.13.2) (default)
+  stable -> 16.13 (-> v16.13.2) (default)
+  lts/* -> lts/gallium (-> N/A)
+  lts/argon -> v4.9.1 (-> N/A)
+  lts/boron -> v6.17.1 (-> N/A)
+  lts/carbon -> v8.17.0 (-> N/A)
+  lts/dubnium -> v10.24.1 (-> N/A)
+  lts/erbium -> v12.22.10 (-> N/A)
+  lts/fermium -> v14.19.0 (-> N/A)
+  lts/gallium -> v16.14.0 (-> N/A)
+  ```
+  
+  Be sure to check your nvm node version if your unit tests fail to run (this typically will happen if you change your repo from package-lock.json version 1 to 2, including updating the node and npm versions as mentioned above).
 
 #### Optimisation Guidelines
 

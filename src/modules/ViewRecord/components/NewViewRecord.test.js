@@ -62,6 +62,11 @@ describe('NewViewRecord', () => {
         userIsAuthor.mockImplementation(() => true);
     });
 
+    afterEach(() => {
+        userIsAdmin.mockReset();
+        userIsAuthor.mockReset();
+    });
+
     it('should render default empty view', () => {
         const { asFragment } = setup({});
         expect(asFragment()).toMatchInlineSnapshot(`
@@ -152,6 +157,7 @@ describe('NewViewRecord', () => {
     });
 
     it('should have status prop in the header for admins', () => {
+        window.matchMedia = createMatchMedia(window.innerWidth);
         userIsAdmin.mockImplementationOnce(() => true);
         const { getByText } = setup({
             recordToView: { ...record, rek_status: 1, rek_status_lookup: 'Unpublished' },

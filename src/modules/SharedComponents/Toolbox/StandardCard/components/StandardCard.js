@@ -31,6 +31,11 @@ export const useStyles = makeStyles(theme => ({
         border: '10px solid red',
         height: '100%',
     },
+    responsiveHeader: {
+        [theme.breakpoints.down('xs')]: {
+            ...theme.typography.h6,
+        },
+    },
 }));
 
 export const StandardCard = ({
@@ -81,6 +86,7 @@ export const StandardCard = ({
                     classes={{
                         root:
                             (primaryHeader && classes.cardHeaderPrimary) || (accentHeader && classes.cardHeaderAccent),
+                        title: classes.responsiveHeader,
                     }}
                 />
             )}

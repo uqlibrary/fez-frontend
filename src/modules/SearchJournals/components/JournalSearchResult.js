@@ -19,6 +19,9 @@ import { useHistory, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
+import { makeStyles } from '@material-ui/styles';
+
+import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
 
 export const id = 'journal-search-results';
 
@@ -33,7 +36,16 @@ export const getSearchResultSortingParams = (journalSearchQueryParams, journalsL
     return { sortBy, sortDirection, pageSize };
 };
 
+const useStyles = makeStyles(theme => ({
+    buttonContainer: {
+        [theme.breakpoints.up('md')]: {
+            display: 'inline-flex',
+        },
+    },
+}));
+
 export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals = false }) => {
+    const classes = useStyles();
     const location = useLocation();
     const history = useHistory();
     const txt = locale.components.searchJournals;
@@ -164,14 +176,28 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     {!!journalsList && (
                         <Grid style={{ paddingTop: 20 }} item xs={12}>
                             <Grid container spacing={2}>
-                                <Grid item xs={12} sm="auto">
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={3}
+                                    alignItems="stretch"
+                                    className={classes.buttonContainer}
+                                >
                                     <AddToFavouritesButton
                                         disabled={countSelectedJournals() < 1}
                                         clearSelectedJournals={clearSelectedJournals}
                                         selectedJournals={selectedJournals}
                                     />
                                 </Grid>
-                                <Grid item xs={12} sm="auto">
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={6}
+                                    md={3}
+                                    alignItems="stretch"
+                                    className={classes.buttonContainer}
+                                >
                                     <Button
                                         disabled={countSelectedJournals() < 2}
                                         onClick={handleJournalsComparisonClick}
@@ -203,6 +229,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
                     <FAQ />
                 </Grid>
             )}
+            <ScrollToTop selector={'#content-container'} />
         </Grid>
     );
 };
