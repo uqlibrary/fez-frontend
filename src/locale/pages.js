@@ -7,6 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import OpenInNew from '@material-ui/icons/OpenInNew';
 
 import locale from 'locale/components';
+import globalLocale from './global';
 
 import { pathConfig } from 'config/pathConfig';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
@@ -54,26 +55,16 @@ export default {
                             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
                             target="_blank"
                             rel="noopener noreferrer"
-                            style={{
-                                overflowWrap: 'break-word',
-                                wordBreak: 'break-word',
-                                maxWidth: '100% !important',
-                                minWidth: 0,
-                                display: 'inline-block',
-                                verticalAlign: 'bottom',
-                                cursor: 'pointer',
-                            }}
+                            className="externalLink"
+                            title={
+                                globalLocale.global.linkWillOpenInNewWindow.replace(
+                                    '[destination]',
+                                    'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
+                                ) || undefined
+                            }
+                            tabIndex="0"
                         >
-                            <OpenInNew
-                                style={{
-                                    color: 'inherit',
-                                    fontSize: '0.66rem',
-                                    display: 'inline-block',
-                                    float: 'right',
-                                    marginLeft: '0.25rem',
-                                }}
-                            />{' '}
-                            online guide
+                            <OpenInNew className="externalLinkIcon" /> online guide
                         </a>
                         .
                     </p>

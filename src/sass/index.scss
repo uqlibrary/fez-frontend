@@ -77,3 +77,21 @@ a {
     font-style: italic;
   }
 }
+
+// External links that don't use built in component
+.externalLink {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100% !important;
+  min-width: 0;
+  display: inline-block;
+  vertical-align: bottom;
+  cursor: pointer;
+  
+  .externalLinkIcon {
+    color: inherit;
+    font-size: 0.66rem;
+    float: right;
+    margin-left: 0.25rem;
+  }
+}
