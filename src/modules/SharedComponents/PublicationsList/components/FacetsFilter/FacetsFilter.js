@@ -224,6 +224,7 @@ export const FacetsFilter = ({
                             key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
                             title={item.title}
                             disabled={disabled}
+                            isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
                             nestedItems={
                                 <FacetFilterNestedListItemsList
                                     facetCategory={item}
