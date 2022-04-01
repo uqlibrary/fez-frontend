@@ -334,7 +334,13 @@ export class AppClass extends PureComponent {
                                 </Grid>
                             )}
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={2} alignItems="center" justifyContent="flex-start" wrap={'nowrap'}>
+                                <Grid
+                                    container
+                                    spacing={2}
+                                    alignItems="center"
+                                    justifyContent="flex-start"
+                                    wrap={'nowrap'}
+                                >
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
                                         <Hidden xsDown>
                                             <Grid item>
