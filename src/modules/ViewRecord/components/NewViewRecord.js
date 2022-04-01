@@ -56,7 +56,7 @@ const useStyles = makeStyles(theme => ({
         marginRight: 0,
     },
     contentShift: {
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             transition: theme.transitions.create('margin', {
                 easing: theme.transitions.easing.easeOut,
                 duration: theme.transitions.duration.enteringScreen,
@@ -114,7 +114,7 @@ export const NewViewRecord = ({
         setOpen(!open);
     };
     const handleDrawerToggle = () => {
-        if (window.matchMedia('(max-width:599.96px)').matches) {
+        if (window.matchMedia('(max-width:959.96px)').matches) {
             handleMobileDrawerToggle();
         } else {
             handleDesktopDrawerToggle();
