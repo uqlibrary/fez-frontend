@@ -12,7 +12,7 @@ export const UserFieldData = ({ userFieldDataId, label, helperText, type, ...pro
     return (
         <React.Fragment>
             <Grid item xs={2}>
-                <Grid container justify="flex-end">
+                <Grid container justifyContent="flex-end">
                     <Grid item>
                         <ColumnTitle title={label} />
                     </Grid>

@@ -313,7 +313,7 @@ export class AppClass extends PureComponent {
                             alignItems="center"
                             direction="row"
                             wrap="nowrap"
-                            justify="flex-start"
+                            justifyContent="flex-start"
                         >
                             {!this.state.docked && !this.state.menuDrawerOpen && !isThesisSubmissionPage && (
                                 <Grid item>
@@ -334,7 +334,7 @@ export class AppClass extends PureComponent {
                                 </Grid>
                             )}
                             <Grid item xs style={titleStyle} className={classes.nowrap}>
-                                <Grid container spacing={2} alignItems="center" justify="flex-start" wrap={'nowrap'}>
+                                <Grid container spacing={2} alignItems="center" justifyContent="flex-start" wrap={'nowrap'}>
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
                                         <Hidden xsDown>
                                             <Grid item>
@@ -418,7 +418,7 @@ export class AppClass extends PureComponent {
                         <Grid
                             container
                             alignContent="center"
-                            justify="center"
+                            justifyContent="center"
                             alignItems="center"
                             style={{ marginBottom: 12 }}
                         >

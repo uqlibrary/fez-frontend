@@ -232,7 +232,7 @@ export const JournalSearchFacetsFilter = ({ facetsData, renameFacetsList, disabl
                     })}
                 </List>
                 {activeFacetsFilters && Object.keys(activeFacetsFilters).length > 0 && (
-                    <Grid container justify="flex-end">
+                    <Grid container justifyContent="flex-end">
                         <Grid item>
                             <Button
                                 variant="contained"

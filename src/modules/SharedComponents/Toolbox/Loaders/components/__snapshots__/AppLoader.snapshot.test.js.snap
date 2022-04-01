@@ -16,7 +16,7 @@ exports[`Component AppLoader should render as expected 1`] = `
   }
   container={true}
   direction="column"
-  justify="center"
+  justifyContent="center"
   spacing={0}
 >
   <WithStyles(ForwardRef(Grid))

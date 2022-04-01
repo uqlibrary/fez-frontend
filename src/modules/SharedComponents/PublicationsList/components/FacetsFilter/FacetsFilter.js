@@ -260,7 +260,7 @@ export const FacetsFilter = ({
                 )}
             </List>
             {hasActiveFilters && (
-                <Grid container justify="flex-end">
+                <Grid container justifyContent="flex-end">
                     <Grid item>
                         <Button variant="contained" onClick={_handleResetClick}>
                             {resetButtonText}

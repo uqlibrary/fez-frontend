@@ -34,7 +34,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
 
     return (
         <div className={classes.containerPadding} id={id}>
-            <Grid container spacing={2} justify="flex-end" direction="row">
+            <Grid container spacing={2} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">
                         <Button
