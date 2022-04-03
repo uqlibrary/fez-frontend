@@ -182,7 +182,7 @@ export default class RecordsSearchResults extends PureComponent {
                                             variant={'contained'}
                                             color="primary"
                                             onClick={this._showNewRecordForm}
-                                            buttonRef={this._setRef}
+                                            ref={this._setRef}
                                         >
                                             {searchResultsTxt.submit}
                                         </Button>
