@@ -13,7 +13,7 @@ exports[`Component InlineLoader should render as expected 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    justify="center"
+    justifyContent="center"
     spacing={1}
   >
     <Hidden

@@ -35,7 +35,7 @@ export class DashboardAuthorProfile extends PureComponent {
 
         return (
             <Card className={classes.wrapper}>
-                <Grid container spacing={3} alignContent={'center'} alignItems={'center'} justify={'center'}>
+                <Grid container spacing={3} alignContent={'center'} alignItems={'center'} justifyContent={'center'}>
                     {/* Profile avatar */}
                     {authorDetails.image_exists === 1 && (
                         <Grid item xs={'auto'}>

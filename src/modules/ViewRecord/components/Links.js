@@ -49,7 +49,7 @@ export class LinksClass extends PureComponent {
             className={this.props.classes.header}
             alignItems={'center'}
             alignContent={'center'}
-            justify={'center'}
+            justifyContent={'center'}
         >
             <Grid item xs={12} sm={6} data-testid={`${linkId}-link`}>
                 <Typography variant={'body2'} component={'span'}>

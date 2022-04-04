@@ -328,7 +328,7 @@ export const AttachedFiles = ({
                                                 spacing={1}
                                                 alignContent={'flex-end'}
                                                 alignItems={'flex-end'}
-                                                justify={'flex-end'}
+                                                justifyContent={'flex-end'}
                                                 style={{ marginTop: 4 }}
                                             >
                                                 <Grid item xs={6} />
