@@ -103,7 +103,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -166,7 +166,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -342,7 +342,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -849,7 +849,7 @@ exports[`Application component should determine if it has incomplete works from 
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -912,7 +912,7 @@ exports[`Application component should determine if it has incomplete works from 
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -1075,7 +1075,7 @@ exports[`Application component should determine if it has incomplete works from 
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -1898,7 +1898,7 @@ exports[`Application component should determine if it has incomplete works from 
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -1961,7 +1961,7 @@ exports[`Application component should determine if it has incomplete works from 
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -2124,7 +2124,7 @@ exports[`Application component should determine if it has incomplete works from 
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -2697,7 +2697,7 @@ exports[`Application component should redirect to login page with correct return
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -2760,7 +2760,7 @@ exports[`Application component should redirect to login page with correct return
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -2936,7 +2936,7 @@ exports[`Application component should redirect to login page with correct return
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -3439,7 +3439,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -3502,7 +3502,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -3678,7 +3678,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -4505,7 +4505,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -4568,7 +4568,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -4707,7 +4707,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/journals/search/",
-          "primaryText": "Strategic publishing tool",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
@@ -5595,7 +5595,7 @@ exports[`Application component should render app for account with fez author wit
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -5658,7 +5658,7 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -5797,7 +5797,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/journals/search/",
-          "primaryText": "Strategic publishing tool",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
@@ -6670,7 +6670,7 @@ exports[`Application component should render application with routing for the us
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -6733,7 +6733,7 @@ exports[`Application component should render application with routing for the us
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -7018,7 +7018,7 @@ exports[`Application component should render for anon user 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -7081,7 +7081,7 @@ exports[`Application component should render for anon user 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -7502,7 +7502,7 @@ exports[`Application component should render thesis submission for HDR without m
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -7518,7 +7518,7 @@ exports[`Application component should render thesis submission for HDR without m
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -8534,11 +8534,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                       "grid-xs-true": "MuiGrid-grid-xs-true",
                       "item": "MuiGrid-item",
-                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                       "root": "MuiGrid-root",
                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -9652,20 +9652,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             ]
                           }
                         >
-                          <HelmetWrapper
-                            defer={true}
-                            encodeSpecialCharacters={true}
-                            link={
-                              Array [
-                                Object {
-                                  "href": "http://purl.org/DC/elements/1.0/",
-                                  "rel": "schema.DC",
-                                },
-                              ]
+                          <HelmetProvider
+                            context={
+                              Object {
+                                "helmet": null,
+                              }
                             }
-                            title="UQ eSpace "
                           >
-                            <SideEffect(NullComponent)
+                            <Helmet
                               defer={true}
                               encodeSpecialCharacters={true}
                               link={
@@ -9676,9 +9670,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   },
                                 ]
                               }
+                              prioritizeSeoTags={true}
                               title="UQ eSpace "
                             >
-                              <NullComponent
+                              <HelmetDispatcher
+                                context={
+                                  Object {
+                                    "helmetInstances": Object {
+                                      "add": [Function],
+                                      "get": [Function],
+                                      "remove": [Function],
+                                    },
+                                    "setHelmet": [Function],
+                                  }
+                                }
                                 defer={true}
                                 encodeSpecialCharacters={true}
                                 link={
@@ -9689,10 +9694,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     },
                                   ]
                                 }
+                                prioritizeSeoTags={true}
                                 title="UQ eSpace "
                               />
-                            </SideEffect(NullComponent)>
-                          </HelmetWrapper>
+                            </Helmet>
+                          </HelmetProvider>
                         </Meta>
                       </Connect(Meta)>
                     </withRouter(Connect(Meta))>
@@ -9802,7 +9808,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       alignItems="center"
                                       container={true}
                                       direction="row"
-                                      justify="flex-start"
+                                      justifyContent="flex-start"
                                       spacing={1}
                                       wrap="nowrap"
                                     >
@@ -9894,11 +9900,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                             "grid-xs-true": "MuiGrid-grid-xs-true",
                                             "item": "MuiGrid-item",
-                                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                             "root": "MuiGrid-root",
                                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -9917,7 +9923,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         }
                                         container={true}
                                         direction="row"
-                                        justify="flex-start"
+                                        justifyContent="flex-start"
                                         spacing={1}
                                         wrap="nowrap"
                                       >
@@ -10014,11 +10020,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                   "item": "MuiGrid-item",
-                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                   "root": "MuiGrid-root",
                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -10475,11 +10481,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                   "item": "MuiGrid-item",
-                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                   "root": "MuiGrid-root",
                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -10515,7 +10521,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 <WithStyles(ForwardRef(Grid))
                                                   alignItems="center"
                                                   container={true}
-                                                  justify="flex-start"
+                                                  justifyContent="flex-start"
                                                   spacing={2}
                                                   wrap="nowrap"
                                                 >
@@ -10607,11 +10613,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                         "grid-xs-true": "MuiGrid-grid-xs-true",
                                                         "item": "MuiGrid-item",
-                                                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                         "root": "MuiGrid-root",
                                                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -10629,7 +10635,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       }
                                                     }
                                                     container={true}
-                                                    justify="flex-start"
+                                                    justifyContent="flex-start"
                                                     spacing={2}
                                                     wrap="nowrap"
                                                   >
@@ -10749,11 +10755,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                               "grid-xs-true": "MuiGrid-grid-xs-true",
                                                               "item": "MuiGrid-item",
-                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                               "root": "MuiGrid-root",
                                                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -10953,11 +10959,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                   "item": "MuiGrid-item",
-                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                   "root": "MuiGrid-root",
                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -11144,6 +11150,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "resetExportPublicationsStatus": [Function],
                                                           "resetSavingAuthorState": [Function],
                                                           "retrieveFavouriteJournals": [Function],
+                                                          "sanitiseData": [Function],
                                                           "searchAuthorPublications": [Function],
                                                           "searchAuthors": [Function],
                                                           "searchEspacePublications": [Function],
@@ -11254,10 +11261,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           classes={
                                                             Object {
                                                               "inHeader": "SimpleSearchComponent-inHeader-7",
-                                                              "mobileBackArrow": "SimpleSearchComponent-mobileBackArrow-9",
-                                                              "mobileBackArrowButton": "SimpleSearchComponent-mobileBackArrowButton-10",
-                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-11",
-                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-12",
+                                                              "mobileCloseButton": "SimpleSearchComponent-mobileCloseButton-9",
+                                                              "mobileHeader": "SimpleSearchComponent-mobileHeader-10",
+                                                              "mobileSearchInput": "SimpleSearchComponent-mobileSearchInput-11",
                                                               "searchIconMobile": "SimpleSearchComponent-searchIconMobile-8",
                                                               "searchIconPrefix": "SimpleSearchComponent-searchIconPrefix-6",
                                                             }
@@ -11808,11 +11814,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                   "item": "MuiGrid-item",
-                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                   "root": "MuiGrid-root",
                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -12021,15 +12027,15 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     className="MuiIconButton-label"
                                                                   >
                                                                     <ForwardRef(PersonIcon)
-                                                                      className="makeStyles-iconButton-13"
+                                                                      className="makeStyles-iconButton-12"
                                                                       id="logged-in-icon"
                                                                     >
                                                                       <WithStyles(ForwardRef(SvgIcon))
-                                                                        className="makeStyles-iconButton-13"
+                                                                        className="makeStyles-iconButton-12"
                                                                         id="logged-in-icon"
                                                                       >
                                                                         <ForwardRef(SvgIcon)
-                                                                          className="makeStyles-iconButton-13"
+                                                                          className="makeStyles-iconButton-12"
                                                                           classes={
                                                                             Object {
                                                                               "colorAction": "MuiSvgIcon-colorAction",
@@ -12047,7 +12053,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         >
                                                                           <svg
                                                                             aria-hidden={true}
-                                                                            className="MuiSvgIcon-root makeStyles-iconButton-13"
+                                                                            className="MuiSvgIcon-root makeStyles-iconButton-12"
                                                                             focusable="false"
                                                                             id="logged-in-icon"
                                                                             viewBox="0 0 24 24"
@@ -12107,7 +12113,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               >
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-iconButton-13"
+                                                                  class="MuiSvgIcon-root makeStyles-iconButton-12"
                                                                   focusable="false"
                                                                   id="logged-in-icon"
                                                                   viewBox="0 0 24 24"
@@ -12216,16 +12222,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       <MenuDrawer
                         classes={
                           Object {
-                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-20",
-                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-21",
-                            "docked": "MenuDrawer-docked-15",
-                            "header": "MenuDrawer-header-17",
-                            "iconButton": "MenuDrawer-iconButton-23",
-                            "mainMenu": "MenuDrawer-mainMenu-19",
-                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-22",
-                            "paper": "MenuDrawer-paper-14",
-                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
-                            "skipNav": "MenuDrawer-skipNav-18",
+                            "ListItemTextPrimary": "MenuDrawer-ListItemTextPrimary-19",
+                            "ListItemTextSecondary": "MenuDrawer-ListItemTextSecondary-20",
+                            "docked": "MenuDrawer-docked-14",
+                            "header": "MenuDrawer-header-16",
+                            "iconButton": "MenuDrawer-iconButton-22",
+                            "mainMenu": "MenuDrawer-mainMenu-18",
+                            "mainMenuFooter": "MenuDrawer-mainMenuFooter-21",
+                            "paper": "MenuDrawer-paper-13",
+                            "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-15",
+                            "skipNav": "MenuDrawer-skipNav-17",
                           }
                         }
                         docked={false}
@@ -12650,9 +12656,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           anchor="left"
                           classes={
                             Object {
-                              "docked": "MenuDrawer-docked-15",
-                              "paper": "MenuDrawer-paper-14",
-                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-16",
+                              "docked": "MenuDrawer-docked-14",
+                              "paper": "MenuDrawer-paper-13",
+                              "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-15",
                             }
                           }
                           id="menudrawer"
@@ -12664,12 +12670,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             anchor="left"
                             classes={
                               Object {
-                                "docked": "MuiDrawer-docked MenuDrawer-docked-15",
+                                "docked": "MuiDrawer-docked MenuDrawer-docked-14",
                                 "modal": "MuiDrawer-modal",
-                                "paper": "MuiDrawer-paper MenuDrawer-paper-14",
+                                "paper": "MuiDrawer-paper MenuDrawer-paper-13",
                                 "paperAnchorBottom": "MuiDrawer-paperAnchorBottom",
                                 "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom",
-                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-16",
+                                "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft MenuDrawer-paperAnchorDockedLeft-15",
                                 "paperAnchorDockedRight": "MuiDrawer-paperAnchorDockedRight",
                                 "paperAnchorDockedTop": "MuiDrawer-paperAnchorDockedTop",
                                 "paperAnchorLeft": "MuiDrawer-paperAnchorLeft",
@@ -13052,7 +13058,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         <ConfirmDialogBox
                           classes={
                             Object {
-                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-24",
+                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-23",
                             }
                           }
                           confirmDialogBoxId="dialog-box"
@@ -13429,7 +13435,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 }
                                 className="MuiDialog-root"
                                 closeAfterTransition={true}
-                                disableBackdropClick={false}
                                 disableEscapeKeyDown={false}
                                 open={false}
                                 style={
@@ -13986,9 +13991,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       <Page
                                         classes={
                                           Object {
-                                            "helpIcon": "Page-helpIcon-27",
-                                            "layoutCard": "Page-layoutCard-25",
-                                            "layoutTitle": "Page-layoutTitle-26",
+                                            "helpIcon": "Page-helpIcon-26",
+                                            "layoutCard": "Page-layoutCard-24",
+                                            "layoutTitle": "Page-layoutTitle-25",
                                           }
                                         }
                                         theme={
@@ -14446,11 +14451,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -14563,11 +14568,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -14593,11 +14598,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 </ForwardRef(Grid)>
                                               </WithStyles(ForwardRef(Grid))>
                                               <WithStyles(ForwardRef(Grid))
-                                                className="Page-layoutCard-25"
+                                                className="Page-layoutCard-24"
                                                 item={true}
                                               >
                                                 <ForwardRef(Grid)
-                                                  className="Page-layoutCard-25"
+                                                  className="Page-layoutCard-24"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -14684,11 +14689,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -14708,7 +14713,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   item={true}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root Page-layoutCard-25 MuiGrid-item"
+                                                    className="MuiGrid-root Page-layoutCard-24 MuiGrid-item"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
                                                       container={true}
@@ -14801,11 +14806,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                             "grid-xs-true": "MuiGrid-grid-xs-true",
                                                             "item": "MuiGrid-item",
-                                                            "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                             "root": "MuiGrid-root",
                                                             "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                             "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -14920,11 +14925,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                                   "item": "MuiGrid-item",
-                                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                                   "root": "MuiGrid-root",
                                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -15102,6 +15107,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "resetExportPublicationsStatus": [Function],
                                                                           "resetSavingAuthorState": [Function],
                                                                           "retrieveFavouriteJournals": [Function],
+                                                                          "sanitiseData": [Function],
                                                                           "searchAuthorPublications": [Function],
                                                                           "searchAuthors": [Function],
                                                                           "searchEspacePublications": [Function],
@@ -15286,6 +15292,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "resetExportPublicationsStatus": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "retrieveFavouriteJournals": [Function],
+                                                                            "sanitiseData": [Function],
                                                                             "searchAuthorPublications": [Function],
                                                                             "searchAuthors": [Function],
                                                                             "searchEspacePublications": [Function],
@@ -15320,9 +15327,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         }
                                                                         classes={
                                                                           Object {
-                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-29",
-                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-30",
-                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-28",
+                                                                            "tab": "WithWidth(TopCitedPublicationsClass)-tab-28",
+                                                                            "tabIndicator": "WithWidth(TopCitedPublicationsClass)-tabIndicator-29",
+                                                                            "tabs": "WithWidth(TopCitedPublicationsClass)-tabs-27",
                                                                           }
                                                                         }
                                                                         history={
@@ -15470,11 +15477,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                   "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                                   "grid-xs-true": "MuiGrid-grid-xs-true",
                                                                   "item": "MuiGrid-item",
-                                                                  "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                                   "root": "MuiGrid-root",
                                                                   "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                                   "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -15589,11 +15596,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                                         "grid-xs-true": "MuiGrid-grid-xs-true",
                                                                         "item": "MuiGrid-item",
-                                                                        "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                                        "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                                        "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                                        "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                                        "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                                         "root": "MuiGrid-root",
                                                                         "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                                         "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -15707,11 +15714,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                                               "grid-xs-true": "MuiGrid-grid-xs-true",
                                                                               "item": "MuiGrid-item",
-                                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                                               "root": "MuiGrid-root",
                                                                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -15740,13 +15747,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 title="What is eSpace?"
                                                                               >
                                                                                 <WithStyles(ForwardRef(Card))
-                                                                                  className="makeStyles-card-31 StandardCard"
+                                                                                  className="makeStyles-card-30 StandardCard"
                                                                                   data-testid="standard-card-what-is-espace?"
                                                                                   id="standard-card-what-is-espace?"
                                                                                   style={Object {}}
                                                                                 >
                                                                                   <ForwardRef(Card)
-                                                                                    className="makeStyles-card-31 StandardCard"
+                                                                                    className="makeStyles-card-30 StandardCard"
                                                                                     classes={
                                                                                       Object {
                                                                                         "root": "MuiCard-root",
@@ -15757,14 +15764,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     style={Object {}}
                                                                                   >
                                                                                     <WithStyles(ForwardRef(Paper))
-                                                                                      className="MuiCard-root makeStyles-card-31 StandardCard"
+                                                                                      className="MuiCard-root makeStyles-card-30 StandardCard"
                                                                                       data-testid="standard-card-what-is-espace?"
                                                                                       elevation={1}
                                                                                       id="standard-card-what-is-espace?"
                                                                                       style={Object {}}
                                                                                     >
                                                                                       <ForwardRef(Paper)
-                                                                                        className="MuiCard-root makeStyles-card-31 StandardCard"
+                                                                                        className="MuiCard-root makeStyles-card-30 StandardCard"
                                                                                         classes={
                                                                                           Object {
                                                                                             "elevation0": "MuiPaper-elevation0",
@@ -15803,7 +15810,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         style={Object {}}
                                                                                       >
                                                                                         <div
-                                                                                          className="MuiPaper-root MuiCard-root makeStyles-card-31 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                                          className="MuiPaper-root MuiCard-root makeStyles-card-30 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
                                                                                           data-testid="standard-card-what-is-espace?"
                                                                                           id="standard-card-what-is-espace?"
                                                                                           style={Object {}}
@@ -15812,7 +15819,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             action={false}
                                                                                             classes={
                                                                                               Object {
-                                                                                                "root": "makeStyles-cardHeaderPrimary-33",
+                                                                                                "root": "makeStyles-cardHeaderPrimary-32",
+                                                                                                "title": "makeStyles-responsiveHeader-35",
                                                                                               }
                                                                                             }
                                                                                             style={Object {}}
@@ -15834,9 +15842,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   "action": "MuiCardHeader-action",
                                                                                                   "avatar": "MuiCardHeader-avatar",
                                                                                                   "content": "MuiCardHeader-content",
-                                                                                                  "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-33",
+                                                                                                  "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-32",
                                                                                                   "subheader": "MuiCardHeader-subheader",
-                                                                                                  "title": "MuiCardHeader-title",
+                                                                                                  "title": "MuiCardHeader-title makeStyles-responsiveHeader-35",
                                                                                                 }
                                                                                               }
                                                                                               style={Object {}}
@@ -15852,14 +15860,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               }
                                                                                             >
                                                                                               <div
-                                                                                                className="MuiCardHeader-root makeStyles-cardHeaderPrimary-33"
+                                                                                                className="MuiCardHeader-root makeStyles-cardHeaderPrimary-32"
                                                                                                 style={Object {}}
                                                                                               >
                                                                                                 <div
                                                                                                   className="MuiCardHeader-content"
                                                                                                 >
                                                                                                   <WithStyles(ForwardRef(Typography))
-                                                                                                    className="MuiCardHeader-title"
+                                                                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-35"
                                                                                                     color="inherit"
                                                                                                     component="h3"
                                                                                                     data-testid="standard-card-what-is-espace?-header"
@@ -15868,7 +15876,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     variant="h5"
                                                                                                   >
                                                                                                     <ForwardRef(Typography)
-                                                                                                      className="MuiCardHeader-title"
+                                                                                                      className="MuiCardHeader-title makeStyles-responsiveHeader-35"
                                                                                                       classes={
                                                                                                         Object {
                                                                                                           "alignCenter": "MuiTypography-alignCenter",
@@ -15911,7 +15919,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       variant="h5"
                                                                                                     >
                                                                                                       <h3
-                                                                                                        className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                                                        className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-35 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                                                                                         data-testid="standard-card-what-is-espace?-header"
                                                                                                         id="standard-card-what-is-espace?-header"
                                                                                                       >
@@ -16111,11 +16119,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                                               "grid-xs-true": "MuiGrid-grid-xs-true",
                                                                               "item": "MuiGrid-item",
-                                                                              "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                                              "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                                              "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                                              "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                                              "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                                              "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                                              "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                                              "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                                              "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                                              "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                                               "root": "MuiGrid-root",
                                                                               "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                                               "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -16244,6 +16252,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "resetExportPublicationsStatus": [Function],
                                                                                     "resetSavingAuthorState": [Function],
                                                                                     "retrieveFavouriteJournals": [Function],
+                                                                                    "sanitiseData": [Function],
                                                                                     "searchAuthorPublications": [Function],
                                                                                     "searchAuthors": [Function],
                                                                                     "searchEspacePublications": [Function],
@@ -16382,6 +16391,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "resetExportPublicationsStatus": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "retrieveFavouriteJournals": [Function],
+                                                                                      "sanitiseData": [Function],
                                                                                       "searchAuthorPublications": [Function],
                                                                                       "searchAuthors": [Function],
                                                                                       "searchEspacePublications": [Function],
@@ -17948,7 +17958,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 alignContent="center"
                                 alignItems="center"
                                 container={true}
-                                justify="center"
+                                justifyContent="center"
                               >
                                 <WithStyles(ForwardRef(Grid))
                                   item={true}
@@ -18004,7 +18014,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   alignContent="center"
                                   alignItems="center"
                                   container={true}
-                                  justify="center"
+                                  justifyContent="center"
                                 >
                                   <WithStyles(ForwardRef(Grid))
                                     item={true}

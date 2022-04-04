@@ -2158,7 +2158,7 @@ export default {
                     aria: 'Click to reset the advanced search',
                 },
                 simpleSearch: {
-                    title: 'Simple search',
+                    title: 'Back To Simple search',
                     aria: 'Click to return to the simple search',
                 },
                 favouriteSearch: {
@@ -3838,11 +3838,11 @@ export default {
                                         >
                                             agreements with some publishers
                                         </a>{' '}
-                                        where that APC is pre-paid or reduced for UQ corresponding authors.
+                                        where that APC is pre-paid or discounted for UQ corresponding authors.
                                     </p>
                                     <p>
                                         To find a journal which meets your requirements or funder mandate, refine your
-                                        results by the open access filters.
+                                        results by Open access: accepted version or Open access: published version.
                                     </p>
                                     <p>
                                         <a
@@ -3853,6 +3853,15 @@ export default {
                                         </a>
                                     </p>
                                 </div>
+                            ),
+                        },
+                        {
+                            question: "Can't find a journal?",
+                            answer: (
+                                <p>
+                                    Contact us for help at{' '}
+                                    <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                </p>
                             ),
                         },
                         {
@@ -3873,8 +3882,8 @@ export default {
                                         </a>
                                     </li>
                                     <li>
-                                        Have feedback or can't find a journal? Contact{' '}
-                                        <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>
+                                        Contact <a href="mailto:espace@.library.uq.edu.au">espace@library.uq.edu.au</a>{' '}
+                                        to let us know your feedback.
                                     </li>
                                 </ul>
                             ),
@@ -4043,7 +4052,16 @@ export default {
                     text: (
                         <React.Fragment>
                             <h3>Listed in</h3>
-                            <p>Indicates a journal has met the quality indicators/requirements for that list.</p>
+                            <p>
+                                Indicates a journal has met the quality indicators/requirements for a list compiled by a
+                                specific group.
+                            </p>
+                            <p>The following lists are available:</p>
+                            <ul>
+                                <li>ABDC (Australian Business Deans Council)</li>
+                                <li>CWTS (Centre of Science and Technology Studies at Leiden University)</li>
+                                <li>ERA (Excellence in Research Australia)</li>
+                            </ul>
                             <h3>Indexed in</h3>
                             <p>Indicates database providers which index the journal.</p>
                             <h3>Open access: accepted version</h3>

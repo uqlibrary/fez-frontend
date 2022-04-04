@@ -60,7 +60,7 @@ export const useData = (dataConfig = [], getData, mergeData, separator) => {
 export const useTemplate = (template, props) => {
     switch (template) {
         case 'LinkTemplate':
-            return [LinkTemplate, props];
+            return [LinkTemplate, { ...props, format: true }];
         case 'EnclosedLinkTemplate':
             return [EnclosedLinkTemplate, props];
         case 'MultiValueTemplate':
@@ -84,6 +84,7 @@ const useStyles = makeStyles(theme => ({
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
         padding: theme.spacing(1),
+        height: '100%',
     },
     heading: {
         fontWeight: 400,

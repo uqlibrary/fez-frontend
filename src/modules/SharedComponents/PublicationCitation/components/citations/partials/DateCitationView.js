@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { PLACEHOLDER_ISO8601_ZULU_DATE } from '../../../../../../config/general';
 
 export default class DateCitationView extends PureComponent {
     static propTypes = {
@@ -29,7 +30,7 @@ export default class DateCitationView extends PureComponent {
     render() {
         const { date, prefix, suffix, format, className, isLocalised, forceSpecifiedFormat } = this.props;
         // If there is no date, it is invalid, or is a placeholder
-        if (!date || !moment(date).isValid() || moment(date).isSame(moment('1000-01-01T00:00:00Z'))) {
+        if (!date || !moment(date).isValid() || moment(date).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))) {
             return <span className="citationDate empty" />;
         }
         const momentDate = moment(date);

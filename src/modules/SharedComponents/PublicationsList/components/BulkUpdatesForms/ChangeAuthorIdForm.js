@@ -130,7 +130,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         onClear={handleClear('rek_author_id')}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.cancelButtonLabel}
@@ -142,7 +142,7 @@ export const ChangeAuthorIdForm = ({ error, handleSubmit, recordsSelected, submi
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.changeAuthorIdForm.formLabels.submitButtonLabel}
                         children={txt.changeAuthorIdForm.formLabels.submitButtonLabel}

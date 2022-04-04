@@ -8,6 +8,7 @@ import ChevronRight from '@material-ui/icons/ChevronRight';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
+import Box from '@material-ui/core/Box';
 
 const styles = theme => ({
     pageButton: {
@@ -27,6 +28,7 @@ const styles = theme => ({
         height: 32,
         minHeight: 32,
         maxHeight: 32,
+        minWidth: 'auto',
         overflow: 'hidden',
         [theme.breakpoints.down('md')]: {
             paddingLeft: 0,
@@ -51,11 +53,6 @@ const styles = theme => ({
     gridContainer: {
         flexWrap: 'nowrap',
         justifyContent: 'space-between',
-    },
-    gridItem: {
-        display: 'flex',
-        flex: 1,
-        justifyContent: 'center',
     },
 });
 
@@ -150,7 +147,7 @@ export class PublicationsListPaging extends Component {
                 {totalPages > 1 && (
                     <Grid container spacing={0} className={classes.gridContainer}>
                         {currentPage >= 1 && (
-                            <Grid item>
+                            <Grid item xs={'auto'}>
                                 <Button
                                     variant={'text'}
                                     className={`${classes.nextPrevButtons} paging-previous`}
@@ -165,7 +162,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         )}
                         <Hidden xsDown>
-                            <Grid item>
+                            <Grid item sm={'auto'}>
                                 {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
                                 {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
                                 {this.renderPageButtons()}
@@ -174,18 +171,20 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         </Hidden>
                         <Hidden smUp>
-                            <Grid item className={classes.gridItem}>
-                                <Button
-                                    variant={'text'}
-                                    className={classes.nextPrevButtons}
-                                    children={txt.pageOf
-                                        .replace('[currentPage]', currentPage)
-                                        .replace('[totalPages]', totalPages)}
-                                />
+                            <Grid item xs>
+                                <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
+                                    <Button
+                                        variant={'text'}
+                                        className={classes.nextPrevButtons}
+                                        children={txt.pageOf
+                                            .replace('[currentPage]', currentPage)
+                                            .replace('[totalPages]', totalPages)}
+                                    />
+                                </Box>
                             </Grid>
                         </Hidden>
                         {currentPage <= totalPages && (
-                            <Grid item>
+                            <Grid item xs={'auto'}>
                                 <Button
                                     variant={'text'}
                                     className={`${classes.nextPrevButtons} paging-next`}

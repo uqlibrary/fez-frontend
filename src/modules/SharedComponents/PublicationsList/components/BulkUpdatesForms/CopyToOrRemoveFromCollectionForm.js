@@ -96,7 +96,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         {...locale.components.selectField.collection}
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
@@ -108,7 +108,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         variant="contained"
                     />
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}

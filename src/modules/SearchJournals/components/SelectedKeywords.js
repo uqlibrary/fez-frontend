@@ -3,8 +3,18 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import SelectedKeywordItem from './partials/SelectedKeywordItem';
 import locale from 'locale/components';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+    separator: {
+        [theme.breakpoints.down('xs')]: {
+            margin: '0 8px',
+        },
+    },
+}));
 
 export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
+    const classes = useStyles();
     const txt = locale.components.searchJournals;
     return (
         <React.Fragment>
@@ -21,7 +31,11 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                                 keyword={keyword}
                                 onKeywordDelete={onKeywordDelete}
                             />
-                            {addSeparator && <span key={`separator-${index}`}>+</span>}
+                            {addSeparator && (
+                                <span className={classes.separator} key={`separator-${index}`}>
+                                    +
+                                </span>
+                            )}
                         </React.Fragment>
                     );
                 })}

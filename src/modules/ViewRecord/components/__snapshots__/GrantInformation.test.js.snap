@@ -1780,11 +1780,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                     "grid-xs-auto": "MuiGrid-grid-xs-auto",
                     "grid-xs-true": "MuiGrid-grid-xs-true",
                     "item": "MuiGrid-item",
-                    "justify-xs-center": "MuiGrid-justify-xs-center",
-                    "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                    "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                    "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                    "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                    "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                    "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                    "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                    "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                    "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                     "root": "MuiGrid-root",
                     "spacing-xs-1": "MuiGrid-spacing-xs-1",
                     "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -1884,6 +1884,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                 classes={
                                   Object {
                                     "root": undefined,
+                                    "title": "makeStyles-responsiveHeader-6",
                                   }
                                 }
                                 style={Object {}}
@@ -1907,7 +1908,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       "content": "MuiCardHeader-content",
                                       "root": "MuiCardHeader-root",
                                       "subheader": "MuiCardHeader-subheader",
-                                      "title": "MuiCardHeader-title",
+                                      "title": "MuiCardHeader-title makeStyles-responsiveHeader-6",
                                     }
                                   }
                                   style={Object {}}
@@ -1930,7 +1931,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       className="MuiCardHeader-content"
                                     >
                                       <WithStyles(ForwardRef(Typography))
-                                        className="MuiCardHeader-title"
+                                        className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                         color="inherit"
                                         component="h3"
                                         data-testid="standard-card-grant-information-header"
@@ -1939,7 +1940,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                         variant="h5"
                                       >
                                         <ForwardRef(Typography)
-                                          className="MuiCardHeader-title"
+                                          className="MuiCardHeader-title makeStyles-responsiveHeader-6"
                                           classes={
                                             Object {
                                               "alignCenter": "MuiTypography-alignCenter",
@@ -1982,7 +1983,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                           variant="h5"
                                         >
                                           <h3
-                                            className="MuiTypography-root MuiCardHeader-title MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                            className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-6 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
                                             data-testid="standard-card-grant-information-header"
                                             id="standard-card-grant-information-header"
                                           >
@@ -2092,23 +2093,19 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       order={1}
                                     >
                                       <div
+                                        className="makeStyles-containerPadding-9"
                                         key="0"
-                                        style={
-                                          Object {
-                                            "padding": 8,
-                                          }
-                                        }
                                       >
                                         <WithStyles(ForwardRef(Grid))
                                           alignItems="flex-start"
-                                          className="makeStyles-gridRow-6"
+                                          className="makeStyles-gridRow-7"
                                           container={true}
                                           key="1"
                                           spacing={2}
                                         >
                                           <ForwardRef(Grid)
                                             alignItems="flex-start"
-                                            className="makeStyles-gridRow-6"
+                                            className="makeStyles-gridRow-7"
                                             classes={
                                               Object {
                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2195,11 +2192,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2220,7 +2217,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                             spacing={2}
                                           >
                                             <div
-                                              className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                              className="MuiGrid-root makeStyles-gridRow-7 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 item={true}
@@ -2314,11 +2311,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2487,11 +2484,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2652,23 +2649,19 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       order={2}
                                     >
                                       <div
+                                        className="makeStyles-containerPadding-9"
                                         key="1"
-                                        style={
-                                          Object {
-                                            "padding": 8,
-                                          }
-                                        }
                                       >
                                         <WithStyles(ForwardRef(Grid))
                                           alignItems="flex-start"
-                                          className="makeStyles-gridRow-6"
+                                          className="makeStyles-gridRow-7"
                                           container={true}
                                           key="2"
                                           spacing={2}
                                         >
                                           <ForwardRef(Grid)
                                             alignItems="flex-start"
-                                            className="makeStyles-gridRow-6"
+                                            className="makeStyles-gridRow-7"
                                             classes={
                                               Object {
                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -2755,11 +2748,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -2780,7 +2773,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                             spacing={2}
                                           >
                                             <div
-                                              className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                              className="MuiGrid-root makeStyles-gridRow-7 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 item={true}
@@ -2874,11 +2867,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3047,11 +3040,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3212,23 +3205,19 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                       order={3}
                                     >
                                       <div
+                                        className="makeStyles-containerPadding-9"
                                         key="2"
-                                        style={
-                                          Object {
-                                            "padding": 8,
-                                          }
-                                        }
                                       >
                                         <WithStyles(ForwardRef(Grid))
                                           alignItems="flex-start"
-                                          className="makeStyles-gridRow-6"
+                                          className="makeStyles-gridRow-7"
                                           container={true}
                                           key="3"
                                           spacing={2}
                                         >
                                           <ForwardRef(Grid)
                                             alignItems="flex-start"
-                                            className="makeStyles-gridRow-6"
+                                            className="makeStyles-gridRow-7"
                                             classes={
                                               Object {
                                                 "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -3315,11 +3304,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                 "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                 "grid-xs-true": "MuiGrid-grid-xs-true",
                                                 "item": "MuiGrid-item",
-                                                "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                 "root": "MuiGrid-root",
                                                 "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                 "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3340,7 +3329,7 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                             spacing={2}
                                           >
                                             <div
-                                              className="MuiGrid-root makeStyles-gridRow-6 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                              className="MuiGrid-root makeStyles-gridRow-7 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 item={true}
@@ -3434,11 +3423,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",
@@ -3607,11 +3596,11 @@ exports[`Grant Information Component  should render component mounted 1`] = `
                                                       "grid-xs-auto": "MuiGrid-grid-xs-auto",
                                                       "grid-xs-true": "MuiGrid-grid-xs-true",
                                                       "item": "MuiGrid-item",
-                                                      "justify-xs-center": "MuiGrid-justify-xs-center",
-                                                      "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end",
-                                                      "justify-xs-space-around": "MuiGrid-justify-xs-space-around",
-                                                      "justify-xs-space-between": "MuiGrid-justify-xs-space-between",
-                                                      "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly",
+                                                      "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                      "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                      "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                      "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                      "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
                                                       "root": "MuiGrid-root",
                                                       "spacing-xs-1": "MuiGrid-spacing-xs-1",
                                                       "spacing-xs-10": "MuiGrid-spacing-xs-10",

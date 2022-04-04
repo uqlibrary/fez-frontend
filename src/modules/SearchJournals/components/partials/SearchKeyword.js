@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { sanitiseId } from 'helpers/general';
+import ForCodeSource from './ForCodeSource';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -30,7 +32,7 @@ export const getIdSuffix = (keyword, variant, type, index) => {
 export const getId = (keyword, variant, type, index) =>
     sanitiseId(`journal-search-item-${getIdSuffix(keyword, variant, type, index)}`);
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, cvoId }) => {
+export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, cvoId, sources }) => {
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
@@ -61,6 +63,15 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, c
             >
                 {keyword}
             </Typography>
+            {sources &&
+                sources.map(source => {
+                    return (
+                        <Box key={`keyword-code-source-${source.name}-${index}`}>
+                            <ForCodeSource source={source.name} index={index} />
+                            {!!source.index && <ForCodeSource source={source.index} index={index} />}
+                        </Box>
+                    );
+                })}
         </Grid>
     );
 };
@@ -72,6 +83,7 @@ SearchKeyword.propTypes = {
     cvoId: PropTypes.number,
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
+    sources: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default React.memo(SearchKeyword);

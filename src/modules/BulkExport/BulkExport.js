@@ -50,6 +50,11 @@ const useStyles = makeStyles(theme => ({
             color: theme.palette.error.contrastText,
         },
     },
+    dialogMobileMargins: {
+        [theme.breakpoints.down('xs')]: {
+            margin: 0,
+        },
+    },
 }));
 
 const BulkExport = ({
@@ -180,6 +185,9 @@ const BulkExport = ({
                 aria-describedby="bulk-export-instructions"
                 className={classes.root}
                 maxWidth="md"
+                classes={{
+                    paperScrollPaper: classes.dialogMobileMargins,
+                }}
             >
                 <MuiDialogTitle disableTypography>
                     <Typography variant="h4" id="bulk-export-dialog-title">

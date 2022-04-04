@@ -143,7 +143,7 @@ const SearchRecords = ({
                     (!!publicationsList && publicationsList.length > 0)) && (
                     <Grid item xs sm md={9}>
                         <StandardCard noHeader standardCardId="search-records-results">
-                            <Grid container spacing={2} justify="space-between">
+                            <Grid container spacing={2} justifyContent="space-between">
                                 <Grid item xs="auto">
                                     {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
                                         <span>
@@ -190,7 +190,7 @@ const SearchRecords = ({
                                 </Grid>
                                 {isLoadingOrExporting && (
                                     <Grid item xs={12}>
-                                        <Grid container justify={'center'}>
+                                        <Grid container justifyContent={'center'}>
                                             <Grid item xs={12}>
                                                 <InlineLoader
                                                     loaderId="search-records-page-loading"

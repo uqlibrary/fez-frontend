@@ -1,7 +1,8 @@
 import JournalName from './JournalName';
 import { journalArticle } from 'mock/data/testing/records';
+import { sanitiseData } from '../../../../actions';
 
-let testJournalArticle = JSON.parse(JSON.stringify(journalArticle));
+let testJournalArticle = sanitiseData(journalArticle);
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
@@ -14,7 +15,7 @@ function setup(testProps = {}, args = { isShallow: false }) {
 describe('Journal Name Component test ', () => {
     beforeEach(() => {
         // Clone from original mock data before each test
-        testJournalArticle = JSON.parse(JSON.stringify(journalArticle));
+        testJournalArticle = sanitiseData(journalArticle);
     });
 
     it('should render with journal article', () => {

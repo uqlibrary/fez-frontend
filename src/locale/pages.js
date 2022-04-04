@@ -4,8 +4,10 @@ import LockIcon from '@material-ui/icons/Lock';
 import Typography from '@material-ui/core/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import OpenInNew from '@material-ui/icons/OpenInNew';
 
 import locale from 'locale/components';
+import globalLocale from './global';
 
 import { pathConfig } from 'config/pathConfig';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX, PUBLICATION_TYPE_DATA_COLLECTION } from '../config/general';
@@ -27,6 +29,9 @@ help: {
 - text can be plain or formatted HTML component with links/tags/etc
 - if help is not required, delete help: {} fully (including closing '},')
 
+[LS 31-3-22] Inlined external link styles because the ExternalLink component would not compile in this context.
+As the contact details changes are only temporary I think this is an ok (not great) approach to display the external link icon.
+
 */
 /* eslint-disable max-len */
 export default {
@@ -37,16 +42,31 @@ export default {
         contact: {
             title: 'Contact UQ eSpace',
             children: (
-                <StandardCard>
+                <StandardCard noHeader>
                     <h3>General Enquiries</h3>
                     <p>
-                        Tel: 07 334 69981 <br />
-                        Email: <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
+                        For assistance or technical issues please email:{' '}
+                        <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                         <br />
                     </p>
                     <p>
-                        Due to COVID-19 measures the phones may not always be monitored by on-site staff. Please email
-                        us for assistance if you are unable to reach us.
+                        You can also view our{' '}
+                        <a
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="externalLink"
+                            title={
+                                globalLocale.global.linkWillOpenInNewWindow.replace(
+                                    '[destination]',
+                                    'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
+                                ) || undefined
+                            }
+                            tabIndex="0"
+                        >
+                            <OpenInNew className="externalLinkIcon" /> online guide
+                        </a>
+                        .
                     </p>
                     <h3>About UQ eSpace</h3>
                     The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility

@@ -78,7 +78,7 @@ export const ListRow = ({
                 </Grid>
                 {!hideReorder && (
                     <Grid item xs={5} sm={5} md={2} className={classes.center}>
-                        <Grid container justify="flex-end">
+                        <Grid container justifyContent="flex-end">
                             {canMoveUp && (
                                 <Grid item>
                                     <Tooltip title={moveUpHint}>

@@ -31,7 +31,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
           alignItems="center"
           container={true}
           direction="column"
-          justify="center"
+          justifyContent="center"
           spacing={0}
         >
           <WithStyles(ForwardRef(Grid))
@@ -92,7 +92,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
           alignItems="center"
           container={true}
           direction="column"
-          justify="center"
+          justifyContent="center"
           spacing={0}
         >
           <WithStyles(ForwardRef(Grid))
@@ -153,7 +153,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
           alignItems="center"
           container={true}
           direction="column"
-          justify="center"
+          justifyContent="center"
           spacing={0}
         >
           <WithStyles(ForwardRef(Grid))
@@ -222,7 +222,7 @@ exports[`Component NewsFeed should show new count if above set limit 1`] = `
           alignItems="center"
           container={true}
           direction="column"
-          justify="center"
+          justifyContent="center"
           spacing={0}
         >
           <WithStyles(ForwardRef(Grid))

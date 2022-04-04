@@ -15,6 +15,7 @@ import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields'
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
@@ -109,6 +110,7 @@ export default class AddDataCollection extends Component {
         // customise error for data collection submission
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
+            dirty: true,
             alertLocale: {
                 validationAlert: { ...formLocale.validationAlert },
                 progressAlert: { ...formLocale.progressAlert },
@@ -167,6 +169,10 @@ export default class AddDataCollection extends Component {
                             onAction={this._navigateToMyDatasets}
                             onCancelAction={this._restartWorkflow}
                             locale={saveConfirmationLocale}
+                        />
+                        <NavigationDialogBox
+                            when={this.props.dirty && !this.props.submitSucceeded}
+                            txt={txt.cancelWorkflowConfirmation}
                         />
                         <Grid container spacing={3} className={'DataCollection'}>
                             <Grid item xs={12}>

@@ -56,6 +56,17 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel adding this data collection?",
+            "confirmationTitle": "Cancel data collection",
+          }
+        }
+        when={true}
+      />
       <WithStyles(ForwardRef(Grid))
         className="DataCollection"
         container={true}
@@ -1657,6 +1668,17 @@ exports[`AddDataCollection test should render component with a valid collection 
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel adding this data collection?",
+            "confirmationTitle": "Cancel data collection",
+          }
+        }
+        when={true}
+      />
       <WithStyles(ForwardRef(Grid))
         className="DataCollection"
         container={true}
@@ -3254,6 +3276,17 @@ exports[`AddDataCollection test should render component with an invalid collecti
         onCancelAction={[Function]}
         onRef={[Function]}
       />
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel adding this data collection?",
+            "confirmationTitle": "Cancel data collection",
+          }
+        }
+        when={true}
+      />
       <WithStyles(ForwardRef(Grid))
         className="DataCollection"
         container={true}
@@ -4850,6 +4883,17 @@ exports[`AddDataCollection test should render data set form 1`] = `
         onAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+      />
+      <NavigationDialogBox
+        txt={
+          Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to cancel adding this data collection?",
+            "confirmationTitle": "Cancel data collection",
+          }
+        }
+        when={true}
       />
       <WithStyles(ForwardRef(Grid))
         className="DataCollection"

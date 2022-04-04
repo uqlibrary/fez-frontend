@@ -1,5 +1,10 @@
 import * as transformers from './transformers';
-import { CONTENT_INDICATORS, PUBLICATION_TYPE_CONFERENCE_PAPER, contentIndicators } from 'config/general';
+import {
+    CONTENT_INDICATORS,
+    contentIndicators,
+    PLACEHOLDER_ISO8601_DATE,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+} from 'config/general';
 
 const moment = require('moment');
 
@@ -2944,7 +2949,7 @@ describe('Sanitising empty data', () => {
         const data = {};
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [
@@ -2963,7 +2968,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [
@@ -2983,7 +2988,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [
@@ -3004,7 +3009,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [
@@ -3025,7 +3030,7 @@ describe('Sanitising empty data', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [
@@ -3238,7 +3243,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3288,7 +3293,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3335,7 +3340,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3369,7 +3374,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3391,7 +3396,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_license: { rek_license: 123 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_license: { rek_license: 123 },
@@ -3415,7 +3420,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 issns: [{ rek_value: '2323-2323', rek_order: 1 }],
             };
             expect(transformers.getBibliographicSectionSearchKeys(dataMany)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3431,7 +3436,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             });
 
             expect(transformers.getBibliographicSectionSearchKeys(dataOne)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3450,7 +3455,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3476,7 +3481,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3524,7 +3529,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3564,7 +3569,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 },
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_matched_journals: {
@@ -3585,7 +3590,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_matched_journals: null,
             };
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_matched_journals: null,
@@ -3644,7 +3649,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     plainText: 'something something',
                     htmlText: 'The Karl Langer collection consists of _snip_',
                 },
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 fez_record_search_key_keywords: [
                     {
                         rek_keywords: 'Langer, Karl, 1903-1969',
@@ -3683,7 +3688,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 fez_record_search_key_end_page: {
                     rek_end_page: '11',
                 },
@@ -3786,7 +3791,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3823,7 +3828,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -3850,7 +3855,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data2)).toEqual({
-                rek_date: '1000-01-01 00:00:00',
+                rek_date: PLACEHOLDER_ISO8601_DATE,
                 rek_description: null,
                 rek_formatted_abstract: null,
                 fez_record_search_key_language: [
@@ -5078,7 +5083,7 @@ describe('getBibliographicSection for thesis', () => {
         };
 
         expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-            rek_date: '1000-01-01 00:00:00',
+            rek_date: PLACEHOLDER_ISO8601_DATE,
             rek_description: null,
             rek_formatted_abstract: null,
             fez_record_search_key_language: [

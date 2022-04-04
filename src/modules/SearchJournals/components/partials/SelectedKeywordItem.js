@@ -8,6 +8,10 @@ import { sanitiseId } from 'helpers/general';
 const useStyles = makeStyles(theme => ({
     chip: {
         margin: theme.spacing(1),
+        [theme.breakpoints.down('xs')]: {
+            maxWidth: '100%',
+            margin: '8px 0',
+        },
     },
     keyword: {
         fontWeight: 400,

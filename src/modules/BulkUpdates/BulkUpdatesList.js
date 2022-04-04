@@ -24,10 +24,12 @@ export const getColumns = classes => {
     } = componentsLocale;
 
     const getDateTime = date =>
-        moment
-            .utc(date, 'YYYY-MM-DD HH:mm:ss')
-            .local()
-            .format('YYYY-MM-DD HH:mm:ss');
+        !!date
+            ? moment
+                  .utc(date, 'YYYY-MM-DD HH:mm:ss')
+                  .local()
+                  .format('YYYY-MM-DD HH:mm:ss')
+            : '-';
 
     return [
         {

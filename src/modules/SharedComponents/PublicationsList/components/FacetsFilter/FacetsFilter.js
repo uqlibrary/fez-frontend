@@ -224,6 +224,7 @@ export const FacetsFilter = ({
                             key={`facet-category-${item.facetTitle.replace(/ /g, '-').toLowerCase()}`}
                             title={item.title}
                             disabled={disabled}
+                            isActive={activeFacetsFilters.hasOwnProperty(item.facetTitle)}
                             nestedItems={
                                 <FacetFilterNestedListItemsList
                                     facetCategory={item}
@@ -259,7 +260,7 @@ export const FacetsFilter = ({
                 )}
             </List>
             {hasActiveFilters && (
-                <Grid container justify="flex-end">
+                <Grid container justifyContent="flex-end">
                     <Grid item>
                         <Button variant="contained" onClick={_handleResetClick}>
                             {resetButtonText}

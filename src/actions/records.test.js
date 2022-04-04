@@ -2,6 +2,18 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import { record } from 'mock/data';
+import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from '../config/general';
+
+/**
+ * @param expectedRekDate
+ * @param response
+ * @param statusCode
+ * @return [int, {}]
+ */
+const assertPayloadsRekDateAndReturnMockedData = (expectedRekDate, response = record, statusCode = 200) => request => {
+    expect(JSON.parse(request.data).rek_date).toBe(expectedRekDate);
+    return [statusCode, { data: { ...response } }];
+};
 
 describe('Record action creators', () => {
     beforeEach(() => {
@@ -58,12 +70,13 @@ describe('Record action creators', () => {
                 ...testInput,
                 files: [],
             };
+            const expectedRekDate = `${testInput.rek_date} 00:00:00`;
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } });
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
 
             const expectedActions = [actions.CREATE_RECORD_SAVING, actions.CREATE_RECORD_SUCCESS];
 
@@ -308,13 +321,19 @@ describe('Record action creators', () => {
         });
 
         it('dispatches expected actions on successful save of an NTRO record', async () => {
+            const startDate = '2020-01-01';
+            expect(startDate).not.toBe(testInput.rek_date);
             const testInput1 = {
                 ...testInput,
                 files: [],
                 isNtro: true,
+                rek_subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
                 ntroAbstract: {
                     rek_description: 'blah blah blah',
                     rek_formatted_abstract: '<p>blah blah blah</p>',
+                },
+                fez_record_search_key_project_start_date: {
+                    rek_project_start_date: startDate,
                 },
                 grants: [
                     {
@@ -329,10 +348,11 @@ describe('Record action creators', () => {
                     },
                 ],
             };
+            const expectedRekDate = `${startDate} 00:00:00`;
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
                 .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
@@ -340,7 +360,7 @@ describe('Record action creators', () => {
                 .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: '.*' }).apiUrl)
                 .reply(200, { data: '' })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } });
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
 
             const expectedActions = [actions.CREATE_RECORD_SAVING, actions.CREATE_RECORD_SUCCESS];
 
@@ -913,16 +933,45 @@ describe('Record action creators', () => {
                 ...testInput,
                 filesSection: {},
             };
-            const pidRequest = { pid: 'UQ:396321' };
+            const expectedRekDate = `${testInput.bibliographicSection.rek_date} 00:00:00`;
 
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
-                .reply(200, { data: { ...record } })
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
-                .reply(200, { data: { ...record } });
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
 
             const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
 
+            await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on create record successfully for NTRO design/Arch type', async () => {
+            const startDate = '2020-01-01';
+            expect(startDate).not.toBe(testInput.bibliographicSection.rek_date);
+            const testInput1 = {
+                ...testInput,
+                filesSection: {},
+                adminSection: {
+                    rek_subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+                },
+                bibliographicSection: {
+                    ...testInput.bibliographicSection,
+                    fez_record_search_key_project_start_date: {
+                        rek_project_start_date: startDate,
+                    },
+                },
+            };
+            const expectedRekDate = `${startDate} 00:00:00`;
+
+            mockApi
+                .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate))
+                .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
+                .reply(assertPayloadsRekDateAndReturnMockedData(expectedRekDate));
+
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
             await mockActionsStore.dispatch(recordActions.adminCreate(testInput1));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });

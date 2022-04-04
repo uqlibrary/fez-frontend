@@ -504,21 +504,17 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -527,9 +523,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -538,21 +532,17 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -561,9 +551,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -1447,21 +1435,17 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -1470,9 +1454,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -1481,21 +1463,17 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -1504,9 +1482,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -2408,21 +2384,17 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -2431,9 +2403,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -2442,21 +2412,17 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -2465,9 +2431,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -3441,21 +3405,17 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -3464,9 +3424,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -3475,21 +3433,17 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -3498,9 +3452,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -4384,21 +4336,17 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -4407,9 +4355,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -4418,21 +4364,17 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -4441,9 +4383,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -5327,21 +5267,17 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -5350,9 +5286,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -5361,21 +5295,17 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -5384,9 +5314,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -6270,21 +6198,17 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -6293,9 +6217,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -6304,21 +6226,17 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -6327,9 +6245,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -7213,21 +7129,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -7236,9 +7148,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -7247,21 +7157,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -7270,9 +7176,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -8169,21 +8073,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -8192,9 +8092,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -8203,21 +8101,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -8226,9 +8120,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -9112,21 +9004,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -9135,9 +9023,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -9146,21 +9032,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -9169,9 +9051,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -10055,21 +9935,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridType-1"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Type of work
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -10078,9 +9954,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Journal Article
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -10089,21 +9963,17 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             <WithStyles(ForwardRef(Grid))
               className="makeStyles-GridSubType-2"
               container={true}
-              spacing={1}
             >
               <WithStyles(ForwardRef(Grid))
                 alignItems="flex-start"
                 container={true}
-                spacing={2}
               >
                 <WithStyles(ForwardRef(Grid))
                   item={true}
                   sm={3}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Sub-type
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>
@@ -10112,9 +9982,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   sm={9}
                   xs={12}
                 >
-                  <WithStyles(ForwardRef(Typography))
-                    variant="body2"
-                  >
+                  <WithStyles(ForwardRef(Typography))>
                     Other
                   </WithStyles(ForwardRef(Typography))>
                 </WithStyles(ForwardRef(Grid))>

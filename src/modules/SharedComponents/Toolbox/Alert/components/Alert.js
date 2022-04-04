@@ -50,6 +50,12 @@ const useStyles = makeStyles(
             alignSelf: 'center',
             padding: '6px 0',
             textShadow: '1px 1px 1px rgba(0, 0, 0, 0.2)',
+
+            '& ul, & ol': {
+                [theme.breakpoints.down('xs')]: {
+                    paddingInlineStart: 0,
+                },
+            },
         },
         actionButton: {
             '& .action': {
@@ -296,14 +302,14 @@ export const Alert = ({
                 container
                 spacing={3}
                 className={classNames(classes[!!customIcon ? customType : type], classes.common)}
-                justify="center"
+                justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
                 id={alertId}
                 data-testid={alertId}
             >
                 <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>
-                    <Grid container justify="center" alignItems="flex-start" alignContent="center">
+                    <Grid container justifyContent="center" alignItems="flex-start" alignContent="center">
                         <Grid
                             item
                             className={`${classes.icon} alert-icon ${wiggle ? classes.wiggler : ''}`}

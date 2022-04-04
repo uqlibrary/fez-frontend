@@ -47,7 +47,7 @@ export const ContributorRowText = ({
             }
             secondary={
                 secondaryText && (
-                    <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
+                    <Typography noWrap variant="caption" display={'block'} classes={{ root: secondaryClass }}>
                         {secondaryText}
                     </Typography>
                 )
