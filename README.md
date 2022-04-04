@@ -27,7 +27,7 @@ This means that it's exactly like production, except for the git branch that use
 
 - Code: `React (~16.8), Javascript (ES2015 - Babel), Immutable, SASS`
 - State: `Redux, ReduxForm`
-- Design: `Google Material Design` - [Material UI](https://v0.material-ui.com/#/components/app-bar)
+- Design: `Google Material Design` - [Material UI](https://v4.material-ui.com/components/app-bar)
 - Build and dev tools: `Webpack`
 - Unit tests: `Jest`
 - E2E tests: `Cypress`
