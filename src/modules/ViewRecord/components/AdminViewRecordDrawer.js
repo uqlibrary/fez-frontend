@@ -104,7 +104,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 id={`adminDrawerContentContainer${variant}`}
                 data-testid={`adminDrawerContentContainer${variant}`}
             >
-                <Hidden xsDown implementation="css" key="toolbarMobile">
+                <Hidden smDown implementation="css" key="toolbarMobile">
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
