@@ -154,6 +154,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     onSortByChanged={sortByChanged}
                                     onPageSizeChanged={pageSizeChanged}
                                     pageSize={PagingData.per_page}
+                                    isCollection
                                     // sortingDefaults={sortingDefaults}
                                 />
 
