@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Popper from '@material-ui/core/Popper';
 
+/* istanbul ignore next */
 const styles = theme => ({
     popper: {
         [theme.breakpoints.down('xs')]: {
