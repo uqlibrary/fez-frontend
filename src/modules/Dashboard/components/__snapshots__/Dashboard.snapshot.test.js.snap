@@ -7857,7 +7857,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                           alignContent="center"
                                                           alignItems="center"
                                                           container={true}
-                                                          justify="center"
+                                                          justifyContent="center"
                                                           spacing={3}
                                                         >
                                                           <ForwardRef(Grid)
@@ -7971,7 +7971,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                               }
                                                             }
                                                             container={true}
-                                                            justify="center"
+                                                            justifyContent="center"
                                                             spacing={3}
                                                           >
                                                             <div
@@ -11180,7 +11180,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 alignItems="flex-start"
                                                 className="makeStyles-info_outline-25 makeStyles-common-11"
                                                 container={true}
-                                                justify="center"
+                                                justifyContent="center"
                                                 spacing={3}
                                               >
                                                 <ForwardRef(Grid)
@@ -11295,7 +11295,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     }
                                                   }
                                                   container={true}
-                                                  justify="center"
+                                                  justifyContent="center"
                                                   spacing={3}
                                                 >
                                                   <div
@@ -11427,7 +11427,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                             alignContent="center"
                                                             alignItems="flex-start"
                                                             container={true}
-                                                            justify="center"
+                                                            justifyContent="center"
                                                           >
                                                             <ForwardRef(Grid)
                                                               alignContent="center"
@@ -11540,7 +11540,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 }
                                                               }
                                                               container={true}
-                                                              justify="center"
+                                                              justifyContent="center"
                                                             >
                                                               <div
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"

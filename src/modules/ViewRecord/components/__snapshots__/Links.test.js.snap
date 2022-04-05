@@ -4151,7 +4151,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             alignItems="center"
                                             className="LinksClass-header-1"
                                             container={true}
-                                            justify="center"
+                                            justifyContent="center"
                                             spacing={2}
                                           >
                                             <ForwardRef(Grid)
@@ -4266,7 +4266,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 }
                                               }
                                               container={true}
-                                              justify="center"
+                                              justifyContent="center"
                                               spacing={2}
                                             >
                                               <div
@@ -4969,7 +4969,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             alignItems="center"
                                             className="LinksClass-header-1"
                                             container={true}
-                                            justify="center"
+                                            justifyContent="center"
                                             spacing={2}
                                           >
                                             <ForwardRef(Grid)
@@ -5084,7 +5084,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 }
                                               }
                                               container={true}
-                                              justify="center"
+                                              justifyContent="center"
                                               spacing={2}
                                             >
                                               <div
@@ -5699,7 +5699,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             alignItems="center"
                                             className="LinksClass-header-1"
                                             container={true}
-                                            justify="center"
+                                            justifyContent="center"
                                             spacing={2}
                                           >
                                             <ForwardRef(Grid)
@@ -5814,7 +5814,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 }
                                               }
                                               container={true}
-                                              justify="center"
+                                              justifyContent="center"
                                               spacing={2}
                                             >
                                               <div
@@ -6521,7 +6521,7 @@ exports[`Component Links  Full mount render 1`] = `
                                             alignItems="center"
                                             className="LinksClass-header-1"
                                             container={true}
-                                            justify="center"
+                                            justifyContent="center"
                                             spacing={2}
                                           >
                                             <ForwardRef(Grid)
@@ -6636,7 +6636,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                 }
                                               }
                                               container={true}
-                                              justify="center"
+                                              justifyContent="center"
                                               spacing={2}
                                             >
                                               <div
@@ -9040,7 +9040,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -9155,7 +9155,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -9862,7 +9862,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -9977,7 +9977,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -10687,7 +10687,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -10802,7 +10802,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -11398,7 +11398,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -11513,7 +11513,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -12109,7 +12109,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -12224,7 +12224,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -14313,7 +14313,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -14428,7 +14428,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -15134,7 +15134,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -15249,7 +15249,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -15845,7 +15845,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -15960,7 +15960,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -16556,7 +16556,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -16671,7 +16671,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -18630,7 +18630,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -18745,7 +18745,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -19446,7 +19446,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -19561,7 +19561,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -20168,7 +20168,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -20283,7 +20283,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -20879,7 +20879,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -20994,7 +20994,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -21590,7 +21590,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -21705,7 +21705,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -23794,7 +23794,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -23909,7 +23909,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -24713,7 +24713,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -24828,7 +24828,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -25424,7 +25424,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -25539,7 +25539,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div
@@ -26135,7 +26135,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                         alignItems="center"
                                         className="header"
                                         container={true}
-                                        justify="center"
+                                        justifyContent="center"
                                         spacing={2}
                                       >
                                         <ForwardRef(Grid)
@@ -26250,7 +26250,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                             }
                                           }
                                           container={true}
-                                          justify="center"
+                                          justifyContent="center"
                                           spacing={2}
                                         >
                                           <div

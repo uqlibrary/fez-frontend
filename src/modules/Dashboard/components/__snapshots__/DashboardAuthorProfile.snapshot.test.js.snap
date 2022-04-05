@@ -6,7 +6,7 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))
@@ -105,7 +105,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))
@@ -204,7 +204,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))
@@ -303,7 +303,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))
@@ -402,7 +402,7 @@ exports[`Dashboard Author Profile test Render the authors profile with publon id
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))
@@ -501,7 +501,7 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
     alignContent="center"
     alignItems="center"
     container={true}
-    justify="center"
+    justifyContent="center"
     spacing={3}
   >
     <WithStyles(ForwardRef(Grid))

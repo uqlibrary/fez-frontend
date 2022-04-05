@@ -78,7 +78,7 @@ export class NewsFeed extends PureComponent {
                                         container
                                         direction="column"
                                         alignItems="center"
-                                        justify="center"
+                                        justifyContent="center"
                                         alignContent="center"
                                         spacing={0}
                                     >
