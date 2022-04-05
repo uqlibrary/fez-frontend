@@ -26,7 +26,7 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
                 return (
                     (matchedKeywords && [
                         ...matches,
-                        ...matchedKeywords.filter(matched => matched && matched.length > 3),
+                        ...matchedKeywords.filter(matched => matched && matched.length > 2),
                     ]) ||
                     []
                 );
