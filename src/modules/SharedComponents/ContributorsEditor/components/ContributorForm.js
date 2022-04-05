@@ -305,6 +305,7 @@ export const ContributorForm = ({
                             disableOrgTypeEdit={disabled}
                             orgAffiliationError={contributor.orgaff === ''}
                             orgAffiliationTypeError={contributor.orgtype === ''}
+                            fullWidthFields
                         />
                     </Grid>
                 )}
