@@ -16,6 +16,9 @@ const getExactMatchKeywords = keywordsResponse => {
 
 const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
     const titleMatchKeywords = query.split(' ').reduce((titleMatches, keywordQuery) => {
+        if (keywordQuery.trim() === '') {
+            return titleMatches;
+        }
         const regexString = `\\w*${keywordQuery}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const titleMatch =
@@ -42,6 +45,9 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
 
 const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
     const keywordMatchKeywords = query.split(' ').reduce((keywordMatches, keywordQuery) => {
+        if (keywordQuery.trim() === '') {
+            return keywordMatches;
+        }
         const regexString = `\\w*${keywordQuery}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const keywordMatch =
