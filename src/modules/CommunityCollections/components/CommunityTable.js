@@ -28,13 +28,9 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                     <TableRow data-testid="community-collections-primary-header">
                         <TableCell />
                         <TableCell>{labels.title}</TableCell>
-                        <TableCell className={classes.dateCell} align="right">
-                            {labels.creation_date}
-                        </TableCell>
-                        <TableCell className={classes.dateCell} align="right">
-                            {labels.updated_date}
-                        </TableCell>
-                        {!!adminUser && <TableCell align="right">{labels.actions}</TableCell>}
+                        <TableCell className={classes.dateCell}>{labels.creation_date}</TableCell>
+                        <TableCell className={classes.dateCell}>{labels.updated_date}</TableCell>
+                        {!!adminUser && <TableCell>{labels.actions}</TableCell>}
                     </TableRow>
                 </TableHead>
 

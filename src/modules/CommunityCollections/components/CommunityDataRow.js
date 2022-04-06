@@ -60,18 +60,18 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                     </Typography>
                     {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
                 </TableCell>
-                <TableCell align="right" className={classes.dateCell}>
+                <TableCell className={classes.dateCell}>
                     {moment(row.rek_created_date)
                         .local()
                         .format(conf.dateFormat)}
                 </TableCell>
-                <TableCell align="right" className={classes.dateCell}>
+                <TableCell className={classes.dateCell}>
                     {moment(row.rek_updated_date)
                         .local()
                         .format(conf.dateFormat)}
                 </TableCell>
                 {!!adminUser && (
-                    <TableCell align="right">
+                    <TableCell>
                         <AdminActions record={row.rek_pid} />
                     </TableCell>
                 )}

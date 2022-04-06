@@ -170,16 +170,10 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     <TableHead>
                                         <TableRow data-testid="embedded-collections-primary-header">
                                             <TableCell>{labels.title}</TableCell>
-                                            <TableCell className={classes.dateCell} align="right">
-                                                {labels.creation_date}
-                                            </TableCell>
-                                            <TableCell className={classes.dateCell} align="right">
-                                                {labels.updated_date}
-                                            </TableCell>
-                                            <TableCell className={classes.dateCell} align="right">
-                                                Explore
-                                            </TableCell>
-                                            {!!adminUser && <TableCell align="right">{labels.actions}</TableCell>}
+                                            <TableCell className={classes.dateCell}>{labels.creation_date}</TableCell>
+                                            <TableCell className={classes.dateCell}>{labels.updated_date}</TableCell>
+                                            <TableCell className={classes.dateCell}>Explore</TableCell>
+                                            {!!adminUser && <TableCell>{labels.actions}</TableCell>}
                                         </TableRow>
                                     </TableHead>
 
@@ -196,21 +190,21 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         <Typography variant="caption">{row.rek_description}</Typography>
                                                     )}
                                                 </TableCell>
-                                                <TableCell align="right" className={classes.dateCell}>
+                                                <TableCell className={classes.dateCell}>
                                                     {moment(row.rek_created_date)
                                                         .local()
                                                         .format(conf.dateFormat)}
                                                 </TableCell>
-                                                <TableCell align="right" className={classes.dateCell}>
+                                                <TableCell className={classes.dateCell}>
                                                     {moment(row.rek_updated_date)
                                                         .local()
                                                         .format(conf.dateFormat)}
                                                 </TableCell>
-                                                <TableCell align="right">
+                                                <TableCell>
                                                     <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>View</Link>
                                                 </TableCell>
                                                 {!!adminUser && (
-                                                    <TableCell align="right">
+                                                    <TableCell>
                                                         <AdminActions record={row.rek_pid} />
                                                     </TableCell>
                                                 )}
