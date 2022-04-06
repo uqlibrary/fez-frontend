@@ -9298,10 +9298,14 @@ exports[`ContributorsEditor should get contributors from props and input value s
 exports[`ContributorsEditor should have a proper style generator 1`] = `
 Object {
   "list": Object {
+    "@media (max-width:959.95px)": Object {
+      "overflowY": "scroll",
+    },
     "margin": "0",
     "marginBottom": 16,
     "maxHeight": 225,
-    "overflow": "hidden",
+    "overflowX": "hidden",
+    "overflowY": "hidden",
     "width": "100%",
   },
   "scroll": Object {
