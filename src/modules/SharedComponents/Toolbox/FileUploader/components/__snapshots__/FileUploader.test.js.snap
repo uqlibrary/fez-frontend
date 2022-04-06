@@ -2478,7 +2478,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                   className="FileUploadDropzoneStaticContent-instructions-4"
                                                                   container={true}
                                                                   direction="column"
-                                                                  justify="center"
+                                                                  justifyContent="center"
                                                                 >
                                                                   <ForwardRef(Grid)
                                                                     alignItems="center"
@@ -2592,7 +2592,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                     }
                                                                     container={true}
                                                                     direction="column"
-                                                                    justify="center"
+                                                                    justifyContent="center"
                                                                   >
                                                                     <div
                                                                       className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-4 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
@@ -5425,7 +5425,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                   className="FileUploadDropzoneStaticContent-instructions-4"
                                                                   container={true}
                                                                   direction="column"
-                                                                  justify="center"
+                                                                  justifyContent="center"
                                                                 >
                                                                   <ForwardRef(Grid)
                                                                     alignItems="center"
@@ -5539,7 +5539,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                     }
                                                                     container={true}
                                                                     direction="column"
-                                                                    justify="center"
+                                                                    justifyContent="center"
                                                                   >
                                                                     <div
                                                                       className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-4 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"

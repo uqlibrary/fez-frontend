@@ -42,7 +42,7 @@ export class AppLoader extends React.Component {
                 container
                 spacing={0}
                 direction="column"
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 className={classes.appLoader}
             >

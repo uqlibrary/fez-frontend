@@ -1566,7 +1566,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                 className="FileUploadDropzoneStaticContent-instructions-3"
                                                 container={true}
                                                 direction="column"
-                                                justify="center"
+                                                justifyContent="center"
                                               >
                                                 <ForwardRef(Grid)
                                                   alignItems="center"
@@ -1680,7 +1680,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                   }
                                                   container={true}
                                                   direction="column"
-                                                  justify="center"
+                                                  justifyContent="center"
                                                 >
                                                   <div
                                                     className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-3 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
@@ -3618,7 +3618,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                 className="FileUploadDropzoneStaticContent-instructions-3"
                                                 container={true}
                                                 direction="column"
-                                                justify="center"
+                                                justifyContent="center"
                                               >
                                                 <ForwardRef(Grid)
                                                   alignItems="center"
@@ -3732,7 +3732,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                   }
                                                   container={true}
                                                   direction="column"
-                                                  justify="center"
+                                                  justifyContent="center"
                                                 >
                                                   <div
                                                     className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-3 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"

@@ -229,7 +229,7 @@ export class SimpleSearchComponent extends PureComponent {
                                             direction={'row'}
                                             wrap={'nowrap'}
                                             alignItems={'center'}
-                                            justify={'center'}
+                                            justifyContent={'center'}
                                         >
                                             {this.props.showMobileSearchButton && (
                                                 <Hidden smUp>

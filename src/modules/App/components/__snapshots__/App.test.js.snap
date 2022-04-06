@@ -84,7 +84,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -147,7 +147,7 @@ exports[`Application component Should display mobile correctly 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -318,7 +318,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -784,7 +784,7 @@ exports[`Application component should determine if it has incomplete works from 
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -847,7 +847,7 @@ exports[`Application component should determine if it has incomplete works from 
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -1005,7 +1005,7 @@ exports[`Application component should determine if it has incomplete works from 
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -1787,7 +1787,7 @@ exports[`Application component should determine if it has incomplete works from 
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -1850,7 +1850,7 @@ exports[`Application component should determine if it has incomplete works from 
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -2008,7 +2008,7 @@ exports[`Application component should determine if it has incomplete works from 
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -2540,7 +2540,7 @@ exports[`Application component should redirect to login page with correct return
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -2603,7 +2603,7 @@ exports[`Application component should redirect to login page with correct return
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -2774,7 +2774,7 @@ exports[`Application component should redirect to login page with correct return
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -3236,7 +3236,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -3299,7 +3299,7 @@ exports[`Application component should render alert if user is not fez author 1`]
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -3470,7 +3470,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignContent="center"
       alignItems="center"
       container={true}
-      justify="center"
+      justifyContent="center"
       style={
         Object {
           "marginBottom": 12,
@@ -4256,7 +4256,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -4319,7 +4319,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -5300,7 +5300,7 @@ exports[`Application component should render app for account with fez author wit
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -5363,7 +5363,7 @@ exports[`Application component should render app for account with fez author wit
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -6329,7 +6329,7 @@ exports[`Application component should render application with routing for the us
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -6392,7 +6392,7 @@ exports[`Application component should render application with routing for the us
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -6653,7 +6653,7 @@ exports[`Application component should render for anon user 1`] = `
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -6716,7 +6716,7 @@ exports[`Application component should render for anon user 1`] = `
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -7091,7 +7091,7 @@ exports[`Application component should render thesis submission for HDR without m
         alignItems="center"
         container={true}
         direction="row"
-        justify="flex-start"
+        justifyContent="flex-start"
         spacing={1}
         wrap="nowrap"
       >
@@ -7107,7 +7107,7 @@ exports[`Application component should render thesis submission for HDR without m
           <WithStyles(ForwardRef(Grid))
             alignItems="center"
             container={true}
-            justify="flex-start"
+            justifyContent="flex-start"
             spacing={2}
             wrap="nowrap"
           >
@@ -9318,7 +9318,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       alignItems="center"
                                       container={true}
                                       direction="row"
-                                      justify="flex-start"
+                                      justifyContent="flex-start"
                                       spacing={1}
                                       wrap="nowrap"
                                     >
@@ -9433,7 +9433,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                         }
                                         container={true}
                                         direction="row"
-                                        justify="flex-start"
+                                        justifyContent="flex-start"
                                         spacing={1}
                                         wrap="nowrap"
                                       >
@@ -10031,7 +10031,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 <WithStyles(ForwardRef(Grid))
                                                   alignItems="center"
                                                   container={true}
-                                                  justify="flex-start"
+                                                  justifyContent="flex-start"
                                                   spacing={2}
                                                   wrap="nowrap"
                                                 >
@@ -10145,7 +10145,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       }
                                                     }
                                                     container={true}
-                                                    justify="flex-start"
+                                                    justifyContent="flex-start"
                                                     spacing={2}
                                                     wrap="nowrap"
                                                   >
@@ -17438,7 +17438,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 alignContent="center"
                                 alignItems="center"
                                 container={true}
-                                justify="center"
+                                justifyContent="center"
                               >
                                 <WithStyles(ForwardRef(Grid))
                                   item={true}
@@ -17494,7 +17494,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   alignContent="center"
                                   alignItems="center"
                                   container={true}
-                                  justify="center"
+                                  justifyContent="center"
                                 >
                                   <WithStyles(ForwardRef(Grid))
                                     item={true}

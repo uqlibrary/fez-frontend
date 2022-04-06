@@ -86,7 +86,7 @@ export const FullUserDetails = ({
                                             <Grid
                                                 container
                                                 direction="row-reverse"
-                                                justify="flex-start"
+                                                justifyContent="flex-start"
                                                 alignItems="center"
                                                 spacing={2}
                                             >
