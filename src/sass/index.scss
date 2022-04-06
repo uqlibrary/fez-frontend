@@ -95,3 +95,20 @@ a {
     margin-left: 0.25rem;
   }
 }
+
+// allow dropdown list items to wrap to a new line
+// for phone & tablet breakpoints
+ul[role='listbox']{
+  @media (max-width: 959.96px){
+    li{
+      white-space: normal;
+    }
+  }
+}
+// allow the selected item in a dropdown list to
+// wrap to a new line for phone & tablet breakpoints
+div[class*='MuiSelect-selectMenu-']{
+  @media (max-width: 959.96px){
+      white-space: normal;
+  }
+}

@@ -2,6 +2,16 @@ import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import Popper from '@material-ui/core/Popper';
+
+/* istanbul ignore next */
+const styles = theme => ({
+    popper: {
+        [theme.breakpoints.down('xs')]: {
+            width: 'fit-content',
+        },
+    },
+});
 
 export const AutoCompleteSelectField = ({
     allowFreeText,
@@ -55,6 +65,8 @@ export const AutoCompleteSelectField = ({
         }
     }, [itemsList, open]);
 
+    const PopperMy = props => <Popper {...props} style={styles.popper} placement="bottom-start" />;
+
     return (
         <Autocomplete
             id={autoCompleteSelectFieldId}
@@ -76,6 +88,7 @@ export const AutoCompleteSelectField = ({
             options={options}
             popupIcon={false}
             disabled={disabled}
+            PopperComponent={PopperMy}
             renderInput={params => (
                 <TextField
                     {...params}
