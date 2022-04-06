@@ -96,7 +96,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 22);
+            .should('have.length', 32);
 
         cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
@@ -126,7 +126,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 23);
+            .should('have.length', 34);
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
