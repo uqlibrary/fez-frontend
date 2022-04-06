@@ -20,13 +20,13 @@ const drawerWidth = 260;
 const useStyles = makeStyles(theme => ({
     drawer: {
         padding: theme.spacing(0, 1),
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             width: drawerWidth,
             flexShrink: 0,
         },
     },
     drawerMobile: {
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             display: 'none',
         },
     },
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
     drawerPaper: {
         width: drawerWidth,
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             zIndex: 1,
         },
     },
@@ -104,7 +104,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 id={`adminDrawerContentContainer${variant}`}
                 data-testid={`adminDrawerContentContainer${variant}`}
             >
-                <Hidden xsDown implementation="css" key="toolbarMobile">
+                <Hidden smDown implementation="css" key="toolbarMobile">
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
@@ -137,7 +137,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     return (
         <>
-            <Hidden xsDown implementation="css">
+            <Hidden smDown implementation="css">
                 <Drawer
                     className={classes.drawer}
                     classes={{
@@ -155,7 +155,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                     <DrawerContent content={content} />
                 </Drawer>
             </Hidden>
-            <Hidden smUp implementation="css">
+            <Hidden mdUp implementation="css">
                 <Drawer
                     className={classes.drawerMobile}
                     variant="temporary"
