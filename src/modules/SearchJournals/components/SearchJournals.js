@@ -55,6 +55,7 @@ export const SearchJournals = () => {
         if (!!allJournalsPageRefresh.current) {
             setShowingAllJournals(true);
         }
+        return () => dispatch(clearJournalSearchKeywords());
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
