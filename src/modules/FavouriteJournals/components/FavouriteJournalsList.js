@@ -58,9 +58,9 @@ export const FavouriteJournalsList = ({
             <Grid item xs={12}>
                 <PublicationsListSorting
                     canUseExport
-                    exportData={txt.export}
+                    exportData={locale.components.searchJournals.export}
                     pagingData={journalsList}
-                    sortingData={txt.sorting}
+                    sortingData={locale.components.searchJournals.sorting}
                     sortBy={(journalSearchQueryParams && journalSearchQueryParams.sortBy) || 'score'}
                     sortDirection={(journalSearchQueryParams && journalSearchQueryParams.sortDirection) || 'Desc'}
                     onExportPublications={onExport}
