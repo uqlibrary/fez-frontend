@@ -29,85 +29,98 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "aut_created_date": "2007-08-09",
-          "aut_description": null,
-          "aut_display_name": "J Researcher",
-          "aut_email": null,
-          "aut_external_id": "0001098586",
-          "aut_fname": "J",
-          "aut_google_scholar_id": "kUemDfMAAAAJ",
-          "aut_homepage_link": null,
-          "aut_id": 410,
-          "aut_lname": "Researcher",
-          "aut_mname": null,
-          "aut_mypub_url": null,
-          "aut_orcid_id": "0000-0001-1111-1111",
-          "aut_org_staff_id": "0000111",
-          "aut_org_student_id": null,
-          "aut_org_username": "uqresearcher",
-          "aut_people_australia_id": null,
-          "aut_position": null,
-          "aut_publons_id": null,
-          "aut_ref_num": null,
-          "aut_researcher_id": null,
-          "aut_rid_last_updated": null,
-          "aut_rid_password": null,
-          "aut_scopus_id": null,
-          "aut_student_username": null,
-          "aut_title": "Professor",
-          "aut_update_date": null,
-          "is_administrator": 0,
-          "is_super_administrator": 0,
-          "nameAsPublished": "J. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "aut_created_date": "2007-08-09",
+            "aut_description": null,
+            "aut_display_name": "J Researcher",
+            "aut_email": null,
+            "aut_external_id": "0001098586",
+            "aut_fname": "J",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_homepage_link": null,
+            "aut_id": 410,
+            "aut_lname": "Researcher",
+            "aut_mname": null,
+            "aut_mypub_url": null,
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_org_staff_id": "0000111",
+            "aut_org_student_id": null,
+            "aut_org_username": "uqresearcher",
+            "aut_people_australia_id": null,
+            "aut_position": null,
+            "aut_publons_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_rid_last_updated": null,
+            "aut_rid_password": null,
+            "aut_scopus_id": null,
+            "aut_student_username": null,
+            "aut_title": "Professor",
+            "aut_update_date": null,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "nameAsPublished": "J. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -123,9 +136,9 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -159,85 +172,98 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "aut_created_date": "2007-08-09",
-          "aut_description": null,
-          "aut_display_name": "J Researcher",
-          "aut_email": null,
-          "aut_external_id": "0001098586",
-          "aut_fname": "J",
-          "aut_google_scholar_id": "kUemDfMAAAAJ",
-          "aut_homepage_link": null,
-          "aut_id": 410,
-          "aut_lname": "Researcher",
-          "aut_mname": null,
-          "aut_mypub_url": null,
-          "aut_orcid_id": "0000-0001-1111-1111",
-          "aut_org_staff_id": "0000111",
-          "aut_org_student_id": null,
-          "aut_org_username": "uqresearcher",
-          "aut_people_australia_id": null,
-          "aut_position": null,
-          "aut_publons_id": null,
-          "aut_ref_num": null,
-          "aut_researcher_id": null,
-          "aut_rid_last_updated": null,
-          "aut_rid_password": null,
-          "aut_scopus_id": null,
-          "aut_student_username": null,
-          "aut_title": "Professor",
-          "aut_update_date": null,
-          "is_administrator": 0,
-          "is_super_administrator": 0,
-          "nameAsPublished": "J. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "aut_created_date": "2007-08-09",
+            "aut_description": null,
+            "aut_display_name": "J Researcher",
+            "aut_email": null,
+            "aut_external_id": "0001098586",
+            "aut_fname": "J",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_homepage_link": null,
+            "aut_id": 410,
+            "aut_lname": "Researcher",
+            "aut_mname": null,
+            "aut_mypub_url": null,
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_org_staff_id": "0000111",
+            "aut_org_student_id": null,
+            "aut_org_username": "uqresearcher",
+            "aut_people_australia_id": null,
+            "aut_position": null,
+            "aut_publons_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_rid_last_updated": null,
+            "aut_rid_password": null,
+            "aut_scopus_id": null,
+            "aut_student_username": null,
+            "aut_title": "Professor",
+            "aut_update_date": null,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "nameAsPublished": "J. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -253,9 +279,9 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -289,56 +315,69 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "A. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -354,9 +393,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -390,56 +429,69 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "A. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -455,9 +507,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -491,85 +543,98 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "aut_created_date": "2007-08-09",
-          "aut_description": null,
-          "aut_display_name": "J Researcher",
-          "aut_email": null,
-          "aut_external_id": "0001098586",
-          "aut_fname": "J",
-          "aut_google_scholar_id": "kUemDfMAAAAJ",
-          "aut_homepage_link": null,
-          "aut_id": 410,
-          "aut_lname": "Researcher",
-          "aut_mname": null,
-          "aut_mypub_url": null,
-          "aut_orcid_id": "0000-0001-1111-1111",
-          "aut_org_staff_id": "0000111",
-          "aut_org_student_id": null,
-          "aut_org_username": "uqresearcher",
-          "aut_people_australia_id": null,
-          "aut_position": null,
-          "aut_publons_id": null,
-          "aut_ref_num": null,
-          "aut_researcher_id": null,
-          "aut_rid_last_updated": null,
-          "aut_rid_password": null,
-          "aut_scopus_id": null,
-          "aut_student_username": null,
-          "aut_title": "Professor",
-          "aut_update_date": null,
-          "is_administrator": 0,
-          "is_super_administrator": 0,
-          "nameAsPublished": "J. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Move record up the order"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "aut_created_date": "2007-08-09",
+            "aut_description": null,
+            "aut_display_name": "J Researcher",
+            "aut_email": null,
+            "aut_external_id": "0001098586",
+            "aut_fname": "J",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_homepage_link": null,
+            "aut_id": 410,
+            "aut_lname": "Researcher",
+            "aut_mname": null,
+            "aut_mypub_url": null,
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_org_staff_id": "0000111",
+            "aut_org_student_id": null,
+            "aut_org_username": "uqresearcher",
+            "aut_people_australia_id": null,
+            "aut_position": null,
+            "aut_publons_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_rid_last_updated": null,
+            "aut_rid_password": null,
+            "aut_scopus_id": null,
+            "aut_student_username": null,
+            "aut_title": "Professor",
+            "aut_update_date": null,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "nameAsPublished": "J. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Move record up the order"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record up the order"
             data-testid="test-list-row-0-move-up"
@@ -585,15 +650,13 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Move record down the order"
-      >
-        <span>
+        </WithStyles(ForwardRef(Tooltip))>
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Move record down the order"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Move record down the order"
             data-testid="test-list-row-0-move-down"
@@ -609,15 +672,13 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
+        </WithStyles(ForwardRef(Tooltip))>
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -633,9 +694,9 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -669,57 +730,70 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "J. Smith",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "J. Smith",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -735,9 +809,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -771,57 +845,70 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "J. Smith",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "J. Smith",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -837,9 +924,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -873,85 +960,98 @@ exports[`Component ContributorRow a row with index and contributor with author d
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "aut_created_date": "2007-08-09",
-          "aut_description": null,
-          "aut_display_name": "J Researcher",
-          "aut_email": null,
-          "aut_external_id": "0001098586",
-          "aut_fname": "J",
-          "aut_google_scholar_id": "kUemDfMAAAAJ",
-          "aut_homepage_link": null,
-          "aut_id": 410,
-          "aut_lname": "Researcher",
-          "aut_mname": null,
-          "aut_mypub_url": null,
-          "aut_orcid_id": "0000-0001-1111-1111",
-          "aut_org_staff_id": "0000111",
-          "aut_org_student_id": null,
-          "aut_org_username": "uqresearcher",
-          "aut_people_australia_id": null,
-          "aut_position": null,
-          "aut_publons_id": null,
-          "aut_ref_num": null,
-          "aut_researcher_id": null,
-          "aut_rid_last_updated": null,
-          "aut_rid_password": null,
-          "aut_scopus_id": null,
-          "aut_student_username": null,
-          "aut_title": "Professor",
-          "aut_update_date": null,
-          "is_administrator": 0,
-          "is_super_administrator": 0,
-          "nameAsPublished": "J. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "aut_created_date": "2007-08-09",
+            "aut_description": null,
+            "aut_display_name": "J Researcher",
+            "aut_email": null,
+            "aut_external_id": "0001098586",
+            "aut_fname": "J",
+            "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "aut_homepage_link": null,
+            "aut_id": 410,
+            "aut_lname": "Researcher",
+            "aut_mname": null,
+            "aut_mypub_url": null,
+            "aut_orcid_id": "0000-0001-1111-1111",
+            "aut_org_staff_id": "0000111",
+            "aut_org_student_id": null,
+            "aut_org_username": "uqresearcher",
+            "aut_people_australia_id": null,
+            "aut_position": null,
+            "aut_publons_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_rid_last_updated": null,
+            "aut_rid_password": null,
+            "aut_scopus_id": null,
+            "aut_student_username": null,
+            "aut_title": "Professor",
+            "aut_update_date": null,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "nameAsPublished": "J. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -967,9 +1067,9 @@ exports[`Component ContributorRow a row with index and contributor with author d
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1003,58 +1103,71 @@ exports[`Component ContributorRow a row with index and creator with creator role
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "creatorRole": "Investigator",
-          "nameAsPublished": "J. Smith",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={true}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "creatorRole": "Investigator",
+            "nameAsPublished": "J. Smith",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={true}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1070,9 +1183,9 @@ exports[`Component ContributorRow a row with index and creator with creator role
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1106,58 +1219,71 @@ exports[`Component ContributorRow a row with index and creator with creator role
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "creatorRole": "Investigator",
-          "nameAsPublished": "J. Smith",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={true}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "creatorRole": "Investigator",
+            "nameAsPublished": "J. Smith",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={true}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1173,9 +1299,9 @@ exports[`Component ContributorRow a row with index and creator with creator role
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1209,60 +1335,73 @@ exports[`Component ContributorRow should assign contributor 1`] = `
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "affiliation": "NotUQ",
-          "nameAsPublished": "test",
-          "orgaff": "Somewhere",
-          "orgtype": "453983",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "affiliation": "NotUQ",
+            "nameAsPublished": "test",
+            "orgaff": "Somewhere",
+            "orgtype": "453983",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1278,9 +1417,9 @@ exports[`Component ContributorRow should assign contributor 1`] = `
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1314,60 +1453,73 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "makeStyles-selected-6",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "affiliation": "NotUQ",
-          "nameAsPublished": "test",
-          "orgaff": "Somewhere",
-          "orgtype": "453983",
-          "selected": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass="makeStyles-selected-6"
-      showRoleInput={true}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "makeStyles-selected-6",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "affiliation": "NotUQ",
+            "nameAsPublished": "test",
+            "orgaff": "Somewhere",
+            "orgtype": "453983",
+            "selected": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass="makeStyles-selected-6"
+        showRoleInput={true}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1383,9 +1535,9 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1419,56 +1571,69 @@ exports[`Component ContributorRow should handle edits 1`] = `
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={true}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
-      contributorRowId="test-list-row-2"
-      index={2}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Edit this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={true}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "A. Smith",
+          }
+        }
+        contributorRowId="test-list-row-2"
+        index={2}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-2-actions"
+        id="test-list-row-2-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Edit this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Edit this record"
             data-testid="test-list-row-2-edit"
@@ -1484,15 +1649,13 @@ exports[`Component ContributorRow should handle edits 1`] = `
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
+        </WithStyles(ForwardRef(Tooltip))>
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-2-delete"
@@ -1508,9 +1671,9 @@ exports[`Component ContributorRow should handle edits 1`] = `
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1544,60 +1707,73 @@ exports[`Component ContributorRow should render a row with a disabled contributo
     onKeyDown={[Function]}
     tabIndex={-1}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <WithStyles(ForwardRef(Tooltip))
-          title="You are not able to edit this row"
-        >
-          <Memo(ForwardRef(LockIcon)) />
-        </WithStyles(ForwardRef(Tooltip))>
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "disabled": true,
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <WithStyles(ForwardRef(Tooltip))
+            title="You are not able to edit this row"
+          >
+            <Memo(ForwardRef(LockIcon)) />
+          </WithStyles(ForwardRef(Tooltip))>
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "disabled": true,
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1613,9 +1789,9 @@ exports[`Component ContributorRow should render a row with a disabled contributo
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1649,60 +1825,73 @@ exports[`Component ContributorRow should render contributor row linked class for
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(HowToRegIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={true}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "affilication": "NotUQ",
-          "nameAsPublished": "Test",
-          "orgaff": "Test",
-          "orgtype": "NGO",
-          "uqIdentifier": "123456",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Edit this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(HowToRegIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={true}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "affilication": "NotUQ",
+            "nameAsPublished": "Test",
+            "orgaff": "Test",
+            "orgtype": "NGO",
+            "uqIdentifier": "123456",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Edit this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Edit this record"
             data-testid="test-list-row-0-edit"
@@ -1718,15 +1907,13 @@ exports[`Component ContributorRow should render contributor row linked class for
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
-      >
-        <span>
+        </WithStyles(ForwardRef(Tooltip))>
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1742,9 +1929,9 @@ exports[`Component ContributorRow should render contributor row linked class for
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1778,59 +1965,72 @@ exports[`Component ContributorRow should render row as required 1`] = `
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "affilication": "NotUQ",
-          "nameAsPublished": "Test",
-          "orgaff": "Test",
-          "orgtype": "NGO",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      suffix=" listed contributor"
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
-        title="Remove this record"
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "affilication": "NotUQ",
+            "nameAsPublished": "Test",
+            "orgaff": "Test",
+            "orgtype": "NGO",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        suffix=" listed contributor"
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+          title="Remove this record"
+        >
           <WithStyles(ForwardRef(IconButton))
             aria-label="Remove this record"
             data-testid="test-list-row-0-delete"
@@ -1846,9 +2046,9 @@ exports[`Component ContributorRow should render row as required 1`] = `
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
@@ -1874,54 +2074,67 @@ exports[`Component ContributorRow should render with missing aria label if selec
     onKeyDown={[Function]}
     tabIndex={0}
   >
-    <Hidden
-      xsDown={true}
-    >
-      <WithStyles(ForwardRef(ListItemIcon))
-        classes={
-          Object {
-            "root": "",
-          }
-        }
-      >
-        <Memo(ForwardRef(PersonOutlinedIcon)) />
-      </WithStyles(ForwardRef(ListItemIcon))>
-    </Hidden>
-    <ContributorRowText
-      canEdit={false}
+    <WithStyles(ForwardRef(Grid))
       classes={
         Object {
-          "contributorLinked": "makeStyles-contributorLinked-11",
-          "disabledListItem": "makeStyles-disabledListItem-3",
-          "hideIcon": "makeStyles-hideIcon-7",
-          "highlighted": "makeStyles-highlighted-4",
-          "identifierName": "makeStyles-identifierName-9",
-          "identifierSubtitle": "makeStyles-identifierSubtitle-10",
-          "listContainer": "makeStyles-listContainer-1",
-          "listItem": "makeStyles-listItem-2",
-          "primary": "makeStyles-primary-8",
-          "rowSelected": "makeStyles-rowSelected-5",
-          "selected": "makeStyles-selected-6",
+          "container": "makeStyles-listContainer-1",
         }
       }
-      contributor={
-        Object {
-          "nameAsPublished": "A. Smith",
-        }
-      }
-      contributorRowId="test-list-row-0"
-      index={0}
-      selectedClass=""
-      showRoleInput={false}
-      width="xs"
-    />
-    <WithStyles(ForwardRef(ListItemSecondaryAction))>
-      <WithStyles(ForwardRef(Tooltip))
-        disableFocusListener={false}
-        disableHoverListener={false}
-        disableTouchListener={false}
+      container={true}
+      id="contributor-row"
+    >
+      <Hidden
+        xsDown={true}
       >
-        <span>
+        <WithStyles(ForwardRef(ListItemIcon))
+          classes={
+            Object {
+              "root": "",
+            }
+          }
+        >
+          <Memo(ForwardRef(PersonOutlinedIcon)) />
+        </WithStyles(ForwardRef(ListItemIcon))>
+      </Hidden>
+      <ContributorRowText
+        canEdit={false}
+        classes={
+          Object {
+            "actionsContainer": "makeStyles-actionsContainer-12",
+            "contributorLinked": "makeStyles-contributorLinked-11",
+            "disabledListItem": "makeStyles-disabledListItem-3",
+            "hideIcon": "makeStyles-hideIcon-7",
+            "highlighted": "makeStyles-highlighted-4",
+            "identifierName": "makeStyles-identifierName-9",
+            "identifierSubtitle": "makeStyles-identifierSubtitle-10",
+            "listContainer": "makeStyles-listContainer-1",
+            "listItem": "makeStyles-listItem-2",
+            "primary": "makeStyles-primary-8",
+            "rowSelected": "makeStyles-rowSelected-5",
+            "selected": "makeStyles-selected-6",
+          }
+        }
+        contributor={
+          Object {
+            "nameAsPublished": "A. Smith",
+          }
+        }
+        contributorRowId="test-list-row-0"
+        index={0}
+        selectedClass=""
+        showRoleInput={false}
+        width="xs"
+      />
+      <div
+        className="makeStyles-actionsContainer-12"
+        data-testid="test-list-row-0-actions"
+        id="test-list-row-0-actions"
+      >
+        <WithStyles(ForwardRef(Tooltip))
+          disableFocusListener={false}
+          disableHoverListener={false}
+          disableTouchListener={false}
+        >
           <WithStyles(ForwardRef(IconButton))
             data-testid="test-list-row-0-delete"
             disabled={false}
@@ -1936,9 +2149,9 @@ exports[`Component ContributorRow should render with missing aria label if selec
               }
             />
           </WithStyles(ForwardRef(IconButton))>
-        </span>
-      </WithStyles(ForwardRef(Tooltip))>
-    </WithStyles(ForwardRef(ListItemSecondaryAction))>
+        </WithStyles(ForwardRef(Tooltip))>
+      </div>
+    </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(ListItem))>
 </Fragment>
 `;
