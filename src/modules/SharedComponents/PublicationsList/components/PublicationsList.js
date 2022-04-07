@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -41,6 +42,7 @@ export const PublicationsList = ({
     hideCountDiff,
     hideCountTotal,
     publicationsLoading,
+    showImageThumbnails,
 }) => {
     const {
         shouldRenderRecordsSelectors,
@@ -63,6 +65,7 @@ export const PublicationsList = ({
                         ? customActions
                         : subsetCustomActions
                 }
+                showImageThumbnails={showImageThumbnails}
                 showSources={showSources}
                 showAdminActions={!!showAdminActions}
                 showDefaultActions={showDefaultActions}
@@ -75,7 +78,6 @@ export const PublicationsList = ({
             />
         );
     };
-
     const publications = publicationsList.map((publication, index) => {
         return renderPublicationCitation(index, publication);
     });
@@ -168,6 +170,7 @@ PublicationsList.propTypes = {
     hideCountDiff: PropTypes.bool,
     hideCountTotal: PropTypes.bool,
     publicationsLoading: PropTypes.bool,
+    showImageThumbnails: PropTypes.bool,
 };
 
 PublicationsList.defaultProps = {

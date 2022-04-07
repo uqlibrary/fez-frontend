@@ -73,6 +73,21 @@ export const styles = theme => ({
         fontWeight: 400,
         marginRight: '0.5ex',
     },
+    publicationImage: {
+        display: 'inline-block',
+        [theme.breakpoints.down('xs')]: {
+            width: 50,
+            height: 50,
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: 75,
+            height: 75,
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 100,
+            height: 100,
+        },
+    },
 });
 
 export class PublicationCitation extends PureComponent {
@@ -100,8 +115,8 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showSources: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
+        showImageThumbnails: PropTypes.bool,
     };
-
     static defaultProps = {
         citationStyle: 'notset',
         className: '',
@@ -118,6 +133,7 @@ export class PublicationCitation extends PureComponent {
         showSources: false,
         showUnpublishedBufferFields: false,
         isPublicationDeleted: false,
+        showImageThumbnails: false,
     };
 
     constructor(props) {
@@ -166,6 +182,23 @@ export class PublicationCitation extends PureComponent {
                 // do nothing
                 break;
         }
+    };
+
+    showPublicationImage = showImageThumbnails => {
+        const { publication } = this.props;
+        return (
+            showImageThumbnails &&
+            ((!!publication.fez_datastream_info && !!publication.fez_datastream_info.length > 0) ||
+                publication.rek_pid === 'UQ:95980' ||
+                publication.rek_pid === 'UQ:342708')
+        ); // and has a thumb
+        // const publicationHasImage = () => false;
+    };
+
+    renderPublicationImage = publication => {
+        // fez_datastream_info
+        console.log('Rendering Publication Image', publication);
+        return <img src={'http://placekitten.com/100/100'} />;
     };
 
     renderTitle = () => {
@@ -312,13 +345,18 @@ export class PublicationCitation extends PureComponent {
             showSources,
             showUnpublishedBufferFields,
             isPublicationDeleted,
+            showImageThumbnails,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
         return (
             <div className="publicationCitation">
+                {this.showPublicationImage(showImageThumbnails) && <p>SHOWING IMAGE THUMBNAIL</p>}
                 <Grid container spacing={0}>
-                    <Grid item xs>
+                    <Grid item xs={this.showPublicationImage(showImageThumbnails) ? 1 : 0}>
+                        {this.showPublicationImage(showImageThumbnails) && this.renderPublicationImage(publication)}
+                    </Grid>
+                    <Grid item xs={this.showPublicationImage(showImageThumbnails) ? 11 : 12}>
                         <Grid container spacing={0}>
                             {!hideTitle ? (
                                 <Grid item xs style={{ minWidth: 1 }}>

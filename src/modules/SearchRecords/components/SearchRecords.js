@@ -215,6 +215,7 @@ const SearchRecords = ({
                                                 publicationsList={publicationsList}
                                                 showAdminActions={isAdmin || isUnpublishedBufferPage}
                                                 showUnpublishedBufferFields={isUnpublishedBufferPage}
+                                                showImageThumbnails
                                             />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
