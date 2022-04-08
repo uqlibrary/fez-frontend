@@ -26,6 +26,7 @@ import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
 
 import { mui1theme as theme } from 'config';
+import { withIsMobileView } from '../../../hooks';
 
 export const styles = theme => ({
     tabs: {
@@ -72,6 +73,7 @@ export const fibonacci = (iteration, from = 0) => {
 
 export class DashboardClass extends PureComponent {
     static propTypes = {
+        isMobileView: PropTypes.bool,
         // account data
         account: PropTypes.object.isRequired,
         authorDetails: PropTypes.object,
@@ -237,7 +239,10 @@ export class DashboardClass extends PureComponent {
             this.props.authorDetails.espace &&
             this.props.authorDetails.espace.doc_count > 0;
         const barChart =
-            !loading && this.props.publicationsByYear && this.props.publicationsByYear.series.length > 0 ? (
+            !loading &&
+            !this.props.isMobileView &&
+            this.props.publicationsByYear &&
+            this.props.publicationsByYear.series.length > 0 ? (
                 <StandardCard
                     className="barChart"
                     title={txt.publicationsByYearChart.title}
@@ -252,7 +257,10 @@ export class DashboardClass extends PureComponent {
                 </StandardCard>
             ) : null;
         const donutChart =
-            !loading && this.props.publicationTypesCount && this.props.publicationTypesCount.length > 0 ? (
+            !loading &&
+            !this.props.isMobileView &&
+            this.props.publicationTypesCount &&
+            this.props.publicationTypesCount.length > 0 ? (
                 <StandardCard
                     fullHeight
                     noPadding
@@ -488,5 +496,5 @@ DashboardClass.defaultProps = {
     loadOrcidSyncDelay: 5,
 };
 
-const Dashboard = withStyles(styles, { withTheme: true })(DashboardClass);
+const Dashboard = withStyles(styles, { withTheme: true })(withIsMobileView()(DashboardClass));
 export default Dashboard;
