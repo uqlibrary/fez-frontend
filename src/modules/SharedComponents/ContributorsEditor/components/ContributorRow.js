@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/global';
+import Grid from '@material-ui/core/Grid';
 
 import { makeStyles } from '@material-ui/core/styles';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
@@ -18,7 +18,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
 import { ContributorRowText } from './ContributorRowText';
-import { useWidth, useConfirmationState } from 'hooks';
+import { useConfirmationState, useWidth } from 'hooks';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 
 export const useStyles = makeStyles(theme => ({
@@ -70,6 +70,20 @@ export const useStyles = makeStyles(theme => ({
         },
         '& svg': {
             color: theme.palette.primary.main,
+        },
+    },
+    actionsContainer: {
+        display: 'flex',
+        [theme.breakpoints.up('md')]: {
+            marginLeft: 'auto',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            borderTopColor: '#ddd',
+            borderTopStyle: 'dashed',
+            borderTopWidth: 1,
+            marginTop: 10,
+            marginBottom: -8,
         },
     },
 }));
@@ -207,29 +221,34 @@ export const ContributorRow = ({
                 aria-label={ariaLabel}
                 id={`${contributorRowId}-${index}`}
             >
-                <Hidden xsDown>
-                    <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
-                </Hidden>
-                <ContributorRowText
-                    index={index}
-                    canEdit={canEdit}
-                    contributor={contributor}
-                    classes={classes}
-                    width={width}
-                    showRoleInput={showRoleInput}
-                    selectedClass={selectedClass}
-                    suffix={suffix}
-                    contributorRowId={`${contributorRowId}-${index}`}
-                />
-                <ListItemSecondaryAction>
-                    {canMoveUp && (
-                        <Tooltip
-                            title={moveUpHint}
-                            disableFocusListener={disabled || hideReorder}
-                            disableHoverListener={disabled || hideReorder}
-                            disableTouchListener={disabled || hideReorder}
-                        >
-                            <span>
+                <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
+                    <Hidden xsDown>
+                        <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
+                    </Hidden>
+                    <ContributorRowText
+                        index={index}
+                        canEdit={canEdit}
+                        contributor={contributor}
+                        classes={classes}
+                        width={width}
+                        showRoleInput={showRoleInput}
+                        selectedClass={selectedClass}
+                        suffix={suffix}
+                        contributorRowId={`${contributorRowId}-${index}`}
+                    />
+
+                    <div
+                        className={classes.actionsContainer}
+                        id={`${contributorRowId}-${index}-actions`}
+                        data-testid={`${contributorRowId}-${index}-actions`}
+                    >
+                        {canMoveUp && (
+                            <Tooltip
+                                title={moveUpHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
                                 <IconButton
                                     id={`${contributorRowId}-move-up-${index}`}
                                     data-testid={`${contributorRowId}-${index}-move-up`}
@@ -239,17 +258,15 @@ export const ContributorRow = ({
                                 >
                                     <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
-                            </span>
-                        </Tooltip>
-                    )}
-                    {canMoveDown && (
-                        <Tooltip
-                            title={moveDownHint}
-                            disableFocusListener={disabled || hideReorder}
-                            disableHoverListener={disabled || hideReorder}
-                            disableTouchListener={disabled || hideReorder}
-                        >
-                            <span>
+                            </Tooltip>
+                        )}
+                        {canMoveDown && (
+                            <Tooltip
+                                title={moveDownHint}
+                                disableFocusListener={disabled || hideReorder}
+                                disableHoverListener={disabled || hideReorder}
+                                disableTouchListener={disabled || hideReorder}
+                            >
                                 <IconButton
                                     id={`${contributorRowId}-move-down-${index}`}
                                     data-testid={`${contributorRowId}-${index}-move-down`}
@@ -259,17 +276,15 @@ export const ContributorRow = ({
                                 >
                                     <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
-                            </span>
-                        </Tooltip>
-                    )}
-                    {canEdit && (
-                        <Tooltip
-                            title={editHint}
-                            disableFocusListener={disabled || !!contributor.disabled}
-                            disableHoverListener={disabled || !!contributor.disabled}
-                            disableTouchListener={disabled || !!contributor.disabled}
-                        >
-                            <span>
+                            </Tooltip>
+                        )}
+                        {canEdit && (
+                            <Tooltip
+                                title={editHint}
+                                disableFocusListener={disabled || !!contributor.disabled}
+                                disableHoverListener={disabled || !!contributor.disabled}
+                                disableTouchListener={disabled || !!contributor.disabled}
+                            >
                                 <IconButton
                                     aria-label={editHint}
                                     onClick={_handleEdit}
@@ -279,16 +294,14 @@ export const ContributorRow = ({
                                 >
                                     <Edit classes={{ root: `${selectedClass}` }} />
                                 </IconButton>
-                            </span>
-                        </Tooltip>
-                    )}
-                    <Tooltip
-                        title={deleteHint}
-                        disableFocusListener={disabled || hideDelete}
-                        disableHoverListener={disabled || hideDelete}
-                        disableTouchListener={disabled || hideDelete}
-                    >
-                        <span>
+                            </Tooltip>
+                        )}
+                        <Tooltip
+                            title={deleteHint}
+                            disableFocusListener={disabled || hideDelete}
+                            disableHoverListener={disabled || hideDelete}
+                            disableTouchListener={disabled || hideDelete}
+                        >
                             <IconButton
                                 aria-label={deleteHint}
                                 onClick={showConfirmation}
@@ -298,9 +311,9 @@ export const ContributorRow = ({
                             >
                                 <Delete classes={{ root: `${selectedClass}` }} />
                             </IconButton>
-                        </span>
-                    </Tooltip>
-                </ListItemSecondaryAction>
+                        </Tooltip>
+                    </div>
+                </Grid>
             </ListItem>
         </Fragment>
     );

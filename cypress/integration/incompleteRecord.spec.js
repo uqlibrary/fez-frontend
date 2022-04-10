@@ -183,4 +183,48 @@ context('Incomplete record form', () => {
             .should('have.length', 1)
             .should('not.contain', grantMessage);
     });
+
+    context('author list', () => {
+        beforeEach(() => {
+            const pid = 'UQ:352045';
+            const authorUsername = 'uqrdav10';
+            cy.visit(`/records/${pid}/incomplete?user=${authorUsername}`);
+        });
+
+        context('big screens', () => {
+            beforeEach(() => {
+                cy.viewport(960, 800);
+            });
+
+            it('should display without overlaying elements', () => {
+                // assert author list scrolling
+                cy.get('[data-testid=rek-author-list]').should('have.css', 'overflowY', 'scroll');
+                // assert action table styling
+                cy.get('[data-testid=rek-author-list-row-0-actions]')
+                    .should('have.css', 'marginLeft', '55.5px')
+                    .should('not.have.css', 'borderTopColor', 'rgb(221, 221, 221)')
+                    .should('not.have.css', 'borderTopWidth', '1px')
+                    .should('not.have.css', 'marginTop', '10px')
+                    .should('not.have.css', 'marginBottom', '-8px');
+            });
+        });
+
+        context('small screens', () => {
+            beforeEach(() => {
+                cy.viewport(959, 600);
+            });
+
+            it('should display without overlaying elements', () => {
+                // assert author list scrolling
+                cy.get('[data-testid=rek-author-list]').should('have.css', 'overflowY', 'scroll');
+                // assert action table styling
+                cy.get('[data-testid=rek-author-list-row-0-actions]')
+                    .should('not.have.css', 'marginLeft', '55.5px')
+                    .should('have.css', 'borderTopColor', 'rgb(221, 221, 221)')
+                    .should('have.css', 'borderTopWidth', '1px')
+                    .should('have.css', 'marginTop', '10px')
+                    .should('have.css', 'marginBottom', '-8px');
+            });
+        });
+    });
 });

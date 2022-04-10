@@ -31,7 +31,7 @@ export default function NonUqOrgAffiliationFormSection({
 
     return (
         <Grid container spacing={1}>
-            <Grid item xs={fullWidthFields ? 12 : 6}>
+            <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
                 <TextField
                     required
                     fullWidth
@@ -44,7 +44,7 @@ export default function NonUqOrgAffiliationFormSection({
                     id="org-affiliation-name"
                 />
             </Grid>
-            <Grid item xs={fullWidthFields ? 12 : 6}>
+            <Grid item xs={fullWidthFields ? 12 : 6} sm={6}>
                 <FormControl required fullWidth error={orgAffiliationTypeError}>
                     <InputLabel id="org-affiliation-type-label">{locale.fields.organisationType.inputLabel}</InputLabel>
                     <Select

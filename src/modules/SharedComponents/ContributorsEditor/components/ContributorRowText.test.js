@@ -1,9 +1,9 @@
 import React from 'react';
 import { ContributorRowText } from './ContributorRowText';
 import { rtlRender } from 'test-utils';
+import { userIsAdmin } from 'hooks';
 
 jest.mock('../../../../hooks');
-import { userIsAdmin } from 'hooks';
 
 const classes = {
     listContainer: 'listContainer',
@@ -32,8 +32,7 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).toBe(1);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
     });
 
     it('should render only one column for researcher while adding new non-NTRO work for smaller screen size', () => {
@@ -55,8 +54,7 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).toBe(1);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding new NTRO work (UQ affiliation)', () => {
@@ -84,9 +82,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-uq-details')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding new NTRO work (UQ affiliation) for smaller screen size', () => {
@@ -114,9 +111,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-uq-details')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation)', () => {
@@ -141,9 +137,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-affiliation')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding new NTRO work (NotUQ affiliation) for smaller screen size', () => {
@@ -167,9 +162,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-affiliation')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding datasets', () => {
@@ -192,9 +186,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-role')).toBeInTheDocument();
     });
 
     it('should render three columns for researcher while adding datasets', () => {
@@ -220,9 +213,9 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(3);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-uq-details')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-role')).toBeInTheDocument();
     });
 
     it('should render two columns for researcher while adding datasets for smaller screen size', () => {
@@ -245,9 +238,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-role')).toBeInTheDocument();
     });
 
     it('should render two columns for admin while adding new work', () => {
@@ -272,9 +264,8 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-affiliation')).toBeInTheDocument();
     });
 
     it('should display three columns for admin while adding datasets', () => {
@@ -300,9 +291,9 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(3);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-affiliation')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-role')).toBeInTheDocument();
     });
 
     it('should render two columns for admin while adding new NTRO work (NotUQ affiliation) linking author', () => {
@@ -329,8 +320,7 @@ describe('ContributorRowText', () => {
             />,
         );
 
-        const contributorRow = getByTestId('contributor-row');
-        expect(contributorRow.children.length).not.toBe(1);
-        expect(contributorRow.children.length).toBe(2);
+        expect(getByTestId('test-list-row-name-as-published')).toBeInTheDocument();
+        expect(getByTestId('test-list-row-uq-details')).toBeInTheDocument();
     });
 });
