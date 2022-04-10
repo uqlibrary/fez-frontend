@@ -392,13 +392,17 @@ export const mapStateToProps = state => ({
     author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
 });
 
-export const styles = () => ({
+export const styles = theme => ({
     list: {
         width: '100%',
         margin: '0',
         maxHeight: 225,
-        overflow: 'hidden',
+        overflowX: 'hidden',
+        overflowY: 'hidden',
         marginBottom: 16,
+        [theme.breakpoints.down('sm')]: {
+            overflowY: 'scroll',
+        },
     },
     scroll: {
         overflowY: 'scroll',

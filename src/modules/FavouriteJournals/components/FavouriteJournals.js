@@ -36,10 +36,14 @@ export const FavouriteJournals = () => {
     } = useSelectedJournals({ available: response?.data });
     const { journalSearchQueryParams, handleSearch } = useJournalSearch(pathConfig.journals.favourites);
     /* istanbul ignore next */
-    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(params => {
-        handleSearch(params);
-        clearSelectedJournals();
-    }, journalSearchQueryParams);
+    const { handleExport, pageSizeChanged, pageChanged, sortByChanged } = useJournalSearchControls(
+        params => {
+            handleSearch(params);
+            clearSelectedJournals();
+        },
+        journalSearchQueryParams,
+        true,
+    );
 
     const handleRemoveFromFavouritesClick = () =>
         dispatch(removeFromFavourites(Object.keys(selectedJournals)))

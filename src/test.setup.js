@@ -49,12 +49,13 @@ const setupSessionMockAdapter = () => {
 };
 
 // get a mounted or shallow element
-const getElement = (component, props, args = {}) => {
-    const { isShallow, requiresStore, context, store } = {
+global.getElement = (component, props, args = {}) => {
+    const { isShallow, requiresStore, context, store, renderer } = {
         isShallow: true,
         requiresStore: false,
         context: {},
         store: setupStoreForMount().store,
+        renderer: mount,
         ...args,
     };
 
@@ -67,7 +68,7 @@ const getElement = (component, props, args = {}) => {
             return shallow(React.createElement(component, props), { context });
         }
     }
-    return mount(
+    return renderer(
         <Provider store={store}>
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <MuiThemeProvider theme={mui1theme}>
@@ -94,9 +95,6 @@ global.shallow = shallow;
 global.render = render;
 global.mount = mount;
 global.toJson = toJson;
-
-// make standard libraries/methods globally available to all tests
-global.getElement = getElement;
 
 // set global store for testing actions
 global.setupStoreForActions = setupStoreForActions;

@@ -106,45 +106,34 @@ export const searchJournals = searchQuery => async dispatch => {
  * Reusable export journals action
  *
  * @param searchQuery
+ * @param favourites
  * @return {*}
  */
-export const exportJournals = searchQuery => async dispatch => {
-    const requestParams = JOURNAL_SEARCH_API(searchQuery);
+export const exportJournals = (searchQuery, favourites = false) => async dispatch => {
+    const requestParams = favourites ? JOURNAL_FAVOURITES_API({ query: searchQuery }) : JOURNAL_SEARCH_API(searchQuery);
     const exportConfig = {
         format: requestParams.options.params.export_to,
         page: requestParams.options.params.page,
     };
+    const types = {
+        loading: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_LOADING : actions.EXPORT_JOURNALS_LOADING,
+        loaded: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_LOADED : actions.EXPORT_JOURNALS_LOADED,
+        failed: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_FAILED : actions.EXPORT_JOURNALS_FAILED,
+    };
 
-    dispatch({
-        type: actions.EXPORT_JOURNALS_LOADING,
-        payload: exportConfig,
-    });
+    dispatch({ type: types.loading, payload: exportConfig });
 
     try {
         // set responseType to blob for the FileSaver.saveAs to work
         const response = await get(requestParams, { responseType: 'blob' });
         promptForDownload(exportConfig.format, response);
-        dispatch({
-            type: actions.EXPORT_JOURNALS_LOADED,
-            payload: exportConfig,
-        });
+        dispatch({ type: types.loaded, payload: exportConfig });
     } catch (error) {
         dispatch({
-            type: actions.EXPORT_JOURNALS_FAILED,
-            payload: {
-                ...exportConfig,
-                errorMessage: error.message,
-            },
+            type: types.failed,
+            payload: { ...exportConfig, errorMessage: error.message },
         });
     }
-};
-
-export const resetExportJournalsStatus = () => {
-    return dispatch => {
-        dispatch({
-            type: actions.EXPORT_JOURNALS_RESET,
-        });
-    };
 };
 
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {

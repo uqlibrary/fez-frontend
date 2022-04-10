@@ -43,6 +43,42 @@ describe('Journal Search Keyword enhancer', () => {
         });
         expect(next).toBeCalledWith(expect.objectContaining(referenceObject));
     });
+    it('skip empty keywords', () => {
+        const mockSearchData = {
+            titleFuzzyMatch: [
+                {
+                    jnl_title: 'virus top list',
+                },
+            ],
+            descriptionFuzzyMatch: [
+                {
+                    fez_journal_issn: [
+                        {
+                            fez_ulrichs: {
+                                ulr_description: 'virus description',
+                            },
+                        },
+                    ],
+                },
+            ],
+        };
+        const expectedObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [{ keyword: 'virus' }],
+                subjectMatch: [],
+                titleMatch: [{ keyword: 'virus' }],
+            },
+            query: 'virus ',
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: 'virus ',
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+    });
     it('returns title fuzzy match values without dups', () => {
         const mockSearchData = {
             titleFuzzyMatch: [
@@ -215,7 +251,7 @@ describe('Journal Search Keyword enhancer', () => {
                 keywordMatch: [{ keyword: 'descriptiontest' }],
                 titleMatch: [{ keyword: 'titletest' }],
             },
-            query: '',
+            query: 'test',
         };
         // Mock the base data to a reasonable return set for testing.
         mockSearchData.descriptionFuzzyMatch.forEach(obj =>
@@ -226,7 +262,7 @@ describe('Journal Search Keyword enhancer', () => {
         journalSearchKeywordsEnhancer()(next)({
             type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
             payload: mockSearchData,
-            query: '',
+            query: 'test',
         });
 
         expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
@@ -244,13 +280,13 @@ describe('Journal Search Keyword enhancer', () => {
                 keywordMatch: [],
                 titleMatch: [{ keyword: 'titletest' }],
             },
-            query: '',
+            query: 'test',
         };
 
         journalSearchKeywordsEnhancer()(next)({
             type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
             payload: mockSearchData,
-            query: '',
+            query: 'test',
         });
 
         expect(next).toBeCalledWith(expect.objectContaining(mockReferenceObject));
