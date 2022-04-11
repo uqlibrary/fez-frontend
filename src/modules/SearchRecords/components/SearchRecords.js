@@ -22,41 +22,7 @@ import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
-
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-
-import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
-
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
-    },
-    icon: {
-        color: 'rgba(255, 255, 255, 0.54)',
-    },
-    titleBar: {
-        height: '67px',
-        /* these dont work in this version due to specificity but need them for multiline truncation of titles */
-        fontSize: '12px',
-        display: '-webkit-box',
-        lineClamp: 3,
-        boxOrient: 'vertical',
-        overflow: 'hidden',
-    },
-    gridListTile: {
-        '& [class*="MuiImageListItem-item-"]': {
-            backgroundColor: 'purple',
-        },
-    },
-}));
+import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
 const SearchRecords = ({
     actions,
@@ -73,9 +39,7 @@ const SearchRecords = ({
     searchLoadingError,
     searchQuery,
 }) => {
-    const classes = useStyles();
     const isAdmin = userIsAdmin();
-
     const isAuthor = userIsAuthor();
 
     const isResearcher = userIsResearcher();
@@ -141,11 +105,6 @@ const SearchRecords = ({
     const alertProps = searchLoadingError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
-    };
-
-    const getThumbnail = (dataStream, isAdmin, isAuthor) => {
-        const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
-        return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
     };
 
     return (
@@ -256,26 +215,10 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            <ImageList rowHeight={150} cols={5} className={classes.imageList}>
-                                                {publicationsList.map(item => (
-                                                    <ImageListItem key={item.rek_pid} className={classes.gridListTile}>
-                                                        <img
-                                                            src={`/images/thumbs/${getThumbnail(
-                                                                item.fez_datastream_info,
-                                                                isAdmin,
-                                                                isAuthor,
-                                                            )}`}
-                                                            alt={item.rek_title}
-                                                            width="150"
-                                                            height="150"
-                                                        />
-                                                        <ImageListItemBar
-                                                            title={item.rek_title}
-                                                            className={classes.titleBar}
-                                                        />
-                                                    </ImageListItem>
-                                                ))}
-                                            </ImageList>
+                                            <ImageGallery
+                                                publicationsList={publicationsList}
+                                                security={{ isAdmin, isAuthor }}
+                                            />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
