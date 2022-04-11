@@ -75,6 +75,10 @@ export const viewRecordsConfig = {
             className: 'uq',
             url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         },
+        456807: {
+            className: 'uq',
+            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        },
     },
     htmlFields: [
         'rek_transcript',
