@@ -17,9 +17,12 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-import { userIsAdmin, userIsResearcher } from 'hooks';
+import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+
+import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
+
 import hash from 'hash-sum';
 
 const SearchRecords = ({
@@ -38,6 +41,8 @@ const SearchRecords = ({
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
+    const isAuthor = userIsAuthor();
+
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
@@ -101,6 +106,11 @@ const SearchRecords = ({
     const alertProps = searchLoadingError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
+    };
+
+    const getThumbnail = (dataStream, isAdmin, isAuthor) => {
+        const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
+        return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
     };
 
     return (
