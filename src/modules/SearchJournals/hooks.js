@@ -142,12 +142,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 };
 
-export const useJournalSearchControls = (
-    onSearch,
-    journalSearchQueryParams,
-    favourites = false,
-    allJournals = false,
-) => {
+export const useJournalSearchControls = (onSearch, journalSearchQueryParams, favourites, allJournals = false) => {
     const dispatch = useDispatch();
     const updateSemaphore = React.useRef(false);
 
