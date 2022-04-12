@@ -1288,7 +1288,7 @@ export default {
 		}, {
 			"dsi_id": 2935792,
 			"dsi_pid": "UQ:288585",
-			"dsi_dsid": "thumbnail_Slide_003.jpg",
+			"dsi_dsid": "thumbnail_Slide_error.jpg",
 			"dsi_checksum": "3655a9d06cf7dff723f3dfb8e57acf77",
 			"dsi_embargo_date": null,
 			"dsi_open_access": null,

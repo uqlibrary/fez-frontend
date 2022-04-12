@@ -9,7 +9,7 @@ import ImageGalleryItem from './ImageGalleryItem';
 
 const useStyles = makeStyles(
     theme => ({
-        root: {
+        imageListRoot: {
             [theme.breakpoints.down('xs')]: {},
         },
     }),
@@ -27,13 +27,12 @@ const ImageGallery = ({
     ...rest
 }) => {
     const internalClasses = useStyles();
-    const { imageGallery, ...otherClasses } = classes;
 
     return (
         <ImageList
             rowHeight={itemHeight}
             cols={itemsPerRow}
-            classes={{ ...internalClasses, ...imageGallery }}
+            classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
             {...rest}
         >
             {publicationsList.map(item => (
@@ -43,7 +42,7 @@ const ImageGallery = ({
                     lazyLoading={lazyLoading}
                     itemWidth={itemWidth}
                     itemHeight={itemHeight}
-                    classes={otherClasses}
+                    classes={{ imageListItem: classes.imageListItem, imageListItemBar: classes.imageListItemBar }}
                     security={security}
                 />
             ))}
@@ -54,7 +53,11 @@ const ImageGallery = ({
 ImageGallery.propTypes = {
     publicationsList: PropTypes.array.isRequired,
     security: PropTypes.object,
-    classes: PropTypes.object,
+    classes: PropTypes.shape({
+        imageList: PropTypes.object,
+        imageListItem: PropTypes.object,
+        imageListItemBar: PropTypes.object,
+    }),
     lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
     itemHeight: PropTypes.number,

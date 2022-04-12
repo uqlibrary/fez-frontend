@@ -6,26 +6,34 @@ import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 
 import { default as config } from 'config/imageGalleryConfig';
-import { getThumbnail } from './Utils';
+import ImageGalleryItemImage from './ImageGalleryItemImage';
+
+import { pathConfig } from 'config/pathConfig';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme, props) => ({
+const useStyles = makeStyles(theme => ({
     imageListItemRoot: {
-        ...props?.imageListItem?.root,
+        [theme.breakpoints.down('md')]: {
+            width: '25% !important',
+        },
+        [theme.breakpoints.down('sm')]: {
+            width: '33% !important',
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '50% !important',
+        },
+    },
+    imageListItemItem: {
+        backgroundColor: '#51247a',
     },
     imageListItemBarRoot: {
         height: '67px',
         alignItems: 'flex-start',
         boxSizing: 'border-box',
         padding: '10px',
-        [theme.breakpoints.up('sm')]: {
-            // padding: theme.spacing(2),
-        },
-        ...props?.imageListItemBar?.root,
     },
     imageListItemBarTitle: {
-        /* these dont work in this version due to specificity but
-                need them for multiline truncation of titles */
         fontSize: '12px',
         lineHeight: '16px',
         display: '-webkit-box',
@@ -33,38 +41,60 @@ const useStyles = makeStyles((theme, props) => ({
         boxOrient: 'vertical',
         overflow: 'hidden',
         whiteSpace: 'normal',
-        ...props?.imageListItemBar?.title,
     },
     imageListItemBarTitleWrap: {
         margin: 0,
-        ...props?.imageListItemBar.titleWrap,
+    },
+    imageGalleryItemImage: {
+        minWidth: '100px',
+        minHeight: '100px',
+        width: '100%',
+        height: '100%',
+        [theme.breakpoints.up('md')]: {
+            minWidth: '150px',
+            minHeight: '150px',
+        },
     },
 }));
 
 const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, security, ...rest }) => {
-    const mergedClasses = useStyles(classes);
+    const internalClasses = useStyles();
 
     return (
-        <ImageListItem classes={{ root: mergedClasses.imageListItemRoot }} {...rest}>
-            <img
-                src={`${config.thumbnailImage.prependPath}${getThumbnail(
-                    item.fez_datastream_info,
-                    security.isAdmin,
-                    security.isAuthor,
-                )}`}
+        <ImageListItem
+            classes={{
+                root: `${internalClasses.imageListItemRoot} ${classes?.imageListItem?.root ?? ''}`,
+                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''}`,
+            }}
+            {...rest}
+        >
+            <ImageGalleryItemImage
+                item={item}
+                security={security}
                 alt={item.rek_title}
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
+                className={internalClasses.imageGalleryItemImage}
             />
-            <ImageListItemBar
+            <ExternalLink
                 title={item.rek_title}
-                classes={{
-                    root: mergedClasses.imageListItemBarRoot,
-                    title: mergedClasses.imageListItemBarTitle,
-                    titleWrap: mergedClasses.imageListItemBarTitleWrap,
-                }}
-            />
+                href={pathConfig.records.view(item.rek_pid)}
+                id={`gallery-item-${item.rek_pid}`}
+                data-testid={`gallery-item-${item.rek_pid}`}
+                target="_self"
+                openInNewIcon={false}
+            >
+                <ImageListItemBar
+                    title={item.rek_title}
+                    classes={{
+                        root: `${internalClasses.imageListItemBarRoot} ${classes?.imageListItemBar?.root ?? ''}`,
+                        title: `${internalClasses.imageListItemBarTitle} ${classes?.imageListItemBar?.title ?? ''}`,
+                        titleWrap: `${internalClasses.imageListItemBarTitleWrap} ${classes?.imageListItemBar
+                            ?.titleWrap ?? ''}`,
+                    }}
+                />
+            </ExternalLink>
         </ImageListItem>
     );
 };

@@ -1,7 +1,7 @@
 export default {
     thumbnailImage: {
         defaultImageName: 'uqlogo.svg',
-        prependPath: '/images/thumbs/',
+        defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
         defaultItemsPerRow: 5,
