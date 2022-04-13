@@ -209,8 +209,8 @@ const handlers = {
             },
             publicationsListFacets: (action.payload.filters || {}).facets || {},
             publicationsListDefaultView: {
-                id: action.payload.default_view_type,
-                lookup: action.payload.default_view_type_lookup,
+                id: action.payload.default_view_type || 2,
+                lookup: action.payload.default_view_type_lookup || 'image-gallery',
             },
         };
     },
