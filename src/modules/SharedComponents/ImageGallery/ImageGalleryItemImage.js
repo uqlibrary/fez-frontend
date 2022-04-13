@@ -31,9 +31,8 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
             onError={e => {
                 e.target.onerror = null;
                 // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
-                e.target.src = `${process.env.GALLERY_IMAGE_PATH_PREPEND ?? ''}${
-                    config.thumbnailImage.defaultImageName
-                }`; // TODO - need a proper fallback image and guaranteed location on server
+                // TODO - need a proper fallback image and guaranteed location on server
+                e.target.src = config.thumbnailImage.defaultImageName;
             }}
             alt=""
             className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
