@@ -306,7 +306,7 @@ SearchRecords.propTypes = {
 };
 
 SearchRecords.defaultProps = {
-    publicationsListDefaultView: { id: 0, lookup: 'auto' },
+    publicationsListDefaultView: { id: 0, lookup: 'image-gallery' },
 };
 
 export default SearchRecords;
