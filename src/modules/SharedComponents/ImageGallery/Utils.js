@@ -58,9 +58,10 @@ export const getThumbnail = (item, isAdmin, isAuthor) => {
 export const getUrl = (pid, fileName, checksum = '') => {
     const fullUrl = pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     const url =
-        (fullUrl &&
-            process.env.GALLERY_IMAGE_PATH_PREPEND &&
-            `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(fullUrl.indexOf(fileName))}`) ??
-        fullUrl;
+        fullUrl && process.env.GALLERY_IMAGE_PATH_PREPEND
+            ? `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(fullUrl.indexOf(fileName))}`
+            : (fullUrl && `https://espace.library.uq.edu.au/${fullUrl.substr(fullUrl.indexOf('view/'))}`) ?? fullUrl;
+    // TODO: remove bodge for dev server testing
+    console.log(url);
     return url;
 };
