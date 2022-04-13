@@ -188,7 +188,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.unpublishedSearchList];
         }
         // return [404, ['Request not found']];
-        return [200, mockData.internalTitleSearchList];
+        return [200, mockData.collectionSearchResultsImages];
     })
     .onGet(
         new RegExp(

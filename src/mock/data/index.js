@@ -3,6 +3,7 @@ export {
     collectionRecord,
     collectionSearchList,
     collectionsByCommunity,
+    collectionSearchResultsImages,
     communityRecord,
     communitySearchList,
     externalDoiSearchResultList,

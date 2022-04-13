@@ -10,17 +10,19 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import {
     FacetsFilter,
-    PublicationsList,
+    // PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
 } from 'modules/SharedComponents/PublicationsList';
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-import { userIsAdmin, userIsResearcher } from 'hooks';
+
+import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
+import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
 const SearchRecords = ({
     actions,
@@ -38,6 +40,8 @@ const SearchRecords = ({
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
+    const isAuthor = userIsAuthor();
+
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
@@ -211,10 +215,9 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            <PublicationsList
+                                            <ImageGallery
                                                 publicationsList={publicationsList}
-                                                showAdminActions={isAdmin || isUnpublishedBufferPage}
-                                                showUnpublishedBufferFields={isUnpublishedBufferPage}
+                                                security={{ isAdmin, isAuthor }}
                                             />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
