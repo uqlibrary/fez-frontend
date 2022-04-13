@@ -34610,7 +34610,7 @@ exports[`Additional Information Component  should render component with data col
                 The agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.
               </p>
               <ExternalLink
-                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement"
                 id="rek-license"
                 openInNewIcon={true}
               >
@@ -40317,7 +40317,7 @@ exports[`Additional Information Component  should render component with data col
                 The agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.
               </p>
               <ExternalLink
-                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                href="https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement"
                 id="rek-license"
                 openInNewIcon={true}
               >
