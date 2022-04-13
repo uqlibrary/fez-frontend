@@ -35,7 +35,7 @@ const SearchRecords = ({
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
-    publicationsListDefaultView,
+    publicationsListDefaultView = { id: 2, lookup: 'image-gallery' },
     searchLoading,
     searchLoadingError,
     searchQuery,
@@ -108,8 +108,9 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
 
-    const showRecordView = publicationsList => {
-        // TODO - check mock data to determine how to show the result set
+    const SelectRecordView = publicationsList => {
+        // TODO - update to take in to account presence of querystring parameter
+        // which will take precedence over value coming through the API
         const displayLookup = publicationsListDefaultView.lookup;
 
         switch (displayLookup) {
@@ -243,7 +244,7 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            {showRecordView(publicationsList)}
+                                            {SelectRecordView(publicationsList)}
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
@@ -306,7 +307,7 @@ SearchRecords.propTypes = {
 };
 
 SearchRecords.defaultProps = {
-    publicationsListDefaultView: { id: 0, lookup: 'image-gallery' },
+    publicationsListDefaultView: { id: 2, lookup: 'image-gallery' },
 };
 
 export default SearchRecords;
