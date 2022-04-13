@@ -208,6 +208,10 @@ const handlers = {
                 per_page: action.payload.per_page,
             },
             publicationsListFacets: (action.payload.filters || {}).facets || {},
+            publicationsListDefaultView: {
+                id: action.payload.default_view_type,
+                lookup: action.payload.default_view_type_lookup,
+            },
         };
     },
 
