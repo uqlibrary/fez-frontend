@@ -27,7 +27,7 @@ import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
 import { userIsAdmin, userIsAuthor } from 'hooks';
-import { AUTH_URL_LOGIN, general } from 'config';
+import { general, AUTH_URL_LOGIN } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
 import * as actions from 'actions';
