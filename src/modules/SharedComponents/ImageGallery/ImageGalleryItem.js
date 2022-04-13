@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
         boxOrient: 'vertical',
         overflow: 'hidden',
         whiteSpace: 'normal',
+        wordBreak: 'break-word',
     },
     imageListItemBarTitleWrap: {
         margin: 0,

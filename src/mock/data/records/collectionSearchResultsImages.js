@@ -397,7 +397,7 @@ export default {
 			"dsi_copyright": null,
 			"dsi_state": "A",
 			"dsi_size": 56525440,
-			"dsi_security_policy": 5,
+			"dsi_security_policy": 1,
 			"dsi_security_inherited": 1
 		}, {
 			"dsi_id": 2935636,
