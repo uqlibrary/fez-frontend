@@ -21,13 +21,13 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
     const classes = useStyles();
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
-    if (!!!fileData.thumbnailFileName && optional) return <></>;
-    if (!fileData.securityStatus) return <Lock color={'secondary'} className={classes.lockIcon} />;
+    if (!!!fileData?.thumbnailFileName && optional) return <></>;
+    if (!fileData?.securityStatus) return <Lock color={'secondary'} className={classes.lockIcon} />;
     return (
         <img
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
-            src={`${getUrl(item.rek_pid, fileData.thumbnailFileName, fileData.checksums.thumbnail)}`}
+            src={`${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`}
             onError={e => {
                 e.target.onerror = null;
                 // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'

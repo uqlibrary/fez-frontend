@@ -10,7 +10,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import {
     FacetsFilter,
-    // PublicationsList,
+    PublicationsList,
     PublicationsListPaging,
     PublicationsListSorting,
 } from 'modules/SharedComponents/PublicationsList';
@@ -35,6 +35,7 @@ const SearchRecords = ({
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
+    publicationsListDefaultView,
     searchLoading,
     searchLoadingError,
     searchQuery,
@@ -105,6 +106,33 @@ const SearchRecords = ({
     const alertProps = searchLoadingError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
+    };
+
+    const showRecordView = publicationsList => {
+        // TODO - check mock data to determine how to show the result set
+        const displayLookup = publicationsListDefaultView.lookup;
+
+        switch (displayLookup) {
+            case 'auto':
+            case 'standard':
+                return (
+                    <PublicationsList
+                        publicationsList={publicationsList}
+                        showAdminActions={isAdmin || isUnpublishedBufferPage}
+                        showUnpublishedBufferFields={isUnpublishedBufferPage}
+                    />
+                );
+            case 'image-gallery':
+                return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor }} />;
+            default:
+                return (
+                    <PublicationsList
+                        publicationsList={publicationsList}
+                        showAdminActions={isAdmin || isUnpublishedBufferPage}
+                        showUnpublishedBufferFields={isUnpublishedBufferPage}
+                    />
+                );
+        }
     };
 
     return (
@@ -215,10 +243,7 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            <ImageGallery
-                                                publicationsList={publicationsList}
-                                                security={{ isAdmin, isAuthor }}
-                                            />
+                                            {showRecordView(publicationsList)}
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
@@ -274,9 +299,14 @@ SearchRecords.propTypes = {
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,
+    publicationsListDefaultView: PropTypes.object,
     searchLoading: PropTypes.bool,
     searchLoadingError: PropTypes.bool,
     searchQuery: PropTypes.object,
+};
+
+SearchRecords.defaultProps = {
+    publicationsListDefaultView: { id: 0, lookup: 'image-gallery' },
 };
 
 export default SearchRecords;
