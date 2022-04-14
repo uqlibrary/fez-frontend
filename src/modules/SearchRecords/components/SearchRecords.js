@@ -35,7 +35,7 @@ const SearchRecords = ({
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
-    publicationsListDefaultView = { id: 2, lookup: 'image-gallery' },
+    publicationsListDefaultView,
     searchLoading,
     searchLoadingError,
     searchQuery,
@@ -54,11 +54,14 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
-    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, handleExport } = useSearchRecordsControls(
-        queryParams,
-        updateQueryString,
-        actions,
-    );
+    const {
+        pageSizeChanged,
+        pageChanged,
+        sortByChanged,
+        facetsChanged,
+        handleExport,
+        displayResultsAsChanged,
+    } = useSearchRecordsControls(queryParams, updateQueryString, actions);
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
             setSearchParams({
@@ -111,7 +114,7 @@ const SearchRecords = ({
     const SelectRecordView = publicationsList => {
         // TODO - update to take in to account presence of querystring parameter
         // which will take precedence over value coming through the API
-        const displayLookup = publicationsListDefaultView.lookup;
+        const displayLookup = queryParams.displayRecordsAs ?? publicationsListDefaultView.lookup;
 
         switch (displayLookup) {
             case 'auto':
@@ -206,6 +209,7 @@ const SearchRecords = ({
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
+                                        onDisplayResultsAsChanged={displayResultsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
@@ -304,10 +308,6 @@ SearchRecords.propTypes = {
     searchLoading: PropTypes.bool,
     searchLoadingError: PropTypes.bool,
     searchQuery: PropTypes.object,
-};
-
-SearchRecords.defaultProps = {
-    publicationsListDefaultView: { id: 2, lookup: 'image-gallery' },
 };
 
 export default SearchRecords;
