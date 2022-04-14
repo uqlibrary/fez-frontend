@@ -32,7 +32,7 @@ const PublicationsListSorting = props => {
         props.pageSize ||
         (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
 
-    const initPropDisplayRecordsAs = props.displayRecordsAs || props.sortingData.displayRecordsAs[0].value;
+    const initPropDisplayRecordsAs = props.displayRecordsAs || props.sortingData.displayRecordsAs?.[0]?.value;
 
     // sanitise values
     const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
@@ -46,11 +46,11 @@ const PublicationsListSorting = props => {
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
     const propDisplayRecordsAs = doesListContainItem(
-        locale.components.sorting.displayRecordsAs,
+        locale.components.sorting.displayRecordsAs ?? [],
         initPropDisplayRecordsAs,
     )
         ? initPropDisplayRecordsAs
-        : locale.components.sorting.displayRecordsAs[0].value;
+        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);
@@ -198,7 +198,7 @@ const PublicationsListSorting = props => {
                         onChange={displayRecordsAsChanged}
                         data-testid="publication-list-display-records-as"
                     >
-                        {props.sortingData.displayRecordsAs.map((item, index) => {
+                        {props.sortingData.displayRecordsAs?.map((item, index) => {
                             return (
                                 <MenuItem
                                     key={index}
