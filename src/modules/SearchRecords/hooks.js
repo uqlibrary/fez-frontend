@@ -180,10 +180,10 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
             ...exportFormat,
         });
 
-    const displayResultsAsChanged = displayResultsAs => {
+    const displayRecordsAsChanged = displayRecordsAs => {
         updateQueryString({
             ...queryParams,
-            displayResultsAs,
+            displayRecordsAs,
         });
     };
 
@@ -193,6 +193,6 @@ export const useSearchRecordsControls = (queryParams, updateQueryString, actions
         sortByChanged,
         facetsChanged,
         handleExport,
-        displayResultsAsChanged,
+        displayRecordsAsChanged,
     };
 };

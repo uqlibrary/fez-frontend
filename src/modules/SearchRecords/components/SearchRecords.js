@@ -60,7 +60,7 @@ const SearchRecords = ({
         sortByChanged,
         facetsChanged,
         handleExport,
-        displayResultsAsChanged,
+        displayRecordsAsChanged,
     } = useSearchRecordsControls(queryParams, updateQueryString, actions);
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
@@ -112,8 +112,6 @@ const SearchRecords = ({
     };
 
     const SelectRecordView = publicationsList => {
-        // TODO - update to take in to account presence of querystring parameter
-        // which will take precedence over value coming through the API
         const displayLookup = queryParams.displayRecordsAs ?? publicationsListDefaultView.lookup;
 
         switch (displayLookup) {
@@ -209,11 +207,12 @@ const SearchRecords = ({
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
-                                        onDisplayResultsAsChanged={displayResultsAsChanged}
+                                        onDisplayRecordsAsChanged={displayRecordsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
+                                        displayRecordsAs={searchParams.displayRecordsAs}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
