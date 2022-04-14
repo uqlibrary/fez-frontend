@@ -1761,9 +1761,9 @@ export default {
             },
             displayRecordsAsLabel: 'Display results',
             displayRecordsAs: [
-                { value: 'auto', label: '(auto)' },
-                { value: 'standard', label: 'Standard' },
-                { value: 'image-gallery', label: 'Image Gallery' },
+                { index: 0, value: 'auto', label: '(auto)' },
+                { index: 1, value: 'standard', label: 'Standard' },
+                { index: 2, value: 'image-gallery', label: 'Image Gallery' },
             ],
         },
         newsFeed: {

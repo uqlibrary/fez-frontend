@@ -5,7 +5,7 @@ export default {
 	"current_page": 1,
 	"from": 1,
 	"to": 20,
-	"default_view_type": 0, // 0 = auto (unset), 1 = standard, 2 = image gallery
+	"default_view_type": 2, // 0 = auto (unset), 1 = standard, 2 = image gallery
 	"default_view_type_lookup": "image-gallery", // null | 'auto', 'standard', 'image-gallery'
 	"data": [{
 		"rek_pid": "UQ:288612",
