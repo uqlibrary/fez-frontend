@@ -210,7 +210,7 @@ const handlers = {
             publicationsListFacets: (action.payload.filters || {}).facets || {},
             publicationsListDefaultView: {
                 id: action.payload.default_view_type || 2,
-                lookup: action.payload.default_view_type_lookup || 'image-gallery',
+                lookup: action.payload.default_view_type_lookup || 'image-gallery', // TODO change default to 0 / 'auto'
             },
         };
     },
