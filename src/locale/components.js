@@ -1759,6 +1759,12 @@ export default {
                 ),
                 confirmButtonLabel: 'Close',
             },
+            displayRecordsAsLabel: 'Display results',
+            displayRecordsAs: [
+                { value: 'auto', label: '(auto)' },
+                { value: 'standard', label: 'Standard' },
+                { value: 'image-gallery', label: 'Image Gallery' },
+            ],
         },
         newsFeed: {
             title: 'Latest news',
