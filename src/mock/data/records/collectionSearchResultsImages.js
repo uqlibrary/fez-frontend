@@ -6,7 +6,7 @@ export default {
 	"from": 1,
 	"to": 20,
 	"default_view_type": 0, // 0 = auto (unset), 1 = standard, 2 = image gallery
-	"default_view_type_lookup": "image-gallery", // 'auto', 'standard', 'image-gallery'
+	"default_view_type_lookup": "image-gallery", // null | 'auto', 'standard', 'image-gallery'
 	"data": [{
 		"rek_pid": "UQ:288612",
 		"rek_title_xsdmf_id": 4198,
