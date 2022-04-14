@@ -21,8 +21,12 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
     const classes = useStyles();
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
-    if (!!!fileData?.thumbnailFileName && optional) return <></>;
-    if (!fileData?.securityStatus) return <Lock color={'secondary'} className={classes.lockIcon} />;
+    if (!!!fileData?.thumbnailFileName && optional) return <></>; // no thumbnail available but optional is true
+    if (!!fileData?.thumbnailFileName && !fileData?.securityStatus) {
+        return <Lock color={'secondary'} className={classes.lockIcon} />; // thumbnail available but security denied
+    }
+    // at this stage fileData could still be null, which is fine as below will fall back to default image
+
     return (
         <img
             id={`imageGalleryItemImage-${item.rek_pid}`}
