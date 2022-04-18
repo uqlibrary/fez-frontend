@@ -59,21 +59,30 @@ export const viewRecordsConfig = {
             className: 'cc-by-nc-nd',
             url: 'http://creativecommons.org/licenses/by-nc-nd/4.0/deed.en',
         },
+        // Permitted Re-use with Acknowledgement
         453701: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            url: 'https://guides.library.uq.edu.au/deposit-your-data/license-reuse-with-acknowledgement',
         },
+        // Permitted Non-commercial Re-use with Acknowledgement
         453702: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            url: 'https://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         },
+        // Permitted Re-Use with Commercial Use Restriction
         454104: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            url: 'https://guides.library.uq.edu.au/deposit-your-data/license-reuse-noncommercial',
         },
+        // Permitted Re-Use with Share Alike Requirement
         454105: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            url: 'https://guides.library.uq.edu.au/deposit-your-data/license-reuse-share-alike',
+        },
+        // Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient
+        456807: {
+            className: 'uq',
+            url: 'https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement',
         },
     },
     htmlFields: [
