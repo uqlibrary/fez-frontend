@@ -17,11 +17,11 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
+import { userIsAdmin, userIsResearcher } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 
-import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
+// import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
 
 import hash from 'hash-sum';
 
@@ -41,7 +41,7 @@ const SearchRecords = ({
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
-    const isAuthor = userIsAuthor();
+    // const isAuthor = userIsAuthor();
 
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
@@ -108,10 +108,10 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
 
-    const getThumbnail = (dataStream, isAdmin, isAuthor) => {
-        const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
-        return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
-    };
+    // const getThumbnail = (dataStream, isAdmin, isAuthor) => {
+    //     const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
+    //     return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
+    // };
 
     return (
         <StandardPage className="page-search-records">
