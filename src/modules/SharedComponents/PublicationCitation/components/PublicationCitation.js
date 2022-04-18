@@ -227,7 +227,7 @@ export class PublicationCitation extends PureComponent {
 
     renderPublicationImage = publication => {
         // fez_datastream_info
-        console.log('Rendering Publication Image', this.props.classes);
+        // console.log('Rendering Publication Image', this.props.classes);
         return (
             <Img
                 crossOrigin="anonymous"
@@ -391,7 +391,7 @@ export class PublicationCitation extends PureComponent {
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
         const renderThumbnails = this.showPublicationImage(showImageThumbnails);
-        console.log('Classes', classes);
+        // console.log('Classes', classes);
         return (
             <div className="publicationCitation">
                 <Grid container spacing={0}>
