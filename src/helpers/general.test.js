@@ -1,4 +1,4 @@
-import { hydrateMockSearchList, leftJoin, stripHtml, sanitiseId } from './general';
+import { hydrateMockSearchList, leftJoin, stripHtml, sanitiseId, formatUrlTextWithWbrTags } from './general';
 
 describe('general helpers', () => {
     it('leftJoin', () => {
@@ -203,5 +203,12 @@ describe('general helpers', () => {
         expect(sanitiseId('subject-code abc')).toEqual('subject-code-abc');
         expect(sanitiseId('search-subject-1111 Abc-0')).toEqual('search-subject-1111-abc-0');
         expect(sanitiseId('help-icon-fez_journal_doaj')).toEqual('help-icon-fez-journal-doaj');
+    });
+
+    it('should insert WBR tags in to a URL', () => {
+        const expectedStr =
+            '["http:",{"type":"wbr","key":"1","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"/"]';
+        const actualStr = JSON.stringify(formatUrlTextWithWbrTags('http://www.test.com/'));
+        expect(expectedStr).toEqual(actualStr);
     });
 });

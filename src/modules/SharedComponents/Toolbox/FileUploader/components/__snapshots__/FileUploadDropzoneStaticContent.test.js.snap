@@ -1248,7 +1248,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                             className="FileUploadDropzoneStaticContent-instructions-3"
                             container={true}
                             direction="column"
-                            justify="center"
+                            justifyContent="center"
                           >
                             <ForwardRef(Grid)
                               alignItems="center"
@@ -1362,7 +1362,7 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                               }
                               container={true}
                               direction="column"
-                              justify="center"
+                              justifyContent="center"
                             >
                               <div
                                 className="MuiGrid-root FileUploadDropzoneStaticContent-instructions-3 MuiGrid-container MuiGrid-direction-xs-column MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"

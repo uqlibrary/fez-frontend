@@ -352,7 +352,7 @@ export const AdminInterface = ({
                         <Grid
                             container
                             alignContent="center"
-                            justify="center"
+                            justifyContent="center"
                             alignItems="center"
                             style={{ marginBottom: 12 }}
                         >

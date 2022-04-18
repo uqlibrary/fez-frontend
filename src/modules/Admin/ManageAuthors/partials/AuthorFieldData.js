@@ -11,7 +11,7 @@ export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props
     return (
         <React.Fragment>
             <Grid item xs={2}>
-                <Grid container justify="flex-end">
+                <Grid container justifyContent="flex-end">
                     <Grid item>
                         <ColumnTitle title={label} />
                     </Grid>

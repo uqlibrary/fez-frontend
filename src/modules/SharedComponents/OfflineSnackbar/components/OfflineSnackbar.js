@@ -45,7 +45,7 @@ export class OfflineSnackbar extends PureComponent {
 
     renderMessage = (message, icon) => {
         return (
-            <Grid container alignItems={'center'} justify={'center'} alignContent={'center'}>
+            <Grid container alignItems={'center'} justifyContent={'center'} alignContent={'center'}>
                 <Grid item xs />
                 <Grid item style={{ marginRight: 24 }}>
                     {icon}

@@ -120,7 +120,7 @@ export const JournalSearchInterface = ({
                 )}
                 {showInputControls && (
                     <Grid item xs={12}>
-                        <Grid container spacing={2} justify="flex-end">
+                        <Grid container spacing={2} justifyContent="flex-end">
                             <CommonButtons onSearchAll={onSearchAll} />
                             <Grid item xs={12} sm="auto">
                                 <Button

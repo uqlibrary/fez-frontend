@@ -20,6 +20,9 @@ import { RecordsSelectorContext } from 'context';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+
+// import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
+
 import hash from 'hash-sum';
 
 const SearchRecords = ({
@@ -38,6 +41,8 @@ const SearchRecords = ({
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
+    // const isAuthor = userIsAuthor();
+
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
@@ -103,6 +108,11 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
 
+    // const getThumbnail = (dataStream, isAdmin, isAuthor) => {
+    //     const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
+    //     return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
+    // };
+
     return (
         <StandardPage className="page-search-records">
             <Grid container spacing={3}>
@@ -143,7 +153,7 @@ const SearchRecords = ({
                     (!!publicationsList && publicationsList.length > 0)) && (
                     <Grid item xs sm md={9}>
                         <StandardCard noHeader standardCardId="search-records-results">
-                            <Grid container spacing={2} justify="space-between">
+                            <Grid container spacing={2} justifyContent="space-between">
                                 <Grid item xs="auto">
                                     {pagingData && pagingData.to && pagingData.from && pagingData.total ? (
                                         <span>
@@ -190,7 +200,7 @@ const SearchRecords = ({
                                 </Grid>
                                 {isLoadingOrExporting && (
                                     <Grid item xs={12}>
-                                        <Grid container justify={'center'}>
+                                        <Grid container justifyContent={'center'}>
                                             <Grid item xs={12}>
                                                 <InlineLoader
                                                     loaderId="search-records-page-loading"
@@ -215,6 +225,7 @@ const SearchRecords = ({
                                                 publicationsList={publicationsList}
                                                 showAdminActions={isAdmin || isUnpublishedBufferPage}
                                                 showUnpublishedBufferFields={isUnpublishedBufferPage}
+                                                showImageThumbnails
                                             />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
