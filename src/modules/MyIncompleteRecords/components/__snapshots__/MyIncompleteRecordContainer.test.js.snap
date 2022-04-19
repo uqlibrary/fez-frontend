@@ -46,7 +46,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </svg>
         </span>
         <span
-          class="MuiTouchRipple-root-413"
+          class="MuiTouchRipple-root-414"
         />
       </button>
     </div>
@@ -375,7 +375,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-413"
+                      class="MuiTouchRipple-root-414"
                     />
                   </button>
                 </div>
@@ -460,7 +460,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-423 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-424 Mui-error Mui-required"
                       >
                         This field is required
                       </p>
@@ -569,7 +569,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-413"
+                      class="MuiTouchRipple-root-414"
                     />
                   </button>
                 </div>
@@ -645,7 +645,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-423 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-424 Mui-error Mui-required"
                       >
                         This field is required
                       </p>
@@ -709,7 +709,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-423 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-424 Mui-error Mui-required"
                         data-testid="rek-quality-indicator-helper-text"
                         id="rek-quality-indicator-helper-text"
                       >
@@ -949,7 +949,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-413"
+                      class="MuiTouchRipple-root-414"
                     />
                   </button>
                 </div>
@@ -1074,52 +1074,46 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         id="rek-author-list"
                       >
                         <li
-                          class="MuiListItem-container-388"
+                          aria-label="Select this author (Topology) to update their affiliation data."
+                          class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 MuiListItem-gutters-392 MuiListItem-divider-391"
+                          id="rek-author-list-row-0"
+                          tabindex="0"
                         >
                           <div
-                            aria-label="Select this author (Topology) to update their affiliation data."
-                            class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 MuiListItem-gutters-392 MuiListItem-divider-391 MuiListItem-secondaryAction-394"
-                            id="rek-author-list-row-0"
-                            tabindex="0"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
+                            id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
-                              id="contributor-row"
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              id="rek-author-list-row-0-name-as-published"
                             >
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
-                                id="rek-author-list-row-0-name-as-published"
+                                class="MuiListItemText-root-395 MuiListItemText-multiline-396"
                               >
-                                <div
-                                  class="MuiListItemText-root-395 MuiListItemText-multiline-396"
+                                <p
+                                  class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
-                                  <p
-                                    class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
-                                  >
-                                    Topology
-                                  </p>
-                                  <span
-                                    class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
-                                  >
-                                    First  listed author
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-5-68"
-                                id="rek-author-list-row-0-affiliation"
-                              >
-                                <div
-                                  class="MuiListItemText-root-395"
-                                />
+                                  Topology
+                                </p>
+                                <span
+                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                >
+                                  First  listed author
+                                </span>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root-401"
-                          >
-                            <span
-                              class=""
+                            <div
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              id="rek-author-list-row-0-affiliation"
+                            >
+                              <div
+                                class="MuiListItemText-root-395"
+                              />
+                            </div>
+                            <div
+                              class="makeStyles-actionsContainer-413"
+                              data-testid="rek-author-list-row-0-actions"
+                              id="rek-author-list-row-0-actions"
                             >
                               <button
                                 aria-label="Move item down the order"
@@ -1145,17 +1139,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                              title="Edit this item"
-                            >
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165"
                                 data-testid="rek-author-list-row-0-edit"
                                 id="rek-author-list-row-edit-0"
                                 tabindex="0"
+                                title="Edit this item"
                                 type="button"
                               >
                                 <span
@@ -1173,13 +1163,9 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-413"
+                                  class="MuiTouchRipple-root-414"
                                 />
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1204,56 +1190,50 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
+                            </div>
                           </div>
                         </li>
                         <li
-                          class="MuiListItem-container-388"
+                          aria-label="Select this author (Davidson, Robert) to update their affiliation data."
+                          class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-disabledListItem-404 makeStyles-contributorLinked-412 MuiListItem-gutters-392 MuiListItem-divider-391"
+                          id="rek-author-list-row-1"
+                          tabindex="-1"
                         >
                           <div
-                            aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                            class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-disabledListItem-404 makeStyles-contributorLinked-412 MuiListItem-gutters-392 MuiListItem-divider-391 MuiListItem-secondaryAction-394"
-                            id="rek-author-list-row-1"
-                            tabindex="-1"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
+                            id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
-                              id="contributor-row"
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              id="rek-author-list-row-1-name-as-published"
                             >
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
-                                id="rek-author-list-row-1-name-as-published"
+                                class="MuiListItemText-root-395 MuiListItemText-multiline-396"
                               >
-                                <div
-                                  class="MuiListItemText-root-395 MuiListItemText-multiline-396"
+                                <p
+                                  class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
-                                  <p
-                                    class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
-                                  >
-                                    Davidson, Robert
-                                  </p>
-                                  <span
-                                    class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
-                                  >
-                                    Second  listed author
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-5-68"
-                                id="rek-author-list-row-1-affiliation"
-                              >
-                                <div
-                                  class="MuiListItemText-root-395"
-                                />
+                                  Davidson, Robert
+                                </p>
+                                <span
+                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                >
+                                  Second  listed author
+                                </span>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root-401"
-                          >
-                            <span
-                              class=""
+                            <div
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              id="rek-author-list-row-1-affiliation"
+                            >
+                              <div
+                                class="MuiListItemText-root-395"
+                              />
+                            </div>
+                            <div
+                              class="makeStyles-actionsContainer-413"
+                              data-testid="rek-author-list-row-1-actions"
+                              id="rek-author-list-row-1-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
@@ -1279,10 +1259,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1307,10 +1283,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1335,10 +1307,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1363,56 +1331,50 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
+                            </div>
                           </div>
                         </li>
                         <li
-                          class="MuiListItem-container-388"
+                          aria-label="Select this author (Babbage, John) to update their affiliation data."
+                          class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 makeStyles-contributorLinked-412 MuiListItem-gutters-392 MuiListItem-divider-391"
+                          id="rek-author-list-row-2"
+                          tabindex="0"
                         >
                           <div
-                            aria-label="Select this author (Babbage, John) to update their affiliation data."
-                            class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 makeStyles-contributorLinked-412 MuiListItem-gutters-392 MuiListItem-divider-391 MuiListItem-secondaryAction-394"
-                            id="rek-author-list-row-2"
-                            tabindex="0"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
+                            id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
-                              id="contributor-row"
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              id="rek-author-list-row-2-name-as-published"
                             >
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
-                                id="rek-author-list-row-2-name-as-published"
+                                class="MuiListItemText-root-395 MuiListItemText-multiline-396"
                               >
-                                <div
-                                  class="MuiListItemText-root-395 MuiListItemText-multiline-396"
+                                <p
+                                  class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
-                                  <p
-                                    class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
-                                  >
-                                    Babbage, John
-                                  </p>
-                                  <span
-                                    class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
-                                  >
-                                    Third  listed author
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-5-68"
-                                id="rek-author-list-row-2-affiliation"
-                              >
-                                <div
-                                  class="MuiListItemText-root-395"
-                                />
+                                  Babbage, John
+                                </p>
+                                <span
+                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                >
+                                  Third  listed author
+                                </span>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root-401"
-                          >
-                            <span
-                              class=""
+                            <div
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              id="rek-author-list-row-2-affiliation"
+                            >
+                              <div
+                                class="MuiListItemText-root-395"
+                              />
+                            </div>
+                            <div
+                              class="makeStyles-actionsContainer-413"
+                              data-testid="rek-author-list-row-2-actions"
+                              id="rek-author-list-row-2-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
@@ -1438,10 +1400,6 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Move item down the order"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1466,17 +1424,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                              title="Edit this item"
-                            >
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165"
                                 data-testid="rek-author-list-row-2-edit"
                                 id="rek-author-list-row-edit-2"
                                 tabindex="0"
+                                title="Edit this item"
                                 type="button"
                               >
                                 <span
@@ -1494,13 +1448,9 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-413"
+                                  class="MuiTouchRipple-root-414"
                                 />
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1525,56 +1475,50 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
+                            </div>
                           </div>
                         </li>
                         <li
-                          class="MuiListItem-container-388"
+                          aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
+                          class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 MuiListItem-gutters-392 MuiListItem-divider-391"
+                          id="rek-author-list-row-3"
+                          tabindex="0"
                         >
                           <div
-                            aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                            class="MuiListItem-root-387 makeStyles-listItem-403 makeStyles-highlighted-405 MuiListItem-gutters-392 MuiListItem-divider-391 MuiListItem-secondaryAction-394"
-                            id="rek-author-list-row-3"
-                            tabindex="0"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
+                            id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-402"
-                              id="contributor-row"
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              id="rek-author-list-row-3-name-as-published"
                             >
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
-                                id="rek-author-list-row-3-name-as-published"
+                                class="MuiListItemText-root-395 MuiListItemText-multiline-396"
                               >
-                                <div
-                                  class="MuiListItemText-root-395 MuiListItemText-multiline-396"
+                                <p
+                                  class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
-                                  <p
-                                    class="MuiTypography-root-118 makeStyles-primary-409  MuiTypography-body2-119 MuiTypography-noWrap-137"
-                                  >
-                                    The Brodsky Quartet
-                                  </p>
-                                  <span
-                                    class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
-                                  >
-                                    Fourth  listed author
-                                  </span>
-                                </div>
-                              </div>
-                              <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-5-68"
-                                id="rek-author-list-row-3-affiliation"
-                              >
-                                <div
-                                  class="MuiListItemText-root-395"
-                                />
+                                  The Brodsky Quartet
+                                </p>
+                                <span
+                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                >
+                                  Fourth  listed author
+                                </span>
                               </div>
                             </div>
-                          </div>
-                          <div
-                            class="MuiListItemSecondaryAction-root-401"
-                          >
-                            <span
-                              class=""
+                            <div
+                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              id="rek-author-list-row-3-affiliation"
+                            >
+                              <div
+                                class="MuiListItemText-root-395"
+                              />
+                            </div>
+                            <div
+                              class="makeStyles-actionsContainer-413"
+                              data-testid="rek-author-list-row-3-actions"
+                              id="rek-author-list-row-3-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
@@ -1600,17 +1544,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
-                            <span
-                              class=""
-                              title="Edit this item"
-                            >
                               <button
                                 aria-label="Edit this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165"
                                 data-testid="rek-author-list-row-3-edit"
                                 id="rek-author-list-row-edit-3"
                                 tabindex="0"
+                                title="Edit this item"
                                 type="button"
                               >
                                 <span
@@ -1628,13 +1568,9 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-413"
+                                  class="MuiTouchRipple-root-414"
                                 />
                               </button>
-                            </span>
-                            <span
-                              class=""
-                            >
                               <button
                                 aria-label="Remove this item"
                                 class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
@@ -1659,7 +1595,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                               </button>
-                            </span>
+                            </div>
                           </div>
                         </li>
                       </ul>
@@ -1754,7 +1690,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 Cancel and return to my incomplete works list
               </span>
               <span
-                class="MuiTouchRipple-root-413"
+                class="MuiTouchRipple-root-414"
               />
             </button>
           </div>
