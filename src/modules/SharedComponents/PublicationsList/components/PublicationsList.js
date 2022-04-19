@@ -43,6 +43,7 @@ export const PublicationsList = ({
     hideCountTotal,
     publicationsLoading,
     showImageThumbnails,
+    security,
 }) => {
     const {
         shouldRenderRecordsSelectors,
@@ -75,6 +76,7 @@ export const PublicationsList = ({
                 hideCountDiff={hideCountDiff}
                 hideCountTotal={hideCountTotal}
                 citationStyle="list"
+                security={security}
             />
         );
     };
@@ -171,6 +173,7 @@ PublicationsList.propTypes = {
     hideCountTotal: PropTypes.bool,
     publicationsLoading: PropTypes.bool,
     showImageThumbnails: PropTypes.bool,
+    security: PropTypes.object,
 };
 
 PublicationsList.defaultProps = {
@@ -183,6 +186,7 @@ PublicationsList.defaultProps = {
     showMetrics: false,
     showUnpublishedBufferFields: false,
     hideCountDiff: false,
+    security: { isAdmin: false, isAuthor: false },
 };
 
 export default React.memo(PublicationsList);

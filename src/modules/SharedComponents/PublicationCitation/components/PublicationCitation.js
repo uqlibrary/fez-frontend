@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
-import Img from 'react-image';
+// import Img from 'react-image';
 import { Box } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
@@ -49,6 +49,8 @@ import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedB
 import BrokenImage from '@material-ui/icons/BrokenImage';
 
 // import { userIsAdmin, userIsAuthor } from 'hooks';
+import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
+import { default as imageConfig } from 'config/imageGalleryConfig';
 
 export const styles = theme => ({
     divider: {
@@ -134,6 +136,7 @@ export class PublicationCitation extends PureComponent {
         showSources: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
         showImageThumbnails: PropTypes.bool,
+        security: PropTypes.object,
     };
     static defaultProps = {
         citationStyle: 'notset',
@@ -152,6 +155,7 @@ export class PublicationCitation extends PureComponent {
         showUnpublishedBufferFields: false,
         isPublicationDeleted: false,
         showImageThumbnails: false,
+        security: { isAdmin: false, isAuthor: false },
     };
 
     constructor(props) {
@@ -226,18 +230,30 @@ export class PublicationCitation extends PureComponent {
         // (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     };
 
-    renderPublicationImage = publication => {
+    renderPublicationImage = (publication, security) => {
         // fez_datastream_info
         // console.log('Rendering Publication Image', this.props.classes);
-        const thumbData = getThumbnail(publication, true, true);
+        // const thumbData = getThumbnail(publication, true, true);
         return (
-            <Img
-                crossOrigin="anonymous"
-                src={`https://espace.library.uq.edu.au/view/${publication.rek_pid}/${thumbData.thumbnailFileName}?dsi_version=${thumbData.checksums.thumbnail}`}
+            // <Img
+            //     crossOrigin="anonymous"
+            //     src={`https://espace.library.uq.edu.au/view/${publication.rek_pid}/${thumbData.thumbnailFileName}?dsi_version=${thumbData.checksums.thumbnail}`}
+            //     alt={publication.rek_title}
+            //     loader={<CircularProgress size={15} thickness={1} />}
+            //     unloader={<BrokenImage color={'secondary'} />}
+            //     className={this.props.classes.publicationImage}
+            // />
+            <ImageGalleryItemImage
+                item={publication}
+                security={security}
                 alt={publication.rek_title}
                 loader={<CircularProgress size={15} thickness={1} />}
                 unloader={<BrokenImage color={'secondary'} />}
                 className={this.props.classes.publicationImage}
+                width={imageConfig.thumbnailImage.defaultWidth}
+                height={imageConfig.thumbnailImage.defaultWidth}
+                loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                // className={internalClasses.imageGalleryItemImage}
             />
         );
     };

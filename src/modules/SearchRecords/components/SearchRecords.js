@@ -17,7 +17,7 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-import { userIsAdmin, userIsResearcher } from 'hooks';
+import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 
@@ -41,7 +41,7 @@ const SearchRecords = ({
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
-    // const isAuthor = userIsAuthor();
+    const isAuthor = userIsAuthor();
 
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
@@ -226,6 +226,7 @@ const SearchRecords = ({
                                                 showAdminActions={isAdmin || isUnpublishedBufferPage}
                                                 showUnpublishedBufferFields={isUnpublishedBufferPage}
                                                 showImageThumbnails
+                                                security={{ isAdmin, isAuthor }}
                                             />
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
