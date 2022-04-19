@@ -84,6 +84,7 @@ export const styles = theme => ({
     publicationImage: {
         display: 'inline-block',
         textAlign: 'center',
+        backgroundColor: '#51247a',
         [theme.breakpoints.down('xs')]: {
             width: 50,
             height: 50,
@@ -253,7 +254,7 @@ export class PublicationCitation extends PureComponent {
                 width={imageConfig.thumbnailImage.defaultWidth}
                 height={imageConfig.thumbnailImage.defaultWidth}
                 loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
-                // className={internalClasses.imageGalleryItemImage}
+                // className={this.props.classes.imageGalleryItemImage}
             />
         );
     };
