@@ -46,6 +46,7 @@ Object {
       "height": 120,
       "width": 120,
     },
+    "backgroundColor": "#51247a",
     "display": "inline-block",
     "textAlign": "center",
   },
