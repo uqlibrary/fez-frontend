@@ -32,6 +32,7 @@ describe('PublicationCitation ', () => {
             },
             breakpoints: {
                 down: jest.fn(() => '@media (max-width:959.95px)'),
+                up: jest.fn(() => '@media (min-width:959.95px)'),
             },
         };
         expect(styles(theme)).toMatchSnapshot();

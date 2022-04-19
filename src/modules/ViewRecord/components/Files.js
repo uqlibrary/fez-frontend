@@ -51,7 +51,7 @@ export const styles = theme => ({
     },
 });
 
-export const getSecurityAccess = (dataStream, props) => {
+export const getSecurityAccess = (dataStream, props = { isAdmin: false, isAuthor: false }) => {
     const { isAdmin, isAuthor, author } = props;
     return !!(
         isAdmin ||

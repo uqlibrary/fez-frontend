@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -41,6 +42,8 @@ export const PublicationsList = ({
     hideCountDiff,
     hideCountTotal,
     publicationsLoading,
+    showImageThumbnails,
+    security,
 }) => {
     const {
         shouldRenderRecordsSelectors,
@@ -51,7 +54,6 @@ export const PublicationsList = ({
     } = useRecordsSelector();
 
     const classes = useStyles();
-
     const renderPublicationCitation = (index, publication) => {
         return (
             <PublicationCitation
@@ -63,6 +65,7 @@ export const PublicationsList = ({
                         ? customActions
                         : subsetCustomActions
                 }
+                showImageThumbnails={showImageThumbnails}
                 showSources={showSources}
                 showAdminActions={!!showAdminActions}
                 showDefaultActions={showDefaultActions}
@@ -72,10 +75,10 @@ export const PublicationsList = ({
                 hideCountDiff={hideCountDiff}
                 hideCountTotal={hideCountTotal}
                 citationStyle="list"
+                security={security}
             />
         );
     };
-
     const publications = publicationsList.map((publication, index) => {
         return renderPublicationCitation(index, publication);
     });
@@ -168,6 +171,8 @@ PublicationsList.propTypes = {
     hideCountDiff: PropTypes.bool,
     hideCountTotal: PropTypes.bool,
     publicationsLoading: PropTypes.bool,
+    showImageThumbnails: PropTypes.bool,
+    security: PropTypes.object,
 };
 
 PublicationsList.defaultProps = {
@@ -180,6 +185,7 @@ PublicationsList.defaultProps = {
     showMetrics: false,
     showUnpublishedBufferFields: false,
     hideCountDiff: false,
+    security: { isAdmin: false, isAuthor: false },
 };
 
 export default React.memo(PublicationsList);

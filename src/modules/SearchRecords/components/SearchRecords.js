@@ -17,10 +17,12 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
+
+// import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
+
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 

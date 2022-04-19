@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
+// import Img from 'react-image';
+import { Box } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Divider from '@material-ui/core/Divider';
@@ -15,6 +17,7 @@ import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+// import { getThumbnail } from 'modules/SharedComponents/ImageGallery/Utils';
 
 // citations for different publication types
 import AdminActions from './citations/partials/AdminActions';
@@ -43,6 +46,11 @@ import ThesisCitation from './citations/ThesisCitation';
 import VideoDocumentCitation from './citations/VideoDocumentCitation';
 import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
+import BrokenImage from '@material-ui/icons/BrokenImage';
+
+// import { userIsAdmin, userIsAuthor } from 'hooks';
+import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
+import { default as imageConfig } from 'config/imageGalleryConfig';
 
 export const styles = theme => ({
     divider: {
@@ -73,6 +81,34 @@ export const styles = theme => ({
         fontWeight: 400,
         marginRight: '0.5ex',
     },
+    publicationImage: {
+        display: 'inline-block',
+        textAlign: 'center',
+        backgroundColor: '#51247a',
+        [theme.breakpoints.down('xs')]: {
+            width: 50,
+            height: 50,
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: 75,
+            height: 75,
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 100,
+            height: 100,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 120,
+            height: 120,
+        },
+        // [theme.breakpoints.up('xl')]: {
+        //     width: 130,
+        //     height: 130,
+        // },
+    },
+    citationContainer: {
+        paddingLeft: '10px',
+    },
 });
 
 export class PublicationCitation extends PureComponent {
@@ -100,8 +136,9 @@ export class PublicationCitation extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showSources: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
+        showImageThumbnails: PropTypes.bool,
+        security: PropTypes.object,
     };
-
     static defaultProps = {
         citationStyle: 'notset',
         className: '',
@@ -118,6 +155,8 @@ export class PublicationCitation extends PureComponent {
         showSources: false,
         showUnpublishedBufferFields: false,
         isPublicationDeleted: false,
+        showImageThumbnails: false,
+        security: { isAdmin: false, isAuthor: false },
     };
 
     constructor(props) {
@@ -166,6 +205,58 @@ export class PublicationCitation extends PureComponent {
                 // do nothing
                 break;
         }
+    };
+    showPublicationImage = showImageThumbnails => {
+        const { publication } = this.props;
+        return (
+            showImageThumbnails &&
+            ((!!publication.fez_datastream_info && !!publication.fez_datastream_info.length > 0) ||
+                publication.rek_pid === 'UQ:95980' ||
+                publication.rek_pid === 'UQ:342708')
+            //  &&
+            // (userIsAdmin() ||
+            //     userIsAuthor() ||
+            //     (publication.fez_datastream_info &&
+            //         publication.fez_datastream_info.dsi_security_policy &&
+            //         (publication.fez_datastream_info.security_policy === 4 ||
+            //             publication.fez_datastream_info.security_policy === 5)))
+        );
+        // Somewhere in here we have to determine the security that's applicable to the object.
+        // The structure is
+        // isAdmin ||
+        // isAuthor ||
+        // (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
+        // (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 4) ||
+        /* istanbul ignore next */
+        // (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
+    };
+
+    renderPublicationImage = (publication, security) => {
+        // fez_datastream_info
+        // console.log('Rendering Publication Image', this.props.classes);
+        // const thumbData = getThumbnail(publication, true, true);
+        return (
+            // <Img
+            //     crossOrigin="anonymous"
+            //     src={`https://espace.library.uq.edu.au/view/${publication.rek_pid}/${thumbData.thumbnailFileName}?dsi_version=${thumbData.checksums.thumbnail}`}
+            //     alt={publication.rek_title}
+            //     loader={<CircularProgress size={15} thickness={1} />}
+            //     unloader={<BrokenImage color={'secondary'} />}
+            //     className={this.props.classes.publicationImage}
+            // />
+            <ImageGalleryItemImage
+                item={publication}
+                security={security}
+                alt={publication.rek_title}
+                loader={<CircularProgress size={15} thickness={1} />}
+                unloader={<BrokenImage color={'secondary'} />}
+                className={this.props.classes.publicationImage}
+                width={imageConfig.thumbnailImage.defaultWidth}
+                height={imageConfig.thumbnailImage.defaultWidth}
+                loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                // className={this.props.classes.imageGalleryItemImage}
+            />
+        );
     };
 
     renderTitle = () => {
@@ -312,13 +403,35 @@ export class PublicationCitation extends PureComponent {
             showSources,
             showUnpublishedBufferFields,
             isPublicationDeleted,
+            showImageThumbnails,
+            security,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
+        const renderThumbnails = this.showPublicationImage(showImageThumbnails);
+        // console.log('Classes', classes);
         return (
             <div className="publicationCitation">
                 <Grid container spacing={0}>
-                    <Grid item xs>
+                    <Box
+                        component={Grid}
+                        item
+                        xs={2}
+                        style={{ textAlign: 'center' }}
+                        display={!renderThumbnails ? 'none' : 'block'}
+                    >
+                        {renderThumbnails && this.renderPublicationImage(publication, security)}
+                    </Box>
+                    {/* <Grid
+                        item
+                        xs={renderThumbnails ? 2 : 0}
+                        data-testid={`thumbimage-container-${publication.rek_pid}`}
+                    /> */}
+                    <Grid
+                        item
+                        xs={renderThumbnails ? 10 : 12}
+                        className={renderThumbnails ? classes.citationContainer : null}
+                    >
                         <Grid container spacing={0}>
                             {!hideTitle ? (
                                 <Grid item xs style={{ minWidth: 1 }}>
