@@ -17,7 +17,7 @@ import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { getThumbnail } from 'modules/SharedComponents/ImageGallery/Utils';
+// import { getThumbnail } from 'modules/SharedComponents/ImageGallery/Utils';
 
 // citations for different publication types
 import AdminActions from './citations/partials/AdminActions';
@@ -404,6 +404,7 @@ export class PublicationCitation extends PureComponent {
             showUnpublishedBufferFields,
             isPublicationDeleted,
             showImageThumbnails,
+            security,
         } = this.props;
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
@@ -411,7 +412,6 @@ export class PublicationCitation extends PureComponent {
         // console.log('Classes', classes);
         return (
             <div className="publicationCitation">
-                {console.log('GETTHUMBNAILS', getThumbnail(publication, true, true))}
                 <Grid container spacing={0}>
                     <Box
                         component={Grid}
@@ -420,7 +420,7 @@ export class PublicationCitation extends PureComponent {
                         style={{ textAlign: 'center' }}
                         display={!renderThumbnails ? 'none' : 'block'}
                     >
-                        {renderThumbnails && this.renderPublicationImage(publication)}
+                        {renderThumbnails && this.renderPublicationImage(publication, security)}
                     </Box>
                     {/* <Grid
                         item

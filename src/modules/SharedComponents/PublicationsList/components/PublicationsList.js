@@ -54,7 +54,6 @@ export const PublicationsList = ({
     } = useRecordsSelector();
 
     const classes = useStyles();
-
     const renderPublicationCitation = (index, publication) => {
         return (
             <PublicationCitation
