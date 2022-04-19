@@ -124,6 +124,7 @@ const SearchRecords = ({
                         publicationsList={publicationsList}
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
                     />
                 );
             case 'image-gallery':
@@ -134,6 +135,7 @@ const SearchRecords = ({
                         publicationsList={publicationsList}
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
                     />
                 );
         }

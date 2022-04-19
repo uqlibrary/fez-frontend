@@ -186,6 +186,7 @@ PublicationsList.defaultProps = {
     showUnpublishedBufferFields: false,
     hideCountDiff: false,
     security: { isAdmin: false, isAuthor: false },
+    showImageThumbnails: false,
 };
 
 export default React.memo(PublicationsList);
