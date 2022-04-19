@@ -17,6 +17,7 @@ import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { getThumbnail } from 'modules/SharedComponents/ImageGallery/Utils';
 
 // citations for different publication types
 import AdminActions from './citations/partials/AdminActions';
@@ -228,12 +229,11 @@ export class PublicationCitation extends PureComponent {
     renderPublicationImage = publication => {
         // fez_datastream_info
         // console.log('Rendering Publication Image', this.props.classes);
+        const thumbData = getThumbnail(publication, true, true);
         return (
             <Img
                 crossOrigin="anonymous"
-                src={
-                    'https://espace.library.uq.edu.au/view/UQ:366525/thumbnail_F831_21_21056uc.jpg?dsi_version=af9c4bf2a83ff0ba38a37b03c4700413'
-                }
+                src={`https://espace.library.uq.edu.au/view/${publication.rek_pid}/${thumbData.thumbnailFileName}?dsi_version=${thumbData.checksums.thumbnail}`}
                 alt={publication.rek_title}
                 loader={<CircularProgress size={15} thickness={1} />}
                 unloader={<BrokenImage color={'secondary'} />}
@@ -394,6 +394,7 @@ export class PublicationCitation extends PureComponent {
         // console.log('Classes', classes);
         return (
             <div className="publicationCitation">
+                {console.log('GETTHUMBNAILS', getThumbnail(publication, true, true))}
                 <Grid container spacing={0}>
                     <Box
                         component={Grid}
