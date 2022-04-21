@@ -9,7 +9,8 @@ import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
 import { pathConfig } from 'config/pathConfig';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+// import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -78,14 +79,15 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                 loading={lazyLoading ? 'lazy' : 'eager'}
                 className={internalClasses.imageGalleryItemImage}
             />
-            <ExternalLink
+            {/* <ExternalLink
                 title={item.rek_title}
                 href={pathConfig.records.view(item.rek_pid)}
                 id={`gallery-item-${item.rek_pid}`}
                 data-testid={`gallery-item-${item.rek_pid}`}
                 target="_self"
                 openInNewIcon={false}
-            >
+            > */}
+            <Link to={pathConfig.records.view(item.rek_pid)}>
                 <ImageListItemBar
                     title={item.rek_title}
                     classes={{
@@ -95,7 +97,8 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                             ?.titleWrap ?? ''}`,
                     }}
                 />
-            </ExternalLink>
+            </Link>
+            {/* </ExternalLink>*/}
         </ImageListItem>
     );
 };
