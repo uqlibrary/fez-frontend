@@ -209,10 +209,7 @@ export class PublicationCitation extends PureComponent {
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
         return (
-            showImageThumbnails &&
-            ((!!publication.fez_datastream_info && !!publication.fez_datastream_info.length > 0) ||
-                publication.rek_pid === 'UQ:95980' ||
-                publication.rek_pid === 'UQ:342708')
+            showImageThumbnails && !!publication.fez_datastream_info && !!publication.fez_datastream_info.length > 0
             //  &&
             // (userIsAdmin() ||
             //     userIsAuthor() ||
