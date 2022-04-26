@@ -35,7 +35,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
         ? dataStreams.filter(isFileValid(viewRecordsConfig /* , isAdmin, isAuthor*/)).map(dataStream => {
               const fileName = dataStream.dsi_dsid;
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
+              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
               const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor });
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
 
