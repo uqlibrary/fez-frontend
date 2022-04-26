@@ -2,11 +2,11 @@ import { viewRecordsConfig, pathConfig } from 'config';
 import { checkForThumbnail, getFileOpenAccessStatus, getSecurityAccess } from 'modules/ViewRecord/components/Files';
 import { isAdded } from 'helpers/datastreams';
 
-export const isFileValid = ({ files: { blacklist } } /* , isAdmin = false, isAuthor = false*/) => dataStream => {
+export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream => {
     const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
     const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
 
-    return !prefixMatch && !suffixMatch && isAdded(dataStream);
+    return (!prefixMatch && !suffixMatch && isAdded(dataStream)) || isAdmin;
 };
 
 export const getThumbnailChecksums = (dataStreams, thumbnailFileName) => {
@@ -32,7 +32,7 @@ export const getThumbnailChecksums = (dataStreams, thumbnailFileName) => {
 export const getFileData = (publication, isAdmin, isAuthor) => {
     const dataStreams = publication.fez_datastream_info;
     return !!dataStreams && dataStreams.length > 0
-        ? dataStreams.filter(isFileValid(viewRecordsConfig /* , isAdmin, isAuthor*/)).map(dataStream => {
+        ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
               const fileName = dataStream.dsi_dsid;
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
               const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
