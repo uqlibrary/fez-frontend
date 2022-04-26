@@ -83,6 +83,7 @@ export class PublicationCitation extends PureComponent {
         classes: PropTypes.object,
         customActions: PropTypes.array,
         hideCitationCounts: PropTypes.bool,
+        hideCitationText: PropTypes.bool,
         hideContentIndicators: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
         hideCountTotal: PropTypes.bool,
@@ -106,6 +107,7 @@ export class PublicationCitation extends PureComponent {
         citationStyle: 'notset',
         className: '',
         hideCitationCounts: false,
+        hideCitationText: false,
         hideContentIndicators: false,
         hideCountDiff: false,
         hideCountTotal: false,
@@ -298,6 +300,7 @@ export class PublicationCitation extends PureComponent {
             classes,
             customActions,
             hideCitationCounts,
+            hideCitationText,
             hideContentIndicators,
             hideCountDiff,
             hideCountTotal,
@@ -378,9 +381,11 @@ export class PublicationCitation extends PureComponent {
                                     </ExternalLink>
                                 </Grid>
                             )}
-                            <Grid item xs={12} className={classes.citationText}>
-                                {this.renderCitation(publication.rek_display_type)}
-                            </Grid>
+                            {!hideCitationText && (
+                                <Grid item xs={12} className={classes.citationText}>
+                                    {this.renderCitation(publication.rek_display_type)}
+                                </Grid>
+                            )}
                             {showUnpublishedBufferFields && (
                                 <Grid item xs={12}>
                                     <UnpublishedBufferCitationView publication={publication} />
