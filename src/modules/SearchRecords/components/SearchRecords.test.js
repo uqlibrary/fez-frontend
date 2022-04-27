@@ -1,20 +1,20 @@
 import React from 'react';
 import { default as SearchRecords } from './SearchRecords';
-// import { pathConfig } from 'config';
-import { /* act, fireEvent,*/ WithReduxStore } from 'test-utils';
+import { pathConfig } from 'config';
+import { act, fireEvent, WithReduxStore } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
-// import * as UserIsAdminHook from 'hooks/userIsAdmin';
-// import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import * as UserIsAdminHook from 'hooks/userIsAdmin';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
 import { renderWithRouter } from '../../../../utils/test-utils';
-// import { queryParamsDefaults } from '../hooks';
-// import param from 'can-param';
+import { queryParamsDefaults } from '../hooks';
+import param from 'can-param';
 
 /**
  * @type Object
  */
-/*
+
 const searchQuery = {
     page: 1,
     pageSize: 20,
@@ -25,11 +25,11 @@ const searchQuery = {
         ranges: {},
     },
 };
-*/
+
 /**
  * @type Object
  */
-/*
+
 const props = {
     publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
     publicationsListPagingData: {
@@ -87,7 +87,6 @@ const props = {
         },
     },
 };
-*/
 
 /**
  * Unhide items hidden by MaterialUI based on screen size
@@ -104,19 +103,19 @@ const createMatchMedia = width => {
  * @param history
  * @param params
  */
-/*
+
 const assertQueryString = (history, params) => {
     const { activeFacets } = params;
     expect(history.location.search.substr(1)).toEqual(param({ activeFacets, ...params }));
 };
-*/
+
 /**
  * @param getByTestId
  * @param api
  * @param history
  * @param params
  */
-/*
+
 const doSimpleSearch = (getByTestId, api, history, params) => {
     fireEvent.change(getByTestId('simple-search-input'), { target: { value: params.searchQueryParams.all } });
     act(() => {
@@ -125,7 +124,7 @@ const doSimpleSearch = (getByTestId, api, history, params) => {
     assertQueryString(history, params);
     expect(api).toHaveBeenLastCalledWith(params);
 };
-*/
+
 /**
  * @param props
  * @param history
@@ -222,7 +221,6 @@ describe('SearchRecords page', () => {
         expect(getByText('Search')).toBeInTheDocument();
     });
 
-    /*
     it('should render when paging', () => {
         const { getByText } = setup({
             publicationsList: [{ rek_title: 'Title 01' }, { rek_title: 'Title 02' }],
@@ -426,9 +424,7 @@ describe('SearchRecords page', () => {
         expect(testPushFn).toHaveBeenCalledWith({
             pathname: '/records/search',
             search:
-                // eslint-disable-next-line max-len
-                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=
-                false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
+                'activeFacets%5Bfilters%5D%5BAuthor%5D=745&activeFacets%5BshowOpenAccessOnly%5D=false&page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=test',
         });
     });
 
@@ -924,5 +920,4 @@ describe('SearchRecords page', () => {
         assertQueryString(historyMock, getParams(newValue));
         expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
     });
-    */
 });

@@ -33,6 +33,8 @@ const ImageGallery = ({
             rowHeight={itemHeight}
             cols={itemsPerRow}
             classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
+            id={'image-gallery'}
+            data-testid={'image-gallery'}
             {...rest}
         >
             {publicationsList.map(item => (
