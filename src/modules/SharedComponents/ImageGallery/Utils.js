@@ -31,6 +31,7 @@ export const getThumbnailChecksums = (dataStreams, thumbnailFileName) => {
 // types to only show thumbs
 export const getFileData = (publication, isAdmin, isAuthor) => {
     const dataStreams = publication.fez_datastream_info;
+
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig /* , isAdmin, isAuthor*/)).map(dataStream => {
               const fileName = dataStream.dsi_dsid;
@@ -64,3 +65,6 @@ export const getUrl = (pid, fileName, checksum = '') => {
     // TODO: remove bodge for dev server testing
     return url;
 };
+
+export const isWhiteListed = (publication, config) =>
+    config.allowedTypes.indexOf(publication.rek_display_type_lookup) >= 0;

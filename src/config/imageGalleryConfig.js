@@ -9,4 +9,5 @@ export default {
         defaultItemsPerRow: 5,
         defaultLazyLoading: true,
     },
+    allowedTypes: ['Image', 'Digilib Image', 'Manuscript', 'Design', 'Video Document'],
 };
