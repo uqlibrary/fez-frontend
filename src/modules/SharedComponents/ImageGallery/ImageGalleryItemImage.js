@@ -21,7 +21,6 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
     const classes = useStyles();
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
-    // whitelist component
 
     const isWhiteListed = config.allowedTypes.indexOf(item.rek_display_type_lookup) >= 0;
 
