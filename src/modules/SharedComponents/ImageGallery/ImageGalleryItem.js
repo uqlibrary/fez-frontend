@@ -69,15 +69,6 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
             }}
             {...rest}
         >
-            <ImageGalleryItemImage
-                item={item}
-                security={security}
-                alt={item.rek_title}
-                width={itemWidth}
-                height={itemHeight}
-                loading={lazyLoading ? 'lazy' : 'eager'}
-                className={internalClasses.imageGalleryItemImage}
-            />
             <ExternalLink
                 title={item.rek_title}
                 href={pathConfig.records.view(item.rek_pid)}
@@ -86,6 +77,15 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                 target="_self"
                 openInNewIcon={false}
             >
+                <ImageGalleryItemImage
+                    item={item}
+                    security={security}
+                    alt={item.rek_title}
+                    width={itemWidth}
+                    height={itemHeight}
+                    loading={lazyLoading ? 'lazy' : 'eager'}
+                    className={internalClasses.imageGalleryItemImage}
+                />
                 <ImageListItemBar
                     title={item.rek_title}
                     classes={{
