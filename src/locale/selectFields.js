@@ -26,6 +26,11 @@ export const selectFields = {
         selectPrompt: 'Please select a community',
         loadingHint: 'Loading communities...',
     },
+    collectionViewType: {
+        label: 'Select default collection view',
+        ariaLabel: 'Select default collection view',
+        selectPrompt: 'Please select a default view',
+    },
     directory: {
         label: 'Select folder where CSV and datastream files are located',
         ariaLabel: 'Select folder where CSV and datastream files are located',

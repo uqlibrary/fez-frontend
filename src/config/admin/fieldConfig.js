@@ -15,6 +15,7 @@ import {
     REFEREED_SOURCES,
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
+    COLLECTION_VIEW_TYPE,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -259,6 +260,16 @@ export default {
                 fullWidth: true,
                 label: 'Reason for Edit (optional - will be added to object history)',
                 placeholder: 'Reason for Edit',
+            },
+        },
+        rek_collection_view_type: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'adminSection.rek_collection_view_type',
+                itemsList: COLLECTION_VIEW_TYPE,
+                multiple: false,
+                genericSelectFieldId: 'collection-view-type',
+                ...selectFields.collectionViewType,
             },
         },
         collections: {

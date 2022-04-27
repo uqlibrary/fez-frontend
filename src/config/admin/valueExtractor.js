@@ -249,6 +249,9 @@ export default {
     fez_record_search_key_total_pages: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_total_pages'),
     },
+    rek_collection_view_type: {
+        getValue: record => getValueFromRekKey(record, 'rek_collection_view_type'),
+    },
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
