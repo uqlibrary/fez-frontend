@@ -400,7 +400,7 @@ exports[`Component PublicationForm Shows an alert 1`] = `
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -835,7 +835,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -1375,7 +1375,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -1915,7 +1915,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -2350,7 +2350,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -2800,7 +2800,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -3263,7 +3263,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -3726,7 +3726,7 @@ exports[`Component PublicationForm should render component initialised with just
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -4162,7 +4162,7 @@ exports[`Component PublicationForm should render component initialised with two 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -4618,7 +4618,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -5164,7 +5164,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -5707,7 +5707,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -6250,7 +6250,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -6792,7 +6792,7 @@ exports[`Component PublicationForm should render component with all fields disab
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>
@@ -7228,7 +7228,7 @@ exports[`Component PublicationForm should render form after selecting both publi
                   key="ntro-27"
                   value={1039}
                 >
-                  Research Report - Internal or Other
+                  Research Report - Other or Citation Only
                 </WithStyles(ForwardRef(MenuItem))>
               </Field>
             </WithStyles(ForwardRef(Grid))>

@@ -200,7 +200,7 @@ export const NTRO_SUBTYPE_RREB_PUBLIC_SECTOR = 'Research Report for an External 
 export const NTRO_SUBTYPE_RREB_INDUSTRY = 'Research Report for an External Body - Industry';
 export const NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT = 'Research Report for an External Body - Not-for-profit';
 export const NTRO_SUBTYPE_RREB_OTHER = 'Research Report for an External Body - Other';
-export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Internal or Other';
+export const SUBTYPE_RR_INTERNAL_OTHER = 'Research Report - Other or Citation Only';
 export const SUBTYPE_EDITED_BOOK = 'Edited book';
 export const SUBTYPE_NON_NTRO = 'Non-NTRO';
 
