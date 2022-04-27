@@ -20,8 +20,14 @@ const useStyles = makeStyles(() => ({
 const ImageGalleryItemImage = ({ item, security, className, optional, ...rest }) => {
     const classes = useStyles();
 
-    const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
-    if (!!!fileData?.thumbnailFileName && optional) return <></>; // no thumbnail available but optional is true
+    const fileData = getThumbnail(item, security.isAdmin, security.isAuthor, config.allowedTypes);
+    // whitelist component
+
+    const isWhiteListed = config.allowedTypes.indexOf(item.rek_display_type_lookup) >= 0;
+
+    // console.log('IS THIS WHITELISTED', isWhiteListed);
+    // no thumbnail available but optional is true
+    if (!!!isWhiteListed || (!!!fileData?.thumbnailFileName && optional)) return <></>;
     if (!!fileData?.thumbnailFileName && !fileData?.securityStatus) {
         return <Lock color={'secondary'} className={classes.lockIcon} />; // thumbnail available but security denied
     }

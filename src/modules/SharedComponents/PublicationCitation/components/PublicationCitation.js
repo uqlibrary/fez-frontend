@@ -50,7 +50,10 @@ import BrokenImage from '@material-ui/icons/BrokenImage';
 
 // import { userIsAdmin, userIsAuthor } from 'hooks';
 import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
+
 import { default as imageConfig } from 'config/imageGalleryConfig';
+
+import { isWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
 
 export const styles = theme => ({
     divider: {
@@ -209,7 +212,10 @@ export class PublicationCitation extends PureComponent {
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
         return (
-            showImageThumbnails && !!publication.fez_datastream_info && !!publication.fez_datastream_info.length > 0
+            showImageThumbnails &&
+            isWhiteListed(publication, imageConfig) &&
+            !!publication.fez_datastream_info &&
+            !!publication.fez_datastream_info.length > 0
             //  &&
             // (userIsAdmin() ||
             //     userIsAuthor() ||
