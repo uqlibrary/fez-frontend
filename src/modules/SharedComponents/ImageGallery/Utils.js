@@ -66,5 +66,19 @@ export const getUrl = (pid, fileName, checksum = '') => {
     return url;
 };
 
-export const isWhiteListed = (publication, config) =>
-    config.allowedTypes.indexOf(publication.rek_display_type_lookup) >= 0;
+export const isWhiteListed = (publication, config) => {
+    let whitelistCheck = false;
+    config.allowedTypes.map(type => {
+        if (type.viewType === publication.rek_display_type_lookup && !!!whitelistCheck) {
+            if (!!!type.subType) {
+                whitelistCheck = true;
+            } else {
+                if (type.subType === publication.rek_subtype) {
+                    whitelistCheck = true;
+                }
+            }
+        }
+    });
+
+    return whitelistCheck;
+};

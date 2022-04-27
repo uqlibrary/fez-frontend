@@ -22,11 +22,11 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
 
-    const isWhiteListed = config.allowedTypes.indexOf(item.rek_display_type_lookup) >= 0;
+    // const isWhiteListed = config.allowedTypes.indexOf(item.rek_display_type_lookup) >= 0;
 
     // console.log('IS THIS WHITELISTED', isWhiteListed);
     // no thumbnail available but optional is true
-    if (!!!isWhiteListed || (!!!fileData?.thumbnailFileName && optional)) return <></>;
+    if (!!!fileData?.thumbnailFileName && optional) return <></>;
     if (!!fileData?.thumbnailFileName && !fileData?.securityStatus) {
         return <Lock color={'secondary'} className={classes.lockIcon} />; // thumbnail available but security denied
     }

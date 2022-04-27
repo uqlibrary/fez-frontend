@@ -216,37 +216,11 @@ export class PublicationCitation extends PureComponent {
             isWhiteListed(publication, imageConfig) &&
             !!publication.fez_datastream_info &&
             !!publication.fez_datastream_info.length > 0
-            //  &&
-            // (userIsAdmin() ||
-            //     userIsAuthor() ||
-            //     (publication.fez_datastream_info &&
-            //         publication.fez_datastream_info.dsi_security_policy &&
-            //         (publication.fez_datastream_info.security_policy === 4 ||
-            //             publication.fez_datastream_info.security_policy === 5)))
         );
-        // Somewhere in here we have to determine the security that's applicable to the object.
-        // The structure is
-        // isAdmin ||
-        // isAuthor ||
-        // (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
-        // (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 4) ||
-        /* istanbul ignore next */
-        // (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
     };
 
     renderPublicationImage = (publication, security) => {
-        // fez_datastream_info
-        // console.log('Rendering Publication Image', this.props.classes);
-        // const thumbData = getThumbnail(publication, true, true);
         return (
-            // <Img
-            //     crossOrigin="anonymous"
-            //     src={`https://espace.library.uq.edu.au/view/${publication.rek_pid}/${thumbData.thumbnailFileName}?dsi_version=${thumbData.checksums.thumbnail}`}
-            //     alt={publication.rek_title}
-            //     loader={<CircularProgress size={15} thickness={1} />}
-            //     unloader={<BrokenImage color={'secondary'} />}
-            //     className={this.props.classes.publicationImage}
-            // />
             <ImageGalleryItemImage
                 item={publication}
                 security={security}
@@ -412,7 +386,6 @@ export class PublicationCitation extends PureComponent {
         const txt = locale.components.publicationCitation;
         const recordValue = showMetrics && publication.metricData;
         const renderThumbnails = this.showPublicationImage(showImageThumbnails);
-        // console.log('Classes', classes);
         return (
             <div className="publicationCitation">
                 <Grid container spacing={0}>
