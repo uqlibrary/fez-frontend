@@ -9,5 +9,11 @@ export default {
         defaultItemsPerRow: 5,
         defaultLazyLoading: true,
     },
-    allowedTypes: ['Image', 'Digilib Image', 'Manuscript', 'Design', 'Video Document'],
+    allowedTypes: [
+        { viewType: 'Image' },
+        { viewType: 'Digilib Image' },
+        { viewType: 'Manuscript' },
+        { viewType: 'Design', subType: 'Non-NTRO' },
+        { vuewType: 'Video Document' },
+    ],
 };
