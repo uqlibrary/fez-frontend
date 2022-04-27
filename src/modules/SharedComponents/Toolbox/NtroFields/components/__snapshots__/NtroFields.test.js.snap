@@ -910,6 +910,10 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                   "value": "rus",
                 },
                 Object {
+                  "text": "Sanskrit",
+                  "value": "san",
+                },
+                Object {
                   "text": "Slovak",
                   "value": "slo",
                 },
@@ -1871,6 +1875,10 @@ exports[`Component NtroFields should render contribution statement fields as wel
                   "value": "rus",
                 },
                 Object {
+                  "text": "Sanskrit",
+                  "value": "san",
+                },
+                Object {
                   "text": "Slovak",
                   "value": "slo",
                 },
@@ -2700,6 +2708,10 @@ exports[`Component NtroFields should render default view 1`] = `
                 Object {
                   "text": "Russian",
                   "value": "rus",
+                },
+                Object {
+                  "text": "Sanskrit",
+                  "value": "san",
                 },
                 Object {
                   "text": "Slovak",
@@ -3663,6 +3675,10 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                   "value": "rus",
                 },
                 Object {
+                  "text": "Sanskrit",
+                  "value": "san",
+                },
+                Object {
                   "text": "Slovak",
                   "value": "slo",
                 },
@@ -4562,6 +4578,10 @@ exports[`Component NtroFields should show significance field even if contributio
                 Object {
                   "text": "Russian",
                   "value": "rus",
+                },
+                Object {
+                  "text": "Sanskrit",
+                  "value": "san",
                 },
                 Object {
                   "text": "Slovak",
