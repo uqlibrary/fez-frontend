@@ -92,22 +92,26 @@ export const styles = theme => ({
             width: 50,
             height: 50,
         },
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('xs')]: {
             width: 75,
             height: 75,
+        },
+        [theme.breakpoints.up(640)]: {
+            width: 90,
+            height: 90,
         },
         [theme.breakpoints.up('md')]: {
             width: 100,
             height: 100,
         },
         [theme.breakpoints.up('lg')]: {
+            width: 110,
+            height: 110,
+        },
+        [theme.breakpoints.up(1400)]: {
             width: 120,
             height: 120,
         },
-        // [theme.breakpoints.up('xl')]: {
-        //     width: 130,
-        //     height: 130,
-        // },
     },
     citationContainer: {
         paddingLeft: '10px',
@@ -231,6 +235,7 @@ export class PublicationCitation extends PureComponent {
                 width={imageConfig.thumbnailImage.defaultWidth}
                 height={imageConfig.thumbnailImage.defaultWidth}
                 loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                style={{ marginRight: 10 }}
                 // className={this.props.classes.imageGalleryItemImage}
             />
         );
