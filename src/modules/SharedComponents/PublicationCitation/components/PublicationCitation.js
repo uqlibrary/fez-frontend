@@ -46,7 +46,6 @@ import ThesisCitation from './citations/ThesisCitation';
 import VideoDocumentCitation from './citations/VideoDocumentCitation';
 import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
-import BrokenImage from '@material-ui/icons/BrokenImage';
 
 // import { userIsAdmin, userIsAuthor } from 'hooks';
 import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
@@ -232,14 +231,11 @@ export class PublicationCitation extends PureComponent {
             <ImageGalleryItemImage
                 item={publication}
                 security={security}
-                alt={publication.rek_title}
-                loader={<CircularProgress size={15} thickness={1} />}
-                unloader={<BrokenImage color={'secondary'} />}
                 className={this.props.classes.publicationImage}
+                alt={publication.rek_title}
                 width={imageConfig.thumbnailImage.defaultWidth}
-                height={imageConfig.thumbnailImage.defaultWidth}
+                height={imageConfig.thumbnailImage.defaultHeight}
                 loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
-                // className={this.props.classes.imageGalleryItemImage}
             />
         );
     };
