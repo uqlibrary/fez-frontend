@@ -231,8 +231,8 @@ export class PublicationCitation extends PureComponent {
             <ImageGalleryItemImage
                 item={publication}
                 security={security}
-                alt={publication.rek_title}
                 className={this.props.classes.publicationImage}
+                alt={publication.rek_title}
                 width={imageConfig.thumbnailImage.defaultWidth}
                 height={imageConfig.thumbnailImage.defaultHeight}
                 loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}

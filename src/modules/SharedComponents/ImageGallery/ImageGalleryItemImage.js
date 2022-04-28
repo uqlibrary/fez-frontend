@@ -14,6 +14,7 @@ const useStyles = makeStyles(() => ({
     lockIcon: {
         width: '100%',
         height: '100%',
+        backgroundColor: '#51247a',
     },
 }));
 
