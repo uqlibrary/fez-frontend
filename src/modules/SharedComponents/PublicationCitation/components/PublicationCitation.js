@@ -233,13 +233,10 @@ export class PublicationCitation extends PureComponent {
                 item={publication}
                 security={security}
                 alt={publication.rek_title}
-                loader={<CircularProgress size={15} thickness={1} />}
-                unloader={<BrokenImage color={'secondary'} />}
                 className={this.props.classes.publicationImage}
                 width={imageConfig.thumbnailImage.defaultWidth}
                 height={imageConfig.thumbnailImage.defaultHeight}
                 loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
-                // className={this.props.classes.imageGalleryItemImage}
             />
         );
     };
