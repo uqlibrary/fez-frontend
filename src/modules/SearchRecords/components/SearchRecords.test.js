@@ -24,6 +24,7 @@ const searchQuery = {
         filters: {},
         ranges: {},
     },
+    displayRecordsAs: 'standard',
 };
 
 /**
@@ -919,5 +920,66 @@ describe('SearchRecords page', () => {
         });
         assertQueryString(historyMock, getParams(newValue));
         expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
+    });
+
+    it('should update the queryString and make API call when going back and forward on display type', () => {
+        const getParams = (displayRecordsAs = searchQuery.displayRecordsAs) => {
+            console.log(displayRecordsAs);
+            return {
+                ...searchQuery,
+                searchQueryParams: {
+                    all: 'test',
+                },
+                displayRecordsAs,
+            };
+        };
+        const apiMock = jest.fn();
+        const oldParams = getParams();
+        // add some search history
+        const initialEntries = [
+            {
+                pathname: pathConfig.records.search,
+                search: `?${param(oldParams)}`,
+            },
+        ];
+        const historyMock = createMemoryHistory({
+            initialEntries,
+        });
+        historyMock.push(initialEntries[0]);
+        const { getByTestId, getAllByRole } = setup({
+            ...props, // this props pretends there is a bunch of search results
+            history: historyMock,
+            actions: { searchEspacePublications: apiMock },
+        });
+
+        // change sort
+        act(() => {
+            fireEvent.mouseDown(getByTestId('displayRecordsAs'));
+        });
+        expect(getAllByRole('option').length).toBe(3);
+        act(() => {
+            fireEvent.click(getAllByRole('option')[2]);
+            const newValue = getAllByRole('option')[2]
+                .textContent.toLowerCase()
+                .replace(' ', '-');
+            const newParams = getParams(newValue);
+            /* NEED TO FIX CHANGE IN ORDER WHEN CHECKING URL AS THIS ASSERT FAILS */
+            assertQueryString(historyMock, newParams);
+            expect(apiMock).toHaveBeenLastCalledWith(newParams);
+
+            // go back
+            act(() => {
+                historyMock.goBack();
+            });
+            assertQueryString(historyMock, oldParams);
+            expect(apiMock).toHaveBeenLastCalledWith(oldParams);
+
+            // go forward
+            act(() => {
+                historyMock.goForward();
+            });
+            assertQueryString(historyMock, newParams);
+            expect(apiMock).toHaveBeenLastCalledWith(newParams);
+        });
     });
 });
