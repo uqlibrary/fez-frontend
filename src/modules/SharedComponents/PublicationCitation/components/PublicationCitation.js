@@ -46,7 +46,6 @@ import ThesisCitation from './citations/ThesisCitation';
 import VideoDocumentCitation from './citations/VideoDocumentCitation';
 import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
-import BrokenImage from '@material-ui/icons/BrokenImage';
 
 // import { userIsAdmin, userIsAuthor } from 'hooks';
 import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
