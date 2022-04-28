@@ -38,17 +38,13 @@ Object {
     "marginTop": 12,
   },
   "publicationImage": Object {
-    "@media (max-width:959.95px)": Object {
-      "height": 50,
-      "width": 50,
-    },
-    "@media (min-width:959.95px)": Object {
-      "height": 120,
-      "width": 120,
-    },
+    "aspectRatio": "150/150",
     "backgroundColor": "#51247a",
     "display": "inline-block",
+    "height": "auto",
+    "marginRight": 10,
     "textAlign": "center",
+    "width": "100%",
   },
 }
 `;
