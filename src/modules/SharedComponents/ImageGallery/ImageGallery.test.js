@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, AllTheProviders, screen } from 'test-utils';
+import { render, AllTheProviders } from 'test-utils';
 
 import ImageGallery from './ImageGallery';
 import { collectionSearchResultsImages } from 'mock/data';

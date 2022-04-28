@@ -23,7 +23,14 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
     if (!!!fileData?.thumbnailFileName && optional) return <></>; // no thumbnail available but optional is true
     if (!!fileData?.thumbnailFileName && !fileData?.securityStatus) {
-        return <Lock color={'secondary'} className={classes.lockIcon} />; // thumbnail available but security denied
+        return (
+            <Lock
+                color={'secondary'}
+                className={classes.lockIcon}
+                id={`imageGalleryItemImage-Locked-${item.rek_pid}`}
+                data-testid={`imageGalleryItemImage-Locked-${item.rek_pid}`}
+            />
+        ); // thumbnail available but security denied
     }
     // at this stage fileData could still be null, which is fine as below will fall back to default image
 
@@ -32,12 +39,16 @@ const ImageGalleryItemImage = ({ item, security, className, optional, ...rest })
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={`${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`}
-            onError={e => {
-                e.target.onerror = null;
-                // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
-                // TODO - need a proper fallback image and guaranteed location on server
-                e.target.src = config.thumbnailImage.defaultImageName;
-            }}
+            onError={
+                /* istanbul ignore next */ e => {
+                    /* istanbul ignore next */
+                    e.target.onerror = null;
+                    // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
+                    // TODO - need a proper fallback image and guaranteed location on server
+                    /* istanbul ignore next */
+                    e.target.src = config.thumbnailImage.defaultImageName;
+                }
+            }
             alt=""
             className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
             {...rest}

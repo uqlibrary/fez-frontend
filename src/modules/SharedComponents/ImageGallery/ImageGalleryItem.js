@@ -63,6 +63,8 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
 
     return (
         <ImageListItem
+            id={`image-gallery-item-${item.rek_pid}`}
+            data-testid={`image-gallery-item-${item.rek_pid}`}
             classes={{
                 root: `${internalClasses.imageListItemRoot} ${classes?.imageListItem?.root ?? ''}`,
                 item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''}`,
