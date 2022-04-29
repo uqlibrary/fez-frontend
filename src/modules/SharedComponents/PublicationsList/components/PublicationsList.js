@@ -81,7 +81,11 @@ export const PublicationsList = ({
     });
 
     if (!shouldRenderRecordsSelectors) {
-        return <React.Fragment>{publications}</React.Fragment>;
+        return (
+            <Box id="search-results-publications-list" data-testid="search-results-publications-list">
+                {publications}
+            </Box>
+        );
     }
 
     const handleChange = publication => event => handleClick(publication, event.target.checked);

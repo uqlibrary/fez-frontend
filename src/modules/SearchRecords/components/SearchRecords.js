@@ -54,6 +54,7 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
+
     const {
         pageSizeChanged,
         pageChanged,
@@ -112,7 +113,7 @@ const SearchRecords = ({
     };
 
     const SelectRecordView = publicationsList => {
-        const displayLookup = queryParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+        const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
 
         switch (displayLookup) {
             case 'image-gallery':

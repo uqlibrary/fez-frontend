@@ -133,6 +133,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'Publication date',
             sortDirection: 'test',
             pageSize: 5,
+            displayRecordsAs: 'standard',
             pagingData: {},
         });
 
@@ -180,6 +181,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'score',
             sortDirection: 'Asc',
             pageSize: 50,
+            displayRecordsAs: 'image-gallery',
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

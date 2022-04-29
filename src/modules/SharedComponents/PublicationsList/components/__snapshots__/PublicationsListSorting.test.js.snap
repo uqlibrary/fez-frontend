@@ -464,7 +464,7 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
@@ -1717,7 +1717,7 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="image-gallery"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
