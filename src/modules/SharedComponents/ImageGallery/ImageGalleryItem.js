@@ -11,6 +11,9 @@ import ImageGalleryItemImage from './ImageGalleryItemImage';
 import { pathConfig } from 'config/pathConfig';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { makeStyles } from '@material-ui/core/styles';
+import IconButton from '@material-ui/core/IconButton';
+import ErrorOutlineOutlinedIcon from '@material-ui/icons/ErrorOutlineOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 const useStyles = makeStyles(theme => ({
     imageListItemRoot: {
@@ -56,10 +59,20 @@ const useStyles = makeStyles(theme => ({
             minHeight: '150px',
         },
     },
+    titleBar: {
+        background: 'none',
+        height: '30px',
+    },
+    icon: {
+        color: 'white',
+        filter: 'drop-shadow(0px 0px 5px rgba(0,0,0,0.5))',
+    },
 }));
 
 const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, security, ...rest }) => {
     const internalClasses = useStyles();
+    const [restricted, setRestricted] = React.useState(false);
+    const [advisory, setAdvisory] = React.useState(false);
 
     return (
         <ImageListItem
@@ -87,6 +100,8 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                     height={itemHeight}
                     loading={lazyLoading ? 'lazy' : 'eager'}
                     className={internalClasses.imageGalleryItemImage}
+                    setRestricted={setRestricted}
+                    setAdvisory={setAdvisory}
                 />
                 <ImageListItemBar
                     title={item.rek_title}
@@ -97,6 +112,28 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                             ?.titleWrap ?? ''}`,
                     }}
                 />
+                {restricted && (
+                    <ImageListItemBar
+                        title={item.title}
+                        position="top"
+                        actionIcon={<LockOutlinedIcon className={internalClasses.icon} size="small" />}
+                        actionPosition="left"
+                        className={internalClasses.titleBar}
+                    />
+                )}
+                {advisory && (
+                    <ImageListItemBar
+                        title={item.title}
+                        position="top"
+                        actionIcon={
+                            <IconButton className={internalClasses.icon} size="small">
+                                <ErrorOutlineOutlinedIcon />
+                            </IconButton>
+                        }
+                        actionPosition="right"
+                        className={internalClasses.titleBar}
+                    />
+                )}
             </ExternalLink>
         </ImageListItem>
     );

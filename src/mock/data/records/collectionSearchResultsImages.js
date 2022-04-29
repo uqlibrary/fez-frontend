@@ -499,7 +499,9 @@ export default {
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
 		"fez_record_search_key_additional_notes": null,
-		"fez_record_search_key_advisory_statement": null,
+		"fez_record_search_key_advisory_statement": {
+			"rek_advisory_statement": "This is an example advisory statement"
+		},
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10065,
 			"rek_alternative_title_pid": "UQ:288583",
