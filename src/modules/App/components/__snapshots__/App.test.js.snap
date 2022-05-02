@@ -289,6 +289,19 @@ exports[`Application component Should display mobile correctly 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -989,6 +1002,19 @@ exports[`Application component should determine if it has incomplete works from 
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -1992,6 +2018,19 @@ exports[`Application component should determine if it has incomplete works from 
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -2745,6 +2784,19 @@ exports[`Application component should redirect to login page with correct return
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -3441,6 +3493,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -4502,6 +4567,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -5546,6 +5624,19 @@ exports[`Application component should render app for account with fez author wit
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6534,6 +6625,19 @@ exports[`Application component should render application with routing for the us
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6858,6 +6962,19 @@ exports[`Application component should render for anon user 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -7189,6 +7306,19 @@ exports[`Application component should render thesis submission for HDR without m
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -12537,6 +12667,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           xsUp={false}
                         />
                       </Hidden>
+                      <div
+                        aria-label="eSpace alerts"
+                        role="region"
+                        style={
+                          Object {
+                            "paddingBottom": 24,
+                          }
+                        }
+                      >
+                        <alert-list
+                          system="espace"
+                        />
+                      </div>
                       <WithStyles(ConfirmDialogBox)
                         hideCancelButton={true}
                         locale={
