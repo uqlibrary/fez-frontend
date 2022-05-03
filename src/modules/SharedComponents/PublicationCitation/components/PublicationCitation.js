@@ -52,7 +52,7 @@ import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGa
 
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
-import { isWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
+import { getWhiteListed } from 'modules/SharedComponents/ImageGallery/Utils';
 
 export const styles = theme => ({
     divider: {
@@ -220,7 +220,7 @@ export class PublicationCitation extends PureComponent {
         const { publication } = this.props;
         return (
             showImageThumbnails &&
-            isWhiteListed(publication, imageConfig) &&
+            getWhiteListed(publication, imageConfig) &&
             !!publication.fez_datastream_info &&
             !!publication.fez_datastream_info.length > 0
         );
