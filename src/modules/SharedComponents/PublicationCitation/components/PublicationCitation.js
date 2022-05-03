@@ -119,11 +119,9 @@ export const styles = theme => ({
     citationContainer: {
         paddingLeft: '10px',
     },
-    imageListItem: {
-        root: {
-            [theme.breakpoints.down('md')]: {
-                width: '100% !important',
-            },
+    imageListItemRoot: {
+        [theme.breakpoints.down('md')]: {
+            width: '100% !important',
         },
     },
 });
@@ -254,7 +252,7 @@ export class PublicationCitation extends PureComponent {
                 lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                 itemWidth={imageConfig.thumbnailImage.defaultWidth}
                 itemHeight={imageConfig.thumbnailImage.defaultHeight}
-                classes={{ imageListItem: this.props.classes.imageListItem }}
+                classes={{ imageListItem: { root: this.props.classes.imageListItemRoot } }}
                 security={security}
                 component="div"
                 withTitle={false}
@@ -427,8 +425,9 @@ export class PublicationCitation extends PureComponent {
                         component={Grid}
                         item
                         xs={12}
-                        sm={6}
-                        md={2}
+                        sm={2}
+                        md={3}
+                        lg={2}
                         style={{ textAlign: 'center' }}
                         display={!renderThumbnails ? 'none' : 'block'}
                     >
@@ -442,8 +441,9 @@ export class PublicationCitation extends PureComponent {
                     <Grid
                         item
                         xs={12}
-                        sm={6}
-                        md={10}
+                        sm={10}
+                        md={9}
+                        lg={8}
                         // xs={renderThumbnails ? 10 : 12}
                         // sm={renderThumbnails ? 10 : 12}
                         className={renderThumbnails ? classes.citationContainer : null}
