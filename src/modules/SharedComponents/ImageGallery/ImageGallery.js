@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ImageList from '@material-ui/core/ImageList';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { pathConfig } from 'config/pathConfig';
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItem from './ImageGalleryItem';
 
@@ -15,6 +16,10 @@ const useStyles = makeStyles(
     }),
     { withTheme: true },
 );
+
+export const getItemUrl = pid => {
+    return pathConfig.records.view(pid);
+};
 
 const ImageGallery = ({
     publicationsList,
@@ -41,6 +46,7 @@ const ImageGallery = ({
                 <ImageGalleryItem
                     key={item.rek_pid}
                     item={item}
+                    url={getItemUrl(item.rek_pid)}
                     lazyLoading={lazyLoading}
                     itemWidth={itemWidth}
                     itemHeight={itemHeight}

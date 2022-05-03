@@ -1766,6 +1766,12 @@ export default {
                 { index: 2, value: 'image-gallery', label: 'Image Gallery' },
             ],
         },
+        imageGallery: {
+            tooltip: {
+                restricted: "This record's thumbnail is locked",
+                advisory: 'This record has an advisor statement - caution is advised when viewing this record',
+            },
+        },
         newsFeed: {
             title: 'Latest news',
         },
