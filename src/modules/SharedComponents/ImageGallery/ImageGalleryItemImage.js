@@ -24,7 +24,7 @@ const ImageGalleryItemImage = ({ item, security, className, optional, setRestric
     const classes = useStyles();
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
-    const thumbnailRestricted = !!fileData?.thumbnailFileName && !fileData?.securityStatus;
+    const thumbnailRestricted = !!fileData?.thumbnailFileName && (!fileData?.securityStatus || !fileData.isWhiteListed);
     const thumbnailAdvisory =
         (!security.isAdmin &&
             !!fileData?.thumbnailFileName &&

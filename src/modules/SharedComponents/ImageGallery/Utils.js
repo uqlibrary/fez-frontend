@@ -1,6 +1,7 @@
 import { viewRecordsConfig, pathConfig } from 'config';
 import { checkForThumbnail, getFileOpenAccessStatus, getSecurityAccess } from 'modules/ViewRecord/components/Files';
 import { isAdded } from 'helpers/datastreams';
+import { default as config } from 'config/imageGalleryConfig';
 
 export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream => {
     const prefixMatch = !!dataStream.dsi_dsid.match(blacklist.namePrefixRegex);
@@ -26,9 +27,17 @@ export const getThumbnailChecksums = (dataStreams, thumbnailFileName) => {
     return checksums;
 };
 
-// TODO: logic of this function is key and needs revisiting once we
-// have full clarity on who should see what and which record
-// types to only show thumbs
+export const getWhiteListed = (publication, config) => {
+    const isAllowed =
+        config?.allowedTypes?.some(type => {
+            return (
+                type.viewType === publication.rek_display_type_lookup &&
+                (!!!type.subType || type.subType === publication.rek_subtype)
+            );
+        }) ?? false;
+    return isAllowed;
+};
+
 export const getFileData = (publication, isAdmin, isAuthor) => {
     const dataStreams = publication.fez_datastream_info;
     return !!dataStreams && dataStreams.length > 0
@@ -38,6 +47,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
               const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
               const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor });
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
+              const isWhiteListed = getWhiteListed(publication, config);
 
               return {
                   fileName,
@@ -45,6 +55,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
                   checksums,
                   openAccessStatus,
                   securityStatus,
+                  isWhiteListed,
               };
           })
         : [];
