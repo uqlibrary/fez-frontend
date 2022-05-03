@@ -14,6 +14,6 @@ export default {
         { viewType: 'Digilib Image' },
         { viewType: 'Manuscript' },
         { viewType: 'Design', subType: 'Non-NTRO' },
-        { vuewType: 'Video Document' },
+        { viewType: 'Video Document' },
     ],
 };
