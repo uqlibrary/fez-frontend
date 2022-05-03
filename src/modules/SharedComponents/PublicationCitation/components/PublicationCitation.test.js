@@ -1,5 +1,5 @@
 import { PublicationCitation, styles } from './PublicationCitation';
-import { mockRecordToFix } from 'mock/data/testing/records';
+import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps = {}) {
     const props = {
@@ -19,6 +19,29 @@ function setup(testProps = {}) {
 describe('PublicationCitation ', () => {
     it('should render component with default item', () => {
         const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default item with image support', () => {
+        const wrapper = setup({
+            showImageThumbnails: true,
+            publication: { ...journalArticle, rek_display_type_lookup: 'Image' },
+            security: { isAdmin: true, isAuthor: true },
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default item without image, if not set to show thumbs', () => {
+        const wrapper = setup({ publication: { ...journalArticle, rek_display_type_lookup: 'Image' } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component without image if whitelisted, but no datastream', () => {
+        const wrapper = setup({
+            showImageThumbnails: true,
+            publication: { ...journalArticle, rek_display_type_lookup: 'Image', fez_datastream_info: [] },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
