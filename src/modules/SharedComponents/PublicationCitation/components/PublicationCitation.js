@@ -48,7 +48,7 @@ import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 
 // import { userIsAdmin, userIsAuthor } from 'hooks';
-import ImageGalleryItemImage from 'modules/SharedComponents/ImageGallery/ImageGalleryItemImage';
+import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGalleryItem';
 
 import { default as imageConfig } from 'config/imageGalleryConfig';
 
@@ -118,6 +118,13 @@ export const styles = theme => ({
     },
     citationContainer: {
         paddingLeft: '10px',
+    },
+    imageListItem: {
+        root: {
+            [theme.breakpoints.down('md')]: {
+                width: '100% !important',
+            },
+        },
     },
 });
 
@@ -225,17 +232,40 @@ export class PublicationCitation extends PureComponent {
             !!publication.fez_datastream_info.length > 0
         );
     };
+    /*
+     <ImageGalleryItem
+                    key={item.rek_pid}
+                    item={item}
+                    url={getItemUrl(item.rek_pid)}
+                    lazyLoading={lazyLoading}
+                    itemWidth={itemWidth}
+                    itemHeight={itemHeight}
+                    classes={{ imageListItem: classes.imageListItem, imageListItemBar: classes.imageListItemBar }}
+                    security={security}
+                />
+    */
 
     renderPublicationImage = (publication, security) => {
         return (
-            <ImageGalleryItemImage
+            <ImageGalleryItem
+                key={publication.rek_pid}
                 item={publication}
+                // url={getItemUrl(item.rek_pid)}
+                lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
+                itemWidth={imageConfig.thumbnailImage.defaultWidth}
+                itemHeight={imageConfig.thumbnailImage.defaultHeight}
+                classes={{ imageListItem: this.props.classes.imageListItem }}
                 security={security}
-                className={this.props.classes.publicationImage}
-                alt={publication.rek_title}
-                width={imageConfig.thumbnailImage.defaultWidth}
-                height={imageConfig.thumbnailImage.defaultHeight}
-                loading={/* istanbul ignore next */ imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                component="div"
+                withTitle={false}
+
+                // item={publication}
+                // security={security}
+                // className={this.props.classes.publicationImage}
+                // alt={publication.rek_title}
+                // width={imageConfig.thumbnailImage.defaultWidth}
+                // height={imageConfig.thumbnailImage.defaultHeight}
+                // loading={/* istanbul ignore next */ imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
             />
         );
     };
@@ -396,7 +426,9 @@ export class PublicationCitation extends PureComponent {
                     <Box
                         component={Grid}
                         item
-                        xs={2}
+                        xs={12}
+                        sm={6}
+                        md={2}
                         style={{ textAlign: 'center' }}
                         display={!renderThumbnails ? 'none' : 'block'}
                     >
@@ -409,7 +441,11 @@ export class PublicationCitation extends PureComponent {
                     /> */}
                     <Grid
                         item
-                        xs={renderThumbnails ? 10 : 12}
+                        xs={12}
+                        sm={6}
+                        md={10}
+                        // xs={renderThumbnails ? 10 : 12}
+                        // sm={renderThumbnails ? 10 : 12}
                         className={renderThumbnails ? classes.citationContainer : null}
                     >
                         <Grid container spacing={0}>
