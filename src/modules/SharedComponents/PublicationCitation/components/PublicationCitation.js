@@ -235,7 +235,7 @@ export class PublicationCitation extends PureComponent {
                 alt={publication.rek_title}
                 width={imageConfig.thumbnailImage.defaultWidth}
                 height={imageConfig.thumbnailImage.defaultHeight}
-                loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                loading={/* istanbul ignore next */ imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
             />
         );
     };
