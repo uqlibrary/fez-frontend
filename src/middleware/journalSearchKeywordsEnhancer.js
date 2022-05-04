@@ -25,13 +25,22 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
             !!titleFuzzyMatch &&
             titleFuzzyMatch.length > 0 &&
             titleFuzzyMatch.reduce((matches, journal) => {
-                const matchedKeywords = journal.jnl_title.match(regex);
+                const titles = [
+                    journal.jnl_title,
+                    (journal.fez_journal_doaj && journal.fez_journal_doaj.jnl_doaj_title) || '',
+                    (journal.fez_journal_era &&
+                        Array.isArray(journal.fez_journal_era) &&
+                        journal.fez_journal_era[0].jnl_era_title) ||
+                        '',
+                ];
+
+                const matchedKeywords = titles.reduce(
+                    (previousValue, currentValue) => previousValue.concat(currentValue.match(regex) || []),
+                    [],
+                );
+
                 return (
-                    (matchedKeywords && [
-                        ...matches,
-                        ...matchedKeywords.filter(matched => matched && matched.length > 2),
-                    ]) ||
-                    []
+                    matchedKeywords && [...matches, ...matchedKeywords.filter(matched => matched && matched.length > 2)]
                 );
             }, []);
 
