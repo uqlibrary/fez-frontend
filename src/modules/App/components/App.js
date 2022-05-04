@@ -418,11 +418,9 @@ export class AppClass extends PureComponent {
                     <Hidden smDown>
                         <ScrollTop show containerId="content-container" />
                     </Hidden>
-                    {!isAdminPage() && (
-                        <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                            <alert-list system="espace" />
-                        </div>
-                    )}
+                    <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
+                        {!isAdminPage() && <alert-list system="espace" />}
+                    </div>
                     <ConfirmDialogBox
                         hideCancelButton
                         onRef={this.setSessionExpiredConfirmation}
