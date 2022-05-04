@@ -87,7 +87,7 @@ export const styles = theme => ({
         display: 'inline-block',
         marginRight: 10,
         textAlign: 'center',
-        backgroundColor: '#51247a',
+        // backgroundColor: '#51247a',
         width: '100%',
         height: 'auto',
         aspectRatio: '150/150',
@@ -245,26 +245,28 @@ export class PublicationCitation extends PureComponent {
 
     renderPublicationImage = (publication, security) => {
         return (
-            <ImageGalleryItem
-                key={publication.rek_pid}
-                item={publication}
-                // url={getItemUrl(item.rek_pid)}
-                lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
-                itemWidth={imageConfig.thumbnailImage.defaultWidth}
-                itemHeight={imageConfig.thumbnailImage.defaultHeight}
-                classes={{ imageListItem: { root: this.props.classes.imageListItemRoot } }}
-                security={security}
-                component="div"
-                withTitle={false}
+            <div className={this.props.classes.publicationImage}>
+                <ImageGalleryItem
+                    key={publication.rek_pid}
+                    item={publication}
+                    // url={getItemUrl(item.rek_pid)}
+                    lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
+                    itemWidth={imageConfig.thumbnailImage.defaultWidth}
+                    itemHeight={imageConfig.thumbnailImage.defaultHeight}
+                    classes={{ imageListItem: { root: this.props.classes.imageListItemRoot } }}
+                    security={security}
+                    component="div"
+                    withTitle={false}
 
-                // item={publication}
-                // security={security}
-                // className={this.props.classes.publicationImage}
-                // alt={publication.rek_title}
-                // width={imageConfig.thumbnailImage.defaultWidth}
-                // height={imageConfig.thumbnailImage.defaultHeight}
-                // loading={/* istanbul ignore next */ imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
-            />
+                    // item={publication}
+                    // security={security}
+                    // className={this.props.classes.publicationImage}
+                    // alt={publication.rek_title}
+                    // width={imageConfig.thumbnailImage.defaultWidth}
+                    // height={imageConfig.thumbnailImage.defaultHeight}
+                    // loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
+                />
+            </div>
         );
     };
 

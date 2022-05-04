@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { default as config } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 import { makeStyles } from '@material-ui/core/styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles(() => ({
     imageGalleryItemImage: {
@@ -43,27 +44,40 @@ const ImageGalleryItemImage = ({ item, security, className, optional, setRestric
     // at this stage fileData could still be null, which is fine as below will fall back to default image
 
     return (
-        <img
+        <LazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
-            data-testid={`imageGalleryItemImage-${item.rek_pid}`}
+            effect="opacity"
             src={
                 !thumbnailRestricted && !thumbnailAdvisory
                     ? `${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`
                     : config.thumbnailImage.defaultImageName
             }
-            onError={
-                /* istanbul ignore next */ e => {
-                    /* istanbul ignore next */
-                    e.target.onerror = null;
-                    // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
-                    // TODO - need a proper fallback image and guaranteed location on server
-                    /* istanbul ignore next */
-                    e.target.src = config.thumbnailImage.defaultImageName;
-                }
-            }
+            data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
             {...rest}
         />
+
+        // <img
+        //     id={`imageGalleryItemImage-${item.rek_pid}`}
+        //     data-testid={`imageGalleryItemImage-${item.rek_pid}`}
+        //     src={
+        //         !thumbnailRestricted && !thumbnailAdvisory
+        //             ? `${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`
+        //             : config.thumbnailImage.defaultImageName
+        //     }
+        //     onError={
+        //         /* istanbul ignore next */ e => {
+        //             /* istanbul ignore next */
+        //             e.target.onerror = null;
+        //             // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
+        //             // TODO - need a proper fallback image and guaranteed location on server
+        //             /* istanbul ignore next */
+        //             e.target.src = config.thumbnailImage.defaultImageName;
+        //         }
+        //     }
+        //     className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
+        //     {...rest}
+        // />
     );
 };
 
