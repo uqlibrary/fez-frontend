@@ -90,6 +90,7 @@ export const styles = theme => ({
         // backgroundColor: '#51247a',
         width: '100%',
         height: 'auto',
+        // maxHeight: imageConfig.thumbnailImage.defaultHeight,
         // aspectRatio: '150/150',
         // [theme.breakpoints.down('xs')]: {
         //     width: 50,

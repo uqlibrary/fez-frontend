@@ -46,12 +46,22 @@ const ImageGalleryItemImage = ({ item, security, className, optional, setRestric
     return (
         <LazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
+            data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={
                 !thumbnailRestricted && !thumbnailAdvisory
                     ? `${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`
                     : config.thumbnailImage.defaultImageName
             }
-            data-testid={`imageGalleryItemImage-${item.rek_pid}`}
+            onError={
+                /* istanbul ignore next */ e => {
+                    /* istanbul ignore next */
+                    e.target.onerror = null;
+                    // env vars from root .env file e.g. GALLERY_IMAGE_PATH_PREPEND='/images/thumbs/'
+                    // TODO - need a proper fallback image and guaranteed location on server
+                    /* istanbul ignore next */
+                    e.target.src = config.thumbnailImage.defaultImageName;
+                }
+            }
             className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
             {...rest}
         />
