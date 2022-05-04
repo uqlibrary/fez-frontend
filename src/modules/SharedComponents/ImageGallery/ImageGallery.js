@@ -50,7 +50,10 @@ const ImageGallery = ({
                     lazyLoading={lazyLoading}
                     itemWidth={itemWidth}
                     itemHeight={itemHeight}
-                    classes={{ imageListItem: classes.imageListItem, imageListItemBar: classes.imageListItemBar }}
+                    classes={{
+                        imageListItem: { root: internalClasses.imageListItemRoot },
+                        imageListItemBar: internalClasses.imageListItemBar,
+                    }}
                     security={security}
                 />
             ))}

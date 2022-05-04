@@ -77,13 +77,24 @@ export const viewRecord = (history, url) => {
     history.push(url);
 };
 
-const ImageGalleryItem = ({ item, withTitle, url, classes, lazyLoading, itemWidth, itemHeight, security, ...rest }) => {
+const ImageGalleryItem = ({
+    item,
+    withTitle,
+    url,
+    history,
+    classes,
+    lazyLoading,
+    itemWidth,
+    itemHeight,
+    security,
+    ...rest
+}) => {
     const internalClasses = useStyles();
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
-    const history = useHistory();
+    const historyObject = history ?? useHistory();
 
-    const clickLink = !!url && url.length > 0 ? { onClick: () => viewRecord(history, url) } : {};
+    const clickLink = !!url && url.length > 0 ? { onClick: () => viewRecord(historyObject, url), role: 'button' } : {};
 
     return (
         <ImageListItem
@@ -94,6 +105,8 @@ const ImageGalleryItem = ({ item, withTitle, url, classes, lazyLoading, itemWidt
                 item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ??
                     ''} ${!!clickLink.onClick && internalClasses.imageListItemWithLink}`,
             }}
+            tabIndex={0}
+            aria-label={`Thumbnail image showing ${item.rek_title}`}
             {...clickLink}
             {...rest}
         >
@@ -153,9 +166,13 @@ ImageGalleryItem.propTypes = {
     item: PropTypes.object.isRequired,
     withTitle: PropTypes.bool,
     url: PropTypes.string,
+    history: PropTypes.object,
     security: PropTypes.object,
     classes: PropTypes.shape({
-        imageListItem: PropTypes.object,
+        imageListItem: PropTypes.shape({
+            root: PropTypes.string,
+            item: PropTypes.string,
+        }),
         imageListItemBar: PropTypes.object,
     }),
     lazyLoading: PropTypes.bool,

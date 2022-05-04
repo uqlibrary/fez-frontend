@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, AllTheProviders } from 'test-utils';
+import { render, WithRouter, act, fireEvent } from 'test-utils';
 
 import ImageGalleryItem from './ImageGalleryItem';
 import { collectionSearchResultsImages } from 'mock/data';
@@ -10,9 +10,9 @@ const setup = (props = {}) => {
         ...props,
     };
     return render(
-        <AllTheProviders>
+        <WithRouter>
             <ImageGalleryItem {...testProps} />
-        </AllTheProviders>,
+        </WithRouter>,
     );
 };
 
@@ -35,5 +35,21 @@ describe('Image Gallery Item', () => {
             'loading',
             'eager',
         );
+    });
+
+    it('should enable clickable gallery item if URL prop supplied', () => {
+        const testHistory = jest.fn();
+        const pid = collectionSearchResultsImages.data[1].rek_pid;
+        const { getByTestId } = setup({
+            item: collectionSearchResultsImages.data[1],
+            url: pid,
+            history: { push: testHistory },
+        });
+        const element = getByTestId(`image-gallery-item-${pid}`);
+        expect(element).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(element);
+        });
+        expect(testHistory).toHaveBeenCalledWith(pid);
     });
 });
