@@ -1248,6 +1248,7 @@ export const LANGUAGE = [
     { value: 'por', text: 'Portuguese' },
     { value: 'rum', text: 'Romanian' },
     { value: 'rus', text: 'Russian' },
+    { value: 'san', text: 'Sanskrit' },
     { value: 'slo', text: 'Slovak' },
     { value: 'slv', text: 'Slovenian' },
     { value: 'spa', text: 'Spanish' },
