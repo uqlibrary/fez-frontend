@@ -102,8 +102,9 @@ const ImageGalleryItem = ({
             data-testid={`image-gallery-item-${item.rek_pid}`}
             classes={{
                 root: `${internalClasses.imageListItemRoot} ${classes?.imageListItem?.root ?? ''}`,
-                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ??
-                    ''} ${!!clickLink.onClick && internalClasses.imageListItemWithLink}`,
+                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''} ${
+                    !!clickLink.onClick ? internalClasses.imageListItemWithLink : ''
+                }`,
             }}
             tabIndex={0}
             aria-label={`Thumbnail image showing ${item.rek_title}`}

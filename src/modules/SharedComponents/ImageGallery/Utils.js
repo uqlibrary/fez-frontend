@@ -34,7 +34,7 @@ export const getWhiteListed = (publication, config) => {
                 type.viewType === publication.rek_display_type_lookup &&
                 (!!!type.subType || type.subType === publication.rek_subtype)
             );
-        }) ?? false;
+        }) ?? /* istanbul ignore next */ false;
     return isAllowed;
 };
 
@@ -47,7 +47,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
               const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
               const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor });
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
-              const isWhiteListed = getWhiteListed(publication, config);
+              const isWhiteListed = getWhiteListed(publication, config) || isAdmin;
 
               return {
                   fileName,
