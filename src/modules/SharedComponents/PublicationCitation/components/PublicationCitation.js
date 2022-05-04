@@ -90,7 +90,7 @@ export const styles = theme => ({
         // backgroundColor: '#51247a',
         width: '100%',
         height: 'auto',
-        aspectRatio: '150/150',
+        // aspectRatio: '150/150',
         // [theme.breakpoints.down('xs')]: {
         //     width: 50,
         //     height: 50,
@@ -429,7 +429,7 @@ export class PublicationCitation extends PureComponent {
                         xs={12}
                         sm={2}
                         md={3}
-                        lg={2}
+                        lg={3}
                         style={{ textAlign: 'center' }}
                         display={!renderThumbnails ? 'none' : 'block'}
                     >
@@ -443,9 +443,9 @@ export class PublicationCitation extends PureComponent {
                     <Grid
                         item
                         xs={12}
-                        sm={10}
-                        md={9}
-                        lg={8}
+                        sm={renderThumbnails ? 10 : 12}
+                        md={renderThumbnails ? 9 : 12}
+                        lg={renderThumbnails ? 9 : 12}
                         // xs={renderThumbnails ? 10 : 12}
                         // sm={renderThumbnails ? 10 : 12}
                         className={renderThumbnails ? classes.citationContainer : null}

@@ -46,7 +46,6 @@ const ImageGalleryItemImage = ({ item, security, className, optional, setRestric
     return (
         <LazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
-            effect="opacity"
             src={
                 !thumbnailRestricted && !thumbnailAdvisory
                     ? `${getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)}`
