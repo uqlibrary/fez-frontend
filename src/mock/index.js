@@ -183,12 +183,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
-            return [200, mockData.internalTitleSearchList];
+            //return [200, mockData.internalTitleSearchList];
+            return [200, mockData.collectionSearchResultsImages];
         } else if (config.params.key && !!config.params.key.rek_status) {
             return [200, mockData.unpublishedSearchList];
         }
-        // return [404, ['Request not found']];
-        return [200, mockData.collectionSearchResultsImages];
+        return [404, ['Request not found']];
+        //return [200, mockData.collectionSearchResultsImages];
     })
     .onGet(
         new RegExp(

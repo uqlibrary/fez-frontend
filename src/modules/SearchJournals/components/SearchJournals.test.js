@@ -4,7 +4,7 @@ import { pathConfig } from 'config';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
 import mediaQuery from 'css-mediaquery';
-import * as ExportActions from 'actions/journals.js';
+import * as actions from 'actions/journals.js';
 
 import { initialJournalSearchKeywords, initialState } from 'reducers/journals';
 
@@ -577,7 +577,7 @@ describe('SearchJournals', () => {
         expect(testHistory.location.search).toContain('pageSize=100');
 
         // export
-        const exportJournals = jest.spyOn(ExportActions, 'exportJournals');
+        const exportJournals = jest.spyOn(actions, 'exportJournals');
         expect(queryByTestId('exportPublicationsFormat')).toBeInTheDocument();
         act(() => {
             fireEvent.mouseDown(queryByTestId('exportPublicationsFormat'));
@@ -594,5 +594,27 @@ describe('SearchJournals', () => {
             fireEvent.click(queryByTestId('search-journals-paging-top-select-page-2'));
         });
         expect(testHistory.location.search).toContain('page=2');
+    });
+
+    it('should clear state on dismount', () => {
+        const spy = jest.spyOn(actions, 'clearJournalSearchKeywords');
+        const path = pathConfig.journals.search;
+        const testHistory = createMemoryHistory({ initialEntries: [path] });
+        testHistory.push({
+            path,
+        });
+        const { unmount, queryByText } = setup({
+            testHistory,
+            state: { journalsListLoaded: true, mockData },
+            storeState: {
+                journalSearchKeywords: {
+                    exactMatch: [{ keyword: 'Astrobiology', title: 'Astrobiology', href: '/journal/view/undefined' }],
+                },
+            },
+        });
+        expect(queryByText('Astrobiology')).toBeInTheDocument();
+        // change page
+        unmount();
+        expect(spy).toHaveBeenCalledTimes(1);
     });
 });

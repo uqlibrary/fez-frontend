@@ -31,3 +31,4 @@ export * as BULK_UPDATES from './bulkUpdates';
 export { pathConfig } from './pathConfig';
 export { viewJournalConfig } from './viewJournal';
 export { TRANSITION_COHORT } from './thesisSubmissionTransition';
+export { default as imageGalleryConfig } from './imageGalleryConfig';

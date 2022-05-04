@@ -25,7 +25,13 @@ context('Strategic Publishing - Comparison', () => {
         const query =
             '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
         cy.visit(`${uri}${query}`);
-        cy.get('[data-testid="journal-list-data-col-1-checkbox-0"]', { timeout: 1000 }).should('be.visible');
+
+        // wait until the progress spinner is no longer in the document. Note the
+        // way this is done due to waitUntil needing a truthy value to exit.
+        // https://github.com/NoriSte/cypress-wait-until/issues/75#issuecomment-572685623
+        cy.waitUntil(() => Cypress.$('[role="progressbar"]').length === 0); // doesn't exist
+
+        cy.get('[data-testid="journal-list-data-col-1-checkbox-0"]').should('be.visible');
         // make sure 3rd journal is present
         cy.get('[data-testid="journal-list-data-col-1-title-2"]').should('exist');
 

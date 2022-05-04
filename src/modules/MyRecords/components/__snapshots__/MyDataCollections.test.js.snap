@@ -119,6 +119,24 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAs": Array [
+                    Object {
+                      "index": 0,
+                      "label": "(auto)",
+                      "value": "auto",
+                    },
+                    Object {
+                      "index": 1,
+                      "label": "Standard",
+                      "value": "standard",
+                    },
+                    Object {
+                      "index": 2,
+                      "label": "Image Gallery",
+                      "value": "image-gallery",
+                    },
+                  ],
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -334,6 +352,24 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAs": Array [
+                    Object {
+                      "index": 0,
+                      "label": "(auto)",
+                      "value": "auto",
+                    },
+                    Object {
+                      "index": 1,
+                      "label": "Standard",
+                      "value": "standard",
+                    },
+                    Object {
+                      "index": 2,
+                      "label": "Image Gallery",
+                      "value": "image-gallery",
+                    },
+                  ],
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -656,6 +692,24 @@ exports[`myDatasets test renders loading screen while loading publications while
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAs": Array [
+                    Object {
+                      "index": 0,
+                      "label": "(auto)",
+                      "value": "auto",
+                    },
+                    Object {
+                      "index": 1,
+                      "label": "Standard",
+                      "value": "standard",
+                    },
+                    Object {
+                      "index": 2,
+                      "label": "Image Gallery",
+                      "value": "image-gallery",
+                    },
+                  ],
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [

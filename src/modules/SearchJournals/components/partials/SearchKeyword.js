@@ -66,7 +66,7 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, c
             {sources &&
                 sources.map(source => {
                     return (
-                        <Box key={`keyword-code-source-${source.name}-${index}`}>
+                        <Box key={`keyword-code-source-${source.name}-${index}`} component="span">
                             <ForCodeSource source={source.name} index={index} />
                             {!!source.index && <ForCodeSource source={source.index} index={index} />}
                         </Box>

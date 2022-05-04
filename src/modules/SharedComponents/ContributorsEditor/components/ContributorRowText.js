@@ -61,8 +61,8 @@ export const ContributorRowText = ({
     }
 
     return (
-        <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-            <Grid item xs={10} sm={5} md={3} id={`${contributorRowId}-name-as-published`}>
+        <>
+            <Grid item xs={10} md={3} id={`${contributorRowId}-name-as-published`}>
                 {getListItemTypography(
                     contributor.nameAsPublished,
                     contributorOrder,
@@ -71,7 +71,7 @@ export const ContributorRowText = ({
                 )}
             </Grid>
             {isAuthorLinked(contributor) && haveFullAuthorDetails(contributor) && (
-                <Grid item xs={10} sm={5} md={showRoleInput ? 4 : idColWidth} id={`${contributorRowId}-uq-details`}>
+                <Grid item xs={10} md={showRoleInput ? 4 : idColWidth} id={`${contributorRowId}-uq-details`}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${(contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && contributor.orgaff) ||
@@ -84,7 +84,7 @@ export const ContributorRowText = ({
                 </Grid>
             )}
             {!isAuthorLinked(contributor) && !!contributor.affiliation && (
-                <Grid item xs={12} sm={5} md={idColWidth} id={`${contributorRowId}-affiliation`}>
+                <Grid item xs={12} md={idColWidth} id={`${contributorRowId}-affiliation`}>
                     {getListItemTypography(
                         `${contributor.orgaff}`,
                         `${(!!contributor.orgtype &&
@@ -97,7 +97,7 @@ export const ContributorRowText = ({
                 </Grid>
             )}
             {showRoleInput && (
-                <Grid item xs={12} sm={5} md={md} id={`${contributorRowId}-role`}>
+                <Grid item xs={12} md={md} id={`${contributorRowId}-role`}>
                     {getListItemTypography(
                         contributor.creatorRole,
                         '',
@@ -106,7 +106,7 @@ export const ContributorRowText = ({
                     )}
                 </Grid>
             )}
-        </Grid>
+        </>
     );
 };
 

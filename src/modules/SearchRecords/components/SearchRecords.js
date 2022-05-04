@@ -17,13 +17,12 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
+
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
-
-// import { getFileData } from 'modules/SharedComponents/Toolbox/AttachedFilesField/AttachedFiles';
-
 import hash from 'hash-sum';
+import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
 const SearchRecords = ({
     actions,
@@ -36,6 +35,7 @@ const SearchRecords = ({
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
+    publicationsListDefaultView,
     searchLoading,
     searchLoadingError,
     searchQuery,
@@ -54,11 +54,15 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
-    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, handleExport } = useSearchRecordsControls(
-        queryParams,
-        updateQueryString,
-        actions,
-    );
+
+    const {
+        pageSizeChanged,
+        pageChanged,
+        sortByChanged,
+        facetsChanged,
+        handleExport,
+        displayRecordsAsChanged,
+    } = useSearchRecordsControls(queryParams, updateQueryString, actions);
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
             setSearchParams({
@@ -108,10 +112,24 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
 
-    // const getThumbnail = (dataStream, isAdmin, isAuthor) => {
-    //     const fileData = getFileData(null, dataStream, isAdmin, isAuthor);
-    //     return fileData[0]?.thumbnailFileName ?? 'uqlogo.svg';
-    // };
+    const SelectRecordView = publicationsList => {
+        const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+
+        switch (displayLookup) {
+            case 'image-gallery':
+                return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor }} />;
+            case 'auto':
+            case 'standard':
+            default:
+                return (
+                    <PublicationsList
+                        publicationsList={publicationsList}
+                        showAdminActions={isAdmin || isUnpublishedBufferPage}
+                        showUnpublishedBufferFields={isUnpublishedBufferPage}
+                    />
+                );
+        }
+    };
 
     return (
         <StandardPage className="page-search-records">
@@ -183,10 +201,12 @@ const SearchRecords = ({
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
+                                        onDisplayRecordsAsChanged={displayRecordsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
+                                        displayRecordsAs={searchParams.displayRecordsAs}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -221,13 +241,7 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            <PublicationsList
-                                                publicationsList={publicationsList}
-                                                showAdminActions={isAdmin || isUnpublishedBufferPage}
-                                                showUnpublishedBufferFields={isUnpublishedBufferPage}
-                                                showImageThumbnails
-                                                security={{ isAdmin, isAuthor }}
-                                            />
+                                            {SelectRecordView(publicationsList)}
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
@@ -283,6 +297,7 @@ SearchRecords.propTypes = {
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,
+    publicationsListDefaultView: PropTypes.object,
     searchLoading: PropTypes.bool,
     searchLoadingError: PropTypes.bool,
     searchQuery: PropTypes.object,
