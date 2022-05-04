@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { default as config } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 const useStyles = makeStyles(() => ({
     imageGalleryItemImage: {
         objectFit: 'cover',
@@ -43,7 +43,7 @@ const ImageGalleryItemImage = ({ item, security, className, optional, setRestric
     // at this stage fileData could still be null, which is fine as below will fall back to default image
 
     return (
-        <img
+        <LazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={
