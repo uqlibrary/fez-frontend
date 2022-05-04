@@ -303,7 +303,7 @@ export class AppClass extends PureComponent {
         const titleStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 284 } : { paddingLeft: 0 };
         const isIndex = this.props.history.location.pathname === '/';
         const isAdminPage = () => {
-            return window.location.pathname.startsWith('/admin');
+            return window?.location?.pathname?.startsWith('/admin') || false;
         };
 
         return (
