@@ -111,10 +111,14 @@ const SearchRecords = ({
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
+    const initSortingData = locale.components.sorting;
+    const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+    const newSortingData = initSortingData.sortBy.filter(option =>
+        option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
+    );
+    const sortingData = { ...initSortingData, sortBy: newSortingData };
 
     const SelectRecordView = publicationsList => {
-        const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
-
         switch (displayLookup) {
             case 'image-gallery':
                 return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor }} />;
@@ -209,6 +213,7 @@ const SearchRecords = ({
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
                                         displayRecordsAs={searchParams.displayRecordsAs}
+                                        sortingData={sortingData}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
