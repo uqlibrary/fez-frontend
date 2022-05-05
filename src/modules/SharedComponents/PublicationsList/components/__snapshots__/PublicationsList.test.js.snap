@@ -10,7 +10,10 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:111111"
+        id="publication-citation-parent-UQ:111111"
+      >
         <div
           class="MuiGrid-root-188 MuiGrid-container-189"
         >
@@ -106,7 +109,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:678728"
+        id="publication-citation-parent-UQ:678728"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -375,7 +381,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:410094"
+        id="publication-citation-parent-UQ:410094"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -679,7 +688,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:398497"
+        id="publication-citation-parent-UQ:398497"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -989,7 +1001,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:379178"
+        id="publication-citation-parent-UQ:379178"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -1287,7 +1302,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:357538"
+        id="publication-citation-parent-UQ:357538"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -1590,7 +1608,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:360881"
+        id="publication-citation-parent-UQ:360881"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -1900,7 +1921,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:355233"
+        id="publication-citation-parent-UQ:355233"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -2184,7 +2208,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:350994"
+        id="publication-citation-parent-UQ:350994"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -2445,7 +2472,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:344420"
+        id="publication-citation-parent-UQ:344420"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -2755,7 +2785,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:306039"
+        id="publication-citation-parent-UQ:306039"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -3184,7 +3217,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:305893"
+        id="publication-citation-parent-UQ:305893"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -3460,7 +3496,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:302599"
+        id="publication-citation-parent-UQ:302599"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -3710,7 +3749,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:294055"
+        id="publication-citation-parent-UQ:294055"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -3999,7 +4041,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:319620"
+        id="publication-citation-parent-UQ:319620"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -4240,7 +4285,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:284237"
+        id="publication-citation-parent-UQ:284237"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -4501,7 +4549,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:279315"
+        id="publication-citation-parent-UQ:279315"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -4827,7 +4878,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:265967"
+        id="publication-citation-parent-UQ:265967"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -5158,7 +5212,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:278920"
+        id="publication-citation-parent-UQ:278920"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -5427,7 +5484,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:277856"
+        id="publication-citation-parent-UQ:277856"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
@@ -5623,7 +5683,10 @@ exports[`PublicationsList renders component with items 1`] = `
     <div
       class="publicationCitation"
     >
-      <div>
+      <div
+        data-testid="publication-citation-parent-UQ:256096"
+        id="publication-citation-parent-UQ:256096"
+      >
         <div
           class="MuiGrid-root-18 MuiGrid-container-19"
         >

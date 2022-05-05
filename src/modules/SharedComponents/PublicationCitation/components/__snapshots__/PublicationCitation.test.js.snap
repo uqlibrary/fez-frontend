@@ -77,6 +77,8 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-undefined"
+    id="publication-citation-parent-undefined"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -377,6 +379,8 @@ exports[`PublicationCitation  should render button disabled with spinners on act
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -1413,6 +1417,8 @@ exports[`PublicationCitation  should render component with content indicators 1`
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -2329,6 +2335,8 @@ exports[`PublicationCitation  should render component with default actions 1`] =
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -3279,6 +3287,8 @@ exports[`PublicationCitation  should render component with default item 1`] = `
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -4191,7 +4201,10 @@ exports[`PublicationCitation  should render component with default item with ima
 <div
   className="publicationCitation"
 >
-  <div>
+  <div
+    data-testid="publication-image-parent-UQ:676287"
+    id="publication-image-parent-UQ:676287"
+  >
     <ImageGalleryItem
       classes={
         Object {
@@ -5201,7 +5214,10 @@ exports[`PublicationCitation  should render component with default item with ima
       withTitle={false}
     />
   </div>
-  <div>
+  <div
+    data-testid="publication-citation-parent-UQ:676287"
+    id="publication-citation-parent-UQ:676287"
+  >
     <WithStyles(ForwardRef(Grid))
       container={true}
       spacing={0}
@@ -7253,6 +7269,8 @@ exports[`PublicationCitation  should render component with default item without 
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:676287"
+    id="publication-citation-parent-UQ:676287"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -9305,6 +9323,8 @@ exports[`PublicationCitation  should render component with default item without 
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -10215,6 +10235,8 @@ exports[`PublicationCitation  should render component with default list hiding t
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -11129,6 +11151,8 @@ exports[`PublicationCitation  should render component with default list hiding t
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -12043,6 +12067,8 @@ exports[`PublicationCitation  should render component with publication from mult
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -12989,6 +13015,8 @@ exports[`PublicationCitation  should render component without a title 1`] = `
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -13919,6 +13947,8 @@ exports[`PublicationCitation  should render component without image if whitelist
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:676287"
+    id="publication-citation-parent-UQ:676287"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
@@ -15893,6 +15923,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
 >
   <div
     className={null}
+    data-testid="publication-citation-parent-UQ:41878"
+    id="publication-citation-parent-UQ:41878"
   >
     <WithStyles(ForwardRef(Grid))
       container={true}

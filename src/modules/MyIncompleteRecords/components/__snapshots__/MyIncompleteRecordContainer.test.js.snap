@@ -59,7 +59,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <div
         class="publicationCitation"
       >
-        <div>
+        <div
+          data-testid="publication-citation-parent-UQ:352045"
+          id="publication-citation-parent-UQ:352045"
+        >
           <div
             class="MuiGrid-root-1 MuiGrid-container-2"
           >
