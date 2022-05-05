@@ -6,6 +6,7 @@ import { default as config } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 import { makeStyles } from '@material-ui/core/styles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const useStyles = makeStyles(() => ({
     imageGalleryItemImage: {
         objectFit: 'cover',
