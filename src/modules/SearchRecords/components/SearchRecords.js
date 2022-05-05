@@ -123,10 +123,11 @@ const SearchRecords = ({
             default:
                 return (
                     <PublicationsList
-                        showImageThumbnails
                         publicationsList={publicationsList}
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
+                        security={{ isAdmin, isAuthor }}
                     />
                 );
         }
