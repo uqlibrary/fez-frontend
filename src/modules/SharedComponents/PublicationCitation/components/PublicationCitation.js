@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from 'react-router-dom';
 
-// import Img from 'react-image';
-// import { Box } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Divider from '@material-ui/core/Divider';
@@ -17,7 +15,6 @@ import { locale } from 'locale';
 import { publicationTypes, pathConfig } from 'config';
 
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-// import { getThumbnail } from 'modules/SharedComponents/ImageGallery/Utils';
 
 // citations for different publication types
 import AdminActions from './citations/partials/AdminActions';
@@ -47,7 +44,6 @@ import VideoDocumentCitation from './citations/VideoDocumentCitation';
 import WorkingPaperCitation from './citations/WorkingPaperCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 
-// import { userIsAdmin, userIsAuthor } from 'hooks';
 import ImageGalleryItem from 'modules/SharedComponents/ImageGallery/ImageGalleryItem';
 
 import { default as imageConfig } from 'config/imageGalleryConfig';
@@ -104,8 +100,6 @@ export const styles = theme => ({
             height: 150,
             minWidth: 0,
         },
-        // width: 150,
-        // height: 150,
         float: 'left',
     },
     citationContainer: {
@@ -233,18 +227,6 @@ export class PublicationCitation extends PureComponent {
             !!publication.fez_datastream_info.length > 0
         );
     };
-    /*
-     <ImageGalleryItem
-                    key={item.rek_pid}
-                    item={item}
-                    url={getItemUrl(item.rek_pid)}
-                    lazyLoading={lazyLoading}
-                    itemWidth={itemWidth}
-                    itemHeight={itemHeight}
-                    classes={{ imageListItem: classes.imageListItem, imageListItemBar: classes.imageListItemBar }}
-                    security={security}
-                />
-    */
 
     renderPublicationImage = (publication, security) => {
         return (
@@ -252,7 +234,6 @@ export class PublicationCitation extends PureComponent {
                 <ImageGalleryItem
                     key={publication.rek_pid}
                     item={publication}
-                    // url={getItemUrl(item.rek_pid)}
                     lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
@@ -260,14 +241,6 @@ export class PublicationCitation extends PureComponent {
                     security={security}
                     component="div"
                     withTitle={false}
-
-                    // item={publication}
-                    // security={security}
-                    // className={this.props.classes.publicationImage}
-                    // alt={publication.rek_title}
-                    // width={imageConfig.thumbnailImage.defaultWidth}
-                    // height={imageConfig.thumbnailImage.defaultHeight}
-                    // loading={imageConfig.thumbnailImage.defaultLazyLoading ? 'lazy' : 'eager'}
                 />
             </div>
         );
@@ -428,33 +401,7 @@ export class PublicationCitation extends PureComponent {
                 {renderThumbnails && this.renderPublicationImage(publication, security)}
                 <div className={renderThumbnails ? classes.citationContainer : null}>
                     <Grid container spacing={0}>
-                        {/* <Box
-                            component={Grid}
-                            item
-                            xs={12}
-                            sm={2}
-                            md={3}
-                            lg={3}
-                            style={{ textAlign: 'center' }}
-                            display={!renderThumbnails ? 'none' : 'block'}
-                        >
-
-                        </Box> */}
-                        {/* <Grid
-                        item
-                        xs={renderThumbnails ? 2 : 0}
-                        data-testid={`thumbimage-container-${publication.rek_pid}`}
-                    /> */}
-                        <Grid
-                            item
-                            // xs={12}
-                            // sm={renderThumbnails ? 10 : 12}
-                            // md={renderThumbnails ? 9 : 12}
-                            // lg={renderThumbnails ? 9 : 12}
-                            // xs={renderThumbnails ? 10 : 12}
-                            // sm={renderThumbnails ? 10 : 12}
-                            // className={renderThumbnails ? classes.citationContainer : null}
-                        >
+                        <Grid item>
                             <Grid container spacing={0}>
                                 {!hideTitle ? (
                                     <Grid item xs style={{ minWidth: 1 }}>
