@@ -230,7 +230,11 @@ export class PublicationCitation extends PureComponent {
 
     renderPublicationImage = (publication, security) => {
         return (
-            <div className={this.props.classes.publicationImage}>
+            <div
+                className={this.props.classes.publicationImage}
+                id={`publication-image-parent-${publication.rek_pid}`}
+                data-testid={`publication-image-parent-${publication.rek_pid}`}
+            >
                 <ImageGalleryItem
                     key={publication.rek_pid}
                     item={publication}
@@ -399,7 +403,11 @@ export class PublicationCitation extends PureComponent {
         return (
             <div className="publicationCitation">
                 {renderThumbnails && this.renderPublicationImage(publication, security)}
-                <div className={renderThumbnails ? classes.citationContainer : null}>
+                <div
+                    id={`publication-citation-parent-${publication.rek_pid}`}
+                    data-testid={`publication-citation-parent-${publication.rek_pid}`}
+                    className={renderThumbnails ? classes.citationContainer : null}
+                >
                     <Grid container spacing={0}>
                         <Grid item>
                             <Grid container spacing={0}>
