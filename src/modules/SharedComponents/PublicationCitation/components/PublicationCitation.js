@@ -88,11 +88,21 @@ export const styles = theme => ({
         display: 'inline-block',
         marginRight: 10,
         marginBottom: 10,
-        [theme.breakpoints.down('md')]: {
+        overflow: 'hidden',
+        maxHeight: 150,
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            minWidth: 280,
+        },
+        [theme.breakpoints.up('sm')]: {
             width: 100,
+            height: 100,
+            minWidth: 0,
         },
         [theme.breakpoints.up('md')]: {
             width: 150,
+            height: 150,
+            minWidth: 0,
         },
         // width: 150,
         // height: 150,
@@ -101,7 +111,10 @@ export const styles = theme => ({
     citationContainer: {
         display: 'inline-block',
         float: 'left',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
+        [theme.breakpoints.up('sm')]: {
             width: 'calc(100% - 110px)',
         },
         [theme.breakpoints.up('md')]: {
@@ -413,7 +426,7 @@ export class PublicationCitation extends PureComponent {
         return (
             <div className="publicationCitation">
                 {renderThumbnails && this.renderPublicationImage(publication, security)}
-                <div className={classes.citationContainer}>
+                <div className={renderThumbnails ? classes.citationContainer : null}>
                     <Grid container spacing={0}>
                         {/* <Box
                             component={Grid}
