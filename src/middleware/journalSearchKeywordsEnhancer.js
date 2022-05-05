@@ -28,8 +28,8 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
                 const titles = [
                     journal.jnl_title,
                     (journal.fez_journal_doaj && journal.fez_journal_doaj.jnl_doaj_title) || '',
-                    (journal.fez_journal_era &&
-                        Array.isArray(journal.fez_journal_era) &&
+                    (Array.isArray(journal.fez_journal_era) &&
+                        journal.fez_journal_era.length &&
                         journal.fez_journal_era[0].jnl_era_title) ||
                         '',
                 ];
@@ -40,10 +40,12 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
                 );
 
                 return (
-                    matchedKeywords && [...matches, ...matchedKeywords.filter(matched => matched && matched.length > 2)]
+                    matchedKeywords &&
+                    Array.from(
+                        new Set([...matches, ...matchedKeywords.filter(matched => matched && matched.length > 2)]),
+                    )
                 );
             }, []);
-
         return (titleMatch && [...titleMatches, ...titleMatch]) || [];
     }, []);
 
