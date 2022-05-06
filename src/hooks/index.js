@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState, useCallback } from 'react';
-import { useRecordContext, useAccountContext } from 'context';
-import { publicationTypes, contentIndicators } from 'config';
+import { useCallback, useState } from 'react';
+import { useAccountContext, useRecordContext } from 'context';
+import { contentIndicators, publicationTypes } from 'config';
 
 export const usePublicationSubtype = (displayType = null, isAdmin = false) => {
     const { record } = useRecordContext();
@@ -49,3 +49,4 @@ export { userIsAdmin } from './userIsAdmin';
 export { useIsUserSuperAdmin } from './useIsUserSuperAdmin';
 export { useRecordsSelector } from './useRecordsSelector';
 export { useWidth } from './useWidth';
+export { withIsMobileView, useIsMobileView } from './useIsMobileView';

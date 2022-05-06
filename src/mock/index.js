@@ -425,7 +425,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         return [200, { ...journalsSearch.keywords.none }];
     })
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API({}).apiUrl)))
-    .reply(200, { ...journalsSearch.favourites })
+    .reply(config => {
+        if (config.params.export_to && config.params.export_to === 'excel') {
+            return [
+                200,
+                'Exported',
+                { 'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+            ];
+        }
+        return [200, { ...journalsSearch.favourites }];
+    })
     .onPost(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
     .reply(200)
     .onDelete(new RegExp(escapeRegExp(routes.JOURNAL_FAVOURITES_API().apiUrl)))
