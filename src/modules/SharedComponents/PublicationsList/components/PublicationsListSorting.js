@@ -198,13 +198,13 @@ const PublicationsListSorting = props => {
                         onChange={displayRecordsAsChanged}
                         data-testid="publication-list-display-records-as"
                     >
-                        {props.sortingData.displayRecordsAs?.map((item, index) => {
+                        {props.sortingData.displayRecordsAs?.map(item => {
                             return (
                                 <MenuItem
-                                    key={index}
+                                    key={item.index}
                                     value={item.value}
-                                    data-testid={`publication-display-records-as-option-${index}`}
-                                    id={`publication-display-records-as-option-${index}`}
+                                    data-testid={`publication-display-records-as-option-${item.index}`}
+                                    id={`publication-display-records-as-option-${item.index}`}
                                 >
                                     {item.label}
                                 </MenuItem>

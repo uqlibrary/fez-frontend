@@ -84,4 +84,4 @@ ImageGallery.defaultProps = {
     itemsPerRow: config.thumbnailImage.defaultItemsPerRow,
 };
 
-export default ImageGallery;
+export default React.memo(ImageGallery);

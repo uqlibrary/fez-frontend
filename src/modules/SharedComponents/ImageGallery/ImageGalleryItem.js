@@ -190,4 +190,4 @@ ImageGalleryItem.defaultProps = {
     itemHeight: config.thumbnailImage.defaultHeight,
 };
 
-export default ImageGalleryItem;
+export default React.memo(ImageGalleryItem);
