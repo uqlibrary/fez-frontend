@@ -2,7 +2,6 @@ import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
 import { collectionRecord, communityRecord, record } from 'mock/data';
-import { record } from 'mock/data';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from '../config/general';
 
 /**
