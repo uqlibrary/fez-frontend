@@ -418,7 +418,7 @@ export class PublicationCitation extends PureComponent {
                     className={renderThumbnails ? classes.citationContainer : null}
                 >
                     <Grid container spacing={0}>
-                        <Grid item>
+                        <Grid item xs>
                             <Grid container spacing={0}>
                                 {!hideTitle ? (
                                     <Grid item xs style={{ minWidth: 1 }}>
