@@ -21892,11 +21892,6 @@ exports[`Additional Information Component  should render component with a collec
   >
     <div
       key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21944,11 +21939,6 @@ exports[`Additional Information Component  should render component with a collec
     </div>
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -22028,11 +22018,6 @@ exports[`Additional Information Component  should render component with a commun
   >
     <div
       key="1"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40531,7 +40516,7 @@ exports[`Additional Information Component  should render component with data col
                 id="rek-license"
                 openInNewIcon={true}
               >
-                View licence details
+                View license details
               </ExternalLink>
             </span>
           </WithStyles(ForwardRef(Typography))>
