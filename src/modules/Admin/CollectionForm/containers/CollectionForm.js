@@ -30,7 +30,7 @@ const onSubmit = (values, dispatch, props) => {
         };
     }
     // eslint-disable-next-line camelcase
-    return dispatch(createCollection(data, { ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
+    return dispatch(createCollection({ ...data, ...parentPID }, currentAuthor?.aut_id || null)).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
