@@ -16,11 +16,12 @@ const onSubmit = (values, dispatch, props) => {
 
     delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
 
+    const currentAuthor = props.author || null;
     const queryStringObject = queryString.parse(
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
-    const currentAuthor = props.author || null;
+
     let parentPID = {};
 
     if (!!queryStringObject.pid) {
