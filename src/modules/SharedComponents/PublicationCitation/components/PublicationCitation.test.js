@@ -336,4 +336,9 @@ describe('PublicationCitation ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render component with default list hiding the citation text', () => {
+        const wrapper = setup({ hideCitationText: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

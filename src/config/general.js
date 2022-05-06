@@ -1266,6 +1266,7 @@ export const LANGUAGE = [
 ];
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+export const DELETE_SELECTED_RECORD_LABEL = 'Delete selected record';
 
 export const RECORD_ACTION_URLS = [
     {
@@ -1299,7 +1300,7 @@ export const RECORD_ACTION_URLS = [
         isDoi: true,
     },
     {
-        label: 'Delete selected record',
+        label: DELETE_SELECTED_RECORD_LABEL,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
         inApp: true,
         showInDeleted: false,
@@ -1363,8 +1364,14 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
 
 export const DATA_STREAM_SECURITY_POLICIES = TOP_LEVEL_SECURITY_POLICIES;
 
+export const RECORD_TYPE_COMMUNITY_ID = 11;
+export const RECORD_TYPE_COLLECTION_ID = 9;
 export const RECORD_TYPE_COMMUNITY = 'community';
 export const RECORD_TYPE_COLLECTION = 'collection';
+export const RECORD_TYPE_LOOKUP = {
+    [RECORD_TYPE_COMMUNITY_ID]: RECORD_TYPE_COMMUNITY,
+    [RECORD_TYPE_COLLECTION_ID]: RECORD_TYPE_COLLECTION,
+};
 export const RECORD_TYPE_RECORD = 'record';
 export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_DATA_COLLECTION,
@@ -1373,6 +1380,8 @@ export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
 ];
+
+export const PUBLICATION_EXCLUDE_CITATION_TEXT_LIST = [RECORD_TYPE_COMMUNITY, RECORD_TYPE_COLLECTION];
 
 export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
     'UQ:244548',

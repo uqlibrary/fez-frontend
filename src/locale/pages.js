@@ -1045,6 +1045,9 @@ export default {
                 security: {
                     title: 'Security',
                 },
+                reason: {
+                    title: 'Reason for Edit',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',
