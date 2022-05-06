@@ -1,6 +1,8 @@
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
+// import { screen } from 'test-utils';
+// import * as PushHistory from './components/functions';
 
 function setup(testProps) {
     const props = {
@@ -132,5 +134,13 @@ describe('Collection form - redirections', () => {
             .instance()
             .reloadForm();
         expect(window.location.reload).toBeCalled();
+    });
+});
+
+describe('Collection form - autofill', () => {
+    it('should render without dropdown if params exist', () => {
+        window.history.pushState({}, 'Test Title', '?pid=10&name=test');
+        const wrapper = setup({});
+        expect(wrapper.find('#community-selector').length).toEqual(0);
     });
 });
