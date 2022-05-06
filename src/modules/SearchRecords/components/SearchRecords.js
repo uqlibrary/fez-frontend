@@ -130,6 +130,8 @@ const SearchRecords = ({
                         publicationsList={publicationsList}
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
+                        security={{ isAdmin, isAuthor }}
                     />
                 );
         }

@@ -190,6 +190,7 @@
         "react-jss": "^8.6.1",
         "react-jw-player": "^1.19.1",
         "react-keyboard-event-handler": "^1.5.4",
+        "react-lazy-load-image-component": "^1.5.4",
         "react-redux": "^7.2.4",
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",

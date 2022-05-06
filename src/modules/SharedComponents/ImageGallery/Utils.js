@@ -35,6 +35,7 @@ export const getWhiteListed = (publication, config) => {
                 (!!!type.subType || type.subType === publication.rek_subtype)
             );
         }) ?? /* istanbul ignore next */ false;
+
     return isAllowed;
 };
 

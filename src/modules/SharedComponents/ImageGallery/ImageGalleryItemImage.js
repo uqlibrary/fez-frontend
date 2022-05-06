@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
 import { makeStyles } from '@material-ui/core/styles';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles(() => ({
     imageGalleryItemImage: {
@@ -69,7 +70,7 @@ const ImageGalleryItemImage = ({
             : {};
 
     return (
-        <img
+        <LazyLoadImage
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={imgSrc || filename}
