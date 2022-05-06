@@ -34824,7 +34824,7 @@ exports[`Additional Information Component  should render component with data col
                 id="rek-license"
                 openInNewIcon={true}
               >
-                View licence details
+                View license details
               </ExternalLink>
             </span>
           </WithStyles(ForwardRef(Typography))>

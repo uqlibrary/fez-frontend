@@ -12,10 +12,14 @@ export default {
         },
         sections: {
             publicationDetails: 'Type & Collection',
+            publicationDetailsCustom: {
+                Community: 'Type',
+                Collection: 'Type & Community',
+            },
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
-                licenseLinkText: 'View licence details',
+                licenseLinkText: 'View license details',
             },
             relatedPublications: {
                 title: 'Related works and datasets in eSpace',
@@ -234,6 +238,9 @@ export default {
                     rek_display_type: 'Type of work',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections',
+                    fez_record_search_key_ismemberof_custom: {
+                        Collection: plural => `${plural ? 'Communities' : 'Community'}`,
+                    },
                 },
             },
             Community: {
