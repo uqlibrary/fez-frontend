@@ -67,7 +67,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             class="MuiGrid-root-1 MuiGrid-container-2"
           >
             <div
-              class="MuiGrid-root-1 MuiGrid-item-3"
+              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-true-35"
             >
               <div
                 class="MuiGrid-root-1 MuiGrid-container-2"

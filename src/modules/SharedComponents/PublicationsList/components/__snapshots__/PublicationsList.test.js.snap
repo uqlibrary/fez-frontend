@@ -18,7 +18,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
           class="MuiGrid-root-188 MuiGrid-container-189"
         >
           <div
-            class="MuiGrid-root-188 MuiGrid-item-190"
+            class="MuiGrid-root-188 MuiGrid-item-190 MuiGrid-grid-xs-true-222"
           >
             <div
               class="MuiGrid-root-188 MuiGrid-container-189"
@@ -117,7 +117,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -389,7 +389,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -696,7 +696,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -1009,7 +1009,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -1310,7 +1310,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -1616,7 +1616,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -1929,7 +1929,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -2216,7 +2216,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -2480,7 +2480,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -2793,7 +2793,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -3225,7 +3225,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -3504,7 +3504,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -3757,7 +3757,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -4049,7 +4049,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -4293,7 +4293,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -4557,7 +4557,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -4886,7 +4886,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -5220,7 +5220,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -5492,7 +5492,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
@@ -5691,7 +5691,7 @@ exports[`PublicationsList renders component with items 1`] = `
           class="MuiGrid-root-18 MuiGrid-container-19"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20"
+            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
           >
             <div
               class="MuiGrid-root-18 MuiGrid-container-19"
