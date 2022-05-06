@@ -93,7 +93,7 @@ export const styles = theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             width: '100px !important',
-            height: 100,
+            height: 120,
             minWidth: 0,
         },
         [theme.breakpoints.up('md')]: {
@@ -115,7 +115,7 @@ export const styles = theme => ({
             width: '100%',
         },
         [theme.breakpoints.up('sm')]: {
-            width: 'calc(100% - 110px)',
+            width: 'calc(100% - 130px)',
         },
         [theme.breakpoints.up('md')]: {
             width: 'calc(100% - 135px)',
