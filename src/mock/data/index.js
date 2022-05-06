@@ -4,6 +4,7 @@ export {
     collectionRecordWithExtraData,
     collectionSearchList,
     collectionsByCommunity,
+    collectionSearchResultsImages,
     communityRecord,
     communityRecordWithExtraData,
     communitySearchList,

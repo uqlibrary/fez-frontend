@@ -110,6 +110,17 @@ describe('PublicationsListSorting component', () => {
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
+    it('renders with non-empty paging data, displayRecordsAs called', () => {
+        const testFn = jest.fn();
+        const testValue = 'test';
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn });
+        wrapper
+            .find('#displayRecordsAs')
+            .props()
+            .onChange({ target: { value: testValue } });
+        expect(testFn).toBeCalled();
+    });
+
     it('renders will set state on receiving new props', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         const wrapper = setup({
@@ -122,6 +133,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'Publication date',
             sortDirection: 'test',
             pageSize: 5,
+            displayRecordsAs: 'standard',
             pagingData: {},
         });
 
@@ -169,6 +181,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'score',
             sortDirection: 'Asc',
             pageSize: 50,
+            displayRecordsAs: 'image-gallery',
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

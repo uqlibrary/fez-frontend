@@ -1742,9 +1742,9 @@ export default {
                 { value: 'title', label: 'Title' },
                 { value: 'created_date', label: 'Created date' },
                 { value: 'updated_date', label: 'Updated date' },
-                { value: 'altmetric_score', label: 'Altmetric score' },
-                { value: 'scopus_citation_count', label: 'Scopus citation count' },
-                { value: 'thomson_citation_count', label: 'Web of Science citation count' },
+                { value: 'altmetric_score', label: 'Altmetric score', exclude: ['image-gallery'] },
+                { value: 'scopus_citation_count', label: 'Scopus citation count', exclude: ['image-gallery'] },
+                { value: 'thomson_citation_count', label: 'Web of Science citation count', exclude: ['image-gallery'] },
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [10, 20, 50, 100],
@@ -1758,6 +1758,17 @@ export default {
                     </span>
                 ),
                 confirmButtonLabel: 'Close',
+            },
+            displayRecordsAsLabel: 'Display results',
+            displayRecordsAs: [
+                { index: 0, value: 'standard', label: 'Standard' },
+                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
+            ],
+        },
+        imageGallery: {
+            tooltip: {
+                restricted: "This record's thumbnail is locked",
+                advisory: 'This record has an advisor statement - caution is advised when viewing this record',
             },
         },
         newsFeed: {
