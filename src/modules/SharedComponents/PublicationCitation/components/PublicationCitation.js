@@ -85,19 +85,25 @@ export const styles = theme => ({
         marginRight: 10,
         marginBottom: 10,
         overflow: 'hidden',
-        maxHeight: 150,
+
         [theme.breakpoints.down('sm')]: {
             width: '100%',
             minWidth: 280,
+            maxHeight: 200,
         },
         [theme.breakpoints.up('sm')]: {
-            width: 100,
+            width: '100px !important',
             height: 100,
             minWidth: 0,
         },
         [theme.breakpoints.up('md')]: {
-            width: 150,
-            height: 150,
+            width: '125px !important',
+            height: 125,
+            minWidth: 0,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '130px !important',
+            height: 130,
             minWidth: 0,
         },
         float: 'left',
@@ -112,7 +118,10 @@ export const styles = theme => ({
             width: 'calc(100% - 110px)',
         },
         [theme.breakpoints.up('md')]: {
-            width: 'calc(100% - 160px)',
+            width: 'calc(100% - 135px)',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 'calc(100% - 140px)',
         },
         minWidth: 280,
     },
