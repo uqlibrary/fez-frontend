@@ -85,6 +85,7 @@ export const styles = theme => ({
         marginRight: 10,
         marginBottom: 10,
         overflow: 'hidden',
+        aspectRatio: 1,
 
         [theme.breakpoints.down('sm')]: {
             width: '100%',
