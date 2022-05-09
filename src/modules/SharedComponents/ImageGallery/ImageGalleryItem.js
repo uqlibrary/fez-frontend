@@ -139,7 +139,7 @@ const ImageGalleryItem = ({
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
-                className={internalClasses.imageGalleryItemImage}
+                className={`${internalClasses.imageGalleryItemImage} ${classes?.imageListItemImage ?? ''}`}
                 setRestricted={setRestricted}
                 setAdvisory={setAdvisory}
             />
@@ -220,6 +220,7 @@ ImageGalleryItem.propTypes = {
             root: PropTypes.string,
             item: PropTypes.string,
         }),
+        imageListItemImage: PropTypes.string,
         imageListItemBar: PropTypes.object,
     }),
     lazyLoading: PropTypes.bool,
