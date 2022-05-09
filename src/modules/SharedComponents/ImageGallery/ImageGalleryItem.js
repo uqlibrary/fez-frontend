@@ -53,6 +53,7 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
     },
     imageGalleryItemImage: {
+        aspectRatio: 1,
         minWidth: '100px',
         minHeight: '100px',
         width: '100%',

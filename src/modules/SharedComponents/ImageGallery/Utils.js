@@ -49,7 +49,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
               const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
               const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor });
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
-              const isWhiteListed = getWhiteListed(publication, config) || isAdmin;
+              const isWhiteListed = getWhiteListed(publication, config);
 
               return {
                   fileName,
