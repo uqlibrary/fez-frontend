@@ -52,4 +52,31 @@ describe('Image Gallery Item', () => {
         });
         expect(testHistory).toHaveBeenCalledWith(pid);
     });
+
+    it("should prevent a lock or advisory item from calling the item's clickable action", () => {
+        const testHistory = jest.fn();
+        const item = collectionSearchResultsImages.data[0];
+        item.rek_display_type_lookup = 'NotValidType';
+        item.fez_record_search_key_advisory_statement = {};
+        item.fez_record_search_key_advisory_statement.rek_advisory_statement = 'Test advisory';
+
+        const pid = item.rek_pid;
+        const { getByTestId } = setup({
+            item: collectionSearchResultsImages.data[0],
+            url: pid,
+            history: { push: testHistory },
+        });
+        const iconRestricted = getByTestId(`image-gallery-item-${pid}-restricted`);
+        const iconAdvisory = getByTestId(`image-gallery-item-${pid}-advisory`);
+        expect(iconRestricted).toBeInTheDocument();
+        expect(iconAdvisory).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(iconRestricted);
+        });
+        expect(testHistory).not.toHaveBeenCalled();
+        act(() => {
+            fireEvent.click(iconAdvisory);
+        });
+        expect(testHistory).not.toHaveBeenCalled();
+    });
 });
