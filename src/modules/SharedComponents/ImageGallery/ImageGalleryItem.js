@@ -78,8 +78,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function viewRecord(history, url) {
-    if (this.target?.tagName?.toLowerCase() === 'svg') return;
-
     history.push(url);
 }
 
