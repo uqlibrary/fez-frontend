@@ -4034,6 +4034,10 @@ export default {
                                 Sort by whether charges, such as Article Processing Charges (APCs), are paid to a
                                 publisher to make a publication immediately available and openly accessible.
                             </p>
+                            <h3>Evidence of Peer Review</h3>
+                            <p>
+                                Limit to peer reviewed or refereed journals. This data is provided via the Ulrichsweb.
+                            </p>
                         </React.Fragment>
                     ),
                     testId: 'journal-search-facets',

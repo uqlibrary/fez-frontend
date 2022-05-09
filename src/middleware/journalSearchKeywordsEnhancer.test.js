@@ -104,6 +104,64 @@ describe('Journal Search Keyword enhancer', () => {
         });
         expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
     });
+    it('returns title fuzzy match values with match on doaj title', () => {
+        const mockSearchData = {
+            titleFuzzyMatch: [
+                {
+                    jnl_title: 'no match',
+                    fez_journal_doaj: {
+                        jnl_doaj_title: 'virus to',
+                    },
+                },
+            ],
+        };
+        const expectedObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [],
+                subjectMatch: [],
+                titleMatch: [{ keyword: 'virus' }],
+            },
+            query: 'virus to & vir',
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: 'virus to & vir',
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+    });
+    it('returns title fuzzy match values with match on era title', () => {
+        const mockSearchData = {
+            titleFuzzyMatch: [
+                {
+                    jnl_title: 'no match',
+                    fez_journal_era: [
+                        {
+                            jnl_era_title: 'virus to',
+                        },
+                    ],
+                },
+            ],
+        };
+        const expectedObject = {
+            payload: {
+                exactMatch: [],
+                keywordMatch: [],
+                subjectMatch: [],
+                titleMatch: [{ keyword: 'virus' }],
+            },
+            query: 'virus to & vir',
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+        };
+        journalSearchKeywordsEnhancer()(next)({
+            type: 'JOURNAL_SEARCH_KEYWORDS_LOADED',
+            payload: mockSearchData,
+            query: 'virus to & vir',
+        });
+        expect(next).toBeCalledWith(expect.objectContaining(expectedObject));
+    });
     it('has no KeywordMatch values if no journal_issn data available', () => {
         const mockSearchData = {
             ...keywordsSearch.data,

@@ -107,9 +107,14 @@ export const searchJournals = searchQuery => async dispatch => {
  *
  * @param searchQuery
  * @param favourites
+ * @param allJournals
  * @return {*}
  */
-export const exportJournals = (searchQuery, favourites = false) => async dispatch => {
+export const exportJournals = (searchQuery, favourites = false, allJournals = false) => async dispatch => {
+    // to prevent all journals being passed down to API as a keyword search
+    if (allJournals) {
+        delete searchQuery.keywords;
+    }
     const requestParams = favourites ? JOURNAL_FAVOURITES_API({ query: searchQuery }) : JOURNAL_SEARCH_API(searchQuery);
     const exportConfig = {
         format: requestParams.options.params.export_to,
