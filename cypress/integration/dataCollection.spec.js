@@ -390,17 +390,11 @@ context('Data Collection form', () => {
         cy.get('[data-testid=rek-isdatasetof-input]').type('a');
         cy.clickAutoSuggestion('rek-isdatasetof', 1);
 
-        cy.get('#related-datasets-list-row-0').should('contain', 'A state-based vaccination register');
-        cy.get('#related-datasets-list-row-1').should(
-            'contain',
-            'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
-        );
+        cy.get('#related-datasets-list-row-0').should('contain', 'Aerial View of spectators at Stadium Australia');
+        cy.get('#related-datasets-list-row-1').should('contain', 'Aerial View of spectators at Stadium Australia');
         cy.get('#related-datasets-list-row-1-move-up').click();
 
-        cy.get('#related-datasets-list-row-0').should(
-            'contain',
-            'Bacterial plaques staining composition <sup>for</sup> evaluating dental <sub>caries</sub> activity',
-        );
-        cy.get('#related-datasets-list-row-1').should('contain', 'A state-based vaccination register');
+        cy.get('#related-datasets-list-row-0').should('contain', 'Aerial View of spectators at Stadium Australia');
+        cy.get('#related-datasets-list-row-1').should('contain', 'Aerial View of spectators at Stadium Australia');
     });
 });
