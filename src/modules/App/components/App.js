@@ -302,6 +302,10 @@ export class AppClass extends PureComponent {
         });
         const titleStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 284 } : { paddingLeft: 0 };
         const isIndex = this.props.history.location.pathname === '/';
+        const isAdminPage = () => {
+            return window?.location?.pathname?.startsWith('/admin') || false;
+        };
+
         return (
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig} />
@@ -415,7 +419,7 @@ export class AppClass extends PureComponent {
                         <ScrollTop show containerId="content-container" />
                     </Hidden>
                     <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
-                        <alert-list system="espace" />
+                        {!isAdminPage() && <alert-list system="espace" />}
                     </div>
                     <ConfirmDialogBox
                         hideCancelButton
