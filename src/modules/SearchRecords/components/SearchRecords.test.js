@@ -963,10 +963,10 @@ describe('SearchRecords page', () => {
         act(() => {
             fireEvent.mouseDown(getByTestId('displayRecordsAs'));
         });
-        expect(getAllByRole('option').length).toBe(3);
+        expect(getAllByRole('option').length).toBe(2);
         act(() => {
-            fireEvent.click(getAllByRole('option')[2]);
-            const newValue = getAllByRole('option')[2]
+            fireEvent.click(getAllByRole('option')[1]);
+            const newValue = getAllByRole('option')[1]
                 .textContent.toLowerCase()
                 .replace(' ', '-');
             const newParams = getParams(newValue);

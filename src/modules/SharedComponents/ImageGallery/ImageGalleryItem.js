@@ -53,6 +53,7 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
     },
     imageGalleryItemImage: {
+        aspectRatio: 1,
         minWidth: '100px',
         minHeight: '100px',
         width: '100%',
@@ -71,11 +72,16 @@ const useStyles = makeStyles(theme => ({
         filter: 'drop-shadow(0px 0px 5px rgba(0,0,0,0.5))',
         cursor: 'default',
     },
+    tooltip: {
+        cursor: 'default',
+    },
 }));
 
-export const viewRecord = (history, url) => {
+function viewRecord(history, url) {
+    if (this.target?.tagName?.toLowerCase() === 'svg') return;
+
     history.push(url);
-};
+}
 
 const ImageGalleryItem = ({
     item,
@@ -94,7 +100,22 @@ const ImageGalleryItem = ({
     const [advisory, setAdvisory] = React.useState(false);
     const historyObject = history ?? useHistory();
 
-    const clickLink = !!url && url.length > 0 ? { onClick: () => viewRecord(historyObject, url), role: 'button' } : {};
+    const clickLink =
+        !!url && url.length > 0
+            ? {
+                  onClick: e => viewRecord.call(e, historyObject, url),
+                  role: 'button',
+              }
+            : {};
+    const clickIcon =
+        !!url && url.length > 0
+            ? {
+                  onClick: e => {
+                      e.stopPropagation?.();
+                      e.nativeEvent?.stopImmediatePropagation?.();
+                  },
+              }
+            : {};
 
     return (
         <ImageListItem
@@ -118,7 +139,7 @@ const ImageGalleryItem = ({
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
-                className={internalClasses.imageGalleryItemImage}
+                className={`${internalClasses.imageGalleryItemImage} ${classes?.imageListItemImage ?? ''}`}
                 setRestricted={setRestricted}
                 setAdvisory={setAdvisory}
             />
@@ -138,8 +159,20 @@ const ImageGalleryItem = ({
                     title={item.title}
                     position="top"
                     actionIcon={
-                        <Tooltip title={txt.components.imageGallery.tooltip.restricted}>
-                            <LockOutlinedIcon className={internalClasses.icon} size="small" />
+                        <Tooltip
+                            title={txt.components.imageGallery.tooltip.restricted}
+                            enterTouchDelay={0}
+                            leaveTouchDelay={2500}
+                            id={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
+                            data-testid={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
+                        >
+                            <LockOutlinedIcon
+                                className={internalClasses.icon}
+                                size="small"
+                                id={`image-gallery-item-${item.rek_pid}-restricted`}
+                                data-testid={`image-gallery-item-${item.rek_pid}-restricted`}
+                                {...clickIcon}
+                            />
                         </Tooltip>
                     }
                     actionPosition="left"
@@ -151,8 +184,21 @@ const ImageGalleryItem = ({
                     title={item.title}
                     position="top"
                     actionIcon={
-                        <Tooltip title={txt.components.imageGallery.tooltip.advisory}>
-                            <ErrorOutlineOutlinedIcon className={internalClasses.icon} size="small" />
+                        <Tooltip
+                            className={internalClasses.tooltip}
+                            title={txt.components.imageGallery.tooltip.advisory}
+                            enterTouchDelay={0}
+                            leaveTouchDelay={2500}
+                            id={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
+                            data-testid={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
+                        >
+                            <ErrorOutlineOutlinedIcon
+                                className={internalClasses.icon}
+                                size="small"
+                                id={`image-gallery-item-${item.rek_pid}-advisory`}
+                                data-testid={`image-gallery-item-${item.rek_pid}-advisory`}
+                                {...clickIcon}
+                            />
                         </Tooltip>
                     }
                     actionPosition="right"
@@ -174,6 +220,7 @@ ImageGalleryItem.propTypes = {
             root: PropTypes.string,
             item: PropTypes.string,
         }),
+        imageListItemImage: PropTypes.string,
         imageListItemBar: PropTypes.object,
     }),
     lazyLoading: PropTypes.bool,
@@ -190,4 +237,4 @@ ImageGalleryItem.defaultProps = {
     itemHeight: config.thumbnailImage.defaultHeight,
 };
 
-export default ImageGalleryItem;
+export default React.memo(ImageGalleryItem);

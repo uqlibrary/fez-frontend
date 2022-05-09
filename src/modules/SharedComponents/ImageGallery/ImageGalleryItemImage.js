@@ -98,4 +98,4 @@ ImageGalleryItemImage.defaultProps = {
     className: '',
 };
 
-export default ImageGalleryItemImage;
+export default React.memo(ImageGalleryItemImage);
