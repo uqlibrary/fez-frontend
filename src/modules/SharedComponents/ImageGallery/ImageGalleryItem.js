@@ -74,9 +74,11 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const viewRecord = (history, url) => {
+function viewRecord(history, url) {
+    if (this.target?.tagName?.toLowerCase() === 'svg') return;
+
     history.push(url);
-};
+}
 
 const ImageGalleryItem = ({
     item,
@@ -95,7 +97,13 @@ const ImageGalleryItem = ({
     const [advisory, setAdvisory] = React.useState(false);
     const historyObject = history ?? useHistory();
 
-    const clickLink = !!url && url.length > 0 ? { onClick: () => viewRecord(historyObject, url), role: 'button' } : {};
+    const clickLink =
+        !!url && url.length > 0
+            ? {
+                  onClick: e => viewRecord.call(e, historyObject, url),
+                  role: 'button',
+              }
+            : {};
 
     return (
         <ImageListItem
@@ -139,8 +147,18 @@ const ImageGalleryItem = ({
                     title={item.title}
                     position="top"
                     actionIcon={
-                        <Tooltip title={txt.components.imageGallery.tooltip.restricted}>
-                            <LockOutlinedIcon className={internalClasses.icon} size="small" />
+                        <Tooltip
+                            title={txt.components.imageGallery.tooltip.restricted}
+                            enterTouchDelay={0}
+                            id={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
+                            data-testid={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
+                        >
+                            <LockOutlinedIcon
+                                className={internalClasses.icon}
+                                size="small"
+                                id={`image-gallery-item-${item.rek_pid}-restricted`}
+                                data-testid={`image-gallery-item-${item.rek_pid}-restricted`}
+                            />
                         </Tooltip>
                     }
                     actionPosition="left"
@@ -152,8 +170,18 @@ const ImageGalleryItem = ({
                     title={item.title}
                     position="top"
                     actionIcon={
-                        <Tooltip title={txt.components.imageGallery.tooltip.advisory}>
-                            <ErrorOutlineOutlinedIcon className={internalClasses.icon} size="small" />
+                        <Tooltip
+                            title={txt.components.imageGallery.tooltip.advisory}
+                            enterTouchDelay={0}
+                            id={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
+                            data-testid={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
+                        >
+                            <ErrorOutlineOutlinedIcon
+                                className={internalClasses.icon}
+                                size="small"
+                                id={`image-gallery-item-${item.rek_pid}-advisory`}
+                                data-testid={`image-gallery-item-${item.rek_pid}-advisory`}
+                            />
                         </Tooltip>
                     }
                     actionPosition="right"
