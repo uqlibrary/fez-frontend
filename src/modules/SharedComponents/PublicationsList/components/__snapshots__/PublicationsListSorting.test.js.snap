@@ -216,28 +216,20 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -470,22 +462,14 @@ exports[`PublicationsListSorting component renders will set state on receiving n
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -710,28 +694,20 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -965,28 +941,20 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -1205,28 +1173,20 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -1461,28 +1421,20 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="auto"
+        value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
@@ -1723,22 +1675,14 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
           data-testid="publication-display-records-as-option-0"
           id="publication-display-records-as-option-0"
           key="0"
-          value="auto"
-        >
-          (auto)
-        </WithStyles(ForwardRef(MenuItem))>
-        <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-1"
-          id="publication-display-records-as-option-1"
-          key="1"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-2"
-          id="publication-display-records-as-option-2"
-          key="2"
+          data-testid="publication-display-records-as-option-1"
+          id="publication-display-records-as-option-1"
+          key="1"
           value="image-gallery"
         >
           Image Gallery
