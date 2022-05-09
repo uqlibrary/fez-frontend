@@ -72,6 +72,9 @@ const useStyles = makeStyles(theme => ({
         filter: 'drop-shadow(0px 0px 5px rgba(0,0,0,0.5))',
         cursor: 'default',
     },
+    tooltip: {
+        cursor: 'default',
+    },
 }));
 
 function viewRecord(history, url) {
@@ -102,6 +105,15 @@ const ImageGalleryItem = ({
             ? {
                   onClick: e => viewRecord.call(e, historyObject, url),
                   role: 'button',
+              }
+            : {};
+    const clickIcon =
+        !!url && url.length > 0
+            ? {
+                  onClick: e => {
+                      e.stopPropagation?.();
+                      e.nativeEvent?.stopImmediatePropagation?.();
+                  },
               }
             : {};
 
@@ -150,6 +162,7 @@ const ImageGalleryItem = ({
                         <Tooltip
                             title={txt.components.imageGallery.tooltip.restricted}
                             enterTouchDelay={0}
+                            leaveTouchDelay={2500}
                             id={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
                             data-testid={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
                         >
@@ -158,6 +171,7 @@ const ImageGalleryItem = ({
                                 size="small"
                                 id={`image-gallery-item-${item.rek_pid}-restricted`}
                                 data-testid={`image-gallery-item-${item.rek_pid}-restricted`}
+                                {...clickIcon}
                             />
                         </Tooltip>
                     }
@@ -171,8 +185,10 @@ const ImageGalleryItem = ({
                     position="top"
                     actionIcon={
                         <Tooltip
+                            className={internalClasses.tooltip}
                             title={txt.components.imageGallery.tooltip.advisory}
                             enterTouchDelay={0}
+                            leaveTouchDelay={2500}
                             id={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
                             data-testid={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
                         >
@@ -181,6 +197,7 @@ const ImageGalleryItem = ({
                                 size="small"
                                 id={`image-gallery-item-${item.rek_pid}-advisory`}
                                 data-testid={`image-gallery-item-${item.rek_pid}-advisory`}
+                                {...clickIcon}
                             />
                         </Tooltip>
                     }
