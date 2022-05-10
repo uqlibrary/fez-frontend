@@ -142,7 +142,7 @@ export const useJournalSearch = (path = pathConfig.journals.search) => {
     };
 };
 
-export const useJournalSearchControls = (onSearch, journalSearchQueryParams, favourites = false) => {
+export const useJournalSearchControls = (onSearch, journalSearchQueryParams, favourites, allJournals = false) => {
     const dispatch = useDispatch();
     const updateSemaphore = React.useRef(false);
 
@@ -154,6 +154,7 @@ export const useJournalSearchControls = (onSearch, journalSearchQueryParams, fav
                     ...exportFormat,
                 },
                 favourites,
+                allJournals,
             ),
         );
     };
