@@ -544,6 +544,7 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
       "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-3",
       "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-4",
       "pageButton": "PublicationsListPaging-pageButton-1",
+      "paginationGridContainer": "PublicationsListPaging-paginationGridContainer-7",
     }
   }
   disabled={false}
