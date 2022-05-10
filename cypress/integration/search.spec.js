@@ -85,4 +85,44 @@ context('Search', () => {
             .should('contain', 'Searching for works');
         cy.get('[data-testid="search-records-results"]').contains('Displaying works 1 to 20 of 35 total works.');
     });
+
+    context('Search results in Image Gallery', () => {
+        it.only('has Display As drop down with expected values', () => {
+            cy.get('[data-testid=simple-search-input]')
+                .should(
+                    'have.attr',
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Test{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Standard');
+            cy.contains('[role=listbox] li', 'Image Gallery').click();
+            cy.get('#displayRecordsAs').contains('Image Gallery');
+            cy.get('img[data-testid^=imageGalleryItemImage-]').should('have.length', 8);
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .first()
+                .find('svg[data-testid$=-restricted]')
+                .should('have.attr', 'title', "This record's thumbnail is locked");
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .first()
+                .find('svg[data-testid$=-advisory]')
+                .should(
+                    'have.attr',
+                    'title',
+                    'This record has an advisor statement - caution is advised when viewing this record',
+                );
+        });
+    });
 });
