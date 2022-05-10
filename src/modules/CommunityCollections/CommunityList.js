@@ -171,13 +171,11 @@ export const CommunityList = () => {
                         <Grid item xs={12} style={{ marginBottom: 10 }}>
                             <CommunityCollectionsSorting
                                 data-testid="community-collections-sorting-top"
-                                // canUseExport
                                 exportData={txt.export}
                                 pagingData={PagindData}
                                 sortingData={txt.sorting}
                                 sortBy={sortBy}
                                 sortDirection={sortDirection}
-                                // onExportPublications={handleExport}
                                 onSortByChanged={sortByChanged}
                                 onPageSizeChanged={pageSizeChanged}
                                 pageSize={perPage}
