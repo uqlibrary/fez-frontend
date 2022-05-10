@@ -83,7 +83,7 @@ export const styles = theme => ({
     publicationImage: {
         display: 'inline-block',
         marginRight: 10,
-        marginBottom: 10,
+        marginBottom: 15,
         overflow: 'hidden',
         aspectRatio: 1,
 
@@ -94,7 +94,7 @@ export const styles = theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             width: '100px !important',
-            height: 120,
+            height: 100,
             minWidth: 0,
         },
         [theme.breakpoints.up('md')]: {
@@ -114,6 +114,7 @@ export const styles = theme => ({
         float: 'left',
         [theme.breakpoints.down('sm')]: {
             width: '100%',
+            marginBottom: 10,
         },
         [theme.breakpoints.up('sm')]: {
             width: 'calc(100% - 130px)',
