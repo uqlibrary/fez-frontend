@@ -115,6 +115,11 @@ const ImageGalleryItem = ({
               }
             : {};
 
+    const listItemAriaLabel =
+        !advisory && !restricted
+            ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
+            : {};
+
     return (
         <ImageListItem
             id={`image-gallery-item-${item.rek_pid}`}
@@ -126,7 +131,7 @@ const ImageGalleryItem = ({
                 }`,
             }}
             tabIndex={0}
-            aria-label={`Thumbnail image showing ${item.rek_title}`}
+            {...listItemAriaLabel}
             {...clickLink}
             {...rest}
         >

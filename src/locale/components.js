@@ -1770,6 +1770,9 @@ export default {
                 restricted: "This record's thumbnail is locked",
                 advisory: 'This record has an advisor statement - caution is advised when viewing this record',
             },
+            thumbnail: {
+                ariaLabel: 'Thumbnail image showing [title]',
+            },
         },
         newsFeed: {
             title: 'Latest news',
