@@ -7,6 +7,8 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import txt from 'locale/components';
 import { useHistory } from 'react-router';
 
+import { handleKeyboardPressActivate } from 'helpers/general';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import ErrorOutlineOutlinedIcon from '@material-ui/icons/ErrorOutlineOutlined';
@@ -77,9 +79,9 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function viewRecord(history, url) {
+const viewRecord = (history, url) => {
     history.push(url);
-}
+};
 
 const ImageGalleryItem = ({
     item,
@@ -101,7 +103,7 @@ const ImageGalleryItem = ({
     const clickLink =
         !!url && url.length > 0
             ? {
-                  onClick: e => viewRecord.call(e, historyObject, url),
+                  onClick: () => viewRecord(historyObject, url),
                   role: 'button',
               }
             : {};
@@ -131,6 +133,7 @@ const ImageGalleryItem = ({
                 }`,
             }}
             tabIndex={0}
+            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(historyObject, url))}
             {...listItemAriaLabel}
             {...clickLink}
             {...rest}
