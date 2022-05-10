@@ -9,6 +9,7 @@ Object {
   },
   "citationContainer": Object {
     "@media (max-width:959.95px)": Object {
+      "marginBottom": 10,
       "width": "100%",
     },
     "@media (min-width:959.95px)": Object {
@@ -65,7 +66,7 @@ Object {
     "aspectRatio": 1,
     "display": "inline-block",
     "float": "left",
-    "marginBottom": 10,
+    "marginBottom": 15,
     "marginRight": 10,
     "overflow": "hidden",
   },
