@@ -163,7 +163,12 @@ export const CommunityList = () => {
 
                     <StandardCard noHeader style={{ marginTop: 10 }}>
                         {!!!loadingCommunities && (
-                            <Typography variant="body2" style={{ fontWeight: 600 }}>
+                            <Typography
+                                variant="body2"
+                                style={{ fontWeight: 600 }}
+                                id="total-communities"
+                                data-testid="total-communities"
+                            >
                                 Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
                             </Typography>
                         )}

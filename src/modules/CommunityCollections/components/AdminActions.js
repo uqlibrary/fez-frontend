@@ -77,10 +77,22 @@ export const AdminActions = ({
 
     return (
         <React.Fragment>
-            <IconButton id="admin-actions-button" aria-label="More" aria-haspopup="true" onClick={handleClick}>
+            <IconButton
+                id={`admin-actions-button-${record}`}
+                data-testid={`admin-actions-button-${record}`}
+                aria-label="More"
+                aria-haspopup="true"
+                onClick={handleClick}
+            >
                 <MoreVertIcon fontSize="small" />
             </IconButton>
-            <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+            <Menu
+                id={`admin-actions-menu-${record}`}
+                data-testid={`admin-actions-menu-${record}`}
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+            >
                 {menuOptions.map((option, index) => (
                     <MenuItem
                         key={index}
