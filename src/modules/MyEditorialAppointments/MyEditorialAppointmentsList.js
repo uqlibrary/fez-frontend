@@ -42,16 +42,41 @@ export const CustomToolbar = props => {
 
 const useStyles = makeStyles(theme => ({
     datePicker: {
-        minWidth: 120,
+        width: '100%',
+        [theme.breakpoints.up('sm')]: {
+            minWidth: 120,
+        },
     },
-    adjustSpacingXs: {
-        [theme.breakpoints.down('xs')]: {
+    transformResponsive: {
+        [theme.breakpoints.down('sm')]: {
             '& [class*="MuiToolbar-root-"]': {
                 padding: 0,
                 display: 'block',
 
                 '& > div:first-child': {
                     display: 'none',
+                },
+            },
+
+            '& [class*="MuiTable-root-"]': {
+                '& thead': {
+                    display: 'none',
+                },
+
+                '& tr[class*="MuiTableRow-root-"]': {
+                    display: 'block',
+                    width: '100%',
+                    boxSizing: 'border-box',
+
+                    '& td[class*="MuiTableCell-root-"]': {
+                        maxWidth: '100% !important',
+                        display: 'block',
+                        width: '100% !important',
+                        boxSizing: 'border-box',
+                    },
+                },
+                '& tr[class*="MuiTableRow-root-"]:not(:last-of-type)': {
+                    marginBottom: '12px',
                 },
             },
 
@@ -424,7 +449,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         {...props}
                         id="my-editorial-appointments-list"
                         data-testid="my-editorial-appointments-list"
-                        className={classes.adjustSpacingXs}
+                        className={classes.transformResponsive}
                     />
                 ),
                 Row: props => (
