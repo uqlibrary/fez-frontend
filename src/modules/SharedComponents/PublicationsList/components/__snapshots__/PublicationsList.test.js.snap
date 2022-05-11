@@ -3,7 +3,7 @@
 exports[`PublicationsList renders component with custom subset actions 1`] = `
 <DocumentFragment>
   <div
-    class="MuiBox-root-177 MuiBox-root-178"
+    class="MuiBox-root-178 MuiBox-root-179"
     data-testid="search-results-publications-list"
     id="search-results-publications-list"
   >
@@ -15,20 +15,20 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
         id="publication-citation-parent-UQ:111111"
       >
         <div
-          class="MuiGrid-root-188 MuiGrid-container-189"
+          class="MuiGrid-root-190 MuiGrid-container-191"
         >
           <div
-            class="MuiGrid-root-188 MuiGrid-item-190 MuiGrid-grid-xs-true-222"
+            class="MuiGrid-root-190 MuiGrid-item-192 MuiGrid-grid-xs-true-224"
           >
             <div
-              class="MuiGrid-root-188 MuiGrid-container-189"
+              class="MuiGrid-root-190 MuiGrid-container-191"
             >
               <div
-                class="MuiGrid-root-188 MuiGrid-item-190 MuiGrid-grid-xs-true-222"
+                class="MuiGrid-root-190 MuiGrid-item-192 MuiGrid-grid-xs-true-224"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-291 PublicationCitation-citationTitle-180 MuiTypography-h6-301"
+                  class="MuiTypography-root-293 PublicationCitation-citationTitle-181 MuiTypography-h6-303"
                 >
                   <a
                     href="/view/UQ:111111"
@@ -36,31 +36,31 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-188 PublicationCitation-citationText-181 MuiGrid-item-190 MuiGrid-grid-xs-12-234"
+                class="MuiGrid-root-190 PublicationCitation-citationText-182 MuiGrid-item-192 MuiGrid-grid-xs-12-236"
               >
                 <div>
                   Citation display not available for 
                 </div>
               </div>
               <div
-                class="MuiGrid-root-188 MuiGrid-item-190 MuiGrid-grid-xs-12-234"
+                class="MuiGrid-root-190 MuiGrid-item-192 MuiGrid-grid-xs-12-236"
               >
                 <div
-                  class="MuiGrid-root-188 MuiGrid-container-189 MuiGrid-align-items-xs-center-197"
+                  class="MuiGrid-root-190 MuiGrid-container-191 MuiGrid-align-items-xs-center-199"
                 >
                   <div
-                    class="MuiGrid-root-188 PublicationCitation-citationCounts-182 MuiGrid-item-190 MuiGrid-grid-xs-auto-221"
+                    class="MuiGrid-root-190 PublicationCitation-citationCounts-183 MuiGrid-item-192 MuiGrid-grid-xs-auto-223"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-188 MuiGrid-container-189"
+                      class="MuiGrid-root-190 MuiGrid-container-191"
                     >
                       <div
-                        class="MuiGrid-root-188 MuiGrid-item-190 MuiGrid-grid-xs-12-234 MuiGrid-grid-sm-auto-235"
+                        class="MuiGrid-root-190 MuiGrid-item-192 MuiGrid-grid-xs-12-236 MuiGrid-grid-sm-auto-237"
                       >
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-322 makeStyles-externalLink-324"
+                          class="googleCitationCount CitationCountView-citationCount-324 makeStyles-externalLink-326"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:undefined"
                           id="citation-count-link"
@@ -78,7 +78,7 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-188 MuiGrid-item-190"
+                        class="MuiGrid-root-190 MuiGrid-item-192"
                       />
                     </div>
                   </div>
@@ -88,11 +88,11 @@ exports[`PublicationsList renders component with custom subset actions 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-188 PublicationCitation-buttonMargin-183 MuiGrid-container-189 MuiGrid-spacing-xs-1-211"
+          class="MuiGrid-root-190 PublicationCitation-buttonMargin-184 MuiGrid-container-191 MuiGrid-spacing-xs-1-213"
         />
       </div>
       <hr
-        class="MuiDivider-root-328 PublicationCitation-divider-179"
+        class="MuiDivider-root-330 PublicationCitation-divider-180"
       />
     </div>
   </div>
@@ -114,20 +114,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:678728"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:678728"
@@ -137,7 +137,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -244,7 +244,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.mcn.2017.07.005"
                       id="citation-doi-link"
@@ -255,7 +255,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -270,24 +270,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                           id="citation-count-link"
@@ -300,14 +300,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             0
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/23535331"
                           id="citation-count-link"
@@ -320,14 +320,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             1
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                           id="citation-count-link"
@@ -345,7 +345,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -354,10 +354,10 @@ exports[`PublicationsList renders component with items 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
           >
             <span
-              class="MuiTypography-root-121 MuiTypography-caption-124"
+              class="MuiTypography-root-122 MuiTypography-caption-125"
               data-testid="rek-content-indicator"
               id="rek-content-indicator"
             >
@@ -371,11 +371,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -386,20 +386,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:410094"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:410094"
@@ -409,7 +409,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -547,7 +547,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1038/ncomms12976"
                       id="citation-doi-link"
@@ -558,7 +558,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -573,24 +573,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000385388600003&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -603,14 +603,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             3
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84989945657&origin=inward"
                           id="citation-count-link"
@@ -623,14 +623,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             4
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/12381138"
                           id="citation-count-link"
@@ -643,14 +643,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             14
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Flux%20of%20signalling%20endosomes%20undergoing%20axonal%20retrograde%20transport%20is%20encoded%20by%20presynaptic%20activity%20and%20TrkB"
                           id="citation-count-link"
@@ -668,7 +668,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -678,11 +678,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -693,20 +693,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:398497"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:398497"
@@ -716,7 +716,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -860,7 +860,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.18632/oncotarget.9781"
                       id="citation-doi-link"
@@ -871,7 +871,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -886,24 +886,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000385395700055&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -916,14 +916,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             0
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84978646090&origin=inward"
                           id="citation-count-link"
@@ -936,14 +936,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             1
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/8476957"
                           id="citation-count-link"
@@ -956,14 +956,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Extracellular%20vesicles%20secreted%20by%20highly%20metastatic%20clonal%20variants%20of%20osteosarcoma%20preferentially%20localize%20to%20the%20lungs%20and%20induce%20metastatic%20behaviour%20in%20poorly%20metastatic%20clones"
                           id="citation-count-link"
@@ -981,7 +981,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -991,11 +991,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -1006,20 +1006,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:379178"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:379178"
@@ -1029,7 +1029,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -1161,7 +1161,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1038/srep19654"
                       id="citation-doi-link"
@@ -1172,7 +1172,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -1187,24 +1187,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000368812400003&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1217,14 +1217,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             6
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84955446517&origin=inward"
                           id="citation-count-link"
@@ -1237,14 +1237,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             6
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/5042920"
                           id="citation-count-link"
@@ -1257,14 +1257,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Botulinum%20neurotoxin%20type-A%20enters%20a%20non-recycling%20pool%20of%20synaptic%20vesicles"
                           id="citation-count-link"
@@ -1282,7 +1282,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -1292,11 +1292,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -1307,20 +1307,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:357538"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:357538"
@@ -1330,7 +1330,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -1467,7 +1467,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1128/JVI.03440-14"
                       id="citation-doi-link"
@@ -1478,7 +1478,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -1493,24 +1493,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000352219600012&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1523,14 +1523,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             6
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84928551972&origin=inward"
                           id="citation-count-link"
@@ -1543,14 +1543,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             6
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3588125"
                           id="citation-count-link"
@@ -1563,14 +1563,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:A%20mutant%20tat%20protein%20inhibits%20HIV-1%20reverse%20transcription%20by%20targeting%20the%20reverse%20transcription%20complex"
                           id="citation-count-link"
@@ -1588,7 +1588,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -1598,11 +1598,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -1613,20 +1613,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:360881"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:360881"
@@ -1636,7 +1636,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -1780,7 +1780,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.3757-14.2015"
                       id="citation-doi-link"
@@ -1791,7 +1791,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -1806,24 +1806,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000353055600028&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -1836,14 +1836,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             23
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84929251718&origin=inward"
                           id="citation-count-link"
@@ -1856,14 +1856,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             23
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3913388"
                           id="citation-count-link"
@@ -1876,14 +1876,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             104
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Control%20of%20autophagosome%20axonal%20retrograde%20flux%20by%20presynaptic%20activity%20unveiled%20using%20botulinum%20neurotoxin%20type%20A"
                           id="citation-count-link"
@@ -1901,7 +1901,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -1911,11 +1911,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -1926,20 +1926,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:355233"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:355233"
@@ -1949,7 +1949,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -2067,7 +2067,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1038/ncomms7297"
                       id="citation-doi-link"
@@ -2078,7 +2078,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -2093,24 +2093,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000350289800005&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2123,14 +2123,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             12
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84923870078&origin=inward"
                           id="citation-count-link"
@@ -2143,14 +2143,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             14
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3821356"
                           id="citation-count-link"
@@ -2163,14 +2163,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             4
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Activity-driven%20relaxation%20of%20the%20cortical%20actomyosin%20II%20network%20synchronizes%20Munc18-1-dependent%20neurosecretory%20vesicle%20docking"
                           id="citation-count-link"
@@ -2188,7 +2188,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -2198,11 +2198,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -2213,20 +2213,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:350994"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:350994"
@@ -2236,7 +2236,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -2331,7 +2331,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.3228-14.2015"
                       id="citation-doi-link"
@@ -2342,7 +2342,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -2357,24 +2357,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000349669600006&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2387,14 +2387,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             14
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84921902987&origin=inward"
                           id="citation-count-link"
@@ -2407,14 +2407,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             14
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/3135958"
                           id="citation-count-link"
@@ -2427,14 +2427,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             3
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:An%20acto-myosin%20II%20constricting%20ring%20initiates%20the%20fission%20of%20activity-dependent%20bulk%20endosomes%20in%20neurosecretory%20cells"
                           id="citation-count-link"
@@ -2452,7 +2452,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -2462,11 +2462,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -2477,20 +2477,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:344420"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:344420"
@@ -2500,7 +2500,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -2644,7 +2644,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.celrep.2014.08.059"
                       id="citation-doi-link"
@@ -2655,7 +2655,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -2670,24 +2670,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000344468100019&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -2700,14 +2700,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             4
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84907966407&origin=inward"
                           id="citation-count-link"
@@ -2720,14 +2720,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             5
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/2740279"
                           id="citation-count-link"
@@ -2740,14 +2740,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Increased%20polyubiquitination%20and%20proteasomal%20degradation%20of%20a%20Munc18-1%20disease-linked%20mutant%20causes%20temperature-sensitive%20defect%20in%20exocytosis"
                           id="citation-count-link"
@@ -2765,7 +2765,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -2775,11 +2775,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -2790,20 +2790,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:306039"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:306039"
@@ -2813,7 +2813,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -3076,7 +3076,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.celrep.2013.06.017"
                       id="citation-doi-link"
@@ -3087,7 +3087,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -3102,24 +3102,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000322704400002&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3132,14 +3132,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             15
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84880848107&origin=inward"
                           id="citation-count-link"
@@ -3152,14 +3152,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             16
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/1621395"
                           id="citation-count-link"
@@ -3172,14 +3172,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20is%20necessary%20for%20hepatic%20oxidative%20lipid%20metabolism:%20evidence%20for%20crosstalk%20between%20caveolin-1%20and%20bile%20acid%20signaling"
                           id="citation-count-link"
@@ -3197,7 +3197,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -3207,11 +3207,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -3222,20 +3222,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:305893"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:305893"
@@ -3245,7 +3245,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -3375,7 +3375,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1242/jcs.126813"
                       id="citation-doi-link"
@@ -3386,7 +3386,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -3401,24 +3401,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000320236100004&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3431,14 +3431,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             16
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84880018993&origin=inward"
                           id="citation-count-link"
@@ -3451,14 +3451,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             16
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:The%20Munc18-1%20domain%203a%20loop%20is%20essential%20for%20neuroexocytosis%20but%20not%20for%20syntaxin-1A%20transport%20to%20the%20plasma%20membrane"
                           id="citation-count-link"
@@ -3476,7 +3476,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -3486,11 +3486,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -3501,20 +3501,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:302599"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:302599"
@@ -3524,7 +3524,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -3628,7 +3628,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0060152"
                       id="citation-doi-link"
@@ -3639,7 +3639,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -3654,24 +3654,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000317480700088&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3684,14 +3684,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             18
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84875435923&origin=inward"
                           id="citation-count-link"
@@ -3704,14 +3704,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             23
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Inhibition%20of%20PIKfyve%20by%20YM-201636%20Dysregulates%20Autophagy%20and%20Leads%20to%20Apoptosis-Independent%20Neuronal%20Cell%20Death"
                           id="citation-count-link"
@@ -3729,7 +3729,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -3739,11 +3739,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -3754,20 +3754,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:294055"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:294055"
@@ -3777,7 +3777,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -3900,7 +3900,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1083/jcb.201204092"
                       id="citation-doi-link"
@@ -3911,7 +3911,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -3926,24 +3926,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000314562500008&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -3956,14 +3956,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             21
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84874366244&origin=inward"
                           id="citation-count-link"
@@ -3976,14 +3976,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             26
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/1218318"
                           id="citation-count-link"
@@ -3996,14 +3996,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             1
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Myosin%20VI%20small%20insert%20isoform%20maintains%20exocytosis%20by%20tethering%20secretory%20granules%20to%20the%20cortical%20actin"
                           id="citation-count-link"
@@ -4021,7 +4021,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -4031,11 +4031,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -4046,20 +4046,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:319620"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:319620"
@@ -4069,7 +4069,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -4164,7 +4164,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1523/JNEUROSCI.2634-13.2013"
                       id="citation-doi-link"
@@ -4175,7 +4175,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -4190,24 +4190,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000328110100011&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4220,14 +4220,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             11
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84889030400&origin=inward"
                           id="citation-count-link"
@@ -4240,14 +4240,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             14
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Secretagogue%20stimulation%20of%20neurosecretory%20cells%20elicits%20filopodial%20extensions%20uncovering%20new%20functional%20release%20sites"
                           id="citation-count-link"
@@ -4265,7 +4265,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -4275,11 +4275,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -4290,20 +4290,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:284237"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:284237"
@@ -4313,7 +4313,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -4428,7 +4428,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0046242"
                       id="citation-doi-link"
@@ -4439,7 +4439,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -4454,24 +4454,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000309517300099&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4484,14 +4484,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             15
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84866864613&origin=inward"
                           id="citation-count-link"
@@ -4504,14 +4504,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             15
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20deficiency%20leads%20to%20increased%20susceptibility%20to%20cell%20death%20and%20fibrosis%20in%20white%20adipose%20tissue:%20characterization%20of%20a%20lipodystrophic%20model"
                           id="citation-count-link"
@@ -4529,7 +4529,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -4539,11 +4539,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -4554,20 +4554,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:279315"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:279315"
@@ -4577,7 +4577,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -4737,7 +4737,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1371/journal.pone.0043041"
                       id="citation-doi-link"
@@ -4748,7 +4748,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -4763,24 +4763,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000307500100056&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -4793,14 +4793,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             27
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84865055662&origin=inward"
                           id="citation-count-link"
@@ -4813,14 +4813,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             31
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/885842"
                           id="citation-count-link"
@@ -4833,14 +4833,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             2
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Co-regulation%20of%20cell%20polarization%20and%20migration%20by%20caveolar%20proteins%20PTRF/cavin-1%20and%20caveolin-1"
                           id="citation-count-link"
@@ -4858,7 +4858,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -4868,11 +4868,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -4883,20 +4883,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:265967"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:265967"
@@ -4906,7 +4906,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -5071,7 +5071,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1002/hep.24810"
                       id="citation-doi-link"
@@ -5082,7 +5082,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -5097,24 +5097,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000303049400027&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5127,14 +5127,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             25
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84859980069&origin=inward"
                           id="citation-count-link"
@@ -5147,14 +5147,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             28
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/849563"
                           id="citation-count-link"
@@ -5167,14 +5167,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             1
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Caveolin-1%20orchestrates%20the%20balance%20between%20glucose%20and%20lipid-dependent%20energy%20metabolism:%20Implications%20for%20liver%20regeneration"
                           id="citation-count-link"
@@ -5192,7 +5192,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -5202,11 +5202,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -5217,20 +5217,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:278920"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:278920"
@@ -5240,7 +5240,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -5363,7 +5363,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1091/mbc.E11-10-0847"
                       id="citation-doi-link"
@@ -5374,7 +5374,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -5389,24 +5389,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000306245500003&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5419,14 +5419,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             36
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-84861152007&origin=inward"
                           id="citation-count-link"
@@ -5439,14 +5439,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             40
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Postlipolytic%20insulin-dependent%20remodeling%20of%20micro%20lipid%20droplets%20in%20adipocytes"
                           id="citation-count-link"
@@ -5464,7 +5464,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -5474,11 +5474,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -5489,20 +5489,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:277856"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:277856"
@@ -5512,7 +5512,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationConferencePaper"
@@ -5582,7 +5582,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1016/j.toxicon.2012.04.130"
                       id="citation-doi-link"
@@ -5593,7 +5593,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -5608,24 +5608,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000305721800131&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5638,14 +5638,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             0
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Retrograde%20trafficking%20at%20the%20presynaptic%20nerve%20terminal%20using%20bacterial%20toxins"
                           id="citation-count-link"
@@ -5663,7 +5663,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -5673,11 +5673,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
     <div
@@ -5688,20 +5688,20 @@ exports[`PublicationsList renders component with items 1`] = `
         id="publication-citation-parent-UQ:256096"
       >
         <div
-          class="MuiGrid-root-18 MuiGrid-container-19"
+          class="MuiGrid-root-19 MuiGrid-container-20"
         >
           <div
-            class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+            class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
           >
             <div
-              class="MuiGrid-root-18 MuiGrid-container-19"
+              class="MuiGrid-root-19 MuiGrid-container-20"
             >
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-true-52"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-true-53"
                 style="min-width: 1px;"
               >
                 <h6
-                  class="MuiTypography-root-121 PublicationCitation-citationTitle-10 MuiTypography-h6-131"
+                  class="MuiTypography-root-122 PublicationCitation-citationTitle-10 MuiTypography-h6-132"
                 >
                   <a
                     href="/view/UQ:256096"
@@ -5711,7 +5711,7 @@ exports[`PublicationsList renders component with items 1`] = `
                 </h6>
               </div>
               <div
-                class="MuiGrid-root-18 PublicationCitation-citationText-11 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 PublicationCitation-citationText-11 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
                   class="citationContent citationJournalArticle"
@@ -5855,7 +5855,7 @@ exports[`PublicationsList renders component with items 1`] = `
                   >
                     <a
                       aria-label="Open this DOI in an new window"
-                      class="citationDoiLink makeStyles-externalLink-152"
+                      class="citationDoiLink makeStyles-externalLink-153"
                       data-testid="citation-doi-link"
                       href="https://doi.org/10.1074/jbc.M111.283879"
                       id="citation-doi-link"
@@ -5866,7 +5866,7 @@ exports[`PublicationsList renders component with items 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-154 makeStyles-externalLinkIcon-153"
+                        class="MuiSvgIcon-root-155 makeStyles-externalLinkIcon-154"
                         focusable="false"
                         id="citation-doi-link-new-window-icon"
                         viewBox="0 0 24 24"
@@ -5881,24 +5881,24 @@ exports[`PublicationsList renders component with items 1`] = `
                 </div>
               </div>
               <div
-                class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64"
+                class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65"
               >
                 <div
-                  class="MuiGrid-root-18 MuiGrid-container-19 MuiGrid-align-items-xs-center-27"
+                  class="MuiGrid-root-19 MuiGrid-container-20 MuiGrid-align-items-xs-center-28"
                 >
                   <div
-                    class="MuiGrid-root-18 PublicationCitation-citationCounts-12 MuiGrid-item-20 MuiGrid-grid-xs-auto-51"
+                    class="MuiGrid-root-19 PublicationCitation-citationCounts-12 MuiGrid-item-21 MuiGrid-grid-xs-auto-52"
                     style="flex-grow: 1;"
                   >
                     <div
-                      class="MuiGrid-root-18 MuiGrid-container-19"
+                      class="MuiGrid-root-19 MuiGrid-container-20"
                     >
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20 MuiGrid-grid-xs-12-64 MuiGrid-grid-sm-auto-65"
+                        class="MuiGrid-root-19 MuiGrid-item-21 MuiGrid-grid-xs-12-65 MuiGrid-grid-sm-auto-66"
                       >
                         <a
                           aria-label="Full citation in Web of science will open in a new window"
-                          class="wosCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="wosCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000295927100070&SrcAuth=uqueensland"
                           id="citation-count-link"
@@ -5911,14 +5911,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon wos large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             76
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Scopus will open in a new window"
-                          class="scopusCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="scopusCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-80053897195&origin=inward"
                           id="citation-count-link"
@@ -5931,14 +5931,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon scopus large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             82
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Altmetric will open in a new window"
-                          class="altmetricCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="altmetricCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://queensland.altmetric.com/details/390008"
                           id="citation-count-link"
@@ -5951,14 +5951,14 @@ exports[`PublicationsList renders component with items 1`] = `
                             class="fez-icon altmetric large"
                           />
                           <span
-                            class="CitationCountView-citationCountNumber-165"
+                            class="CitationCountView-citationCountNumber-166"
                           >
                             1
                           </span>
                         </a>
                         <a
                           aria-label="Full citation in Google scholar will open in a new window"
-                          class="googleCitationCount CitationCountView-citationCount-164 makeStyles-externalLink-152"
+                          class="googleCitationCount CitationCountView-citationCount-165 makeStyles-externalLink-153"
                           data-testid="citation-count-link"
                           href="https://scholar.google.com/scholar?q=intitle:Dynamin%20inhibition%20blocks%20botulinum%20neurotoxin%20type%20A%20endocytosis%20in%20neurons%20and%20delays%20botulism"
                           id="citation-count-link"
@@ -5976,7 +5976,7 @@ exports[`PublicationsList renders component with items 1`] = `
                         />
                       </div>
                       <div
-                        class="MuiGrid-root-18 MuiGrid-item-20"
+                        class="MuiGrid-root-19 MuiGrid-item-21"
                       />
                     </div>
                   </div>
@@ -5986,11 +5986,11 @@ exports[`PublicationsList renders component with items 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-18 PublicationCitation-buttonMargin-13 MuiGrid-container-19 MuiGrid-spacing-xs-1-41"
+          class="MuiGrid-root-19 PublicationCitation-buttonMargin-13 MuiGrid-container-20 MuiGrid-spacing-xs-1-42"
         />
       </div>
       <hr
-        class="MuiDivider-root-168 PublicationCitation-divider-9"
+        class="MuiDivider-root-169 PublicationCitation-divider-9"
       />
     </div>
   </div>

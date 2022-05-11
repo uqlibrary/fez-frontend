@@ -47,6 +47,20 @@ Object {
     "marginBottom": 12,
     "marginTop": 12,
   },
+  "imageListItemImage": Object {
+    "@media (max-width:959.95px)": Object {
+      "height": "50vw !important",
+      "minHeight": "50vw",
+      "minWidth": "50vw",
+      "width": "50vw !important",
+    },
+    "@media (min-width:959.95px)": Object {
+      "height": "130px !important",
+      "minHeight": 130,
+      "minWidth": 130,
+      "width": "130px !important",
+    },
+  },
   "imageListItemRoot": Object {
     "@media (max-width:959.95px)": Object {
       "width": "100% !important",
@@ -54,20 +68,26 @@ Object {
   },
   "publicationImage": Object {
     "@media (max-width:959.95px)": Object {
-      "maxHeight": 200,
-      "minWidth": 280,
-      "width": "100%",
+      "display": "block",
+      "float": "none",
+      "height": "50vw",
+      "margin": "auto auto 15px",
+      "minHeight": "50vw",
+      "minWidth": "50vw",
+      "width": "50vw",
     },
     "@media (min-width:959.95px)": Object {
+      "float": "left",
       "height": 130,
-      "minWidth": 0,
+      "minHeight": 130,
       "width": "130px !important",
     },
     "aspectRatio": 1,
     "display": "inline-block",
-    "float": "left",
     "marginBottom": 15,
     "marginRight": 10,
+    "minHeight": 0,
+    "minWidth": 0,
     "overflow": "hidden",
   },
 }
@@ -4218,6 +4238,7 @@ exports[`PublicationCitation  should render component with default item with ima
           "imageListItem": Object {
             "root": undefined,
           },
+          "imageListItemImage": undefined,
         }
       }
       component="div"
