@@ -86,28 +86,40 @@ export const styles = theme => ({
         marginBottom: 15,
         overflow: 'hidden',
         aspectRatio: 1,
+        minWidth: 0,
+        minHeight: 0,
 
         [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            minWidth: 280,
-            maxHeight: 200,
+            width: '50vw',
+            height: '50vw',
+            float: 'none',
+            display: 'block',
+            margin: 'auto auto 15px',
+            minWidth: '50vw',
+            minHeight: '50vw',
         },
         [theme.breakpoints.up('sm')]: {
             width: '100px !important',
             height: 100,
+
+            float: 'left',
+            marginRight: 10,
             minWidth: 0,
+            minHeight: 0,
         },
         [theme.breakpoints.up('md')]: {
             width: '125px !important',
             height: 125,
-            minWidth: 0,
+            minHeight: 125,
+
+            float: 'left',
         },
         [theme.breakpoints.up('lg')]: {
             width: '130px !important',
             height: 130,
-            minWidth: 0,
+            minHeight: 130,
+            float: 'left',
         },
-        float: 'left',
     },
     citationContainer: {
         display: 'inline-block',
@@ -130,6 +142,32 @@ export const styles = theme => ({
     imageListItemRoot: {
         [theme.breakpoints.down('md')]: {
             width: '100% !important',
+        },
+    },
+    imageListItemImage: {
+        [theme.breakpoints.down('sm')]: {
+            width: '50vw !important',
+            height: '50vw !important',
+            minWidth: '50vw',
+            minHeight: '50vw',
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: '100px !important',
+            height: '100px !important',
+            minHeight: 100,
+            minWidth: 100,
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '125px !important',
+            height: '125px !important',
+            minHeight: 125,
+            minWidth: 125,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '130px !important',
+            height: '130px !important',
+            minHeight: 130,
+            minWidth: 130,
         },
     },
 });
@@ -254,7 +292,10 @@ export class PublicationCitation extends PureComponent {
                     lazyLoading={imageConfig.thumbnailImage.defaultLazyLoading}
                     itemWidth={imageConfig.thumbnailImage.defaultWidth}
                     itemHeight={imageConfig.thumbnailImage.defaultHeight}
-                    classes={{ imageListItem: { root: this.props.classes.imageListItemRoot } }}
+                    classes={{
+                        imageListItem: { root: this.props.classes.imageListItemRoot },
+                        imageListItemImage: this.props.classes.imageListItemImage,
+                    }}
                     security={security}
                     component="div"
                     withTitle={false}
