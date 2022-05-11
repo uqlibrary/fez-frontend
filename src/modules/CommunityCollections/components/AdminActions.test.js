@@ -58,9 +58,9 @@ describe('AdminActions component', () => {
     it('should handle admin actions menu', () => {
         const { getByTestId, getByText } = setup();
 
-        fireEvent.click(getByTestId('admin-actions-button'));
+        fireEvent.click(getByTestId('admin-actions-button-UQ:ABCDEF'));
 
-        const menu = getByTestId('admin-actions-menu');
+        const menu = getByTestId('admin-actions-menu-UQ:ABCDEF');
 
         const expectedActions = testActions.map(action => ({
             ...action,
@@ -82,9 +82,9 @@ describe('AdminActions component', () => {
         const testProps = { record: 'UQ:123ZZ' };
         const { getByTestId, getByText } = setup(testProps);
 
-        fireEvent.click(getByTestId('admin-actions-button'));
+        fireEvent.click(getByTestId('admin-actions-button-UQ:123ZZ'));
 
-        const menu = getByTestId('admin-actions-menu');
+        const menu = getByTestId('admin-actions-menu-UQ:123ZZ');
 
         const expectedActions = testActions.map(action => ({
             ...action,
@@ -103,9 +103,9 @@ describe('AdminActions component', () => {
     });
     it('should handle alternate click events', () => {
         const { getByTestId, getByText } = setup({ record: 'UQ:12345' });
-        fireEvent.click(getByTestId('admin-actions-button'));
+        fireEvent.click(getByTestId('admin-actions-button-UQ:12345'));
 
-        const menu = getByTestId('admin-actions-menu');
+        const menu = getByTestId('admin-actions-menu-UQ:12345');
 
         fireEvent.contextMenu(getByText(/More options/i, menu));
         expect(global.window.open).toHaveBeenCalledTimes(1);

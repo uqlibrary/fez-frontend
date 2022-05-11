@@ -56,7 +56,13 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                 </TableCell>
                 <TableCell component="th" scope="row">
                     <Typography variant="body2">
-                        <Link to={pathConfig.records.view(row.rek_pid)}>{ReactHtmlParser(row.rek_title)}</Link>
+                        <Link
+                            to={pathConfig.records.view(row.rek_pid)}
+                            id={`community-title-${row.rek_pid}`}
+                            data-testid={`community-title-${row.rek_pid}`}
+                        >
+                            {ReactHtmlParser(row.rek_title)}
+                        </Link>
                     </Typography>
                     {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
                 </TableCell>
@@ -72,7 +78,11 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                 </TableCell>
                 {!!adminUser && (
                     <TableCell>
-                        <AdminActions record={row.rek_pid} />
+                        <AdminActions
+                            record={row.rek_pid}
+                            id={`admin-actions-${row.rek_pid}`}
+                            data-testid={`admin-actions-${row.rek_pid}`}
+                        />
                     </TableCell>
                 )}
             </TableRow>
