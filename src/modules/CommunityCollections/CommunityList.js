@@ -169,7 +169,7 @@ export const CommunityList = () => {
                                 id="total-communities"
                                 data-testid="total-communities"
                             >
-                                Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
+                                {communityCollectionsConfig.communityCountTitle(startRecord, endRecord, totalRecords)}
                             </Typography>
                         )}
 
