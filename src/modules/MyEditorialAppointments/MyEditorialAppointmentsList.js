@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
 import moment from 'moment';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@material-ui/core/Typography';
@@ -52,6 +53,7 @@ const useStyles = makeStyles(theme => ({
             '& [class*="MuiToolbar-root-"]': {
                 padding: 0,
                 display: 'block',
+                marginBlockEnd: '12px',
 
                 '& > div:first-child': {
                     display: 'none',
@@ -68,11 +70,10 @@ const useStyles = makeStyles(theme => ({
                     width: '100%',
                     boxSizing: 'border-box',
 
-                    '& td[class*="MuiTableCell-root-"]': {
-                        maxWidth: '100% !important',
+                    '& td[class*="MuiTableCell-root-"]:last-of-type': {
                         display: 'block',
+                        clear: 'both',
                         width: '100% !important',
-                        boxSizing: 'border-box',
                     },
                 },
                 '& tr[class*="MuiTableRow-root-"]:not(:last-of-type)': {
@@ -94,6 +95,9 @@ const useStyles = makeStyles(theme => ({
 
 export const GetColumns = () => {
     const classes = useStyles();
+    const theme = useTheme();
+    const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
+
     const {
         header: {
             columns: { journalName, role, startYear, endYear },
@@ -165,10 +169,16 @@ export const GetColumns = () => {
                 );
             },
             validate: rowData => !!rowData.eap_journal_name && rowData.eap_journal_name !== '',
-            cellStyle: {
-                width: '45%',
-                maxWidth: '45%',
-            },
+            cellStyle: matchesMd
+                ? {
+                      width: '45%',
+                      maxWidth: '45%',
+                  }
+                : {
+                      display: 'block',
+                      width: '100%',
+                      boxSizing: 'border-box',
+                  },
             headerStyle: {
                 width: '45%',
                 maxWidth: '45%',
@@ -252,10 +262,16 @@ export const GetColumns = () => {
             validate: rowData =>
                 !!rowData.eap_role_cvo_id &&
                 (rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER ? !!rowData.eap_role_name : true),
-            cellStyle: {
-                width: '25%',
-                maxWidth: '25%',
-            },
+            cellStyle: matchesMd
+                ? {
+                      width: '25%',
+                      maxWidth: '25%',
+                  }
+                : {
+                      display: 'block',
+                      width: '100%',
+                      boxSizing: 'border-box',
+                  },
             headerStyle: {
                 width: '25%',
                 maxWidth: '25%',
@@ -320,10 +336,18 @@ export const GetColumns = () => {
                     startYearMoment.isSameOrAfter(moment(EDITORIAL_APPOINTMENT_MIN_YEAR, 'YYYY'))
                 );
             },
-            cellStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
+            cellStyle: matchesMd
+                ? {
+                      width: '15%',
+                      maxWidth: '15%',
+                      float: 'none',
+                  }
+                : {
+                      width: '50%',
+                      float: 'left',
+                      display: 'block',
+                      boxSizing: 'border-box',
+                  },
             headerStyle: {
                 width: '15%',
                 maxWidth: '15%',
@@ -404,10 +428,18 @@ export const GetColumns = () => {
                     endYearMoment.isSameOrAfter(moment(String(rowData.eap_start_year), 'YYYY'))
                 );
             },
-            cellStyle: {
-                width: '15%',
-                maxWidth: '15%',
-            },
+            cellStyle: matchesMd
+                ? {
+                      width: '15%',
+                      maxWidth: '15%',
+                      float: 'none',
+                  }
+                : {
+                      width: '50%',
+                      float: 'left',
+                      display: 'block',
+                      boxSizing: 'border-box',
+                  },
             headerStyle: {
                 width: '15%',
                 maxWidth: '15%',
