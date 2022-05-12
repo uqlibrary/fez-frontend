@@ -2,7 +2,13 @@ import React from 'react';
 import AdminActions from './AdminActions';
 import { navigateToUrl } from 'modules/SharedComponents/Toolbox/helpers';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
-import { APP_URL, PUBLICATION_TYPE_WORKING_PAPER, RECORD_ACTION_URLS as defaultActions } from 'config/general';
+import {
+    APP_URL,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_WORKING_PAPER,
+    RECORD_ACTION_URLS as defaultActions,
+} from 'config/general';
+import { rccDatasetCollection } from 'config/doi';
 
 function setup(testProps = {}) {
     const props = {
@@ -134,6 +140,27 @@ describe('AdminActions component', () => {
                 fez_record_search_key_doi: {
                     rek_doi: '123456',
                 },
+            },
+        });
+
+        fireEvent.click(getByTestId('admin-actions-button'));
+
+        const menu = getByTestId('admin-actions-menu');
+        const doiAction = defaultActions.find(action => !!action.isDoi);
+
+        expect(queryByText(doiAction.label(false), menu)).toBeNull();
+    });
+
+    it('should not include Update DOI item for RCC datasets', () => {
+        const { getByTestId, queryByText } = setup({
+            publication: {
+                rek_pid: 'UQ:111111',
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: rccDatasetCollection,
+                    },
+                ],
             },
         });
 
