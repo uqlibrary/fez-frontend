@@ -344,8 +344,7 @@ export const GetColumns = () => {
                       float: 'none',
                   }
                 : {
-                      width: '50%',
-                      float: 'left',
+                      width: '100%',
                       display: 'block',
                       boxSizing: 'border-box',
                   },
@@ -436,8 +435,7 @@ export const GetColumns = () => {
                       float: 'none',
                   }
                 : {
-                      width: '50%',
-                      float: 'left',
+                      width: '100%',
                       display: 'block',
                       boxSizing: 'border-box',
                   },
