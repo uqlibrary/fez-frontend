@@ -74,6 +74,7 @@ const useStyles = makeStyles(theme => ({
                         display: 'block',
                         clear: 'both',
                         width: '100% !important',
+                        boxSizing: 'border-box',
                     },
                 },
                 '& tr[class*="MuiTableRow-root-"]:not(:last-of-type)': {
