@@ -21,14 +21,38 @@ import { useDispatch, useSelector } from 'react-redux';
 import CommunityCollectionsSorting from './components/CommunityCollectionsSorting';
 import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
-
+import { makeStyles } from '@material-ui/core/styles';
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
 import Add from '@material-ui/icons/Add';
 
 import { pushHistory } from './components/functions';
 
+const useStyles = makeStyles(theme => ({
+    communityAutoCloseParent: {
+        overflow: 'auto',
+        marginBottom: 10,
+    },
+    addNewCommunity: {
+        float: 'left',
+        [theme.breakpoints.down('xs')]: {
+            float: 'none',
+        },
+    },
+    addNewCommunityButton: {
+        backgroundColor: '#51247A',
+        color: 'white',
+    },
+    autoCloseCommunity: {
+        float: 'right',
+        [theme.breakpoints.down('xs')]: {
+            float: 'none',
+        },
+    },
+}));
+
 export const CommunityList = () => {
+    const classes = useStyles();
     const [autoCollapse, setAutoCollapse] = React.useState(false);
     const handleSwitchChange = event => {
         setAutoCollapse(event.target.checked);
@@ -118,48 +142,41 @@ export const CommunityList = () => {
         <StandardPage title={txt.title.communities}>
             {!!!loadingCommunitiesError && (
                 <React.Fragment>
-                    <Grid container>
-                        <>
-                            <Grid item xs={6} style={{ marginBottom: 10 }} data-testid="admin-add-community">
-                                {!!adminUser && (
-                                    <Button
-                                        component={Link}
-                                        variant="outlined"
-                                        to={pathConfig.admin.community}
-                                        data-testid="admin-add-community-button"
-                                        startIcon={<Add />}
-                                        style={{
-                                            backgroundColor: '#51247A',
-                                            color: 'white',
-                                        }}
-                                    >
-                                        {communityCollectionsConfig.addNewCommunityText}
-                                    </Button>
-                                )}
-                            </Grid>
-                            <Grid
-                                item
-                                xs={6}
-                                style={{ textAlign: 'right', marginBottom: 10 }}
-                                id="autoclose-community"
-                                data-testid="autoclose-community"
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Switch
-                                            checked={autoCollapse}
-                                            onChange={handleSwitchChange}
-                                            name="collection-auto-collapse"
-                                            id="collection-auto-collapse"
-                                            data-testid="collection-auto-collapse"
-                                            inputProps={{ 'aria-label': 'primary checkbox' }}
-                                        />
-                                    }
-                                    label={communityCollectionsConfig.collapseSwitchText}
-                                />
-                            </Grid>
-                        </>
-                    </Grid>
+                    <div className={classes.communityAutoCloseParent}>
+                        <div className={classes.addNewCommunity} data-testid="admin-add-community">
+                            {!!adminUser && (
+                                <Button
+                                    component={Link}
+                                    variant="outlined"
+                                    to={pathConfig.admin.community}
+                                    data-testid="admin-add-community-button"
+                                    startIcon={<Add />}
+                                    className={classes.addNewCommunityButton}
+                                >
+                                    {communityCollectionsConfig.addNewCommunityText}
+                                </Button>
+                            )}
+                        </div>
+                        <div
+                            className={classes.autoCloseCommunity}
+                            id="autoclose-community"
+                            data-testid="autoclose-community"
+                        >
+                            <FormControlLabel
+                                control={
+                                    <Switch
+                                        checked={autoCollapse}
+                                        onChange={handleSwitchChange}
+                                        name="collection-auto-collapse"
+                                        id="collection-auto-collapse"
+                                        data-testid="collection-auto-collapse"
+                                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                                    />
+                                }
+                                label={communityCollectionsConfig.collapseSwitchText}
+                            />
+                        </div>
+                    </div>
 
                     <StandardCard noHeader style={{ marginTop: 10 }}>
                         {!!!loadingCommunities && (
