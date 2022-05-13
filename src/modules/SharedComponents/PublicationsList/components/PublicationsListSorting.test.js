@@ -113,7 +113,7 @@ describe('PublicationsListSorting component', () => {
     it('renders with non-empty paging data, displayRecordsAs called', () => {
         const testFn = jest.fn();
         const testValue = 'test';
-        const wrapper = setup({ onDisplayRecordsAsChanged: testFn });
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
         wrapper
             .find('#displayRecordsAs')
             .props()

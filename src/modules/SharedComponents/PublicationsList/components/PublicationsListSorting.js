@@ -98,8 +98,6 @@ const PublicationsListSorting = props => {
 
     const dropDownWidth = !!props.showDisplayAs ? 2 : 3;
 
-    console.log('dISPLAY RECORDS AS', props.showDisplayAs);
-
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
