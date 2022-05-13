@@ -48,8 +48,8 @@ const CommunityCollectionsSorting = props => {
     }
 
     return (
-        <Grid container spacing={2}>
-            <Grid item xs={props.isCollection ? 8 : 12} sm={6} md={props.canUseExport ? 3 : 4}>
+        <Grid container spacing={0}>
+            <Grid item xs={props.isCollection ? 8 : 12} sm={props.isCollection ? 3 : 4} md={4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{txt.sortLabel}</InputLabel>
                     <Select id="sortBy" onChange={sortByChanged} value={sortBy} disabled={props.disabled}>
@@ -63,7 +63,7 @@ const CommunityCollectionsSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={props.isCollection ? 8 : 12} sm={6} md={props.canUseExport ? 3 : 4}>
+            <Grid item xs={props.isCollection ? 8 : 12} sm={props.isCollection ? 4 : 4} md={4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
                     <Select
@@ -82,12 +82,7 @@ const CommunityCollectionsSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid
-                item
-                xs={props.isCollection ? 8 : 12}
-                sm={props.canUseExport ? 6 : 12}
-                md={props.canUseExport ? 3 : 4}
-            >
+            <Grid item xs={props.isCollection ? 8 : 12} sm={props.isCollection ? 3 : 4} md={4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{txt.pageSize}</InputLabel>
                     <Select id="pageSize" value={pageSize} disabled={props.disabled} onChange={pageSizeChanged}>
