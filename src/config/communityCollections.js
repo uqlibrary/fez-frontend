@@ -5,5 +5,5 @@ export const communityCollectionsConfig = {
     communityCountTitle: (start, end, total) =>
         `Displaying communities ${start} to ${end} of ${total} total communities`,
     collectionCountTitle: (start, end, total, community) =>
-        `Displaying ${start} to ${end} of ${total} collections for ${community}`,
+        `Displaying ${start} to ${end} of ${total} collections for '${community}'`,
 };
