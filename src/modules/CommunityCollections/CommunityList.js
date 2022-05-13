@@ -49,6 +49,10 @@ const useStyles = makeStyles(theme => ({
             float: 'none',
         },
     },
+    communityCountTitle: {
+        fontWeight: 600,
+        marginBottom: 10,
+    },
 }));
 
 export const CommunityList = () => {
@@ -182,11 +186,11 @@ export const CommunityList = () => {
                         {!!!loadingCommunities && (
                             <Typography
                                 variant="body2"
-                                style={{ fontWeight: 600 }}
+                                className={classes.communityCountTitle}
                                 id="total-communities"
                                 data-testid="total-communities"
                             >
-                                Displaying communities {startRecord} to {endRecord} of {totalRecords} total communities
+                                {communityCollectionsConfig.communityCountTitle(startRecord, endRecord, totalRecords)}
                             </Typography>
                         )}
 
