@@ -48,7 +48,7 @@ const CommunityCollectionsSorting = props => {
     }
 
     return (
-        <Grid container spacing={0}>
+        <Grid container spacing={2}>
             <Grid item xs={props.isCollection ? 8 : 12} sm={props.isCollection ? 3 : 4} md={4}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{txt.sortLabel}</InputLabel>
