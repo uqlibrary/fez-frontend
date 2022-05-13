@@ -7,6 +7,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(TextField))
@@ -20,6 +21,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(FormControl))
@@ -108,6 +110,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(TextField))
@@ -121,6 +124,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(FormControl))
@@ -209,6 +213,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(TextField))
@@ -222,6 +227,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(FormControl))
@@ -310,6 +316,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(TextField))
@@ -323,6 +330,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={6}
   >
     <WithStyles(ForwardRef(FormControl))
@@ -411,6 +419,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={12}
   >
     <WithStyles(ForwardRef(TextField))
@@ -424,6 +433,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render full width input fi
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     item={true}
+    sm={6}
     xs={12}
   >
     <WithStyles(ForwardRef(FormControl))

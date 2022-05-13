@@ -172,12 +172,32 @@ describe('Search action creators', () => {
             });
             mockApi.onGet(apiUrl).reply(200, { data: [] });
 
-            const expectedActions = [actions.EXPORT_JOURNALS_LOADING, actions.EXPORT_JOURNALS_LOADED];
-
             await mockActionsStore.dispatch(
                 journalActions.exportJournals({ query: 'a', exportPublicationsFormat: 'excel' }),
             );
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.EXPORT_JOURNALS_LOADING,
+                actions.EXPORT_JOURNALS_LOADED,
+            ]);
+        });
+
+        it('should dispatch action for successful favourite journal export', async () => {
+            promptForDownload = jest.spyOn(ExportPublicationsTransformers, 'promptForDownload');
+            promptForDownload.mockImplementation(() => exportPublicationsFormat);
+            const { apiUrl } = repositories.routes.JOURNAL_FAVOURITES_API({
+                query: 'a',
+                exportPublicationsFormat: 'excel',
+            });
+            mockApi.onGet(apiUrl).reply(200, { data: [] });
+
+            // export favourite journals
+            await mockActionsStore.dispatch(
+                journalActions.exportJournals({ query: 'a', exportPublicationsFormat: 'excel' }, true),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions([
+                actions.EXPORT_FAVOURITE_JOURNALS_LOADING,
+                actions.EXPORT_FAVOURITE_JOURNALS_LOADED,
+            ]);
         });
 
         it('should dispatch action for failed journal export api', async () => {
@@ -224,12 +244,6 @@ describe('Search action creators', () => {
             } catch {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             }
-        });
-
-        it('should dispatch action on export reset', () => {
-            const expectedActions = [actions.EXPORT_JOURNALS_RESET];
-            mockActionsStore.dispatch(journalActions.resetExportJournalsStatus());
-            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
     });
     describe('retrieveFavouriteJournals', () => {

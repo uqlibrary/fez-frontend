@@ -167,6 +167,26 @@ export const viewJournalConfig = {
                     },
                 },
             ],
+            [
+                {
+                    heading: 'Sherpa Romeo open access and archiving policies',
+                    fieldId: 'srm-journal-link',
+                    data: [
+                        {
+                            isArray: true,
+                            primaryKey: 'fez_journal_issn',
+                            path: ['fez_sherpa_romeo'],
+                            filterFn: item => !!item.fez_sherpa_romeo,
+                        },
+                    ],
+                    template: 'MultiLinkTemplate',
+                    templateProps: {
+                        href: item => item.srm_journal_link,
+                        title: 'View SHERPA/RoMEO details in a new tab',
+                        text: item => item.srm_issn,
+                    },
+                },
+            ],
         ],
     },
     doaj: {
@@ -274,26 +294,6 @@ export const viewJournalConfig = {
                         href: item => `https://doaj.org/toc/${item}`,
                         title: 'View journal details in DOAJ',
                         text: item => item,
-                    },
-                },
-            ],
-            [
-                {
-                    heading: 'Sherpa Romeo open access and archiving policies',
-                    fieldId: 'srm-journal-link',
-                    data: [
-                        {
-                            isArray: true,
-                            primaryKey: 'fez_journal_issn',
-                            path: ['fez_sherpa_romeo'],
-                            filterFn: item => !!item.fez_sherpa_romeo,
-                        },
-                    ],
-                    template: 'MultiLinkTemplate',
-                    templateProps: {
-                        href: item => item.srm_journal_link,
-                        title: 'View SHERPA/RoMEO details in a new tab',
-                        text: item => item.srm_issn,
                     },
                 },
             ],

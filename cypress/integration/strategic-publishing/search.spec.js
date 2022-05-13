@@ -96,7 +96,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 22);
+            .should('have.length', 32);
 
         cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
@@ -126,7 +126,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 23);
+            .should('have.length', 34);
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
@@ -292,6 +292,23 @@ context('Strategic Publishing - Search', () => {
             },
             violations => console.log(violations),
         );
+    });
+
+    it('Should not keep any previous search history when navigating from another page', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[id=main-menu-button]').click();
+        cy.contains('Home').click();
+        cy.get('[id=main-menu-button]').click();
+        cy.contains('Journal search').click();
+
+        cy.contains('Step 2').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-titles-containing"]').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-keyword-matches"]').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]').should('not.exist');
+        cy.get('Searching for journals containing').should('not.exist');
+        cy.get('[id=journal-search-results-container]').should('not.exist');
     });
 
     it('Renders journal search result table in more view', () => {

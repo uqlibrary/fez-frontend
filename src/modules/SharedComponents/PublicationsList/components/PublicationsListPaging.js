@@ -13,7 +13,6 @@ import Box from '@material-ui/core/Box';
 const styles = theme => ({
     pageButton: {
         flex: '1 0 auto',
-        width: 32,
         height: 32,
         minWidth: 32,
         minHeight: 32,
@@ -53,6 +52,9 @@ const styles = theme => ({
     gridContainer: {
         flexWrap: 'nowrap',
         justifyContent: 'space-between',
+    },
+    paginationGridContainer: {
+        textAlign: 'center',
     },
 });
 
@@ -162,7 +164,7 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         )}
                         <Hidden xsDown>
-                            <Grid item sm={'auto'}>
+                            <Grid item sm={'auto'} className={classes.paginationGridContainer}>
                                 {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
                                 {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
                                 {this.renderPageButtons()}

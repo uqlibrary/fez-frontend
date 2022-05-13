@@ -71,6 +71,8 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
             clearSelectedJournals();
         },
         journalSearchQueryParams,
+        false,
+        browseAllJournals,
     );
 
     const handleJournalsComparisonClick = () =>

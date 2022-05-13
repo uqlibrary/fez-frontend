@@ -16,22 +16,36 @@ const getExactMatchKeywords = keywordsResponse => {
 
 const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
     const titleMatchKeywords = query.split(' ').reduce((titleMatches, keywordQuery) => {
+        if (keywordQuery.trim() === '') {
+            return titleMatches;
+        }
         const regexString = `\\w*${keywordQuery}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const titleMatch =
             !!titleFuzzyMatch &&
             titleFuzzyMatch.length > 0 &&
             titleFuzzyMatch.reduce((matches, journal) => {
-                const matchedKeywords = journal.jnl_title.match(regex);
+                const titles = [
+                    journal.jnl_title,
+                    (journal.fez_journal_doaj && journal.fez_journal_doaj.jnl_doaj_title) || '',
+                    (Array.isArray(journal.fez_journal_era) &&
+                        journal.fez_journal_era.length &&
+                        journal.fez_journal_era[0].jnl_era_title) ||
+                        '',
+                ];
+
+                const matchedKeywords = titles.reduce(
+                    (previousValue, currentValue) => previousValue.concat(currentValue.match(regex) || []),
+                    [],
+                );
+
                 return (
-                    (matchedKeywords && [
-                        ...matches,
-                        ...matchedKeywords.filter(matched => matched && matched.length > 3),
-                    ]) ||
-                    []
+                    matchedKeywords &&
+                    Array.from(
+                        new Set([...matches, ...matchedKeywords.filter(matched => matched && matched.length > 2)]),
+                    )
                 );
             }, []);
-
         return (titleMatch && [...titleMatches, ...titleMatch]) || [];
     }, []);
 
@@ -42,6 +56,9 @@ const getTitleMatchKeywords = (titleFuzzyMatch, query) => {
 
 const getKeywordMatchKeywords = (descriptionFuzzyMatch, query) => {
     const keywordMatchKeywords = query.split(' ').reduce((keywordMatches, keywordQuery) => {
+        if (keywordQuery.trim() === '') {
+            return keywordMatches;
+        }
         const regexString = `\\w*${keywordQuery}\\w*`;
         const regex = new RegExp(regexString, 'ig');
         const keywordMatch =
