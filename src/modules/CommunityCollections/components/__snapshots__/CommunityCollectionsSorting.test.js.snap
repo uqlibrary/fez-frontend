@@ -3,7 +3,7 @@
 exports[`Community Collections component renders will set state on receiving new props 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={0}
+  spacing={2}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -140,7 +140,7 @@ exports[`Community Collections component renders will set state on receiving new
 exports[`Community Collections component renders will set state on receiving new props 2`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={0}
+  spacing={2}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -283,7 +283,7 @@ exports[`Community Collections component renders with empty paging data 1`] = `
 exports[`Community Collections component renders with export dropdown for admin or author 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={0}
+  spacing={2}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -414,7 +414,7 @@ exports[`Community Collections component renders with export dropdown for admin 
 exports[`Community Collections component renders with export dropdown hidden 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={0}
+  spacing={2}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
@@ -545,7 +545,7 @@ exports[`Community Collections component renders with export dropdown hidden 1`]
 exports[`Community Collections component renders with non-empty community paging data 1`] = `
 <WithStyles(ForwardRef(Grid))
   container={true}
-  spacing={0}
+  spacing={2}
 >
   <WithStyles(ForwardRef(Grid))
     item={true}
