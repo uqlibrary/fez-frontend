@@ -52,6 +52,8 @@ const useStyles = makeStyles({
     },
     collectionCountTitle: {
         fontWeight: 600,
+        marginBottom: 10,
+        display: 'block',
     },
 });
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
