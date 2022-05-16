@@ -46,11 +46,11 @@ const PublicationsListSorting = props => {
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
     const propDisplayRecordsAs = doesListContainItem(
-        locale.components.sorting.displayRecordsAs ?? [],
+        locale.components.sorting.displayRecordsAs ?? /* istanbul ignore next */ [],
         initPropDisplayRecordsAs,
     )
         ? initPropDisplayRecordsAs
-        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? '';
+        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? /* istanbul ignore next */ '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);

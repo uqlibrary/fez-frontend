@@ -216,4 +216,24 @@ describe('PublicationsListSorting component', () => {
                 .props().value,
         ).toEqual('test_3');
     });
+    it('renders correctly when set to true', () => {
+        const data = {
+            from: 1,
+            to: 10,
+            total: 10,
+            current_page: 1,
+        };
+        const wrapper = setup({ showDisplayAs: true, canUseExport: true, pagingData: data });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('renders correctly when set to false', () => {
+        const data = {
+            from: 0,
+            to: 0,
+            total: 0,
+            current_page: 1,
+        };
+        const wrapper = setup({ showDisplayAs: true, canUseExport: false, pagingData: data });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
