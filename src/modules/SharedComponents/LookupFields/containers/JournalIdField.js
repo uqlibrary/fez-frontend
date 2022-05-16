@@ -29,7 +29,14 @@ const mapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : null,
         getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || ''),
         filterOptions: (options, { inputValue }) => {
-            return matchSorter(options, inputValue.replace(/\s&\s|\sand\s/gi, ' ').trim(), { keys: ['value'] });
+            return matchSorter(
+                options,
+                inputValue
+                    .replace(/&|\sand\s/gi, ' ')
+                    .replace(/\s{2,}/g, ' ')
+                    .trim(),
+                { keys: ['value'] },
+            );
         },
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,
