@@ -81,7 +81,7 @@ context('Creative Work admin edit', () => {
                         significanceList.forEach((significance, index) => {
                             cy.get('p')
                                 .eq(2 * index)
-                                .should('have.text', significance);
+                                .should('have.text', significance || 'Missing');
                             cy.get('p')
                                 .eq(2 * index + 1)
                                 .should(
