@@ -2,7 +2,7 @@ import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/
 import { FIELD_OF_RESEARCH_VOCAB_ID } from 'config/general';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import matchSorter from 'match-sorter';
+import { matchSorter } from 'match-sorter';
 import { FoROptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const category = FIELD_OF_RESEARCH_VOCAB_ID;
