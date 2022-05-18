@@ -925,6 +925,10 @@ export const viewJournalConfig = {
                             publisher:
                                 journalDetails.fez_journal_read_and_publish &&
                                 journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_publisher,
+                            showCaulLink:
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted,
                         };
                     },
                     template: 'EnclosedLinkTemplate',
@@ -938,9 +942,34 @@ export const viewJournalConfig = {
                                       `${data.publisher}`,
                                   )
                                 : 'No',
-                        postfix: () => '',
+                        postfix: data =>
+                            data.showCaulLink ? viewJournalLocale.viewJournal.readAndPublish.postfixText : '',
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.caulLink.heading,
+                    fieldId: 'jnl-read-and-publish-caul-link',
+                    getData: journalDetails => {
+                        return {
+                            showCaulLink: !!(
+                                journalDetails.fez_journal_read_and_publish &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped &&
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted
+                            ),
+                        };
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: data =>
+                            !!data.showCaulLink
+                                ? viewJournalLocale.viewJournal.readAndPublish.caulLink.externalUrl
+                                : '',
+                        title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
+                        text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
                     },
                 },
             ],
