@@ -11,7 +11,7 @@ context('Creative Work admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('should load expected tabs', () => {
+    it('the tabs should include NTRO', () => {
         cy.adminEditCountCards(9);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
@@ -72,26 +72,27 @@ context('Creative Work admin edit', () => {
                     .within(() => {
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
-                        const significanceList = record.fez_record_search_key_significance.map(
-                            item => item.rek_significance_lookup,
-                        );
-                        const contributionStatement = record.fez_record_search_key_creator_contribution_statement.map(
-                            item => item.rek_creator_contribution_statement,
-                        )[0];
-                        significanceList.forEach((significance, index) => {
-                            cy.get('p')
-                                .eq(2 * index)
-                                .should('have.text', significance || 'Missing');
-                            cy.get('p')
-                                .eq(2 * index + 1)
-                                .should(
-                                    'have.text',
-                                    [/<p>/, /<\/p>/].reduce(
-                                        (statement, regex) => statement.replace(regex, ''),
-                                        contributionStatement,
-                                    ),
+                        record.fez_record_search_key_significance
+                            .map(item => item.rek_significance_lookup)
+                            .forEach((significance, index) => {
+                                cy.get(`[data-testid="scale-of-signficance-list-editor-field-list-row-${index}"]`)
+                                    .find('p')
+                                    .eq(0)
+                                    .should('have.text', significance || 'Missing');
+                            });
+
+                        record.fez_record_search_key_creator_contribution_statement
+                            .map(item => item.rek_creator_contribution_statement)
+                            .forEach((contribution, index) => {
+                                const reducedContributionStatement = [/<p>/, /<\/p>/].reduce(
+                                    (statement, regex) => statement.replace(regex, ''),
+                                    contribution,
                                 );
-                        });
+                                cy.get(`[data-testid="scale-of-signficance-list-editor-field-list-row-${index}"]`)
+                                    .find('span')
+                                    .eq(0)
+                                    .should('contain', reducedContributionStatement);
+                            });
                     });
 
                 cy.get('.AdminCard')
