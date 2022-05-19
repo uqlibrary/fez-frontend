@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import * as actions from 'actions';
@@ -16,20 +17,27 @@ import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import CommunityCollectionsPaging from './CommunityCollectionsPaging';
+// import CommunityCollectionsPaging from './CommunityCollectionsPaging';
 import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
 import Add from '@material-ui/icons/Add';
-
+import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
+import { Grid } from '@material-ui/core';
 const moment = require('moment');
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     table: {
         minWidth: 650,
     },
     dateCell: {
         minWidth: 120,
+    },
+    titleCell: {
+        minWidth: 300,
+    },
+    actionCell: {
+        maxWidth: '100px !important',
     },
     adminButton: {
         marginBottom: 10,
@@ -55,7 +63,7 @@ const useStyles = makeStyles({
         marginBottom: 10,
         display: 'block',
     },
-});
+}));
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
     const dispatch = useDispatch();
     const [sortDirection, setSortDirection] = React.useState('Asc');
@@ -189,7 +197,15 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     isCollection
                                 />
 
-                                <CommunityCollectionsPaging
+                                {/* <CommunityCollectionsPaging
+                                    loading={false}
+                                    pagingData={PagingData}
+                                    onPageChanged={pageChanged}
+                                    disabled={false}
+                                    pagingId="embedded-collections-paging-top"
+                                    data-testid="embedded-collections-paging-top"
+                                /> */}
+                                <PublicationsListPaging
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}
@@ -197,7 +213,93 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
                                 />
-                                <Table aria-label="simple table">
+                                <Grid container style={{ overflow: 'auto' }}>
+                                    <Grid container style={{ minWidth: 700 }}>
+                                        <Grid
+                                            container
+                                            spacing={0}
+                                            style={{
+                                                fontWeight: 400,
+                                                padding: '15px 0px',
+                                            }}
+                                        >
+                                            <Grid item xs={adminUser ? 6 : 7} style={{ paddingRight: 5 }}>
+                                                {labels.title}
+                                            </Grid>
+                                            <Grid item xs={2} style={{ paddingRight: 5 }}>
+                                                {labels.creation_date}
+                                            </Grid>
+                                            <Grid item xs={2} style={{ paddingRight: 5 }}>
+                                                {labels.updated_date}
+                                            </Grid>
+                                            <Grid item xs={1} style={{ textAlign: 'center' }}>
+                                                Explore
+                                            </Grid>
+                                            {!!adminUser && (
+                                                <Grid item xs={1} style={{ paddingLeft: 5 }}>
+                                                    {labels.actions}
+                                                </Grid>
+                                            )}
+                                        </Grid>
+                                        {finalList.data.map(row => (
+                                            <Grid
+                                                style={{
+                                                    boxSizing: 'border-box',
+                                                    outline: '1px solid #ededed',
+                                                    boxShadow: '0 -1px 0 #eaeaea',
+                                                    padding: '15px 0px',
+                                                }}
+                                                container
+                                                key={row.rek_pid}
+                                                id={`row-${row.rek_pid}`}
+                                                data-testid={`row-${row.rek_pid}`}
+                                            >
+                                                <Grid item xs={adminUser ? 6 : 7} style={{ paddingRight: 5 }}>
+                                                    <Typography variant="body2">
+                                                        <Link
+                                                            to={pathConfig.records.view(row.rek_pid)}
+                                                            id={`collection-title-${row.rek_pid}`}
+                                                            data-testid={`collection-title-${row.rek_pid}`}
+                                                        >
+                                                            {ReactHtmlParser(row.rek_title)}
+                                                        </Link>
+                                                    </Typography>
+                                                    {!!row.rek_description && (
+                                                        <Typography variant="caption">{row.rek_description}</Typography>
+                                                    )}
+                                                </Grid>
+                                                <Grid item xs={2} style={{ paddingRight: 5 }}>
+                                                    <Typography variant="body2">
+                                                        {moment(row.rek_created_date)
+                                                            .local()
+                                                            .format(conf.dateFormat)}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={2} style={{ paddingRight: 5 }}>
+                                                    <Typography variant="body2">
+                                                        {moment(row.rek_updated_date)
+                                                            .local()
+                                                            .format(conf.dateFormat)}
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item xs={1} style={{ textAlign: 'center' }}>
+                                                    <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>View</Link>
+                                                </Grid>
+                                                {!!adminUser && (
+                                                    <Grid item xs={1} style={{ paddingLeft: 5 }}>
+                                                        <AdminActions
+                                                            record={row.rek_pid}
+                                                            id={`row-admin-actions-${row.rek_pid}`}
+                                                            data-testid={`row-admin-actions-${row.rek_pid}`}
+                                                        />
+                                                    </Grid>
+                                                )}
+                                            </Grid>
+                                        ))}
+                                    </Grid>
+                                </Grid>
+
+                                {/* <Table aria-label="simple table">
                                     <TableHead>
                                         <TableRow data-testid="embedded-collections-primary-header">
                                             <TableCell>{labels.title}</TableCell>
@@ -215,7 +317,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 id={`row-${row.rek_pid}`}
                                                 data-testid={`row-${row.rek_pid}`}
                                             >
-                                                <TableCell component="th" scope="row">
+                                                <TableCell className={classes.titleCell}>
                                                     <Typography variant="body2">
                                                         <Link
                                                             to={pathConfig.records.view(row.rek_pid)}
@@ -239,7 +341,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         .local()
                                                         .format(conf.dateFormat)}
                                                 </TableCell>
-                                                <TableCell>
+                                                <TableCell className={classes.actionCell}>
                                                     <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>View</Link>
                                                 </TableCell>
                                                 {!!adminUser && (
@@ -254,8 +356,8 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                             </TableRow>
                                         ))}
                                     </TableBody>
-                                </Table>
-                                <CommunityCollectionsPaging
+                                </Table> */}
+                                <PublicationsListPaging
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}

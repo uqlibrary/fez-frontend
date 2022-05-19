@@ -19,7 +19,7 @@ import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
 import CommunityCollectionsSorting from './components/CommunityCollectionsSorting';
-import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
+// import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
 import { makeStyles } from '@material-ui/core/styles';
 import queryString from 'query-string';
@@ -27,6 +27,7 @@ import { useHistory } from 'react-router-dom';
 import Add from '@material-ui/icons/Add';
 
 import { pushHistory } from './components/functions';
+import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 
 const useStyles = makeStyles(theme => ({
     communityAutoCloseParent: {
@@ -209,7 +210,7 @@ export const CommunityList = () => {
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <CommunityCollectionsPaging
+                            <PublicationsListPaging
                                 loading={false}
                                 pagingData={PagindData}
                                 onPageChanged={pageChanged}
@@ -230,13 +231,13 @@ export const CommunityList = () => {
                             <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
                         )}
                         <Grid item xs={12} style={{ marginTop: 10 }}>
-                            <CommunityCollectionsPaging
-                                data-testid="community-collections-paging-bottom"
+                            <PublicationsListPaging
                                 loading={false}
                                 pagingData={PagindData}
                                 onPageChanged={pageChanged}
                                 disabled={false}
-                                pagingId="community-collections-paging-bottom"
+                                pagingId="community-collections-paging-top"
+                                data-testid="community-collections-paging-top"
                             />
                         </Grid>
                     </StandardCard>
