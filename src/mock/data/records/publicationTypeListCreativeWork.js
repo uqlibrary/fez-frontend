@@ -408,8 +408,10 @@ const publicationTypeListCreativeWork = {
                     "rek_significance": 454026,
                     "rek_significance_lookup": "Major"
                 }, {
+                    "rek_significance_id": 123655,
                     "rek_significance": 0,
                 }, {
+                    "rek_significance_id": 123656,
                     "rek_significance": 454027,
                     "rek_significance_lookup": "Minor"
                 }

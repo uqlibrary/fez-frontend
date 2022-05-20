@@ -18,6 +18,29 @@ context('Creative Work admin edit', () => {
         cy.adminEditCheckDefaultTab('Bibliographic');
     });
 
+    function assertChangeSelectFromTo(item, changeFrom, changeTo) {
+        cy.waitUntil(() => cy.get(`[data-testid="${item}-select"]`).should('exist'));
+        if (changeFrom === '') {
+            cy.log('look for an unselected item');
+            cy.get(`[data-testid="${item}-select"]`)
+                .then(text => {
+                    expect(text).to.have.lengthOf(1); // special zero length string
+                })
+                .click();
+        } else {
+            cy.log('look for a selected item', changeFrom);
+            cy.get(`[data-testid="${item}-select"]`)
+                .should('exist')
+                .should('contain', changeFrom)
+                .click();
+        }
+        cy.waitUntil(() => cy.get(`[data-testid="${item}-options"]`).should('exist'));
+        cy.get(`[data-testid="${item}-options"]`)
+            .contains(changeTo)
+            .click();
+        cy.get(`[data-testid="${item}-select"]`).should('contain', changeTo);
+    }
+
     it('should render the different sections as expected', () => {
         // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
         cy.log('Bibliographic tab');
@@ -50,6 +73,8 @@ context('Creative Work admin edit', () => {
 
         // ---------------------------------------------- NTRO TAB ---------------------------------------------------
         cy.log('NTRO tab');
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
             .within(() => {
@@ -76,7 +101,7 @@ context('Creative Work admin edit', () => {
                         record.fez_record_search_key_significance
                             .map(item => item.rek_significance_lookup)
                             .forEach((significance, index) => {
-                                cy.get(`[data-testid="scale-of-signficance-list-editor-field-list-row-${index}"]`)
+                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
                                     .find('p')
                                     .eq(0)
                                     .should('have.text', significance || 'Missing');
@@ -89,13 +114,14 @@ context('Creative Work admin edit', () => {
                                     (statement, regex) => statement.replace(regex, ''),
                                     contribution,
                                 );
-                                cy.get(`[data-testid="scale-of-signficance-list-editor-field-list-row-${index}"]`)
+                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
                                     .find('span')
                                     .eq(0)
                                     .should('contain', reducedContributionStatement);
                             });
 
                         // the form is initially blank
+                        cy.get('button[data-testid="rek-significance-add"]').should('contain', 'ADD');
                         cy.get('[data-testid="rek-significance-select"]').should('contain', '');
                         cy.readCKEditor('rek-creator-contribution-statement').then(text => {
                             expect(text).to.be.empty;
@@ -105,19 +131,35 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 3);
-                        cy.get('[data-testid="rek-significance-select"]').click();
-                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-options"]').should('exist'));
-                        cy.get('[data-testid="rek-significance-options"]')
-                            .contains('Minor')
-                            .click();
-                        cy.get('[data-testid="rek-significance-select"]').should('contain', 'Minor');
-                        cy.typeCKEditor('rek-creator-contribution-statement', 'new entry');
+                    });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        const newContributionStatementText = 'new entry';
+                        cy.typeCKEditor('rek-creator-contribution-statement', newContributionStatementText);
                         cy.get('button[data-testid="rek-significance-add"]')
                             .should('contain', 'ADD')
                             .click();
+                        // the newly added item appears correctly
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 4);
+                        cy.get('[data-testid="rek-significance-list-row-3"]')
+                            .find('span')
+                            .eq(0)
+                            .should('contain', newContributionStatementText);
+                        cy.get('[data-testid="rek-significance-list-row-3"]')
+                            .find('p')
+                            .eq(0)
+                            .should('have.text', 'Minor');
                     });
 
                 cy.get('.AdminCard')
