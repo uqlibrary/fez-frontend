@@ -957,8 +957,7 @@ export const viewJournalConfig = {
                         return {
                             showCaulLink: !!(
                                 journalDetails.fez_journal_read_and_publish &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped &&
-                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_discounted
+                                journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
                             ),
                         };
                     },
