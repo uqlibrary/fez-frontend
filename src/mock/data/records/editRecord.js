@@ -531,24 +531,31 @@ const editRecord = {
         "rek_grant_agency_type_lookup": "Not set",
     }],
     "fez_record_search_key_significance": [{
+        "rek_significance_id": 123657,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123658,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123659,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123660,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123661,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123662,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }, {
+        "rek_significance_id": 123663,
         "rek_significance": 0,
         "rek_significance_lookup": null,
     }]

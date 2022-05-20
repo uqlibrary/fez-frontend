@@ -382,6 +382,7 @@ const publicationTypeListCreativeWork = {
             "fez_record_search_key_security_policy": [5],
             "fez_record_search_key_significance": [
                 {
+                    "rek_significance_id": 123654,
                     "rek_significance": 454026,
                     "rek_significance_lookup": "Major"
                 }
