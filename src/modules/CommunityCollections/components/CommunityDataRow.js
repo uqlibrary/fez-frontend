@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
@@ -17,18 +14,46 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Grid } from '@material-ui/core';
 const moment = require('moment');
 
-const useStyles = makeStyles({
-    table: {
-        minWidth: 650,
-    },
-    dateCell: {
-        minWidth: 120,
-    },
-});
+const returnDateField = (date, conf, className) => {
+    return (
+        <Grid item xs={2} className={className}>
+            <Typography variant="body2">
+                {moment(date)
+                    .local()
+                    .format(conf.dateFormat)}
+            </Typography>
+        </Grid>
+    );
+};
+
 import { Link } from 'react-router-dom';
+
+const useStyles = makeStyles({
+    rowParent: {
+        boxSizing: 'border-box',
+        outline: '1px solid #ededed',
+        boxShadow: '0 -1px 0 #eaeaea',
+        padding: '15px 0px 0px',
+    },
+    rowChild: {
+        paddingBottom: 10,
+    },
+    expandButton: {
+        float: 'left',
+        width: 24,
+    },
+    title: {
+        float: 'right',
+        width: 'calc(100% - 30px)',
+        paddingTop: 5,
+        paddingBottom: 5,
+    },
+    dateField: { paddingTop: 5 },
+});
 
 export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse }) => {
     const dispatch = useDispatch();
+    const classes = useStyles();
     const collectionsOpen = useSelector(state => state.get('viewCollectionsReducer').collectionsOpened);
 
     const open = collectionsOpen.indexOf(row.rek_pid) > -1;
@@ -40,21 +65,12 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
         dispatch(actions.setCollectionsArray({ pid: row.rek_pid, open: openState }));
     };
 
-    const classes = useStyles();
     return (
-        <Grid
-            container
-            style={{
-                boxSizing: 'border-box',
-                outline: '1px solid #ededed',
-                boxShadow: '0 -1px 0 #eaeaea',
-                padding: '15px 0px 0px',
-            }}
-        >
+        <Grid container key={row.rek_pid} data-testid={`row-${row.rek_pid}`} className={classes.rowParent}>
             <React.Fragment key={row.rek_pid}>
-                <Grid container style={{ paddingBottom: 10 }}>
+                <Grid container className={classes.rowChild}>
                     <Grid item xs={adminUser ? 7 : 8}>
-                        <div style={{ float: 'left', width: 24 }}>
+                        <div className={classes.expandButton}>
                             <IconButton
                                 aria-label="expand row"
                                 size="small"
@@ -65,7 +81,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </div>{' '}
-                        <div style={{ float: 'right', width: 'calc(100% - 30px)', paddingTop: 5, paddingBottom: 5 }}>
+                        <div className={classes.title}>
                             <Typography variant="body2">
                                 <Link
                                     to={pathConfig.records.view(row.rek_pid)}
@@ -79,20 +95,8 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         </div>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    <Grid item xs={2} style={{ paddingTop: 5 }}>
-                        <Typography variant="body2">
-                            {moment(row.rek_created_date)
-                                .local()
-                                .format(conf.dateFormat)}
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={2} style={{ paddingTop: 5 }}>
-                        <Typography variant="body2">
-                            {moment(row.rek_updated_date)
-                                .local()
-                                .format(conf.dateFormat)}
-                        </Typography>
-                    </Grid>
+                    {returnDateField(row.rek_created_date, conf, classes.datefield)}
+                    {returnDateField(row.rek_updated_date, conf, classes.datefield)}
                     {!!adminUser && (
                         <Grid item xs={1}>
                             <AdminActions
@@ -118,65 +122,6 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         </Grid>
                     </Grid>
                 )}
-                {/* <TableRow key={row.rek_pid} data-testid={`row-${row.rek_pid}`}>
-                <TableCell>
-                    <IconButton
-                        aria-label="expand row"
-                        size="small"
-                        onClick={() => handleSetOpen(!open)}
-                        id={`expand-row-${row.rek_pid}`}
-                        data-testid={`expand-row-${row.rek_pid}`}
-                    >
-                        {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                    </IconButton>
-                </TableCell>
-                <TableCell component="th" scope="row">
-                    <Typography variant="body2">
-                        <Link
-                            to={pathConfig.records.view(row.rek_pid)}
-                            id={`community-title-${row.rek_pid}`}
-                            data-testid={`community-title-${row.rek_pid}`}
-                        >
-                            {ReactHtmlParser(row.rek_title)}
-                        </Link>
-                    </Typography>
-                    {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
-                </TableCell>
-                <TableCell className={classes.dateCell}>
-                    {moment(row.rek_created_date)
-                        .local()
-                        .format(conf.dateFormat)}
-                </TableCell>
-                <TableCell className={classes.dateCell}>
-                    {moment(row.rek_updated_date)
-                        .local()
-                        .format(conf.dateFormat)}
-                </TableCell>
-                {!!adminUser && (
-                    <TableCell>
-                        <AdminActions
-                            record={row.rek_pid}
-                            id={`admin-actions-${row.rek_pid}`}
-                            data-testid={`admin-actions-${row.rek_pid}`}
-                        />
-                    </TableCell>
-                )}
-            </TableRow>
-            {!!open && (
-                <TableRow>
-                    <TableCell colSpan={6} style={{ padding: 0, margin: 0 }}>
-                        <CollectionsListEmbedded
-                            title={row.rek_title}
-                            key={row.rek_pid}
-                            pid={row.rek_pid}
-                            labels={labels}
-                            conf={conf}
-                            adminUser={adminUser}
-                            open={open}
-                        />
-                    </TableCell>
-                </TableRow>
-            )} */}
             </React.Fragment>
         </Grid>
     );
