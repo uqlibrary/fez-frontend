@@ -11,7 +11,7 @@ context('Creative Work admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('the tabs should include NTRO', () => {
+    it('the tabs should also include NTRO', () => {
         cy.adminEditCountCards(9);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
@@ -72,6 +72,7 @@ context('Creative Work admin edit', () => {
                     .within(() => {
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
+                        // the list rows have the correct content
                         record.fez_record_search_key_significance
                             .map(item => item.rek_significance_lookup)
                             .forEach((significance, index) => {
@@ -93,11 +94,36 @@ context('Creative Work admin edit', () => {
                                     .eq(0)
                                     .should('contain', reducedContributionStatement);
                             });
+
+                        // the form is initially blank
+                        cy.get('[data-testid="rek-significance-select"]').should('contain', '');
+                        cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                            expect(text).to.be.empty;
+                        });
+
+                        // can add an entry
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
+                        cy.get('[data-testid="rek-significance-select"]').click();
+                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-options"]').should('exist'));
+                        cy.get('[data-testid="rek-significance-options"]')
+                            .contains('Minor')
+                            .click();
+                        cy.get('[data-testid="rek-significance-select"]').should('contain', 'Minor');
+                        cy.typeCKEditor('rek-creator-contribution-statement', 'new entry');
+                        cy.get('button[data-testid="rek-significance-add"]')
+                            .should('contain', 'ADD')
+                            .click();
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 4);
                     });
 
                 cy.get('.AdminCard')
                     .eq(1)
                     .within(() => {
+                        cy.log('QUALITY INDICATORS SECTION');
                         cy.get('h4').should('contain', 'Quality indicators');
                         const qualityIndicators = record.fez_record_search_key_quality_indicator;
                         cy.get('[data-testid="rek-quality-indicator-input"]')
