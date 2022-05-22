@@ -903,6 +903,7 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator contribution statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
+                        editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -947,7 +948,9 @@ export default {
                         significanceInputFieldHint: 'Please select scale of significance',
                         contributionStatementInputFieldLabel: 'Creator research statement',
                         contributionStatementFieldHint: 'Enter description',
-                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT 111',
+                        editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        resetFormLabel: 'Cancel',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -979,6 +982,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
+                        editHint: 'Edit this item',
                     },
                 },
             },

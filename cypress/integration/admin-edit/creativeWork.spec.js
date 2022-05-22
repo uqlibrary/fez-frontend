@@ -137,6 +137,37 @@ context('Creative Work admin edit', () => {
         // popup appears at foot of page, outside Admin section
         assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
 
+        // each edit button loads the correct text into the form
+        const statementList = {
+            0: {
+                statementContains: 'This is an online lecture',
+                significance: 'Major',
+                newSignificance: 'Minor',
+                newText: 'Changed content',
+            },
+            1: {
+                statementContains: 'Missing',
+                significance: '',
+            },
+            2: {
+                statementContains: 'Missing',
+                significance: 'Minor',
+            },
+        };
+
+        function clickFormSaveButton(label) {
+            const button = 'button[data-testid="rek-significance-add"]';
+            cy.waitUntil(() => cy.get(button).should('exist'));
+            cy.get(button)
+                .should('contain', label)
+                .click();
+        }
+        function clickRowEditButton(rowId) {
+            const editButton = rowId => `[data-testid="rek-significance-list-row-${rowId}-edit"]`;
+            cy.waitUntil(() => cy.get(editButton(rowId)).should('exist'));
+            cy.get(editButton(rowId)).click();
+        }
+
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
             .within(() => {
@@ -145,9 +176,7 @@ context('Creative Work admin edit', () => {
                     .within(() => {
                         const newContributionStatementText = 'new entry';
                         cy.typeCKEditor('rek-creator-contribution-statement', newContributionStatementText);
-                        cy.get('button[data-testid="rek-significance-add"]')
-                            .should('contain', 'ADD')
-                            .click();
+                        clickFormSaveButton('ADD');
                         // the newly added item appears correctly
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
@@ -160,7 +189,63 @@ context('Creative Work admin edit', () => {
                             .find('p')
                             .eq(0)
                             .should('have.text', 'Minor');
+
+                        // each of the values loads into the form correctly
+                        for (const [rowId, value] of Object.entries(statementList)) {
+                            clickRowEditButton(rowId);
+
+                            cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
+                            cy.get('[data-testid="rek-significance-select"]').should('contain', value.significance);
+                            cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                                cy.log('ckeditor text=', text);
+                                expect(text).to.contain(value.statementContains);
+                            });
+                            if (rowId === 0) {
+                                // the cancel button clears the form when loaded from edit
+                                cy.get('button[data-testid="rek-significance-clear"]')
+                                    .should('contain', 'Cancel')
+                                    .click();
+                                cy.get('[data-testid="rek-significance-select"]').should('contain', '');
+                                cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                                    expect(text).to.be.empty;
+                                });
+                            }
+                        }
+
+                        cy.log('NOW EDIT THE FIRST ITEM');
+                        clickRowEditButton(0);
+                        cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
+
+                        // the cancel button clears the form on add
+                        clickRowEditButton(0);
                     });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        assertChangeSelectFromTo('rek-significance', statementList[0].significance, statementList[0].newSignificance);
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        clickFormSaveButton('UPDATE');
+                        cy.get('[data-testid="rek-significance-list-row-0"]')
+                            .find('p')
+                            .eq(0)
+                            // .find('p')
+                            // .eq(0)
+                            .should('have.text', statementList[0].newSignificance);
+                        cy.get('[data-testid="rek-significance-list-row-0"]')
+                            .find('span')
+                            .eq(0)
+                            .should('contain', statementList[0].newText);
+                    });
+
+                // check the tests reach the bottom
+                // const checkComplete = 4;
+                // expect(checkComplete.to.equal(3));
 
                 cy.get('.AdminCard')
                     .eq(1)

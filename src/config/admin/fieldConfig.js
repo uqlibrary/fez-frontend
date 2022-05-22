@@ -954,6 +954,7 @@ export default {
                 label: 'Scale/significance of work - Contribution statement',
                 placeholder: '',
                 locale: locale.components.scaleOfSignificanceListAdminForm.field,
+                canEdit: true,
             },
         },
         qualityIndicators: {

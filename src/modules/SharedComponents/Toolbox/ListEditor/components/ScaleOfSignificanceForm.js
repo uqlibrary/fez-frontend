@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import RichEditor from 'modules/SharedComponents/RichEditor/components/RichEditor';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 
@@ -20,6 +20,7 @@ export const handleSignificanceCallbackFactory = setSignificance => {
 
 export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance) => {
     const callback = () => {
+        console.log('resetFormCallbackFactory');
         setSignificance(null);
         contributionStatementEditor.current.setData(null);
     };
@@ -40,11 +41,28 @@ export const addItemCallbackFactory = (disabled, significance, contributionState
     return [callback, [disabled, significance, contributionStatement, onAdd, resetForm]];
 };
 
-export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) => {
+export const ScaleOfSignificanceForm = propFields => {
+    const { disabled, locale, errorText, onAdd } = propFields;
+    console.log('ScaleOfSignificanceForm::propFields=', propFields);
+    // const { significance, contributionStatement } = fieldsToEdit;
+    // console.log('ScaleOfSignificanceForm::significance=', significance);
+    // console.log('ScaleOfSignificanceForm::contributionStatement=', contributionStatement);
+
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
+
+    React.useEffect(() => {
+        console.log('itemIndexSelectedToEdit is now ', propFields.itemIndexSelectedToEdit);
+        if (propFields.itemIndexSelectedToEdit !== null) {
+            setSignificance(propFields.itemSelectedToEdit.key);
+            setContributionStatement(propFields.itemSelectedToEdit.value);
+            console.log('trying to write this into field:', propFields.itemSelectedToEdit.value);
+            contributionStatementEditor.current.setData(propFields.itemSelectedToEdit.value.htmlText);
+            console.log('ScaleOfSignificanceForm::usefffect ', propFields.itemSelectedToEdit.value);
+        }
+    }, [propFields.itemIndexSelectedToEdit, propFields.itemSelectedToEdit]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleContributionStatement = useCallback(
@@ -63,7 +81,8 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
         significanceInputFieldLabel,
         significanceInputFieldHint,
         contributionStatementInputFieldLabel,
-        addButtonLabel,
+        // addButtonLabel,
+        resetFormLabel,
         id,
         authorOrderAlert,
     } = locale;
@@ -88,7 +107,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                 />
             </Grid>
             <Grid item xs={12}>
-                <RichEditor
+                <RichEditorField
                     fullWidth
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
@@ -106,18 +125,31 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                             opacity: 0.666,
                         },
                     }}
+                    value={contributionStatement || ''}
+                    input={propFields.input}
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={9}>
                 <Button
                     fullWidth
                     id="add-items"
                     data-testid="rek-significance-add"
                     color="primary"
                     variant="contained"
-                    children={addButtonLabel}
+                    children={propFields.buttonLabel}
                     disabled={disabled}
                     onClick={addItem}
+                />
+            </Grid>
+            <Grid item xs={3}>
+                <Button
+                    fullWidth
+                    id="clear-items"
+                    data-testid="rek-significance-clear"
+                    variant="contained"
+                    children={resetFormLabel}
+                    disabled={disabled}
+                    onClick={resetForm}
                 />
             </Grid>
         </Grid>
@@ -129,6 +161,7 @@ ScaleOfSignificanceForm.propTypes = {
     locale: PropTypes.object,
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
+    buttonLabel: PropTypes.string.isRequired,
 };
 
 export default React.memo(ScaleOfSignificanceForm);

@@ -490,7 +490,11 @@ export default {
             const significanceScales = (record.fez_record_search_key_significance || []).reduce(
                 (significanceScalesObject, significance) => ({
                     ...significanceScalesObject,
-                    [significance.rek_significance_order]: significance,
+                    [significance.rek_significance_order]: {
+                        ...significance,
+                        // // so we can determine if we should allow add or not
+                        // numAuthors: record.fez_record_search_key_author?.length || 0,
+                    },
                 }),
                 {},
             );
@@ -507,6 +511,8 @@ export default {
                 return {
                     rek_order: order,
                     rek_value: {
+                        id: (significanceScales[order] || {}).rek_significance_id || 0,
+                        // originalAuthorCount: (significanceScales[order] || {}).numAuthors || 0,
                         key: (significanceScales[order] || {}).rek_significance || 0,
                         value: {
                             plainText:
