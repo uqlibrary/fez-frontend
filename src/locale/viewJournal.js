@@ -16,6 +16,12 @@ export default {
             postfixText: '',
             linkText: 'Read and Publish Agreement',
             externalUrl: 'https://web.library.uq.edu.au/read-and-publish-agreements',
+            caulLink: {
+                heading: 'Limited amount available',
+                ariaLabel: 'Click to view CAUL information on number of remaining pre-paid APCs',
+                linkText: 'Check current status',
+                externalUrl: 'https://caul.libguides.com/read-and-publish/reports',
+            },
         },
     },
 };
