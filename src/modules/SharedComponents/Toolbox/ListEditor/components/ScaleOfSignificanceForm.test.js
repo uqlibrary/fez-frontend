@@ -10,6 +10,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         locale: {},
         onAdd: jest.fn(),
+        buttonLabel: 'label',
         ...testProps,
     };
 
@@ -24,7 +25,7 @@ describe('ScaleOfSignificanceForm component', () => {
 
     it('should render with id', () => {
         const wrapper = setup({ locale: { id: '100' } });
-        expect(wrapper.find('RichEditor').props().id).toBe('100');
+        expect(wrapper.find('RichEditorField').props().id).toBe('100');
     });
 });
 
@@ -53,7 +54,12 @@ describe('ScaleOfSignificanceForm callback factories', () => {
             },
         };
         const setSignificance = jest.fn();
-        const callback = resetFormCallbackFactory(contributionStatementEditor, setSignificance)[0];
+        const showScaleAdditionForm = jest.fn();
+        const callback = resetFormCallbackFactory(
+            contributionStatementEditor,
+            setSignificance,
+            showScaleAdditionForm,
+        )[0];
         callback();
         expect(setSignificance).toHaveBeenCalledWith(null);
         expect(testFn).toHaveBeenCalledWith(null);

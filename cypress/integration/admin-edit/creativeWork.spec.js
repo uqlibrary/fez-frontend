@@ -11,12 +11,63 @@ context('Creative Work admin edit', () => {
         cy.adminEditCleanup();
     });
 
-    it('the tabs should also include NTRO', () => {
+    it('tabs for Creative entry should also include NTRO', () => {
         cy.adminEditCountCards(9);
         cy.adminEditNoAlerts();
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
     });
+
+    it('should render the Bibliographic section as expected', () => {
+        cy.get('[data-testid=bibliographic-section-content]')
+            .as('bibliographicTab')
+            .within(() => {
+                cy.get('h4').should('contain', 'Related publications');
+                const pubList = record.fez_record_search_key_isderivationof.map(item => item.rek_isderivationof_lookup);
+                pubList.forEach((pub, index) => {
+                    cy.get(`[data-testid=rek-isderivationof-list-row-${index}]`).should('have.text', pub);
+                });
+            });
+    });
+
+    it('should render the Additional Information section as expected', () => {
+        cy.get('[data-testid=admin-section-content]')
+            .as('adminTab')
+            .within(() => {
+                cy.get('h4').should('contain', 'Additional information');
+                cy.get('[data-testid=rek-license-input]')
+                    .should('have.value', record.fez_record_search_key_license.rek_license.toString())
+                    .siblings('[role=button]')
+                    .invoke('text')
+                    .should('equal', record.fez_record_search_key_license.rek_license_lookup);
+                cy.get('[data-testid="rek-content-indicator-select"]').should(
+                    'have.text',
+                    'Scholarship of Teaching and Learning',
+                );
+            });
+    });
+
+    // it('in the NTRO section, should render Audience size section as expected', () => {
+    //     cy.adminEditTabbedView();
+    //     cy.get('[data-testid="ntro-tab"]').click();
+    //     cy.get('[data-testid=ntro-section-content]')
+    //         .as('NTRO')
+    //         .within(() => {
+    //             // https://www.pivotaltracker.com/story/show/173121745
+    //             cy.get('.AdminCard')
+    //                 .eq(0)
+    //                 .within(() => {
+    //                     cy.get('h4').should('contain', 'Audience size');
+    //                     cy.get('[data-testid=rek-audience-size-select]')
+    //                         .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
+    //                         .get('[data-testid=rek-audience-size-input]')
+    //                         .should(
+    //                             'have.value',
+    //                             record.fez_record_search_key_audience_size.rek_audience_size.toString(),
+    //                         );
+    //                 });
+    //         });
+    // });
 
     function assertChangeSelectFromTo(item, changeFrom, changeTo) {
         cy.waitUntil(() => cy.get(`[data-testid="${item}-select"]`).should('exist'));
@@ -41,63 +92,62 @@ context('Creative Work admin edit', () => {
         cy.get(`[data-testid="${item}-select"]`).should('contain', changeTo);
     }
 
-    it('should render the different sections as expected', () => {
-        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
-        cy.log('Bibliographic tab');
-        cy.get('[data-testid=bibliographic-section-content]')
-            .as('bibliographicTab')
-            .within(() => {
-                cy.get('h4').should('contain', 'Related publications');
-                const pubList = record.fez_record_search_key_isderivationof.map(item => item.rek_isderivationof_lookup);
-                pubList.forEach((pub, index) => {
-                    cy.get(`[data-testid=rek-isderivationof-list-row-${index}]`).should('have.text', pub);
-                });
-            });
+    function clickFormSaveButton(label) {
+        const button = 'button[data-testid="rek-significance-add"]';
+        cy.waitUntil(() => cy.get(button).should('exist'));
+        cy.get(button)
+            .should('contain', label)
+            .click();
+    }
 
-        // -------------------------------------- ADMIN TAB -----------------------------------------
-        cy.log('Additional Information tab');
-        cy.get('[data-testid=admin-section-content]')
-            .as('adminTab')
-            .within(() => {
-                cy.get('h4').should('contain', 'Additional information');
-                cy.get('[data-testid=rek-license-input]')
-                    .should('have.value', record.fez_record_search_key_license.rek_license.toString())
-                    .siblings('[role=button]')
-                    .invoke('text')
-                    .should('equal', record.fez_record_search_key_license.rek_license_lookup);
-                cy.get('[data-testid="rek-content-indicator-select"]').should(
-                    'have.text',
-                    'Scholarship of Teaching and Learning',
-                );
-            });
+    function clickFormClearButton() {
+        cy.get('button[data-testid="rek-significance-clear"]')
+            .should('contain', 'Cancel')
+            .click();
+    }
 
-        // ---------------------------------------------- NTRO TAB ---------------------------------------------------
-        cy.log('NTRO tab');
+    function clickRowEditButton(rowId) {
+        const editButton = rowId => `[data-testid="rek-significance-list-row-${rowId}-edit"]`;
+        cy.waitUntil(() => cy.get(editButton(rowId)).should('exist'));
+        cy.get(editButton(rowId)).click();
+    }
+
+    function clickButtonShowForm() {
+        cy.get('[data-testid="rek-significance-showhidebutton"]')
+            .should('exist')
+            .click();
+    }
+
+    const statementList = {
+        0: {
+            statementContains: 'This is an online lecture',
+            significance: 'Major',
+            newSignificance: 'Minor',
+            newText: 'Changed content',
+        },
+        1: {
+            statementContains: 'Missing',
+            significance: '',
+        },
+        2: {
+            statementContains: 'Missing',
+            significance: 'Minor',
+        },
+    };
+
+    it('in the NTRO section, the significance and statement list rows have the correct content', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
             .within(() => {
-                // https://www.pivotaltracker.com/story/show/173121745
-                // cy.get('.AdminCard')
-                //     .eq(0)
-                //     .within(() => {
-                //         cy.get('h4').should('contain', 'Audience size');
-                //         cy.get('[data-testid=rek-audience-size-select]')
-                //             .should('have.text', record.fez_record_search_key_audience_size.rek_audience_size_lookup)
-                //             .get('[data-testid=rek-audience-size-input]')
-                //             .should(
-                //                 'have.value',
-                //                 record.fez_record_search_key_audience_size.rek_audience_size.toString(),
-                //             );
-                //     });
+                cy.log('SCALE OF SIGNIFICANCE AND CONTRIBUTION STATEMENT SECTION');
 
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
-                        // the list rows have the correct content
                         record.fez_record_search_key_significance
                             .map(item => item.rek_significance_lookup)
                             .forEach((significance, index) => {
@@ -119,15 +169,24 @@ context('Creative Work admin edit', () => {
                                     .eq(0)
                                     .should('contain', reducedContributionStatement);
                             });
+                    });
+            });
+    });
 
-                        // the form is initially hidden
-                        cy.get('[data-testid="rek-significance-form"]').should('not.exist');
-                        cy.get('[data-testid="rek-significance-showhidebutton"]')
-                            .should('exist')
-                            .click();
-                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
-                        cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+    it('in the NTRO section, the user can add an entry to significance and statement ', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
 
+                        clickButtonShowForm();
                         cy.get('button[data-testid="rek-significance-add"]')
                             .should('exist')
                             .should('contain', 'ADD');
@@ -135,47 +194,11 @@ context('Creative Work admin edit', () => {
                         cy.readCKEditor('rek-creator-contribution-statement').then(text => {
                             expect(text).to.be.empty;
                         });
-
-                        // can add an entry
-                        cy.get('[data-testid="rek-significance-list"]')
-                            .children()
-                            .should('have.length', 3);
                     });
             });
 
         // popup appears at foot of page, outside Admin section
         assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
-
-        // each edit button loads the correct text into the form
-        const statementList = {
-            0: {
-                statementContains: 'This is an online lecture',
-                significance: 'Major',
-                newSignificance: 'Minor',
-                newText: 'Changed content',
-            },
-            1: {
-                statementContains: 'Missing',
-                significance: '',
-            },
-            2: {
-                statementContains: 'Missing',
-                significance: 'Minor',
-            },
-        };
-
-        function clickFormSaveButton(label) {
-            const button = 'button[data-testid="rek-significance-add"]';
-            cy.waitUntil(() => cy.get(button).should('exist'));
-            cy.get(button)
-                .should('contain', label)
-                .click();
-        }
-        function clickRowEditButton(rowId) {
-            const editButton = rowId => `[data-testid="rek-significance-list-row-${rowId}-edit"]`;
-            cy.waitUntil(() => cy.get(editButton(rowId)).should('exist'));
-            cy.get(editButton(rowId)).click();
-        }
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -201,8 +224,21 @@ context('Creative Work admin edit', () => {
                         // the show hide status is correct
                         cy.waitUntil(() => cy.get('[data-testid="rek-significance-showhidebutton"]').should('exist'));
                         cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+                        // end: can add an entry
+                    });
+            });
+        cy.log('DONE');
+    });
 
-                        // each of the values loads into the form correctly
+    it('in the NTRO section, each of the significance and statement values loads into the form correctly', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
                         for (const [rowId, value] of Object.entries(statementList)) {
                             clickRowEditButton(rowId);
 
@@ -214,22 +250,28 @@ context('Creative Work admin edit', () => {
                             });
                             if (rowId === 0) {
                                 // the cancel button clears the form when loaded from edit
-                                cy.get('button[data-testid="rek-significance-clear"]')
-                                    .should('contain', 'Cancel')
-                                    .click();
+                                clickFormClearButton();
                                 cy.get('[data-testid="rek-significance-select"]').should('contain', '');
                                 cy.readCKEditor('rek-creator-contribution-statement').then(text => {
                                     expect(text).to.be.empty;
                                 });
                             }
                         }
+                    });
+            });
+    });
 
-                        cy.log('NOW EDIT THE FIRST ITEM');
+    it('in the NTRO section, the user can edit a significance and statement row', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
                         clickRowEditButton(0);
                         cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
-
-                        // the cancel button clears the form on add
-                        clickRowEditButton(0);
                     });
             });
 
@@ -246,19 +288,65 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list-row-0"]')
                             .find('p')
                             .eq(0)
-                            // .find('p')
-                            // .eq(0)
                             .should('have.text', statementList[0].newSignificance);
                         cy.get('[data-testid="rek-significance-list-row-0"]')
                             .find('span')
                             .eq(0)
                             .should('contain', statementList[0].newText);
                     });
+            });
+    });
 
-                // check the tests reach the bottom
-                // const checkComplete = 4;
-                // expect(checkComplete.to.equal(3));
+    it('in the NTRO section, the clear button clears the significance and statement add form', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
 
+                        // the form is initially hidden
+                        cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+                        clickButtonShowForm();
+                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
+
+                        cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+
+                        // enter some dtaa in the form
+                        cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
+                    });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        assertChangeSelectFromTo('rek-significance', '', statementList[0].newSignificance);
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        // clear the form
+                        clickFormClearButton();
+
+                        // the add form is cleared and the entered values have NOT appeared in the list
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 3);
+                    });
+            });
+        cy.log('DONE');
+    });
+
+    it('should render the NTRO quality indicators section as expected', () => {
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
                 cy.get('.AdminCard')
                     .eq(1)
                     .within(() => {
