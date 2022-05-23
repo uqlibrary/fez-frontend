@@ -12,6 +12,8 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
 import { Grid } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
+import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
 
 const returnDateField = (date, conf, className) => {
@@ -38,6 +40,9 @@ const useStyles = makeStyles({
     rowChild: {
         paddingBottom: 10,
     },
+    padTop: {
+        paddingTop: 5,
+    },
     expandButton: {
         float: 'left',
         width: 24,
@@ -47,6 +52,9 @@ const useStyles = makeStyles({
         width: 'calc(100% - 30px)',
         paddingTop: 5,
         paddingBottom: 5,
+    },
+    italic: {
+        fontStyle: 'italic',
     },
     dateField: { paddingTop: 5 },
 });
@@ -69,7 +77,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
         <Grid container key={row.rek_pid} data-testid={`row-${row.rek_pid}`} className={classes.rowParent}>
             <React.Fragment key={row.rek_pid}>
                 <Grid container className={classes.rowChild}>
-                    <Grid item xs={adminUser ? 7 : 8}>
+                    <Grid item xs={10} sm={11} md={adminUser ? 7 : 8} className={classes.outline}>
                         <div className={classes.expandButton}>
                             <IconButton
                                 aria-label="expand row"
@@ -92,13 +100,43 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                 </Link>
                             </Typography>
                             {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
+                            <Hidden mdUp>
+                                <div>
+                                    <Typography variant="caption" className={classes.italic}>
+                                        {communityCollectionsConfig.formatCreationDate(
+                                            moment(row.rek_created_date)
+                                                .local()
+                                                .format(conf.dateFormat),
+                                        )}
+                                        <Hidden smUp>
+                                            <br />
+                                        </Hidden>
+                                        <Hidden xsDown> / </Hidden>
+                                        {communityCollectionsConfig.formatUpdatedDate(
+                                            moment(row.rek_updated_date)
+                                                .local()
+                                                .format(conf.dateFormat),
+                                        )}
+                                    </Typography>
+                                </div>
+                            </Hidden>
                         </div>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    {returnDateField(row.rek_created_date, conf, classes.datefield)}
-                    {returnDateField(row.rek_updated_date, conf, classes.datefield)}
+                    <Hidden smDown>
+                        {returnDateField(
+                            row.rek_created_date,
+                            conf,
+                            `${classes.datefield} ${classes.padTop} ${classes.outline}`,
+                        )}
+                        {returnDateField(
+                            row.rek_updated_date,
+                            conf,
+                            `${classes.datefield} ${classes.padTop} ${classes.outline}`,
+                        )}
+                    </Hidden>
                     {!!adminUser && (
-                        <Grid item xs={1}>
+                        <Grid item xs={2} sm={1}>
                             <AdminActions
                                 record={row.rek_pid}
                                 id={`admin-actions-${row.rek_pid}`}

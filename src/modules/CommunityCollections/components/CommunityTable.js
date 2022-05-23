@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
 import { Grid } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
 const useStyles = makeStyles({
     headerStyle: {
         fontWeight: 400,
@@ -30,18 +31,20 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                 className={classes.headerStyle}
                 data-testid="community-collections-primary-header"
             >
-                <Grid item xs={adminUser ? 7 : 8}>
+                <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
                     <div className={classes.collapseIcon} />
                     <div className={classes.title}>{labels.title}</div>
                 </Grid>
-                <Grid item xs={2}>
-                    {labels.creation_date}
-                </Grid>
-                <Grid item xs={2}>
-                    {labels.updated_date}
-                </Grid>
+                <Hidden smDown>
+                    <Grid item xs={2}>
+                        {labels.creation_date}
+                    </Grid>
+                    <Grid item xs={2}>
+                        {labels.updated_date}
+                    </Grid>
+                </Hidden>
                 {!!adminUser && (
-                    <Grid item xs={1}>
+                    <Grid item xs={2} sm={1}>
                         {labels.actions}
                     </Grid>
                 )}
