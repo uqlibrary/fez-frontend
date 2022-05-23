@@ -90,7 +90,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
         console.log('ScaleOfSignificanceListEditor::valueAsJson=', valueAsJson);
 
         this.transformOutput = this.transformOutput.bind(this);
-        this.addItem = this.addItem.bind(this);
+        this.saveChangeToItem = this.saveChangeToItem.bind(this);
         this.moveUpList = this.moveUpList.bind(this);
         this.moveDownList = this.moveDownList.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
@@ -151,7 +151,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
         }
     };
 
-    addItem = item => {
+    saveChangeToItem = item => {
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
@@ -297,7 +297,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                             (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
                             'list-editor-form'
                         }
-                        onAdd={this.addItem}
+                        saveChangeToItem={this.saveChangeToItem}
                         remindToAdd={this.props.remindToAdd}
                         {...((this.props.locale && this.props.locale.form) || {})}
                         isValid={this.props.isValid}
@@ -324,10 +324,10 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     <Box display="flex" justifyContent="flex-end" alignItems="flex-end">
                         <IconButton
                             data-testid="rek-significance-showhidebutton"
-                            variant="contained"
-                            color="primary"
                             onClick={this.showScaleAdditionForm}
                             aria-label={this.props.locale.form.locale.addEntryButton}
+                            size="small"
+                            style={{ color: '#fff', backgroundColor: '#51247A' }}
                         >
                             <AddCircle />
                         </IconButton>

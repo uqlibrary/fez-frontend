@@ -28,26 +28,23 @@ export const resetFormCallbackFactory = (contributionStatementEditor, setSignifi
     return [callback, [contributionStatementEditor, setSignificance]];
 };
 
-export const addItemCallbackFactory = (disabled, significance, contributionStatement, onAdd, resetForm) => {
+export const addItemCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
     const callback = event => {
         // add item if user hits 'enter' key on input field
         if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
             return;
         }
         // pass on the selected item
-        onAdd({ key: significance, value: contributionStatement });
+        saveChangeToItem({ key: significance, value: contributionStatement });
         resetForm();
         // move focus to name as published text field after item was added
     };
-    return [callback, [disabled, significance, contributionStatement, onAdd, resetForm]];
+    return [callback, [disabled, significance, contributionStatement, saveChangeToItem, resetForm]];
 };
 
 export const ScaleOfSignificanceForm = propFields => {
-    const { disabled, locale, errorText, onAdd, showScaleAdditionForm } = propFields;
+    const { disabled, locale, errorText, saveChangeToItem, showScaleAdditionForm } = propFields;
     console.log('ScaleOfSignificanceForm::propFields=', propFields);
-    // const { significance, contributionStatement } = fieldsToEdit;
-    // console.log('ScaleOfSignificanceForm::significance=', significance);
-    // console.log('ScaleOfSignificanceForm::contributionStatement=', contributionStatement);
 
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
@@ -77,7 +74,7 @@ export const ScaleOfSignificanceForm = propFields => {
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const addItem = useCallback(
-        ...addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm),
+        ...addItemCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
     );
 
     const {
@@ -160,7 +157,7 @@ export const ScaleOfSignificanceForm = propFields => {
 };
 
 ScaleOfSignificanceForm.propTypes = {
-    onAdd: PropTypes.func.isRequired,
+    saveChangeToItem: PropTypes.func.isRequired,
     locale: PropTypes.object,
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
