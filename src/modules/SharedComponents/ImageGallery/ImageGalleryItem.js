@@ -10,27 +10,15 @@ import { useHistory } from 'react-router';
 import { handleKeyboardPressActivate } from 'helpers/general';
 
 import { makeStyles } from '@material-ui/core/styles';
-import Tooltip from '@material-ui/core/Tooltip';
-import ErrorOutlineOutlinedIcon from '@material-ui/icons/ErrorOutlineOutlined';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
 const useStyles = makeStyles(theme => ({
-    imageListItemRoot: {
-        [theme.breakpoints.down('md')]: {
-            width: '25% !important',
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '33% !important',
-        },
-        [theme.breakpoints.down('xs')]: {
-            width: '50% !important',
-        },
-    },
+    imageListItemRoot: {},
     imageListItemItem: {
-        backgroundColor: '#51247a',
+        backgroundColor: '#fff',
+        border: '1px solid #d7d1cc',
     },
     imageListItemWithLink: {
         cursor: 'pointer',
@@ -42,7 +30,8 @@ const useStyles = makeStyles(theme => ({
         padding: '10px',
     },
     imageListItemBarTitle: {
-        fontSize: '12px',
+        fontSize: '14px',
+        fontWeight: '500',
         lineHeight: '16px',
         display: '-webkit-box',
         lineClamp: 3,
@@ -65,17 +54,19 @@ const useStyles = makeStyles(theme => ({
             minHeight: '150px',
         },
     },
-    titleBar: {
+    imageListAlertBarRoot: {
         background: 'none',
-        height: '30px',
+        backgroundColor: '#4085c6',
+        height: 'auto',
     },
-    icon: {
-        color: 'white',
-        filter: 'drop-shadow(0px 0px 5px rgba(0,0,0,0.5))',
-        cursor: 'default',
+    imageListAlertBarWrap: {
+        margin: '0px',
+        padding: '10px',
     },
-    tooltip: {
-        cursor: 'default',
+    imageListAlertBarTitle: {
+        fontSize: '14px',
+        fontWeight: '500',
+        lineHeight: 'normal',
     },
 }));
 
@@ -98,22 +89,22 @@ const ImageGalleryItem = ({
     const internalClasses = useStyles();
     const [restricted, setRestricted] = React.useState(false);
     const [advisory, setAdvisory] = React.useState(false);
+    const [unavailable, setUnavailable] = React.useState(false);
     const historyObject = history ?? useHistory();
+
+    const alertMessage = React.useMemo(() => {
+        if (unavailable) return txt.components.imageGallery.alert.unavailable;
+        if (restricted && advisory) return txt.components.imageGallery.alert.restrictedAdvisory;
+        if (restricted) return txt.components.imageGallery.alert.restricted;
+        if (advisory) return txt.components.imageGallery.alert.advisory;
+        return null;
+    }, [restricted, advisory, unavailable]);
 
     const clickLink =
         !!url && url.length > 0
             ? {
                   onClick: () => viewRecord(historyObject, url),
                   role: 'button',
-              }
-            : {};
-    const clickIcon =
-        !!url && url.length > 0
-            ? {
-                  onClick: e => {
-                      e.stopPropagation?.();
-                      e.nativeEvent?.stopImmediatePropagation?.();
-                  },
               }
             : {};
 
@@ -148,6 +139,7 @@ const ImageGalleryItem = ({
                 className={`${internalClasses.imageGalleryItemImage} ${classes?.imageListItemImage ?? ''}`}
                 setRestricted={setRestricted}
                 setAdvisory={setAdvisory}
+                setUnavailable={setUnavailable}
             />
             {withTitle && (
                 <ImageListItemBar
@@ -160,55 +152,16 @@ const ImageGalleryItem = ({
                     }}
                 />
             )}
-            {restricted && (
+            {!!alertMessage && (
                 <ImageListItemBar
-                    title={item.title}
+                    title={alertMessage}
                     position="top"
-                    actionIcon={
-                        <Tooltip
-                            title={txt.components.imageGallery.tooltip.restricted}
-                            enterTouchDelay={0}
-                            leaveTouchDelay={2500}
-                            id={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
-                            data-testid={`image-gallery-item-${item.rek_pid}-restricted-tooltip`}
-                        >
-                            <LockOutlinedIcon
-                                className={internalClasses.icon}
-                                size="small"
-                                id={`image-gallery-item-${item.rek_pid}-restricted`}
-                                data-testid={`image-gallery-item-${item.rek_pid}-restricted`}
-                                {...clickIcon}
-                            />
-                        </Tooltip>
-                    }
-                    actionPosition="left"
-                    className={internalClasses.titleBar}
-                />
-            )}
-            {advisory && (
-                <ImageListItemBar
-                    title={item.title}
-                    position="top"
-                    actionIcon={
-                        <Tooltip
-                            className={internalClasses.tooltip}
-                            title={txt.components.imageGallery.tooltip.advisory}
-                            enterTouchDelay={0}
-                            leaveTouchDelay={2500}
-                            id={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
-                            data-testid={`image-gallery-item-${item.rek_pid}-advisory-tooltip`}
-                        >
-                            <ErrorOutlineOutlinedIcon
-                                className={internalClasses.icon}
-                                size="small"
-                                id={`image-gallery-item-${item.rek_pid}-advisory`}
-                                data-testid={`image-gallery-item-${item.rek_pid}-advisory`}
-                                {...clickIcon}
-                            />
-                        </Tooltip>
-                    }
-                    actionPosition="right"
-                    className={internalClasses.titleBar}
+                    classes={{
+                        root: `${internalClasses.imageListAlertBarRoot} ${classes?.imageListAlertBar?.root ?? ''}`,
+                        title: `${internalClasses.imageListAlertBarTitle} ${classes?.imageListAlertBar?.title ?? ''}`,
+                        titleWrap: `${internalClasses.imageListAlertBarWrap} ${classes?.imageListAlertBar?.titleWrap ??
+                            ''}`,
+                    }}
                 />
             )}
         </ImageListItem>
@@ -228,6 +181,7 @@ ImageGalleryItem.propTypes = {
         }),
         imageListItemImage: PropTypes.string,
         imageListItemBar: PropTypes.object,
+        imageListAlertBar: PropTypes.object,
     }),
     lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,

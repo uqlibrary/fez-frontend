@@ -75,7 +75,6 @@ export const getUrl = (pid, fileName, checksum = '') => {
             ? /* istanbul ignore next*/ `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(
                   fullUrl.indexOf(fileName),
               )}`
-            : (fullUrl && `https://espace.library.uq.edu.au/${fullUrl.substr(fullUrl.indexOf('view/'))}`) ?? fullUrl;
-    // TODO: remove bodge for dev server testing
+            : fullUrl ?? '';
     return url;
 };

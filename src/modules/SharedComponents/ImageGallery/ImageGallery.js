@@ -2,20 +2,18 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import ImageList from '@material-ui/core/ImageList';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import { pathConfig } from 'config/pathConfig';
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItem from './ImageGalleryItem';
 
-const useStyles = makeStyles(
-    theme => ({
-        imageListRoot: {
-            [theme.breakpoints.down('xs')]: {},
-        },
-    }),
-    { withTheme: true },
-);
+const useStyles = makeStyles(() => ({
+    imageListItemRoot: {
+        height: '100% !important',
+    },
+}));
 
 export const getItemUrl = pid => {
     return pathConfig.records.view(pid);
@@ -33,10 +31,17 @@ const ImageGallery = ({
 }) => {
     const internalClasses = useStyles();
 
+    const theme = useTheme();
+    const sm = useMediaQuery(theme.breakpoints.up('sm'));
+    const md = useMediaQuery(theme.breakpoints.up('md'));
+
+    // eslint-disable-next-line no-nested-ternary
+    const cols = itemsPerRow ?? md ? 4 : sm ? 3 : 2;
+
     return (
         <ImageList
             rowHeight={itemHeight}
-            cols={itemsPerRow}
+            cols={cols}
             classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
             id={'image-gallery'}
             data-testid={'image-gallery'}
@@ -81,7 +86,6 @@ ImageGallery.defaultProps = {
     lazyLoading: config.thumbnailImage.defaultLazyLoading,
     itemWidth: config.thumbnailImage.defaultWidth,
     itemHeight: config.thumbnailImage.defaultHeight,
-    itemsPerRow: config.thumbnailImage.defaultItemsPerRow,
 };
 
 export default React.memo(ImageGallery);
