@@ -120,8 +120,17 @@ context('Creative Work admin edit', () => {
                                     .should('contain', reducedContributionStatement);
                             });
 
-                        // the form is initially blank
-                        cy.get('button[data-testid="rek-significance-add"]').should('contain', 'ADD');
+                        // the form is initially hidden
+                        cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+                        cy.get('[data-testid="rek-significance-showhidebutton"]')
+                            .should('exist')
+                            .click();
+                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
+                        cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
+
+                        cy.get('button[data-testid="rek-significance-add"]')
+                            .should('exist')
+                            .should('contain', 'ADD');
                         cy.get('[data-testid="rek-significance-select"]').should('contain', '');
                         cy.readCKEditor('rek-creator-contribution-statement').then(text => {
                             expect(text).to.be.empty;
@@ -189,6 +198,9 @@ context('Creative Work admin edit', () => {
                             .find('p')
                             .eq(0)
                             .should('have.text', 'Minor');
+                        // the show hide status is correct
+                        cy.waitUntil(() => cy.get('[data-testid="rek-significance-showhidebutton"]').should('exist'));
+                        cy.get('[data-testid="rek-significance-form"]').should('not.exist');
 
                         // each of the values loads into the form correctly
                         for (const [rowId, value] of Object.entries(statementList)) {

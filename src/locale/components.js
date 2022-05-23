@@ -904,6 +904,7 @@ export default {
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
                         editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
+                        addEntryButton: 'Add entry',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',

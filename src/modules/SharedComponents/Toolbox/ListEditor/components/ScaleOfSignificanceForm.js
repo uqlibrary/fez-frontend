@@ -18,11 +18,12 @@ export const handleSignificanceCallbackFactory = setSignificance => {
     return [callback, [setSignificance]];
 };
 
-export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance) => {
+export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance, showScaleAdditionForm) => {
     const callback = () => {
         console.log('resetFormCallbackFactory');
         setSignificance(null);
         contributionStatementEditor.current.setData(null);
+        showScaleAdditionForm(false);
     };
     return [callback, [contributionStatementEditor, setSignificance]];
 };
@@ -42,7 +43,7 @@ export const addItemCallbackFactory = (disabled, significance, contributionState
 };
 
 export const ScaleOfSignificanceForm = propFields => {
-    const { disabled, locale, errorText, onAdd } = propFields;
+    const { disabled, locale, errorText, onAdd, showScaleAdditionForm } = propFields;
     console.log('ScaleOfSignificanceForm::propFields=', propFields);
     // const { significance, contributionStatement } = fieldsToEdit;
     // console.log('ScaleOfSignificanceForm::significance=', significance);
@@ -71,7 +72,9 @@ export const ScaleOfSignificanceForm = propFields => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance));
+    const resetForm = useCallback(
+        ...resetFormCallbackFactory(contributionStatementEditor, setSignificance, showScaleAdditionForm),
+    );
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const addItem = useCallback(
         ...addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm),
@@ -88,7 +91,7 @@ export const ScaleOfSignificanceForm = propFields => {
     } = locale;
 
     return (
-        <Grid container spacing={2} display="row" alignItems="center">
+        <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">
             <Grid item xs={12}>
                 <Alert {...authorOrderAlert} />
             </Grid>

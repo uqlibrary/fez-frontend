@@ -5,6 +5,9 @@ import ListRow from './ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 import FormHelperText from '@material-ui/core/FormHelperText';
+import IconButton from '@material-ui/core/IconButton';
+import Box from '@material-ui/core/Box';
+import AddCircle from '@material-ui/icons/Add';
 
 export default class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
@@ -82,6 +85,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
             itemIndexSelectedToEdit: null,
             buttonLabel: props.locale.form.locale.addButtonLabel,
+            showAddForm: false,
         };
         console.log('ScaleOfSignificanceListEditor::valueAsJson=', valueAsJson);
 
@@ -248,11 +252,18 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     editItem = index => {
         console.log('ScaleOfSignificanceListEditor::editItem index=', index);
+        this.showScaleAdditionForm();
         this.setState({
             itemIndexSelectedToEdit: index,
         });
         this.state.buttonLabel = this.props.locale.form.locale.editButtonLabel;
         console.log('ScaleOfSignificanceListEditor::now editing ', this.state.itemIndexSelectedToEdit);
+    };
+
+    showScaleAdditionForm = (show = true) => {
+        this.setState({
+            showAddForm: show,
+        });
     };
 
     render() {
@@ -276,34 +287,52 @@ export default class ScaleOfSignificanceListEditor extends Component {
             />
         ));
         return (
-            <div className={`${this.props.className}`} id={`${this.props.listEditorId}-list-editor`}>
-                <ScaleOfSignificanceForm
-                    key={
-                        (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
-                        'list-editor-form'
-                    }
-                    onAdd={this.addItem}
-                    remindToAdd={this.props.remindToAdd}
-                    {...((this.props.locale && this.props.locale.form) || {})}
-                    isValid={this.props.isValid}
-                    error={this.props.error}
-                    disabled={
-                        this.props.disabled ||
-                        (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)
-                    }
-                    maxInputLength={this.props.maxInputLength}
-                    normalize={this.props.inputNormalizer}
-                    category={this.props.category}
-                    required={this.props.required}
-                    itemSelectedToEdit={this.props.getItemSelectedToEdit(
-                        this.state.itemList,
-                        this.state.itemIndexSelectedToEdit,
-                    )}
-                    itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
-                    listEditorId={this.props.listEditorId}
-                    input={this.props.input}
-                    buttonLabel={this.state.buttonLabel}
-                />
+            <div
+                // className={`${this.props.className}`}
+                id={`${this.props.listEditorId}-list-editor`}
+            >
+                {this.state.showAddForm ? (
+                    <ScaleOfSignificanceForm
+                        key={
+                            (!!this.state.itemIndexSelectedToEdit && `${this.props.listEditorId}-form`) ||
+                            'list-editor-form'
+                        }
+                        onAdd={this.addItem}
+                        remindToAdd={this.props.remindToAdd}
+                        {...((this.props.locale && this.props.locale.form) || {})}
+                        isValid={this.props.isValid}
+                        error={this.props.error}
+                        disabled={
+                            this.props.disabled ||
+                            (this.props.maxCount > 0 && this.state.itemList.length >= this.props.maxCount)
+                        }
+                        maxInputLength={this.props.maxInputLength}
+                        normalize={this.props.inputNormalizer}
+                        category={this.props.category}
+                        required={this.props.required}
+                        itemSelectedToEdit={this.props.getItemSelectedToEdit(
+                            this.state.itemList,
+                            this.state.itemIndexSelectedToEdit,
+                        )}
+                        itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
+                        listEditorId={this.props.listEditorId}
+                        input={this.props.input}
+                        buttonLabel={this.state.buttonLabel}
+                        showScaleAdditionForm={this.showScaleAdditionForm}
+                    />
+                ) : (
+                    <Box display="flex" justifyContent="flex-end" alignItems="flex-end">
+                        <IconButton
+                            data-testid="rek-significance-showhidebutton"
+                            variant="contained"
+                            color="primary"
+                            onClick={this.showScaleAdditionForm}
+                            aria-label={this.props.locale.form.locale.addEntryButton}
+                        >
+                            <AddCircle />
+                        </IconButton>
+                    </Box>
+                )}
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader
                         onDeleteAll={this.deleteAllItems}
