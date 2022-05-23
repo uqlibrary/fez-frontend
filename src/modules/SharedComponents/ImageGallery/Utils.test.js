@@ -57,7 +57,7 @@ describe('ImageGallery Utils', () => {
         it('should return a properly formatted URL string', () => {
             const fd = getThumbnail(publication, false, false);
             expect(getUrl(publication.rek_pid, fd.fileName, 'test')).toEqual(
-                'https://espace.library.uq.edu.au/view/UQ:288612/Slide_009.tif?dsi_version=db98827b0a5c6ce3e80296096863c88c',
+                'http://localhost/view/UQ:288612/Slide_009.tif?dsi_version=db98827b0a5c6ce3e80296096863c88c',
             );
         });
     });

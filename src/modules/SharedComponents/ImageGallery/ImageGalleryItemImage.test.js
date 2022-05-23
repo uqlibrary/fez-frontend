@@ -19,7 +19,7 @@ const setup = (props = {}) => {
 };
 
 describe('Image Gallery Item Image', () => {
-    it('should make call to render a lock icon', () => {
+    it('should make call when image is restricted', () => {
         const setRestricted = jest.fn();
         const item = collectionSearchResultsImages.data[0];
         item.rek_display_type_lookup = 'NotValidType';
@@ -27,7 +27,7 @@ describe('Image Gallery Item Image', () => {
 
         expect(setRestricted).toHaveBeenCalledWith(true);
     });
-    it('should make call to render an advisory icon', () => {
+    it('should make call when image contains an advisory statement', () => {
         const setAdvisory = jest.fn();
         const item = collectionSearchResultsImages.data[0];
         item.fez_record_search_key_advisory_statement = {};
@@ -36,7 +36,7 @@ describe('Image Gallery Item Image', () => {
 
         expect(setAdvisory).toHaveBeenCalledWith(true);
     });
-    it('should make call to render both a lock icon and an advisory icon', () => {
+    it('should make call when image is restricted and contains an advisory statement', () => {
         const setRestricted = jest.fn();
         const setAdvisory = jest.fn();
         const item = collectionSearchResultsImages.data[0];
@@ -74,10 +74,11 @@ describe('Image Gallery Item Image', () => {
         expect(galleryElement).not.toHaveAttribute('src', config.thumbnailImage.defaultImageName);
     });
 
-    it('should render a placeholder image when no thumb to show', () => {
+    it('should render a placeholder image when no thumb to show and make a call to the image unavailable function', () => {
+        const setUnavailable = jest.fn();
         const testItem = collectionSearchResultsImages.data[0];
         testItem.fez_datastream_info = null;
-        const { getByTestId } = setup({ item: testItem });
+        const { getByTestId } = setup({ item: testItem, setUnavailable });
 
         expect(
             getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[0].rek_pid}`),
@@ -87,11 +88,13 @@ describe('Image Gallery Item Image', () => {
             'src',
             config.thumbnailImage.defaultImageName,
         );
+        expect(setUnavailable).toHaveBeenCalledWith(true);
     });
-    it('should render a placeholder image when thumb image fails to load', () => {
+    it('should render a placeholder image when thumb image fails to load and make a call to the image unavailable function', () => {
+        const setUnavailable = jest.fn();
         const testItem = collectionSearchResultsImages.data[2];
         const mockGetUrl = jest.spyOn(utils, 'getUrl').mockImplementationOnce(() => 'broken-image-url.jpg');
-        const { getByTestId } = setup({ item: testItem });
+        const { getByTestId } = setup({ item: testItem, setUnavailable });
 
         const galleryElement = getByTestId(`imageGalleryItemImage-${collectionSearchResultsImages.data[2].rek_pid}`);
 
@@ -105,6 +108,8 @@ describe('Image Gallery Item Image', () => {
 
         // In reality JS onError will kick in to show a fallback image when image src is invalid
         expect(galleryElement).toHaveAttribute('src', config.thumbnailImage.defaultImageName);
+
+        expect(setUnavailable).toHaveBeenCalledWith(true);
     });
     it('should render a gallery image', () => {
         const { getByTestId } = setup({ item: collectionSearchResultsImages.data[5] });
