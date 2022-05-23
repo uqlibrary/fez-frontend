@@ -81,6 +81,9 @@ const useStyles = makeStyles(theme => ({
     autoOverflow: {
         overflow: 'auto',
     },
+    italic: {
+        fontStyle: 'italic',
+    },
 }));
 export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, open }) => {
     const dispatch = useDispatch();

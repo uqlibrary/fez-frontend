@@ -236,8 +236,8 @@ export const CommunityList = () => {
                                 pagingData={PagindData}
                                 onPageChanged={pageChanged}
                                 disabled={false}
-                                pagingId="community-collections-paging-top"
-                                data-testid="community-collections-paging-top"
+                                pagingId="community-collections-paging-bottom"
+                                data-testid="community-collections-paging-bottom"
                             />
                         </Grid>
                     </StandardCard>
