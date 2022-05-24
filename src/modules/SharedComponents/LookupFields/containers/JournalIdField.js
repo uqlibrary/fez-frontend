@@ -6,7 +6,7 @@ import { JournalTemplate } from 'modules/SharedComponents/LookupFields';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { APP_URL, PATH_PREFIX } from 'config';
 import locale from 'locale/components';
-import matchSorter from 'match-sorter';
+import { matchSorter } from 'match-sorter';
 
 const mapStateToProps = (state, props) => {
     const selectedJournalId =
@@ -29,7 +29,14 @@ const mapStateToProps = (state, props) => {
         error: props.meta ? !!props.meta.error : null,
         getOptionLabel: (!!props.getOptionLabel && props.getOptionLabel) || (item => (item || {}).value || ''),
         filterOptions: (options, { inputValue }) => {
-            return matchSorter(options, inputValue, { keys: ['value'] });
+            return matchSorter(
+                options,
+                inputValue
+                    .replace(/&|\sand\s/gi, ' ')
+                    .replace(/\s{2,}/g, ' ')
+                    .trim(),
+                { keys: ['value'] },
+            );
         },
         floatingLabelText: props.floatingLabelText || 'Journal Id',
         OptionTemplate: JournalTemplate,

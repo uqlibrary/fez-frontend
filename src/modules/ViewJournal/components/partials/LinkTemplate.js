@@ -44,7 +44,7 @@ export const LinkTemplate = ({ data, templateProps, fieldId }) => {
 };
 
 LinkTemplate.propTypes = {
-    data: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    data: PropTypes.oneOfType([PropTypes.object, PropTypes.string, PropTypes.bool]),
     templateProps: PropTypes.object,
     fieldId: PropTypes.string,
 };
