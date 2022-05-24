@@ -67,6 +67,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '14px',
         fontWeight: '500',
         lineHeight: 'normal',
+        whiteSpace: 'normal',
     },
 }));
 
