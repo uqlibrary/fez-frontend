@@ -19,6 +19,13 @@ export const getItemUrl = pid => {
     return pathConfig.records.view(pid);
 };
 
+export const getItemsPerRow = (itemsPerRow, sm, md) => {
+    if (!!itemsPerRow) return itemsPerRow;
+    if (!!md) return 4;
+    if (!!sm) return 3;
+    return 2;
+};
+
 const ImageGallery = ({
     publicationsList,
     classes,
@@ -35,8 +42,7 @@ const ImageGallery = ({
     const sm = useMediaQuery(theme.breakpoints.up('sm'));
     const md = useMediaQuery(theme.breakpoints.up('md'));
 
-    // eslint-disable-next-line no-nested-ternary
-    const cols = itemsPerRow ?? md ? 4 : sm ? 3 : 2;
+    const cols = getItemsPerRow(itemsPerRow, sm, md);
 
     return (
         <ImageList

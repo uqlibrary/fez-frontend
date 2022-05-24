@@ -74,9 +74,18 @@ const viewRecord = (history, url) => {
     history.push(url);
 };
 
+export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
+    if (unavailable) return txt.components.imageGallery.alert.unavailable;
+    if (restricted && advisory) return txt.components.imageGallery.alert.restrictedAdvisory;
+    if (restricted) return txt.components.imageGallery.alert.restricted;
+    if (advisory) return txt.components.imageGallery.alert.advisory;
+    return null;
+};
+
 const ImageGalleryItem = ({
     item,
     withTitle,
+    withAlert,
     url,
     history,
     classes,
@@ -93,11 +102,7 @@ const ImageGalleryItem = ({
     const historyObject = history ?? useHistory();
 
     const alertMessage = React.useMemo(() => {
-        if (unavailable) return txt.components.imageGallery.alert.unavailable;
-        if (restricted && advisory) return txt.components.imageGallery.alert.restrictedAdvisory;
-        if (restricted) return txt.components.imageGallery.alert.restricted;
-        if (advisory) return txt.components.imageGallery.alert.advisory;
-        return null;
+        return getAlertMessageText({ unavailable, restricted, advisory });
     }, [restricted, advisory, unavailable]);
 
     const clickLink =
@@ -150,9 +155,11 @@ const ImageGalleryItem = ({
                         titleWrap: `${internalClasses.imageListItemBarTitleWrap} ${classes?.imageListItemBar
                             ?.titleWrap ?? ''}`,
                     }}
+                    id={`image-gallery-item-${item.rek_pid}-title`}
+                    data-testid={`image-gallery-item-${item.rek_pid}-title`}
                 />
             )}
-            {!!alertMessage && (
+            {!!alertMessage && withAlert && (
                 <ImageListItemBar
                     title={alertMessage}
                     position="top"
@@ -162,6 +169,8 @@ const ImageGalleryItem = ({
                         titleWrap: `${internalClasses.imageListAlertBarWrap} ${classes?.imageListAlertBar?.titleWrap ??
                             ''}`,
                     }}
+                    id={`image-gallery-item-${item.rek_pid}-alert`}
+                    data-testid={`image-gallery-item-${item.rek_pid}-alert`}
                 />
             )}
         </ImageListItem>
@@ -171,6 +180,7 @@ const ImageGalleryItem = ({
 ImageGalleryItem.propTypes = {
     item: PropTypes.object.isRequired,
     withTitle: PropTypes.bool,
+    withAlert: PropTypes.bool,
     url: PropTypes.string,
     history: PropTypes.object,
     security: PropTypes.object,
@@ -190,6 +200,7 @@ ImageGalleryItem.propTypes = {
 
 ImageGalleryItem.defaultProps = {
     withTitle: true,
+    withAlert: true,
     classes: {},
     security: { isAdmin: false, isAuthor: false },
     lazyLoading: config.thumbnailImage.defaultLazyLoading,
