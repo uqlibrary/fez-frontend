@@ -1,6 +1,16 @@
+import records from '../../src/mock/data/records/internalTitleSearchList';
+
 context('Search', () => {
     // const searchLocale = componentsLocale.components.searchComponent;
     const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ').trim();
+    const xs = 320;
+    const sm = 600;
+    const md = 960;
+    const filterByTop = top => {
+        return function _() {
+            return this.offsetTop === top;
+        };
+    };
 
     beforeEach(() => {
         cy.visit('/records/search');
@@ -87,7 +97,7 @@ context('Search', () => {
     });
 
     context('Search results in Image Gallery', () => {
-        it.only('has Display As drop down with expected values', () => {
+        it('has Display As drop down with expected values', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -111,18 +121,123 @@ context('Search', () => {
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
             cy.get('img[data-testid^=imageGalleryItemImage-]').should('have.length', 8);
-            cy.get('li[data-testid^=image-gallery-item-]')
-                .first()
-                .find('svg[data-testid$=-restricted]')
-                .should('have.attr', 'title', "This record's thumbnail is locked");
-            cy.get('li[data-testid^=image-gallery-item-]')
-                .first()
-                .find('svg[data-testid$=-advisory]')
+            cy.get('li[data-testid^=image-gallery-item-]').each(item => {
+                cy.wrap(item)
+                    .find('div[data-testid$="-alert"]')
+                    .siblings('div')
+                    .siblings('div')
+                    .should('contain.text', 'Image not available');
+            });
+            cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
+                cy.wrap(item)
+                    .find('div[data-testid$="-title"]')
+                    .siblings('div')
+                    .siblings('div')
+                    .should('contain.text', records.data[index].rek_title);
+            });
+        });
+
+        it('should show 4 items in the first row at >=medium breakpoint', () => {
+            cy.viewport(md, 768);
+            cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
-                    'title',
-                    'This record has an advisor statement - caution is advised when viewing this record',
-                );
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Test{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Standard');
+            cy.contains('[role=listbox] li', 'Image Gallery').click();
+            cy.get('#displayRecordsAs').contains('Image Gallery');
+
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .should('have.length', 8)
+                .then(() => {
+                    const firstElement = cy.$$('li[data-testid^=image-gallery-item-]')[0];
+                    cy.get('li[data-testid^=image-gallery-item-]')
+                        .filter(filterByTop(firstElement.offsetTop))
+                        .should('have.length', 4);
+                });
+        });
+        it('should show 3 items in the first row at >=small & <medium breakpoint', () => {
+            cy.viewport(sm, 768);
+            cy.get('[data-testid=simple-search-input]')
+                .should(
+                    'have.attr',
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Test{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Standard');
+            cy.contains('[role=listbox] li', 'Image Gallery').click();
+            cy.get('#displayRecordsAs').contains('Image Gallery');
+
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .should('have.length', 8)
+                .then(() => {
+                    const firstElement = cy.$$('li[data-testid^=image-gallery-item-]')[0];
+                    cy.get('li[data-testid^=image-gallery-item-]')
+                        .filter(filterByTop(firstElement.offsetTop))
+                        .should('have.length', 3);
+                });
+        });
+        it('should show 2 items in the first row at >=xs & <small breakpoint', () => {
+            cy.viewport(xs, 768);
+            cy.get('[data-testid=simple-search-input]')
+                .should(
+                    'have.attr',
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Test{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Standard');
+            cy.contains('[role=listbox] li', 'Image Gallery').click();
+            cy.get('#displayRecordsAs').contains('Image Gallery');
+
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .should('have.length', 8)
+                .then(() => {
+                    const firstElement = cy.$$('li[data-testid^=image-gallery-item-]')[0];
+                    cy.get('li[data-testid^=image-gallery-item-]')
+                        .filter(filterByTop(firstElement.offsetTop))
+                        .should('have.length', 2);
+                });
         });
     });
 });

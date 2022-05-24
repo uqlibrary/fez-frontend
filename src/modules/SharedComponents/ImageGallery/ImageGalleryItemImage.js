@@ -28,6 +28,7 @@ const ImageGalleryItemImage = ({
     className,
     setRestricted,
     setAdvisory,
+    setUnavailable,
     ...rest
 }) => {
     const classes = useStyles();
@@ -45,12 +46,6 @@ const ImageGalleryItemImage = ({
             item.fez_record_search_key_advisory_statement?.rek_advisory_statement) ??
         false;
 
-    React.useEffect(() => {
-        if (thumbnailRestricted && !!setRestricted) setRestricted(true);
-        if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
     // at this stage fileData could still be null, which is fine as below will fall back to default image
     const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
 
@@ -59,8 +54,16 @@ const ImageGalleryItemImage = ({
             ? filenameSrc
             : config.thumbnailImage.defaultImageName;
 
+    React.useEffect(() => {
+        if (filename === config.thumbnailImage.defaultImageName && !!setUnavailable) setUnavailable(true);
+        if (thumbnailRestricted && !!setRestricted) setRestricted(true);
+        if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const onError = fallbackUrl => {
         setImgSrc(fallbackUrl);
+        !!setUnavailable && setUnavailable(true);
     };
     const errorHandler =
         imgSrc !== config.thumbnailImage.defaultImageName
@@ -91,6 +94,7 @@ ImageGalleryItemImage.propTypes = {
     className: PropTypes.string,
     setRestricted: PropTypes.func,
     setAdvisory: PropTypes.func,
+    setUnavailable: PropTypes.func,
 };
 
 ImageGalleryItemImage.defaultProps = {

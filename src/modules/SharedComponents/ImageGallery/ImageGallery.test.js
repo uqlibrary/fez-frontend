@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, AllTheProviders } from 'test-utils';
 
-import ImageGallery from './ImageGallery';
+import ImageGallery, { getItemUrl, getItemsPerRow } from './ImageGallery';
 import { collectionSearchResultsImages } from 'mock/data';
 
 const setup = (props = {}) => {
@@ -29,5 +29,25 @@ describe('Image Gallery', () => {
         const galleryElement = getByTestId('image-gallery');
         expect(galleryElement).toBeInTheDocument();
         expect(galleryElement.querySelectorAll('li').length).toEqual(20);
+    });
+
+    describe('getItemUrl function', () => {
+        it('should return a properly formatted URL string', () => {
+            expect(getItemUrl('test')).toEqual('/view/test');
+        });
+    });
+    describe('getItemsPerRow function', () => {
+        it('should return itemsPerRow if passed', () => {
+            expect(getItemsPerRow(10)).toEqual(10);
+        });
+        it('should return 4 if md=true', () => {
+            expect(getItemsPerRow(null, false, true)).toEqual(4);
+        });
+        it('should return 3 if sm=true', () => {
+            expect(getItemsPerRow(null, true, false)).toEqual(3);
+        });
+        it('should return 2 if sm & md = false', () => {
+            expect(getItemsPerRow(null, false, false)).toEqual(2);
+        });
     });
 });

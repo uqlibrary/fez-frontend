@@ -1766,9 +1766,11 @@ export default {
             ],
         },
         imageGallery: {
-            tooltip: {
-                restricted: "This record's thumbnail is locked",
-                advisory: 'This record has an advisor statement - caution is advised when viewing this record',
+            alert: {
+                restricted: 'Image restricted',
+                advisory: 'Content warning',
+                restrictedAdvisory: 'Restricted + content warning',
+                unavailable: 'Image not available',
             },
             thumbnail: {
                 ariaLabel: 'Thumbnail image showing [title]',
