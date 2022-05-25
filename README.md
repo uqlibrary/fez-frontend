@@ -285,7 +285,24 @@ To keep initial load to a minimum, the following optimisations have been added t
   
   Be sure to check your nvm node version if your unit tests fail to run (this typically will happen if you change your repo from package-lock.json version 1 to 2, including updating the node and npm versions as mentioned above).
 
-#### Optimisation Guidelines
+- If you wish to reference static images in the `public/images` folder outside of `src`, you must use `require()` to bring them in to your component. This is due to a hashing process during build that moves and renames images to an assets folder on S3.
+
+So instead of:
+
+``` 
+<img src='/images/someimage.jpg'>
+```
+
+use:
+
+``` 
+const myImage = require(../../public/images/someimage.jpg) // your path with depend upon where you're referencing the image in the hierarchy
+<img src={myImage}>
+// or in styles
+backgroundImage: `url(${myImage})`
+```
+
+### Optimisation Guidelines
 
 - do not use functional components
 - try to simplify props
