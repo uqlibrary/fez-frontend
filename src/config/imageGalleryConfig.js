@@ -1,4 +1,4 @@
-const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
+export const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
 
 export default {
     thumbnailImage: {
