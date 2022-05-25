@@ -10,14 +10,8 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const useStyles = makeStyles(() => ({
     imageGalleryItemImage: {
         objectFit: 'cover',
-    },
-    lockIcon: {
-        position: 'absolute',
-        top: '5px',
-        left: '5px',
-        width: '25px',
-        height: '25px',
-        filter: 'drop-shadow(0px 0px 5px rgba(0,0,0,0.5))',
+        boxSizing: 'border-box',
+        display: 'block',
     },
 }));
 
@@ -31,7 +25,7 @@ const ImageGalleryItemImage = ({
     setUnavailable,
     ...rest
 }) => {
-    const classes = useStyles();
+    const internalClasses = useStyles();
     const [imgSrc, setImgSrc] = React.useState();
 
     const config = { ...defaultConfig, ...customDefaultConfig };
@@ -77,7 +71,7 @@ const ImageGalleryItemImage = ({
             id={`imageGalleryItemImage-${item.rek_pid}`}
             data-testid={`imageGalleryItemImage-${item.rek_pid}`}
             src={imgSrc || filename}
-            className={`${classes.imageGalleryItemImage} ${className} image-gallery-item-image`}
+            className={`${internalClasses.imageGalleryItemImage} ${className} image-gallery-item-image`}
             {...errorHandler}
             {...rest}
         />
