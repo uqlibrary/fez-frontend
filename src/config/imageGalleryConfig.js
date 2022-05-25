@@ -1,10 +1,11 @@
+import { APP_URL, PATH_PREFIX } from 'config/general';
 export const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
 
 export default {
     thumbnailImage: {
         defaultImageName: process.env.GALLERY_IMAGE_PATH_PREPEND
             ? `${process.env.GALLERY_IMAGE_PATH_PREPEND}image_unavailable.svg`
-            : placeholderImage,
+            : `${APP_URL}${PATH_PREFIX}${placeholderImage}`,
         defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
