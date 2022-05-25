@@ -302,6 +302,16 @@ const myImage = require(../../public/images/someimage.jpg) // your path with dep
 backgroundImage: `url(${myImage})`
 ```
 
+Also be wary of the different environments your code will deploy to, e.g. dev branch, staging, production. Dev branches work slightly different to the other two when it comes to using absolute vs relative paths, due to how the dev server must host multiple branches each with their own build.
+When referencing something from the root, it is usually best practice to use an absolute path constructed as such:
+
+```
+`${APP_URL}${yourPathHereWithoutLeadingSlash}`
+```
+Be sure *not* to include ${PATH_PREFIX} in your image path, as this will fail on the dev server.
+
+APP_URL and PATH_PREFIX are defined in `src/config/general.js`.
+
 ### Optimisation Guidelines
 
 - do not use functional components
