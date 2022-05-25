@@ -1,9 +1,8 @@
-import { fullPath as FULL_PATH } from 'config/pathConfig';
 export const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
 
 export default {
     thumbnailImage: {
-        defaultImageName: `${FULL_PATH}/${placeholderImage}`,
+        defaultImageName: `${placeholderImage}`,
         defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
