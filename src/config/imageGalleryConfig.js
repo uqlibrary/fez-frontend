@@ -3,7 +3,7 @@ const placeholderImage = require('../../public/images/thumbs/image_unavailable.s
 
 export default {
     thumbnailImage: {
-        defaultImageName: `${!!PATH_PREFIX ? '' : '/'}${placeholderImage}`,
+        defaultImageName: `${PATH_PREFIX === '' ? '/' : ''}${placeholderImage}`,
         defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
