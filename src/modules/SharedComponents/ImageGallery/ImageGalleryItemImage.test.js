@@ -91,6 +91,8 @@ describe('Image Gallery Item Image', () => {
         expect(setUnavailable).toHaveBeenCalledWith(true);
     });
     it('should render a placeholder image when thumb image fails to load and make a call to the image unavailable function', () => {
+        config.thumbnailImage.defaultImageName = 'image_unavailable.svg';
+
         const setUnavailable = jest.fn();
         const testItem = collectionSearchResultsImages.data[2];
         const mockGetUrl = jest.spyOn(utils, 'getUrl').mockImplementationOnce(() => 'broken-image-url.jpg');
