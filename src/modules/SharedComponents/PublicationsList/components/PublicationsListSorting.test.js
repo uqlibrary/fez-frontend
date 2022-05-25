@@ -110,7 +110,7 @@ describe('PublicationsListSorting component', () => {
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
-    it('renders with non-empty paging data, displayRecordsAs called', () => {
+    it('renders dropdown for displayRecordsAs if assigned prop, onDisplayRecordsAsChanged called', () => {
         const testFn = jest.fn();
         const testValue = 'test';
         const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
@@ -119,6 +119,18 @@ describe('PublicationsListSorting component', () => {
             .props()
             .onChange({ target: { value: testValue } });
         expect(testFn).toBeCalled();
+    });
+
+    it('renders dropdown for displayRecordsAs if assigned showDisplayAs prop', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
+        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(true);
+    });
+
+    it('does not render dropdown for displayRecordsAs if not assigned showDisplayAs prop', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: false });
+        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(false);
     });
 
     it('renders will set state on receiving new props', () => {
