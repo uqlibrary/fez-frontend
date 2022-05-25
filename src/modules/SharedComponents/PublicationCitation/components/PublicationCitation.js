@@ -84,7 +84,6 @@ export const styles = theme => ({
         display: 'inline-block',
         marginRight: 10,
         marginBottom: 15,
-        overflow: 'hidden',
         aspectRatio: 1,
         minWidth: 0,
         minHeight: 0,
