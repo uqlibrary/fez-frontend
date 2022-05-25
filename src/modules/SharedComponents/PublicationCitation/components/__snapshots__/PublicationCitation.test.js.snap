@@ -88,7 +88,6 @@ Object {
     "marginRight": 10,
     "minHeight": 0,
     "minWidth": 0,
-    "overflow": "hidden",
   },
 }
 `;
