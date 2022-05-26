@@ -68,6 +68,11 @@ const useStyles = makeStyles(theme => ({
     dateField: {
         paddingRight: 5,
     },
+    padTop: {
+        [theme.breakpoints.up('md')]: {
+            paddingTop: 5,
+        },
+    },
     centerAlign: {
         textAlign: 'center',
     },
@@ -288,7 +293,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         xs={10}
                                                         sm={adminUser ? 8 : 9}
                                                         md={adminUser ? 6 : 7}
-                                                        className={classes.dateField}
+                                                        className={`${classes.dateField} ${classes.padTop}`}
                                                     >
                                                         <Typography variant="body2">
                                                             <Link
@@ -329,8 +334,16 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         </Hidden>
                                                     </Grid>
                                                     <Hidden smDown>
-                                                        {returnDateField(row.rek_created_date, conf, classes.dateField)}
-                                                        {returnDateField(row.rek_updated_date, conf, classes.dateField)}
+                                                        {returnDateField(
+                                                            row.rek_created_date,
+                                                            conf,
+                                                            `${classes.dateField} ${classes.padTop}`,
+                                                        )}
+                                                        {returnDateField(
+                                                            row.rek_updated_date,
+                                                            conf,
+                                                            `${classes.dateField} ${classes.padTop}`,
+                                                        )}
                                                     </Hidden>
 
                                                     <Hidden smUp>
@@ -350,7 +363,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         </Grid>
                                                     </Hidden>
                                                     <Hidden xsDown>
-                                                        <Grid item xs={2} md={1} className={classes.centerAlign}>
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            md={1}
+                                                            className={`${classes.centerAlign} ${classes.padTop}`}
+                                                        >
                                                             <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
                                                                 {communityCollectionsConfig.viewCommunityText}
                                                             </Link>
@@ -363,6 +381,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 className={`${classes.dateField} ${classes.centerAlign}`}
                                                             >
                                                                 <AdminActions
+                                                                    className={classes.padTop}
                                                                     record={row.rek_pid}
                                                                     id={`row-admin-actions-${row.rek_pid}`}
                                                                     data-testid={`row-admin-actions-${row.rek_pid}`}
