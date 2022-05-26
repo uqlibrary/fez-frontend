@@ -1,5 +1,5 @@
 import React from 'react';
-import ScaleOfSignificanceListEditor from './components/ScaleOfSignificanceListEditor';
+import ScaleOfSignificanceListEditor from './ScaleOfSignificanceListEditor';
 
 export default function ScaleOfSignificanceListEditorField(fieldProps) {
     return (

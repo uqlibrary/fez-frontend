@@ -1,4 +1,4 @@
-import ScaleOfSignificanceListEditorField from './ScaleOfSignificanceListEditorField';
+import ScaleOfSignificanceListEditorField from '../ScaleOfSignificanceListEditorField';
 
 describe('ScaleOfSignificanceListEditorField function', () => {
     it('should return <ScaleOfSignificanceListEditor>', () => {

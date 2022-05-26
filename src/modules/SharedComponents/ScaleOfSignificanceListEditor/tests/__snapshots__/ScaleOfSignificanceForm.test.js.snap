@@ -34,7 +34,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     xs={12}
   >
     <Memo(NewGenericSelectField)
-      error={false}
+      error={true}
       fullWidth={true}
       genericSelectFieldId="rek-significance"
       itemsList={
@@ -51,6 +51,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       name="key"
       onChange={[Function]}
+      required={true}
       value={null}
     />
   </WithStyles(ForwardRef(Grid))>
@@ -75,6 +76,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}
+      required={true}
       richEditorId="rek-creator-contribution-statement"
       titleProps={
         Object {
@@ -94,6 +96,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
     <WithStyles(ForwardRef(Button))
       color="primary"
       data-testid="rek-significance-add"
+      disabled={true}
       fullWidth={true}
       id="add-items"
       onClick={[Function]}

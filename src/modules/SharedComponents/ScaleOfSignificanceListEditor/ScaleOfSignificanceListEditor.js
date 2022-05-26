@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ListRowHeader from './ListRowHeader';
-import ListRow from './ListRow';
+import ListRowHeader from '../Toolbox/ListEditor/components/ListRowHeader';
+import ListRow from '../Toolbox/ListEditor/components/ListRow';
 import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 import FormHelperText from '@material-ui/core/FormHelperText';

@@ -4,13 +4,15 @@ import {
     handleSignificanceCallbackFactory,
     resetFormCallbackFactory,
     addItemCallbackFactory,
-} from './ScaleOfSignificanceForm';
+} from '../ScaleOfSignificanceForm';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         locale: {},
         onAdd: jest.fn(),
         buttonLabel: 'label',
+        showForm: jest.fn(),
+        saveChangeToItem: jest.fn(),
         ...testProps,
     };
 

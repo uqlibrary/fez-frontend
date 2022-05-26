@@ -1,4 +1,4 @@
-import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
+import { ScaleOfSignificanceTemplate } from '../ScaleOfSignificanceTemplate';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
