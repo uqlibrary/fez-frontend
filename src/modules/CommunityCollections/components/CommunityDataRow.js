@@ -56,6 +56,9 @@ const useStyles = makeStyles({
     italic: {
         fontStyle: 'italic',
     },
+    rightAlign: {
+        textAlign: 'center',
+    },
     dateField: { paddingTop: 5 },
 });
 
@@ -136,7 +139,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         )}
                     </Hidden>
                     {!!adminUser && (
-                        <Grid item xs={2} sm={1}>
+                        <Grid item xs={2} sm={1} className={classes.rightAlign}>
                             <AdminActions
                                 record={row.rek_pid}
                                 id={`admin-actions-${row.rek_pid}`}

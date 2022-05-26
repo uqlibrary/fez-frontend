@@ -51,7 +51,9 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: '#eee',
         padding: 20,
         boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
-        [theme.breakpoints.down('md')]: {},
+        [theme.breakpoints.down('xs')]: {
+            padding: 10,
+        },
     },
     collectionContainer: {
         minHeight: 200,

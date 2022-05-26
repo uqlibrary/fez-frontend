@@ -8,6 +8,9 @@ const useStyles = makeStyles({
     headerStyle: {
         fontWeight: 400,
     },
+    rightAlign: {
+        textAlign: 'right',
+    },
     collapseIcon: {
         float: 'left',
         width: 24,
@@ -31,7 +34,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                 className={classes.headerStyle}
                 data-testid="community-collections-primary-header"
             >
-                <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
+                <Grid item xs={6} md={adminUser ? 7 : 8}>
                     <div className={classes.collapseIcon} />
                     <div className={classes.title}>{labels.title}</div>
                 </Grid>
@@ -44,7 +47,7 @@ export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser 
                     </Grid>
                 </Hidden>
                 {!!adminUser && (
-                    <Grid item xs={2} sm={1}>
+                    <Grid item xs={6} md={1} className={classes.rightAlign}>
                         {labels.actions}
                     </Grid>
                 )}
