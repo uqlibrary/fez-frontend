@@ -134,11 +134,11 @@ export class GrantListEditorRow extends PureComponent {
         const { grant, classes, width } = this.props;
         return (
             <Grid container spacing={0} alignContent={'center'} alignItems={'stretch'}>
-                <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
+                <Grid item xs={12} sm={5}>
                     {this.getListItemTypoGraphy(grant.grantAgencyName, '', `${classes.primary} ${selectedClass}`, '')}
                 </Grid>
                 <Hidden xsDown>
-                    <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
+                    <Grid item sm={3}>
                         {this.getListItemTypoGraphy(
                             `${grant.grantId}`,
                             '',
@@ -146,7 +146,7 @@ export class GrantListEditorRow extends PureComponent {
                             '',
                         )}
                     </Grid>
-                    <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
+                    <Grid item sm={4}>
                         {this.getListItemTypoGraphy(
                             `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                             '',
@@ -184,10 +184,10 @@ export class GrantListEditorRow extends PureComponent {
                 />
                 <ListItem divider style={{ padding: '8px 0 8px 0' }} aria-label={ariaLabel}>
                     <Grid container spacing={0}>
-                        <Grid item xs={this.props.width === 'xs' ? 10 : 9}>
+                        <Grid item xs={10} sm={11} md={9}>
                             {this.getGrantRowText(selectedClass)}
                         </Grid>
-                        <Grid item xs={this.props.width === 'xs' ? 2 : 3}>
+                        <Grid item xs={2} sm={1} md={3}>
                             <ListItemSecondaryAction
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
