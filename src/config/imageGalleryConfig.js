@@ -1,10 +1,10 @@
-import { IS_DEVELOPMENT_SERVER } from 'config/general';
+import { getRequiredImagePath } from 'config/general';
 
 const placeholderImage = require('../../public/images/thumbs/image_unavailable.svg');
 
 export default {
     thumbnailImage: {
-        defaultImageName: `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${placeholderImage}`,
+        defaultImageName: getRequiredImagePath(placeholderImage),
         defaultImageMimeType: 'image/svg+xml',
         defaultWidth: 150,
         defaultHeight: 150,
