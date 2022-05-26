@@ -68,9 +68,9 @@ export class GrantListEditorHeader extends PureComponent {
                 />
                 <ListItem classes={{ root: classes.header }}>
                     <Grid container spacing={0}>
-                        <Grid item xs={this.props.width === 'xs' ? 10 : 9}>
+                        <Grid item xs={10} sm={11} md={9}>
                             <Grid container spacing={0}>
-                                <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
+                                <Grid item xs={12} sm={5}>
                                     <ListItemText
                                         secondary={GrantAgencyName}
                                         secondaryTypographyProps={{ variant: 'caption' }}
@@ -78,7 +78,7 @@ export class GrantListEditorHeader extends PureComponent {
                                     />
                                 </Grid>
                                 <Hidden xsDown>
-                                    <Grid item sm={4}>
+                                    <Grid item sm={3}>
                                         <ListItemText
                                             secondary={GrantID}
                                             secondaryTypographyProps={{ variant: 'caption' }}
@@ -86,7 +86,7 @@ export class GrantListEditorHeader extends PureComponent {
                                         />
                                     </Grid>
                                     {!this.props.hideType && (
-                                        <Grid item sm={3}>
+                                        <Grid item sm={4}>
                                             <ListItemText
                                                 secondary={GrantAgencyType}
                                                 secondaryTypographyProps={{ variant: 'caption' }}
@@ -97,7 +97,7 @@ export class GrantListEditorHeader extends PureComponent {
                                 </Hidden>
                             </Grid>
                         </Grid>
-                        <Grid item xs={this.props.width === 'xs' ? 2 : 3}>
+                        <Grid item xs={2} sm={1} md={3}>
                             <ListItemSecondaryAction
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
