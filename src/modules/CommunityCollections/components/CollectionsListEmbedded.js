@@ -58,7 +58,12 @@ const useStyles = makeStyles(theme => ({
     collectionContainer: {
         minHeight: 200,
         backgroundColor: 'white',
-        padding: 10,
+        [theme.breakpoints.down('sx')]: {
+            padding: 8,
+        },
+        [theme.breakpoints.up('sm')]: {
+            padding: 10,
+        },
     },
     collectionCountTitle: {
         fontWeight: 600,
