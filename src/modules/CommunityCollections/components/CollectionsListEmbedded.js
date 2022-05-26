@@ -78,15 +78,11 @@ const useStyles = makeStyles(theme => ({
     },
     collectionRow: {
         boxSizing: 'border-box',
-        outline: '1px solid #ededed',
         boxShadow: '0 -1px 0 #eaeaea',
         padding: '15px 0px',
     },
     responsiveMin: {
         minWidth: 0,
-    },
-    autoOverflow: {
-        overflow: 'auto',
     },
     italic: {
         fontStyle: 'italic',
@@ -233,7 +229,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
                                 />
-                                <Grid container className={classes.autoOverflow}>
+                                <Grid container>
                                     <Grid container className={classes.responsiveMin}>
                                         <Grid
                                             container
