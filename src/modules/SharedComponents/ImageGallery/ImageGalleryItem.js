@@ -76,10 +76,10 @@ const viewRecord = (history, url) => {
 };
 
 export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
+    if (restricted && advisory && !unavailable) return txt.components.imageGallery.alert.restrictedAdvisory;
+    if (restricted && !unavailable) return txt.components.imageGallery.alert.restricted;
+    if (advisory && !unavailable) return txt.components.imageGallery.alert.advisory;
     if (unavailable) return txt.components.imageGallery.alert.unavailable;
-    if (restricted && advisory) return txt.components.imageGallery.alert.restrictedAdvisory;
-    if (restricted) return txt.components.imageGallery.alert.restricted;
-    if (advisory) return txt.components.imageGallery.alert.advisory;
     return null;
 };
 
