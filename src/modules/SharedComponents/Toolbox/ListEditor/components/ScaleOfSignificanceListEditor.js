@@ -11,11 +11,6 @@ import AddCircle from '@material-ui/icons/Add';
 
 export default class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
-        // formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
-        // inputField: PropTypes.oneOfType([
-        //     PropTypes.object, // eg connected auto complete fields
-        //     PropTypes.func,
-        // ]),
         className: PropTypes.string,
         searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,
@@ -55,7 +50,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
-        // rowItemTemplate: GenericTemplate,
         inputNormalizer: value => value,
         locale: {
             form: {
@@ -67,14 +61,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
             },
         },
         required: false,
-        // scrollList: false,
-        // scrollListHeight: 250,
         getItemSelectedToEdit: (list, index) => list[index] || null,
     };
 
     constructor(props) {
         super(props);
-        console.log('ScaleOfSignificanceListEditor props=', props);
 
         const valueAsJson =
             ((props.input || {}).name &&
@@ -86,8 +77,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
             itemIndexSelectedToEdit: null,
             buttonLabel: props.locale.form.locale.addButtonLabel,
             showAddForm: false,
+            formMode: 'edit',
         };
-        console.log('ScaleOfSignificanceListEditor::valueAsJson=', valueAsJson);
 
         this.transformOutput = this.transformOutput.bind(this);
         this.saveChangeToItem = this.saveChangeToItem.bind(this);
@@ -251,41 +242,58 @@ export default class ScaleOfSignificanceListEditor extends Component {
     };
 
     editItem = index => {
-        console.log('ScaleOfSignificanceListEditor::editItem index=', index);
-        this.showScaleAdditionForm();
+        this.showScaleEditForm();
         this.setState({
             itemIndexSelectedToEdit: index,
         });
         this.state.buttonLabel = this.props.locale.form.locale.editButtonLabel;
-        console.log('ScaleOfSignificanceListEditor::now editing ', this.state.itemIndexSelectedToEdit);
     };
 
     showScaleAdditionForm = (show = true) => {
         this.setState({
             showAddForm: show,
+            formMode: 'add',
+            buttonLabel: this.props.locale.form.locale.addButtonLabel,
+        });
+    };
+
+    showScaleEditForm = (show = true) => {
+        this.setState({
+            showAddForm: show,
+            formMode: 'edit',
+            buttonLabel: this.props.locale.form.locale.editButtonLabel,
         });
     };
 
     render() {
-        const renderListsRows = this.state.itemList.map((item, index) => (
-            <ListRow
-                key={item.id || item.key || `${item}-${index}`}
-                index={index}
-                item={item}
-                canMoveDown={index !== this.state.itemList.length - 1}
-                canMoveUp={index !== 0}
-                onMoveUp={this.moveUpList}
-                onMoveDown={this.moveDownList}
-                onDelete={this.deleteItem}
-                onEdit={this.editItem}
-                {...((this.props.locale && this.props.locale.row) || {})}
-                hideReorder={this.props.hideReorder}
-                disabled={this.props.disabled}
-                itemTemplate={ScaleOfSignificanceTemplate}
-                canEdit={this.props.canEdit}
-                listRowId={`${this.props.listEditorId}-list-row-${index}`}
-            />
-        ));
+        const renderListsRows = this.state.itemList.map((item, index) => {
+            // make it disply returned html rather than plain text
+            const tempItem = {
+                key: item.key,
+                value: {
+                    htmlText: item.value.htmlText,
+                },
+            };
+            return (
+                <ListRow
+                    key={item.id || item.key || `${item}-${index}`}
+                    index={index}
+                    item={tempItem}
+                    canMoveDown={index !== this.state.itemList.length - 1}
+                    canMoveUp={index !== 0}
+                    onMoveUp={this.moveUpList}
+                    onMoveDown={this.moveDownList}
+                    onDelete={this.deleteItem}
+                    onEdit={this.editItem}
+                    {...((this.props.locale && this.props.locale.row) || {})}
+                    hideReorder={this.props.hideReorder}
+                    disabled={this.props.disabled}
+                    itemTemplate={ScaleOfSignificanceTemplate}
+                    canEdit={this.props.canEdit}
+                    listRowId={`${this.props.listEditorId}-list-row-${index}`}
+                />
+            );
+        });
         return (
             <div
                 // className={`${this.props.className}`}
@@ -318,7 +326,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         listEditorId={this.props.listEditorId}
                         input={this.props.input}
                         buttonLabel={this.state.buttonLabel}
-                        showScaleAdditionForm={this.showScaleAdditionForm}
+                        showForm={this.showScaleEditForm}
+                        formMode={this.state.formMode}
                     />
                 ) : (
                     <Box display="flex" justifyContent="flex-end" alignItems="flex-end">

@@ -35,7 +35,6 @@ export default class RichEditor extends PureComponent {
     };
 
     componentDidMount() {
-        console.log('componentDidMount:this.props.inputRef=', this.props.inputRef);
         this.editorInstance =
             !!window.CKEDITOR &&
             window.CKEDITOR.replace(this.props.inputRef.current, {
@@ -60,7 +59,6 @@ export default class RichEditor extends PureComponent {
 
     // eslint-disable-next-line camelcase
     UNSAFE_componentWillReceiveProps(nextProps) {
-        console.log('UNSAFE_componentWillReceiveProps:nextProps=', nextProps);
         if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
             this.editorInstance.setReadOnly(!!nextProps.disabled);
         }
@@ -93,7 +91,6 @@ export default class RichEditor extends PureComponent {
     };
 
     render() {
-        console.log('RichEditor:: props=', this.props);
         let error = null;
         const inputLength =
             (this.props.value && this.props.value.plainText && this.props.value.plainText.length) ||
@@ -111,7 +108,6 @@ export default class RichEditor extends PureComponent {
                     }
                 });
         }
-        console.log('render:this.props.inputRef=', this.props.inputRef);
         return (
             <React.Fragment>
                 <span>

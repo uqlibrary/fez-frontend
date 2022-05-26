@@ -2,7 +2,6 @@ import React from 'react';
 import ScaleOfSignificanceListEditor from './components/ScaleOfSignificanceListEditor';
 
 export default function ScaleOfSignificanceListEditorField(fieldProps) {
-    console.log('ScaleOfSignificanceListEditorField::fieldProps=', fieldProps);
     return (
         <ScaleOfSignificanceListEditor
             listEditorId="rek-significance"

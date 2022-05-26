@@ -70,6 +70,7 @@ context('Creative Work admin edit', () => {
     // });
 
     function assertChangeSelectFromTo(item, changeFrom, changeTo) {
+        cy.log(`expect ${item}-select to change from '${changeFrom}' to '${changeTo}'`);
         cy.waitUntil(() => cy.get(`[data-testid="${item}-select"]`).should('exist'));
         if (changeFrom === '') {
             cy.log('look for an unselected item');
@@ -110,6 +111,7 @@ context('Creative Work admin edit', () => {
         const editButton = rowId => `[data-testid="rek-significance-list-row-${rowId}-edit"]`;
         cy.waitUntil(() => cy.get(editButton(rowId)).should('exist'));
         cy.get(editButton(rowId)).click();
+        // cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
     }
 
     function clickButtonShowForm() {
@@ -141,8 +143,6 @@ context('Creative Work admin edit', () => {
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
             .within(() => {
-                cy.log('SCALE OF SIGNIFICANCE AND CONTRIBUTION STATEMENT SECTION');
-
                 cy.get('.AdminCard')
                     .eq(0)
                     .within(() => {
@@ -224,13 +224,46 @@ context('Creative Work admin edit', () => {
                         // the show hide status is correct
                         cy.waitUntil(() => cy.get('[data-testid="rek-significance-showhidebutton"]').should('exist'));
                         cy.get('[data-testid="rek-significance-form"]').should('not.exist');
-                        // end: can add an entry
                     });
             });
-        cy.log('DONE');
     });
 
-    it('in the NTRO section, each of the significance and statement values loads into the form correctly', () => {
+    // bug fix: the values of the previously edited entry were preloaded when adding
+    it('in the NTRO section, the add form loads empty after using the edit form', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        const rowId = 0;
+                        clickRowEditButton(rowId);
+
+                        cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
+                        cy.get('[data-testid="rek-significance-select"]').should(
+                            'contain',
+                            statementList[rowId].significance,
+                        );
+                        cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                            expect(text).to.contain(statementList[rowId].statementContains);
+                        });
+
+                        clickFormClearButton();
+
+                        // the add button now gets a blank form
+                        clickButtonShowForm();
+
+                        cy.readCKEditor('rek-creator-contribution-statement').then(text => {
+                            expect(text).to.be.empty;
+                        });
+                        cy.get('[data-testid="rek-significance-select"]').should('contain', '');
+                    });
+            });
+    });
+
+    it('in the NTRO section, editing loads the significance and statement values into the form correctly', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
@@ -245,7 +278,6 @@ context('Creative Work admin edit', () => {
                             cy.get('button[data-testid="rek-significance-add"]').should('contain', 'UPDATE');
                             cy.get('[data-testid="rek-significance-select"]').should('contain', value.significance);
                             cy.readCKEditor('rek-creator-contribution-statement').then(text => {
-                                cy.log('ckeditor text=', text);
                                 expect(text).to.contain(value.statementContains);
                             });
                             if (rowId === 0) {
@@ -312,18 +344,18 @@ context('Creative Work admin edit', () => {
 
                         // the form is initially hidden
                         cy.get('[data-testid="rek-significance-form"]').should('not.exist');
+
                         clickButtonShowForm();
                         cy.waitUntil(() => cy.get('[data-testid="rek-significance-form"]').should('exist'));
-
                         cy.get('[data-testid="rek-significance-showhidebutton"]').should('not.exist');
 
-                        // enter some dtaa in the form
-                        cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
+                        // enter some data in the form
+                        cy.typeCKEditor('rek-creator-contribution-statement', 'New content');
                     });
             });
 
         // popup appears at foot of page, outside Admin section
-        assertChangeSelectFromTo('rek-significance', '', statementList[0].newSignificance);
+        assertChangeSelectFromTo('rek-significance', '', 'Minor');
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -340,7 +372,6 @@ context('Creative Work admin edit', () => {
                             .should('have.length', 3);
                     });
             });
-        cy.log('DONE');
     });
 
     it('should render the NTRO quality indicators section as expected', () => {
@@ -350,7 +381,6 @@ context('Creative Work admin edit', () => {
                 cy.get('.AdminCard')
                     .eq(1)
                     .within(() => {
-                        cy.log('QUALITY INDICATORS SECTION');
                         cy.get('h4').should('contain', 'Quality indicators');
                         const qualityIndicators = record.fez_record_search_key_quality_indicator;
                         cy.get('[data-testid="rek-quality-indicator-input"]')

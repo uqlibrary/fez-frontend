@@ -79,7 +79,6 @@ export default class ListEditor extends Component {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
             itemIndexSelectedToEdit: null,
         };
-        console.log('ListEditor::valueAsJson=', valueAsJson);
 
         this.transformOutput = this.transformOutput.bind(this);
         this.addItem = this.addItem.bind(this);
@@ -243,7 +242,6 @@ export default class ListEditor extends Component {
     };
 
     editItem = index => {
-        console.log('ListEditor::editItem index=', index);
         this.setState({
             itemIndexSelectedToEdit: index,
         });
