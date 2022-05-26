@@ -41,7 +41,8 @@ export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${get
 )}v=3.exp&libraries=geometry,drawing,places`;
 
 // convenience method to return an image via require() with a leading / where necessary
-export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${imagePath}`;
+export const getRequiredImagePath = imagePath =>
+    `${!IS_DEVELOPMENT_SERVER || APP_URL === STAGING_URL ? '/' : ''}${imagePath}`;
 
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
