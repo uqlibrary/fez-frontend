@@ -9,8 +9,6 @@ import { pathConfig } from 'config/pathConfig';
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItem from './ImageGalleryItem';
 
-import { PATH_PREFIX } from 'config/general';
-
 const useStyles = makeStyles(() => ({
     imageListItemRoot: {
         height: '100% !important',
@@ -47,41 +45,30 @@ const ImageGallery = ({
     const cols = getItemsPerRow(itemsPerRow, sm, md);
 
     return (
-        <>
-            <ImageList
-                rowHeight={itemHeight}
-                cols={cols}
-                classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
-                id={'image-gallery'}
-                data-testid={'image-gallery'}
-                {...rest}
-            >
-                {publicationsList.map(item => (
-                    <ImageGalleryItem
-                        key={item.rek_pid}
-                        item={item}
-                        url={getItemUrl(item.rek_pid)}
-                        lazyLoading={lazyLoading}
-                        itemWidth={itemWidth}
-                        itemHeight={itemHeight}
-                        classes={{
-                            imageListItem: { root: internalClasses.imageListItemRoot },
-                            imageListItemBar: internalClasses.imageListItemBar,
-                        }}
-                        security={security}
-                    />
-                ))}
-            </ImageList>
-            <div>
-                {`process.env.BRANCH: ${process.env.BRANCH}`}
-                <br />
-                {`process.env.NODE_ENV: ${process.env.NODE_ENV}`}
-                <br />
-                {`process.env.USE_MOCK: ${process.env.USE_MOCK}`}
-                <br />
-                {`PATH_PREFIX: ${PATH_PREFIX}`}
-            </div>
-        </>
+        <ImageList
+            rowHeight={itemHeight}
+            cols={cols}
+            classes={{ root: `${internalClasses.imageListRoot} ${classes?.imageList?.root ?? ''}` }}
+            id={'image-gallery'}
+            data-testid={'image-gallery'}
+            {...rest}
+        >
+            {publicationsList.map(item => (
+                <ImageGalleryItem
+                    key={item.rek_pid}
+                    item={item}
+                    url={getItemUrl(item.rek_pid)}
+                    lazyLoading={lazyLoading}
+                    itemWidth={itemWidth}
+                    itemHeight={itemHeight}
+                    classes={{
+                        imageListItem: { root: internalClasses.imageListItemRoot },
+                        imageListItemBar: internalClasses.imageListItemBar,
+                    }}
+                    security={security}
+                />
+            ))}
+        </ImageList>
     );
 };
 
