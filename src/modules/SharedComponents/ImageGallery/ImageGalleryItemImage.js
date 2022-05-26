@@ -49,7 +49,14 @@ const ImageGalleryItemImage = ({
             : config.thumbnailImage.defaultImageName;
 
     React.useEffect(() => {
-        if (filename === config.thumbnailImage.defaultImageName && !!setUnavailable) setUnavailable(true);
+        if (
+            filename === config.thumbnailImage.defaultImageName &&
+            !thumbnailRestricted &&
+            !thumbnailAdvisory &&
+            !!setUnavailable
+        ) {
+            setUnavailable(true);
+        }
         if (thumbnailRestricted && !!setRestricted) setRestricted(true);
         if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
         // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -118,7 +118,7 @@ describe('Image Gallery Item', () => {
         expect(getByTestId('image-gallery-item-UQ:288583-title')).toBeInTheDocument();
         expect(getByText(collectionSearchResultsImages.data[1].rek_title)).toBeInTheDocument();
         expect(getByTestId('image-gallery-item-UQ:288583-alert')).toBeInTheDocument();
-        expect(getByText(txt.components.imageGallery.alert.unavailable)).toBeInTheDocument();
+        expect(getByText(txt.components.imageGallery.alert.advisory)).toBeInTheDocument();
     });
     it('should render a full gallery item without title adornment', () => {
         const { getByTestId, getByText, queryByText, queryByTestId } = setup({
@@ -130,7 +130,7 @@ describe('Image Gallery Item', () => {
         expect(queryByTestId('image-gallery-item-UQ:288583-title')).not.toBeInTheDocument();
         expect(queryByText(collectionSearchResultsImages.data[1].rek_title)).not.toBeInTheDocument();
         expect(getByTestId('image-gallery-item-UQ:288583-alert')).toBeInTheDocument();
-        expect(getByText(txt.components.imageGallery.alert.unavailable)).toBeInTheDocument();
+        expect(getByText(txt.components.imageGallery.alert.advisory)).toBeInTheDocument();
     });
     it('should render a full gallery item without alert adornment', () => {
         const { getByTestId, getByText, queryByText, queryByTestId } = setup({
@@ -142,7 +142,7 @@ describe('Image Gallery Item', () => {
         expect(getByTestId('image-gallery-item-UQ:288583-title')).toBeInTheDocument();
         expect(getByText(collectionSearchResultsImages.data[1].rek_title)).toBeInTheDocument();
         expect(queryByTestId('image-gallery-item-UQ:288583-alert')).not.toBeInTheDocument();
-        expect(queryByText(txt.components.imageGallery.alert.unavailable)).not.toBeInTheDocument();
+        expect(queryByText(txt.components.imageGallery.alert.advisory)).not.toBeInTheDocument();
     });
     it('should render a full gallery item without title or alert adornment', () => {
         const { getByTestId, queryByText, queryByTestId } = setup({
@@ -155,7 +155,7 @@ describe('Image Gallery Item', () => {
         expect(queryByTestId('image-gallery-item-UQ:288583-title')).not.toBeInTheDocument();
         expect(queryByText(collectionSearchResultsImages.data[1].rek_title)).not.toBeInTheDocument();
         expect(queryByTestId('image-gallery-item-UQ:288583-alert')).not.toBeInTheDocument();
-        expect(queryByText(txt.components.imageGallery.alert.unavailable)).not.toBeInTheDocument();
+        expect(queryByText(txt.components.imageGallery.alert.advisory)).not.toBeInTheDocument();
     });
     describe('getAlertMessageText function', () => {
         it('should return a message with image unavailable text', () => {
