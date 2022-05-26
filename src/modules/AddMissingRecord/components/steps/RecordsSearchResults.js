@@ -128,7 +128,7 @@ export default class RecordsSearchResults extends PureComponent {
                             </Suspense>
                         </Grid>
                     </Hidden>
-                    <Grid item sm={8} md={9}>
+                    <Grid item xs sm={8} md={9}>
                         {this.props.searchLoading && <InlineLoader message={searchResultsTxt.loadingMessage} />}
                         {this.props.publicationsList.length > 0 && (
                             <Grid item sm={12}>
