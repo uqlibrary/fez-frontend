@@ -1,8 +1,6 @@
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
-// import { screen } from 'test-utils';
-// import * as PushHistory from './components/functions';
 
 function setup(testProps) {
     const props = {
