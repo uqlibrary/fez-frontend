@@ -257,6 +257,15 @@ export default class ScaleOfSignificanceListEditor extends Component {
             itemIndexSelectedToEdit: index,
         });
         this.state.buttonLabel = this.props.locale.form.locale.editButtonLabel;
+
+        // if its a long list we need the form to scroll into view
+        const form = document.getElementById('rek-significance-list-editor');
+        form &&
+            form.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'center',
+            });
     };
 
     showScaleAdditionForm = (show = true) => {
@@ -284,6 +293,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     htmlText: item.value.htmlText,
                 },
             };
+            console.log('renderListsRows this.state.itemList=', this.state.itemList);
             return (
                 <ListRow
                     key={item.id || item.key || `${item}-${index}`}
