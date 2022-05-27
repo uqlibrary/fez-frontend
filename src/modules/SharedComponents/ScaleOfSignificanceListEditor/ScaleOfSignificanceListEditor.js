@@ -61,7 +61,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
             },
         },
         required: false,
-        getItemSelectedToEdit: (list, index) => list[index] || null,
     };
 
     constructor(props) {
@@ -99,6 +98,13 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
+    };
+
+    getItemSelectedToEdit = (mode, list, index) => {
+        if (mode === 'add') {
+            return null;
+        }
+        return list[index] || null;
     };
 
     /**
@@ -151,7 +157,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
         ) {
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
-            if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
+            if (this.state.formMode === 'edit' && ((!!item.key && !!item.value) || (!!item.id && !!item.value))) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
@@ -182,7 +188,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     itemList: [...totalArray],
                 });
             } else {
-                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
+                if (
+                    this.state.formMode === 'edit' &&
+                    this.state.itemIndexSelectedToEdit !== null &&
+                    this.state.itemIndexSelectedToEdit > -1
+                ) {
                     const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
                         ? {
                               ...this.state.itemList[this.state.itemIndexSelectedToEdit],
@@ -318,7 +328,8 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         normalize={this.props.inputNormalizer}
                         category={this.props.category}
                         required={this.props.required}
-                        itemSelectedToEdit={this.props.getItemSelectedToEdit(
+                        itemSelectedToEdit={this.getItemSelectedToEdit(
+                            this.state.formMode,
                             this.state.itemList,
                             this.state.itemIndexSelectedToEdit,
                         )}

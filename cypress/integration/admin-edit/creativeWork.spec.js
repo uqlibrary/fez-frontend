@@ -255,10 +255,29 @@ context('Creative Work admin edit', () => {
                         // the add button now gets a blank form
                         clickButtonShowForm();
 
+                        cy.get('[data-testid="rek-significance-select"]').should('contain', '');
                         cy.readCKEditor('rek-creator-contribution-statement').then(text => {
                             expect(text).to.be.empty;
                         });
-                        cy.get('[data-testid="rek-significance-select"]').should('contain', '');
+                    });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        const newContributionStatementText = 'new entry';
+                        cy.typeCKEditor('rek-creator-contribution-statement', newContributionStatementText);
+                        clickFormSaveButton('ADD');
+                        // the newly added item appears correctly
+                        cy.get('[data-testid="rek-significance-list"]')
+                            .children()
+                            .should('have.length', 4);
                     });
             });
     });

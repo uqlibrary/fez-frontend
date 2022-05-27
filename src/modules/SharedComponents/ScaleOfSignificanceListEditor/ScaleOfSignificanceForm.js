@@ -27,7 +27,7 @@ export const resetFormCallbackFactory = (contributionStatementEditor, setSignifi
     return [callback, [contributionStatementEditor, setSignificance]];
 };
 
-export const addItemCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
+export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
     const callback = event => {
         // add item if user hits 'enter' key on input field
         if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
@@ -79,21 +79,17 @@ export const ScaleOfSignificanceForm = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance, showForm));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const addItem = useCallback(
-        ...addItemCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
+    const saveChanges = useCallback(
+        ...saveCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
     );
 
     const {
         significanceInputFieldLabel,
-        significanceInputFieldHint,
         contributionStatementInputFieldLabel,
         resetFormLabel,
         id,
         authorOrderAlert,
     } = locale;
-
-    // const getCurrentStatementValue = () =>
-    //     formMode === 'edit' && !!contributionStatement ? contributionStatement : '';
 
     const isValidSignificance = sig => !!sig;
 
@@ -106,16 +102,13 @@ export const ScaleOfSignificanceForm = ({
             </Grid>
             <Grid item style={{ flexGrow: 1 }} xs={12}>
                 <NewGenericSelectField
-                    fullWidth
-                    name="key"
                     genericSelectFieldId="rek-significance"
                     label={significanceInputFieldLabel}
-                    placeholder={significanceInputFieldHint}
                     onChange={handleSignificance}
                     disabled={disabled}
                     error={!!errorText || !isValidSignificance(significance)}
                     errorText={errorText}
-                    value={significance}
+                    value={significance || null}
                     itemsList={SIGNIFICANCE}
                     required
                 />
@@ -127,7 +120,7 @@ export const ScaleOfSignificanceForm = ({
                     name="value"
                     id={(!!id && id) || ''}
                     onChange={handleContributionStatement}
-                    onKeyPress={addItem}
+                    onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
                     inputRef={contributionStatementInput}
@@ -155,7 +148,7 @@ export const ScaleOfSignificanceForm = ({
                     disabled={
                         disabled || !isValidSignificance(significance) || !isValidStatement(contributionStatement)
                     }
-                    onClick={addItem}
+                    onClick={saveChanges}
                 />
             </Grid>
             <Grid item xs={3}>
