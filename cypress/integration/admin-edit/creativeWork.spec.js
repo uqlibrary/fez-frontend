@@ -148,12 +148,21 @@ context('Creative Work admin edit', () => {
                     .within(() => {
                         cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
 
+                        record.fez_record_search_key_author
+                            .map(item => item.rek_author)
+                            .forEach((author, index) => {
+                                cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
+                                    .find('p')
+                                    .eq(0)
+                                    .should('contain', author);
+                            });
+
                         record.fez_record_search_key_significance
                             .map(item => item.rek_significance_lookup)
                             .forEach((significance, index) => {
                                 cy.get(`[data-testid="rek-significance-list-row-${index}"]`)
                                     .find('p')
-                                    .eq(0)
+                                    .eq(1)
                                     .should('have.text', significance || 'Missing');
                             });
 
@@ -219,7 +228,7 @@ context('Creative Work admin edit', () => {
                             .should('contain', newContributionStatementText);
                         cy.get('[data-testid="rek-significance-list-row-3"]')
                             .find('p')
-                            .eq(0)
+                            .eq(1)
                             .should('have.text', 'Minor');
                         // the show hide status is correct
                         cy.waitUntil(() => cy.get('[data-testid="rek-significance-showhidebutton"]').should('exist'));
@@ -338,14 +347,26 @@ context('Creative Work admin edit', () => {
                         clickFormSaveButton('UPDATE');
                         cy.get('[data-testid="rek-significance-list-row-0"]')
                             .find('p')
-                            .eq(0)
+                            .eq(1)
                             .should('have.text', statementList[0].newSignificance);
                         cy.get('[data-testid="rek-significance-list-row-0"]')
                             .find('span')
                             .eq(0)
                             .should('contain', statementList[0].newText);
+                        cy.get('[data-testid="rek-significance-list-row-0"]')
+                            .find('p')
+                            .eq(0)
+                            .should('contain', '1st');
                     });
             });
+
+        // save does not cause crash
+        cy.get('[data-testid="submit-admin-top"]').click();
+        // Confirmation message
+        cy.get('[role=dialog]')
+            .should('exist')
+            .find('h2')
+            .should('contain', 'Work has been updated');
     });
 
     it('in the NTRO section, the clear button clears the significance and statement add form', () => {
@@ -389,6 +410,39 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 3);
+                    });
+            });
+    });
+
+    it('in the NTRO section, the scale-statement row set can be reordered', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
+
+                        function rowHasAuthor(rowid, authorName) {
+                            cy.get(`[data-testid="rek-significance-list-row-${rowid}"]`)
+                                .find('p')
+                                .eq(0)
+                                .should('contain', authorName);
+                        }
+
+                        rowHasAuthor(0, 'Ashkanasy');
+                        rowHasAuthor(1, 'Belanger');
+                        rowHasAuthor(2, 'Bernal');
+
+                        cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
+                            .should('exist')
+                            .click();
+
+                        rowHasAuthor(0, 'Ashkanasy');
+                        rowHasAuthor(1, 'Bernal');
+                        rowHasAuthor(2, 'Belanger');
                     });
             });
     });

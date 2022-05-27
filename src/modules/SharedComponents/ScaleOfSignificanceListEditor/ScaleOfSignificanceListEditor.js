@@ -288,10 +288,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
         const renderListsRows = this.state.itemList.map((item, index) => {
             const tempItem = {
                 id: index,
-                authorName: item.author.rek_author,
+                // eslint-disable-next-line camelcase
+                authorName: item.authorName || item.author?.rek_author || null,
                 key: item.key,
                 value: {
-                    htmlText: item.value.htmlText,
+                    htmlText: item.value?.htmlText || null,
                 },
             };
             return (
