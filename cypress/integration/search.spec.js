@@ -94,7 +94,7 @@ context('Search', () => {
     });
 
     context('Search results in Image Gallery', () => {
-        it.only('has Display As drop down with expected values', () => {
+        it('has Display As drop down with expected values', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
