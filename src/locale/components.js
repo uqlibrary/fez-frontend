@@ -961,7 +961,7 @@ export default {
                 },
                 header: {
                     locale: {
-                        nameColumn: 'Scale/significance of work - Creator research statement',
+                        nameColumn: 'Author - Scale/significance of work - Creator research statement',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {

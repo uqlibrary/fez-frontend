@@ -286,14 +286,14 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     render() {
         const renderListsRows = this.state.itemList.map((item, index) => {
-            // make it disply returned html rather than plain text
             const tempItem = {
+                id: index,
+                authorName: item.author.rek_author,
                 key: item.key,
                 value: {
                     htmlText: item.value.htmlText,
                 },
             };
-            console.log('renderListsRows this.state.itemList=', this.state.itemList);
             return (
                 <ListRow
                     key={item.id || item.key || `${item}-${index}`}
@@ -315,10 +315,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
             );
         });
         return (
-            <div
-                // className={`${this.props.className}`}
-                id={`${this.props.listEditorId}-list-editor`}
-            >
+            <div id={`${this.props.listEditorId}-list-editor`}>
                 {this.state.showAddForm ? (
                     <ScaleOfSignificanceForm
                         key={

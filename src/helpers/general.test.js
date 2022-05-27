@@ -1,4 +1,11 @@
-import { hydrateMockSearchList, leftJoin, stripHtml, sanitiseId, formatUrlTextWithWbrTags } from './general';
+import {
+    hydrateMockSearchList,
+    leftJoin,
+    stripHtml,
+    sanitiseId,
+    formatUrlTextWithWbrTags,
+    makeOrdinalNumber,
+} from './general';
 
 describe('general helpers', () => {
     it('leftJoin', () => {
@@ -210,5 +217,42 @@ describe('general helpers', () => {
             '["http:",{"type":"wbr","key":"1","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"/"]';
         const actualStr = JSON.stringify(formatUrlTextWithWbrTags('http://www.test.com/'));
         expect(expectedStr).toEqual(actualStr);
+    });
+
+    it('should find the order of numbers correctly', () => {
+        expect(makeOrdinalNumber(1)).toEqual('1st');
+        expect(makeOrdinalNumber(2)).toEqual('2nd');
+        expect(makeOrdinalNumber(3)).toEqual('3rd');
+        expect(makeOrdinalNumber(4)).toEqual('4th');
+        expect(makeOrdinalNumber(5)).toEqual('5th');
+        expect(makeOrdinalNumber(6)).toEqual('6th');
+        expect(makeOrdinalNumber(7)).toEqual('7th');
+        expect(makeOrdinalNumber(8)).toEqual('8th');
+        expect(makeOrdinalNumber(9)).toEqual('9th');
+        expect(makeOrdinalNumber(10)).toEqual('10th');
+        expect(makeOrdinalNumber(11)).toEqual('11th');
+        expect(makeOrdinalNumber(12)).toEqual('12th');
+        expect(makeOrdinalNumber(13)).toEqual('13th');
+        expect(makeOrdinalNumber(14)).toEqual('14th');
+        expect(makeOrdinalNumber(15)).toEqual('15th');
+        expect(makeOrdinalNumber(16)).toEqual('16th');
+        expect(makeOrdinalNumber(17)).toEqual('17th');
+        expect(makeOrdinalNumber(18)).toEqual('18th');
+        expect(makeOrdinalNumber(19)).toEqual('19th');
+        expect(makeOrdinalNumber(20)).toEqual('20th');
+        expect(makeOrdinalNumber(21)).toEqual('21st');
+        expect(makeOrdinalNumber(22)).toEqual('22nd');
+        expect(makeOrdinalNumber(23)).toEqual('23rd');
+        expect(makeOrdinalNumber(24)).toEqual('24th');
+        expect(makeOrdinalNumber(25)).toEqual('25th');
+        expect(makeOrdinalNumber(26)).toEqual('26th');
+        expect(makeOrdinalNumber(27)).toEqual('27th');
+        expect(makeOrdinalNumber(28)).toEqual('28th');
+        expect(makeOrdinalNumber(29)).toEqual('29th');
+        expect(makeOrdinalNumber(30)).toEqual('30th');
+        expect(makeOrdinalNumber(31)).toEqual('31st');
+        expect(makeOrdinalNumber(32)).toEqual('32nd');
+        expect(makeOrdinalNumber(33)).toEqual('33rd');
+        expect(makeOrdinalNumber(34)).toEqual('34th');
     });
 });
