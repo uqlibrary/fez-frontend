@@ -94,7 +94,7 @@ context('Search', () => {
     });
 
     context('Search results in Image Gallery', () => {
-        it('has Display As drop down with expected values', () => {
+        it.only('has Display As drop down with expected values', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -118,12 +118,20 @@ context('Search', () => {
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
             cy.get('img[data-testid^=imageGalleryItemImage-]').should('have.length', 8);
-            cy.get('li[data-testid^=image-gallery-item-]').each(item => {
-                cy.wrap(item)
-                    .find('div[data-testid$="-alert"]')
-                    .siblings('div')
-                    .siblings('div')
-                    .should('contain.text', 'Image not available');
+            cy.get('li[data-testid^=image-gallery-item-]')
+                .first()
+                .find('div[data-testid$="-alert"]')
+                .siblings('div')
+                .siblings('div')
+                .should('contain.text', 'Restricted + content warning');
+            cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
+                if (index > 0) {
+                    cy.wrap(item)
+                        .find('div[data-testid$="-alert"]')
+                        .siblings('div')
+                        .siblings('div')
+                        .should('contain.text', 'Image not available');
+                }
             });
             cy.get('li[data-testid^=image-gallery-item-]').each((item, index) => {
                 cy.wrap(item)
