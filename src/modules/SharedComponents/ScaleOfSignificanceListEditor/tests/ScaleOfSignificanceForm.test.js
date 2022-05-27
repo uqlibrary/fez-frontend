@@ -3,7 +3,7 @@ import {
     handleContributionStatementCallbackFactory,
     handleSignificanceCallbackFactory,
     resetFormCallbackFactory,
-    addItemCallbackFactory,
+    saveCallbackFactory,
 } from '../ScaleOfSignificanceForm';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -73,7 +73,7 @@ describe('ScaleOfSignificanceForm callback factories', () => {
         const contributionStatement = 'test 2';
         const onAdd = jest.fn();
         const resetForm = jest.fn();
-        const callback = addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm)[0];
+        const callback = saveCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm)[0];
         callback({ key: 'Enter' });
         expect(onAdd).toHaveBeenCalledWith({ key: 'test 1', value: 'test 2' });
         expect(resetForm).toHaveBeenCalledTimes(1);

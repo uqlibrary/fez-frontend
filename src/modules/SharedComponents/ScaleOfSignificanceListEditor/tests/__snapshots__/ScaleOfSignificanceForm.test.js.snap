@@ -35,7 +35,6 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
   >
     <Memo(NewGenericSelectField)
       error={true}
-      fullWidth={true}
       genericSelectFieldId="rek-significance"
       itemsList={
         Array [
@@ -49,7 +48,6 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
           },
         ]
       }
-      name="key"
       onChange={[Function]}
       required={true}
       value={null}
