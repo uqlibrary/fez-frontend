@@ -183,7 +183,8 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                             component={Link}
                             variant="outlined"
                             to={`${pathConfig.admin.collection}?pid=${pid}&name=${title}`}
-                            data-test-id="admin-add-community-button"
+                            id={`admin-add-community-button-${pid}`}
+                            data-testid={`admin-add-community-button-${pid}`}
                             startIcon={<Add />}
                         >
                             {communityCollectionsConfig.addNewCollectionText}
