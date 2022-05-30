@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const KeywordsBrowser = ({ onKeywordAdd }) => {
+export const KeywordsBrowser = ({ onKeywordAdd, selectedKeywords }) => {
     const txt = locale.components.searchJournals.partials.keywordsBrowser;
     const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
     const isInitialValues = useSelector(state => state.get('journalReducer').isInitialValues);
@@ -99,7 +99,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
-
+    console.log('SELECTED KEYWORDS', selectedKeywords);
     return (
         <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
@@ -138,6 +138,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     keywordsList={journalSearchKeywords.keywordMatch}
                     keywordsType={'keyword'}
                     onKeywordClick={handleKeywordsKeywordClick}
+                    selectedKeywords={selectedKeywords}
                 />
             </Grid>
             <Grid item xs={12} md={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
@@ -153,6 +154,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
 
 KeywordsBrowser.propTypes = {
     onKeywordAdd: PropTypes.func.isRequired,
+    selectedKeywords: PropTypes.object,
 };
 
 export default React.memo(KeywordsBrowser);

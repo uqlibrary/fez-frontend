@@ -19,6 +19,12 @@ const useStyles = makeStyles(theme => ({
             marginRight: '4px',
         },
     },
+    added: {
+        '&::before': {
+            content: '"\\2713"',
+            marginRight: '4px',
+        },
+    },
 }));
 
 export const getIdSuffix = (keyword, variant, type, index) => {
@@ -32,7 +38,16 @@ export const getIdSuffix = (keyword, variant, type, index) => {
 export const getId = (keyword, variant, type, index) =>
     sanitiseId(`journal-search-item-${getIdSuffix(keyword, variant, type, index)}`);
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, cvoId, sources }) => {
+export const SearchKeyword = ({
+    keyword,
+    onKeywordClick,
+    variant,
+    type,
+    index,
+    cvoId,
+    sources,
+    selectedKeywords = [],
+}) => {
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
@@ -48,12 +63,29 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, c
 
         handleKeywordClick();
     };
+    // console.log('In the element, keyword and selected list', keyword, selectedKeywords);
+    // /const isASelectedKeyword = true;
+    // console.log('the keyword I have clicked is ', keyword);
+    // console.log('Turned to an array', Object.keys(selectedKeywords));
+    // console.log('Do we?', selectedKeywords, selectedKeywords.length);
+    const isSelected = Object.keys(selectedKeywords).filter(key => selectedKeywords[key].text === keyword).length > 0;
+    // (selectedKeywords &&
+    //     selectedKeywords.length > 0 &&
+    //     selectedKeywords?.some(keywordItem => {
+    //         console.log('Checking against ', keywordItem.text, keyword);
+    //         return keywordItem.text === keyword;
+    //     })) ??
+    // /* istanbul ignore next */ false;
+
+    // Object.keys(selectedKeywords).find(key => selectedKeywords[key] === keyword);
+
+    console.log('Is Selected', isSelected, keyword);
     return (
         <Grid item xs={12}>
             <Typography
                 component="span"
                 classes={{ root: classes.root }}
-                className={classes[variant || 'default']}
+                className={`${classes[variant || 'default']} ${isSelected && classes.added}`}
                 onKeyPress={handleKeywordKeyboardPress}
                 onClick={handleKeywordClick}
                 id={id}
@@ -84,6 +116,7 @@ SearchKeyword.propTypes = {
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
     sources: PropTypes.arrayOf(PropTypes.object),
+    selectedKeywords: PropTypes.object,
 };
 
 export default React.memo(SearchKeyword);
