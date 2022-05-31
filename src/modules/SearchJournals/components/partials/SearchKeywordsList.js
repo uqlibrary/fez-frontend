@@ -10,7 +10,6 @@ export const SearchKeywordsList = ({
     help,
     selectedKeywords,
 }) => {
-    console.log('This is the one that I need to target', selectedKeywords);
     return (
         <KeywordsList
             title={keywordsListTitle}

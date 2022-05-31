@@ -46,11 +46,20 @@ export const SearchKeyword = ({
     index,
     cvoId,
     sources,
-    selectedKeywords = [],
+    selectedKeywords = {},
 }) => {
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
-    const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
+    const isSelected =
+        Object.keys(selectedKeywords).filter(key => {
+            console.log('SELECTED KEYWORDS', selectedKeywords[key]);
+            console.log('matching against', keyword, variant, type);
+            return (
+                selectedKeywords[key].text.toUpperCase() === keyword.toUpperCase() &&
+                selectedKeywords[key].type.toUpperCase() === type.toUpperCase()
+            );
+        }).length > 0;
+    const handleKeywordClick = () => onKeywordClick && onKeywordClick(isSelected, keyword, cvoId);
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
@@ -68,7 +77,7 @@ export const SearchKeyword = ({
     // console.log('the keyword I have clicked is ', keyword);
     // console.log('Turned to an array', Object.keys(selectedKeywords));
     // console.log('Do we?', selectedKeywords, selectedKeywords.length);
-    const isSelected = Object.keys(selectedKeywords).filter(key => selectedKeywords[key].text === keyword).length > 0;
+
     // (selectedKeywords &&
     //     selectedKeywords.length > 0 &&
     //     selectedKeywords?.some(keywordItem => {
@@ -78,8 +87,7 @@ export const SearchKeyword = ({
     // /* istanbul ignore next */ false;
 
     // Object.keys(selectedKeywords).find(key => selectedKeywords[key] === keyword);
-
-    console.log('Is Selected', isSelected, keyword);
+    console.log('SELECTED KEYWORDS', selectedKeywords);
     return (
         <Grid item xs={12}>
             <Typography

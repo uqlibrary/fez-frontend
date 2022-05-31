@@ -22,6 +22,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const classes = useStyles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
+    console.log('ON KEYWORD DELETE', keyword);
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
         if (
