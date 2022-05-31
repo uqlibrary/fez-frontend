@@ -51,14 +51,11 @@ export const SearchKeyword = ({
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
     const isSelected =
-        Object.keys(selectedKeywords).filter(key => {
-            console.log('SELECTED KEYWORDS', selectedKeywords[key]);
-            console.log('matching against', keyword, variant, type);
-            return (
+        Object.keys(selectedKeywords).filter(
+            key =>
                 selectedKeywords[key].text.toUpperCase() === keyword.toUpperCase() &&
-                selectedKeywords[key].type.toUpperCase() === type.toUpperCase()
-            );
-        }).length > 0;
+                selectedKeywords[key].type.toUpperCase() === type.toUpperCase(),
+        ).length > 0;
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(isSelected, keyword, cvoId);
     const handleKeywordKeyboardPress = key => {
         key.preventDefault();
@@ -87,7 +84,6 @@ export const SearchKeyword = ({
     // /* istanbul ignore next */ false;
 
     // Object.keys(selectedKeywords).find(key => selectedKeywords[key] === keyword);
-    console.log('SELECTED KEYWORDS', selectedKeywords);
     return (
         <Grid item xs={12}>
             <Typography

@@ -50,17 +50,10 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     /* istanbul ignore next */
     const handleKeywordClick = React.useCallback(
         (isSelected, type, keyword, cvoId) => {
-            console.log('ARGUMENTS', isSelected, type, keyword, cvoId);
             if (!!!isSelected) {
                 return onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) });
             } else {
                 const id = cvoId ? `${type}-${cvoId}` : `${type}-${keyword}`;
-                console.log('THE ID WOULD BE:', {
-                    type,
-                    text: keyword,
-                    ...(id ? { id } : {}),
-                    ...(cvoId ? { cvoId } : {}),
-                });
                 return onKeywordDelete({ type, text: keyword, ...(id ? { id } : {}), ...(cvoId ? { cvoId } : {}) });
             }
             // return onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) });
@@ -110,7 +103,6 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     /* istanbul ignore next */
     const handleKeywordsKeywordClick = React.useCallback(
         (isSelected, keyword) => {
-            console.log('Keywords Arguments', isSelected);
             return handleKeywordClick(isSelected, txt.keywordMatch.chipTitle, keyword);
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -120,7 +112,6 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
-    console.log('SELECTED KEYWORDS', selectedKeywords);
     return (
         <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
