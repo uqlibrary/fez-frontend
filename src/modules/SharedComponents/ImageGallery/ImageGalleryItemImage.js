@@ -32,7 +32,7 @@ const ImageGalleryItemImage = ({
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
 
-    const thumbnailBlacklisted = !fileData?.isWhiteListed ?? true;
+    const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
     const thumbnailRestricted = !!fileData?.thumbnailFileName && !fileData?.securityStatus;
     const thumbnailAdvisory =
         (!security.isAdmin &&
