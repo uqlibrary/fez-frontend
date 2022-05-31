@@ -31,7 +31,8 @@ const ImageGalleryItemImage = ({
 
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
 
-    const thumbnailRestricted = !!fileData?.thumbnailFileName && (!fileData?.securityStatus || !fileData.isWhiteListed);
+    const thumbnailBlacklisted = !fileData?.isWhiteListed ?? true;
+    const thumbnailRestricted = !!fileData?.thumbnailFileName && !fileData?.securityStatus;
     const thumbnailAdvisory =
         (!security.isAdmin &&
             !!fileData?.thumbnailFileName &&
@@ -43,7 +44,7 @@ const ImageGalleryItemImage = ({
     const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
 
     const filename =
-        !thumbnailRestricted && !thumbnailAdvisory && !!filenameSrc
+        !thumbnailRestricted && !thumbnailAdvisory && !thumbnailBlacklisted && !!filenameSrc
             ? filenameSrc
             : config.thumbnailImage.defaultImageName;
 
@@ -56,6 +57,7 @@ const ImageGalleryItemImage = ({
         ) {
             setUnavailable(true);
         }
+
         if (thumbnailRestricted && !!setRestricted) setRestricted(true);
         if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
         // eslint-disable-next-line react-hooks/exhaustive-deps

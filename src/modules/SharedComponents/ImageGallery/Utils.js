@@ -71,7 +71,7 @@ export const getThumbnail = (item, isAdmin, isAuthor) => {
 export const getUrl = (pid, fileName, checksum = '') => {
     const fullUrl = pid && fileName && pathConfig.file.url(pid, fileName, checksum);
     const url =
-        fullUrl && process.env.GALLERY_IMAGE_PATH_PREPEND
+        fullUrl && process.env.USE_MOCK
             ? /* istanbul ignore next*/ `${process.env.GALLERY_IMAGE_PATH_PREPEND}${fullUrl.substr(
                   fullUrl.indexOf(fileName),
               )}`
