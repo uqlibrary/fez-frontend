@@ -56,7 +56,6 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
                 const id = cvoId ? `${type}-${cvoId}` : `${type}-${keyword}`;
                 return onKeywordDelete({ type, text: keyword, ...(id ? { id } : {}), ...(cvoId ? { cvoId } : {}) });
             }
-            // return onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) });
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
@@ -71,7 +70,6 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     /* istanbul ignore next */
     const handleSubjectKeywordClick = React.useCallback(
         (isSelected, keyword, cvoId) => {
-            // console.log('Subject Arguments', rest);
             handleKeywordClick(isSelected, txt.forCodeMatch.chipTitle, keyword, cvoId);
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -87,7 +85,6 @@ export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeyword
     /* istanbul ignore next */
     const handleTitleKeywordClick = React.useCallback(
         (isSelected, keyword) => {
-            console.log('Title Arguments', isSelected);
             return handleKeywordClick(isSelected, txt.titleMatch.chipTitle, keyword);
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
