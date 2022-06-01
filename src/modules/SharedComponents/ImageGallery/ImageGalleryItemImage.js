@@ -32,10 +32,11 @@ const ImageGalleryItemImage = ({
     const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
 
     const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
-    const thumbnailRestricted = !!fileData?.thumbnailFileName && !fileData?.securityStatus;
+    const thumbnailRestricted =
+        (!security.isAdmin && !!fileData?.thumbnailFileName && !fileData?.securityStatus) ??
+        /* istanbul ignore next */ false;
     const thumbnailAdvisory =
-        (!security.isAdmin &&
-            !!fileData?.thumbnailFileName &&
+        (!!fileData?.thumbnailFileName &&
             // eslint-disable-next-line camelcase
             item.fez_record_search_key_advisory_statement?.rek_advisory_statement) ??
         false;

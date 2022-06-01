@@ -55,7 +55,7 @@ describe('Image Gallery Item Image', () => {
         expect(setAdvisory).toHaveBeenCalledWith(true);
     });
 
-    it('should NOT make call when image is restricted and contains an advisory statement when admin logged in', () => {
+    it('should make "advisory" call when image has an advisory statement even when admin logged in', () => {
         const setRestricted = jest.fn();
         const setAdvisory = jest.fn();
         const item = collectionSearchResultsImages.data[0];
@@ -65,7 +65,7 @@ describe('Image Gallery Item Image', () => {
         setup({ item, setRestricted, setAdvisory, security: { isAdmin: true } });
 
         expect(setRestricted).not.toHaveBeenCalled();
-        expect(setAdvisory).not.toHaveBeenCalled();
+        expect(setAdvisory).toHaveBeenCalled();
     });
 
     it('should NOT make a "restricted" call when image is restricted and contains an advisory statement when author logged in', () => {
