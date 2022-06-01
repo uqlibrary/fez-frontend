@@ -21,7 +21,8 @@ const useStyles = makeStyles(theme => ({
     },
     added: {
         '&::before': {
-            content: '"\\2713"',
+            // content: '"\\2713"',
+            content: '"\\2012"',
             marginRight: '4px',
         },
     },
@@ -96,6 +97,7 @@ export const SearchKeyword = ({
                 data-testid={id}
                 role="button"
                 tabIndex="0"
+                aria-label={`${isSelected ? 'Remove' : 'Add'} ${type} ${keyword}`}
             >
                 {keyword}
             </Typography>
