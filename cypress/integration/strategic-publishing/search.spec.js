@@ -17,6 +17,11 @@ const assertScrollIsOnTop = () =>
     cy.get('#content-container').should($el => {
         expect($el.get(0).scrollTop).to.be.equals(0);
     });
+const captureBeforeContent = element => {
+    const win = element[0].ownerDocument.defaultView;
+    const before = win.getComputedStyle(element[0], 'before');
+    return before.getPropertyValue('content');
+};
 
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
@@ -180,35 +185,23 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
         cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
         cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
-            const win = $element[0].ownerDocument.defaultView;
-            const before = win.getComputedStyle($element[0], 'before');
-            const contentValue = before.getPropertyValue('content');
-            expect(contentValue).to.eq('"‒"');
+            expect(captureBeforeContent($element)).to.eq('"‒"');
         });
         cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
         cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
         cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
-            const win = $element[0].ownerDocument.defaultView;
-            const before = win.getComputedStyle($element[0], 'before');
-            const contentValue = before.getPropertyValue('content');
-            expect(contentValue).to.eq('"+"');
+            expect(captureBeforeContent($element)).to.eq('"+"');
         });
 
         cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
         cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('exist');
         cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
-            const win = $element[0].ownerDocument.defaultView;
-            const before = win.getComputedStyle($element[0], 'before');
-            const contentValue = before.getPropertyValue('content');
-            expect(contentValue).to.eq('"‒"');
+            expect(captureBeforeContent($element)).to.eq('"‒"');
         });
         cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
         cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('not.exist');
         cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
-            const win = $element[0].ownerDocument.defaultView;
-            const before = win.getComputedStyle($element[0], 'before');
-            const contentValue = before.getPropertyValue('content');
-            expect(contentValue).to.eq('"+"');
+            expect(captureBeforeContent($element)).to.eq('"+"');
         });
     });
 
