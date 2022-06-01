@@ -175,6 +175,43 @@ context('Strategic Publishing - Search', () => {
         });
     });
 
+    it('Selecting keyword should indicate change on keyword icon when added', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            const win = $element[0].ownerDocument.defaultView;
+            const before = win.getComputedStyle($element[0], 'before');
+            const contentValue = before.getPropertyValue('content');
+            expect(contentValue).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            const win = $element[0].ownerDocument.defaultView;
+            const before = win.getComputedStyle($element[0], 'before');
+            const contentValue = before.getPropertyValue('content');
+            expect(contentValue).to.eq('"+"');
+        });
+
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            const win = $element[0].ownerDocument.defaultView;
+            const before = win.getComputedStyle($element[0], 'before');
+            const contentValue = before.getPropertyValue('content');
+            expect(contentValue).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            const win = $element[0].ownerDocument.defaultView;
+            const before = win.getComputedStyle($element[0], 'before');
+            const contentValue = before.getPropertyValue('content');
+            expect(contentValue).to.eq('"+"');
+        });
+    });
+
     it('FAQ', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
         cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
