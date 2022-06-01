@@ -3,7 +3,6 @@ import { locale } from 'locale';
 import { APP_URL } from 'config';
 import Immutable from 'immutable';
 import { MEDIATED_ACCESS_ID } from 'config/general';
-import { isAuthorOrEditorSelected } from './validation';
 
 describe('Validation method', () => {
     it('should validate required', () => {
