@@ -19,7 +19,7 @@ import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
 
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
-import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
+import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
@@ -71,6 +71,22 @@ const SearchRecords = ({
             });
     };
 
+    /*
+    a method to ensure we only use the view type strings as
+    defined in general.js. This is used both by the code when loading
+    a result directly, and when the user changes the display type via
+    the UI - which also updates the querystring, hence the need for
+    a normalised value there
+    */
+    const normaliseDisplayLookup = raw => {
+        if (!!!raw) return COLLECTION_VIEW_TYPE[0].value;
+
+        return (
+            COLLECTION_VIEW_TYPE.filter(viewType => viewType.id === raw || viewType.value === raw)?.[0]?.value ??
+            COLLECTION_VIEW_TYPE[0].value
+        );
+    };
+
     /**
      * Effect to handle initial render
      */
@@ -112,7 +128,10 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
     const initSortingData = locale.components.sorting;
-    const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+
+    const displayLookup = normaliseDisplayLookup(
+        searchParams.displayRecordsAs ?? publicationsListDefaultView?.id ?? null,
+    );
     const newSortingData = initSortingData.sortBy.filter(option =>
         option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
     );
@@ -210,7 +229,7 @@ const SearchRecords = ({
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
-                                        displayRecordsAs={searchParams.displayRecordsAs}
+                                        displayRecordsAs={displayLookup}
                                         sortingData={sortingData}
                                     />
                                 </Grid>

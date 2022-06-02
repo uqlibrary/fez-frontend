@@ -12,6 +12,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 import { doesListContainItem } from 'helpers/general';
+import { COLLECTION_VIEW_TYPE } from 'config/general';
 
 const PublicationsListSorting = props => {
     const txt = locale.components.sorting;
@@ -32,7 +33,7 @@ const PublicationsListSorting = props => {
         props.pageSize ||
         (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
 
-    const initPropDisplayRecordsAs = props.displayRecordsAs || props.sortingData.displayRecordsAs?.[0]?.value;
+    const initPropDisplayRecordsAs = props.displayRecordsAs || COLLECTION_VIEW_TYPE[0].text;
 
     // sanitise values
     const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
@@ -45,12 +46,11 @@ const PublicationsListSorting = props => {
         ? initPropPageSize
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
-    const propDisplayRecordsAs = doesListContainItem(
-        locale.components.sorting.displayRecordsAs ?? [],
-        initPropDisplayRecordsAs,
-    )
+    const selectableCollectionViewType = COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false ?? true);
+
+    const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType ?? [], initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
-        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? '';
+        : selectableCollectionViewType[0].value ?? '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);
@@ -198,10 +198,10 @@ const PublicationsListSorting = props => {
                         onChange={displayRecordsAsChanged}
                         data-testid="publication-list-display-records-as"
                     >
-                        {props.sortingData.displayRecordsAs?.map(item => {
+                        {selectableCollectionViewType.map(item => {
                             return (
                                 <MenuItem
-                                    key={item.index}
+                                    key={item.id}
                                     value={item.value}
                                     data-testid={`publication-display-records-as-option-${item.index}`}
                                     id={`publication-display-records-as-option-${item.index}`}
