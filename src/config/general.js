@@ -20,9 +20,11 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
+export const IS_DEVELOPMENT_SERVER = !process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1;
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -37,6 +39,9 @@ export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${get
 export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;
+
+// convenience method to return an image via require() with a leading / where necessary
+export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${imagePath}`;
 
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;

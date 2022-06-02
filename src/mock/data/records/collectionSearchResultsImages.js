@@ -5,8 +5,8 @@ export default {
 	"current_page": 1,
 	"from": 1,
 	"to": 20,
-	"default_view_type": 2, // 0 = auto (unset), 1 = standard, 2 = image gallery
-	"default_view_type_lookup": "image-gallery", // null | 'auto', 'standard', 'image-gallery'
+	"default_view_type": 0, // 0 = auto (unset), 1 = standard, 2 = image gallery
+	"default_view_type_lookup": null, // null | 'auto', 'standard', 'image-gallery'
 	"data": [{
 		"rek_pid": "UQ:288612",
 		"rek_title_xsdmf_id": 4198,
@@ -499,7 +499,9 @@ export default {
 		"rek_datastream_policy": null,
 		"fez_record_search_key_acknowledgements": null,
 		"fez_record_search_key_additional_notes": null,
-		"fez_record_search_key_advisory_statement": null,
+		"fez_record_search_key_advisory_statement": {
+			"rek_advisory_statement": "This is an example advisory statement"
+		},
 		"fez_record_search_key_alternative_title": [{
 			"rek_alternative_title_id": 10065,
 			"rek_alternative_title_pid": "UQ:288583",
@@ -1290,7 +1292,7 @@ export default {
 		}, {
 			"dsi_id": 2935792,
 			"dsi_pid": "UQ:288585",
-			"dsi_dsid": "thumbnail_Slide_error.jpg",
+			"dsi_dsid": "thumbnail_Slide_003.jpg",
 			"dsi_checksum": "3655a9d06cf7dff723f3dfb8e57acf77",
 			"dsi_embargo_date": null,
 			"dsi_open_access": null,
@@ -1299,7 +1301,7 @@ export default {
 			"dsi_copyright": null,
 			"dsi_state": "A",
 			"dsi_size": 3904,
-			"dsi_security_policy": 1,
+			"dsi_security_policy": 5,
 			"dsi_security_inherited": 0
 		}, {
 			"dsi_id": 2935791,
@@ -1737,7 +1739,7 @@ export default {
 		"fez_record_search_key_isdatasetof": [],
 		"fez_record_search_key_has_related_datasets": [],
 		"fez_record_search_key_has_derivations": [],
-		"rek_display_type_lookup": "Digilib Image",
+		"rek_display_type_lookup": "NotAllowed",
 		"rek_pubmed_doc_type_lookup": null,
 		"rek_object_type_lookup": "Record",
 		"rek_scopus_doc_type_lookup": null,
@@ -2177,7 +2179,7 @@ export default {
 			"dsi_copyright": null,
 			"dsi_state": "A",
 			"dsi_size": 56197860,
-			"dsi_security_policy": 5,
+			"dsi_security_policy": 1,
 			"dsi_security_inherited": 1
 		}, {
 			"dsi_id": 2935780,

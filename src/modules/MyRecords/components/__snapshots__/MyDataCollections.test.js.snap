@@ -122,16 +122,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                   "displayRecordsAs": Array [
                     Object {
                       "index": 0,
-                      "label": "(auto)",
-                      "value": "auto",
-                    },
-                    Object {
-                      "index": 1,
                       "label": "Standard",
                       "value": "standard",
                     },
                     Object {
-                      "index": 2,
+                      "index": 1,
                       "label": "Image Gallery",
                       "value": "image-gallery",
                     },
@@ -167,14 +162,23 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -355,16 +359,11 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                   "displayRecordsAs": Array [
                     Object {
                       "index": 0,
-                      "label": "(auto)",
-                      "value": "auto",
-                    },
-                    Object {
-                      "index": 1,
                       "label": "Standard",
                       "value": "standard",
                     },
                     Object {
-                      "index": 2,
+                      "index": 1,
                       "label": "Image Gallery",
                       "value": "image-gallery",
                     },
@@ -400,14 +399,23 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -695,16 +703,11 @@ exports[`myDatasets test renders loading screen while loading publications while
                   "displayRecordsAs": Array [
                     Object {
                       "index": 0,
-                      "label": "(auto)",
-                      "value": "auto",
-                    },
-                    Object {
-                      "index": 1,
                       "label": "Standard",
                       "value": "standard",
                     },
                     Object {
-                      "index": 2,
+                      "index": 1,
                       "label": "Image Gallery",
                       "value": "image-gallery",
                     },
@@ -740,14 +743,23 @@ exports[`myDatasets test renders loading screen while loading publications while
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },

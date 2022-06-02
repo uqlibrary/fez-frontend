@@ -285,7 +285,36 @@ To keep initial load to a minimum, the following optimisations have been added t
   
   Be sure to check your nvm node version if your unit tests fail to run (this typically will happen if you change your repo from package-lock.json version 1 to 2, including updating the node and npm versions as mentioned above).
 
-#### Optimisation Guidelines
+- If you wish to reference static images in the `public/images` folder outside of `src`, you must use `require()` to bring them in to your component. This is due to a hashing process during build that moves and renames images to an assets folder on S3.
+
+So instead of:
+
+``` 
+<img src='/images/someimage.jpg'>
+```
+
+use:
+
+``` 
+const myImage = require(../../public/images/someimage.jpg) // your path with depend upon where you're referencing the image in the hierarchy
+<img src={myImage}>
+// or in styles
+backgroundImage: `url(${myImage})`
+```
+
+Also be wary of the different environments your code will deploy to, e.g. dev branch, staging, production. Dev branches work slightly different to the other two when it comes to using absolute vs relative paths within IMG elements, due to how the dev server must host multiple branches each with their own build (note this is not an issue if using the image in a style, as shown above).
+Typically for localhost, staging and production you'll need to reference your image from the root, by adding a leading `\`. However, this **won't** work on the development server, which requires an image reference *without* the leading slash.
+To handle this, use the `IS_DEVELOPMENT_SERVER` constant in `src/config/general.js` to conditionally add a leading `\` when you output your image path, or leverage the convenience function `getRequiredImagePath`:
+
+```
+const myImagePath = `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${myImage}`;
+
+//or
+
+const myImagePath = getRequiredImagePath(myImage);
+```
+
+### Optimisation Guidelines
 
 - do not use functional components
 - try to simplify props

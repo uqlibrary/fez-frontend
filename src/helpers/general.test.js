@@ -1,4 +1,11 @@
-import { hydrateMockSearchList, leftJoin, stripHtml, sanitiseId, formatUrlTextWithWbrTags } from './general';
+import {
+    hydrateMockSearchList,
+    leftJoin,
+    stripHtml,
+    sanitiseId,
+    formatUrlTextWithWbrTags,
+    handleKeyboardPressActivate,
+} from './general';
 
 describe('general helpers', () => {
     it('leftJoin', () => {
@@ -210,5 +217,32 @@ describe('general helpers', () => {
             '["http:",{"type":"wbr","key":"1","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"//",{"type":"wbr","key":"3","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"www",{"type":"wbr","key":"5","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".test",{"type":"wbr","key":"7","ref":null,"props":{"children":null},"_owner":null,"_store":{}},".com",{"type":"wbr","key":"9","ref":null,"props":{"children":null},"_owner":null,"_store":{}},"/"]';
         const actualStr = JSON.stringify(formatUrlTextWithWbrTags('http://www.test.com/'));
         expect(expectedStr).toEqual(actualStr);
+    });
+
+    describe('handleKeyboardPressActivate', () => {
+        it('should fire callback function if Space key pressed', () => {
+            const testFn = jest.fn();
+            const mockKey = { code: 'SPACE', preventDefault: jest.fn() };
+            handleKeyboardPressActivate(mockKey, testFn);
+            expect(testFn).toHaveBeenCalled();
+        });
+        it('should fire callback function if Enter key pressed', () => {
+            const testFn = jest.fn();
+            const mockKey = { code: 'ENTER', preventDefault: jest.fn() };
+            handleKeyboardPressActivate(mockKey, testFn);
+            expect(testFn).toHaveBeenCalled();
+        });
+        it('should fire callback function if NumPad Enter key pressed', () => {
+            const testFn = jest.fn();
+            const mockKey = { code: 'NUMPADENTER', preventDefault: jest.fn() };
+            handleKeyboardPressActivate(mockKey, testFn);
+            expect(testFn).toHaveBeenCalled();
+        });
+        it('should not fire callback function if a key other than Space, Enter or NumPad Enter is pressed', () => {
+            const testFn = jest.fn();
+            const mockKey = { code: 'A', preventDefault: jest.fn() };
+            handleKeyboardPressActivate(mockKey, testFn);
+            expect(testFn).not.toHaveBeenCalled();
+        });
     });
 });

@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { sanitiseId } from 'helpers/general';
 import ForCodeSource from './ForCodeSource';
 import Box from '@material-ui/core/Box';
+import { handleKeyboardPressActivate } from 'helpers/general';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -36,25 +37,14 @@ export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, c
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
     const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
-    const handleKeywordKeyboardPress = key => {
-        key.preventDefault();
-        if (
-            key.code.toLowerCase() !== 'space' &&
-            key.code.toLowerCase() !== 'enter' &&
-            key.code.toLowerCase() !== 'numpadenter'
-        ) {
-            return;
-        }
 
-        handleKeywordClick();
-    };
     return (
         <Grid item xs={12}>
             <Typography
                 component="span"
                 classes={{ root: classes.root }}
                 className={classes[variant || 'default']}
-                onKeyPress={handleKeywordKeyboardPress}
+                onKeyPress={key => handleKeyboardPressActivate(key, handleKeywordClick)}
                 onClick={handleKeywordClick}
                 id={id}
                 data-testid={id}

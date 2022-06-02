@@ -54,6 +54,7 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
+
     const {
         pageSizeChanged,
         pageChanged,
@@ -110,22 +111,19 @@ const SearchRecords = ({
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
+    const initSortingData = locale.components.sorting;
+    const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+    const newSortingData = initSortingData.sortBy.filter(option =>
+        option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
+    );
+    const sortingData = { ...initSortingData, sortBy: newSortingData };
 
     const SelectRecordView = publicationsList => {
-        const displayLookup = queryParams.displayRecordsAs ?? publicationsListDefaultView.lookup;
-
         switch (displayLookup) {
-            case 'auto':
-            case 'standard':
-                return (
-                    <PublicationsList
-                        publicationsList={publicationsList}
-                        showAdminActions={isAdmin || isUnpublishedBufferPage}
-                        showUnpublishedBufferFields={isUnpublishedBufferPage}
-                    />
-                );
             case 'image-gallery':
                 return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor }} />;
+            case 'auto':
+            case 'standard':
             default:
                 return (
                     <PublicationsList
@@ -213,6 +211,7 @@ const SearchRecords = ({
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
                                         displayRecordsAs={searchParams.displayRecordsAs}
+                                        sortingData={sortingData}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>

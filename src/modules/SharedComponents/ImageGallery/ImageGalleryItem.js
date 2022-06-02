@@ -4,28 +4,24 @@ import PropTypes from 'prop-types';
 
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import txt from 'locale/components';
+import { useHistory } from 'react-router';
+
+import { handleKeyboardPressActivate } from 'helpers/general';
+
+import { makeStyles } from '@material-ui/core/styles';
 
 import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
-import { pathConfig } from 'config/pathConfig';
-import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
-import { makeStyles } from '@material-ui/core/styles';
-
 const useStyles = makeStyles(theme => ({
-    imageListItemRoot: {
-        [theme.breakpoints.down('md')]: {
-            width: '25% !important',
-        },
-        [theme.breakpoints.down('sm')]: {
-            width: '33% !important',
-        },
-        [theme.breakpoints.down('xs')]: {
-            width: '50% !important',
-        },
-    },
+    imageListItemRoot: {},
     imageListItemItem: {
-        backgroundColor: '#51247a',
+        backgroundColor: '#fff',
+        border: '1px solid #d7d1cc',
+    },
+    imageListItemWithLink: {
+        cursor: 'pointer',
     },
     imageListItemBarRoot: {
         height: '67px',
@@ -34,7 +30,8 @@ const useStyles = makeStyles(theme => ({
         padding: '10px',
     },
     imageListItemBarTitle: {
-        fontSize: '12px',
+        fontSize: '14px',
+        fontWeight: '500',
         lineHeight: '16px',
         display: '-webkit-box',
         lineClamp: 3,
@@ -47,6 +44,7 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
     },
     imageGalleryItemImage: {
+        aspectRatio: 1,
         minWidth: '100px',
         minHeight: '100px',
         width: '100%',
@@ -56,17 +54,85 @@ const useStyles = makeStyles(theme => ({
             minHeight: '150px',
         },
     },
+    imageListAlertBarRoot: {
+        background: 'none',
+        backgroundColor: '#4085c6',
+        height: 'auto',
+    },
+    imageListAlertBarWrap: {
+        margin: '0px',
+        padding: '10px',
+    },
+    imageListAlertBarTitle: {
+        fontSize: '14px',
+        fontWeight: '500',
+        lineHeight: 'normal',
+        whiteSpace: 'normal',
+    },
 }));
 
-const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, security, ...rest }) => {
+const viewRecord = (history, url) => {
+    history.push(url);
+};
+
+export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
+    if (restricted && advisory && !unavailable) return txt.components.imageGallery.alert.restrictedAdvisory;
+    if (restricted && !unavailable) return txt.components.imageGallery.alert.restricted;
+    if (advisory && !unavailable) return txt.components.imageGallery.alert.advisory;
+    if (unavailable) return txt.components.imageGallery.alert.unavailable;
+    return null;
+};
+
+const ImageGalleryItem = ({
+    item,
+    withTitle,
+    withAlert,
+    url,
+    history,
+    classes,
+    lazyLoading,
+    itemWidth,
+    itemHeight,
+    security,
+    ...rest
+}) => {
     const internalClasses = useStyles();
+    const [restricted, setRestricted] = React.useState(false);
+    const [advisory, setAdvisory] = React.useState(false);
+    const [unavailable, setUnavailable] = React.useState(false);
+    const historyObject = history ?? useHistory();
+
+    const alertMessage = React.useMemo(() => {
+        return getAlertMessageText({ unavailable, restricted, advisory });
+    }, [restricted, advisory, unavailable]);
+
+    const clickLink =
+        !!url && url.length > 0
+            ? {
+                  onClick: () => viewRecord(historyObject, url),
+                  role: 'button',
+              }
+            : {};
+
+    const listItemAriaLabel =
+        !advisory && !restricted
+            ? { 'aria-label': txt.components.imageGallery.thumbnail.ariaLabel.replace('[title]', item.rek_title) }
+            : {};
 
     return (
         <ImageListItem
+            id={`image-gallery-item-${item.rek_pid}`}
+            data-testid={`image-gallery-item-${item.rek_pid}`}
             classes={{
                 root: `${internalClasses.imageListItemRoot} ${classes?.imageListItem?.root ?? ''}`,
-                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''}`,
+                item: `${internalClasses.imageListItemItem} ${classes?.imageListItem?.item ?? ''} ${
+                    !!clickLink.onClick ? internalClasses.imageListItemWithLink : ''
+                }`,
             }}
+            tabIndex={0}
+            onKeyPress={key => handleKeyboardPressActivate(key, () => viewRecord(historyObject, url))}
+            {...listItemAriaLabel}
+            {...clickLink}
             {...rest}
         >
             <ImageGalleryItemImage
@@ -76,16 +142,12 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                 width={itemWidth}
                 height={itemHeight}
                 loading={lazyLoading ? 'lazy' : 'eager'}
-                className={internalClasses.imageGalleryItemImage}
+                className={`${internalClasses.imageGalleryItemImage} ${classes?.imageListItemImage ?? ''}`}
+                setRestricted={setRestricted}
+                setAdvisory={setAdvisory}
+                setUnavailable={setUnavailable}
             />
-            <ExternalLink
-                title={item.rek_title}
-                href={pathConfig.records.view(item.rek_pid)}
-                id={`gallery-item-${item.rek_pid}`}
-                data-testid={`gallery-item-${item.rek_pid}`}
-                target="_self"
-                openInNewIcon={false}
-            >
+            {withTitle && (
                 <ImageListItemBar
                     title={item.rek_title}
                     classes={{
@@ -94,18 +156,43 @@ const ImageGalleryItem = ({ item, classes, lazyLoading, itemWidth, itemHeight, s
                         titleWrap: `${internalClasses.imageListItemBarTitleWrap} ${classes?.imageListItemBar
                             ?.titleWrap ?? ''}`,
                     }}
+                    id={`image-gallery-item-${item.rek_pid}-title`}
+                    data-testid={`image-gallery-item-${item.rek_pid}-title`}
                 />
-            </ExternalLink>
+            )}
+            {!!alertMessage && withAlert && (
+                <ImageListItemBar
+                    title={alertMessage}
+                    position="top"
+                    classes={{
+                        root: `${internalClasses.imageListAlertBarRoot} ${classes?.imageListAlertBar?.root ?? ''}`,
+                        title: `${internalClasses.imageListAlertBarTitle} ${classes?.imageListAlertBar?.title ?? ''}`,
+                        titleWrap: `${internalClasses.imageListAlertBarWrap} ${classes?.imageListAlertBar?.titleWrap ??
+                            ''}`,
+                    }}
+                    id={`image-gallery-item-${item.rek_pid}-alert`}
+                    data-testid={`image-gallery-item-${item.rek_pid}-alert`}
+                />
+            )}
         </ImageListItem>
     );
 };
 
 ImageGalleryItem.propTypes = {
     item: PropTypes.object.isRequired,
+    withTitle: PropTypes.bool,
+    withAlert: PropTypes.bool,
+    url: PropTypes.string,
+    history: PropTypes.object,
     security: PropTypes.object,
     classes: PropTypes.shape({
-        imageListItem: PropTypes.object,
+        imageListItem: PropTypes.shape({
+            root: PropTypes.string,
+            item: PropTypes.string,
+        }),
+        imageListItemImage: PropTypes.string,
         imageListItemBar: PropTypes.object,
+        imageListAlertBar: PropTypes.object,
     }),
     lazyLoading: PropTypes.bool,
     itemWidth: PropTypes.number,
@@ -113,6 +200,8 @@ ImageGalleryItem.propTypes = {
 };
 
 ImageGalleryItem.defaultProps = {
+    withTitle: true,
+    withAlert: true,
     classes: {},
     security: { isAdmin: false, isAuthor: false },
     lazyLoading: config.thumbnailImage.defaultLazyLoading,
@@ -120,4 +209,4 @@ ImageGalleryItem.defaultProps = {
     itemHeight: config.thumbnailImage.defaultHeight,
 };
 
-export default ImageGalleryItem;
+export default React.memo(ImageGalleryItem);
