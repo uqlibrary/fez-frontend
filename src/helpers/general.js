@@ -353,6 +353,7 @@ export const formatUrlTextWithWbrTags = url => {
 
     return ReactHtmlParser(formatted);
 };
+
 export const handleKeyboardPressActivate = (key, callbackFn) => {
     key.preventDefault();
     if (
