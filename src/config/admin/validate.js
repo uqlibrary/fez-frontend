@@ -63,6 +63,7 @@ export default values => {
         bibliographicSection: {},
         adminSection: {},
         filesSection: {},
+        securitySection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
@@ -85,6 +86,13 @@ export default values => {
 
     (!(data.filesSection || {}).hasOwnProperty('rek_copyright') || data.filesSection.rek_copyright !== 'on') &&
         (errors.filesSection.rek_copyright = summary.rek_copyright);
+
+    (data.securitySection || {}).hasOwnProperty('rek_security_inherited') &&
+        (data.securitySection || {}).hasOwnProperty('rek_security_policy') &&
+        data.securitySection.rek_security_inherited === 0 &&
+        (typeof data.securitySection.rek_security_policy === 'undefined' ||
+            data.securitySection.rek_security_policy === null) &&
+        (errors.securitySection.rek_security_policy = summary.rek_security_policy);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:
