@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
     },
     added: {
         '&::before': {
-            // content: '"\\2713"',
             content: '"\\2012"',
             marginRight: '4px',
         },
@@ -70,21 +69,7 @@ export const SearchKeyword = ({
 
         handleKeywordClick();
     };
-    // console.log('In the element, keyword and selected list', keyword, selectedKeywords);
-    // /const isASelectedKeyword = true;
-    // console.log('the keyword I have clicked is ', keyword);
-    // console.log('Turned to an array', Object.keys(selectedKeywords));
-    // console.log('Do we?', selectedKeywords, selectedKeywords.length);
 
-    // (selectedKeywords &&
-    //     selectedKeywords.length > 0 &&
-    //     selectedKeywords?.some(keywordItem => {
-    //         console.log('Checking against ', keywordItem.text, keyword);
-    //         return keywordItem.text === keyword;
-    //     })) ??
-    // /* istanbul ignore next */ false;
-
-    // Object.keys(selectedKeywords).find(key => selectedKeywords[key] === keyword);
     return (
         <Grid item xs={12}>
             <Typography
