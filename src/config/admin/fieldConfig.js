@@ -262,10 +262,10 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
-        rek_collection_view_type: {
+        fez_record_search_key_collection_view_type: {
             component: NewGenericSelectField,
             componentProps: {
-                name: 'adminSection.rek_collection_view_type',
+                name: 'adminSection.fez_record_search_key_collection_view_type.rek_collection_view_type',
                 itemsList: COLLECTION_VIEW_TYPE,
                 multiple: false,
                 genericSelectFieldId: 'collection-view-type',

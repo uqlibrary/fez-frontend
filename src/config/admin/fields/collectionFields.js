@@ -9,7 +9,7 @@ export default {
         },
         {
             title: 'Collection Display Default',
-            groups: [['rek_collection_view_type']],
+            groups: [['fez_record_search_key_collection_view_type']],
         },
     ],
     bibliographic: () => [
