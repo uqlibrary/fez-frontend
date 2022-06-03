@@ -24,6 +24,21 @@ import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearc
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
+/*
+a method to ensure we only use the view type strings as
+defined in general.js. This is used both by the code when loading
+a result directly, and when the user changes the display type via
+the UI - which also updates the querystring, hence the need for
+a normalised value there
+*/
+export const normaliseDisplayLookup = raw => {
+    if (!!!raw) return COLLECTION_VIEW_TYPE[0].value;
+
+    return (
+        COLLECTION_VIEW_TYPE.filter(viewType => viewType.id === raw || viewType.value === raw)?.[0]?.value ??
+        COLLECTION_VIEW_TYPE[0].value
+    );
+};
 const SearchRecords = ({
     actions,
     canUseExport,
@@ -69,22 +84,6 @@ const SearchRecords = ({
                 ...queryParams,
                 advancedSearchFields: getAdvancedSearchFields(searchFields),
             });
-    };
-
-    /*
-    a method to ensure we only use the view type strings as
-    defined in general.js. This is used both by the code when loading
-    a result directly, and when the user changes the display type via
-    the UI - which also updates the querystring, hence the need for
-    a normalised value there
-    */
-    const normaliseDisplayLookup = raw => {
-        if (!!!raw) return COLLECTION_VIEW_TYPE[0].value;
-
-        return (
-            COLLECTION_VIEW_TYPE.filter(viewType => viewType.id === raw || viewType.value === raw)?.[0]?.value ??
-            COLLECTION_VIEW_TYPE[0].value
-        );
     };
 
     /**

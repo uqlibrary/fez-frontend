@@ -14,10 +14,12 @@ import { userIsAdmin, userIsResearcher } from 'hooks';
 import { doesListContainItem } from 'helpers/general';
 import { COLLECTION_VIEW_TYPE } from 'config/general';
 
+export const filterCollectionViewTypes = () => COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false);
+
 const PublicationsListSorting = props => {
     const txt = locale.components.sorting;
     /* istanbul ignore next */
-    const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
+    const pageLength = txt.recordsPerPage /* istanbul ignore next */ ?? [10, 20, 50, 100];
 
     // Allow cust page length if defined in props
     if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
@@ -46,11 +48,11 @@ const PublicationsListSorting = props => {
         ? initPropPageSize
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
-    const selectableCollectionViewType = COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false ?? true);
+    const selectableCollectionViewType = filterCollectionViewTypes();
 
-    const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType ?? [], initPropDisplayRecordsAs)
+    const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType, initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
-        : selectableCollectionViewType[0].value ?? '';
+        : selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);
