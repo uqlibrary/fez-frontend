@@ -356,7 +356,13 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list-row-0"]')
                             .find('p')
                             .eq(0)
-                            .should('contain', '1st');
+                            .should('contain', 'First')
+                            .and('contain', 'Ashkanasy');
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('p')
+                            .eq(0)
+                            .should('contain', 'Second')
+                            .and('contain', 'Belanger');
                     });
             });
 
@@ -367,6 +373,7 @@ context('Creative Work admin edit', () => {
             .should('exist')
             .find('h2')
             .should('contain', 'Work has been updated');
+        cy.log('Done!');
     });
 
     it('in the NTRO section, the clear button clears the significance and statement add form', () => {

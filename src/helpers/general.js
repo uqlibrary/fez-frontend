@@ -353,15 +353,3 @@ export const formatUrlTextWithWbrTags = url => {
 
     return ReactHtmlParser(formatted);
 };
-
-export function makeOrdinalNumber(id) {
-    if (id % 10 === 1 && id !== 11) {
-        return `${id}st`;
-    } else if (id % 10 === 2 && id !== 12) {
-        return `${id}nd`;
-    } else if (id % 10 === 3 && id !== 13) {
-        return `${id}rd`;
-    } else {
-        return `${id}th`;
-    }
-}
