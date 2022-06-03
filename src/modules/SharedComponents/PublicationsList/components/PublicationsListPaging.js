@@ -58,6 +58,58 @@ const styles = theme => ({
     },
 });
 
+const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => {
+    let currPage = currentPage;
+    // calculate total pages
+    const totalPages = Math.ceil(totalItems / pageSize);
+
+    // ensure current page isn't out of range
+    if (currentPage < 1) {
+        currPage = 1;
+    } else if (currentPage > totalPages) {
+        currPage = totalPages;
+    }
+
+    let startPage;
+    let endPage;
+    if (totalPages <= maxPages) {
+        // total pages less than max so show all pages
+        startPage = 1;
+        endPage = totalPages;
+    } else {
+        // total pages more than max so calculate start and end pages
+        const maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
+        const maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
+        if (currPage <= maxPagesBeforeCurrentPage) {
+            // current page near the start
+            startPage = 1;
+            endPage = maxPages;
+        } else if (currPage + maxPagesAfterCurrentPage >= totalPages) {
+            // current page near the end
+            startPage = totalPages - maxPages + 1;
+            endPage = totalPages;
+        } else {
+            // current page somewhere in the middle
+            startPage = currPage - maxPagesBeforeCurrentPage;
+            endPage = currPage + maxPagesAfterCurrentPage;
+        }
+    }
+
+    // create an array of pages to ng-repeat in the pager control
+    const pages = Array.from(Array(endPage + 1 - startPage).keys()).map(i => startPage + i);
+
+    // return object with all pager properties required by the view
+    return {
+        totalItems: totalItems,
+        currentPage: currPage,
+        pageSize: pageSize,
+        totalPages: totalPages,
+        startPage: startPage,
+        endPage: endPage,
+        pages: pages,
+    };
+};
+
 export class PublicationsListPaging extends Component {
     static propTypes = {
         classes: PropTypes.object,
@@ -96,6 +148,7 @@ export class PublicationsListPaging extends Component {
         const isCurrentPage = key === currentPage;
         const totalPages =
             this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
+        console.log('renderButton', key, currentPage, isCurrentPage, totalPages);
         return (
             <Button
                 variant={'text'}
@@ -121,18 +174,27 @@ export class PublicationsListPaging extends Component {
     };
 
     renderPageButtons = () => {
-        const totalPages =
-            this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
-        const pageBracket = locale.components.paging.pagingBracket;
-        const currentPage = this.state.current_page;
-        const startPage = currentPage - pageBracket < 1 ? 1 : currentPage - pageBracket;
-        const endPage = currentPage + pageBracket > totalPages ? totalPages : currentPage + pageBracket;
-        const totalToRender = endPage - startPage + 1;
-        return Array(totalToRender)
+        const pagination = paginate(
+            this.state.total,
+            this.state.current_page,
+            this.state.per_page,
+            locale.components.paging.pagingBracket * 2,
+        );
+        // const totalPages =
+        //     this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
+        // const pageBracket = locale.components.paging.pagingBracket;
+        // const currentPage = this.state.current_page;
+        // const startPage = currentPage - pageBracket < 1 ? 1 : currentPage - pageBracket;
+        // const endPage = currentPage + pageBracket > totalPages ? totalPages : currentPage + pageBracket;
+        // const totalToRender = endPage - startPage + 1;
+        const ret = Array(pagination.pages.length)
             .fill()
             .map((page, index) => {
-                return this.renderButton(index + startPage);
+                console.log('map', index, pagination.pages[index]);
+                return this.renderButton(pagination.pages[index]);
             });
+        console.log(pagination, ret);
+        return ret;
     };
 
     render() {
