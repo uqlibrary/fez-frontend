@@ -79,6 +79,11 @@ import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 
+const transformCollectionView = () =>
+    COLLECTION_VIEW_TYPE.map(viewType => {
+        return { value: viewType.id, text: viewType.label };
+    });
+
 export default {
     default: {
         rek_title: {
@@ -266,7 +271,7 @@ export default {
             component: NewGenericSelectField,
             componentProps: {
                 name: 'adminSection.fez_record_search_key_collection_view_type.rek_collection_view_type',
-                itemsList: COLLECTION_VIEW_TYPE,
+                itemsList: transformCollectionView(),
                 multiple: false,
                 genericSelectFieldId: 'collection-view-type',
                 ...selectFields.collectionViewType,
