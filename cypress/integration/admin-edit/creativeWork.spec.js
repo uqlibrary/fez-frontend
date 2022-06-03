@@ -69,30 +69,6 @@ context('Creative Work admin edit', () => {
     //         });
     // });
 
-    function assertChangeSelectFromTo(item, changeFrom, changeTo) {
-        cy.log(`expect ${item}-select to change from '${changeFrom}' to '${changeTo}'`);
-        cy.waitUntil(() => cy.get(`[data-testid="${item}-select"]`).should('exist'));
-        if (changeFrom === '') {
-            cy.log('look for an unselected item');
-            cy.get(`[data-testid="${item}-select"]`)
-                .then(text => {
-                    expect(text).to.have.lengthOf(1); // special zero length string
-                })
-                .click();
-        } else {
-            cy.log('look for a selected item', changeFrom);
-            cy.get(`[data-testid="${item}-select"]`)
-                .should('exist')
-                .should('contain', changeFrom)
-                .click();
-        }
-        cy.waitUntil(() => cy.get(`[data-testid="${item}-options"]`).should('exist'));
-        cy.get(`[data-testid="${item}-options"]`)
-            .contains(changeTo)
-            .click();
-        cy.get(`[data-testid="${item}-select"]`).should('contain', changeTo);
-    }
-
     function clickFormSaveButton(label) {
         const button = 'button[data-testid="rek-significance-add"]';
         cy.waitUntil(() => cy.get(button).should('exist'));
@@ -207,7 +183,7 @@ context('Creative Work admin edit', () => {
             });
 
         // popup appears at foot of page, outside Admin section
-        assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
+        cy.assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -272,7 +248,7 @@ context('Creative Work admin edit', () => {
             });
 
         // popup appears at foot of page, outside Admin section
-        assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
+        cy.assertChangeSelectFromTo('rek-significance', '', 'Minor'); // was unselected
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -336,7 +312,11 @@ context('Creative Work admin edit', () => {
             });
 
         // popup appears at foot of page, outside Admin section
-        assertChangeSelectFromTo('rek-significance', statementList[0].significance, statementList[0].newSignificance);
+        cy.assertChangeSelectFromTo(
+            'rek-significance',
+            statementList[0].significance,
+            statementList[0].newSignificance,
+        );
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')
@@ -402,7 +382,7 @@ context('Creative Work admin edit', () => {
             });
 
         // popup appears at foot of page, outside Admin section
-        assertChangeSelectFromTo('rek-significance', '', 'Minor');
+        cy.assertChangeSelectFromTo('rek-significance', '', 'Minor');
 
         cy.get('[data-testid=ntro-section-content]')
             .as('NTRO')

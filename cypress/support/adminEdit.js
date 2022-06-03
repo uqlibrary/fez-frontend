@@ -72,3 +72,30 @@ Cypress.Commands.add('adminEditCheckTabErrorBadge', (tab, value = '1') => {
         .find('[class*="MuiBadge-colorError"]')
         .should('have.text', value);
 });
+
+// change the value in a NewGenericSelectField and confirm it is as expected
+// eg cy.assertChangeSelectFromTo('rek-significance', 'Major', 'Minor');
+// initial value can be '' for unselected
+Cypress.Commands.add('assertChangeSelectFromTo', (item, changeFrom, changeTo) => {
+    cy.log(`expect ${item}-select to change from '${changeFrom}' to '${changeTo}'`);
+    cy.waitUntil(() => cy.get(`[data-testid="${item}-select"]`).should('exist'));
+    if (changeFrom === '') {
+        // nothing is selected in the dropdown
+        cy.get(`[data-testid="${item}-select"]`)
+            .then(text => {
+                expect(text).to.have.lengthOf(1); // special zero length string
+            })
+            .click();
+    } else {
+        // an item is selected in the dropdown
+        cy.get(`[data-testid="${item}-select"]`)
+            .should('exist')
+            .should('contain', changeFrom)
+            .click();
+    }
+    cy.waitUntil(() => cy.get(`[data-testid="${item}-options"]`).should('exist'));
+    cy.get(`[data-testid="${item}-options"]`)
+        .contains(changeTo)
+        .click();
+    cy.get(`[data-testid="${item}-select"]`).should('contain', changeTo);
+});
