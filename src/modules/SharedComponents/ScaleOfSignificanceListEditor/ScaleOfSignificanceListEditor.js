@@ -8,6 +8,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import IconButton from '@material-ui/core/IconButton';
 import Box from '@material-ui/core/Box';
 import AddCircle from '@material-ui/icons/Add';
+import Typography from '@material-ui/core/Typography';
 
 export default class ScaleOfSignificanceListEditor extends Component {
     static propTypes = {
@@ -153,8 +154,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
     };
 
     saveChangeToItem = item => {
-        console.log('saveChangeToItem: item=', item);
-        console.log('saveChangeToItem: this.state.itemList=', this.state.itemList);
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
@@ -171,7 +170,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
-                    console.log('saveChangeToItem 111: editedItem=', editedItem);
                     this.setState({
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
@@ -181,13 +179,11 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         itemIndexSelectedToEdit: null,
                     });
                 } else {
-                    console.log('saveChangeToItem 222: editedItem=', editedItem);
                     this.setState({
                         itemList: [...this.state.itemList, editedItem],
                     });
                 }
             } else if (!!item && !item.key && !item.value && item.includes('|')) {
-                console.log('saveChangeToItem 333: editedItem=', editedItem);
                 // Item is a string with pipes in it - we will strip and separate the values to be individual keywords
                 const commaSepListToArray = item.split('|'); // Convert the string to an array of values
                 // Filter out empty array values
@@ -206,7 +202,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     this.state.itemIndexSelectedToEdit !== null &&
                     this.state.itemIndexSelectedToEdit > -1
                 ) {
-                    console.log('saveChangeToItem 444: editedItem=', editedItem);
                     const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
                         ? {
                               ...this.state.itemList[this.state.itemIndexSelectedToEdit],
@@ -223,7 +218,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         itemIndexSelectedToEdit: null,
                     });
                 } else {
-                    console.log('saveChangeToItem 555: editedItem=', editedItem);
                     // Item is just a string - so just add it
                     this.setState({
                         itemList: [...this.state.itemList, item],
@@ -301,7 +295,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     render() {
         const renderListsRows = this.state.itemList.map((item, index) => {
-            console.log('item=', index, item);
             const tempItem = {
                 id: index,
                 // authorName: item.authorName || item.author?.rek_author || null,
@@ -314,8 +307,6 @@ export default class ScaleOfSignificanceListEditor extends Component {
                     htmlText: item.value?.htmlText || null,
                 },
             };
-            console.log('tempItem=', tempItem);
-            console.log('this.state.itemList[index]=', this.state.itemList[index]);
             return (
                 <ListRow
                     key={item.id || item.key || `${item}-${index}`}
@@ -336,7 +327,12 @@ export default class ScaleOfSignificanceListEditor extends Component {
                 />
             );
         });
-        console.log('this.props=', this.props);
+        const noRecordsStyle = {
+            textAlign: 'center',
+            fontSize: '0.875rem',
+            padding: 16,
+            borderBottom: '1px solid rgba(224, 224, 224, 1)',
+        };
         return (
             <div id={`${this.props.listEditorId}-list-editor`}>
                 {this.state.showAddForm ? (
@@ -383,18 +379,22 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         </IconButton>
                     </Box>
                 )}
-                {this.state.itemList.length > 0 && (
-                    <ListRowHeader
-                        onDeleteAll={this.deleteAllItems}
-                        hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
-                        disabled={this.props.disabled}
-                        listEditorId={this.props.listEditorId}
-                        {...((this.props.locale && this.props.locale.header) || {})}
-                    />
+                <ListRowHeader
+                    onDeleteAll={this.deleteAllItems}
+                    hideReorder={this.props.hideReorder || this.state.itemList.length < 2}
+                    disabled={this.props.disabled}
+                    listEditorId={this.props.listEditorId}
+                    {...((this.props.locale && this.props.locale.header) || {})}
+                />
+                {this.state.itemList.length > 0 ? (
+                    <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
+                        {renderListsRows}
+                    </div>
+                ) : (
+                    <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
+                        <Typography style={noRecordsStyle}>No records to display</Typography>
+                    </div>
                 )}
-                <div id={`${this.props.listEditorId}-list`} data-testid={`${this.props.listEditorId}-list`}>
-                    {renderListsRows}
-                </div>
                 {this.props.error && <FormHelperText error>{this.props.error}</FormHelperText>}
             </div>
         );

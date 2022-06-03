@@ -6,11 +6,14 @@ import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import ReactHtmlParser from 'react-html-parser';
 
 export const ScaleOfSignificanceTemplate = ({ item }) => {
+    const wrappedAuthor = `(${item.author.rek_author})`;
+    // eslint-disable-next-line camelcase
+    const authorNameIfKnown = <>{!!item.author?.rek_author ? wrappedAuthor : ''}</>;
     return (
         <Grid container>
             <Grid item xs={12}>
                 <Typography variant="body2" style={{ color: 'rgba(0, 0, 0, 0.5)' }}>
-                    {numberToWords(item.id + 1)} listed author ({item.author.rek_author})
+                    {numberToWords(item.id + 1)} listed author {authorNameIfKnown}
                 </Typography>
             </Grid>
             <Grid item xs={12} md={3}>

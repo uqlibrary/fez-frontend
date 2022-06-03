@@ -137,7 +137,7 @@ context('Creative Work admin edit', () => {
         },
     };
 
-    it('in the NTRO section, the significance and statement list rows have the correct content', () => {
+    it('in the NTRO section, the significance and statement list rows load the correct content', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
