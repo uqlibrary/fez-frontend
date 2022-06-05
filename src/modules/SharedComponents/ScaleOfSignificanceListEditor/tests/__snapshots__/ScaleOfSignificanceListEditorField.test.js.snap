@@ -4,6 +4,7 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 <ScaleOfSignificanceListEditor
   canEdit={false}
   distinctOnly={false}
+  error={false}
   errorText={null}
   hideReorder={false}
   input={
@@ -41,6 +42,8 @@ exports[`ScaleOfSignificanceListEditorField function should return <ScaleOfSigni
 <ScaleOfSignificanceListEditor
   canEdit={false}
   distinctOnly={false}
+  error={false}
+  errorText=""
   hideReorder={false}
   input={
     Object {

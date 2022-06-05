@@ -16,9 +16,8 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       }
       variant="body2"
     >
-      NaNth
-       position (
-      )
+      First
+       listed author 
     </WithStyles(ForwardRef(Typography))>
   </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
