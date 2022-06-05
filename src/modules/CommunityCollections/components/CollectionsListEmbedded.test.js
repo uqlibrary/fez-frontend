@@ -156,4 +156,24 @@ describe('CollectionsListEmbedded form', () => {
         await waitFor(() => getByText('Sort results by'));
         expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
     });
+
+    it('should render admin elements for admin user', async () => {
+        mockApi
+            .onGet(
+                repositories.routes.COLLECTION_LIST_API({
+                    pid: testProps.pid,
+                    pageSize: 10,
+                    page: 1,
+                    sortBy: 'updated_date',
+                    direction: 'Asc',
+                }).apiUrl,
+            )
+            .reply(200, multiPageResponse);
+        const { getByText, getByTestId } = setup({
+            ...testProps,
+            adminUser: true,
+        });
+        await waitFor(() => getByText('Sort results by'));
+        expect(getByTestId('admin-add-community-button-UQ:12345')).toBeInTheDocument();
+    });
 });

@@ -65,7 +65,6 @@ context('Communities and Collections', () => {
             'Aboriginal and Torres Strait Islander Studies Unit Publications',
         );
         cy.go('back');
-        // [data-testid="row-UQ:3586"] > :nth-child(4) > a
         cy.get('[data-testid="row-UQ:3586"] > :nth-child(4) > a').click();
         cy.get('[data-testid="rek-ismemberof-0"] > span').should('contain', 'Mill Point Archaeological Project');
     });
@@ -92,5 +91,31 @@ context('Communities and Collections - Admin', () => {
         cy.get('[data-testid="admin-actions-button-UQ:12096"]').click();
         cy.get('[data-testid="admin-actions-menu-UQ:12096"]').should('exist');
         cy.get('[data-testid="admin-actions-menu-UQ:12096"] ul li[tabindex="0"]').should('exist');
+    });
+    it('Renders correctly at smaller screen resolutions', () => {
+        cy.viewport(320, 200);
+        cy.get('[data-testid="row-UQ:12096"] > div')
+            .children()
+            .should($element => {
+                expect($element).to.have.length(2);
+            });
+        cy.viewport(640, 480);
+        cy.get('[data-testid="row-UQ:12096"] > div')
+            .children()
+            .should($element => {
+                expect($element).to.have.length(2);
+            });
+        cy.viewport(800, 600);
+        cy.get('[data-testid="row-UQ:12096"] > div')
+            .children()
+            .should($element => {
+                expect($element).to.have.length(2);
+            });
+        cy.viewport(1024, 768);
+        cy.get('[data-testid="row-UQ:12096"] > div')
+            .children()
+            .should($element => {
+                expect($element).to.have.length(4);
+            });
     });
 });
