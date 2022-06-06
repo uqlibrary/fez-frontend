@@ -210,7 +210,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Describe the problem with this work, eg work is a duplicate, or suggested changes',
+                    comments: 'Type changes or comments here',
                     url: 'Link (URL)',
                 },
             },
