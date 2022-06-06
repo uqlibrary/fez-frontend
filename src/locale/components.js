@@ -464,9 +464,9 @@ export default {
                 form: {
                     locale: {
                         grantAgencyNameLabel: 'Funder/Sponsor name',
-                        grantAgencyNameHint: 'Enter Funder/Sponsor name for this work',
+                        grantAgencyNameHint: 'Funder/sponsor name for this work',
                         grantIdLabel: 'Grant ID',
-                        grantIdHint: 'Enter grant number for this work, if available',
+                        grantIdHint: 'Grant number for this work',
                         grantAgencyTypeLabel: 'Funder/Sponsor type',
                         grantAgencyTypeHint: 'Select Funder/Sponsor type',
                         addButton: 'Add grant',
@@ -659,7 +659,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'ISBN value',
-                        inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
+                        inputFieldHint: 'Enter a 10 or 13 digit ISBN',
                         addButtonLabel: <span>Add&nbsp;ISBN</span>,
                         editButtonLabel: <span>Update&nbsp;ISBN</span>,
                         remindToAddText: (
@@ -1022,7 +1022,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each author's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Authors's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
@@ -1135,7 +1135,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each editor's name as published (eg. John Smith)",
+                        nameAsPublishedLabel: "Editor's name as published",
                         nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor',
@@ -1214,7 +1214,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each creator's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Creator's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         creatorRoleLabel: "Enter creator's role",
                         creatorRoleHint:
@@ -1304,7 +1304,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each designer's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Designer's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
@@ -1380,7 +1380,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each supervisor's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Supervisor's name as published",
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor',
@@ -1457,7 +1457,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each creator's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Creator's name as published",
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator',
@@ -1586,7 +1586,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Enter each contributor's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: "Contributor's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',

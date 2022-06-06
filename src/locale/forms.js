@@ -70,7 +70,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Type edits/changes/comments here',
+                    comments: 'Type changes or comments here',
                     url: 'Link (URL)',
                 },
             },

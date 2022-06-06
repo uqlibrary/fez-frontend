@@ -187,7 +187,7 @@ export default {
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
             },
         },
@@ -267,7 +267,7 @@ export default {
                 title: 'Title of paper',
                 conferenceName: 'Conference name',
                 conferenceLocation: 'Conference location',
-                conferenceDates: 'Conference dates (eg 13-15 December 2011)',
+                conferenceDates: 'Conference dates (e.g 3-5 May)',
                 proceedingsTitle: 'Proceedings title',
                 subtype: 'Work subtype',
                 publicationPlace: 'Place of publication',
@@ -338,7 +338,7 @@ export default {
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
             },
         },
@@ -611,7 +611,7 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 totalPages: {
                     label: 'Total pages',
@@ -698,7 +698,7 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 totalPages: {
                     label: 'Total pages',
@@ -775,7 +775,7 @@ export default {
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 date: {
                     title: 'Publication/Start date',
@@ -816,7 +816,7 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter a valid URL to the work, or information about this work.',
+                    placeholder: 'Enter a valid URL to the work',
                 },
             },
         },
@@ -954,15 +954,15 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Enter the geographical location for the client, builder or curator of the work.',
+                    placeholder: 'Geographical location of publisher',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Enter the name of the client, builder or curator of the work.',
+                    placeholder: 'The client, builder, or curator',
                 },
                 location: {
                     label: 'Location',
-                    placeholder: 'Type the geographical location for the design itself.',
+                    placeholder: 'Geographical location of design.',
                 },
                 date: {
                     title: 'Publication/Start date',
@@ -1209,7 +1209,7 @@ export default {
                     placeholder: 'Type the place of conference',
                 },
                 conferenceDates: {
-                    label: 'Conference dates (eg 13-15 December 2011)',
+                    label: 'Conference dates (e.g 3-5 May)',
                     placeholder: 'Type the dates of conference',
                 },
                 proceedingsTitle: {
