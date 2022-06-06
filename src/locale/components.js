@@ -3960,7 +3960,7 @@ export default {
                 },
             },
             input: {
-                placeholder: 'Type at least 3 characters to start journal search',
+                placeholder: 'Minimum of 3 characters',
                 aria_label:
                     'This search application produces tabular results that may be problematic with a screen reader. Please contact your librarian for assistance if needed.',
             },
