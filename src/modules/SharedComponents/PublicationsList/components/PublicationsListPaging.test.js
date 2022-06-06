@@ -1,4 +1,4 @@
-import PublicationsListPagingWithStyles, { PublicationsListPaging } from './PublicationsListPaging';
+import PublicationsListPagingWithStyles, { PublicationsListPaging, paginate } from './PublicationsListPaging';
 import React from 'react';
 import { createTheme, MuiThemeProvider } from '@material-ui/core';
 import { render } from 'test-utils';
@@ -209,7 +209,7 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(7);
+        expect(wrapper.instance().renderPageButtons().length).toEqual(6);
     });
 
     it('method to render buttons appears as expected for 50 pages on page 1', () => {
@@ -223,7 +223,7 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(4);
+        expect(wrapper.instance().renderPageButtons().length).toEqual(6);
     });
 
     it('method to render buttons appears as expected for 50 pages on page 50', () => {
@@ -237,7 +237,7 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(4);
+        expect(wrapper.instance().renderPageButtons().length).toEqual(6);
     });
 
     it('should render buttons with zero total pages', () => {
@@ -284,5 +284,72 @@ describe('PublicationsListPaging responsive rendering ', () => {
 
         expect(queryByTestId(`${testProps.pagingId}-select-page-1`)).not.toBeInTheDocument();
         expect(queryByTestId(`${testProps.pagingId}-select-page-2`)).not.toBeInTheDocument();
+    });
+
+    describe('Pagination function', () => {
+        it('should use default values if none provided', () => {
+            const expectedResponse = {
+                totalItems: 100,
+                currentPage: 1,
+                pageSize: 10,
+                totalPages: 10,
+                startPage: 1,
+                endPage: 10,
+                pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            };
+            expect(paginate(100)).toMatchObject(expectedResponse);
+        });
+
+        it('should use default value if current page < 1', () => {
+            const expectedResponse = {
+                totalItems: 100,
+                currentPage: 1,
+                pageSize: 10,
+                totalPages: 10,
+                startPage: 1,
+                endPage: 10,
+                pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            };
+            expect(paginate(100, 0)).toMatchObject(expectedResponse);
+        });
+
+        it('should return a single page response even with out of range current page', () => {
+            const expectedResponse = {
+                totalItems: 9,
+                currentPage: 1,
+                pageSize: 10,
+                totalPages: 1,
+                startPage: 1,
+                endPage: 1,
+                pages: [1],
+            };
+            expect(paginate(9, 2, 10, 10)).toMatchObject(expectedResponse);
+        });
+
+        it('should return correct limit on maximum pages', () => {
+            const expectedResponse = {
+                totalItems: 300,
+                currentPage: 1,
+                pageSize: 10,
+                totalPages: 30,
+                startPage: 1,
+                endPage: 20,
+                pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            };
+            expect(paginate(300, 1, 10, 20)).toMatchObject(expectedResponse);
+        });
+
+        it('should return correct number of pages with provided values', () => {
+            const expectedResponse = {
+                totalItems: 10,
+                currentPage: 1,
+                pageSize: 1,
+                totalPages: 10,
+                startPage: 1,
+                endPage: 1,
+                pages: [1],
+            };
+            expect(paginate(10, 1, 1, 1)).toMatchObject(expectedResponse);
+        });
     });
 });

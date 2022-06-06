@@ -132,20 +132,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         >
           12
         </WithStyles(ForwardRef(Button))>
-        <WithStyles(ForwardRef(Button))
-          aria-label="Click to select page 13 of 50 result pages"
-          className=" paging-button"
-          color="default"
-          data-testid="undefined-select-page-13"
-          disabled={false}
-          id="undefined-select-page-13"
-          key="13"
-          onClick={[Function]}
-          size="small"
-          variant="text"
-        >
-          13
-        </WithStyles(ForwardRef(Button))>
         ...
         <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 50 of 50 result pages"
