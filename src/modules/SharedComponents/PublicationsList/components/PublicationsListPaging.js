@@ -58,7 +58,7 @@ const styles = theme => ({
     },
 });
 
-const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => {
+export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => {
     let currPage = currentPage;
     // calculate total pages
     const totalPages = Math.ceil(totalItems / pageSize);
@@ -95,8 +95,8 @@ const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => 
         }
     }
 
-    // create an array of pages to ng-repeat in the pager control
-    const pages = Array.from(Array(endPage + 1 - startPage).keys()).map(i => startPage + i);
+    // create an array of pages
+    const pages = Array.from(Array(endPage + 1 - startPage).keys(), i => startPage + i);
 
     // return object with all pager properties required by the view
     return {
@@ -180,21 +180,9 @@ export class PublicationsListPaging extends Component {
             this.state.per_page,
             locale.components.paging.pagingBracket * 2,
         );
-        // const totalPages =
-        //     this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
-        // const pageBracket = locale.components.paging.pagingBracket;
-        // const currentPage = this.state.current_page;
-        // const startPage = currentPage - pageBracket < 1 ? 1 : currentPage - pageBracket;
-        // const endPage = currentPage + pageBracket > totalPages ? totalPages : currentPage + pageBracket;
-        // const totalToRender = endPage - startPage + 1;
-        const ret = Array(pagination.pages.length)
+        return Array(pagination.pages.length)
             .fill()
-            .map((page, index) => {
-                console.log('map', index, pagination.pages[index]);
-                return this.renderButton(pagination.pages[index]);
-            });
-        console.log(pagination, ret);
-        return ret;
+            .map((page, index) => this.renderButton(pagination.pages[index]));
     };
 
     render() {
