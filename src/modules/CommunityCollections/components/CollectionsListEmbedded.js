@@ -244,6 +244,11 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                             >
                                                 {labels.title}
                                             </Grid>
+                                            <Hidden xsDown>
+                                                <Grid item sm={2} md={1} className={classes.centerAlign}>
+                                                    {communityCollectionsConfig.viewCommunityTitle}
+                                                </Grid>
+                                            </Hidden>
                                             <Hidden smDown>
                                                 <Grid item xs={2} className={classes.dateField}>
                                                     {labels.creation_date}
@@ -253,9 +258,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 </Grid>
                                             </Hidden>
                                             <Hidden xsDown>
-                                                <Grid item sm={2} md={1} className={classes.centerAlign}>
-                                                    {communityCollectionsConfig.viewCommunityTitle}
-                                                </Grid>
                                                 {!!adminUser && (
                                                     <Grid
                                                         item
@@ -327,6 +329,13 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                             </div>
                                                         </Hidden>
                                                     </Grid>
+                                                    <Hidden xsDown>
+                                                        <Grid item xs={2} md={1} className={classes.centerAlign}>
+                                                            <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
+                                                                {communityCollectionsConfig.viewCommunityText}
+                                                            </Link>
+                                                        </Grid>
+                                                    </Hidden>
                                                     <Hidden smDown>
                                                         {returnDateField(row.rek_created_date, conf, classes.dateField)}
                                                         {returnDateField(row.rek_updated_date, conf, classes.dateField)}
@@ -349,11 +358,6 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         </Grid>
                                                     </Hidden>
                                                     <Hidden xsDown>
-                                                        <Grid item xs={2} md={1} className={classes.centerAlign}>
-                                                            <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
-                                                                {communityCollectionsConfig.viewCommunityText}
-                                                            </Link>
-                                                        </Grid>
                                                         {!!adminUser && (
                                                             <Grid
                                                                 item
