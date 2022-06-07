@@ -148,7 +148,7 @@ export class PublicationsListPaging extends Component {
         const isCurrentPage = key === currentPage;
         const totalPages =
             this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
-        console.log('renderButton', key, currentPage, isCurrentPage, totalPages);
+
         return (
             <Button
                 variant={'text'}
