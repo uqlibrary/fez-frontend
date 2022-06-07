@@ -271,12 +271,7 @@ export class PublicationCitation extends PureComponent {
     };
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
-        return (
-            showImageThumbnails &&
-            getWhiteListed(publication, imageConfig) &&
-            !!publication.fez_datastream_info &&
-            !!publication.fez_datastream_info.length > 0
-        );
+        return showImageThumbnails && getWhiteListed(publication, imageConfig);
     };
 
     renderPublicationImage = (publication, security) => {
