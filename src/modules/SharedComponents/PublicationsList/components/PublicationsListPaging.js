@@ -178,7 +178,7 @@ export class PublicationsListPaging extends Component {
             this.state.total,
             this.state.current_page,
             this.state.per_page,
-            locale.components.paging.pagingBracket * 2,
+            locale.components.paging.maxPagesToShow,
         );
         return Array(pagination.pages.length)
             .fill()
