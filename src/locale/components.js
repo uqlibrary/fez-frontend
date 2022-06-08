@@ -1728,7 +1728,7 @@ export default {
             pageSize: 'Works per page',
             pageOf: 'Page [currentPage] of [totalPages]',
             totalRecords: '([total] works)',
-            pagingBracket: 3,
+            pagingBracket: 2,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },

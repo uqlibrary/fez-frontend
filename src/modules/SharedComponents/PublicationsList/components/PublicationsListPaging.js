@@ -58,6 +58,67 @@ const styles = theme => ({
     },
 });
 
+export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 10) => {
+    let currPage = currentPage;
+    // calculate total pages
+    const totalPages = Math.ceil(totalItems / pageSize);
+
+    // ensure current page isn't out of range
+    if (currentPage < 1) {
+        currPage = 1;
+    } else if (currentPage > totalPages) {
+        currPage = totalPages;
+    }
+
+    let startPage;
+    let endPage;
+    if (totalPages <= maxPages) {
+        // total pages less than max so show all pages
+        startPage = 1;
+        endPage = totalPages;
+    } else {
+        // total pages more than max so calculate start and end pages
+        const maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
+        const maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
+        if (currPage <= maxPagesBeforeCurrentPage) {
+            // current page near the start
+            startPage = 1;
+            endPage = maxPages;
+        } else if (currPage + maxPagesAfterCurrentPage >= totalPages) {
+            // current page near the end
+            startPage = totalPages - maxPages + 1;
+            endPage = totalPages;
+        } else {
+            // current page somewhere in the middle
+            startPage = currPage - maxPagesBeforeCurrentPage;
+            endPage = currPage + maxPagesAfterCurrentPage;
+        }
+    }
+
+    // create an array of pages
+    const pages = Array.from(Array(endPage + 1 - startPage).keys(), i => startPage + i);
+
+    // adjust the paging array to account for the edge case
+    // where if the currentPage is exactly 1 position in from
+    // the starting page 1 or end page totalPages, we end up
+    // rendering an additional number. Although not a breaking issue
+    // it is a jarring UI artefact so to fix, we either remove a page
+    // number from the start or the end of the array
+    if (pages[0] === 2) pages.pop();
+    if (pages[pages.length - 1] === totalPages - 1) pages.shift();
+
+    // return object with all pager properties required by the view
+    return {
+        totalItems: totalItems,
+        currentPage: currPage,
+        pageSize: pageSize,
+        totalPages: totalPages,
+        startPage: startPage,
+        endPage: endPage,
+        pages: pages,
+    };
+};
+
 export class PublicationsListPaging extends Component {
     static propTypes = {
         classes: PropTypes.object,
@@ -96,6 +157,7 @@ export class PublicationsListPaging extends Component {
         const isCurrentPage = key === currentPage;
         const totalPages =
             this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
+
         return (
             <Button
                 variant={'text'}
@@ -120,26 +182,22 @@ export class PublicationsListPaging extends Component {
         );
     };
 
-    renderPageButtons = () => {
-        const totalPages =
-            this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
-        const pageBracket = locale.components.paging.pagingBracket;
-        const currentPage = this.state.current_page;
-        const startPage = currentPage - pageBracket < 1 ? 1 : currentPage - pageBracket;
-        const endPage = currentPage + pageBracket > totalPages ? totalPages : currentPage + pageBracket;
-        const totalToRender = endPage - startPage + 1;
-        return Array(totalToRender)
+    renderPageButtons = (pagesToShow = []) => {
+        return Array(pagesToShow.length)
             .fill()
-            .map((page, index) => {
-                return this.renderButton(index + startPage);
-            });
+            .map((page, index) => this.renderButton(pagesToShow[index]));
     };
 
     render() {
         const { classes } = this.props;
         const txt = locale.components.paging;
-        const totalPages =
-            this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
+        const maxPagesToShow = locale.components.paging.maxPagesToShow;
+        const pagination = paginate(this.state.total, this.state.current_page, this.state.per_page, maxPagesToShow);
+        const paginationPages = pagination.pages;
+        const totalPages = pagination.totalPages;
+
+        const renderedPageButtons = this.renderPageButtons(paginationPages);
+
         const currentPage = this.state.current_page;
         if (totalPages === 0 || this.state.current_page < 1 || this.state.current_page > totalPages) {
             return <span className="publicationsListControls empty" />;
@@ -165,11 +223,11 @@ export class PublicationsListPaging extends Component {
                         )}
                         <Hidden xsDown>
                             <Grid item sm={'auto'} className={classes.paginationGridContainer}>
-                                {currentPage - (txt.pagingBracket + 1) >= 1 && this.renderButton(1)}
-                                {currentPage - (txt.pagingBracket + 2) >= 1 && txt.firstLastSeparator}
-                                {this.renderPageButtons()}
-                                {currentPage + (txt.pagingBracket + 2) <= totalPages && txt.firstLastSeparator}
-                                {currentPage + (txt.pagingBracket + 1) <= totalPages && this.renderButton(totalPages)}
+                                {paginationPages.indexOf(1) === -1 && this.renderButton(1)}
+                                {paginationPages[0] - 1 > 1 && txt.firstLastSeparator}
+                                {renderedPageButtons}
+                                {paginationPages[paginationPages.length - 1] + 1 < totalPages && txt.firstLastSeparator}
+                                {paginationPages.indexOf(totalPages) === -1 && this.renderButton(totalPages)}
                             </Grid>
                         </Hidden>
                         <Hidden smUp>
