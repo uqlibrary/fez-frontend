@@ -88,7 +88,7 @@ ImageGallery.propTypes = {
 
 ImageGallery.defaultProps = {
     classes: {},
-    security: { isAdmin: false, isAuthor: false },
+    security: { isAdmin: false, isAuthor: false, author: {} },
     lazyLoading: config.thumbnailImage.defaultLazyLoading,
     itemWidth: config.thumbnailImage.defaultWidth,
     itemHeight: config.thumbnailImage.defaultHeight,

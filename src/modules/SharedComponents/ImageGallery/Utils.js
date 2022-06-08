@@ -39,7 +39,8 @@ export const getWhiteListed = (publication, config) => {
     return isAllowed;
 };
 
-export const getFileData = (publication, isAdmin, isAuthor) => {
+export const getFileData = (publication, props) => {
+    const { isAdmin, isAuthor, author } = props;
     const dataStreams = publication.fez_datastream_info;
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig)).map(dataStream => {
@@ -47,7 +48,7 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
               const fileName = dataStream.dsi_dsid;
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
               const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
-              const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor });
+              const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor, author });
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
               const isWhiteListed = getWhiteListed(publication, config);
 
@@ -63,8 +64,8 @@ export const getFileData = (publication, isAdmin, isAuthor) => {
         : [];
 };
 
-export const getThumbnail = (item, isAdmin, isAuthor) => {
-    const fileData = getFileData(item, isAdmin, isAuthor);
+export const getThumbnail = (publication, props) => {
+    const fileData = getFileData(publication, props);
     return fileData[0];
 };
 
