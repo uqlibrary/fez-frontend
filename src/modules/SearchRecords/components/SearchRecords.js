@@ -132,7 +132,7 @@ const SearchRecords = ({
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
                         showImageThumbnails
-                        security={{ isAdmin, isAuthor }}
+                        security={{ isAdmin, isAuthor, author }}
                     />
                 );
         }
