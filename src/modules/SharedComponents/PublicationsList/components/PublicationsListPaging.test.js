@@ -210,7 +210,17 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(locale.components.paging.maxPagesToShow);
+        const pagination = paginate(
+            wrapper.state.total,
+            wrapper.state.current_page,
+            wrapper.state.per_page,
+            locale.components.paging.maxPagesToShow,
+        );
+        const paginationPages = pagination.pages;
+
+        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
+            locale.components.paging.maxPagesToShow,
+        );
     });
 
     it('method to render buttons appears as expected for 50 pages on page 1', () => {
@@ -224,7 +234,17 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(locale.components.paging.maxPagesToShow);
+        const pagination = paginate(
+            wrapper.state.total,
+            wrapper.state.current_page,
+            wrapper.state.per_page,
+            locale.components.paging.maxPagesToShow,
+        );
+        const paginationPages = pagination.pages;
+
+        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
+            locale.components.paging.maxPagesToShow,
+        );
     });
 
     it('method to render buttons appears as expected for 50 pages on page 50', () => {
@@ -238,9 +258,18 @@ describe('PublicationsListPaging renders ', () => {
         const wrapper = setup({ pagingData: data });
         wrapper.setState({ ...data });
         wrapper.update();
-        expect(wrapper.instance().renderPageButtons().length).toEqual(locale.components.paging.maxPagesToShow);
-    });
+        const pagination = paginate(
+            wrapper.state.total,
+            wrapper.state.current_page,
+            wrapper.state.per_page,
+            locale.components.paging.maxPagesToShow,
+        );
+        const paginationPages = pagination.pages;
 
+        expect(wrapper.instance().renderPageButtons(paginationPages).length).toEqual(
+            locale.components.paging.maxPagesToShow,
+        );
+    });
     it('should render buttons with zero total pages', () => {
         const wrapper = setup();
         wrapper.setState({
@@ -314,6 +343,19 @@ describe('PublicationsListPaging renders ', () => {
             expect(paginate(100, 0)).toMatchObject(expectedResponse);
         });
 
+        it('should return correct values if current page = 5', () => {
+            const expectedResponse = {
+                totalItems: 100,
+                currentPage: 5,
+                pageSize: 10,
+                totalPages: 10,
+                startPage: 3,
+                endPage: 7,
+                pages: [3, 4, 5, 6, 7],
+            };
+            expect(paginate(100, 5, 10, locale.components.paging.maxPagesToShow)).toMatchObject(expectedResponse);
+        });
+
         it('should return a single page response even with out of range current page', () => {
             const expectedResponse = {
                 totalItems: 9,
@@ -350,7 +392,16 @@ describe('PublicationsListPaging renders ', () => {
                 endPage: 1,
                 pages: [1],
             };
-            expect(paginate(10, 1, 1, 1)).toMatchObject(expectedResponse);
+            const paginated = paginate(10, 1, 1, 1);
+            expect(paginated).toMatchObject(expectedResponse);
+        });
+
+        it('should reduce number of returned pages for 10 pages on page 4', () => {
+            expect(paginate(100, 4, 10, 5).pages.length).toEqual(locale.components.paging.maxPagesToShow - 1);
+        });
+
+        it('should reduce number of returned pages for 10 pages on page 7', () => {
+            expect(paginate(100, 7, 10, 5).pages.length).toEqual(locale.components.paging.maxPagesToShow - 1);
         });
     });
 });
