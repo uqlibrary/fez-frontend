@@ -59,13 +59,13 @@ context('Communities and Collections', () => {
     it('correctly opens collections in advanced search view', () => {
         cy.get('[data-testid="expand-row-UQ:12096"]').click();
         cy.get('[data-testid="total-collections-UQ:12096"]').should('be.visible');
-        cy.get('[data-testid="row-UQ:11398"] > :nth-child(4) > a').click();
+        cy.get('[data-testid="row-UQ:11398"] > :nth-child(2) > a').click();
         cy.get('[data-testid="rek-ismemberof-0"] > span').should(
             'contain',
             'Aboriginal and Torres Strait Islander Studies Unit Publications',
         );
         cy.go('back');
-        cy.get('[data-testid="row-UQ:3586"] > :nth-child(4) > a').click();
+        cy.get('[data-testid="row-UQ:3586"] > :nth-child(2) > a').click();
         cy.get('[data-testid="rek-ismemberof-0"] > span').should('contain', 'Mill Point Archaeological Project');
     });
 });
