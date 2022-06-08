@@ -30,12 +30,11 @@ const ImageGalleryItemImage = ({
 
     const config = { ...defaultConfig, ...customDefaultConfig };
 
-    const fileData = getThumbnail(item, security.isAdmin, security.isAuthor);
+    const fileData = getThumbnail(item, security);
 
     const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
     const thumbnailRestricted =
-        (!security.isAdmin && !!fileData?.thumbnailFileName && !fileData?.securityStatus) ??
-        /* istanbul ignore next */ false;
+        (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* istanbul ignore next */ false;
     const thumbnailAdvisory =
         (!!fileData?.thumbnailFileName &&
             // eslint-disable-next-line camelcase
@@ -102,7 +101,7 @@ ImageGalleryItemImage.propTypes = {
 };
 
 ImageGalleryItemImage.defaultProps = {
-    security: { isAdmin: false, isAuthor: false },
+    security: { isAdmin: false, isAuthor: false, author: {} },
     className: '',
 };
 

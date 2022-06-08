@@ -8,7 +8,7 @@ describe('ImageGallery Utils', () => {
     });
     describe('getThumbnail', () => {
         it('should return file data object for a publication', () => {
-            const fd = getThumbnail(publication, false, false);
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd).toEqual(
                 expect.objectContaining({
                     fileName: 'Slide_009.tif',
@@ -28,36 +28,42 @@ describe('ImageGallery Utils', () => {
         it('should blacklist record if display type matches but subtype does not match whitelist', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
-            const fd = getThumbnail(publication, false, false);
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
         it('should whitelist record if display type matches but subtype does not match whitelist for Admin user', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
-            const fd = getThumbnail(publication, false, false);
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
         it('should whitelist record if display type and subtype match whitelist', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = 'Non-NTRO';
-            const fd = getThumbnail(publication, true, false);
+            const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(true);
         });
         it('should set securityStatus to false (locked) if permissions do not allow access', () => {
-            const fd = getThumbnail(publication, false, false);
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd.securityStatus).toEqual(false);
         });
         it('should set securityStatus to true (unlocked) if permissions do not allow access but is Admin user', () => {
-            const fd = getThumbnail(publication, true, false);
+            const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
+            expect(fd.securityStatus).toEqual(true);
+        });
+        it('should set securityStatus to true (unlocked) if permissions do not allow access but is Admin read-only user', () => {
+            // eslint-disable-next-line prettier/prettier
+            const author = { pol_id: 1 };
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false, author });
             expect(fd.securityStatus).toEqual(true);
         });
     });
     describe('getUrl', () => {
         it('should return a properly formatted URL string', () => {
-            const fd = getThumbnail(publication, false, false);
-            expect(getUrl(publication.rek_pid, fd.fileName, 'test')).toEqual(
-                'http://localhost/view/UQ:288612/Slide_009.tif?dsi_version=db98827b0a5c6ce3e80296096863c88c',
+            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
+            expect(getUrl(publication.rek_pid, fd.fileName, 'test')).toContain(
+                '/view/UQ:288612/Slide_009.tif?dsi_version=db98827b0a5c6ce3e80296096863c88c',
             );
         });
     });
