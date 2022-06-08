@@ -227,7 +227,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
                                 />
-                                <Grid container className={classes.autoOverflow}>
+                                <Grid container>
                                     <Grid container className={classes.responsiveMin}>
                                         <Grid
                                             container
