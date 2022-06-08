@@ -104,8 +104,10 @@ export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 
     // rendering an additional number. Although not a breaking issue
     // it is a jarring UI artefact so to fix, we either remove a page
     // number from the start or the end of the array
-    if (pages[0] === 2) pages.pop();
-    if (pages[pages.length - 1] === totalPages - 1) pages.shift();
+    if (startPage === 2 && endPage !== totalPages + 1) pages.pop();
+    else if (endPage === totalPages - 1) pages.shift();
+
+    console.log(startPage, endPage, pages);
 
     // return object with all pager properties required by the view
     return {
