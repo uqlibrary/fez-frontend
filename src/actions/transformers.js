@@ -1464,6 +1464,16 @@ export const getRemoveFromCollectionData = (records, data) => {
     }));
 };
 
+export const getRemoveFromCommunityData = (records, data) => {
+    const selectedCommunities = data.communities.map(community => community.rek_pid);
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
+            community => !selectedCommunities.includes(community.rek_ismemberof),
+        ),
+    }));
+};
+
 export const getCopyToCollectionData = (records, data) => {
     return records.map(record => {
         const existingCollectionPids = record.fez_record_search_key_ismemberof.map(
@@ -1483,7 +1493,26 @@ export const getCopyToCollectionData = (records, data) => {
         };
     });
 };
-
+export const getCopyToCommunityData = (records, data) => {
+    console.log('GET COP TO COMMUNITY DATA', data);
+    return records.map(record => {
+        const existingCommunityPids = record.fez_record_search_key_ismemberof.map(
+            existingCommunity => existingCommunity.rek_pid,
+        );
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_ismemberof: [
+                ...record.fez_record_search_key_ismemberof,
+                ...data.communities
+                    .filter(newCommunity => existingCommunityPids.indexOf(newCommunity.rek_pid) === -1)
+                    .map((community, index) => ({
+                        rek_ismemberof: community.rek_pid,
+                        rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+                    })),
+            ],
+        };
+    });
+};
 export const createOrUpdateDoi = records => {
     return records.map(record => {
         return {
