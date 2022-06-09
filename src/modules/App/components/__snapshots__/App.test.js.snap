@@ -282,7 +282,7 @@ exports[`Application component Should display mobile correctly 1`] = `
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -1041,7 +1041,7 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -2103,7 +2103,7 @@ exports[`Application component should determine if it has incomplete works from 
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -2915,7 +2915,7 @@ exports[`Application component should redirect to login page with correct return
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -3670,7 +3670,7 @@ exports[`Application component should render alert if user is not fez author 1`]
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -4790,7 +4790,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -5893,7 +5893,7 @@ exports[`Application component should render app for account with fez author wit
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -6940,7 +6940,7 @@ exports[`Application component should render application with routing for the us
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -7301,7 +7301,7 @@ exports[`Application component should render for anon user 1`] = `
         },
         Object {
           "linkTo": "/communities",
-          "primaryText": "Browse UQ eSpace",
+          "primaryText": "Browse",
           "public": true,
         },
         Object {
@@ -12330,7 +12330,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           },
                           Object {
                             "linkTo": "/communities",
-                            "primaryText": "Browse UQ eSpace",
+                            "primaryText": "Browse",
                             "public": true,
                           },
                           Object {
@@ -12401,7 +12401,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             },
                             Object {
                               "linkTo": "/communities",
-                              "primaryText": "Browse UQ eSpace",
+                              "primaryText": "Browse",
                               "public": true,
                             },
                             Object {

@@ -60,7 +60,7 @@ export default {
             primaryText: 'Add a missing community',
         },
         communityList: {
-            primaryText: 'Browse UQ eSpace',
+            primaryText: 'Browse',
         },
         unpublished: {
             primaryText: 'Unpublished buffer',
