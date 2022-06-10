@@ -227,16 +227,16 @@ exports[`PublicationsListSorting component has the correct display type options 
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -467,16 +467,16 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -707,16 +707,16 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -945,16 +945,16 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -1192,16 +1192,16 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -1424,16 +1424,16 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -1672,16 +1672,16 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         value="standard"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
@@ -1920,16 +1920,16 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         value="image-gallery"
       >
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456850"
+          id="publication-display-records-as-option-456850"
           key="456850"
           value="standard"
         >
           Standard
         </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
-          data-testid="publication-display-records-as-option-undefined"
-          id="publication-display-records-as-option-undefined"
+          data-testid="publication-display-records-as-option-456851"
+          id="publication-display-records-as-option-456851"
           key="456851"
           value="image-gallery"
         >
