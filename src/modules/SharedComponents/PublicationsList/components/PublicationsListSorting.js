@@ -205,8 +205,8 @@ const PublicationsListSorting = props => {
                                 <MenuItem
                                     key={item.id}
                                     value={item.value}
-                                    data-testid={`publication-display-records-as-option-${item.index}`}
-                                    id={`publication-display-records-as-option-${item.index}`}
+                                    data-testid={`publication-display-records-as-option-${item.id}`}
+                                    id={`publication-display-records-as-option-${item.id}`}
                                 >
                                     {item.label}
                                 </MenuItem>
