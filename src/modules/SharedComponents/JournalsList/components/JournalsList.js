@@ -1,17 +1,40 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
-import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
-import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
-import JournalsListDataCol1 from './partials/JournalsListDataCol1';
-import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
-import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
+// import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
+// import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
+// import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
+// import JournalsListDataCol1 from './partials/JournalsListDataCol1';
+// import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
+// import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
-import JournalsListDataCol3 from './partials/JournalsListDataCol3';
-import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
+// import JournalsListDataCol3 from './partials/JournalsListDataCol3';
+// import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 import { makeStyles } from '@material-ui/core/styles';
+
+// import Collapse from '@material-ui/core/Collapse';
+import IconButton from '@material-ui/core/IconButton';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Checkbox from '@material-ui/core/Checkbox';
+import Paper from '@material-ui/core/Paper';
+import { sanitiseId } from 'helpers/general';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Hidden from '@material-ui/core/Hidden';
+import Box from '@material-ui/core/Box';
+import Collapse from '@material-ui/core/Collapse';
+import InputLabel from '@material-ui/core/InputLabel';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
@@ -60,44 +83,236 @@ const useStyles = makeStyles(theme => ({
             height: 32,
         },
     },
+
+    resultsTable: {
+        '& th, & td': {
+            padding: '6px',
+        },
+    },
+
+    collapsedCell: {
+        backgroundColor: '#F5F5F5',
+        '& td': {
+            paddingBottom: 0,
+            paddingTop: 0,
+        },
+    },
 }));
 
 const JournalsList = ({
     journals,
-    onSelectionChange,
-    onToggleSelectAll,
-    selected = {},
-    isSelectable,
-    isAllSelected,
+    // onSelectionChange,
+    // onToggleSelectAll,
+    // selected = {},
+    isSelectable = true,
+    // isAllSelected,
 }) => {
-    React.useEffect(() => {
-        if (!Cookies.get('minimalView')) {
-            Cookies.set('minimalView', true);
-        }
-    }, []);
+    // React.useEffect(() => {
+    //     if (!Cookies.get('minimalView')) {
+    //         Cookies.set('minimalView', true);
+    //     }
+    // }, []);
 
-    const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') !== 'false');
-    const toggleView = () => {
-        Cookies.set('minimalView', !minimalView);
-        setMinimalView(!minimalView);
-    };
-    let colWidth = 0;
-    if (!minimalView) {
-        for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
-            colWidth += JournalFieldsMap[i + 1].size;
-        }
-    } else {
-        for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
-            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
-        }
-    }
+    // const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') !== 'false');
+    // const toggleView = () => {
+    //     Cookies.set('minimalView', !minimalView);
+    //     setMinimalView(!minimalView);
+    // };
+    // let colWidth = 0;
+    // if (!minimalView) {
+    //     for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
+    //         colWidth += JournalFieldsMap[i + 1].size;
+    //     }
+    // } else {
+    //     for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
+    //         colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
+    //     }
+    // }
 
     const props = {
-        minimalView,
+        //    minimalView,
     };
     const classes = useStyles(props);
 
+    const quartileFn = data => {
+        const quartileList = [];
+
+        if (data.fez_journal_cite_score && data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0) {
+            data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
+                quartileList.push(parseInt(item.jnl_cite_score_asjc_code_quartile, 10));
+            });
+        }
+
+        if (!!data.fez_journal_jcr_scie && data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0) {
+            data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
+                quartileList.push(parseInt(item.jnl_jcr_scie_category_quartile.replace('Q', ''), 10));
+            });
+        }
+
+        if (data.fez_journal_jcr_ssci && data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0) {
+            data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
+                quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
+            });
+        }
+        return quartileList.length > 0 ? Array.min(quartileList) : null;
+    };
+
+    const Row = props => {
+        const { row } = props;
+        const [open, setOpen] = React.useState(false);
+
+        return (
+            <>
+                <TableRow className={classes.root} size={'small'}>
+                    {isSelectable && (
+                        <TableCell size="small">
+                            <Checkbox
+                                size="small"
+                                id={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
+                                data-testid={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
+                                value={row.jnl_jid}
+                                label={`Select ${row.jnl_title}`}
+                                inputProps={{ 'aria-label': `Select ${row.jnl_title}` }}
+                            />
+                        </TableCell>
+                    )}
+                    <TableCell size="small">
+                        <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                        </IconButton>
+                    </TableCell>
+                    <TableCell size="small" component="th" scope="row">
+                        <Grid container>
+                            <Grid xs={12} sm={8} item>
+                                <Typography variant="body1" component="span">
+                                    <Link
+                                        href={`/journal/view/${row.jnl_jid}`}
+                                        title={row.jnl_title}
+                                        id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
+                                    >
+                                        {row.jnl_title}
+                                    </Link>
+                                </Typography>
+                            </Grid>
+                            <Hidden smUp>
+                                <Grid item xs={12}>
+                                    Open access
+                                </Grid>
+                            </Hidden>
+                            <Grid item xs={12} sm={2}>
+                                {row.fez_journal_doaj ? (
+                                    <LockOpenIcon style={{ color: 'orange' }} />
+                                ) : (
+                                    <LockOutlinedIcon style={{ color: '#e5e5e5' }} />
+                                )}
+                            </Grid>
+                            <Hidden smUp>
+                                <Grid item xs={12}>
+                                    Highest quartile
+                                </Grid>
+                            </Hidden>
+                            <Grid item xs={12} sm={2}>
+                                {`Q${quartileFn(row)}`}
+                            </Grid>
+                        </Grid>
+                    </TableCell>
+                </TableRow>
+                <TableRow className={classes.collapsedCell}>
+                    <TableCell colSpan={3}>
+                        <Collapse in={open} timeout="auto" unmountOnExit>
+                            <Box padding={2}>
+                                <Grid container>
+                                    {JournalFieldsMap.slice(3).map(item => {
+                                        const itemData = (row && item.translateFn(row)) || '';
+                                        return (
+                                            <Grid xs={12} sm={6} key={`${item.key}-${row.jnl_jid}`} item>
+                                                <Typography variant="body1">
+                                                    <InputLabel
+                                                        shrink
+                                                        style={{
+                                                            lineHeight: 1.3,
+                                                            whiteSpace: 'normal',
+                                                            textOverflow: 'ellipsis',
+                                                            fontWeight: 600,
+                                                        }}
+                                                    >
+                                                        {item.label}
+                                                        <span style={{ display: 'block', fontWeight: 400 }}>
+                                                            {item.subLabel}
+                                                        </span>
+                                                    </InputLabel>
+                                                </Typography>
+                                                <Typography variant="body1">
+                                                    {(itemData && item.prefix) || ''}
+                                                    {itemData || ''}
+                                                    {(itemData && item.suffix) || ''}
+                                                </Typography>
+                                                <br />
+                                            </Grid>
+                                        );
+                                    })}
+                                </Grid>
+                            </Box>
+                        </Collapse>
+                    </TableCell>
+                </TableRow>
+            </>
+        );
+    };
+
     return (
+        <Grid container spacing={0} id="journal-list" data-testid="journal-list">
+            <Grid item xs={12}>
+                <TableContainer
+                    component={Paper}
+                    style={{ boxShadow: 'none' }}
+                    className={classes.resultsTableContainer}
+                >
+                    <Table aria-label="collapsible table" className={classes.resultsTable}>
+                        <TableHead>
+                            <TableRow>
+                                {isSelectable && (
+                                    <TableCell size="small">
+                                        <Checkbox
+                                            size="small"
+                                            id="journal-list-header-col-1-select-all"
+                                            data-testid="journal-list-header-col-1-select-all"
+                                            label="Select All"
+                                            inputProps={{ 'aria-label': 'Select All' }}
+                                        />
+                                    </TableCell>
+                                )}
+                                <TableCell size="small" />
+                                <TableCell size="small">
+                                    <Grid container>
+                                        <Grid xs={12} sm={8} item>
+                                            Journal title
+                                        </Grid>
+                                        <Hidden xsDown>
+                                            <Grid item xs={12} sm={2}>
+                                                Open access
+                                            </Grid>
+                                            <Grid item xs={12} sm={2}>
+                                                Highest quartile
+                                            </Grid>
+                                        </Hidden>
+                                    </Grid>
+                                </TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {journals &&
+                                journals.length > 0 &&
+                                journals.map(row => {
+                                    return <Row key={row.jnl_jid} row={row} />;
+                                })}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Grid>
+        </Grid>
+    );
+    /*
         <Grid
             container
             spacing={0}
@@ -107,13 +322,13 @@ const JournalsList = ({
             className={classes.journalList}
         >
             <Grid item className={classes.titleColumn}>
-                {/* Header */}
+                // header
                 <JournalsListHeaderCol1
                     isSelectable={isSelectable}
                     checked={isAllSelected}
                     onChange={onToggleSelectAll}
                 />
-                {/* Data */}
+                // data
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
@@ -132,7 +347,7 @@ const JournalsList = ({
             <Grid item xs className={classes.moreColumnsWidth}>
                 <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
                     <Grid container spacing={0} alignItems="flex-end" className={classes.headerRow}>
-                        {/* Header */}
+                        // header
                         {!minimalView
                             ? JournalFieldsMap.slice(1).map((item, index) => {
                                   return <JournalsListHeaderCol2Full journal={item} index={index} key={index} />;
@@ -143,7 +358,7 @@ const JournalsList = ({
                                       return <JournalsListHeaderCol2Min journal={item} index={index} key={index} />;
                                   })}
                     </Grid>
-                    {/* Data */}
+                    // data
                     <Grid container spacing={0} alignItems="center">
                         <Grid item xs={12} style={{ marginTop: 6 }}>
                             {journals &&
@@ -160,9 +375,9 @@ const JournalsList = ({
                 </div>
             </Grid>
             <Grid item xs={'auto'}>
-                {/* Header */}
+                // header
                 <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
-                {/* Data */}
+                // data
                 {journals &&
                     journals.length > 0 &&
                     journals.map((item, index) => {
@@ -170,7 +385,7 @@ const JournalsList = ({
                     })}
             </Grid>
         </Grid>
-    );
+    );*/
 };
 
 JournalsList.propTypes = {
