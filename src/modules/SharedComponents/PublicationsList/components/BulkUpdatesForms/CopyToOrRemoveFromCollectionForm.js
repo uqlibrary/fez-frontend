@@ -80,7 +80,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                 {!!hasACollectionSelected && (
                     <Grid item xs={12}>
                         <Alert
-                            alertId={`alert-info-${idText}-community-notallowed`}
+                            alertId={`alert-info-${idText}-collection-notallowed`}
                             {...txt.copyToOrRemoveFromCollectionForm.onlyRecordsAllowed}
                         />
                     </Grid>

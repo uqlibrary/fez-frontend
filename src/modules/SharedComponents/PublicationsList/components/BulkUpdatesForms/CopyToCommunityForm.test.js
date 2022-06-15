@@ -214,4 +214,32 @@ describe('CopyToCommunityForm', () => {
         expect(getByTestId('alert-warning-remove-from-community')).toBeInTheDocument();
         expect(getByTestId('remove-from-community-submit')).toHaveAttribute('disabled');
     });
+
+    it('should display warning alert to user if an attempt to copy incorrect record exists in selected items', async () => {
+        mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).replyOnce(200, {});
+        mockApi
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQueryParams: { rek_object_type: 1 } }).apiUrl,
+            )
+            .replyOnce(200, {
+                data: [
+                    { rek_pid: 'UQ:123', rek_title: 'Testing community', rek_object_type: 1 },
+                    { rek_pid: 'UQ:333', rek_title: 'Test community', rek_object_type: 1 },
+                ],
+            });
+
+        const { getByTestId, queryByTestId } = setup({
+            recordsSelected: {
+                'UQ:123456': {
+                    rek_pid: 'UQ:123456',
+                    rek_object_type: 1,
+                    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123' }],
+                },
+            },
+        });
+
+        expect(queryByTestId('alert-warning-remove-from-community')).not.toBeInTheDocument();
+
+        expect(getByTestId('alert-info-copy-to-community-notallowed')).toBeInTheDocument();
+    });
 });
