@@ -18,17 +18,15 @@ export const userIsResearcher = () => {
     return (account.aut_org_username || account.aut_student_username || false) === account.id;
 };
 
+export const isIntWithin = (int, items, field) => items?.some(item => parseInt(item[field], 10) === parseInt(int, 10));
+export const belongsToAuthor = (author, record) =>
+    // eslint-disable-next-line camelcase
+    isIntWithin(author?.aut_id, record?.fez_record_search_key_author_id, 'rek_author_id');
+
 export const userIsAuthor = () => {
     const { account } = useAccountContext();
     const { record } = useRecordContext();
-
-    return (
-        account &&
-        record.fez_record_search_key_author_id &&
-        !!record.fez_record_search_key_author_id.some(authors => {
-            return parseInt(authors.rek_author_id, 10) === parseInt(account.aut_id, 10);
-        })
-    );
+    return account && belongsToAuthor(account, record);
 };
 
 export const useConfirmationState = () => {
