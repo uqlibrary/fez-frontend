@@ -3045,6 +3045,12 @@ export default {
                         title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} community`,
                         type: 'error',
                     }),
+                    onlyCollectionsAllowed: {
+                        title: 'Only Collections Allowed',
+                        message:
+                            'One or more selected items is not a collection-type. You can only copy or remove collection-type records from/to communities.',
+                        type: 'error',
+                    },
                     warningAlert: {
                         title: 'Note',
                         message: 'Please retain membership of at least one community',
@@ -3112,6 +3118,12 @@ export default {
                         title: 'Note',
                         message: 'Please retain membership of at least one collection',
                         type: 'warning',
+                    },
+                    onlyRecordsAllowed: {
+                        title: 'Only Records Allowed',
+                        message:
+                            'One or more selected items is not a record-type. You can only copy or remove record-type records from/to collections.',
+                        type: 'error',
                     },
                 },
                 changeAuthorIdForm: {

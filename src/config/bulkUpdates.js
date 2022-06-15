@@ -41,11 +41,11 @@ export const BUA_CREATE_OR_UPDATE_DOI_OPTION = {
 
 export const BUA_COPY_TO_COMMUNITY_OPTION = {
     value: BUA_COPY_TO_COMMUNITY,
-    text: 'Copy to Community',
+    text: 'Copy to community',
 };
 export const BUA_REMOVE_FROM_COMMUNITY_OPTION = {
     value: BUA_REMOVE_FROM_COMMUNITY,
-    text: 'Remove from Community',
+    text: 'Remove from community',
 };
 
 // Bulk updates actions for dropdown

@@ -66,32 +66,44 @@ export const CopyToCommunityForm = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [submitSucceeded]);
 
+    const hasMoreThanCollectionsSelected = Object.entries(recordsSelected).some(i => i[1].rek_object_type !== 2);
+
     return (
         <form data-testid={`${idText}-community-form`} id={`${idText}-community-form`}>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
                     <Alert alertId={`alert-info-${idText}-community`} {...txt.copyToCommunity.alert(isRemoveFrom)} />
                 </Grid>
+                {!!hasMoreThanCollectionsSelected && (
+                    <Grid item xs={12}>
+                        <Alert
+                            alertId={`alert-info-${idText}-community-notallowed`}
+                            {...txt.copyToCommunity.onlyCollectionsAllowed}
+                        />
+                    </Grid>
+                )}
                 {!!alertUser && (
                     <Grid item xs={12}>
                         <Alert alertId={`alert-warning-${idText}-community`} {...txt.copyToCommunity.warningAlert} />
                     </Grid>
                 )}
-                <Grid item xs={12}>
-                    <Field
-                        component={CommunityField}
-                        communityFieldId="rek-ismemberof"
-                        disabled={submitting || submitSucceeded}
-                        floatingLabelText={`${isRemoveFrom ? 'Remove from ' : 'Add to '} ${
-                            txt.copyToCommunity.formLabels.community
-                        }`}
-                        fullwidth
-                        name="communities"
-                        required
-                        validate={[validation.requiredList]}
-                        {...locale.components.selectField.community}
-                    />
-                </Grid>
+                {!!!hasMoreThanCollectionsSelected && (
+                    <Grid item xs={12}>
+                        <Field
+                            component={CommunityField}
+                            communityFieldId="rek-ismemberof"
+                            disabled={submitting || submitSucceeded}
+                            floatingLabelText={`${isRemoveFrom ? 'Remove from ' : 'Add to '} ${
+                                txt.copyToCommunity.formLabels.community
+                            }`}
+                            fullwidth
+                            name="communities"
+                            required
+                            validate={[validation.requiredList]}
+                            {...locale.components.selectField.community}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.copyToCommunity.formLabels.cancelButtonLabel}
@@ -110,7 +122,13 @@ export const CopyToCommunityForm = ({
                         children={txt.copyToCommunity.formLabels.submitButtonLabel}
                         color="primary"
                         data-testid={`${idText}-community-submit`}
-                        disabled={submitting || disableSubmit || submitSucceeded || !!alertUser}
+                        disabled={
+                            submitting ||
+                            disableSubmit ||
+                            submitSucceeded ||
+                            !!alertUser ||
+                            !!hasMoreThanCollectionsSelected
+                        }
                         fullWidth
                         id={`${idText}-community-submit`}
                         onClick={handleSubmit}

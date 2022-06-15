@@ -1494,7 +1494,6 @@ export const getCopyToCollectionData = (records, data) => {
     });
 };
 export const getCopyToCommunityData = (records, data) => {
-    console.log('GET COP TO COMMUNITY DATA', data);
     return records.map(record => {
         const existingCommunityPids = record.fez_record_search_key_ismemberof.map(
             existingCommunity => existingCommunity.rek_pid,

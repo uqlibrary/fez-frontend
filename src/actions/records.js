@@ -829,7 +829,6 @@ export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false
 };
 
 export const copyToOrRemoveFromCommunity = (records, data, isRemoveFrom = false) => {
-    console.log('DATA COPYTOORREMOVEFROMCOMMUNITY', data);
     const copyToOrRemoveFromCommunityRequest = isRemoveFrom
         ? transformers.getRemoveFromCommunityData(records, data)
         : transformers.getCopyToCommunityData(records, data);
