@@ -65,19 +65,19 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Author/Creator research statement',
                 fields: {
                     scaleOfWork: {
-                        label: (
+                        label: 'Scale/Significance of work',
+                        description: (
                             <span>
-                                Scale/Significance of work*
-                                <span style={{ fontWeight: 700 }}>(not for public view)</span>
+                                Select the option that best describes the significance of the work*
+                                <span style={{ fontWeight: 700 }}> (not for public view)</span>
                             </span>
                         ),
-                        description: 'Select the option that best describes the significance of the work.',
                     },
                     impactStatement: {
                         label: (
                             <span>
                                 Creator research statement*. Include Background, Contribution and Significance
-                                <span style={{ fontWeight: 700 }}>(not for public view)</span>
+                                <span style={{ fontWeight: 700 }}> (not for public view)</span>
                             </span>
                         ),
                         placeholder:
