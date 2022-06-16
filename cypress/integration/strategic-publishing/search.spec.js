@@ -34,7 +34,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('div[data-testid="journal-search-card"]').should('contain', 'Step 1.');
         cy.get('div[data-testid="journal-search-card"]').should(
             'contain',
-            'Enter a journal title, keyword, subject or field of research code.',
+            'Enter a journal title, ISSN, keyword, subject or field of research code',
         );
         cy.get('[data-testid="journal-search-card"]').should('exist');
         cy.get('button[data-testid="journal-search-keywords-voice-record-start-button"]').should('exist');
