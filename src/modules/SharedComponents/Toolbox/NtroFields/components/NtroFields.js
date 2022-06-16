@@ -135,11 +135,11 @@ export default class NtroFields extends React.PureComponent {
                     },
                     extent: {
                         label: 'Total pages/Extent',
-                        placeholder: 'Total pages, size, or duration of work',
+                        placeholder: 'Total pages, size, or duration',
                     },
                     physicalDescription: {
                         label: 'Physical description',
-                        placeholder: 'e.g Building, Exhibition, Performance',
+                        placeholder: 'e.g Building, Exhibit, Performance',
                     },
                     audienceSize: {
                         label: 'Audience size',

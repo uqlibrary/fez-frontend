@@ -97,7 +97,7 @@ export default {
                     },
                     extent: {
                         label: 'Extent',
-                        placeholder: 'Total pages, size, or duration of work',
+                        placeholder: 'Total pages, size, or duration',
                     },
                     physicalDescription: {
                         label: 'Physical description',

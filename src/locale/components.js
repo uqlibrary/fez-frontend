@@ -1136,7 +1136,7 @@ export default {
                             </div>
                         ),
                         nameAsPublishedLabel: "Editor's name as published",
-                        nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
+                        nameAsPublishedHint: 'e.g. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor',
                         nameAsPublishedFieldId: 'editors-name-as-published-field',

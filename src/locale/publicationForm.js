@@ -61,7 +61,7 @@ export default {
             'If relevant to your work, you can select multiple content indicators ' +
             'to add more information about your work.',
         fieldLabels: {
-            label: 'Please select any relevant indicator(s).',
+            label: 'Select any relevant indicator(s).',
         },
     },
     generic: {
