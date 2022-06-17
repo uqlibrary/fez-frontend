@@ -1226,6 +1226,16 @@ export default {
                     message: 'Unable to load journal details',
                     type: 'error_outline',
                 },
+                favouriteTooltip: {
+                    isFavourite: 'Click to remove this journal from your favourites',
+                    isNotFavourite: 'Click to add this journal to your favourites',
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: message => message,
+                    alertId: 'alert-error',
+                },
             },
         },
         authors: {
