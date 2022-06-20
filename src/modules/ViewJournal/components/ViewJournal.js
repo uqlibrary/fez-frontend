@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -9,71 +8,15 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 
+import * as actions from 'actions';
+
 import { JournalDetailsContext } from './JournalDataContext';
 import Section from './Section';
 
 import { locale } from 'locale';
 import { viewJournalConfig } from 'config/viewJournal';
-import * as actions from 'actions';
 
-import IconButton from '@material-ui/core/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
-import StarIcon from '@material-ui/icons/Star';
-import Tooltip from '@material-ui/core/Tooltip';
-
-const TitleAndFavourite = props => {
-    const dispatch = useDispatch();
-    const txt = locale.pages.journal.view;
-    const { journal, setFavouriteUpdateError } = props;
-    const [active, setActive] = React.useState(!!journal.jnl_favourite === true);
-
-    const favouriteHandler = isAddingFavourite => {
-        let newActive = isAddingFavourite;
-        if (isAddingFavourite) {
-            dispatch(actions.addToFavourites([journal.jnl_jid]))
-                .catch(() => {
-                    setFavouriteUpdateError(true);
-                    newActive = false;
-                })
-                .then(() => {
-                    active !== newActive && setActive(newActive);
-                });
-        } else {
-            dispatch(actions.removeFromFavourites([journal.jnl_jid]))
-                .catch(() => {
-                    setFavouriteUpdateError(true);
-                    newActive = true;
-                })
-                .then(() => {
-                    active !== newActive && setActive(newActive);
-                });
-        }
-    };
-
-    return (
-        <>
-            {journal.jnl_title}
-            <Tooltip title={active ? txt.favouriteTooltip.isFavourite : txt.favouriteTooltip.isNotFavourite}>
-                <span>
-                    <IconButton
-                        id={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
-                        data-testid={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
-                        onClick={() => favouriteHandler(!active)}
-                        size="small"
-                    >
-                        {active && <StarIcon color="primary" />}
-                        {!active && <StarBorderIcon color="primary" />}
-                    </IconButton>
-                </span>
-            </Tooltip>
-        </>
-    );
-};
-
-TitleAndFavourite.propTypes = {
-    journal: PropTypes.object.isRequired,
-    setFavouriteUpdateError: PropTypes.func.isRequired,
-};
+import TitleWithFavouriteButton from './partials/TitleWithFavouriteButton';
 
 export const ViewJournal = () => {
     const dispatch = useDispatch();
@@ -84,7 +27,7 @@ export const ViewJournal = () => {
     const journalDetails = useSelector(state => state.get('journalReducer').journalDetails);
     const journalLoadingError = useSelector(state => state.get('journalReducer').journalLoadingError);
 
-    const [favouriteUpdateError, setFavouriteUpdateError] = React.useState(false);
+    const [favouriteUpdateError, setUpdateFavouriteError] = React.useState(false);
     const alertProps = favouriteUpdateError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
@@ -115,7 +58,16 @@ export const ViewJournal = () => {
     return (
         <StandardPage
             standarPageId="journal-view"
-            title={<TitleAndFavourite journal={journalDetails} setFavouriteUpdateError={setFavouriteUpdateError} />}
+            title={
+                <TitleWithFavouriteButton
+                    journal={journalDetails}
+                    handlers={{ errorUpdatingFavourite: setUpdateFavouriteError }}
+                    tooltips={{
+                        favourite: txt.favouriteTooltip.isFavourite,
+                        notFavourite: txt.favouriteTooltip.isNotFavourite,
+                    }}
+                />
+            }
         >
             <JournalDetailsContext.Provider
                 value={{
@@ -129,7 +81,7 @@ export const ViewJournal = () => {
                                 pushToTop
                                 {...alertProps}
                                 allowDismiss
-                                dismissAction={() => setFavouriteUpdateError(false)}
+                                dismissAction={() => setUpdateFavouriteError(false)}
                             />
                         </Grid>
                     )}
