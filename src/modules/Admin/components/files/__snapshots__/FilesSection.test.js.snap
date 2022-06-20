@@ -30,6 +30,14 @@ exports[`FilesSection component should render default view for Files on a Data C
       Object {
         "groups": Array [
           Array [
+            "sensitiveHandlingNote",
+          ],
+        ],
+        "title": "Sensitive Handling Note",
+      },
+      Object {
+        "groups": Array [
+          Array [
             "rek_copyright",
           ],
         ],
@@ -67,6 +75,14 @@ exports[`FilesSection component should render default view for Files on a public
           ],
         ],
         "title": "Advisory statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "sensitiveHandlingNote",
+          ],
+        ],
+        "title": "Sensitive Handling Note",
       },
       Object {
         "groups": Array [
