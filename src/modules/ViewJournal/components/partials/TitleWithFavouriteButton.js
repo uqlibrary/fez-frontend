@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarIcon from '@material-ui/icons/Star';
 import Tooltip from '@material-ui/core/Tooltip';
+import Icon from '@material-ui/core/Icon';
 
 import { makeStyles } from '@material-ui/styles';
 
@@ -62,8 +63,17 @@ const TitleWithFavouriteButton = props => {
                     disabled={busy}
                     className={classes.iconButton}
                 >
-                    {active && <StarIcon color="primary" className={classes.iconButtonSvg} />}
-                    {!active && <StarBorderIcon color="primary" className={classes.iconButtonSvg} />}
+                    {
+                        <Icon
+                            id={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
+                            data-testid={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
+                            color="primary"
+                            className={classes.iconButtonSvg}
+                        >
+                            {active && <StarIcon className={classes.iconButtonSvg} />}
+                            {!active && <StarBorderIcon className={classes.iconButtonSvg} />}
+                        </Icon>
+                    }
                 </IconButton>
             </Tooltip>
         </>
