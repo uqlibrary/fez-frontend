@@ -1614,6 +1614,7 @@ export const OA_STATUS_TYPE = [
     { value: 454123, text: 'Bronze' },
 ];
 
+export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
 export const SENSITIVE_HANDLING_NOTE_TYPE = [
     {
         value: 456855,
@@ -1642,7 +1643,7 @@ export const SENSITIVE_HANDLING_NOTE_TYPE = [
             'sexuality, or drug use which may be confronting and potentially distressing to some people.',
     },
     {
-        value: 456860,
+        value: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
         text: 'Other',
     },
 ];

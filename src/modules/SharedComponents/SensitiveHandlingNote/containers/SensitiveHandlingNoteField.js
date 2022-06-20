@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { SENSITIVE_HANDLING_NOTE_TYPE } from '../../../../config/general';
+import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from '../../../../config/general';
 import { selectFields } from '../../../../locale/selectFields';
 import { Field } from 'redux-form/immutable';
 import { useFormValuesContext } from 'context';
 
-export const isSensitiveHandlingNoteTypeOther = value =>
-    parseInt(value, 10) === parseInt(SENSITIVE_HANDLING_NOTE_TYPE.find(item => item.text === 'Other')?.value, 10);
+export const isSensitiveHandlingNoteTypeOther = value => parseInt(value, 10) === SENSITIVE_HANDLING_NOTE_OTHER_TYPE;
 
 export const SensitiveHandlingNoteField = props => {
     const { formValues } = useFormValuesContext();
