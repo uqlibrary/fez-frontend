@@ -31,18 +31,6 @@ exports[`FieldGridItem should render default view 1`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`FieldGridItem should render default view 2`] = `
-<WithStyles(ForwardRef(Grid))
-  item={true}
-  md={12}
-  xs={12}
->
-  <SensitiveHandlingNoteField
-    name="filesSection.sensitiveHandlingNote"
-  />
-</WithStyles(ForwardRef(Grid))>
-`;
-
 exports[`FieldGridItem should render default view for a composed field 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
