@@ -70,6 +70,7 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
+    const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
 
     const {
         pageSizeChanged,
@@ -85,6 +86,20 @@ const SearchRecords = ({
                 ...queryParams,
                 advancedSearchFields: getAdvancedSearchFields(searchFields),
             });
+    };
+
+    /**
+     * Handle the user changing the Display As view type via the UI.
+     * This function saves the user choice to state and then forwards
+     * that choice on to the function defined in useSearchRecordsControls.
+     * The state value is used as a user-choice override for any other
+     * displayAs values coming from either the URL or any Collection record
+     * being searched upon.
+     * @param {string} displayAs - the string value of the selected option
+     */
+    const onDisplayRecordsAsChanged = displayAs => {
+        setUserSelectedDisplayAs(displayAs === 'auto' ? /* istanbul ignore next */ null : displayAs);
+        displayRecordsAsChanged(displayAs);
     };
 
     /**
@@ -130,7 +145,7 @@ const SearchRecords = ({
     const initSortingData = locale.components.sorting;
 
     const displayLookup = normaliseDisplayLookup(
-        searchParams.displayRecordsAs ?? publicationsListDefaultView?.id ?? null,
+        userSelectedDisplayAs ?? searchParams.displayRecordsAs ?? publicationsListDefaultView?.id ?? null,
     );
     const newSortingData = initSortingData.sortBy.filter(option =>
         option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
@@ -224,7 +239,7 @@ const SearchRecords = ({
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
-                                        onDisplayRecordsAsChanged={displayRecordsAsChanged}
+                                        onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
