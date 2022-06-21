@@ -28,7 +28,7 @@ const TitleWithFavouriteButton = props => {
     const classes = useStyles();
 
     const { journal, tooltips, handlers } = props;
-    const [busy, setIsBusy] = React.useState(false);
+    const [isBusy, setIsBusy] = React.useState(false);
     const [active, setActive] = React.useState(!!journal.jnl_favourite === true);
     const dispatch = useDispatch();
 
@@ -60,7 +60,7 @@ const TitleWithFavouriteButton = props => {
                     data-testid={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
                     onClick={() => onClickFavouriteButtonHandler(!active)}
                     size="small"
-                    disabled={busy}
+                    disabled={isBusy}
                     className={classes.iconButton}
                 >
                     {
