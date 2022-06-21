@@ -4,16 +4,21 @@ import Immutable from 'immutable';
 import CollectionForm from '../components/CollectionForm';
 import { createCollection, checkSession, clearSessionExpiredFlag } from 'actions';
 import { bindActionCreators } from 'redux';
+import { getNotesSectionSearchKeys } from 'actions/transformers';
 
 const FORM_NAME = 'Collection';
 
 const onSubmit = (values, dispatch, props) => {
+    const dataJS = { ...values.toJS() };
+    const data = { ...dataJS, ...getNotesSectionSearchKeys(dataJS) };
+
+    delete data.internalNotes; // transformed above to fez_internal_notes: {ain_detail}
+
     const currentAuthor = props.author || null;
-    return dispatch(createCollection({ ...values.toJS() }, (currentAuthor && currentAuthor.aut_id) || null)).catch(
-        error => {
-            throw new SubmissionError({ _error: error });
-        },
-    );
+    // eslint-disable-next-line camelcase
+    return dispatch(createCollection(data, currentAuthor?.aut_id || null)).catch(error => {
+        throw new SubmissionError({ _error: error });
+    });
 };
 
 const CollectionContainer = reduxForm({

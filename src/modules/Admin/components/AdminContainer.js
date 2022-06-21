@@ -32,6 +32,7 @@ import FilesSection from './files/FilesSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
+import ReasonSection from './reason/ReasonSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import { RecordContext, TabbedContext } from 'context';
@@ -107,14 +108,14 @@ export const AdminContainer = ({
 
     // Collections and Communities admin edit currently only has the Security tab, so don't act on errors in other tabs
     const reducedFormErrors = formErrors => {
-        if (
-            !!recordToView &&
-            recordToView.rek_display_type_lookup &&
-            (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
-                recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
-        ) {
-            return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
-        }
+        // if (
+        //     !!recordToView &&
+        //     recordToView.rek_display_type_lookup &&
+        //     (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
+        //         recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
+        // ) {
+        //     return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
+        // }
         return formErrors;
     };
 
@@ -156,7 +157,7 @@ export const AdminContainer = ({
 
     const isActivated = () => {
         if (recordToView && recordToView.rek_object_type_lookup) {
-            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+            return recordToView && recordToView.rek_object_type_lookup?.toLowerCase() === RECORD_TYPE_RECORD;
         }
         return false;
     };
@@ -201,12 +202,20 @@ export const AdminContainer = ({
                                 tabs={{
                                     admin: {
                                         component: AdminSection,
-                                        activated: isActivated(),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
                                     bibliographic: {
                                         component: BibliographicSection,
-                                        activated: isActivated(),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
                                     },
                                     authors: {
@@ -242,7 +251,11 @@ export const AdminContainer = ({
                                     },
                                     notes: {
                                         component: NotesSection,
-                                        activated: isActivated(),
+                                        activated:
+                                            isActivated() ||
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
                                     },
                                     files: {
                                         component: FilesSection,
@@ -252,6 +265,14 @@ export const AdminContainer = ({
                                     security: {
                                         component: SecuritySection,
                                         activated: !createMode, // true,
+                                    },
+                                    reason: {
+                                        component: ReasonSection,
+                                        activated:
+                                            !createMode &&
+                                            [RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY].includes(
+                                                recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
+                                            ),
                                     },
                                 }}
                             />

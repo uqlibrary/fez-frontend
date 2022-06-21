@@ -12,11 +12,14 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
 import { doesListContainItem } from 'helpers/general';
+import { COLLECTION_VIEW_TYPE } from 'config/general';
+
+export const filterCollectionViewTypes = () => COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false);
 
 const PublicationsListSorting = props => {
     const txt = locale.components.sorting;
     /* istanbul ignore next */
-    const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
+    const pageLength = txt.recordsPerPage /* istanbul ignore next */ ?? [10, 20, 50, 100];
 
     // Allow cust page length if defined in props
     if (props.initPageLength && pageLength.indexOf(props.initPageLength) === -1) {
@@ -32,7 +35,7 @@ const PublicationsListSorting = props => {
         props.pageSize ||
         (props.pagingData && props.pagingData.per_page ? props.pagingData.per_page : 20);
 
-    const initPropDisplayRecordsAs = props.displayRecordsAs || props.sortingData.displayRecordsAs?.[0]?.value;
+    const initPropDisplayRecordsAs = props.displayRecordsAs || COLLECTION_VIEW_TYPE[0].text;
 
     // sanitise values
     const propSortBy = doesListContainItem(props.sortingData.sortBy, initPropSortBy)
@@ -45,12 +48,11 @@ const PublicationsListSorting = props => {
         ? initPropPageSize
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
-    const propDisplayRecordsAs = doesListContainItem(
-        locale.components.sorting.displayRecordsAs ?? [],
-        initPropDisplayRecordsAs,
-    )
+    const selectableCollectionViewType = filterCollectionViewTypes();
+
+    const propDisplayRecordsAs = doesListContainItem(selectableCollectionViewType, initPropDisplayRecordsAs)
         ? initPropDisplayRecordsAs
-        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? '';
+        : selectableCollectionViewType[0].value ?? /* istanbul ignore next */ '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);
@@ -198,13 +200,13 @@ const PublicationsListSorting = props => {
                         onChange={displayRecordsAsChanged}
                         data-testid="publication-list-display-records-as"
                     >
-                        {props.sortingData.displayRecordsAs?.map(item => {
+                        {selectableCollectionViewType.map(item => {
                             return (
                                 <MenuItem
-                                    key={item.index}
+                                    key={item.id}
                                     value={item.value}
-                                    data-testid={`publication-display-records-as-option-${item.index}`}
-                                    id={`publication-display-records-as-option-${item.index}`}
+                                    data-testid={`publication-display-records-as-option-${item.id}`}
+                                    id={`publication-display-records-as-option-${item.id}`}
                                 >
                                     {item.label}
                                 </MenuItem>

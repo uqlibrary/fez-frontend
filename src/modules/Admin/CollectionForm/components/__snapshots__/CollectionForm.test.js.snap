@@ -471,6 +471,25 @@ exports[`Collection form should render the full form 1`] = `
                   }
                 />
               </WithStyles(ForwardRef(Grid))>
+              <WithStyles(ForwardRef(Grid))
+                item={true}
+                xs={12}
+              >
+                <WithStyles(ForwardRef(Typography))>
+                  Internal Notes (admin)
+                </WithStyles(ForwardRef(Typography))>
+                <Field
+                  component={[Function]}
+                  disabled={false}
+                  fullWidth={true}
+                  label="Internal Notes (admin)"
+                  multiline={true}
+                  name="internalNotes"
+                  placeholder="Optionally enter internal notes"
+                  richEditorId="internalNotes"
+                  rows={5}
+                />
+              </WithStyles(ForwardRef(Grid))>
             </WithStyles(ForwardRef(Grid))>
           </StandardCard>
         </WithStyles(ForwardRef(Grid))>

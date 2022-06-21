@@ -23,6 +23,8 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    RECORD_TYPE_COMMUNITY_ID,
+    RECORD_TYPE_COLLECTION_ID,
 } from 'config/general';
 
 import {
@@ -50,6 +52,8 @@ import {
     thesisFields,
     videoFields,
     workingPaperFields,
+    communityFields,
+    collectionFields,
 } from './fields';
 
 export default {
@@ -77,4 +81,6 @@ export default {
     [PUBLICATION_TYPE_THESIS]: thesisFields,
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: videoFields,
     [PUBLICATION_TYPE_WORKING_PAPER]: workingPaperFields,
+    [RECORD_TYPE_COMMUNITY_ID]: communityFields,
+    [RECORD_TYPE_COLLECTION_ID]: collectionFields,
 };
