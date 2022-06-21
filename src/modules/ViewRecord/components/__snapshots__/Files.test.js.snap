@@ -430,689 +430,7 @@ exports[`Files Component  getFileData{} branch 3 1`] = `"[{\\"pid\\":\\"UQ:18504
 
 exports[`Files Component  getFileData{} branch pol_id 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":false,\\"icon\\":{\\"type\\":{\\"type\\":{},\\"compare\\":null},\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693,\\"allowDownload\\":false},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksums\\":{},\\"requiresLoginToDownload\\":true}]"`;
 
-exports[`Files Component  should not render component with no files 1`] = `""`;
-
-exports[`Files Component  should not render cultural message 1`] = `
-<WithStyles(ForwardRef(Grid))
-  item={true}
-  xs={12}
->
-  <StandardCard
-    title="Files"
-  >
-    <div>
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={1}
-          xs={2}
-        >
-           
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-label"
-          item={true}
-          sm={4}
-        >
-          <WithStyles(ForwardRef(Typography))
-            gutterBottom={true}
-            variant="caption"
-          >
-            File name
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-label"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-label"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Size
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={true}
-          />
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="0"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-0"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-0"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <WithStyles(Thumbnail)
-            fileName="image.jpg"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={true}
-            thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-0"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.49 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="testing image description"
-            fileName="image.jpg"
-            icon={
-              <WithStyles(Thumbnail)
-                fileName="image.jpg"
-                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-                mimeType="image/jpeg"
-                onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={true}
-                thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-              />
-            }
-            id="file-name-0"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-0"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              testing image description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-0"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.49 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-0"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="1"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-1"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-1"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <Memo(ForwardRef(ImageIcon))
-            color="secondary"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-1"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.06 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="staffdata.pdf"
-            fileName="staffdata.pdf"
-            icon={
-              <Memo
-                color="secondary"
-              />
-            }
-            id="file-name-1"
-            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-1"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              staffdata.pdf
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-1"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.06 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-1"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-  </StandardCard>
-</WithStyles(ForwardRef(Grid))>
-`;
-
-exports[`Files Component  should not render cultural message 2`] = `
-<WithStyles(ForwardRef(Grid))
-  item={true}
-  xs={12}
->
-  <StandardCard
-    title="Files"
-  >
-    <div>
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={1}
-          xs={2}
-        >
-           
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-label"
-          item={true}
-          sm={4}
-        >
-          <WithStyles(ForwardRef(Typography))
-            gutterBottom={true}
-            variant="caption"
-          >
-            File name
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-label"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-label"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Size
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={true}
-          />
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="0"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-0"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-0"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <WithStyles(Thumbnail)
-            fileName="image.jpg"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={true}
-            thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-0"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.49 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="testing image description"
-            fileName="image.jpg"
-            icon={
-              <WithStyles(Thumbnail)
-                fileName="image.jpg"
-                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-                mimeType="image/jpeg"
-                onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={true}
-                thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-              />
-            }
-            id="file-name-0"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-0"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              testing image description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-0"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.49 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-0"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="1"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-1"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-1"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <Memo(ForwardRef(ImageIcon))
-            color="secondary"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-1"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.06 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="staffdata.pdf"
-            fileName="staffdata.pdf"
-            icon={
-              <Memo
-                color="secondary"
-              />
-            }
-            id="file-name-1"
-            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-1"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              staffdata.pdf
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-1"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.06 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-1"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-  </StandardCard>
-</WithStyles(ForwardRef(Grid))>
-`;
-
-exports[`Files Component  should not render cultural sensitivity statement 1`] = `
+exports[`Files Component  should not render advisory statement 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
   xs={12}
@@ -1128,6 +446,1720 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
       dismissAction={[MockFunction]}
       dismissTitle="Click to dismiss this alert"
       message=""
+      showLoader={false}
+      type="info"
+      wiggle={null}
+    />
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should not render advisory statement 2`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should not render component with no files 1`] = `""`;
+
+exports[`Files Component  should not render sensitive handling note - scenario 1 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should not render sensitive handling note - scenario 2 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should not render sensitive handling note - scenario 3 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should render advisory statement 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <Alert
+      allowDismiss={true}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissAction={[MockFunction]}
+      dismissTitle="Click to dismiss this alert"
+      message="hello"
       showLoader={false}
       type="info"
       wiggle={null}
@@ -1999,358 +3031,6 @@ exports[`Files Component  should render component 1`] = `
   <StandardCard
     title="Files"
   >
-    <div>
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={1}
-          xs={2}
-        >
-           
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-label"
-          item={true}
-          sm={4}
-        >
-          <WithStyles(ForwardRef(Typography))
-            gutterBottom={true}
-            variant="caption"
-          >
-            File name
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-label"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-label"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              gutterBottom={true}
-              variant="caption"
-            >
-              Size
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            sm={true}
-          />
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="0"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-0"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-0"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <WithStyles(Thumbnail)
-            fileName="image.jpg"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onClick={[Function]}
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={true}
-            thumbnailFileName="thumbnail_image.jpg"
-            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-0"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.49 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="testing image description"
-            fileName="image.jpg"
-            icon={
-              <WithStyles(Thumbnail)
-                fileName="image.jpg"
-                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-                mimeType="image/jpeg"
-                onClick={[Function]}
-                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={true}
-                thumbnailFileName="thumbnail_image.jpg"
-                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
-                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-              />
-            }
-            id="file-name-0"
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-0"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              testing image description
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-0"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.49 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-0"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="1"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-1"
-        spacing={2}
-        wrap="nowrap"
-      >
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-mimetype-1"
-          item={true}
-          sm={1}
-          xs={2}
-        >
-          <Memo(ForwardRef(ImageIcon))
-            color="secondary"
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          data-testid="dsi-dsid-1"
-          item={true}
-          sm={4}
-        >
-          <FileName
-            allowDownload={true}
-            calculatedSize="95.06 KB"
-            checksums={
-              Object {
-                "media": undefined,
-                "preview": undefined,
-                "thumbnail": undefined,
-                "web": undefined,
-              }
-            }
-            description="staffdata.pdf"
-            fileName="staffdata.pdf"
-            icon={
-              <Memo
-                color="secondary"
-              />
-            }
-            id="file-name-1"
-            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "allowDownload": true,
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": 453693,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
-            requiresLoginToDownload={false}
-            securityStatus={true}
-            webMediaUrl={null}
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-label-1"
-            item={true}
-            md={4}
-            sm={6}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              staffdata.pdf
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          smDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="dsi-size-1"
-            item={true}
-            md={2}
-          >
-            <WithStyles(ForwardRef(Typography))
-              noWrap={true}
-              variant="body2"
-            >
-              95.06 KB
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            data-testid="rek-oa-status-1"
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              allowDownload={true}
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453693}
-              securityStatus={true}
-            />
-          </WithStyles(ForwardRef(Grid))>
-        </Hidden>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-  </StandardCard>
-</WithStyles(ForwardRef(Grid))>
-`;
-
-exports[`Files Component  should render cultural message 1`] = `
-<WithStyles(ForwardRef(Grid))
-  item={true}
-  xs={12}
->
-  <StandardCard
-    title="Files"
-  >
-    <Alert
-      allowDismiss={true}
-      customIcon={null}
-      customType={null}
-      disableAlertClick={false}
-      dismissAction={[MockFunction]}
-      dismissTitle="Click to dismiss this alert"
-      message="hello"
-      showLoader={false}
-      type="info"
-      wiggle={null}
-    />
     <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"
@@ -4391,6 +5071,358 @@ exports[`Files Component  should render icon for mimeType 6`] = `
   <StandardCard
     title="Files"
   >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={1}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="testing image description"
+            fileName="image.jpg"
+            icon={
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-0"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-1"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-1"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-1"
+          item={true}
+          sm={4}
+        >
+          <FileName
+            allowDownload={true}
+            calculatedSize="95.06 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description="staffdata.pdf"
+            fileName="staffdata.pdf"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-1"
+            mediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            mimeType="image/jpeg"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/staffdata.pdf"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-1"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              staffdata.pdf
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-1"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              95.06 KB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="rek-oa-status-1"
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              allowDownload={true}
+              embargoDate={null}
+              isOpenAccess={false}
+              openAccessStatusId={453693}
+              securityStatus={true}
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Files Component  should render sensitive handling note 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <Alert
+      allowDismiss={true}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissAction={[MockFunction]}
+      dismissTitle="Click to dismiss this alert"
+      message="test"
+      showLoader={false}
+      type="info"
+      wiggle={null}
+    />
     <div>
       <WithStyles(ForwardRef(Grid))
         alignItems="center"

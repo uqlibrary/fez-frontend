@@ -15,6 +15,7 @@ import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
+import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE } from '../../../config/general';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
@@ -35,7 +36,8 @@ const setup = (testProps = {}, renderer = render) => {
     const props = {
         account: accounts.uqresearcher,
         author: null,
-        hideCulturalSensitivityStatement: true,
+        hideAdvisoryStatement: true,
+        hideSensitiveHandlingNote: true,
         isDeleted: false,
         isDeletedVersion: false,
         loadingRecordToView: false,
@@ -189,21 +191,37 @@ describe('NewViewRecord', () => {
         expect(getAllByText('Scale/Significance of work').length).toBe(2);
     });
 
-    it('should dismiss cultural sensitivity statement alert', () => {
+    it('should dismiss advisory statement alert', () => {
         window.matchMedia = createMatchMedia(2056);
-        const setHideCulturalSensitivityStatementFn = jest.spyOn(
-            ViewRecordActions,
-            'setHideCulturalSensitivityStatement',
-        );
+        const setAdvisoryStatementFn = jest.spyOn(ViewRecordActions, 'setAdvisoryStatement');
         const { getByTestId } = setup({
             recordToView: {
                 ...record,
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'Test advisory statement' },
             },
-            hideCulturalSensitivityStatement: false,
+            hideAdvisoryStatement: false,
         });
         fireEvent.click(getByTestId('dismiss'));
-        expect(setHideCulturalSensitivityStatementFn).toHaveBeenCalled();
+        expect(setAdvisoryStatementFn).toHaveBeenCalled();
+    });
+
+    it('should dismiss advisory statement alert', () => {
+        window.matchMedia = createMatchMedia(2056);
+        const spy = jest.spyOn(ViewRecordActions, 'setSensitiveHandlingNote');
+        const { getByTestId } = setup({
+            recordToView: {
+                ...record,
+                fez_record_search_key_sensitive_handling_note_id: {
+                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+                },
+                fez_record_search_key_sensitive_handling_note_other: {
+                    rek_sensitive_handling_note_other: 'text',
+                },
+            },
+            hideSensitiveHandlingNote: false,
+        });
+        fireEvent.click(getByTestId('dismiss'));
+        expect(spy).toHaveBeenCalled();
     });
 
     it('should rerender component on props change', () => {

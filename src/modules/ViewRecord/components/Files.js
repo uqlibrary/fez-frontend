@@ -27,6 +27,7 @@ import Thumbnail from './partials/Thumbnail';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { stripHtml } from 'helpers/general';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
+import { isSensitiveHandlingNoteTypeOther } from '../../SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 
 export const styles = theme => ({
     header: {
@@ -184,8 +185,10 @@ export const formatBytes = bytes => {
 export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideCulturalSensitivityStatement: PropTypes.bool,
-        setHideCulturalSensitivityStatement: PropTypes.func,
+        hideAdvisoryStatement: PropTypes.bool,
+        setAdvisoryStatement: PropTypes.func,
+        hideSensitiveHandlingNote: PropTypes.bool,
+        setSensitiveHandlingNote: PropTypes.func,
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
@@ -421,20 +424,41 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
+        const shouldDisplayAdvisoryStatementAlert =
+            !this.props.hideAdvisoryStatement && !!publication.fez_record_search_key_advisory_statement;
+        const shouldDisplaySensitiveHandlingNoteAlert =
+            !this.props.hideSensitiveHandlingNote &&
+            isSensitiveHandlingNoteTypeOther(
+                // eslint-disable-next-line camelcase
+                publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id,
+            ) &&
+            // eslint-disable-next-line camelcase
+            !!publication.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other;
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
-                    {!!publication.fez_record_search_key_advisory_statement &&
-                        !this.props.hideCulturalSensitivityStatement && (
-                            <Alert
-                                allowDismiss
-                                type={'info'}
-                                message={stripHtml(
-                                    publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
-                                )}
-                                dismissAction={this.props.setHideCulturalSensitivityStatement}
-                            />
-                        )}
+                    {shouldDisplayAdvisoryStatementAlert && (
+                        <Alert
+                            allowDismiss
+                            type={'info'}
+                            message={stripHtml(
+                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                            )}
+                            dismissAction={this.props.setAdvisoryStatement}
+                        />
+                    )}
+                    {shouldDisplayAdvisoryStatementAlert && shouldDisplaySensitiveHandlingNoteAlert && <br />}
+                    {shouldDisplaySensitiveHandlingNoteAlert && (
+                        <Alert
+                            allowDismiss
+                            type={'info'}
+                            message={
+                                publication.fez_record_search_key_sensitive_handling_note_other
+                                    .rek_sensitive_handling_note_other
+                            }
+                            dismissAction={this.props.setSensitiveHandlingNote}
+                        />
+                    )}
                     {/* istanbul ignore next */ !!fileData.filter(
                         ({ requiresLoginToDownload }) => requiresLoginToDownload,
                     ).length > 0 && (

@@ -167,10 +167,17 @@ describe('View record actions', () => {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
-        it('dispatch expected actions on hiding cultural sensitivity statement', () => {
-            mockActionsStore.dispatch(viewRecordActions.setHideCulturalSensitivityStatement());
+        it('dispatch expected actions on hiding advisory statement', () => {
+            mockActionsStore.dispatch(viewRecordActions.setAdvisoryStatement());
             expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+                type: actions.VIEW_RECORD_ADVISORY_STATEMENT_HIDE,
+            });
+        });
+
+        it('dispatch expected actions on hiding sensitive handling note', () => {
+            mockActionsStore.dispatch(viewRecordActions.setSensitiveHandlingNote());
+            expect(mockActionsStore.getActions()).toContainEqual({
+                type: actions.VIEW_RECORD_SENSITIVE_HANDLING_NOTE_HIDE,
             });
         });
     });

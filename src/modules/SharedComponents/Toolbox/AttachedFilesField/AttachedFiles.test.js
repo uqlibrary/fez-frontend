@@ -19,7 +19,7 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 
 jest.mock('context');
 import { useRecordContext, useFormValuesContext } from 'context';
-import { CURRENT_LICENCES } from '../../../../config/general';
+import { CURRENT_LICENCES, SENSITIVE_HANDLING_NOTE_OTHER_TYPE } from '../../../../config/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
@@ -181,7 +181,7 @@ describe('AttachedFiles component', () => {
 
         const { getByText } = setup({
             canEdit: true,
-            hideCulturalSensitivityStatement: false,
+            hideAdvisoryStatement: false,
             locale: {
                 culturalSensitivityStatement: 'test advisory',
             },
@@ -199,13 +199,36 @@ describe('AttachedFiles component', () => {
 
         const { getByText } = setup({
             canEdit: true,
-            hideCulturalSensitivityStatement: false,
+            hideAdvisoryStatement: false,
             locale: {
                 culturalSensitivityStatement: 'test advisory',
             },
         });
 
         expect(getByText('test advisory')).toBeInTheDocument();
+    });
+
+    it('should show alert for sensitive handling note - other', () => {
+        const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+        const text = 'sensitive handling note';
+        userIsAdmin.mockImplementation(() => true);
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                fez_record_search_key_sensitive_handling_note_id: {
+                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+                },
+                fez_record_search_key_sensitive_handling_note_other: {
+                    rek_sensitive_handling_note_other: text,
+                },
+            },
+        }));
+
+        const { getByText } = setup({
+            canEdit: true,
+            hideSensitiveHandlingNote: false,
+        });
+
+        expect(getByText(text)).toBeInTheDocument();
     });
 
     it('should toggle preview', async done => {

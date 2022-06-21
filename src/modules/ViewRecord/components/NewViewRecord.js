@@ -82,7 +82,8 @@ const useStyles = makeStyles(theme => ({
 export const NewViewRecord = ({
     account,
     author,
-    hideCulturalSensitivityStatement,
+    hideAdvisoryStatement,
+    hideSensitiveHandlingNote,
     isDeleted,
     isDeletedVersion,
     loadingRecordToView,
@@ -98,8 +99,13 @@ export const NewViewRecord = ({
     const txt = locale.pages.viewRecord;
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
 
-    const handleSetHideCulturalSensitivityStatement = React.useCallback(
-        () => dispatch(actions.setHideCulturalSensitivityStatement()),
+    const handleSetAdvisoryStatement = React.useCallback(
+        () => dispatch(actions.setAdvisoryStatement()),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    );
+    const handleSetSensitiveHandlingNote = React.useCallback(
+        () => dispatch(actions.setSensitiveHandlingNote()),
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -298,8 +304,10 @@ export const NewViewRecord = ({
                                 author={author}
                                 account={account}
                                 publication={recordToView}
-                                hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
-                                setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
+                                hideAdvisoryStatement={hideAdvisoryStatement}
+                                setAdvisoryStatement={handleSetAdvisoryStatement}
+                                hideSensitiveHandlingNote={hideSensitiveHandlingNote}
+                                setSensitiveHandlingNote={handleSetSensitiveHandlingNote}
                                 isAdmin={!!isAdmin}
                                 isAuthor={!!isAuthor}
                             />
@@ -321,7 +329,8 @@ export const NewViewRecord = ({
 NewViewRecord.propTypes = {
     account: PropTypes.object,
     author: PropTypes.object,
-    hideCulturalSensitivityStatement: PropTypes.bool,
+    hideAdvisoryStatement: PropTypes.bool,
+    hideSensitiveHandlingNote: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,

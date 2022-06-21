@@ -18,15 +18,16 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             error: null,
-            hideCulturalSensitivityStatement: false,
+            hideAdvisoryStatement: false,
+            hideSensitiveHandlingNote: false,
             isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
     });
 
-    it('should set cultural message to hide', () => {
+    it('should set advisory statement to hide', () => {
         const testState = viewRecordReducer(initialState, {
-            type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+            type: actions.VIEW_RECORD_ADVISORY_STATEMENT_HIDE,
         });
         const expectedState = {
             loadingRecordToView: true,
@@ -36,7 +37,27 @@ describe('viewRecord reducer', () => {
             recordToView: null,
             recordToViewError: null,
             error: null,
-            hideCulturalSensitivityStatement: true,
+            hideAdvisoryStatement: true,
+            hideSensitiveHandlingNote: false,
+            isJobCreated: false,
+        };
+        expect(testState).toEqual(expectedState);
+    });
+
+    it('should set sensitive handling note to hide', () => {
+        const testState = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_SENSITIVE_HANDLING_NOTE_HIDE,
+        });
+        const expectedState = {
+            loadingRecordToView: true,
+            isRecordLocked: false,
+            isDeleted: false,
+            isDeletedVersion: false,
+            recordToView: null,
+            recordToViewError: null,
+            error: null,
+            hideAdvisoryStatement: false,
+            hideSensitiveHandlingNote: true,
             isJobCreated: false,
         };
         expect(testState).toEqual(expectedState);
@@ -45,18 +66,30 @@ describe('viewRecord reducer', () => {
     it('should return a record to be viewed', () => {
         const test = viewRecordReducer(initialState, { type: actions.VIEW_RECORD_LOADED, payload: mockRecord });
         expect(test.loadingRecordToView).toBeFalsy();
-        expect(test.hideCulturalSensitivityStatement).toEqual(false);
+        expect(test.hideAdvisoryStatement).toEqual(false);
+        expect(test.hideSensitiveHandlingNote).toEqual(false);
         expect(test.recordToView).toEqual(mockRecord);
         expect(test.recordToViewError).toBeNull();
     });
 
-    it("should return a record to be viewed and keep hidden cultural statement if it's hidden", () => {
+    it("should return a record to be viewed and keep hidden advisory statement if it's hidden", () => {
         const test = viewRecordReducer(
-            { ...initialState, hideCulturalSensitivityStatement: true },
+            { ...initialState, hideAdvisoryStatement: true },
             { type: actions.VIEW_RECORD_LOADED, payload: mockRecord },
         );
         expect(test.loadingRecordToView).toBeFalsy();
-        expect(test.hideCulturalSensitivityStatement).toEqual(true);
+        expect(test.hideAdvisoryStatement).toEqual(true);
+        expect(test.recordToView).toEqual(mockRecord);
+        expect(test.recordToViewError).toBeNull();
+    });
+
+    it("should return a record to be viewed and keep hidden sensitive handling note if it's hidden", () => {
+        const test = viewRecordReducer(
+            { ...initialState, hideSensitiveHandlingNote: true },
+            { type: actions.VIEW_RECORD_LOADED, payload: mockRecord },
+        );
+        expect(test.loadingRecordToView).toBeFalsy();
+        expect(test.hideSensitiveHandlingNote).toEqual(true);
         expect(test.recordToView).toEqual(mockRecord);
         expect(test.recordToViewError).toBeNull();
     });
@@ -123,7 +156,8 @@ describe('viewRecord reducer', () => {
         expect(test).toEqual({
             ...initialState,
             isRecordLocked: false,
-            hideCulturalSensitivityStatement: true,
+            hideAdvisoryStatement: true,
+            hideSensitiveHandlingNote: true,
             loadingRecordToView: false,
             isDeleted: true,
             recordToView: {

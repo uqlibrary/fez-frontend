@@ -94,12 +94,22 @@ export function clearRecordToView() {
 }
 
 /**
- * Hides culture sensitivity statement application-wide
+ * Hides advisory statement application-wide
  * @returns {action}
  */
-export function setHideCulturalSensitivityStatement() {
+export function setAdvisoryStatement() {
     return {
-        type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+        type: actions.VIEW_RECORD_ADVISORY_STATEMENT_HIDE,
+    };
+}
+
+/**
+ * Hides sensitive handling note application-wide
+ * @returns {action}
+ */
+export function setSensitiveHandlingNote() {
+    return {
+        type: actions.VIEW_RECORD_SENSITIVE_HANDLING_NOTE_HIDE,
     };
 }
 

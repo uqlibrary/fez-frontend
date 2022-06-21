@@ -4,7 +4,8 @@ export const initialState = {
     recordToView: null,
     loadingRecordToView: true,
     recordToViewError: null,
-    hideCulturalSensitivityStatement: false,
+    hideAdvisoryStatement: false,
+    hideSensitiveHandlingNote: false,
     isRecordLocked: false,
     isDeleted: false,
     isDeletedVersion: false,
@@ -15,14 +16,16 @@ export const initialState = {
 const handlers = {
     [actions.VIEW_RECORD_LOADING]: state => ({
         ...initialState,
-        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        hideAdvisoryStatement: state.hideAdvisoryStatement,
+        hideSensitiveHandlingNote: state.hideSensitiveHandlingNote,
     }),
 
     [actions.VIEW_RECORD_LOADED]: (state, action) => ({
         ...initialState,
         loadingRecordToView: false,
         recordToView: action.payload,
-        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        hideAdvisoryStatement: state.hideAdvisoryStatement,
+        hideSensitiveHandlingNote: state.hideSensitiveHandlingNote,
         isRecordLocked: !!action.payload.rek_editing_user,
     }),
 
@@ -31,7 +34,8 @@ const handlers = {
         isDeletedVersion: true,
         loadingRecordToView: false,
         recordToView: action.payload,
-        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        hideAdvisoryStatement: state.hideAdvisoryStatement,
+        hideSensitiveHandlingNote: state.hideSensitiveHandlingNote,
         isRecordLocked: !!action.payload.rek_editing_user,
     }),
 
@@ -39,26 +43,34 @@ const handlers = {
         ...initialState,
         loadingRecordToView: false,
         recordToViewError: action.payload,
-        hideCulturalSensitivityStatement: true,
+        hideAdvisoryStatement: true,
+        hideSensitiveHandlingNote: true,
     }),
 
     [actions.VIEW_RECORD_DELETED]: (state, action) => ({
         ...initialState,
         loadingRecordToView: false,
         recordToView: action.payload,
-        hideCulturalSensitivityStatement: true,
+        hideAdvisoryStatement: true,
+        hideSensitiveHandlingNote: true,
         isDeleted: true,
     }),
 
     [actions.VIEW_RECORD_CLEAR]: state => ({
         ...initialState,
-        hideCulturalSensitivityStatement: state.hideCulturalSensitivityStatement,
+        hideAdvisoryStatement: state.hideAdvisoryStatement,
+        hideSensitiveHandlingNote: state.hideSensitiveHandlingNote,
         isRecordLocked: false,
     }),
 
-    [actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE]: state => ({
+    [actions.VIEW_RECORD_ADVISORY_STATEMENT_HIDE]: state => ({
         ...state,
-        hideCulturalSensitivityStatement: true,
+        hideAdvisoryStatement: true,
+    }),
+
+    [actions.VIEW_RECORD_SENSITIVE_HANDLING_NOTE_HIDE]: state => ({
+        ...state,
+        hideSensitiveHandlingNote: true,
     }),
 
     [actions.VIEW_RECORD_UNLOCK]: state => ({
