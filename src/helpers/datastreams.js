@@ -1,7 +1,6 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_ADDED } from '../config/viewRecord';
-import { isString, stripHtml } from './general';
-import locale from '../modules/SharedComponents/Toolbox/FileUploader/locale';
+import { stripHtml } from './general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
 
@@ -22,12 +21,11 @@ export const isAdded = datastream => {
 /**
  * @param record
  */
-export const getAdvisoryStatement = (record, _default) =>
+export const getAdvisoryStatement = (record, _default) => {
     // eslint-disable-next-line camelcase
-    record.fez_record_search_key_advisory_statement?.rek_advisory_statement
-        ? // eslint-disable-next-line camelcase
-          stripHtml(record.fez_record_search_key_advisory_statement?.rek_advisory_statement)
-        : stripHtml(_default);
+    const value = record.fez_record_search_key_advisory_statement?.rek_advisory_statement;
+    return value ? stripHtml(value) : stripHtml(_default);
+};
 
 /**
  * @param record
