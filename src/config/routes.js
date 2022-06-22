@@ -540,6 +540,14 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       },
                   ]
                 : []),
+            ...(account
+                ? [
+                      {
+                          linkTo: pathConfig.journals.search,
+                          ...locale.menu.journals.search,
+                      },
+                  ]
+                : []),
             ...publicPages,
         ];
     }
@@ -579,16 +587,20 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.myEditorialAppointments,
                   },
                   {
-                      linkTo: pathConfig.journals.search,
-                      ...locale.menu.journals.search,
-                  },
-                  {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
                   {
                       divider: true,
                       path: '/234234234242',
+                  },
+              ]
+            : []),
+        ...(account
+            ? [
+                  {
+                      linkTo: pathConfig.journals.search,
+                      ...locale.menu.journals.search,
                   },
               ]
             : []),
