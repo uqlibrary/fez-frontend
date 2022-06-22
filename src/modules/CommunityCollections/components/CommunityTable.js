@@ -1,53 +1,68 @@
 import React from 'react';
-
-import Table from '@material-ui/core/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableBody from '@material-ui/core/TableBody';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
-
+import { Grid } from '@material-ui/core';
+import { Hidden } from '@material-ui/core';
 const useStyles = makeStyles({
-    table: {
-        minWidth: 650,
+    headerStyle: {
+        fontWeight: 400,
     },
-    dateCell: {
-        minWidth: 120,
+    collapseIcon: {
+        float: 'left',
+        width: 24,
+    },
+    title: {
+        float: 'right',
+        width: 'calc(100% - 30px)',
+    },
+    dataRow: {
+        paddingTop: 10,
     },
 });
 export const CommunityTable = ({ records, labels, conf, autoCollapse, adminUser }) => {
     const classes = useStyles();
     return (
-        <TableContainer component={Paper} style={{ margin: 0, padding: 0 }}>
-            <Table aria-label="simple table">
-                <TableHead>
-                    <TableRow data-testid="community-collections-primary-header">
-                        <TableCell />
-                        <TableCell>{labels.title}</TableCell>
-                        <TableCell className={classes.dateCell}>{labels.creation_date}</TableCell>
-                        <TableCell className={classes.dateCell}>{labels.updated_date}</TableCell>
-                        {!!adminUser && <TableCell>{labels.actions}</TableCell>}
-                    </TableRow>
-                </TableHead>
-
-                <TableBody data-testid="community-collections-primary-body">
-                    {records.map(row => (
-                        <CommunityDataRow
-                            key={row.rek_pid}
-                            conf={conf}
-                            row={row}
-                            adminUser={adminUser}
-                            labels={labels}
-                            autoCollapse={autoCollapse}
-                        />
-                    ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <Grid container spacing={0}>
+            {/* Header Row */}
+            <Grid
+                container
+                spacing={0}
+                className={classes.headerStyle}
+                data-testid="community-collections-primary-header"
+            >
+                <Grid item xs={10} sm={11} md={adminUser ? 7 : 8}>
+                    <div className={classes.collapseIcon} />
+                    <div className={classes.title}>{labels.title}</div>
+                </Grid>
+                <Hidden smDown>
+                    <Grid item xs={2}>
+                        {labels.creation_date}
+                    </Grid>
+                    <Grid item xs={2}>
+                        {labels.updated_date}
+                    </Grid>
+                </Hidden>
+                {!!adminUser && (
+                    <Grid item xs={2} sm={1}>
+                        {labels.actions}
+                    </Grid>
+                )}
+            </Grid>
+            {/* Data Row */}
+            <Grid container className={classes.dataRow} data-testid="community-collections-primary-body">
+                {records.map(row => (
+                    <CommunityDataRow
+                        key={row.rek_pid}
+                        conf={conf}
+                        row={row}
+                        adminUser={adminUser}
+                        labels={labels}
+                        autoCollapse={autoCollapse}
+                    />
+                ))}
+            </Grid>
+        </Grid>
     );
 };
 CommunityTable.propTypes = {
