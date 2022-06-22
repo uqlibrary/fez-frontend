@@ -2,9 +2,9 @@ import React from 'react';
 import MemoizedAdminContainer, { AdminContainer, isSame } from './AdminContainer';
 import { recordWithDatastreams } from 'mock/data';
 import Immutable from 'immutable';
+import { useIsMobileView } from '../../../hooks/useIsMobileView';
 
-jest.mock('@material-ui/core/useMediaQuery');
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+jest.mock('../../../hooks/useIsMobileView');
 
 jest.mock('../submitHandler', () => ({
     onSubmit: jest.fn(),
@@ -60,7 +60,7 @@ describe('AdminContainer component', () => {
     });
 
     it('should render mobile view', () => {
-        useMediaQuery.mockImplementation(() => true);
+        useIsMobileView.mockImplementation(() => true);
         const wrapper = setup({});
 
         expect(toJson(wrapper)).toMatchSnapshot();

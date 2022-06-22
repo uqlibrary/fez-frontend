@@ -993,6 +993,7 @@ export default {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
                     },
                 },
+                rccDataset: 'RCC Datasets are not allowed.',
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),

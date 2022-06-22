@@ -8,6 +8,7 @@ import { debounce } from 'throttle-debounce';
 
 import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECORD_TYPE_RECORD } from 'config/general';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
+import { rccDatasetCollection } from 'config/doi';
 
 export const navigateToUrl = (uri, target, navigatedFrom, options) => {
     let fullUri = uri;
@@ -53,7 +54,13 @@ export const AdminActions = ({
 
     // Restrict DOI option to restricted types
     const isDoiType = isTypeRecord && PUBLICATION_TYPES_WITH_DOI.includes(displayType);
-    filteredActions = filteredActions.filter(action => !action.isDoi || (isDoiType && (!doi || hasUQDoi)));
+    const isRccDataset = publication.fez_record_search_key_ismemberof?.filter(
+        parent => parent.rek_ismemberof === rccDatasetCollection,
+    ).length;
+
+    filteredActions = filteredActions.filter(
+        action => !action.isDoi || (isDoiType && (!doi || hasUQDoi) && !isRccDataset),
+    );
 
     const menuOptions = filteredActions.map(action => {
         const linkTarget = action.inApp ? '_self' : '_blank';

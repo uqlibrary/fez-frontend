@@ -17,6 +17,11 @@ const assertScrollIsOnTop = () =>
     cy.get('#content-container').should($el => {
         expect($el.get(0).scrollTop).to.be.equals(0);
     });
+const captureBeforeContent = element => {
+    const win = element[0].ownerDocument.defaultView;
+    const before = win.getComputedStyle(element[0], 'before');
+    return before.getPropertyValue('content');
+};
 
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
@@ -29,7 +34,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('div[data-testid="journal-search-card"]').should('contain', 'Step 1.');
         cy.get('div[data-testid="journal-search-card"]').should(
             'contain',
-            'Enter a journal title, keyword, subject or field of research code.',
+            'Enter a journal title, ISSN, keyword, subject or field of research code',
         );
         cy.get('[data-testid="journal-search-card"]').should('exist');
         cy.get('button[data-testid="journal-search-keywords-voice-record-start-button"]').should('exist');
@@ -96,7 +101,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 22);
+            .should('have.length', 32);
 
         cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
@@ -126,7 +131,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 23);
+            .should('have.length', 34);
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 
@@ -172,6 +177,31 @@ context('Strategic Publishing - Search', () => {
                     // make sure the scroll hasn't changed
                     assertScrollIsNotOnTop();
                 });
+        });
+    });
+
+    it('Selecting keyword should indicate change on keyword icon when added', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"+"');
+        });
+
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"+"');
         });
     });
 
@@ -292,6 +322,23 @@ context('Strategic Publishing - Search', () => {
             },
             violations => console.log(violations),
         );
+    });
+
+    it('Should not keep any previous search history when navigating from another page', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[id=main-menu-button]').click();
+        cy.contains('Home').click();
+        cy.get('[id=main-menu-button]').click();
+        cy.contains('Journal search').click();
+
+        cy.contains('Step 2').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-titles-containing"]').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-keyword-matches"]').should('not.exist');
+        cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]').should('not.exist');
+        cy.get('Searching for journals containing').should('not.exist');
+        cy.get('[id=journal-search-results-container]').should('not.exist');
     });
 
     it('Renders journal search result table in more view', () => {

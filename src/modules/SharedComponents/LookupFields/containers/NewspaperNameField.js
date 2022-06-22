@@ -1,7 +1,7 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import matchSorter from 'match-sorter';
+import { matchSorter } from 'match-sorter';
 
 const category = 'journal_name';
 const mapStateToProps = (state, props) => {

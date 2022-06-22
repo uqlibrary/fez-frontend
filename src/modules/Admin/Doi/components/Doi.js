@@ -23,7 +23,7 @@ import {
     UQ_FULL_NAME,
 } from 'config/general';
 import { pathConfig } from 'config/pathConfig';
-import { doiFields } from 'config/doi';
+import { doiFields, rccDatasetCollection } from 'config/doi';
 import { validation } from 'config';
 
 import { useConfirmationState } from 'hooks';
@@ -225,6 +225,13 @@ export const getErrorMessage = record => {
             errorMessages.push(txt.alertMessages.uqIsNotPublisher.replace('[SUBJECT]', 'This work'));
         }
 
+        if (
+            record.fez_record_search_key_ismemberof?.filter(parent => parent.rek_ismemberof === rccDatasetCollection)
+                .length
+        ) {
+            errorMessages.push(txt.alertMessages.rccDataset);
+        }
+
         // Preview fields
         const invalidPreviewFields = !unsupportedDisplayType && getInvalidPreviewFields(record);
         if (invalidPreviewFields.length) {
@@ -316,18 +323,21 @@ export const Doi = ({
         window.location.assign(pathConfig.records.view(pid, true));
     };
 
+    // deep clone
+    const alertTxt = JSON.parse(JSON.stringify(txt.alertProps));
+    const confirmationTxt = JSON.parse(JSON.stringify(txt.successConfirmation));
     if (record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION) {
-        txt.alertProps.progressAlert.message = txt.alertProps.progressAlert.message
+        alertTxt.progressAlert.message = alertTxt.progressAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');
-        txt.alertProps.successAlert.message = txt.alertProps.successAlert.message
+        alertTxt.successAlert.message = alertTxt.successAlert.message
             .replace(DOI_CROSSREF_NAME, DOI_DATACITE_NAME)
             .replace('queued', 'submitted');
-        txt.successConfirmation.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
+        confirmationTxt.confirmationMessage = `The DOI has been created/updated in ${DOI_DATACITE_NAME}`;
     }
 
     const alertProps = validation.getErrorAlertProps({
-        alertLocale: txt.alertProps,
+        alertLocale: alertTxt,
         error: doiFailed,
         submitSucceeded: doiUpdated,
         submitting: doiRequesting,
@@ -353,7 +363,7 @@ export const Doi = ({
                             confirmationBoxId="rek-doi"
                             hideCancelButton
                             isOpen={isOpen}
-                            locale={txt.successConfirmation}
+                            locale={confirmationTxt}
                             onAction={navigateToViewPage}
                             onClose={hideConfirmation}
                         />

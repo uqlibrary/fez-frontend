@@ -1,7 +1,7 @@
 import { AutoCompleteAsynchronousField } from 'modules/SharedComponents/Toolbox/AutoSuggestField';
 import { connect } from 'react-redux';
 import * as actions from 'actions';
-import matchSorter from 'match-sorter';
+import { matchSorter } from 'match-sorter';
 import { TitleOrPidOptionTemplate } from 'modules/SharedComponents/LookupFields';
 
 const category = 'publication';

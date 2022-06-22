@@ -68,24 +68,24 @@ context('Strategic Publishing - Favourite Journals', () => {
         cy.location('pathname').should('contain', '/journals/search/');
     });
 
-    it('Should navigate to search results', () => {
+    it('Should remove a favourite journal and navigate back to search results', () => {
         const uri = '/journals/search/';
         const query =
             '?keywords%5BTitle-Microbiology%5D%5Btype%5D=Title&keywords%5BTitle-Microbiology%5D%5Btext%5D=Microbiology&keywords%5BTitle-Microbiology%5D%5Bid%5D=Title-Microbiology';
         cy.visit(`${uri}${query}`);
         cy.get('[data-testid="journal-search-favourite-journals-button"]').click();
         cy.location('pathname').should('contain', '/journals/favourites/');
-        cy.get('[data-testid="remove-from-favourites-button"]').should('be.disabled');
+        // change results sorting
+        cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
+        cy.get('[data-testid="publication-list-sorting-sort-order-option-1"]').click();
         // remove a fav
+        cy.get('[data-testid="remove-from-favourites-button"]').should('be.disabled');
         cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]')
             .click()
             .should('not.be.disabled');
         cy.get('[data-testid="remove-from-favourites-button"]')
             .should('not.be.disabled')
             .click();
-        // change results sorting
-        cy.get('[data-testid="publication-list-sorting-sort-order"]').click();
-        cy.get('[data-testid="publication-list-sorting-sort-order-option-1"]').click();
         cy.get('[data-testid="return-to-search-results-button"]').click();
         // go back to search results
         cy.location().should(loc => {
