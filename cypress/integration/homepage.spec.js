@@ -53,7 +53,7 @@ context('Homepage', () => {
 
     it('Has expected menu items for a student without an author account', () => {
         cy.visit('/?user=s3333333');
-        checkMenuItemCount(4);
+        checkMenuItemCount(5);
     });
 
     it('Has expected menu items for a RHD student', () => {
