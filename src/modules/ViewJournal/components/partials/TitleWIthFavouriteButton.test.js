@@ -1,5 +1,7 @@
 import React from 'react';
 import { act, fireEvent, render, WithReduxStore, WithRouter } from 'test-utils';
+import * as actions from 'actions';
+
 import TitleWithFavouriteButton from './TitleWithFavouriteButton';
 
 import { journalDetails } from 'mock/data';
@@ -7,6 +9,7 @@ import { journalDetails } from 'mock/data';
 function setup(testProps = {}) {
     const props = {
         journal: journalDetails.data,
+        actions: { addFavourite: actions.addToFavourites, removeFavourite: actions.removeFromFavourites },
         tooltips: {
             favourite: 'Test favourite tooltip',
             notFavourite: 'Test not favourite tooltip',
@@ -41,7 +44,7 @@ describe('TitleWithFavouriteButton', () => {
     });
 
     it('should contain a title with an unfavourite button', () => {
-        const journal = { ...journalDetails.data, jnl_favourite: true };
+        const journal = { ...journalDetails.data, is_favourite: true };
         const { getByTestId, getByText } = setup({ journal });
         expect(getByText(journalDetails.data.jnl_title)).toBeInTheDocument();
         expect(getByTestId('favourite-journal-saved')).toBeInTheDocument();
