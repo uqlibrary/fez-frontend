@@ -23,7 +23,7 @@ export const isAdded = datastream => {
  */
 export const getAdvisoryStatement = (record, _default) => {
     // eslint-disable-next-line camelcase
-    const value = record.fez_record_search_key_advisory_statement?.rek_advisory_statement;
+    const value = record?.fez_record_search_key_advisory_statement?.rek_advisory_statement;
     return value ? stripHtml(value) : stripHtml(_default);
 };
 
@@ -35,9 +35,9 @@ export const getSensitiveHandlingNote = record =>
         record.fez_record_search_key_sensitive_handling_note_id.rek_sensitive_handling_note_id,
     ) &&
     // eslint-disable-next-line camelcase
-    !!record.fez_record_search_key_sensitive_handling_note_other.rek_sensitive_handling_note_other
+    !!record.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other
         ? record.fez_record_search_key_sensitive_handling_note_other.rek_sensitive_handling_note_other
         : SENSITIVE_HANDLING_NOTE_TYPE.find(
               item =>
                   item.value === record.fez_record_search_key_sensitive_handling_note_id.rek_sensitive_handling_note_id,
-          ).text;
+          )?.text;
