@@ -71,7 +71,6 @@ const useStyles = makeStyles(theme => ({
     },
     collectionRow: {
         boxSizing: 'border-box',
-        outline: '1px solid #ededed',
         boxShadow: '0 -1px 0 #eaeaea',
         padding: '15px 0px',
     },

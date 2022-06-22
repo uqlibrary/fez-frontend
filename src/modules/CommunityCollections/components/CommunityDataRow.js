@@ -33,7 +33,6 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles({
     rowParent: {
         boxSizing: 'border-box',
-        outline: '1px solid #ededed',
         boxShadow: '0 -1px 0 #eaeaea',
         padding: '15px 0px 0px',
     },

@@ -42,7 +42,9 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -50,7 +52,8 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               secondaryTypographyProps={
@@ -70,7 +73,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -90,7 +93,9 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
@@ -188,6 +193,8 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
+        md={9}
+        sm={11}
         xs={10}
       >
         <WithStyles(ForwardRef(Grid))
@@ -196,6 +203,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
+            sm={5}
             xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
@@ -216,7 +224,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -233,7 +241,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -253,6 +261,8 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
+        md={3}
+        sm={1}
         xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
@@ -351,7 +361,9 @@ exports[`GrantListEditorHeader should render default view 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -359,7 +371,8 @@ exports[`GrantListEditorHeader should render default view 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               secondaryTypographyProps={
@@ -379,7 +392,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -396,7 +409,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -416,7 +429,9 @@ exports[`GrantListEditorHeader should render default view 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
@@ -514,7 +529,9 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           container={true}
@@ -522,7 +539,8 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               secondaryTypographyProps={
@@ -542,7 +560,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -559,7 +577,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              sm={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 secondaryTypographyProps={
@@ -579,7 +597,9 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={

@@ -206,7 +206,9 @@ describe('SearchJournals', () => {
         expect(testHistory.location.search).toEqual('');
         expect(queryByTestId('journal-search-chip-keyword-astrobiology')).not.toBeInTheDocument();
         expect(queryByTestId('641-astrobiology-link')).not.toBeInTheDocument();
-        expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
+        expect(
+            getByText('Enter a journal title, ISSN, keyword, subject or field of research code'),
+        ).toBeInTheDocument();
 
         expect(queryByText('Step 2.')).not.toBeInTheDocument();
     });
@@ -261,7 +263,9 @@ describe('SearchJournals', () => {
         expect(testHistory.location.search).toEqual('');
         expect(queryByTestId('journal-search-chip-keyword-astrobiology')).not.toBeInTheDocument();
         expect(queryByTestId('641-astrobiology-link')).not.toBeInTheDocument();
-        expect(getByText('Enter a journal title, keyword, subject or field of research code.')).toBeInTheDocument();
+        expect(
+            getByText('Enter a journal title, ISSN, keyword, subject or field of research code'),
+        ).toBeInTheDocument();
 
         act(() => {
             testHistory.goBack();
@@ -269,7 +273,7 @@ describe('SearchJournals', () => {
 
         expect(testHistory.location.search).toEqual(testQuerySearchAstrobiology);
         expect(
-            queryByText('Enter a journal title, keyword, subject or field of research code.'),
+            queryByText('Enter a journal title, ISSN, keyword, subject or field of research code'),
         ).not.toBeInTheDocument();
         expect(queryByTestId('journal-search-chip-keyword-astrobiology')).toBeInTheDocument();
         expect(queryByTestId('641-astrobiology-link')).toBeInTheDocument();

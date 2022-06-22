@@ -17,6 +17,11 @@ const assertScrollIsOnTop = () =>
     cy.get('#content-container').should($el => {
         expect($el.get(0).scrollTop).to.be.equals(0);
     });
+const captureBeforeContent = element => {
+    const win = element[0].ownerDocument.defaultView;
+    const before = win.getComputedStyle(element[0], 'before');
+    return before.getPropertyValue('content');
+};
 
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
@@ -29,7 +34,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('div[data-testid="journal-search-card"]').should('contain', 'Step 1.');
         cy.get('div[data-testid="journal-search-card"]').should(
             'contain',
-            'Enter a journal title, keyword, subject or field of research code.',
+            'Enter a journal title, ISSN, keyword, subject or field of research code',
         );
         cy.get('[data-testid="journal-search-card"]').should('exist');
         cy.get('button[data-testid="journal-search-keywords-voice-record-start-button"]').should('exist');
@@ -172,6 +177,31 @@ context('Strategic Publishing - Search', () => {
                     // make sure the scroll hasn't changed
                     assertScrollIsNotOnTop();
                 });
+        });
+    });
+
+    it('Selecting keyword should indicate change on keyword icon when added', () => {
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').click();
+        cy.get('[data-testid="journal-search-chip-keyword-bioe"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-keyword-bioe-27"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"+"');
+        });
+
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"‒"');
+        });
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').click();
+        cy.get('[data-testid="journal-search-chip-title-biomedicine"]').should('not.exist');
+        cy.get('[data-testid="journal-search-item-addable-title-biomedicine-5"]').then($element => {
+            expect(captureBeforeContent($element)).to.eq('"+"');
         });
     });
 

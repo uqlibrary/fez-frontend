@@ -31,6 +31,7 @@ exports[`Search record results should render a single claimable item with no aut
       item={true}
       md={9}
       sm={8}
+      xs={true}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -516,6 +517,7 @@ exports[`Search record results should render a single unclaimable item with no a
       item={true}
       md={9}
       sm={8}
+      xs={true}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -1413,6 +1415,7 @@ exports[`Search record results should render a single unclaimable item with no a
                     item={true}
                     md={9}
                     sm={8}
+                    xs={true}
                   >
                     <ForwardRef(Grid)
                       classes={
@@ -1525,9 +1528,10 @@ exports[`Search record results should render a single unclaimable item with no a
                       item={true}
                       md={9}
                       sm={8}
+                      xs={true}
                     >
                       <div
-                        className="MuiGrid-root MuiGrid-item MuiGrid-grid-sm-8 MuiGrid-grid-md-9"
+                        className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-8 MuiGrid-grid-md-9"
                       >
                         <WithStyles(ForwardRef(Grid))
                           item={true}
@@ -3210,6 +3214,7 @@ exports[`Search record results should render publications list with one publicat
       item={true}
       md={9}
       sm={8}
+      xs={true}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
@@ -3448,6 +3453,7 @@ exports[`Search record results should render spinner 1`] = `
       item={true}
       md={9}
       sm={8}
+      xs={true}
     >
       <WithStyles(InlineLoader)
         message="Searching for works"
@@ -3513,6 +3519,7 @@ exports[`Search record results should render stepper and no results 1`] = `
       item={true}
       md={9}
       sm={8}
+      xs={true}
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
