@@ -2,8 +2,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import * as actions from 'actions';
-
 import IconButton from '@material-ui/core/IconButton';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarIcon from '@material-ui/icons/Star';
@@ -27,9 +25,9 @@ const useStyles = makeStyles(theme => ({
 const TitleWithFavouriteButton = props => {
     const classes = useStyles();
 
-    const { journal, tooltips, handlers } = props;
+    const { journal, tooltips, actions, handlers } = props;
     const [isBusy, setIsBusy] = React.useState(false);
-    const [active, setActive] = React.useState(!!journal.jnl_favourite === true);
+    const [active, setActive] = React.useState(!!journal.is_favourite === true);
     const dispatch = useDispatch();
 
     const onClickFavouriteButtonHandler = isAddingFavourite => {
@@ -37,8 +35,8 @@ const TitleWithFavouriteButton = props => {
         let newActive = isAddingFavourite;
 
         const dispatchAction = isAddingFavourite
-            ? actions.addToFavourites([journal.jnl_jid])
-            : actions.removeFromFavourites([journal.jnl_jid]);
+            ? actions.addFavourite([journal.jnl_jid])
+            : actions.removeFavourite([journal.jnl_jid]);
 
         dispatch(dispatchAction)
             .catch(() => {
@@ -58,22 +56,22 @@ const TitleWithFavouriteButton = props => {
                 <IconButton
                     id={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
                     data-testid={`favourite-journal-${active ? 'saved' : 'notsaved'}`}
-                    onClick={() => onClickFavouriteButtonHandler(!active)}
+                    component={isBusy ? 'div' : undefined}
+                    onClick={!isBusy ? () => onClickFavouriteButtonHandler(!active) : undefined}
                     size="small"
                     disabled={isBusy}
                     className={classes.iconButton}
+                    aria-label={active ? tooltips.favourite : tooltips.notFavourite}
                 >
-                    {
-                        <Icon
-                            id={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
-                            data-testid={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
-                            color="primary"
-                            className={classes.iconButtonSvg}
-                        >
-                            {active && <StarIcon className={classes.iconButtonSvg} />}
-                            {!active && <StarBorderIcon className={classes.iconButtonSvg} />}
-                        </Icon>
-                    }
+                    <Icon
+                        id={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
+                        data-testid={`favourite-icon-${active ? 'saved' : 'notsaved'}`}
+                        color="primary"
+                        className={classes.iconButtonSvg}
+                    >
+                        {active && <StarIcon className={classes.iconButtonSvg} />}
+                        {!active && <StarBorderIcon className={classes.iconButtonSvg} />}
+                    </Icon>
                 </IconButton>
             </Tooltip>
         </>
@@ -85,6 +83,10 @@ TitleWithFavouriteButton.propTypes = {
     tooltips: PropTypes.shape({
         favourite: PropTypes.string.isRequired,
         notFavourite: PropTypes.string.isRequired,
+    }).isRequired,
+    actions: PropTypes.shape({
+        addFavourite: PropTypes.func.isRequired,
+        removeFavourite: PropTypes.func.isRequired,
     }).isRequired,
     handlers: PropTypes.shape({
         errorUpdatingFavourite: PropTypes.func.isRequired,
