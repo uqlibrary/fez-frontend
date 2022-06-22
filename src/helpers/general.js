@@ -10,9 +10,14 @@ export const leftJoin = (objArr1, objArr2, key1, key2) => {
     }));
 };
 
+export const isString = argument => typeof argument === 'string' || argument instanceof String;
+
 export const stripHtml = html => {
+    if (!isString(html)) {
+        return '';
+    }
     const temporalDivElement = document.createElement('div');
-    temporalDivElement.innerHTML = html;
+    temporalDivElement.innerHTML = html.replace(/<(?:br|p)[^>]*>/gim, ' ').replace(/\s+/, ' ');
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
 };
 

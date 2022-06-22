@@ -820,10 +820,6 @@ function setup(testProps) {
         theme: {},
         isAdmin: testProps.isAdmin || true,
         publication: testProps.publication || journalArticle,
-        hideAdvisoryStatement: false,
-        setAdvisoryStatement: jest.fn(),
-        hideSensitiveHandlingNote: false,
-        setSensitiveHandlingNote: jest.fn(),
         classes: { header: 'header' },
         authorDetails: testProps.authorDetails || mock.accounts.uqresearcher,
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
@@ -879,7 +875,6 @@ describe('Files Component ', () => {
 
     it('should not render advisory statement', () => {
         const wrapper = setup({
-            hideAdvisoryStatement: false,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_advisory_statement: {
@@ -892,7 +887,6 @@ describe('Files Component ', () => {
 
     it('should not render advisory statement', () => {
         const wrapper = setup({
-            hideAdvisoryStatement: true,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
@@ -907,14 +901,12 @@ describe('Files Component ', () => {
                 ...journalArticle,
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
             },
-            hideAdvisoryStatement: false,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render sensitive handling note - scenario 1', () => {
         const wrapper = setup({
-            hideSensitiveHandlingNote: false,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_sensitive_handling_note_id: {
@@ -931,7 +923,6 @@ describe('Files Component ', () => {
 
     it('should not render sensitive handling note - scenario 2', () => {
         const wrapper = setup({
-            hideSensitiveHandlingNote: true,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_sensitive_handling_note_id: {
@@ -945,25 +936,21 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not render sensitive handling note - scenario 3', () => {
+    it('should render sensitive handling note', () => {
         const wrapper = setup({
-            hideSensitiveHandlingNote: true,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: 'test',
+                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_TYPE.find(item => item.value !== 'Other')
+                        .value,
                 },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render sensitive handling note', () => {
+    it('should render sensitive handling note - other', () => {
         const wrapper = setup({
-            hideSensitiveHandlingNote: false,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_sensitive_handling_note_id: {
@@ -1002,8 +989,6 @@ describe('Files Component ', () => {
                     rek_sensitive_handling_note_other: 'test',
                 },
             },
-            hideAdvisoryStatement: true,
-            hideSensitiveHandlingNote: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -1896,8 +1881,6 @@ describe('Files Component ', () => {
                     rek_sensitive_handling_note_other: 'test',
                 },
             },
-            hideAdvisoryStatement: true,
-            hideSensitiveHandlingNote: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -166,20 +166,6 @@ describe('View record actions', () => {
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
-
-        it('dispatch expected actions on hiding advisory statement', () => {
-            mockActionsStore.dispatch(viewRecordActions.setAdvisoryStatement());
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_ADVISORY_STATEMENT_HIDE,
-            });
-        });
-
-        it('dispatch expected actions on hiding sensitive handling note', () => {
-            mockActionsStore.dispatch(viewRecordActions.setSensitiveHandlingNote());
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_SENSITIVE_HANDLING_NOTE_HIDE,
-            });
-        });
     });
 
     describe('setting/clearing record to view action', () => {

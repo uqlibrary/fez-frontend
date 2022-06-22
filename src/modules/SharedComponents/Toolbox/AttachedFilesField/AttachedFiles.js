@@ -30,8 +30,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
-import { stripHtml } from 'helpers/general';
-import { isSensitiveHandlingNoteTypeOther } from '../../SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
+import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -137,10 +136,6 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) 
 
 export const AttachedFiles = ({
     dataStreams,
-    hideAdvisoryStatement,
-    setAdvisoryStatement,
-    hideSensitiveHandlingNote,
-    setSensitiveHandlingNote,
     disabled,
     deleteHint,
     onDelete,
@@ -181,45 +176,24 @@ export const AttachedFiles = ({
     };
 
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
-    const shouldDisplayAdvisoryStatementAlert =
-        !hideAdvisoryStatement && !!record.fez_record_search_key_advisory_statement;
-    const shouldDisplaySensitiveHandlingNoteAlert =
-        !hideSensitiveHandlingNote &&
-        isSensitiveHandlingNoteTypeOther(
-            // eslint-disable-next-line camelcase
-            record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id,
-        ) &&
-        // eslint-disable-next-line camelcase
-        !!record.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other;
-    const replaceBreakLines = string => string.replace(/\n/, ' ');
+
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
     return (
         <Grid item xs={12}>
             <StandardCard title={locale.title} subCard>
-                {shouldDisplayAdvisoryStatementAlert && (
+                {/* eslint-disable-next-line camelcase */}
+                {!!record.fez_record_search_key_advisory_statement && (
                     <Alert
                         allowDismiss
                         type="info"
-                        message={replaceBreakLines(
-                            stripHtml(record.fez_record_search_key_advisory_statement.rek_advisory_statement) ||
-                                stripHtml(locale.culturalSensitivityStatement),
-                        )}
-                        dismissAction={setAdvisoryStatement}
+                        message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
                     />
                 )}
-                {shouldDisplayAdvisoryStatementAlert && shouldDisplaySensitiveHandlingNoteAlert && <br />}
-                {shouldDisplaySensitiveHandlingNoteAlert && (
-                    <Alert
-                        allowDismiss
-                        type="info"
-                        message={replaceBreakLines(
-                            record.fez_record_search_key_sensitive_handling_note_other
-                                .rek_sensitive_handling_note_other,
-                        )}
-                        dismissAction={setSensitiveHandlingNote}
-                    />
+                {/* eslint-disable-next-line camelcase */}
+                {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
+                    <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 <div style={{ padding: 8 }}>
@@ -388,10 +362,6 @@ export const AttachedFiles = ({
 
 AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
-    hideAdvisoryStatement: PropTypes.bool,
-    setAdvisoryStatement: PropTypes.func,
-    hideSensitiveHandlingNote: PropTypes.bool,
-    setSensitiveHandlingNote: PropTypes.func,
     disabled: PropTypes.bool,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,

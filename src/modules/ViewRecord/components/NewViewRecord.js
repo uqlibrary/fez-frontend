@@ -82,8 +82,6 @@ const useStyles = makeStyles(theme => ({
 export const NewViewRecord = ({
     account,
     author,
-    hideAdvisoryStatement,
-    hideSensitiveHandlingNote,
     isDeleted,
     isDeletedVersion,
     loadingRecordToView,
@@ -98,17 +96,6 @@ export const NewViewRecord = ({
 
     const txt = locale.pages.viewRecord;
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
-
-    const handleSetAdvisoryStatement = React.useCallback(
-        () => dispatch(actions.setAdvisoryStatement()),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
-    const handleSetSensitiveHandlingNote = React.useCallback(
-        () => dispatch(actions.setSensitiveHandlingNote()),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
     const classes = useStyles();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
@@ -304,10 +291,6 @@ export const NewViewRecord = ({
                                 author={author}
                                 account={account}
                                 publication={recordToView}
-                                hideAdvisoryStatement={hideAdvisoryStatement}
-                                setAdvisoryStatement={handleSetAdvisoryStatement}
-                                hideSensitiveHandlingNote={hideSensitiveHandlingNote}
-                                setSensitiveHandlingNote={handleSetSensitiveHandlingNote}
                                 isAdmin={!!isAdmin}
                                 isAuthor={!!isAuthor}
                             />
@@ -329,8 +312,6 @@ export const NewViewRecord = ({
 NewViewRecord.propTypes = {
     account: PropTypes.object,
     author: PropTypes.object,
-    hideAdvisoryStatement: PropTypes.bool,
-    hideSensitiveHandlingNote: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,
