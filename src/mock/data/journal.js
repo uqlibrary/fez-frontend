@@ -1,5 +1,6 @@
 export const journalDetails = {
     'data': {
+        'jnl_favourite': false,
         'jnl_jid': 8508,
         'jnl_title': 'American Journal of Public Health',
         'jnl_publisher': 'American Public Health Association',
