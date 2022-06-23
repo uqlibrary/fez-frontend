@@ -5,6 +5,7 @@ import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from
 import { selectFields } from '../../../../locale/selectFields';
 import { Field } from 'redux-form/immutable';
 import { useFormValuesContext } from 'context';
+import { validation } from 'config';
 
 export const isSensitiveHandlingNoteTypeOther = value => parseInt(value, 10) === SENSITIVE_HANDLING_NOTE_OTHER_TYPE;
 
@@ -35,6 +36,7 @@ export const SensitiveHandlingNoteField = props => {
                     minRows={6}
                     maxRows={6}
                     inputProps={{ maxLength: 65535 }}
+                    validate={value => isOther && validation.required(value)}
                 />
             )}
         </>
