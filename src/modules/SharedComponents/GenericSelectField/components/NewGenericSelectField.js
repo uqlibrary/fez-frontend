@@ -130,7 +130,9 @@ export const NewGenericSelectField = ({
                 return (
                     <MenuItem
                         classes={{ root: classes.root, selected: classes.selectedMenuItem }}
-                        style={{ display: 'block' }}
+                        // 1200px is the width of tha pages on the App. This is static
+                        // so there is no need to make the style property dynamic at this stage
+                        style={{ display: 'block', maxWidth: '1200px' }}
                         selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}
