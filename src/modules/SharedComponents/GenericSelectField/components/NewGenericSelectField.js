@@ -12,6 +12,10 @@ const useStyles = makeStyles(
         root: {
             whiteSpace: 'unset',
             wordBreak: 'break-word',
+            display: 'block',
+            // 1200px is the width of pages on the App. This is static
+            // so there is no need to make the style property dynamic at this stage
+            maxWidth: '1200px',
         },
         selectedMenuItem: {
             backgroundColor: `${theme.palette.accent.main} !important`,
@@ -130,9 +134,6 @@ export const NewGenericSelectField = ({
                 return (
                     <MenuItem
                         classes={{ root: classes.root, selected: classes.selectedMenuItem }}
-                        // 1200px is the width of tha pages on the App. This is static
-                        // so there is no need to make the style property dynamic at this stage
-                        style={{ display: 'block', maxWidth: '1200px' }}
                         selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}
