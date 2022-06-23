@@ -18,6 +18,7 @@ export const stripHtml = html => {
     }
     const temporalDivElement = document.createElement('div');
     temporalDivElement.innerHTML = html.replace(/<(?:br|p)[^>]*>/gim, ' ').replace(/\s+/, ' ');
+    /* istanbul ignore next */
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
 };
 
