@@ -12,6 +12,7 @@ const exportConfigFromAction = action =>
 const handlers = {
     [actions.EXPORT_PUBLICATIONS_LOADING]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
+        // console.log('EXPORT_PUBLICATIONS_LOADING', state, action, exportConfig);
         return {
             ...state,
             exportPublicationsLoading: true,
@@ -28,6 +29,8 @@ const handlers = {
         if (exportConfig) {
             delete loadingByPage[exportConfig];
         }
+
+        // console.log('EXPORT_PUBLICATIONS_LOADED', state, action, exportConfig, loadingByPage);
         return {
             ...state,
             exportPublicationsLoading: false,
@@ -41,6 +44,7 @@ const handlers = {
 
     [actions.EXPORT_PUBLICATIONS_FAILED]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
+        // console.log('EXPORT_PUBLICATIONS_FAILED', state, action, exportConfig);
         return {
             ...state,
             exportPublicationsLoading: false,

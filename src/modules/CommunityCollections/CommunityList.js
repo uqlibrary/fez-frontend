@@ -8,6 +8,7 @@ import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import { userIsAdmin } from 'hooks';
+import { useQueryStringParams, useSearchRecordsControls } from 'modules/SearchRecords/hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +19,8 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
-import CommunityCollectionsSorting from './components/CommunityCollectionsSorting';
+import PublicationsListSorting from 'modules/SharedComponents/PublicationsList/components/PublicationsListSorting';
+
 // import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
 import { makeStyles } from '@material-ui/core/styles';
@@ -75,6 +77,8 @@ export const CommunityList = () => {
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
+    const { queryParams, updateQueryString } = useQueryStringParams(history, history.location, null, true);
+    const { handleExport } = useSearchRecordsControls(queryParams, updateQueryString, actions);
 
     sortDirection = queryStringObject.sortDirection ? queryStringObject.sortDirection : sortDirection;
     sortDirection = sortDirection.charAt(0).toUpperCase() + sortDirection.slice(1);
@@ -86,6 +90,11 @@ export const CommunityList = () => {
     const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
     const loadingCommunitiesError = useSelector(state => state.get('viewCommunitiesReducer').loadingCommunitiesError);
+
+    const tmp = useSelector(state => state.get('exportPublicationsReducer').exportPublicationsLoading);
+    React.useEffect(() => {
+        console.log('exportPublicationsReducer', tmp);
+    }, [tmp]);
 
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
@@ -196,14 +205,16 @@ export const CommunityList = () => {
                         )}
 
                         <Grid item xs={12} style={{ marginBottom: 10 }}>
-                            <CommunityCollectionsSorting
+                            <PublicationsListSorting
                                 data-testid="community-collections-sorting-top"
+                                canUseExport
                                 exportData={txt.export}
                                 pagingData={PagindData}
                                 sortingData={txt.sorting}
                                 sortBy={sortBy}
                                 sortDirection={sortDirection}
                                 onSortByChanged={sortByChanged}
+                                onExportPublications={handleExport}
                                 onPageSizeChanged={pageSizeChanged}
                                 pageSize={perPage}
                                 sortingDefaults={sortingDefaults}
