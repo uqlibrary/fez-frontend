@@ -11,11 +11,13 @@ import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
 import Add from '@material-ui/icons/Add';
+import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
+import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
+import param from 'can-param';
 import { Grid } from '@material-ui/core';
 import { Hidden } from '@material-ui/core';
 
@@ -107,6 +109,16 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
     const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
     const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
+
+    const exportCollectionsLoading = useSelector(
+        state => state.get('exportCollectionsReducer').exportCollectionsLoading,
+    );
+    React.useEffect(() => {
+        console.log('exportCollectionsLoading', exportCollectionsLoading);
+    }, [exportCollectionsLoading]);
+    // <<< HERE, WHY ISN"T THIS STATE VALUE BEING SET OR UPDATED WHEN EXPORTING COLLECTIONS??
+    const isLoadingOrExporting = collectionListLoading || exportCollectionsLoading;
+
     const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
@@ -119,6 +131,19 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         per_page: finalList.per_page,
         current_page: finalList.current_page,
     };
+
+    const location = React.useMemo(() => {
+        return {
+            search: param({
+                page: PagingData.current_page,
+                per_page: PagingData.per_page,
+                sort: sortBy,
+                order_by: sortDirection,
+            }),
+        };
+    }, [PagingData.current_page, PagingData.per_page, sortBy, sortDirection]);
+    const { queryParams } = useQueryStringParams(location);
+    const { handleCollectionExport } = useCommunityCollectionControls(queryParams, actions);
 
     const sortByChanged = (sortby, direction) => {
         setSortDirection(direction);
@@ -165,12 +190,18 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
 
     return (
         <div>
-            {collectionListLoading && loadingCollectionsPid === pid && (
-                <div data-testid="collections-page-loading">
-                    <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
-                </div>
-            )}
-            {loadingCollectionsPid !== pid && (
+            {exportCollectionsLoading ||
+                (collectionListLoading && loadingCollectionsPid === pid && (
+                    <div data-testid="collections-page-loading">
+                        <InlineLoader
+                            loaderId="collections-page-loading"
+                            message={
+                                exportCollectionsLoading ? conf.loading.exportLoadingMessage : conf.loading.message
+                            }
+                        />
+                    </div>
+                ))}
+            {!exportCollectionsLoading && loadingCollectionsPid !== pid && (
                 <div
                     className={classes.collectionBase}
                     data-testid={`collection-records-${pid}`}
@@ -205,7 +236,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                         title,
                                     )}
                                 </Typography>
-                                <CommunityCollectionsSorting
+                                <PublicationsListSorting
                                     data-testid="embedded-collections-sorting-top"
                                     exportData={conf.export}
                                     pagingData={PagingData}
@@ -215,14 +246,16 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     onSortByChanged={sortByChanged}
                                     onPageSizeChanged={pageSizeChanged}
                                     pageSize={PagingData.per_page}
-                                    isCollection
+                                    canUseExport
+                                    onExportPublications={handleCollectionExport}
+                                    disabled={isLoadingOrExporting}
                                 />
 
                                 <PublicationsListPaging
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}
-                                    disabled={false}
+                                    disabled={isLoadingOrExporting}
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
                                 />
@@ -381,7 +414,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}
-                                    disabled={false}
+                                    disabled={isLoadingOrExporting}
                                     pagingId="embedded-collections-paging-bottom"
                                     data-testid="embedded-collections-paging-bottom"
                                 />

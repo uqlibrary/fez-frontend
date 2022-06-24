@@ -1,7 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
-    exportPublicationsLoading: false,
+    exportCollectionsLoading: false,
     loadingByPage: {},
     loadedByPage: {},
 };
@@ -10,11 +10,11 @@ const exportConfigFromAction = action =>
     (action.payload && action.payload.page && `${action.payload.format}-page-${action.payload.page}`) || false;
 
 const handlers = {
-    [actions.EXPORT_PUBLICATIONS_LOADING]: (state, action) => {
+    [actions.EXPORT_COLLECTIONS_LOADING]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
         return {
             ...state,
-            exportPublicationsLoading: true,
+            exportCollectionsLoading: true,
             loadingByPage: {
                 ...state.loadingByPage,
                 ...(exportConfig ? { [exportConfig]: true } : {}),
@@ -22,7 +22,7 @@ const handlers = {
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_LOADED]: (state, action) => {
+    [actions.EXPORT_COLLECTIONS_LOADED]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
         const loadingByPage = { ...state.loadingByPage };
         if (exportConfig) {
@@ -30,7 +30,7 @@ const handlers = {
         }
         return {
             ...state,
-            exportPublicationsLoading: false,
+            exportCollectionsLoading: false,
             loadingByPage,
             loadedByPage: {
                 ...state.loadedByPage,
@@ -39,11 +39,11 @@ const handlers = {
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_FAILED]: (state, action) => {
+    [actions.EXPORT_COLLECTIONS_FAILED]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
         return {
             ...state,
-            exportPublicationsLoading: false,
+            exportCollectionsLoading: false,
             loadingByPage: {
                 ...state.loadingByPage,
                 ...(exportConfig ? { [exportConfig]: false } : {}),
@@ -51,10 +51,10 @@ const handlers = {
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_RESET]: () => initialState,
+    [actions.EXPORT_COLLECTIONS_RESET]: () => initialState,
 };
 
-export default function exportPublicationsReducer(state = initialState, action) {
+export default function exportCollectionsReducer(state = initialState, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;
