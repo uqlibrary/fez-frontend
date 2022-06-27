@@ -209,9 +209,9 @@ GrantListEditorForm.propTypes = {
 GrantListEditorForm.defaultProps = {
     locale: {
         grantAgencyNameLabel: 'Funder/Sponsor name',
-        grantAgencyNameHint: 'Enter funder/sponsor name for this work',
+        grantAgencyNameHint: 'Funder/sponsor name for this work',
         grantIdLabel: 'Grant ID',
-        grantIdHint: 'Enter grant number for this work, if available',
+        grantIdHint: 'Grant number for this work',
         grantAgencyTypeLabel: 'Funder/Sponsor type',
         grantAgencyTypeHint: 'Funder/Sponsor type',
         addButton: 'Add grant',

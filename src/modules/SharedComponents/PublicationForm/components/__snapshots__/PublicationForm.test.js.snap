@@ -901,7 +901,7 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -1441,7 +1441,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -4707,7 +4707,7 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 displayType={174}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -5250,7 +5250,7 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 displayType={202}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -5793,7 +5793,7 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 displayType={179}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -6336,7 +6336,7 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 displayType={275}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select any relevant indicator(s)."
+                label="Select any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
