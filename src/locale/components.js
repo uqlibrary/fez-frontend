@@ -1728,7 +1728,7 @@ export default {
             pageSize: 'Works per page',
             pageOf: 'Page [currentPage] of [totalPages]',
             totalRecords: '([total] works)',
-            pagingBracket: 3,
+            pagingBracket: 2,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
             firstLastSeparator: '...',
         },
@@ -3911,18 +3911,15 @@ export default {
             },
             journalSearchInput: {
                 titlePrefix: 'Step 1.',
-                title: 'Enter a journal title, keyword, subject or field of research code.',
+                title: 'Enter a journal title, ISSN, keyword, subject or field of research code',
             },
             journalSearchInterface: {
                 title: 'Journal search',
                 intro: (
                     <React.Fragment>
-                        <p>
-                            Search UQ's curated strategic publishing data as part of your critical tasks of publishing
-                            and promotion:
-                        </p>
+                        <p>Search UQ's curated master journal list to inform your strategic publishing decisions:</p>
                         <ul>
-                            <li>Search journal titles, keywords and subject areas</li>
+                            <li>Search journal titles, ISSNs, keywords and subject areas</li>
                             <li>Identify journals with open access or pre-paid charges</li>
                             <li>Understand, refine and rank results by indexing and a range of metrics</li>
                             <li>Create a list of favourite journals</li>
@@ -4035,9 +4032,7 @@ export default {
                                 publisher to make a publication immediately available and openly accessible.
                             </p>
                             <h3>Evidence of Peer Review</h3>
-                            <p>
-                                Limit to peer reviewed or refereed journals. This data is provided via the Ulrichsweb.
-                            </p>
+                            <p>Limit to peer reviewed or refereed journals. This data is provided via Ulrichsweb.</p>
                         </React.Fragment>
                     ),
                     testId: 'journal-search-facets',

@@ -513,6 +513,15 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
     ];
+    const userPages =
+        (account && [
+            {
+                linkTo: pathConfig.journals.search,
+                ...locale.menu.journals.search,
+            },
+        ]) ||
+        [];
+
     // eslint-disable-next-line camelcase
     const isAuthor = author?.aut_id;
     const incompletePage =
@@ -540,6 +549,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       },
                   ]
                 : []),
+            ...userPages,
             ...publicPages,
         ];
     }
@@ -579,10 +589,6 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.myEditorialAppointments,
                   },
                   {
-                      linkTo: pathConfig.journals.search,
-                      ...locale.menu.journals.search,
-                  },
-                  {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
@@ -592,6 +598,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                   },
               ]
             : []),
+        ...userPages,
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
