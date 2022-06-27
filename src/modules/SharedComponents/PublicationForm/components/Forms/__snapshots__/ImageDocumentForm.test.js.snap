@@ -155,7 +155,7 @@ exports[`ImageDocumentForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "creators-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Creator's name as published",
               },
             },
             "header": Object {

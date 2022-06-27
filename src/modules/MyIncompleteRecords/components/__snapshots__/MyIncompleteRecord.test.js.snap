@@ -589,15 +589,14 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -605,9 +604,10 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -667,7 +667,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -684,7 +684,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -785,7 +785,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -1520,15 +1520,14 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -1536,9 +1535,10 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -1598,7 +1598,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -1615,7 +1615,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -1716,7 +1716,7 @@ exports[`Component MyIncompleteRecord should display confirmation box after succ
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -2469,15 +2469,14 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -2485,9 +2484,10 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -2547,7 +2547,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -2564,7 +2564,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -2665,7 +2665,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -3490,15 +3490,14 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -3506,9 +3505,10 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -3568,7 +3568,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -3585,7 +3585,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -3686,7 +3686,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -4421,15 +4421,14 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -4437,9 +4436,10 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -4499,7 +4499,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -4516,7 +4516,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -4617,7 +4617,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -5352,15 +5352,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -5368,9 +5367,10 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -5430,7 +5430,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -5447,7 +5447,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -5548,7 +5548,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -6283,15 +6283,14 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -6299,9 +6298,10 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -6361,7 +6361,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -6378,7 +6378,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -6479,7 +6479,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -7214,15 +7214,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -7230,9 +7229,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -7292,7 +7292,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -7309,7 +7309,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -7410,7 +7410,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -8158,15 +8158,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -8174,9 +8173,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -8236,7 +8236,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -8253,7 +8253,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -8354,7 +8354,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -9089,15 +9089,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -9105,9 +9104,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -9167,7 +9167,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -9184,7 +9184,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -9285,7 +9285,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
@@ -10020,15 +10020,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
                     "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
                   },
                   "scaleOfWork": Object {
-                    "description": "Select the option that best describes the significance of the work.",
-                    "label": <span>
-                      Scale/Significance of work*
+                    "description": <span>
+                      Select the option that best describes the significance of the work*
                       <span
                         style={
                           Object {
@@ -10036,9 +10035,10 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                           }
                         }
                       >
-                        (not for public view)
+                         (not for public view)
                       </span>
                     </span>,
+                    "label": "Scale/Significance of work",
                   },
                 },
                 "help": Object {
@@ -10098,7 +10098,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   },
                   "extent": Object {
                     "label": "Total pages/Extent",
-                    "placeholder": "Enter total pages, size or duration of work",
+                    "placeholder": "Total pages, size, or duration",
                   },
                   "issue": Object {
                     "label": "Issue",
@@ -10115,7 +10115,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   },
                   "physicalDescription": Object {
                     "label": "Physical description",
-                    "placeholder": "Building, Exhibition, Performance, Composition",
+                    "placeholder": "e.g Building, Exhibit, Performance",
                   },
                   "series": Object {
                     "floatingLabelText": "Series",
@@ -10216,7 +10216,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "authors-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Authors's name as published",
                     },
                   },
                   "header": Object {
