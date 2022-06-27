@@ -65,6 +65,7 @@ export function exportCollections(requestParams) {
         const exportConfig = {
             format: requestParams.options.params.export_to,
             page: requestParams.options.params.page,
+            pid: requestParams.options.params.pid,
         };
 
         dispatch({

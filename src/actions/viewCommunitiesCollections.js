@@ -74,13 +74,9 @@ export function setCollectionsArray(rowObject) {
 }
 export function exportCommunityRecords(searchParams) {
     console.log('exportCommunities', searchParams);
-    return exportCommunities(
-        SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: searchParams.activeFacets || {} }, 'export'),
-    );
+    return exportCommunities(SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: {} }, 'export'));
 }
 export function exportCollectionRecords(searchParams) {
-    console.log('exportCollections', searchParams);
-    return exportCollections(
-        SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: searchParams.activeFacets || {} }, 'export'),
-    );
+    console.log('exportCollectionRecords', searchParams);
+    return exportCollections(SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: {} }, 'export'));
 }

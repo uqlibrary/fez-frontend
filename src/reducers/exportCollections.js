@@ -1,6 +1,7 @@
 import * as actions from 'actions/actionTypes';
 
 export const initialState = {
+    exportingCollectionsPid: null,
     exportCollectionsLoading: false,
     loadingByPage: {},
     loadedByPage: {},
@@ -14,6 +15,7 @@ const handlers = {
         const exportConfig = exportConfigFromAction(action);
         return {
             ...state,
+            exportingCollectionsPid: action.payload.pid,
             exportCollectionsLoading: true,
             loadingByPage: {
                 ...state.loadingByPage,
@@ -30,6 +32,7 @@ const handlers = {
         }
         return {
             ...state,
+            exportingCollectionsPid: null,
             exportCollectionsLoading: false,
             loadingByPage,
             loadedByPage: {
@@ -43,6 +46,7 @@ const handlers = {
         const exportConfig = exportConfigFromAction(action);
         return {
             ...state,
+            exportingCollectionsPid: null,
             exportCollectionsLoading: false,
             loadingByPage: {
                 ...state.loadingByPage,
