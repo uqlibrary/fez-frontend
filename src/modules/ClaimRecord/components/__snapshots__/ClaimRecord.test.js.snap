@@ -1010,7 +1010,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -1102,7 +1102,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -2057,7 +2057,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -3204,7 +3204,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -3296,7 +3296,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -4201,7 +4201,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -5556,7 +5556,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -5648,7 +5648,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -6970,7 +6970,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -7062,7 +7062,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -8384,7 +8384,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -8476,7 +8476,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -9798,7 +9798,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -9890,7 +9890,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -12220,7 +12220,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -12312,7 +12312,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -13634,7 +13634,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -13726,7 +13726,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -15048,7 +15048,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   }
                   disabled={true}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -15140,7 +15140,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -16481,7 +16481,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -16573,7 +16573,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -17913,7 +17913,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -18005,7 +18005,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -19359,7 +19359,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -19451,7 +19451,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   displayType={179}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -19677,7 +19677,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -19768,7 +19768,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   disabled={false}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
@@ -19988,7 +19988,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   }
                   disabled={false}
                   fullWidth={true}
-                  label="Type edits/changes/comments here"
+                  label="Type changes or comments here"
                   multiline={true}
                   name="comments"
                   rows={3}
@@ -20079,7 +20079,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   disabled={false}
                   fullWidth={true}
                   id="content-indicators"
-                  label="Please add any relevant indicator(s)."
+                  label="Add any relevant indicator(s)."
                   multiple={true}
                   name="contentIndicators"
                 />
