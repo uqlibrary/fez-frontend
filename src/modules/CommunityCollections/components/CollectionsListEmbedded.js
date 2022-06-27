@@ -192,7 +192,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                     <InlineLoader loaderId="collections-page-loading" message={conf.loading.message} />
                 </div>
             )}
-            {!collectionListLoading && loadingCollectionsPid !== pid && (
+            {loadingCollectionsPid !== pid && (
                 <div
                     className={classes.collectionBase}
                     data-testid={`collection-records-${pid}`}

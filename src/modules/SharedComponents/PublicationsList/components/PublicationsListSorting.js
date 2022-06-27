@@ -14,7 +14,11 @@ import { userIsAdmin, userIsResearcher } from 'hooks';
 import { doesListContainItem } from 'helpers/general';
 
 const PublicationsListSorting = props => {
+    const isAdmin = userIsAdmin();
+    const isResearcher = userIsResearcher();
+
     const txt = locale.components.sorting;
+
     /* istanbul ignore next */
     const pageLength = txt.recordsPerPage ?? [10, 20, 50, 100];
 
@@ -92,9 +96,6 @@ const PublicationsListSorting = props => {
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
     }
-
-    const isAdmin = userIsAdmin();
-    const isResearcher = userIsResearcher();
 
     const dropDownWidth = !!props.showDisplayAs ? 2 : 3;
 
