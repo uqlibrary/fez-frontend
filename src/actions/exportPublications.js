@@ -12,7 +12,6 @@ import { MY_RECORDS_BULK_EXPORT_SIZE, PUB_SEARCH_BULK_EXPORT_SIZE } from 'config
  * @return {*}
  */
 export function exportPublications(requestParams) {
-    // console.log('exportPublications', requestParams);
     return dispatch => {
         const exportConfig = {
             format: requestParams.options.params.export_to,

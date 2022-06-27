@@ -310,7 +310,6 @@ export function loadPublicationList(searchKey, searchQuery) {
  * @returns {action}
  */
 export function exportEspacePublications(searchParams) {
-    // console.log('exportEspacePublications', searchParams);
     return exportPublications(
         SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: searchParams.activeFacets || {} }, 'export'),
     );
