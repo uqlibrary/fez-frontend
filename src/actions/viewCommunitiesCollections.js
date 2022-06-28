@@ -1,11 +1,6 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import {
-    COMMUNITY_LIST_API,
-    COLLECTION_LIST_API,
-    EXPORT_COMMUNITY_LIST_API,
-    EXPORT_COLLECTION_LIST_API,
-} from 'repositories/routes';
+import { COMMUNITY_LIST_API, COLLECTION_LIST_API } from 'repositories/routes';
 import { exportCommunities, exportCollections } from './exportCommunitiesCollections';
 
 /**
@@ -78,8 +73,8 @@ export function setCollectionsArray(rowObject) {
     };
 }
 export function exportCommunityRecords(params) {
-    return exportCommunities(EXPORT_COMMUNITY_LIST_API({ ...params }));
+    return exportCommunities(COMMUNITY_LIST_API({ ...params }, 'export'));
 }
 export function exportCollectionRecords(params) {
-    return exportCollections(EXPORT_COLLECTION_LIST_API({ ...params }));
+    return exportCollections(COLLECTION_LIST_API({ ...params }, 'export'));
 }

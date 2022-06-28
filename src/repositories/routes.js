@@ -108,15 +108,15 @@ export const getValidPageSize = (defaultSize, pageSize) => {
     return validPageSize;
 };
 
-export const getExportParams = ({ pid, exportPublicationsFormat, ...params }) => {
-    const pidParam = !!pid ? { pid } : {};
+export const getCCParams = ({ pid, exportPublicationsFormat, ...params }) => {
     const exportParams = !!exportPublicationsFormat ? { export_to: exportPublicationsFormat } : {};
+    const pidParams = !!pid ? { pid } : {};
     return {
-        ...pidParam,
         per_page: params.pageSize,
         page: params.page,
-        order_by: params.sortDirection,
+        order_by: !!exportPublicationsFormat ? params.sortDirection : params.direction,
         sort: params.sortBy,
+        ...pidParams,
         ...exportParams,
     };
 };
@@ -214,34 +214,20 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 // Communities and Collections
-export const COMMUNITY_LIST_API = ({ exportPublicationsFormat, ...params }) => {
-    const exportParam = !!exportPublicationsFormat ? `&export_to=${exportPublicationsFormat}` : '';
+export const COMMUNITY_LIST_API = (config, action = null) => {
+    const params = getCCParams(config);
+    const options = action === 'export' ? { params } : {};
     return {
-        apiUrl: `communities?per_page=${params.pageSize}&page=${params.page}&order_by=${params.direction}&sort=${params.sortBy}${exportParam}`,
+        apiUrl: `communities${action !== 'export' ? `?${param(params)}` : ''}`,
+        options,
     };
 };
-export const COLLECTION_LIST_API = params => ({
-    apiUrl: `communities/${params.pid}/collections?per_page=${params.pageSize}&page=${params.page}&order_by=${params.direction}&sort=${params.sortBy}`,
-});
-
-export const EXPORT_COMMUNITY_LIST_API = config => {
-    const params = getExportParams(config);
-
+export const COLLECTION_LIST_API = (config, action = null) => {
+    const { pid, ...params } = getCCParams(config);
+    const options = action === 'export' ? { params } : {};
     return {
-        apiUrl: 'communities',
-        options: {
-            params,
-        },
-    };
-};
-export const EXPORT_COLLECTION_LIST_API = config => {
-    const params = getExportParams(config);
-
-    return {
-        apiUrl: `communities/${params.pid}/collections`,
-        options: {
-            params,
-        },
+        apiUrl: `communities/${pid}/collections${action !== 'export' ? `?${param(params)}` : ''}`,
+        options,
     };
 };
 
