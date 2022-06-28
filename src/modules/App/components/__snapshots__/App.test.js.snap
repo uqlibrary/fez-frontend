@@ -1034,6 +1034,10 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -2094,6 +2098,10 @@ exports[`Application component should determine if it has incomplete works from 
           "linkTo": "/",
           "primaryText": "Home",
           "public": true,
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "/records/search",
@@ -3663,6 +3671,10 @@ exports[`Application component should render alert if user is not fez author 1`]
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -4771,16 +4783,16 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/journals/search/",
-          "primaryText": "Journal search",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "/records/search",
@@ -5874,16 +5886,16 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/journals/search/",
-          "primaryText": "Journal search",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
           "path": "/234234234242",
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "/records/search",
@@ -6931,6 +6943,10 @@ exports[`Application component should render application with routing for the us
           "linkTo": "/",
           "primaryText": "Home",
           "public": true,
+        },
+        Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
         },
         Object {
           "linkTo": "/records/search",
@@ -12323,6 +12339,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "public": true,
                           },
                           Object {
+                            "linkTo": "/journals/search/",
+                            "primaryText": "Journal search",
+                          },
+                          Object {
                             "linkTo": "/records/search",
                             "primaryText": "Search eSpace",
                             "public": true,
@@ -12392,6 +12412,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "linkTo": "/",
                               "primaryText": "Home",
                               "public": true,
+                            },
+                            Object {
+                              "linkTo": "/journals/search/",
+                              "primaryText": "Journal search",
                             },
                             Object {
                               "linkTo": "/records/search",

@@ -395,7 +395,14 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     <p
                       class="MuiTypography-root-118 MuiTypography-body1-120"
                     >
-                      Select the option that best describes the significance of the work.
+                      <span>
+                        Select the option that best describes the significance of the work*
+                        <span
+                          style="font-weight: 700;"
+                        >
+                           (not for public view)
+                        </span>
+                      </span>
                     </p>
                     <div
                       class="MuiFormControl-root-285"
@@ -406,14 +413,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         data-shrink="false"
                         id="rek-significance-label"
                       >
-                        <span>
-                          Scale/Significance of work*
-                          <span
-                            style="font-weight: 700;"
-                          >
-                            (not for public view)
-                          </span>
-                        </span>
+                        Scale/Significance of work
                         <span
                           aria-hidden="true"
                           class="MuiFormLabel-asterisk-300 MuiInputLabel-asterisk-290 Mui-error Mui-error"
@@ -480,7 +480,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           <span
                             style="font-weight: 700;"
                           >
-                            (not for public view)
+                             (not for public view)
                           </span>
                         </span>
                         <span>
@@ -784,7 +784,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             id="rek-grant-agency-input"
                             label="Funder/Sponsor name"
                             name="grantAgencyName"
-                            placeholder="Enter funder/sponsor name for this work"
+                            placeholder="Funder/sponsor name for this work"
                             type="text"
                             value=""
                           />
@@ -819,7 +819,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             id="rek-grant-id-input"
                             label="Grant ID"
                             name="grantId"
-                            placeholder="Enter grant number for this work, if available"
+                            placeholder="Grant number for this work"
                             type="text"
                             value=""
                           />
