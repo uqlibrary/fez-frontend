@@ -1,7 +1,5 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import { promptForDownload } from './exportPublicationsDataTransformers';
-import { COMMUNITY_COLLECTION_BULK_EXPORT_SIZE } from 'config/general';
 
 /**
  * Reusable export Communities action
@@ -23,17 +21,8 @@ export function exportCommunities(requestParams) {
             payload: exportConfig,
         });
 
-        const bulkExportSizes = [COMMUNITY_COLLECTION_BULK_EXPORT_SIZE];
-        const getOptions = {};
-        if (!bulkExportSizes.includes(requestParams.options.params.per_page)) {
-            getOptions.responseType = 'blob';
-        }
-
-        return get(requestParams, { ...getOptions })
-            .then(response => {
-                if (getOptions.responseType === 'blob') {
-                    promptForDownload(exportConfig.format, response);
-                }
+        return get(requestParams)
+            .then(() => {
                 dispatch({
                     type: actions.EXPORT_COMMUNITIES_LOADED,
                     payload: exportConfig,
@@ -73,19 +62,10 @@ export function exportCollections(requestParams) {
             payload: exportConfig,
         });
 
-        const bulkExportSizes = [COMMUNITY_COLLECTION_BULK_EXPORT_SIZE];
-        const getOptions = {};
-        if (!bulkExportSizes.includes(requestParams.options.params.per_page)) {
-            getOptions.responseType = 'blob';
-        }
-
         delete requestParams.options.params.pid;
 
-        return get(requestParams, { ...getOptions })
-            .then(response => {
-                if (getOptions.responseType === 'blob') {
-                    promptForDownload(exportConfig.format, response);
-                }
+        return get(requestParams)
+            .then(() => {
                 dispatch({
                     type: actions.EXPORT_COLLECTIONS_LOADED,
                     payload: exportConfig,
@@ -103,11 +83,3 @@ export function exportCollections(requestParams) {
             });
     };
 }
-
-export const resetExportCommunitiesCollectionsStatus = () => {
-    return dispatch => {
-        dispatch({
-            type: actions.EXPORT_PUBLICATIONS_RESET,
-        });
-    };
-};
