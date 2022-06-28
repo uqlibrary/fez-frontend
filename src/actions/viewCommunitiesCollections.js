@@ -1,6 +1,11 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import { COMMUNITY_LIST_API, COLLECTION_LIST_API, SEARCH_INTERNAL_RECORDS_API } from 'repositories/routes';
+import {
+    COMMUNITY_LIST_API,
+    COLLECTION_LIST_API,
+    EXPORT_COMMUNITY_LIST_API,
+    EXPORT_COLLECTION_LIST_API,
+} from 'repositories/routes';
 import { exportCommunities, exportCollections } from './exportCommunitiesCollections';
 
 /**
@@ -72,9 +77,9 @@ export function setCollectionsArray(rowObject) {
         });
     };
 }
-export function exportCommunityRecords(searchParams) {
-    return exportCommunities(SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: {} }, 'export'));
+export function exportCommunityRecords(params) {
+    return exportCommunities(EXPORT_COMMUNITY_LIST_API({ ...params }));
 }
-export function exportCollectionRecords(searchParams) {
-    return exportCollections(SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: {} }, 'export'));
+export function exportCollectionRecords(params) {
+    return exportCollections(EXPORT_COLLECTION_LIST_API({ ...params }));
 }

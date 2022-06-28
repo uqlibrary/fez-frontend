@@ -79,6 +79,8 @@ export function exportCollections(requestParams) {
             getOptions.responseType = 'blob';
         }
 
+        delete requestParams.options.params.pid;
+
         return get(requestParams, { ...getOptions })
             .then(response => {
                 if (getOptions.responseType === 'blob') {

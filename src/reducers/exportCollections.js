@@ -13,6 +13,7 @@ const exportConfigFromAction = action =>
 const handlers = {
     [actions.EXPORT_COLLECTIONS_LOADING]: (state, action) => {
         const exportConfig = exportConfigFromAction(action);
+
         return {
             ...state,
             exportingCollectionsPid: action.payload.pid,

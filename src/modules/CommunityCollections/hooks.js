@@ -93,14 +93,13 @@ export const useCommunityCollectionControls = (queryParams, actions) => {
                 ...exportFormat,
             }),
         );
-    const handleCollectionExport = exportFormat => {
-        return dispatch(
+    const handleCollectionExport = exportFormat =>
+        dispatch(
             actions.exportCollectionRecords({
                 ...queryParams,
                 ...exportFormat,
             }),
         );
-    };
     return {
         handleCommunityExport,
         handleCollectionExport,
