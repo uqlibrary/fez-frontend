@@ -73,7 +73,7 @@ export function setCollectionsArray(rowObject) {
     };
 }
 export function exportCommunityRecords(params) {
-    return exportCommunities(COMMUNITY_LIST_API({ ...params }, 'export'));
+    return exportCommunities(COMMUNITY_LIST_API({ ...params }));
 }
 export function exportCollectionRecords(params) {
     return exportCollections(COLLECTION_LIST_API({ ...params }, 'export'));

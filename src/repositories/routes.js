@@ -214,20 +214,21 @@ export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 // Communities and Collections
-export const COMMUNITY_LIST_API = (config, action = null) => {
+export const COMMUNITY_LIST_API = config => {
     const params = getCCParams(config);
-    const options = action === 'export' ? { params } : {};
     return {
-        apiUrl: `communities${action !== 'export' ? `?${param(params)}` : ''}`,
-        options,
+        apiUrl: 'communities',
+        options: { params },
     };
 };
 export const COLLECTION_LIST_API = (config, action = null) => {
-    const { pid, ...params } = getCCParams(config);
-    const options = action === 'export' ? { params } : {};
+    const params = getCCParams(config);
+    const pid = params.pid;
+    action !== 'export' && delete params.pid;
+
     return {
-        apiUrl: `communities/${pid}/collections${action !== 'export' ? `?${param(params)}` : ''}`,
-        options,
+        apiUrl: `communities/${pid}/collections`,
+        options: { params },
     };
 };
 
