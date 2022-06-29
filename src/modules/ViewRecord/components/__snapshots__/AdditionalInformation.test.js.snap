@@ -21882,6 +21882,201 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`Additional Information Component  should render component with a collection 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Additional information"
+  >
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract/Description"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-description-label"
+            variant="body2"
+          >
+            Abstract/Description
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-description"
+            >
+              Aboriginal and European cultural landscapes, places and objects.
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Keyword(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-keywords-label"
+            variant="body2"
+          >
+            Keyword(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_keywords"
+            >
+              <li
+                data-testid="rek-keywords-0"
+                key="rek-keywords-0"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=archaeology&searchQueryParams%5Ball%5D="
+                >
+                  archaeology
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-1"
+                key="rek-keywords-1"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=cultural+heritage&searchQueryParams%5Ball%5D="
+                >
+                  cultural heritage
+                </Link>
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Additional Information Component  should render component with a community 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Additional information"
+  >
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Keyword(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-keywords-label"
+            variant="body2"
+          >
+            Keyword(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_keywords"
+            >
+              <li
+                data-testid="rek-keywords-0"
+                key="rek-keywords-0"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=indigenous&searchQueryParams%5Ball%5D="
+                >
+                  indigenous
+                </Link>
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`Additional Information Component  should render component with audio document 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}
@@ -34614,7 +34809,7 @@ exports[`Additional Information Component  should render component with data col
                 id="rek-license"
                 openInNewIcon={true}
               >
-                View licence details
+                View license details
               </ExternalLink>
             </span>
           </WithStyles(ForwardRef(Typography))>
@@ -40321,7 +40516,7 @@ exports[`Additional Information Component  should render component with data col
                 id="rek-license"
                 openInNewIcon={true}
               >
-                View licence details
+                View license details
               </ExternalLink>
             </span>
           </WithStyles(ForwardRef(Typography))>

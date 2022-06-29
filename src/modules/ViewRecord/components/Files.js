@@ -51,7 +51,7 @@ export const styles = theme => ({
     },
 });
 
-const getSecurityAccess = (dataStream, props) => {
+export const getSecurityAccess = (dataStream, props) => {
     const { isAdmin, isAuthor, author } = props;
     return !!(
         isAdmin ||
@@ -74,7 +74,7 @@ export const getFileOpenAccessStatus = (publication, dataStream, props) => {
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
     const downloadLicence = getDownloadLicence(publication);
-    const allowDownload = !downloadLicence && (dataStream.dsi_security_policy === 4 ? !!props.account : true);
+    const allowDownload = !downloadLicence && (dataStream.dsi_security_policy === 4 ? !!props?.account : true);
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
         return {
             isOpenAccess: false,

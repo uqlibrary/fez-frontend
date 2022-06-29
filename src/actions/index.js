@@ -24,3 +24,4 @@ export * from './records';
 export * from './search';
 export * from './thirdPartyLookupTool';
 export * from './viewRecord';
+export * from './viewCommunitiesCollections';

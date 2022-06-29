@@ -1,5 +1,6 @@
 import React from 'react';
-import AdminActions, { navigateToUrl } from './AdminActions';
+import AdminActions from './AdminActions';
+import { navigateToUrl } from 'modules/SharedComponents/Toolbox/helpers';
 import { rtlRender, fireEvent, cleanup } from 'test-utils';
 import {
     APP_URL,

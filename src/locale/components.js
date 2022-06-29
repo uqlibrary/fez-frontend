@@ -1742,9 +1742,9 @@ export default {
                 { value: 'title', label: 'Title' },
                 { value: 'created_date', label: 'Created date' },
                 { value: 'updated_date', label: 'Updated date' },
-                { value: 'altmetric_score', label: 'Altmetric score' },
-                { value: 'scopus_citation_count', label: 'Scopus citation count' },
-                { value: 'thomson_citation_count', label: 'Web of Science citation count' },
+                { value: 'altmetric_score', label: 'Altmetric score', exclude: ['image-gallery'] },
+                { value: 'scopus_citation_count', label: 'Scopus citation count', exclude: ['image-gallery'] },
+                { value: 'thomson_citation_count', label: 'Web of Science citation count', exclude: ['image-gallery'] },
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [10, 20, 50, 100],
@@ -1758,6 +1758,22 @@ export default {
                     </span>
                 ),
                 confirmButtonLabel: 'Close',
+            },
+            displayRecordsAsLabel: 'Display results',
+            displayRecordsAs: [
+                { index: 0, value: 'standard', label: 'Standard' },
+                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
+            ],
+        },
+        imageGallery: {
+            alert: {
+                restricted: 'Image restricted',
+                advisory: 'Content warning',
+                restrictedAdvisory: 'Restricted + content warning',
+                unavailable: 'Image not available',
+            },
+            thumbnail: {
+                ariaLabel: 'Thumbnail image showing [title]',
             },
         },
         newsFeed: {
@@ -3629,6 +3645,52 @@ export default {
                 allowDismiss: true,
                 type: 'error',
                 message: 'A user could not be deleted.',
+            },
+        },
+        communitiesCollections: {
+            title: {
+                communities: 'Communities',
+                collections: 'Collections',
+            },
+            addCommunityText: 'Add Missing Community',
+            snackbar: {
+                message: 'Search results updated',
+            },
+            dateFormat: 'ddd MMM DD, YYYY',
+            loading: {
+                message: '...Loading Data...',
+                noCollections: 'No collections found for this community',
+                noCommunities: 'No communities found.',
+            },
+            columns: {
+                labels: {
+                    title: 'Title',
+                    creation_date: 'Created Date',
+                    updated_date: 'Updated Date',
+                    actions: 'Actions',
+                },
+            },
+            export: {
+                label: 'Export page results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
+            sorting: {
+                pageSize: 'Records per page',
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'title', label: 'Title' },
+                    { value: 'created_date', label: 'Created Date' },
+                    { value: 'updated_date', label: 'Updated Date' },
+                ],
+                sortDirection: ['Desc', 'Asc'],
+                recordsPerPage: [10, 20, 50, 100],
+                exportOnlyLabel: 'Export Only:',
+            },
+            sortingDefaults: {
+                pageSize: 10,
+                sortBy: 'title',
+                sortDirection: 'Asc',
             },
         },
         favouriteJournals: {
