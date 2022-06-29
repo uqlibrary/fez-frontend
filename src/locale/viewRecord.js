@@ -12,10 +12,14 @@ export default {
         },
         sections: {
             publicationDetails: 'Type & Collection',
+            publicationDetailsCustom: {
+                Community: 'Type',
+                Collection: 'Type & Community',
+            },
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
-                licenseLinkText: 'View licence details',
+                licenseLinkText: 'View license details',
             },
             relatedPublications: {
                 title: 'Related works and datasets in eSpace',
@@ -234,7 +238,16 @@ export default {
                     rek_display_type: 'Type of work',
                     rek_subtype: 'Sub-type',
                     fez_record_search_key_ismemberof: 'Collections',
+                    fez_record_search_key_ismemberof_custom: {
+                        Collection: plural => `${plural ? 'Communities' : 'Community'}`,
+                    },
                 },
+            },
+            Community: {
+                rek_description: 'Abstract/Description',
+            },
+            Collection: {
+                rek_description: 'Abstract/Description',
             },
             'Audio Document': {
                 rek_date: 'Date',
@@ -743,6 +756,26 @@ export default {
                 {
                     field: 'fez_record_search_key_advisory_statement',
                     order: 28,
+                },
+            ],
+            Community: [
+                {
+                    field: 'rek_description',
+                    order: 1,
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 2,
+                },
+            ],
+            Collection: [
+                {
+                    field: 'rek_description',
+                    order: 1,
+                },
+                {
+                    field: 'fez_record_search_key_keywords',
+                    order: 2,
                 },
             ],
             'Conference Paper': [

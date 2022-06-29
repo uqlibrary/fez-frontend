@@ -294,7 +294,18 @@ export default {
                 type: 'error_outline',
                 title: 'Error',
                 message: message =>
-                    `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+                    `Error has occurred during request and request cannot be processed. ${message}. Please contact eSpace administrators or try again later.`,
+            },
+            errorCustom: {
+                communityCollection: [
+                    {
+                        httpStatus: 409,
+                        message: rekType =>
+                            `Error occurred during request and request cannot be processed. The ${rekType} contains ${
+                                rekType === 'Community' ? 'Collections' : 'records'
+                            } that must be manually unlinked first.`,
+                    },
+                ],
             },
             progressAlert: {
                 type: 'info_outline',

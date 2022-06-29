@@ -17,7 +17,9 @@ export const mapStateToProps = (state, ownProps) => {
     const isAdvancedSearch =
         (!!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced') ||
         ownProps.isAdvancedSearch;
-    const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList && publicationsList.length > 0;
+    const isCommunityCollection = !!searchQuery && !!searchQuery.commColl && searchQuery.commColl === 'true';
+    const isAdvancedSearchMinimised =
+        isAdvancedSearch && publicationsList && publicationsList.length > 0 && !!!isCommunityCollection;
 
     return {
         ...state.get('accountReducer'),

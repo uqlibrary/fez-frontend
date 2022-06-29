@@ -1,7 +1,10 @@
 export { default as collectionRecord } from './collectionRecord';
+export { default as collectionRecordWithExtraData } from './collectionRecordWithExtraData';
 export { default as collectionSearchList } from './collectionSearchList';
+export { default as collectionSearchResultsImages} from './collectionSearchResultsImages';
 export { default as collectionsByCommunity } from './collectionsByCommunity';
 export { default as communityRecord } from './communityRecord';
+export { default as communityRecordWithExtraData } from './communityRecordWithExtraData';
 export { default as communitySearchList } from './communitySearchList';
 export { default as externalDoiSearchResultList } from './externalDoiSearchResultList';
 export { default as externalPubMedSearchResultsList } from './externalPubMedSearchResultsList';

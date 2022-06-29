@@ -110,6 +110,29 @@ describe('PublicationsListSorting component', () => {
         expect(testFn).toHaveBeenCalledWith({ exportPublicationsFormat: expected });
     });
 
+    it('renders dropdown for displayRecordsAs if assigned prop, onDisplayRecordsAsChanged called', () => {
+        const testFn = jest.fn();
+        const testValue = 'test';
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
+        wrapper
+            .find('#displayRecordsAs')
+            .props()
+            .onChange({ target: { value: testValue } });
+        expect(testFn).toBeCalled();
+    });
+
+    it('renders dropdown for displayRecordsAs if assigned showDisplayAs prop', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: true });
+        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(true);
+    });
+
+    it('does not render dropdown for displayRecordsAs if not assigned showDisplayAs prop', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({ onDisplayRecordsAsChanged: testFn, showDisplayAs: false });
+        expect(wrapper.find('#displayRecordsAs').exists()).toEqual(false);
+    });
+
     it('renders will set state on receiving new props', () => {
         const mockUseEffect = jest.spyOn(React, 'useEffect');
         const wrapper = setup({
@@ -122,6 +145,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'Publication date',
             sortDirection: 'test',
             pageSize: 5,
+            displayRecordsAs: 'standard',
             pagingData: {},
         });
 
@@ -169,6 +193,7 @@ describe('PublicationsListSorting component', () => {
             sortBy: 'score',
             sortDirection: 'Asc',
             pageSize: 50,
+            displayRecordsAs: 'image-gallery',
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -202,5 +227,25 @@ describe('PublicationsListSorting component', () => {
                 .childAt(2)
                 .props().value,
         ).toEqual('test_3');
+    });
+    it('renders correctly when set to true', () => {
+        const data = {
+            from: 1,
+            to: 10,
+            total: 10,
+            current_page: 1,
+        };
+        const wrapper = setup({ showDisplayAs: true, canUseExport: true, pagingData: data });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('renders correctly when set to false', () => {
+        const data = {
+            from: 0,
+            to: 0,
+            total: 0,
+            current_page: 1,
+        };
+        const wrapper = setup({ showDisplayAs: true, canUseExport: false, pagingData: data });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

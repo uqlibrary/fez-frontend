@@ -52,7 +52,7 @@ describe('Community form', () => {
     it('should render form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(3);
+        expect(wrapper.find('Field').length).toEqual(4);
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 

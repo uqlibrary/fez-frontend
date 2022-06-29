@@ -1,5 +1,5 @@
 import { PublicationCitation, styles } from './PublicationCitation';
-import { mockRecordToFix } from 'mock/data/testing/records';
+import { mockRecordToFix, journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps = {}) {
     const props = {
@@ -22,6 +22,29 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with default item with image support', () => {
+        const wrapper = setup({
+            showImageThumbnails: true,
+            publication: { ...journalArticle, rek_display_type_lookup: 'Image' },
+            security: { isAdmin: true, isAuthor: true },
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default item without image, if not set to show thumbs', () => {
+        const wrapper = setup({ publication: { ...journalArticle, rek_display_type_lookup: 'Image' } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component without image if whitelisted, but no datastream', () => {
+        const wrapper = setup({
+            showImageThumbnails: true,
+            publication: { ...journalArticle, rek_display_type_lookup: 'Image', fez_datastream_info: [] },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should have a proper style generator', () => {
         const theme = {
             typography: {
@@ -32,6 +55,7 @@ describe('PublicationCitation ', () => {
             },
             breakpoints: {
                 down: jest.fn(() => '@media (max-width:959.95px)'),
+                up: jest.fn(() => '@media (min-width:959.95px)'),
             },
         };
         expect(styles(theme)).toMatchSnapshot();
@@ -334,6 +358,11 @@ describe('PublicationCitation ', () => {
                 rek_object_type_lookup: 'Record',
             },
         });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with default list hiding the citation text', () => {
+        const wrapper = setup({ hideCitationText: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

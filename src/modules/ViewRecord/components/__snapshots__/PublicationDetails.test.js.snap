@@ -6056,6 +6056,158 @@ exports[`Publication Details Component  Renders full mount 1`] = `
 
 exports[`Publication Details Component  Renders nothing for no display type lookup 1`] = `""`;
 
+exports[`Publication Details Component  Renders the Type & Collection title for collections with multiple communities 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Type & Community"
+  >
+    <Component
+      data="Collection"
+      heading="Type of work"
+      rowId="rek-display-type"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+      rowId="rek-content-indicator"
+    />
+    <Component
+      data={
+        <ul
+          className="ul"
+        >
+          <li
+            data-testid="rek-ismemberof-0"
+          >
+            <Link
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A289097&searchMode=advanced"
+            >
+              Research Data Collections
+            </Link>
+          </li>
+          <li
+            data-testid="rek-ismemberof-1"
+          >
+            <Link
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A3825&searchMode=advanced"
+            >
+              School of Chemistry and Molecular Biosciences
+            </Link>
+          </li>
+        </ul>
+      }
+      heading="Communities"
+      rowId="rek-ismemberof"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Publication Details Component  Renders the Type & Collection title for collections with one community 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Type & Community"
+  >
+    <Component
+      data="Collection"
+      heading="Type of work"
+      rowId="rek-display-type"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+      rowId="rek-content-indicator"
+    />
+    <Component
+      data={
+        <ul
+          className="ul"
+        >
+          <li
+            data-testid="rek-ismemberof-0"
+          >
+            <Link
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_ismemberof%5D%5Bvalue%5D%5B%5D=UQ%3A289097&searchMode=advanced"
+            >
+              Research Data Collections
+            </Link>
+          </li>
+        </ul>
+      }
+      heading="Community"
+      rowId="rek-ismemberof"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Publication Details Component  Renders the Type title for Communities 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Type"
+  >
+    <Component
+      data="Community"
+      heading="Type of work"
+      rowId="rek-display-type"
+    />
+    <Component
+      data={
+        Array [
+          <span
+            data-testid="rek-content-indicator-0"
+          >
+            Scholarship of Teaching and Learning
+          </span>,
+          <span
+            data-testid="rek-content-indicator-1"
+          >
+            Protocol
+          </span>,
+        ]
+      }
+      heading="Content Indicators"
+      rowId="rek-content-indicator"
+    />
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`Publication Details Component  ViewRecordRow() 1`] = `undefined`;
 
 exports[`Publication Details Component  should not render component with empty publication 1`] = `""`;
