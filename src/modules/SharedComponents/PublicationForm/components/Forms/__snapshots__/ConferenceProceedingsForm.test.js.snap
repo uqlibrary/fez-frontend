@@ -162,28 +162,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            allowPartial={true}
-            className="requiredHintField"
-            component={[Function]}
-            disabled={false}
-            floatingTitle="Publication date"
-            floatingTitleRequired={true}
-            name="rek_date"
-            partialDateFieldId="rek-date"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
             component={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
@@ -206,7 +184,6 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={6}
           xs={12}
         >
           <Field
@@ -228,6 +205,60 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
             placeholder="Type the place of publication"
             type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="fez_record_search_key_doi.rek_doi"
+            placeholder="Enter a valid DOI (e.g. 10.123/456)"
+            textFieldId="rek-doi"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            allowPartial={true}
+            className="requiredHintField"
+            component={[Function]}
+            disabled={false}
+            floatingTitle="Publication date"
+            floatingTitleRequired={true}
+            name="rek_date"
+            partialDateFieldId="rek-date"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
