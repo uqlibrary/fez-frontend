@@ -124,7 +124,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     type="text"
                                     fullWidth
                                     validate={[validation.doi]}
-                                    {...txt.information.fieldLabels.doi}
+                                    {...formLocale.generic.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>

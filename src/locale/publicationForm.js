@@ -84,10 +84,6 @@ export default {
                     label: 'Abstract',
                     placeholder: 'Add a full article abstract here.',
                 },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
-                },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
@@ -388,10 +384,6 @@ export default {
                 title: 'Title of patent',
                 patentNumber: 'Patent number',
                 countryOfOrigin: 'Country of origin',
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
-                },
                 date: {
                     title: 'Date patent issued',
                     day: 'Day',
@@ -886,10 +878,6 @@ export default {
                     floatingLabelText: 'Newspaper name',
                     hintText: 'Enter title of the journal',
                 },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
-                },
                 date: {
                     title: 'Publication Date',
                     day: 'Day',
@@ -945,10 +933,6 @@ export default {
                     floatingLabelText: 'Report number',
                     hintText: '',
                 },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
-                },
                 date: {
                     title: 'Date published',
                     day: 'Day',
@@ -995,10 +979,6 @@ export default {
                 orgName: {
                     floatingLabelText: 'Institution',
                     hintText: '',
-                },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 date: {
                     title: 'Publication date',
@@ -1070,10 +1050,6 @@ export default {
                 publisher: {
                     label: 'Publisher',
                     placeholder: 'Type the name of the publisher',
-                },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
                 date: {
                     title: 'Publication date',
