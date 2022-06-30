@@ -134,7 +134,7 @@ export default class ResearchReportForm extends Component {
                                     type="text"
                                     fullWidth
                                     validate={[validation.doi]}
-                                    {...formLocale.generic.information.fieldLabels.doi}
+                                    {...txt.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={this.props.isNtro ? 6 : 4}>

@@ -110,7 +110,7 @@ export default class CreativeWorkForm extends Component {
                                         type="text"
                                         fullWidth
                                         validate={[validation.doi]}
-                                        {...formLocale.generic.information.fieldLabels.doi}
+                                        {...txt.information.fieldLabels.doi}
                                     />
                                 </Grid>
                             )}

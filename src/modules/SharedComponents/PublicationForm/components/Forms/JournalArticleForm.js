@@ -82,7 +82,7 @@ export default class JournalArticleForm extends Component {
                                     type="text"
                                     fullWidth
                                     validate={[validation.doi]}
-                                    {...formLocale.generic.information.fieldLabels.doi}
+                                    {...txt.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
