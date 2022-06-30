@@ -296,8 +296,13 @@ describe('Image Gallery Item', () => {
     });
     describe('getAlertMessageText function', () => {
         it('should return a message with image unavailable text', () => {
-            expect(getAlertMessageText({ unavailable: true, restricted: true, advisory: true })).toEqual(
+            expect(getAlertMessageText({ unavailable: true, restricted: false, advisory: false })).toEqual(
                 txt.components.imageGallery.alert.unavailable,
+            );
+        });
+        it('should return a message with advisory text', () => {
+            expect(getAlertMessageText({ unavailable: true, restricted: true, advisory: true })).toEqual(
+                txt.components.imageGallery.alert.advisory,
             );
         });
         it('should return a message with restricted and advisory title text', () => {
