@@ -95,32 +95,6 @@ export default class ThesisForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="currentAuthor.0.nameAsPublished"
-                                    textFieldId="rek-author-0"
-                                    type="text"
-                                    fullWidth
-                                    rows={1}
-                                    {...txt.information.fieldLabels.author}
-                                    required
-                                    validate={[validation.required]}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_doi.rek_doi"
-                                    textFieldId="rek-doi"
-                                    type="text"
-                                    fullWidth
-                                    validate={[validation.doi]}
-                                    {...txt.information.fieldLabels.doi}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
                                     component={PartialDateField}
                                     partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
@@ -131,6 +105,20 @@ export default class ThesisForm extends Component {
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
                                     floatingTitleRequired
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="currentAuthor.0.nameAsPublished"
+                                    textFieldId="rek-author-0"
+                                    type="text"
+                                    fullWidth
+                                    rows={1}
+                                    {...txt.information.fieldLabels.author}
+                                    required
+                                    validate={[validation.required]}
                                 />
                             </Grid>
                         </Grid>
