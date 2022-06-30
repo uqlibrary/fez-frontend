@@ -35,32 +35,41 @@ const ImageGalleryItemImage = ({
     const thumbnailBlacklisted = !fileData?.isWhiteListed ?? /* istanbul ignore next */ true;
     const thumbnailRestricted =
         (!!fileData?.thumbnailFileName && !fileData?.securityStatus) ?? /* istanbul ignore next */ false;
-    const thumbnailAdvisory =
-        (!!fileData?.thumbnailFileName &&
-            // eslint-disable-next-line camelcase
-            item.fez_record_search_key_advisory_statement?.rek_advisory_statement) ??
-        false;
+    // eslint-disable-next-line camelcase
+    const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image
-    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
+    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)?.replace(
+        'fez-staging',
+        'espace',
+    );
 
     const filename =
         !thumbnailRestricted && !thumbnailAdvisory && !thumbnailBlacklisted && !!filenameSrc
             ? filenameSrc
             : config.thumbnailImage.defaultImageName;
 
+    console.log(
+        item.rek_title,
+        item.rek_display_type_lookup,
+        item.fez_datastream_info,
+        fileData,
+        `thumbnailBlacklisted: ${thumbnailBlacklisted}`,
+        `thumbnailRestricted: ${thumbnailRestricted}`,
+        `thumbnailAdvisory: ${thumbnailAdvisory}`,
+        filenameSrc,
+        filename,
+    );
+
     React.useEffect(() => {
+        if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
         if (
-            filename === config.thumbnailImage.defaultImageName &&
-            !thumbnailRestricted &&
-            !thumbnailAdvisory &&
-            !!setUnavailable
+            !!setUnavailable &&
+            (thumbnailBlacklisted || (filename === config.thumbnailImage.defaultImageName && !thumbnailRestricted))
         ) {
             setUnavailable(true);
-        }
+        } else if (thumbnailRestricted && !!setRestricted) setRestricted(true);
 
-        if (thumbnailRestricted && !!setRestricted) setRestricted(true);
-        if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

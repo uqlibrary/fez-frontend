@@ -76,6 +76,7 @@ const viewRecord = (history, url) => {
 };
 
 export const getAlertMessageText = ({ unavailable, restricted, advisory }) => {
+    if (advisory && unavailable) return txt.components.imageGallery.alert.advisory;
     if (restricted && advisory && !unavailable) return txt.components.imageGallery.alert.restrictedAdvisory;
     if (restricted && !unavailable) return txt.components.imageGallery.alert.restricted;
     if (advisory && !unavailable) return txt.components.imageGallery.alert.advisory;
@@ -103,7 +104,14 @@ const ImageGalleryItem = ({
     const historyObject = history ?? useHistory();
 
     const alertMessage = React.useMemo(() => {
+        console.log(
+            item.rek_title,
+            `unavailable: ${unavailable}`,
+            `restricted: ${restricted}`,
+            `advisory: ${advisory}`,
+        );
         return getAlertMessageText({ unavailable, restricted, advisory });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [restricted, advisory, unavailable]);
 
     const clickLink =
