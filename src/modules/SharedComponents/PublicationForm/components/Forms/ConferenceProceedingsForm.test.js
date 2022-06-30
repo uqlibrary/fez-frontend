@@ -16,9 +16,9 @@ describe('ConferenceProceedingsForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 13 input fields', () => {
+    it('component with 12 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(13);
+        expect(wrapper.find('Field').length).toEqual(12);
     });
 
     it('component with all fields disabled', () => {

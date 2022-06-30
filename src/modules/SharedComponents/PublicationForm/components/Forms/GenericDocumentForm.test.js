@@ -17,9 +17,9 @@ describe('GenericDocumentForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 9 input fields', () => {
+    it('component with 8 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(9);
+        expect(wrapper.find('Field').length).toEqual(8);
     });
 
     it('component with all fields disabled', () => {

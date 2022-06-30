@@ -80,27 +80,25 @@ exports[`PatentForm renders  component 1`] = `
           xs={12}
         >
           <Field
-            component={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "propTypes": Object {
-                  "classes": [Function],
-                  "help": [Function],
-                  "innerRef": [Function],
-                  "textFieldId": [Function],
-                },
-                "render": [Function],
-              }
-            }
+            allowPartial={true}
+            className="requiredHintField"
+            component={[Function]}
             disabled={false}
-            fullWidth={true}
-            label="Patent owner"
-            name="fez_record_search_key_publisher.rek_publisher"
-            type="text"
+            floatingTitle="Date patent issued"
+            floatingTitleRequired={true}
+            name="rek_date"
+            partialDateFieldId="rek-date"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
           />
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={6}
           xs={12}
         >
           <Field
@@ -143,38 +141,9 @@ exports[`PatentForm renders  component 1`] = `
             }
             disabled={false}
             fullWidth={true}
-            label="DOI"
-            name="fez_record_search_key_doi.rek_doi"
-            placeholder="Enter a valid DOI (e.g. 10.123/456)"
-            textFieldId="rek-doi"
+            label="Patent owner"
+            name="fez_record_search_key_publisher.rek_publisher"
             type="text"
-            validate={
-              Array [
-                [Function],
-              ]
-            }
-          />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={6}
-          xs={12}
-        >
-          <Field
-            allowPartial={true}
-            className="requiredHintField"
-            component={[Function]}
-            disabled={false}
-            floatingTitle="Date patent issued"
-            floatingTitleRequired={true}
-            name="rek_date"
-            partialDateFieldId="rek-date"
-            required={true}
-            validate={
-              Array [
-                [Function],
-              ]
-            }
           />
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
