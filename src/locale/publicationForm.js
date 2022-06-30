@@ -95,6 +95,10 @@ export default {
                     month: 'Month',
                     year: 'Year',
                 },
+                doi: {
+                    label: 'DOI',
+                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
+                },
             },
         },
         authors: txt.components.authors,
@@ -184,10 +188,6 @@ export default {
                 extent: {
                     label: 'Total pages',
                     placeholder: '',
-                },
-                doi: {
-                    label: 'DOI',
-                    placeholder: 'Enter a valid DOI (e.g. 10.123/456)',
                 },
             },
         },

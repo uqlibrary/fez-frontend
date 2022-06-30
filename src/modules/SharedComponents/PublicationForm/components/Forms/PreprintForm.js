@@ -45,7 +45,19 @@ export default class PreprintForm extends Component {
                                     validate={[validation.required]}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_doi.rek_doi"
+                                    textFieldId="rek-doi"
+                                    type="text"
+                                    fullWidth
+                                    validate={[validation.doi]}
+                                    {...formLocale.generic.information.fieldLabels.doi}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
                                     partialDateFieldId="rek-date"

@@ -55,7 +55,7 @@ export default class GenericDocumentForm extends Component {
                                     {...txt.information.fieldLabels.publicationPlace}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -63,6 +63,18 @@ export default class GenericDocumentForm extends Component {
                                     type="text"
                                     fullWidth
                                     {...txt.information.fieldLabels.publisher}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_doi.rek_doi"
+                                    textFieldId="rek-doi"
+                                    type="text"
+                                    fullWidth
+                                    validate={[validation.doi]}
+                                    {...formLocale.generic.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>

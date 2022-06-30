@@ -62,7 +62,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     {...txt.information.fieldLabels.orgName}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={SeriesField}
                                     name="fez_record_search_key_series.rek_series"
@@ -76,6 +76,18 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     name="fez_record_search_key_report_number.rek_report_number"
                                     disabled={this.props.submitting}
                                     {...txt.information.fieldLabels.reportNumber}
+                                />
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <Field
+                                    component={TextField}
+                                    disabled={this.props.submitting}
+                                    name="fez_record_search_key_doi.rek_doi"
+                                    textFieldId="rek-doi"
+                                    type="text"
+                                    fullWidth
+                                    validate={[validation.doi]}
+                                    {...formLocale.generic.information.fieldLabels.doi}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
