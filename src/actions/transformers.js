@@ -1267,6 +1267,7 @@ export const getOpenAccessStatusSearchKey = record => {
 export const getAdminSectionSearchKeys = (data = {}) => {
     const {
         collections,
+        communities,
         contentIndicators,
         contactName,
         contactNameId,
@@ -1280,8 +1281,8 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_end_date: endDate,
         ...rest
     } = data;
-
     return {
+        ...getRecordIsMemberOfSearchKey(communities),
         ...getRecordIsMemberOfSearchKey(collections),
         ...getContentIndicatorSearchKey(contentIndicators),
         ...(!!contactName && !!contactEmail
@@ -1389,6 +1390,13 @@ export const getThesisTypeSearchKey = type => ({
         rek_thesis_type: type,
     },
 });
+
+export const getReasonSectionSearchKeys = (data = {}) => {
+    const { reason } = data;
+    return {
+        ...(!!reason ? { reason: reason } : {}),
+    };
+};
 
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;

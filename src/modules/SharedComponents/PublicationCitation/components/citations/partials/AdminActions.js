@@ -10,14 +10,7 @@ import { PUBLICATION_TYPES_WITH_DOI, RECORD_ACTION_URLS as defaultActions, RECOR
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { rccDatasetCollection } from 'config/doi';
 
-export const navigateToUrl = (uri, target, navigatedFrom, options) => {
-    let fullUri = uri;
-    if (navigatedFrom) {
-        const queryStringGlue = uri.indexOf('?') > -1 ? '&' : '?';
-        fullUri = `${uri}${queryStringGlue}navigatedFrom=${encodeURIComponent(navigatedFrom)}`;
-    }
-    window.open(fullUri, target, options);
-};
+import { navigateToUrl } from 'modules/SharedComponents/Toolbox/helpers';
 
 export const AdminActions = ({
     adminActions = [...defaultActions],

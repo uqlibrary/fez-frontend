@@ -38,3 +38,5 @@ export { default as searchRecordsReducer } from './searchRecords';
 export { default as thirdPartyLookupToolReducer } from './thirdPartyLookupTool';
 export { default as topCitedPublicationsReducer } from './topCitedPublications';
 export { default as viewRecordReducer } from './viewRecord';
+export { default as viewCommunitiesReducer } from './communities';
+export { default as viewCollectionsReducer } from './collections';

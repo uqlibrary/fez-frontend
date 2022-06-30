@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { sanitiseId } from 'helpers/general';
 import ForCodeSource from './ForCodeSource';
 import Box from '@material-ui/core/Box';
+import { handleKeyboardPressActivate } from 'helpers/general';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -16,6 +17,12 @@ const useStyles = makeStyles(theme => ({
     addable: {
         '&::before': {
             content: '"+"',
+            marginRight: '4px',
+        },
+    },
+    added: {
+        '&::before': {
+            content: '"\\2012"',
             marginRight: '4px',
         },
     },
@@ -32,34 +39,39 @@ export const getIdSuffix = (keyword, variant, type, index) => {
 export const getId = (keyword, variant, type, index) =>
     sanitiseId(`journal-search-item-${getIdSuffix(keyword, variant, type, index)}`);
 
-export const SearchKeyword = ({ keyword, onKeywordClick, variant, type, index, cvoId, sources }) => {
+export const SearchKeyword = ({
+    keyword,
+    onKeywordClick,
+    variant,
+    type,
+    index,
+    cvoId,
+    sources,
+    selectedKeywords = {},
+}) => {
     const classes = useStyles();
     const id = getId(keyword, variant, type, index);
-    const handleKeywordClick = () => onKeywordClick && onKeywordClick(keyword, cvoId);
-    const handleKeywordKeyboardPress = key => {
-        key.preventDefault();
-        if (
-            key.code.toLowerCase() !== 'space' &&
-            key.code.toLowerCase() !== 'enter' &&
-            key.code.toLowerCase() !== 'numpadenter'
-        ) {
-            return;
-        }
+    const isSelected =
+        Object.keys(selectedKeywords).filter(
+            key =>
+                selectedKeywords[key].text.toUpperCase() === keyword.toUpperCase() &&
+                selectedKeywords[key].type.toUpperCase() === type.toUpperCase(),
+        ).length > 0;
+    const handleKeywordClick = () => onKeywordClick && onKeywordClick(isSelected, keyword, cvoId);
 
-        handleKeywordClick();
-    };
     return (
         <Grid item xs={12}>
             <Typography
                 component="span"
                 classes={{ root: classes.root }}
-                className={classes[variant || 'default']}
-                onKeyPress={handleKeywordKeyboardPress}
+                className={`${classes[variant || 'default']} ${isSelected && classes.added}`}
+                onKeyPress={key => handleKeyboardPressActivate(key, handleKeywordClick)}
                 onClick={handleKeywordClick}
                 id={id}
                 data-testid={id}
                 role="button"
                 tabIndex="0"
+                aria-label={`${isSelected ? 'Remove' : 'Add'} ${type} ${keyword}`}
             >
                 {keyword}
             </Typography>
@@ -84,6 +96,7 @@ SearchKeyword.propTypes = {
     onKeywordClick: PropTypes.func,
     variant: PropTypes.oneOf(['default', 'addable']),
     sources: PropTypes.arrayOf(PropTypes.object),
+    selectedKeywords: PropTypes.object,
 };
 
 export default React.memo(SearchKeyword);

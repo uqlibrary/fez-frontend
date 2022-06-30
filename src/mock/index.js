@@ -184,11 +184,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
+            // return [200, mockData.collectionSearchResultsImages];
         } else if (config.params.key && !!config.params.key.rek_status) {
             return [200, mockData.unpublishedSearchList];
         }
-        // return [404, ['Request not found']];
-        return [200, mockData.internalTitleSearchList];
+        return [404, ['Request not found']];
+        //return [200, mockData.collectionSearchResultsImages];
     })
     .onGet(
         new RegExp(
@@ -259,6 +260,122 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, { data: { ...matchedRecord } }];
         }
         return [404, { message: 'File not found' }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:3883' }).apiUrl)))
+    .reply(config => {
+        const mockRecords = [
+            { ...mockData.collectionRecord },
+            { ...mockData.communityRecordWithExtraData },
+            { ...mockData.incompleteNTROrecord },
+            { ...mockData.incompleteNTRORecordUQ352045 },
+            { ...mockData.recordWithoutAuthorIds },
+            { ...mockData.recordWithLotOfAuthors },
+            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.UQ716942uqagrinb },
+            { ...mockTestingData.dataCollection },
+            ...mockData.collectionSearchList.data,
+            ...mockData.communitySearchList.data,
+            ...mockData.incompleteNTROlist.data,
+            ...mockData.internalTitleSearchList.data,
+            ...mockData.mockRecordToFix,
+            ...mockData.myRecordsList.data,
+            ...mockData.myDatasetList.data,
+            ...mockData.possibleUnclaimedList.data,
+            ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
+            ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListBookEdited.data,
+            ...mockData.publicationTypeListConferencePaper.data,
+            ...mockData.publicationTypeListConferenceProceedings.data,
+            ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
+            ...mockData.publicationTypeListDepartmentTechnicalReport.data,
+            ...mockData.publicationTypeListDesign.data,
+            ...mockData.publicationTypeListDigilibImage.data,
+            ...mockData.publicationTypeListGenericDocument.data,
+            ...mockData.publicationTypeListImage.data,
+            ...mockData.publicationTypeListJournal.data,
+            ...mockData.publicationTypeListJournalArticle.data,
+            ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
+            ...mockData.publicationTypeListPatent.data,
+            ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListReferenceEntry.data,
+            ...mockData.publicationTypeListResearchReport.data,
+            ...mockData.publicationTypeListSeminarPaper.data,
+            ...mockData.publicationTypeListThesis.data,
+            ...mockData.publicationTypeListVideo.data,
+            ...mockData.publicationTypeListWorkingPaper.data,
+            ...mockData.trendingPublications.data,
+            ...mockData.unpublishedSearchList.data,
+            ...mockData.UQ353708.data,
+            ...mockData.UQ339703,
+        ];
+        // const mockedPids = mockRecords.map(record => record.rek_pid);
+        // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
+        const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
+        if (matchedRecord) {
+            return [200, { data: { ...matchedRecord } }];
+        }
+        return [200, { data: { ...mockData.record } }];
+    })
+    .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: 'UQ:11399' }).apiUrl)))
+    .reply(config => {
+        const mockRecords = [
+            { ...mockData.collectionRecordWithExtraData },
+            { ...mockData.communityRecord },
+            { ...mockData.incompleteNTROrecord },
+            { ...mockData.incompleteNTRORecordUQ352045 },
+            { ...mockData.recordWithoutAuthorIds },
+            { ...mockData.recordWithLotOfAuthors },
+            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.UQ716942uqagrinb },
+            { ...mockTestingData.dataCollection },
+            ...mockData.collectionSearchList.data,
+            ...mockData.communitySearchList.data,
+            ...mockData.incompleteNTROlist.data,
+            ...mockData.internalTitleSearchList.data,
+            ...mockData.mockRecordToFix,
+            ...mockData.myRecordsList.data,
+            ...mockData.myDatasetList.data,
+            ...mockData.possibleUnclaimedList.data,
+            ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
+            ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListBookEdited.data,
+            ...mockData.publicationTypeListConferencePaper.data,
+            ...mockData.publicationTypeListConferenceProceedings.data,
+            ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
+            ...mockData.publicationTypeListDepartmentTechnicalReport.data,
+            ...mockData.publicationTypeListDesign.data,
+            ...mockData.publicationTypeListDigilibImage.data,
+            ...mockData.publicationTypeListGenericDocument.data,
+            ...mockData.publicationTypeListImage.data,
+            ...mockData.publicationTypeListJournal.data,
+            ...mockData.publicationTypeListJournalArticle.data,
+            ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
+            ...mockData.publicationTypeListPatent.data,
+            ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListReferenceEntry.data,
+            ...mockData.publicationTypeListResearchReport.data,
+            ...mockData.publicationTypeListSeminarPaper.data,
+            ...mockData.publicationTypeListThesis.data,
+            ...mockData.publicationTypeListVideo.data,
+            ...mockData.publicationTypeListWorkingPaper.data,
+            ...mockData.trendingPublications.data,
+            ...mockData.unpublishedSearchList.data,
+            ...mockData.UQ353708.data,
+            ...mockData.UQ339703,
+        ];
+        // const mockedPids = mockRecords.map(record => record.rek_pid);
+        // console.log(`Mocking ${mockedPids.length} pids:`, mockedPids);
+        const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
+        if (matchedRecord) {
+            return [200, { data: { ...matchedRecord } }];
+        }
+        return [200, { data: { ...mockData.record } }];
     })
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
@@ -458,7 +575,24 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.JOURNAL_API({ id: '.*' }).apiUrl)))
     .reply(200, { ...mockData.journalDetails })
     .onGet(new RegExp(escapeRegExp(routes.MANAGE_USERS_LIST_API({}).apiUrl)))
-    .reply(200, { ...mockData.userList });
+    .reply(200, { ...mockData.userList })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.COMMUNITY_LIST_API({ pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' }).apiUrl,
+            ),
+        ),
+    )
+    .reply(200, { ...mockData.communityList })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.COLLECTION_LIST_API({ pid: '.*', pageSize: '.*', page: '.*', direction: '.*', sortBy: '.*' })
+                    .apiUrl,
+            ),
+        ),
+    )
+    .reply(200, { ...mockData.collectionList });
 
 // let uploadTryCount = 1;
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/)

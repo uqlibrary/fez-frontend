@@ -353,3 +353,16 @@ export const formatUrlTextWithWbrTags = url => {
 
     return ReactHtmlParser(formatted);
 };
+
+export const handleKeyboardPressActivate = (key, callbackFn) => {
+    key.preventDefault();
+    if (
+        key.code.toLowerCase() !== 'space' &&
+        key.code.toLowerCase() !== 'enter' &&
+        key.code.toLowerCase() !== 'numpadenter'
+    ) {
+        return;
+    }
+
+    callbackFn();
+};
