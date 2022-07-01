@@ -57,15 +57,19 @@ export default class PatentForm extends Component {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
-                                    component={TextField}
+                                    component={PartialDateField}
+                                    partialDateFieldId="rek-date"
                                     disabled={this.props.submitting}
-                                    name="fez_record_search_key_publisher.rek_publisher"
-                                    type="text"
-                                    fullWidth
-                                    label={txt.information.fieldLabels.patentOwner}
+                                    name="rek_date"
+                                    allowPartial
+                                    required
+                                    className="requiredHintField"
+                                    validate={[validation.required]}
+                                    floatingTitle={txt.information.fieldLabels.date.title}
+                                    floatingTitleRequired
                                 />
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
@@ -79,26 +83,10 @@ export default class PatentForm extends Component {
                                 <Field
                                     component={TextField}
                                     disabled={this.props.submitting}
-                                    name="fez_record_search_key_doi.rek_doi"
-                                    textFieldId="rek-doi"
+                                    name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     fullWidth
-                                    validate={[validation.doi]}
-                                    {...formLocale.generic.information.fieldLabels.doi}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    partialDateFieldId="rek-date"
-                                    disabled={this.props.submitting}
-                                    name="rek_date"
-                                    allowPartial
-                                    required
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired
+                                    label={txt.information.fieldLabels.patentOwner}
                                 />
                             </Grid>
                         </Grid>

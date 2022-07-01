@@ -62,7 +62,7 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     {...txt.information.fieldLabels.orgName}
                                 />
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={SeriesField}
                                     name="fez_record_search_key_series.rek_series"
