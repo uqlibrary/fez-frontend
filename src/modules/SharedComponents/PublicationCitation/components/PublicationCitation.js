@@ -270,7 +270,11 @@ export class PublicationCitation extends PureComponent {
     };
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
-        return showImageThumbnails && getWhiteListed(publication, imageConfig);
+        return (
+            showImageThumbnails &&
+            (getWhiteListed(publication, imageConfig) || // eslint-disable-next-line camelcase
+                !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement)
+        );
     };
 
     renderPublicationImage = (publication, security) => {
