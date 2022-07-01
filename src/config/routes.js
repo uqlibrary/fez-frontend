@@ -61,6 +61,7 @@ export const flattedPathConfig = [
     '/records/possible',
     '/records/search',
     '/view',
+    '/communitylist',
 ];
 
 // TODO: will we even have roles?
@@ -89,6 +90,7 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.index.title,
         },
+
         {
             path: pathConfig.contact,
             render: () => components.StandardPage({ ...locale.pages.contact }),
@@ -113,6 +115,19 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
+        {
+            path: pathConfig.communityList,
+            component: components.CommunityList,
+            exact: true,
+            pageTitle: locale.pages.communityList.title,
+        },
+        {
+            path: pathConfig.collectionList.path(pid),
+            component: components.CollectionList,
+            exact: true,
+            pageTitle: locale.pages.collectionList.title,
+        },
+
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
@@ -503,6 +518,11 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
         {
+            linkTo: pathConfig.communityList,
+            ...locale.menu.communityList,
+            public: true,
+        },
+        {
             linkTo: pathConfig.help,
             ...locale.menu.help,
             public: true,
@@ -513,6 +533,15 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
     ];
+    const userPages =
+        (account && [
+            {
+                linkTo: pathConfig.journals.search,
+                ...locale.menu.journals.search,
+            },
+        ]) ||
+        [];
+
     // eslint-disable-next-line camelcase
     const isAuthor = author?.aut_id;
     const incompletePage =
@@ -540,6 +569,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       },
                   ]
                 : []),
+            ...userPages,
             ...publicPages,
         ];
     }
@@ -579,25 +609,27 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       ...locale.menu.myEditorialAppointments,
                   },
                   {
-                      linkTo: pathConfig.journals.search,
-                      ...locale.menu.journals.search,
-                  },
-                  {
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
+                  //   {
+                  //       linkTo: pathConfig.communityList,
+                  //       ...locale.menu.communityList,
+                  //       public: true,
+                  //   },
                   {
                       divider: true,
                       path: '/234234234242',
                   },
               ]
             : []),
+        ...userPages,
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
-                  {
-                      linkTo: pathConfig.admin.community,
-                      ...locale.menu.communityForm,
-                  },
+                  //   {
+                  //       linkTo: pathConfig.admin.community,
+                  //       ...locale.menu.communityForm,
+                  //   },
                   {
                       linkTo: pathConfig.admin.collection,
                       ...locale.menu.collectionForm,

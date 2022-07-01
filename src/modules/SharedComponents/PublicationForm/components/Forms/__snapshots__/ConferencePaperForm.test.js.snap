@@ -130,7 +130,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
             }
             disabled={false}
             fullWidth={true}
-            label="Conference dates (eg 13-15 December 2011)"
+            label="Conference dates (e.g 3-5 May)"
             name="fez_record_search_key_conference_dates.rek_conference_dates"
             required={true}
             type="text"
@@ -325,7 +325,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each author's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Authors's name as published",
               },
             },
             "header": Object {
@@ -414,7 +414,7 @@ exports[`ConferencePaperForm renders  component 1`] = `
                 "editButtonLabel": <span>
                   Update ISBN
                 </span>,
-                "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
+                "inputFieldHint": "Enter a 10 or 13 digit ISBN",
                 "inputFieldLabel": "ISBN value",
                 "remindToAddText": <span>
                   Please press 

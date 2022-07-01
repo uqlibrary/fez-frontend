@@ -37,6 +37,16 @@ export const getDatastreamVersionQueryString = (fileName, checksum) => {
 
 export const pathConfig = {
     index: '/',
+    communityCollections: {
+        communityListUrl: '/communities',
+        collectionsListUrl: '/collections',
+        communityListAPI: 'communities',
+        collectionListAPI: 'communities',
+    },
+    communityList: '/communities',
+    collectionList: {
+        path: pid => `/communities/${pid}/collections`,
+    },
     dashboard: '/dashboard',
     contact: '/contact',
     hdrSubmission: '/rhdsubmission',

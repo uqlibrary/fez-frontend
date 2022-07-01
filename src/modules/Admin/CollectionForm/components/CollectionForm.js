@@ -5,6 +5,7 @@ import { Field } from 'redux-form/immutable';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -17,6 +18,8 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { pathConfig } from 'config/pathConfig';
+
+import queryString from 'query-string';
 
 export default class CollectionForm extends Component {
     static propTypes = {
@@ -56,7 +59,19 @@ export default class CollectionForm extends Component {
     };
 
     render() {
+        let hasParams = false;
+
+        const queryStringObject = queryString.parse(
+            location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
+            { ignoreQueryPrefix: true },
+        );
+        if (queryStringObject?.pid && queryStringObject?.name) {
+            hasParams = true;
+        }
         const txt = formLocale.addACollection;
+        const detailsTitle = !!hasParams
+            ? `New collection in community '${queryStringObject.name}'`
+            : txt.details.title;
         if (this.props.submitSucceeded && this.props.newRecord) {
             return (
                 <StandardPage title={txt.title}>
@@ -98,87 +113,116 @@ export default class CollectionForm extends Component {
         });
         return (
             <StandardPage title={txt.title}>
-                <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
+                <ConfirmDiscardFormChanges
+                    dirty={this.props.dirty && (!!!hasParams || (!!hasParams && this.props.formValues.size > 1))}
+                    submitSucceeded={this.props.submitSucceeded}
+                >
                     <form>
                         <NavigationDialogBox
-                            when={this.props.dirty && !this.props.submitSucceeded}
+                            when={
+                                this.props.dirty &&
+                                !this.props.submitSucceeded &&
+                                (!!!hasParams || (!!hasParams && this.props.formValues.size > 1))
+                            }
                             txt={txt.cancelWorkflowConfirmation}
                         />
                         <Grid container spacing={3}>
-                            <Grid item xs={12}>
-                                <StandardCard title={txt.title} help={txt.help}>
-                                    <Grid container spacing={3}>
-                                        <Grid item xs={12}>
-                                            <Field
-                                                component={CommunitySelectField}
-                                                disabled={this.props.submitting}
-                                                genericSelectFieldId="rek-ismemberof"
-                                                name="fez_record_search_key_ismemberof"
-                                                required
-                                                validate={[validation.required]}
-                                                {...txt.formLabels.ismemberof}
-                                            />
-                                        </Grid>
-                                    </Grid>
-                                </StandardCard>
-                            </Grid>
-                            {this.props.formValues.get('fez_record_search_key_ismemberof') &&
-                                this.props.formValues.get('fez_record_search_key_ismemberof').length > 0 && (
-                                    <Grid item xs={12}>
-                                        <StandardCard title={txt.details.title} help={txt.details.help}>
-                                            <Grid container spacing={3}>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        textFieldId="rek-title"
-                                                        disabled={this.props.submitting}
-                                                        autoFocus
-                                                        name="rek_title"
-                                                        type="text"
-                                                        fullWidth
-                                                        {...txt.formLabels.title}
-                                                        required
-                                                        validate={[validation.required]}
-                                                    />
-                                                </Grid>
-
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={TextField}
-                                                        textFieldId="rek-description"
-                                                        disabled={this.props.submitting}
-                                                        name="rek_description"
-                                                        fullWidth
-                                                        multiline
-                                                        rows={5}
-                                                        {...txt.formLabels.description}
-                                                        validate={[validation.required]}
-                                                        required
-                                                    />
-                                                </Grid>
-
-                                                <Grid item xs={12}>
-                                                    <Typography>{txt.formLabels.keywords.description}</Typography>
-                                                    <Field
-                                                        component={NewListEditorField}
-                                                        name="fez_record_search_key_keywords"
-                                                        maxCount={10}
-                                                        // validate={[validation.requiredList]}
-                                                        searchKey={{
-                                                            value: 'rek_keywords',
-                                                            order: 'rek_keywords_order',
-                                                        }}
-                                                        ListEditorForm={KeywordsForm}
-                                                        // isValid={validation.isValidKeyword(111)}
-                                                        listEditorId="rek-keywords"
-                                                        locale={txt.formLabels.keywords.field}
-                                                        disabled={this.props.submitting}
-                                                    />
-                                                </Grid>
+                            {!!!hasParams && (
+                                <Grid item xs={12}>
+                                    <StandardCard title={txt.title} help={txt.help}>
+                                        <Grid
+                                            container
+                                            spacing={3}
+                                            id="community-selector"
+                                            data-testid="community-selector"
+                                        >
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={CommunitySelectField}
+                                                    disabled={this.props.submitting}
+                                                    genericSelectFieldId="rek-ismemberof"
+                                                    name="fez_record_search_key_ismemberof"
+                                                    required
+                                                    validate={[validation.required]}
+                                                    {...txt.formLabels.ismemberof}
+                                                />
                                             </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                )}
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                            )}
+                            {(!!hasParams ||
+                                (this.props.formValues.get('fez_record_search_key_ismemberof') &&
+                                    this.props.formValues.get('fez_record_search_key_ismemberof').length > 0)) && (
+                                <Grid item xs={12}>
+                                    <StandardCard title={detailsTitle} help={txt.details.help}>
+                                        <Grid container spacing={3}>
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    textFieldId="rek-title"
+                                                    disabled={this.props.submitting}
+                                                    autoFocus
+                                                    name="rek_title"
+                                                    type="text"
+                                                    fullWidth
+                                                    {...txt.formLabels.title}
+                                                    required
+                                                    validate={[validation.required]}
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={12}>
+                                                <Field
+                                                    component={TextField}
+                                                    textFieldId="rek-description"
+                                                    disabled={this.props.submitting}
+                                                    name="rek_description"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={5}
+                                                    {...txt.formLabels.description}
+                                                    validate={[validation.required]}
+                                                    required
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={12}>
+                                                <Typography>{txt.formLabels.keywords.description}</Typography>
+                                                <Field
+                                                    component={NewListEditorField}
+                                                    name="fez_record_search_key_keywords"
+                                                    maxCount={10}
+                                                    // validate={[validation.requiredList]}
+                                                    searchKey={{
+                                                        value: 'rek_keywords',
+                                                        order: 'rek_keywords_order',
+                                                    }}
+                                                    ListEditorForm={KeywordsForm}
+                                                    // isValid={validation.isValidKeyword(111)}
+                                                    listEditorId="rek-keywords"
+                                                    locale={txt.formLabels.keywords.field}
+                                                    disabled={this.props.submitting}
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={12}>
+                                                <Typography>{txt.formLabels.internalNotes.label}</Typography>
+                                                <Field
+                                                    component={RichEditorField}
+                                                    richEditorId="internalNotes"
+                                                    disabled={this.props.submitting}
+                                                    name="internalNotes"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={5}
+                                                    {...txt.formLabels.internalNotes}
+                                                />
+                                            </Grid>
+                                        </Grid>
+                                    </StandardCard>
+                                </Grid>
+                            )}
                             {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert {...alertProps} />

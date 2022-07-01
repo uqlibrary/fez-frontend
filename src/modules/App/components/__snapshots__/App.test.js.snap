@@ -56,6 +56,25 @@ exports[`Application component Should display mobile correctly 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -262,6 +281,11 @@ exports[`Application component Should display mobile correctly 1`] = `
           "secondaryText": "",
         },
         Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -289,6 +313,19 @@ exports[`Application component Should display mobile correctly 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -426,15 +463,37 @@ exports[`Application component Should display mobile correctly 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -762,6 +821,25 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -956,10 +1034,19 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -989,6 +1076,19 @@ exports[`Application component should determine if it has incomplete works from 
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -1440,8 +1540,30 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_27"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -1765,6 +1887,25 @@ exports[`Application component should determine if it has incomplete works from 
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -1959,10 +2100,19 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -1992,6 +2142,19 @@ exports[`Application component should determine if it has incomplete works from 
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -2443,8 +2606,30 @@ exports[`Application component should determine if it has incomplete works from 
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_27"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -2510,6 +2695,25 @@ exports[`Application component should redirect to login page with correct return
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -2718,6 +2922,11 @@ exports[`Application component should redirect to login page with correct return
           "secondaryText": "",
         },
         Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -2745,6 +2954,19 @@ exports[`Application component should redirect to login page with correct return
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -2882,15 +3104,37 @@ exports[`Application component should redirect to login page with correct return
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -3214,6 +3458,25 @@ exports[`Application component should render alert if user is not fez author 1`]
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -3408,10 +3671,19 @@ exports[`Application component should render alert if user is not fez author 1`]
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -3441,6 +3713,19 @@ exports[`Application component should render alert if user is not fez author 1`]
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -3909,8 +4194,30 @@ exports[`Application component should render alert if user is not fez author 1`]
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_27"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -4234,6 +4541,25 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -4457,10 +4783,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/journals/search/",
-          "primaryText": "Journal search",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
           "primaryText": "Author statistics",
         },
@@ -4469,10 +4791,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
           "path": "/234234234242",
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -4502,6 +4833,19 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -4953,8 +5297,30 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_27"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -5278,6 +5644,25 @@ exports[`Application component should render app for account with fez author wit
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -5501,10 +5886,6 @@ exports[`Application component should render app for account with fez author wit
           "primaryText": "My editorial appointments",
         },
         Object {
-          "linkTo": "/journals/search/",
-          "primaryText": "Journal search",
-        },
-        Object {
           "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
           "primaryText": "Author statistics",
         },
@@ -5513,10 +5894,19 @@ exports[`Application component should render app for account with fez author wit
           "path": "/234234234242",
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -5546,6 +5936,19 @@ exports[`Application component should render app for account with fez author wit
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -5982,8 +6385,30 @@ exports[`Application component should render app for account with fez author wit
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_27"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_28"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            key="route_29"
             pageTitle="Page not found"
           />
         </Switch>
@@ -6307,6 +6732,25 @@ exports[`Application component should render application with routing for the us
           "path": "/journal/view/:id([0-9]+)",
         },
         Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+        },
+        Object {
           "component": [Function],
           "pageTitle": "Page not found",
         },
@@ -6501,10 +6945,19 @@ exports[`Application component should render application with routing for the us
           "public": true,
         },
         Object {
+          "linkTo": "/journals/search/",
+          "primaryText": "Journal search",
+        },
+        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
           "secondaryText": "",
+        },
+        Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
         },
         Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -6534,6 +6987,19 @@ exports[`Application component should render application with routing for the us
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6623,6 +7089,25 @@ exports[`Application component should render for anon user 1`] = `
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "component": [Function],
@@ -6831,6 +7316,11 @@ exports[`Application component should render for anon user 1`] = `
           "secondaryText": "",
         },
         Object {
+          "linkTo": "/communities",
+          "primaryText": "Browse",
+          "public": true,
+        },
+        Object {
           "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
           "primaryText": "Help",
           "public": true,
@@ -6858,6 +7348,19 @@ exports[`Application component should render for anon user 1`] = `
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6958,15 +7461,37 @@ exports[`Application component should render for anon user 1`] = `
             path="/journal/view/:id([0-9]+)"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
             exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            component={[Function]}
+            exact={true}
+            key="route_7"
             pageTitle="eSpace"
             path="/dashboard"
           />
           <Route
             component={[Function]}
-            key="route_6"
+            key="route_8"
             pageTitle="Page not found"
           />
         </Switch>
@@ -7050,6 +7575,25 @@ exports[`Application component should render thesis submission for HDR without m
           },
           "pageTitle": "Journal details",
           "path": "/journal/view/:id([0-9]+)",
+        },
+        Object {
+          "component": Object {
+            "$$typeof": Symbol(react.lazy),
+            "_init": [Function],
+            "_payload": Object {
+              "_result": [Function],
+              "_status": -1,
+            },
+          },
+          "exact": true,
+          "pageTitle": "List of Communities",
+          "path": "/communities",
+        },
+        Object {
+          "component": undefined,
+          "exact": true,
+          "pageTitle": "List of Collections",
+          "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
         },
         Object {
           "pageTitle": "Higher degree by research thesis deposit",
@@ -7189,6 +7733,19 @@ exports[`Application component should render thesis submission for HDR without m
         show={true}
       />
     </Hidden>
+    <div
+      aria-label="eSpace alerts"
+      role="region"
+      style={
+        Object {
+          "paddingBottom": 24,
+        }
+      }
+    >
+      <alert-list
+        system="espace"
+      />
+    </div>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -7313,13 +7870,35 @@ exports[`Application component should render thesis submission for HDR without m
             path="/journal/view/:id([0-9]+)"
           />
           <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.lazy),
+                "_init": [Function],
+                "_payload": Object {
+                  "_result": [Function],
+                  "_status": -1,
+                },
+              }
+            }
+            exact={true}
             key="route_5"
+            pageTitle="List of Communities"
+            path="/communities"
+          />
+          <Route
+            exact={true}
+            key="route_6"
+            pageTitle="List of Collections"
+            path="/communities/:pid(UQ:[a-z0-9]+)/collections"
+          />
+          <Route
+            key="route_7"
             pageTitle="Higher degree by research thesis deposit"
             path="/rhdsubmission"
             render={[Function]}
           />
           <Route
-            key="route_6"
+            key="route_8"
             pageTitle="Professional doctorate deposit"
             path="/habslodge"
             render={[Function]}
@@ -7335,7 +7914,7 @@ exports[`Application component should render thesis submission for HDR without m
                 },
               }
             }
-            key="route_7"
+            key="route_9"
             pageTitle="Link ORCID ID to UQ eSpace"
           />
         </Switch>
@@ -8435,6 +9014,25 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "path": "/journal/view/:id([0-9]+)",
                           },
                           Object {
+                            "component": Object {
+                              "$$typeof": Symbol(react.lazy),
+                              "_init": [Function],
+                              "_payload": Object {
+                                "_result": [Function],
+                                "_status": -1,
+                              },
+                            },
+                            "exact": true,
+                            "pageTitle": "List of Communities",
+                            "path": "/communities",
+                          },
+                          Object {
+                            "component": undefined,
+                            "exact": true,
+                            "pageTitle": "List of Collections",
+                            "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
+                          },
+                          Object {
                             "component": [Function],
                             "pageTitle": "Page not found",
                           },
@@ -8793,6 +9391,25 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               },
                               "pageTitle": "Journal details",
                               "path": "/journal/view/:id([0-9]+)",
+                            },
+                            Object {
+                              "component": Object {
+                                "$$typeof": Symbol(react.lazy),
+                                "_init": [Function],
+                                "_payload": Object {
+                                  "_result": [Function],
+                                  "_status": -1,
+                                },
+                              },
+                              "exact": true,
+                              "pageTitle": "List of Communities",
+                              "path": "/communities",
+                            },
+                            Object {
+                              "component": undefined,
+                              "exact": true,
+                              "pageTitle": "List of Collections",
+                              "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
                             },
                             Object {
                               "component": [Function],
@@ -9154,6 +9771,25 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 },
                                 "pageTitle": "Journal details",
                                 "path": "/journal/view/:id([0-9]+)",
+                              },
+                              Object {
+                                "component": Object {
+                                  "$$typeof": Symbol(react.lazy),
+                                  "_init": [Function],
+                                  "_payload": Object {
+                                    "_result": [Function],
+                                    "_status": -1,
+                                  },
+                                },
+                                "exact": true,
+                                "pageTitle": "List of Communities",
+                                "path": "/communities",
+                              },
+                              Object {
+                                "component": undefined,
+                                "exact": true,
+                                "pageTitle": "List of Collections",
+                                "path": "/communities/:pid(UQ:[a-z0-9]+)/collections",
                               },
                               Object {
                                 "component": [Function],
@@ -10577,6 +11213,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "checkSession": [Function],
                                                           "claimPublication": [Function],
                                                           "clearAuthorsSuggestions": [Function],
+                                                          "clearCCCollectionsList": [Function],
                                                           "clearClaimPublication": [Function],
                                                           "clearDeleteRecord": [Function],
                                                           "clearFixRecord": [Function],
@@ -10626,7 +11263,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadAuthorList": [Function],
                                                           "loadAuthorPublicationsStats": [Function],
                                                           "loadBulkUpdatesList": [Function],
+                                                          "loadCCCollectionsList": [Function],
                                                           "loadCollectionsList": [Function],
+                                                          "loadCommunitiesList": [Function],
                                                           "loadCurrentAccount": [Function],
                                                           "loadDetailedHistory": [Function],
                                                           "loadFavouriteSearchList": [Function],
@@ -10653,7 +11292,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
-                                                          "resetExportJournalsStatus": [Function],
                                                           "resetExportPublicationsStatus": [Function],
                                                           "resetSavingAuthorState": [Function],
                                                           "retrieveFavouriteJournals": [Function],
@@ -10668,6 +11306,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "searchTopCitedPublications": [Function],
                                                           "searchTrendingPublications": [Function],
                                                           "setClaimPublication": [Function],
+                                                          "setCollectionsArray": [Function],
                                                           "setDeleteRecord": [Function],
                                                           "setFixRecord": [Function],
                                                           "setHideCulturalSensitivityStatement": [Function],
@@ -11700,10 +12339,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             "public": true,
                           },
                           Object {
+                            "linkTo": "/journals/search/",
+                            "primaryText": "Journal search",
+                          },
+                          Object {
                             "linkTo": "/records/search",
                             "primaryText": "Search eSpace",
                             "public": true,
                             "secondaryText": "",
+                          },
+                          Object {
+                            "linkTo": "/communities",
+                            "primaryText": "Browse",
+                            "public": true,
                           },
                           Object {
                             "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -11766,10 +12414,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "public": true,
                             },
                             Object {
+                              "linkTo": "/journals/search/",
+                              "primaryText": "Journal search",
+                            },
+                            Object {
                               "linkTo": "/records/search",
                               "primaryText": "Search eSpace",
                               "public": true,
                               "secondaryText": "",
+                            },
+                            Object {
+                              "linkTo": "/communities",
+                              "primaryText": "Browse",
+                              "public": true,
                             },
                             Object {
                               "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
@@ -12538,6 +13195,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           xsUp={false}
                         />
                       </Hidden>
+                      <div
+                        aria-label="eSpace alerts"
+                        role="region"
+                        style={
+                          Object {
+                            "paddingBottom": 24,
+                          }
+                        }
+                      >
+                        <alert-list
+                          system="espace"
+                        />
+                      </div>
                       <WithStyles(ConfirmDialogBox)
                         hideCancelButton={true}
                         locale={
@@ -14520,6 +15190,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "checkSession": [Function],
                                                                           "claimPublication": [Function],
                                                                           "clearAuthorsSuggestions": [Function],
+                                                                          "clearCCCollectionsList": [Function],
                                                                           "clearClaimPublication": [Function],
                                                                           "clearDeleteRecord": [Function],
                                                                           "clearFixRecord": [Function],
@@ -14569,7 +15240,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadAuthorList": [Function],
                                                                           "loadAuthorPublicationsStats": [Function],
                                                                           "loadBulkUpdatesList": [Function],
+                                                                          "loadCCCollectionsList": [Function],
                                                                           "loadCollectionsList": [Function],
+                                                                          "loadCommunitiesList": [Function],
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadDetailedHistory": [Function],
                                                                           "loadFavouriteSearchList": [Function],
@@ -14596,7 +15269,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "requestMJLIngest": [Function],
                                                                           "requestOrcidSync": [Function],
                                                                           "resetDoi": [Function],
-                                                                          "resetExportJournalsStatus": [Function],
                                                                           "resetExportPublicationsStatus": [Function],
                                                                           "resetSavingAuthorState": [Function],
                                                                           "retrieveFavouriteJournals": [Function],
@@ -14611,6 +15283,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "searchTopCitedPublications": [Function],
                                                                           "searchTrendingPublications": [Function],
                                                                           "setClaimPublication": [Function],
+                                                                          "setCollectionsArray": [Function],
                                                                           "setDeleteRecord": [Function],
                                                                           "setFixRecord": [Function],
                                                                           "setHideCulturalSensitivityStatement": [Function],
@@ -14701,6 +15374,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
                                                                             "clearAuthorsSuggestions": [Function],
+                                                                            "clearCCCollectionsList": [Function],
                                                                             "clearClaimPublication": [Function],
                                                                             "clearDeleteRecord": [Function],
                                                                             "clearFixRecord": [Function],
@@ -14750,7 +15424,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadAuthorList": [Function],
                                                                             "loadAuthorPublicationsStats": [Function],
                                                                             "loadBulkUpdatesList": [Function],
+                                                                            "loadCCCollectionsList": [Function],
                                                                             "loadCollectionsList": [Function],
+                                                                            "loadCommunitiesList": [Function],
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadDetailedHistory": [Function],
                                                                             "loadFavouriteSearchList": [Function],
@@ -14777,7 +15453,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "requestMJLIngest": [Function],
                                                                             "requestOrcidSync": [Function],
                                                                             "resetDoi": [Function],
-                                                                            "resetExportJournalsStatus": [Function],
                                                                             "resetExportPublicationsStatus": [Function],
                                                                             "resetSavingAuthorState": [Function],
                                                                             "retrieveFavouriteJournals": [Function],
@@ -14792,6 +15467,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "searchTopCitedPublications": [Function],
                                                                             "searchTrendingPublications": [Function],
                                                                             "setClaimPublication": [Function],
+                                                                            "setCollectionsArray": [Function],
                                                                             "setDeleteRecord": [Function],
                                                                             "setFixRecord": [Function],
                                                                             "setHideCulturalSensitivityStatement": [Function],
@@ -15657,6 +16333,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "checkSession": [Function],
                                                                                     "claimPublication": [Function],
                                                                                     "clearAuthorsSuggestions": [Function],
+                                                                                    "clearCCCollectionsList": [Function],
                                                                                     "clearClaimPublication": [Function],
                                                                                     "clearDeleteRecord": [Function],
                                                                                     "clearFixRecord": [Function],
@@ -15706,7 +16383,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadAuthorList": [Function],
                                                                                     "loadAuthorPublicationsStats": [Function],
                                                                                     "loadBulkUpdatesList": [Function],
+                                                                                    "loadCCCollectionsList": [Function],
                                                                                     "loadCollectionsList": [Function],
+                                                                                    "loadCommunitiesList": [Function],
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadDetailedHistory": [Function],
                                                                                     "loadFavouriteSearchList": [Function],
@@ -15733,7 +16412,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "requestMJLIngest": [Function],
                                                                                     "requestOrcidSync": [Function],
                                                                                     "resetDoi": [Function],
-                                                                                    "resetExportJournalsStatus": [Function],
                                                                                     "resetExportPublicationsStatus": [Function],
                                                                                     "resetSavingAuthorState": [Function],
                                                                                     "retrieveFavouriteJournals": [Function],
@@ -15748,6 +16426,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "searchTopCitedPublications": [Function],
                                                                                     "searchTrendingPublications": [Function],
                                                                                     "setClaimPublication": [Function],
+                                                                                    "setCollectionsArray": [Function],
                                                                                     "setDeleteRecord": [Function],
                                                                                     "setFixRecord": [Function],
                                                                                     "setHideCulturalSensitivityStatement": [Function],
@@ -15792,6 +16471,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],
                                                                                       "clearAuthorsSuggestions": [Function],
+                                                                                      "clearCCCollectionsList": [Function],
                                                                                       "clearClaimPublication": [Function],
                                                                                       "clearDeleteRecord": [Function],
                                                                                       "clearFixRecord": [Function],
@@ -15841,7 +16521,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadAuthorList": [Function],
                                                                                       "loadAuthorPublicationsStats": [Function],
                                                                                       "loadBulkUpdatesList": [Function],
+                                                                                      "loadCCCollectionsList": [Function],
                                                                                       "loadCollectionsList": [Function],
+                                                                                      "loadCommunitiesList": [Function],
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadDetailedHistory": [Function],
                                                                                       "loadFavouriteSearchList": [Function],
@@ -15868,7 +16550,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "requestMJLIngest": [Function],
                                                                                       "requestOrcidSync": [Function],
                                                                                       "resetDoi": [Function],
-                                                                                      "resetExportJournalsStatus": [Function],
                                                                                       "resetExportPublicationsStatus": [Function],
                                                                                       "resetSavingAuthorState": [Function],
                                                                                       "retrieveFavouriteJournals": [Function],
@@ -15883,6 +16564,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "searchTopCitedPublications": [Function],
                                                                                       "searchTrendingPublications": [Function],
                                                                                       "setClaimPublication": [Function],
+                                                                                      "setCollectionsArray": [Function],
                                                                                       "setDeleteRecord": [Function],
                                                                                       "setFixRecord": [Function],
                                                                                       "setHideCulturalSensitivityStatement": [Function],

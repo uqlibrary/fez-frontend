@@ -438,3 +438,6 @@ export const doiFields = {
         ],
     },
 };
+
+// Collection with RCC datasets
+export const rccDatasetCollection = 'UQ:5d1d4fb';

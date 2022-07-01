@@ -131,6 +131,8 @@ const SearchRecords = ({
                         publicationsList={publicationsList}
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
+                        security={{ isAdmin, isAuthor, author }}
                     />
                 );
         }
@@ -201,6 +203,7 @@ const SearchRecords = ({
                                 </Grid>
                                 <Grid item xs={12}>
                                     <PublicationsListSorting
+                                        showDisplayAs
                                         canUseExport={canUseExport}
                                         disabled={isLoadingOrExporting}
                                         onExportPublications={handleExport}

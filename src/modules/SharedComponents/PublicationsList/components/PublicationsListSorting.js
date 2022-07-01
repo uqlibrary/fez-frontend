@@ -46,11 +46,11 @@ const PublicationsListSorting = props => {
         : props.sortingDefaults.pageSize ?? pageLength[0];
 
     const propDisplayRecordsAs = doesListContainItem(
-        locale.components.sorting.displayRecordsAs ?? [],
+        locale.components.sorting.displayRecordsAs ?? /* istanbul ignore next */ [],
         initPropDisplayRecordsAs,
     )
         ? initPropDisplayRecordsAs
-        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? '';
+        : locale.components.sorting.displayRecordsAs?.[0]?.value ?? /* istanbul ignore next */ '';
 
     const [sortBy, setSortBy] = React.useState(propSortBy);
     const [sortDirection, setSortDirection] = React.useState(propSortDirection);
@@ -96,6 +96,8 @@ const PublicationsListSorting = props => {
     const isAdmin = userIsAdmin();
     const isResearcher = userIsResearcher();
 
+    const dropDownWidth = !!props.showDisplayAs ? 2 : 3;
+
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
@@ -123,7 +125,7 @@ const PublicationsListSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6} md={props.canUseExport ? 2 : 3}>
+            <Grid item xs={12} sm={6} md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}>
                 <FormControl fullWidth>
                     <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
                     <Select
@@ -148,7 +150,12 @@ const PublicationsListSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={props.canUseExport ? 6 : 12} md={props.canUseExport ? 2 : 3}>
+            <Grid
+                item
+                xs={12}
+                sm={props.canUseExport ? 6 : 12}
+                md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
+            >
                 <FormControl fullWidth>
                     <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
                     <Select
@@ -188,31 +195,38 @@ const PublicationsListSorting = props => {
                     </Select>
                 </FormControl>
             </Grid>
-            <Grid item xs={12} sm={props.canUseExport ? 6 : 12} md={props.canUseExport ? 2 : 3}>
-                <FormControl fullWidth>
-                    <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
-                    <Select
-                        id="displayRecordsAs"
-                        value={displayRecordsAs}
-                        disabled={props.disabled}
-                        onChange={displayRecordsAsChanged}
-                        data-testid="publication-list-display-records-as"
-                    >
-                        {props.sortingData.displayRecordsAs?.map(item => {
-                            return (
-                                <MenuItem
-                                    key={item.index}
-                                    value={item.value}
-                                    data-testid={`publication-display-records-as-option-${item.index}`}
-                                    id={`publication-display-records-as-option-${item.index}`}
-                                >
-                                    {item.label}
-                                </MenuItem>
-                            );
-                        })}
-                    </Select>
-                </FormControl>
-            </Grid>
+            {!!props.showDisplayAs && (
+                <Grid
+                    item
+                    xs={12}
+                    sm={props.canUseExport ? 6 : 12}
+                    md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
+                >
+                    <FormControl fullWidth>
+                        <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
+                        <Select
+                            id="displayRecordsAs"
+                            value={displayRecordsAs}
+                            disabled={props.disabled}
+                            onChange={displayRecordsAsChanged}
+                            data-testid="publication-list-display-records-as"
+                        >
+                            {props.sortingData.displayRecordsAs?.map(item => {
+                                return (
+                                    <MenuItem
+                                        key={item.index}
+                                        value={item.value}
+                                        data-testid={`publication-display-records-as-option-${item.index}`}
+                                        id={`publication-display-records-as-option-${item.index}`}
+                                    >
+                                        {item.label}
+                                    </MenuItem>
+                                );
+                            })}
+                        </Select>
+                    </FormControl>
+                </Grid>
+            )}
             {props.canUseExport && (
                 <Hidden xsDown>
                     <Grid item sm={6} md={3}>
@@ -238,6 +252,7 @@ PublicationsListSorting.propTypes = {
     onPageSizeChanged: PropTypes.func,
     onSortByChanged: PropTypes.func,
     pageSize: PropTypes.number,
+    showDisplayAs: PropTypes.bool,
     sortingData: PropTypes.object,
     pagingData: PropTypes.shape({
         from: PropTypes.number,
@@ -259,6 +274,7 @@ PublicationsListSorting.propTypes = {
 
 PublicationsListSorting.defaultProps = {
     exportData: {},
+    showDisplayAs: false,
     sortingData: locale.components.sorting,
     sortingDefaults: {},
 };

@@ -76,6 +76,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 
 export default {
     default: {
@@ -237,6 +238,29 @@ export default {
                 partialDateFieldId: 'rek-date',
             },
         },
+        communities: {
+            component: CommunityField,
+            componentProps: {
+                floatingLabelText: 'Member of communities',
+                hintText: 'Begin typing to select and add communities',
+                name: 'adminSection.communities',
+                id: 'member-of-communities-input',
+                required: true,
+                fullWidth: true,
+                validate: [validation.requiredList],
+                communityFieldId: 'rek-ismemberof',
+            },
+        },
+        reason: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'reason',
+                name: 'reasonSection.reason',
+                fullWidth: true,
+                label: 'Reason for Edit (optional - will be added to object history)',
+                placeholder: 'Reason for Edit',
+            },
+        },
         collections: {
             component: CollectionField,
             componentProps: {
@@ -245,7 +269,7 @@ export default {
                 name: 'adminSection.collections',
                 id: 'member-of-collections-input',
                 required: true,
-                fullwidth: true,
+                fullWidth: true,
                 validate: [validation.requiredList],
                 collectionFieldId: 'rek-ismemberof',
             },

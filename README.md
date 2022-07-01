@@ -103,11 +103,11 @@ You should now be able to run one of the following commands from the CLI:
   - for Hot Reloading to work in IntelliJ products, turn ["safe write"](https://www.jetbrains.com/help/phpstorm/system-settings.html#f1e47e50) off in the settings
 - `npm run start:build`
   - runs production build version on <http://dev-espace.library.uq.edu.au:9000/> and `http://localhost:9000/`
-  - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/1>) as a backend!! Careful!!
+  - To use prod's api, change config.json -> deployment.development.api key value to <https://api.library.uq.edu.au/v1/> and re-run
 - `npm run start:build:e2e`
   - runs production build version on <http://localhost:9000/>
   - uses mock data from src/mock
-  - async loading is not working since chuncks are not saved, navigate directly to required routes
+  - async loading is not working since chunks are not saved, navigate directly to required routes
 - `npm run test:cs`
   - Runs Prettier and ESLint checks on all Javascript files in the project, then lists files with code style issues. Check the other npm scripts for ways to fix the issues automatically if possible.
 - `npm run test:e2e:cc`

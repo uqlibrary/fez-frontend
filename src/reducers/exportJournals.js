@@ -1,57 +1,31 @@
-import * as actions from 'actions/actionTypes';
+import { EXPORT_JOURNALS_LOADING, EXPORT_JOURNALS_LOADED, EXPORT_JOURNALS_FAILED } from 'actions/actionTypes';
 
 export const initialState = {
     exportJournalsLoading: false,
-    loadingByPage: {},
-    loadedByPage: {},
+    payload: {},
 };
 
-const exportConfigFromAction = action =>
-    (action.payload && action.payload.page && `${action.payload.format}-page-${action.payload.page}`) || false;
-
 const handlers = {
-    [actions.EXPORT_JOURNALS_LOADING]: (state, action) => {
-        const exportConfig = exportConfigFromAction(action);
+    [EXPORT_JOURNALS_LOADING]: (state, action) => {
         return {
-            ...state,
             exportJournalsLoading: true,
-            loadingByPage: {
-                ...state.loadingByPage,
-                ...(exportConfig ? { [exportConfig]: true } : {}),
-            },
+            payload: action.payload,
         };
     },
 
-    [actions.EXPORT_JOURNALS_LOADED]: (state, action) => {
-        const exportConfig = exportConfigFromAction(action);
-        const loadingByPage = { ...state.loadingByPage };
-        if (exportConfig) {
-            delete loadingByPage[exportConfig];
-        }
+    [EXPORT_JOURNALS_LOADED]: (state, action) => {
         return {
-            ...state,
             exportJournalsLoading: false,
-            loadingByPage,
-            loadedByPage: {
-                ...state.loadedByPage,
-                ...(exportConfig ? { [exportConfig]: true } : {}),
-            },
+            payload: action.payload,
         };
     },
 
-    [actions.EXPORT_JOURNALS_FAILED]: (state, action) => {
-        const exportConfig = exportConfigFromAction(action);
+    [EXPORT_JOURNALS_FAILED]: (state, action) => {
         return {
-            ...state,
             exportJournalsLoading: false,
-            loadingByPage: {
-                ...state.loadingByPage,
-                ...(exportConfig ? { [exportConfig]: false } : {}),
-            },
+            payload: action.payload,
         };
     },
-
-    [actions.EXPORT_JOURNALS_RESET]: () => initialState,
 };
 
 export default function exportJournalsReducer(state = initialState, action) {

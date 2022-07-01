@@ -170,7 +170,7 @@
         "jss-nested": "^6.0.1",
         "keycode": "^2.2.0",
         "load-script": "^1.0.0",
-        "match-sorter": "^4.0.2",
+        "match-sorter": "^6.3.1",
         "material-table": "^1.69.2",
         "moment": "^2.22.1",
         "moment-timezone": "^0.5.16",
@@ -190,6 +190,7 @@
         "react-jss": "^8.6.1",
         "react-jw-player": "^1.19.1",
         "react-keyboard-event-handler": "^1.5.4",
+        "react-lazy-load-image-component": "^1.5.4",
         "react-redux": "^7.2.4",
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0",
@@ -224,7 +225,7 @@
         "eslint": "eslint '**/*.js' --quiet",
         "eslint:fix": "eslint '**/*.js' --quiet --fix",
         "start": "webpack-dev-server",
-        "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --disable-host-check",
+        "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --allowed-hosts=all",
         "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
         "start:mock": "cross-env USE_MOCK=true FULL_PATH=http://localhost:3000 NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
@@ -270,12 +271,9 @@
                     [
                         "@babel/env",
                         {
-                            "es2015": {
-                                "modules": false
-                            },
+                            "modules": false,
                             "targets": {
-                                "ie": 11,
-                                "terser": true
+                                "ie": 11
                             }
                         }
                     ]
@@ -283,7 +281,6 @@
                 "plugins": [
                     "@babel/plugin-transform-react-constant-elements",
                     "transform-react-remove-prop-types",
-                    "@babel/plugin-proposal-class-properties",
                     "@babel/plugin-proposal-export-namespace-from",
                     "@babel/plugin-proposal-export-default-from",
                     "@babel/plugin-proposal-class-properties",

@@ -98,7 +98,7 @@ exports[`DesignForm renders  component 1`] = `
             fullWidth={true}
             label="Location"
             name="fez_record_search_key_location[0].rek_location"
-            placeholder="Type the geographical location for the design itself."
+            placeholder="Geographical location of design."
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -124,7 +124,7 @@ exports[`DesignForm renders  component 1`] = `
             fullWidth={true}
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
-            placeholder="Enter the name of the client, builder or curator of the work."
+            placeholder="The client, builder, or curator"
             required={true}
             type="text"
             validate={
@@ -156,7 +156,7 @@ exports[`DesignForm renders  component 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="Enter the geographical location for the client, builder or curator of the work."
+            placeholder="Geographical location of publisher"
             required={true}
             type="text"
             validate={
@@ -265,7 +265,7 @@ exports[`DesignForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "designers-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each designer's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Designer's name as published",
               },
             },
             "header": Object {
@@ -523,7 +523,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             fullWidth={true}
             label="Location"
             name="fez_record_search_key_location[0].rek_location"
-            placeholder="Type the geographical location for the design itself."
+            placeholder="Geographical location of design."
             type="text"
           />
         </WithStyles(ForwardRef(Grid))>
@@ -549,7 +549,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             fullWidth={true}
             label="Publisher"
             name="fez_record_search_key_publisher.rek_publisher"
-            placeholder="Enter the name of the client, builder or curator of the work."
+            placeholder="The client, builder, or curator"
             required={true}
             type="text"
             validate={
@@ -581,7 +581,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             fullWidth={true}
             label="Place of publication"
             name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-            placeholder="Enter the geographical location for the client, builder or curator of the work."
+            placeholder="Geographical location of publisher"
             required={true}
             type="text"
             validate={
@@ -691,7 +691,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "designers-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each designer's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Designer's name as published",
               },
             },
             "header": Object {
@@ -783,15 +783,14 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                     }
                   }
                 >
-                  (not for public view)
+                   (not for public view)
                 </span>
               </span>,
               "placeholder": "Remember to include substantiation of your major or minor scale/significance claim above.",
             },
             "scaleOfWork": Object {
-              "description": "Select the option that best describes the significance of the work.",
-              "label": <span>
-                Scale/Significance of work*
+              "description": <span>
+                Select the option that best describes the significance of the work*
                 <span
                   style={
                     Object {
@@ -799,9 +798,10 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
                     }
                   }
                 >
-                  (not for public view)
+                   (not for public view)
                 </span>
               </span>,
+              "label": "Scale/Significance of work",
             },
           },
           "help": Object {
@@ -861,7 +861,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             },
             "extent": Object {
               "label": "Total pages/Extent",
-              "placeholder": "Enter total pages, size or duration of work",
+              "placeholder": "Total pages, size, or duration",
             },
             "issue": Object {
               "label": "Issue",
@@ -878,7 +878,7 @@ exports[`DesignForm renders  should show architectural content correctly 1`] = `
             },
             "physicalDescription": Object {
               "label": "Physical description",
-              "placeholder": "Building, Exhibition, Performance, Composition",
+              "placeholder": "e.g Building, Exhibit, Performance",
             },
             "series": Object {
               "floatingLabelText": "Series",

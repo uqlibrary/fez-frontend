@@ -4,8 +4,7 @@ import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 export const initialState = {
     exportJournalsLoading: false,
-    loadingByPage: {},
-    loadedByPage: {},
+    payload: {},
 };
 
 describe('export journals reducer', () => {
@@ -21,10 +20,7 @@ describe('export journals reducer', () => {
         });
         expect(testResult2).toEqual({
             exportJournalsLoading: true,
-            loadingByPage: {
-                [`${format}-page-1`]: true,
-            },
-            loadedByPage: {},
+            payload: { page: 1, format },
         });
     });
 
@@ -38,24 +34,15 @@ describe('export journals reducer', () => {
             {
                 ...initialState,
                 exportJournalsLoading: true,
-                loadingByPage: {
-                    [`${format}-page-1`]: true,
-                },
             },
             {
                 type: actions.EXPORT_JOURNALS_LOADED,
-                payload: {
-                    page: 1,
-                    format,
-                },
+                payload: { page: 1, format },
             },
         );
         expect(testResult2).toEqual({
             exportJournalsLoading: false,
-            loadingByPage: {},
-            loadedByPage: {
-                [`${format}-page-1`]: true,
-            },
+            payload: { page: 1, format },
         });
     });
 
@@ -67,39 +54,16 @@ describe('export journals reducer', () => {
             {
                 ...initialState,
                 exportJournalsLoading: true,
-                loadingByPage: {
-                    [`${format}-page-1`]: true,
-                },
             },
             {
                 type: actions.EXPORT_JOURNALS_FAILED,
-                payload: {
-                    page: 1,
-                    format,
-                },
+                payload: { page: 1, format },
             },
         );
         expect(testResult2).toEqual({
             exportJournalsLoading: false,
-            loadingByPage: {
-                [`${format}-page-1`]: false,
-            },
-            loadedByPage: {},
+            payload: { page: 1, format },
         });
-    });
-
-    it('returns the initial state on reset', () => {
-        const testResult = exportJournalsReducer(
-            {
-                exportJournalsLoading: false,
-                loadingByPage: {},
-                loadedByPage: {
-                    [`${format}-page-1`]: true,
-                },
-            },
-            { type: actions.EXPORT_JOURNALS_RESET },
-        );
-        expect(testResult).toEqual(initialState);
     });
 });
 

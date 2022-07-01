@@ -43,6 +43,19 @@ describe('Additional Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with data collection with license link', () => {
+        const wrapper = setup({
+            publication: {
+                ...records.dataCollection,
+                fez_record_search_key_license: {
+                    ...records.dataCollectionWithFoRCodes.fez_record_search_key_license,
+                    rek_license: 456807,
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with audio document', () => {
         const wrapper = setup({ publication: records.audioDocument });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -71,6 +84,16 @@ describe('Additional Information Component ', () => {
 
     it('should render component with creative work', () => {
         const wrapper = setup({ publication: records.creativeWork });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with a community', () => {
+        const wrapper = setup({ publication: records.communityRecord });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with a collection', () => {
+        const wrapper = setup({ publication: records.collectionRecord });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

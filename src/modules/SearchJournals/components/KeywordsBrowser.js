@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const KeywordsBrowser = ({ onKeywordAdd }) => {
+export const KeywordsBrowser = ({ onKeywordAdd, onKeywordDelete, selectedKeywords }) => {
     const txt = locale.components.searchJournals.partials.keywordsBrowser;
     const journalSearchKeywords = useSelector(state => state.get('journalReducer').journalSearchKeywords);
     const isInitialValues = useSelector(state => state.get('journalReducer').isInitialValues);
@@ -39,7 +39,6 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     const hasSubjectKeywords = journalSearchKeywords.subjectMatch.length > 0;
     const hasAnyKeywordsLoaded = hasExactKeywords || hasTitleKeywords || hasKeywordKeywords || hasSubjectKeywords;
     const classes = useStyles();
-
     /**
      * Handle click event on keyword
      *
@@ -50,7 +49,14 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
 
     /* istanbul ignore next */
     const handleKeywordClick = React.useCallback(
-        (type, keyword, cvoId) => onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) }),
+        (isSelected, type, keyword, cvoId) => {
+            if (!!!isSelected) {
+                return onKeywordAdd({ type, text: keyword, ...(cvoId ? { cvoId } : {}) });
+            } else {
+                const id = cvoId ? `${type}-${cvoId}` : `${type}-${keyword}`;
+                return onKeywordDelete({ type, text: keyword, ...(id ? { id } : {}), ...(cvoId ? { cvoId } : {}) });
+            }
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -63,8 +69,8 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      */
     /* istanbul ignore next */
     const handleSubjectKeywordClick = React.useCallback(
-        (keyword, cvoId) => {
-            handleKeywordClick(txt.forCodeMatch.chipTitle, keyword, cvoId);
+        (isSelected, keyword, cvoId) => {
+            handleKeywordClick(isSelected, txt.forCodeMatch.chipTitle, keyword, cvoId);
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
@@ -78,7 +84,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      */
     /* istanbul ignore next */
     const handleTitleKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.titleMatch.chipTitle, keyword),
+        (isSelected, keyword) => {
+            return handleKeywordClick(isSelected, txt.titleMatch.chipTitle, keyword);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -91,7 +99,9 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
      */
     /* istanbul ignore next */
     const handleKeywordsKeywordClick = React.useCallback(
-        keyword => handleKeywordClick(txt.keywordMatch.chipTitle, keyword),
+        (isSelected, keyword) => {
+            return handleKeywordClick(isSelected, txt.keywordMatch.chipTitle, keyword);
+        },
         // eslint-disable-next-line react-hooks/exhaustive-deps
         [],
     );
@@ -99,7 +109,6 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
     if (!hasAnyKeywordsLoaded && isInitialValues) {
         return <div />;
     }
-
     return (
         <Grid container spacing={0}>
             {hasJournalSearchKeywordsFailed && (
@@ -128,6 +137,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                             keywordsList={journalSearchKeywords.titleMatch}
                             keywordsType={'title'}
                             onKeywordClick={handleTitleKeywordClick}
+                            selectedKeywords={selectedKeywords}
                         />
                     </Grid>
                 </Grid>
@@ -138,6 +148,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     keywordsList={journalSearchKeywords.keywordMatch}
                     keywordsType={'keyword'}
                     onKeywordClick={handleKeywordsKeywordClick}
+                    selectedKeywords={selectedKeywords}
                 />
             </Grid>
             <Grid item xs={12} md={6} className={classes.border} style={{ marginTop: '10px', paddingRight: 0 }}>
@@ -145,6 +156,7 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
                     keywordsListTitle={txt.forCodeMatch.title}
                     keywordsList={journalSearchKeywords.subjectMatch}
                     onKeywordClick={handleSubjectKeywordClick}
+                    selectedKeywords={selectedKeywords}
                 />
             </Grid>
         </Grid>
@@ -153,6 +165,8 @@ export const KeywordsBrowser = ({ onKeywordAdd }) => {
 
 KeywordsBrowser.propTypes = {
     onKeywordAdd: PropTypes.func.isRequired,
+    onKeywordDelete: PropTypes.func,
+    selectedKeywords: PropTypes.object,
 };
 
 export default React.memo(KeywordsBrowser);

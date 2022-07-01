@@ -49,20 +49,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
         </WithStyles(ForwardRef(Button))>
         ...
         <WithStyles(ForwardRef(Button))
-          aria-label="Click to select page 7 of 50 result pages"
-          className=" paging-button"
-          color="default"
-          data-testid="undefined-select-page-7"
-          disabled={false}
-          id="undefined-select-page-7"
-          key="7"
-          onClick={[Function]}
-          size="small"
-          variant="text"
-        >
-          7
-        </WithStyles(ForwardRef(Button))>
-        <WithStyles(ForwardRef(Button))
           aria-label="Click to select page 8 of 50 result pages"
           className=" paging-button"
           color="default"
@@ -131,20 +117,6 @@ exports[`PublicationsListPaging renders  component with ellipsis paging results 
           variant="text"
         >
           12
-        </WithStyles(ForwardRef(Button))>
-        <WithStyles(ForwardRef(Button))
-          aria-label="Click to select page 13 of 50 result pages"
-          className=" paging-button"
-          color="default"
-          data-testid="undefined-select-page-13"
-          disabled={false}
-          id="undefined-select-page-13"
-          key="13"
-          onClick={[Function]}
-          size="small"
-          variant="text"
-        >
-          13
         </WithStyles(ForwardRef(Button))>
         ...
         <WithStyles(ForwardRef(Button))
@@ -544,6 +516,7 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
       "nextPrevButtons": "PublicationsListPaging-nextPrevButtons-3",
       "nextPrevIcons": "PublicationsListPaging-nextPrevIcons-4",
       "pageButton": "PublicationsListPaging-pageButton-1",
+      "paginationGridContainer": "PublicationsListPaging-paginationGridContainer-7",
     }
   }
   disabled={false}

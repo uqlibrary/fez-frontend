@@ -26,6 +26,8 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    RECORD_TYPE_COLLECTION_ID,
+    RECORD_TYPE_COMMUNITY_ID,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -52,6 +54,8 @@ import {
     validateThesis,
     validateVideo,
     validateWorkingPaper,
+    validateCollection,
+    validateCommunity,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -63,6 +67,7 @@ export default values => {
         bibliographicSection: {},
         adminSection: {},
         filesSection: {},
+        securitySection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
@@ -85,6 +90,13 @@ export default values => {
 
     (!(data.filesSection || {}).hasOwnProperty('rek_copyright') || data.filesSection.rek_copyright !== 'on') &&
         (errors.filesSection.rek_copyright = summary.rek_copyright);
+
+    (data.securitySection || {}).hasOwnProperty('rek_security_inherited') &&
+        (data.securitySection || {}).hasOwnProperty('rek_security_policy') &&
+        data.securitySection.rek_security_inherited === 0 &&
+        (typeof data.securitySection.rek_security_policy === 'undefined' ||
+            data.securitySection.rek_security_policy === null) &&
+        (errors.securitySection.rek_security_policy = summary.rek_security_policy);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:
@@ -183,6 +195,19 @@ export default values => {
             const workingPaperErrors = validateWorkingPaper(data, locale);
             errors = deepmerge(errors, workingPaperErrors);
             break;
+        case RECORD_TYPE_COMMUNITY_ID:
+            delete errors.adminSection;
+            delete errors.filesSection;
+            const communityErrors = validateCommunity(data, locale);
+            errors = deepmerge(errors, communityErrors);
+            break;
+        case RECORD_TYPE_COLLECTION_ID:
+            delete errors.adminSection.collections;
+            delete errors.filesSection;
+            const collectionErrors = validateCollection(data, locale);
+            errors = deepmerge(errors, collectionErrors);
+            break;
+
         default:
             break;
     }

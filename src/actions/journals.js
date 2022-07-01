@@ -10,12 +10,14 @@ import {
 } from 'repositories/routes';
 import { promptForDownload } from './exportPublicationsDataTransformers';
 
+const replaceAmpersand = value => value.replaceAll(' & ', ' and ');
+
 export const loadJournalLookup = searchText => dispatch => {
     dispatch({ type: actions.JOURNAL_LOOKUP_LOADING, payload: searchText });
     return (
         searchText &&
         searchText.trim().length > 0 &&
-        get(JOURNAL_LOOKUP_API({ query: searchText })).then(
+        get(JOURNAL_LOOKUP_API({ query: replaceAmpersand(searchText) })).then(
             response => {
                 dispatch({
                     type: actions.JOURNAL_LOOKUP_LOADED,
@@ -81,7 +83,7 @@ export const loadJournal = id => dispatch => {
 export const loadJournalSearchKeywords = searchQuery => async dispatch => {
     dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADING });
     try {
-        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: searchQuery }));
+        const keywordsResponse = await get(JOURNAL_KEYWORDS_LOOKUP_API({ query: replaceAmpersand(searchQuery) }));
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_LOADED, payload: keywordsResponse.data, query: searchQuery });
     } catch (e) {
         dispatch({ type: actions.JOURNAL_SEARCH_KEYWORDS_FAILED, payload: e });
@@ -106,45 +108,39 @@ export const searchJournals = searchQuery => async dispatch => {
  * Reusable export journals action
  *
  * @param searchQuery
+ * @param favourites
+ * @param allJournals
  * @return {*}
  */
-export const exportJournals = searchQuery => async dispatch => {
-    const requestParams = JOURNAL_SEARCH_API(searchQuery);
+export const exportJournals = (searchQuery, favourites = false, allJournals = false) => async dispatch => {
+    // to prevent all journals being passed down to API as a keyword search
+    if (allJournals) {
+        delete searchQuery.keywords;
+    }
+    const requestParams = favourites ? JOURNAL_FAVOURITES_API({ query: searchQuery }) : JOURNAL_SEARCH_API(searchQuery);
     const exportConfig = {
         format: requestParams.options.params.export_to,
         page: requestParams.options.params.page,
     };
+    const types = {
+        loading: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_LOADING : actions.EXPORT_JOURNALS_LOADING,
+        loaded: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_LOADED : actions.EXPORT_JOURNALS_LOADED,
+        failed: favourites ? actions.EXPORT_FAVOURITE_JOURNALS_FAILED : actions.EXPORT_JOURNALS_FAILED,
+    };
 
-    dispatch({
-        type: actions.EXPORT_JOURNALS_LOADING,
-        payload: exportConfig,
-    });
+    dispatch({ type: types.loading, payload: exportConfig });
 
     try {
         // set responseType to blob for the FileSaver.saveAs to work
         const response = await get(requestParams, { responseType: 'blob' });
         promptForDownload(exportConfig.format, response);
-        dispatch({
-            type: actions.EXPORT_JOURNALS_LOADED,
-            payload: exportConfig,
-        });
+        dispatch({ type: types.loaded, payload: exportConfig });
     } catch (error) {
         dispatch({
-            type: actions.EXPORT_JOURNALS_FAILED,
-            payload: {
-                ...exportConfig,
-                errorMessage: error.message,
-            },
+            type: types.failed,
+            payload: { ...exportConfig, errorMessage: error.message },
         });
     }
-};
-
-export const resetExportJournalsStatus = () => {
-    return dispatch => {
-        dispatch({
-            type: actions.EXPORT_JOURNALS_RESET,
-        });
-    };
 };
 
 export const retrieveFavouriteJournals = searchQuery => async dispatch => {

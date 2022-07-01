@@ -652,6 +652,12 @@ export default {
                 confirmButtonLabel: 'Yes',
             },
         },
+        communityList: {
+            title: 'List of Communities',
+        },
+        collectionList: {
+            title: 'List of Collections',
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
@@ -987,6 +993,7 @@ export default {
                         missing: "Sorry, this book chapter doesn't seem to belong to a existing book",
                     },
                 },
+                rccDataset: 'RCC Datasets are not allowed.',
             },
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: hasDoi => (hasDoi ? 'Update DOI' : 'Create DOI'),
@@ -1044,6 +1051,9 @@ export default {
                 },
                 security: {
                     title: 'Security',
+                },
+                reason: {
+                    title: 'Reason for Edit',
                 },
             },
             help: {
@@ -1224,6 +1234,16 @@ export default {
                     title: 'Loading failed',
                     message: 'Unable to load journal details',
                     type: 'error_outline',
+                },
+                favouriteTooltip: {
+                    isFavourite: 'Remove journal from your favourites',
+                    isNotFavourite: 'Add journal to your favourites',
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: message => message,
+                    alertId: 'alert-error',
                 },
             },
         },

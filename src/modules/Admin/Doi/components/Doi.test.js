@@ -7,14 +7,15 @@ import publicationTypeListConferencePaper from 'mock/data/records/publicationTyp
 import publicationTypeListJournalArticle from 'mock/data/records/publicationTypeListJournalArticle';
 import publicationTypeListResearchReport from 'mock/data/records/publicationTypeListResearchReport';
 import collectionRecord from 'mock/data/records/collectionRecord';
-import publicationTypeListBookChapter from '../../../../mock/data/records/publicationTypeListBookChapter';
+import publicationTypeListBookChapter from 'mock/data/records/publicationTypeListBookChapter';
 import {
     DOI_CROSSREF_NAME,
     DOI_CROSSREF_PREFIX,
     DOI_DATACITE_NAME,
     PUBLICATION_TYPE_DATA_COLLECTION,
     UQ_FULL_NAME,
-} from '../../../../config/general';
+} from 'config/general';
+import { rccDatasetCollection } from 'config/doi';
 
 const confPaperRecord = {
     ...publicationTypeListConferencePaper.data[0],
@@ -263,6 +264,24 @@ describe('DOI component', () => {
         expect(renderedWarningMessage.text()).toBe(
             `Error:The parent Book's Publisher should contain "${UQ_FULL_NAME}".`,
         );
+    });
+
+    it('should render error for RCC datasets', () => {
+        const wrapper = setup({
+            record: {
+                ...mockRecord,
+                rek_display_type: PUBLICATION_TYPE_DATA_COLLECTION,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: rccDatasetCollection,
+                        rek_ismemberof_order: 1,
+                    },
+                ],
+            },
+        });
+
+        const renderedWarningMessage = shallow(wrapper.find('Alert').props().message);
+        expect(renderedWarningMessage.text()).toBe('Error:RCC Datasets are not allowed.');
     });
 
     it('should flag required field with no data', () => {

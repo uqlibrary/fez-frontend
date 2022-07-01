@@ -115,7 +115,11 @@ export const JournalSearchInterface = ({
                 )}
                 {showInputControls && (
                     <Grid item xs={12} id={`${id}-keywords-browser`} data-testid={`${id}-keywords-browser`}>
-                        <KeywordsBrowser onKeywordAdd={handleKeywordAdd} />
+                        <KeywordsBrowser
+                            onKeywordAdd={handleKeywordAdd}
+                            onKeywordDelete={handleKeywordDelete}
+                            selectedKeywords={selectedKeywords}
+                        />
                     </Grid>
                 )}
                 {showInputControls && (
