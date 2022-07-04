@@ -6,6 +6,7 @@ context('Search', () => {
     const xs = 320;
     const sm = 600;
     const md = 960;
+    const xl = 1600;
     const filterByTop = top => {
         return function _() {
             return this.offsetTop === top;
@@ -95,6 +96,8 @@ context('Search', () => {
 
     context('Search results in Image Gallery', () => {
         it('has Display As drop down with expected values', () => {
+            cy.viewport(xl, 1600);
+
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -117,6 +120,7 @@ context('Search', () => {
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
+
             cy.get('img[data-testid^=imageGalleryItemImage-]').should('have.length', 8);
             cy.get('li[data-testid^=image-gallery-item-]')
                 .first()

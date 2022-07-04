@@ -3,7 +3,7 @@ import { accounts, authorDetails, currentAuthor } from 'mock/data/account';
 import { getDatastreamVersionQueryString, pathConfig } from './pathConfig';
 
 describe('Routes getMenuConfig method', () => {
-    it('should return a list of menus for anon user', () => {
+    it('should return a list of menus for a non user', () => {
         const testRoutes = routes.getMenuConfig(null);
         expect(testRoutes.length).toEqual(5);
     });
@@ -35,7 +35,8 @@ describe('Routes getMenuConfig method', () => {
             authorDetails.uqnoauthid,
             true,
         );
-        expect(testRoutes.length).toEqual(7);
+
+        expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
@@ -150,7 +151,7 @@ describe('Routes getMenuConfig method', () => {
         expect(testMenuItems.length).toEqual(15);
     });
 
-    it('should return list of menus for a student with an author account', () => {
+    it('should return list of menus for a student with no author account', () => {
         const testMenuItems = routes.getMenuConfig(
             accounts.s3333333,
             currentAuthor.s3333333.data,
@@ -158,7 +159,8 @@ describe('Routes getMenuConfig method', () => {
             false,
             false,
         );
-        expect(testMenuItems.length).toEqual(5);
+
+        expect(testMenuItems.length).toEqual(6);
     });
 });
 

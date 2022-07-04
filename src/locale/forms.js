@@ -60,7 +60,7 @@ export default {
                     'If relevant to your work, you can select multiple content indicators to ' +
                     'add more information about your work, but you cannot remove indicators already selected. ' +
                     'To amend existing information, Suggest changes above.',
-                label: 'Please add any relevant indicator(s).',
+                label: 'Add any relevant indicator(s).',
             },
             comments: {
                 title: 'Optional: Suggest changes or add links to this work',
@@ -70,7 +70,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Type edits/changes/comments here',
+                    comments: 'Type changes or comments here',
                     url: 'Link (URL)',
                 },
             },
@@ -200,7 +200,7 @@ export default {
                     'If relevant to your work, you can select multiple content indicators to add more ' +
                     'information about your work, but you cannot remove indicators already selected. ' +
                     'To amend existing information, Suggest a correction above.',
-                label: 'Please add any relevant indicator(s).',
+                label: 'Add any relevant indicator(s).',
             },
             comments: {
                 title: 'Suggest a correction',
@@ -210,7 +210,7 @@ export default {
                 //     buttonLabel: 'CLOSE'
                 // },
                 fieldLabels: {
-                    comments: 'Describe the problem with this work, eg work is a duplicate, or suggested changes',
+                    comments: 'Type changes or comments here',
                     url: 'Link (URL)',
                 },
             },

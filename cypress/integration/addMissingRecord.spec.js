@@ -45,7 +45,7 @@ context('Add missing record', () => {
             .should('be.disabled');
     });
 
-    it('should validate form as expected', () => {
+    it.only('should validate form as expected', () => {
         // Choose Book > Textbook
         cy.get('[data-testid=rek-display-type-select]').click();
         cy.get('[data-testid=rek-display-type-options]')

@@ -84,7 +84,7 @@ NonUqOrgAffiliationFormSection.defaultProps = {
         fields: {
             organisation: {
                 inputLabel: 'Organisation',
-                placeholder: 'Enter the primary affiliated organisation',
+                placeholder: 'Primary organisation affiliation',
             },
             organisationType: {
                 inputLabel: 'Organisation type',

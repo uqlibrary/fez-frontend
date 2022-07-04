@@ -214,7 +214,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "creators-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Creator's name as published",
               },
             },
             "header": Object {
@@ -318,7 +318,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "contributors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Contributor's name as published",
               },
             },
             "header": Object {
@@ -662,7 +662,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "creators-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Creator's name as published",
               },
             },
             "header": Object {
@@ -766,7 +766,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "contributors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Enter each contributor's name as published (eg. Smith, John)",
+                "nameAsPublishedLabel": "Contributor's name as published",
               },
             },
             "header": Object {
