@@ -47,25 +47,23 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
           xs={12}
         >
           <WithStyles(ForwardRef(Typography))>
-            Select the option that best describes the significance of the work.
+            <span>
+              Select the option that best describes the significance of the work*
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 (not for public view)
+              </span>
+            </span>
           </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
-            label={
-              <span>
-                Scale/Significance of work*
-                <span
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                >
-                  (not for public view)
-                </span>
-              </span>
-            }
+            label="Scale/Significance of work"
             name="significance"
             required={true}
             selectFieldId="rek-significance"
@@ -162,25 +160,23 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           xs={12}
         >
           <WithStyles(ForwardRef(Typography))>
-            Select the option that best describes the significance of the work.
+            <span>
+              Select the option that best describes the significance of the work*
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 (not for public view)
+              </span>
+            </span>
           </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={true}
-            label={
-              <span>
-                Scale/Significance of work*
-                <span
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                >
-                  (not for public view)
-                </span>
-              </span>
-            }
+            label="Scale/Significance of work"
             name="significance"
             required={true}
             selectFieldId="rek-significance"
@@ -232,7 +228,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     }
                   }
                 >
-                  (not for public view)
+                   (not for public view)
                 </span>
               </span>
             }
@@ -624,7 +620,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
-            placeholder="Enter total pages, size or duration of work"
+            placeholder="Total pages, size, or duration"
             required={true}
             textFieldId="rek-total-pages"
             type="text"
@@ -657,7 +653,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Building, Exhibition, Performance, Composition"
+            placeholder="e.g Building, Exhibit, Performance"
             textFieldId="rek-original-format"
             type="text"
           />
@@ -1127,25 +1123,23 @@ exports[`Component NtroFields should render contribution statement fields as wel
           xs={12}
         >
           <WithStyles(ForwardRef(Typography))>
-            Select the option that best describes the significance of the work.
+            <span>
+              Select the option that best describes the significance of the work*
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 (not for public view)
+              </span>
+            </span>
           </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
-            label={
-              <span>
-                Scale/Significance of work*
-                <span
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                >
-                  (not for public view)
-                </span>
-              </span>
-            }
+            label="Scale/Significance of work"
             name="significance"
             required={true}
             selectFieldId="rek-significance"
@@ -1197,7 +1191,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     }
                   }
                 >
-                  (not for public view)
+                   (not for public view)
                 </span>
               </span>
             }
@@ -1589,7 +1583,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
-            placeholder="Enter total pages, size or duration of work"
+            placeholder="Total pages, size, or duration"
             required={true}
             textFieldId="rek-total-pages"
             type="text"
@@ -1622,7 +1616,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Building, Exhibition, Performance, Composition"
+            placeholder="e.g Building, Exhibit, Performance"
             textFieldId="rek-original-format"
             type="text"
           />
@@ -2424,7 +2418,7 @@ exports[`Component NtroFields should render default view 1`] = `
             id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
-            placeholder="Enter total pages, size or duration of work"
+            placeholder="Total pages, size, or duration"
             required={true}
             textFieldId="rek-total-pages"
             type="text"
@@ -2457,7 +2451,7 @@ exports[`Component NtroFields should render default view 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Building, Exhibition, Performance, Composition"
+            placeholder="e.g Building, Exhibit, Performance"
             textFieldId="rek-original-format"
             type="text"
           />
@@ -2927,25 +2921,23 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           xs={12}
         >
           <WithStyles(ForwardRef(Typography))>
-            Select the option that best describes the significance of the work.
+            <span>
+              Select the option that best describes the significance of the work*
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 (not for public view)
+              </span>
+            </span>
           </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
-            label={
-              <span>
-                Scale/Significance of work*
-                <span
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                >
-                  (not for public view)
-                </span>
-              </span>
-            }
+            label="Scale/Significance of work"
             name="significance"
             required={true}
             selectFieldId="rek-significance"
@@ -2997,7 +2989,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     }
                   }
                 >
-                  (not for public view)
+                   (not for public view)
                 </span>
               </span>
             }
@@ -3389,7 +3381,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
-            placeholder="Enter total pages, size or duration of work"
+            placeholder="Total pages, size, or duration"
             required={true}
             textFieldId="rek-total-pages"
             type="text"
@@ -3422,7 +3414,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Building, Exhibition, Performance, Composition"
+            placeholder="e.g Building, Exhibit, Performance"
             textFieldId="rek-original-format"
             type="text"
           />
@@ -3872,25 +3864,23 @@ exports[`Component NtroFields should show significance field even if contributio
           xs={12}
         >
           <WithStyles(ForwardRef(Typography))>
-            Select the option that best describes the significance of the work.
+            <span>
+              Select the option that best describes the significance of the work*
+              <span
+                style={
+                  Object {
+                    "fontWeight": 700,
+                  }
+                }
+              >
+                 (not for public view)
+              </span>
+            </span>
           </WithStyles(ForwardRef(Typography))>
           <Field
             component={[Function]}
             disabled={false}
-            label={
-              <span>
-                Scale/Significance of work*
-                <span
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                >
-                  (not for public view)
-                </span>
-              </span>
-            }
+            label="Scale/Significance of work"
             name="significance"
             required={true}
             selectFieldId="rek-significance"
@@ -4294,7 +4284,7 @@ exports[`Component NtroFields should show significance field even if contributio
             id="rek-total-pages"
             label="Total pages/Extent"
             name="fez_record_search_key_total_pages.rek_total_pages"
-            placeholder="Enter total pages, size or duration of work"
+            placeholder="Total pages, size, or duration"
             required={true}
             textFieldId="rek-total-pages"
             type="text"
@@ -4327,7 +4317,7 @@ exports[`Component NtroFields should show significance field even if contributio
             fullWidth={true}
             label="Physical description"
             name="fez_record_search_key_original_format.rek_original_format"
-            placeholder="Building, Exhibition, Performance, Composition"
+            placeholder="e.g Building, Exhibit, Performance"
             textFieldId="rek-original-format"
             type="text"
           />

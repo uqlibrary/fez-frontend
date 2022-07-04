@@ -2,7 +2,7 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore, fireEvent } from 'test-utils';
+import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent } from 'test-utils';
 import ViewJournal from './ViewJournal';
 import mediaQuery from 'css-mediaquery';
 
@@ -580,5 +580,46 @@ describe('ViewJournal', () => {
             'style',
             'max-width: 100%; width: 100%;',
         );
+    });
+
+    describe('Favouriting', () => {
+        // beforeEach(() => {
+        //     mockApi = setupMockAdapter();
+        // });
+
+        // afterEach(() => {
+        //     mockApi.reset();
+        // });
+
+        it('should display an error message if the journal "favourite" action fails', async () => {
+            window.matchMedia = createMatchMedia(1600);
+            mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
+                data: {
+                    ...journalDetails.data,
+                },
+            });
+            mockApi.onPost(new RegExp(repositories.routes.JOURNAL_FAVOURITES_API().apiUrl)).reply(500, { data: '' });
+            const { getByTestId, getByText, queryByTestId } = setup();
+
+            await waitForElementToBeRemoved(() => getByText('Loading journal data'));
+
+            expect(getByTestId('favourite-journal-notsaved')).toBeInTheDocument();
+            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
+
+            await act(async () => {
+                fireEvent.click(getByTestId('favourite-journal-notsaved'));
+
+                // need some time to pass for the api call to return
+                await new Promise(r => setTimeout(r, 500));
+            });
+            expect(getByTestId('alert-error')).toBeInTheDocument();
+            expect(getByTestId('dismiss')).toBeInTheDocument();
+
+            await act(async () => {
+                fireEvent.click(getByTestId('dismiss'));
+            });
+
+            expect(queryByTestId('alert-error')).not.toBeInTheDocument();
+        });
     });
 });

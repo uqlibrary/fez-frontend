@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'test-utils';
 import { SelectedKeywords } from './SelectedKeywords';
-import locale from '../../../locale/components';
+import locale from 'locale/components';
 
 const setup = state => {
     return render(<SelectedKeywords {...{ onKeywordDelete: () => {}, ...state }} />);
@@ -26,5 +26,20 @@ describe('SelectedKeywords', () => {
         keywords.forEach(keyword => {
             expect(getByTestId(`journal-search-chip-${keyword.type}-${keyword.text}`)).toBeInTheDocument();
         });
+    });
+
+    it('should render correct separators', () => {
+        const keywords = [
+            { type: 'Keyword', text: 'cats' },
+            { type: 'Title', text: 'dogs' },
+            { type: 'Subject', text: 'dogs' },
+            { type: 'Keyword', text: 'dogs' },
+        ];
+        const { getByTestId } = setup({
+            keywords: keywords,
+        });
+        expect(getByTestId('separator-0')).toHaveTextContent('OR');
+        expect(getByTestId('separator-1')).toHaveTextContent('OR');
+        expect(getByTestId('separator-2')).toHaveTextContent('AND');
     });
 });

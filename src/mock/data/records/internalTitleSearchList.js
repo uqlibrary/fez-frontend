@@ -46,8 +46,46 @@ const internalTitleSearchList = {
             ],
             rek_updated_date: '2018-03-14T03:11:09Z',
             rek_depositor: 6230,
-            rek_display_type_lookup: 'Book',
-            rek_display_type: 174,
+            rek_display_type_lookup: 'Image',
+            rek_display_type: 238,
+            fez_record_search_key_advisory_statement: {
+            rek_advisory_statement_id: 23188,
+                rek_advisory_statement_pid: "UQ:375129",
+                rek_advisory_statement_xsdmf_id: null,
+                rek_advisory_statement: "Aboriginal and Torres Strait Islander people are warned that this photograph may contain images of Aboriginal and Islander people now deceased."
+            },
+            fez_datastream_info: [
+                {
+                    dsi_id: 2706293,
+                    dsi_pid: "UQ:375129",
+                    dsi_dsid: "thumbnail_UQFL11_p0004.jpg",
+                    dsi_checksum: "c4a1e6e73b486f0ae46ef67e00e3285f",
+                    dsi_embargo_date: null,
+                    dsi_open_access: null,
+                    dsi_label: "",
+                    dsi_mimetype: "image/jpeg",
+                    dsi_copyright: null,
+                    dsi_state: "A",
+                    dsi_size: 2461,
+                    dsi_security_policy: 1,
+                    dsi_security_inherited: 0
+                },
+                {
+                    dsi_id: 2706296,
+                    dsi_pid: "UQ:375129",
+                    dsi_dsid: "UQFL11_p0004.tif",
+                    dsi_checksum: "9091df099b9004d5f6b1929c9e3d29a6",
+                    dsi_embargo_date: null,
+                    dsi_open_access: null,
+                    dsi_label: "",
+                    dsi_mimetype: "image/tiff",
+                    dsi_copyright: null,
+                    dsi_state: "A",
+                    dsi_size: 47877132,
+                    dsi_security_policy: 1,
+                    dsi_security_inherited: 1
+                },
+            ],
         },
         {
             rek_pid: 'UQ:342708',

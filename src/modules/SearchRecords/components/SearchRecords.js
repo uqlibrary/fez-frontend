@@ -17,12 +17,15 @@ import {
 import { BulkExport } from 'modules/BulkExport';
 import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
-import { userIsAdmin, userIsResearcher } from 'hooks';
+
+import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
 import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
+import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
 const SearchRecords = ({
+    author,
     actions,
     canUseExport,
     exportPublicationsLoading,
@@ -33,11 +36,14 @@ const SearchRecords = ({
     publicationsList,
     publicationsListFacets,
     publicationsListPagingData,
+    publicationsListDefaultView,
     searchLoading,
     searchLoadingError,
     searchQuery,
 }) => {
     const isAdmin = userIsAdmin();
+    const isAuthor = userIsAuthor();
+
     const isResearcher = userIsResearcher();
     const canBulkExport = isResearcher || isAdmin;
     const { queryParams, updateQueryString } = useQueryStringParams(
@@ -49,11 +55,15 @@ const SearchRecords = ({
     );
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
-    const { pageSizeChanged, pageChanged, sortByChanged, facetsChanged, handleExport } = useSearchRecordsControls(
-        queryParams,
-        updateQueryString,
-        actions,
-    );
+
+    const {
+        pageSizeChanged,
+        pageChanged,
+        sortByChanged,
+        facetsChanged,
+        handleExport,
+        displayRecordsAsChanged,
+    } = useSearchRecordsControls(queryParams, updateQueryString, actions);
     const handleFacetExcludesFromSearchFields = searchFields => {
         !!searchFields &&
             setSearchParams({
@@ -101,6 +111,31 @@ const SearchRecords = ({
     const alertProps = searchLoadingError && {
         ...txt.errorAlert,
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
+    };
+    const initSortingData = locale.components.sorting;
+    const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+    const newSortingData = initSortingData.sortBy.filter(option =>
+        option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
+    );
+    const sortingData = { ...initSortingData, sortBy: newSortingData };
+
+    const SelectRecordView = publicationsList => {
+        switch (displayLookup) {
+            case 'image-gallery':
+                return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor, author }} />;
+            case 'auto':
+            case 'standard':
+            default:
+                return (
+                    <PublicationsList
+                        publicationsList={publicationsList}
+                        showAdminActions={isAdmin || isUnpublishedBufferPage}
+                        showUnpublishedBufferFields={isUnpublishedBufferPage}
+                        showImageThumbnails
+                        security={{ isAdmin, isAuthor, author }}
+                    />
+                );
+        }
     };
 
     return (
@@ -168,15 +203,19 @@ const SearchRecords = ({
                                 </Grid>
                                 <Grid item xs={12}>
                                     <PublicationsListSorting
+                                        showDisplayAs
                                         canUseExport={canUseExport}
                                         disabled={isLoadingOrExporting}
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
+                                        onDisplayRecordsAsChanged={displayRecordsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
+                                        displayRecordsAs={searchParams.displayRecordsAs}
+                                        sortingData={sortingData}
                                     />
                                 </Grid>
                                 <Grid item xs={12}>
@@ -211,11 +250,7 @@ const SearchRecords = ({
                                                 records: publicationsList,
                                             }}
                                         >
-                                            <PublicationsList
-                                                publicationsList={publicationsList}
-                                                showAdminActions={isAdmin || isUnpublishedBufferPage}
-                                                showUnpublishedBufferFields={isUnpublishedBufferPage}
-                                            />
+                                            {SelectRecordView(publicationsList)}
                                         </RecordsSelectorContext.Provider>
                                     </Grid>
                                 )}
@@ -261,6 +296,7 @@ const SearchRecords = ({
 };
 
 SearchRecords.propTypes = {
+    author: PropTypes.object,
     actions: PropTypes.object,
     canUseExport: PropTypes.bool,
     exportPublicationsLoading: PropTypes.bool,
@@ -271,6 +307,7 @@ SearchRecords.propTypes = {
     publicationsList: PropTypes.array,
     publicationsListFacets: PropTypes.object,
     publicationsListPagingData: PropTypes.object,
+    publicationsListDefaultView: PropTypes.object,
     searchLoading: PropTypes.bool,
     searchLoadingError: PropTypes.bool,
     searchQuery: PropTypes.object,
