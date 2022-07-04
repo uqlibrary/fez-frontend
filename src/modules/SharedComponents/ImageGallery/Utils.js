@@ -26,12 +26,11 @@ export const getThumbnailChecksums = (dataStreams, thumbnailFileName) => {
 
 export const getWhiteListed = (publication, config) => {
     const isAllowed =
-        config?.allowedTypes?.some(type => {
-            return (
+        config?.allowedTypes?.some(
+            type =>
                 type.viewType === publication.rek_display_type_lookup &&
-                (!!!type.subType || type.subType === publication.rek_subtype)
-            );
-        }) ?? /* istanbul ignore next */ false;
+                (!!!type.subTypes || type.subTypes.some(subType => subType === publication.rek_subtype)),
+        ) ?? /* istanbul ignore next */ false;
 
     return isAllowed;
 };

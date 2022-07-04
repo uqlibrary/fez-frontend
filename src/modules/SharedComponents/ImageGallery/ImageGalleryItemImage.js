@@ -39,27 +39,12 @@ const ImageGalleryItemImage = ({
     const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image
-    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)?.replace(
-        'fez-staging',
-        'espace',
-    );
+    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
 
     const filename =
         !thumbnailRestricted && !thumbnailAdvisory && !thumbnailBlacklisted && !!filenameSrc
             ? filenameSrc
             : config.thumbnailImage.defaultImageName;
-
-    console.log(
-        item.rek_title,
-        item.rek_display_type_lookup,
-        item.fez_datastream_info,
-        fileData,
-        `thumbnailBlacklisted: ${thumbnailBlacklisted}`,
-        `thumbnailRestricted: ${thumbnailRestricted}`,
-        `thumbnailAdvisory: ${thumbnailAdvisory}`,
-        filenameSrc,
-        filename,
-    );
 
     React.useEffect(() => {
         if (thumbnailAdvisory && !!setAdvisory) setAdvisory(true);

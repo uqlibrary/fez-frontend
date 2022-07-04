@@ -104,12 +104,6 @@ const ImageGalleryItem = ({
     const historyObject = history ?? useHistory();
 
     const alertMessage = React.useMemo(() => {
-        console.log(
-            item.rek_title,
-            `unavailable: ${unavailable}`,
-            `restricted: ${restricted}`,
-            `advisory: ${advisory}`,
-        );
         return getAlertMessageText({ unavailable, restricted, advisory });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [restricted, advisory, unavailable]);
