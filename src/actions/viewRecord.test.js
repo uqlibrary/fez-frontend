@@ -166,13 +166,6 @@ describe('View record actions', () => {
             await mockActionsStore.dispatch(viewRecordActions.loadRecordToView(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
-
-        it('dispatch expected actions on hiding cultural sensitivity statement', () => {
-            mockActionsStore.dispatch(viewRecordActions.setHideCulturalSensitivityStatement());
-            expect(mockActionsStore.getActions()).toContainEqual({
-                type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
-            });
-        });
     });
 
     describe('setting/clearing record to view action', () => {
