@@ -50,8 +50,6 @@ const handlers = {
             },
         };
     },
-
-    [actions.EXPORT_COMMUNITIES_RESET]: () => initialState,
 };
 
 export default function exportCommunitiesReducer(state = initialState, action) {

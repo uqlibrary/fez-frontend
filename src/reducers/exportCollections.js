@@ -55,8 +55,6 @@ const handlers = {
             },
         };
     },
-
-    [actions.EXPORT_COLLECTIONS_RESET]: () => initialState,
 };
 
 export default function exportCollectionsReducer(state = initialState, action) {

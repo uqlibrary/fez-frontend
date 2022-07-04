@@ -241,7 +241,11 @@ export const CommunityList = () => {
                             />
                         ) : (
                             <InlineLoader
-                                loaderId="communities-page-loading"
+                                loaderId={
+                                    !exportCommunitiesLoading
+                                        ? 'communities-page-loading'
+                                        : 'communities-results-exporting'
+                                }
                                 message={
                                     exportCommunitiesLoading ? txt.loading.exportLoadingMessage : txt.loading.message
                                 }

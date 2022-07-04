@@ -365,9 +365,6 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
         if (query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
             exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
         }
-        if (!!queryValuesToSend.pid) {
-            exportParams.pid = queryValuesToSend.pid;
-        }
     }
 
     return {

@@ -251,9 +251,9 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     data-testid="embedded-collections-paging-top"
                                 />
                                 {exportCollectionsLoading && exportingCollectionsPid === pid && (
-                                    <div data-testid="collections-page-loading">
+                                    <div>
                                         <InlineLoader
-                                            loaderId="collections-page-loading"
+                                            loaderId="collections-page-exporting"
                                             message={conf.loading.exportLoadingMessage}
                                         />
                                     </div>

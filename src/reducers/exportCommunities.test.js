@@ -1,26 +1,26 @@
 import * as actions from 'actions/actionTypes';
-import exportPublicationsReducer from './exportPublications';
+import exportCommunitiesReducer from './exportCommunities';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 export const initialState = {
-    exportPublicationsLoading: false,
+    exportCommunitiesLoading: false,
     loadingByPage: {},
     loadedByPage: {},
 };
 
-describe('export publications reducer', () => {
+describe('export communities reducer', () => {
     const format = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
 
-    it('returns the correct state while publications are being exported', () => {
-        const testResult = exportPublicationsReducer(initialState, { type: actions.EXPORT_PUBLICATIONS_LOADING });
-        expect(testResult.exportPublicationsLoading).toEqual(true);
+    it('returns the correct state while communities are being exported', () => {
+        const testResult = exportCommunitiesReducer(initialState, { type: actions.EXPORT_COMMUNITIES_LOADING });
+        expect(testResult.exportCommunitiesLoading).toEqual(true);
 
-        const testResult2 = exportPublicationsReducer(initialState, {
-            type: actions.EXPORT_PUBLICATIONS_LOADING,
+        const testResult2 = exportCommunitiesReducer(initialState, {
+            type: actions.EXPORT_COMMUNITIES_LOADING,
             payload: { page: 1, format },
         });
         expect(testResult2).toEqual({
-            exportPublicationsLoading: true,
+            exportCommunitiesLoading: true,
             loadingByPage: {
                 [`${format}-page-1`]: true,
             },
@@ -28,22 +28,22 @@ describe('export publications reducer', () => {
         });
     });
 
-    it('returns the correct state when publications have been exported', () => {
-        const testResult = exportPublicationsReducer(initialState, {
-            type: actions.EXPORT_PUBLICATIONS_LOADED,
+    it('returns the correct state when communities have been exported', () => {
+        const testResult = exportCommunitiesReducer(initialState, {
+            type: actions.EXPORT_COMMUNITIES_LOADED,
         });
-        expect(testResult.exportPublicationsLoading).toEqual(false);
+        expect(testResult.exportCommunitiesLoading).toEqual(false);
 
-        const testResult2 = exportPublicationsReducer(
+        const testResult2 = exportCommunitiesReducer(
             {
                 ...initialState,
-                exportPublicationsLoading: true,
+                exportCommunitiesLoading: true,
                 loadingByPage: {
                     [`${format}-page-1`]: true,
                 },
             },
             {
-                type: actions.EXPORT_PUBLICATIONS_LOADED,
+                type: actions.EXPORT_COMMUNITIES_LOADED,
                 payload: {
                     page: 1,
                     format,
@@ -51,7 +51,7 @@ describe('export publications reducer', () => {
             },
         );
         expect(testResult2).toEqual({
-            exportPublicationsLoading: false,
+            exportCommunitiesLoading: false,
             loadingByPage: {},
             loadedByPage: {
                 [`${format}-page-1`]: true,
@@ -59,20 +59,20 @@ describe('export publications reducer', () => {
         });
     });
 
-    it('returns the correct state when exporting publications fails to load data', () => {
-        const testResult = exportPublicationsReducer(initialState, { type: actions.EXPORT_PUBLICATIONS_FAILED });
-        expect(testResult.exportPublicationsLoading).toEqual(false);
+    it('returns the correct state when exporting communities fails to load data', () => {
+        const testResult = exportCommunitiesReducer(initialState, { type: actions.EXPORT_COMMUNITIES_FAILED });
+        expect(testResult.exportCommunitiesLoading).toEqual(false);
 
-        const testResult2 = exportPublicationsReducer(
+        const testResult2 = exportCommunitiesReducer(
             {
                 ...initialState,
-                exportPublicationsLoading: true,
+                exportCommunitiesLoading: true,
                 loadingByPage: {
                     [`${format}-page-1`]: true,
                 },
             },
             {
-                type: actions.EXPORT_PUBLICATIONS_FAILED,
+                type: actions.EXPORT_COMMUNITIES_FAILED,
                 payload: {
                     page: 1,
                     format,
@@ -80,32 +80,18 @@ describe('export publications reducer', () => {
             },
         );
         expect(testResult2).toEqual({
-            exportPublicationsLoading: false,
+            exportCommunitiesLoading: false,
             loadingByPage: {
                 [`${format}-page-1`]: false,
             },
             loadedByPage: {},
         });
     });
-
-    it('returns the initial state on reset', () => {
-        const testResult = exportPublicationsReducer(
-            {
-                exportPublicationsLoading: false,
-                loadingByPage: {},
-                loadedByPage: {
-                    [`${format}-page-1`]: true,
-                },
-            },
-            { type: actions.EXPORT_PUBLICATIONS_RESET },
-        );
-        expect(testResult).toEqual(initialState);
-    });
 });
 
-describe('General export publications reducer', () => {
+describe('General export communities reducer', () => {
     it('returns the state when an invalid action type is supplied', () => {
-        const test = exportPublicationsReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
+        const test = exportCommunitiesReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(test).toEqual(initialState);
     });
 });

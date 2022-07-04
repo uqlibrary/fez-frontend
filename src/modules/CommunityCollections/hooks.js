@@ -14,10 +14,6 @@ export const parseSearchQueryStringFromUrl = queryString => {
 
     const providedSearchQuery = deparam(queryString);
 
-    if (!!queryString.pid) {
-        providedSearchQuery.pid = queryString.pid;
-    }
-
     const pageSize = parseInt(providedSearchQuery.pageSize, 10);
     if (pageSize === COMMUNITY_COLLECTION_BULK_EXPORT_SIZE) {
         providedSearchQuery.bulkExportSelected = true;
