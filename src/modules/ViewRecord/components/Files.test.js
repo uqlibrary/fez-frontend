@@ -9,11 +9,7 @@ import {
     getDownloadLicence,
 } from './Files';
 import * as mock from 'mock/data';
-import {
-    CURRENT_LICENCES,
-    SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-    SENSITIVE_HANDLING_NOTE_TYPE,
-} from '../../../config/general';
+import { CURRENT_LICENCES } from '../../../config/general';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -820,6 +816,8 @@ function setup(testProps) {
         theme: {},
         isAdmin: testProps.isAdmin || true,
         publication: testProps.publication || journalArticle,
+        hideCulturalSensitivityStatement: false,
+        setHideCulturalSensitivityStatement: jest.fn(),
         classes: { header: 'header' },
         authorDetails: testProps.authorDetails || mock.accounts.uqresearcher,
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
@@ -873,8 +871,9 @@ describe('Files Component ', () => {
         });
     });
 
-    it('should not render advisory statement', () => {
+    it('should not render cultural sensitivity statement', () => {
         const wrapper = setup({
+            hideCulturalSensitivityStatement: false,
             publication: {
                 ...journalArticle,
                 fez_record_search_key_advisory_statement: {
@@ -885,81 +884,13 @@ describe('Files Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should not render advisory statement', () => {
+    it('should not render cultural message', () => {
         const wrapper = setup({
             publication: {
                 ...journalArticle,
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
             },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render advisory statement', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should not render sensitive handling note - scenario 1', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_TYPE.find(item => item.value !== 'Other')
-                        .value,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: 'test',
-                },
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should not render sensitive handling note - scenario 2', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: null,
-                },
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render sensitive handling note', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_TYPE.find(item => item.value !== 'Other')
-                        .value,
-                },
-            },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render sensitive handling note - other', () => {
-        const wrapper = setup({
-            publication: {
-                ...journalArticle,
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: 'test',
-                },
-            },
+            hideCulturalSensitivityStatement: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -982,13 +913,30 @@ describe('Files Component ', () => {
                     },
                 ],
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: 'test',
-                },
             },
+            hideCulturalSensitivityStatement: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not render cultural message', () => {
+        const wrapper = setup({
+            publication: {
+                ...journalArticle,
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello<br/> there' },
+            },
+            hideCulturalSensitivityStatement: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render cultural message', () => {
+        const wrapper = setup({
+            publication: {
+                ...journalArticle,
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
+            },
+            hideCulturalSensitivityStatement: false,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -1874,13 +1822,8 @@ describe('Files Component ', () => {
                     },
                 ],
                 fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
-                fez_record_search_key_sensitive_handling_note_id: {
-                    rek_sensitive_handling_note_id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                },
-                fez_record_search_key_sensitive_handling_note_other: {
-                    rek_sensitive_handling_note_other: 'test',
-                },
             },
+            hideCulturalSensitivityStatement: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

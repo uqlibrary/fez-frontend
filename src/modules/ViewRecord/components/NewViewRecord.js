@@ -85,6 +85,7 @@ const useStyles = makeStyles(theme => ({
 export const NewViewRecord = ({
     account,
     author,
+    hideCulturalSensitivityStatement,
     isDeleted,
     isDeletedVersion,
     loadingRecordToView,
@@ -99,8 +100,15 @@ export const NewViewRecord = ({
 
     const txt = locale.pages.viewRecord;
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
+
     const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();
     const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
+
+    const handleSetHideCulturalSensitivityStatement = React.useCallback(
+        () => dispatch(actions.setHideCulturalSensitivityStatement()),
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    );
     const classes = useStyles();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
@@ -298,6 +306,8 @@ export const NewViewRecord = ({
                                 author={author}
                                 account={account}
                                 publication={recordToView}
+                                hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
+                                setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
                                 isAdmin={!!isAdmin}
                                 isAuthor={!!isAuthor}
                             />
@@ -319,6 +329,7 @@ export const NewViewRecord = ({
 NewViewRecord.propTypes = {
     account: PropTypes.object,
     author: PropTypes.object,
+    hideCulturalSensitivityStatement: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,

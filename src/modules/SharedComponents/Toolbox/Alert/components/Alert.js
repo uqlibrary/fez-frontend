@@ -21,13 +21,6 @@ const classNames = require('classnames');
 
 const useStyles = makeStyles(
     theme => ({
-        root: {
-            padding: 12,
-            marginTop: 5,
-            '&:first-child': {
-                marginTop: 0,
-            },
-        },
         common: {
             borderRadius: 5,
             boxShadow: theme.shadows[1],
@@ -304,7 +297,7 @@ export const Alert = ({
     };
 
     return (
-        <div className={classes.root}>
+        <div style={{ padding: 12 }} className="Alert">
             <Grid
                 container
                 spacing={3}

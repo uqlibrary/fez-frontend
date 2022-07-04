@@ -1628,40 +1628,6 @@ export const OA_STATUS_TYPE = [
     { value: 454123, text: 'Bronze' },
 ];
 
-export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
-export const SENSITIVE_HANDLING_NOTE_TYPE = [
-    {
-        value: 456855,
-        text:
-            'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
-    },
-    {
-        value: 456856,
-        text: 'Indigenous/First Nations people should be aware that this output is about women’s business.',
-    },
-    {
-        value: 456857,
-        text: 'Indigenous/First Nations people should be aware that this output is about men’s business.',
-    },
-    {
-        value: 456858,
-        text:
-            'Assessors should be aware that this output contains content related to any of the following: violence, ' +
-            'family or domestic violence, self-harm, sexual assault, suicide, family child removal, refugee experiences, ' +
-            'war survivor experiences or other traumatic experiences that may be distressing or harmful to some people.',
-    },
-    {
-        value: 456859,
-        text:
-            'Assessors should be aware that this output contains content with explicit language, hate speech, nudity or ' +
-            'sexuality, or drug use which may be confronting and potentially distressing to some people.',
-    },
-    {
-        value: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-        text: 'Other',
-    },
-];
-
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 export const ANDS_COLLECTION_TYPE_OPTIONS = [

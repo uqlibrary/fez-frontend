@@ -11168,12 +11168,17 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                             wiggle={null}
                                           >
                                             <div
-                                              className="makeStyles-root-11"
+                                              className="Alert"
+                                              style={
+                                                Object {
+                                                  "padding": 12,
+                                                }
+                                              }
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
                                                 alignItems="flex-start"
-                                                className="makeStyles-info_outline-26 makeStyles-common-12"
+                                                className="makeStyles-info_outline-25 makeStyles-common-11"
                                                 container={true}
                                                 justifyContent="center"
                                                 spacing={3}
@@ -11181,7 +11186,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 <ForwardRef(Grid)
                                                   alignContent="center"
                                                   alignItems="flex-start"
-                                                  className="makeStyles-info_outline-26 makeStyles-common-12"
+                                                  className="makeStyles-info_outline-25 makeStyles-common-11"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11294,16 +11299,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   spacing={3}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root makeStyles-info_outline-26 makeStyles-common-12 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
+                                                    className="MuiGrid-root makeStyles-info_outline-25 makeStyles-common-11 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-linked-19"
+                                                      className="makeStyles-linked-18"
                                                       item={true}
                                                       sm={true}
                                                       xs={12}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-linked-19"
+                                                        className="makeStyles-linked-18"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11416,7 +11421,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={12}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-linked-19 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
+                                                          className="MuiGrid-root makeStyles-linked-18 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
                                                         >
                                                           <WithStyles(ForwardRef(Grid))
                                                             alignContent="center"
@@ -11541,13 +11546,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                               >
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-icon-15 alert-icon "
+                                                                  className="makeStyles-icon-14 alert-icon "
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-icon-15 alert-icon "
+                                                                    className="makeStyles-icon-14 alert-icon "
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11660,7 +11665,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     onKeyDown={[Function]}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-icon-15 alert-icon  MuiGrid-item"
+                                                                      className="MuiGrid-root makeStyles-icon-14 alert-icon  MuiGrid-item"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11707,14 +11712,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-text-16 alert-text"
+                                                                  className="makeStyles-text-15 alert-text"
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                   xs={true}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-text-16 alert-text"
+                                                                    className="makeStyles-text-15 alert-text"
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11828,7 +11833,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     xs={true}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-text-16 alert-text MuiGrid-item MuiGrid-grid-xs-true"
+                                                                      className="MuiGrid-root makeStyles-text-15 alert-text MuiGrid-item MuiGrid-grid-xs-true"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11846,13 +11851,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-actionButton-17"
+                                                      className="makeStyles-actionButton-16"
                                                       item={true}
                                                       sm="auto"
                                                       xs={true}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-actionButton-17"
+                                                        className="makeStyles-actionButton-16"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11965,7 +11970,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={true}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-actionButton-17 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
+                                                          className="MuiGrid-root makeStyles-actionButton-16 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"

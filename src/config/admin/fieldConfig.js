@@ -76,7 +76,6 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
 
 export default {
@@ -954,13 +953,6 @@ export default {
                 height: 100,
                 format: value => Immutable.Map(value),
                 richEditorId: 'rek-advisory-statement',
-            },
-        },
-        sensitiveHandlingNote: {
-            isComposed: true,
-            component: SensitiveHandlingNoteField,
-            componentProps: {
-                name: 'filesSection.sensitiveHandlingNote',
             },
         },
         fez_record_search_key_transcript: {

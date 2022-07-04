@@ -29,10 +29,6 @@ describe('general helpers', () => {
         expect(leftJoin(objArrA)).toBe(objArrA);
     });
 
-    it('stripHtml should return string when non string is given', () => {
-        expect(stripHtml(null)).toEqual('');
-    });
-
     it('should strip HTML from a string containing HTML', () => {
         expect(stripHtml('hello<br/> there')).toEqual('hello there');
     });

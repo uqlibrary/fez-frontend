@@ -4,8 +4,6 @@ import {
     contentIndicators,
     PLACEHOLDER_ISO8601_DATE,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
-    SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-    SENSITIVE_HANDLING_NOTE_TYPE,
 } from 'config/general';
 
 const moment = require('moment');
@@ -4267,46 +4265,13 @@ describe('getFilesSectionSearchKeys', () => {
         const data = {
             advisoryStatement: {
                 htmlText: '<p>Test advisory statement</p>',
-                plainText: 'Test advisory statement',
-            },
-            sensitiveHandlingNote: {
-                id: SENSITIVE_HANDLING_NOTE_TYPE[0].value,
-                other: 'other',
+                plainText: 'Test advisory statment',
             },
         };
 
         expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
             fez_record_search_key_advisory_statement: {
                 rek_advisory_statement: '<p>Test advisory statement</p>',
-            },
-            fez_record_search_key_sensitive_handling_note_id: {
-                rek_sensitive_handling_note_id: data.sensitiveHandlingNote.id,
-            },
-            fez_record_search_key_sensitive_handling_note_other: null,
-        });
-    });
-
-    it('should get files section search keys with sensitive handling note - other', () => {
-        const data = {
-            advisoryStatement: {
-                htmlText: '<p>Test advisory statement</p>',
-                plainText: 'Test advisory statement',
-            },
-            sensitiveHandlingNote: {
-                id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
-                other: 'other',
-            },
-        };
-
-        expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
-            fez_record_search_key_advisory_statement: {
-                rek_advisory_statement: '<p>Test advisory statement</p>',
-            },
-            fez_record_search_key_sensitive_handling_note_id: {
-                rek_sensitive_handling_note_id: data.sensitiveHandlingNote.id,
-            },
-            fez_record_search_key_sensitive_handling_note_other: {
-                rek_sensitive_handling_note_other: data.sensitiveHandlingNote.other,
             },
         });
     });
@@ -4332,8 +4297,6 @@ describe('getFilesSectionSearchKeys', () => {
 
         expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
             fez_record_search_key_advisory_statement: null,
-            fez_record_search_key_sensitive_handling_note_id: null,
-            fez_record_search_key_sensitive_handling_note_other: null,
         });
     });
 });

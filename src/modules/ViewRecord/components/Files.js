@@ -24,7 +24,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FileName from './partials/FileName';
 import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
-import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
+import { isAdded, isDerivative } from 'helpers/datastreams';
+import { stripHtml } from 'helpers/general';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 
 export const styles = theme => ({
@@ -183,6 +184,8 @@ export const formatBytes = bytes => {
 export class FilesClass extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        hideCulturalSensitivityStatement: PropTypes.bool,
+        setHideCulturalSensitivityStatement: PropTypes.func,
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
@@ -421,18 +424,17 @@ export class FilesClass extends Component {
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
-                    {/* eslint-disable-next-line camelcase */}
-                    {!!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement && (
-                        <Alert
-                            allowDismiss
-                            type={'info'}
-                            message={getAdvisoryStatement(publication, locale.culturalSensitivityStatement)}
-                        />
-                    )}
-                    {/* eslint-disable-next-line camelcase */}
-                    {!!publication.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
-                        <Alert allowDismiss type={'info'} message={getSensitiveHandlingNote(publication)} />
-                    )}
+                    {!!publication.fez_record_search_key_advisory_statement &&
+                        !this.props.hideCulturalSensitivityStatement && (
+                            <Alert
+                                allowDismiss
+                                type={'info'}
+                                message={stripHtml(
+                                    publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                                )}
+                                dismissAction={this.props.setHideCulturalSensitivityStatement}
+                            />
+                        )}
                     {/* istanbul ignore next */ !!fileData.filter(
                         ({ requiresLoginToDownload }) => requiresLoginToDownload,
                     ).length > 0 && (

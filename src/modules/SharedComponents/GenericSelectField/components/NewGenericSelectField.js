@@ -9,14 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(
     theme => ({
-        root: {
-            whiteSpace: 'unset',
-            wordBreak: 'break-word',
-            display: 'block',
-            // 1200px is the width of pages on the App. This is static
-            // so there is no need to make the style property dynamic at this stage
-            maxWidth: '1200px',
-        },
         selectedMenuItem: {
             backgroundColor: `${theme.palette.accent.main} !important`,
             color: theme.palette.white.main,
@@ -118,22 +110,19 @@ export const NewGenericSelectField = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error]);
 
-    const handleChange = React.useCallback(event => {
-        if (!!input) {
-            input.onChange(event.target.value);
-        }
-        if (!!onChange) {
-            onChange(event.target.value);
-        }
+    const handleChange = React.useCallback(
+        event => (!!input ? input.onChange(event.target.value) : onChange(event.target.value)),
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        [],
+    );
 
     const renderMenuItems = itemsList => {
         return [
             itemsList.map((item, index) => {
                 return (
                     <MenuItem
-                        classes={{ root: classes.root, selected: classes.selectedMenuItem }}
+                        classes={{ selected: classes.selectedMenuItem }}
+                        style={{ display: 'block' }}
                         selected={(multiple && selectValue.includes(item.value)) || undefined}
                         value={item.value}
                         key={index + 1}

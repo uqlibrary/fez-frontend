@@ -1,8 +1,5 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_ADDED } from '../config/viewRecord';
-import { stripHtml } from './general';
-import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
-import { SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
 
 export const isDerivative = dataStream => {
     const {
@@ -17,27 +14,3 @@ export const isDerivative = dataStream => {
 export const isAdded = datastream => {
     return datastream.dsi_state === STATE_ADDED;
 };
-
-/**
- * @param record
- */
-export const getAdvisoryStatement = (record, _default) => {
-    // eslint-disable-next-line camelcase
-    const value = record?.fez_record_search_key_advisory_statement?.rek_advisory_statement;
-    return value ? stripHtml(value) : stripHtml(_default);
-};
-
-/**
- * @param record
- */
-export const getSensitiveHandlingNote = record =>
-    isSensitiveHandlingNoteTypeOther(
-        record.fez_record_search_key_sensitive_handling_note_id.rek_sensitive_handling_note_id,
-    ) &&
-    // eslint-disable-next-line camelcase
-    !!record.fez_record_search_key_sensitive_handling_note_other?.rek_sensitive_handling_note_other
-        ? record.fez_record_search_key_sensitive_handling_note_other.rek_sensitive_handling_note_other
-        : SENSITIVE_HANDLING_NOTE_TYPE.find(
-              item =>
-                  item.value === record.fez_record_search_key_sensitive_handling_note_id.rek_sensitive_handling_note_id,
-          )?.text;
