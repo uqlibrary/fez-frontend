@@ -1,5 +1,6 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
+import { promptForDownload } from './exportPublicationsDataTransformers';
 
 /**
  * Reusable export Communities action
@@ -21,8 +22,11 @@ export function exportCommunities(requestParams) {
             payload: exportConfig,
         });
 
-        return get(requestParams)
-            .then(() => {
+        const getOptions = { responseType: 'blob' };
+        return get(requestParams, { ...getOptions })
+            .then(response => {
+                promptForDownload(exportConfig.format, response);
+
                 dispatch({
                     type: actions.EXPORT_COMMUNITIES_LOADED,
                     payload: exportConfig,
@@ -64,8 +68,10 @@ export function exportCollections(requestParams) {
 
         delete requestParams.options.params.pid;
 
-        return get(requestParams)
-            .then(() => {
+        const getOptions = { responseType: 'blob' };
+        return get(requestParams, { ...getOptions })
+            .then(response => {
+                promptForDownload(exportConfig.format, response);
                 dispatch({
                     type: actions.EXPORT_COLLECTIONS_LOADED,
                     payload: exportConfig,
