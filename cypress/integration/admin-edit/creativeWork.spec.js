@@ -1,5 +1,12 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListCreativeWork';
 
+function rowHasAuthor(rowid, authorName) {
+    cy.get(`[data-testid="rek-significance-list-row-${rowid}"]`)
+        .find('p')
+        .eq(0)
+        .should('contain', authorName);
+}
+
 context('Creative Work admin edit', () => {
     const record = recordList.data[0];
 
@@ -213,7 +220,6 @@ context('Creative Work admin edit', () => {
             });
     });
 
-    // bug fix: the values of the previously edited entry were preloaded when adding
     it('in the NTRO section, the add form loads empty after using the edit form', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
@@ -297,7 +303,7 @@ context('Creative Work admin edit', () => {
             });
     });
 
-    it('in the NTRO section, the user can edit a significance and statement row', () => {
+    it('in the NTRO section, the user can edit an existing significance and statement row', () => {
         cy.adminEditTabbedView();
         cy.get('[data-testid="ntro-tab"]').click();
         cy.get('[data-testid=ntro-section-content]')
@@ -353,7 +359,159 @@ context('Creative Work admin edit', () => {
             .should('exist')
             .find('h2')
             .should('contain', 'Work has been updated');
-        cy.log('Done!');
+    });
+
+    it('in the NTRO section, the user can edit a significance and statement row where it was previously "Missing"', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        clickRowEditButton(1);
+                        cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
+                    });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        cy.assertChangeSelectFromTo('rek-significance', '', statementList[0].newSignificance);
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        clickFormSaveButton('UPDATE');
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('p')
+                            .eq(1)
+                            .should('have.text', statementList[0].newSignificance);
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('span')
+                            .eq(0)
+                            .should('contain', statementList[0].newText);
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('p')
+                            .eq(0)
+                            .should('contain', 'Second')
+                            .and('contain', 'Belanger');
+                    });
+            });
+
+        // save does not cause crash
+        cy.get('[data-testid="submit-admin-top"]').click();
+        // Confirmation message
+        cy.get('[role=dialog]')
+            .should('exist')
+            .find('h2')
+            .should('contain', 'Work has been updated');
+    });
+
+    it('in the NTRO section, the scale-statement row set can be reordered', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
+
+                        rowHasAuthor(0, 'Ashkanasy');
+                        rowHasAuthor(1, 'Belanger');
+                        rowHasAuthor(2, 'Bernal');
+
+                        cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
+                            .should('exist')
+                            .click();
+
+                        rowHasAuthor(0, 'Ashkanasy');
+                        rowHasAuthor(1, 'Bernal');
+                        rowHasAuthor(2, 'Belanger');
+                    });
+            });
+    });
+
+    it('in the NTRO section, the scale-statement row set can edit then be reordered and the record is still updated', () => {
+        cy.adminEditTabbedView();
+        cy.get('[data-testid="ntro-tab"]').click();
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        clickRowEditButton(1);
+                        cy.typeCKEditor('rek-creator-contribution-statement', statementList[0].newText);
+                    });
+            });
+
+        // popup appears at foot of page, outside Admin section
+        cy.assertChangeSelectFromTo('rek-significance', '', statementList[0].newSignificance);
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        clickFormSaveButton('UPDATE');
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('p')
+                            .eq(1)
+                            .should('have.text', statementList[0].newSignificance);
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('span')
+                            .eq(0)
+                            .should('contain', statementList[0].newText);
+                        cy.get('[data-testid="rek-significance-list-row-1"]')
+                            .find('p')
+                            .eq(0)
+                            .should('contain', 'Second')
+                            .and('contain', 'Belanger');
+                    });
+            });
+
+        rowHasAuthor(0, 'Ashkanasy');
+        rowHasAuthor(1, 'Belanger');
+        rowHasAuthor(2, 'Bernal');
+
+        cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
+            .should('exist')
+            .click();
+
+        rowHasAuthor(0, 'Ashkanasy');
+        rowHasAuthor(1, 'Bernal');
+        rowHasAuthor(2, 'Belanger');
+
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('[data-testid="rek-significance-list-row-2"]')
+                            .find('p')
+                            .eq(1)
+                            .should('have.text', statementList[0].newSignificance);
+                        cy.get('[data-testid="rek-significance-list-row-2"]')
+                            .find('span')
+                            .eq(0)
+                            .should('contain', statementList[0].newText);
+                    });
+            });
+
+        // save does not cause crash
+        cy.get('[data-testid="submit-admin-top"]').click();
+        // Confirmation message
+        cy.get('[role=dialog]')
+            .should('exist')
+            .find('h2')
+            .should('contain', 'Work has been updated');
     });
 
     it('in the NTRO section, the clear button clears the significance and statement add form', () => {
@@ -397,39 +555,6 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 3);
-                    });
-            });
-    });
-
-    it('in the NTRO section, the scale-statement row set can be reordered', () => {
-        cy.adminEditTabbedView();
-        cy.get('[data-testid="ntro-tab"]').click();
-        cy.get('[data-testid=ntro-section-content]')
-            .as('NTRO')
-            .within(() => {
-                cy.get('.AdminCard')
-                    .eq(0)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Scale/Significance of work & Creator research statement');
-
-                        function rowHasAuthor(rowid, authorName) {
-                            cy.get(`[data-testid="rek-significance-list-row-${rowid}"]`)
-                                .find('p')
-                                .eq(0)
-                                .should('contain', authorName);
-                        }
-
-                        rowHasAuthor(0, 'Ashkanasy');
-                        rowHasAuthor(1, 'Belanger');
-                        rowHasAuthor(2, 'Bernal');
-
-                        cy.get('[data-testid="rek-significance-list-row-1-move-down"]')
-                            .should('exist')
-                            .click();
-
-                        rowHasAuthor(0, 'Ashkanasy');
-                        rowHasAuthor(1, 'Bernal');
-                        rowHasAuthor(2, 'Belanger');
                     });
             });
     });

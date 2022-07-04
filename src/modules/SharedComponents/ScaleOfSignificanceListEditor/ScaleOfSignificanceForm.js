@@ -93,7 +93,7 @@ export const ScaleOfSignificanceForm = ({
 
     const isValidSignificance = sig => !!sig;
 
-    const isValidStatement = statement => !!statement.plainText?.trim();
+    const isValidStatement = statement => !!statement?.plainText?.trim();
 
     return (
         <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">

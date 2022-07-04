@@ -229,12 +229,13 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     moveUpList = (item, index) => {
         if (index === 0) return;
-        const nextList = this.state.itemList[index - 1];
+        const movedItem = this.state.itemList[index];
+        const swappedItem = this.state.itemList[index - 1];
         this.setState({
             itemList: [
                 ...this.state.itemList.slice(0, index - 1),
-                item,
-                nextList,
+                movedItem,
+                swappedItem,
                 ...this.state.itemList.slice(index + 1),
             ],
         });
@@ -242,9 +243,15 @@ export default class ScaleOfSignificanceListEditor extends Component {
 
     moveDownList = (item, index) => {
         if (index === this.state.itemList.length - 1) return;
-        const nextList = this.state.itemList[index + 1];
+        const movedItem = this.state.itemList[index];
+        const swappedItem = this.state.itemList[index + 1];
         this.setState({
-            itemList: [...this.state.itemList.slice(0, index), nextList, item, ...this.state.itemList.slice(index + 2)],
+            itemList: [
+                ...this.state.itemList.slice(0, index),
+                swappedItem,
+                movedItem,
+                ...this.state.itemList.slice(index + 2),
+            ],
         });
     };
 
