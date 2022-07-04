@@ -15,7 +15,6 @@ import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
-import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE } from '../../../config/general';
 
 jest.mock('../../../hooks');
 jest.mock('react-router', () => ({
