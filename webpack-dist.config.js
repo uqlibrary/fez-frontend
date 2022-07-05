@@ -19,7 +19,7 @@ const options = {
             allow: [
                 '/$',
                 '/index.html$',
-                '/contact$',
+                '/about$',
                 '/view/*',
                 '/data/*',
                 '/assets/*.svg',
