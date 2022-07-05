@@ -268,12 +268,16 @@ export class PublicationCitation extends PureComponent {
                 break;
         }
     };
+
+    hasPublicationAdvisoryStatement = publication => {
+        // eslint-disable-next-line camelcase
+        return !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement;
+    };
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
         return (
             showImageThumbnails &&
-            (getWhiteListed(publication, imageConfig) || // eslint-disable-next-line camelcase
-                !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement)
+            (getWhiteListed(publication, imageConfig) || this.hasPublicationAdvisoryStatement(publication))
         );
     };
 

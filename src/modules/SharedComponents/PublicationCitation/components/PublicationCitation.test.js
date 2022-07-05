@@ -37,6 +37,19 @@ describe('PublicationCitation ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with default item with image support, if item not in the whitelist but has an advisory', () => {
+        const wrapper = setup({
+            showImageThumbnails: true,
+            publication: {
+                ...journalArticle,
+                rek_display_type_lookup: 'Invalid',
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'advisory' },
+            },
+            security: { isAdmin: false, isAuthor: false },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component without image if whitelisted, but no datastream', () => {
         const wrapper = setup({
             showImageThumbnails: true,

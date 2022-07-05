@@ -1,4 +1,4 @@
-import { getThumbnail, getUrl } from './Utils';
+import { getThumbnail, getUrl, sortThumbnailsBySecurityStatus, filterMissingThumbnails } from './Utils';
 import { collectionSearchResultsImages } from 'mock/data';
 
 describe('ImageGallery Utils', () => {
@@ -28,19 +28,28 @@ describe('ImageGallery Utils', () => {
         it('should blacklist record if display type matches but subtype does not match whitelist', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
+            publication.rek_subtype = 'SomethingElse';
             const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
         it('should whitelist record if display type matches but subtype does not match whitelist for Admin user', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
-            const fd = getThumbnail(publication, { isAdmin: false, isAuthor: false });
+            publication.rek_subtype = 'SomethingElse';
+            const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(false);
         });
-        it('should whitelist record if display type and subtype match whitelist', () => {
+        it('should whitelist record if display type is Design and subtype is Non-NTRO', () => {
             // eslint-disable-next-line prettier/prettier
             publication.rek_display_type_lookup = 'Design';
             publication.rek_subtype = 'Non-NTRO';
+            const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
+            expect(fd.isWhiteListed).toEqual(true);
+        });
+        it('should whitelist record if display type is Design and subtype null', () => {
+            // eslint-disable-next-line prettier/prettier
+            publication.rek_display_type_lookup = 'Design';
+            publication.rek_subtype = null;
             const fd = getThumbnail(publication, { isAdmin: true, isAuthor: false });
             expect(fd.isWhiteListed).toEqual(true);
         });
@@ -65,6 +74,45 @@ describe('ImageGallery Utils', () => {
             expect(getUrl(publication.rek_pid, fd.fileName, 'test')).toContain(
                 '/view/UQ:288612/Slide_009.tif?dsi_version=db98827b0a5c6ce3e80296096863c88c',
             );
+        });
+    });
+
+    describe('sortThumbnailsBySecurityStatus', () => {
+        it('should return an array sorted by publicly accessible records first', () => {
+            const unsorted = [
+                { id: 1, securityStatus: false },
+                { id: 2, securityStatus: true },
+                { id: 3, securityStatus: true },
+                { id: 4, securityStatus: true },
+                { id: 5, securityStatus: false },
+                { id: 6, securityStatus: false },
+            ];
+            const sorted = [
+                { id: 2, securityStatus: true },
+                { id: 3, securityStatus: true },
+                { id: 4, securityStatus: true },
+                { id: 1, securityStatus: false },
+                { id: 5, securityStatus: false },
+                { id: 6, securityStatus: false },
+            ];
+
+            expect(sortThumbnailsBySecurityStatus(unsorted)).toEqual(sorted);
+        });
+    });
+    describe('filterMissingThumbnails', () => {
+        it('should filter out records without a thumbnail', () => {
+            const unfiltered = [
+                { id: 1, thumbnailFileName: null },
+                { id: 2, thumbnailFileName: 'path' },
+                { id: 3, thumbnailFileName: null },
+                { id: 4, thumbnailFileName: 'path' },
+            ];
+            const filtered = [
+                { id: 2, thumbnailFileName: 'path' },
+                { id: 4, thumbnailFileName: 'path' },
+            ];
+
+            expect(filterMissingThumbnails(unfiltered)).toEqual(filtered);
         });
     });
 });
