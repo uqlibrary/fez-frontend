@@ -974,7 +974,7 @@ describe('SearchRecords page', () => {
             act(() => {
                 fireEvent.mouseDown(getByTestId('displayRecordsAs'));
             });
-            expect(getAllByRole('option').length).toBe(2);
+            expect(getAllByRole('option').length).toBe(3);
             act(() => {
                 fireEvent.click(getAllByRole('option')[1]);
                 const newValue = getAllByRole('option')[1]

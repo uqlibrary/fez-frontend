@@ -1718,7 +1718,7 @@ export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
 
 export const COLLECTION_VIEW_TYPE = [
-    { id: 456849, value: 'auto', label: 'Auto', selectable: false },
+    { id: 456849, value: 'auto', label: 'Auto' },
     { id: 456850, value: 'standard', label: 'Standard' },
     { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
 ];
