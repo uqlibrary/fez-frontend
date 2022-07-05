@@ -673,10 +673,6 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should construct url for GET_NEWS_API', () => {
-        expect(routes.GET_NEWS_API()).toEqual({ apiUrl: 'fez-news' });
-    });
-
     it('should construct url for AUTHOR_TRENDING_PUBLICATIONS_API', () => {
         expect(routes.AUTHOR_TRENDING_PUBLICATIONS_API()).toEqual({ apiUrl: 'records/my-trending' });
     });
