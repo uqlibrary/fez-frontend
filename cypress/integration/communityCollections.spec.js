@@ -2,6 +2,8 @@ context('Communities and Collections', () => {
     beforeEach(() => {
         cy.visit('/communities');
     });
+    const dismissPopover = () => cy.get('body').click(0, 0);
+
     it('Renders the default community and collections screen', () => {
         cy.get('[data-testid="page-title"]').should('contain', 'Communities');
         cy.get('[data-testid="total-communities"]').should(
@@ -15,20 +17,49 @@ context('Communities and Collections', () => {
         cy.get('[data-testid="community-collections-paging-top-select-page-1"]').should('exist');
         cy.get('[data-testid="community-collections-paging-top-select-page-2"]').should('exist');
         cy.get('[data-testid="community-collections-paging-top-select-page-3"]').should('not.exist');
+
+        // export format
+        cy.get('[data-testid="export-publications-format"]').should('be.visible');
+        cy.get('[data-testid="export-publications-format"]').click();
+        cy.get('[role="listbox"]').should('contain', 'Excel File');
+        dismissPopover();
     });
     it('correctly expands and contracts collections within community', () => {
+        cy.viewport(1200, 1000);
         cy.get('[data-testid="expand-row-UQ:12096"]').click();
         cy.get('[data-testid="total-collections-UQ:12096"]').should('be.visible');
         cy.get('[data-testid="total-collections-UQ:12096"]').should(
             'contain',
             "Displaying 1 to 3 of 3 collections for 'Aboriginal and Torres Strait Islander Studies Unit'",
         );
+        // export format
+        cy.get('[data-testid="export-publications-format"]')
+            .as('exportCollection1')
+            .should('have.length', 2);
+
+        cy.get('@exportCollection1')
+            .eq(1)
+            .click();
+        cy.get('[role="listbox"]').should('contain', 'Excel File');
+        dismissPopover();
+
         cy.get('[data-testid="expand-row-UQ:7556"]').click();
         cy.get('[data-testid="total-collections-UQ:7556"]').should('be.visible');
         cy.get('[data-testid="total-collections-UQ:7556"]').should(
             'contain',
             "Displaying 1 to 3 of 3 collections for 'Advanced Computational Modelling Centre'",
         );
+        // export format
+        cy.get('[data-testid="export-publications-format"]')
+            .as('exportCollection2')
+            .should('have.length', 3);
+
+        cy.get('@exportCollection2')
+            .eq(2)
+            .click();
+        cy.get('[role="listbox"]').should('contain', 'Excel File');
+        dismissPopover();
+
         cy.get('[data-testid="expand-row-UQ:12096"]').click();
         cy.get('[data-testid="total-collections-UQ:12096"]').should('not.exist');
         cy.get('[data-testid="expand-row-UQ:7556"]').click();

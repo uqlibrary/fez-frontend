@@ -9,6 +9,7 @@ import Immutable from 'immutable';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import locale from 'locale/components';
 import * as repositories from 'repositories';
+import mediaQuery from 'css-mediaquery';
 
 const txt = locale.components.communitiesCollections;
 
@@ -23,6 +24,13 @@ const testProps = {
     isSuperAdmin: false,
     open: true,
 };
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
 
 const setup = (testProps = {}, state = {}, testHistory = createMemoryHistory({ initialEntries: ['/'] })) => {
     return render(
@@ -175,5 +183,22 @@ describe('CollectionsListEmbedded form', () => {
         });
         await waitFor(() => getByText('Sort results by'));
         expect(getByTestId('admin-add-community-button-UQ:12345')).toBeInTheDocument();
+    });
+
+    it('should allow exporting of community page results', async () => {
+        window.matchMedia = createMatchMedia(1920);
+
+        const { getByText, getByTestId, getByRole } = setup({ ...testProps });
+        await waitFor(() => getByText('Export page results'));
+
+        expect(getByTestId('exportPublicationsFormat')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(getByTestId('export-publication-option-0'));
+        });
+        expect(getByTestId('collections-page-exporting')).toBeInTheDocument();
     });
 });

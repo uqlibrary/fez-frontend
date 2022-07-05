@@ -115,8 +115,9 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').contains('Auto');
             cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
@@ -146,6 +147,42 @@ context('Search', () => {
             });
         });
 
+        it('should preserve users displayAs choice across searches', () => {
+            cy.get('[data-testid=simple-search-input]')
+                .should(
+                    'have.attr',
+                    'aria-label',
+                    // searchLocale.ariaInputLabel
+                    'Enter your search query to search eSpace and then press Enter',
+                )
+                .closest('[class*="MuiFormControl-root"]')
+                // .contains('label', searchLocale.searchBoxPlaceholder);
+                .contains('label', 'Search eSpace');
+
+            cy.get('[data-testid=simple-search-input]').type('Brisbane{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Auto');
+            cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Auto');
+            cy.contains('[role=listbox] li', 'Standard');
+            cy.contains('[role=listbox] li', 'Image Gallery').click();
+            cy.get('#displayRecordsAs').contains('Image Gallery');
+
+            cy.get('[data-testid=simple-search-input]')
+                .clear()
+                .type('Queensland{enter}');
+            cy.get('[data-testid="search-records-results"]').should(
+                'contain',
+                'Displaying works 1 to 7 of 7 total works.',
+            );
+
+            cy.get('#displayRecordsAs').contains('Image Gallery'); // choice should persist
+        });
+
         it('should show 4 items in the first row at >=medium breakpoint', () => {
             cy.viewport(md, 768);
             cy.get('[data-testid=simple-search-input]')
@@ -165,8 +202,9 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').contains('Auto');
             cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
@@ -199,8 +237,9 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').contains('Auto');
             cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');
@@ -233,8 +272,9 @@ context('Search', () => {
                 'Displaying works 1 to 7 of 7 total works.',
             );
 
-            cy.get('#displayRecordsAs').contains('Standard');
+            cy.get('#displayRecordsAs').contains('Auto');
             cy.get('#displayRecordsAs').click();
+            cy.contains('[role=listbox] li', 'Auto');
             cy.contains('[role=listbox] li', 'Standard');
             cy.contains('[role=listbox] li', 'Image Gallery').click();
             cy.get('#displayRecordsAs').contains('Image Gallery');

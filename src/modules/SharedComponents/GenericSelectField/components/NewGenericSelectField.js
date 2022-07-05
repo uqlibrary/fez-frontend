@@ -82,7 +82,7 @@ export const NewGenericSelectField = ({
 
     /* Run this effect to set value from redux-form field */
     React.useEffect(() => {
-        if (!!input && !!input.value) {
+        if (!!input && (!!input.value || Number.isFinite(input?.value))) {
             setSelectValue(!!input.value.toJS ? input.value.toJS() : input.value);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps

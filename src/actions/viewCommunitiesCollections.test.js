@@ -1,7 +1,9 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
+import * as ExportCommCollActions from './exportCommunitiesCollections';
 import * as viewRecordActions from './viewCommunitiesCollections';
 import * as mockData from 'mock/data';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 // import { locale } from 'locale';
 
 describe('View communities and collections actions', () => {
@@ -112,12 +114,43 @@ describe('View communities and collections actions', () => {
             mockActionsStore.dispatch(viewRecordActions.clearCCCollectionsList());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
-        it('ddispatches expected actions when setting collections list open array', async () => {
+        it('dispatches expected actions when setting collections list open array', async () => {
             const expectedActions = [actions.SET_COLLECTIONS_ARRAY];
 
             await mockActionsStore.dispatch(viewRecordActions.setCollectionsArray({ pid: testPid, open: false }));
             const result = mockActionsStore.getActions();
             expect(result).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
+    describe('export functions', () => {
+        it('exportCommunities should fire with expected parameters', async () => {
+            const exportCommColl = jest.spyOn(ExportCommCollActions, 'exportCommunities');
+            const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
+            const testRequest = {
+                exportPublicationsFormat,
+                page,
+                pageSize,
+                sortBy,
+                direction,
+            };
+
+            viewRecordActions.exportCommunityRecords(testRequest);
+            expect(exportCommColl).toHaveBeenCalledWith(repositories.routes.COMMUNITY_LIST_API(testRequest));
+        });
+        it('exportCollections should fire with expected parameters', async () => {
+            const exportCommColl = jest.spyOn(ExportCommCollActions, 'exportCollections');
+            const exportPublicationsFormat = Object.keys(EXPORT_FORMAT_TO_EXTENSION)[0];
+            const testRequest = {
+                exportPublicationsFormat,
+                page,
+                pageSize,
+                sortBy,
+                direction,
+            };
+
+            viewRecordActions.exportCollectionRecords(testRequest);
+            expect(exportCommColl).toHaveBeenCalledWith(repositories.routes.COLLECTION_LIST_API(testRequest, 'export'));
         });
     });
 });

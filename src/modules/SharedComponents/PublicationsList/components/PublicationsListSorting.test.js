@@ -1,5 +1,5 @@
 import React from 'react';
-import PublicationsListSorting from './PublicationsListSorting';
+import PublicationsListSorting, { filterCollectionViewTypes } from './PublicationsListSorting';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 jest.mock('../../../../hooks');
@@ -247,5 +247,20 @@ describe('PublicationsListSorting component', () => {
         };
         const wrapper = setup({ showDisplayAs: true, canUseExport: false, pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+    it('has the correct display type options in the dropdown', () => {
+        const wrapper = setup({ showDisplayAs: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        const selectableCollectionViewType = filterCollectionViewTypes();
+        // Have the correct amount of elements in dropdown
+        expect(wrapper.find('#displayRecordsAs').children().length).toEqual(selectableCollectionViewType.length);
+        selectableCollectionViewType.forEach((viewType, index) => {
+            expect(
+                wrapper
+                    .find('#displayRecordsAs')
+                    .childAt(index)
+                    .text(),
+            ).toEqual(viewType.label);
+        });
     });
 });
