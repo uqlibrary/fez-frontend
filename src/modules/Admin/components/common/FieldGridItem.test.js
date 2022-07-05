@@ -45,6 +45,13 @@ describe('FieldGridItem', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render default view for a composed field', () => {
+        const wrapper = setup({
+            field: 'sensitiveHandlingNote',
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render with correct props', () => {
         useRecordContext.mockImplementation(() => ({
             record: {

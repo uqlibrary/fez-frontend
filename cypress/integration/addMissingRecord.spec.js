@@ -45,7 +45,7 @@ context('Add missing record', () => {
             .should('be.disabled');
     });
 
-    it.only('should validate form as expected', () => {
+    it('should validate form as expected', () => {
         // Choose Book > Textbook
         cy.get('[data-testid=rek-display-type-select]').click();
         cy.get('[data-testid=rek-display-type-options]')
@@ -89,7 +89,7 @@ context('Add missing record', () => {
             'Publisher',
             'Publication date',
         ];
-        cy.get('.Alert li')
+        cy.get('[data-testid=alert] li')
             .as('validationErrors')
             .should('have.length', invalidFieldNames.length);
         invalidFieldNames.forEach(invalidFieldName => {

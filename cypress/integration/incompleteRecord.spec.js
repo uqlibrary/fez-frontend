@@ -44,7 +44,7 @@ context('Incomplete record form', () => {
 
     const authorEditInstruction = 'Step 2 of 2 - Update the affiliation information.';
     const grantMessage = 'You must click ADD GRANT to enter the value to the grants list';
-    const validationErrorsSelector = 'form > div > div:last-of-type .Alert ul li';
+    const validationErrorsSelector = '[data-testid=alert] li';
 
     const editNonUQAuthor = (authorNumber, orgName, orgType) => {
         cy.get(`#rek-author-list-row-edit-${authorNumber}`)

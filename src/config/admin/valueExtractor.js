@@ -500,6 +500,16 @@ export default {
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
             ),
     },
+    sensitiveHandlingNote: {
+        getValue: record => {
+            return {
+                id: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_id')
+                    .rek_sensitive_handling_note_id,
+                other: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_other')
+                    .rek_sensitive_handling_note_other,
+            };
+        },
+    },
     significanceAndContributionStatement: {
         getValue: record => {
             const authors = (record.fez_record_search_key_author || []).reduce(
