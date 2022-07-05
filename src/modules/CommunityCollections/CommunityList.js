@@ -45,6 +45,10 @@ const useStyles = makeStyles(theme => ({
     addNewCommunityButton: {
         backgroundColor: '#51247A',
         color: 'white',
+        '&:hover': {
+            backgroundColor: '#51247A',
+            color: 'white',
+        },
     },
     autoCloseCommunity: {
         float: 'right',

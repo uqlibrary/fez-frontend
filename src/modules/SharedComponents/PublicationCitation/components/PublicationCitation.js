@@ -129,6 +129,7 @@ export const styles = theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             width: 'calc(100% - 130px)',
+            minWidth: 280,
         },
         [theme.breakpoints.up('md')]: {
             width: 'calc(100% - 135px)',
@@ -136,7 +137,6 @@ export const styles = theme => ({
         [theme.breakpoints.up('lg')]: {
             width: 'calc(100% - 140px)',
         },
-        minWidth: 280,
     },
     imageListItemRoot: {
         [theme.breakpoints.down('md')]: {
