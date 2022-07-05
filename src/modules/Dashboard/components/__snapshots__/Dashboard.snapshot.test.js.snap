@@ -11169,6 +11169,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                           >
                                             <div
                                               className="makeStyles-root-11"
+                                              data-testid="alert"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"

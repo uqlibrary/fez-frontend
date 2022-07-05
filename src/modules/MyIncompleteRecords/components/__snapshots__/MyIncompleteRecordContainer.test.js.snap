@@ -202,6 +202,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           >
             <div
               class="makeStyles-root-224"
+              data-testid="alert"
             >
               <div
                 class="MuiGrid-root-1 makeStyles-info_outline-239 makeStyles-common-225 MuiGrid-container-2 MuiGrid-spacing-xs-3-26 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-content-xs-center-19"
