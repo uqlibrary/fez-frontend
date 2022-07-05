@@ -11274,7 +11274,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                           "loadJournalLookup": [Function],
                                                           "loadJournalSearchKeywords": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
-                                                          "loadNewsFeed": [Function],
+                                                          "loadCulturalAdvice": [Function],
                                                           "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
                                                           "loadRecordToDelete": [Function],
@@ -15250,7 +15250,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "loadJournalLookup": [Function],
                                                                           "loadJournalSearchKeywords": [Function],
                                                                           "loadMyEditorialAppointmentsList": [Function],
-                                                                          "loadNewsFeed": [Function],
+                                                                          "loadCulturalAdvice": [Function],
                                                                           "loadOrcidSyncStatus": [Function],
                                                                           "loadPublicationList": [Function],
                                                                           "loadRecordToDelete": [Function],
@@ -15433,7 +15433,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "loadJournalLookup": [Function],
                                                                             "loadJournalSearchKeywords": [Function],
                                                                             "loadMyEditorialAppointmentsList": [Function],
-                                                                            "loadNewsFeed": [Function],
+                                                                            "loadCulturalAdvice": [Function],
                                                                             "loadOrcidSyncStatus": [Function],
                                                                             "loadPublicationList": [Function],
                                                                             "loadRecordToDelete": [Function],
@@ -16307,8 +16307,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           <div
                                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                                           >
-                                                                            <Connect(WithStyles(NewsFeed))>
-                                                                              <WithStyles(NewsFeed)
+                                                                            <Connect(WithStyles(CulturalAdvice))>
+                                                                              <WithStyles(CulturalAdvice)
                                                                                 actions={
                                                                                   Object {
                                                                                     "addAuthor": [Function],
@@ -16391,7 +16391,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "loadJournalLookup": [Function],
                                                                                     "loadJournalSearchKeywords": [Function],
                                                                                     "loadMyEditorialAppointmentsList": [Function],
-                                                                                    "loadNewsFeed": [Function],
+                                                                                    "loadCulturalAdvice": [Function],
                                                                                     "loadOrcidSyncStatus": [Function],
                                                                                     "loadPublicationList": [Function],
                                                                                     "loadRecordToDelete": [Function],
@@ -16445,7 +16445,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   }
                                                                                 }
                                                                               >
-                                                                                <NewsFeed
+                                                                                <CulturalAdvice
                                                                                   actions={
                                                                                     Object {
                                                                                       "addAuthor": [Function],
@@ -16528,7 +16528,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "loadJournalLookup": [Function],
                                                                                       "loadJournalSearchKeywords": [Function],
                                                                                       "loadMyEditorialAppointmentsList": [Function],
-                                                                                      "loadNewsFeed": [Function],
+                                                                                      "loadCulturalAdvice": [Function],
                                                                                       "loadOrcidSyncStatus": [Function],
                                                                                       "loadPublicationList": [Function],
                                                                                       "loadRecordToDelete": [Function],
@@ -16583,11 +16583,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   }
                                                                                   classes={
                                                                                     Object {
-                                                                                      "newsItem": "NewsFeed-newsItem-36",
+                                                                                      "newsItem": "CulturalAdvice-newsItem-36",
                                                                                     }
                                                                                   }
-                                                                                  loadingNewsFeedList={true}
-                                                                                  newsFeedList={Array []}
+                                                                                  loadingCulturalAdviceList={true}
+                                                                                  culturalAdviceList={Array []}
                                                                                   showNewsCount={3}
                                                                                   theme={
                                                                                     Object {
@@ -16952,8 +16952,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     }
                                                                                   }
                                                                                 />
-                                                                              </WithStyles(NewsFeed)>
-                                                                            </Connect(WithStyles(NewsFeed))>
+                                                                              </WithStyles(CulturalAdvice)>
+                                                                            </Connect(WithStyles(CulturalAdvice))>
                                                                           </div>
                                                                         </ForwardRef(Grid)>
                                                                       </WithStyles(ForwardRef(Grid))>

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { TopCitedPublications } from 'modules/TopCitedPublications';
-import { NewsFeed } from 'modules/SharedComponents/NewsFeed';
+import { CulturalAdvice } from 'modules/SharedComponents/CulturalAdvice';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { AcknowledgementOfCountry } from '../../SharedComponents/AcknowledgementOfCountry';
@@ -20,7 +20,7 @@ class IndexComponent extends PureComponent {
                                 <AcknowledgementOfCountry />
                             </Grid>
                             <Grid item xs={12}>
-                                <NewsFeed />
+                                <CulturalAdvice />
                             </Grid>
                         </Grid>
                     </Grid>

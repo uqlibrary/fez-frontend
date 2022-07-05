@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component NewsFeed should not render anything if there are no news 1`] = `""`;
+exports[`Component CulturalAdvice should not render anything if there are no news 1`] = `""`;
 
-exports[`Component NewsFeed should not render anything while loading 1`] = `""`;
+exports[`Component CulturalAdvice should not render anything while loading 1`] = `""`;
 
-exports[`Component NewsFeed should render news feed 1`] = `
+exports[`Component CulturalAdvice should render news feed 1`] = `
 <StandardCard
   darkHeader={true}
   title="Latest news"
@@ -195,7 +195,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
 </StandardCard>
 `;
 
-exports[`Component NewsFeed should show new count if above set limit 1`] = `
+exports[`Component CulturalAdvice should show new count if above set limit 1`] = `
 <StandardCard
   darkHeader={true}
   title="Latest news"

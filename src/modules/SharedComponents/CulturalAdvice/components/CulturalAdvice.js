@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Typography from '@material-ui/core/Typography';
 import { locale } from 'locale';
+import Typography from '@material-ui/core/Typography';
 
-const AcknowledgementOfCountry = () => {
-    const txt = locale.components.acknowledgementOfCountry;
+const CulturalAdvice = () => {
+    const txt = locale.components.culturalAdvice;
     return (
         <StandardCard title={txt.title} primaryHeader>
             <Typography variant={'body2'}>{txt.text}</Typography>
@@ -13,4 +13,4 @@ const AcknowledgementOfCountry = () => {
     );
 };
 
-export default AcknowledgementOfCountry;
+export default CulturalAdvice;

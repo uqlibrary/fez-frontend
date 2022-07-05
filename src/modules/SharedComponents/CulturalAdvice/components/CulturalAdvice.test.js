@@ -1,13 +1,13 @@
-import { NewsFeed, styles } from './NewsFeed';
+import { CulturalAdvice, styles } from './CulturalAdvice';
 
 function setup(testProps = {}) {
     const props = {
         classes: {},
         actions: {
-            loadNewsFeed: jest.fn(),
+            loadCulturalAdvice: jest.fn(),
         },
-        loadingNewsFeedList: false,
-        newsFeedList: [
+        loadingCulturalAdviceList: false,
+        culturalAdviceList: [
             {
                 nws_usr_id: 1,
                 nws_created_date: '2006-12-15 02:59:07',
@@ -45,17 +45,17 @@ function setup(testProps = {}) {
         ],
         ...testProps,
     };
-    return getElement(NewsFeed, props);
+    return getElement(CulturalAdvice, props);
 }
 
-describe('Component NewsFeed', () => {
+describe('Component CulturalAdvice', () => {
     it('should not render anything while loading', () => {
-        const wrapper = setup({ loadingNewsFeedList: true });
+        const wrapper = setup({ loadingCulturalAdviceList: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render anything if there are no news', () => {
-        const wrapper = setup({ newsFeedList: [] });
+        const wrapper = setup({ culturalAdviceList: [] });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -66,7 +66,7 @@ describe('Component NewsFeed', () => {
 
     it('should call action to load news feed', () => {
         const loadFn = jest.fn();
-        const wrapper = setup({ actions: { loadNewsFeed: loadFn } });
+        const wrapper = setup({ actions: { loadCulturalAdvice: loadFn } });
         wrapper.instance().componentDidMount();
         expect(loadFn).toHaveBeenCalled();
     });

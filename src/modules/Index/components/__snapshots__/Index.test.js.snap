@@ -1958,7 +1958,6 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadJournalLookup": [Function],
                                                         "loadJournalSearchKeywords": [Function],
                                                         "loadMyEditorialAppointmentsList": [Function],
-                                                        "loadNewsFeed": [Function],
                                                         "loadOrcidSyncStatus": [Function],
                                                         "loadPublicationList": [Function],
                                                         "loadRecordToDelete": [Function],
@@ -2141,7 +2140,6 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadJournalLookup": [Function],
                                                           "loadJournalSearchKeywords": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
-                                                          "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
                                                           "loadRecordToDelete": [Function],
@@ -3015,8 +3013,8 @@ exports[`Index page should render placeholders 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                         >
-                                                          <Connect(WithStyles(NewsFeed))>
-                                                            <WithStyles(NewsFeed)
+                                                          <Connect(WithStyles(CulturalAdvice))>
+                                                            <WithStyles(CulturalAdvice)
                                                               actions={
                                                                 Object {
                                                                   "addAuthor": [Function],
@@ -3099,7 +3097,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "loadJournalLookup": [Function],
                                                                   "loadJournalSearchKeywords": [Function],
                                                                   "loadMyEditorialAppointmentsList": [Function],
-                                                                  "loadNewsFeed": [Function],
                                                                   "loadOrcidSyncStatus": [Function],
                                                                   "loadPublicationList": [Function],
                                                                   "loadRecordToDelete": [Function],
@@ -3153,7 +3150,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 }
                                                               }
                                                             >
-                                                              <NewsFeed
+                                                              <CulturalAdvice
                                                                 actions={
                                                                   Object {
                                                                     "addAuthor": [Function],
@@ -3236,7 +3233,6 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "loadJournalLookup": [Function],
                                                                     "loadJournalSearchKeywords": [Function],
                                                                     "loadMyEditorialAppointmentsList": [Function],
-                                                                    "loadNewsFeed": [Function],
                                                                     "loadOrcidSyncStatus": [Function],
                                                                     "loadPublicationList": [Function],
                                                                     "loadRecordToDelete": [Function],
@@ -3291,11 +3287,9 @@ exports[`Index page should render placeholders 1`] = `
                                                                 }
                                                                 classes={
                                                                   Object {
-                                                                    "newsItem": "NewsFeed-newsItem-13",
+                                                                    "newsItem": "CulturalAdvice-newsItem-13",
                                                                   }
                                                                 }
-                                                                loadingNewsFeedList={true}
-                                                                newsFeedList={Array []}
                                                                 showNewsCount={3}
                                                                 theme={
                                                                   Object {
@@ -3660,8 +3654,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                   }
                                                                 }
                                                               />
-                                                            </WithStyles(NewsFeed)>
-                                                          </Connect(WithStyles(NewsFeed))>
+                                                            </WithStyles(CulturalAdvice)>
+                                                          </Connect(WithStyles(CulturalAdvice))>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>

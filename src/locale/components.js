@@ -1776,8 +1776,25 @@ export default {
                 ariaLabel: 'Thumbnail image showing [title]',
             },
         },
-        newsFeed: {
-            title: 'Latest news',
+        culturalAdvice: {
+            title: 'Cultural advice',
+            text: (
+                <span>
+                    <p>
+                        Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images,
+                        voices or names of deceased persons in photographs, film, audio recordings or printed material.
+                        Aboriginal and Torres Strait Islander material and information accessed on this site may be
+                        culturally sensitive for some individuals and communities.
+                    </p>
+                    <p>
+                        Some material may contain language, terms, or descriptions that reflect the authors’ views, or
+                        those of the period in which the item was written or recorded but may be considered
+                        inappropriate today. These views are not necessarily the views of The University of Queensland.
+                        While the information may not reflect current understandings, it is provided in an historical
+                        context.
+                    </p>
+                </span>
+            ),
         },
         ntroFields: {
             header: {
