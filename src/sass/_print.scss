@@ -4,7 +4,7 @@
   margin: 0;
 }
 @media print {
-  .AppBar, div.possiblePublicationLure, div.authorCount, #menudrawer, .Alert, .AddThis, #unsupportedBrowser {
+  .AppBar, div.possiblePublicationLure, div.authorCount, #menudrawer, .AddThis, #unsupportedBrowser {
     display: none !important;
   }
   html, body {

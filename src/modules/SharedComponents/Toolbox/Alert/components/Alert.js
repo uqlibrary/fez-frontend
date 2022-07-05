@@ -304,7 +304,7 @@ export const Alert = ({
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} data-testid="alert">
             <Grid
                 container
                 spacing={3}

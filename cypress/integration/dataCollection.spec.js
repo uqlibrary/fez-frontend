@@ -9,7 +9,7 @@ context('Data Collection form', () => {
         cy.get('button#submit-data-collection')
             .as('submitButton')
             .should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
-        cy.get('div.Alert li')
+        cy.get('[data-testid=alert] li')
             .as('errors')
             .should('have.length', errorCount);
     });

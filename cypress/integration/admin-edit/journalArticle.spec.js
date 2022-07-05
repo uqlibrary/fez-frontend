@@ -468,12 +468,8 @@ context('Journal Article admin edit', () => {
                 .should('have.value', moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'));
         });
         cy.get('[data-testid=files-section-content]').within(() => {
-            cy.get('h4')
-                .eq(2)
-                .should('contain', 'Advisory statement');
-            cy.get('h4')
-                .eq(3)
-                .should('contain', 'Copyright agreement');
+            cy.contains('h4', 'Advisory statement');
+            cy.contains('h4', 'Copyright agreement');
             cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
                 if (record.rek_copyright === 'on') {
                     expect($checkbox).to.be.checked;
