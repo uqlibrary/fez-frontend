@@ -249,7 +249,7 @@ describe('PublicationsListSorting component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
     it('has the correct display type options in the dropdown', () => {
-        const wrapper = setup();
+        const wrapper = setup({ showDisplayAs: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         const selectableCollectionViewType = filterCollectionViewTypes();
         // Have the correct amount of elements in dropdown

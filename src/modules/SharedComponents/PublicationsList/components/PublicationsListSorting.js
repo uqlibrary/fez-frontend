@@ -204,30 +204,30 @@ const PublicationsListSorting = props => {
                     sm={props.canUseExport ? 6 : 12}
                     md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
                 >
-                <FormControl fullWidth>
-                    <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
-                    <Select
-                        id="displayRecordsAs"
-                        value={displayRecordsAs}
-                        disabled={props.disabled}
-                        onChange={displayRecordsAsChanged}
-                        data-testid="publication-list-display-records-as"
-                    >
-                        {selectableCollectionViewType.map(item => {
-                            return (
-                                <MenuItem
-                                    key={item.id}
-                                    value={item.value}
-                                    data-testid={`publication-display-records-as-option-${item.id}`}
-                                    id={`publication-display-records-as-option-${item.id}`}
-                                >
-                                    {item.label}
-                                </MenuItem>
-                            );
-                        })}
-                    </Select>
-                </FormControl>
-            </Grid>
+                    <FormControl fullWidth>
+                        <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
+                        <Select
+                            id="displayRecordsAs"
+                            value={displayRecordsAs}
+                            disabled={props.disabled}
+                            onChange={displayRecordsAsChanged}
+                            data-testid="publication-list-display-records-as"
+                        >
+                            {selectableCollectionViewType.map(item => {
+                                return (
+                                    <MenuItem
+                                        key={item.id}
+                                        value={item.value}
+                                        data-testid={`publication-display-records-as-option-${item.id}`}
+                                        id={`publication-display-records-as-option-${item.id}`}
+                                    >
+                                        {item.label}
+                                    </MenuItem>
+                                );
+                            })}
+                        </Select>
+                    </FormControl>
+                </Grid>
             )}
             {props.canUseExport && (
                 <Hidden xsDown>
