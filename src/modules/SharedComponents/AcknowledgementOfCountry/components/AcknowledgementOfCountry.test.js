@@ -1,11 +1,11 @@
-import WhatIsEspace from './WhatIsEspace';
+import AcknowledgementOfCountry from './AcknowledgementOfCountry';
 
 function setup(testProps, isShallow = true) {
     const props = { ...testProps };
-    return getElement(WhatIsEspace, props, isShallow);
+    return getElement(AcknowledgementOfCountry, props, isShallow);
 }
 
-describe('Component WhatIsEspace', () => {
+describe('Component AcknowledgementOfCountry', () => {
     it('should render component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

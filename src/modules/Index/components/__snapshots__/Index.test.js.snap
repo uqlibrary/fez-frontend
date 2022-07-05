@@ -2610,7 +2610,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                         >
-                                                          <WhatIsEspace>
+                                                          <AcknowledgementOfCountry>
                                                             <StandardCard
                                                               primaryHeader={true}
                                                               title="What is eSpace?"
@@ -2893,7 +2893,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 </ForwardRef(Card)>
                                                               </WithStyles(ForwardRef(Card))>
                                                             </StandardCard>
-                                                          </WhatIsEspace>
+                                                          </AcknowledgementOfCountry>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>

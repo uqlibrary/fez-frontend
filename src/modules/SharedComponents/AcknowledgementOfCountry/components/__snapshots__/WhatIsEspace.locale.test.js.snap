@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component WhatIsEspace with different locale should render external link 1`] = `
+exports[`Component AcknowledgementOfCountry with different locale should render external link 1`] = `
 <StandardCard
   primaryHeader={true}
   title="what is espace title"

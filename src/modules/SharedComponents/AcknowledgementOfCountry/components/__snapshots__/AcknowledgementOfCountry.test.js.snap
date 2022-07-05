@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AcknowledgementOfCountry should render component 1`] = `
+<StandardCard
+  primaryHeader={true}
+  title="Acknowledgement of Country"
+>
+  <WithStyles(ForwardRef(Typography))
+    variant="body2"
+  >
+    <span>
+      UQ acknowledges and respects Aboriginal and Torres Strait Islander peoples as First Australians in which we value and celebrate the uniqueness of knowledges, cultures and histories and languages that have shared and created for at least 65,000 years.
+    </span>
+  </WithStyles(ForwardRef(Typography))>
+</StandardCard>
+`;

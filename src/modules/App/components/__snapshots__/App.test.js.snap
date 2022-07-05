@@ -15902,7 +15902,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           <div
                                                                             className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                                           >
-                                                                            <WhatIsEspace>
+                                                                            <AcknowledgementOfCountry>
                                                                               <StandardCard
                                                                                 primaryHeader={true}
                                                                                 title="What is eSpace?"
@@ -16185,7 +16185,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   </ForwardRef(Card)>
                                                                                 </WithStyles(ForwardRef(Card))>
                                                                               </StandardCard>
-                                                                            </WhatIsEspace>
+                                                                            </AcknowledgementOfCountry>
                                                                           </div>
                                                                         </ForwardRef(Grid)>
                                                                       </WithStyles(ForwardRef(Grid))>

@@ -2188,18 +2188,15 @@ export default {
                 },
             },
         },
-        whatIsEspace: {
-            title: 'What is eSpace?',
+        acknowledgementOfCountry: {
+            title: 'Acknowledgement of Country',
             text: (
                 <span>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search
-                    engines such as Google and Trove...
+                    UQ acknowledges and respects Aboriginal and Torres Strait Islander peoples as First Australians in
+                    which we value and celebrate the uniqueness of knowledges, cultures and histories and languages that
+                    have shared and created for at least 65,000 years.
                 </span>
             ),
-            readMoreLabel: ' read more',
-            readMoreTitle: 'Click to read more about UQ eSpace',
-            readMoreLink: '/contact',
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
