@@ -82,6 +82,11 @@ export const selectFields = {
         ariaLabel: 'Please select an oa status type',
         selectPrompt: 'Select an oa status type',
     },
+    sensitiveHandlingNoteType: {
+        label: 'Sensitive Handling Note',
+        ariaLabel: 'Please select sensitive handling note',
+        selectPrompt: 'Select a sensitive handling note',
+    },
     pubmedDocType: {
         label: 'PubMed doc type(s)',
         ariaLabel: 'Please select a pubmed doc type',

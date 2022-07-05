@@ -31,7 +31,7 @@ context('Request correction form', () => {
         cy.contains('.StandardCard .publicationCitation h6 a', record.rek_title);
         cy.get('[data-testid=rek-content-indicator]').contains('Scholarship of Teaching and Learning');
         cy.contains('Select an action');
-        cy.contains('.Alert', 'Validation');
+        cy.contains('[data-testid=alert]', 'Validation');
         cy.contains('button', 'Cancel');
     });
 
@@ -125,10 +125,10 @@ context('Request correction form', () => {
         cy.contains('button', 'Submit')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', fixFormLocale.progressAlert.title)
             .should('contain', fixFormLocale.progressAlert.message);
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', fixFormLocale.successAlert.title)
             .should('contain', fixFormLocale.successAlert.message);
         cy.contains('h2', fixFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);

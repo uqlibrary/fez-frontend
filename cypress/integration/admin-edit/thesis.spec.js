@@ -217,18 +217,14 @@ context('Thesis admin edit', () => {
                 .within(() => {
                     cy.get('h4').should('contain', 'Advisory statement');
                 });
-            cy.get('@cards')
-                .eq(2)
-                .within(() => {
-                    cy.get('h4').should('contain', 'Copyright agreement');
-                    cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
-                        if (record.rek_copyright === 'on') {
-                            expect($checkbox).to.be.checked;
-                        } else {
-                            expect($checkbox).not.to.be.checked;
-                        }
-                    });
-                });
+            cy.get('h4').should('contain', 'Copyright agreement');
+            cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
+                if (record.rek_copyright === 'on') {
+                    expect($checkbox).to.be.checked;
+                } else {
+                    expect($checkbox).not.to.be.checked;
+                }
+            });
         });
 
         // --------------------------------------------- SECURITY TAB ------------------------------------------------

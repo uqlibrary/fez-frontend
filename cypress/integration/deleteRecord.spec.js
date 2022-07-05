@@ -28,10 +28,10 @@ context('Delete work form', () => {
         cy.get('button#submit-delete-record')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', deleteFormLocale.progressAlert.title)
             .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', deleteFormLocale.successAlert.title)
             .should('contain', deleteFormLocale.successAlert.message);
         cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
@@ -45,10 +45,10 @@ context('Delete work form', () => {
         cy.get('button#submit-delete-record')
             .should('not.be.disabled')
             .click();
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', deleteFormLocale.progressAlert.title)
             .should('contain', deleteFormLocale.progressAlert.message);
-        cy.get('[class*="Alert"] .alert-text')
+        cy.get('[data-testid=alert] .alert-text')
             .should('contain', deleteFormLocale.successAlert.title)
             .should('contain', deleteFormLocale.successAlert.message);
         cy.contains('h2', deleteFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
@@ -64,7 +64,7 @@ context('Delete work form', () => {
 
     it('should show UQ DOI alert and disable the delete button', () => {
         cy.visit(`/admin/delete/${uqDoiRecord.rek_pid}/?user=uqstaff`);
-        cy.get('[class*="Alert"] .alert-text').should(
+        cy.get('[data-testid=alert] .alert-text').should(
             'contain',
             deleteFormLocale.uqDoiAlert.message(uqDoiRecord.rek_pid),
         );
