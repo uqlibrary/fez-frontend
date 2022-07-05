@@ -224,8 +224,16 @@ exports[`PublicationsListSorting component has the correct display type options 
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="standard"
+        value="auto"
       >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-display-records-as-option-456849"
+          id="publication-display-records-as-option-456849"
+          key="456849"
+          value="auto"
+        >
+          Auto
+        </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-456850"
           id="publication-display-records-as-option-456850"
@@ -478,8 +486,16 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         disabled={false}
         id="displayRecordsAs"
         onChange={[Function]}
-        value="standard"
+        value="auto"
       >
+        <WithStyles(ForwardRef(MenuItem))
+          data-testid="publication-display-records-as-option-456849"
+          id="publication-display-records-as-option-456849"
+          key="456849"
+          value="auto"
+        >
+          Auto
+        </WithStyles(ForwardRef(MenuItem))>
         <WithStyles(ForwardRef(MenuItem))
           data-testid="publication-display-records-as-option-456850"
           id="publication-display-records-as-option-456850"
