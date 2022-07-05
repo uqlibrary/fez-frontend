@@ -77,7 +77,6 @@ export const getThumbnail = (publication, props) => {
     const fileData = getFileData(publication, props);
     const sortedData = sortThumbnailsBySecurityStatus(fileData);
     const filteredFileData = filterMissingThumbnails(sortedData);
-    console.log(fileData, sortedData, filteredFileData);
 
     return filteredFileData?.[0] ?? {};
 };
