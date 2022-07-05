@@ -1760,10 +1760,6 @@ export default {
                 confirmButtonLabel: 'Close',
             },
             displayRecordsAsLabel: 'Display results',
-            displayRecordsAs: [
-                { index: 0, value: 'standard', label: 'Standard' },
-                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
-            ],
         },
         imageGallery: {
             alert: {

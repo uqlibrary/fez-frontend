@@ -8,6 +8,8 @@ export default {
     "rek_display_type": 9,
     "rek_status_xsdmf_id": null,
     "rek_status": 2,
+    "rek_collection_view_type": 2,
+    "rek_collection_view_type_lookup": "image-gallery",
     "rek_date_xsdmf_id": null,
     "rek_date": "2006-12-20T21:56:09Z",
     "rek_object_type_xsdmf_id": null,
