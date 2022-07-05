@@ -17,7 +17,11 @@ import { COLLECTION_VIEW_TYPE } from 'config/general';
 export const filterCollectionViewTypes = () => COLLECTION_VIEW_TYPE.filter(viewType => viewType.selectable !== false);
 
 const PublicationsListSorting = props => {
+    const isAdmin = userIsAdmin();
+    const isResearcher = userIsResearcher();
+
     const txt = locale.components.sorting;
+
     /* istanbul ignore next */
     const pageLength = txt.recordsPerPage /* istanbul ignore next */ ?? [10, 20, 50, 100];
 
@@ -94,9 +98,6 @@ const PublicationsListSorting = props => {
     if (!props.pagingData || props.pagingData.total === 0 || !sortBy || !sortDirection || !pageSize) {
         return <span className="publicationsListSorting empty" />;
     }
-
-    const isAdmin = userIsAdmin();
-    const isResearcher = userIsResearcher();
 
     const dropDownWidth = !!props.showDisplayAs ? 2 : 3;
 

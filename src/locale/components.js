@@ -3657,6 +3657,7 @@ export default {
                 message: '...Loading Data...',
                 noCollections: 'No collections found for this community',
                 noCommunities: 'No communities found.',
+                exportLoadingMessage: 'Exporting search results',
             },
             columns: {
                 labels: {

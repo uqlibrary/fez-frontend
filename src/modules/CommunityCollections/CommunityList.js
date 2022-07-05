@@ -8,6 +8,7 @@ import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import { userIsAdmin } from 'hooks';
+import { useQueryStringParams, useCommunityCollectionControls } from './hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Typography from '@material-ui/core/Typography';
@@ -18,7 +19,8 @@ import * as actions from 'actions';
 import locale from 'locale/components';
 import { useDispatch, useSelector } from 'react-redux';
 
-import CommunityCollectionsSorting from './components/CommunityCollectionsSorting';
+import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
+
 // import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
 import { makeStyles } from '@material-ui/core/styles';
@@ -75,6 +77,8 @@ export const CommunityList = () => {
         location && ((location.hash && location.hash.replace('?', '&').replace('#', '?')) || location.search),
         { ignoreQueryPrefix: true },
     );
+    const { queryParams } = useQueryStringParams(history.location);
+    const { handleCommunityExport } = useCommunityCollectionControls(queryParams, actions);
 
     sortDirection = queryStringObject.sortDirection ? queryStringObject.sortDirection : sortDirection;
     sortDirection = sortDirection.charAt(0).toUpperCase() + sortDirection.slice(1);
@@ -86,6 +90,11 @@ export const CommunityList = () => {
     const startRecord = useSelector(state => state.get('viewCommunitiesReducer').startRecord);
     const endRecord = useSelector(state => state.get('viewCommunitiesReducer').endRecord);
     const loadingCommunitiesError = useSelector(state => state.get('viewCommunitiesReducer').loadingCommunitiesError);
+
+    const exportCommunitiesLoading = useSelector(
+        state => state.get('exportCommunitiesReducer').exportCommunitiesLoading,
+    );
+    const isLoadingOrExporting = loadingCommunities || exportCommunitiesLoading;
 
     const currentPage = queryStringObject.page ? parseInt(queryStringObject.page, 10) : 1;
     const perPage = queryStringObject.pageSize ? parseInt(queryStringObject.pageSize, 10) : 10;
@@ -196,7 +205,7 @@ export const CommunityList = () => {
                         )}
 
                         <Grid item xs={12} style={{ marginBottom: 10 }}>
-                            <CommunityCollectionsSorting
+                            <PublicationsListSorting
                                 data-testid="community-collections-sorting-top"
                                 exportData={txt.export}
                                 pagingData={PagindData}
@@ -204,9 +213,12 @@ export const CommunityList = () => {
                                 sortBy={sortBy}
                                 sortDirection={sortDirection}
                                 onSortByChanged={sortByChanged}
+                                canUseExport
+                                onExportPublications={handleCommunityExport}
                                 onPageSizeChanged={pageSizeChanged}
                                 pageSize={perPage}
                                 sortingDefaults={sortingDefaults}
+                                disabled={isLoadingOrExporting}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -214,12 +226,12 @@ export const CommunityList = () => {
                                 loading={false}
                                 pagingData={PagindData}
                                 onPageChanged={pageChanged}
-                                disabled={false}
+                                disabled={isLoadingOrExporting}
                                 pagingId="community-collections-paging-top"
                                 data-testid="community-collections-paging-top"
                             />
                         </Grid>
-                        {sortedList.length > 0 ? (
+                        {!exportCommunitiesLoading && sortedList.length > 0 ? (
                             <CommunityTable
                                 records={sortedList}
                                 labels={labels}
@@ -228,14 +240,23 @@ export const CommunityList = () => {
                                 adminUser={adminUser}
                             />
                         ) : (
-                            <InlineLoader loaderId="communities-page-loading" message={txt.loading.message} />
+                            <InlineLoader
+                                loaderId={
+                                    !exportCommunitiesLoading
+                                        ? 'communities-page-loading'
+                                        : 'communities-results-exporting'
+                                }
+                                message={
+                                    exportCommunitiesLoading ? txt.loading.exportLoadingMessage : txt.loading.message
+                                }
+                            />
                         )}
                         <Grid item xs={12} style={{ marginTop: 10 }}>
                             <PublicationsListPaging
                                 loading={false}
                                 pagingData={PagindData}
                                 onPageChanged={pageChanged}
-                                disabled={false}
+                                disabled={isLoadingOrExporting}
                                 pagingId="community-collections-paging-bottom"
                                 data-testid="community-collections-paging-bottom"
                             />
