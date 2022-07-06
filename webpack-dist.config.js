@@ -213,7 +213,7 @@ const webpackConfig = {
             },
             {
                 test: /\.js$/,
-                loader: WebpackStrip.loader('console.log'),
+                loader: WebpackStrip.loader('console.log', 'd'),
             },
         ],
     },
