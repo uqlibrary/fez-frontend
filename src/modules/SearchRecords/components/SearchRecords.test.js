@@ -1135,5 +1135,63 @@ describe('SearchRecords page', () => {
             expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
             expect(getByTestId('image-gallery')).toBeInTheDocument();
         });
+        it("should should maintain user's display choice even if querystring contains displayRecordsAs parameter", () => {
+            const getParams = ({ displayRecordsAs = 'image-gallery', ...params } = {}) => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                    ...params,
+                };
+            };
+            const oldParams = getParams();
+            // add some search history
+            const historyEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
+                },
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(getParams({ searchQueryParams: { all: 'test2' } }))}`,
+                },
+            ];
+            const historyMock = createMemoryHistory({
+                historyEntries,
+            });
+            historyMock.push(historyEntries[0]);
+            const { getByTestId, queryByTestId, getAllByRole } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                location: {
+                    ...historyEntries[0],
+                },
+                history: historyMock,
+            });
+
+            expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
+            expect(getByTestId('image-gallery')).toBeInTheDocument();
+            expect(getByTestId('displayRecordsAs').textContent).toEqual('Image Gallery');
+
+            // change display type
+            act(() => {
+                fireEvent.mouseDown(getByTestId('displayRecordsAs'));
+            });
+            expect(getAllByRole('option').length).toBe(3);
+            act(() => {
+                fireEvent.click(getAllByRole('option')[1]);
+                const newValue = getAllByRole('option')[1]
+                    .textContent.toLowerCase()
+                    .replace(' ', '-');
+                const newParams = getParams({ displayRecordsAs: newValue });
+                assertQueryString(historyMock, newParams);
+            });
+            // test if user choice persists when querystring updates (simulating user changing the search in the UI)
+            act(() => {
+                historyMock.push(historyEntries[1]);
+            });
+            expect(getByTestId('displayRecordsAs').textContent).toEqual('Standard');
+        });
     });
 });
