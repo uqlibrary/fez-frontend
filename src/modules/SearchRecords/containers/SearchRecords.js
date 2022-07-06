@@ -8,6 +8,7 @@ import { pathConfig } from 'config';
 const mapStateToProps = (state, props) => ({
     ...state.get('searchRecordsReducer'),
     ...state.get('exportPublicationsReducer'),
+    ...state.get('accountReducer'),
     canUseExport: true,
     isUnpublishedBufferPage: props.location.pathname === pathConfig.admin.unpublished,
 });

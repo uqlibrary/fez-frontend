@@ -26,6 +26,11 @@ export const selectFields = {
         selectPrompt: 'Please select a community',
         loadingHint: 'Loading communities...',
     },
+    collectionViewType: {
+        label: 'Select default collection view',
+        ariaLabel: 'Select default collection view',
+        selectPrompt: 'Please select a default view',
+    },
     directory: {
         label: 'Select folder where CSV and datastream files are located',
         ariaLabel: 'Select folder where CSV and datastream files are located',
@@ -81,6 +86,11 @@ export const selectFields = {
         label: 'OA status type',
         ariaLabel: 'Please select an oa status type',
         selectPrompt: 'Select an oa status type',
+    },
+    sensitiveHandlingNoteType: {
+        label: 'Sensitive Handling Note',
+        ariaLabel: 'Please select sensitive handling note',
+        selectPrompt: 'Select a sensitive handling note',
     },
     pubmedDocType: {
         label: 'PubMed doc type(s)',

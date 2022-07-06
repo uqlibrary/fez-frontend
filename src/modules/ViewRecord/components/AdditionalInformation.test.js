@@ -87,6 +87,16 @@ describe('Additional Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with a community', () => {
+        const wrapper = setup({ publication: records.communityRecord });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component with a collection', () => {
+        const wrapper = setup({ publication: records.collectionRecord });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with creative work (Creative Work - Textual)', () => {
         const wrapper = setup({
             isNtro: true,

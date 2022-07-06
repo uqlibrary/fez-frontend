@@ -40,6 +40,9 @@ import AdminViewRecordDrawer from './AdminViewRecordDrawer';
 import { Button } from '@material-ui/core';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
+import { doesListContainItem } from 'helpers/general';
+
+import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
 
 export function redirectUserToLogin() {
     window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
@@ -82,7 +85,6 @@ const useStyles = makeStyles(theme => ({
 export const NewViewRecord = ({
     account,
     author,
-    hideCulturalSensitivityStatement,
     isDeleted,
     isDeletedVersion,
     loadingRecordToView,
@@ -97,12 +99,8 @@ export const NewViewRecord = ({
 
     const txt = locale.pages.viewRecord;
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
-
-    const handleSetHideCulturalSensitivityStatement = React.useCallback(
-        () => dispatch(actions.setHideCulturalSensitivityStatement()),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
+    const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();
+    const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
     const classes = useStyles();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
@@ -222,8 +220,10 @@ export const NewViewRecord = ({
                             showAdminActions={isAdmin}
                             isPublicationDeleted={isDeleted}
                             citationStyle={'header'}
+                            hideCitationText={hideCitationText}
                         />
                     </Grid>
+
                     {!isDeleted && !!recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={2} style={{ marginBottom: 4 }}>
@@ -298,8 +298,6 @@ export const NewViewRecord = ({
                                 author={author}
                                 account={account}
                                 publication={recordToView}
-                                hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
-                                setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
                                 isAdmin={!!isAdmin}
                                 isAuthor={!!isAuthor}
                             />
@@ -321,7 +319,6 @@ export const NewViewRecord = ({
 NewViewRecord.propTypes = {
     account: PropTypes.object,
     author: PropTypes.object,
-    hideCulturalSensitivityStatement: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,

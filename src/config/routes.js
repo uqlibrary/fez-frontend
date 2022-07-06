@@ -39,7 +39,7 @@ export const flattedPathConfig = [
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
-    '/contact',
+    '/about',
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
@@ -61,6 +61,7 @@ export const flattedPathConfig = [
     '/records/possible',
     '/records/search',
     '/view',
+    '/communitylist',
 ];
 
 // TODO: will we even have roles?
@@ -89,10 +90,10 @@ export const getRoutesConfig = ({
             exact: true,
             pageTitle: locale.pages.index.title,
         },
+
         {
-            path: pathConfig.contact,
-            render: () => components.StandardPage({ ...locale.pages.contact }),
-            pageTitle: locale.pages.contact.title,
+            path: pathConfig.about,
+            render: () => components.StandardPage({ ...locale.pages.about }),
         },
         {
             path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
@@ -113,6 +114,19 @@ export const getRoutesConfig = ({
             access: [roles.admin],
             pageTitle: locale.pages.journal.view.title,
         },
+        {
+            path: pathConfig.communityList,
+            component: components.CommunityList,
+            exact: true,
+            pageTitle: locale.pages.communityList.title,
+        },
+        {
+            path: pathConfig.collectionList.path(pid),
+            component: components.CollectionList,
+            exact: true,
+            pageTitle: locale.pages.collectionList.title,
+        },
+
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
                   {
@@ -503,13 +517,18 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
         {
+            linkTo: pathConfig.communityList,
+            ...locale.menu.communityList,
+            public: true,
+        },
+        {
             linkTo: pathConfig.help,
             ...locale.menu.help,
             public: true,
         },
         {
-            linkTo: pathConfig.contact,
-            ...locale.menu.contact,
+            linkTo: pathConfig.about,
+            ...locale.menu.about,
             public: true,
         },
     ];
@@ -592,6 +611,11 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
                       linkTo: pathConfig.authorStatistics.url(account.id),
                       ...locale.menu.authorStatistics,
                   },
+                  //   {
+                  //       linkTo: pathConfig.communityList,
+                  //       ...locale.menu.communityList,
+                  //       public: true,
+                  //   },
                   {
                       divider: true,
                       path: '/234234234242',
@@ -601,10 +625,10 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
         ...userPages,
         ...(authorDetails && isSuperAdmin(authorDetails)
             ? [
-                  {
-                      linkTo: pathConfig.admin.community,
-                      ...locale.menu.communityForm,
-                  },
+                  //   {
+                  //       linkTo: pathConfig.admin.community,
+                  //       ...locale.menu.communityForm,
+                  //   },
                   {
                       linkTo: pathConfig.admin.collection,
                       ...locale.menu.collectionForm,

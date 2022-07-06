@@ -44,7 +44,7 @@ context('Incomplete record form', () => {
 
     const authorEditInstruction = 'Step 2 of 2 - Update the affiliation information.';
     const grantMessage = 'You must click ADD GRANT to enter the value to the grants list';
-    const validationErrorsSelector = 'form > div > div:last-of-type .Alert ul li';
+    const validationErrorsSelector = '[data-testid=alert] li';
 
     const editNonUQAuthor = (authorNumber, orgName, orgType) => {
         cy.get(`#rek-author-list-row-edit-${authorNumber}`)
@@ -219,7 +219,7 @@ context('Incomplete record form', () => {
                 cy.get('[data-testid=rek-author-list]').should('have.css', 'overflowY', 'scroll');
                 // assert action table styling
                 cy.get('[data-testid=rek-author-list-row-0-actions]')
-                    .should('not.have.css', 'marginLeft', '55.5px')
+                    .should('not.have.css', 'marginLeft', '65px')
                     .should('have.css', 'borderTopColor', 'rgb(221, 221, 221)')
                     .should('have.css', 'borderTopWidth', '1px')
                     .should('have.css', 'marginTop', '10px')

@@ -522,7 +522,7 @@ describe('Application component', () => {
 
         const pathExpectations = [
             {
-                pathname: '/contact',
+                pathname: '/about',
                 isPublic: true,
             },
             {

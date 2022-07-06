@@ -363,7 +363,17 @@ exports[`AdminContainer component should not render non-security errors for comm
             }
           }
           disabled={true}
-          formErrors={false}
+          formErrors={
+            Immutable.Map {
+              "bibliographicSection": Object {
+                "rek_date": "Publication date is required",
+                "rek_title": "Title is required",
+              },
+              "securitySection": Object {
+                "rek_security_policy": "Policy is required",
+              },
+            }
+          }
           handleSubmit={[MockFunction]}
           location={
             Location {
@@ -483,6 +493,14 @@ exports[`AdminContainer component should not render non-security errors for comm
                     "compare": null,
                     "type": [Function],
                   },
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
                   "compare": null,
                   "type": [Function],
                 },
@@ -1937,6 +1955,14 @@ exports[`AdminContainer component should render default view 1`] = `
                     "compare": null,
                     "type": [Function],
                   },
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
                   "compare": null,
                   "type": [Function],
                 },
@@ -3400,6 +3426,14 @@ exports[`AdminContainer component should render memoized component with styles 1
                   "type": [Function],
                 },
               },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
               "security": Object {
                 "activated": true,
                 "component": Object {
@@ -4844,6 +4878,14 @@ exports[`AdminContainer component should render mobile view 1`] = `
                     "compare": null,
                     "type": [Function],
                   },
+                  "compare": null,
+                  "type": [Function],
+                },
+              },
+              "reason": Object {
+                "activated": false,
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
                   "compare": null,
                   "type": [Function],
                 },

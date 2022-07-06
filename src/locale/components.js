@@ -1742,9 +1742,9 @@ export default {
                 { value: 'title', label: 'Title' },
                 { value: 'created_date', label: 'Created date' },
                 { value: 'updated_date', label: 'Updated date' },
-                { value: 'altmetric_score', label: 'Altmetric score' },
-                { value: 'scopus_citation_count', label: 'Scopus citation count' },
-                { value: 'thomson_citation_count', label: 'Web of Science citation count' },
+                { value: 'altmetric_score', label: 'Altmetric score', exclude: ['image-gallery'] },
+                { value: 'scopus_citation_count', label: 'Scopus citation count', exclude: ['image-gallery'] },
+                { value: 'thomson_citation_count', label: 'Web of Science citation count', exclude: ['image-gallery'] },
             ],
             sortDirection: ['Desc', 'Asc'],
             recordsPerPage: [10, 20, 50, 100],
@@ -1759,9 +1759,35 @@ export default {
                 ),
                 confirmButtonLabel: 'Close',
             },
+            displayRecordsAsLabel: 'Display results',
         },
-        newsFeed: {
-            title: 'Latest news',
+        imageGallery: {
+            alert: {
+                restricted: 'Image restricted',
+                advisory: 'Content warning',
+                restrictedAdvisory: 'Restricted + content warning',
+                unavailable: 'Image not available',
+            },
+            thumbnail: {
+                ariaLabel: 'Thumbnail image showing [title]',
+            },
+        },
+        culturalAdvice: {
+            title: 'Cultural advice',
+            text: (
+                <span>
+                    Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices
+                    or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal
+                    and Torres Strait Islander material and information accessed on this site may be culturally
+                    sensitive for some individuals and communities.
+                    <br />
+                    <br />
+                    Some material may contain language, terms, or descriptions that reflect the authors’ views, or those
+                    of the period in which the item was written or recorded but may be considered inappropriate today.
+                    These views are not necessarily the views of The University of Queensland. While the information may
+                    not reflect current understandings, it is provided in an historical context.
+                </span>
+            ),
         },
         ntroFields: {
             header: {
@@ -2172,18 +2198,17 @@ export default {
                 },
             },
         },
-        whatIsEspace: {
-            title: 'What is eSpace?',
+        acknowledgementOfCountry: {
+            title: 'Acknowledgement of Country',
             text: (
                 <span>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search
-                    engines such as Google and Trove...
+                    The University of Queensland acknowledges the Traditional Owners and their custodianship of the
+                    lands. We pay our respects to their Ancestors and their descendants, who continue cultural and
+                    spiritual connections to Country. We recognise their valuable contributions to Australian and global
+                    society, celebrating the unique knowledges, cultures, histories and languages that have been shared
+                    and created for at least 65,000 years.
                 </span>
             ),
-            readMoreLabel: ' read more',
-            readMoreTitle: 'Click to read more about UQ eSpace',
-            readMoreLink: '/contact',
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
@@ -3085,10 +3110,10 @@ export default {
                 changeAuthorIdForm: {
                     selectPrompt: 'Please select an option to search author by',
                     formLabels: {
-                        searchBy: 'Search author by',
+                        searchBy: 'Search author by (change from)',
                         searchByAuthorName: 'Search by Author Name',
                         searchByAuthorId: 'Search by Author Id',
-                        authorId: 'Author Id',
+                        authorId: 'Author Id (change to)',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',
                     },
@@ -3629,6 +3654,53 @@ export default {
                 allowDismiss: true,
                 type: 'error',
                 message: 'A user could not be deleted.',
+            },
+        },
+        communitiesCollections: {
+            title: {
+                communities: 'Communities',
+                collections: 'Collections',
+            },
+            addCommunityText: 'Add Missing Community',
+            snackbar: {
+                message: 'Search results updated',
+            },
+            dateFormat: 'ddd MMM DD, YYYY',
+            loading: {
+                message: '...Loading Data...',
+                noCollections: 'No collections found for this community',
+                noCommunities: 'No communities found.',
+                exportLoadingMessage: 'Exporting search results',
+            },
+            columns: {
+                labels: {
+                    title: 'Title',
+                    creation_date: 'Created Date',
+                    updated_date: 'Updated Date',
+                    actions: 'Actions',
+                },
+            },
+            export: {
+                label: 'Export page results',
+                format: [{ value: 'excel', label: 'Excel File' }],
+            },
+            sorting: {
+                pageSize: 'Records per page',
+                sortLabel: 'Sort results by',
+                sortDirectionLabel: 'Sort order',
+                sortBy: [
+                    { value: 'title', label: 'Title' },
+                    { value: 'created_date', label: 'Created Date' },
+                    { value: 'updated_date', label: 'Updated Date' },
+                ],
+                sortDirection: ['Desc', 'Asc'],
+                recordsPerPage: [10, 20, 50, 100],
+                exportOnlyLabel: 'Export Only:',
+            },
+            sortingDefaults: {
+                pageSize: 10,
+                sortBy: 'title',
+                sortDirection: 'Asc',
             },
         },
         favouriteJournals: {

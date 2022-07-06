@@ -1,5 +1,6 @@
 import * as actions from 'actions/actionTypes';
 import { locale } from 'locale';
+import { COLLECTION_VIEW_TYPE } from 'config/general';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -208,6 +209,10 @@ const handlers = {
                 per_page: action.payload.per_page,
             },
             publicationsListFacets: (action.payload.filters || {}).facets || {},
+            publicationsListDefaultView: {
+                id: action.payload.rek_collection_view_type || COLLECTION_VIEW_TYPE[0].index,
+                lookup: action.payload.rek_collection_view_type_lookup || COLLECTION_VIEW_TYPE[0].text,
+            },
         };
     },
 
