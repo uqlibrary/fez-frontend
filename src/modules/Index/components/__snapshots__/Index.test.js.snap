@@ -2833,7 +2833,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     className="MuiTypography-root MuiTypography-body2"
                                                                                   >
                                                                                     <span>
-                                                                                      UQ acknowledges and respects Aboriginal and Torres Strait Islander peoples as First Australians in which we value and celebrate the uniqueness of knowledges, cultures and histories and languages that have shared and created for at least 65,000 years.
+                                                                                      The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
                                                                                     </span>
                                                                                   </p>
                                                                                 </ForwardRef(Typography)>
