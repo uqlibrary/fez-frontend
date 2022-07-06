@@ -30,7 +30,6 @@ export { default as manageUsersReducer } from './manageUsers';
 export { default as myEditorialAppointmentsReducer } from './myEditorialAppointments';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';
 export { default as myTrendingPublicationsReducer } from './myTrendingPublications';
-export { default as newsFeedReducer } from './newsFeed';
 export { default as orcidSyncReducer } from './orcidSync';
 export { default as publicationsReducer } from './publications';
 export { default as searchJournalsReducer } from './searchJournals';

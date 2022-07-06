@@ -48,7 +48,7 @@ export const pathConfig = {
         path: pid => `/communities/${pid}/collections`,
     },
     dashboard: '/dashboard',
-    contact: '/contact',
+    about: '/about',
     hdrSubmission: '/rhdsubmission',
     sbsSubmission: '/habslodge',
     records: {

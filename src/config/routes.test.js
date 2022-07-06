@@ -82,7 +82,7 @@ describe('Routes getMenuConfig method', () => {
         expect(testMenuItems.length).toEqual(5);
 
         const contactMenuItem = testMenuItems.pop();
-        expect(contactMenuItem.primaryText).toEqual('Contact');
+        expect(contactMenuItem.primaryText).toEqual('About');
     });
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
@@ -126,7 +126,7 @@ describe('Routes getMenuConfig method', () => {
         expect(testMenuItems.length).toEqual(5);
 
         const contactMenuItem = testMenuItems.pop();
-        expect(contactMenuItem.primaryText).toEqual('Contact');
+        expect(contactMenuItem.primaryText).toEqual('About');
     });
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
