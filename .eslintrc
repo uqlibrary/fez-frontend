@@ -26,7 +26,7 @@
     "setupStoreForActions": true,
     "sinon": true,
     "toJson": true,
-    "d": true
+    "dd": true
   },
   "settings": {
     "react": {

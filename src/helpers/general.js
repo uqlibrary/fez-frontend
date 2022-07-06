@@ -1,6 +1,6 @@
 import ReactHtmlParser from 'react-html-parser';
 
-global.d = console.log;
+global.dd = console.log;
 
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
