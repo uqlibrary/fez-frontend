@@ -249,6 +249,9 @@ export default {
     fez_record_search_key_total_pages: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_total_pages'),
     },
+    fez_record_search_key_collection_view_type: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_collection_view_type'),
+    },
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
@@ -496,6 +499,16 @@ export default {
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
             ),
+    },
+    sensitiveHandlingNote: {
+        getValue: record => {
+            return {
+                id: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_id')
+                    .rek_sensitive_handling_note_id,
+                other: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_other')
+                    .rek_sensitive_handling_note_other,
+            };
+        },
     },
     significanceAndContributionStatement: {
         getValue: record => {

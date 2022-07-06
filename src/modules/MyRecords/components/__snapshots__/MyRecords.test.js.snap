@@ -291,18 +291,6 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -539,18 +527,6 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -795,18 +771,6 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -1132,18 +1096,6 @@ exports[`MyRecords test renders loading screen while export publications loading
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -1371,18 +1323,6 @@ exports[`MyRecords test renders loading screen while loading publications while 
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -1654,18 +1594,6 @@ exports[`MyRecords test should handle export publications 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",

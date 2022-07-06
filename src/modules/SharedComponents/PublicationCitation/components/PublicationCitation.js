@@ -129,6 +129,7 @@ export const styles = theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             width: 'calc(100% - 130px)',
+            minWidth: 280,
         },
         [theme.breakpoints.up('md')]: {
             width: 'calc(100% - 135px)',
@@ -136,7 +137,6 @@ export const styles = theme => ({
         [theme.breakpoints.up('lg')]: {
             width: 'calc(100% - 140px)',
         },
-        minWidth: 280,
     },
     imageListItemRoot: {
         [theme.breakpoints.down('md')]: {
@@ -268,9 +268,17 @@ export class PublicationCitation extends PureComponent {
                 break;
         }
     };
+
+    hasPublicationAdvisoryStatement = publication => {
+        // eslint-disable-next-line camelcase
+        return !!publication.fez_record_search_key_advisory_statement?.rek_advisory_statement;
+    };
     showPublicationImage = showImageThumbnails => {
         const { publication } = this.props;
-        return showImageThumbnails && getWhiteListed(publication, imageConfig);
+        return (
+            showImageThumbnails &&
+            (getWhiteListed(publication, imageConfig) || this.hasPublicationAdvisoryStatement(publication))
+        );
     };
 
     renderPublicationImage = (publication, security) => {

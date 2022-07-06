@@ -44,7 +44,7 @@ context('Claim possible work', () => {
             .should('contain', claimFormLocale.contentIndicators.title)
             .should('contain', claimFormLocale.comments.title)
             .should('contain', claimFormLocale.fileUpload.title);
-        cy.get('.Alert b')
+        cy.get('[data-testid=alert] b')
             .scrollIntoView()
             .should('contain', claimFormLocale.validationAlert.title);
         cy.contains('button', claimFormLocale.cancel).should('not.be.disabled');

@@ -1760,10 +1760,6 @@ export default {
                 confirmButtonLabel: 'Close',
             },
             displayRecordsAsLabel: 'Display results',
-            displayRecordsAs: [
-                { index: 0, value: 'standard', label: 'Standard' },
-                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
-            ],
         },
         imageGallery: {
             alert: {
@@ -1776,8 +1772,22 @@ export default {
                 ariaLabel: 'Thumbnail image showing [title]',
             },
         },
-        newsFeed: {
-            title: 'Latest news',
+        culturalAdvice: {
+            title: 'Cultural advice',
+            text: (
+                <span>
+                    Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices
+                    or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal
+                    and Torres Strait Islander material and information accessed on this site may be culturally
+                    sensitive for some individuals and communities.
+                    <br />
+                    <br />
+                    Some material may contain language, terms, or descriptions that reflect the authors’ views, or those
+                    of the period in which the item was written or recorded but may be considered inappropriate today.
+                    These views are not necessarily the views of The University of Queensland. While the information may
+                    not reflect current understandings, it is provided in an historical context.
+                </span>
+            ),
         },
         ntroFields: {
             header: {
@@ -2188,18 +2198,17 @@ export default {
                 },
             },
         },
-        whatIsEspace: {
-            title: 'What is eSpace?',
+        acknowledgementOfCountry: {
+            title: 'Acknowledgement of Country',
             text: (
                 <span>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search
-                    engines such as Google and Trove...
+                    The University of Queensland acknowledges the Traditional Owners and their custodianship of the
+                    lands. We pay our respects to their Ancestors and their descendants, who continue cultural and
+                    spiritual connections to Country. We recognise their valuable contributions to Australian and global
+                    society, celebrating the unique knowledges, cultures, histories and languages that have been shared
+                    and created for at least 65,000 years.
                 </span>
             ),
-            readMoreLabel: ' read more',
-            readMoreTitle: 'Click to read more about UQ eSpace',
-            readMoreLink: '/contact',
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
@@ -3661,6 +3670,7 @@ export default {
                 message: '...Loading Data...',
                 noCollections: 'No collections found for this community',
                 noCommunities: 'No communities found.',
+                exportLoadingMessage: 'Exporting search results',
             },
             columns: {
                 labels: {

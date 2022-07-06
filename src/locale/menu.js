@@ -40,8 +40,8 @@ export default {
             primaryText: 'Search eSpace',
             secondaryText: '',
         },
-        contact: {
-            primaryText: 'Contact',
+        about: {
+            primaryText: 'About',
             secondaryText: '',
         },
         thirdPartyLookupTools: {

@@ -1628,6 +1628,40 @@ export const OA_STATUS_TYPE = [
     { value: 454123, text: 'Bronze' },
 ];
 
+export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
+export const SENSITIVE_HANDLING_NOTE_TYPE = [
+    {
+        value: 456855,
+        text:
+            'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
+    },
+    {
+        value: 456856,
+        text: 'Indigenous/First Nations people should be aware that this output is about women’s business.',
+    },
+    {
+        value: 456857,
+        text: 'Indigenous/First Nations people should be aware that this output is about men’s business.',
+    },
+    {
+        value: 456858,
+        text:
+            'Assessors should be aware that this output contains content related to any of the following: violence, ' +
+            'family or domestic violence, self-harm, sexual assault, suicide, family child removal, refugee experiences, ' +
+            'war survivor experiences or other traumatic experiences that may be distressing or harmful to some people.',
+    },
+    {
+        value: 456859,
+        text:
+            'Assessors should be aware that this output contains content with explicit language, hate speech, nudity or ' +
+            'sexuality, or drug use which may be confronting and potentially distressing to some people.',
+    },
+    {
+        value: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+        text: 'Other',
+    },
+];
+
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 export const ANDS_COLLECTION_TYPE_OPTIONS = [
@@ -1655,6 +1689,7 @@ export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';
 export const THESIS_UPLOAD_RETRIES = 5;
 
 export const PUB_SEARCH_BULK_EXPORT_SIZE = 500;
+export const COMMUNITY_COLLECTION_BULK_EXPORT_SIZE = 500;
 export const MY_RECORDS_BULK_EXPORT_SIZE = 1000;
 export const PUB_LIST_BULK_EXPORT_SIZES = [PUB_SEARCH_BULK_EXPORT_SIZE, MY_RECORDS_BULK_EXPORT_SIZE];
 
@@ -1716,3 +1751,9 @@ export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
 
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
+
+export const COLLECTION_VIEW_TYPE = [
+    { id: 456849, value: 'auto', label: 'Auto' },
+    { id: 456850, value: 'standard', label: 'Standard' },
+    { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
+];

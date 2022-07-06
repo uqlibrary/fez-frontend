@@ -39,7 +39,7 @@ export const flattedPathConfig = [
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
-    '/contact',
+    '/about',
     '/dashboard',
     '/data-collections/add',
     '/data-collections/mine',
@@ -92,9 +92,8 @@ export const getRoutesConfig = ({
         },
 
         {
-            path: pathConfig.contact,
-            render: () => components.StandardPage({ ...locale.pages.contact }),
-            pageTitle: locale.pages.contact.title,
+            path: pathConfig.about,
+            render: () => components.StandardPage({ ...locale.pages.about }),
         },
         {
             path: pathConfig.records.view(`:pid(${pidRegExp}|${notFound})`),
@@ -528,8 +527,8 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
             public: true,
         },
         {
-            linkTo: pathConfig.contact,
-            ...locale.menu.contact,
+            linkTo: pathConfig.about,
+            ...locale.menu.about,
             public: true,
         },
     ];

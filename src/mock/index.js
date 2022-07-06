@@ -219,8 +219,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.authorsSearch)
     .onGet(routes.GET_PUBLICATION_TYPES_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
-    .onGet(routes.GET_NEWS_API().apiUrl)
-    .reply(200, mockData.newsFeed)
     .onGet(
         new RegExp(
             escapeRegExp(
