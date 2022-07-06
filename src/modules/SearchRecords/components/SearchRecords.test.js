@@ -1,10 +1,10 @@
 import React from 'react';
-import { default as SearchRecords } from './SearchRecords';
+import { default as SearchRecords, normaliseDisplayLookup } from './SearchRecords';
 import { pathConfig } from 'config';
 import { act, fireEvent, WithReduxStore } from 'test-utils';
 import mediaQuery from 'css-mediaquery';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
-import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
+import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
 import { renderWithRouter } from '../../../../utils/test-utils';
@@ -930,195 +930,210 @@ describe('SearchRecords page', () => {
         expect(apiMock).toHaveBeenLastCalledWith(getParams(newValue));
     });
 
-    it('should update the queryString and make API call when going back and forward on display type', () => {
-        const getParams = (displayRecordsAs = 'standard') => {
-            return {
-                ...searchQuery,
-                searchQueryParams: {
-                    all: 'test',
-                },
-                displayRecordsAs,
-            };
-        };
-        const apiMock = jest.fn();
-        const oldParams = getParams();
-        // add some search history
-        const initialEntries = [
-            {
-                pathname: pathConfig.records.search,
-                search: `?${param(oldParams)}`,
-            },
-        ];
-        const historyMock = createMemoryHistory({
-            initialEntries,
-        });
-        historyMock.push(initialEntries[0]);
-        const { getByTestId, getAllByRole } = setup({
-            ...props, // this props pretends there is a bunch of search results
-            history: historyMock,
-            actions: { searchEspacePublications: apiMock },
-        });
-
-        // change display type
-        act(() => {
-            fireEvent.mouseDown(getByTestId('displayRecordsAs'));
-        });
-        expect(getAllByRole('option').length).toBe(2);
-        act(() => {
-            fireEvent.click(getAllByRole('option')[1]);
-            const newValue = getAllByRole('option')[1]
-                .textContent.toLowerCase()
-                .replace(' ', '-');
-            const newParams = getParams(newValue);
-            assertQueryString(historyMock, newParams);
-            expect(apiMock).toHaveBeenLastCalledWith(newParams);
-
-            // go back
-            act(() => {
-                historyMock.goBack();
+    describe('Image Gallery', () => {
+        it('normaliseDisplayLookup function', () => {
+            COLLECTION_VIEW_TYPE.forEach(viewType => {
+                expect(normaliseDisplayLookup(viewType.value)).toEqual(viewType.value); // expected string value
+                expect(normaliseDisplayLookup(viewType.id)).toEqual(viewType.value); // expected id value
             });
-            assertQueryString(historyMock, oldParams);
-            expect(apiMock).toHaveBeenLastCalledWith(oldParams);
 
-            // go forward
-            act(() => {
-                historyMock.goForward();
+            // default when invalid value passed
+            expect(normaliseDisplayLookup('autos')).toEqual(COLLECTION_VIEW_TYPE[0].value);
+            expect(normaliseDisplayLookup(12345)).toEqual(COLLECTION_VIEW_TYPE[0].value);
+        });
+        it('should update the queryString and make API call when going back and forward on display type', () => {
+            const getParams = (displayRecordsAs = 'standard') => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                };
+            };
+            const apiMock = jest.fn();
+            const oldParams = getParams();
+            // add some search history
+            const initialEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
+                },
+            ];
+            const historyMock = createMemoryHistory({
+                initialEntries,
             });
-            assertQueryString(historyMock, newParams);
-            expect(apiMock).toHaveBeenLastCalledWith(newParams);
-        });
-    });
+            historyMock.push(initialEntries[0]);
+            const { getByTestId, getAllByRole } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                history: historyMock,
+                actions: { searchEspacePublications: apiMock },
+            });
 
-    it('should show the default search component when the querystring displayRecordsAs parameter is not set', () => {
-        const getParams = (displayRecordsAs = '') => {
-            return {
-                ...searchQuery,
-                searchQueryParams: {
-                    all: 'test',
-                },
-                displayRecordsAs,
+            // change display type
+            act(() => {
+                fireEvent.mouseDown(getByTestId('displayRecordsAs'));
+            });
+            expect(getAllByRole('option').length).toBe(3);
+            act(() => {
+                fireEvent.click(getAllByRole('option')[1]);
+                const newValue = getAllByRole('option')[1]
+                    .textContent.toLowerCase()
+                    .replace(' ', '-');
+                const newParams = getParams(newValue);
+                assertQueryString(historyMock, newParams);
+                expect(apiMock).toHaveBeenLastCalledWith(newParams);
+
+                // go back
+                act(() => {
+                    historyMock.goBack();
+                });
+                assertQueryString(historyMock, oldParams);
+                expect(apiMock).toHaveBeenLastCalledWith(oldParams);
+
+                // go forward
+                act(() => {
+                    historyMock.goForward();
+                });
+                assertQueryString(historyMock, newParams);
+                expect(apiMock).toHaveBeenLastCalledWith(newParams);
+            });
+        });
+
+        it('should show the default search component when the querystring displayRecordsAs parameter is not set', () => {
+            const getParams = (displayRecordsAs = '') => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                };
             };
-        };
-        const oldParams = getParams();
-        // add some search history
-        const initialEntries = [
-            {
-                pathname: pathConfig.records.search,
-                search: `?${param(oldParams)}`,
-            },
-        ];
-        const historyMock = createMemoryHistory({
-            initialEntries,
-        });
-        historyMock.push(initialEntries[0]);
-        const { getByTestId, queryByTestId } = setup({
-            ...props, // this props pretends there is a bunch of search results
-            location: {
-                ...initialEntries[0],
-            },
-            history: historyMock,
-        });
-
-        expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
-        expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
-    });
-    it('should show the auto (standard) search component based upon the querystring displayRecordsAs parameter', () => {
-        const getParams = (displayRecordsAs = 'auto') => {
-            return {
-                ...searchQuery,
-                searchQueryParams: {
-                    all: 'test',
+            const oldParams = getParams();
+            // add some search history
+            const initialEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
                 },
-                displayRecordsAs,
-            };
-        };
-        const oldParams = getParams();
-        // add some search history
-        const initialEntries = [
-            {
-                pathname: pathConfig.records.search,
-                search: `?${param(oldParams)}`,
-            },
-        ];
-        const historyMock = createMemoryHistory({
-            initialEntries,
-        });
-        historyMock.push(initialEntries[0]);
-        const { getByTestId, queryByTestId } = setup({
-            ...props, // this props pretends there is a bunch of search results
-            location: {
-                ...initialEntries[0],
-            },
-            history: historyMock,
-        });
-
-        expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
-        expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
-    });
-    it('should show the standard search component based upon the querystring displayRecordsAs parameter', () => {
-        const getParams = (displayRecordsAs = 'standard') => {
-            return {
-                ...searchQuery,
-                searchQueryParams: {
-                    all: 'test',
+            ];
+            const historyMock = createMemoryHistory({
+                initialEntries,
+            });
+            historyMock.push(initialEntries[0]);
+            const { getByTestId, queryByTestId } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                location: {
+                    ...initialEntries[0],
                 },
-                displayRecordsAs,
-            };
-        };
-        const oldParams = getParams();
-        // add some search history
-        const initialEntries = [
-            {
-                pathname: pathConfig.records.search,
-                search: `?${param(oldParams)}`,
-            },
-        ];
-        const historyMock = createMemoryHistory({
-            initialEntries,
-        });
-        historyMock.push(initialEntries[0]);
-        const { getByTestId, queryByTestId } = setup({
-            ...props, // this props pretends there is a bunch of search results
-            location: {
-                ...initialEntries[0],
-            },
-            history: historyMock,
+                history: historyMock,
+            });
+
+            expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
+            expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
         });
 
-        expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
-        expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
-    });
-    it('should show the Image Gallery component based upon the querystring displayRecordsAs parameter', () => {
-        const getParams = (displayRecordsAs = 'image-gallery') => {
-            return {
-                ...searchQuery,
-                searchQueryParams: {
-                    all: 'test',
+        it('should show the auto (standard) search component based upon the querystring displayRecordsAs parameter', () => {
+            const getParams = (displayRecordsAs = 'auto') => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                };
+            };
+            const oldParams = getParams();
+            // add some search history
+            const initialEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
                 },
-                displayRecordsAs,
-            };
-        };
-        const oldParams = getParams();
-        // add some search history
-        const initialEntries = [
-            {
-                pathname: pathConfig.records.search,
-                search: `?${param(oldParams)}`,
-            },
-        ];
-        const historyMock = createMemoryHistory({
-            initialEntries,
-        });
-        historyMock.push(initialEntries[0]);
-        const { getByTestId, queryByTestId } = setup({
-            ...props, // this props pretends there is a bunch of search results
-            location: {
-                ...initialEntries[0],
-            },
-            history: historyMock,
+            ];
+            const historyMock = createMemoryHistory({
+                initialEntries,
+            });
+            historyMock.push(initialEntries[0]);
+            const { getByTestId, queryByTestId } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                location: {
+                    ...initialEntries[0],
+                },
+                history: historyMock,
+            });
+
+            expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
+            expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
         });
 
-        expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
-        expect(getByTestId('image-gallery')).toBeInTheDocument();
+        it('should show the standard search component based upon the querystring displayRecordsAs parameter', () => {
+            const getParams = (displayRecordsAs = 'standard') => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                };
+            };
+            const oldParams = getParams();
+            // add some search history
+            const initialEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
+                },
+            ];
+            const historyMock = createMemoryHistory({
+                initialEntries,
+            });
+            historyMock.push(initialEntries[0]);
+            const { getByTestId, queryByTestId } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                location: {
+                    ...initialEntries[0],
+                },
+                history: historyMock,
+            });
+
+            expect(getByTestId('search-results-publications-list')).toBeInTheDocument();
+            expect(queryByTestId('image-gallery')).not.toBeInTheDocument();
+        });
+
+        it('should show the Image Gallery component based upon the querystring displayRecordsAs parameter', () => {
+            const getParams = (displayRecordsAs = 'image-gallery') => {
+                return {
+                    ...searchQuery,
+                    searchQueryParams: {
+                        all: 'test',
+                    },
+                    displayRecordsAs,
+                };
+            };
+            const oldParams = getParams();
+            // add some search history
+            const initialEntries = [
+                {
+                    pathname: pathConfig.records.search,
+                    search: `?${param(oldParams)}`,
+                },
+            ];
+            const historyMock = createMemoryHistory({
+                initialEntries,
+            });
+            historyMock.push(initialEntries[0]);
+            const { getByTestId, queryByTestId } = setup({
+                ...props, // this props pretends there is a bunch of search results
+                location: {
+                    ...initialEntries[0],
+                },
+                history: historyMock,
+            });
+
+            expect(queryByTestId('search-results-publications-list')).not.toBeInTheDocument();
+            expect(getByTestId('image-gallery')).toBeInTheDocument();
+        });
     });
 });

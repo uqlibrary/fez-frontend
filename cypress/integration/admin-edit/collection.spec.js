@@ -12,6 +12,35 @@ context('As an admin,', () => {
             .find('svg')
             .click();
 
+        // cycle through the known default view types and ensure
+        // each option is displayed after being selected
+        cy.get('[data-testid=collection-view-type-select]')
+            .as('defaultViewSelector')
+            .click();
+        cy.get('[data-testid=collection-view-type-options]')
+            .as('defaultViewOptions')
+            .contains('li', 'Auto')
+            .click();
+        cy.get('@defaultViewSelector')
+            .contains('Auto')
+            .should('exist');
+
+        cy.get('@defaultViewSelector').click();
+        cy.get('@defaultViewOptions')
+            .contains('li', 'Standard')
+            .click();
+        cy.get('@defaultViewSelector')
+            .contains('Standard')
+            .should('exist');
+
+        cy.get('@defaultViewSelector').click();
+        cy.get('@defaultViewOptions')
+            .contains('li', 'Image Gallery')
+            .click();
+        cy.get('@defaultViewSelector')
+            .contains('Image Gallery')
+            .should('exist');
+
         cy.typeCKEditor(
             'rek-title',
             'Aboriginal and Torres Strait Islander Studies Unit Publications With Extra Data UPDATED',
