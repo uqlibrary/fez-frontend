@@ -17,7 +17,6 @@ export * from './journals';
 export * from './manageAuthors';
 export * from './manageUsers';
 export * from './myEditorialAppointments';
-export * from './newsFeed';
 export * from './orcidSync';
 export * from './publications';
 export * from './records';
