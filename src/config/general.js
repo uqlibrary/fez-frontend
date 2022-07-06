@@ -1689,6 +1689,7 @@ export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';
 export const THESIS_UPLOAD_RETRIES = 5;
 
 export const PUB_SEARCH_BULK_EXPORT_SIZE = 500;
+export const COMMUNITY_COLLECTION_BULK_EXPORT_SIZE = 500;
 export const MY_RECORDS_BULK_EXPORT_SIZE = 1000;
 export const PUB_LIST_BULK_EXPORT_SIZES = [PUB_SEARCH_BULK_EXPORT_SIZE, MY_RECORDS_BULK_EXPORT_SIZE];
 
@@ -1750,3 +1751,9 @@ export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
 
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
+
+export const COLLECTION_VIEW_TYPE = [
+    { id: 456849, value: 'auto', label: 'Auto' },
+    { id: 456850, value: 'standard', label: 'Standard' },
+    { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
+];

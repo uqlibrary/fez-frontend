@@ -994,7 +994,15 @@ describe('Backend routes method', () => {
     });
     it('should construct url for community list api', () => {
         expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' })).toEqual({
-            apiUrl: 'communities?per_page=20&page=1&order_by=Asc&sort=title',
+            apiUrl: 'communities',
+            options: {
+                params: {
+                    order_by: 'Asc',
+                    page: 1,
+                    per_page: 20,
+                    sort: 'title',
+                },
+            },
         });
     });
 
@@ -1002,7 +1010,15 @@ describe('Backend routes method', () => {
         expect(
             routes.COLLECTION_LIST_API({ pid: 'UQ:12345', pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' }),
         ).toEqual({
-            apiUrl: 'communities/UQ:12345/collections?per_page=20&page=1&order_by=Asc&sort=title',
+            apiUrl: 'communities/UQ:12345/collections',
+            options: {
+                params: {
+                    order_by: 'Asc',
+                    page: 1,
+                    per_page: 20,
+                    sort: 'title',
+                },
+            },
         });
     });
 });

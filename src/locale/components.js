@@ -1760,10 +1760,6 @@ export default {
                 confirmButtonLabel: 'Close',
             },
             displayRecordsAsLabel: 'Display results',
-            displayRecordsAs: [
-                { index: 0, value: 'standard', label: 'Standard' },
-                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
-            ],
         },
         imageGallery: {
             alert: {
@@ -3674,6 +3670,7 @@ export default {
                 message: '...Loading Data...',
                 noCollections: 'No collections found for this community',
                 noCommunities: 'No communities found.',
+                exportLoadingMessage: 'Exporting search results',
             },
             columns: {
                 labels: {

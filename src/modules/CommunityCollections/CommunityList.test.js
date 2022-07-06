@@ -9,6 +9,7 @@ import * as PushHistory from './components/functions';
 import * as UserIsAdmin from 'hooks/userIsAdmin';
 import { createMemoryHistory } from 'history';
 import Immutable from 'immutable';
+import mediaQuery from 'css-mediaquery';
 
 import CommunityList from './CommunityList';
 import * as repositories from 'repositories';
@@ -22,6 +23,14 @@ const setup = ({ state = {}, testHistory = createMemoryHistory({ initialEntries:
         </WithRouter>,
     );
 };
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
+
 describe('CommunityList form', () => {
     const testPid1 = 'UQ:12096';
     const testPid2 = 'UQ:7556';
@@ -211,6 +220,24 @@ describe('CommunityList form', () => {
         await waitFor(() => getByText('Sort results by'));
         expect(getByTestId('sortBy').innerHTML).toBe('Updated Date');
     });
+
+    it('should allow exporting of community page results', async () => {
+        window.matchMedia = createMatchMedia(1920);
+        userIsAdmin.mockImplementation(() => false);
+        const { getByText, getByTestId, getByRole } = setup();
+        await waitFor(() => getByText('Export page results'));
+
+        expect(getByTestId('exportPublicationsFormat')).toBeInTheDocument();
+        act(() => {
+            fireEvent.mouseDown(getByTestId('exportPublicationsFormat'));
+        });
+        expect(getByRole('listbox')).toBeInTheDocument();
+        act(() => {
+            fireEvent.click(getByTestId('export-publication-option-0'));
+        });
+        expect(getByTestId('communities-results-exporting')).toBeInTheDocument();
+    });
+
     it('should show relevant error message', async () => {
         mockApi
             .onGet(

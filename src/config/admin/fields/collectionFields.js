@@ -7,6 +7,10 @@ export default {
             title: 'Member of Communities',
             groups: [['communities']],
         },
+        {
+            title: 'Collection Display Default',
+            groups: [['fez_record_search_key_collection_view_type']],
+        },
     ],
     bibliographic: () => [
         {
