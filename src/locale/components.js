@@ -2343,12 +2343,6 @@ export default {
                         ariaLabel: 'Select a document type',
                         selectPrompt: 'Please select a document type',
                     },
-                    subType: {
-                        label: 'Select a document subtype',
-                        placeholder: 'Select a document subtype',
-                        ariaLabel: 'Select a document subtype',
-                        selectPrompt: 'Please select a document subtype',
-                    },
                     directory: {
                         ...selectFields.directory,
                     },
