@@ -147,7 +147,7 @@ context('Search', () => {
             });
         });
 
-        it('should preserve users displayAs choice across searches', () => {
+        it.only('should preserve users displayAs choice across searches', () => {
             cy.get('[data-testid=simple-search-input]')
                 .should(
                     'have.attr',
@@ -181,6 +181,10 @@ context('Search', () => {
             );
 
             cy.get('#displayRecordsAs').contains('Image Gallery'); // choice should persist
+            cy.location().should(location => {
+                // choice should persist in querystring too
+                expect(location.search).to.contain('image-gallery');
+            });
         });
 
         it('should show 4 items in the first row at >=medium breakpoint', () => {
