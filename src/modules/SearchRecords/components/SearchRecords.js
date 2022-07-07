@@ -68,9 +68,19 @@ const SearchRecords = ({
         canBulkExport,
         isUnpublishedBufferPage,
     );
+
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
     const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
+
+    React.useEffect(() => {
+        /* istanbul ignore next */
+        if (!!userSelectedDisplayAs && userSelectedDisplayAs !== queryParams.displayRecordsAs) {
+            /* istanbul ignore next */
+            updateQueryString({ ...queryParams, displayRecordsAs: userSelectedDisplayAs });
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [queryParamsHash]);
 
     const {
         pageSizeChanged,
@@ -145,7 +155,10 @@ const SearchRecords = ({
     const initSortingData = locale.components.sorting;
 
     const displayLookup = normaliseDisplayLookup(
-        userSelectedDisplayAs ?? searchParams.displayRecordsAs ?? publicationsListDefaultView?.id ?? null,
+        userSelectedDisplayAs ??
+            (searchParams.displayRecordsAs === 'auto' ? null : searchParams.displayRecordsAs) ??
+            publicationsListDefaultView?.id ??
+            null,
     );
     const newSortingData = initSortingData.sortBy.filter(option =>
         option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
