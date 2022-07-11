@@ -7,7 +7,11 @@ export default {
             ariaLabel: 'Click to explore articles in UQ eSpace',
             externalUrl:
                 APP_URL +
-                'records/search?activeFacets[ranges][Year+published][from]=2016&activeFacets[ranges][Year+published][to]=2021&searchQueryParams[mtj_jnl_id][value]=[id]&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
+                'records/search?activeFacets[ranges][Year+published][from]=' +
+                (new Date().getFullYear() - 5) +
+                '&activeFacets[ranges][Year+published][to]=' +
+                new Date().getFullYear() +
+                '&searchQueryParams[mtj_jnl_id][value]=[id]&searchMode=advanced&activeFacets[ranges][Author%20Id]=[1%20TO%20*]',
         },
         readAndPublish: {
             heading: 'Read and publish agreement',
