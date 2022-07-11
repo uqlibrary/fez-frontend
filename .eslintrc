@@ -26,7 +26,7 @@
     "setupStoreForActions": true,
     "sinon": true,
     "toJson": true,
-    "d": true
+    "dd": true
   },
   "settings": {
     "react": {
@@ -232,7 +232,7 @@
     "jsx-a11y/img-has-alt": "off",
     "jsx-a11y/onclick-has-focus" : "off",
     "jsx-a11y/href-no-hash": "off",
-    "uqlibrary/no-uql-token": 2,
+    "uqlibrary/no-uql-token": 2
   },
   "plugins": [
     "react",
@@ -240,5 +240,5 @@
     "jsx-a11y",
     "uqlibrary"
   ],
-  "extends": ["plugin:prettier/recommended"],
+  "extends": ["plugin:prettier/recommended"]
 }
