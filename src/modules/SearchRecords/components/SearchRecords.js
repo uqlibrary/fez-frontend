@@ -244,6 +244,7 @@ const SearchRecords = ({
                                             locale={txt.bulkExport}
                                             pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                             totalMatches={publicationsListPagingData.total}
+                                            disabled={isLoadingOrExporting}
                                         />
                                     )}
                                 </Grid>

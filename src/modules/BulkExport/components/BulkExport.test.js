@@ -14,6 +14,10 @@ const setup = (testProps = {}, initialState = {}) => {
         pageSize: 10,
         totalMatches: 40,
         ...testProps,
+        actions: {
+            resetExportPublicationsStatus: jest.fn(),
+            ...testProps.actions,
+        },
     };
     const state = {
         exportPublicationsReducer: {
@@ -31,8 +35,16 @@ const setup = (testProps = {}, initialState = {}) => {
 };
 
 describe('BulkExport component', () => {
+    it('should render button disabled', () => {
+        const { getByTestId } = setup({ disabled: true });
+        expect(getByTestId('bulk-export-open').closest('button')).toHaveAttribute('disabled');
+    });
+
     it('should open and close dialog on button click', async () => {
-        const { getByTestId, getByLabelText, queryByRole } = setup();
+        const mock = jest.fn();
+        const { getByTestId, getByLabelText, queryByRole } = setup({
+            actions: { resetExportPublicationsStatus: mock },
+        });
         expect(getByTestId('bulk-export')).toBeInTheDocument();
         expect(getByTestId('bulk-export-open')).toBeInTheDocument();
 
@@ -41,6 +53,7 @@ describe('BulkExport component', () => {
             fireEvent.click(getByTestId('bulk-export-open'));
         });
         expect(queryByRole('dialog')).toBeInTheDocument();
+        expect(mock).toHaveBeenCalledTimes(1);
 
         expect(getByLabelText('close')).toBeInTheDocument();
         act(() => {
@@ -48,6 +61,7 @@ describe('BulkExport component', () => {
         });
         await waitForElementToBeRemoved(queryByRole('dialog'));
         expect(queryByRole('dialog')).toBeNull();
+        expect(mock).toHaveBeenCalledTimes(2);
     });
 
     it('should render buttons in different states', () => {

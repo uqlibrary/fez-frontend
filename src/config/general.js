@@ -247,7 +247,7 @@ const CREATIVE_WORK_NTRO_SUBTYPES = [
     ...CPEE_NTRO_SUBTYPES,
 ];
 
-const RESEARCH_REPORT_NTRO_SUBTYPES = [
+export const NTRO_RESEARCH_REPORT_SUBTYPES = [
     NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
     NTRO_SUBTYPE_RREB_INDUSTRY,
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
@@ -257,7 +257,7 @@ const RESEARCH_REPORT_NTRO_SUBTYPES = [
 export const NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     ...CREATIVE_WORK_NTRO_SUBTYPES,
-    ...RESEARCH_REPORT_NTRO_SUBTYPES,
+    ...NTRO_RESEARCH_REPORT_SUBTYPES,
 ];
 
 export const NTRO_SUBTYPES_CATEGORY_CODE = {
@@ -526,7 +526,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true,
-        subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
+        subtypes: [...NTRO_RESEARCH_REPORT_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
     },
     [PUBLICATION_TYPE_SEMINAR_PAPER]: {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,

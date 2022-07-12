@@ -62,6 +62,8 @@ const BulkExport = ({
     exportPublications,
     pageSize,
     totalMatches,
+    disabled,
+    actions,
 }) => {
     const { loadingByPage, loadedByPage } = useSelector(state => state.get('exportPublicationsReducer'));
     const [open, setOpen] = React.useState(false);
@@ -71,9 +73,11 @@ const BulkExport = ({
     const classes = useStyles();
 
     const openDialog = () => {
+        actions.resetExportPublicationsStatus();
         setOpen(true);
     };
     const closeDialog = () => {
+        actions.resetExportPublicationsStatus();
         setOpen(false);
     };
 
@@ -174,7 +178,7 @@ const BulkExport = ({
             <Button
                 variant="contained"
                 children={buttonText}
-                disabled={open}
+                disabled={open || disabled}
                 onClick={openDialog}
                 data-testid="bulk-export-open"
                 id="bulk-export-open"
@@ -225,6 +229,8 @@ BulkExport.propTypes = {
     }),
     pageSize: PropTypes.number,
     totalMatches: PropTypes.number,
+    disabled: PropTypes.bool,
+    actions: PropTypes.object,
 };
 
 export default BulkExport;
