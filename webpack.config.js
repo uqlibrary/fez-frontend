@@ -2,6 +2,7 @@
 
 const chalk = require('chalk');
 const { resolve, join } = require('path');
+const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -51,7 +52,7 @@ module.exports = {
             stats: 'errors-only',
         },
         static: {
-            publicPath: __dirname,
+            directory: path.join(__dirname, 'public'),
             watch: false,
         },
     },

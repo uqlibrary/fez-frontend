@@ -272,6 +272,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                   "total": 147,
                 }
               }
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -290,6 +291,7 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -320,14 +322,23 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -497,6 +508,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                   "total": 147,
                 }
               }
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -515,6 +527,7 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -545,14 +558,23 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -730,6 +752,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                   "total": 147,
                 }
               }
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -748,6 +771,7 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -778,14 +802,23 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -1044,6 +1077,7 @@ exports[`MyRecords test renders loading screen while export publications loading
               onSortByChanged={[Function]}
               pageSize={20}
               pagingData={Object {}}
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -1062,6 +1096,7 @@ exports[`MyRecords test renders loading screen while export publications loading
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -1092,14 +1127,23 @@ exports[`MyRecords test renders loading screen while export publications loading
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -1260,6 +1304,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
               onSortByChanged={[Function]}
               pageSize={20}
               pagingData={Object {}}
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -1278,6 +1323,7 @@ exports[`MyRecords test renders loading screen while loading publications while 
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -1308,14 +1354,23 @@ exports[`MyRecords test renders loading screen while loading publications while 
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },
@@ -1520,6 +1575,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                   "total": 147,
                 }
               }
+              showDisplayAs={false}
               sortBy="published_date"
               sortDirection="Desc"
               sortingData={
@@ -1538,6 +1594,7 @@ exports[`MyRecords test should handle export publications 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
+                  "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
                   "recordsPerPage": Array [
@@ -1568,14 +1625,23 @@ exports[`MyRecords test should handle export publications 1`] = `
                       "value": "updated_date",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Altmetric score",
                       "value": "altmetric_score",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Scopus citation count",
                       "value": "scopus_citation_count",
                     },
                     Object {
+                      "exclude": Array [
+                        "image-gallery",
+                      ],
                       "label": "Web of Science citation count",
                       "value": "thomson_citation_count",
                     },

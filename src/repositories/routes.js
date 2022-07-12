@@ -108,6 +108,19 @@ export const getValidPageSize = (defaultSize, pageSize) => {
     return validPageSize;
 };
 
+export const getCCParams = ({ pid, exportPublicationsFormat, ...params }) => {
+    const exportParams = !!exportPublicationsFormat ? { export_to: exportPublicationsFormat } : {};
+    const pidParams = !!pid ? { pid } : {};
+    return {
+        per_page: params.pageSize,
+        page: params.page,
+        order_by: !!exportPublicationsFormat ? params.sortDirection : params.direction,
+        sort: params.sortBy,
+        ...pidParams,
+        ...exportParams,
+    };
+};
+
 export const CURRENT_ACCOUNT_API = () => ({
     apiUrl: 'account',
     options: { params: { ts: `${new Date().getTime()}` } },
@@ -165,7 +178,6 @@ export const ACADEMIC_STATS_PUBLICATION_HINDEX_API = ({ userId }) => ({ apiUrl: 
 export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-trending' });
 
 // lookup apis
-export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
 export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 export const JOURNAL_LOOKUP_API = ({ query }) => ({
@@ -199,6 +211,25 @@ export const EXISTING_RECORD_VERSION_API = (pid, version) => ({
 export const EXISTING_COLLECTION_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
 
 export const EXISTING_COMMUNITY_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+// Communities and Collections
+export const COMMUNITY_LIST_API = config => {
+    const params = getCCParams(config);
+    return {
+        apiUrl: 'communities',
+        options: { params },
+    };
+};
+export const COLLECTION_LIST_API = (config, action = null) => {
+    const params = getCCParams(config);
+    const pid = params.pid;
+    action !== 'export' && delete params.pid;
+
+    return {
+        apiUrl: `communities/${pid}/collections`,
+        options: { params },
+    };
+};
 
 export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
@@ -326,10 +357,13 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
     }
 
     const exportParams = {};
-    if (route === 'export' && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+    if (route === 'export') {
+        // && query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
         // eslint-disable-next-line no-unused-vars
         const { exportPublicationsFormat, ...queryValuesToSend } = query;
-        exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
+        if (query.pageSize === PUB_SEARCH_BULK_EXPORT_SIZE) {
+            exportParams.querystring = encodeURIComponent(param(queryValuesToSend));
+        }
     }
 
     return {

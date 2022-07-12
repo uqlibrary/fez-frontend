@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
@@ -41,6 +42,8 @@ export const PublicationsList = ({
     hideCountDiff,
     hideCountTotal,
     publicationsLoading,
+    showImageThumbnails,
+    security,
 }) => {
     const {
         shouldRenderRecordsSelectors,
@@ -51,10 +54,10 @@ export const PublicationsList = ({
     } = useRecordsSelector();
 
     const classes = useStyles();
-
     const renderPublicationCitation = (index, publication) => {
         return (
             <PublicationCitation
+                showImageThumbnails={showImageThumbnails}
                 publicationsLoading={publicationsLoading}
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
@@ -72,16 +75,20 @@ export const PublicationsList = ({
                 hideCountDiff={hideCountDiff}
                 hideCountTotal={hideCountTotal}
                 citationStyle="list"
+                security={security}
             />
         );
     };
-
     const publications = publicationsList.map((publication, index) => {
         return renderPublicationCitation(index, publication);
     });
 
     if (!shouldRenderRecordsSelectors) {
-        return <React.Fragment>{publications}</React.Fragment>;
+        return (
+            <Box id="search-results-publications-list" data-testid="search-results-publications-list">
+                {publications}
+            </Box>
+        );
     }
 
     const handleChange = publication => event => handleClick(publication, event.target.checked);
@@ -168,6 +175,8 @@ PublicationsList.propTypes = {
     hideCountDiff: PropTypes.bool,
     hideCountTotal: PropTypes.bool,
     publicationsLoading: PropTypes.bool,
+    showImageThumbnails: PropTypes.bool,
+    security: PropTypes.object,
 };
 
 PublicationsList.defaultProps = {
@@ -180,6 +189,8 @@ PublicationsList.defaultProps = {
     showMetrics: false,
     showUnpublishedBufferFields: false,
     hideCountDiff: false,
+    security: { isAdmin: false, isAuthor: false },
+    showImageThumbnails: false,
 };
 
 export default React.memo(PublicationsList);

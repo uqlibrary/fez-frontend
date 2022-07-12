@@ -267,6 +267,28 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not render alert if user is not fez author and on the journal search page', () => {
+        const wrapper = setup({
+            location: {
+                pathname: pathConfig.journals.search,
+            },
+            account: account,
+            author: null,
+        });
+        expect(wrapper.find('[alertId*="not-registered-author"]').length).toBe(0);
+    });
+
+    it('should not render alert if user is not fez author and on the journal view page', () => {
+        const wrapper = setup({
+            location: {
+                pathname: pathConfig.journal.view(1),
+            },
+            account: account,
+            author: null,
+        });
+        expect(wrapper.find('[alertId*="not-registered-author"]').length).toBe(0);
+    });
+
     it('should render app for account with fez author with ORCID ID', () => {
         const wrapper = setup({
             account: account,
@@ -500,7 +522,7 @@ describe('Application component', () => {
 
         const pathExpectations = [
             {
-                pathname: '/contact',
+                pathname: '/about',
                 isPublic: true,
             },
             {

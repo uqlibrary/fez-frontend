@@ -41,7 +41,6 @@ const setup = (testProps = {}, renderer = render) => {
     const props = {
         account: accounts.uqresearcher,
         author: null,
-        hideCulturalSensitivityStatement: true,
         isDeleted: false,
         isDeletedVersion: false,
         loadingRecordToView: false,
@@ -193,23 +192,6 @@ describe('NewViewRecord', () => {
             },
         });
         expect(getAllByText('Scale/Significance of work').length).toBe(2);
-    });
-
-    it('should dismiss cultural sensitivity statement alert', () => {
-        window.matchMedia = createMatchMedia(2056);
-        const setHideCulturalSensitivityStatementFn = jest.spyOn(
-            ViewRecordActions,
-            'setHideCulturalSensitivityStatement',
-        );
-        const { getByTestId } = setup({
-            recordToView: {
-                ...record,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'Test advisory statement' },
-            },
-            hideCulturalSensitivityStatement: false,
-        });
-        fireEvent.click(getByTestId('dismiss'));
-        expect(setHideCulturalSensitivityStatementFn).toHaveBeenCalled();
     });
 
     it('should rerender component on props change', () => {
