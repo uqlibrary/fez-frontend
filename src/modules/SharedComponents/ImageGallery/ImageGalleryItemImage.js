@@ -39,8 +39,10 @@ const ImageGalleryItemImage = ({
     const thumbnailAdvisory = item.fez_record_search_key_advisory_statement?.rek_advisory_statement ?? false;
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image
-    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
-
+    const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail)?.replace(
+        'fez-staging',
+        'espace',
+    );
     const filename =
         !thumbnailRestricted && !thumbnailAdvisory && !thumbnailBlacklisted && !!filenameSrc
             ? filenameSrc

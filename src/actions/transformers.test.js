@@ -5086,6 +5086,36 @@ describe('getCopyToCollectionData', () => {
     });
 });
 
+describe('getCopyToCommunityData', () => {
+    it('should correctly transform data for copy to community', () => {
+        expect(
+            transformers.getCopyToCommunityData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    communities: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [
+                    { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                    {
+                        rek_ismemberof: 'UQ:234',
+                        rek_ismemberof_order: 2,
+                    },
+                ],
+            },
+        ]);
+    });
+});
+
 describe('getRemoveFromCollectionData', () => {
     it('should correctly transform data for remove from collection', () => {
         expect(
@@ -5102,6 +5132,33 @@ describe('getRemoveFromCollectionData', () => {
                 {
                     search_key: 'rek_ismemberof',
                     collections: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+            },
+        ]);
+    });
+});
+
+describe('getRemoveFromCommunityData', () => {
+    it('should correctly transform data for remove from collection', () => {
+        expect(
+            transformers.getRemoveFromCommunityData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [
+                            { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                            { rek_ismemberof: 'UQ:234', rek_ismemberof_order: 2 },
+                        ],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    communities: [{ rek_pid: 'UQ:234' }],
                 },
             ),
         ).toEqual([
