@@ -10,11 +10,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import Button from '@material-ui/core/Button';
 
-import { PUBLICATION_TYPE_DESIGN, CSV_INGEST_DOCUMENT_TYPES } from 'config/general';
+import { CSV_INGEST_DOCUMENT_TYPES } from 'config/general';
 import { createBatchImport } from 'actions';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -56,9 +55,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
     const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const communityID = useSelector(state => selector(state, 'communityID'));
-    const isDesignType = useSelector(state => selector(state, 'doc_type_id')) === PUBLICATION_TYPE_DESIGN;
     const isBulkFileIngest = useSelector(state => selector(state, 'is_bulk_file_ingest'));
-    const designSubtypes = isDesignType ? publicationTypes(null, true)[PUBLICATION_TYPE_DESIGN].subtypes : null;
     const formErrors = useSelector(state => getFormSyncErrors(FORM_NAME)(state));
     const disableSubmit = !!formErrors && !(formErrors instanceof Immutable.Map) && Object.keys(formErrors).length > 0;
 
@@ -169,21 +166,6 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                                 validate={[validation.required]}
                                                 itemsList={csvIngestDoctypesList}
                                                 {...batchImportTxt.formLabels.docType}
-                                            />
-                                        </Grid>
-                                    )}
-                                    {!isBulkFileIngest && !!isDesignType && (
-                                        <Grid item xs={12}>
-                                            <Field
-                                                component={NewGenericSelectField}
-                                                disabled={submitting}
-                                                id="subtype"
-                                                genericSelectFieldId="subtype"
-                                                name="subtype"
-                                                required
-                                                validate={[validation.required]}
-                                                itemsList={designSubtypes.map(item => ({ text: item, value: item }))}
-                                                {...batchImportTxt.formLabels.subType}
                                             />
                                         </Grid>
                                     )}
