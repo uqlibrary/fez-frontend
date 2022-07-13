@@ -1672,4 +1672,65 @@ describe('Record action creators', () => {
             }
         });
     });
+
+    describe('copyToRemoveFromCommunity', () => {
+        it('dispatches expected actions on success for bulk collection updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_COMMUNITIES_INPROGRESS, actions.CHANGE_COMMUNITIES_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.copyToOrRemoveFromCommunity(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [
+                                {
+                                    rek_ismemberof: 'UQ:1111',
+                                    rek_author_order: 1,
+                                },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        communities: ['UQ:1234'],
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_COMMUNITIES_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_COMMUNITIES_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.copyToOrRemoveFromCommunity(
+                        [
+                            {
+                                rek_pid: 'UQ:11111',
+                                fez_record_search_key_ismemberof: [
+                                    {
+                                        rek_ismemberof: 'UQ:1234',
+                                    },
+                                ],
+                            },
+                        ],
+                        {
+                            search_key: 'rek_ismemberof',
+                            communities: ['UQ:1234'],
+                        },
+                        true,
+                    ),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
 });

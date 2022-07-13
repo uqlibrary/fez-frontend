@@ -40,7 +40,6 @@ const ImageGalleryItemImage = ({
 
     // at this stage fileData could still be null, which is fine as below will fall back to default image
     const filenameSrc = getUrl(item.rek_pid, fileData?.thumbnailFileName, fileData?.checksums?.thumbnail);
-
     const filename =
         !thumbnailRestricted && !thumbnailAdvisory && !thumbnailBlacklisted && !!filenameSrc
             ? filenameSrc
