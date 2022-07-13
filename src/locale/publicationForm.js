@@ -767,11 +767,11 @@ export default {
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Enter place of publication, location or venue',
+                    placeholder: 'Enter the place, location or venue',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Enter the name of the publisher or producer',
+                    placeholder: 'Enter the publisher or producer',
                 },
                 doi: {
                     label: 'DOI',
