@@ -7,7 +7,7 @@ function rowHasAuthor(rowid, authorName) {
         .should('contain', authorName);
 }
 
-context('Creative Work admin edit', () => {
+context('Creative Work admin edit, general', () => {
     const record = recordList.data[0];
 
     beforeEach(() => {
@@ -75,6 +75,37 @@ context('Creative Work admin edit', () => {
     //                 });
     //         });
     // });
+
+    it('should render the NTRO quality indicators section as expected', () => {
+        cy.get('[data-testid=ntro-section-content]')
+            .as('NTRO')
+            .within(() => {
+                cy.get('.AdminCard')
+                    .eq(1)
+                    .within(() => {
+                        cy.get('h4').should('contain', 'Quality indicators');
+                        const qualityIndicators = record.fez_record_search_key_quality_indicator;
+                        cy.get('[data-testid="rek-quality-indicator-input"]')
+                            .should('have.value', qualityIndicators.map(item => item.rek_quality_indicator).join(','))
+                            .get('[data-testid=rek-quality-indicator-select]')
+                            .should(
+                                'have.text',
+                                qualityIndicators.map(item => item.rek_quality_indicator_lookup).join(', '),
+                            );
+                    });
+            });
+    });
+});
+context('in the NTRO section, the significance and statement works correctly', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
+    });
+
+    afterEach(() => {
+        cy.adminEditCleanup();
+    });
 
     function clickFormSaveButton(label) {
         const button = 'button[data-testid="rek-significance-add"]';
@@ -432,6 +463,14 @@ context('Creative Work admin edit', () => {
                         rowHasAuthor(0, 'Ashkanasy');
                         rowHasAuthor(1, 'Bernal');
                         rowHasAuthor(2, 'Belanger');
+
+                        cy.get('[data-testid="rek-significance-list-row-1-move-up"]')
+                            .should('exist')
+                            .click();
+
+                        rowHasAuthor(0, 'Bernal');
+                        rowHasAuthor(1, 'Ashkanasy');
+                        rowHasAuthor(2, 'Belanger');
                     });
             });
     });
@@ -555,26 +594,6 @@ context('Creative Work admin edit', () => {
                         cy.get('[data-testid="rek-significance-list"]')
                             .children()
                             .should('have.length', 3);
-                    });
-            });
-    });
-
-    it('should render the NTRO quality indicators section as expected', () => {
-        cy.get('[data-testid=ntro-section-content]')
-            .as('NTRO')
-            .within(() => {
-                cy.get('.AdminCard')
-                    .eq(1)
-                    .within(() => {
-                        cy.get('h4').should('contain', 'Quality indicators');
-                        const qualityIndicators = record.fez_record_search_key_quality_indicator;
-                        cy.get('[data-testid="rek-quality-indicator-input"]')
-                            .should('have.value', qualityIndicators.map(item => item.rek_quality_indicator).join(','))
-                            .get('[data-testid=rek-quality-indicator-select]')
-                            .should(
-                                'have.text',
-                                qualityIndicators.map(item => item.rek_quality_indicator_lookup).join(', '),
-                            );
                     });
             });
     });

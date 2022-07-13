@@ -949,7 +949,7 @@ export default {
                         significanceInputFieldHint: 'Please select scale of significance',
                         contributionStatementInputFieldLabel: 'Creator research statement',
                         contributionStatementFieldHint: 'Enter description',
-                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT 111',
+                        addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
                         resetFormLabel: 'Cancel',
                         authorOrderAlert: {

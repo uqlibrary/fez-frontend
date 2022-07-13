@@ -230,6 +230,8 @@
         "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest --maxWorkers=8",
         "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
+        "pretest:cc": "rm -rf coverage .nyc_output",
+        "test:cc": "npm run test:unit:ci && npm run test:e2e:cc && npm run cc:reportAll",
         "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
         "pretest:e2e": "rm -rf .nyc_output",
         "test:e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
@@ -242,6 +244,8 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit:serial": "npm run test:unit -- --ci --runInBand",
         "test:unit:serial:skipcoverage": "npm run test:unit -- --ci --runInBand --no-coverage",
+        "pretest:unit:ci": "rm -rf coverage/jest",
+        "test:unit:ci": "npm run test:unit -- --ci --runInBand",
         "test:unit:ci1": "npm run test:unit -- --ci --testPathIgnorePatterns=SharedComponents --coveragePathIgnorePatterns=SharedComponents",
         "test:unit:ci2": "npm run test:unit -- --ci SharedComponents --collectCoverageFrom=\\'[\\\"**/SharedComponents/**\\\",\\\"!**/containers/**\\\",\\\"!**/index.js\\\"]\\'",
         "test:unit:ci1:skipcoverage": "npm run test:unit -- --ci --no-coverage --testPathIgnorePatterns=SharedComponents",
@@ -388,14 +392,6 @@
             "text",
             "json"
         ],
-        "coverageThreshold": {
-            "global": {
-                "statements": 100,
-                "branches": 100,
-                "functions": 100,
-                "lines": 100
-            }
-        },
         "modulePaths": [
             "<rootDir>/src",
             "<rootDir>/eslint-plugin-uqlibrary",
@@ -435,8 +431,24 @@
             "src/repositories/routes.js"
         ],
         "exclude": [
-            "src/**/{index,locale,config}.js",
-            "src/**/containers/*.{js,jsx}"
+            "src/**/{index,locale,config,pages}.js",
+            "src/**/containers/*.{js,jsx}",
+            "!src/modules/Admin/Doi/components/**",
+            "!src/modules/Admin/FavouriteSearch/components/**",
+            "!src/modules/Admin/ManageAuthors/**",
+            "!src/modules/Admin/ManageAuthors/partials/**",
+            "!src/modules/Admin/ManageUsers/**",
+            "!src/modules/Admin/ManageUsers/partials/**",
+            "!src/modules/Admin/MasterJournalListIngest/components/**",
+            "!src/modules/AuthorIdentifiers/components/**",
+            "!src/modules/BulkUpdates/**",
+            "!src/modules/MyEditorialAppointments/**",
+            "!src/modules/SbsSubmission/components/**",
+            "!src/modules/SharedComponents/Toolbox/ScrollToSection/components/**",
+            "!src/modules/SharedComponents/Toolbox/TabbedCard/components/**",
+            "!src/modules/ThirdPartyLookupTool/components/**",
+            "!src/modules/ViewJournal/components/**",
+            "!src/modules/ViewJournal/components/partials/"
         ],
         "all": true
     }

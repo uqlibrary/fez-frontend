@@ -26,6 +26,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
     xs={12}
   >
     <WithStyles(ForwardRef(Typography))
+      id="scale-item-0"
       variant="body2"
     >
       Missing
@@ -38,6 +39,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
   >
     <WithStyles(ForwardRef(Typography))
       component="span"
+      id="statement-item-0"
       variant="body2"
     />
   </WithStyles(ForwardRef(Grid))>

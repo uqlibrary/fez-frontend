@@ -17,10 +17,12 @@ export const ScaleOfSignificanceTemplate = ({ item }) => {
                 </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-                <Typography variant="body2">{SIGNIFICANCE_MAP[item.key] || 'Missing'}</Typography>
+                <Typography variant="body2" id={`scale-item-${item.id}`}>
+                    {SIGNIFICANCE_MAP[item.key] || 'Missing'}
+                </Typography>
             </Grid>
             <Grid item xs={12} md={9}>
-                <Typography variant="body2" component={'span'}>
+                <Typography variant="body2" component={'span'} id={`statement-item-${item.id}`}>
                     {ReactHtmlParser(item.value.plainText || item.value.htmlText || '')}
                 </Typography>
             </Grid>

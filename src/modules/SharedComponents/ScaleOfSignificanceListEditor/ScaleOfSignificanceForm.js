@@ -30,7 +30,9 @@ export const resetFormCallbackFactory = (contributionStatementEditor, setSignifi
 export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
     const callback = event => {
         // add item if user hits 'enter' key on input field
+        /* istanbul ignore next */
         if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
+            /* istanbul ignore next */
             return;
         }
         // pass on the selected item
@@ -64,7 +66,7 @@ export const ScaleOfSignificanceForm = ({
             setContributionStatement(itemSelectedToEdit.value);
             contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
         } else {
-            setSignificance(null); // '' // 0
+            setSignificance(null);
             setContributionStatement('');
             contributionStatementEditor.current.setData('');
         }
@@ -97,9 +99,11 @@ export const ScaleOfSignificanceForm = ({
 
     return (
         <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">
-            <Grid item xs={12}>
-                <Alert {...authorOrderAlert} />
-            </Grid>
+            {!!authorOrderAlert && (
+                <Grid item xs={12}>
+                    <Alert {...authorOrderAlert} />
+                </Grid>
+            )}
             <Grid item style={{ flexGrow: 1 }} xs={12}>
                 <NewGenericSelectField
                     genericSelectFieldId="rek-significance"
@@ -118,7 +122,7 @@ export const ScaleOfSignificanceForm = ({
                     fullWidth
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
-                    id={(!!id && id) || ''}
+                    id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
                     onKeyPress={saveChanges}
                     error={!!errorText}
