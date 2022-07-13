@@ -1,7 +1,13 @@
 import { pathConfig } from 'config';
-import { checkForThumbnail, getFileOpenAccessStatus, getSecurityAccess } from 'modules/ViewRecord/components/Files';
+import {
+    checkForThumbnail,
+    getFileOpenAccessStatus,
+    getSecurityAccess,
+    getDownloadLicence,
+} from 'modules/ViewRecord/components/Files';
 import { isAdded, isDerivative } from 'helpers/datastreams';
 import { default as config } from 'config/imageGalleryConfig';
+import { viewRecordsConfig } from 'config';
 
 export const isFileValid = dataStream => {
     return !isDerivative(dataStream) && isAdded(dataStream);
@@ -35,23 +41,37 @@ export const getWhiteListed = (publication, config) => {
     return isAllowed;
 };
 
-export const getFileData = (publication, props) => {
-    const { isAdmin, isAuthor, author } = props;
-    const dataStreams = publication.fez_datastream_info;
+export const isViewableByUser = (publication, dataStreams, props) => {
+    const { files } = viewRecordsConfig;
+    // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
+    const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
+        files.blacklist.collections.includes(collection.rek_ismemberof),
+    );
+    return (
+        (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!props.isAdmin)) ||
+        // eslint-disable-next-line camelcase
+        props.author?.pol_id === 1
+    );
+};
 
-    return !!dataStreams && dataStreams.length > 0
+export const getFileData = (publication, props) => {
+    const dataStreams = publication.fez_datastream_info;
+    return !!dataStreams && isViewableByUser(publication, dataStreams, props)
         ? dataStreams.filter(isFileValid).map(dataStream => {
               // isAdmin not passed to isFileValid because in this case all we care about is the thumbnail record
               const fileName = dataStream.dsi_dsid;
               const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, { isAdmin, isAuthor });
-              const securityStatus = getSecurityAccess(dataStream, { isAdmin, isAuthor, author });
+              const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, props);
+              const securityStatus = getSecurityAccess(dataStream, props);
               const checksums = getThumbnailChecksums(dataStreams, thumbnailFileName);
               const isWhiteListed = getWhiteListed(publication, config);
 
               return {
                   fileName,
-                  thumbnailFileName,
+                  thumbnailFileName:
+                      !getDownloadLicence(publication) && !(!props.account && dataStream.dsi_security_policy === 4)
+                          ? thumbnailFileName
+                          : null,
                   checksums,
                   openAccessStatus,
                   securityStatus,
@@ -77,7 +97,6 @@ export const getThumbnail = (publication, props) => {
     const fileData = getFileData(publication, props);
     const sortedData = sortThumbnailsBySecurityStatus(fileData);
     const filteredFileData = filterMissingThumbnails(sortedData);
-
     return filteredFileData?.[0] ?? {};
 };
 
