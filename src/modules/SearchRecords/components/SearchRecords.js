@@ -40,6 +40,7 @@ export const normaliseDisplayLookup = raw => {
     );
 };
 const SearchRecords = ({
+    account,
     author,
     actions,
     canUseExport,
@@ -168,7 +169,12 @@ const SearchRecords = ({
     const SelectRecordView = publicationsList => {
         switch (displayLookup) {
             case 'image-gallery':
-                return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor, author }} />;
+                return (
+                    <ImageGallery
+                        publicationsList={publicationsList}
+                        security={{ isAdmin: !!isAdmin, isAuthor: !!isAuthor, author, account }}
+                    />
+                );
             case 'auto':
             case 'standard':
             default:
@@ -178,7 +184,7 @@ const SearchRecords = ({
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
                         showImageThumbnails
-                        security={{ isAdmin, isAuthor, author }}
+                        security={{ isAdmin, isAuthor, author, account }}
                     />
                 );
         }
@@ -343,6 +349,7 @@ const SearchRecords = ({
 };
 
 SearchRecords.propTypes = {
+    account: PropTypes.object,
     author: PropTypes.object,
     actions: PropTypes.object,
     canUseExport: PropTypes.bool,
