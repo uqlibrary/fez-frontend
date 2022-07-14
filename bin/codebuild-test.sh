@@ -57,7 +57,7 @@ case "$PIPE_NUM" in
     # Running in series with `runInBand` to avoid CodeShip VM running out of memory
     if [[ $BRANCH_INCLUDES_CC == true ]]; then
         printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-        npm run test:unit:ci1
+        npm run test:cc
     else
         printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
         npm run test:unit:ci1:skipcoverage
@@ -95,14 +95,13 @@ case "$PIPE_NUM" in
     printf "Jest v"; jest --version
 
     if [[ $BRANCH_INCLUDES_CC == true ]]; then
-        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-        npm run test:unit:ci2
+        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check - at least for the moment, all tests run in other pipeline)\n"
     else
         printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
         npm run test:unit:ci2:skipcoverage
     fi
 
-    if [[ $BRANCH_RUNS_E2E == true ]]; then
+    if [[ $BRANCH_RUNS_E2E == true && $BRANCH_INCLUDES_CC == false ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
         # Use this variant to only run tests locally in Codeship.
         # Turn off the e2e tests in other pipeline(s) when using this.
