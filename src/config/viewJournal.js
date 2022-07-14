@@ -938,9 +938,26 @@ export const viewJournalConfig = {
                                       `${data.publisher}`,
                                   )
                                 : 'No',
-                        postfix: () => '',
                         title: viewJournalLocale.viewJournal.readAndPublish.ariaLabel,
                         text: () => viewJournalLocale.viewJournal.readAndPublish.linkText,
+                    },
+                },
+            ],
+            [
+                {
+                    heading: viewJournalLocale.viewJournal.readAndPublish.caulLink.heading,
+                    fieldId: 'jnl-read-and-publish-caul-link',
+                    getData: journalDetails => {
+                        return (
+                            journalDetails.fez_journal_read_and_publish &&
+                            journalDetails.fez_journal_read_and_publish.jnl_read_and_publish_is_capped
+                        );
+                    },
+                    template: 'LinkTemplate',
+                    templateProps: {
+                        href: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.externalUrl,
+                        title: viewJournalLocale.viewJournal.readAndPublish.caulLink.ariaLabel,
+                        text: () => viewJournalLocale.viewJournal.readAndPublish.caulLink.linkText,
                     },
                 },
             ],

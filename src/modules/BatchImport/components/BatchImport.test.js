@@ -56,9 +56,6 @@ describe('BatchImport Component', () => {
         fireEvent.mouseDown(getByTestId('doc-type-id-select'));
         fireEvent.click(getByText('Design'));
 
-        fireEvent.mouseDown(getByTestId('subtype-select'));
-        fireEvent.click(getByText('Non-NTRO'));
-
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));
 
@@ -116,9 +113,6 @@ describe('BatchImport Component', () => {
 
         fireEvent.mouseDown(getByTestId('doc-type-id-select'));
         fireEvent.click(getByText('Design'));
-
-        fireEvent.mouseDown(getByTestId('subtype-select'));
-        fireEvent.click(getByText('Non-NTRO'));
 
         fireEvent.mouseDown(getByTestId('directory-select'));
         fireEvent.click(getByText('Test directory 1'));

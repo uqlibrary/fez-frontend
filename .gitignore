@@ -1,14 +1,4 @@
-.idea/workspace.xml
-.idea/preferred-vcs.xml
-.idea/watcherTasks.xml
-.idea/composerJson.xml
-.idea/php.xml
-.idea/markdown-navigator*
-.idea/markdown-exported-files.xml
-.idea/dbnavigator.xml
-.idea/markdown-navigator.xml
-.idea/shelf/
-.idea/sonarlint/
+.idea
 node_modules
 dist
 npm-debug.log*

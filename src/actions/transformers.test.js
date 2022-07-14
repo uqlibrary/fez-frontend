@@ -4,6 +4,8 @@ import {
     contentIndicators,
     PLACEHOLDER_ISO8601_DATE,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
+    SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+    SENSITIVE_HANDLING_NOTE_TYPE,
 } from 'config/general';
 
 const moment = require('moment');
@@ -4265,13 +4267,46 @@ describe('getFilesSectionSearchKeys', () => {
         const data = {
             advisoryStatement: {
                 htmlText: '<p>Test advisory statement</p>',
-                plainText: 'Test advisory statment',
+                plainText: 'Test advisory statement',
+            },
+            sensitiveHandlingNote: {
+                id: SENSITIVE_HANDLING_NOTE_TYPE[0].value,
+                other: 'other',
             },
         };
 
         expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
             fez_record_search_key_advisory_statement: {
                 rek_advisory_statement: '<p>Test advisory statement</p>',
+            },
+            fez_record_search_key_sensitive_handling_note_id: {
+                rek_sensitive_handling_note_id: data.sensitiveHandlingNote.id,
+            },
+            fez_record_search_key_sensitive_handling_note_other: null,
+        });
+    });
+
+    it('should get files section search keys with sensitive handling note - other', () => {
+        const data = {
+            advisoryStatement: {
+                htmlText: '<p>Test advisory statement</p>',
+                plainText: 'Test advisory statement',
+            },
+            sensitiveHandlingNote: {
+                id: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+                other: 'other',
+            },
+        };
+
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_advisory_statement: {
+                rek_advisory_statement: '<p>Test advisory statement</p>',
+            },
+            fez_record_search_key_sensitive_handling_note_id: {
+                rek_sensitive_handling_note_id: data.sensitiveHandlingNote.id,
+            },
+            fez_record_search_key_sensitive_handling_note_other: {
+                rek_sensitive_handling_note_other: data.sensitiveHandlingNote.other,
             },
         });
     });
@@ -4297,6 +4332,8 @@ describe('getFilesSectionSearchKeys', () => {
 
         expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
             fez_record_search_key_advisory_statement: null,
+            fez_record_search_key_sensitive_handling_note_id: null,
+            fez_record_search_key_sensitive_handling_note_other: null,
         });
     });
 });
@@ -5049,6 +5086,36 @@ describe('getCopyToCollectionData', () => {
     });
 });
 
+describe('getCopyToCommunityData', () => {
+    it('should correctly transform data for copy to community', () => {
+        expect(
+            transformers.getCopyToCommunityData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    communities: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [
+                    { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                    {
+                        rek_ismemberof: 'UQ:234',
+                        rek_ismemberof_order: 2,
+                    },
+                ],
+            },
+        ]);
+    });
+});
+
 describe('getRemoveFromCollectionData', () => {
     it('should correctly transform data for remove from collection', () => {
         expect(
@@ -5065,6 +5132,33 @@ describe('getRemoveFromCollectionData', () => {
                 {
                     search_key: 'rek_ismemberof',
                     collections: [{ rek_pid: 'UQ:234' }],
+                },
+            ),
+        ).toEqual([
+            {
+                rek_pid: 'UQ:11111',
+                fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 }],
+            },
+        ]);
+    });
+});
+
+describe('getRemoveFromCommunityData', () => {
+    it('should correctly transform data for remove from collection', () => {
+        expect(
+            transformers.getRemoveFromCommunityData(
+                [
+                    {
+                        rek_pid: 'UQ:11111',
+                        fez_record_search_key_ismemberof: [
+                            { rek_ismemberof: 'UQ:123', rek_ismemberof_order: 1 },
+                            { rek_ismemberof: 'UQ:234', rek_ismemberof_order: 2 },
+                        ],
+                    },
+                ],
+                {
+                    search_key: 'rek_ismemberof',
+                    communities: [{ rek_pid: 'UQ:234' }],
                 },
             ),
         ).toEqual([
@@ -5125,5 +5219,15 @@ describe('createOrUpdateDoi', () => {
                 fez_record_search_key_doi: { rek_doi: true },
             },
         ]);
+    });
+});
+
+describe('reasonForEdit', () => {
+    it('should correctly transform data', () => {
+        const record = { reason: 'This is a test reason' };
+        expect(transformers.getReasonSectionSearchKeys(record)).toEqual({
+            ...record,
+        });
+        expect(transformers.getReasonSectionSearchKeys({})).toEqual({});
     });
 });

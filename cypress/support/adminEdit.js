@@ -22,7 +22,7 @@ Cypress.Commands.add('adminEditCountCards', count => {
 
 Cypress.Commands.add('adminEditNoAlerts', () => {
     cy.get('.StandardPage form > div:first-child').within(() => {
-        cy.get('.Alert').should('not.exist');
+        cy.get('[data-testid=alert]').should('not.exist');
     });
 
     cy.get('#admin-work-submit')

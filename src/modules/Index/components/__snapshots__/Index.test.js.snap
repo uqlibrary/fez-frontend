@@ -4,37 +4,15 @@ exports[`Index page should render placeholders 1`] = `
 <Provider
   store={
     Object {
-      "dispatch": [MockFunction] {
-        "calls": Array [
-          Array [
-            [Function],
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
+      "dispatch": [MockFunction],
       "getState": [MockFunction] {
         "calls": Array [
           Array [],
           Array [],
           Array [],
           Array [],
-          Array [],
-          Array [],
         ],
         "results": Array [
-          Object {
-            "type": "return",
-            "value": Immutable.Map {},
-          },
-          Object {
-            "type": "return",
-            "value": Immutable.Map {},
-          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -61,15 +39,8 @@ exports[`Index page should render placeholders 1`] = `
           Array [
             [Function],
           ],
-          Array [
-            [Function],
-          ],
         ],
         "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
           Object {
             "type": "return",
             "value": undefined,
@@ -1897,6 +1868,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "checkSession": [Function],
                                                         "claimPublication": [Function],
                                                         "clearAuthorsSuggestions": [Function],
+                                                        "clearCCCollectionsList": [Function],
                                                         "clearClaimPublication": [Function],
                                                         "clearDeleteRecord": [Function],
                                                         "clearFixRecord": [Function],
@@ -1911,6 +1883,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "collectionsList": [Function],
                                                         "communitiesList": [Function],
                                                         "copyToOrRemoveFromCollection": [Function],
+                                                        "copyToOrRemoveFromCommunity": [Function],
                                                         "countPossiblyYourPublications": [Function],
                                                         "createBatchImport": [Function],
                                                         "createCollection": [Function],
@@ -1926,6 +1899,8 @@ exports[`Index page should render placeholders 1`] = `
                                                         "deleteUserListItem": [Function],
                                                         "dismissAppAlert": [Function],
                                                         "exportAuthorPublications": [Function],
+                                                        "exportCollectionRecords": [Function],
+                                                        "exportCommunityRecords": [Function],
                                                         "exportEspacePublications": [Function],
                                                         "exportJournals": [Function],
                                                         "exportPublications": [Function],
@@ -1946,7 +1921,9 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadAuthorList": [Function],
                                                         "loadAuthorPublicationsStats": [Function],
                                                         "loadBulkUpdatesList": [Function],
+                                                        "loadCCCollectionsList": [Function],
                                                         "loadCollectionsList": [Function],
+                                                        "loadCommunitiesList": [Function],
                                                         "loadCurrentAccount": [Function],
                                                         "loadDetailedHistory": [Function],
                                                         "loadFavouriteSearchList": [Function],
@@ -1955,7 +1932,6 @@ exports[`Index page should render placeholders 1`] = `
                                                         "loadJournalLookup": [Function],
                                                         "loadJournalSearchKeywords": [Function],
                                                         "loadMyEditorialAppointmentsList": [Function],
-                                                        "loadNewsFeed": [Function],
                                                         "loadOrcidSyncStatus": [Function],
                                                         "loadPublicationList": [Function],
                                                         "loadRecordToDelete": [Function],
@@ -1987,9 +1963,9 @@ exports[`Index page should render placeholders 1`] = `
                                                         "searchTopCitedPublications": [Function],
                                                         "searchTrendingPublications": [Function],
                                                         "setClaimPublication": [Function],
+                                                        "setCollectionsArray": [Function],
                                                         "setDeleteRecord": [Function],
                                                         "setFixRecord": [Function],
-                                                        "setHideCulturalSensitivityStatement": [Function],
                                                         "setRedirectPath": [Function],
                                                         "showAppAlert": [Function],
                                                         "submitThesis": [Function],
@@ -2077,6 +2053,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "checkSession": [Function],
                                                           "claimPublication": [Function],
                                                           "clearAuthorsSuggestions": [Function],
+                                                          "clearCCCollectionsList": [Function],
                                                           "clearClaimPublication": [Function],
                                                           "clearDeleteRecord": [Function],
                                                           "clearFixRecord": [Function],
@@ -2091,6 +2068,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "collectionsList": [Function],
                                                           "communitiesList": [Function],
                                                           "copyToOrRemoveFromCollection": [Function],
+                                                          "copyToOrRemoveFromCommunity": [Function],
                                                           "countPossiblyYourPublications": [Function],
                                                           "createBatchImport": [Function],
                                                           "createCollection": [Function],
@@ -2106,6 +2084,8 @@ exports[`Index page should render placeholders 1`] = `
                                                           "deleteUserListItem": [Function],
                                                           "dismissAppAlert": [Function],
                                                           "exportAuthorPublications": [Function],
+                                                          "exportCollectionRecords": [Function],
+                                                          "exportCommunityRecords": [Function],
                                                           "exportEspacePublications": [Function],
                                                           "exportJournals": [Function],
                                                           "exportPublications": [Function],
@@ -2126,7 +2106,9 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadAuthorList": [Function],
                                                           "loadAuthorPublicationsStats": [Function],
                                                           "loadBulkUpdatesList": [Function],
+                                                          "loadCCCollectionsList": [Function],
                                                           "loadCollectionsList": [Function],
+                                                          "loadCommunitiesList": [Function],
                                                           "loadCurrentAccount": [Function],
                                                           "loadDetailedHistory": [Function],
                                                           "loadFavouriteSearchList": [Function],
@@ -2135,7 +2117,6 @@ exports[`Index page should render placeholders 1`] = `
                                                           "loadJournalLookup": [Function],
                                                           "loadJournalSearchKeywords": [Function],
                                                           "loadMyEditorialAppointmentsList": [Function],
-                                                          "loadNewsFeed": [Function],
                                                           "loadOrcidSyncStatus": [Function],
                                                           "loadPublicationList": [Function],
                                                           "loadRecordToDelete": [Function],
@@ -2167,9 +2148,9 @@ exports[`Index page should render placeholders 1`] = `
                                                           "searchTopCitedPublications": [Function],
                                                           "searchTrendingPublications": [Function],
                                                           "setClaimPublication": [Function],
+                                                          "setCollectionsArray": [Function],
                                                           "setDeleteRecord": [Function],
                                                           "setFixRecord": [Function],
-                                                          "setHideCulturalSensitivityStatement": [Function],
                                                           "setRedirectPath": [Function],
                                                           "showAppAlert": [Function],
                                                           "submitThesis": [Function],
@@ -2604,15 +2585,15 @@ exports[`Index page should render placeholders 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                         >
-                                                          <WhatIsEspace>
+                                                          <AcknowledgementOfCountry>
                                                             <StandardCard
                                                               primaryHeader={true}
-                                                              title="What is eSpace?"
+                                                              title="Acknowledgement of Country"
                                                             >
                                                               <WithStyles(ForwardRef(Card))
                                                                 className="makeStyles-card-7 StandardCard"
-                                                                data-testid="standard-card-what-is-espace?"
-                                                                id="standard-card-what-is-espace?"
+                                                                data-testid="standard-card-acknowledgement-of-country"
+                                                                id="standard-card-acknowledgement-of-country"
                                                                 style={Object {}}
                                                               >
                                                                 <ForwardRef(Card)
@@ -2622,15 +2603,15 @@ exports[`Index page should render placeholders 1`] = `
                                                                       "root": "MuiCard-root",
                                                                     }
                                                                   }
-                                                                  data-testid="standard-card-what-is-espace?"
-                                                                  id="standard-card-what-is-espace?"
+                                                                  data-testid="standard-card-acknowledgement-of-country"
+                                                                  id="standard-card-acknowledgement-of-country"
                                                                   style={Object {}}
                                                                 >
                                                                   <WithStyles(ForwardRef(Paper))
                                                                     className="MuiCard-root makeStyles-card-7 StandardCard"
-                                                                    data-testid="standard-card-what-is-espace?"
+                                                                    data-testid="standard-card-acknowledgement-of-country"
                                                                     elevation={1}
-                                                                    id="standard-card-what-is-espace?"
+                                                                    id="standard-card-acknowledgement-of-country"
                                                                     style={Object {}}
                                                                   >
                                                                     <ForwardRef(Paper)
@@ -2667,15 +2648,15 @@ exports[`Index page should render placeholders 1`] = `
                                                                           "rounded": "MuiPaper-rounded",
                                                                         }
                                                                       }
-                                                                      data-testid="standard-card-what-is-espace?"
+                                                                      data-testid="standard-card-acknowledgement-of-country"
                                                                       elevation={1}
-                                                                      id="standard-card-what-is-espace?"
+                                                                      id="standard-card-acknowledgement-of-country"
                                                                       style={Object {}}
                                                                     >
                                                                       <div
                                                                         className="MuiPaper-root MuiCard-root makeStyles-card-7 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
-                                                                        data-testid="standard-card-what-is-espace?"
-                                                                        id="standard-card-what-is-espace?"
+                                                                        data-testid="standard-card-acknowledgement-of-country"
+                                                                        id="standard-card-acknowledgement-of-country"
                                                                         style={Object {}}
                                                                       >
                                                                         <WithStyles(ForwardRef(CardHeader))
@@ -2687,13 +2668,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                             }
                                                                           }
                                                                           style={Object {}}
-                                                                          title="What is eSpace?"
+                                                                          title="Acknowledgement of Country"
                                                                           titleTypographyProps={
                                                                             Object {
                                                                               "color": "inherit",
                                                                               "component": "h3",
-                                                                              "data-testid": "standard-card-what-is-espace?-header",
-                                                                              "id": "standard-card-what-is-espace?-header",
+                                                                              "data-testid": "standard-card-acknowledgement-of-country-header",
+                                                                              "id": "standard-card-acknowledgement-of-country-header",
                                                                               "variant": "h5",
                                                                             }
                                                                           }
@@ -2711,13 +2692,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                               }
                                                                             }
                                                                             style={Object {}}
-                                                                            title="What is eSpace?"
+                                                                            title="Acknowledgement of Country"
                                                                             titleTypographyProps={
                                                                               Object {
                                                                                 "color": "inherit",
                                                                                 "component": "h3",
-                                                                                "data-testid": "standard-card-what-is-espace?-header",
-                                                                                "id": "standard-card-what-is-espace?-header",
+                                                                                "data-testid": "standard-card-acknowledgement-of-country-header",
+                                                                                "id": "standard-card-acknowledgement-of-country-header",
                                                                                 "variant": "h5",
                                                                               }
                                                                             }
@@ -2733,9 +2714,9 @@ exports[`Index page should render placeholders 1`] = `
                                                                                   className="MuiCardHeader-title makeStyles-responsiveHeader-12"
                                                                                   color="inherit"
                                                                                   component="h3"
-                                                                                  data-testid="standard-card-what-is-espace?-header"
+                                                                                  data-testid="standard-card-acknowledgement-of-country-header"
                                                                                   display="block"
-                                                                                  id="standard-card-what-is-espace?-header"
+                                                                                  id="standard-card-acknowledgement-of-country-header"
                                                                                   variant="h5"
                                                                                 >
                                                                                   <ForwardRef(Typography)
@@ -2776,17 +2757,17 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     }
                                                                                     color="inherit"
                                                                                     component="h3"
-                                                                                    data-testid="standard-card-what-is-espace?-header"
+                                                                                    data-testid="standard-card-acknowledgement-of-country-header"
                                                                                     display="block"
-                                                                                    id="standard-card-what-is-espace?-header"
+                                                                                    id="standard-card-acknowledgement-of-country-header"
                                                                                     variant="h5"
                                                                                   >
                                                                                     <h3
                                                                                       className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-12 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
-                                                                                      data-testid="standard-card-what-is-espace?-header"
-                                                                                      id="standard-card-what-is-espace?-header"
+                                                                                      data-testid="standard-card-acknowledgement-of-country-header"
+                                                                                      id="standard-card-acknowledgement-of-country-header"
                                                                                     >
-                                                                                      What is eSpace?
+                                                                                      Acknowledgement of Country
                                                                                     </h3>
                                                                                   </ForwardRef(Typography)>
                                                                                 </WithStyles(ForwardRef(Typography))>
@@ -2796,8 +2777,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                         </WithStyles(ForwardRef(CardHeader))>
                                                                         <WithStyles(ForwardRef(CardContent))
                                                                           className=""
-                                                                          data-testid="standard-card-what-is-espace?-content"
-                                                                          id="standard-card-what-is-espace?-content"
+                                                                          data-testid="standard-card-acknowledgement-of-country-content"
+                                                                          id="standard-card-acknowledgement-of-country-content"
                                                                         >
                                                                           <ForwardRef(CardContent)
                                                                             className=""
@@ -2806,13 +2787,13 @@ exports[`Index page should render placeholders 1`] = `
                                                                                 "root": "MuiCardContent-root",
                                                                               }
                                                                             }
-                                                                            data-testid="standard-card-what-is-espace?-content"
-                                                                            id="standard-card-what-is-espace?-content"
+                                                                            data-testid="standard-card-acknowledgement-of-country-content"
+                                                                            id="standard-card-acknowledgement-of-country-content"
                                                                           >
                                                                             <div
                                                                               className="MuiCardContent-root"
-                                                                              data-testid="standard-card-what-is-espace?-content"
-                                                                              id="standard-card-what-is-espace?-content"
+                                                                              data-testid="standard-card-acknowledgement-of-country-content"
+                                                                              id="standard-card-acknowledgement-of-country-content"
                                                                             >
                                                                               <WithStyles(ForwardRef(Typography))
                                                                                 variant="body2"
@@ -2858,23 +2839,8 @@ exports[`Index page should render placeholders 1`] = `
                                                                                     className="MuiTypography-root MuiTypography-body2"
                                                                                   >
                                                                                     <span>
-                                                                                      The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
+                                                                                      The University of Queensland acknowledges the Traditional Owners and their custodianship of the lands. We pay our respects to their Ancestors and their descendants, who continue cultural and spiritual connections to Country. We recognise their valuable contributions to Australian and global society, celebrating the unique knowledges, cultures, histories and languages that have been shared and created for at least 65,000 years.
                                                                                     </span>
-                                                                                    <Link
-                                                                                      to="/contact"
-                                                                                    >
-                                                                                      <LinkAnchor
-                                                                                        href="/contact"
-                                                                                        navigate={[Function]}
-                                                                                      >
-                                                                                        <a
-                                                                                          href="/contact"
-                                                                                          onClick={[Function]}
-                                                                                        >
-                                                                                           read more
-                                                                                        </a>
-                                                                                      </LinkAnchor>
-                                                                                    </Link>
                                                                                   </p>
                                                                                 </ForwardRef(Typography)>
                                                                               </WithStyles(ForwardRef(Typography))>
@@ -2887,7 +2853,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                 </ForwardRef(Card)>
                                                               </WithStyles(ForwardRef(Card))>
                                                             </StandardCard>
-                                                          </WhatIsEspace>
+                                                          </AcknowledgementOfCountry>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
@@ -3009,647 +2975,278 @@ exports[`Index page should render placeholders 1`] = `
                                                         <div
                                                           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
                                                         >
-                                                          <Connect(WithStyles(NewsFeed))>
-                                                            <WithStyles(NewsFeed)
-                                                              actions={
-                                                                Object {
-                                                                  "addAuthor": [Function],
-                                                                  "addFavouriteSearch": [Function],
-                                                                  "addMyEditorialAppointments": [Function],
-                                                                  "addToFavourites": [Function],
-                                                                  "addUser": [Function],
-                                                                  "adminCreate": [Function],
-                                                                  "adminReset": [Function],
-                                                                  "adminUpdate": [Function],
-                                                                  "bulkDeleteAuthorListItems": [Function],
-                                                                  "bulkDeleteUserListItems": [Function],
-                                                                  "changeAuthorId": [Function],
-                                                                  "changeDisplayType": [Function],
-                                                                  "changeSearchKeyValue": [Function],
-                                                                  "checkForExistingAuthor": [Function],
-                                                                  "checkForExistingFavouriteSearchAlias": [Function],
-                                                                  "checkForExistingUser": [Function],
-                                                                  "checkSession": [Function],
-                                                                  "claimPublication": [Function],
-                                                                  "clearAuthorsSuggestions": [Function],
-                                                                  "clearClaimPublication": [Function],
-                                                                  "clearDeleteRecord": [Function],
-                                                                  "clearFixRecord": [Function],
-                                                                  "clearJournalSearchKeywords": [Function],
-                                                                  "clearMyEditorialAppointmentsAddStatus": [Function],
-                                                                  "clearNewRecord": [Function],
-                                                                  "clearRecordToView": [Function],
-                                                                  "clearRedirectPath": [Function],
-                                                                  "clearSearchQuery": [Function],
-                                                                  "clearSessionExpiredFlag": [Function],
-                                                                  "clearThirdPartyLookup": [Function],
-                                                                  "collectionsList": [Function],
-                                                                  "communitiesList": [Function],
-                                                                  "copyToOrRemoveFromCollection": [Function],
-                                                                  "countPossiblyYourPublications": [Function],
-                                                                  "createBatchImport": [Function],
-                                                                  "createCollection": [Function],
-                                                                  "createCommunity": [Function],
-                                                                  "createNewRecord": [Function],
-                                                                  "createOrUpdateDoi": [Function],
-                                                                  "createSearchPromise": [Function],
-                                                                  "deleteAttachedFile": [Function],
-                                                                  "deleteAuthorListItem": [Function],
-                                                                  "deleteFavouriteSearchListItem": [Function],
-                                                                  "deleteMyEditorialAppointmentsListItem": [Function],
-                                                                  "deleteRecord": [Function],
-                                                                  "deleteUserListItem": [Function],
-                                                                  "dismissAppAlert": [Function],
-                                                                  "exportAuthorPublications": [Function],
-                                                                  "exportEspacePublications": [Function],
-                                                                  "exportJournals": [Function],
-                                                                  "exportPublications": [Function],
-                                                                  "fixRecord": [Function],
-                                                                  "getBatchImportDirectories": [Function],
-                                                                  "getCollectionsListAPI": [Function],
-                                                                  "getFavouriteSearchAlias": [Function],
-                                                                  "getPreCheckError": [Function],
-                                                                  "getSearchLookupApi": [Function],
-                                                                  "getSherpaFromIssn": [Function],
-                                                                  "getThirdPartyLookupApiUrl": [Function],
-                                                                  "getUlrichsFromIssn": [Function],
-                                                                  "hidePossiblyYourPublicationsLure": [Function],
-                                                                  "hideRecord": [Function],
-                                                                  "hideRecordErrorReset": [Function],
-                                                                  "ingestFromScopus": [Function],
-                                                                  "linkAuthorOrcidId": [Function],
-                                                                  "loadAuthorList": [Function],
-                                                                  "loadAuthorPublicationsStats": [Function],
-                                                                  "loadBulkUpdatesList": [Function],
-                                                                  "loadCollectionsList": [Function],
-                                                                  "loadCurrentAccount": [Function],
-                                                                  "loadDetailedHistory": [Function],
-                                                                  "loadFavouriteSearchList": [Function],
-                                                                  "loadFullRecordToClaim": [Function],
-                                                                  "loadJournal": [Function],
-                                                                  "loadJournalLookup": [Function],
-                                                                  "loadJournalSearchKeywords": [Function],
-                                                                  "loadMyEditorialAppointmentsList": [Function],
-                                                                  "loadNewsFeed": [Function],
-                                                                  "loadOrcidSyncStatus": [Function],
-                                                                  "loadPublicationList": [Function],
-                                                                  "loadRecordToDelete": [Function],
-                                                                  "loadRecordToFix": [Function],
-                                                                  "loadRecordToView": [Function],
-                                                                  "loadRecordVersionToView": [Function],
-                                                                  "loadSearchKeyList": [Function],
-                                                                  "loadThirdPartyResults": [Function],
-                                                                  "loadUserList": [Function],
-                                                                  "loadVocabulariesList": [Function],
-                                                                  "logout": [Function],
-                                                                  "mergeAvailableAuthoringData": [Function],
-                                                                  "removeFromFavourites": [Function],
-                                                                  "removeShadowSuffixFromTableNames": [Function],
-                                                                  "requestMJLIngest": [Function],
-                                                                  "requestOrcidSync": [Function],
-                                                                  "resetDoi": [Function],
-                                                                  "resetExportPublicationsStatus": [Function],
-                                                                  "resetSavingAuthorState": [Function],
-                                                                  "retrieveFavouriteJournals": [Function],
-                                                                  "sanitiseData": [Function],
-                                                                  "searchAuthorPublications": [Function],
-                                                                  "searchAuthors": [Function],
-                                                                  "searchEspacePublications": [Function],
-                                                                  "searchJournals": [Function],
-                                                                  "searchLatestPublications": [Function],
-                                                                  "searchPossiblyYourPublications": [Function],
-                                                                  "searchPublications": [Function],
-                                                                  "searchTopCitedPublications": [Function],
-                                                                  "searchTrendingPublications": [Function],
-                                                                  "setClaimPublication": [Function],
-                                                                  "setDeleteRecord": [Function],
-                                                                  "setFixRecord": [Function],
-                                                                  "setHideCulturalSensitivityStatement": [Function],
-                                                                  "setRedirectPath": [Function],
-                                                                  "showAppAlert": [Function],
-                                                                  "submitThesis": [Function],
-                                                                  "unclaimRecord": [Function],
-                                                                  "unlockRecord": [Function],
-                                                                  "unlockRecordToView": [Function],
-                                                                  "updateAuthorListItem": [Function],
-                                                                  "updateCollection": [Function],
-                                                                  "updateCommunity": [Function],
-                                                                  "updateCurrentAuthor": [Function],
-                                                                  "updateDoi": [Function],
-                                                                  "updateFavouriteSearchListItem": [Function],
-                                                                  "updateIncompleteRecord": [Function],
-                                                                  "updateMatchedRecordAuthoringData": [Function],
-                                                                  "updateMyEditorialAppointmentsListItem": [Function],
-                                                                  "updateUserListItem": [Function],
-                                                                }
-                                                              }
+                                                          <CulturalAdvice>
+                                                            <StandardCard
+                                                              primaryHeader={true}
+                                                              title="Cultural advice"
                                                             >
-                                                              <NewsFeed
-                                                                actions={
-                                                                  Object {
-                                                                    "addAuthor": [Function],
-                                                                    "addFavouriteSearch": [Function],
-                                                                    "addMyEditorialAppointments": [Function],
-                                                                    "addToFavourites": [Function],
-                                                                    "addUser": [Function],
-                                                                    "adminCreate": [Function],
-                                                                    "adminReset": [Function],
-                                                                    "adminUpdate": [Function],
-                                                                    "bulkDeleteAuthorListItems": [Function],
-                                                                    "bulkDeleteUserListItems": [Function],
-                                                                    "changeAuthorId": [Function],
-                                                                    "changeDisplayType": [Function],
-                                                                    "changeSearchKeyValue": [Function],
-                                                                    "checkForExistingAuthor": [Function],
-                                                                    "checkForExistingFavouriteSearchAlias": [Function],
-                                                                    "checkForExistingUser": [Function],
-                                                                    "checkSession": [Function],
-                                                                    "claimPublication": [Function],
-                                                                    "clearAuthorsSuggestions": [Function],
-                                                                    "clearClaimPublication": [Function],
-                                                                    "clearDeleteRecord": [Function],
-                                                                    "clearFixRecord": [Function],
-                                                                    "clearJournalSearchKeywords": [Function],
-                                                                    "clearMyEditorialAppointmentsAddStatus": [Function],
-                                                                    "clearNewRecord": [Function],
-                                                                    "clearRecordToView": [Function],
-                                                                    "clearRedirectPath": [Function],
-                                                                    "clearSearchQuery": [Function],
-                                                                    "clearSessionExpiredFlag": [Function],
-                                                                    "clearThirdPartyLookup": [Function],
-                                                                    "collectionsList": [Function],
-                                                                    "communitiesList": [Function],
-                                                                    "copyToOrRemoveFromCollection": [Function],
-                                                                    "countPossiblyYourPublications": [Function],
-                                                                    "createBatchImport": [Function],
-                                                                    "createCollection": [Function],
-                                                                    "createCommunity": [Function],
-                                                                    "createNewRecord": [Function],
-                                                                    "createOrUpdateDoi": [Function],
-                                                                    "createSearchPromise": [Function],
-                                                                    "deleteAttachedFile": [Function],
-                                                                    "deleteAuthorListItem": [Function],
-                                                                    "deleteFavouriteSearchListItem": [Function],
-                                                                    "deleteMyEditorialAppointmentsListItem": [Function],
-                                                                    "deleteRecord": [Function],
-                                                                    "deleteUserListItem": [Function],
-                                                                    "dismissAppAlert": [Function],
-                                                                    "exportAuthorPublications": [Function],
-                                                                    "exportEspacePublications": [Function],
-                                                                    "exportJournals": [Function],
-                                                                    "exportPublications": [Function],
-                                                                    "fixRecord": [Function],
-                                                                    "getBatchImportDirectories": [Function],
-                                                                    "getCollectionsListAPI": [Function],
-                                                                    "getFavouriteSearchAlias": [Function],
-                                                                    "getPreCheckError": [Function],
-                                                                    "getSearchLookupApi": [Function],
-                                                                    "getSherpaFromIssn": [Function],
-                                                                    "getThirdPartyLookupApiUrl": [Function],
-                                                                    "getUlrichsFromIssn": [Function],
-                                                                    "hidePossiblyYourPublicationsLure": [Function],
-                                                                    "hideRecord": [Function],
-                                                                    "hideRecordErrorReset": [Function],
-                                                                    "ingestFromScopus": [Function],
-                                                                    "linkAuthorOrcidId": [Function],
-                                                                    "loadAuthorList": [Function],
-                                                                    "loadAuthorPublicationsStats": [Function],
-                                                                    "loadBulkUpdatesList": [Function],
-                                                                    "loadCollectionsList": [Function],
-                                                                    "loadCurrentAccount": [Function],
-                                                                    "loadDetailedHistory": [Function],
-                                                                    "loadFavouriteSearchList": [Function],
-                                                                    "loadFullRecordToClaim": [Function],
-                                                                    "loadJournal": [Function],
-                                                                    "loadJournalLookup": [Function],
-                                                                    "loadJournalSearchKeywords": [Function],
-                                                                    "loadMyEditorialAppointmentsList": [Function],
-                                                                    "loadNewsFeed": [Function],
-                                                                    "loadOrcidSyncStatus": [Function],
-                                                                    "loadPublicationList": [Function],
-                                                                    "loadRecordToDelete": [Function],
-                                                                    "loadRecordToFix": [Function],
-                                                                    "loadRecordToView": [Function],
-                                                                    "loadRecordVersionToView": [Function],
-                                                                    "loadSearchKeyList": [Function],
-                                                                    "loadThirdPartyResults": [Function],
-                                                                    "loadUserList": [Function],
-                                                                    "loadVocabulariesList": [Function],
-                                                                    "logout": [Function],
-                                                                    "mergeAvailableAuthoringData": [Function],
-                                                                    "removeFromFavourites": [Function],
-                                                                    "removeShadowSuffixFromTableNames": [Function],
-                                                                    "requestMJLIngest": [Function],
-                                                                    "requestOrcidSync": [Function],
-                                                                    "resetDoi": [Function],
-                                                                    "resetExportPublicationsStatus": [Function],
-                                                                    "resetSavingAuthorState": [Function],
-                                                                    "retrieveFavouriteJournals": [Function],
-                                                                    "sanitiseData": [Function],
-                                                                    "searchAuthorPublications": [Function],
-                                                                    "searchAuthors": [Function],
-                                                                    "searchEspacePublications": [Function],
-                                                                    "searchJournals": [Function],
-                                                                    "searchLatestPublications": [Function],
-                                                                    "searchPossiblyYourPublications": [Function],
-                                                                    "searchPublications": [Function],
-                                                                    "searchTopCitedPublications": [Function],
-                                                                    "searchTrendingPublications": [Function],
-                                                                    "setClaimPublication": [Function],
-                                                                    "setDeleteRecord": [Function],
-                                                                    "setFixRecord": [Function],
-                                                                    "setHideCulturalSensitivityStatement": [Function],
-                                                                    "setRedirectPath": [Function],
-                                                                    "showAppAlert": [Function],
-                                                                    "submitThesis": [Function],
-                                                                    "unclaimRecord": [Function],
-                                                                    "unlockRecord": [Function],
-                                                                    "unlockRecordToView": [Function],
-                                                                    "updateAuthorListItem": [Function],
-                                                                    "updateCollection": [Function],
-                                                                    "updateCommunity": [Function],
-                                                                    "updateCurrentAuthor": [Function],
-                                                                    "updateDoi": [Function],
-                                                                    "updateFavouriteSearchListItem": [Function],
-                                                                    "updateIncompleteRecord": [Function],
-                                                                    "updateMatchedRecordAuthoringData": [Function],
-                                                                    "updateMyEditorialAppointmentsListItem": [Function],
-                                                                    "updateUserListItem": [Function],
+                                                              <WithStyles(ForwardRef(Card))
+                                                                className="makeStyles-card-7 StandardCard"
+                                                                data-testid="standard-card-cultural-advice"
+                                                                id="standard-card-cultural-advice"
+                                                                style={Object {}}
+                                                              >
+                                                                <ForwardRef(Card)
+                                                                  className="makeStyles-card-7 StandardCard"
+                                                                  classes={
+                                                                    Object {
+                                                                      "root": "MuiCard-root",
+                                                                    }
                                                                   }
-                                                                }
-                                                                classes={
-                                                                  Object {
-                                                                    "newsItem": "NewsFeed-newsItem-13",
-                                                                  }
-                                                                }
-                                                                loadingNewsFeedList={true}
-                                                                newsFeedList={Array []}
-                                                                showNewsCount={3}
-                                                                theme={
-                                                                  Object {
-                                                                    "breakpoints": Object {
-                                                                      "between": [Function],
-                                                                      "down": [Function],
-                                                                      "keys": Array [
-                                                                        "xs",
-                                                                        "sm",
-                                                                        "md",
-                                                                        "lg",
-                                                                        "xl",
-                                                                      ],
-                                                                      "only": [Function],
-                                                                      "up": [Function],
-                                                                      "values": Object {
-                                                                        "lg": 1280,
-                                                                        "md": 960,
-                                                                        "sm": 600,
-                                                                        "xl": 1920,
-                                                                        "xs": 0,
-                                                                      },
-                                                                      "width": [Function],
-                                                                    },
-                                                                    "direction": "ltr",
-                                                                    "graphs": Object {
-                                                                      "color1": "#d72865",
-                                                                      "color2": "#1e7d94",
-                                                                      "color3": "#49075E",
-                                                                      "color4": "#468fcc",
-                                                                      "color5": "#f28620",
-                                                                      "color6": "#333333",
-                                                                      "color7": "#595959",
-                                                                    },
-                                                                    "hexToRGBA": [Function],
-                                                                    "mixins": Object {
-                                                                      "gutters": [Function],
-                                                                      "toolbar": Object {
-                                                                        "@media (min-width:0px) and (orientation: landscape)": Object {
-                                                                          "minHeight": 48,
-                                                                        },
-                                                                        "@media (min-width:600px)": Object {
-                                                                          "minHeight": 64,
-                                                                        },
-                                                                        "minHeight": 56,
-                                                                      },
-                                                                    },
-                                                                    "overrides": Object {
-                                                                      "MUIDataTable": Object {
-                                                                        "paper": Object {
-                                                                          "boxShadow": "none",
-                                                                          "margin": 0,
-                                                                          "padding": 0,
-                                                                        },
-                                                                      },
-                                                                      "MuiFormLabel": Object {
-                                                                        "root": Object {
-                                                                          "lineHeight": "normal",
-                                                                          "overflow": "hidden",
-                                                                          "textOverflow": "ellipsis",
-                                                                          "whiteSpace": "nowrap",
-                                                                          "width": "100%",
-                                                                        },
-                                                                      },
-                                                                      "MuiIconButton": Object {
-                                                                        "colorInherit": Object {
-                                                                          "color": "none",
-                                                                        },
-                                                                      },
-                                                                      "MuiInput": Object {
-                                                                        "formControl": Object {
-                                                                          "label + &": Object {
-                                                                            "marginTop": 17,
-                                                                          },
-                                                                        },
-                                                                      },
-                                                                      "MuiMenuItem": Object {
-                                                                        "root": Object {
-                                                                          "&$selected": Object {
-                                                                            "backgroundColor": "#4085C6 !important",
-                                                                            "color": "#FFFFFF",
-                                                                          },
-                                                                        },
-                                                                      },
-                                                                    },
-                                                                    "palette": Object {
-                                                                      "accent": Object {
-                                                                        "dark": "#2a557d",
-                                                                        "light": "#54acff",
-                                                                        "main": "#316799",
-                                                                      },
-                                                                      "action": Object {
-                                                                        "activatedOpacity": 0.12,
-                                                                        "active": "rgba(0, 0, 0, 0.54)",
-                                                                        "disabled": "rgba(0, 0, 0, 0.26)",
-                                                                        "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                                                                        "disabledOpacity": 0.38,
-                                                                        "focus": "rgba(0, 0, 0, 0.12)",
-                                                                        "focusOpacity": 0.12,
-                                                                        "hover": "rgba(0, 0, 0, 0.04)",
-                                                                        "hoverOpacity": 0.04,
-                                                                        "selected": "rgba(0, 0, 0, 0.08)",
-                                                                        "selectedOpacity": 0.08,
-                                                                      },
-                                                                      "augmentColor": [Function],
-                                                                      "background": Object {
-                                                                        "default": "#fafafa",
-                                                                        "paper": "#fff",
-                                                                      },
-                                                                      "common": Object {
-                                                                        "black": "#000",
-                                                                        "white": "#fff",
-                                                                      },
-                                                                      "contrastThreshold": 3,
-                                                                      "divider": "rgba(0, 0, 0, 0.12)",
-                                                                      "error": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#790000",
-                                                                        "light": "#ff0000",
-                                                                        "main": "#c80000",
-                                                                      },
-                                                                      "getContrastText": [Function],
-                                                                      "grey": Object {
-                                                                        "100": "#f5f5f5",
-                                                                        "200": "#eeeeee",
-                                                                        "300": "#e0e0e0",
-                                                                        "400": "#bdbdbd",
-                                                                        "50": "#fafafa",
-                                                                        "500": "#9e9e9e",
-                                                                        "600": "#757575",
-                                                                        "700": "#616161",
-                                                                        "800": "#424242",
-                                                                        "900": "#212121",
-                                                                        "A100": "#d5d5d5",
-                                                                        "A200": "#aaaaaa",
-                                                                        "A400": "#303030",
-                                                                        "A700": "#616161",
-                                                                      },
-                                                                      "info": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#1976d2",
-                                                                        "light": "#64b5f6",
-                                                                        "main": "#2196f3",
-                                                                      },
-                                                                      "primary": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#3b1a59",
-                                                                        "gradient": Object {
-                                                                          "diagonal": Object {
-                                                                            "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
-                                                                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
-                                                                          },
-                                                                          "horizontal": Object {
-                                                                            "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
-                                                                            "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
-                                                                          },
-                                                                        },
-                                                                        "light": "#962A8B",
-                                                                        "main": "#51247A",
-                                                                      },
-                                                                      "secondary": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#333333",
-                                                                        "light": "#f2f2f2",
-                                                                        "main": "#595959",
-                                                                      },
-                                                                      "success": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#005000",
-                                                                        "light": "#00a700",
-                                                                        "main": "#007200",
-                                                                      },
-                                                                      "text": Object {
-                                                                        "disabled": "rgba(0, 0, 0, 0.38)",
-                                                                        "hint": "rgba(0, 0, 0, 0.38)",
-                                                                        "primary": "rgba(0, 0, 0, 0.87)",
-                                                                        "secondary": "rgba(0, 0, 0, 0.54)",
-                                                                      },
-                                                                      "tonalOffset": 0.2,
-                                                                      "type": "light",
-                                                                      "warning": Object {
-                                                                        "contrastText": "#fff",
-                                                                        "dark": "#542400",
-                                                                        "light": "#ff9a57",
-                                                                        "main": "#bf5000",
-                                                                      },
-                                                                      "white": Object {
-                                                                        "main": "#FFFFFF",
-                                                                      },
-                                                                    },
-                                                                    "props": Object {},
-                                                                    "shadows": Array [
-                                                                      "none",
-                                                                      "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
-                                                                      "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
-                                                                      "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
-                                                                      "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
-                                                                      "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
-                                                                      "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
-                                                                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
-                                                                      "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
-                                                                      "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
-                                                                      "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
-                                                                      "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
-                                                                      "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
-                                                                      "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
-                                                                      "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
-                                                                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
-                                                                      "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
-                                                                      "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
-                                                                      "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
-                                                                      "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
-                                                                    ],
-                                                                    "shape": Object {
-                                                                      "borderRadius": 4,
-                                                                    },
-                                                                    "spacing": [Function],
-                                                                    "status": Object {
-                                                                      "danger": "#f44336",
-                                                                      "warning": "#ff9800",
-                                                                    },
-                                                                    "transitions": Object {
-                                                                      "create": [Function],
-                                                                      "duration": Object {
-                                                                        "complex": 375,
-                                                                        "enteringScreen": 225,
-                                                                        "leavingScreen": 195,
-                                                                        "short": 250,
-                                                                        "shorter": 200,
-                                                                        "shortest": 150,
-                                                                        "standard": 300,
-                                                                      },
-                                                                      "easing": Object {
-                                                                        "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-                                                                        "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
-                                                                        "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
-                                                                        "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
-                                                                      },
-                                                                      "getAutoHeightDuration": [Function],
-                                                                    },
-                                                                    "typography": Object {
-                                                                      "body1": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "1rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.00938em",
-                                                                        "lineHeight": 1.5,
-                                                                      },
-                                                                      "body2": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "0.875rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.01071em",
-                                                                        "lineHeight": 1.43,
-                                                                      },
-                                                                      "button": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "0.875rem",
-                                                                        "fontWeight": 400,
-                                                                        "letterSpacing": "0.02857em",
-                                                                        "lineHeight": 1.75,
-                                                                        "textTransform": "uppercase",
-                                                                      },
-                                                                      "caption": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "0.75rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.03333em",
-                                                                        "lineHeight": 1.66,
-                                                                      },
-                                                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                      "fontSize": 14,
-                                                                      "fontWeightBold": 700,
-                                                                      "fontWeightLight": 200,
-                                                                      "fontWeightMedium": 400,
-                                                                      "fontWeightRegular": 300,
-                                                                      "h1": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "6rem",
-                                                                        "fontWeight": 200,
-                                                                        "letterSpacing": "-0.01562em",
-                                                                        "lineHeight": 1.167,
-                                                                      },
-                                                                      "h2": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "3.75rem",
-                                                                        "fontWeight": 200,
-                                                                        "letterSpacing": "-0.00833em",
-                                                                        "lineHeight": 1.2,
-                                                                      },
-                                                                      "h3": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "3rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0em",
-                                                                        "lineHeight": 1.167,
-                                                                      },
-                                                                      "h4": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "2.125rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.00735em",
-                                                                        "lineHeight": 1.235,
-                                                                      },
-                                                                      "h5": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "1.5rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0em",
-                                                                        "lineHeight": 1.334,
-                                                                      },
-                                                                      "h6": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "1.25rem",
-                                                                        "fontWeight": 400,
-                                                                        "letterSpacing": "0.0075em",
-                                                                        "lineHeight": 1.6,
-                                                                      },
-                                                                      "htmlFontSize": 16,
-                                                                      "overline": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "0.75rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.08333em",
-                                                                        "lineHeight": 2.66,
-                                                                        "textTransform": "uppercase",
-                                                                      },
-                                                                      "pxToRem": [Function],
-                                                                      "round": [Function],
-                                                                      "subtitle1": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "1rem",
-                                                                        "fontWeight": 300,
-                                                                        "letterSpacing": "0.00938em",
-                                                                        "lineHeight": 1.75,
-                                                                      },
-                                                                      "subtitle2": Object {
-                                                                        "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                                        "fontSize": "0.875rem",
-                                                                        "fontWeight": 400,
-                                                                        "letterSpacing": "0.00714em",
-                                                                        "lineHeight": 1.57,
-                                                                      },
-                                                                      "suppressDeprecationWarnings": true,
-                                                                      "useNextVariants": true,
-                                                                    },
-                                                                    "zIndex": Object {
-                                                                      "appBar": 1100,
-                                                                      "drawer": 1200,
-                                                                      "mobileStepper": 1000,
-                                                                      "modal": 1300,
-                                                                      "snackbar": 1400,
-                                                                      "speedDial": 1050,
-                                                                      "tooltip": 1500,
-                                                                    },
-                                                                    Symbol(mui.nested): false,
-                                                                  }
-                                                                }
-                                                              />
-                                                            </WithStyles(NewsFeed)>
-                                                          </Connect(WithStyles(NewsFeed))>
+                                                                  data-testid="standard-card-cultural-advice"
+                                                                  id="standard-card-cultural-advice"
+                                                                  style={Object {}}
+                                                                >
+                                                                  <WithStyles(ForwardRef(Paper))
+                                                                    className="MuiCard-root makeStyles-card-7 StandardCard"
+                                                                    data-testid="standard-card-cultural-advice"
+                                                                    elevation={1}
+                                                                    id="standard-card-cultural-advice"
+                                                                    style={Object {}}
+                                                                  >
+                                                                    <ForwardRef(Paper)
+                                                                      className="MuiCard-root makeStyles-card-7 StandardCard"
+                                                                      classes={
+                                                                        Object {
+                                                                          "elevation0": "MuiPaper-elevation0",
+                                                                          "elevation1": "MuiPaper-elevation1",
+                                                                          "elevation10": "MuiPaper-elevation10",
+                                                                          "elevation11": "MuiPaper-elevation11",
+                                                                          "elevation12": "MuiPaper-elevation12",
+                                                                          "elevation13": "MuiPaper-elevation13",
+                                                                          "elevation14": "MuiPaper-elevation14",
+                                                                          "elevation15": "MuiPaper-elevation15",
+                                                                          "elevation16": "MuiPaper-elevation16",
+                                                                          "elevation17": "MuiPaper-elevation17",
+                                                                          "elevation18": "MuiPaper-elevation18",
+                                                                          "elevation19": "MuiPaper-elevation19",
+                                                                          "elevation2": "MuiPaper-elevation2",
+                                                                          "elevation20": "MuiPaper-elevation20",
+                                                                          "elevation21": "MuiPaper-elevation21",
+                                                                          "elevation22": "MuiPaper-elevation22",
+                                                                          "elevation23": "MuiPaper-elevation23",
+                                                                          "elevation24": "MuiPaper-elevation24",
+                                                                          "elevation3": "MuiPaper-elevation3",
+                                                                          "elevation4": "MuiPaper-elevation4",
+                                                                          "elevation5": "MuiPaper-elevation5",
+                                                                          "elevation6": "MuiPaper-elevation6",
+                                                                          "elevation7": "MuiPaper-elevation7",
+                                                                          "elevation8": "MuiPaper-elevation8",
+                                                                          "elevation9": "MuiPaper-elevation9",
+                                                                          "outlined": "MuiPaper-outlined",
+                                                                          "root": "MuiPaper-root",
+                                                                          "rounded": "MuiPaper-rounded",
+                                                                        }
+                                                                      }
+                                                                      data-testid="standard-card-cultural-advice"
+                                                                      elevation={1}
+                                                                      id="standard-card-cultural-advice"
+                                                                      style={Object {}}
+                                                                    >
+                                                                      <div
+                                                                        className="MuiPaper-root MuiCard-root makeStyles-card-7 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                        data-testid="standard-card-cultural-advice"
+                                                                        id="standard-card-cultural-advice"
+                                                                        style={Object {}}
+                                                                      >
+                                                                        <WithStyles(ForwardRef(CardHeader))
+                                                                          action={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "root": "makeStyles-cardHeaderPrimary-9",
+                                                                              "title": "makeStyles-responsiveHeader-12",
+                                                                            }
+                                                                          }
+                                                                          style={Object {}}
+                                                                          title="Cultural advice"
+                                                                          titleTypographyProps={
+                                                                            Object {
+                                                                              "color": "inherit",
+                                                                              "component": "h3",
+                                                                              "data-testid": "standard-card-cultural-advice-header",
+                                                                              "id": "standard-card-cultural-advice-header",
+                                                                              "variant": "h5",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <ForwardRef(CardHeader)
+                                                                            action={false}
+                                                                            classes={
+                                                                              Object {
+                                                                                "action": "MuiCardHeader-action",
+                                                                                "avatar": "MuiCardHeader-avatar",
+                                                                                "content": "MuiCardHeader-content",
+                                                                                "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-9",
+                                                                                "subheader": "MuiCardHeader-subheader",
+                                                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-12",
+                                                                              }
+                                                                            }
+                                                                            style={Object {}}
+                                                                            title="Cultural advice"
+                                                                            titleTypographyProps={
+                                                                              Object {
+                                                                                "color": "inherit",
+                                                                                "component": "h3",
+                                                                                "data-testid": "standard-card-cultural-advice-header",
+                                                                                "id": "standard-card-cultural-advice-header",
+                                                                                "variant": "h5",
+                                                                              }
+                                                                            }
+                                                                          >
+                                                                            <div
+                                                                              className="MuiCardHeader-root makeStyles-cardHeaderPrimary-9"
+                                                                              style={Object {}}
+                                                                            >
+                                                                              <div
+                                                                                className="MuiCardHeader-content"
+                                                                              >
+                                                                                <WithStyles(ForwardRef(Typography))
+                                                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-12"
+                                                                                  color="inherit"
+                                                                                  component="h3"
+                                                                                  data-testid="standard-card-cultural-advice-header"
+                                                                                  display="block"
+                                                                                  id="standard-card-cultural-advice-header"
+                                                                                  variant="h5"
+                                                                                >
+                                                                                  <ForwardRef(Typography)
+                                                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-12"
+                                                                                    classes={
+                                                                                      Object {
+                                                                                        "alignCenter": "MuiTypography-alignCenter",
+                                                                                        "alignJustify": "MuiTypography-alignJustify",
+                                                                                        "alignLeft": "MuiTypography-alignLeft",
+                                                                                        "alignRight": "MuiTypography-alignRight",
+                                                                                        "body1": "MuiTypography-body1",
+                                                                                        "body2": "MuiTypography-body2",
+                                                                                        "button": "MuiTypography-button",
+                                                                                        "caption": "MuiTypography-caption",
+                                                                                        "colorError": "MuiTypography-colorError",
+                                                                                        "colorInherit": "MuiTypography-colorInherit",
+                                                                                        "colorPrimary": "MuiTypography-colorPrimary",
+                                                                                        "colorSecondary": "MuiTypography-colorSecondary",
+                                                                                        "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                                                        "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                                                        "displayBlock": "MuiTypography-displayBlock",
+                                                                                        "displayInline": "MuiTypography-displayInline",
+                                                                                        "gutterBottom": "MuiTypography-gutterBottom",
+                                                                                        "h1": "MuiTypography-h1",
+                                                                                        "h2": "MuiTypography-h2",
+                                                                                        "h3": "MuiTypography-h3",
+                                                                                        "h4": "MuiTypography-h4",
+                                                                                        "h5": "MuiTypography-h5",
+                                                                                        "h6": "MuiTypography-h6",
+                                                                                        "noWrap": "MuiTypography-noWrap",
+                                                                                        "overline": "MuiTypography-overline",
+                                                                                        "paragraph": "MuiTypography-paragraph",
+                                                                                        "root": "MuiTypography-root",
+                                                                                        "srOnly": "MuiTypography-srOnly",
+                                                                                        "subtitle1": "MuiTypography-subtitle1",
+                                                                                        "subtitle2": "MuiTypography-subtitle2",
+                                                                                      }
+                                                                                    }
+                                                                                    color="inherit"
+                                                                                    component="h3"
+                                                                                    data-testid="standard-card-cultural-advice-header"
+                                                                                    display="block"
+                                                                                    id="standard-card-cultural-advice-header"
+                                                                                    variant="h5"
+                                                                                  >
+                                                                                    <h3
+                                                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-12 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                                      data-testid="standard-card-cultural-advice-header"
+                                                                                      id="standard-card-cultural-advice-header"
+                                                                                    >
+                                                                                      Cultural advice
+                                                                                    </h3>
+                                                                                  </ForwardRef(Typography)>
+                                                                                </WithStyles(ForwardRef(Typography))>
+                                                                              </div>
+                                                                            </div>
+                                                                          </ForwardRef(CardHeader)>
+                                                                        </WithStyles(ForwardRef(CardHeader))>
+                                                                        <WithStyles(ForwardRef(CardContent))
+                                                                          className=""
+                                                                          data-testid="standard-card-cultural-advice-content"
+                                                                          id="standard-card-cultural-advice-content"
+                                                                        >
+                                                                          <ForwardRef(CardContent)
+                                                                            className=""
+                                                                            classes={
+                                                                              Object {
+                                                                                "root": "MuiCardContent-root",
+                                                                              }
+                                                                            }
+                                                                            data-testid="standard-card-cultural-advice-content"
+                                                                            id="standard-card-cultural-advice-content"
+                                                                          >
+                                                                            <div
+                                                                              className="MuiCardContent-root"
+                                                                              data-testid="standard-card-cultural-advice-content"
+                                                                              id="standard-card-cultural-advice-content"
+                                                                            >
+                                                                              <WithStyles(ForwardRef(Typography))
+                                                                                variant="body2"
+                                                                              >
+                                                                                <ForwardRef(Typography)
+                                                                                  classes={
+                                                                                    Object {
+                                                                                      "alignCenter": "MuiTypography-alignCenter",
+                                                                                      "alignJustify": "MuiTypography-alignJustify",
+                                                                                      "alignLeft": "MuiTypography-alignLeft",
+                                                                                      "alignRight": "MuiTypography-alignRight",
+                                                                                      "body1": "MuiTypography-body1",
+                                                                                      "body2": "MuiTypography-body2",
+                                                                                      "button": "MuiTypography-button",
+                                                                                      "caption": "MuiTypography-caption",
+                                                                                      "colorError": "MuiTypography-colorError",
+                                                                                      "colorInherit": "MuiTypography-colorInherit",
+                                                                                      "colorPrimary": "MuiTypography-colorPrimary",
+                                                                                      "colorSecondary": "MuiTypography-colorSecondary",
+                                                                                      "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                                                      "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                                                      "displayBlock": "MuiTypography-displayBlock",
+                                                                                      "displayInline": "MuiTypography-displayInline",
+                                                                                      "gutterBottom": "MuiTypography-gutterBottom",
+                                                                                      "h1": "MuiTypography-h1",
+                                                                                      "h2": "MuiTypography-h2",
+                                                                                      "h3": "MuiTypography-h3",
+                                                                                      "h4": "MuiTypography-h4",
+                                                                                      "h5": "MuiTypography-h5",
+                                                                                      "h6": "MuiTypography-h6",
+                                                                                      "noWrap": "MuiTypography-noWrap",
+                                                                                      "overline": "MuiTypography-overline",
+                                                                                      "paragraph": "MuiTypography-paragraph",
+                                                                                      "root": "MuiTypography-root",
+                                                                                      "srOnly": "MuiTypography-srOnly",
+                                                                                      "subtitle1": "MuiTypography-subtitle1",
+                                                                                      "subtitle2": "MuiTypography-subtitle2",
+                                                                                    }
+                                                                                  }
+                                                                                  variant="body2"
+                                                                                >
+                                                                                  <p
+                                                                                    className="MuiTypography-root MuiTypography-body2"
+                                                                                  >
+                                                                                    <span>
+                                                                                      Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities.
+                                                                                      <br />
+                                                                                      <br />
+                                                                                      Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
+                                                                                    </span>
+                                                                                  </p>
+                                                                                </ForwardRef(Typography)>
+                                                                              </WithStyles(ForwardRef(Typography))>
+                                                                            </div>
+                                                                          </ForwardRef(CardContent)>
+                                                                        </WithStyles(ForwardRef(CardContent))>
+                                                                      </div>
+                                                                    </ForwardRef(Paper)>
+                                                                  </WithStyles(ForwardRef(Paper))>
+                                                                </ForwardRef(Card)>
+                                                              </WithStyles(ForwardRef(Card))>
+                                                            </StandardCard>
+                                                          </CulturalAdvice>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>

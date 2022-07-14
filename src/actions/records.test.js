@@ -1,7 +1,7 @@
 import * as actions from './actionTypes';
 import * as repositories from 'repositories';
 import * as recordActions from './records';
-import { record } from 'mock/data';
+import { collectionRecord, communityRecord, record } from 'mock/data';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from '../config/general';
 
 /**
@@ -1125,7 +1125,7 @@ describe('Record action creators', () => {
     describe('updateCollection()', () => {
         const pid = 'UQ:123456';
         const testInput = {
-            pid,
+            publication: { rek_pid: pid },
             date: '2020-04-07',
             updated: {
                 securitySection: {
@@ -1135,7 +1135,9 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi.onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl).reply(200, { data: {} });
+            mockApi
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .reply(200, { data: { ...collectionRecord } });
 
             const expectedActions = [actions.COLLECTION_UPDATING, actions.COLLECTION_UPDATE_SUCCESS];
 
@@ -1145,7 +1147,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COLLECTION_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
@@ -1215,7 +1217,7 @@ describe('Record action creators', () => {
     describe('updateCommunity()', () => {
         const pid = 'UQ:123456';
         const testInput = {
-            pid,
+            publication: { rek_pid: pid },
             date: '2020-04-07',
             updated: {
                 securitySection: {
@@ -1225,7 +1227,9 @@ describe('Record action creators', () => {
         };
 
         it('dispatches expected actions on successful save', async () => {
-            mockApi.onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl).reply(200, { data: {} });
+            mockApi
+                .onPut(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .reply(200, { data: { ...communityRecord } });
 
             const expectedActions = [actions.COMMUNITY_UPDATING, actions.COMMUNITY_UPDATE_SUCCESS];
 
@@ -1235,7 +1239,7 @@ describe('Record action creators', () => {
 
         it('dispatches expected actions on failed save', async () => {
             mockApi
-                .onPatch(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
+                .onPut(repositories.routes.EXISTING_COMMUNITY_API({ pid }).apiUrl)
                 .reply(500, { error: { message: 'FAILED' } });
 
             const expectedActions = [
@@ -1662,6 +1666,67 @@ describe('Record action creators', () => {
                             rek_pid: 'UQ:11111',
                         },
                     ]),
+                );
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
+
+    describe('copyToRemoveFromCommunity', () => {
+        it('dispatches expected actions on success for bulk collection updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(200, {});
+            const expectedActions = [actions.CHANGE_COMMUNITIES_INPROGRESS, actions.CHANGE_COMMUNITIES_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.copyToOrRemoveFromCommunity(
+                    [
+                        {
+                            rek_pid: 'UQ:11111',
+                            fez_record_search_key_ismemberof: [
+                                {
+                                    rek_ismemberof: 'UQ:1111',
+                                    rek_author_order: 1,
+                                },
+                            ],
+                        },
+                    ],
+                    {
+                        search_key: 'rek_ismemberof',
+                        communities: ['UQ:1234'],
+                    },
+                ),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on failure for bulk updates', async () => {
+            mockApi.onPatch(repositories.routes.NEW_RECORD_API().apiUrl).reply(500);
+            const expectedActions = [
+                actions.CHANGE_COMMUNITIES_INPROGRESS,
+                actions.APP_ALERT_SHOW,
+                actions.CHANGE_COMMUNITIES_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.copyToOrRemoveFromCommunity(
+                        [
+                            {
+                                rek_pid: 'UQ:11111',
+                                fez_record_search_key_ismemberof: [
+                                    {
+                                        rek_ismemberof: 'UQ:1234',
+                                    },
+                                ],
+                            },
+                        ],
+                        {
+                            search_key: 'rek_ismemberof',
+                            communities: ['UQ:1234'],
+                        },
+                        true,
+                    ),
                 );
             } catch (e) {
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

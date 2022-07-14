@@ -39,8 +39,7 @@ export default {
         index: {
             title: 'eSpace',
         },
-        contact: {
-            title: 'Contact UQ eSpace',
+        about: {
             children: (
                 <StandardCard noHeader>
                     <h3>General Enquiries</h3>
@@ -652,6 +651,12 @@ export default {
                 confirmButtonLabel: 'Yes',
             },
         },
+        communityList: {
+            title: 'List of Communities',
+        },
+        collectionList: {
+            title: 'List of Collections',
+        },
         masquerade: {
             title: 'Masquerade',
             help: {
@@ -1046,6 +1051,9 @@ export default {
                 security: {
                     title: 'Security',
                 },
+                reason: {
+                    title: 'Reason for Edit',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',
@@ -1225,6 +1233,16 @@ export default {
                     title: 'Loading failed',
                     message: 'Unable to load journal details',
                     type: 'error_outline',
+                },
+                favouriteTooltip: {
+                    isFavourite: 'Remove journal from your favourites',
+                    isNotFavourite: 'Add journal to your favourites',
+                },
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: message => message,
+                    alertId: 'alert-error',
                 },
             },
         },

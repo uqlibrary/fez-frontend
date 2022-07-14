@@ -172,7 +172,7 @@ context('Thesis', () => {
 
         uploadFile('test three.jpg');
 
-        cy.get('div.Alert').should('have.length', 2);
+        cy.get('[data-testid=alert]').should('have.length', 2);
 
         uploadFile('test.jpg');
         uploadFile('test_two.jpg');

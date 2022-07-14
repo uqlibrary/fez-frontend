@@ -5,7 +5,7 @@ import SearchKeyword from './SearchKeyword';
 
 import locale from 'locale/components';
 
-export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick }) => {
+export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onKeywordClick, selectedKeywords }) => {
     const txt = locale.components.searchJournals.partials.forCodeSearchKeywordsList;
     return (
         <KeywordsList
@@ -21,6 +21,7 @@ export const ForCodeSearchKeywordsList = ({ keywordsListTitle, keywordsList, onK
                             onKeywordClick={onKeywordClick}
                             type={'subject'}
                             variant={'addable'}
+                            selectedKeywords={selectedKeywords}
                         />
                     ))) ||
                 []
@@ -40,6 +41,7 @@ ForCodeSearchKeywordsList.propTypes = {
         }),
     ).isRequired,
     onKeywordClick: PropTypes.func.isRequired,
+    selectedKeywords: PropTypes.object,
 };
 
 export default React.memo(ForCodeSearchKeywordsList);

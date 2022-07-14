@@ -1,9 +1,12 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails, uqrdav10, uqagrinb } from './account';
 export {
     collectionRecord,
+    collectionRecordWithExtraData,
     collectionSearchList,
     collectionsByCommunity,
+    collectionSearchResultsImages,
     communityRecord,
+    communityRecordWithExtraData,
     communitySearchList,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
@@ -61,7 +64,6 @@ export { vocabulariesList } from './vocabularies';
 export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails, orcidSyncStatus, orcidSyncResponse, orcidSyncNullResponse } from './orcid';
-export { newsFeed } from './newsFeed';
 export { batchImportDirectories } from './batchImportDirectories';
 export { sherpaRomeo } from './sherpaRomeo';
 export { ulrichs } from './ulrichs';
@@ -69,6 +71,8 @@ export { mockRecordToFix } from './testing/records';
 export { journalLookup } from './journalLookup';
 export { keywordsSearch } from './journals/search/keyword/bio';
 export { journalDetails } from './journal';
+export { communityList } from './communityList'
+export { collectionList } from './collectionList'
 export { journalsList } from './journals';
 export { journalList } from './journalList';
 

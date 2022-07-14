@@ -6,7 +6,7 @@ import mediaQuery from 'css-mediaquery';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 import { ntro } from 'mock/data/testing/records';
 import { default as record } from 'mock/data/records/record';
-import { accounts } from 'mock/data/account';
+import { accounts, currentAuthor } from 'mock/data/account';
 import { useParams } from 'react-router';
 import { recordVersionLegacy } from '../../../mock/data';
 import locale from '../../../locale/pages';
@@ -15,8 +15,14 @@ import { stripHtml } from '../../../helpers/general';
 import globalLocale from '../../../locale/global';
 import { default as recordWithNotes } from 'mock/data/records/recordWithNotes';
 import { default as recordWithAuthorAffiliates } from 'mock/data/records/recordWithAuthorAffiliates';
+import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from '../../../config/general';
 
-jest.mock('../../../hooks');
+jest.mock('../../../hooks', () => ({
+    userIsAdmin: jest.fn(() => ({})),
+    isIntWithin: jest.requireActual('../../../hooks').isIntWithin,
+    belongsToAuthor: jest.requireActual('../../../hooks').belongsToAuthor,
+}));
+
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
     useHistory: jest.fn(() => ({ push: jest.fn() })),
@@ -35,7 +41,6 @@ const setup = (testProps = {}, renderer = render) => {
     const props = {
         account: accounts.uqresearcher,
         author: null,
-        hideCulturalSensitivityStatement: true,
         isDeleted: false,
         isDeletedVersion: false,
         loadingRecordToView: false,
@@ -59,12 +64,12 @@ describe('NewViewRecord', () => {
 
     beforeEach(() => {
         userIsAdmin.mockImplementation(() => false);
-        userIsAuthor.mockImplementation(() => true);
+        userIsAuthor && userIsAuthor.mockImplementation(() => true);
     });
 
     afterEach(() => {
         userIsAdmin.mockReset();
-        userIsAuthor.mockReset();
+        userIsAuthor && userIsAuthor.mockReset();
     });
 
     it('should render default empty view', () => {
@@ -187,23 +192,6 @@ describe('NewViewRecord', () => {
             },
         });
         expect(getAllByText('Scale/Significance of work').length).toBe(2);
-    });
-
-    it('should dismiss cultural sensitivity statement alert', () => {
-        window.matchMedia = createMatchMedia(2056);
-        const setHideCulturalSensitivityStatementFn = jest.spyOn(
-            ViewRecordActions,
-            'setHideCulturalSensitivityStatement',
-        );
-        const { getByTestId } = setup({
-            recordToView: {
-                ...record,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'Test advisory statement' },
-            },
-            hideCulturalSensitivityStatement: false,
-        });
-        fireEvent.click(getByTestId('dismiss'));
-        expect(setHideCulturalSensitivityStatementFn).toHaveBeenCalled();
     });
 
     it('should rerender component on props change', () => {
@@ -373,6 +361,75 @@ describe('NewViewRecord', () => {
             expect(getByTestId('drawer-Mobile-content-value-8-5')).toHaveTextContent(
                 'Journal Article - Article (original research)',
             );
+        });
+    });
+
+    describe('datastream visibility', () => {
+        const filename = 'image.jpg';
+        const publication = {
+            ...record,
+            fez_datastream_info: [
+                {
+                    dsi_pid: 'UQ:792099',
+                    dsi_dsid: filename,
+                    dsi_embargo_date: null,
+                    dsi_open_access: null,
+                    dsi_label: 'testing image description',
+                    dsi_mimetype: 'image/jpeg',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 97786,
+                    dsi_security_policy: 1,
+                    dsi_security_inherited: 0,
+                },
+            ],
+        };
+        publication.fez_record_search_key_author_id[0].rek_author_id = currentAuthor.uqresearcher.data.aut_id;
+
+        it("shouldn't show admin only attachments to authors", () => {
+            const { queryByText } = setup({
+                recordToView: publication,
+                account: accounts.uqresearcher,
+                author: currentAuthor.uqresearcher.data,
+            });
+            expect(queryByText(filename)).not.toBeInTheDocument();
+        });
+
+        it('should show admin only attachments to admin', () => {
+            userIsAdmin.mockImplementation(() => true);
+            const { queryByText } = setup({
+                recordToView: publication,
+                account: accounts.uqresearcher,
+                author: currentAuthor.uqresearcher.data,
+            });
+            expect(queryByText(filename)).toBeInTheDocument();
+        });
+
+        describe('NTRO', () => {
+            const ntroPublication = {
+                ...ntro,
+                fez_record_search_key_author_id: publication.fez_record_search_key_author_id,
+                fez_datastream_info: publication.fez_datastream_info,
+            };
+
+            it('should show admin only attachments to authors of NTROs (non research reports)', () => {
+                const filename = 'image.jpg';
+                const { queryByText } = setup({
+                    recordToView: ntroPublication,
+                    account: accounts.uqresearcher,
+                    author: currentAuthor.uqresearcher.data,
+                });
+                expect(queryByText(filename)).toBeInTheDocument();
+            });
+
+            it("shouldn't show admin only attachments to authors of NTROs research reports", () => {
+                const { queryByText } = setup({
+                    recordToView: { ...ntroPublication, rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR },
+                    account: accounts.uqresearcher,
+                    author: currentAuthor.uqresearcher.data,
+                });
+                expect(queryByText(filename)).not.toBeInTheDocument();
+            });
         });
     });
 });

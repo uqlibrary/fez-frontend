@@ -673,10 +673,6 @@ describe('Backend routes method', () => {
         });
     });
 
-    it('should construct url for GET_NEWS_API', () => {
-        expect(routes.GET_NEWS_API()).toEqual({ apiUrl: 'fez-news' });
-    });
-
     it('should construct url for AUTHOR_TRENDING_PUBLICATIONS_API', () => {
         expect(routes.AUTHOR_TRENDING_PUBLICATIONS_API()).toEqual({ apiUrl: 'records/my-trending' });
     });
@@ -993,6 +989,35 @@ describe('Backend routes method', () => {
             apiUrl: 'journals/favourites/append',
             options: {
                 params: { ...commonQueryParams },
+            },
+        });
+    });
+    it('should construct url for community list api', () => {
+        expect(routes.COMMUNITY_LIST_API({ pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' })).toEqual({
+            apiUrl: 'communities',
+            options: {
+                params: {
+                    order_by: 'Asc',
+                    page: 1,
+                    per_page: 20,
+                    sort: 'title',
+                },
+            },
+        });
+    });
+
+    it('should construct url for collection list api', () => {
+        expect(
+            routes.COLLECTION_LIST_API({ pid: 'UQ:12345', pageSize: 20, page: 1, direction: 'Asc', sortBy: 'title' }),
+        ).toEqual({
+            apiUrl: 'communities/UQ:12345/collections',
+            options: {
+                params: {
+                    order_by: 'Asc',
+                    page: 1,
+                    per_page: 20,
+                    sort: 'title',
+                },
             },
         });
     });

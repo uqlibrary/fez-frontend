@@ -12,6 +12,10 @@ export default {
             groups: [['advisoryStatement']],
         },
         {
+            title: 'Sensitive Handling Note',
+            groups: [['sensitiveHandlingNote']],
+        },
+        {
             title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
             groups: [['rek_copyright']],
         },

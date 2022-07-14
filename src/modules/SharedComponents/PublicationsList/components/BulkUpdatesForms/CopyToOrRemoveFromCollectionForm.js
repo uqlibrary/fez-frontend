@@ -66,6 +66,8 @@ export const CopyToOrRemoveFromCollectionForm = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [submitSucceeded]);
 
+    const hasACollectionSelected = Object.entries(recordsSelected).some(i => i[1].rek_object_type === 2);
+
     return (
         <form data-testid={`${idText}-collection-form`} id={`${idText}-collection-form`}>
             <Grid container spacing={2}>
@@ -75,6 +77,14 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         {...txt.copyToOrRemoveFromCollectionForm.alert(isRemoveFrom)}
                     />
                 </Grid>
+                {!!hasACollectionSelected && (
+                    <Grid item xs={12}>
+                        <Alert
+                            alertId={`alert-info-${idText}-collection-notallowed`}
+                            {...txt.copyToOrRemoveFromCollectionForm.onlyRecordsAllowed}
+                        />
+                    </Grid>
+                )}
                 {!!alertUser && (
                     <Grid item xs={12}>
                         <Alert
@@ -83,19 +93,21 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         />
                     </Grid>
                 )}
-                <Grid item xs={12}>
-                    <Field
-                        component={CollectionField}
-                        collectionFieldId="rek-ismemberof"
-                        disabled={submitting || submitSucceeded}
-                        floatingLabelText={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
-                        fullwidth
-                        name="collections"
-                        required
-                        validate={[validation.requiredList]}
-                        {...locale.components.selectField.collection}
-                    />
-                </Grid>
+                {!!!hasACollectionSelected && (
+                    <Grid item xs={12}>
+                        <Field
+                            component={CollectionField}
+                            collectionFieldId="rek-ismemberof"
+                            disabled={submitting || submitSucceeded}
+                            floatingLabelText={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
+                            fullwidth
+                            name="collections"
+                            required
+                            validate={[validation.requiredList]}
+                            {...locale.components.selectField.collection}
+                        />
+                    </Grid>
+                )}
                 <Grid item xs={12} sm={6}>
                     <Button
                         aria-label={txt.copyToOrRemoveFromCollectionForm.formLabels.cancelButtonLabel}
@@ -114,7 +126,9 @@ export const CopyToOrRemoveFromCollectionForm = ({
                         children={txt.copyToOrRemoveFromCollectionForm.formLabels.submitButtonLabel}
                         color="primary"
                         data-testid={`${idText}-collection-submit`}
-                        disabled={submitting || disableSubmit || submitSucceeded || !!alertUser}
+                        disabled={
+                            submitting || disableSubmit || submitSucceeded || !!alertUser || !!hasACollectionSelected
+                        }
                         fullWidth
                         id={`${idText}-collection-submit`}
                         onClick={handleSubmit}

@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Chip from '@material-ui/core/Chip';
 import { makeStyles } from '@material-ui/core/styles';
 import { sanitiseId } from 'helpers/general';
+import { handleKeyboardPressActivate } from 'helpers/general';
 
 const useStyles = makeStyles(theme => ({
     chip: {
@@ -22,18 +23,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
     const classes = useStyles();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDeleteKeyword = React.useCallback(() => onKeywordDelete(keyword), [keyword]);
-    const handleKeywordKeyboardPress = key => {
-        key.preventDefault();
-        if (
-            key.code.toLowerCase() !== 'space' &&
-            key.code.toLowerCase() !== 'enter' &&
-            key.code.toLowerCase() !== 'numpadenter'
-        ) {
-            return;
-        }
 
-        handleDeleteKeyword();
-    };
     const idValue = sanitiseId(`journal-search-chip-${keyword.type}-${keyword.text}`);
     return (
         <Chip
@@ -54,7 +44,7 @@ export const SelectedKeywordItem = ({ onKeywordDelete, keyword }) => {
             aria-label={`${keyword.type.toLowerCase()} '${
                 keyword.text
             }' filter, to remove press the backspace or delete keyboard`}
-            onKeyPress={handleKeywordKeyboardPress}
+            onKeyPress={key => handleKeyboardPressActivate(key, handleDeleteKeyword)}
             onDelete={handleDeleteKeyword}
         />
     );

@@ -118,7 +118,8 @@ export default {
         // Collection form validations
         communityID: 'You must select a community',
         collection_pid: 'You must select a collection',
-        collections: 'You must select atleast one collection',
+        collections: 'You must select at least one collection',
+        communities: 'You must select at least one community',
         doc_type_id: 'You must select a document type',
         directory: 'You must select a directory',
         title: 'Title is required',
@@ -130,5 +131,6 @@ export default {
         rek_ands_collection_type: 'Dataset collection type is required',
         rek_date_available: 'Invalid year',
         rek_project_start_date: 'Project start date is required',
+        rek_security_policy: 'Security policy is required',
     },
 };

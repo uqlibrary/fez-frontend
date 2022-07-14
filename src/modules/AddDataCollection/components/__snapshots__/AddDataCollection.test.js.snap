@@ -486,7 +486,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "creators-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Creator's name as published",
                     },
                   },
                   "header": Object {
@@ -2098,7 +2098,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "creators-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Creator's name as published",
                     },
                   },
                   "header": Object {
@@ -3706,7 +3706,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "creators-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Creator's name as published",
                     },
                   },
                   "header": Object {
@@ -5314,7 +5314,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       "identifierLabel": "UQ identifier (if available)",
                       "nameAsPublishedFieldId": "creators-name-as-published-field",
                       "nameAsPublishedHint": "Type the name exactly as published",
-                      "nameAsPublishedLabel": "Enter each creator's name as published (eg. Smith, John)",
+                      "nameAsPublishedLabel": "Creator's name as published",
                     },
                   },
                   "header": Object {

@@ -20,9 +20,11 @@ export const UQ_FULL_NAME = 'The University of Queensland';
 
 // URLS - values are set in webpack build
 export const STAGING_URL = 'https://fez-staging.library.uq.edu.au/';
+export const DEVELOPMENT_DOMAIN = 'development.library.uq.edu.au';
 export const API_URL = process.env.API_URL || 'https://api.library.uq.edu.au/staging/';
 export const APP_URL = process.env.APP_URL || STAGING_URL;
 export const IS_PRODUCTION = API_URL.indexOf('staging') === -1;
+export const IS_DEVELOPMENT_SERVER = !process.env.USE_MOCK && APP_URL.indexOf(DEVELOPMENT_DOMAIN) > -1;
 
 export const AUTH_URL_LOGIN = process.env.AUTH_LOGIN_URL || 'https://fez-staging.library.uq.edu.au/login.php';
 export const AUTH_URL_LOGOUT = process.env.AUTH_LOGOUT_URL || 'https://auth.library.uq.edu.au/logout';
@@ -37,6 +39,9 @@ export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${get
 export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
 )}v=3.exp&libraries=geometry,drawing,places`;
+
+// convenience method to return an image via require() with a leading / where necessary
+export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${imagePath}`;
 
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -242,7 +247,7 @@ const CREATIVE_WORK_NTRO_SUBTYPES = [
     ...CPEE_NTRO_SUBTYPES,
 ];
 
-const RESEARCH_REPORT_NTRO_SUBTYPES = [
+export const NTRO_RESEARCH_REPORT_SUBTYPES = [
     NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
     NTRO_SUBTYPE_RREB_INDUSTRY,
     NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT,
@@ -252,7 +257,7 @@ const RESEARCH_REPORT_NTRO_SUBTYPES = [
 export const NTRO_SUBTYPES = [
     NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
     ...CREATIVE_WORK_NTRO_SUBTYPES,
-    ...RESEARCH_REPORT_NTRO_SUBTYPES,
+    ...NTRO_RESEARCH_REPORT_SUBTYPES,
 ];
 
 export const NTRO_SUBTYPES_CATEGORY_CODE = {
@@ -521,7 +526,7 @@ export const publicationTypes = (components, isAdmin = false) => ({
         formComponent: components ? components.ResearchReportForm : null,
         citationComponent: components ? components.ResearchReportCitation : null,
         hasFormComponent: true,
-        subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
+        subtypes: [...NTRO_RESEARCH_REPORT_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
     },
     [PUBLICATION_TYPE_SEMINAR_PAPER]: {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
@@ -1266,6 +1271,7 @@ export const LANGUAGE = [
 ];
 
 export const PATH_PREFIX = !process.env.USE_MOCK && process.env.NODE_ENV === 'development' ? '#/' : '';
+export const DELETE_SELECTED_RECORD_LABEL = 'Delete selected record';
 
 export const RECORD_ACTION_URLS = [
     {
@@ -1299,7 +1305,7 @@ export const RECORD_ACTION_URLS = [
         isDoi: true,
     },
     {
-        label: 'Delete selected record',
+        label: DELETE_SELECTED_RECORD_LABEL,
         url: pid => `${APP_URL}${PATH_PREFIX}admin/delete/${pid}`,
         inApp: true,
         showInDeleted: false,
@@ -1363,8 +1369,14 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
 
 export const DATA_STREAM_SECURITY_POLICIES = TOP_LEVEL_SECURITY_POLICIES;
 
+export const RECORD_TYPE_COMMUNITY_ID = 11;
+export const RECORD_TYPE_COLLECTION_ID = 9;
 export const RECORD_TYPE_COMMUNITY = 'community';
 export const RECORD_TYPE_COLLECTION = 'collection';
+export const RECORD_TYPE_LOOKUP = {
+    [RECORD_TYPE_COMMUNITY_ID]: RECORD_TYPE_COMMUNITY,
+    [RECORD_TYPE_COLLECTION_ID]: RECORD_TYPE_COLLECTION,
+};
 export const RECORD_TYPE_RECORD = 'record';
 export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_DATA_COLLECTION,
@@ -1373,6 +1385,8 @@ export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
 ];
+
+export const PUBLICATION_EXCLUDE_CITATION_TEXT_LIST = [RECORD_TYPE_COMMUNITY, RECORD_TYPE_COLLECTION];
 
 export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
     'UQ:244548',
@@ -1614,6 +1628,40 @@ export const OA_STATUS_TYPE = [
     { value: 454123, text: 'Bronze' },
 ];
 
+export const SENSITIVE_HANDLING_NOTE_OTHER_TYPE = 456860;
+export const SENSITIVE_HANDLING_NOTE_TYPE = [
+    {
+        value: 456855,
+        text:
+            'Indigenous/First Nations people should be aware that this output contains images, voices and/or names of deceased persons.',
+    },
+    {
+        value: 456856,
+        text: 'Indigenous/First Nations people should be aware that this output is about women’s business.',
+    },
+    {
+        value: 456857,
+        text: 'Indigenous/First Nations people should be aware that this output is about men’s business.',
+    },
+    {
+        value: 456858,
+        text:
+            'Assessors should be aware that this output contains content related to any of the following: violence, ' +
+            'family or domestic violence, self-harm, sexual assault, suicide, family child removal, refugee experiences, ' +
+            'war survivor experiences or other traumatic experiences that may be distressing or harmful to some people.',
+    },
+    {
+        value: 456859,
+        text:
+            'Assessors should be aware that this output contains content with explicit language, hate speech, nudity or ' +
+            'sexuality, or drug use which may be confronting and potentially distressing to some people.',
+    },
+    {
+        value: SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+        text: 'Other',
+    },
+];
+
 export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
 export const ANDS_COLLECTION_TYPE_DATASET = 453616;
 export const ANDS_COLLECTION_TYPE_OPTIONS = [
@@ -1641,6 +1689,7 @@ export const PLACEHOLDER_ISO8601_DATE = '1000-01-01 00:00:00';
 export const THESIS_UPLOAD_RETRIES = 5;
 
 export const PUB_SEARCH_BULK_EXPORT_SIZE = 500;
+export const COMMUNITY_COLLECTION_BULK_EXPORT_SIZE = 500;
 export const MY_RECORDS_BULK_EXPORT_SIZE = 1000;
 export const PUB_LIST_BULK_EXPORT_SIZES = [PUB_SEARCH_BULK_EXPORT_SIZE, MY_RECORDS_BULK_EXPORT_SIZE];
 
@@ -1702,3 +1751,9 @@ export const BULK_DELETE_AUTHOR_NOT_FOUND = 'Author not found';
 export const BULK_DELETE_AUTHOR_LINKED_WORKS = 'Cannot delete author with linked works';
 
 export const SCOPUS_INGESTED_AUTHORS = 'SCOPUS_INGESTED_AUTHORS';
+
+export const COLLECTION_VIEW_TYPE = [
+    { id: 456849, value: 'auto', label: 'Auto' },
+    { id: 456850, value: 'standard', label: 'Standard' },
+    { id: 456851, value: 'image-gallery', label: 'Image Gallery' },
+];

@@ -114,6 +114,8 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
+        md={9}
+        sm={11}
         xs={10}
       >
         <WithStyles(ForwardRef(Grid))
@@ -124,6 +126,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
+            sm={5}
             xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
@@ -164,7 +167,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={5}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -203,7 +206,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={4}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -245,6 +248,8 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
+        md={3}
+        sm={1}
         xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
@@ -385,7 +390,9 @@ exports[`GrantListEditorRow should render default view 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           alignContent="center"
@@ -395,7 +402,8 @@ exports[`GrantListEditorRow should render default view 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
@@ -435,7 +443,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -474,7 +482,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -516,7 +524,9 @@ exports[`GrantListEditorRow should render default view 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
@@ -657,7 +667,9 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           alignContent="center"
@@ -667,7 +679,8 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
@@ -709,7 +722,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -748,7 +761,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -790,7 +803,9 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
@@ -937,7 +952,9 @@ exports[`GrantListEditorRow should render given locale 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           alignContent="center"
@@ -947,7 +964,8 @@ exports[`GrantListEditorRow should render given locale 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
@@ -987,7 +1005,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -1026,7 +1044,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -1068,7 +1086,9 @@ exports[`GrantListEditorRow should render given locale 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
@@ -1214,7 +1234,9 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
     >
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={9}
+        md={9}
+        sm={11}
+        xs={10}
       >
         <WithStyles(ForwardRef(Grid))
           alignContent="center"
@@ -1224,7 +1246,8 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
         >
           <WithStyles(ForwardRef(Grid))
             item={true}
-            xs={5}
+            sm={5}
+            xs={12}
           >
             <WithStyles(ForwardRef(ListItemText))
               disableTypography={true}
@@ -1264,7 +1287,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
           >
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={4}
+              sm={3}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -1303,7 +1326,7 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
             </WithStyles(ForwardRef(Grid))>
             <WithStyles(ForwardRef(Grid))
               item={true}
-              xs={3}
+              sm={4}
             >
               <WithStyles(ForwardRef(ListItemText))
                 disableTypography={true}
@@ -1345,7 +1368,9 @@ exports[`GrantListEditorRow should show confirmation box 1`] = `
       </WithStyles(ForwardRef(Grid))>
       <WithStyles(ForwardRef(Grid))
         item={true}
-        xs={3}
+        md={3}
+        sm={1}
+        xs={2}
       >
         <WithStyles(ForwardRef(ListItemSecondaryAction))
           style={
