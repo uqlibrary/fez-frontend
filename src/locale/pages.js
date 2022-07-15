@@ -41,63 +41,101 @@ export default {
         },
         about: {
             children: (
-                <StandardCard noHeader>
-                    <h3>General Enquiries</h3>
-                    <p>
-                        For assistance or technical issues please email:{' '}
-                        <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
-                        <br />
-                    </p>
-                    <p>
-                        You can also view our{' '}
-                        <a
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="externalLink"
-                            title={
-                                globalLocale.global.linkWillOpenInNewWindow.replace(
-                                    '[destination]',
-                                    'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
-                                ) || undefined
-                            }
-                            tabIndex="0"
-                        >
-                            <OpenInNew className="externalLinkIcon" /> online guide
-                        </a>
-                        .
-                    </p>
-                    <h3>About UQ eSpace</h3>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by:
-                    <ul>
-                        <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
-                        <li>
-                            Allowing researchers to deposit scholarly works, datasets and open access materials and to
-                            view associated metrics
-                        </li>
-                        <li>
-                            Maintaining a complete and accurate collection of all UQ scholarly works and data sets that
-                            feeds into central UQ systems including UQ Researchers and the Academic Portal
-                        </li>
-                        <li>
-                            Enabling government reporting such as Australian Research Council’s Excellence in Research
-                            for Australia and the Engagement and Impact Assessment
-                        </li>
-                        <li>Supporting the deposit of open access works to make UQ research globally accessible</li>
-                        <li>
-                            Preserving and making digitised materials accessible to the world including HDR theses,
-                            photographs, audio materials, videos, manuscripts and other original works.
-                        </li>
-                    </ul>
-                    <p>
-                        You can also read the{' '}
-                        <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">
-                            UQ eSpace Scope and Policy
-                        </a>
-                        .
-                    </p>
-                </StandardCard>
+                <React.Fragment>
+                    <StandardCard noHeader>
+                        <h3>General Enquiries</h3>
+                        <p>
+                            For assistance or technical issues please email:{' '}
+                            <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
+                            <br />
+                        </p>
+                        <p>
+                            You can also view our{' '}
+                            <a
+                                href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="externalLink"
+                                title={
+                                    globalLocale.global.linkWillOpenInNewWindow.replace(
+                                        '[destination]',
+                                        'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
+                                    ) || undefined
+                                }
+                                tabIndex="0"
+                            >
+                                <OpenInNew className="externalLinkIcon" /> online guide
+                            </a>
+                            .
+                        </p>
+                        <h3>About UQ eSpace</h3>
+                        The University of Queensland's institutional repository, UQ eSpace, aims to create global
+                        visibility and accessibility of UQ’s scholarly research by:
+                        <ul>
+                            <li>Enhancing discovery of UQ research via search engines such as Google and Trove</li>
+                            <li>
+                                Allowing researchers to deposit scholarly works, datasets and open access materials and
+                                to view associated metrics
+                            </li>
+                            <li>
+                                Maintaining a complete and accurate collection of all UQ scholarly works and data sets
+                                that feeds into central UQ systems including UQ Researchers and the Academic Portal
+                            </li>
+                            <li>
+                                Enabling government reporting such as Australian Research Council’s Excellence in
+                                Research for Australia and the Engagement and Impact Assessment
+                            </li>
+                            <li>Supporting the deposit of open access works to make UQ research globally accessible</li>
+                            <li>
+                                Preserving and making digitised materials accessible to the world including HDR theses,
+                                photographs, audio materials, videos, manuscripts and other original works.
+                            </li>
+                        </ul>
+                        <p>
+                            You can also read the{' '}
+                            <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">
+                                UQ eSpace Scope and Policy
+                            </a>
+                            .
+                        </p>
+                        <h3>Cultural Institution (CI) Notices</h3>
+                        <p>
+                            The CI Notices are for use by collecting institutions, data repositories and organizations
+                            who engage in collaborative curation with Indigenous and other marginalized communities who
+                            have been traditionally excluded from processes of documentation and record keeping. There
+                            are two Notices that can be used in these contexts: <strong>Open to Collaborate </strong>
+                            and <strong>Attribution Incomplete</strong>.
+                        </p>
+                        <div style={{ clear: 'both' }}>
+                            <img
+                                style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
+                                width={100}
+                                src={locale.components.culturalNoticeOC.imagePath}
+                                alt={locale.components.culturalNoticeOC.title}
+                            />
+
+                            <p style={{ marginLeft: 110 }}>
+                                <strong>{locale.components.culturalNoticeOC.title}: </strong>
+                                {locale.components.culturalNoticeOC.text}
+                            </p>
+                            <p style={{ marginLeft: 110 }}>{locale.components.culturalNoticeOC.description}</p>
+                        </div>
+                        <div style={{ clear: 'both' }}>
+                            <img
+                                style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
+                                width={100}
+                                src={locale.components.culturalNoticeAI.imagePath}
+                                alt={locale.components.culturalNoticeAI.title}
+                            />
+
+                            <p style={{ marginLeft: 110 }}>
+                                <strong>{locale.components.culturalNoticeAI.title}: </strong>
+                                {locale.components.culturalNoticeAI.text}
+                            </p>
+                            <p style={{ marginLeft: 110 }}>{locale.components.culturalNoticeAI.description}</p>
+                        </div>
+                    </StandardCard>
+                </React.Fragment>
             ),
         },
         browse: {
