@@ -28,8 +28,9 @@ if [[ -z $CI_BRANCH ]]; then
   CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 fi
 
-# Not running code coverage check for feature branches.
 # (Putting * around the test-string gives a test for inclusion of the substring rather than exact match)
+
+# Not running code coverage check for feature branches.
 CODE_COVERAGE_REQUIRED=false
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
@@ -37,10 +38,10 @@ fi
 
 export TZ='Australia/Brisbane'
 
-# dont run cypress tests if the branch name includes 'nocypress'
-CYPRESS_TESTS_REQUIRED=true
-if [[ $CI_BRANCH == *"nocypress"* ]]; then
-    CYPRESS_TESTS_REQUIRED=false
+# Run cypress tests only on certain branches
+CYPRESS_TESTS_REQUIRED=false
+if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
+    CYPRESS_TESTS_REQUIRED=true
 fi
 
 if [[ -z $PIPE_NUM ]]; then
@@ -148,7 +149,7 @@ case "$PIPE_NUM" in
         exit 1
     fi
 
-    # Setting this after codestyle checks so that this script doesn't exit before list of failures can be printed above.
+    # Set this after the codestyle checks above, so that this script doesn't exit before any failures can be printed
     set -e
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
