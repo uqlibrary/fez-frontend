@@ -615,9 +615,11 @@ const publicationTypeListBookChapter = {
             ],
             "fez_record_search_key_significance": [
                 {
+                    "rek_significance_id": 1236645,
                     "rek_significance": 0,
                 },
                 {
+                    "rek_significance_id": 1236646,
                     "rek_significance": 454027,
                     "rek_significance_lookup": "Minor"
                 }

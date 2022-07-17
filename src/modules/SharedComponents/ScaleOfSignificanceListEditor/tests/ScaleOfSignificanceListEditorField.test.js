@@ -1,4 +1,4 @@
-import ScaleOfSignificanceListEditorField from './ScaleOfSignificanceListEditorField';
+import ScaleOfSignificanceListEditorField from '../ScaleOfSignificanceListEditorField';
 
 describe('ScaleOfSignificanceListEditorField function', () => {
     it('should return <ScaleOfSignificanceListEditor>', () => {
@@ -7,7 +7,7 @@ describe('ScaleOfSignificanceListEditorField function', () => {
     });
 
     it('should return <ScaleOfSignificanceListEditor> with error attributes', () => {
-        const props = { input: { onChange: jest.fn() }, meta: { error: 'test' } };
+        const props = { input: { onChange: jest.fn() }, meta: { errorText: 'test' } };
         expect(ScaleOfSignificanceListEditorField(props)).toMatchSnapshot();
     });
 });

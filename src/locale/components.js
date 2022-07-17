@@ -903,6 +903,8 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator contribution statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
+                        editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
+                        addEntryButton: 'Add entry',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -948,6 +950,8 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator research statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        resetFormLabel: 'Cancel',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -957,7 +961,7 @@ export default {
                 },
                 header: {
                     locale: {
-                        nameColumn: 'Scale/significance of work - Creator research statement',
+                        nameColumn: 'Author - Scale/significance of work - Creator research statement',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -979,6 +983,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
+                        editHint: 'Edit this item',
                     },
                 },
             },
