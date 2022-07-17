@@ -28,24 +28,76 @@ if [[ -z $CI_BRANCH ]]; then
   CI_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 fi
 
+# (Putting * around the test-string gives a test for inclusion of the substring rather than exact match)
+
 # Not running code coverage check for feature branches.
-BRANCH_INCLUDES_CC=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"* || $CI_BRANCH == "feature-strategic-publishing") ]]; then
-    BRANCH_INCLUDES_CC=true
+CODE_COVERAGE_REQUIRED=false
+if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
+    CODE_COVERAGE_REQUIRED=true
 fi
 
 export TZ='Australia/Brisbane'
 
-# Run e2e tests if in master branch, or if the branch name includes 'cypress'
-# Putting * around the test-string gives a test for inclusion of the substring rather than exact match
-BRANCH_RUNS_E2E=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* || $CI_BRANCH == "feature-strategic-publishing" ]]; then
-    BRANCH_RUNS_E2E=true
+# Run cypress tests only on certain branches
+CYPRESS_TESTS_REQUIRED=false
+if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
+    CYPRESS_TESTS_REQUIRED=true
 fi
 
 if [[ -z $PIPE_NUM ]]; then
   PIPE_NUM=1
 fi
+
+function checkCoverage {
+     npm run cc:reportAll
+
+     # four instances of `<span class="strong">100% </span>` indicates 100% code coverage
+     ls -la coverage/index.html
+
+     grep -c class=\"strong\"\>100\% coverage/index.html
+
+     NUM_FULL_COVERAGE=$(grep -c class=\"strong\"\>100\% coverage/index.html)
+     echo "full coverage count = ${NUM_FULL_COVERAGE} (wanted: 4)"
+     if [[ $NUM_FULL_COVERAGE == 4 ]]; then
+         echo "Coverage 100%";
+         echo ""
+         echo '            ,-""-.'
+         echo "           :======:"
+         echo "           :======:"
+         echo "            '-..-"
+         echo "              ||"
+         echo "            _,  --.    _____"
+         echo "           \(/ __   '._|"
+         echo "          ((_/_)\     |"
+         echo "           (____)'.___|"
+         echo "            (___)____.|_____"
+         echo "Human, your code coverage was found to be satisfactory. Great job!"
+     else
+         echo "                     ____________________"
+         echo "                    /                    \ "
+         echo "                    |      Coverage       | "
+         echo "                    |      NOT 100%       | "
+         echo "                    \____________________/ "
+         echo "                             !  !"
+         echo "                             !  !"
+         echo "                             L_ !"
+         echo "                            / _)!"
+         echo "                           / /__L"
+         echo "                     _____/ (____)"
+         echo "                            (____)"
+         echo "                     _____  (____)"
+         echo "                          \_(____)"
+         echo "                             !  !"
+         echo "                             !  !"
+         echo "                             \__/"
+         echo ""
+         echo "            Human, your code coverage was found to be lacking... Do not commit again until it is fixed."
+         # show actual coverage numbers
+         grep -A 2 class=\"strong\"\> coverage/index.html
+         echo "Run your tests locally with npm run test:cc then load coverage/index.html to determine where the coverage gaps are"
+         exit 1;
+     fi;
+}
 
 case "$PIPE_NUM" in
 "1")
@@ -55,18 +107,27 @@ case "$PIPE_NUM" in
     printf "Jest v"; jest --version
 
     # Running in series with `runInBand` to avoid CodeShip VM running out of memory
-    if [[ $BRANCH_INCLUDES_CC == true ]]; then
-        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-        npm run test:unit:ci1
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        printf "(Build of feature branch \"$CI_BRANCH\" INCLUDES code coverage check)\n"
+
+        printf "\n--- \e[1mRUNNING JEST UNIT TESTS for code coverage\e[0m ---\n"
+        npm run test:unit:ci
+
+        printf "\n--- \e[1mRUNNING CYPRESS TESTS for code coverage check\e[0m ---\n"
+        npm run test:e2e:cc
+
+        checkCoverage
     else
         printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
-        npm run test:unit:ci1:skipcoverage
-    fi
 
-    # Second runner for e2e. The first one is in the other pipeline.
-    if [[ $BRANCH_RUNS_E2E == true ]]; then
-        printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-        npm run test:e2e:dashboard
+        printf "\n--- \e[1mRUNNING JEST UNIT TESTS (pipeline 1, no code coverage)\e[0m ---\n"
+        npm run test:unit:ci1:skipcoverage
+
+        # Second runner for e2e. The first one is in the other pipeline.
+        if [[ $CYPRESS_TESTS_REQUIRED == true ]]; then
+          printf "\n--- \e[1mRUNNING CYPRESS TESTS (pipeline 1, no code coverage)\e[0m ---\n"
+            npm run test:e2e:dashboard
+        fi
     fi
 
 ;;
@@ -88,35 +149,34 @@ case "$PIPE_NUM" in
         exit 1
     fi
 
-    # Setting this after codestyle checks so that script doesn't exist before list of failures can be printed above.
+    # Set this after the codestyle checks above, so that this script doesn't exit before any failures can be printed
     set -e
 
-    printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
-    printf "Jest v"; jest --version
-
-    if [[ $BRANCH_INCLUDES_CC == true ]]; then
-        printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-        npm run test:unit:ci2
+    if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
+        printf "(Build of feature branch \"$CI_BRANCH\" INCLUDES code coverage check - at least for the moment, all tests run in other pipeline)\n"
     else
         printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
+
+        printf "\n--- \e[1mRUNNING JEST UNIT TESTS (pipeline 2, no code coverage)\e[0m ---\n"
+        printf "Jest v"; jest --version
         npm run test:unit:ci2:skipcoverage
-    fi
 
-    if [[ $BRANCH_RUNS_E2E == true ]]; then
-        printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
-        # Use this variant to only run tests locally in Codeship.
-        # Turn off the e2e tests in other pipeline(s) when using this.
-        # npm run test:e2e
+        if [[ $CYPRESS_TESTS_REQUIRED == true ]]; then
+            printf "\n--- \e[1mRUNNING CYPRESS TESTS (pipeline 2, no code coverage)\e[0m ---\n"
+            # Use this variant to only run tests locally in Codeship.
+            # Turn off the e2e tests in other pipeline(s) when using this.
+            # npm run test:e2e
 
-        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-        npm run test:e2e:dashboard
+            # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+            npm run test:e2e:dashboard
+        fi
     fi
 ;;
 *)
     set -e
 
     # Additional dynamic pipelines for e2e tests
-    if [[ $BRANCH_RUNS_E2E == true ]]; then
+    if [[ $CYPRESS_TESTS_REQUIRED == true ]]; then
         printf "\n--- \e[1mRUNNING E2E TESTS\e[0m ---\n"
         npm run test:e2e:dashboard
     fi

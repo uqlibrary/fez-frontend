@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import RichEditor from 'modules/SharedComponents/RichEditor/components/RichEditor';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 
@@ -18,33 +18,59 @@ export const handleSignificanceCallbackFactory = setSignificance => {
     return [callback, [setSignificance]];
 };
 
-export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance) => {
+export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance, showForm) => {
     const callback = () => {
         setSignificance(null);
         contributionStatementEditor.current.setData(null);
+        showForm(false);
     };
     return [callback, [contributionStatementEditor, setSignificance]];
 };
 
-export const addItemCallbackFactory = (disabled, significance, contributionStatement, onAdd, resetForm) => {
+export const saveCallbackFactory = (disabled, significance, contributionStatement, saveChangeToItem, resetForm) => {
     const callback = event => {
         // add item if user hits 'enter' key on input field
+        /* istanbul ignore next */
         if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
+            /* istanbul ignore next */
             return;
         }
         // pass on the selected item
-        onAdd({ key: significance, value: contributionStatement });
+        saveChangeToItem({ key: significance, value: contributionStatement });
         resetForm();
         // move focus to name as published text field after item was added
     };
-    return [callback, [disabled, significance, contributionStatement, onAdd, resetForm]];
+    return [callback, [disabled, significance, contributionStatement, saveChangeToItem, resetForm]];
 };
 
-export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) => {
+export const ScaleOfSignificanceForm = ({
+    disabled,
+    locale,
+    errorText,
+    saveChangeToItem,
+    showForm,
+    formMode,
+    itemIndexSelectedToEdit,
+    itemSelectedToEdit,
+    buttonLabel,
+    input,
+}) => {
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
+
+    React.useEffect(() => {
+        if (itemIndexSelectedToEdit !== null && formMode === 'edit') {
+            setSignificance(itemSelectedToEdit.key);
+            setContributionStatement(itemSelectedToEdit.value);
+            contributionStatementEditor.current.setData(itemSelectedToEdit.value.htmlText);
+        } else {
+            setSignificance(null);
+            setContributionStatement('');
+            contributionStatementEditor.current.setData('');
+        }
+    }, [itemIndexSelectedToEdit, itemSelectedToEdit, formMode]);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleContributionStatement = useCallback(
@@ -53,48 +79,52 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance));
+    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance, showForm));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const addItem = useCallback(
-        ...addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm),
+    const saveChanges = useCallback(
+        ...saveCallbackFactory(disabled, significance, contributionStatement, saveChangeToItem, resetForm),
     );
 
     const {
         significanceInputFieldLabel,
-        significanceInputFieldHint,
         contributionStatementInputFieldLabel,
-        addButtonLabel,
+        resetFormLabel,
         id,
         authorOrderAlert,
     } = locale;
 
+    const isValidSignificance = sig => !!sig;
+
+    const isValidStatement = statement => !!statement?.plainText?.trim();
+
     return (
-        <Grid container spacing={2} display="row" alignItems="center">
-            <Grid item xs={12}>
-                <Alert {...authorOrderAlert} />
-            </Grid>
+        <Grid container spacing={2} display="row" alignItems="center" data-testid="rek-significance-form">
+            {!!authorOrderAlert && (
+                <Grid item xs={12}>
+                    <Alert {...authorOrderAlert} />
+                </Grid>
+            )}
             <Grid item style={{ flexGrow: 1 }} xs={12}>
                 <NewGenericSelectField
-                    fullWidth
-                    name="key"
                     genericSelectFieldId="rek-significance"
                     label={significanceInputFieldLabel}
-                    placeholder={significanceInputFieldHint}
                     onChange={handleSignificance}
-                    error={!!errorText}
                     disabled={disabled}
-                    value={significance}
+                    error={!!errorText || !isValidSignificance(significance)}
+                    errorText={errorText}
+                    value={significance || null}
                     itemsList={SIGNIFICANCE}
+                    required
                 />
             </Grid>
             <Grid item xs={12}>
-                <RichEditor
+                <RichEditorField
                     fullWidth
                     richEditorId="rek-creator-contribution-statement"
                     name="value"
-                    id={(!!id && id) || ''}
+                    id={(!!id && /* istanbul ignore next */ id) || ''}
                     onChange={handleContributionStatement}
-                    onKeyPress={addItem}
+                    onKeyPress={saveChanges}
                     error={!!errorText}
                     disabled={disabled}
                     inputRef={contributionStatementInput}
@@ -106,18 +136,34 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
                             opacity: 0.666,
                         },
                     }}
+                    value={formMode === 'edit' && !!contributionStatement ? contributionStatement : ''}
+                    input={input}
+                    required
                 />
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={9}>
                 <Button
                     fullWidth
                     id="add-items"
                     data-testid="rek-significance-add"
                     color="primary"
                     variant="contained"
-                    children={addButtonLabel}
+                    children={buttonLabel}
+                    disabled={
+                        disabled || !isValidSignificance(significance) || !isValidStatement(contributionStatement)
+                    }
+                    onClick={saveChanges}
+                />
+            </Grid>
+            <Grid item xs={3}>
+                <Button
+                    fullWidth
+                    id="clear-items"
+                    data-testid="rek-significance-clear"
+                    variant="contained"
+                    children={resetFormLabel}
                     disabled={disabled}
-                    onClick={addItem}
+                    onClick={resetForm}
                 />
             </Grid>
         </Grid>
@@ -125,10 +171,16 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
 };
 
 ScaleOfSignificanceForm.propTypes = {
-    onAdd: PropTypes.func.isRequired,
-    locale: PropTypes.object,
+    buttonLabel: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     errorText: PropTypes.string,
+    formMode: PropTypes.string,
+    input: PropTypes.any,
+    itemIndexSelectedToEdit: PropTypes.any,
+    itemSelectedToEdit: PropTypes.object,
+    locale: PropTypes.object,
+    saveChangeToItem: PropTypes.func.isRequired,
+    showForm: PropTypes.func.isRequired,
 };
 
 export default React.memo(ScaleOfSignificanceForm);

@@ -70,8 +70,8 @@ import {
     ListEditorField,
     NewListEditorField,
     KeywordsForm,
-    ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/ScaleOfSignificanceListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -1002,6 +1002,7 @@ export default {
                 label: 'Scale/significance of work - Contribution statement',
                 placeholder: '',
                 locale: locale.components.scaleOfSignificanceListAdminForm.field,
+                canEdit: true,
             },
         },
         qualityIndicators: {
