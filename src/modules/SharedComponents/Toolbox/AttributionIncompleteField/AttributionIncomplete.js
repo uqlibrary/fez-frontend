@@ -57,7 +57,6 @@ export class AttributionIncomplete extends PureComponent {
 
 export const styles = () => ({
     root: {
-        alignItems: 'flex-start',
         margin: 0,
     },
     label: {

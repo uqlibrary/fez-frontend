@@ -2,12 +2,12 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    culturalInstitutionNotice: () => [
-        {
-            title: 'Attribution Incomplete Marker',
-            groups: [['culturalInstitutionNotice']],
-        },
-    ],
+    // culturalInstitutionNotice: () => [
+    //     {
+    //         title: 'Attribution Incomplete Marker',
+    //         groups: [['culturalInstitutionNotice']],
+    //     },
+    // ],
     bibliographic: ({ isLote = false }) => [
         {
             title: 'Title',
@@ -103,6 +103,10 @@ export default {
                 ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
                 ['fez_record_search_key_license'],
             ],
+        },
+        {
+            title: 'Cultural Institute (CI) Notice',
+            groups: [['attributionIncomplete']],
         },
     ],
     ntro: () => [

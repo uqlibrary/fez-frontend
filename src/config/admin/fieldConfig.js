@@ -270,10 +270,10 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
-        culturalInstitutionNotice: {
+        attributionIncomplete: {
             component: AttributionIncompleteField,
             componentProps: {
-                name: 'culturalInstitutionNoticeSection.culturalInstitutionNotice',
+                name: 'adminSection.attributionIncomplete',
                 label: 'Attribution Incomplete',
                 placeholder: 'Attribution Incomplete Placeholder',
                 attributionIncompleteFieldId: 'rek_attribution_incomplete',
