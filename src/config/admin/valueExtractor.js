@@ -252,6 +252,7 @@ export default {
     fez_record_search_key_collection_view_type: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_collection_view_type'),
     },
+
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
@@ -613,6 +614,12 @@ export default {
         getValue: () => [],
     },
     reason: {
+        getValue: () => '',
+    },
+    attributionIncomplete: {
+        getValue: () => '',
+    },
+    culturalInstitutionNotice: {
         getValue: () => '',
     },
     fez_datastream_info: {

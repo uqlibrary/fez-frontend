@@ -1415,6 +1415,14 @@ export const getReasonSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const getCulturalInstitutionNoticeSectionSearchKeys = (data = {}) => {
+    const { culturalInstitutionNotice } = data;
+    return {
+        ...(!!culturalInstitutionNotice
+            ? { attributionIncomplete: culturalInstitutionNotice.attributionIncomplete }
+            : {}),
+    };
+};
 export const getChangeSearchKeyValues = (records, data) => {
     const { search_key: searchKey } = data;
     const [primaryKey, subKey] = searchKey.split('.');

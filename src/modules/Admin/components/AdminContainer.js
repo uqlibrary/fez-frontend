@@ -31,6 +31,7 @@ import GrantInformationSection from './grantInformation/GrantInformationSectionC
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import NotesSection from './notes/NotesSection';
 import ReasonSection from './reason/ReasonSection';
+import CulturalInstitutionNoticeSection from './culturalInstitutionNotice/CulturalInstitutionNoticeSection';
 import NtroSection from './ntro/NtroSectionContainer';
 import SecuritySection from './security/SecuritySectionContainer';
 import { RecordContext, TabbedContext } from 'context';
@@ -201,6 +202,7 @@ export const AdminContainer = ({
                                             ),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
+                                    /* it would go here or something */
                                     bibliographic: {
                                         component: BibliographicSection,
                                         activated:
@@ -209,6 +211,10 @@ export const AdminContainer = ({
                                                 recordToView && recordToView.rek_object_type_lookup?.toLowerCase(),
                                             ),
                                         numberOfErrors: tabErrors.current.bibliographicSection || null,
+                                    },
+                                    culturalInstitutionNotice: {
+                                        component: CulturalInstitutionNoticeSection,
+                                        activated: isActivated(),
                                     },
                                     authors: {
                                         component: AuthorsSection,
@@ -258,6 +264,7 @@ export const AdminContainer = ({
                                         component: SecuritySection,
                                         activated: !createMode, // true,
                                     },
+
                                     reason: {
                                         component: ReasonSection,
                                         activated:

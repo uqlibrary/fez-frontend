@@ -1092,6 +1092,9 @@ export default {
                 reason: {
                     title: 'Reason for Edit',
                 },
+                culturalInstitutionNotice: {
+                    title: 'Cultural Institution (CI) Notice',
+                },
             },
             help: {
                 tooltip: 'Learn about keyboard shortcuts',

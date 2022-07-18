@@ -38,6 +38,12 @@ export default {
             groups: [['reason']],
         },
     ],
+    attributionIncomplete: () => [
+        {
+            title: 'Attribution Incomplete Marker',
+            groups: [['attributionIncomplete']],
+        },
+    ],
 };
 
 export const validateCollection = () => ({});

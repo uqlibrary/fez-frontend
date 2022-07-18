@@ -25,6 +25,9 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
+    console.log('RECORD', record);
+    console.log('TAB', tab);
+
     if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
@@ -48,6 +51,7 @@ const getInitialFormValues = (recordToView, recordType) => {
         initialValues: {
             pid: recordToView.rek_pid,
             publication: recordToView,
+            rek_requires_attribution: false,
             rek_display_type: recordToView.rek_display_type,
             rek_date: recordToView.rek_date || recordToView.rek_created_date,
             identifiersSection:
@@ -68,6 +72,10 @@ const getInitialFormValues = (recordToView, recordType) => {
                       }
                     : []),
             },
+            culturalInstitutionNoticeSection:
+                ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
+                    getInitialValues(recordToView, 'culturalInstitutionNotice')) ||
+                {},
             bibliographicSection:
                 ((recordType === RECORD_TYPE_RECORD ||
                     recordType === RECORD_TYPE_COMMUNITY ||

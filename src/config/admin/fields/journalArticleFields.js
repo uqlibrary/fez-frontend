@@ -2,6 +2,12 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
+    culturalInstitutionNotice: () => [
+        {
+            title: 'Attribution Incomplete Marker',
+            groups: [['culturalInstitutionNotice']],
+        },
+    ],
     bibliographic: ({ isLote = false }) => [
         {
             title: 'Title',
@@ -78,6 +84,7 @@ export default {
             groups: [['authors']],
         },
     ],
+
     admin: () => [
         {
             title: 'Member of collections',
