@@ -50,10 +50,19 @@
   }
 
   &.tklabel {
-vertical-align: middle;
+    vertical-align: middle;
+    display: inline-block;
+    width: 88px;
+    height: auto;
+    aspect-ratio: 1;
+
+    &.cc-by-nc-nd{
+      background-position:centre centre;
+      background-repeat: no-repeat;
+      background-size:contain;
+    }
     &.cc-by-nc-nd::before{
-      content: url(../../src/images/tklabels/tk_label_a.png);
-      zoom: 20%;
+      content: '';
     }
   }
 

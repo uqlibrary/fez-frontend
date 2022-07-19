@@ -692,7 +692,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 xs={12}
               >
                 <Field
-                  ariaLabel="Please elect a license"
+                  ariaLabel="Please select a license"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -2304,7 +2304,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 xs={12}
               >
                 <Field
-                  ariaLabel="Please elect a license"
+                  ariaLabel="Please select a license"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -3912,7 +3912,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 xs={12}
               >
                 <Field
-                  ariaLabel="Please elect a license"
+                  ariaLabel="Please select a license"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),
@@ -5520,7 +5520,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 xs={12}
               >
                 <Field
-                  ariaLabel="Please elect a license"
+                  ariaLabel="Please select a license"
                   component={
                     Object {
                       "$$typeof": Symbol(react.memo),

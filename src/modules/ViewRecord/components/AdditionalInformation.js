@@ -156,7 +156,6 @@ export class AdditionalInformationClass extends PureComponent {
     // render a single object (without order field)
     renderObject = (object, subkey) => {
         const data = this.getData(object, subkey);
-
         // date fields
         if (viewRecordsConfig.dateFields.includes(subkey)) {
             return formatDate(data, viewRecordsConfig.dateFieldFormat[subkey]);
@@ -188,7 +187,7 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
             case 'rek_tk_label':
-                return this.renderTraditionalKnowledgeLabel(object[subkey], data);
+                return this.renderTraditionalKnowledgeLabel(object[subkey], data, object);
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -262,7 +261,7 @@ export class AdditionalInformationClass extends PureComponent {
             </span>
         );
     };
-    renderTraditionalKnowledgeLabel = (cvoId, lookup) => {
+    renderTraditionalKnowledgeLabel = (cvoId, lookup, data) => {
         const tkLabelLookup = this.renderLink(pathConfig.list.license(lookup), lookup, 'rek_tk_label_lookup');
         const tkLabelLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
         const uqTkLabelLinkText =
@@ -271,14 +270,23 @@ export class AdditionalInformationClass extends PureComponent {
                 : null;
         // TODO - REMOVE THIS BODGE
         tkLabelLink.url = 'https://localcontexts.org/label/tk-attribution/';
+        const tkLabelImageUrl = data.rek_tk_label_image_url ?? '';
         return (
             <span>
-                {tkLabelLookup}
                 {tkLabelLink && (
-                    <ExternalLink href={tkLabelLink.url} openInNewIcon={!!uqTkLabelLinkText} id="rek-tk-label">
-                        {uqTkLabelLinkText || <div className={`fez-icon tklabel ${tkLabelLink.className}`} />}
-                    </ExternalLink>
+                    <>
+                        <ExternalLink href={tkLabelLink.url} openInNewIcon={!!uqTkLabelLinkText} id="rek-tk-label">
+                            {uqTkLabelLinkText || (
+                                <div
+                                    className={`fez-icon tklabel ${tkLabelLink.className}`}
+                                    style={{ backgroundImage: `url(${tkLabelImageUrl})` }}
+                                />
+                            )}
+                        </ExternalLink>
+                        <br />
+                    </>
                 )}
+                {tkLabelLookup}
             </span>
         );
     };
@@ -374,6 +382,8 @@ export class AdditionalInformationClass extends PureComponent {
             fez_record_search_key_tk_label: {
                 rek_tk_label: 453611,
                 rek_tk_label_lookup: 'TK Attribution (TK A)',
+                rek_tk_label_image_url:
+                    'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png',
             },
         }; // TODO - REMOVE THIS BODGE
         const displayType = publication.rek_display_type_lookup;
