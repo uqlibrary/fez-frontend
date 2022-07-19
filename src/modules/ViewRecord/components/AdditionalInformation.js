@@ -187,6 +187,8 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
+            case 'rek_tk_label':
+                return this.renderTraditionalKnowledgeLabel(object[subkey], data);
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -255,6 +257,25 @@ export class AdditionalInformationClass extends PureComponent {
                 {licenseLink && (
                     <ExternalLink href={licenseLink.url} openInNewIcon={!!uqLicenseLinkText} id="rek-license">
                         {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
+                    </ExternalLink>
+                )}
+            </span>
+        );
+    };
+    renderTraditionalKnowledgeLabel = (cvoId, lookup) => {
+        const tkLabelLookup = this.renderLink(pathConfig.list.license(lookup), lookup, 'rek_tk_label_lookup');
+        const tkLabelLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
+        const uqTkLabelLinkText =
+            tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
+                ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
+                : null;
+
+        return (
+            <span>
+                {tkLabelLookup}
+                {tkLabelLink && (
+                    <ExternalLink href={tkLabelLink.url} openInNewIcon={!!uqTkLabelLinkText} id="rek-tk-label">
+                        {uqTkLabelLinkText || <div className={`fez-icon tklabel ${tkLabelLink.className}`} />}
                     </ExternalLink>
                 )}
             </span>
