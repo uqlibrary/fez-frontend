@@ -269,7 +269,8 @@ export class AdditionalInformationClass extends PureComponent {
             tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
                 ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
                 : null;
-
+        // TODO - REMOVE THIS BODGE
+        tkLabelLink.url = 'https://localcontexts.org/label/tk-attribution/';
         return (
             <span>
                 {tkLabelLookup}
@@ -368,7 +369,13 @@ export class AdditionalInformationClass extends PureComponent {
 
     renderColumns = () => {
         const rows = [];
-        const publication = this.props.publication;
+        const publication = {
+            ...this.props.publication,
+            fez_record_search_key_tk_label: {
+                rek_tk_label: 453611,
+                rek_tk_label_lookup: 'TK Attribution (TK A)',
+            },
+        }; // TODO - REMOVE THIS BODGE
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];

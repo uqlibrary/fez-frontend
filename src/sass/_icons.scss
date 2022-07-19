@@ -49,6 +49,14 @@
     content: url(../../src/images/creativecommons/by_nc_nd.png);
   }
 
+  &.tklabel {
+vertical-align: middle;
+    &.cc-by-nc-nd::before{
+      content: url(../../src/images/tklabels/tk_label_a.png);
+      zoom: 20%;
+    }
+  }
+
   &.cc-by-nc-sa::before {
     content: url(../../src/images/creativecommons/by_nc_sa.png);
   }
