@@ -22,6 +22,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import {
     AIATSIS_CODES_VOCAB_ID,
     FIELD_OF_RESEARCH_VOCAB_ID,
+    TK_FIELDS_VOCAB_ID,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
@@ -53,6 +54,7 @@ import {
     OrgNameField,
     RelatedDatasetAndPublicationListField,
     SeriesField,
+    TkLabelsField,
 } from 'modules/SharedComponents/LookupFields';
 import { ThesisSubtypeSelectField } from 'modules/SharedComponents/SelectFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
@@ -289,6 +291,17 @@ export default {
                 fullWidth: true,
                 validate: [validation.requiredList],
                 collectionFieldId: 'rek-ismemberof',
+            },
+        },
+        fez_record_search_key_tk_label: {
+            component: TkLabelsField,
+            componentProps: {
+                name: 'adminSection.fez_record_search_key_tk_label.rek_tk_label',
+                tkLabelsFieldId: 'rek_tk_label',
+                required: false,
+                canUnselect: true,
+                category: TK_FIELDS_VOCAB_ID,
+                ...selectFields.tkLabels,
             },
         },
         rek_subtype: {

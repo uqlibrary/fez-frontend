@@ -1,4 +1,4 @@
-import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
+import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID, TK_FIELDS_VOCAB_ID } from 'config/general';
 
 export const vocabulariesList = {
     [ORG_UNITS_VOCAB_ID]: {
@@ -5479,6 +5479,352 @@ export const vocabulariesList = {
         ],
         "filters": []
     },
+    [TK_FIELDS_VOCAB_ID]: {
+        "total": 17,
+        "data": [
+          {
+            "cvr_id": 4729,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453608,
+            "controlled_vocab": {
+              "cvo_id": 453608,
+              "cvo_title": "Creative Commons Attribution 3.0 International (CC BY 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by/3.0/deed.en_US",
+              "cvo_image_filename": "by.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4730,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453609,
+            "controlled_vocab": {
+              "cvo_id": 453609,
+              "cvo_title": "Creative Commons Attribution-NoDerivatives 3.0 International (CC BY-ND 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by-nd/3.0/deed.en_US",
+              "cvo_image_filename": "by_nd.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4731,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453610,
+            "controlled_vocab": {
+              "cvo_id": 453610,
+              "cvo_title": "Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by-nc/3.0/deed.en_US",
+              "cvo_image_filename": "by_nc.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4732,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453611,
+            "controlled_vocab": {
+              "cvo_id": 453611,
+              "cvo_title": "Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 International (CC BY-NC-ND 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US",
+              "cvo_image_filename": "by_nc_nd.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4733,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453612,
+            "controlled_vocab": {
+              "cvo_id": 453612,
+              "cvo_title": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 International (CC BY-NC-SA 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US",
+              "cvo_image_filename": "by_nc_sa.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4734,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453613,
+            "controlled_vocab": {
+              "cvo_id": 453613,
+              "cvo_title": "Creative Commons Attribution-ShareAlike 3.0 International (CC BY-SA 3.0)",
+              "cvo_desc": "http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
+              "cvo_image_filename": "by_sa.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4817,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453701,
+            "controlled_vocab": {
+              "cvo_id": 453701,
+              "cvo_title": "Permitted Re-use with Acknowledgement",
+              "cvo_desc": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+              "cvo_image_filename": "",
+              "cvo_external_id": "rdm-1",
+              "cvo_hide": 0,
+              "cvo_order": 1,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers. \r\n\r\nThe agreed form of acknowledgement is as a full citation as presented on the UQ eSpace record for this dataset.",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 4818,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 453702,
+            "controlled_vocab": {
+              "cvo_id": 453702,
+              "cvo_title": "Permitted Non-commercial Re-use with Acknowledgement",
+              "cvo_desc": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+              "cvo_image_filename": "",
+              "cvo_external_id": "",
+              "cvo_hide": 1,
+              "cvo_order": 8,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "I AGREE TO A COMMERCIAL USE RESTRICTION on this data, or data included in it and to only use this data in non-commercial endeavours, such as conference papers and published research papers.\r\nI ALSO AGREE TO ACKNOWLEDGE, using the agreed form of acknowledgement as a full citation as presented on the UQ eSpace record for this dataset.",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 5205,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 454104,
+            "controlled_vocab": {
+              "cvo_id": 454104,
+              "cvo_title": "Permitted Re-Use with Commercial Use Restriction",
+              "cvo_desc": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+              "cvo_image_filename": "",
+              "cvo_external_id": "rdm-2",
+              "cvo_hide": 0,
+              "cvo_order": 2,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 5206,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 454105,
+            "controlled_vocab": {
+              "cvo_id": 454105,
+              "cvo_title": "Permitted Re-Use with Share Alike Requirement",
+              "cvo_desc": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+              "cvo_image_filename": "",
+              "cvo_external_id": "rdm-3",
+              "cvo_hide": 0,
+              "cvo_order": 3,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7804,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456710,
+            "controlled_vocab": {
+              "cvo_id": 456710,
+              "cvo_title": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by/4.0/deed.en",
+              "cvo_image_filename": "by.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7805,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456711,
+            "controlled_vocab": {
+              "cvo_id": 456711,
+              "cvo_title": "Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+              "cvo_image_filename": "by_sa.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7806,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456712,
+            "controlled_vocab": {
+              "cvo_id": 456712,
+              "cvo_title": "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by-nd/4.0/deed.en",
+              "cvo_image_filename": "by_nd.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7807,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456713,
+            "controlled_vocab": {
+              "cvo_id": 456713,
+              "cvo_title": "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by-nc/4.0/deed.en",
+              "cvo_image_filename": "by_nc.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7808,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456714,
+            "controlled_vocab": {
+              "cvo_id": 456714,
+              "cvo_title": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en",
+              "cvo_image_filename": "by_nc_sa.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7809,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456715,
+            "controlled_vocab": {
+              "cvo_id": 456715,
+              "cvo_title": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)",
+              "cvo_desc": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en",
+              "cvo_image_filename": "by_nc_nd.png",
+              "cvo_external_id": "",
+              "cvo_hide": 0,
+              "cvo_order": null,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          },
+          {
+            "cvr_id": 7901,
+            "cvr_parent_cvo_id": 453607,
+            "cvr_child_cvo_id": 456807,
+            "controlled_vocab": {
+              "cvo_id": 456807,
+              "cvo_title": "Permitted reuse only with a Data Sharing Agreement in place between UQ and recipient",
+              "cvo_desc": "https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement",
+              "cvo_image_filename": "",
+              "cvo_external_id": "rdm-4",
+              "cvo_hide": 0,
+              "cvo_order": 4,
+              "cvo_lat": null,
+              "cvo_long": null,
+              "cvo_policy": "I AGREE TO ACKNOWLEDGE any re-use of this dataset in any research outputs where reliance is made upon it, including conference papers and published research papers.\r\n\r\nI FURTHER AGREE that my re-use of this dataset will fully comply with all terms and conditions of the Data Sharing Agreement established between myself and UQ for this purpose.\r\n\r\nThe agreed form of acknowledgement is a full citation as presented on the UQ eSpace record for this dataset.",
+              "cvo_created_at": "2022-01-19 09:09:05",
+              "cvo_updated_at": "2022-01-19 09:09:05",
+              "controlled_vocab_children": []
+            }
+          }
+        ],
+        "filters": []
+      },
     [FIELD_OF_RESEARCH_VOCAB_ID]: {
         "total": 22,
         "data": [

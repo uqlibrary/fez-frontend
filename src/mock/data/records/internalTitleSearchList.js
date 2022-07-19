@@ -86,6 +86,14 @@ const internalTitleSearchList = {
                     dsi_security_inherited: 1
                 },
             ],
+            fez_record_search_key_license: {
+                rek_license: 453610,
+                rek_license_lookup: 'Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0)',
+            },
+            fez_record_search_key_tk_label: {
+                rek_tk_label: 453611,
+                rek_tk_label_lookup: 'Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 International (CC BY-NC-ND 3.0)',
+            },
         },
         {
             rek_pid: 'UQ:342708',
@@ -581,6 +589,10 @@ const internalTitleSearchList = {
             fez_record_search_key_license: {
                 rek_license: 453610,
                 rek_license_lookup: 'Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0)',
+            },
+            fez_record_search_key_tk_label: {
+                rek_tk_label: 453611,
+                rek_tk_label_lookup: 'Creative Commons Attribution-NonCommercial-NoDerivatives 3.0 International (CC BY-NC-ND 3.0)',
             },
             fez_record_search_key_notes: 'Conference paper number:E1',
             fez_record_search_key_oa_status: {
