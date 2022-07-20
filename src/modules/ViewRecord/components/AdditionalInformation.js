@@ -168,7 +168,6 @@ export class AdditionalInformationClass extends PureComponent {
         }
 
         const testId = subkey.replace(/_/g, '-');
-
         switch (subkey) {
             case 'rek_doi':
                 return this.renderDoi(data);
@@ -187,6 +186,8 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
+            case 'fez_record_search_key_ci_attr_incomplete':
+                return <span>THIS IS A TEST</span>;
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -206,6 +207,7 @@ export class AdditionalInformationClass extends PureComponent {
 
     // render rek fields from fez_record_search_key
     renderContent = (key, value) => {
+        console.log('renderContent', key, value);
         let renderedValue;
         switch (key) {
             case 'rek_title':
