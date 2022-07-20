@@ -25,9 +25,6 @@ export const filesParams = record => ({
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) => {
-    console.log('RECORD', record);
-    console.log('TAB', tab);
-
     if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
         return false;
     }
@@ -46,7 +43,6 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
-
     return {
         initialValues: {
             pid: recordToView.rek_pid,
@@ -157,6 +153,7 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
+        // console.log('Reducer State', recordToView);
         locked = state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =

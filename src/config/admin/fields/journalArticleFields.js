@@ -106,7 +106,7 @@ export default {
         },
         {
             title: 'Cultural Institute (CI) Notice',
-            groups: [['attributionIncomplete']],
+            groups: [['fez_record_search_key_ci_attr_incomplete']],
         },
     ],
     ntro: () => [

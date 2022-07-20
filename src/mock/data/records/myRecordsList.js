@@ -8,6 +8,7 @@ const myRecordsList = {
     "from": 1,
     "to": 20,
     "data": [{
+        "fez_record_search_key_ci_attr_incomplete" : true,
         "rek_pid": "UQ:678728",
         "rek_title": "ENA\/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network",
         "rek_description": "In neurosecretory cells, myosin VI associated with secretory granules (SGs) mediates their activity-dependent recruitment to the cortical actin network and is necessary to sustain exocytosis. The mechanism by which myosin VI interacts with SGs is unknown. Using a myosin VI pull-down assay and mass spectrometry we identified Mena, a member of the ENA\/VASP family, as a myosin VI binding partner in PC12 cells, and confirmed that Mena colocalized with myosin VI on SGs. Using a knock-sideways approach to inactivate the ENA\/VASP family members by mitochondrial relocation, we revealed a concomitant redistribution of myosin VI. This was ensued by a reduction in the association of myosin VI with SGs, a decreased SG mobility and density in proximity to the plasma membrane as well as decreased evoked exocytosis. These data demonstrate that ENA\/VASP proteins regulate SG exocytosis through modulating the activity of myosin VI.",

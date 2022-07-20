@@ -5,7 +5,9 @@ export default function AttributionIncompleteField(fieldProps) {
     return (
         <AttributionIncomplete
             onChange={fieldProps.input.onChange}
-            isAttributionIncomplete={fieldProps.input.value !== '' && fieldProps.input.value === 'on'}
+            isAttributionIncomplete={
+                fieldProps.input.value !== '' && (fieldProps.input.value === 'on' || fieldProps.input.value === true)
+            }
             {...fieldProps}
         />
     );

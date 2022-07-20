@@ -12,45 +12,58 @@ export class AttributionIncomplete extends PureComponent {
         classes: PropTypes.object,
         disabled: PropTypes.bool,
         attributionIncompleteStatement: PropTypes.string,
+        attributionIncompleteDetail: PropTypes.string,
+        input: PropTypes.object,
     };
 
     _handleChange = event => {
-        this.props.onChange(event.target.checked ? 'on' : 'off');
+        this.props.onChange(event.target.checked ? true : false);
     };
 
     render() {
-        const { isAttributionIncomplete, attributionIncompleteStatement, classes, disabled } = this.props;
+        const {
+            isAttributionIncomplete,
+            attributionIncompleteStatement,
+            attributionIncompleteDetail,
+            classes,
+            disabled,
+        } = this.props;
 
         return (
-            <FormControlLabel
-                classes={{
-                    root: classes.root,
-                }}
-                disabled={disabled}
-                control={
-                    <Checkbox
-                        inputProps={{
-                            'data-testid': 'attributionIncomplete-input',
-                            id: 'attributionIncomplete-input',
-                        }}
-                        checked={isAttributionIncomplete}
-                        onChange={this._handleChange}
-                        classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
-                    />
-                }
-                label={
-                    <Typography
-                        classes={{
-                            root: classes.label,
-                        }}
-                        component="div"
-                        id={'attributionIncomplete-label'}
-                        data-testid={'attributionIncomplete-label'}
-                    >
-                        {attributionIncompleteStatement}
-                    </Typography>
-                }
-            />
+            <React.Fragment>
+                <div>
+                    <Typography variant="caption">{attributionIncompleteDetail}</Typography>
+                </div>
+                <FormControlLabel
+                    classes={{
+                        root: classes.root,
+                    }}
+                    disabled={disabled}
+                    control={
+                        <Checkbox
+                            inputProps={{
+                                'data-testid': 'attributionIncomplete-input',
+                                id: 'attributionIncomplete-input',
+                            }}
+                            checked={isAttributionIncomplete}
+                            onChange={this._handleChange}
+                            classes={{ root: classes.checkboxRoot, checked: classes.checkboxChecked }}
+                        />
+                    }
+                    label={
+                        <Typography
+                            classes={{
+                                root: classes.label,
+                            }}
+                            component="div"
+                            id={'attributionIncomplete-label'}
+                            data-testid={'attributionIncomplete-label'}
+                        >
+                            {attributionIncompleteStatement}
+                        </Typography>
+                    }
+                />
+            </React.Fragment>
         );
     }
 }
