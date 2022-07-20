@@ -15,4 +15,5 @@ export const TkLabelsListField = ({ loadVocabularies, ...fieldProps } = {}) => {
 };
 TkLabelsListField.propTypes = {
     loadVocabularies: PropTypes.func,
+    itemsList: PropTypes.array,
 };

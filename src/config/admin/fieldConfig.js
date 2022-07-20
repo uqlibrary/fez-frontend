@@ -299,7 +299,7 @@ export default {
                 name: 'adminSection.fez_record_search_key_tk_label.rek_tk_label',
                 tkLabelsFieldId: 'rek_tk_label',
                 required: false,
-                canUnselect: true,
+                hasNoneOption: true,
                 category: TK_FIELDS_VOCAB_ID,
                 ...selectFields.tkLabels,
             },

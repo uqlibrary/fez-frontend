@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 
 const category = TK_FIELDS_VOCAB_ID;
+const NONE_ITEM = {
+    key: -1,
+    value: 'None',
+};
 
 const mapStateToProps = (state, props) => {
     const { itemsKeyValueList, itemsLoading } = (state.get('controlledVocabulariesReducer') &&
@@ -11,12 +15,20 @@ const mapStateToProps = (state, props) => {
         itemsKeyValueList: [],
         itemsLoading: false,
     };
+    const itemsList = (!!props.hasNoneOption ? [{ ...NONE_ITEM }, ...itemsKeyValueList] : [...itemsKeyValueList]).map(
+        item => ({
+            key: item.key,
+            value: item.key,
+            text: item.value,
+        }),
+    );
+
     return {
         disabled: itemsLoading || props.disabled,
         onChange: props.input.onChange,
         errorText: props.meta ? props.meta.error : props.errorText,
         error: props.meta ? !!props.meta.error : !!props.error || null,
-        itemsList: itemsKeyValueList.map(item => ({ key: item.key, value: item.key, text: item.value })),
+        itemsList,
         genericSelectFieldId: props.tkLabelsFieldId ?? 'tk-labels-field-input',
         itemsLoading,
         ...props,

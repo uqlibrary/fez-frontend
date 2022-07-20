@@ -147,7 +147,6 @@ export const NewGenericSelectField = ({
             }),
         ];
     };
-
     return (
         <FormControl fullWidth required={required} error={!!inputError}>
             {!hideLabel && (

@@ -74,6 +74,8 @@ Now that you have a definition for how the Admin Edit page should look, be sure 
 If you were to check your new Admin Edit page now you should see your fields appearing as expected, however if you've created new fields there's a good chance there'll be no values pre-populating from your record. 
 To fix this, head to `src/config/admin/valueExtractor.js` and create a definition for the name of your new field ensuring the names match. This file defines the relationship between a field and the actual Record key/value and it's here where `src/modules/Admin/containers/Admin.js` (`getInitialValues` function) will populate your field. Also be sure to check `src/modules/Admin/containers/Admin.js`, specifically the `getInitialFormValues` function, as it is from here where `valueExtractor` is called.
 
+> A note on valueExtractor: you may find, after adding a new key to your mock data and extracting it within valueExtractor, your new key is no longer in the mock data once it gets to the admin page itself. This is due to valueExtractor _deleting_ the key once it has extracted the value. If you don't want this to happen, you may include your key in the `deleteKey` function.
+
 Finally, if you're _not_ using the commonField sections, or if you only required a subsection, you may discover your Admin Edit page is showing an error message referring to fields you aren't using. This is because certain sections were hard coded in to the system as requiring validation and as such, all new Admin Edit pages will likely run afoul of this issue.
 To fix, open up `src/config/admin/validate.js` and include a new section in the main `switch` block for your field. For example the record type `RECORD_TYPE_COMMUNITY_ID` did not require an admin section or a `files` section, and so these were deleted from the general validation object in the `switch` block to remove the error messages. Remember to include your record type if it's not already available, and your page config's `validation<Name>` method.
 
@@ -129,7 +131,7 @@ notesSection: {
     reasonForEdit: "this is a reason"
 }
 ```
-Finally, be mindful of the second part of your field's name. In the example above it is notesSection.`reasonForEdit`, however a misspelling here will also result in an undesirable data structure:
+Be mindful of the second part of your field's name. In the example above it is notesSection.`reasonForEdit`, however a misspelling here will also result in an undesirable data structure:
 
 ```
 notesSection: {
@@ -138,7 +140,22 @@ notesSection: {
     reasonForEdit: ""
 ```
 
+Finally, the field name can also affect how the end component renders. Take this example:
 
+```
+name: 'adminSection.tklabels'
+```
+
+The above name was used on a component that rendered a Material-UI InputLabel and Select (see `src/modules/SharedComponents/GenericSelectField/components/NewGenericSelectField.js`). When viewing the component in the web browser, however, the InputLabel appeared shrunk, and the Select was being assigned an invalid `[Object object]` value that was breaking the component functionality.
+
+By changing the name to:
+
+```
+name: 'adminSection.fez_record_search_key_tk_label.rek_tk_label'
+```
+
+the InputLabel no longer appeared shrunk and the Select element was assigned an empty string instead. So be sure to check the naming of your component if you are seeing unexpected results in the web browser. 
+> **TODO:** _explain why this happens._
 
 ## Submitting to an API
 
