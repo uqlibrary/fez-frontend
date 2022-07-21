@@ -129,18 +129,22 @@ const SearchRecords = ({
      */
     React.useEffect(() => {
         return history.listen(location => {
-            // we can't use location.state to send state around,
-            // as state changes are async and might not be up-to-date
-            const queryParams = getQueryParams(
-                location.search.substr(1),
-                canBulkExport,
-                isUnpublishedBufferPage,
-                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
-            );
-            setSearchParams(queryParams);
-            actions.searchEspacePublications(queryParams);
-            actions.clearSearchQuery();
-            actions.resetExportPublicationsStatus();
+            // Don't mess with location if the user is clicking a link to view record details.
+            // PT #182603156
+            if (!location.pathname.startsWith('/view/')) {
+                // we can't use location.state to send state around,
+                // as state changes are async and might not be up-to-date
+                const queryParams = getQueryParams(
+                    location.search.substr(1),
+                    canBulkExport,
+                    isUnpublishedBufferPage,
+                    searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
+                );
+                setSearchParams(queryParams);
+                actions.searchEspacePublications(queryParams);
+                actions.clearSearchQuery();
+                actions.resetExportPublicationsStatus();
+            }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
