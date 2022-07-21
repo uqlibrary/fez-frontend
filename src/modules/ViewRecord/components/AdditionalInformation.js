@@ -186,7 +186,7 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
-            case 'fez_record_search_key_ci_attr_incomplete':
+            case 'rek_ci_notice_attribution_incomplete':
                 return <span>THIS IS A TEST</span>;
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);

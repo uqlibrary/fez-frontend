@@ -273,10 +273,11 @@ export default {
         fez_record_search_key_ci_attr_incomplete: {
             component: AttributionIncompleteField,
             componentProps: {
-                name: 'adminSection.fez_record_search_key_ci_attr_incomplete',
+                name:
+                    'adminSection.fez_record_search_key_ci_notice_attribution_incomplete.rek_ci_notice_attribution_incomplete',
                 label: 'Attribution Incomplete',
                 placeholder: 'Attribution Incomplete Placeholder',
-                attributionIncompleteFieldId: 'fez_record_search_key_ci_attr_incomplete',
+                attributionIncompleteFieldId: 'rek_ci_notice_attribution_incomplete',
                 attributionIncompleteStatement: 'Attribution Incomplete',
                 attributionIncompleteDetail:
                     'Determines if the record or collection is to be CI labelled Attribution Incomplete.',
