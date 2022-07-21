@@ -437,6 +437,29 @@ describe('SearchRecords page', () => {
         });
     });
 
+    it('should not call the search API when clicking a works title', () => {
+        const historyMock = createMemoryHistory();
+        const testPushFn = jest.spyOn(historyMock, 'push');
+        const testAction = jest.fn();
+
+        const { getByText } = setup({
+            ...props,
+            actions: {
+                searchEspacePublications: testAction,
+            },
+            history: historyMock,
+        });
+
+        act(() => {
+            fireEvent.click(getByText('Title 01'));
+        });
+
+        // this is the initial call when the component loads,
+        // without bug fix in #182603156 the "toHaveBeenCalledTimes" value here would be 2
+        expect(testAction).toHaveBeenCalledTimes(1);
+        expect(testPushFn).toHaveBeenCalledWith('/view/1');
+    });
+
     it('should set history to unpublished path if pathname matches it', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
