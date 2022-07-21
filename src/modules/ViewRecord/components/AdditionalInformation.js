@@ -187,7 +187,7 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
             case 'rek_ci_notice_attribution_incomplete':
-                return <span>THIS IS A TEST</span>;
+                return this.renderCulturalInstitutionNotice();
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -207,7 +207,6 @@ export class AdditionalInformationClass extends PureComponent {
 
     // render rek fields from fez_record_search_key
     renderContent = (key, value) => {
-        console.log('renderContent', key, value);
         let renderedValue;
         switch (key) {
             case 'rek_title':
@@ -259,6 +258,25 @@ export class AdditionalInformationClass extends PureComponent {
                         {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
                     </ExternalLink>
                 )}
+            </span>
+        );
+    };
+
+    renderCulturalInstitutionNotice = () => {
+        return (
+            <span>
+                <div
+                    data-testid="fez-icon-cilabel"
+                    className={'fez-icon_cilabel'}
+                    style={{
+                        backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
+                        width: 100,
+                        height: 100,
+                    }}
+                />
+                <br />
+                <strong>{locale.viewRecord.culturalNoticeAI.title} - </strong>
+                {locale.viewRecord.culturalNoticeAI.text}
             </span>
         );
     };
@@ -359,7 +377,7 @@ export class AdditionalInformationClass extends PureComponent {
                 ? locale.viewRecord.fields[displayType].concat(footerFields)
                 : footerFields;
         fields = this.props.account && this.props.account.canMasquerade ? fields : this.excludeAdminOnlyFields(fields);
-
+        console.log('RENDERCOLUMNS', displayType);
         fields
             .sort((field1, field2) => field1.order - field2.order)
             .map((item, index) => {
@@ -374,6 +392,11 @@ export class AdditionalInformationClass extends PureComponent {
                         value = moment(publication[field]).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))
                             ? null
                             : publication[field];
+                        break;
+                    case 'fez_record_search_key_ci_notice_attribution_incomplete':
+                        const ciKey = this.transformFieldNameToSubkey(field);
+                        // console.log('CI NOTICE', ciKey);
+                        value = publication[field] && publication[field][ciKey] === true ? publication[field] : null;
                         break;
                     case 'fez_record_search_key_herdc_code':
                         const subkey = this.transformFieldNameToSubkey(field);

@@ -616,14 +616,9 @@ export default {
     reason: {
         getValue: () => '',
     },
-    fez_record_search_key_ci_attr_incomplete: {
+    fez_record_search_key_ci_notice_attribution_incomplete: {
         getValue: record => {
-            return getValueFromRekKey(record, 'fez_record_search_key_ci_attr_incomplete') || null;
-        },
-    },
-    culturalInstitutionNotice: {
-        getValue: record => {
-            return getValueFromRekKey(record, 'fez_record_search_key_ci_attr_incomplete') || null;
+            return getValueSearchKeyObject(record, 'fez_record_search_key_ci_notice_attribution_incomplete') || null;
         },
     },
     fez_datastream_info: {

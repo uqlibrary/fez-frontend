@@ -2434,7 +2434,6 @@ export const trendingPublications = {
         "fez_record_search_key_article_number": null,
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_ci_attr_incomplete": true,
         "fez_record_search_key_ci_notice_attribution_incomplete": {
             "rek_ci_notice_attribution_incomplete":true,
         },

@@ -91,7 +91,6 @@ export const NewViewRecord = ({
     recordToViewError,
     recordToView,
 }) => {
-    console.log('Record to view', recordToView);
     const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();

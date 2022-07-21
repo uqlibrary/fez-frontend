@@ -270,7 +270,7 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
-        fez_record_search_key_ci_attr_incomplete: {
+        fez_record_search_key_ci_notice_attribution_incomplete: {
             component: AttributionIncompleteField,
             componentProps: {
                 name:
