@@ -160,7 +160,7 @@ const FileName = ({
     );
 };
 
-FileName.propTypes = {
+export const FileNameProps = {
     downloadLicence: PropTypes.object,
     id: PropTypes.string,
     pid: PropTypes.string.isRequired,
@@ -174,5 +174,7 @@ FileName.propTypes = {
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
 };
+
+FileName.propTypes = { ...FileNameProps };
 
 export default FileName;

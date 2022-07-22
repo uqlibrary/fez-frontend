@@ -21,6 +21,7 @@ import { isFileValid } from 'config/validation';
 import { mui1theme, openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
 
 import FileName from 'modules/ViewRecord/components/partials/FileName';
+import EditableFileName from 'modules/ViewRecord/components/partials/EditableFileName';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
 import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -141,6 +142,7 @@ export const AttachedFiles = ({
     onDelete,
     onDateChange,
     onDescriptionChange,
+    onFilenameChange,
     onEmbargoClearPromptText,
     locale,
     canEdit,
@@ -179,6 +181,9 @@ export const AttachedFiles = ({
 
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
+    const onFileNameChange = index => event => {
+        onFilenameChange('dsi_dsid', event.target.value, index);
+    };
 
     return (
         <Grid item xs={12}>
@@ -249,7 +254,21 @@ export const AttachedFiles = ({
                                             />
                                         </Grid>
                                         <Grid item sm={3} className={classes.dataWrapper}>
-                                            <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
+                                            {isAdmin && canEdit ? (
+                                                <EditableFileName
+                                                    {...item}
+                                                    isEditing
+                                                    onFilenameChange={onFileNameChange(index)}
+                                                    onFileSelect={showPreview}
+                                                    id={`file-name-${index}-editing`}
+                                                />
+                                            ) : (
+                                                <FileName
+                                                    {...item}
+                                                    onFileSelect={showPreview}
+                                                    id={`file-name-${index}`}
+                                                />
+                                            )}
                                         </Grid>
                                         <Hidden xsDown>
                                             <Grid item sm={3} className={classes.dataWrapper}>
@@ -367,6 +386,7 @@ AttachedFiles.propTypes = {
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,
     onDescriptionChange: PropTypes.func,
+    onFilenameChange: PropTypes.func,
     onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,
     canEdit: PropTypes.bool,

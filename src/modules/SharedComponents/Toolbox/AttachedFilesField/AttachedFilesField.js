@@ -14,6 +14,7 @@ export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttac
 };
 
 export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
+    console.log('datastreamChangeCallbackFactory', dataStreams, setDataStreams);
     const callback = (key, value, index) => {
         const newDataStreams = [
             ...dataStreams.slice(0, index),
@@ -52,6 +53,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
             onDelete={handleDelete}
             onDateChange={handleDataStreamChange}
             onDescriptionChange={handleDataStreamChange}
+            onFilenameChange={handleDataStreamChange}
             dataStreams={dataStreams}
             {...props}
         />
@@ -60,5 +62,6 @@ export const AttachedFilesField = ({ input, ...props }) => {
 
 AttachedFilesField.propTypes = {
     input: PropTypes.object,
+    fileName: PropTypes.string,
     meta: PropTypes.object,
 };
