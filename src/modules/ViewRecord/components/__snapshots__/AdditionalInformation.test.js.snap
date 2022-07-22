@@ -12878,6 +12878,507 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                             alignItems="flex-start"
                                             className="AdditionalInformationClass-gridRow-1"
                                             container={true}
+                                            key="additional-info-Cultural Institution Notice"
+                                            spacing={2}
+                                          >
+                                            <ForwardRef(Grid)
+                                              alignItems="flex-start"
+                                              className="AdditionalInformationClass-gridRow-1"
+                                              classes={
+                                                Object {
+                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                  "container": "MuiGrid-container",
+                                                  "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                  "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                  "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                  "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                  "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                  "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                  "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                  "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                  "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                  "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                  "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                  "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                  "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                  "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                  "grid-md-1": "MuiGrid-grid-md-1",
+                                                  "grid-md-10": "MuiGrid-grid-md-10",
+                                                  "grid-md-11": "MuiGrid-grid-md-11",
+                                                  "grid-md-12": "MuiGrid-grid-md-12",
+                                                  "grid-md-2": "MuiGrid-grid-md-2",
+                                                  "grid-md-3": "MuiGrid-grid-md-3",
+                                                  "grid-md-4": "MuiGrid-grid-md-4",
+                                                  "grid-md-5": "MuiGrid-grid-md-5",
+                                                  "grid-md-6": "MuiGrid-grid-md-6",
+                                                  "grid-md-7": "MuiGrid-grid-md-7",
+                                                  "grid-md-8": "MuiGrid-grid-md-8",
+                                                  "grid-md-9": "MuiGrid-grid-md-9",
+                                                  "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                  "grid-md-true": "MuiGrid-grid-md-true",
+                                                  "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                  "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                  "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                  "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                  "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                  "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                  "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                  "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                  "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                  "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                  "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                  "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                  "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                  "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                  "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                  "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                  "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                  "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                  "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                  "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                  "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                  "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                  "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                  "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                  "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                  "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                  "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                  "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                  "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                  "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                  "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                  "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                  "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                  "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                  "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                  "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                  "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                  "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                  "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                  "item": "MuiGrid-item",
+                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
+                                                  "root": "MuiGrid-root",
+                                                  "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                  "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                  "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                  "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                  "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                  "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                  "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                  "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                  "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                }
+                                              }
+                                              container={true}
+                                              spacing={2}
+                                            >
+                                              <div
+                                                className="MuiGrid-root AdditionalInformationClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
+                                              >
+                                                <WithStyles(ForwardRef(Grid))
+                                                  item={true}
+                                                  sm={3}
+                                                  xs={12}
+                                                >
+                                                  <ForwardRef(Grid)
+                                                    classes={
+                                                      Object {
+                                                        "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                        "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                        "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                        "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                        "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                        "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                        "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                        "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                        "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                        "container": "MuiGrid-container",
+                                                        "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                        "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                        "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                        "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                        "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                        "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                        "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                        "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                        "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                        "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                        "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                        "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                        "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                        "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                        "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                        "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                        "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                        "grid-md-1": "MuiGrid-grid-md-1",
+                                                        "grid-md-10": "MuiGrid-grid-md-10",
+                                                        "grid-md-11": "MuiGrid-grid-md-11",
+                                                        "grid-md-12": "MuiGrid-grid-md-12",
+                                                        "grid-md-2": "MuiGrid-grid-md-2",
+                                                        "grid-md-3": "MuiGrid-grid-md-3",
+                                                        "grid-md-4": "MuiGrid-grid-md-4",
+                                                        "grid-md-5": "MuiGrid-grid-md-5",
+                                                        "grid-md-6": "MuiGrid-grid-md-6",
+                                                        "grid-md-7": "MuiGrid-grid-md-7",
+                                                        "grid-md-8": "MuiGrid-grid-md-8",
+                                                        "grid-md-9": "MuiGrid-grid-md-9",
+                                                        "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                        "grid-md-true": "MuiGrid-grid-md-true",
+                                                        "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                        "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                        "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                        "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                        "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                        "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                        "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                        "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                        "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                        "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                        "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                        "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                        "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                        "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                        "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                        "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                        "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                        "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                        "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                        "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                        "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                        "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                        "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                        "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                        "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                        "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                        "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                        "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                        "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                        "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                        "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                        "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                        "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                        "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                        "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                        "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                        "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                        "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                        "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                        "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                        "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                        "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                        "item": "MuiGrid-item",
+                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
+                                                        "root": "MuiGrid-root",
+                                                        "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                        "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                        "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                        "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                        "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                        "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                        "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                        "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                        "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                        "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                        "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                        "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                        "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                      }
+                                                    }
+                                                    item={true}
+                                                    sm={3}
+                                                    xs={12}
+                                                  >
+                                                    <div
+                                                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
+                                                    >
+                                                      <WithStyles(ForwardRef(Typography))
+                                                        classes={
+                                                          Object {
+                                                            "root": undefined,
+                                                          }
+                                                        }
+                                                        component="span"
+                                                        data-testid="rek-ci-notice-attribution-incomplete-label"
+                                                        variant="body2"
+                                                      >
+                                                        <ForwardRef(Typography)
+                                                          classes={
+                                                            Object {
+                                                              "alignCenter": "MuiTypography-alignCenter",
+                                                              "alignJustify": "MuiTypography-alignJustify",
+                                                              "alignLeft": "MuiTypography-alignLeft",
+                                                              "alignRight": "MuiTypography-alignRight",
+                                                              "body1": "MuiTypography-body1",
+                                                              "body2": "MuiTypography-body2",
+                                                              "button": "MuiTypography-button",
+                                                              "caption": "MuiTypography-caption",
+                                                              "colorError": "MuiTypography-colorError",
+                                                              "colorInherit": "MuiTypography-colorInherit",
+                                                              "colorPrimary": "MuiTypography-colorPrimary",
+                                                              "colorSecondary": "MuiTypography-colorSecondary",
+                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                              "displayBlock": "MuiTypography-displayBlock",
+                                                              "displayInline": "MuiTypography-displayInline",
+                                                              "gutterBottom": "MuiTypography-gutterBottom",
+                                                              "h1": "MuiTypography-h1",
+                                                              "h2": "MuiTypography-h2",
+                                                              "h3": "MuiTypography-h3",
+                                                              "h4": "MuiTypography-h4",
+                                                              "h5": "MuiTypography-h5",
+                                                              "h6": "MuiTypography-h6",
+                                                              "noWrap": "MuiTypography-noWrap",
+                                                              "overline": "MuiTypography-overline",
+                                                              "paragraph": "MuiTypography-paragraph",
+                                                              "root": "MuiTypography-root",
+                                                              "srOnly": "MuiTypography-srOnly",
+                                                              "subtitle1": "MuiTypography-subtitle1",
+                                                              "subtitle2": "MuiTypography-subtitle2",
+                                                            }
+                                                          }
+                                                          component="span"
+                                                          data-testid="rek-ci-notice-attribution-incomplete-label"
+                                                          variant="body2"
+                                                        >
+                                                          <span
+                                                            className="MuiTypography-root MuiTypography-body2"
+                                                            data-testid="rek-ci-notice-attribution-incomplete-label"
+                                                          >
+                                                            Cultural Institution Notice
+                                                          </span>
+                                                        </ForwardRef(Typography)>
+                                                      </WithStyles(ForwardRef(Typography))>
+                                                    </div>
+                                                  </ForwardRef(Grid)>
+                                                </WithStyles(ForwardRef(Grid))>
+                                                <WithStyles(ForwardRef(Grid))
+                                                  item={true}
+                                                  sm={9}
+                                                  xs={12}
+                                                >
+                                                  <ForwardRef(Grid)
+                                                    classes={
+                                                      Object {
+                                                        "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                        "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                        "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                        "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                        "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                        "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                        "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                        "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                        "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                        "container": "MuiGrid-container",
+                                                        "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                        "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                        "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                        "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                        "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                        "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                        "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                        "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                        "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                        "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                        "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                        "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                        "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                        "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                        "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                        "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                        "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                        "grid-md-1": "MuiGrid-grid-md-1",
+                                                        "grid-md-10": "MuiGrid-grid-md-10",
+                                                        "grid-md-11": "MuiGrid-grid-md-11",
+                                                        "grid-md-12": "MuiGrid-grid-md-12",
+                                                        "grid-md-2": "MuiGrid-grid-md-2",
+                                                        "grid-md-3": "MuiGrid-grid-md-3",
+                                                        "grid-md-4": "MuiGrid-grid-md-4",
+                                                        "grid-md-5": "MuiGrid-grid-md-5",
+                                                        "grid-md-6": "MuiGrid-grid-md-6",
+                                                        "grid-md-7": "MuiGrid-grid-md-7",
+                                                        "grid-md-8": "MuiGrid-grid-md-8",
+                                                        "grid-md-9": "MuiGrid-grid-md-9",
+                                                        "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                        "grid-md-true": "MuiGrid-grid-md-true",
+                                                        "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                        "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                        "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                        "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                        "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                        "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                        "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                        "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                        "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                        "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                        "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                        "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                        "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                        "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                        "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                        "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                        "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                        "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                        "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                        "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                        "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                        "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                        "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                        "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                        "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                        "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                        "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                        "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                        "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                        "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                        "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                        "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                        "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                        "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                        "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                        "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                        "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                        "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                        "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                        "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                        "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                        "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                        "item": "MuiGrid-item",
+                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
+                                                        "root": "MuiGrid-root",
+                                                        "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                        "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                        "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                        "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                        "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                        "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                        "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                        "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                        "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                        "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                        "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                        "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                        "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                      }
+                                                    }
+                                                    item={true}
+                                                    sm={9}
+                                                    xs={12}
+                                                  >
+                                                    <div
+                                                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9"
+                                                    >
+                                                      <WithStyles(ForwardRef(Typography))
+                                                        component="span"
+                                                        variant="body2"
+                                                      >
+                                                        <ForwardRef(Typography)
+                                                          classes={
+                                                            Object {
+                                                              "alignCenter": "MuiTypography-alignCenter",
+                                                              "alignJustify": "MuiTypography-alignJustify",
+                                                              "alignLeft": "MuiTypography-alignLeft",
+                                                              "alignRight": "MuiTypography-alignRight",
+                                                              "body1": "MuiTypography-body1",
+                                                              "body2": "MuiTypography-body2",
+                                                              "button": "MuiTypography-button",
+                                                              "caption": "MuiTypography-caption",
+                                                              "colorError": "MuiTypography-colorError",
+                                                              "colorInherit": "MuiTypography-colorInherit",
+                                                              "colorPrimary": "MuiTypography-colorPrimary",
+                                                              "colorSecondary": "MuiTypography-colorSecondary",
+                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                              "displayBlock": "MuiTypography-displayBlock",
+                                                              "displayInline": "MuiTypography-displayInline",
+                                                              "gutterBottom": "MuiTypography-gutterBottom",
+                                                              "h1": "MuiTypography-h1",
+                                                              "h2": "MuiTypography-h2",
+                                                              "h3": "MuiTypography-h3",
+                                                              "h4": "MuiTypography-h4",
+                                                              "h5": "MuiTypography-h5",
+                                                              "h6": "MuiTypography-h6",
+                                                              "noWrap": "MuiTypography-noWrap",
+                                                              "overline": "MuiTypography-overline",
+                                                              "paragraph": "MuiTypography-paragraph",
+                                                              "root": "MuiTypography-root",
+                                                              "srOnly": "MuiTypography-srOnly",
+                                                              "subtitle1": "MuiTypography-subtitle1",
+                                                              "subtitle2": "MuiTypography-subtitle2",
+                                                            }
+                                                          }
+                                                          component="span"
+                                                          variant="body2"
+                                                        >
+                                                          <span
+                                                            className="MuiTypography-root MuiTypography-body2"
+                                                          >
+                                                            <span>
+                                                              <div
+                                                                className="fez-icon_cilabel"
+                                                                data-testid="fez-icon-cilabel"
+                                                                style={
+                                                                  Object {
+                                                                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                                                                    "height": 100,
+                                                                    "width": 100,
+                                                                  }
+                                                                }
+                                                              />
+                                                              <br />
+                                                              <strong>
+                                                                Attribution Incomplete
+                                                                 - 
+                                                              </strong>
+                                                              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+                                                            </span>
+                                                          </span>
+                                                        </ForwardRef(Typography)>
+                                                      </WithStyles(ForwardRef(Typography))>
+                                                    </div>
+                                                  </ForwardRef(Grid)>
+                                                </WithStyles(ForwardRef(Grid))>
+                                              </div>
+                                            </ForwardRef(Grid)>
+                                          </WithStyles(ForwardRef(Grid))>
+                                        </div>
+                                        <div
+                                          className="AdditionalInformationClass-containerPadding-3"
+                                          key="17"
+                                        >
+                                          <WithStyles(ForwardRef(Grid))
+                                            alignItems="flex-start"
+                                            className="AdditionalInformationClass-gridRow-1"
+                                            container={true}
                                             key="additional-info-Volume"
                                             spacing={2}
                                           >
@@ -13359,7 +13860,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="17"
+                                          key="18"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -13846,7 +14347,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="18"
+                                          key="19"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -14333,7 +14834,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="19"
+                                          key="20"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -14820,7 +15321,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="20"
+                                          key="21"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -15307,7 +15808,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="21"
+                                          key="22"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -15794,7 +16295,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="23"
+                                          key="24"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -16281,7 +16782,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="24"
+                                          key="25"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -16781,7 +17282,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="26"
+                                          key="27"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -17408,7 +17909,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="30"
+                                          key="31"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -17908,7 +18409,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="31"
+                                          key="32"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -18408,7 +18909,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="32"
+                                          key="33"
                                         >
                                           <WithStyles(ForwardRef(Grid))
                                             alignItems="flex-start"
@@ -21391,6 +21892,67 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Volume"
         spacing={2}
       >
@@ -21432,7 +21994,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21479,7 +22041,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21526,7 +22088,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21573,7 +22135,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21620,7 +22182,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21667,7 +22229,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21714,7 +22276,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -21762,7 +22324,7 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -22000,6 +22562,67 @@ exports[`Additional Information Component  should render component with a collec
                 </Link>
               </li>
             </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="2"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -22875,6 +23498,67 @@ exports[`Additional Information Component  should render component with audio do
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="25"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Genres"
         spacing={2}
       >
@@ -22926,7 +23610,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -23003,7 +23687,7 @@ exports[`Additional Information Component  should render component with audio do
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -23713,7 +24397,68 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="12"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -23760,7 +24505,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -23808,7 +24553,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -23873,7 +24618,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -24232,7 +24977,7 @@ exports[`Additional Information Component  should render component with book 1`]
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25142,7 +25887,68 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="15"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25190,7 +25996,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25243,7 +26049,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25296,7 +26102,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25763,7 +26569,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25810,7 +26616,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25857,7 +26663,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25904,7 +26710,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25951,7 +26757,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -25998,7 +26804,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -26045,7 +26851,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -26112,7 +26918,7 @@ exports[`Additional Information Component  should render component with book cha
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27711,7 +28517,68 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="25"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27770,7 +28637,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27817,7 +28684,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27864,7 +28731,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27911,7 +28778,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -27958,7 +28825,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="32"
+      key="33"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -28005,7 +28872,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="36"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29069,7 +29936,68 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="27"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29116,7 +30044,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29163,7 +30091,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29210,7 +30138,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="34"
+      key="35"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29263,7 +30191,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="36"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29350,7 +30278,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="36"
+      key="37"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -29517,7 +30445,7 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="40"
+      key="41"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -30171,6 +31099,67 @@ exports[`Additional Information Component  should render component with creative
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="9"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Publisher"
         spacing={2}
       >
@@ -30213,7 +31202,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -30269,7 +31258,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -30316,7 +31305,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -30383,7 +31372,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -31051,6 +32040,67 @@ exports[`Additional Information Component  should render component with creative
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="9"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Publisher"
         spacing={2}
       >
@@ -31093,7 +32143,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -31149,7 +32199,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -31196,7 +32246,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -31263,7 +32313,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -32015,6 +33065,67 @@ exports[`Additional Information Component  should render component with creative
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="9"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Publisher"
         spacing={2}
       >
@@ -32057,7 +33168,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -32113,7 +33224,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -32180,7 +33291,7 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -34823,6 +35934,67 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-ANZSRC Field of Research (FoR) Code"
         spacing={2}
       >
@@ -34884,7 +36056,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -34930,7 +36102,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35001,7 +36173,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35054,7 +36226,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35107,7 +36279,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35159,7 +36331,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35211,7 +36383,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35263,7 +36435,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35315,7 +36487,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35412,7 +36584,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35458,7 +36630,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35515,7 +36687,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35562,7 +36734,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35610,7 +36782,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -35666,7 +36838,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37232,6 +38404,67 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-ANZSRC Field of Research (FoR) Code"
         spacing={2}
       >
@@ -37303,7 +38536,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37349,7 +38582,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37402,7 +38635,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37455,7 +38688,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37507,7 +38740,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37559,7 +38792,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37646,7 +38879,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37692,7 +38925,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37739,7 +38972,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37787,7 +39020,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37843,7 +39076,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -37890,7 +39123,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="32"
+      key="33"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40530,6 +41763,67 @@ exports[`Additional Information Component  should render component with data col
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-ANZSRC Field of Research (FoR) Code"
         spacing={2}
       >
@@ -40591,7 +41885,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40637,7 +41931,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40708,7 +42002,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40761,7 +42055,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40814,7 +42108,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40866,7 +42160,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40918,7 +42212,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -40970,7 +42264,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41022,7 +42316,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41119,7 +42413,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
+      key="26"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41165,7 +42459,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41222,7 +42516,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41269,7 +42563,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41317,7 +42611,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -41373,7 +42667,7 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -42293,6 +43587,67 @@ exports[`Additional Information Component  should render component with design d
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Date"
         spacing={2}
       >
@@ -42343,7 +43698,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -42396,7 +43751,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -42860,7 +44215,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -42947,7 +44302,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -43044,7 +44399,7 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
+      key="28"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -43746,6 +45101,67 @@ exports[`Additional Information Component  should render component with digilib 
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="16"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Category"
         spacing={2}
       >
@@ -43799,7 +45215,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -43858,7 +45274,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -43911,7 +45327,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -43964,7 +45380,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -44023,7 +45439,7 @@ exports[`Additional Information Component  should render component with digilib 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -45512,6 +46928,67 @@ exports[`Additional Information Component  should render component with generic 
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
+    <div
+      key="16"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -46259,7 +47736,68 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="15"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -46306,7 +47844,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -46354,7 +47892,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -46407,7 +47945,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -46464,7 +48002,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49012,6 +50550,67 @@ exports[`Additional Information Component  should render component with journal 
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Volume"
         spacing={2}
       >
@@ -49053,7 +50652,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49100,7 +50699,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49147,7 +50746,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49194,7 +50793,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49241,7 +50840,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49288,7 +50887,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49335,7 +50934,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -49383,7 +50982,7 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50172,6 +51771,67 @@ exports[`Additional Information Component  should render component with manuscri
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="8"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Date"
         spacing={2}
       >
@@ -50222,7 +51882,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="8"
+      key="9"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50274,7 +51934,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50779,7 +52439,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50827,7 +52487,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50874,7 +52534,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50921,7 +52581,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -50974,7 +52634,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -51021,7 +52681,7 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -52618,6 +54278,67 @@ exports[`Additional Information Component  should render component with newspape
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="26"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Additional notes"
         spacing={2}
       >
@@ -53097,6 +54818,67 @@ exports[`Additional Information Component  should render component with patent 1
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="10"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Patent owner"
         spacing={2}
       >
@@ -53139,7 +54921,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -53186,7 +54968,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -53233,7 +55015,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -53286,7 +55068,7 @@ exports[`Additional Information Component  should render component with patent 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -54337,6 +56119,67 @@ exports[`Additional Information Component  should render component with preprint
                 </Link>
               </li>
             </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="18"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -56215,7 +58058,68 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="25"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56274,7 +58178,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56321,7 +58225,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="29"
+      key="30"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56368,7 +58272,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56415,7 +58319,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56462,7 +58366,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="32"
+      key="33"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56509,7 +58413,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="35"
+      key="36"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -56562,7 +58466,7 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="37"
+      key="38"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -57956,6 +59860,67 @@ exports[`Additional Information Component  should render component with referenc
                 </Link>
               </li>
             </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="24"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -60442,6 +62407,67 @@ exports[`Additional Information Component  should render component with rek_herd
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Volume"
         spacing={2}
       >
@@ -60483,7 +62509,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60530,7 +62556,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60577,7 +62603,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60624,7 +62650,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60671,7 +62697,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60718,7 +62744,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="23"
+      key="24"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60765,7 +62791,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="24"
+      key="25"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60813,7 +62839,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60930,7 +62956,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="30"
+      key="31"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -60978,7 +63004,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="31"
+      key="32"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -61026,7 +63052,7 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="32"
+      key="33"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -61781,6 +63807,67 @@ exports[`Additional Information Component  should render component with rek_star
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="9"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Publisher"
         spacing={2}
       >
@@ -61823,7 +63910,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
+      key="10"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -61879,7 +63966,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="10"
+      key="11"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -61931,7 +64018,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="11"
+      key="12"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -61983,7 +64070,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -62050,7 +64137,7 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -62704,6 +64791,67 @@ exports[`Additional Information Component  should render component with research
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="15"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Publisher"
         spacing={2}
       >
@@ -62746,7 +64894,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -62793,7 +64941,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -62840,7 +64988,7 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="26"
+      key="27"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -63567,6 +65715,67 @@ exports[`Additional Information Component  should render component with thesis 1
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Supervisor(s)"
         spacing={2}
       >
@@ -63626,7 +65835,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -63683,7 +65892,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -63740,7 +65949,7 @@ exports[`Additional Information Component  should render component with thesis 1
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -64534,6 +66743,67 @@ exports[`Additional Information Component  should render component with video do
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
+    <div
+      key="21"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -65171,6 +67441,67 @@ exports[`Additional Information Component  should render component with working 
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="12"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Series"
         spacing={2}
       >
@@ -65213,7 +67544,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
+      key="13"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65260,7 +67591,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="13"
+      key="14"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65316,7 +67647,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
+      key="15"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65362,7 +67693,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="15"
+      key="16"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65410,7 +67741,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65457,7 +67788,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="18"
+      key="19"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65504,7 +67835,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="19"
+      key="20"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65551,7 +67882,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="20"
+      key="21"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65604,7 +67935,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65671,7 +68002,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="22"
+      key="23"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -65758,7 +68089,7 @@ exports[`Additional Information Component  should render component with working 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="28"
+      key="29"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -66488,6 +68819,67 @@ exports[`Additional Information Component  should render oa status value link in
         alignItems="flex-start"
         className="gridRow"
         container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
         key="additional-info-Supervisor(s)"
         spacing={2}
       >
@@ -66547,7 +68939,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
+      key="17"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -66604,7 +68996,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="17"
+      key="18"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -66661,7 +69053,7 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="21"
+      key="22"
     >
       <WithStyles(ForwardRef(Grid))
         alignItems="flex-start"
@@ -66707,4 +69099,65 @@ exports[`Additional Information Component  should render oa status value link in
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`Additional Information Component  should skip render of date if it has a placeholder value 1`] = `Array []`;
+exports[`Additional Information Component  should skip render of date if it has a placeholder value 1`] = `
+Array [
+  <div>
+    <WithStyles(ForwardRef(Grid))
+      alignItems="flex-start"
+      className="gridRow"
+      container={true}
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        sm={3}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(Typography))
+          classes={
+            Object {
+              "root": "header",
+            }
+          }
+          component="span"
+          data-testid="rek-ci-notice-attribution-incomplete-label"
+          variant="body2"
+        >
+          Cultural Institution Notice
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        className="data"
+        item={true}
+        sm={9}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(Typography))
+          component="span"
+          variant="body2"
+        >
+          <span>
+            <div
+              className="fez-icon_cilabel"
+              data-testid="fez-icon-cilabel"
+              style={
+                Object {
+                  "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                  "height": 100,
+                  "width": 100,
+                }
+              }
+            />
+            <br />
+            <strong>
+              Attribution Incomplete
+               - 
+            </strong>
+            Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+          </span>
+        </WithStyles(ForwardRef(Typography))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </div>,
+]
+`;

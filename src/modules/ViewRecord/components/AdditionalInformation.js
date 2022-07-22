@@ -367,7 +367,16 @@ export class AdditionalInformationClass extends PureComponent {
 
     renderColumns = () => {
         const rows = [];
-        const publication = this.props.publication;
+        // const publication = this.props.publication;
+        /* Code for testing branch - TO REMOVE */
+        // REPLACE WITH const publication = this.props.publication;
+        const publication = {
+            ...this.props.publication,
+            fez_record_search_key_ci_notice_attribution_incomplete: {
+                rek_ci_notice_attribution_incomplete: true,
+            },
+        }; // TODO - REMOVE THIS BODGE
+        /* End code for testing branch */
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
@@ -377,7 +386,7 @@ export class AdditionalInformationClass extends PureComponent {
                 ? locale.viewRecord.fields[displayType].concat(footerFields)
                 : footerFields;
         fields = this.props.account && this.props.account.canMasquerade ? fields : this.excludeAdminOnlyFields(fields);
-        console.log('RENDERCOLUMNS', displayType);
+
         fields
             .sort((field1, field2) => field1.order - field2.order)
             .map((item, index) => {
