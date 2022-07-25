@@ -19,7 +19,10 @@ import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import { isFileValid } from 'config/validation';
 import { mui1theme, openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import * as fileUploadConfig from '../FileUploader/config';
 
+import { getErrorMessage } from '../FileUploader/components/FileUploader';
+import { removeInvalidFileNames } from '../FileUploader/components/FileUploadDropzone';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
 import EditableFileName from 'modules/ViewRecord/components/partials/EditableFileName';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
@@ -32,6 +35,7 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
+import * as fileUploadLocale from '../FileUploader/locale';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -146,8 +150,12 @@ export const AttachedFiles = ({
     onEmbargoClearPromptText,
     locale,
     canEdit,
+    fileRestrictionsConfig,
 }) => {
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const { errorTitle } = locale;
 
     const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
@@ -181,8 +189,18 @@ export const AttachedFiles = ({
 
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-    const onFileNameChange = index => event => {
-        onFilenameChange('dsi_dsid', event.target.value, index);
+    const onFileNameChange = index => (filename /* , reset*/) => {
+        onFilenameChange('dsi_dsid', filename, index);
+        // POSSIBLE METHOD TO INDICATE FILENAME CHANGE AT API
+        // onFilenameChange('dsi_dsid_changed', !!reset ?? false, index);
+    };
+    const onFileNameBlur = () => {
+        const mappedFilenames = fileData.map(({ fileName }) => ({
+            name: fileName,
+        }));
+        const invalidFileNames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
+        const errormessage = getErrorMessage(invalidFileNames, fileUploadLocale.default, fileRestrictionsConfig);
+        setErrorMessage(errormessage);
     };
 
     return (
@@ -257,9 +275,9 @@ export const AttachedFiles = ({
                                             {isAdmin && canEdit ? (
                                                 <EditableFileName
                                                     {...item}
-                                                    isEditing
-                                                    onFilenameChange={onFileNameChange(index)}
+                                                    onFileNameChange={onFileNameChange(index)}
                                                     onFileSelect={showPreview}
+                                                    onFileNameBlur={onFileNameBlur}
                                                     id={`file-name-${index}-editing`}
                                                 />
                                             ) : (
@@ -375,6 +393,11 @@ export const AttachedFiles = ({
                     <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
             </StandardCard>
+            {errorMessage.length > 0 && (
+                <Grid item xs={12}>
+                    <Alert title={errorTitle} message={errorMessage} type="error" />
+                </Grid>
+            )}
         </Grid>
     );
 };
@@ -390,6 +413,7 @@ AttachedFiles.propTypes = {
     onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,
     canEdit: PropTypes.bool,
+    fileRestrictionsConfig: PropTypes.object,
 };
 
 AttachedFiles.defaultProps = {
@@ -400,6 +424,10 @@ AttachedFiles.defaultProps = {
         </span>
     ),
     canEdit: false,
+    fileRestrictionsConfig: {
+        fileUploadLimit: fileUploadConfig.DEFAULT_FILE_UPLOAD_LIMIT,
+        fileNameRestrictions: fileUploadConfig.FILE_NAME_RESTRICTION,
+    },
 };
 
 export default AttachedFiles;

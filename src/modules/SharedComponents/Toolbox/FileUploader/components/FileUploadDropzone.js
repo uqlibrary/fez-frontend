@@ -17,6 +17,22 @@ const styles = () => ({
     },
 });
 
+/**
+ * Remove invalid file names
+ *
+ * @param incomingFiles - array of files
+ * @param fileNameRestrictions - RegExp
+ * @returns Object
+ */
+export const removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
+    const validFiles = incomingFiles.filter(file => file && new RegExp(fileNameRestrictions, 'gi').test(file.name));
+    const invalidFileNames = incomingFiles
+        .filter(file => file && !new RegExp(fileNameRestrictions, 'gi').test(file.name))
+        .map(file => file.name);
+
+    return { validFiles: validFiles, invalidFileNames: invalidFileNames };
+};
+
 export class FileUploadDropzone extends PureComponent {
     static propTypes = {
         onDrop: PropTypes.func.isRequired,
@@ -148,22 +164,6 @@ export class FileUploadDropzone extends PureComponent {
     /**
      * Remove invalid file names
      *
-     * @param incomingFiles - array of files
-     * @param fileNameRestrictions - RegExp
-     * @returns Object
-     */
-    removeInvalidFileNames = (incomingFiles, fileNameRestrictions) => {
-        const validFiles = incomingFiles.filter(file => file && new RegExp(fileNameRestrictions, 'gi').test(file.name));
-        const invalidFileNames = incomingFiles
-            .filter(file => file && !new RegExp(fileNameRestrictions, 'gi').test(file.name))
-            .map(file => file.name);
-
-        return { validFiles: validFiles, invalidFileNames: invalidFileNames };
-    };
-
-    /**
-     * Remove invalid file names
-     *
      * Note: We could use a library like this, however, anything at this end can be easily be tampered.
      * @link https://github.com/sindresorhus/file-type
      *
@@ -229,7 +229,7 @@ export class FileUploadDropzone extends PureComponent {
         // Remove folders from accepted files (async)
         this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
             // Remove invalid file names
-            const { validFiles, invalidFileNames } = this.removeInvalidFileNames(onlyFiles, fileNameRestrictions);
+            const { validFiles, invalidFileNames } = removeInvalidFileNames(onlyFiles, fileNameRestrictions);
 
             // Remove duplicate files from accepted files
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(

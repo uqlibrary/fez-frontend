@@ -14,13 +14,13 @@ export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttac
 };
 
 export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    console.log('datastreamChangeCallbackFactory', dataStreams, setDataStreams);
     const callback = (key, value, index) => {
         const newDataStreams = [
             ...dataStreams.slice(0, index),
             { ...dataStreams[index], [key]: value },
             ...dataStreams.slice(index + 1),
         ];
+        console.log('datastreamChangeCallbackFactory newDataStreams', newDataStreams);
         setDataStreams(newDataStreams);
     };
     return [callback, [dataStreams, setDataStreams]];

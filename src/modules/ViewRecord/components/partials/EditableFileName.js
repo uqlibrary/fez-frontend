@@ -1,43 +1,84 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
+
+import Grid from '@material-ui/core/Grid';
+import Input from '@material-ui/core/Input';
+import IconButton from '@material-ui/core/IconButton';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import ClearIcon from '@material-ui/icons/Clear';
+import EditIcon from '@material-ui/icons/Edit';
 
 import FileName from './FileName';
 import { FileNameProps } from './FileName';
+import { Hidden } from '@material-ui/core';
 
-const EditableFileName = ({ isEditing, onFilenameChange, ...props }) => {
-    // eslint-disable-next-line no-unused-vars
+const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, ...props }) => {
+    const [isEditing, setIsEditing] = useState(false);
     const isEdited = useRef(false);
-    const originalFilenameRef = useRef(props.filename);
+    const originalFilenameRef = useRef(null);
 
     const onFilenameChangeProxy = event => {
         event.target.value !== originalFilenameRef.current && (isEdited.current = true);
-        onFilenameChange(event);
+        onFileNameChange(event.target.value);
     };
 
-    console.log(props);
+    const handleFileCancelEdit = () => {
+        setIsEditing(false);
+        onFileNameChange(originalFilenameRef.current, true);
+        handleCancelEdit && handleCancelEdit();
+    };
+
+    const handleFileEditFilename = () => {
+        originalFilenameRef.current = props.fileName;
+        setIsEditing(true);
+    };
 
     return (
         <>
             {!isEditing ? (
-                <FileName {...props} />
+                <>
+                    <Hidden smDown>
+                        <Grid container alignItems="flex-start" wrap="nowrap">
+                            <Grid item xs={10} style={{ display: 'flex', alignItems: 'center' }}>
+                                <FileName {...props} />
+                            </Grid>
+                            <Grid item xs>
+                                <IconButton aria-label="rename file" onClick={handleFileEditFilename} size={'small'}>
+                                    <EditIcon />
+                                </IconButton>
+                            </Grid>
+                        </Grid>
+                    </Hidden>
+                    <Hidden mdUp>
+                        <FileName {...props} />
+                    </Hidden>
+                </>
             ) : (
-                <TextField
+                <Input
                     autoFocus
+                    type={'text'}
                     value={props.fileName}
                     onChange={e => onFilenameChangeProxy(e)}
+                    onBlur={onFileNameBlur}
                     id={`${props.id}`}
                     data-testid={`${props.id}`}
-                /> /* Maybe change textfiled to Input, so we can add adornments such as tick and X buttons to accept or cancel edits (may need reset button too).
-                Also have to prevent the onchange firing every time the text changes but the control hasnt lost focus.   */
+                    endAdornment={
+                        <InputAdornment position="end">
+                            <IconButton aria-label="cancel rename" onClick={handleFileCancelEdit} size={'small'}>
+                                <ClearIcon />
+                            </IconButton>
+                        </InputAdornment>
+                    }
+                />
             )}
         </>
     );
 };
 
 export const EditableFileNameProps = {
-    isEditing: PropTypes.bool,
-    onFilenameChange: PropTypes.func,
+    onFileNameChange: PropTypes.func,
+    onFileNameBlur: PropTypes.func,
+    handleCancelEdit: PropTypes.func,
     ...FileNameProps,
 };
 
