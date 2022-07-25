@@ -133,6 +133,21 @@ export class FileUploader extends PureComponent {
     };
 
     /**
+     * Update file's description
+     *
+     * @param fileToUpdate
+     * @param index
+     * @param newValue
+     * @private
+     */
+    _updateFileDescription = (fileToUpdate, index, newValue) => {
+        const file = { ...fileToUpdate };
+        file[config.FILE_META_KEY_DESCRIPTION] = newValue;
+
+        this.replaceFile(file, index);
+    };
+
+    /**
      * Accept terms and conditions
      *
      * @param event
@@ -288,6 +303,7 @@ export class FileUploader extends PureComponent {
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onFileDescriptionChange={this._updateFileDescription}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                     disabled={disabled}

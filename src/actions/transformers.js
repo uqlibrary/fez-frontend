@@ -131,6 +131,7 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     const attachmentNames = files.map((item, index) => ({
         rek_file_attachment_name: item.name,
         rek_file_attachment_name_order: initialCount + index + 1,
+        rek_file_attachment_description: item.description,
     }));
     const attachmentEmbargoDates = files
         .map((item, index) => {
