@@ -189,17 +189,19 @@ export const AttachedFiles = ({
 
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-    const onFileNameChange = index => (filename /* , reset*/) => {
+    const onFileNameChange = index => (filename, reset) => {
         onFilenameChange('dsi_dsid', filename, index);
+        !!reset && setErrorMessage('');
         // POSSIBLE METHOD TO INDICATE FILENAME CHANGE AT API
         // onFilenameChange('dsi_dsid_changed', !!reset ?? false, index);
     };
     const onFileNameBlur = () => {
-        const mappedFilenames = fileData.map(({ fileName }) => ({
-            name: fileName,
+        const mappedFilenames = fileData.map((file, index) => ({
+            index,
+            name: file.fileName,
         }));
-        const invalidFileNames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
-        const errormessage = getErrorMessage(invalidFileNames, fileUploadLocale.default, fileRestrictionsConfig);
+        const processedFilenames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
+        const errormessage = getErrorMessage(processedFilenames, fileUploadLocale.default, fileRestrictionsConfig);
         setErrorMessage(errormessage);
     };
 
@@ -278,6 +280,7 @@ export const AttachedFiles = ({
                                                     onFileNameChange={onFileNameChange(index)}
                                                     onFileSelect={showPreview}
                                                     onFileNameBlur={onFileNameBlur}
+                                                    filenameRestrictions={fileRestrictionsConfig.fileNameRestrictions}
                                                     id={`file-name-${index}-editing`}
                                                 />
                                             ) : (

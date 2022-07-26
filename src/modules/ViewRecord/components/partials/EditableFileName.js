@@ -12,8 +12,9 @@ import FileName from './FileName';
 import { FileNameProps } from './FileName';
 import { Hidden } from '@material-ui/core';
 
-const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, ...props }) => {
+const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, filenameRestrictions, ...props }) => {
     const [isEditing, setIsEditing] = useState(false);
+    const [isInvalid, setIsInvalid] = useState(false);
     const isEdited = useRef(false);
     const originalFilenameRef = useRef(null);
 
@@ -24,8 +25,9 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
 
     const handleFileCancelEdit = () => {
         setIsEditing(false);
+        setIsInvalid(false);
         onFileNameChange(originalFilenameRef.current, true);
-        handleCancelEdit && handleCancelEdit();
+        handleCancelEdit?.();
     };
 
     const handleFileEditFilename = () => {
@@ -33,12 +35,17 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
         setIsEditing(true);
     };
 
+    const onFileNameBlurProxy = () => {
+        setIsInvalid(!new RegExp(filenameRestrictions, 'gi').test(props.fileName));
+        onFileNameBlur?.();
+    };
+
     return (
         <>
             {!isEditing ? (
                 <>
                     <Hidden smDown>
-                        <Grid container alignItems="flex-start" wrap="nowrap">
+                        <Grid container alignItems={'center'} wrap="nowrap">
                             <Grid item xs={10} style={{ display: 'flex', alignItems: 'center' }}>
                                 <FileName {...props} />
                             </Grid>
@@ -56,10 +63,12 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
             ) : (
                 <Input
                     autoFocus
+                    required
+                    error={isInvalid}
                     type={'text'}
                     value={props.fileName}
-                    onChange={e => onFilenameChangeProxy(e)}
-                    onBlur={onFileNameBlur}
+                    onChange={onFilenameChangeProxy}
+                    onBlur={onFileNameBlurProxy}
                     id={`${props.id}`}
                     data-testid={`${props.id}`}
                     endAdornment={
@@ -79,6 +88,7 @@ export const EditableFileNameProps = {
     onFileNameChange: PropTypes.func,
     onFileNameBlur: PropTypes.func,
     handleCancelEdit: PropTypes.func,
+    filenameRestrictions: PropTypes.any,
     ...FileNameProps,
 };
 
