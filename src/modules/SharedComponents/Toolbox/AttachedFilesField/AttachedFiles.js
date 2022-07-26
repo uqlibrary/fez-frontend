@@ -281,7 +281,7 @@ export const AttachedFiles = ({
                                                     onFileSelect={showPreview}
                                                     onFileNameBlur={onFileNameBlur}
                                                     filenameRestrictions={fileRestrictionsConfig.fileNameRestrictions}
-                                                    id={`file-name-${index}-editing`}
+                                                    id={`file-name-${index}`}
                                                 />
                                             ) : (
                                                 <FileName

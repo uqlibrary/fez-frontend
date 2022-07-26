@@ -13,6 +13,12 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
     ]
   }
   deleteHint="Remove this file"
+  fileRestrictionsConfig={
+    Object {
+      "fileNameRestrictions": /\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/,
+      "fileUploadLimit": 10,
+    }
+  }
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
@@ -24,5 +30,6 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
        - review security policy on Security tab
     </span>
   }
+  onFilenameChange={[Function]}
 />
 `;

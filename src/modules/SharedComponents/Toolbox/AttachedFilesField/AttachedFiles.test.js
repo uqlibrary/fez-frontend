@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act, screen } from 'test-utils';
 
 import { openAccessConfig } from 'config';
 
@@ -169,7 +169,7 @@ describe('AttachedFiles component', () => {
         });
 
         act(() => {
-            fireEvent.click(getAllByRole('button')[0]);
+            fireEvent.click(getAllByRole('button')[1]);
         });
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
         fireEvent.click(getByText('26', calendar));
@@ -339,6 +339,7 @@ describe('AttachedFiles component', () => {
             onDateChange: onDateChangeFn,
         });
 
+        screen.debug(undefined, 100000);
         expect(
             getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),
         ).toBeInTheDocument();

@@ -69,8 +69,8 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
                     value={props.fileName}
                     onChange={onFilenameChangeProxy}
                     onBlur={onFileNameBlurProxy}
-                    id={`${props.id}`}
-                    data-testid={`${props.id}`}
+                    id={`${props.id}-editing`}
+                    data-testid={`${props.id}-editing`}
                     endAdornment={
                         <InputAdornment position="end">
                             <IconButton aria-label="cancel rename" onClick={handleFileCancelEdit} size={'small'}>
