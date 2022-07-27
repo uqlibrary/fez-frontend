@@ -131,6 +131,8 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
     const attachmentNames = files.map((item, index) => ({
         rek_file_attachment_name: item.name,
         rek_file_attachment_name_order: initialCount + index + 1,
+    }));
+    const attachmentDescriptions = files.map(item => ({
         rek_file_attachment_description: item.description,
     }));
     const attachmentEmbargoDates = files
@@ -170,6 +172,10 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         fez_record_search_key_file_attachment_name: [
             ...((record && record.fez_record_search_key_file_attachment_name) || []),
             ...attachmentNames,
+        ],
+        fez_record_search_key_file_attachment_description: [
+            ...((record && record.fez_record_search_key_file_attachment_description) || []),
+            ...attachmentDescriptions,
         ],
         fez_record_search_key_file_attachment_embargo_date: [
             ...((record && record.fez_record_search_key_file_attachment_embargo_date) || []),
