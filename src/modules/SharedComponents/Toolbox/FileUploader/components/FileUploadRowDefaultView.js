@@ -58,12 +58,12 @@ export class FileUploadRowDefaultView extends PureComponent {
         return (
             <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
-                    <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
+                    <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
                         </Typography>
                     </Grid>
-                    {/* <Grid item md={3}>
+                    <Grid item sm={3} md={3}>
                         <TextField
                             fullWidth
                             className={classes.input}
@@ -74,10 +74,10 @@ export class FileUploadRowDefaultView extends PureComponent {
                             textFieldId={`dsi-label-upload-${index}`}
                             key={this.props.name}
                         />
-                    </Grid> */}
+                    </Grid>
                     {requireOpenAccessStatus && (
                         <Fragment>
-                            <Grid item md={3} sm={4}>
+                            <Grid item md={3} sm={3}>
                                 <NewGenericSelectField
                                     value={accessConditionId || ''}
                                     onChange={this.props.onAccessConditionChange}
@@ -138,7 +138,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             fileUploadRowStatusId={`dsi-dsid-${index}`}
                         />
                     </Grid>
-                    <Grid item sm={12}>
+                    {/* <Grid item sm={12}>
                         <TextField
                             fullWidth
                             label={'File Description'}
@@ -149,7 +149,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             textFieldId={`dsi-label-upload-${index}`}
                             key={this.props.name}
                         />
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </div>
         );

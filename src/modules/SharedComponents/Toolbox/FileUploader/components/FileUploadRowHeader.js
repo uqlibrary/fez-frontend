@@ -47,12 +47,12 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                             {filenameColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={2}>
+                    <Grid item md={3} sm={3}>
                         <Typography variant="caption" gutterBottom>
                             {fileDescriptionColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={4}>
+                    <Grid item md={3} sm={3}>
                         <Typography variant="caption" gutterBottom>
                             {requireOpenAccessStatus && fileAccessColumn}
                         </Typography>
