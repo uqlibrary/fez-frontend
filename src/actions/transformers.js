@@ -132,6 +132,10 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         rek_file_attachment_name: item.name,
         rek_file_attachment_name_order: initialCount + index + 1,
     }));
+    const attachmentSecurityPolicies = files.map((item, index) => ({
+        rek_file_attachment_security_policy: item.security_policy,
+        rek_file_attachment_security_policy_order: initialCount + index + 1,
+    }));
     const attachmentEmbargoDates = files
         .map((item, index) => {
             if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) {
@@ -177,6 +181,10 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         fez_record_search_key_file_attachment_access_condition: [
             ...((record && record.fez_record_search_key_file_attachment_access_condition) || []),
             ...attachmentAccessConditions,
+        ],
+        fez_record_search_key_file_attachment_security_policy: [
+            ...((record && record.fez_record_search_key_file_attachment_security_policy) || []),
+            ...attachmentSecurityPolicies,
         ],
     };
 };

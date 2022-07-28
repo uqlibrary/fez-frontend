@@ -20,10 +20,17 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled }) => {
+export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const { filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation } = locale;
+    const {
+        filenameColumn,
+        fileAccessColumn,
+        fileSecurityPolicyColumn,
+        embargoDateColumn,
+        deleteAllFiles,
+        deleteAllFilesConfirmation,
+    } = locale;
     return (
         <Hidden only={['xs']}>
             <ConfirmationBox
@@ -42,10 +49,12 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                     <Grid item md={3} sm={4}>
                         <Typography variant="caption" gutterBottom>
-                            {requireOpenAccessStatus && fileAccessColumn}
+                            {isAdmin
+                                ? requireOpenAccessStatus && fileSecurityPolicyColumn
+                                : requireOpenAccessStatus && fileAccessColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={2} sm={2}>
+                    <Grid item sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {requireOpenAccessStatus && embargoDateColumn}
                         </Typography>
@@ -70,12 +79,14 @@ FileUploadRowHeader.propTypes = {
     locale: PropTypes.object,
     requireOpenAccessStatus: PropTypes.bool,
     disabled: PropTypes.bool,
+    isAdmin: PropTypes.bool,
 };
 
 FileUploadRowHeader.defaultProps = {
     locale: {
         filenameColumn: 'File name',
         fileAccessColumn: 'Access conditions',
+        fileSecurityPolicyColumn: 'Security policy',
         embargoDateColumn: 'Embargo release date',
         deleteAllFiles: 'Remove all files from the upload queue',
         deleteAllFilesConfirmation: {

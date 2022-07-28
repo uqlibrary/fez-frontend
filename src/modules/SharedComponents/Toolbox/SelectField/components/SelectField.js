@@ -14,12 +14,16 @@ const SelectFieldWrapper = props => {
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
+    const hideLabel = !!filteredProps.hideLabel;
+    const formHelperTextProps = filteredProps.formHelperTextProps ?? {};
+    delete filteredProps.formHelperTextProps;
+    delete filteredProps.hideLabel;
     delete filteredProps.errorText;
 
     return (
         <React.Fragment>
             <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
-                <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>
+                {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
                 <Select
                     inputProps={{
                         'aria-labelledby': `${props.selectFieldId}-label`,
@@ -37,7 +41,7 @@ const SelectFieldWrapper = props => {
                     {...filteredProps}
                     autoWidth
                 />
-                {helperText && <FormHelperText>{helperText}</FormHelperText>}
+                {helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>}
             </FormControl>
         </React.Fragment>
     );
@@ -46,6 +50,8 @@ const SelectFieldWrapper = props => {
 SelectFieldWrapper.propTypes = {
     ...Select.propTypes,
     selectFieldId: PropTypes.string.isRequired,
+    hideLabel: PropTypes.bool,
+    formHelperTextProps: PropTypes.object,
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,

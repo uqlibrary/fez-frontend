@@ -1,10 +1,10 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import FileUploadEmbargoDate from './FileUploadEmbargoDate';
 import FileUploadRowStatus from './FileUploadRowStatus';
 
-import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, INHERIT_OPTION } from '../config';
+import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_PUBLIC } from '../config';
 import { selectFields } from 'locale/selectFields';
 
 import Grid from '@material-ui/core/Grid';
@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
 export class FileUploadRowDefaultView extends PureComponent {
     static propTypes = {
@@ -20,6 +21,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         size: PropTypes.string,
         accessConditionId: PropTypes.number,
         embargoDate: PropTypes.string,
+        securityPolicy: PropTypes.number,
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         disabled: PropTypes.bool,
         locale: PropTypes.object,
@@ -27,6 +29,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
+        onSecurityPolicyChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
@@ -47,6 +50,7 @@ export class FileUploadRowDefaultView extends PureComponent {
             requireOpenAccessStatus,
             accessConditionId,
             embargoDate,
+            securityPolicy,
             name,
             size,
             classes,
@@ -61,60 +65,88 @@ export class FileUploadRowDefaultView extends PureComponent {
                             {name} ({size})
                         </Typography>
                     </Grid>
-                    {requireOpenAccessStatus && (
-                        <Fragment>
-                            <Grid item md={3} sm={4}>
-                                <NewGenericSelectField
-                                    value={accessConditionId || ''}
-                                    onChange={this.props.onAccessConditionChange}
-                                    disabled={disabled}
-                                    autoFocus={index === focusOnIndex}
-                                    locale={this.props.accessConditionLocale}
-                                    genericSelectFieldId={`dsi-open-access-${index}`}
-                                    itemsList={
-                                        this.props.isAdmin
-                                            ? [...FILE_ACCESS_OPTIONS, INHERIT_OPTION]
-                                            : FILE_ACCESS_OPTIONS
-                                    }
-                                    displayEmpty
-                                    hideLabel
-                                    required
-                                    selectProps={{
+                    {!!this.props.isAdmin && requireOpenAccessStatus && (
+                        <Grid item md={3} sm={4}>
+                            <PolicyDropdown
+                                fieldName={name}
+                                hideLabel
+                                required
+                                displayEmpty
+                                disabled={disabled}
+                                displayPrompt
+                                autoFocus={index === focusOnIndex}
+                                {...{ MenuProps: { root: !!securityPolicy ? classes.selected : classes.placeholder } }}
+                                {...{
+                                    input: {
                                         className: classes.selector,
-                                        input: (
-                                            <Input
-                                                disableUnderline
-                                                autoFocus={index === focusOnIndex}
-                                                classes={{
-                                                    root: !!accessConditionId ? classes.selected : classes.placeholder,
-                                                }}
-                                            />
-                                        ),
-                                    }}
-                                    formHelperTextProps={{
-                                        className: classes.error,
-                                    }}
-                                    error={!accessConditionId && selectFields.accessCondition.errorMessage}
-                                    selectPrompt={selectFields.accessCondition.selectPrompt}
+                                        disableUnderline: true,
+                                        autoFocus: index === focusOnIndex,
+                                        onChange: this.props.onSecurityPolicyChange,
+                                        onBlur: /* istanbul ignore next */ () => {},
+                                    },
+                                    value: securityPolicy ?? '',
+                                }}
+                                errorText={!securityPolicy && selectFields.securityPolicy.errorMessage}
+                                prompt={selectFields.securityPolicy.selectPrompt}
+                                policyDropdownId={`dsi-security-policy-${index}`}
+                                formHelperTextProps={{
+                                    className: classes.error,
+                                }}
+                            />
+                        </Grid>
+                    )}
+                    {!!!this.props.isAdmin && requireOpenAccessStatus && (
+                        <Grid item md={3} sm={4}>
+                            <NewGenericSelectField
+                                value={accessConditionId || ''}
+                                onChange={this.props.onAccessConditionChange}
+                                disabled={disabled}
+                                autoFocus={index === focusOnIndex}
+                                locale={this.props.accessConditionLocale}
+                                genericSelectFieldId={`dsi-open-access-${index}`}
+                                itemsList={FILE_ACCESS_OPTIONS}
+                                displayEmpty
+                                hideLabel
+                                required
+                                selectProps={{
+                                    className: classes.selector,
+                                    input: (
+                                        <Input
+                                            disableUnderline
+                                            autoFocus={index === focusOnIndex}
+                                            classes={{
+                                                root: !!accessConditionId ? classes.selected : classes.placeholder,
+                                            }}
+                                        />
+                                    ),
+                                }}
+                                formHelperTextProps={{
+                                    className: classes.error,
+                                }}
+                                error={!accessConditionId && selectFields.accessCondition.errorMessage}
+                                selectPrompt={selectFields.accessCondition.selectPrompt}
+                            />
+                        </Grid>
+                    )}
+                    {requireOpenAccessStatus && (
+                        <Grid item sm={2}>
+                            {((this.props.isAdmin && securityPolicy !== FILE_SECURITY_POLICY_PUBLIC) ||
+                                (!this.props.isAdmin && accessConditionId !== FILE_ACCESS_CONDITION_OPEN)) && (
+                                <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
+                                    {embargoDateClosedAccess}
+                                </Typography>
+                            )}
+                            {((this.props.isAdmin && securityPolicy === FILE_SECURITY_POLICY_PUBLIC) ||
+                                (!this.props.isAdmin && accessConditionId === FILE_ACCESS_CONDITION_OPEN)) && (
+                                <FileUploadEmbargoDate
+                                    value={embargoDate}
+                                    minDate={new Date()}
+                                    onChange={this.props.onEmbargoDateChange}
+                                    disabled={disabled}
+                                    fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                 />
-                            </Grid>
-                            <Grid item md={2} sm={2}>
-                                {accessConditionId !== FILE_ACCESS_CONDITION_OPEN && (
-                                    <Typography variant="body2" gutterBottom data-testid={`dsi-embargo-date-${index}`}>
-                                        {embargoDateClosedAccess}
-                                    </Typography>
-                                )}
-                                {accessConditionId === FILE_ACCESS_CONDITION_OPEN && (
-                                    <FileUploadEmbargoDate
-                                        value={embargoDate}
-                                        minDate={new Date()}
-                                        onChange={this.props.onEmbargoDateChange}
-                                        disabled={disabled}
-                                        fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                    />
-                                )}
-                            </Grid>
-                        </Fragment>
+                            )}
+                        </Grid>
                     )}
                     <Grid item xs={1} className={classes.icon}>
                         <FileUploadRowStatus
@@ -140,6 +172,9 @@ const styles = () => ({
     },
     selector: {
         maxWidth: 200,
+        fontSize: 14,
+    },
+    securitySelector: {
         fontSize: 14,
     },
     placeholder: {
