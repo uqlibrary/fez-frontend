@@ -6598,6 +6598,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -6652,6 +6653,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -6706,6 +6708,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -6928,6 +6931,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -6982,6 +6986,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -7543,6 +7548,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -7598,6 +7604,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -7654,6 +7661,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -8047,6 +8055,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -8101,6 +8110,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8155,6 +8165,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8378,6 +8389,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -8432,6 +8444,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8488,6 +8501,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8711,6 +8725,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -8765,6 +8780,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8821,6 +8837,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9054,6 +9071,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={true}
     />
@@ -9108,6 +9126,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9164,6 +9183,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9566,6 +9586,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     xs={12}
   >
     <Memo(FileUploadRowHeader)
+      isAdmin={false}
       onDeleteAll={[Function]}
       requireOpenAccessStatus={false}
     />
@@ -9621,6 +9642,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -9677,6 +9699,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {

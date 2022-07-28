@@ -200,6 +200,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_name_order: 4,
                 },
             ],
+            fez_record_search_key_file_attachment_security_policy: [],
             fez_record_search_key_file_attachment_embargo_date: [
                 {
                     rek_file_attachment_embargo_date: '2018-01-31',
@@ -254,6 +255,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_name_order: 2,
                 },
             ],
+            fez_record_search_key_file_attachment_security_policy: [],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [],
         };
@@ -284,6 +286,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_name_order: 2,
                 },
             ],
+            fez_record_search_key_file_attachment_security_policy: [],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [
                 {
@@ -328,6 +331,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_name_order: 2,
                 },
             ],
+            fez_record_search_key_file_attachment_security_policy: [],
             fez_record_search_key_file_attachment_embargo_date: [
                 {
                     rek_file_attachment_embargo_date: '2017-10-01',
@@ -392,6 +396,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_name_order: 3,
                 },
             ],
+            fez_record_search_key_file_attachment_security_policy: [],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_access_condition: [
                 {

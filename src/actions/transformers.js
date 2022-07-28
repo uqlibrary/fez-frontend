@@ -4,6 +4,8 @@ import {
     FILE_ACCESS_CONDITION_CLOSED,
     FILE_ACCESS_CONDITION_INHERIT,
     FILE_ACCESS_CONDITION_OPEN,
+    FILE_SECURITY_POLICY_ADMIN,
+    FILE_SECURITY_POLICY_PUBLIC,
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { contentIndicators } from '../config';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
@@ -132,10 +134,24 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         rek_file_attachment_name: item.name,
         rek_file_attachment_name_order: initialCount + index + 1,
     }));
-    const attachmentSecurityPolicies = files.map((item, index) => ({
-        rek_file_attachment_security_policy: item.security_policy,
-        rek_file_attachment_security_policy_order: initialCount + index + 1,
-    }));
+    // const attachmentSecurityPolicies = files.map((item, index) => ({
+    //     rek_file_attachment_security_policy: item.security_policy,
+    //     rek_file_attachment_security_policy_order: initialCount + index + 1,
+    // }));
+    const attachmentSecurityPolicies = files
+        .map((item, index) => {
+            if (!item.hasOwnProperty('security_policy')) return null;
+            let accessCondition = item.security_policy;
+            if (accessCondition === FILE_SECURITY_POLICY_PUBLIC && item.date && moment(item.date).isAfter()) {
+                accessCondition = FILE_SECURITY_POLICY_ADMIN;
+            }
+            return {
+                rek_file_attachment_security_policy: accessCondition,
+                rek_file_attachment_security_policy_order: initialCount + index + 1,
+            };
+        })
+        .filter(file => file !== null);
+
     const attachmentEmbargoDates = files
         .map((item, index) => {
             if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) {
