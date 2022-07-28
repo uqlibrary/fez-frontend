@@ -75,7 +75,6 @@ export class FileUploadRowDefaultView extends PureComponent {
                                 disabled={disabled}
                                 displayPrompt
                                 autoFocus={index === focusOnIndex}
-                                {...{ MenuProps: { root: !!securityPolicy ? classes.selected : classes.placeholder } }}
                                 {...{
                                     input: {
                                         className: classes.selector,
