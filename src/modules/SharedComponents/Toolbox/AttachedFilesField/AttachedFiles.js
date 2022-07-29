@@ -147,6 +147,7 @@ export const AttachedFiles = ({
     onDateChange,
     onDescriptionChange,
     onFilenameChange,
+    onHandleFileIsValid,
     onEmbargoClearPromptText,
     locale,
     canEdit,
@@ -189,13 +190,8 @@ export const AttachedFiles = ({
 
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-    const onFileNameChange = index => (filename, reset) => {
-        onFilenameChange('dsi_dsid', filename, index);
-        !!reset && setErrorMessage('');
-        // POSSIBLE METHOD TO INDICATE FILENAME CHANGE AT API
-        // onFilenameChange('dsi_dsid_changed', !!reset ?? false, index);
-    };
-    const onFileNameBlur = () => {
+
+    const checkFileNamesForErrors = () => {
         const mappedFilenames = fileData.map((file, index) => ({
             index,
             name: file.fileName,
@@ -203,6 +199,22 @@ export const AttachedFiles = ({
         const processedFilenames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
         const errormessage = getErrorMessage(processedFilenames, fileUploadLocale.default, fileRestrictionsConfig);
         setErrorMessage(errormessage);
+    };
+
+    const onFileCancelEdit = () => {
+        checkFileNamesForErrors();
+    };
+
+    const onFileNameChange = index => (filename /* , reset*/) => {
+        onFilenameChange('dsi_dsid', filename, index);
+        // POSSIBLE METHOD TO INDICATE FILENAME CHANGE AT API
+        // onFilenameChange('dsi_dsid_changed', !!reset ?? false, index);
+    };
+    const onFileSaveFilename = () => {
+        checkFileNamesForErrors();
+    };
+    const handleFileIsValid = index => isValid => {
+        onHandleFileIsValid?.('isValid', isValid, index);
     };
 
     return (
@@ -279,8 +291,10 @@ export const AttachedFiles = ({
                                                     {...item}
                                                     onFileNameChange={onFileNameChange(index)}
                                                     onFileSelect={showPreview}
-                                                    onFileNameBlur={onFileNameBlur}
+                                                    onFileSaveFilename={onFileSaveFilename}
+                                                    onFileCancelEdit={onFileCancelEdit}
                                                     filenameRestrictions={fileRestrictionsConfig.fileNameRestrictions}
+                                                    handleFileIsValid={handleFileIsValid(index)}
                                                     id={`file-name-${index}`}
                                                 />
                                             ) : (
@@ -413,6 +427,7 @@ AttachedFiles.propTypes = {
     onDateChange: PropTypes.func,
     onDescriptionChange: PropTypes.func,
     onFilenameChange: PropTypes.func,
+    onHandleFileIsValid: PropTypes.func,
     onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,
     canEdit: PropTypes.bool,

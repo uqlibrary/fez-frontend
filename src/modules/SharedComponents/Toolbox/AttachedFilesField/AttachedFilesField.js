@@ -20,7 +20,6 @@ export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => 
             { ...dataStreams[index], [key]: value },
             ...dataStreams.slice(index + 1),
         ];
-        console.log('datastreamChangeCallbackFactory newDataStreams', newDataStreams);
         setDataStreams(newDataStreams);
     };
     return [callback, [dataStreams, setDataStreams]];
@@ -54,6 +53,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
             onDateChange={handleDataStreamChange}
             onDescriptionChange={handleDataStreamChange}
             onFilenameChange={handleDataStreamChange}
+            onHandleFileIsValid={handleDataStreamChange}
             dataStreams={dataStreams}
             {...props}
         />
@@ -62,6 +62,5 @@ export const AttachedFilesField = ({ input, ...props }) => {
 
 AttachedFilesField.propTypes = {
     input: PropTypes.object,
-    fileName: PropTypes.string,
     meta: PropTypes.object,
 };

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -15,9 +15,16 @@ import FileName from './FileName';
 import { FileNameProps } from './FileName';
 import { Hidden } from '@material-ui/core';
 
-const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, filenameRestrictions, ...props }) => {
+const EditableFileName = ({
+    onFileNameChange,
+    onFileSaveFilename,
+    handleFileIsValid,
+    onFileCancelEdit,
+    filenameRestrictions,
+    ...props
+}) => {
     const [isEditing, setIsEditing] = useState(false);
-    const [isInvalid, setIsInvalid] = useState(false);
+    const [isValid, setIsValid] = useState(true);
     const isEdited = useRef(false);
     const originalFilenameRef = useRef(null);
     const editingFilenameRef = useRef(null);
@@ -29,9 +36,13 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
 
     const handleFileCancelEdit = () => {
         setIsEditing(false);
-        setIsInvalid(false);
+        setIsValid(true);
+        isEdited.current = editingFilenameRef.current !== originalFilenameRef.current;
         onFileNameChange(editingFilenameRef.current ?? originalFilenameRef.current, true);
-        handleCancelEdit?.();
+        onFileCancelEdit?.();
+        /* HERE  - NEED TO ADDRESS ISSUE OF MULTIPLE FILES EDITING AT SAME TIME,
+        WHEN ONE IS CANCELLED ANY ERRORS FROM THE OTHER FILES ARE CLEARED.
+        ALSO NEED TO TRUNCATE THE LONG TEXT OF A FILENAME AFTER BEING EDITED */
     };
 
     const handleFileEditFilename = () => {
@@ -41,17 +52,22 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
     };
 
     const handleFileSaveFilename = () => {
-        const isInvalid = !new RegExp(filenameRestrictions, 'gi').test(props.fileName);
-        setIsInvalid(isInvalid);
-        !isInvalid && setIsEditing(false);
-        onFileNameBlur?.();
+        const isValid = new RegExp(filenameRestrictions, 'gi').test(props.fileName);
+        setIsValid(isValid);
+        isValid && setIsEditing(false);
+        onFileSaveFilename?.();
     };
 
     const handleFileRestoreFilename = () => {
         onFileNameChange(originalFilenameRef.current);
         isEdited.current = false;
-        setIsInvalid(false);
+        setIsValid(true);
     };
+
+    useEffect(() => {
+        handleFileIsValid?.(isEditing ? false : isValid);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isEditing, isValid]);
 
     return (
         <>
@@ -96,7 +112,7 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
                 <Input
                     autoFocus
                     required
-                    error={isInvalid}
+                    error={!isValid}
                     type={'text'}
                     value={props.fileName}
                     onChange={onFilenameChangeProxy}
@@ -122,8 +138,9 @@ const EditableFileName = ({ onFileNameChange, onFileNameBlur, handleCancelEdit, 
 
 export const EditableFileNameProps = {
     onFileNameChange: PropTypes.func,
-    onFileNameBlur: PropTypes.func,
-    handleCancelEdit: PropTypes.func,
+    onFileSaveFilename: PropTypes.func,
+    onFileCancelEdit: PropTypes.func,
+    handleFileIsValid: PropTypes.func,
     filenameRestrictions: PropTypes.any,
     ...FileNameProps,
 };

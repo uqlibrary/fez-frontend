@@ -11,7 +11,7 @@ export default {
         isrc: 'ISRC value is not valid',
         fileUpload: 'File upload is not in valid state',
         fileUploadRequired: 'Add at least one file to upload',
-        fileName: 'Filename value is not valid',
+        fileName: 'File name value is not valid',
         required: 'This field is required',
         email: 'Email address is not valid',
         url: 'URL is not valid',
