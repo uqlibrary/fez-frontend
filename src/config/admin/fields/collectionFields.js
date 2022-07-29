@@ -11,10 +11,6 @@ export default {
             title: 'Collection Display Default',
             groups: [['fez_record_search_key_collection_view_type']],
         },
-        {
-            title: 'Cultural Institute (CI) Notice',
-            groups: [['fez_record_search_key_ci_notice_attribution_incomplete']],
-        },
     ],
     bibliographic: () => [
         {

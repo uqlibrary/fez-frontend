@@ -186,7 +186,7 @@ export default {
                 fez_record_search_key_license: 'Licence and terms of access',
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
-                fez_record_search_key_ci_notice_attribution_incomplete: 'Cultural Institution Notice',
+                ciNotices: 'Cultural Institution Notice',
                 fez_record_search_key_software_required: 'Software required',
                 fez_record_search_key_type_of_data: 'Type',
                 fez_record_search_key_original_format: 'Original format',
@@ -497,7 +497,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 22.1,
                 },
                 {
@@ -587,7 +587,7 @@ export default {
                     order: 9.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 9.8,
                 },
                 {
@@ -721,7 +721,7 @@ export default {
                     order: 12.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 12.8,
                 },
                 {
@@ -817,7 +817,7 @@ export default {
                     order: 2,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 3,
                 },
             ],
@@ -923,7 +923,7 @@ export default {
                     order: 22.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 22.8,
                 },
                 {
@@ -1101,7 +1101,7 @@ export default {
                     order: 25.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 25.8,
                 },
                 {
@@ -1195,7 +1195,7 @@ export default {
                     order: 6.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 6.8,
                 },
                 {
@@ -1325,7 +1325,7 @@ export default {
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 10.6,
                 },
                 {
@@ -1531,7 +1531,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 22.1,
                 },
             ],
@@ -1601,7 +1601,7 @@ export default {
                     order: 13.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 13.75,
                 },
                 {
@@ -1743,7 +1743,7 @@ export default {
                     order: 12.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 12.8,
                 },
                 {
@@ -1861,7 +1861,7 @@ export default {
                     order: 14,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 14.5,
                 },
             ],
@@ -1943,7 +1943,7 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 17.2,
                 },
                 {
@@ -2037,7 +2037,7 @@ export default {
                     order: 11.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 11.8,
                 },
                 {
@@ -2151,7 +2151,7 @@ export default {
                     order: 13.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 13.8,
                 },
                 {
@@ -2245,7 +2245,7 @@ export default {
                     order: 4.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 4.75,
                 },
                 {
@@ -2415,7 +2415,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 22.1,
                 },
             ],
@@ -2517,7 +2517,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 22.1,
                 },
             ],
@@ -2579,7 +2579,7 @@ export default {
                     order: 10.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 10.8,
                 },
                 {
@@ -2673,7 +2673,7 @@ export default {
                     order: 6.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 6.8,
                 },
                 {
@@ -2791,7 +2791,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 16,
                 },
             ],
@@ -2885,7 +2885,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 20,
                 },
             ],
@@ -2939,7 +2939,7 @@ export default {
                     order: 9.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 9.8,
                 },
                 {
@@ -3065,7 +3065,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 19.6,
                 },
                 {
@@ -3127,7 +3127,7 @@ export default {
                     order: 7.6,
                 },
                 {
-                    field: 'fez_record_search_key_ci_notice_attribution_incomplete',
+                    field: 'ciNotices',
                     order: 7.8,
                 },
                 {

@@ -531,6 +531,7 @@ export function adminUpdate(data) {
             ...data.publication,
             collections: data.adminSection.collections,
         });
+        console.log('PATCHRECORDREQUEST', patchRecordRequest);
         return Promise.resolve([])
             .then(() =>
                 hasFilesToUpload

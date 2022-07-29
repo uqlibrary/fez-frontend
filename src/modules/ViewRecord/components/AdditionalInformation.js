@@ -372,7 +372,7 @@ export class AdditionalInformationClass extends PureComponent {
         // REPLACE WITH const publication = this.props.publication;
         const publication = {
             ...this.props.publication,
-            fez_record_search_key_ci_notice_attribution_incomplete: {
+            ciNotices: {
                 rek_ci_notice_attribution_incomplete: true,
             },
         }; // TODO - REMOVE THIS BODGE
@@ -402,7 +402,7 @@ export class AdditionalInformationClass extends PureComponent {
                             ? null
                             : publication[field];
                         break;
-                    case 'fez_record_search_key_ci_notice_attribution_incomplete':
+                    case 'ciNotices':
                         const ciKey = this.transformFieldNameToSubkey(field);
                         // console.log('CI NOTICE', ciKey);
                         value = publication[field] && publication[field][ciKey] === true ? publication[field] : null;

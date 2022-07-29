@@ -270,11 +270,10 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
-        fez_record_search_key_ci_notice_attribution_incomplete: {
+        ciNotices: {
             component: AttributionIncompleteField,
             componentProps: {
-                name:
-                    'adminSection.fez_record_search_key_ci_notice_attribution_incomplete.rek_ci_notice_attribution_incomplete',
+                name: 'notesSection.ciNotices.rek_ci_notice_attribution_incomplete',
                 label: 'Attribution Incomplete',
                 placeholder: 'Attribution Incomplete Placeholder',
                 attributionIncompleteFieldId: 'rek_ci_notice_attribution_incomplete',

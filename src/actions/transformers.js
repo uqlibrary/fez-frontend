@@ -1387,7 +1387,8 @@ export const getDatastreamInfo = (
 };
 
 export const getNotesSectionSearchKeys = (data = {}) => {
-    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
+    console.log('NOTES SECTION KEYS', data);
+    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes, ciNotices } = data;
     return {
         ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
             ? {
@@ -1399,6 +1400,11 @@ export const getNotesSectionSearchKeys = (data = {}) => {
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : { fez_internal_notes: null }),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+        ...(!!ciNotices && ciNotices.hasOwnProperty('rek_ci_notice_attribution_incomplete')
+            ? {
+                  fez_record_search_key_ci_notice_attribution_incomplete: { ...ciNotices },
+              }
+            : {}),
     };
 };
 

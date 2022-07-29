@@ -27,7 +27,7 @@ const collectionRecord = {
     ],
     fez_record_search_key_xsd_display_option: [263],
     rek_wok_doc_type_lookup: 'Abstract of Published Item',
-    "fez_record_search_key_ci_notice_attribution_incomplete": {
+    "ciNotices": {
         "rek_ci_notice_attribution_incomplete":true,
     },
 };

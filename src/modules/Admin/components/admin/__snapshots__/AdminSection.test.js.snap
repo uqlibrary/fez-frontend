@@ -39,7 +39,7 @@ exports[`AdminSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_ci_notice_attribution_incomplete",
+            "ciNotices",
           ],
         ],
         "title": "Cultural Institute (CI) Notice",
@@ -89,7 +89,7 @@ exports[`AdminSection component should render design form fields 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_ci_notice_attribution_incomplete",
+            "ciNotices",
           ],
         ],
         "title": "Cultural Institute (CI) Notice",
@@ -139,7 +139,7 @@ exports[`AdminSection component should render disabled view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_ci_notice_attribution_incomplete",
+            "ciNotices",
           ],
         ],
         "title": "Cultural Institute (CI) Notice",
