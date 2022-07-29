@@ -36,14 +36,6 @@ exports[`AdminSection component should render default view 1`] = `
         ],
         "title": "Additional information",
       },
-      Object {
-        "groups": Array [
-          Array [
-            "ciNotices",
-          ],
-        ],
-        "title": "Cultural Institute (CI) Notice",
-      },
     ]
   }
   disabled={false}
@@ -86,14 +78,6 @@ exports[`AdminSection component should render design form fields 1`] = `
         ],
         "title": "Additional information",
       },
-      Object {
-        "groups": Array [
-          Array [
-            "ciNotices",
-          ],
-        ],
-        "title": "Cultural Institute (CI) Notice",
-      },
     ]
   }
   disabled={false}
@@ -135,14 +119,6 @@ exports[`AdminSection component should render disabled view 1`] = `
           ],
         ],
         "title": "Additional information",
-      },
-      Object {
-        "groups": Array [
-          Array [
-            "ciNotices",
-          ],
-        ],
-        "title": "Cultural Institute (CI) Notice",
       },
     ]
   }

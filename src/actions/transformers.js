@@ -1387,7 +1387,6 @@ export const getDatastreamInfo = (
 };
 
 export const getNotesSectionSearchKeys = (data = {}) => {
-    console.log('NOTES SECTION KEYS', data);
     const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes, ciNotices } = data;
     return {
         ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
