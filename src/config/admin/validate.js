@@ -70,8 +70,6 @@ export default values => {
         securitySection: {},
     };
 
-    console.log('validator', data.adminSection, data.filesSection);
-
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
 
     dateTimeYear(((data.bibliographicSection || {}).fez_record_search_key_date_available || {}).rek_date_available) &&

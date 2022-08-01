@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+import { Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 import Typography from '@material-ui/core/Typography';
@@ -10,10 +11,18 @@ import ClearIcon from '@material-ui/icons/Clear';
 import EditIcon from '@material-ui/icons/Edit';
 import CheckIcon from '@material-ui/icons/Check';
 import ReplayIcon from '@material-ui/icons/Replay';
+import { makeStyles } from '@material-ui/core/styles';
 
 import FileName from './FileName';
 import { FileNameProps } from './FileName';
-import { Hidden } from '@material-ui/core';
+
+const useStyles = makeStyles(() => ({
+    labelTruncated: {
+        overflow: 'hidden',
+        whiteSspace: 'nowrap',
+        textOverflow: 'ellipsis',
+    },
+}));
 
 const EditableFileName = ({
     onFileNameChange,
@@ -23,6 +32,7 @@ const EditableFileName = ({
     filenameRestrictions,
     ...props
 }) => {
+    const classes = useStyles();
     const [isEditing, setIsEditing] = useState(false);
     const [isValid, setIsValid] = useState(true);
     const isEdited = useRef(false);
@@ -39,10 +49,6 @@ const EditableFileName = ({
         setIsValid(true);
         isEdited.current = editingFilenameRef.current !== originalFilenameRef.current;
         onFileNameChange(editingFilenameRef.current ?? originalFilenameRef.current, true);
-        onFileCancelEdit?.();
-        /* HERE  - NEED TO ADDRESS ISSUE OF MULTIPLE FILES EDITING AT SAME TIME,
-        WHEN ONE IS CANCELLED ANY ERRORS FROM THE OTHER FILES ARE CLEARED.
-        ALSO NEED TO TRUNCATE THE LONG TEXT OF A FILENAME AFTER BEING EDITED */
     };
 
     const handleFileEditFilename = () => {
@@ -64,10 +70,24 @@ const EditableFileName = ({
         setIsValid(true);
     };
 
+    const handleKeyPress = (key, callbackFn) => {
+        if (key.code.toLowerCase() === 'enter' || key.code.toLowerCase() === 'numpadenter') {
+            key.preventDefault();
+            callbackFn?.();
+        }
+    };
+
     useEffect(() => {
         handleFileIsValid?.(isEditing ? false : isValid);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isEditing, isValid]);
+
+    useEffect(() => {
+        if (!!originalFilenameRef.current && !isEditing) {
+            onFileCancelEdit?.();
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [props.fileName]);
 
     return (
         <>
@@ -78,20 +98,28 @@ const EditableFileName = ({
                             <Grid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>
                                 {!!!isEdited.current && <FileName {...props} />}
                                 {!!isEdited.current && (
-                                    <Typography variant="body2" color="textPrimary">
+                                    <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
                                         {props.fileName}
                                     </Typography>
                                 )}
                             </Grid>
                             <Grid item xs>
-                                <IconButton aria-label="rename file" onClick={handleFileEditFilename} size={'small'}>
+                                <IconButton
+                                    aria-label="rename file"
+                                    onClick={handleFileEditFilename}
+                                    size={'small'}
+                                    id={`${props.id}-edit`}
+                                    data-testid={`${props.id}-edit`}
+                                >
                                     <EditIcon />
                                 </IconButton>
                                 {!!isEdited.current && (
                                     <IconButton
-                                        aria-label="rename file"
+                                        aria-label="reset file name"
                                         onClick={handleFileRestoreFilename}
                                         size={'small'}
+                                        id={`${props.id}-reset`}
+                                        data-testid={`${props.id}-reset`}
                                     >
                                         <ReplayIcon />
                                     </IconButton>
@@ -102,7 +130,7 @@ const EditableFileName = ({
                     <Hidden mdUp>
                         {!!!isEdited.current && <FileName {...props} />}
                         {!!isEdited.current && (
-                            <Typography variant="body2" color="textPrimary">
+                            <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
                                 {props.fileName}
                             </Typography>
                         )}
@@ -116,15 +144,28 @@ const EditableFileName = ({
                     type={'text'}
                     value={props.fileName}
                     onChange={onFilenameChangeProxy}
+                    onKeyPress={key => handleKeyPress(key, handleFileSaveFilename)}
                     id={`${props.id}-editing`}
                     data-testid={`${props.id}-editing`}
                     endAdornment={
                         <>
                             <InputAdornment position="end">
-                                <IconButton aria-label="save rename" onClick={handleFileSaveFilename} size={'small'}>
+                                <IconButton
+                                    aria-label="save rename"
+                                    onClick={handleFileSaveFilename}
+                                    size={'small'}
+                                    id={`${props.id}-save`}
+                                    data-testid={`${props.id}-save`}
+                                >
                                     <CheckIcon />
                                 </IconButton>
-                                <IconButton aria-label="cancel rename" onClick={handleFileCancelEdit} size={'small'}>
+                                <IconButton
+                                    aria-label="cancel rename"
+                                    onClick={handleFileCancelEdit}
+                                    size={'small'}
+                                    id={`${props.id}-cancel`}
+                                    data-testid={`${props.id}-cancel`}
+                                >
                                     <ClearIcon />
                                 </IconButton>
                             </InputAdornment>
