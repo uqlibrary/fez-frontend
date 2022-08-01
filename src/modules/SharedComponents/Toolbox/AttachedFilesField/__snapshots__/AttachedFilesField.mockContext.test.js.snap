@@ -31,5 +31,6 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
     </span>
   }
   onFilenameChange={[Function]}
+  onHandleFileIsValid={[Function]}
 />
 `;
