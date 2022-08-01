@@ -100,13 +100,12 @@ export default {
                         </p>
                         <h3>Cultural Institution (CI) Notices</h3>
                         <p>
-                            The CI Notices are for use by collecting institutions, data repositories and organizations
-                            who engage in collaborative curation with Indigenous and other marginalized communities who
-                            have been traditionally excluded from processes of documentation and record keeping. There
-                            are two Notices that can be used in these contexts: <strong>Open to Collaborate </strong>
-                            and <strong>Attribution Incomplete</strong>.
+                            The CI Notices are used by collecting institutions, data repositories and organisations who
+                            engage in collaborative curation with Indigenous and other marginalised communities who have
+                            been traditionally excluded from processes of documentation and record keeping. There are
+                            two Notices that can be used in these contexts:
                         </p>
-                        <div style={{ clear: 'both' }}>
+                        <div style={{ display: 'inline-block', clear: 'both' }}>
                             <img
                                 style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
                                 width={100}
@@ -114,13 +113,12 @@ export default {
                                 alt={locale.components.culturalNoticeOC.title}
                             />
 
-                            <p style={{ marginLeft: 110 }}>
+                            <p style={{ marginLeft: 110, marginTop: 0 }}>
                                 <strong>{locale.components.culturalNoticeOC.title}: </strong>
                                 {locale.components.culturalNoticeOC.text}
                             </p>
-                            <p style={{ marginLeft: 110 }}>{locale.components.culturalNoticeOC.description}</p>
                         </div>
-                        <div style={{ clear: 'both' }}>
+                        <div style={{ display: 'inline-block', clear: 'both' }}>
                             <img
                                 style={{ display: 'block', float: 'left', padding: '0 10px 10px 0' }}
                                 width={100}
@@ -128,11 +126,10 @@ export default {
                                 alt={locale.components.culturalNoticeAI.title}
                             />
 
-                            <p style={{ marginLeft: 110 }}>
+                            <p style={{ marginLeft: 110, marginTop: 0 }}>
                                 <strong>{locale.components.culturalNoticeAI.title}: </strong>
                                 {locale.components.culturalNoticeAI.text}
                             </p>
-                            <p style={{ marginLeft: 110 }}>{locale.components.culturalNoticeAI.description}</p>
                         </div>
                     </StandardCard>
                 </React.Fragment>
