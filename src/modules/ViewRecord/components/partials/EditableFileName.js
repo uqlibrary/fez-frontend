@@ -19,7 +19,7 @@ import { FileNameProps } from './FileName';
 const useStyles = makeStyles(() => ({
     labelTruncated: {
         overflow: 'hidden',
-        whiteSspace: 'nowrap',
+        whiteSpace: 'nowrap',
         textOverflow: 'ellipsis',
     },
 }));
