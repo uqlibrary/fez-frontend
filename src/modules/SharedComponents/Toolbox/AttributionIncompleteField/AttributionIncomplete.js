@@ -13,7 +13,6 @@ export class AttributionIncomplete extends PureComponent {
         disabled: PropTypes.bool,
         attributionIncompleteStatement: PropTypes.string,
         attributionIncompleteDetail: PropTypes.string,
-        input: PropTypes.object,
     };
 
     _handleChange = event => {

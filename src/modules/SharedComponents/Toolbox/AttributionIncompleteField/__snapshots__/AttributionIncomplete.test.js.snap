@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AttributionIncomplete should have a proper style generator 1`] = `
+Object {
+  "checkboxRoot": Object {},
+  "label": Object {
+    "fontSize": 16,
+    "fontWeight": 300,
+    "lineHeight": "24px",
+    "textAlign": "justify",
+  },
+  "root": Object {
+    "margin": 0,
+  },
+}
+`;
+
+exports[`Component AttributionIncomplete should have a proper style generator 2`] = `
+Object {
+  "checkboxRoot": Object {},
+  "label": Object {
+    "fontSize": 16,
+    "fontWeight": 300,
+    "lineHeight": "24px",
+    "textAlign": "justify",
+  },
+  "root": Object {
+    "margin": 0,
+  },
+}
+`;
+
+exports[`Component AttributionIncomplete should render checked if record is checked 1`] = `
+<Fragment>
+  <div>
+    <WithStyles(ForwardRef(Typography))
+      variant="caption"
+    >
+      Test detail
+    </WithStyles(ForwardRef(Typography))>
+  </div>
+  <WithStyles(ForwardRef(FormControlLabel))
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    control={
+      <WithStyles(ForwardRef(Checkbox))
+        checked={true}
+        classes={
+          Object {
+            "checked": undefined,
+            "root": undefined,
+          }
+        }
+        inputProps={
+          Object {
+            "data-testid": "attributionIncomplete-input",
+            "id": "attributionIncomplete-input",
+          }
+        }
+        onChange={[Function]}
+      />
+    }
+    disabled={false}
+    label={
+      <WithStyles(ForwardRef(Typography))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+        component="div"
+        data-testid="attributionIncomplete-label"
+        id="attributionIncomplete-label"
+      >
+        Test statement
+      </WithStyles(ForwardRef(Typography))>
+    }
+  />
+</Fragment>
+`;
+
+exports[`Component AttributionIncomplete should render default view 1`] = `
+<Fragment>
+  <div>
+    <WithStyles(ForwardRef(Typography))
+      variant="caption"
+    >
+      Test detail
+    </WithStyles(ForwardRef(Typography))>
+  </div>
+  <WithStyles(ForwardRef(FormControlLabel))
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    control={
+      <WithStyles(ForwardRef(Checkbox))
+        checked={false}
+        classes={
+          Object {
+            "checked": undefined,
+            "root": undefined,
+          }
+        }
+        inputProps={
+          Object {
+            "data-testid": "attributionIncomplete-input",
+            "id": "attributionIncomplete-input",
+          }
+        }
+        onChange={[Function]}
+      />
+    }
+    disabled={false}
+    label={
+      <WithStyles(ForwardRef(Typography))
+        classes={
+          Object {
+            "root": "",
+          }
+        }
+        component="div"
+        data-testid="attributionIncomplete-label"
+        id="attributionIncomplete-label"
+      >
+        Test statement
+      </WithStyles(ForwardRef(Typography))>
+    }
+  />
+</Fragment>
+`;
