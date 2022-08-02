@@ -21882,6 +21882,3042 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`Additional Information Component  should render component with Attribution incomplete 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Additional information"
+  >
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Author(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-author-label"
+            variant="body2"
+          >
+            Author(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <WithStyles(AuthorsCitationView)
+              citationStyle="all"
+              key="additional-information-authors"
+              prefix=""
+              publication={
+                Object {
+                  "fez_datastream_info": Array [
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "testing image description",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 5,
+                      "dsi_size": 97786,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "preview_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "preview_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 4,
+                      "dsi_size": 65857,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "thumbnail_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "thumbnail_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 3,
+                      "dsi_size": 3952,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "web_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "web_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 2,
+                      "dsi_size": 97345,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "deleted.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "deleted jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 1,
+                      "dsi_size": 97345,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "staffdata.pdf",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "staffdata.pdf",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 1,
+                      "dsi_size": 97345,
+                      "dsi_state": "A",
+                    },
+                  ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
+                  "fez_record_search_key_access_conditions": null,
+                  "fez_record_search_key_acknowledgements": null,
+                  "fez_record_search_key_additional_notes": null,
+                  "fez_record_search_key_advisory_statement": null,
+                  "fez_record_search_key_alternate_genre": Array [],
+                  "fez_record_search_key_alternative_title": Array [],
+                  "fez_record_search_key_ands_collection_type": null,
+                  "fez_record_search_key_architectural_features": Array [],
+                  "fez_record_search_key_article_number": Object {
+                    "rek_article_number": "article 123",
+                    "rek_article_number_id": null,
+                    "rek_article_number_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_assigned_group_id": Array [],
+                  "fez_record_search_key_assigned_user_id": Array [],
+                  "fez_record_search_key_author": Array [
+                    Object {
+                      "rek_author": "Azimi, Iman",
+                      "rek_author_id": null,
+                      "rek_author_order": 1,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Milevskiy, Michael J. G.",
+                      "rek_author_id": null,
+                      "rek_author_order": 2,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Kaemmerer, Elke",
+                      "rek_author_id": null,
+                      "rek_author_order": 3,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Turner, Dane",
+                      "rek_author_id": null,
+                      "rek_author_order": 4,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Yapa, Kunsala T. D. S.",
+                      "rek_author_id": null,
+                      "rek_author_order": 5,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Brown, Melissa A.",
+                      "rek_author_id": null,
+                      "rek_author_order": 6,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Thompson, Erik W.",
+                      "rek_author_id": null,
+                      "rek_author_order": 7,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Roberts-Thomson, Sarah J.",
+                      "rek_author_id": null,
+                      "rek_author_order": 8,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Monteith, Gregory R.",
+                      "rek_author_id": null,
+                      "rek_author_order": 9,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_country": Array [
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 1,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 2,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 3,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 4,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 5,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 6,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 7,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 8,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 9,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_full_address": Array [
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 1,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 2,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 3,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 4,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 5,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 6,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Translat Res Inst, Brisbane, Qld 4102, Australia|Queensland Univ Technol, Inst Hlth & Biomed Innovat, Brisbane, Qld 4059, Australia|Queensland Univ Technol, Sch Biomed Sci, Brisbane, Qld 4059, Australia|Univ Melbourne, St Vincents Hosp, Dept Surg, Melbourne, Vic 3065, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 7,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 8,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 9,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_id": Array [
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100000925",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 1,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100001168",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 2,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100001026",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 3,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_name": Array [
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 1,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 2,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 3,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 4,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 5,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 6,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "Translat Res Inst|Queensland University of Technology (QUT)|Queensland University of Technology (QUT)|University of Melbourne",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 7,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 8,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 9,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_id": Array [
+                    Object {
+                      "rek_author_id": 88893,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 1,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 0,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 2,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 1706239,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 3,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 97626,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 4,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 95450,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 5,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 1671,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 6,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 0,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 7,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 973,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 8,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 972,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 9,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_role": Array [],
+                  "fez_record_search_key_book_title": null,
+                  "fez_record_search_key_building_materials": Array [],
+                  "fez_record_search_key_category": Array [],
+                  "fez_record_search_key_chapter_number": null,
+                  "fez_record_search_key_ci_notice_attribution_incomplete": Object {
+                    "rek_ci_notice_attribution_incomplete": true,
+                  },
+                  "fez_record_search_key_condition": Array [],
+                  "fez_record_search_key_conference_dates": null,
+                  "fez_record_search_key_conference_id": null,
+                  "fez_record_search_key_conference_location": null,
+                  "fez_record_search_key_conference_name": null,
+                  "fez_record_search_key_construction_date": null,
+                  "fez_record_search_key_contact_details_email": Array [],
+                  "fez_record_search_key_contributor": Array [],
+                  "fez_record_search_key_contributor_id": Array [],
+                  "fez_record_search_key_convener": null,
+                  "fez_record_search_key_corresponding_country": Array [
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 1,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 2,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 3,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 4,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 5,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 6,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 7,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_email": Array [
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 1,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 2,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 3,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_name": Array [
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 1,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 2,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 3,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_organisation": Array [
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 1,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 2,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Translat Res Inst",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 3,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 4,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 5,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 6,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Melbourne",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 7,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_country_of_issue": null,
+                  "fez_record_search_key_coverage_period": Array [],
+                  "fez_record_search_key_creator_id": Array [],
+                  "fez_record_search_key_creator_name": Array [],
+                  "fez_record_search_key_data_volume": null,
+                  "fez_record_search_key_datastream_policy": null,
+                  "fez_record_search_key_date_available": Object {
+                    "rek_date_available": "2017-07-15T00:00:00Z",
+                    "rek_date_available_id": null,
+                    "rek_date_available_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_date_photo_taken": null,
+                  "fez_record_search_key_date_recorded": null,
+                  "fez_record_search_key_date_scanned": null,
+                  "fez_record_search_key_doi": Object {
+                    "rek_doi": "10.1242/jcs.196659",
+                    "rek_doi_id": null,
+                    "rek_doi_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_edition": null,
+                  "fez_record_search_key_end_date": null,
+                  "fez_record_search_key_end_page": Object {
+                    "rek_end_page": "2305",
+                    "rek_end_page_id": null,
+                    "rek_end_page_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_file_attachment_access_condition": Array [
+                    Object {
+                      "rek_file_attachment_access_condition": "8",
+                      "rek_file_attachment_access_condition_id": 17,
+                      "rek_file_attachment_access_condition_order": 3,
+                      "rek_file_attachment_access_condition_pid": "UQ:792099",
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_embargo_date": Array [
+                    Object {
+                      "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                      "rek_file_attachment_embargo_date_id": 83,
+                      "rek_file_attachment_embargo_date_order": 3,
+                      "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_name": Array [
+                    Object {
+                      "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 1,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_UQ676287_OA.xml",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 2,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "UQ676287_OA.pdf",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 3,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "image.jpg",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 4,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_geographic_area": Array [],
+                  "fez_record_search_key_grant_acronym": Array [],
+                  "fez_record_search_key_grant_agency": Array [
+                    Object {
+                      "rek_grant_agency": "National Health and Medical Research Council",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 1,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency": "Cancer Council Queensland",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 2,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency": "National Breast Cancer Foundation",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 3,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_agency_id": Array [
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100000925",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 1,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100001168",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 2,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100001026",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 3,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_id": Array [
+                    Object {
+                      "rek_grant_id": "569645 | 1022263",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 1,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_id": "1042819",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 2,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_id": "CG-12-07 | CG-10-04",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 3,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_text": Array [
+                    Object {
+                      "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+                      "rek_grant_text_id": 583,
+                      "rek_grant_text_order": 1,
+                      "rek_grant_text_pid": "UQ:676287",
+                      "rek_grant_text_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_herdc_code": Object {
+                    "rek_herdc_code": 450009,
+                    "rek_herdc_code_id": null,
+                    "rek_herdc_code_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_herdc_status": Object {
+                    "rek_herdc_status": 453220,
+                    "rek_herdc_status_id": null,
+                    "rek_herdc_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_identifier": Array [],
+                  "fez_record_search_key_institutional_status": Object {
+                    "rek_institutional_status": 453223,
+                    "rek_institutional_status_id": null,
+                    "rek_institutional_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_interior_features": Array [],
+                  "fez_record_search_key_isbn": Array [],
+                  "fez_record_search_key_isdatasetof": Array [],
+                  "fez_record_search_key_isderivationof": Array [],
+                  "fez_record_search_key_isi_loc": Object {
+                    "rek_isi_loc": "000405613400008",
+                    "rek_isi_loc_id": null,
+                    "rek_isi_loc_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_ismemberof": Array [
+                    Object {
+                      "rek_ismemberof": "UQ:3833",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 1,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:13602",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 2,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:3825",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 3,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:218311",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 4,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:677356",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 5,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_issn": Array [
+                    Object {
+                      "fez_sherpa_romeo": Object {
+                        "srm_date_updated": "2017-09-30 18:26:18",
+                        "srm_id": 13764,
+                        "srm_issn": "1477-9137",
+                        "srm_journal_link": "https://example.com/",
+                        "srm_journal_name": "Journal of Cell Science",
+                        "srm_json": "{}",
+                      },
+                      "rek_issn": "1477-9137",
+                      "rek_issn_id": 5382905,
+                      "rek_issn_lookup": "",
+                      "rek_issn_order": 1,
+                      "rek_issn_pid": "UQ:676287",
+                      "rek_issn_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_issue_number": Object {
+                    "rek_issue_number": "14",
+                    "rek_issue_number_id": null,
+                    "rek_issue_number_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_job_number": null,
+                  "fez_record_search_key_journal_name": Object {
+                    "rek_journal_name": "Journal of Cell Science",
+                    "rek_journal_name_id": null,
+                    "rek_journal_name_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_keywords": Array [
+                    Object {
+                      "rek_keywords": "Akt",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 1,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Breast cancer",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 2,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Ca2+",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 3,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Hypoxia",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 4,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "PTEN",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 5,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Signal transduction",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 6,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "TRPC1",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 7,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_language": Array [
+                    Object {
+                      "rek_language": "eng",
+                      "rek_language_id": null,
+                      "rek_language_order": 1,
+                      "rek_language_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_language_of_book_title": Array [],
+                  "fez_record_search_key_language_of_journal_name": Array [],
+                  "fez_record_search_key_language_of_proceedings_title": Array [],
+                  "fez_record_search_key_language_of_title": Array [],
+                  "fez_record_search_key_length": null,
+                  "fez_record_search_key_license": null,
+                  "fez_record_search_key_link": Array [],
+                  "fez_record_search_key_link_description": Array [],
+                  "fez_record_search_key_location": Array [],
+                  "fez_record_search_key_native_script_book_title": null,
+                  "fez_record_search_key_native_script_conference_name": null,
+                  "fez_record_search_key_native_script_journal_name": null,
+                  "fez_record_search_key_native_script_proceedings_title": null,
+                  "fez_record_search_key_native_script_title": null,
+                  "fez_record_search_key_newspaper": null,
+                  "fez_record_search_key_notes": null,
+                  "fez_record_search_key_oa_embargo_days": null,
+                  "fez_record_search_key_oa_notes": null,
+                  "fez_record_search_key_oa_status": Object {
+                    "rek_oa_status": 453693,
+                    "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
+                    "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_org_name": null,
+                  "fez_record_search_key_org_unit_name": null,
+                  "fez_record_search_key_original_format": null,
+                  "fez_record_search_key_parent_publication": null,
+                  "fez_record_search_key_patent_number": null,
+                  "fez_record_search_key_period": Array [],
+                  "fez_record_search_key_place_of_publication": Object {
+                    "rek_place_of_publication": "Cambridge, United Kingdom",
+                    "rek_place_of_publication_id": null,
+                    "rek_place_of_publication_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_proceedings_title": null,
+                  "fez_record_search_key_project_description": null,
+                  "fez_record_search_key_project_id": null,
+                  "fez_record_search_key_project_name": null,
+                  "fez_record_search_key_project_start_date": null,
+                  "fez_record_search_key_publisher": Object {
+                    "rek_publisher": "Company of Biologists",
+                    "rek_publisher_id": null,
+                    "rek_publisher_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_pubmed_id": Object {
+                    "rek_pubmed_id": "28559303",
+                    "rek_pubmed_id_id": null,
+                    "rek_pubmed_id_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_refereed": Object {
+                    "rek_refereed": 1,
+                    "rek_refereed_id": null,
+                    "rek_refereed_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_refereed_source": Object {
+                    "rek_refereed_source": 453635,
+                    "rek_refereed_source_id": null,
+                    "rek_refereed_source_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_related_datasets": null,
+                  "fez_record_search_key_related_publications": null,
+                  "fez_record_search_key_report_number": null,
+                  "fez_record_search_key_retracted": Object {
+                    "rek_retracted": 0,
+                    "rek_retracted_id": null,
+                    "rek_retracted_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_rights": null,
+                  "fez_record_search_key_roman_script_book_title": null,
+                  "fez_record_search_key_roman_script_conference_name": null,
+                  "fez_record_search_key_roman_script_journal_name": null,
+                  "fez_record_search_key_roman_script_proceedings_title": null,
+                  "fez_record_search_key_roman_script_title": null,
+                  "fez_record_search_key_scale": null,
+                  "fez_record_search_key_scopus_id": Object {
+                    "rek_scopus_id": "2-s2.0-85024119372",
+                    "rek_scopus_id_id": null,
+                    "rek_scopus_id_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_section": null,
+                  "fez_record_search_key_seo_code": Array [],
+                  "fez_record_search_key_series": null,
+                  "fez_record_search_key_software_required": Array [],
+                  "fez_record_search_key_source": null,
+                  "fez_record_search_key_start_date": null,
+                  "fez_record_search_key_start_page": Object {
+                    "rek_start_page": "2292",
+                    "rek_start_page_id": null,
+                    "rek_start_page_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_structural_systems": Array [],
+                  "fez_record_search_key_style": Array [],
+                  "fez_record_search_key_subcategory": Array [],
+                  "fez_record_search_key_subject": Array [],
+                  "fez_record_search_key_supervisor": Array [],
+                  "fez_record_search_key_supervisor_id": Array [],
+                  "fez_record_search_key_surrounding_features": Array [],
+                  "fez_record_search_key_time_period_end_date": null,
+                  "fez_record_search_key_time_period_start_date": null,
+                  "fez_record_search_key_total_chapters": null,
+                  "fez_record_search_key_total_pages": Object {
+                    "rek_total_pages": "14",
+                    "rek_total_pages_id": null,
+                    "rek_total_pages_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_transcript": null,
+                  "fez_record_search_key_translated_book_title": null,
+                  "fez_record_search_key_translated_conference_name": null,
+                  "fez_record_search_key_translated_journal_name": null,
+                  "fez_record_search_key_translated_newspaper": null,
+                  "fez_record_search_key_translated_proceedings_title": null,
+                  "fez_record_search_key_translated_title": null,
+                  "fez_record_search_key_type_of_data": Array [],
+                  "fez_record_search_key_volume_number": Object {
+                    "rek_volume_number": "130",
+                    "rek_volume_number_id": null,
+                    "rek_volume_number_pid": "UQ:676287",
+                  },
+                  "rek_altmetric_id": 20711411,
+                  "rek_altmetric_score": 49,
+                  "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Azimi, Iman\\" href=\\"/list/author_id/88893/\\">Azimi, Iman</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Milevskiy, Michael J. G.\\" href=\\"/list/author/Milevskiy%2C+Michael+J.+G./\\">Milevskiy, Michael J. G.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Kaemmerer, Elke\\" href=\\"/list/author_id/1706239/\\">Kaemmerer, Elke</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Turner, Dane\\" href=\\"/list/author_id/97626/\\">Turner, Dane</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Yapa, Kunsala T. D. S.\\" href=\\"/list/author_id/95450/\\">Yapa, Kunsala T. D. S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, Melissa A.\\" href=\\"/list/author_id/1671/\\">Brown, Melissa A.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Thompson, Erik W.\\" href=\\"/list/author/Thompson%2C+Erik+W./\\">Thompson, Erik W.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roberts-Thomson, Sarah J.\\" href=\\"/list/author_id/973/\\">Roberts-Thomson, Sarah J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Monteith, Gregory R.\\" href=\\"/list/author_id/972/\\">Monteith, Gregory R.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells\\" href=\\"/view/UQ:676287\\">TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells</a>. <i><span class=\\"citation_journal_name\\">Journal of Cell Science</span></i>, <i><span class=\\"citation_volume_number\\">130</span></i> <span class=\\"citation_issue_number\\">14</span>: <span class=\\"citation_start_page\\">2292</span>-<span class=\\"citation_end_page\\">2305</span>. doi:<span class=\\"citation_doi\\">10.1242/jcs.196659</span>",
+                  "rek_copyright": "on",
+                  "rek_created_date": "2017-07-29T15:00:44Z",
+                  "rek_date": "2017-07-01T00:00:00Z",
+                  "rek_depositor": 8524,
+                  "rek_depositor_affiliation": 1247,
+                  "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
+                  "rek_display_type": 179,
+                  "rek_display_type_lookup": "Journal Article",
+                  "rek_file_downloads": 0,
+                  "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
+                  "rek_formatted_title": null,
+                  "rek_genre": "Journal Article",
+                  "rek_genre_type": "Article (original research)",
+                  "rek_herdc_notes": null,
+                  "rek_object_type": 3,
+                  "rek_pid": "UQ:676287",
+                  "rek_pubmed_doc_type": null,
+                  "rek_scopus_citation_count": 0,
+                  "rek_scopus_doc_type": "ar",
+                  "rek_security_inherited": null,
+                  "rek_status": 2,
+                  "rek_subtype": "Article (original research)",
+                  "rek_thomson_citation_count": 0,
+                  "rek_title": "TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells",
+                  "rek_updated_date": "2017-08-20T04:04:37Z",
+                  "rek_wok_doc_type": "@",
+                }
+              }
+              separator=", "
+              showLink={true}
+              suffix=""
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Title"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-title-label"
+            variant="body2"
+          >
+            Title
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-title"
+            >
+              TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="2"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-description-label"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-description"
+            >
+              This is a test of the abstract
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="5"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Journal name"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-journal-name-label"
+            variant="body2"
+          >
+            Journal name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <JournalName
+              publication={
+                Object {
+                  "fez_datastream_info": Array [
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "testing image description",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 5,
+                      "dsi_size": 97786,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "preview_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "preview_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 4,
+                      "dsi_size": 65857,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "thumbnail_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "thumbnail_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 3,
+                      "dsi_size": 3952,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "web_image.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "web_image.jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 2,
+                      "dsi_size": 97345,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "deleted.jpg",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "deleted jpg",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 1,
+                      "dsi_size": 97345,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "staffdata.pdf",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "staffdata.pdf",
+                      "dsi_mimetype": "image/jpeg",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:792099",
+                      "dsi_security_policy": 1,
+                      "dsi_size": 97345,
+                      "dsi_state": "A",
+                    },
+                  ],
+                  "fez_matched_journals": Object {
+                    "fez_journal": Object {
+                      "fez_journal_era": Array [
+                        Object {
+                          "jnl_era_jid": 20339,
+                          "jnl_era_source_id": "122966",
+                          "jnl_era_source_year": 2010,
+                        },
+                      ],
+                      "jni_id": 13071,
+                      "jni_issn": "1477-9137",
+                      "jni_issn_order": 2,
+                      "jni_jnl_id": 7538,
+                    },
+                    "mtj_jnl_id": 13071,
+                    "mtj_pid": "UQ:676287",
+                    "mtj_status": "A",
+                  },
+                  "fez_record_search_key_access_conditions": null,
+                  "fez_record_search_key_acknowledgements": null,
+                  "fez_record_search_key_additional_notes": null,
+                  "fez_record_search_key_advisory_statement": null,
+                  "fez_record_search_key_alternate_genre": Array [],
+                  "fez_record_search_key_alternative_title": Array [],
+                  "fez_record_search_key_ands_collection_type": null,
+                  "fez_record_search_key_architectural_features": Array [],
+                  "fez_record_search_key_article_number": Object {
+                    "rek_article_number": "article 123",
+                    "rek_article_number_id": null,
+                    "rek_article_number_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_assigned_group_id": Array [],
+                  "fez_record_search_key_assigned_user_id": Array [],
+                  "fez_record_search_key_author": Array [
+                    Object {
+                      "rek_author": "Azimi, Iman",
+                      "rek_author_id": null,
+                      "rek_author_order": 1,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Milevskiy, Michael J. G.",
+                      "rek_author_id": null,
+                      "rek_author_order": 2,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Kaemmerer, Elke",
+                      "rek_author_id": null,
+                      "rek_author_order": 3,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Turner, Dane",
+                      "rek_author_id": null,
+                      "rek_author_order": 4,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Yapa, Kunsala T. D. S.",
+                      "rek_author_id": null,
+                      "rek_author_order": 5,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Brown, Melissa A.",
+                      "rek_author_id": null,
+                      "rek_author_order": 6,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Thompson, Erik W.",
+                      "rek_author_id": null,
+                      "rek_author_order": 7,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Roberts-Thomson, Sarah J.",
+                      "rek_author_id": null,
+                      "rek_author_order": 8,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author": "Monteith, Gregory R.",
+                      "rek_author_id": null,
+                      "rek_author_order": 9,
+                      "rek_author_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_country": Array [
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 1,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 2,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 3,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 4,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 5,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 6,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 7,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 8,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_country": "Australia|Australia|Australia",
+                      "rek_author_affiliation_country_id": null,
+                      "rek_author_affiliation_country_order": 9,
+                      "rek_author_affiliation_country_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_full_address": Array [
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 1,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 2,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 3,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 4,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 5,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Chem & Mol Biosci, Brisbane, Qld 4072, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 6,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Translat Res Inst, Brisbane, Qld 4102, Australia|Queensland Univ Technol, Inst Hlth & Biomed Innovat, Brisbane, Qld 4059, Australia|Queensland Univ Technol, Sch Biomed Sci, Brisbane, Qld 4059, Australia|Univ Melbourne, St Vincents Hosp, Dept Surg, Melbourne, Vic 3065, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 7,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 8,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_full_address": "Univ Queensland, Sch Pharm, Brisbane, Qld 4102, Australia|Univ Queensland, Mater Res Inst, Brisbane, Qld 4101, Australia|Translat Res Inst, Brisbane, Qld 4102, Australia",
+                      "rek_author_affiliation_full_address_id": null,
+                      "rek_author_affiliation_full_address_order": 9,
+                      "rek_author_affiliation_full_address_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_id": Array [
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100000925",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 1,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100001168",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 2,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_id": "10.13039/501100001026",
+                      "rek_author_affiliation_id_id": null,
+                      "rek_author_affiliation_id_order": 3,
+                      "rek_author_affiliation_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_name": Array [
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 1,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 2,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 3,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 4,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 5,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 6,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "Translat Res Inst|Queensland University of Technology (QUT)|Queensland University of Technology (QUT)|University of Melbourne",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 7,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 8,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_affiliation_name": "University of Queensland|University of Queensland|Translat Res Inst",
+                      "rek_author_affiliation_name_id": null,
+                      "rek_author_affiliation_name_order": 9,
+                      "rek_author_affiliation_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_id": Array [
+                    Object {
+                      "rek_author_id": 88893,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 1,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 0,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 2,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 1706239,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 3,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 97626,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 4,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 95450,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 5,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 1671,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 6,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 0,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 7,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 973,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 8,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_author_id": 972,
+                      "rek_author_id_id": null,
+                      "rek_author_id_order": 9,
+                      "rek_author_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_author_role": Array [],
+                  "fez_record_search_key_book_title": null,
+                  "fez_record_search_key_building_materials": Array [],
+                  "fez_record_search_key_category": Array [],
+                  "fez_record_search_key_chapter_number": null,
+                  "fez_record_search_key_ci_notice_attribution_incomplete": Object {
+                    "rek_ci_notice_attribution_incomplete": true,
+                  },
+                  "fez_record_search_key_condition": Array [],
+                  "fez_record_search_key_conference_dates": null,
+                  "fez_record_search_key_conference_id": null,
+                  "fez_record_search_key_conference_location": null,
+                  "fez_record_search_key_conference_name": null,
+                  "fez_record_search_key_construction_date": null,
+                  "fez_record_search_key_contact_details_email": Array [],
+                  "fez_record_search_key_contributor": Array [],
+                  "fez_record_search_key_contributor_id": Array [],
+                  "fez_record_search_key_convener": null,
+                  "fez_record_search_key_corresponding_country": Array [
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 1,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 2,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 3,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 4,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 5,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 6,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_country": "Australia",
+                      "rek_corresponding_country_id": null,
+                      "rek_corresponding_country_order": 7,
+                      "rek_corresponding_country_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_email": Array [
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 1,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 2,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_email": "gregm@uq.edu.au",
+                      "rek_corresponding_email_id": null,
+                      "rek_corresponding_email_order": 3,
+                      "rek_corresponding_email_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_name": Array [
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 1,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 2,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_name": "Monteith, Gregory R.",
+                      "rek_corresponding_name_id": null,
+                      "rek_corresponding_name_order": 3,
+                      "rek_corresponding_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_corresponding_organisation": Array [
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 1,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 2,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Translat Res Inst",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 3,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Queensland",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 4,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 5,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "Queensland University of Technology (QUT)",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 6,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_corresponding_organisation": "University of Melbourne",
+                      "rek_corresponding_organisation_id": null,
+                      "rek_corresponding_organisation_order": 7,
+                      "rek_corresponding_organisation_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_country_of_issue": null,
+                  "fez_record_search_key_coverage_period": Array [],
+                  "fez_record_search_key_creator_id": Array [],
+                  "fez_record_search_key_creator_name": Array [],
+                  "fez_record_search_key_data_volume": null,
+                  "fez_record_search_key_datastream_policy": null,
+                  "fez_record_search_key_date_available": Object {
+                    "rek_date_available": "2017-07-15T00:00:00Z",
+                    "rek_date_available_id": null,
+                    "rek_date_available_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_date_photo_taken": null,
+                  "fez_record_search_key_date_recorded": null,
+                  "fez_record_search_key_date_scanned": null,
+                  "fez_record_search_key_doi": Object {
+                    "rek_doi": "10.1242/jcs.196659",
+                    "rek_doi_id": null,
+                    "rek_doi_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_edition": null,
+                  "fez_record_search_key_end_date": null,
+                  "fez_record_search_key_end_page": Object {
+                    "rek_end_page": "2305",
+                    "rek_end_page_id": null,
+                    "rek_end_page_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_file_attachment_access_condition": Array [
+                    Object {
+                      "rek_file_attachment_access_condition": "8",
+                      "rek_file_attachment_access_condition_id": 17,
+                      "rek_file_attachment_access_condition_order": 3,
+                      "rek_file_attachment_access_condition_pid": "UQ:792099",
+                      "rek_file_attachment_access_condition_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_embargo_date": Array [
+                    Object {
+                      "rek_file_attachment_embargo_date": "2018-03-27T08:16:00Z",
+                      "rek_file_attachment_embargo_date_id": 83,
+                      "rek_file_attachment_embargo_date_order": 3,
+                      "rek_file_attachment_embargo_date_pid": "UQ:795494",
+                      "rek_file_attachment_embargo_date_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_name": Array [
+                    Object {
+                      "rek_file_attachment_name": "FezACML_UQ676287_OA.pdf.xml",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 1,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_UQ676287_OA.xml",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 2,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "UQ676287_OA.pdf",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 3,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_file_attachment_name": "image.jpg",
+                      "rek_file_attachment_name_id": null,
+                      "rek_file_attachment_name_order": 4,
+                      "rek_file_attachment_name_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_geographic_area": Array [],
+                  "fez_record_search_key_grant_acronym": Array [],
+                  "fez_record_search_key_grant_agency": Array [
+                    Object {
+                      "rek_grant_agency": "National Health and Medical Research Council",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 1,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency": "Cancer Council Queensland",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 2,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency": "National Breast Cancer Foundation",
+                      "rek_grant_agency_id": null,
+                      "rek_grant_agency_order": 3,
+                      "rek_grant_agency_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_agency_id": Array [
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100000925",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 1,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100001168",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 2,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_agency_id": "10.13039/501100001026",
+                      "rek_grant_agency_id_id": null,
+                      "rek_grant_agency_id_order": 3,
+                      "rek_grant_agency_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_id": Array [
+                    Object {
+                      "rek_grant_id": "569645 | 1022263",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 1,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_id": "1042819",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 2,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_grant_id": "CG-12-07 | CG-10-04",
+                      "rek_grant_id_id": null,
+                      "rek_grant_id_order": 3,
+                      "rek_grant_id_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_grant_text": Array [
+                    Object {
+                      "rek_grant_text": "We thank Jonathan Harris for the provision of DHT and David Miller for technical assistance and Kyle Upton for his critical review of the manuscript. Research was funded by the National Breast Cancer Foundation (NBCF: 2007003445 and CG-12-07) of Australia, the Australian Research Council (ARC: DP0985025), the Cancer Council of Queensland (CCQ: 1026095) and The University of Queensland. DHD was supported by a Collaborative Program Grant from the, National Breast Cancer Foundation [NBCF; CG-08-03]. Institute, Integrative Cancer Biology Program U54CA1113001 (KPN). SLE, JDF, AMS and ED are supported by Fellowships from the NBCF [ID# ECF-10-05, ECF-12-04, ECF-12-12 and ECF-13-04 respectively]. FA is supported by Future Fellowship from the Australian Research Council [ID: FT130101417]. JMWG is funding by a Scientific Fellowship from Breast Cancer Now. MJM and JAB are supported by an Australian Postgraduate Award (APA). AS was supported from NBCF program grant. SJC supported by NHMRC fellowship. Funding to pay the Open Access publication charges for this article was provided by The University of Queensland.",
+                      "rek_grant_text_id": 583,
+                      "rek_grant_text_order": 1,
+                      "rek_grant_text_pid": "UQ:676287",
+                      "rek_grant_text_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_herdc_code": Object {
+                    "rek_herdc_code": 450009,
+                    "rek_herdc_code_id": null,
+                    "rek_herdc_code_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_herdc_status": Object {
+                    "rek_herdc_status": 453220,
+                    "rek_herdc_status_id": null,
+                    "rek_herdc_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_identifier": Array [],
+                  "fez_record_search_key_institutional_status": Object {
+                    "rek_institutional_status": 453223,
+                    "rek_institutional_status_id": null,
+                    "rek_institutional_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_interior_features": Array [],
+                  "fez_record_search_key_isbn": Array [],
+                  "fez_record_search_key_isdatasetof": Array [],
+                  "fez_record_search_key_isderivationof": Array [],
+                  "fez_record_search_key_isi_loc": Object {
+                    "rek_isi_loc": "000405613400008",
+                    "rek_isi_loc_id": null,
+                    "rek_isi_loc_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_ismemberof": Array [
+                    Object {
+                      "rek_ismemberof": "UQ:3833",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 1,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:13602",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 2,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:3825",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 3,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:218311",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 4,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_ismemberof": "UQ:677356",
+                      "rek_ismemberof_id": null,
+                      "rek_ismemberof_order": 5,
+                      "rek_ismemberof_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_issn": Array [
+                    Object {
+                      "fez_sherpa_romeo": Object {
+                        "srm_date_updated": "2017-09-30 18:26:18",
+                        "srm_id": 13764,
+                        "srm_issn": "1477-9137",
+                        "srm_journal_link": "https://example.com/",
+                        "srm_journal_name": "Journal of Cell Science",
+                        "srm_json": "{}",
+                      },
+                      "rek_issn": "1477-9137",
+                      "rek_issn_id": 5382905,
+                      "rek_issn_lookup": "",
+                      "rek_issn_order": 1,
+                      "rek_issn_pid": "UQ:676287",
+                      "rek_issn_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_issue_number": Object {
+                    "rek_issue_number": "14",
+                    "rek_issue_number_id": null,
+                    "rek_issue_number_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_job_number": null,
+                  "fez_record_search_key_journal_name": Object {
+                    "rek_journal_name": "Journal of Cell Science",
+                    "rek_journal_name_id": null,
+                    "rek_journal_name_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_keywords": Array [
+                    Object {
+                      "rek_keywords": "Akt",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 1,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Breast cancer",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 2,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Ca2+",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 3,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Hypoxia",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 4,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "PTEN",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 5,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "Signal transduction",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 6,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                    Object {
+                      "rek_keywords": "TRPC1",
+                      "rek_keywords_id": null,
+                      "rek_keywords_order": 7,
+                      "rek_keywords_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_language": Array [
+                    Object {
+                      "rek_language": "eng",
+                      "rek_language_id": null,
+                      "rek_language_order": 1,
+                      "rek_language_pid": "UQ:676287",
+                    },
+                  ],
+                  "fez_record_search_key_language_of_book_title": Array [],
+                  "fez_record_search_key_language_of_journal_name": Array [],
+                  "fez_record_search_key_language_of_proceedings_title": Array [],
+                  "fez_record_search_key_language_of_title": Array [],
+                  "fez_record_search_key_length": null,
+                  "fez_record_search_key_license": null,
+                  "fez_record_search_key_link": Array [],
+                  "fez_record_search_key_link_description": Array [],
+                  "fez_record_search_key_location": Array [],
+                  "fez_record_search_key_native_script_book_title": null,
+                  "fez_record_search_key_native_script_conference_name": null,
+                  "fez_record_search_key_native_script_journal_name": null,
+                  "fez_record_search_key_native_script_proceedings_title": null,
+                  "fez_record_search_key_native_script_title": null,
+                  "fez_record_search_key_newspaper": null,
+                  "fez_record_search_key_notes": null,
+                  "fez_record_search_key_oa_embargo_days": null,
+                  "fez_record_search_key_oa_notes": null,
+                  "fez_record_search_key_oa_status": Object {
+                    "rek_oa_status": 453693,
+                    "rek_oa_status_id": null,
+                    "rek_oa_status_lookup": "DOI",
+                    "rek_oa_status_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_oa_status_type": Object {
+                    "rek_oa_status_type": 454123,
+                    "rek_oa_status_type_id": null,
+                    "rek_oa_status_type_lookup": "Bronze",
+                    "rek_oa_status_type_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_org_name": null,
+                  "fez_record_search_key_org_unit_name": null,
+                  "fez_record_search_key_original_format": null,
+                  "fez_record_search_key_parent_publication": null,
+                  "fez_record_search_key_patent_number": null,
+                  "fez_record_search_key_period": Array [],
+                  "fez_record_search_key_place_of_publication": Object {
+                    "rek_place_of_publication": "Cambridge, United Kingdom",
+                    "rek_place_of_publication_id": null,
+                    "rek_place_of_publication_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_proceedings_title": null,
+                  "fez_record_search_key_project_description": null,
+                  "fez_record_search_key_project_id": null,
+                  "fez_record_search_key_project_name": null,
+                  "fez_record_search_key_project_start_date": null,
+                  "fez_record_search_key_publisher": Object {
+                    "rek_publisher": "Company of Biologists",
+                    "rek_publisher_id": null,
+                    "rek_publisher_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_pubmed_id": Object {
+                    "rek_pubmed_id": "28559303",
+                    "rek_pubmed_id_id": null,
+                    "rek_pubmed_id_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_refereed": Object {
+                    "rek_refereed": 1,
+                    "rek_refereed_id": null,
+                    "rek_refereed_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_refereed_source": Object {
+                    "rek_refereed_source": 453635,
+                    "rek_refereed_source_id": null,
+                    "rek_refereed_source_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_related_datasets": null,
+                  "fez_record_search_key_related_publications": null,
+                  "fez_record_search_key_report_number": null,
+                  "fez_record_search_key_retracted": Object {
+                    "rek_retracted": 0,
+                    "rek_retracted_id": null,
+                    "rek_retracted_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_rights": null,
+                  "fez_record_search_key_roman_script_book_title": null,
+                  "fez_record_search_key_roman_script_conference_name": null,
+                  "fez_record_search_key_roman_script_journal_name": null,
+                  "fez_record_search_key_roman_script_proceedings_title": null,
+                  "fez_record_search_key_roman_script_title": null,
+                  "fez_record_search_key_scale": null,
+                  "fez_record_search_key_scopus_id": Object {
+                    "rek_scopus_id": "2-s2.0-85024119372",
+                    "rek_scopus_id_id": null,
+                    "rek_scopus_id_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_section": null,
+                  "fez_record_search_key_seo_code": Array [],
+                  "fez_record_search_key_series": null,
+                  "fez_record_search_key_software_required": Array [],
+                  "fez_record_search_key_source": null,
+                  "fez_record_search_key_start_date": null,
+                  "fez_record_search_key_start_page": Object {
+                    "rek_start_page": "2292",
+                    "rek_start_page_id": null,
+                    "rek_start_page_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_structural_systems": Array [],
+                  "fez_record_search_key_style": Array [],
+                  "fez_record_search_key_subcategory": Array [],
+                  "fez_record_search_key_subject": Array [],
+                  "fez_record_search_key_supervisor": Array [],
+                  "fez_record_search_key_supervisor_id": Array [],
+                  "fez_record_search_key_surrounding_features": Array [],
+                  "fez_record_search_key_time_period_end_date": null,
+                  "fez_record_search_key_time_period_start_date": null,
+                  "fez_record_search_key_total_chapters": null,
+                  "fez_record_search_key_total_pages": Object {
+                    "rek_total_pages": "14",
+                    "rek_total_pages_id": null,
+                    "rek_total_pages_pid": "UQ:676287",
+                  },
+                  "fez_record_search_key_transcript": null,
+                  "fez_record_search_key_translated_book_title": null,
+                  "fez_record_search_key_translated_conference_name": null,
+                  "fez_record_search_key_translated_journal_name": null,
+                  "fez_record_search_key_translated_newspaper": null,
+                  "fez_record_search_key_translated_proceedings_title": null,
+                  "fez_record_search_key_translated_title": null,
+                  "fez_record_search_key_type_of_data": Array [],
+                  "fez_record_search_key_volume_number": Object {
+                    "rek_volume_number": "130",
+                    "rek_volume_number_id": null,
+                    "rek_volume_number_pid": "UQ:676287",
+                  },
+                  "rek_altmetric_id": 20711411,
+                  "rek_altmetric_score": 49,
+                  "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Azimi, Iman\\" href=\\"/list/author_id/88893/\\">Azimi, Iman</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Milevskiy, Michael J. G.\\" href=\\"/list/author/Milevskiy%2C+Michael+J.+G./\\">Milevskiy, Michael J. G.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Kaemmerer, Elke\\" href=\\"/list/author_id/1706239/\\">Kaemmerer, Elke</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Turner, Dane\\" href=\\"/list/author_id/97626/\\">Turner, Dane</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Yapa, Kunsala T. D. S.\\" href=\\"/list/author_id/95450/\\">Yapa, Kunsala T. D. S.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Brown, Melissa A.\\" href=\\"/list/author_id/1671/\\">Brown, Melissa A.</a>, <a class=\\"citation_author_name\\" title=\\"Browse by Author Name for Thompson, Erik W.\\" href=\\"/list/author/Thompson%2C+Erik+W./\\">Thompson, Erik W.</a>, <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Roberts-Thomson, Sarah J.\\" href=\\"/list/author_id/973/\\">Roberts-Thomson, Sarah J.</a> and <a class=\\"author_id_link\\" title=\\"Browse by Author ID for Monteith, Gregory R.\\" href=\\"/list/author_id/972/\\">Monteith, Gregory R.</a> (<span class=\\"citation_date\\">2017</span>) <a class=\\"citation_title\\" title=\\"Click to view Journal Article: TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells\\" href=\\"/view/UQ:676287\\">TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells</a>. <i><span class=\\"citation_journal_name\\">Journal of Cell Science</span></i>, <i><span class=\\"citation_volume_number\\">130</span></i> <span class=\\"citation_issue_number\\">14</span>: <span class=\\"citation_start_page\\">2292</span>-<span class=\\"citation_end_page\\">2305</span>. doi:<span class=\\"citation_doi\\">10.1242/jcs.196659</span>",
+                  "rek_copyright": "on",
+                  "rek_created_date": "2017-07-29T15:00:44Z",
+                  "rek_date": "2017-07-01T00:00:00Z",
+                  "rek_depositor": 8524,
+                  "rek_depositor_affiliation": 1247,
+                  "rek_description": "Hypoxia is a feature of the tumour microenvironment that promotes invasiveness, resistance to chemotherapeutics and cell survival. Our studies identify the transient receptor potential canonical-1 (TRPC1) ion channel as a key component of responses to hypoxia in breast cancer cells. This regulation includes control of specific epithelial to mesenchymal transition (EMT) events and hypoxia-mediated activation of signalling pathways such as activation of the EGFR, STAT3 and the autophagy marker LC3B, through hypoxia-inducible factor-1α (HIF1α)-dependent and -independent mechanisms. TRPC1 regulated HIF1α levels in PTEN-deficient MDA-MB-468 and HCC1569 breast cancer cell lines. This regulation arises from effects on the constitutive translation of HIF1α under normoxic conditions via an Akt-dependent pathway. In further support of the role of TRPC1 in EMT, its expression is closely associated with EMT- and metastasisrelated genes in breast tumours, and is enhanced in basal B breast cancer cell lines. TRPC1 expression is also significantly prognostic for basal breast cancers, particularly those classified as lymph node positive. The defined roles of TRPC1 identified here could be therapeutically exploited for the control of oncogenic pathways in breast cancer cells.",
+                  "rek_display_type": 179,
+                  "rek_display_type_lookup": "Journal Article",
+                  "rek_file_downloads": 0,
+                  "rek_formatted_abstract": "This is a test of the&nbsp;abstract",
+                  "rek_formatted_title": null,
+                  "rek_genre": "Journal Article",
+                  "rek_genre_type": "Article (original research)",
+                  "rek_herdc_notes": null,
+                  "rek_object_type": 3,
+                  "rek_pid": "UQ:676287",
+                  "rek_pubmed_doc_type": null,
+                  "rek_scopus_citation_count": 0,
+                  "rek_scopus_doc_type": "ar",
+                  "rek_security_inherited": null,
+                  "rek_status": 2,
+                  "rek_subtype": "Article (original research)",
+                  "rek_thomson_citation_count": 0,
+                  "rek_title": "TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells",
+                  "rek_updated_date": "2017-08-20T04:04:37Z",
+                  "rek_wok_doc_type": "@",
+                }
+              }
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="8"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-ISSN"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-issn-label"
+            variant="body2"
+          >
+            ISSN
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_issn"
+            >
+              <li
+                data-testid="rek-issn-0"
+                key="rek-issn-0"
+              >
+                1477-9137
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="10"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Publication/Start date"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-date-label"
+            variant="body2"
+          >
+            Publication/Start date
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-date"
+            >
+              <DateCitationView
+                className="citationDate"
+                data-testid="rek-date"
+                date="2017-07-01T00:00:00Z"
+                forceSpecifiedFormat={false}
+                format="YYYY-MM-DD"
+                isLocalised={false}
+                prefix=""
+                suffix=""
+              />
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="11"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Year available"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-date-available-label"
+            variant="body2"
+          >
+            Year available
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <DateCitationView
+              className="citationDate"
+              data-testid="rek-date"
+              date="2017-07-15T00:00:00Z"
+              forceSpecifiedFormat={false}
+              format="YYYY"
+              isLocalised={false}
+              prefix=""
+              suffix=""
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="12"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-DOI"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-doi-label"
+            variant="body2"
+          >
+            DOI
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <DoiCitationView
+              doi="10.1242/jcs.196659"
+              key="additional-information-doi"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Open access status"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-oa-status-label"
+            variant="body2"
+          >
+            Open access status
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-oa-status"
+            >
+              DOI
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="14"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Open access status type"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-oa-status-type-label"
+            variant="body2"
+          >
+            Open access status type
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-oa-status-type"
+            >
+              Bronze
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="16"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Cultural Institution Notice"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-ci-notice-attribution-incomplete-label"
+            variant="body2"
+          >
+            Cultural Institution Notice
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span>
+              <div
+                className="fez-icon_cilabel"
+                data-testid="fez-icon-cilabel"
+                style={
+                  Object {
+                    "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg)",
+                    "height": 100,
+                    "width": 100,
+                  }
+                }
+              />
+              <br />
+              <strong>
+                Attribution Incomplete
+                 - 
+              </strong>
+              Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are using this notice to clearly identify this material so that it can be updated, or corrected by communities of origin. Our institution is committed to collaboration and partnerships to address this problem of incorrect or missing attribution
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="17"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Volume"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-volume-number-label"
+            variant="body2"
+          >
+            Volume
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-volume-number"
+            >
+              130
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="18"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Issue"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-issue-number-label"
+            variant="body2"
+          >
+            Issue
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-issue-number"
+            >
+              14
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="19"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Start page"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-start-page-label"
+            variant="body2"
+          >
+            Start page
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-start-page"
+            >
+              2292
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="20"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-End page"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-end-page-label"
+            variant="body2"
+          >
+            End page
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-end-page"
+            >
+              2305
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="21"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Total pages"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-total-pages-label"
+            variant="body2"
+          >
+            Total pages
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-total-pages"
+            >
+              14
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="22"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Article number"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-article-number-label"
+            variant="body2"
+          >
+            Article number
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-article-number"
+            >
+              article 123
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="24"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Place of publication"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-place-of-publication-label"
+            variant="body2"
+          >
+            Place of publication
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-place-of-publication"
+            >
+              Cambridge, United Kingdom
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="25"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Publisher"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-publisher-label"
+            variant="body2"
+          >
+            Publisher
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <Link
+              data-testid="rek-publisher"
+              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Brek_publisher%5D%5Bvalue%5D=Company+of+Biologists&searchMode=advanced"
+            >
+              Company of Biologists
+            </Link>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="27"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Keyword(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-keywords-label"
+            variant="body2"
+          >
+            Keyword(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_keywords"
+            >
+              <li
+                data-testid="rek-keywords-0"
+                key="rek-keywords-0"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Akt&searchQueryParams%5Ball%5D="
+                >
+                  Akt
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-1"
+                key="rek-keywords-1"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Breast+cancer&searchQueryParams%5Ball%5D="
+                >
+                  Breast cancer
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-2"
+                key="rek-keywords-2"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Ca2%2B&searchQueryParams%5Ball%5D="
+                >
+                  Ca2+
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-3"
+                key="rek-keywords-3"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hypoxia&searchQueryParams%5Ball%5D="
+                >
+                  Hypoxia
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-4"
+                key="rek-keywords-4"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=PTEN&searchQueryParams%5Ball%5D="
+                >
+                  PTEN
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-5"
+                key="rek-keywords-5"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Signal+transduction&searchQueryParams%5Ball%5D="
+                >
+                  Signal transduction
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-6"
+                key="rek-keywords-6"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=TRPC1&searchQueryParams%5Ball%5D="
+                >
+                  TRPC1
+                </Link>
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`Additional Information Component  should render component with a collection 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}

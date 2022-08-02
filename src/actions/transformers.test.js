@@ -4597,6 +4597,9 @@ describe('getNotesSectionSearchKeys', () => {
                 ain_detail: '<p>This is test internal note</p>',
             },
             rek_herdc_notes: 'This is test herdc notes',
+            fez_record_search_key_ci_notice_attribution_incomplete: {
+                rek_ci_notice_attribution_incomplete: true,
+            },
         };
 
         expect(
@@ -4609,6 +4612,7 @@ describe('getNotesSectionSearchKeys', () => {
                     htmlText: 'This is test herdc notes',
                     plainText: 'This is test herdc notes',
                 },
+                ciNotices: { rek_ci_notice_attribution_incomplete: true },
             }),
         ).toEqual(expected);
     });
@@ -5231,3 +5235,16 @@ describe('reasonForEdit', () => {
         expect(transformers.getReasonSectionSearchKeys({})).toEqual({});
     });
 });
+
+// describe('Cultural Institution Notices', () => {
+//     it('should correctly transform CI data', () => {
+//         const record = { ciNotices: { rek_ci_notice_attribution_incomplete: true } };
+//         // console.log(transformers.getNotesSectionSearchKeys(record));
+//         expect(transformers.getNotesSectionSearchKeys(record)).toEqual({
+//             // fez_internal_notes: null,
+//             fez_record_search_key_ci_notice_attribution_incomplete: { rek_ci_notice_attribution_incomplete: true },
+//         });
+
+//         expect(transformers.getNotesSectionSearchKeys({})).toEqual({});
+//     });
+// });

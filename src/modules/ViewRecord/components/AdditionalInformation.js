@@ -402,9 +402,8 @@ export class AdditionalInformationClass extends PureComponent {
                             ? null
                             : publication[field];
                         break;
-                    case 'ciNotices':
+                    case 'fez_record_search_key_ci_notice_attribution_incomplete':
                         const ciKey = this.transformFieldNameToSubkey(field);
-                        // console.log('CI NOTICE', ciKey);
                         value = publication[field] && publication[field][ciKey] === true ? publication[field] : null;
                         break;
                     case 'fez_record_search_key_herdc_code':
