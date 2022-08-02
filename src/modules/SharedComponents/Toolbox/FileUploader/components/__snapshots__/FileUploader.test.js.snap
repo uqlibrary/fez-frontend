@@ -6652,6 +6652,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -6706,6 +6707,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -6982,6 +6984,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -7598,6 +7601,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -7654,6 +7658,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -8101,6 +8106,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8155,6 +8161,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8432,6 +8439,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8488,6 +8496,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8765,6 +8774,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -8821,6 +8831,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9108,6 +9119,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9164,6 +9176,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
@@ -9621,6 +9634,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
@@ -9677,6 +9691,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
       requireOpenAccessStatus={false}
       uploadedFile={
         Object {
