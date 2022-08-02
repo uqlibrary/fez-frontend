@@ -121,7 +121,7 @@ export class FileUploader extends PureComponent {
 
         file[config.FILE_META_KEY_SECURITY_POLICY] = newValue;
 
-        if (newValue === config.FILE_ACCESS_CONDITION_OPEN) {
+        if (newValue === config.FILE_SECURITY_POLICY_PUBLIC) {
             file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
         } else {
             file[config.FILE_META_KEY_EMBARGO_DATE] = null;

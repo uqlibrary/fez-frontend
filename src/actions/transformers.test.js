@@ -7,6 +7,7 @@ import {
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from 'config/general';
+import { FILE_SECURITY_POLICY_ADMIN, FILE_SECURITY_POLICY_PUBLIC } from 'modules/SharedComponents/Toolbox/FileUploader';
 
 const moment = require('moment');
 
@@ -229,6 +230,90 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                     rek_file_attachment_access_condition_order: 4,
                 },
             ],
+        };
+        const result = transformers.getRecordFileAttachmentSearchKey(files, record);
+        expect(result).toEqual(expected);
+    });
+
+    it('should return request object structure for files with various security policies', () => {
+        const files = [
+            {
+                security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
+                name: 'file1.txt',
+                date: moment()
+                    .clone()
+                    .format('YYYY-MM-DD'), // today
+            },
+            {
+                security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access, should revert to admin
+                name: 'file2.txt',
+                date: moment()
+                    .clone()
+                    .add(30, 'days')
+                    .format('YYYY-MM-DD'), // future
+            },
+            {
+                security_policy: FILE_SECURITY_POLICY_PUBLIC, // Public access
+                name: 'file3.txt',
+                date: moment()
+                    .clone()
+                    .add(-30, 'days')
+                    .format('YYYY-MM-DD'), // past
+            },
+            {
+                security_policy: FILE_SECURITY_POLICY_ADMIN, // closed access
+                name: 'file4.txt',
+            },
+        ];
+        const record = null;
+        const expected = {
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'file1.txt',
+                    rek_file_attachment_name_order: 1,
+                },
+                {
+                    rek_file_attachment_name: 'file2.txt',
+                    rek_file_attachment_name_order: 2,
+                },
+                {
+                    rek_file_attachment_name: 'file3.txt',
+                    rek_file_attachment_name_order: 3,
+                },
+                {
+                    rek_file_attachment_name: 'file4.txt',
+                    rek_file_attachment_name_order: 4,
+                },
+            ],
+            fez_record_search_key_file_attachment_security_policy: [
+                {
+                    rek_file_attachment_security_policy: 5,
+                    rek_file_attachment_security_policy_order: 1,
+                },
+                {
+                    rek_file_attachment_security_policy: 1,
+                    rek_file_attachment_security_policy_order: 2,
+                },
+                {
+                    rek_file_attachment_security_policy: 5,
+                    rek_file_attachment_security_policy_order: 3,
+                },
+                {
+                    rek_file_attachment_security_policy: 1,
+                    rek_file_attachment_security_policy_order: 4,
+                },
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [
+                {
+                    rek_file_attachment_embargo_date: '2018-01-31',
+                    rek_file_attachment_embargo_date_order: 2,
+                },
+                {
+                    rek_file_attachment_embargo_date: '2017-12-02',
+                    rek_file_attachment_embargo_date_order: 3,
+                },
+            ],
+            fez_record_search_key_file_attachment_access_condition: [],
         };
         const result = transformers.getRecordFileAttachmentSearchKey(files, record);
         expect(result).toEqual(expected);
