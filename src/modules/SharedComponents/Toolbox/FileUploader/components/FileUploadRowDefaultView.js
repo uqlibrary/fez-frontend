@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { Button } from '@material-ui/core';
 
 export class FileUploadRowDefaultView extends PureComponent {
     static propTypes = {
@@ -27,6 +28,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
+        onOrderUpClick: PropTypes.func,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
         fileUploadRowViewId: PropTypes.string,
@@ -52,11 +54,15 @@ export class FileUploadRowDefaultView extends PureComponent {
             classes,
             focusOnIndex,
         } = this.props;
-
+        // console.log('SL File Upload Row View ID', this.props.fileUploadRowViewId);
         return (
             <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
                     <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
+                        {/* Testing */}
+                        <Button onClick={this.props.onOrderUpClick}>^</Button>
+
+                        {/* End Testing */}
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
                         </Typography>

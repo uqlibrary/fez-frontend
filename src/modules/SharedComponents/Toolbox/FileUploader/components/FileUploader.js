@@ -132,6 +132,41 @@ export class FileUploader extends PureComponent {
         this.replaceFile(file, index);
     };
 
+    shuffleFileOrder = (arr, from, to) => {
+        return arr.reduce((prev, current, idx, self) => {
+            if (from === to) {
+                prev.push(current);
+            }
+            if (idx === from) {
+                return prev;
+            }
+            if (from < to) {
+                prev.push(current);
+            }
+            if (idx === to) {
+                prev.push(self[from]);
+            }
+            if (from > to) {
+                prev.push(current);
+            }
+            return prev;
+        }, []);
+    };
+
+    _updateOrderUp = index => {
+        console.log('The current Index is', index);
+        console.log('The current file queue is', this.state.filesInQueue);
+        // Below needs to be moved into a seperate function
+        const filesToOrder = [...this.state.filesInQueue];
+        console.log('FILES TO ORDER', filesToOrder);
+        if (index > 0) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+
     /**
      * Accept terms and conditions
      *
@@ -277,6 +312,8 @@ export class FileUploader extends PureComponent {
             .replace('[maxFileSize]', `${maxFileSize}`)
             .replace('[fileSizeUnit]', fileSizeUnit === config.SIZE_UNIT_B ? config.SIZE_UNIT_B : `${fileSizeUnit}B`);
 
+        console.log('SL FILES IN QUEUE', filesInQueue);
+
         const filesInQueueRow = filesInQueue.map((file, index) => {
             return (
                 <FileUploadRow
@@ -288,6 +325,7 @@ export class FileUploader extends PureComponent {
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onOrderUpClick={this._updateOrderUp}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                     disabled={disabled}
