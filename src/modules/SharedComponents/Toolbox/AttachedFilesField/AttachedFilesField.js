@@ -33,11 +33,13 @@ export const onChangeCallbackFactory = (dataStreams, onChange) => {
 export const AttachedFilesField = ({ input, ...props }) => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
-    const [dataStreams, setDataStreams] = useState(
-        !!formValues.fez_datastream_info
+    const [dataStreams, setDataStreams] = useState(() => {
+        // SL: Can refactor or adjust the ordering in here?
+        console.log('FORM VALS', formValues.fez_datastream_info, 'PROPS', props.meta.initial.toJS());
+        return !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
-            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [],
-    );
+            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
+    });
     const { onChange } = input;
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
