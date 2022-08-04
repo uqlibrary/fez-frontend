@@ -2,7 +2,6 @@ import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 import { rtlRender, fireEvent, waitFor, act, screen } from 'test-utils';
-
 import { openAccessConfig } from 'config';
 
 import mediaQuery from 'css-mediaquery';
@@ -381,5 +380,91 @@ describe('AttachedFiles component', () => {
         };
         expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: testDate })).toEqual(expected1);
         expect(getFileOpenAccessStatus(openAccessStatusId, { dsi_embargo_date: '1920-09-09' })).toEqual(expected2);
+    });
+
+    describe('Attached file renaming', () => {
+        it('should check calls to rename fire expected function calls', async () => {
+            const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
+            userIsAdmin.mockImplementation(() => true);
+            const originalFilename = 'My_UQ_eSpace_UPO_guidelines_2016.pdf';
+            const newFilename = 'test.pdf';
+            const dataStreams = [
+                {
+                    dsi_pid: 'UQ:252236',
+                    dsi_dsid: originalFilename,
+                    dsi_embargo_date: '2018-01-01',
+                    dsi_open_access: 1,
+                    dsi_label: 'UPO Guide v.4',
+                    dsi_mimetype: 'application/pdf',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 587005,
+                    dsi_security_inherited: 1,
+                    dsi_security_policy: 1,
+                },
+            ];
+            const onFilenameChange = jest.fn(filename => {
+                dataStreams.dsi_dsid = filename;
+                return dataStreams;
+            });
+
+            const { getByTestId, queryByTestId } = setup({
+                canEdit: true,
+                dataStreams,
+                onFilenameChange,
+            });
+
+            expect(getByTestId('file-name-0-edit')).toBeInTheDocument();
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-edit'));
+            });
+            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+
+            expect(getByTestId('file-name-0-cancel')).toBeInTheDocument(); // cancel btn
+            expect(getByTestId('file-name-0-save')).toBeInTheDocument(); // save btn
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-cancel'));
+            });
+
+            await waitFor(() => expect(getByTestId('file-name-0-edit')).toBeInTheDocument());
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0);
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-edit'));
+            });
+            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+
+            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: newFilename } });
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-save'));
+            });
+
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', newFilename, 0);
+
+            await waitFor(() => expect(getByTestId('file-name-0-reset')).toBeInTheDocument());
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-reset'));
+            });
+
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0);
+
+            await waitFor(() => expect(getByTestId('file-name-0-edit')).toBeInTheDocument());
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-edit'));
+            });
+            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+
+            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: 'test.pdf.invalid' } });
+
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-save'));
+            });
+
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', 'test.pdf.invalid', 0);
+        });
     });
 });

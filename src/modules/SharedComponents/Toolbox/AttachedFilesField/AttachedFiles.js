@@ -97,7 +97,7 @@ export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
 };
 
-export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
+export const getFileData = (openAccessStatusId, dataStreams, viewRecordsConfig, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
               const pid = dataStream.dsi_pid;
@@ -166,7 +166,7 @@ export const AttachedFiles = ({
     const { openAccessStatusId } = useFormValuesContext();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
+    const fileData = getFileData(openAccessStatusId, dataStreams, viewRecordsConfig, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
 
     // tested in cypress
@@ -410,7 +410,8 @@ export const AttachedFiles = ({
                     <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
             </StandardCard>
-            {errorMessage.length > 0 && (
+            {/* istanbul ignore next*/
+            errorMessage.length > 0 && (
                 <Grid item xs={12}>
                     <Alert title={errorTitle} message={errorMessage} type="error" />
                 </Grid>
