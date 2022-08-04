@@ -201,6 +201,7 @@ export const AttachedFiles = ({
         setErrorMessage(errormessage);
     };
 
+    /* istanbul ignore next */
     const onFileCancelEdit = () => {
         checkFileNamesForErrors();
     };

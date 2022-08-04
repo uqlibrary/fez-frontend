@@ -48,6 +48,7 @@ const EditableFileName = ({
         setIsEditing(false);
         setIsValid(true);
         isEdited.current = editingFilenameRef.current !== originalFilenameRef.current;
+        /* istanbul ignore next */
         onFileNameChange(editingFilenameRef.current ?? originalFilenameRef.current, true);
     };
 
@@ -83,6 +84,7 @@ const EditableFileName = ({
     }, [isEditing, isValid]);
 
     useEffect(() => {
+        /* istanbul ignore next */
         if (!!originalFilenameRef.current && !isEditing) {
             onFileCancelEdit?.();
         }
