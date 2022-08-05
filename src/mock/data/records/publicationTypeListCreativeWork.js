@@ -33,11 +33,21 @@ const publicationTypeListCreativeWork = {
                 "rek_audience_size": 453992,
                 "rek_audience_size_lookup": "Less than 100"
             },
-            "fez_record_search_key_author": ["Ashkanasy, Neal M."],
+            "fez_record_search_key_author": [
+                "Ashkanasy, Neal M.",
+                "Belanger, Zackery",
+                "Bernal, Guillermo",
+            ],
             "fez_record_search_key_author_id": [
                 {
                     "rek_author_id": 570,
                     "rek_author_id_lookup": "Ashkanasy, Neal M."
+                }, {
+                    "rek_author_id": 0,
+                    "author": null
+                }, {
+                    "rek_author_id": 0,
+                    "author": null
                 }
             ],
             "fez_record_search_key_contributor": ["R. J. Aldag"],
@@ -353,9 +363,19 @@ const publicationTypeListCreativeWork = {
                 "ain_pid": "UQ:285760",
                 "ain_detail": "http://hstalks.com/?t=MM1553222-Ashkanasy\r\n\r\nEC15UQ285760_partX 30Mg chunks\r\n\r\n\"ERA Assessors\""
             },
-            "fez_record_search_key_author_affiliation_name": ["The University of Queensland",],
+            "fez_record_search_key_author_affiliation_name": [
+                "The University of Queensland",
+                "The University of Queensland",
+                "The University of Queensland"
+            ],
             "fez_record_search_key_author_affiliation_type": [
                 {
+                    "rek_author_affiliation_type": 453989,
+                    "rek_author_affiliation_type_lookup": "University"
+                }, {
+                    "rek_author_affiliation_type": 453989,
+                    "rek_author_affiliation_type_lookup": "University"
+                }, {
                     "rek_author_affiliation_type": 453989,
                     "rek_author_affiliation_type_lookup": "University"
                 }
@@ -368,6 +388,8 @@ const publicationTypeListCreativeWork = {
             ],
             "fez_record_search_key_creator_contribution_statement": [
                 "<p>This is an online lecture covering all aspects of the field of orgnizationalculture and climate . At the time, it was the most up-to-date review of the topic, based on the recently published Handbook of Organizational Culture and Climate, Second Edition (Sage Publishing).</p>",
+                "Missing",
+                "Missing",
             ],
             "fez_record_search_key_quality_indicator": [
                 {
@@ -382,8 +404,16 @@ const publicationTypeListCreativeWork = {
             "fez_record_search_key_security_policy": [5],
             "fez_record_search_key_significance": [
                 {
+                    "rek_significance_id": 123654,
                     "rek_significance": 454026,
                     "rek_significance_lookup": "Major"
+                }, {
+                    "rek_significance_id": 123655,
+                    "rek_significance": 0,
+                }, {
+                    "rek_significance_id": 123656,
+                    "rek_significance": 454027,
+                    "rek_significance_lookup": "Minor"
                 }
             ]
         },
