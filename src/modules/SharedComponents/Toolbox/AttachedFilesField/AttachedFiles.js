@@ -10,7 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import WarningIcon from '@material-ui/icons/Warning';
-
+import { Button } from '@material-ui/core';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
@@ -94,7 +94,7 @@ export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
 
 export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
-        ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
+        ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map((dataStream, key) => {
               const pid = dataStream.dsi_pid;
               const fileName = dataStream.dsi_dsid;
               const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -129,6 +129,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) 
                   mediaUrl: getUrl(pid, fileName),
                   securityStatus: true,
                   embargoDate: dataStream.dsi_embargo_date,
+                  fileOrder: (dataStream.dsi_order_position && dataStream.dsi_order_position) || key,
+                  key: key,
               };
           })
         : [];
@@ -141,6 +143,7 @@ export const AttachedFiles = ({
     onDelete,
     onDateChange,
     onDescriptionChange,
+    onOrderChange,
     onEmbargoClearPromptText,
     locale,
     canEdit,
@@ -156,6 +159,7 @@ export const AttachedFiles = ({
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
+    console.log('FILEDATA: ', fileData);
     if (fileData.length === 0) return null;
 
     // tested in cypress
@@ -180,6 +184,10 @@ export const AttachedFiles = ({
     const onFileDelete = index => () => onDelete(index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
+    // const onFileOrderChangeUp = index => (index > 0 ? onOrderChange(index, index - 1) : null);
+    const onFileOrderChangeUp = (key, index) => onOrderChange(key, index, index - 1);
+    const onFileOrderChangeDown = (key, index) => onOrderChange(key, index, index + 1);
+    // const onFileOrderChangeDown = index =>  onOrderChange(index, index+1);
     return (
         <Grid item xs={12}>
             <StandardCard title={locale.title} subCard>
@@ -235,123 +243,140 @@ export const AttachedFiles = ({
                         )}
                     </Grid>
                 </div>
-                {fileData.map((item, index) => (
-                    <React.Fragment key={index}>
-                        <div style={{ padding: 8 }} key={index}>
-                            <Grid container className={classes.header} spacing={3} key={`file-${index}`}>
-                                <Grid item xs={12}>
-                                    <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                                        <Grid item xs={1} className={classes.thumbIconCentered}>
-                                            <FileIcon
-                                                {...item.iconProps}
-                                                showPreview={showPreview}
-                                                id={`file-icon-${index}`}
-                                            />
-                                        </Grid>
-                                        <Grid item sm={3} className={classes.dataWrapper}>
-                                            <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
-                                        </Grid>
-                                        <Hidden xsDown>
-                                            <Grid item sm={3} className={classes.dataWrapper}>
-                                                {isAdmin && canEdit ? (
-                                                    <TextField
-                                                        fullWidth
-                                                        onChange={onFileDescriptionChange(index)}
-                                                        name="fileDescription"
-                                                        defaultValue={item.description}
-                                                        id={`file-description-input-${index}`}
-                                                        textFieldId={`dsi-label-${index}`}
-                                                        key={item.fileName}
-                                                    />
-                                                ) : (
-                                                    <Typography variant="body2" noWrap>
-                                                        {item.description}
-                                                    </Typography>
-                                                )}
-                                            </Grid>
-                                        </Hidden>
-                                        <Hidden smDown>
-                                            <Grid item sm={2} className={classes.dataWrapper}>
-                                                <Typography variant="body2" noWrap>
-                                                    {item.calculatedSize}
-                                                </Typography>
-                                            </Grid>
-                                        </Hidden>
-                                        <Hidden xsDown>
-                                            <Grid item sm style={{ textAlign: 'right' }}>
-                                                <OpenAccessIcon
-                                                    {...item.openAccessStatus}
-                                                    securityStatus={item.securityStatus}
+                {fileData
+                    .sort((a, b) => a.fileOrder - b.fileOrder)
+                    .map((item, index) => (
+                        <React.Fragment key={index}>
+                            <div style={{ padding: 8 }} key={index}>
+                                <Button disabled={index === 0} onClick={() => onFileOrderChangeUp(item.key, index + 1)}>
+                                    ^
+                                </Button>
+                                <Button
+                                    disabled={index === fileData.length - 1}
+                                    onClick={() => onFileOrderChangeDown(item.key, index + 1)}
+                                >
+                                    V
+                                </Button>
+                                <Grid container className={classes.header} spacing={3} key={`file-${index}`}>
+                                    <Grid item xs={12}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                                            <Grid item xs={1} className={classes.thumbIconCentered}>
+                                                <FileIcon
+                                                    {...item.iconProps}
+                                                    showPreview={showPreview}
+                                                    id={`file-icon-${index}`}
                                                 />
                                             </Grid>
-                                        </Hidden>
-                                        {isAdmin && canEdit && (
-                                            <React.Fragment>
-                                                {/* cypress test does not like period in the id */}
-                                                <Grid
-                                                    item
-                                                    xs={2}
-                                                    id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
-                                                >
-                                                    {openAccessConfig.openAccessFiles.includes(openAccessStatusId) && (
-                                                        <FileUploadEmbargoDate
-                                                            value={item.openAccessStatus.embargoDate}
-                                                            onChange={onEmbargoDateChange(index)}
-                                                            disabled={disabled}
-                                                            fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                            <Grid item sm={3} className={classes.dataWrapper}>
+                                                <FileName
+                                                    {...item}
+                                                    onFileSelect={showPreview}
+                                                    id={`file-name-${index}`}
+                                                />
+                                            </Grid>
+                                            <Hidden xsDown>
+                                                <Grid item sm={3} className={classes.dataWrapper}>
+                                                    {isAdmin && canEdit ? (
+                                                        <TextField
+                                                            fullWidth
+                                                            onChange={onFileDescriptionChange(index)}
+                                                            name="fileDescription"
+                                                            defaultValue={item.description}
+                                                            id={`file-description-input-${index}`}
+                                                            textFieldId={`dsi-label-${index}`}
+                                                            key={item.fileName}
                                                         />
+                                                    ) : (
+                                                        <Typography variant="body2" noWrap>
+                                                            {item.description}
+                                                        </Typography>
                                                     )}
                                                 </Grid>
-                                                <Grid item xs style={{ textAlign: 'right' }}>
-                                                    <Tooltip title={deleteHint}>
-                                                        <span>
-                                                            <IconButton
-                                                                id={`delete-file-${index}`}
-                                                                onClick={onFileDelete(index)}
+                                            </Hidden>
+                                            <Hidden smDown>
+                                                <Grid item sm={2} className={classes.dataWrapper}>
+                                                    <Typography variant="body2" noWrap>
+                                                        {item.calculatedSize}
+                                                    </Typography>
+                                                </Grid>
+                                            </Hidden>
+                                            <Hidden xsDown>
+                                                <Grid item sm style={{ textAlign: 'right' }}>
+                                                    <OpenAccessIcon
+                                                        {...item.openAccessStatus}
+                                                        securityStatus={item.securityStatus}
+                                                    />
+                                                </Grid>
+                                            </Hidden>
+                                            {isAdmin && canEdit && (
+                                                <React.Fragment>
+                                                    {/* cypress test does not like period in the id */}
+                                                    <Grid
+                                                        item
+                                                        xs={2}
+                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
+                                                    >
+                                                        {openAccessConfig.openAccessFiles.includes(
+                                                            openAccessStatusId,
+                                                        ) && (
+                                                            <FileUploadEmbargoDate
+                                                                value={item.openAccessStatus.embargoDate}
+                                                                onChange={onEmbargoDateChange(index)}
                                                                 disabled={disabled}
-                                                            >
-                                                                <Delete />
-                                                            </IconButton>
-                                                        </span>
-                                                    </Tooltip>
+                                                                fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                            />
+                                                        )}
+                                                    </Grid>
+                                                    <Grid item xs style={{ textAlign: 'right' }}>
+                                                        <Tooltip title={deleteHint}>
+                                                            <span>
+                                                                <IconButton
+                                                                    id={`delete-file-${index}`}
+                                                                    onClick={onFileDelete(index)}
+                                                                    disabled={disabled}
+                                                                >
+                                                                    <Delete />
+                                                                </IconButton>
+                                                            </span>
+                                                        </Tooltip>
+                                                    </Grid>
+                                                </React.Fragment>
+                                            )}
+                                        </Grid>
+                                        {!!hasClearedEmbargoDate[index] && (
+                                            // tested in cypress admin-edit audio
+                                            /* istanbul ignore next */
+                                            <React.Fragment>
+                                                <Grid
+                                                    container
+                                                    spacing={1}
+                                                    alignContent={'flex-end'}
+                                                    alignItems={'flex-end'}
+                                                    justifyContent={'flex-end'}
+                                                    style={{ marginTop: 4 }}
+                                                >
+                                                    <Grid item xs={6} />
+                                                    <Grid item xs={6}>
+                                                        <Typography style={{ color: mui1theme.palette.warning.main }}>
+                                                            <WarningIcon
+                                                                fontSize={'small'}
+                                                                style={{
+                                                                    color: mui1theme.palette.warning.main,
+                                                                    marginRight: 10,
+                                                                    marginBottom: -4,
+                                                                }}
+                                                            />
+                                                            {onEmbargoClearPromptText}
+                                                        </Typography>
+                                                    </Grid>
                                                 </Grid>
                                             </React.Fragment>
                                         )}
                                     </Grid>
-                                    {!!hasClearedEmbargoDate[index] && (
-                                        // tested in cypress admin-edit audio
-                                        /* istanbul ignore next */
-                                        <React.Fragment>
-                                            <Grid
-                                                container
-                                                spacing={1}
-                                                alignContent={'flex-end'}
-                                                alignItems={'flex-end'}
-                                                justifyContent={'flex-end'}
-                                                style={{ marginTop: 4 }}
-                                            >
-                                                <Grid item xs={6} />
-                                                <Grid item xs={6}>
-                                                    <Typography style={{ color: mui1theme.palette.warning.main }}>
-                                                        <WarningIcon
-                                                            fontSize={'small'}
-                                                            style={{
-                                                                color: mui1theme.palette.warning.main,
-                                                                marginRight: 10,
-                                                                marginBottom: -4,
-                                                            }}
-                                                        />
-                                                        {onEmbargoClearPromptText}
-                                                    </Typography>
-                                                </Grid>
-                                            </Grid>
-                                        </React.Fragment>
-                                    )}
                                 </Grid>
-                            </Grid>
-                        </div>
-                    </React.Fragment>
-                ))}
+                            </div>
+                        </React.Fragment>
+                    ))}
                 {preview.mediaUrl && preview.mimeType && (
                     <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
@@ -366,6 +391,7 @@ AttachedFiles.propTypes = {
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,
+    onOrderChange: PropTypes.func,
     onDescriptionChange: PropTypes.func,
     onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,

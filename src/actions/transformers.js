@@ -1349,12 +1349,19 @@ export const getDatastreamInfo = (
     dataStreamsFromFileSection = [],
     dataStreamsFromSecuritySection = [],
 ) => {
+    console.log(
+        'GET DATA STREAM INFO',
+        originalDatastreams,
+        dataStreamsFromFileSection,
+        dataStreamsFromSecuritySection,
+    );
     const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
         (map, ds) => ({
             ...map,
             [ds.dsi_dsid]: {
                 dsi_label: ds.dsi_label,
                 dsi_embargo_date: ds.dsi_embargo_date,
+                dsi_order_position: ds.dsi_order_position,
             },
         }),
         {},

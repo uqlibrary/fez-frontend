@@ -25,6 +25,49 @@ export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => 
     return [callback, [dataStreams, setDataStreams]];
 };
 
+export const shuffleFileOrder = (arr, from, to) => {
+    return arr.reduce((prev, current, idx, self) => {
+        if (from === to) {
+            prev.push(current);
+        }
+        if (idx === from) {
+            return prev;
+        }
+        if (from < to) {
+            prev.push(current);
+        }
+        if (idx === to) {
+            prev.push(self[from]);
+        }
+        if (from > to) {
+            prev.push(current);
+        }
+        return prev;
+    }, []);
+};
+
+export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
+    const callback = (key, oldPosition, newPosition) => {
+        const newDataStreams = [...dataStreams];
+
+        newDataStreams.map(
+            (item, index) =>
+                (item.dsi_order_position = item.hasOwnProperty('dsi_order_position')
+                    ? item.dsi_order_position
+                    : index + 1),
+        );
+
+        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_order_position === oldPosition);
+        const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order_position === newPosition);
+
+        newDataStreams[sourceFileIndex].dsi_order_position = newPosition;
+        newDataStreams[replaceFileIndex].dsi_order_position = oldPosition;
+
+        setDataStreams(newDataStreams);
+    };
+    return [callback, [dataStreams, setDataStreams]];
+};
+
 export const onChangeCallbackFactory = (dataStreams, onChange) => {
     const callback = () => onChange(dataStreams);
     return [callback, [dataStreams, onChange]];
@@ -34,13 +77,16 @@ export const AttachedFilesField = ({ input, ...props }) => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(() => {
-        // SL: Can refactor or adjust the ordering in here?
-        console.log('FORM VALS', formValues.fez_datastream_info, 'PROPS', props.meta.initial.toJS());
         return !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
             : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
     });
     const { onChange } = input;
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const handleDataStreamOrderChange = useCallback(
+        ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
+    );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
@@ -54,6 +100,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
             onDelete={handleDelete}
             onDateChange={handleDataStreamChange}
             onDescriptionChange={handleDataStreamChange}
+            onOrderChange={handleDataStreamOrderChange}
             dataStreams={dataStreams}
             {...props}
         />
