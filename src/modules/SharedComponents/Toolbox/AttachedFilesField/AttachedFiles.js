@@ -10,7 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import WarningIcon from '@material-ui/icons/Warning';
-import { Button } from '@material-ui/core';
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
@@ -31,6 +30,7 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
+import { ExpandLess, ExpandMore } from '@material-ui/icons';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -47,6 +47,14 @@ export const useStyles = makeStyles(
         },
         thumbIconCentered: {
             textAlign: 'center',
+        },
+        upDownArrowContainer: {
+            padding: '0 !important',
+            textAlign: 'center',
+        },
+        upDownArrow: {
+            padding: '0 8px 0',
+            display: 'inline-block',
         },
     }),
     { withTheme: true },
@@ -248,17 +256,19 @@ export const AttachedFiles = ({
                     .map((item, index) => (
                         <React.Fragment key={index}>
                             <div style={{ padding: 8 }} key={index}>
-                                <Button disabled={index === 0} onClick={() => onFileOrderChangeUp(item.key, index + 1)}>
-                                    ^
-                                </Button>
-                                <Button
-                                    disabled={index === fileData.length - 1}
-                                    onClick={() => onFileOrderChangeDown(item.key, index + 1)}
-                                >
-                                    V
-                                </Button>
                                 <Grid container className={classes.header} spacing={3} key={`file-${index}`}>
                                     <Grid item xs={12}>
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                                <IconButton
+                                                    disabled={index === 0}
+                                                    className={classes.upDownArrow}
+                                                    onClick={() => onFileOrderChangeUp(item.key, index + 1)}
+                                                >
+                                                    <ExpandLess />
+                                                </IconButton>
+                                            </Grid>
+                                        </Grid>
                                         <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                             <Grid item xs={1} className={classes.thumbIconCentered}>
                                                 <FileIcon
@@ -372,6 +382,26 @@ export const AttachedFiles = ({
                                                 </Grid>
                                             </React.Fragment>
                                         )}
+                                        {/* <div>
+                                            <IconButton
+                                                disabled={index === fileData.length - 1}
+                                                onClick={() => onFileOrderChangeDown(item.key, index + 1)}
+                                            >
+                                                <ExpandMore />
+                                            </IconButton>
+                                        </div> */}
+
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                                            <Grid item xs={1} className={classes.upDownArrowContainer}>
+                                                <IconButton
+                                                    className={classes.upDownArrow}
+                                                    disabled={index === fileData.length - 1}
+                                                    onClick={() => onFileOrderChangeDown(item.key, index + 1)}
+                                                >
+                                                    <ExpandMore />
+                                                </IconButton>
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </div>

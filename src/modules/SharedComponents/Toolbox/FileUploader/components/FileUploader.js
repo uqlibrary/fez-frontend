@@ -166,6 +166,19 @@ export class FileUploader extends PureComponent {
             });
         }
     };
+    _updateOrderDown = index => {
+        console.log('The current Index is', index);
+        console.log('The current file queue is', this.state.filesInQueue);
+        // Below needs to be moved into a seperate function
+        const filesToOrder = [...this.state.filesInQueue];
+        console.log('FILES TO ORDER', filesToOrder);
+        if (index < filesToOrder.length - 1) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
 
     /**
      * Accept terms and conditions
@@ -319,6 +332,7 @@ export class FileUploader extends PureComponent {
                 <FileUploadRow
                     key={file.name}
                     fileUploadRowId={`fez-datastream-info-list-row-${index}`}
+                    rowCount={this.state.filesInQueue.length}
                     index={index}
                     uploadedFile={file}
                     fileSizeUnit={fileSizeUnit}
@@ -326,6 +340,7 @@ export class FileUploader extends PureComponent {
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
                     onOrderUpClick={this._updateOrderUp}
+                    onOrderDownClick={this._updateOrderDown}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                     disabled={disabled}
