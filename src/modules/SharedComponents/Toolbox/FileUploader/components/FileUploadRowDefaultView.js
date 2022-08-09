@@ -60,19 +60,23 @@ export class FileUploadRowDefaultView extends PureComponent {
         } = this.props;
         // console.log('SL File Upload Row View ID', this.props.fileUploadRowViewId);
         return (
-            <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
-                <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
-                    <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                        <Grid item xs={1} className={classes.upDownArrowContainer}>
-                            <IconButton
-                                disabled={index === 0}
-                                className={classes.upDownArrow}
-                                onClick={this.props.onOrderUpClick}
-                            >
-                                <ExpandLess />
-                            </IconButton>
-                        </Grid>
+            <div
+                style={{ flexGrow: 1, padding: 4 }}
+                data-testid={this.props.fileUploadRowViewId}
+                className={classes.row}
+            >
+                <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                    <Grid item xs={1} className={classes.upDownArrowContainer}>
+                        <IconButton
+                            disabled={index === 0}
+                            className={classes.upDownArrow}
+                            onClick={this.props.onOrderUpClick}
+                        >
+                            <ExpandLess />
+                        </IconButton>
                     </Grid>
+                </Grid>
+                <Grid container direction="row" alignItems="center" spacing={1}>
                     <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
@@ -141,16 +145,16 @@ export class FileUploadRowDefaultView extends PureComponent {
                             fileUploadRowStatusId={`dsi-dsid-${index}`}
                         />
                     </Grid>
-                    <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
-                        <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
-                            <IconButton
-                                disabled={index === rowCount - 1}
-                                className={classes.upDownArrow}
-                                onClick={this.props.onOrderDownClick}
-                            >
-                                <ExpandMore />
-                            </IconButton>
-                        </Grid>
+                </Grid>
+                <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                    <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
+                        <IconButton
+                            disabled={index === rowCount - 1}
+                            className={classes.upDownArrow}
+                            onClick={this.props.onOrderDownClick}
+                        >
+                            <ExpandMore />
+                        </IconButton>
                     </Grid>
                 </Grid>
             </div>
