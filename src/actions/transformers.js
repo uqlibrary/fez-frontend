@@ -1183,6 +1183,16 @@ export const getRecordIsMemberOfSearchKey = collections => {
     };
 };
 
+export const getExternalLabelSearchKey = externalLabels => {
+    if (((externalLabels && externalLabels) || []).length === 0) return {};
+    return {
+        fez_record_search_key_external_label_id: externalLabels.map((labelId, index) => ({
+            rek_external_label_id: labelId,
+            rek_external_label_id_order: index + 1,
+        })),
+    };
+};
+
 export const getHerdcCodeSearchKey = record => {
     // return empty object if all parameters are null
     if (record.rek_herdc_code === '0' || (!!record.rek_herdc_code && record.rek_herdc_code.value === null)) {
@@ -1280,8 +1290,10 @@ export const getAdminSectionSearchKeys = (data = {}) => {
         fez_record_search_key_oa_status_type: openAccessStatusType,
         fez_record_search_key_license: license,
         fez_record_search_key_end_date: endDate,
+        fez_record_search_key_external_label_id: externalLabel,
         ...rest
     } = data;
+
     return {
         ...getRecordIsMemberOfSearchKey(communities),
         ...getRecordIsMemberOfSearchKey(collections),
@@ -1299,6 +1311,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
                 ...(!!license && !!license.rek_license && license.rek_license > 0 ? license : {}),
             },
         },
+        ...(!!externalLabel ? getExternalLabelSearchKey(externalLabel) : {}),
         ...(!!endDate && !!endDate.rek_end_date ? { fez_record_search_key_end_date: { ...endDate } } : {}),
         ...rest,
     };

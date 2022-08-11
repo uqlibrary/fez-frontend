@@ -43,6 +43,9 @@ export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${get
 // convenience method to return an image via require() with a leading / where necessary
 export const getRequiredImagePath = imagePath => `${!IS_DEVELOPMENT_SERVER ? '/' : ''}${imagePath}`;
 
+export const getExternalLabelImageUrl = (externalLabelId, extension = '.png') =>
+    `${APP_URL}external-assets/local-contexts/${externalLabelId}${extension}`;
+
 // these values must match what is in api at fez_core/src/config/fez_core.php
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;
@@ -596,7 +599,7 @@ export const EXPORT_FORMAT_TO_EXTENSION = {
 export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
 export const AIATSIS_CODES_VOCAB_ID = 453669;
-export const TK_FIELDS_VOCAB_ID = 453607;
+export const EXTERNAL_LABELS_FIELDS_VOCAB_ID = 456904;
 
 export const UNPROCESSED_RECORDS_COLLECTION = {
     fez_record_search_key_ismemberof: [

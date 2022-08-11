@@ -98,7 +98,7 @@ export default {
                 : [
                       ['rek_subtype'],
                       ['fez_record_search_key_oa_status', 'fez_record_search_key_oa_status_type'],
-                      ['fez_record_search_key_license', 'fez_record_search_key_tk_label'],
+                      ['fez_record_search_key_license', 'fez_record_search_key_external_label_id'],
                   ],
         },
     ],

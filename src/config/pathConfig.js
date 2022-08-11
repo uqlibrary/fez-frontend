@@ -137,6 +137,7 @@ export const pathConfig = {
         publisher: publisher => getSearchUrl({ searchQuery: { rek_publisher: { value: publisher } } }),
         series: series => getSearchUrl({ searchQuery: { rek_series: { value: series } } }),
         license: license => getSearchUrl({ searchQuery: { all: license } }),
+        externalLabel: externalLabel => getSearchUrl({ searchQuery: { all: externalLabel } }),
         jobNumber: jobNumber => getSearchUrl({ searchQuery: { all: jobNumber } }),
         proceedingsTitle: proceedingsTitle => getSearchUrl({ searchQuery: { all: proceedingsTitle } }),
         // Exact match on Any Field

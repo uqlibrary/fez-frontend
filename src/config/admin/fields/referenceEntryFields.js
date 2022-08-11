@@ -72,7 +72,7 @@ export default {
                     'fez_record_search_key_institutional_status',
                 ],
                 ['fez_record_search_key_refereed_source', 'contentIndicators'],
-                ['fez_record_search_key_license', 'fez_record_search_key_tk_label'],
+                ['fez_record_search_key_license', 'fez_record_search_key_external_label_id'],
             ],
         },
     ],

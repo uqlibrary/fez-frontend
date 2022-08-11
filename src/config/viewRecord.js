@@ -85,6 +85,20 @@ export const viewRecordsConfig = {
             url: 'https://guides.library.uq.edu.au/deposit-your-data/license-reuse-data-agreement',
         },
     },
+    externalLabelsLinks: {
+        456926: {
+            className: 'uq',
+            url: 'https://localcontexts.org/label/tk-non-commercial/',
+        },
+        456927: {
+            className: 'uq',
+            url: 'https://localcontexts.org/label/tk-secret-sacred/',
+        },
+        456928: {
+            className: 'uq',
+            url: 'https://localcontexts.org/label/tk-attribution/',
+        },
+    },
     htmlFields: [
         'rek_transcript',
         'rek_notes',

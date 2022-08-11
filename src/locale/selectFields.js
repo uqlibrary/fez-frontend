@@ -117,10 +117,10 @@ export const selectFields = {
         ariaLabel: 'Select a thesis type',
         selectPrompt: 'Please select a thesis type',
     },
-    tkLabels: {
+    externalLabels: {
         label: 'Traditional Knowledge Rights',
         ariaLabel: 'Please select a Traditional Knowledge label for this work',
-        selectPrompt: 'Select a Traditional Knowledge Rights label',
+        selectPrompt: 'Select one or more Traditional Knowledge Rights label(s)',
         loadingHint: 'Loading labels...',
     },
     wokDocType: {

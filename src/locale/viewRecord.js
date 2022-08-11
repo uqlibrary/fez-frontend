@@ -20,7 +20,7 @@ export default {
             additionalInformation: {
                 title: 'Additional information',
                 licenseLinkText: 'View license details',
-                tkLabelLinkText: 'View Traditional Knowledge rights details',
+                externalLabelLinkText: 'View Traditional Knowledge rights details',
             },
             relatedPublications: {
                 title: 'Related works and datasets in eSpace',
@@ -185,7 +185,7 @@ export default {
                 fez_record_search_key_project_description: 'Project description',
                 fez_record_search_key_project_name: 'Project name',
                 fez_record_search_key_license: 'Licence and terms of access',
-                fez_record_search_key_tk_label: 'Traditional Knowledge rights',
+                fez_record_search_key_external_label_id: 'Traditional Knowledge rights',
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
                 fez_record_search_key_software_required: 'Software required',
@@ -498,7 +498,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 22.25,
                 },
                 {
@@ -588,7 +588,7 @@ export default {
                     order: 9.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 9.7,
                 },
                 {
@@ -722,7 +722,7 @@ export default {
                     order: 12.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 12.7,
                 },
                 {
@@ -920,7 +920,7 @@ export default {
                     order: 22.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 22.7,
                 },
                 {
@@ -1098,7 +1098,7 @@ export default {
                     order: 25.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 25.7,
                 },
                 {
@@ -1192,7 +1192,7 @@ export default {
                     order: 6.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 7.7,
                 },
                 {
@@ -1322,7 +1322,7 @@ export default {
                     order: 10,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 10.25,
                 },
                 {
@@ -1528,7 +1528,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 23,
                 },
             ],
@@ -1598,7 +1598,7 @@ export default {
                     order: 13.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 13.7,
                 },
                 {
@@ -1740,7 +1740,7 @@ export default {
                     order: 12.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 12.7,
                 },
                 {
@@ -1858,7 +1858,7 @@ export default {
                     order: 14,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 15,
                 },
             ],
@@ -1940,7 +1940,7 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 17.25,
                 },
                 {
@@ -2058,7 +2058,7 @@ export default {
                     order: 17,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 17.25,
                 },
                 {
@@ -2148,7 +2148,7 @@ export default {
                     order: 13.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 13.7,
                 },
                 {
@@ -2278,7 +2278,7 @@ export default {
                     order: 13,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 13.25,
                 },
                 {
@@ -2412,7 +2412,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 22.25,
                 },
             ],
@@ -2514,7 +2514,7 @@ export default {
                     order: 22,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 22.25,
                 },
             ],
@@ -2576,7 +2576,7 @@ export default {
                     order: 10.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 10.7,
                 },
                 {
@@ -2670,7 +2670,7 @@ export default {
                     order: 6.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 6.7,
                 },
                 {
@@ -2788,7 +2788,7 @@ export default {
                     order: 15,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 16,
                 },
             ],
@@ -2882,7 +2882,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 20,
                 },
             ],
@@ -2936,7 +2936,7 @@ export default {
                     order: 9.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 9.7,
                 },
                 {
@@ -3062,7 +3062,7 @@ export default {
                     order: 19,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 19.25,
                 },
                 {
@@ -3124,7 +3124,7 @@ export default {
                     order: 7.6,
                 },
                 {
-                    field: 'fez_record_search_key_tk_label',
+                    field: 'fez_record_search_key_external_label_id',
                     order: 7.7,
                 },
                 {

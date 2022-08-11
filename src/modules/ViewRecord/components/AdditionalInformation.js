@@ -15,7 +15,12 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
+import {
+    CURRENT_LICENCES,
+    NTRO_SUBTYPE_CW_TEXTUAL_WORK,
+    PLACEHOLDER_ISO8601_ZULU_DATE,
+    getExternalLabelImageUrl,
+} from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -148,6 +153,8 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderMap(objects);
             case 'rek_subject':
                 return this.renderList(objects, subkey, pathConfig.list.subject);
+            case 'rek_external_label_id':
+                return this.renderExternalLabel(objects);
             default:
                 return this.renderList(objects, subkey);
         }
@@ -186,8 +193,6 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
-            case 'rek_tk_label':
-                return this.renderTraditionalKnowledgeLabel(object[subkey], data, object);
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -261,33 +266,43 @@ export class AdditionalInformationClass extends PureComponent {
             </span>
         );
     };
-    renderTraditionalKnowledgeLabel = (cvoId, lookup, data) => {
-        const tkLabelLookup = this.renderLink(pathConfig.list.license(lookup), lookup, 'rek_tk_label_lookup');
-        const tkLabelLink = viewRecordsConfig.licenseLinks[cvoId] ? viewRecordsConfig.licenseLinks[cvoId] : null;
-        const uqTkLabelLinkText =
-            tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
-                ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
-                : null;
-        // TODO - REMOVE THIS BODGE
-        tkLabelLink.url = 'https://localcontexts.org/label/tk-attribution/';
-        const tkLabelImageUrl = data.rek_tk_label_image_url ?? '';
+
+    renderExternalLabel = objects => {
         return (
-            <span>
-                {tkLabelLink && (
-                    <>
-                        <ExternalLink href={tkLabelLink.url} openInNewIcon={!!uqTkLabelLinkText} id="rek-tk-label">
-                            {uqTkLabelLinkText || (
-                                <div
-                                    className={`fez-icon tklabel ${tkLabelLink.className}`}
-                                    style={{ backgroundImage: `url(${tkLabelImageUrl})` }}
-                                />
+            <ul className="externallabels">
+                {objects.map(data => {
+                    const cvoId = data.rek_external_label_id;
+                    const externalLabelLookup = this.renderLink(
+                        pathConfig.list.externalLabel(data.rek_external_label_id_lookup),
+                        data.rek_external_label_id_lookup,
+                        'rek_external_labels',
+                    );
+                    const externalLabelLink = viewRecordsConfig.externalLabelsLinks[cvoId]
+                        ? viewRecordsConfig.externalLabelsLinks[cvoId]
+                        : null;
+                    // const uqTkLabelLinkText =
+                    //     tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
+                    //         ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
+                    //         : null;
+
+                    const externalLabelImageUrl = getExternalLabelImageUrl('529abbc89fff6d91300c9ab44050fd6e'); // , data.rek_external_label_id);
+
+                    const ExternalImageElement = url => (
+                        <img src={url} className={`fez-icon externallabel ${externalLabelLink.className}`} />
+                    );
+                    return (
+                        <li key={cvoId}>
+                            {!!externalLabelLink && (
+                                <ExternalLink href={externalLabelLink.url} openInNewIcon={false} id="rek-tk-label">
+                                    <ExternalImageElement url={externalLabelImageUrl} />
+                                </ExternalLink>
                             )}
-                        </ExternalLink>
-                        <br />
-                    </>
-                )}
-                {tkLabelLookup}
-            </span>
+                            {!!!externalLabelLink && <ExternalImageElement url={externalLabelImageUrl} />}
+                            <div className="externalLabelText">{externalLabelLookup}</div>
+                        </li>
+                    );
+                })}
+            </ul>
         );
     };
 
@@ -379,13 +394,7 @@ export class AdditionalInformationClass extends PureComponent {
         const rows = [];
         const publication = {
             ...this.props.publication,
-            fez_record_search_key_tk_label: {
-                rek_tk_label: 453611,
-                rek_tk_label_lookup: 'TK Attribution (TK A)',
-                rek_tk_label_image_url:
-                    'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png',
-            },
-        }; // TODO - REMOVE THIS BODGE
+        };
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];

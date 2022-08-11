@@ -49,21 +49,10 @@
     content: url(../../src/images/creativecommons/by_nc_nd.png);
   }
 
-  &.tklabel {
-    vertical-align: middle;
-    display: inline-block;
-    width: 88px;
+  &.externallabel {
+    max-width: 88px;
     height: auto;
-    aspect-ratio: 1;
-
-    &.cc-by-nc-nd{
-      background-position:centre centre;
-      background-repeat: no-repeat;
-      background-size:contain;
-    }
-    &.cc-by-nc-nd::before{
-      content: '';
-    }
+    aspect-ratio: 1;   
   }
 
   &.cc-by-nc-sa::before {

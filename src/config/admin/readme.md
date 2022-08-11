@@ -151,7 +151,7 @@ The above name was used on a component that rendered a Material-UI InputLabel an
 By changing the name to:
 
 ```
-name: 'adminSection.fez_record_search_key_tk_label.rek_tk_label'
+name: 'adminSection.fez_record_search_key_external_label_id.rek_tk_label'
 ```
 
 the InputLabel no longer appeared shrunk and the Select element was assigned an empty string instead. So be sure to check the naming of your component if you are seeing unexpected results in the web browser. 

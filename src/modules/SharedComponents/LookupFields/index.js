@@ -18,4 +18,4 @@ export { default as FoROptionTemplate } from './OptionTemplates/FoROptionTemplat
 export { default as JournalTemplate } from './OptionTemplates/JournalTemplate';
 export { default as GenericOptionTemplate } from './OptionTemplates/GenericOptionTemplate';
 export { default as TitleOrPidOptionTemplate } from './OptionTemplates/TitleOrPidOptionTemplate';
-export { TkLabelsField } from './containers/TkLabelsField';
+export { ExternalLabelsField } from './containers/ExternalLabelsField';
