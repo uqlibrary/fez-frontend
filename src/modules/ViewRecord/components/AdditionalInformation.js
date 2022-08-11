@@ -287,9 +287,12 @@ export class AdditionalInformationClass extends PureComponent {
 
                     const externalLabelImageUrl = getExternalLabelImageUrl('529abbc89fff6d91300c9ab44050fd6e'); // , data.rek_external_label_id);
 
-                    const ExternalImageElement = url => (
-                        <img src={url} className={`fez-icon externallabel ${externalLabelLink.className}`} />
-                    );
+                    const ExternalImageElement = ({ url }) => {
+                        const bodgeUrl = url.replace('dev-espace', 'fez-staging').replace(':3000', '');
+                        return (
+                            <img src={bodgeUrl} className={`fez-icon externallabel ${externalLabelLink.className}`} />
+                        );
+                    };
                     return (
                         <li key={cvoId}>
                             {!!externalLabelLink && (
