@@ -86,15 +86,15 @@ export const viewRecordsConfig = {
         },
     },
     externalLabelsLinks: {
-        456926: {
+        456929: {
             className: 'uq',
             url: 'https://localcontexts.org/label/tk-non-commercial/',
         },
-        456927: {
+        456930: {
             className: 'uq',
             url: 'https://localcontexts.org/label/tk-secret-sacred/',
         },
-        456928: {
+        456931: {
             className: 'uq',
             url: 'https://localcontexts.org/label/tk-attribution/',
         },

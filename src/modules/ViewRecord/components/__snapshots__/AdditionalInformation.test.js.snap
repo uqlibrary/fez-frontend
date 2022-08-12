@@ -47015,15 +47015,9 @@ exports[`Additional Information Component  should render component with generic 
               <li
                 key="456927"
               >
-                <ExternalLink
-                  href="https://localcontexts.org/label/tk-secret-sacred/"
-                  id="rek-tk-label"
-                  openInNewIcon={false}
-                >
-                  <ExternalImageElement
-                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
-                  />
-                </ExternalLink>
+                <ExternalImageElement
+                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456927.png"
+                />
                 <div
                   className="externalLabelText"
                 >
@@ -47036,15 +47030,9 @@ exports[`Additional Information Component  should render component with generic 
               <li
                 key="456926"
               >
-                <ExternalLink
-                  href="https://localcontexts.org/label/tk-non-commercial/"
-                  id="rek-tk-label"
-                  openInNewIcon={false}
-                >
-                  <ExternalImageElement
-                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
-                  />
-                </ExternalLink>
+                <ExternalImageElement
+                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456926.png"
+                />
                 <div
                   className="externalLabelText"
                 >
@@ -47057,15 +47045,9 @@ exports[`Additional Information Component  should render component with generic 
               <li
                 key="456928"
               >
-                <ExternalLink
-                  href="https://localcontexts.org/label/tk-attribution/"
-                  id="rek-tk-label"
-                  openInNewIcon={false}
-                >
-                  <ExternalImageElement
-                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
-                  />
-                </ExternalLink>
+                <ExternalImageElement
+                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456928.png"
+                />
                 <div
                   className="externalLabelText"
                 >

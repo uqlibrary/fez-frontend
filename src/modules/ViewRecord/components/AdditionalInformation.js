@@ -285,7 +285,7 @@ export class AdditionalInformationClass extends PureComponent {
                     //         ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
                     //         : null;
 
-                    const externalLabelImageUrl = getExternalLabelImageUrl('529abbc89fff6d91300c9ab44050fd6e'); // , data.rek_external_label_id);
+                    const externalLabelImageUrl = getExternalLabelImageUrl(data.rek_external_label_id);
 
                     const ExternalImageElement = ({ url }) => {
                         const bodgeUrl = url.replace('dev-espace', 'fez-staging').replace(':3000', '');
