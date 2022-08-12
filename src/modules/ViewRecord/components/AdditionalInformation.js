@@ -288,7 +288,10 @@ export class AdditionalInformationClass extends PureComponent {
                     const externalLabelImageUrl = getExternalLabelImageUrl(data.rek_external_label_id);
 
                     const ExternalImageElement = ({ url }) => {
-                        const bodgeUrl = url.replace('dev-espace', 'fez-staging').replace(':3000', '');
+                        const bodgeUrl = url
+                            .replace('dev-espace.', 'fez-staging.')
+                            .replace('development.', 'fez-staging.')
+                            .replace(':3000', '');
                         return (
                             <img src={bodgeUrl} className={`fez-icon externallabel ${externalLabelLink.className}`} />
                         );
