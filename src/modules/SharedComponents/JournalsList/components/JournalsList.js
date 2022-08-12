@@ -20,7 +20,6 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
@@ -35,6 +34,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Box from '@material-ui/core/Box';
 import Collapse from '@material-ui/core/Collapse';
 import InputLabel from '@material-ui/core/InputLabel';
+import JournalsListHeaderRow from './partials/JournalsListHeaderRow';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
@@ -269,37 +269,7 @@ const JournalsList = ({
                     className={classes.resultsTableContainer}
                 >
                     <Table aria-label="collapsible table" className={classes.resultsTable}>
-                        <TableHead>
-                            <TableRow>
-                                {isSelectable && (
-                                    <TableCell size="small">
-                                        <Checkbox
-                                            size="small"
-                                            id="journal-list-header-col-1-select-all"
-                                            data-testid="journal-list-header-col-1-select-all"
-                                            label="Select All"
-                                            inputProps={{ 'aria-label': 'Select All' }}
-                                        />
-                                    </TableCell>
-                                )}
-                                <TableCell size="small" />
-                                <TableCell size="small">
-                                    <Grid container>
-                                        <Grid xs={12} sm={8} item>
-                                            Journal title
-                                        </Grid>
-                                        <Hidden xsDown>
-                                            <Grid item xs={12} sm={2}>
-                                                Open access
-                                            </Grid>
-                                            <Grid item xs={12} sm={2}>
-                                                Highest quartile
-                                            </Grid>
-                                        </Hidden>
-                                    </Grid>
-                                </TableCell>
-                            </TableRow>
-                        </TableHead>
+                        <JournalsListHeaderRow isSelectable={isSelectable} />
                         <TableBody>
                             {journals &&
                                 journals.length > 0 &&
