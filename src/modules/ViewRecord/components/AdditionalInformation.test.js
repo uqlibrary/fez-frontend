@@ -207,6 +207,12 @@ describe('Additional Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render component with generic document with Local Context labels', () => {
+        const wrapper = setup({ publication: records.genericWithExternalLabels });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('.externalLabelText').length).toEqual(3);
+    });
+
     it('should render component with rek_start and end dates', () => {
         const publication = {
             rek_pid: 'UQ:177836',

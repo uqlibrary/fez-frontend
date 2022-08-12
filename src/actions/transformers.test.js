@@ -2521,6 +2521,7 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_end_date: {
                 rek_end_date: '2019-03-14',
             },
+            fez_record_search_key_external_label_id: [456927, 456926, 456928],
         };
 
         expect(transformers.getAdminSectionSearchKeys(data)).toEqual({
@@ -2580,6 +2581,20 @@ describe('getAdminSectionSearchKeys', () => {
             fez_record_search_key_end_date: {
                 rek_end_date: '2019-03-14',
             },
+            fez_record_search_key_external_label_id: [
+                {
+                    rek_external_label_id: 456927,
+                    rek_external_label_id_order: 1,
+                },
+                {
+                    rek_external_label_id: 456926,
+                    rek_external_label_id_order: 2,
+                },
+                {
+                    rek_external_label_id: 456928,
+                    rek_external_label_id_order: 3,
+                },
+            ],
         });
     });
 
@@ -5229,5 +5244,38 @@ describe('reasonForEdit', () => {
             ...record,
         });
         expect(transformers.getReasonSectionSearchKeys({})).toEqual({});
+    });
+});
+
+describe('getExternalLabelSearchKey', () => {
+    it('should transform external label ids in to correct API object structure', () => {
+        const input = [456927, 456926, 456928];
+        const expected = {
+            fez_record_search_key_external_label_id: [
+                {
+                    rek_external_label_id: 456927,
+                    rek_external_label_id_order: 1,
+                },
+                {
+                    rek_external_label_id: 456926,
+                    rek_external_label_id_order: 2,
+                },
+                {
+                    rek_external_label_id: 456928,
+                    rek_external_label_id_order: 3,
+                },
+            ],
+        };
+        expect(transformers.getExternalLabelSearchKey(input)).toEqual(expected);
+    });
+    it('should return empty object if empty array input is passed', () => {
+        const input = [];
+        const expected = {};
+        expect(transformers.getExternalLabelSearchKey(input)).toEqual(expected);
+    });
+
+    it('should return empty object if no input is passed', () => {
+        const expected = {};
+        expect(transformers.getExternalLabelSearchKey()).toEqual(expected);
     });
 });

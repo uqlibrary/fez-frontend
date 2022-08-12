@@ -12872,533 +12872,6 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                         </div>
                                         <div
                                           className="AdditionalInformationClass-containerPadding-3"
-                                          key="16"
-                                        >
-                                          <WithStyles(ForwardRef(Grid))
-                                            alignItems="flex-start"
-                                            className="AdditionalInformationClass-gridRow-1"
-                                            container={true}
-                                            key="additional-info-Traditional Knowledge rights"
-                                            spacing={2}
-                                          >
-                                            <ForwardRef(Grid)
-                                              alignItems="flex-start"
-                                              className="AdditionalInformationClass-gridRow-1"
-                                              classes={
-                                                Object {
-                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center",
-                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
-                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
-                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
-                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
-                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
-                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center",
-                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
-                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
-                                                  "container": "MuiGrid-container",
-                                                  "direction-xs-column": "MuiGrid-direction-xs-column",
-                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
-                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
-                                                  "grid-lg-1": "MuiGrid-grid-lg-1",
-                                                  "grid-lg-10": "MuiGrid-grid-lg-10",
-                                                  "grid-lg-11": "MuiGrid-grid-lg-11",
-                                                  "grid-lg-12": "MuiGrid-grid-lg-12",
-                                                  "grid-lg-2": "MuiGrid-grid-lg-2",
-                                                  "grid-lg-3": "MuiGrid-grid-lg-3",
-                                                  "grid-lg-4": "MuiGrid-grid-lg-4",
-                                                  "grid-lg-5": "MuiGrid-grid-lg-5",
-                                                  "grid-lg-6": "MuiGrid-grid-lg-6",
-                                                  "grid-lg-7": "MuiGrid-grid-lg-7",
-                                                  "grid-lg-8": "MuiGrid-grid-lg-8",
-                                                  "grid-lg-9": "MuiGrid-grid-lg-9",
-                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto",
-                                                  "grid-lg-true": "MuiGrid-grid-lg-true",
-                                                  "grid-md-1": "MuiGrid-grid-md-1",
-                                                  "grid-md-10": "MuiGrid-grid-md-10",
-                                                  "grid-md-11": "MuiGrid-grid-md-11",
-                                                  "grid-md-12": "MuiGrid-grid-md-12",
-                                                  "grid-md-2": "MuiGrid-grid-md-2",
-                                                  "grid-md-3": "MuiGrid-grid-md-3",
-                                                  "grid-md-4": "MuiGrid-grid-md-4",
-                                                  "grid-md-5": "MuiGrid-grid-md-5",
-                                                  "grid-md-6": "MuiGrid-grid-md-6",
-                                                  "grid-md-7": "MuiGrid-grid-md-7",
-                                                  "grid-md-8": "MuiGrid-grid-md-8",
-                                                  "grid-md-9": "MuiGrid-grid-md-9",
-                                                  "grid-md-auto": "MuiGrid-grid-md-auto",
-                                                  "grid-md-true": "MuiGrid-grid-md-true",
-                                                  "grid-sm-1": "MuiGrid-grid-sm-1",
-                                                  "grid-sm-10": "MuiGrid-grid-sm-10",
-                                                  "grid-sm-11": "MuiGrid-grid-sm-11",
-                                                  "grid-sm-12": "MuiGrid-grid-sm-12",
-                                                  "grid-sm-2": "MuiGrid-grid-sm-2",
-                                                  "grid-sm-3": "MuiGrid-grid-sm-3",
-                                                  "grid-sm-4": "MuiGrid-grid-sm-4",
-                                                  "grid-sm-5": "MuiGrid-grid-sm-5",
-                                                  "grid-sm-6": "MuiGrid-grid-sm-6",
-                                                  "grid-sm-7": "MuiGrid-grid-sm-7",
-                                                  "grid-sm-8": "MuiGrid-grid-sm-8",
-                                                  "grid-sm-9": "MuiGrid-grid-sm-9",
-                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto",
-                                                  "grid-sm-true": "MuiGrid-grid-sm-true",
-                                                  "grid-xl-1": "MuiGrid-grid-xl-1",
-                                                  "grid-xl-10": "MuiGrid-grid-xl-10",
-                                                  "grid-xl-11": "MuiGrid-grid-xl-11",
-                                                  "grid-xl-12": "MuiGrid-grid-xl-12",
-                                                  "grid-xl-2": "MuiGrid-grid-xl-2",
-                                                  "grid-xl-3": "MuiGrid-grid-xl-3",
-                                                  "grid-xl-4": "MuiGrid-grid-xl-4",
-                                                  "grid-xl-5": "MuiGrid-grid-xl-5",
-                                                  "grid-xl-6": "MuiGrid-grid-xl-6",
-                                                  "grid-xl-7": "MuiGrid-grid-xl-7",
-                                                  "grid-xl-8": "MuiGrid-grid-xl-8",
-                                                  "grid-xl-9": "MuiGrid-grid-xl-9",
-                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto",
-                                                  "grid-xl-true": "MuiGrid-grid-xl-true",
-                                                  "grid-xs-1": "MuiGrid-grid-xs-1",
-                                                  "grid-xs-10": "MuiGrid-grid-xs-10",
-                                                  "grid-xs-11": "MuiGrid-grid-xs-11",
-                                                  "grid-xs-12": "MuiGrid-grid-xs-12",
-                                                  "grid-xs-2": "MuiGrid-grid-xs-2",
-                                                  "grid-xs-3": "MuiGrid-grid-xs-3",
-                                                  "grid-xs-4": "MuiGrid-grid-xs-4",
-                                                  "grid-xs-5": "MuiGrid-grid-xs-5",
-                                                  "grid-xs-6": "MuiGrid-grid-xs-6",
-                                                  "grid-xs-7": "MuiGrid-grid-xs-7",
-                                                  "grid-xs-8": "MuiGrid-grid-xs-8",
-                                                  "grid-xs-9": "MuiGrid-grid-xs-9",
-                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto",
-                                                  "grid-xs-true": "MuiGrid-grid-xs-true",
-                                                  "item": "MuiGrid-item",
-                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
-                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
-                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
-                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
-                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
-                                                  "root": "MuiGrid-root",
-                                                  "spacing-xs-1": "MuiGrid-spacing-xs-1",
-                                                  "spacing-xs-10": "MuiGrid-spacing-xs-10",
-                                                  "spacing-xs-2": "MuiGrid-spacing-xs-2",
-                                                  "spacing-xs-3": "MuiGrid-spacing-xs-3",
-                                                  "spacing-xs-4": "MuiGrid-spacing-xs-4",
-                                                  "spacing-xs-5": "MuiGrid-spacing-xs-5",
-                                                  "spacing-xs-6": "MuiGrid-spacing-xs-6",
-                                                  "spacing-xs-7": "MuiGrid-spacing-xs-7",
-                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8",
-                                                  "spacing-xs-9": "MuiGrid-spacing-xs-9",
-                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
-                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
-                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth",
-                                                }
-                                              }
-                                              container={true}
-                                              spacing={2}
-                                            >
-                                              <div
-                                                className="MuiGrid-root AdditionalInformationClass-gridRow-1 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-flex-start"
-                                              >
-                                                <WithStyles(ForwardRef(Grid))
-                                                  item={true}
-                                                  sm={3}
-                                                  xs={12}
-                                                >
-                                                  <ForwardRef(Grid)
-                                                    classes={
-                                                      Object {
-                                                        "align-content-xs-center": "MuiGrid-align-content-xs-center",
-                                                        "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
-                                                        "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
-                                                        "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
-                                                        "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
-                                                        "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
-                                                        "align-items-xs-center": "MuiGrid-align-items-xs-center",
-                                                        "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
-                                                        "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
-                                                        "container": "MuiGrid-container",
-                                                        "direction-xs-column": "MuiGrid-direction-xs-column",
-                                                        "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
-                                                        "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
-                                                        "grid-lg-1": "MuiGrid-grid-lg-1",
-                                                        "grid-lg-10": "MuiGrid-grid-lg-10",
-                                                        "grid-lg-11": "MuiGrid-grid-lg-11",
-                                                        "grid-lg-12": "MuiGrid-grid-lg-12",
-                                                        "grid-lg-2": "MuiGrid-grid-lg-2",
-                                                        "grid-lg-3": "MuiGrid-grid-lg-3",
-                                                        "grid-lg-4": "MuiGrid-grid-lg-4",
-                                                        "grid-lg-5": "MuiGrid-grid-lg-5",
-                                                        "grid-lg-6": "MuiGrid-grid-lg-6",
-                                                        "grid-lg-7": "MuiGrid-grid-lg-7",
-                                                        "grid-lg-8": "MuiGrid-grid-lg-8",
-                                                        "grid-lg-9": "MuiGrid-grid-lg-9",
-                                                        "grid-lg-auto": "MuiGrid-grid-lg-auto",
-                                                        "grid-lg-true": "MuiGrid-grid-lg-true",
-                                                        "grid-md-1": "MuiGrid-grid-md-1",
-                                                        "grid-md-10": "MuiGrid-grid-md-10",
-                                                        "grid-md-11": "MuiGrid-grid-md-11",
-                                                        "grid-md-12": "MuiGrid-grid-md-12",
-                                                        "grid-md-2": "MuiGrid-grid-md-2",
-                                                        "grid-md-3": "MuiGrid-grid-md-3",
-                                                        "grid-md-4": "MuiGrid-grid-md-4",
-                                                        "grid-md-5": "MuiGrid-grid-md-5",
-                                                        "grid-md-6": "MuiGrid-grid-md-6",
-                                                        "grid-md-7": "MuiGrid-grid-md-7",
-                                                        "grid-md-8": "MuiGrid-grid-md-8",
-                                                        "grid-md-9": "MuiGrid-grid-md-9",
-                                                        "grid-md-auto": "MuiGrid-grid-md-auto",
-                                                        "grid-md-true": "MuiGrid-grid-md-true",
-                                                        "grid-sm-1": "MuiGrid-grid-sm-1",
-                                                        "grid-sm-10": "MuiGrid-grid-sm-10",
-                                                        "grid-sm-11": "MuiGrid-grid-sm-11",
-                                                        "grid-sm-12": "MuiGrid-grid-sm-12",
-                                                        "grid-sm-2": "MuiGrid-grid-sm-2",
-                                                        "grid-sm-3": "MuiGrid-grid-sm-3",
-                                                        "grid-sm-4": "MuiGrid-grid-sm-4",
-                                                        "grid-sm-5": "MuiGrid-grid-sm-5",
-                                                        "grid-sm-6": "MuiGrid-grid-sm-6",
-                                                        "grid-sm-7": "MuiGrid-grid-sm-7",
-                                                        "grid-sm-8": "MuiGrid-grid-sm-8",
-                                                        "grid-sm-9": "MuiGrid-grid-sm-9",
-                                                        "grid-sm-auto": "MuiGrid-grid-sm-auto",
-                                                        "grid-sm-true": "MuiGrid-grid-sm-true",
-                                                        "grid-xl-1": "MuiGrid-grid-xl-1",
-                                                        "grid-xl-10": "MuiGrid-grid-xl-10",
-                                                        "grid-xl-11": "MuiGrid-grid-xl-11",
-                                                        "grid-xl-12": "MuiGrid-grid-xl-12",
-                                                        "grid-xl-2": "MuiGrid-grid-xl-2",
-                                                        "grid-xl-3": "MuiGrid-grid-xl-3",
-                                                        "grid-xl-4": "MuiGrid-grid-xl-4",
-                                                        "grid-xl-5": "MuiGrid-grid-xl-5",
-                                                        "grid-xl-6": "MuiGrid-grid-xl-6",
-                                                        "grid-xl-7": "MuiGrid-grid-xl-7",
-                                                        "grid-xl-8": "MuiGrid-grid-xl-8",
-                                                        "grid-xl-9": "MuiGrid-grid-xl-9",
-                                                        "grid-xl-auto": "MuiGrid-grid-xl-auto",
-                                                        "grid-xl-true": "MuiGrid-grid-xl-true",
-                                                        "grid-xs-1": "MuiGrid-grid-xs-1",
-                                                        "grid-xs-10": "MuiGrid-grid-xs-10",
-                                                        "grid-xs-11": "MuiGrid-grid-xs-11",
-                                                        "grid-xs-12": "MuiGrid-grid-xs-12",
-                                                        "grid-xs-2": "MuiGrid-grid-xs-2",
-                                                        "grid-xs-3": "MuiGrid-grid-xs-3",
-                                                        "grid-xs-4": "MuiGrid-grid-xs-4",
-                                                        "grid-xs-5": "MuiGrid-grid-xs-5",
-                                                        "grid-xs-6": "MuiGrid-grid-xs-6",
-                                                        "grid-xs-7": "MuiGrid-grid-xs-7",
-                                                        "grid-xs-8": "MuiGrid-grid-xs-8",
-                                                        "grid-xs-9": "MuiGrid-grid-xs-9",
-                                                        "grid-xs-auto": "MuiGrid-grid-xs-auto",
-                                                        "grid-xs-true": "MuiGrid-grid-xs-true",
-                                                        "item": "MuiGrid-item",
-                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
-                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
-                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
-                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
-                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
-                                                        "root": "MuiGrid-root",
-                                                        "spacing-xs-1": "MuiGrid-spacing-xs-1",
-                                                        "spacing-xs-10": "MuiGrid-spacing-xs-10",
-                                                        "spacing-xs-2": "MuiGrid-spacing-xs-2",
-                                                        "spacing-xs-3": "MuiGrid-spacing-xs-3",
-                                                        "spacing-xs-4": "MuiGrid-spacing-xs-4",
-                                                        "spacing-xs-5": "MuiGrid-spacing-xs-5",
-                                                        "spacing-xs-6": "MuiGrid-spacing-xs-6",
-                                                        "spacing-xs-7": "MuiGrid-spacing-xs-7",
-                                                        "spacing-xs-8": "MuiGrid-spacing-xs-8",
-                                                        "spacing-xs-9": "MuiGrid-spacing-xs-9",
-                                                        "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
-                                                        "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
-                                                        "zeroMinWidth": "MuiGrid-zeroMinWidth",
-                                                      }
-                                                    }
-                                                    item={true}
-                                                    sm={3}
-                                                    xs={12}
-                                                  >
-                                                    <div
-                                                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3"
-                                                    >
-                                                      <WithStyles(ForwardRef(Typography))
-                                                        classes={
-                                                          Object {
-                                                            "root": undefined,
-                                                          }
-                                                        }
-                                                        component="span"
-                                                        data-testid="rek-tk-label-label"
-                                                        variant="body2"
-                                                      >
-                                                        <ForwardRef(Typography)
-                                                          classes={
-                                                            Object {
-                                                              "alignCenter": "MuiTypography-alignCenter",
-                                                              "alignJustify": "MuiTypography-alignJustify",
-                                                              "alignLeft": "MuiTypography-alignLeft",
-                                                              "alignRight": "MuiTypography-alignRight",
-                                                              "body1": "MuiTypography-body1",
-                                                              "body2": "MuiTypography-body2",
-                                                              "button": "MuiTypography-button",
-                                                              "caption": "MuiTypography-caption",
-                                                              "colorError": "MuiTypography-colorError",
-                                                              "colorInherit": "MuiTypography-colorInherit",
-                                                              "colorPrimary": "MuiTypography-colorPrimary",
-                                                              "colorSecondary": "MuiTypography-colorSecondary",
-                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary",
-                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary",
-                                                              "displayBlock": "MuiTypography-displayBlock",
-                                                              "displayInline": "MuiTypography-displayInline",
-                                                              "gutterBottom": "MuiTypography-gutterBottom",
-                                                              "h1": "MuiTypography-h1",
-                                                              "h2": "MuiTypography-h2",
-                                                              "h3": "MuiTypography-h3",
-                                                              "h4": "MuiTypography-h4",
-                                                              "h5": "MuiTypography-h5",
-                                                              "h6": "MuiTypography-h6",
-                                                              "noWrap": "MuiTypography-noWrap",
-                                                              "overline": "MuiTypography-overline",
-                                                              "paragraph": "MuiTypography-paragraph",
-                                                              "root": "MuiTypography-root",
-                                                              "srOnly": "MuiTypography-srOnly",
-                                                              "subtitle1": "MuiTypography-subtitle1",
-                                                              "subtitle2": "MuiTypography-subtitle2",
-                                                            }
-                                                          }
-                                                          component="span"
-                                                          data-testid="rek-tk-label-label"
-                                                          variant="body2"
-                                                        >
-                                                          <span
-                                                            className="MuiTypography-root MuiTypography-body2"
-                                                            data-testid="rek-tk-label-label"
-                                                          >
-                                                            Traditional Knowledge rights
-                                                          </span>
-                                                        </ForwardRef(Typography)>
-                                                      </WithStyles(ForwardRef(Typography))>
-                                                    </div>
-                                                  </ForwardRef(Grid)>
-                                                </WithStyles(ForwardRef(Grid))>
-                                                <WithStyles(ForwardRef(Grid))
-                                                  item={true}
-                                                  sm={9}
-                                                  xs={12}
-                                                >
-                                                  <ForwardRef(Grid)
-                                                    classes={
-                                                      Object {
-                                                        "align-content-xs-center": "MuiGrid-align-content-xs-center",
-                                                        "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
-                                                        "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
-                                                        "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
-                                                        "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
-                                                        "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
-                                                        "align-items-xs-center": "MuiGrid-align-items-xs-center",
-                                                        "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
-                                                        "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
-                                                        "container": "MuiGrid-container",
-                                                        "direction-xs-column": "MuiGrid-direction-xs-column",
-                                                        "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
-                                                        "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
-                                                        "grid-lg-1": "MuiGrid-grid-lg-1",
-                                                        "grid-lg-10": "MuiGrid-grid-lg-10",
-                                                        "grid-lg-11": "MuiGrid-grid-lg-11",
-                                                        "grid-lg-12": "MuiGrid-grid-lg-12",
-                                                        "grid-lg-2": "MuiGrid-grid-lg-2",
-                                                        "grid-lg-3": "MuiGrid-grid-lg-3",
-                                                        "grid-lg-4": "MuiGrid-grid-lg-4",
-                                                        "grid-lg-5": "MuiGrid-grid-lg-5",
-                                                        "grid-lg-6": "MuiGrid-grid-lg-6",
-                                                        "grid-lg-7": "MuiGrid-grid-lg-7",
-                                                        "grid-lg-8": "MuiGrid-grid-lg-8",
-                                                        "grid-lg-9": "MuiGrid-grid-lg-9",
-                                                        "grid-lg-auto": "MuiGrid-grid-lg-auto",
-                                                        "grid-lg-true": "MuiGrid-grid-lg-true",
-                                                        "grid-md-1": "MuiGrid-grid-md-1",
-                                                        "grid-md-10": "MuiGrid-grid-md-10",
-                                                        "grid-md-11": "MuiGrid-grid-md-11",
-                                                        "grid-md-12": "MuiGrid-grid-md-12",
-                                                        "grid-md-2": "MuiGrid-grid-md-2",
-                                                        "grid-md-3": "MuiGrid-grid-md-3",
-                                                        "grid-md-4": "MuiGrid-grid-md-4",
-                                                        "grid-md-5": "MuiGrid-grid-md-5",
-                                                        "grid-md-6": "MuiGrid-grid-md-6",
-                                                        "grid-md-7": "MuiGrid-grid-md-7",
-                                                        "grid-md-8": "MuiGrid-grid-md-8",
-                                                        "grid-md-9": "MuiGrid-grid-md-9",
-                                                        "grid-md-auto": "MuiGrid-grid-md-auto",
-                                                        "grid-md-true": "MuiGrid-grid-md-true",
-                                                        "grid-sm-1": "MuiGrid-grid-sm-1",
-                                                        "grid-sm-10": "MuiGrid-grid-sm-10",
-                                                        "grid-sm-11": "MuiGrid-grid-sm-11",
-                                                        "grid-sm-12": "MuiGrid-grid-sm-12",
-                                                        "grid-sm-2": "MuiGrid-grid-sm-2",
-                                                        "grid-sm-3": "MuiGrid-grid-sm-3",
-                                                        "grid-sm-4": "MuiGrid-grid-sm-4",
-                                                        "grid-sm-5": "MuiGrid-grid-sm-5",
-                                                        "grid-sm-6": "MuiGrid-grid-sm-6",
-                                                        "grid-sm-7": "MuiGrid-grid-sm-7",
-                                                        "grid-sm-8": "MuiGrid-grid-sm-8",
-                                                        "grid-sm-9": "MuiGrid-grid-sm-9",
-                                                        "grid-sm-auto": "MuiGrid-grid-sm-auto",
-                                                        "grid-sm-true": "MuiGrid-grid-sm-true",
-                                                        "grid-xl-1": "MuiGrid-grid-xl-1",
-                                                        "grid-xl-10": "MuiGrid-grid-xl-10",
-                                                        "grid-xl-11": "MuiGrid-grid-xl-11",
-                                                        "grid-xl-12": "MuiGrid-grid-xl-12",
-                                                        "grid-xl-2": "MuiGrid-grid-xl-2",
-                                                        "grid-xl-3": "MuiGrid-grid-xl-3",
-                                                        "grid-xl-4": "MuiGrid-grid-xl-4",
-                                                        "grid-xl-5": "MuiGrid-grid-xl-5",
-                                                        "grid-xl-6": "MuiGrid-grid-xl-6",
-                                                        "grid-xl-7": "MuiGrid-grid-xl-7",
-                                                        "grid-xl-8": "MuiGrid-grid-xl-8",
-                                                        "grid-xl-9": "MuiGrid-grid-xl-9",
-                                                        "grid-xl-auto": "MuiGrid-grid-xl-auto",
-                                                        "grid-xl-true": "MuiGrid-grid-xl-true",
-                                                        "grid-xs-1": "MuiGrid-grid-xs-1",
-                                                        "grid-xs-10": "MuiGrid-grid-xs-10",
-                                                        "grid-xs-11": "MuiGrid-grid-xs-11",
-                                                        "grid-xs-12": "MuiGrid-grid-xs-12",
-                                                        "grid-xs-2": "MuiGrid-grid-xs-2",
-                                                        "grid-xs-3": "MuiGrid-grid-xs-3",
-                                                        "grid-xs-4": "MuiGrid-grid-xs-4",
-                                                        "grid-xs-5": "MuiGrid-grid-xs-5",
-                                                        "grid-xs-6": "MuiGrid-grid-xs-6",
-                                                        "grid-xs-7": "MuiGrid-grid-xs-7",
-                                                        "grid-xs-8": "MuiGrid-grid-xs-8",
-                                                        "grid-xs-9": "MuiGrid-grid-xs-9",
-                                                        "grid-xs-auto": "MuiGrid-grid-xs-auto",
-                                                        "grid-xs-true": "MuiGrid-grid-xs-true",
-                                                        "item": "MuiGrid-item",
-                                                        "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
-                                                        "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
-                                                        "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
-                                                        "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
-                                                        "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
-                                                        "root": "MuiGrid-root",
-                                                        "spacing-xs-1": "MuiGrid-spacing-xs-1",
-                                                        "spacing-xs-10": "MuiGrid-spacing-xs-10",
-                                                        "spacing-xs-2": "MuiGrid-spacing-xs-2",
-                                                        "spacing-xs-3": "MuiGrid-spacing-xs-3",
-                                                        "spacing-xs-4": "MuiGrid-spacing-xs-4",
-                                                        "spacing-xs-5": "MuiGrid-spacing-xs-5",
-                                                        "spacing-xs-6": "MuiGrid-spacing-xs-6",
-                                                        "spacing-xs-7": "MuiGrid-spacing-xs-7",
-                                                        "spacing-xs-8": "MuiGrid-spacing-xs-8",
-                                                        "spacing-xs-9": "MuiGrid-spacing-xs-9",
-                                                        "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
-                                                        "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
-                                                        "zeroMinWidth": "MuiGrid-zeroMinWidth",
-                                                      }
-                                                    }
-                                                    item={true}
-                                                    sm={9}
-                                                    xs={12}
-                                                  >
-                                                    <div
-                                                      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9"
-                                                    >
-                                                      <WithStyles(ForwardRef(Typography))
-                                                        component="span"
-                                                        variant="body2"
-                                                      >
-                                                        <ForwardRef(Typography)
-                                                          classes={
-                                                            Object {
-                                                              "alignCenter": "MuiTypography-alignCenter",
-                                                              "alignJustify": "MuiTypography-alignJustify",
-                                                              "alignLeft": "MuiTypography-alignLeft",
-                                                              "alignRight": "MuiTypography-alignRight",
-                                                              "body1": "MuiTypography-body1",
-                                                              "body2": "MuiTypography-body2",
-                                                              "button": "MuiTypography-button",
-                                                              "caption": "MuiTypography-caption",
-                                                              "colorError": "MuiTypography-colorError",
-                                                              "colorInherit": "MuiTypography-colorInherit",
-                                                              "colorPrimary": "MuiTypography-colorPrimary",
-                                                              "colorSecondary": "MuiTypography-colorSecondary",
-                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary",
-                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary",
-                                                              "displayBlock": "MuiTypography-displayBlock",
-                                                              "displayInline": "MuiTypography-displayInline",
-                                                              "gutterBottom": "MuiTypography-gutterBottom",
-                                                              "h1": "MuiTypography-h1",
-                                                              "h2": "MuiTypography-h2",
-                                                              "h3": "MuiTypography-h3",
-                                                              "h4": "MuiTypography-h4",
-                                                              "h5": "MuiTypography-h5",
-                                                              "h6": "MuiTypography-h6",
-                                                              "noWrap": "MuiTypography-noWrap",
-                                                              "overline": "MuiTypography-overline",
-                                                              "paragraph": "MuiTypography-paragraph",
-                                                              "root": "MuiTypography-root",
-                                                              "srOnly": "MuiTypography-srOnly",
-                                                              "subtitle1": "MuiTypography-subtitle1",
-                                                              "subtitle2": "MuiTypography-subtitle2",
-                                                            }
-                                                          }
-                                                          component="span"
-                                                          variant="body2"
-                                                        >
-                                                          <span
-                                                            className="MuiTypography-root MuiTypography-body2"
-                                                          >
-                                                            <span>
-                                                              <ExternalLink
-                                                                href="https://localcontexts.org/label/tk-attribution/"
-                                                                id="rek-tk-label"
-                                                                openInNewIcon={false}
-                                                              >
-                                                                <a
-                                                                  className="makeStyles-externalLink-11"
-                                                                  data-testid="rek-tk-label-link"
-                                                                  href="https://localcontexts.org/label/tk-attribution/"
-                                                                  id="rek-tk-label-link"
-                                                                  rel="noopener noreferrer"
-                                                                  tabIndex="0"
-                                                                  target="_blank"
-                                                                >
-                                                                  <div
-                                                                    className="fez-icon tklabel cc-by-nc-nd"
-                                                                    style={
-                                                                      Object {
-                                                                        "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                                                                      }
-                                                                    }
-                                                                  />
-                                                                </a>
-                                                              </ExternalLink>
-                                                              <br />
-                                                              <Link
-                                                                data-testid="rek_tk_label_lookup"
-                                                                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-                                                              >
-                                                                <LinkAnchor
-                                                                  data-testid="rek_tk_label_lookup"
-                                                                  href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-                                                                  navigate={[Function]}
-                                                                >
-                                                                  <a
-                                                                    data-testid="rek_tk_label_lookup"
-                                                                    href="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-                                                                    onClick={[Function]}
-                                                                  >
-                                                                    TK Attribution (TK A)
-                                                                  </a>
-                                                                </LinkAnchor>
-                                                              </Link>
-                                                            </span>
-                                                          </span>
-                                                        </ForwardRef(Typography)>
-                                                      </WithStyles(ForwardRef(Typography))>
-                                                    </div>
-                                                  </ForwardRef(Grid)>
-                                                </WithStyles(ForwardRef(Grid))>
-                                              </div>
-                                            </ForwardRef(Grid)>
-                                          </WithStyles(ForwardRef(Grid))>
-                                        </div>
-                                        <div
-                                          className="AdditionalInformationClass-containerPadding-3"
                                           key="17"
                                         >
                                           <WithStyles(ForwardRef(Grid))
@@ -21912,71 +21385,6 @@ exports[`Additional Information Component  should not render empty doi 1`] = `
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="17"
     >
       <WithStyles(ForwardRef(Grid))
@@ -23447,7 +22855,7 @@ exports[`Additional Information Component  should render component with audio do
                 Creative Commons Attribution-NonCommercial 3.0 International (CC BY-NC 3.0) no derivatives
               </Link>
               <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
+                href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"
                 id="rek-license"
                 openInNewIcon={false}
               >
@@ -23455,71 +22863,6 @@ exports[`Additional Information Component  should render component with audio do
                   className="fez-icon license cc-by-nc-nd"
                 />
               </ExternalLink>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="24"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
             </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -24364,71 +23707,6 @@ exports[`Additional Information Component  should render component with book 1`]
               data-testid="rek-oa-status-type"
             >
               Hybrid
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
             </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -25859,71 +25137,6 @@ exports[`Additional Information Component  should render component with book cha
             <span
               data-testid="rek-oa-status"
             />
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="15"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -28498,71 +27711,6 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="27"
     >
       <WithStyles(ForwardRef(Grid))
@@ -29921,71 +29069,6 @@ exports[`Additional Information Component  should render component with conferen
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="27"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="30"
     >
       <WithStyles(ForwardRef(Grid))
@@ -31130,71 +30213,6 @@ exports[`Additional Information Component  should render component with creative
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="10"
     >
       <WithStyles(ForwardRef(Grid))
@@ -32070,71 +31088,6 @@ exports[`Additional Information Component  should render component with creative
             >
               School of Architecture, The University of Queensland
             </Link>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="9"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -33099,71 +32052,6 @@ exports[`Additional Information Component  should render component with creative
             >
               School of Architecture, The University of Queensland
             </Link>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="9"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -35929,71 +34817,6 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="13"
     >
       <WithStyles(ForwardRef(Grid))
@@ -38397,71 +37220,6 @@ exports[`Additional Information Component  should render component with data col
                   className="fez-icon license cc-by"
                 />
               </ExternalLink>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
             </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -41766,71 +40524,6 @@ exports[`Additional Information Component  should render component with data col
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="13"
     >
       <WithStyles(ForwardRef(Grid))
@@ -43594,71 +42287,6 @@ exports[`Additional Information Component  should render component with design d
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="17"
     >
       <WithStyles(ForwardRef(Grid))
@@ -45107,71 +43735,6 @@ exports[`Additional Information Component  should render component with digilib 
             <span
               data-testid="rek-oa-status"
             />
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="15"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -46949,6 +45512,1465 @@ exports[`Additional Information Component  should render component with generic 
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Additional Information Component  should render component with generic document with Local Context labels 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Additional information"
+  >
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Title"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-title-label"
+            variant="body2"
+          >
+            Title
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-title"
+            >
+              Numerical solution of partial differential equations
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="1"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Abstract"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-description-label"
+            variant="body2"
+          >
+            Abstract
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-description"
+            >
+              Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="2"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Keyword(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-keywords-label"
+            variant="body2"
+          >
+            Keyword(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_keywords"
+            >
+              <li
+                data-testid="rek-keywords-0"
+                key="rek-keywords-0"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Partial+Differential+Equations+(PDEs)&searchQueryParams%5Ball%5D="
+                >
+                  Partial Differential Equations (PDEs)
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-1"
+                key="rek-keywords-1"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Parabolic&searchQueryParams%5Ball%5D="
+                >
+                  Parabolic
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-2"
+                key="rek-keywords-2"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Hyperbolic&searchQueryParams%5Ball%5D="
+                >
+                  Hyperbolic
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-3"
+                key="rek-keywords-3"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+difference&searchQueryParams%5Ball%5D="
+                >
+                  Finite difference
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-4"
+                key="rek-keywords-4"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Spectral+method&searchQueryParams%5Ball%5D="
+                >
+                  Spectral method
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-5"
+                key="rek-keywords-5"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Finite+element+method&searchQueryParams%5Ball%5D="
+                >
+                  Finite element method
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-6"
+                key="rek-keywords-6"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Iterative+methods&searchQueryParams%5Ball%5D="
+                >
+                  Iterative methods
+                </Link>
+              </li>
+              <li
+                data-testid="rek-keywords-7"
+                key="rek-keywords-7"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BKeywords%5D=Nonlinear+Partial+Differential+Equations&searchQueryParams%5Ball%5D="
+                >
+                  Nonlinear Partial Differential Equations
+                </Link>
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="9"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Date"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-date-label"
+            variant="body2"
+          >
+            Date
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-date"
+            >
+              <DateCitationView
+                className="citationDate"
+                data-testid="rek-date"
+                date="2011-03-29T00:00:00Z"
+                forceSpecifiedFormat={false}
+                format="YYYY-MM-DD"
+                isLocalised={false}
+                prefix=""
+                suffix=""
+              />
+            </span>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="10"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Research fields, Courses and Disciplines"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-subject-label"
+            variant="body2"
+          >
+            Research fields, Courses and Disciplines
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <ul
+              className="list"
+              key="rek_subject"
+            >
+              <li
+                data-testid="rek-subject-0"
+                key="rek-subject-0"
+              >
+                <Link
+                  to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Bfilters%5D%5BSubject+(lookup)%5D=451825&searchQueryParams%5Ball%5D="
+                >
+                  451825
+                </Link>
+              </li>
+            </ul>
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="11"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Author(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-author-label"
+            variant="body2"
+          >
+            Author(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <WithStyles(AuthorsCitationView)
+              citationStyle="all"
+              key="additional-information-authors"
+              prefix=""
+              publication={
+                Object {
+                  "fez_datastream_info": Array [
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "CodeNumericalSolutionPDEs.zip",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/zip",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 33985,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "FezACML_UQ_239427.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "FezACML security for PID - UQ:239427",
+                      "dsi_mimetype": "text/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 3705,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "Lectures_Book.pdf",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/pdf",
+                      "dsi_open_access": 1,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 3425059,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "NumericalSolutionCode.zip",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "NumericalSolutionOfPartialDifferentialEquations",
+                      "dsi_mimetype": "application/zip",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 46336,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "NumericalSolutionPartialdifferentialCode.gz",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/octet-stream",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 12844,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_CodeNumericalSolutionPDEs.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1226,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_Lectures_Book.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1258,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_NumericalSolutionCode.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1184,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_NumericalSolutionPartialdifferentialCode.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1254,
+                      "dsi_state": "A",
+                    },
+                  ],
+                  "fez_record_search_key_access_conditions": null,
+                  "fez_record_search_key_acknowledgements": null,
+                  "fez_record_search_key_additional_notes": null,
+                  "fez_record_search_key_advisory_statement": null,
+                  "fez_record_search_key_alternate_genre": Array [],
+                  "fez_record_search_key_alternative_title": Array [],
+                  "fez_record_search_key_ands_collection_type": null,
+                  "fez_record_search_key_architectural_features": Array [],
+                  "fez_record_search_key_article_number": null,
+                  "fez_record_search_key_assigned_group_id": Array [],
+                  "fez_record_search_key_assigned_user_id": Array [],
+                  "fez_record_search_key_author": Array [
+                    Object {
+                      "rek_author": "Louise Olsen-Kettle",
+                      "rek_author_id": 28695376,
+                      "rek_author_order": 1,
+                      "rek_author_pid": "UQ:239427",
+                      "rek_author_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_country": Array [],
+                  "fez_record_search_key_author_affiliation_full_address": Array [],
+                  "fez_record_search_key_author_affiliation_id": Array [],
+                  "fez_record_search_key_author_affiliation_name": Array [],
+                  "fez_record_search_key_author_id": Array [
+                    Object {
+                      "rek_author_id": 4041,
+                      "rek_author_id_id": 28071781,
+                      "rek_author_id_order": 1,
+                      "rek_author_id_pid": "UQ:239427",
+                      "rek_author_id_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_author_role": Array [],
+                  "fez_record_search_key_book_title": null,
+                  "fez_record_search_key_building_materials": Array [],
+                  "fez_record_search_key_category": Array [],
+                  "fez_record_search_key_chapter_number": null,
+                  "fez_record_search_key_condition": Array [],
+                  "fez_record_search_key_conference_dates": null,
+                  "fez_record_search_key_conference_id": null,
+                  "fez_record_search_key_conference_location": null,
+                  "fez_record_search_key_conference_name": null,
+                  "fez_record_search_key_construction_date": null,
+                  "fez_record_search_key_contact_details_email": Array [],
+                  "fez_record_search_key_contributor": Array [
+                    Object {
+                      "rek_contributor": "Dion Weatherley",
+                      "rek_contributor_id": 3118551,
+                      "rek_contributor_order": 1,
+                      "rek_contributor_pid": "UQ:187819",
+                      "rek_contributor_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_contributor": "V. E. Boros",
+                      "rek_contributor_id": 3118552,
+                      "rek_contributor_order": 2,
+                      "rek_contributor_pid": "UQ:187819",
+                      "rek_contributor_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_contributor_id": Array [
+                    Object {
+                      "rek_contributor_id": 0,
+                      "rek_contributor_id_id": 2325833,
+                      "rek_contributor_id_order": 1,
+                      "rek_contributor_id_pid": "UQ:187819",
+                      "rek_contributor_id_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_contributor_id": 0,
+                      "rek_contributor_id_id": 2325834,
+                      "rek_contributor_id_order": 2,
+                      "rek_contributor_id_pid": "UQ:187819",
+                      "rek_contributor_id_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_convener": null,
+                  "fez_record_search_key_corresponding_country": Array [],
+                  "fez_record_search_key_corresponding_email": Array [],
+                  "fez_record_search_key_corresponding_name": Array [],
+                  "fez_record_search_key_corresponding_organisation": Array [],
+                  "fez_record_search_key_country_of_issue": null,
+                  "fez_record_search_key_coverage_period": Array [],
+                  "fez_record_search_key_creator_id": Array [],
+                  "fez_record_search_key_creator_name": Array [],
+                  "fez_record_search_key_data_volume": null,
+                  "fez_record_search_key_datastream_policy": null,
+                  "fez_record_search_key_date_available": null,
+                  "fez_record_search_key_date_photo_taken": null,
+                  "fez_record_search_key_date_recorded": null,
+                  "fez_record_search_key_date_scanned": null,
+                  "fez_record_search_key_doi": null,
+                  "fez_record_search_key_edition": null,
+                  "fez_record_search_key_end_date": null,
+                  "fez_record_search_key_end_page": null,
+                  "fez_record_search_key_external_label_id": Array [
+                    Object {
+                      "rek_external_label_id": 456927,
+                      "rek_external_label_id_order": 1,
+                    },
+                    Object {
+                      "rek_external_label_id": 456926,
+                      "rek_external_label_id_order": 2,
+                    },
+                    Object {
+                      "rek_external_label_id": 456928,
+                      "rek_external_label_id_order": 3,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_access_condition": Array [],
+                  "fez_record_search_key_file_attachment_embargo_date": Array [],
+                  "fez_record_search_key_file_attachment_name": Array [
+                    Object {
+                      "rek_file_attachment_name": "CodeNumericalSolutionPDEs.zip",
+                      "rek_file_attachment_name_id": 3815878,
+                      "rek_file_attachment_name_order": 1,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "Lectures_Book.pdf",
+                      "rek_file_attachment_name_id": 3815879,
+                      "rek_file_attachment_name_order": 2,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_CodeNumericalSolutionPDEs.xml",
+                      "rek_file_attachment_name_id": 3815880,
+                      "rek_file_attachment_name_order": 3,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_Lectures_Book.xml",
+                      "rek_file_attachment_name_id": 3815881,
+                      "rek_file_attachment_name_order": 4,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_geographic_area": Array [],
+                  "fez_record_search_key_grant_acronym": Array [],
+                  "fez_record_search_key_grant_agency": Array [],
+                  "fez_record_search_key_grant_agency_id": Array [],
+                  "fez_record_search_key_grant_id": Array [],
+                  "fez_record_search_key_grant_text": Array [],
+                  "fez_record_search_key_herdc_code": null,
+                  "fez_record_search_key_herdc_status": null,
+                  "fez_record_search_key_identifier": Array [],
+                  "fez_record_search_key_institutional_status": Object {
+                    "rek_institutional_status": 453223,
+                    "rek_institutional_status_id": 3201954,
+                    "rek_institutional_status_pid": "UQ:239427",
+                    "rek_institutional_status_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_interior_features": Array [],
+                  "fez_record_search_key_isbn": Array [],
+                  "fez_record_search_key_isdatasetof": Array [],
+                  "fez_record_search_key_isderivationof": Array [],
+                  "fez_record_search_key_isi_loc": null,
+                  "fez_record_search_key_ismemberof": Array [
+                    Object {
+                      "rek_ismemberof": "UQ:7563",
+                      "rek_ismemberof_id": 11447114,
+                      "rek_ismemberof_order": 1,
+                      "rek_ismemberof_pid": "UQ:239427",
+                      "rek_ismemberof_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_issn": Array [],
+                  "fez_record_search_key_issue_number": null,
+                  "fez_record_search_key_job_number": null,
+                  "fez_record_search_key_journal_name": null,
+                  "fez_record_search_key_keywords": Array [
+                    Object {
+                      "rek_keywords": "Partial Differential Equations (PDEs)",
+                      "rek_keywords_id": 29017641,
+                      "rek_keywords_order": 1,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Parabolic",
+                      "rek_keywords_id": 29017642,
+                      "rek_keywords_order": 2,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Hyperbolic",
+                      "rek_keywords_id": 29017643,
+                      "rek_keywords_order": 3,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Finite difference",
+                      "rek_keywords_id": 29017644,
+                      "rek_keywords_order": 4,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Spectral method",
+                      "rek_keywords_id": 29017645,
+                      "rek_keywords_order": 5,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Finite element method",
+                      "rek_keywords_id": 29017646,
+                      "rek_keywords_order": 6,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Iterative methods",
+                      "rek_keywords_id": 29017647,
+                      "rek_keywords_order": 7,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Nonlinear Partial Differential Equations",
+                      "rek_keywords_id": 29017648,
+                      "rek_keywords_order": 8,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_language_of_book_title": Array [],
+                  "fez_record_search_key_language_of_journal_name": Array [],
+                  "fez_record_search_key_language_of_proceedings_title": Array [],
+                  "fez_record_search_key_language_of_title": Array [],
+                  "fez_record_search_key_length": null,
+                  "fez_record_search_key_license": null,
+                  "fez_record_search_key_link": Array [],
+                  "fez_record_search_key_link_description": Array [],
+                  "fez_record_search_key_location": Array [],
+                  "fez_record_search_key_native_script_book_title": null,
+                  "fez_record_search_key_native_script_conference_name": null,
+                  "fez_record_search_key_native_script_journal_name": null,
+                  "fez_record_search_key_native_script_proceedings_title": null,
+                  "fez_record_search_key_native_script_title": null,
+                  "fez_record_search_key_newspaper": null,
+                  "fez_record_search_key_notes": null,
+                  "fez_record_search_key_oa_embargo_days": null,
+                  "fez_record_search_key_oa_notes": null,
+                  "fez_record_search_key_oa_status": Object {
+                    "rek_oa_status": 453697,
+                    "rek_oa_status_id": 291096,
+                    "rek_oa_status_pid": "UQ:239427",
+                    "rek_oa_status_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_oa_status_type": null,
+                  "fez_record_search_key_org_name": null,
+                  "fez_record_search_key_org_unit_name": null,
+                  "fez_record_search_key_original_format": null,
+                  "fez_record_search_key_parent_publication": null,
+                  "fez_record_search_key_patent_number": null,
+                  "fez_record_search_key_period": Array [],
+                  "fez_record_search_key_place_of_publication": null,
+                  "fez_record_search_key_proceedings_title": null,
+                  "fez_record_search_key_project_description": null,
+                  "fez_record_search_key_project_id": null,
+                  "fez_record_search_key_project_name": null,
+                  "fez_record_search_key_project_start_date": null,
+                  "fez_record_search_key_publisher": null,
+                  "fez_record_search_key_pubmed_id": null,
+                  "fez_record_search_key_refereed": null,
+                  "fez_record_search_key_refereed_source": Object {
+                    "rek_refereed_source": "453638",
+                    "rek_refereed_source_id": 1144035,
+                    "rek_refereed_source_pid": "UQ:239427",
+                    "rek_refereed_source_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_related_datasets": null,
+                  "fez_record_search_key_related_publications": null,
+                  "fez_record_search_key_report_number": null,
+                  "fez_record_search_key_retracted": null,
+                  "fez_record_search_key_rights": null,
+                  "fez_record_search_key_roman_script_book_title": null,
+                  "fez_record_search_key_roman_script_conference_name": null,
+                  "fez_record_search_key_roman_script_journal_name": null,
+                  "fez_record_search_key_roman_script_proceedings_title": null,
+                  "fez_record_search_key_roman_script_title": null,
+                  "fez_record_search_key_scale": null,
+                  "fez_record_search_key_scopus_id": null,
+                  "fez_record_search_key_section": null,
+                  "fez_record_search_key_seo_code": Array [],
+                  "fez_record_search_key_series": null,
+                  "fez_record_search_key_software_required": Array [],
+                  "fez_record_search_key_source": null,
+                  "fez_record_search_key_start_date": null,
+                  "fez_record_search_key_start_page": null,
+                  "fez_record_search_key_structural_systems": Array [],
+                  "fez_record_search_key_style": Array [],
+                  "fez_record_search_key_subcategory": Array [],
+                  "fez_record_search_key_subject": Array [
+                    Object {
+                      "rek_subject": 451825,
+                      "rek_subject_id": 9068399,
+                      "rek_subject_order": 1,
+                      "rek_subject_pid": "UQ:239427",
+                      "rek_subject_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_supervisor": Array [],
+                  "fez_record_search_key_supervisor_id": Array [],
+                  "fez_record_search_key_surrounding_features": Array [],
+                  "fez_record_search_key_time_period_end_date": null,
+                  "fez_record_search_key_time_period_start_date": null,
+                  "fez_record_search_key_total_chapters": null,
+                  "fez_record_search_key_total_pages": null,
+                  "fez_record_search_key_transcript": null,
+                  "fez_record_search_key_translated_book_title": null,
+                  "fez_record_search_key_translated_conference_name": null,
+                  "fez_record_search_key_translated_journal_name": null,
+                  "fez_record_search_key_translated_newspaper": null,
+                  "fez_record_search_key_translated_proceedings_title": null,
+                  "fez_record_search_key_translated_title": null,
+                  "fez_record_search_key_type_of_data": Array [],
+                  "fez_record_search_key_volume_number": null,
+                  "rek_altmetric_id": null,
+                  "rek_altmetric_id_xsdmf_id": null,
+                  "rek_altmetric_score": null,
+                  "rek_altmetric_score_xsdmf_id": null,
+                  "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Louise Olsen-Kettle\\" href=\\"/list/author_id/4041/\\">Louise Olsen-Kettle</a> (<span class=\\"citation_date\\">2011</span>). <a class=\\"citation_title\\" title=\\"Click to view Generic Document: Numerical solution of partial differential equations\\" href=\\"/view/UQ:239427\\">Numerical solution of partial differential equations</a>. ",
+                  "rek_copyright": "on",
+                  "rek_copyright_xsdmf_id": null,
+                  "rek_created_date": "2011-03-29T14:14:38Z",
+                  "rek_created_date_xsdmf_id": null,
+                  "rek_date": "2011-03-29T00:00:00Z",
+                  "rek_date_xsdmf_id": null,
+                  "rek_depositor": 1491,
+                  "rek_depositor_affiliation": 957,
+                  "rek_depositor_affiliation_xsdmf_id": null,
+                  "rek_depositor_xsdmf_id": null,
+                  "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
+                  "rek_description_xsdmf_id": null,
+                  "rek_display_type": 202,
+                  "rek_display_type_lookup": "Generic Document",
+                  "rek_display_type_xsdmf_id": null,
+                  "rek_file_downloads": 106769,
+                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract_xsdmf_id": null,
+                  "rek_formatted_title": null,
+                  "rek_formatted_title_xsdmf_id": null,
+                  "rek_genre": "Generic Document",
+                  "rek_genre_type": null,
+                  "rek_genre_type_xsdmf_id": null,
+                  "rek_genre_xsdmf_id": null,
+                  "rek_herdc_notes": null,
+                  "rek_herdc_notes_xsdmf_id": null,
+                  "rek_object_type": 3,
+                  "rek_object_type_xsdmf_id": null,
+                  "rek_pid": "UQ:239427",
+                  "rek_pubmed_doc_type": null,
+                  "rek_pubmed_doc_type_xsdmf_id": null,
+                  "rek_scopus_citation_count": null,
+                  "rek_scopus_doc_type": null,
+                  "rek_scopus_doc_type_xsdmf_id": null,
+                  "rek_security_inherited": 1,
+                  "rek_status": 2,
+                  "rek_status_xsdmf_id": null,
+                  "rek_subtype": null,
+                  "rek_subtype_xsdmf_id": null,
+                  "rek_thomson_citation_count": null,
+                  "rek_thomson_citation_count_xsdmf_id": null,
+                  "rek_title": "Numerical solution of partial differential equations",
+                  "rek_title_xsdmf_id": null,
+                  "rek_updated_date": "2016-03-03T00:13:48Z",
+                  "rek_updated_date_xsdmf_id": null,
+                  "rek_wok_doc_type": null,
+                  "rek_wok_doc_type_xsdmf_id": null,
+                }
+              }
+              separator=", "
+              showLink={true}
+              suffix=""
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="12"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Contributor(s)"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-contributor-label"
+            variant="body2"
+          >
+            Contributor(s)
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <EditorsCitationView
+              citationStyle="all"
+              key="additional-information-editors"
+              prefix=""
+              publication={
+                Object {
+                  "fez_datastream_info": Array [
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "CodeNumericalSolutionPDEs.zip",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/zip",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 33985,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "FezACML_UQ_239427.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "FezACML security for PID - UQ:239427",
+                      "dsi_mimetype": "text/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 3705,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "Lectures_Book.pdf",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/pdf",
+                      "dsi_open_access": 1,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 3425059,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "NumericalSolutionCode.zip",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "NumericalSolutionOfPartialDifferentialEquations",
+                      "dsi_mimetype": "application/zip",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 46336,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "NumericalSolutionPartialdifferentialCode.gz",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "Full text (open access)",
+                      "dsi_mimetype": "application/octet-stream",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 12844,
+                      "dsi_state": "D",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_CodeNumericalSolutionPDEs.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1226,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_Lectures_Book.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1258,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_NumericalSolutionCode.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1184,
+                      "dsi_state": "A",
+                    },
+                    Object {
+                      "dsi_copyright": null,
+                      "dsi_dsid": "presmd_NumericalSolutionPartialdifferentialCode.xml",
+                      "dsi_embargo_date": null,
+                      "dsi_label": "",
+                      "dsi_mimetype": "application/xml",
+                      "dsi_open_access": null,
+                      "dsi_pid": "UQ:239427",
+                      "dsi_size": 1254,
+                      "dsi_state": "A",
+                    },
+                  ],
+                  "fez_record_search_key_access_conditions": null,
+                  "fez_record_search_key_acknowledgements": null,
+                  "fez_record_search_key_additional_notes": null,
+                  "fez_record_search_key_advisory_statement": null,
+                  "fez_record_search_key_alternate_genre": Array [],
+                  "fez_record_search_key_alternative_title": Array [],
+                  "fez_record_search_key_ands_collection_type": null,
+                  "fez_record_search_key_architectural_features": Array [],
+                  "fez_record_search_key_article_number": null,
+                  "fez_record_search_key_assigned_group_id": Array [],
+                  "fez_record_search_key_assigned_user_id": Array [],
+                  "fez_record_search_key_author": Array [
+                    Object {
+                      "rek_author": "Louise Olsen-Kettle",
+                      "rek_author_id": 28695376,
+                      "rek_author_order": 1,
+                      "rek_author_pid": "UQ:239427",
+                      "rek_author_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_author_affiliation_country": Array [],
+                  "fez_record_search_key_author_affiliation_full_address": Array [],
+                  "fez_record_search_key_author_affiliation_id": Array [],
+                  "fez_record_search_key_author_affiliation_name": Array [],
+                  "fez_record_search_key_author_id": Array [
+                    Object {
+                      "rek_author_id": 4041,
+                      "rek_author_id_id": 28071781,
+                      "rek_author_id_order": 1,
+                      "rek_author_id_pid": "UQ:239427",
+                      "rek_author_id_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_author_role": Array [],
+                  "fez_record_search_key_book_title": null,
+                  "fez_record_search_key_building_materials": Array [],
+                  "fez_record_search_key_category": Array [],
+                  "fez_record_search_key_chapter_number": null,
+                  "fez_record_search_key_condition": Array [],
+                  "fez_record_search_key_conference_dates": null,
+                  "fez_record_search_key_conference_id": null,
+                  "fez_record_search_key_conference_location": null,
+                  "fez_record_search_key_conference_name": null,
+                  "fez_record_search_key_construction_date": null,
+                  "fez_record_search_key_contact_details_email": Array [],
+                  "fez_record_search_key_contributor": Array [
+                    Object {
+                      "rek_contributor": "Dion Weatherley",
+                      "rek_contributor_id": 3118551,
+                      "rek_contributor_order": 1,
+                      "rek_contributor_pid": "UQ:187819",
+                      "rek_contributor_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_contributor": "V. E. Boros",
+                      "rek_contributor_id": 3118552,
+                      "rek_contributor_order": 2,
+                      "rek_contributor_pid": "UQ:187819",
+                      "rek_contributor_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_contributor_id": Array [
+                    Object {
+                      "rek_contributor_id": 0,
+                      "rek_contributor_id_id": 2325833,
+                      "rek_contributor_id_order": 1,
+                      "rek_contributor_id_pid": "UQ:187819",
+                      "rek_contributor_id_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_contributor_id": 0,
+                      "rek_contributor_id_id": 2325834,
+                      "rek_contributor_id_order": 2,
+                      "rek_contributor_id_pid": "UQ:187819",
+                      "rek_contributor_id_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_convener": null,
+                  "fez_record_search_key_corresponding_country": Array [],
+                  "fez_record_search_key_corresponding_email": Array [],
+                  "fez_record_search_key_corresponding_name": Array [],
+                  "fez_record_search_key_corresponding_organisation": Array [],
+                  "fez_record_search_key_country_of_issue": null,
+                  "fez_record_search_key_coverage_period": Array [],
+                  "fez_record_search_key_creator_id": Array [],
+                  "fez_record_search_key_creator_name": Array [],
+                  "fez_record_search_key_data_volume": null,
+                  "fez_record_search_key_datastream_policy": null,
+                  "fez_record_search_key_date_available": null,
+                  "fez_record_search_key_date_photo_taken": null,
+                  "fez_record_search_key_date_recorded": null,
+                  "fez_record_search_key_date_scanned": null,
+                  "fez_record_search_key_doi": null,
+                  "fez_record_search_key_edition": null,
+                  "fez_record_search_key_end_date": null,
+                  "fez_record_search_key_end_page": null,
+                  "fez_record_search_key_external_label_id": Array [
+                    Object {
+                      "rek_external_label_id": 456927,
+                      "rek_external_label_id_order": 1,
+                    },
+                    Object {
+                      "rek_external_label_id": 456926,
+                      "rek_external_label_id_order": 2,
+                    },
+                    Object {
+                      "rek_external_label_id": 456928,
+                      "rek_external_label_id_order": 3,
+                    },
+                  ],
+                  "fez_record_search_key_file_attachment_access_condition": Array [],
+                  "fez_record_search_key_file_attachment_embargo_date": Array [],
+                  "fez_record_search_key_file_attachment_name": Array [
+                    Object {
+                      "rek_file_attachment_name": "CodeNumericalSolutionPDEs.zip",
+                      "rek_file_attachment_name_id": 3815878,
+                      "rek_file_attachment_name_order": 1,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "Lectures_Book.pdf",
+                      "rek_file_attachment_name_id": 3815879,
+                      "rek_file_attachment_name_order": 2,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_CodeNumericalSolutionPDEs.xml",
+                      "rek_file_attachment_name_id": 3815880,
+                      "rek_file_attachment_name_order": 3,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_file_attachment_name": "presmd_Lectures_Book.xml",
+                      "rek_file_attachment_name_id": 3815881,
+                      "rek_file_attachment_name_order": 4,
+                      "rek_file_attachment_name_pid": "UQ:239427",
+                      "rek_file_attachment_name_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_geographic_area": Array [],
+                  "fez_record_search_key_grant_acronym": Array [],
+                  "fez_record_search_key_grant_agency": Array [],
+                  "fez_record_search_key_grant_agency_id": Array [],
+                  "fez_record_search_key_grant_id": Array [],
+                  "fez_record_search_key_grant_text": Array [],
+                  "fez_record_search_key_herdc_code": null,
+                  "fez_record_search_key_herdc_status": null,
+                  "fez_record_search_key_identifier": Array [],
+                  "fez_record_search_key_institutional_status": Object {
+                    "rek_institutional_status": 453223,
+                    "rek_institutional_status_id": 3201954,
+                    "rek_institutional_status_pid": "UQ:239427",
+                    "rek_institutional_status_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_interior_features": Array [],
+                  "fez_record_search_key_isbn": Array [],
+                  "fez_record_search_key_isdatasetof": Array [],
+                  "fez_record_search_key_isderivationof": Array [],
+                  "fez_record_search_key_isi_loc": null,
+                  "fez_record_search_key_ismemberof": Array [
+                    Object {
+                      "rek_ismemberof": "UQ:7563",
+                      "rek_ismemberof_id": 11447114,
+                      "rek_ismemberof_order": 1,
+                      "rek_ismemberof_pid": "UQ:239427",
+                      "rek_ismemberof_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_issn": Array [],
+                  "fez_record_search_key_issue_number": null,
+                  "fez_record_search_key_job_number": null,
+                  "fez_record_search_key_journal_name": null,
+                  "fez_record_search_key_keywords": Array [
+                    Object {
+                      "rek_keywords": "Partial Differential Equations (PDEs)",
+                      "rek_keywords_id": 29017641,
+                      "rek_keywords_order": 1,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Parabolic",
+                      "rek_keywords_id": 29017642,
+                      "rek_keywords_order": 2,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Hyperbolic",
+                      "rek_keywords_id": 29017643,
+                      "rek_keywords_order": 3,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Finite difference",
+                      "rek_keywords_id": 29017644,
+                      "rek_keywords_order": 4,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Spectral method",
+                      "rek_keywords_id": 29017645,
+                      "rek_keywords_order": 5,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Finite element method",
+                      "rek_keywords_id": 29017646,
+                      "rek_keywords_order": 6,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Iterative methods",
+                      "rek_keywords_id": 29017647,
+                      "rek_keywords_order": 7,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                    Object {
+                      "rek_keywords": "Nonlinear Partial Differential Equations",
+                      "rek_keywords_id": 29017648,
+                      "rek_keywords_order": 8,
+                      "rek_keywords_pid": "UQ:239427",
+                      "rek_keywords_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_language": Array [],
+                  "fez_record_search_key_language_of_book_title": Array [],
+                  "fez_record_search_key_language_of_journal_name": Array [],
+                  "fez_record_search_key_language_of_proceedings_title": Array [],
+                  "fez_record_search_key_language_of_title": Array [],
+                  "fez_record_search_key_length": null,
+                  "fez_record_search_key_license": null,
+                  "fez_record_search_key_link": Array [],
+                  "fez_record_search_key_link_description": Array [],
+                  "fez_record_search_key_location": Array [],
+                  "fez_record_search_key_native_script_book_title": null,
+                  "fez_record_search_key_native_script_conference_name": null,
+                  "fez_record_search_key_native_script_journal_name": null,
+                  "fez_record_search_key_native_script_proceedings_title": null,
+                  "fez_record_search_key_native_script_title": null,
+                  "fez_record_search_key_newspaper": null,
+                  "fez_record_search_key_notes": null,
+                  "fez_record_search_key_oa_embargo_days": null,
+                  "fez_record_search_key_oa_notes": null,
+                  "fez_record_search_key_oa_status": Object {
+                    "rek_oa_status": 453697,
+                    "rek_oa_status_id": 291096,
+                    "rek_oa_status_pid": "UQ:239427",
+                    "rek_oa_status_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_oa_status_type": null,
+                  "fez_record_search_key_org_name": null,
+                  "fez_record_search_key_org_unit_name": null,
+                  "fez_record_search_key_original_format": null,
+                  "fez_record_search_key_parent_publication": null,
+                  "fez_record_search_key_patent_number": null,
+                  "fez_record_search_key_period": Array [],
+                  "fez_record_search_key_place_of_publication": null,
+                  "fez_record_search_key_proceedings_title": null,
+                  "fez_record_search_key_project_description": null,
+                  "fez_record_search_key_project_id": null,
+                  "fez_record_search_key_project_name": null,
+                  "fez_record_search_key_project_start_date": null,
+                  "fez_record_search_key_publisher": null,
+                  "fez_record_search_key_pubmed_id": null,
+                  "fez_record_search_key_refereed": null,
+                  "fez_record_search_key_refereed_source": Object {
+                    "rek_refereed_source": "453638",
+                    "rek_refereed_source_id": 1144035,
+                    "rek_refereed_source_pid": "UQ:239427",
+                    "rek_refereed_source_xsdmf_id": null,
+                  },
+                  "fez_record_search_key_related_datasets": null,
+                  "fez_record_search_key_related_publications": null,
+                  "fez_record_search_key_report_number": null,
+                  "fez_record_search_key_retracted": null,
+                  "fez_record_search_key_rights": null,
+                  "fez_record_search_key_roman_script_book_title": null,
+                  "fez_record_search_key_roman_script_conference_name": null,
+                  "fez_record_search_key_roman_script_journal_name": null,
+                  "fez_record_search_key_roman_script_proceedings_title": null,
+                  "fez_record_search_key_roman_script_title": null,
+                  "fez_record_search_key_scale": null,
+                  "fez_record_search_key_scopus_id": null,
+                  "fez_record_search_key_section": null,
+                  "fez_record_search_key_seo_code": Array [],
+                  "fez_record_search_key_series": null,
+                  "fez_record_search_key_software_required": Array [],
+                  "fez_record_search_key_source": null,
+                  "fez_record_search_key_start_date": null,
+                  "fez_record_search_key_start_page": null,
+                  "fez_record_search_key_structural_systems": Array [],
+                  "fez_record_search_key_style": Array [],
+                  "fez_record_search_key_subcategory": Array [],
+                  "fez_record_search_key_subject": Array [
+                    Object {
+                      "rek_subject": 451825,
+                      "rek_subject_id": 9068399,
+                      "rek_subject_order": 1,
+                      "rek_subject_pid": "UQ:239427",
+                      "rek_subject_xsdmf_id": null,
+                    },
+                  ],
+                  "fez_record_search_key_supervisor": Array [],
+                  "fez_record_search_key_supervisor_id": Array [],
+                  "fez_record_search_key_surrounding_features": Array [],
+                  "fez_record_search_key_time_period_end_date": null,
+                  "fez_record_search_key_time_period_start_date": null,
+                  "fez_record_search_key_total_chapters": null,
+                  "fez_record_search_key_total_pages": null,
+                  "fez_record_search_key_transcript": null,
+                  "fez_record_search_key_translated_book_title": null,
+                  "fez_record_search_key_translated_conference_name": null,
+                  "fez_record_search_key_translated_journal_name": null,
+                  "fez_record_search_key_translated_newspaper": null,
+                  "fez_record_search_key_translated_proceedings_title": null,
+                  "fez_record_search_key_translated_title": null,
+                  "fez_record_search_key_type_of_data": Array [],
+                  "fez_record_search_key_volume_number": null,
+                  "rek_altmetric_id": null,
+                  "rek_altmetric_id_xsdmf_id": null,
+                  "rek_altmetric_score": null,
+                  "rek_altmetric_score_xsdmf_id": null,
+                  "rek_citation": "<a class=\\"author_id_link\\" title=\\"Browse by Author ID for Louise Olsen-Kettle\\" href=\\"/list/author_id/4041/\\">Louise Olsen-Kettle</a> (<span class=\\"citation_date\\">2011</span>). <a class=\\"citation_title\\" title=\\"Click to view Generic Document: Numerical solution of partial differential equations\\" href=\\"/view/UQ:239427\\">Numerical solution of partial differential equations</a>. ",
+                  "rek_copyright": "on",
+                  "rek_copyright_xsdmf_id": null,
+                  "rek_created_date": "2011-03-29T14:14:38Z",
+                  "rek_created_date_xsdmf_id": null,
+                  "rek_date": "2011-03-29T00:00:00Z",
+                  "rek_date_xsdmf_id": null,
+                  "rek_depositor": 1491,
+                  "rek_depositor_affiliation": 957,
+                  "rek_depositor_affiliation_xsdmf_id": null,
+                  "rek_depositor_xsdmf_id": null,
+                  "rek_description": "Lecture notes on numerical solution of partial differential equations. Topics include parabolic and hyperbolic partial differential equations, explicit and implicit methods, iterative methods, finite difference, stability and error analysis, finite element method, spectral method, central difference method, Forward Euler method, Backward Euler method, Lax method, Jacobi method, Gauss-Seidel method, relaxation methods, wave equation, diffusion and heat equation, nonlinear partial differential equations, soliton, shock wave, Korteweg-de-Vries equation, nonlinear inviscid Burger's equation, method of characteristics.",
+                  "rek_description_xsdmf_id": null,
+                  "rek_display_type": 202,
+                  "rek_display_type_lookup": "Generic Document",
+                  "rek_display_type_xsdmf_id": null,
+                  "rek_file_downloads": 106769,
+                  "rek_formatted_abstract": null,
+                  "rek_formatted_abstract_xsdmf_id": null,
+                  "rek_formatted_title": null,
+                  "rek_formatted_title_xsdmf_id": null,
+                  "rek_genre": "Generic Document",
+                  "rek_genre_type": null,
+                  "rek_genre_type_xsdmf_id": null,
+                  "rek_genre_xsdmf_id": null,
+                  "rek_herdc_notes": null,
+                  "rek_herdc_notes_xsdmf_id": null,
+                  "rek_object_type": 3,
+                  "rek_object_type_xsdmf_id": null,
+                  "rek_pid": "UQ:239427",
+                  "rek_pubmed_doc_type": null,
+                  "rek_pubmed_doc_type_xsdmf_id": null,
+                  "rek_scopus_citation_count": null,
+                  "rek_scopus_doc_type": null,
+                  "rek_scopus_doc_type_xsdmf_id": null,
+                  "rek_security_inherited": 1,
+                  "rek_status": 2,
+                  "rek_status_xsdmf_id": null,
+                  "rek_subtype": null,
+                  "rek_subtype_xsdmf_id": null,
+                  "rek_thomson_citation_count": null,
+                  "rek_thomson_citation_count_xsdmf_id": null,
+                  "rek_title": "Numerical solution of partial differential equations",
+                  "rek_title_xsdmf_id": null,
+                  "rek_updated_date": "2016-03-03T00:13:48Z",
+                  "rek_updated_date_xsdmf_id": null,
+                  "rek_wok_doc_type": null,
+                  "rek_wok_doc_type_xsdmf_id": null,
+                }
+              }
+              separator=", "
+              showLink={true}
+              suffix=""
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="13"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="flex-start"
+        className="gridRow"
+        container={true}
+        key="additional-info-Open access status"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            classes={
+              Object {
+                "root": "header",
+              }
+            }
+            component="span"
+            data-testid="rek-oa-status-label"
+            variant="body2"
+          >
+            Open access status
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          className="data"
+          item={true}
+          sm={9}
+          xs={12}
+        >
+          <WithStyles(ForwardRef(Typography))
+            component="span"
+            variant="body2"
+          >
+            <span
+              data-testid="rek-oa-status"
+            />
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
     <div
       key="16"
     >
@@ -46971,7 +46993,7 @@ exports[`Additional Information Component  should render component with generic 
               }
             }
             component="span"
-            data-testid="rek-tk-label-label"
+            data-testid="rek-external-label-id-label"
             variant="body2"
           >
             Traditional Knowledge rights
@@ -46987,29 +47009,73 @@ exports[`Additional Information Component  should render component with generic 
             component="span"
             variant="body2"
           >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
+            <ul
+              className="externallabels"
+            >
+              <li
+                key="456927"
               >
+                <ExternalLink
+                  href="https://localcontexts.org/label/tk-secret-sacred/"
+                  id="rek-tk-label"
+                  openInNewIcon={false}
+                >
+                  <ExternalImageElement
+                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
+                  />
+                </ExternalLink>
                 <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
+                  className="externalLabelText"
+                >
+                  <Link
+                    data-testid="rek_external_labels"
+                    to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                  />
+                </div>
+              </li>
+              <li
+                key="456926"
               >
-                TK Attribution (TK A)
-              </Link>
-            </span>
+                <ExternalLink
+                  href="https://localcontexts.org/label/tk-non-commercial/"
+                  id="rek-tk-label"
+                  openInNewIcon={false}
+                >
+                  <ExternalImageElement
+                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
+                  />
+                </ExternalLink>
+                <div
+                  className="externalLabelText"
+                >
+                  <Link
+                    data-testid="rek_external_labels"
+                    to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                  />
+                </div>
+              </li>
+              <li
+                key="456928"
+              >
+                <ExternalLink
+                  href="https://localcontexts.org/label/tk-attribution/"
+                  id="rek-tk-label"
+                  openInNewIcon={false}
+                >
+                  <ExternalImageElement
+                    url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/529abbc89fff6d91300c9ab44050fd6e.png"
+                  />
+                </ExternalLink>
+                <div
+                  className="externalLabelText"
+                >
+                  <Link
+                    data-testid="rek_external_labels"
+                    to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=undefined"
+                  />
+                </div>
+              </li>
+            </ul>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -47904,71 +47970,6 @@ exports[`Additional Information Component  should render component with journal 
                 eng
               </li>
             </ul>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="21"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -50573,71 +50574,6 @@ exports[`Additional Information Component  should render component with journal 
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="17"
     >
       <WithStyles(ForwardRef(Grid))
@@ -52653,71 +52589,6 @@ exports[`Additional Information Component  should render component with manuscri
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="17"
     >
       <WithStyles(ForwardRef(Grid))
@@ -54309,71 +54180,6 @@ exports[`Additional Information Component  should render component with newspape
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="26"
     >
       <WithStyles(ForwardRef(Grid))
@@ -54847,71 +54653,6 @@ exports[`Additional Information Component  should render component with patent 1
                 prefix=""
                 suffix=""
               />
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="9"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
             </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
@@ -56164,71 +55905,6 @@ exports[`Additional Information Component  should render component with preprint
                 </Link>
               </li>
             </ul>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="18"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -58107,71 +57783,6 @@ exports[`Additional Information Component  should render component with proceedi
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="25"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="27"
     >
       <WithStyles(ForwardRef(Grid))
@@ -59913,71 +59524,6 @@ exports[`Additional Information Component  should render component with referenc
                 </Link>
               </li>
             </ul>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="24"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -62458,71 +62004,6 @@ exports[`Additional Information Component  should render component with rek_herd
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="16"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="17"
     >
       <WithStyles(ForwardRef(Grid))
@@ -63910,71 +63391,6 @@ exports[`Additional Information Component  should render component with rek_star
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="9"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="10"
     >
       <WithStyles(ForwardRef(Grid))
@@ -64850,71 +64266,6 @@ exports[`Additional Information Component  should render component with research
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="14"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="15"
     >
       <WithStyles(ForwardRef(Grid))
@@ -65773,71 +65124,6 @@ exports[`Additional Information Component  should render component with thesis 1
             <span
               data-testid="rek-oa-status"
             />
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -66816,71 +66102,6 @@ exports[`Additional Information Component  should render component with video do
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </div>
-    <div
-      key="21"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
   </StandardCard>
 </WithStyles(ForwardRef(Grid))>
 `;
@@ -67507,71 +66728,6 @@ exports[`Additional Information Component  should render component with working 
             <span
               data-testid="rek-oa-status"
             />
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
-      key="11"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
@@ -68894,71 +68050,6 @@ exports[`Additional Information Component  should render oa status value link in
       </WithStyles(ForwardRef(Grid))>
     </div>
     <div
-      key="12"
-    >
-      <WithStyles(ForwardRef(Grid))
-        alignItems="flex-start"
-        className="gridRow"
-        container={true}
-        key="additional-info-Traditional Knowledge rights"
-        spacing={2}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          sm={3}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            classes={
-              Object {
-                "root": "header",
-              }
-            }
-            component="span"
-            data-testid="rek-tk-label-label"
-            variant="body2"
-          >
-            Traditional Knowledge rights
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
-          className="data"
-          item={true}
-          sm={9}
-          xs={12}
-        >
-          <WithStyles(ForwardRef(Typography))
-            component="span"
-            variant="body2"
-          >
-            <span>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-              <Link
-                data-testid="rek_tk_label_lookup"
-                to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-              >
-                TK Attribution (TK A)
-              </Link>
-            </span>
-          </WithStyles(ForwardRef(Typography))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </div>
-    <div
       key="13"
     >
       <WithStyles(ForwardRef(Grid))
@@ -69184,71 +68275,4 @@ exports[`Additional Information Component  should render oa status value link in
 </WithStyles(ForwardRef(Grid))>
 `;
 
-exports[`Additional Information Component  should skip render of date if it has a placeholder value 1`] = `
-Array [
-  <div>
-    <WithStyles(ForwardRef(Grid))
-      alignItems="flex-start"
-      className="gridRow"
-      container={true}
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        sm={3}
-        xs={12}
-      >
-        <WithStyles(ForwardRef(Typography))
-          classes={
-            Object {
-              "root": "header",
-            }
-          }
-          component="span"
-          data-testid="rek-tk-label-label"
-          variant="body2"
-        >
-          Traditional Knowledge rights
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        className="data"
-        item={true}
-        sm={9}
-        xs={12}
-      >
-        <WithStyles(ForwardRef(Typography))
-          component="span"
-          variant="body2"
-        >
-          <span>
-            <React.Fragment>
-              <ExternalLink
-                href="https://localcontexts.org/label/tk-attribution/"
-                id="rek-tk-label"
-                openInNewIcon={false}
-              >
-                <div
-                  className="fez-icon tklabel cc-by-nc-nd"
-                  style={
-                    Object {
-                      "backgroundImage": "url(https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/tklabels/tk-attribution.png)",
-                    }
-                  }
-                />
-              </ExternalLink>
-              <br />
-            </React.Fragment>
-            <Link
-              data-testid="rek_tk_label_lookup"
-              to="/records/search?page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D=TK+Attribution+(TK+A)"
-            >
-              TK Attribution (TK A)
-            </Link>
-          </span>
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-  </div>,
-]
-`;
+exports[`Additional Information Component  should skip render of date if it has a placeholder value 1`] = `Array []`;
