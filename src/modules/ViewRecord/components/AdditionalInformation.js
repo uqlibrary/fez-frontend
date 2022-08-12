@@ -284,26 +284,23 @@ export class AdditionalInformationClass extends PureComponent {
                     //     tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
                     //         ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
                     //         : null;
-
-                    const externalLabelImageUrl = getExternalLabelImageUrl(data.rek_external_label_id);
-
-                    const ExternalImageElement = ({ url }) => {
-                        const bodgeUrl = url
-                            .replace('dev-espace.', 'fez-staging.')
-                            .replace('development.', 'fez-staging.')
-                            .replace(':3000', '');
+                    const ExternalImageElement = ({ labelId }) => {
+                        const externalLabelImageUrl = getExternalLabelImageUrl(labelId);
                         return (
-                            <img src={bodgeUrl} className={`fez-icon externallabel ${externalLabelLink.className}`} />
+                            <img
+                                src={externalLabelImageUrl}
+                                className={`fez-icon externallabel ${externalLabelLink.className}`}
+                            />
                         );
                     };
                     return (
                         <li key={cvoId}>
                             {!!externalLabelLink && (
                                 <ExternalLink href={externalLabelLink.url} openInNewIcon={false} id="rek-tk-label">
-                                    <ExternalImageElement url={externalLabelImageUrl} />
+                                    <ExternalImageElement labelId={data.rek_external_label_id} />
                                 </ExternalLink>
                             )}
-                            {!!!externalLabelLink && <ExternalImageElement url={externalLabelImageUrl} />}
+                            {!!!externalLabelLink && <ExternalImageElement labelId={data.rek_external_label_id} />}
                             <div className="externalLabelText">{externalLabelLookup}</div>
                         </li>
                     );
