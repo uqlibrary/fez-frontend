@@ -89,7 +89,7 @@ context('Add missing record', () => {
             'Publisher',
             'Publication date',
         ];
-        cy.get('.Alert li')
+        cy.get('[data-testid=alert] li')
             .as('validationErrors')
             .should('have.length', invalidFieldNames.length);
         invalidFieldNames.forEach(invalidFieldName => {

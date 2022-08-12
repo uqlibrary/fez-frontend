@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
+import Immutable from 'immutable';
 import { ExactMatchSearchKeywordsList } from './ExactMatchSearchKeywordsList';
 
 const setup = state => {
-    return render(<ExactMatchSearchKeywordsList {...{ onKeywordClick: () => {}, ...state }} />);
+    return render(
+        <WithReduxStore initialState={Immutable.Map({})}>
+            <ExactMatchSearchKeywordsList {...{ onKeywordClick: () => {}, ...state }} />
+        </WithReduxStore>,
+    );
 };
 
 const keywordsListTitle = 'test';

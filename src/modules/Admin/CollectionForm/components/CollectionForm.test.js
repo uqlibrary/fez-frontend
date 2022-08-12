@@ -65,7 +65,7 @@ describe('Collection form', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Field').length).toEqual(4);
+        expect(wrapper.find('Field').length).toEqual(5);
         expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
     });
 
@@ -132,5 +132,13 @@ describe('Collection form - redirections', () => {
             .instance()
             .reloadForm();
         expect(window.location.reload).toBeCalled();
+    });
+});
+
+describe('Collection form - autofill', () => {
+    it('should render without dropdown if params exist', () => {
+        window.history.pushState({}, 'Test Title', '?pid=10&name=test');
+        const wrapper = setup({});
+        expect(wrapper.find('#community-selector').length).toEqual(0);
     });
 });

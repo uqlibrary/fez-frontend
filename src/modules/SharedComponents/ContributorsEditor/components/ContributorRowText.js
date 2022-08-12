@@ -23,6 +23,7 @@ export const ContributorRowText = ({
     const md = showRoleInput && isAdmin && canEdit ? 4 : 5;
     const idColWidth = showRoleInput && isAdmin && canEdit ? 4 : 5;
     const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
+    // eg First listed author
 
     const isAuthorLinked = author => {
         return author.aut_id > 0;

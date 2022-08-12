@@ -6,6 +6,7 @@ import { Field } from 'redux-form/immutable';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { NewListEditorField, KeywordsForm } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -150,6 +151,20 @@ export default class CommunityForm extends Component {
                                                     locale={txt.formLabels.keywords.field}
                                                     disabled={this.props.submitting}
                                                     ListEditorForm={KeywordsForm}
+                                                />
+                                            </Grid>
+
+                                            <Grid item xs={12}>
+                                                <Typography>{txt.formLabels.internalNotes.label}</Typography>
+                                                <Field
+                                                    component={RichEditorField}
+                                                    richEditorId="internalNotes"
+                                                    disabled={this.props.submitting}
+                                                    name="internalNotes"
+                                                    fullWidth
+                                                    multiline
+                                                    rows={5}
+                                                    {...txt.formLabels.internalNotes}
                                                 />
                                             </Grid>
                                         </Grid>

@@ -15,6 +15,7 @@ import {
     REFEREED_SOURCES,
     SCOPUS_DOC_TYPES,
     WOS_DOC_TYPES,
+    COLLECTION_VIEW_TYPE,
 } from 'config/general';
 import { selectFields } from 'locale/selectFields';
 import { default as formLocale } from 'locale/publicationForm';
@@ -69,13 +70,20 @@ import {
     ListEditorField,
     NewListEditorField,
     KeywordsForm,
-    ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/ScaleOfSignificanceListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { IssnRowItemTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import SensitiveHandlingNoteField from '../../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
+import { CommunityField } from 'modules/SharedComponents/LookupFields/containers/CommunityField';
+
+const transformCollectionView = () =>
+    COLLECTION_VIEW_TYPE.map(viewType => {
+        return { value: viewType.id, text: viewType.label };
+    });
 
 export default {
     default: {
@@ -237,6 +245,39 @@ export default {
                 partialDateFieldId: 'rek-date',
             },
         },
+        communities: {
+            component: CommunityField,
+            componentProps: {
+                floatingLabelText: 'Member of communities',
+                hintText: 'Begin typing to select and add communities',
+                name: 'adminSection.communities',
+                id: 'member-of-communities-input',
+                required: true,
+                fullWidth: true,
+                validate: [validation.requiredList],
+                communityFieldId: 'rek-ismemberof',
+            },
+        },
+        reason: {
+            component: GenericTextField,
+            componentProps: {
+                textFieldId: 'reason',
+                name: 'reasonSection.reason',
+                fullWidth: true,
+                label: 'Reason for Edit (optional - will be added to object history)',
+                placeholder: 'Reason for Edit',
+            },
+        },
+        fez_record_search_key_collection_view_type: {
+            component: NewGenericSelectField,
+            componentProps: {
+                name: 'adminSection.fez_record_search_key_collection_view_type.rek_collection_view_type',
+                itemsList: transformCollectionView(),
+                multiple: false,
+                genericSelectFieldId: 'collection-view-type',
+                ...selectFields.collectionViewType,
+            },
+        },
         collections: {
             component: CollectionField,
             componentProps: {
@@ -245,7 +286,7 @@ export default {
                 name: 'adminSection.collections',
                 id: 'member-of-collections-input',
                 required: true,
-                fullwidth: true,
+                fullWidth: true,
                 validate: [validation.requiredList],
                 collectionFieldId: 'rek-ismemberof',
             },
@@ -931,6 +972,13 @@ export default {
                 richEditorId: 'rek-advisory-statement',
             },
         },
+        sensitiveHandlingNote: {
+            isComposed: true,
+            component: SensitiveHandlingNoteField,
+            componentProps: {
+                name: 'filesSection.sensitiveHandlingNote',
+            },
+        },
         fez_record_search_key_transcript: {
             component: RichEditorField,
             componentProps: {
@@ -954,6 +1002,7 @@ export default {
                 label: 'Scale/significance of work - Contribution statement',
                 placeholder: '',
                 locale: locale.components.scaleOfSignificanceListAdminForm.field,
+                canEdit: true,
             },
         },
         qualityIndicators: {

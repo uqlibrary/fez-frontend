@@ -107,8 +107,6 @@ export const paginate = (totalItems, currentPage = 1, pageSize = 10, maxPages = 
     if (startPage === 2 && endPage !== totalPages + 1) pages.pop();
     else if (endPage === totalPages - 1) pages.shift();
 
-    console.log(startPage, endPage, pages);
-
     // return object with all pager properties required by the view
     return {
         totalItems: totalItems,

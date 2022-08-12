@@ -270,6 +270,7 @@ context('Journal Article admin edit', () => {
                     const authorUsernames = record.fez_record_search_key_author_id.map(
                         item => item.author.aut_org_username,
                     );
+                    // eslint-disable-next-line max-len
                     // const authorNames = record.fez_record_search_key_author_id.map(item => item.rek_author_id_lookup);
                     const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
                     // const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
@@ -392,7 +393,7 @@ context('Journal Article admin edit', () => {
                 .should('have.text', 'This field is required');
         });
 
-        cy.adminEditVerifyAlerts(1, ['You must select atleast one collection']);
+        cy.adminEditVerifyAlerts(1, ['You must select at least one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         cy.log('Grant Information tab');
@@ -467,12 +468,8 @@ context('Journal Article admin edit', () => {
                 .should('have.value', moment(record.fez_datastream_info[1].dsi_embargo_date).format('DD/MM/YYYY'));
         });
         cy.get('[data-testid=files-section-content]').within(() => {
-            cy.get('h4')
-                .eq(2)
-                .should('contain', 'Advisory statement');
-            cy.get('h4')
-                .eq(3)
-                .should('contain', 'Copyright agreement');
+            cy.contains('h4', 'Advisory statement');
+            cy.contains('h4', 'Copyright agreement');
             cy.get('[data-testid=rek-copyright-input]').should($checkbox => {
                 if (record.rek_copyright === 'on') {
                     expect($checkbox).to.be.checked;

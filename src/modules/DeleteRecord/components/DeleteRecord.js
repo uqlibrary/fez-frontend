@@ -20,6 +20,9 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { pathConfig, validation } from 'config';
 import { DOI_CROSSREF_PREFIX, DOI_DATACITE_PREFIX } from 'config/general';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { doesListContainItem } from 'helpers/general';
+
+import { PUBLICATION_EXCLUDE_CITATION_TEXT_LIST } from '../../../config/general';
 
 export default class DeleteRecord extends PureComponent {
     static propTypes = {
@@ -57,6 +60,8 @@ export default class DeleteRecord extends PureComponent {
         this.props.actions.clearDeleteRecord();
     }
 
+    #COMMUNITY_COLLECTION_KEY = 'communityCollection';
+
     _hasUQDOI = () => {
         return (
             this.props.recordToDelete &&
@@ -87,6 +92,43 @@ export default class DeleteRecord extends PureComponent {
         event && event.preventDefault();
     };
 
+    _getCustomAlertMessage = (key, statusCode) => {
+        const errorObject = formsLocale.forms.deleteRecordForm.errorCustom[key]?.find(customError => {
+            return customError.httpStatus === statusCode;
+        });
+
+        /* istanbul ignore next */
+        const message = !!errorObject ? errorObject.message : formsLocale.forms.deleteRecordForm.errorAlert.message;
+        return message; // could be string or function
+    };
+
+    _getErrorAlertProps = (rekType, errorResponse) => {
+        const defaultProps = {
+            ...this.props,
+            alertLocale: formsLocale.forms.deleteRecordForm,
+            error: errorResponse?.message,
+        };
+
+        if (rekType !== 'Collection' && rekType !== 'Community') return defaultProps;
+        if (errorResponse?.status !== 409) return defaultProps;
+
+        // if we're working with a collection or community and have received a 409 status error,
+        // we know for sure the reason for the failure is because the community contains collections,
+        // or the collection contains records. Therefore modify the object to be passed to
+        // validation.getErrorAlertProps to change the error message shown to the admin user.
+        const errorMessage = this._getCustomAlertMessage(this.#COMMUNITY_COLLECTION_KEY, errorResponse.status);
+        return {
+            ...defaultProps,
+            error: rekType,
+            alertLocale: {
+                errorAlert: {
+                    ...formsLocale.forms.deleteRecordForm.errorAlert,
+                    message: errorMessage,
+                },
+            },
+        };
+    };
+
     render() {
         const txt = pagesLocale.pages.deleteRecord;
         const txtDeleteForm = formsLocale.forms.deleteRecordForm;
@@ -101,7 +143,20 @@ export default class DeleteRecord extends PureComponent {
 
         const hasUQDOI = this._hasUQDOI();
         const saveConfirmationLocale = { ...txtDeleteForm.successWorkflowConfirmation };
-        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txtDeleteForm });
+
+        const errorResponse = this.props.error && JSON.parse(this.props.error);
+        const errorAlertProps = this._getErrorAlertProps(
+            // eslint-disable-next-line camelcase
+            this.props?.recordToDelete?.rek_display_type_lookup,
+            errorResponse,
+        );
+
+        const alertProps = validation.getErrorAlertProps({ ...errorAlertProps });
+
+        // eslint-disable-next-line camelcase
+        const rekDisplayTypeLowercase = this.props.recordToDelete?.rek_display_type_lookup?.toLowerCase();
+        const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
+
         return (
             <StandardPage title={txt.title}>
                 <ConfirmDiscardFormChanges dirty={this.props.dirty} submitSucceeded={this.props.submitSucceeded}>
@@ -112,6 +167,7 @@ export default class DeleteRecord extends PureComponent {
                                     <PublicationCitation
                                         publication={this.props.recordToDelete}
                                         citationStyle={'header'}
+                                        hideCitationText={hideCitationText}
                                     />
                                 </StandardCard>
                             </Grid>

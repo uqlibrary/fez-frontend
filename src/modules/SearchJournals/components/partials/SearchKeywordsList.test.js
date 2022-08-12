@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render, WithReduxStore } from 'test-utils';
+import Immutable from 'immutable';
 import { SearchKeywordsList } from './SearchKeywordsList';
 
 const setup = state => {
-    return render(<SearchKeywordsList {...{ onKeywordClick: () => {}, ...state }} />);
+    return render(
+        <WithReduxStore initialState={Immutable.Map({})}>
+            <SearchKeywordsList {...{ onKeywordClick: () => {}, ...state }} />
+        </WithReduxStore>,
+    );
 };
 
 const keywordsListTitle = 'test';

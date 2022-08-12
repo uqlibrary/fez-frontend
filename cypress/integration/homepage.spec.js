@@ -33,12 +33,13 @@ context('Homepage', () => {
             .should('not.contain', 'Web of Science citation count')
             .should('contain', 'Altmetric score');
 
-        cy.get('.StandardPage > div > div > div:nth-of-type(2) h3').should('contain', 'What is eSpace?');
+        cy.contains('h3', 'Acknowledgement of Country');
+        cy.contains('h3', 'Cultural advice');
     });
 
     it('Has expected menu items for a public user', () => {
         cy.visit('/?user=uqexpired');
-        checkMenuItemCount(4);
+        checkMenuItemCount(5);
     });
 
     it('Has expected menu items for a researcher', () => {
@@ -53,7 +54,7 @@ context('Homepage', () => {
 
     it('Has expected menu items for a student without an author account', () => {
         cy.visit('/?user=s3333333');
-        checkMenuItemCount(4);
+        checkMenuItemCount(6);
     });
 
     it('Has expected menu items for a RHD student', () => {

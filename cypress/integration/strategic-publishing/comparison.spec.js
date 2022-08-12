@@ -20,6 +20,8 @@ context('Strategic Publishing - Comparison', () => {
     });
 
     it('Compare journals and go back to search results', () => {
+        cy.viewport(1200, 1600);
+
         // steps required to get to the comparison page with journals
         const uri = '/journals/search/';
         const query =

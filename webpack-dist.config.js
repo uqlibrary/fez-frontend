@@ -19,7 +19,7 @@ const options = {
             allow: [
                 '/$',
                 '/index.html$',
-                '/contact$',
+                '/about$',
                 '/view/*',
                 '/data/*',
                 '/assets/*.svg',
@@ -213,7 +213,7 @@ const webpackConfig = {
             },
             {
                 test: /\.js$/,
-                loader: WebpackStrip.loader('console.log'),
+                loader: WebpackStrip.loader('console.log', 'dd'),
             },
         ],
     },

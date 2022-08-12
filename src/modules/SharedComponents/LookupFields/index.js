@@ -1,5 +1,6 @@
 export { AuthorIdField } from './containers/AuthorIdField';
 export { CollectionField } from './containers/CollectionField';
+export { CommunityField } from './containers/CommunityField';
 export { FieldOfResearchField } from './containers/FieldOfResearchField';
 export { FieldOfResearchListField } from './containers/FieldOfResearchListField';
 export { FilteredFieldOfResearchListField } from './containers/FieldOfResearchListField';
