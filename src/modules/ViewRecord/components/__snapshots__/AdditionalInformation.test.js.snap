@@ -47016,7 +47016,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="456927"
               >
                 <ExternalImageElement
-                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456927.png"
+                  labelId={456927}
                 />
                 <div
                   className="externalLabelText"
@@ -47031,7 +47031,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="456926"
               >
                 <ExternalImageElement
-                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456926.png"
+                  labelId={456926}
                 />
                 <div
                   className="externalLabelText"
@@ -47046,7 +47046,7 @@ exports[`Additional Information Component  should render component with generic 
                 key="456928"
               >
                 <ExternalImageElement
-                  url="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456928.png"
+                  labelId={456928}
                 />
                 <div
                   className="externalLabelText"
