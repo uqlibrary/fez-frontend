@@ -325,8 +325,6 @@ export class FileUploader extends PureComponent {
             .replace('[maxFileSize]', `${maxFileSize}`)
             .replace('[fileSizeUnit]', fileSizeUnit === config.SIZE_UNIT_B ? config.SIZE_UNIT_B : `${fileSizeUnit}B`);
 
-        console.log('SL FILES IN QUEUE', filesInQueue);
-
         const filesInQueueRow = filesInQueue.map((file, index) => {
             return (
                 <FileUploadRow

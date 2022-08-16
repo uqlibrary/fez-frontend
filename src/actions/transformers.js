@@ -1349,12 +1349,6 @@ export const getDatastreamInfo = (
     dataStreamsFromFileSection = [],
     dataStreamsFromSecuritySection = [],
 ) => {
-    console.log(
-        'GET DATA STREAM INFO',
-        originalDatastreams,
-        dataStreamsFromFileSection,
-        dataStreamsFromSecuritySection,
-    );
     const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
         (map, ds) => ({
             ...map,

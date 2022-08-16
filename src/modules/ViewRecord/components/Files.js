@@ -316,57 +316,76 @@ export class FilesClass extends Component {
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
         const componentProps = this.props;
-        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
-            ? dataStreams.filter(this.isFileValid).map(dataStream => {
-                  const pid = publication.rek_pid;
-                  const fileName = dataStream.dsi_dsid;
-                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                  const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-                  const previewFileName = checkForPreview(fileName, dataStreams);
-                  const webFileName = checkForWeb(fileName, dataStreams);
-                  const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
-                  const securityAccess = getSecurityAccess(dataStream, componentProps);
-                  const checksums = this.getChecksums(
-                      dataStream,
-                      thumbnailFileName,
-                      previewFileName,
-                      webFileName,
-                      dataStreams,
-                  );
 
-                  return {
-                      pid: pid,
-                      fileName: fileName,
-                      description: dataStream.dsi_label,
-                      mimeType: mimeType,
-                      calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload: openAccessStatus.allowDownload,
-                      icon: this.renderFileIcon(
-                          pid,
-                          mimeType,
-                          fileName,
-                          !getDownloadLicence(publication) &&
-                              !(!componentProps.account && dataStream.dsi_security_policy === 4)
-                              ? thumbnailFileName
-                              : null,
+        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
+            ? dataStreams
+                  .filter(this.isFileValid)
+                  .sort((a, b) => {
+                      if (a.dsi_order === null) {
+                          return 1;
+                      }
+
+                      if (b.dsi_order === null) {
+                          return -1;
+                      }
+
+                      if (a.dsi_order === b.dsi_order) {
+                          return 0;
+                      }
+
+                      return a.dsi_order < b.dsi_order ? -1 : 1;
+                  })
+
+                  .map(dataStream => {
+                      const pid = publication.rek_pid;
+                      const fileName = dataStream.dsi_dsid;
+                      const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                      const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+                      const previewFileName = checkForPreview(fileName, dataStreams);
+                      const webFileName = checkForWeb(fileName, dataStreams);
+                      const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                      const securityAccess = getSecurityAccess(dataStream, componentProps);
+                      const checksums = this.getChecksums(
+                          dataStream,
+                          thumbnailFileName,
                           previewFileName,
                           webFileName,
-                          securityAccess,
-                          checksums,
-                      ),
-                      openAccessStatus: openAccessStatus,
-                      previewMediaUrl: this.getUrl(
-                          pid,
-                          previewFileName ? previewFileName : fileName,
-                          checksums && checksums.preview,
-                      ),
-                      webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                      mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                      securityStatus: securityAccess,
-                      checksums: checksums,
-                      requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
-                  };
-              })
+                          dataStreams,
+                      );
+
+                      return {
+                          pid: pid,
+                          fileName: fileName,
+                          description: dataStream.dsi_label,
+                          mimeType: mimeType,
+                          calculatedSize: formatBytes(dataStream.dsi_size),
+                          allowDownload: openAccessStatus.allowDownload,
+                          icon: this.renderFileIcon(
+                              pid,
+                              mimeType,
+                              fileName,
+                              !getDownloadLicence(publication) &&
+                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                                  ? thumbnailFileName
+                                  : null,
+                              previewFileName,
+                              webFileName,
+                              securityAccess,
+                              checksums,
+                          ),
+                          openAccessStatus: openAccessStatus,
+                          previewMediaUrl: this.getUrl(
+                              pid,
+                              previewFileName ? previewFileName : fileName,
+                              checksums && checksums.preview,
+                          ),
+                          webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                          mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                          securityStatus: securityAccess,
+                          checksums: checksums,
+                          requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
+                      };
+                  })
             : [];
     };
 
@@ -421,14 +440,9 @@ export class FilesClass extends Component {
         // Here's something to play with for sorting the files.
         const sortedData = [];
         const attachedFiles = publication.fez_record_search_key_file_attachment_name;
-
-        console.log('SL AttachedFiles', attachedFiles, fileData, sortedData);
         attachedFiles.map(fileInformation => {
-            console.log('SL fileInformation', fileInformation);
             sortedData.push(...fileData.filter(item => item.fileName === fileInformation.rek_file_attachment_name));
         });
-
-        console.log('File Data is:', fileData, 'Sorted Data is', sortedData);
 
         return (
             <Grid item xs={12}>
@@ -486,10 +500,8 @@ export class FilesClass extends Component {
                         </Grid>
                     </div>
                     {/* here is where I can possibly tweak the ordering of the files */}
-                    {console.log('MY RECORD', publication, fileData)}
-                    {}
 
-                    {sortedData.map((item, index) => (
+                    {fileData.map((item, index) => (
                         <div className={this.props.classes.containerPadding} key={index}>
                             <Grid
                                 container
