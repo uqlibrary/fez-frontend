@@ -51,7 +51,8 @@ export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams
         const newDataStreams = [...dataStreams];
 
         newDataStreams.map(
-            (item, index) => (item.dsi_order = item.hasOwnProperty('dsi_order') ? item.dsi_order : index + 1),
+            (item, index) =>
+                (item.dsi_order = item.hasOwnProperty('dsi_order') && !!item.dsi_order ? item.dsi_order : index + 1),
         );
 
         const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_order === oldPosition);

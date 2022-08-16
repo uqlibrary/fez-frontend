@@ -102,45 +102,62 @@ export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
 
 export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
-        ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map((dataStream, key) => {
-              const pid = dataStream.dsi_pid;
-              const fileName = dataStream.dsi_dsid;
-              const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+        ? dataStreams
+              .filter(isFileValid(viewRecordsConfig, isAdmin))
+              .sort((a, b) => {
+                  if (a.dsi_order === null) {
+                      return 1;
+                  }
 
-              const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-              const previewFileName = checkForPreview(fileName, dataStreams);
-              const webFileName = checkForWeb(fileName, dataStreams);
+                  if (b.dsi_order === null) {
+                      return -1;
+                  }
 
-              const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
+                  if (a.dsi_order === b.dsi_order) {
+                      return 0;
+                  }
 
-              return {
-                  pid,
-                  fileName,
-                  description: dataStream.dsi_label,
-                  mimeType,
-                  thumbnailFileName,
-                  calculatedSize: formatBytes(dataStream.dsi_size),
-                  allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
-                  iconProps: {
+                  return a.dsi_order < b.dsi_order ? -1 : 1;
+              })
+              .map((dataStream, key) => {
+                  const pid = dataStream.dsi_pid;
+                  const fileName = dataStream.dsi_dsid;
+                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+
+                  const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+                  const previewFileName = checkForPreview(fileName, dataStreams);
+                  const webFileName = checkForWeb(fileName, dataStreams);
+
+                  const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
+
+                  return {
                       pid,
-                      mimeType,
                       fileName,
+                      description: dataStream.dsi_label,
+                      mimeType,
                       thumbnailFileName,
-                      previewFileName,
-                      allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
-                      webFileName,
-                      securityAccess: true,
-                  },
-                  openAccessStatus,
-                  previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
-                  webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
-                  mediaUrl: getUrl(pid, fileName),
-                  securityStatus: true,
-                  embargoDate: dataStream.dsi_embargo_date,
-                  fileOrder: (dataStream.dsi_order && dataStream.dsi_order) || key,
-                  key: key,
-              };
-          })
+                      calculatedSize: formatBytes(dataStream.dsi_size),
+                      allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                      iconProps: {
+                          pid,
+                          mimeType,
+                          fileName,
+                          thumbnailFileName,
+                          previewFileName,
+                          allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
+                          webFileName,
+                          securityAccess: true,
+                      },
+                      openAccessStatus,
+                      previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                      webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
+                      mediaUrl: getUrl(pid, fileName),
+                      securityStatus: true,
+                      embargoDate: dataStream.dsi_embargo_date,
+                      fileOrder: (!!dataStream.dsi_order && dataStream.dsi_order) || key + 1,
+                      key: key,
+                  };
+              })
         : [];
 };
 
@@ -167,7 +184,6 @@ export const AttachedFiles = ({
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor);
-    console.log('FILEDATA: ', fileData);
     if (fileData.length === 0) return null;
 
     // tested in cypress
