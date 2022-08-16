@@ -42,6 +42,39 @@ export const quartileFn = data => {
     return quartileList.length > 0 ? Array.min(quartileList) : null;
 };
 
+export const DataCollapsiblePanelContent = ({ key, item, data }) => {
+    return (
+        <Grid xs={12} sm={6} key={key} item>
+            <Typography variant="body1">
+                <InputLabel
+                    shrink
+                    style={{
+                        lineHeight: 1.3,
+                        whiteSpace: 'normal',
+                        textOverflow: 'ellipsis',
+                        fontWeight: 600,
+                    }}
+                >
+                    {item.label}
+                    <span style={{ display: 'block', fontWeight: 400 }}>{item.subLabel}</span>
+                </InputLabel>
+            </Typography>
+            <Typography variant="body1">
+                {(data && item.prefix) || ''}
+                {data || ''}
+                {(data && item.suffix) || ''}
+            </Typography>
+            <br />
+        </Grid>
+    );
+};
+
+DataCollapsiblePanelContent.propTypes = {
+    key: PropTypes.string,
+    item: PropTypes.object,
+    data: PropTypes.object,
+};
+
 const JournalsListDataRow = ({ row, classes, isSelectable }) => {
     const [open, setOpen] = React.useState(false);
 
@@ -109,30 +142,11 @@ const JournalsListDataRow = ({ row, classes, isSelectable }) => {
                                 {JournalFieldsMap.slice(3).map(item => {
                                     const itemData = (row && item.translateFn(row)) || '';
                                     return (
-                                        <Grid xs={12} sm={6} key={`${item.key}-${row.jnl_jid}`} item>
-                                            <Typography variant="body1">
-                                                <InputLabel
-                                                    shrink
-                                                    style={{
-                                                        lineHeight: 1.3,
-                                                        whiteSpace: 'normal',
-                                                        textOverflow: 'ellipsis',
-                                                        fontWeight: 600,
-                                                    }}
-                                                >
-                                                    {item.label}
-                                                    <span style={{ display: 'block', fontWeight: 400 }}>
-                                                        {item.subLabel}
-                                                    </span>
-                                                </InputLabel>
-                                            </Typography>
-                                            <Typography variant="body1">
-                                                {(itemData && item.prefix) || ''}
-                                                {itemData || ''}
-                                                {(itemData && item.suffix) || ''}
-                                            </Typography>
-                                            <br />
-                                        </Grid>
+                                        <DataCollapsiblePanelContent
+                                            key={`${item.key}-${row.jnl_jid}`}
+                                            item={item}
+                                            data={itemData}
+                                        />
                                     );
                                 })}
                             </Grid>
