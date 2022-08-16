@@ -137,7 +137,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) 
                   mediaUrl: getUrl(pid, fileName),
                   securityStatus: true,
                   embargoDate: dataStream.dsi_embargo_date,
-                  fileOrder: (dataStream.dsi_order_position && dataStream.dsi_order_position) || key,
+                  fileOrder: (dataStream.dsi_order && dataStream.dsi_order) || key,
                   key: key,
               };
           })

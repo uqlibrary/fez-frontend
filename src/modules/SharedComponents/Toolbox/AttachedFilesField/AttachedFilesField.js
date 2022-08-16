@@ -51,17 +51,14 @@ export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams
         const newDataStreams = [...dataStreams];
 
         newDataStreams.map(
-            (item, index) =>
-                (item.dsi_order_position = item.hasOwnProperty('dsi_order_position')
-                    ? item.dsi_order_position
-                    : index + 1),
+            (item, index) => (item.dsi_order = item.hasOwnProperty('dsi_order') ? item.dsi_order : index + 1),
         );
 
-        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_order_position === oldPosition);
-        const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order_position === newPosition);
+        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_order === oldPosition);
+        const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order === newPosition);
 
-        newDataStreams[sourceFileIndex].dsi_order_position = newPosition;
-        newDataStreams[replaceFileIndex].dsi_order_position = oldPosition;
+        newDataStreams[sourceFileIndex].dsi_order = newPosition;
+        newDataStreams[replaceFileIndex].dsi_order = oldPosition;
 
         setDataStreams(newDataStreams);
     };
