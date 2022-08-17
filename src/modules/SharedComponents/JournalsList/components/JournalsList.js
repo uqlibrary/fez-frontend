@@ -25,19 +25,19 @@ const useStyles = makeStyles(theme => ({
             gridTemplateColumns: 'auto auto 50px',
         },
     },
-    titleColumn: {
-        width: JournalFieldsMap[0].size.xs,
+    actionsColumn: {
+        ...(JournalFieldsMap[0].actionsCol?.xs ?? {}),
         [theme.breakpoints.up('sm')]: {
-            width: JournalFieldsMap[0].size.sm,
+            ...(JournalFieldsMap[0].actionsCol?.sm ?? {}),
         },
         [theme.breakpoints.up('md')]: {
-            width: JournalFieldsMap[0].size.md,
+            ...(JournalFieldsMap[0].actionsCol?.md ?? {}),
         },
         [theme.breakpoints.up('lg')]: {
-            width: JournalFieldsMap[0].size.lg,
+            ...(JournalFieldsMap[0].actionsCol?.lg ?? {}),
         },
         [theme.breakpoints.up('xl')]: {
-            width: JournalFieldsMap[0].size.xl,
+            ...(JournalFieldsMap[0].actionsCol?.xl ?? {}),
         },
     },
     moreColumnsWidth: {
@@ -62,16 +62,8 @@ const useStyles = makeStyles(theme => ({
     },
 
     resultsTable: {
-        '& th, & td': {
+        '& th, & td:not[data-testid=collapsible-cell-closed]': {
             padding: '6px',
-        },
-    },
-
-    collapsedCell: {
-        backgroundColor: '#F5F5F5',
-        '& td': {
-            paddingBottom: 0,
-            paddingTop: 0,
         },
     },
 }));
@@ -99,6 +91,7 @@ const JournalsList = ({
                             checked={isAllSelected}
                             onChange={onToggleSelectAll}
                             isSelectable={isSelectable}
+                            classes={classes}
                         />
                         <TableBody>
                             {journals &&

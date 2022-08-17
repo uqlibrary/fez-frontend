@@ -12,6 +12,18 @@ export const JournalFieldsMap = [
         key: 'jnl_title',
         label: 'Journal title',
         subLabel: '',
+        actionsCol: {
+            xs: {
+                width: '30%',
+                padding: '6px',
+            },
+            sm: {
+                width: '20%',
+            },
+            md: {
+                width: 'auto',
+            },
+        },
         size: {
             // width - can be anything.
             xs: 12,

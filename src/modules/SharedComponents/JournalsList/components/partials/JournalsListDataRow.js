@@ -18,6 +18,41 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Box from '@material-ui/core/Box';
 import Collapse from '@material-ui/core/Collapse';
 import InputLabel from '@material-ui/core/InputLabel';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(
+    /* theme*/ () => ({
+        inputLabel: {
+            lineHeight: 1.3,
+            whiteSpace: 'normal',
+            textOverflow: 'ellipsis',
+            fontWeight: 600,
+        },
+        subLabel: {
+            display: 'block',
+            fontWeight: 400,
+        },
+        iconClosed: {
+            color: '#e5e5e5',
+        },
+        iconOpen: {
+            color: 'orange',
+        },
+
+        collapsibleRow: {
+            backgroundColor: '#F5F5F5',
+        },
+
+        collapsedCell: {
+            padding: 0,
+            borderBottom: 0,
+        },
+
+        expandedCell: {
+            padding: '6px',
+        },
+    }),
+);
 
 export const quartileFn = data => {
     const quartileList = [];
@@ -42,21 +77,15 @@ export const quartileFn = data => {
     return quartileList.length > 0 ? Array.min(quartileList) : null;
 };
 
-export const DataCollapsiblePanelContent = ({ item, data }) => {
+export const CollapsibleDataPanelContent = ({ item, data }) => {
+    const classesInternal = useStyles();
+
     return (
-        <Grid xs={12} sm={6} item>
+        <Grid xs={12} sm={6} item size="small">
             <Typography variant="body1">
-                <InputLabel
-                    shrink
-                    style={{
-                        lineHeight: 1.3,
-                        whiteSpace: 'normal',
-                        textOverflow: 'ellipsis',
-                        fontWeight: 600,
-                    }}
-                >
+                <InputLabel shrink className={classesInternal.inputLabel}>
                     {item.label}
-                    <span style={{ display: 'block', fontWeight: 400 }}>{item.subLabel}</span>
+                    <span className={classesInternal.inputLabel}>{item.subLabel}</span>
                 </InputLabel>
             </Typography>
             <Typography variant="body1">
@@ -64,42 +93,80 @@ export const DataCollapsiblePanelContent = ({ item, data }) => {
                 {data || ''}
                 {(data && item.suffix) || ''}
             </Typography>
-            <br />
         </Grid>
     );
 };
 
-DataCollapsiblePanelContent.propTypes = {
+CollapsibleDataPanelContent.propTypes = {
     item: PropTypes.object,
     data: PropTypes.string,
 };
 
+export const CollapsibleDataPanel = ({ row, open }) => {
+    const classesInternal = useStyles();
+
+    return (
+        <TableRow className={classesInternal.collapsibleRow}>
+            <TableCell
+                colSpan={2}
+                className={!open ? classesInternal.collapsedCell : classesInternal.expandedCell}
+                data-testid={`collapsible-cell-${open ? 'open' : 'closed'}`}
+                size="small"
+            >
+                <Collapse in={open} timeout="auto" unmountOnExit>
+                    <Box padding={2}>
+                        <Grid container>
+                            {JournalFieldsMap.slice(3).map(item => {
+                                const itemData = (row && item.translateFn(row)) || '';
+                                return (
+                                    <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
+                                        <CollapsibleDataPanelContent item={item} data={itemData} />
+                                    </React.Fragment>
+                                );
+                            })}
+                        </Grid>
+                    </Box>
+                </Collapse>
+            </TableCell>
+        </TableRow>
+    );
+};
+CollapsibleDataPanel.propTypes = {
+    row: PropTypes.object,
+    open: PropTypes.bool,
+};
+
 const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
+    const classesInternal = useStyles();
 
     return (
         <>
-            <TableRow className={classes.root} size={'small'}>
-                {isSelectable && (
-                    <TableCell size="small">
-                        <Checkbox
-                            size="small"
-                            id={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
-                            data-testid={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
-                            value={row.jnl_jid}
-                            onChange={onChange}
-                            checked={checked}
-                            label={`Select ${row.jnl_title}`}
-                            inputProps={{ 'aria-label': `Select ${row.jnl_title}` }}
-                        />
-                    </TableCell>
-                )}
-                <TableCell size="small">
-                    <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
-                        {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                    </IconButton>
+            <TableRow className={classes.root}>
+                <TableCell size="small" className={classes.actionsColumn}>
+                    <Grid container>
+                        {isSelectable && (
+                            <Grid xs={6} item>
+                                <Checkbox
+                                    size="small"
+                                    id={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
+                                    data-testid={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
+                                    value={row.jnl_jid}
+                                    onChange={onChange}
+                                    checked={checked}
+                                    label={`Select ${row.jnl_title}`}
+                                    inputProps={{ 'aria-label': `Select ${row.jnl_title}` }}
+                                />
+                            </Grid>
+                        )}
+                        <Grid xs={6} item>
+                            <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+                            </IconButton>
+                        </Grid>
+                    </Grid>
                 </TableCell>
-                <TableCell size="small" component="th" scope="row">
+                <TableCell size="small">
                     <Grid container>
                         <Grid xs={12} sm={8} item>
                             <Typography variant="body1" component="span">
@@ -119,9 +186,9 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                         </Hidden>
                         <Grid item xs={12} sm={2}>
                             {row.fez_journal_doaj ? (
-                                <LockOpenIcon style={{ color: 'orange' }} />
+                                <LockOpenIcon className={classesInternal.iconClosed} />
                             ) : (
-                                <LockOutlinedIcon style={{ color: '#e5e5e5' }} />
+                                <LockOutlinedIcon className={classesInternal.iconOpen} />
                             )}
                         </Grid>
                         <Hidden smUp>
@@ -135,24 +202,7 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                     </Grid>
                 </TableCell>
             </TableRow>
-            <TableRow className={classes.collapsedCell}>
-                <TableCell colSpan={3}>
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <Box padding={2}>
-                            <Grid container>
-                                {JournalFieldsMap.slice(3).map(item => {
-                                    const itemData = (row && item.translateFn(row)) || '';
-                                    return (
-                                        <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
-                                            <DataCollapsiblePanelContent item={item} data={itemData} />
-                                        </React.Fragment>
-                                    );
-                                })}
-                            </Grid>
-                        </Box>
-                    </Collapse>
-                </TableCell>
-            </TableRow>
+            <CollapsibleDataPanel row={row} open={open} />
         </>
     );
 };

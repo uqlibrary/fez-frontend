@@ -10,25 +10,28 @@ import Hidden from '@material-ui/core/Hidden';
 
 import { JournalFieldsMap } from './JournalFieldsMap';
 
-const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
+const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true }) => {
     return (
         <TableHead>
             <TableRow>
-                {isSelectable && (
-                    <TableCell>
-                        <Checkbox
-                            id="journal-list-header-col-1-select-all"
-                            data-testid="journal-list-header-col-1-select-all"
-                            onChange={onChange}
-                            checked={checked}
-                            label="Select All"
-                            inputProps={{ 'aria-label': 'Select All' }}
-                            size="small"
-                        />
-                    </TableCell>
-                )}
-                <TableCell />
-                <TableCell>
+                <TableCell size="small" className={classes.actionsColumn}>
+                    <Grid container>
+                        {isSelectable && (
+                            <Grid item size="small" xs={6}>
+                                <Checkbox
+                                    id="journal-list-header-col-1-select-all"
+                                    data-testid="journal-list-header-col-1-select-all"
+                                    onChange={onChange}
+                                    checked={checked}
+                                    label="Select All"
+                                    inputProps={{ 'aria-label': 'Select All' }}
+                                    size="small"
+                                />
+                            </Grid>
+                        )}
+                    </Grid>
+                </TableCell>
+                <TableCell size="small">
                     <Grid container>
                         {JournalFieldsMap.filter(item => item.compactView).map(header => {
                             return (
@@ -57,6 +60,7 @@ const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
 JournalsListHeaderRow.propTypes = {
     checked: PropTypes.bool,
     onChange: PropTypes.func,
+    classes: PropTypes.object,
     isSelectable: PropTypes.bool,
 };
 export default React.memo(JournalsListHeaderRow);
