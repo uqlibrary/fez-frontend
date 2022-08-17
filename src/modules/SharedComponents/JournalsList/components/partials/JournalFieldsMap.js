@@ -14,16 +14,12 @@ export const JournalFieldsMap = [
         subLabel: '',
         size: {
             // width - can be anything.
-            xs: 'auto',
-            sm: 'auto',
-            md: '55%',
-            lg: '60%',
-            xl: '60%',
+            xs: 12,
+            sm: 8,
         },
         prefix: '',
         suffix: '',
         compactView: true, // Does this display in the minimal view?
-        compactSize: 3, // Grid size - number between 1 and 12 - or set to boolean true to fill space left
         showTooltip: true,
         translateFn: data => {
             return data.jnl_title;
@@ -33,11 +29,15 @@ export const JournalFieldsMap = [
         key: 'fez_journal_doaj',
         label: 'Open access',
         subLabel: '',
-        size: 75,
+        size: {
+            // width - can be anything.
+            xs: 12,
+            sm: 2,
+        },
+        hidden: ['xs'],
         prefix: '',
         suffix: '',
         compactView: true,
-        compactSize: 2,
         titleHelp: {
             title: 'Open Access',
             text: (
@@ -90,11 +90,15 @@ export const JournalFieldsMap = [
         key: 'highest_quartile',
         label: 'Highest quartile',
         subLabel: 'Q1 is best',
-        size: 125,
+        size: {
+            // width - can be anything.
+            xs: 12,
+            sm: 2,
+        },
+        hidden: ['xs'],
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        compactSize: 4,
         titleHelp: {
             title: 'Highest quartile',
             text: (

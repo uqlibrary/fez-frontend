@@ -8,35 +8,45 @@ import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import Hidden from '@material-ui/core/Hidden';
 
-const JournalsListHeaderRow = ({ isSelectable = true }) => {
+import { JournalFieldsMap } from './JournalFieldsMap';
+
+const JournalsListHeaderRow = ({ checked, onChange, isSelectable = true }) => {
     return (
         <TableHead>
             <TableRow>
                 {isSelectable && (
-                    <TableCell size="small">
+                    <TableCell>
                         <Checkbox
-                            size="small"
                             id="journal-list-header-col-1-select-all"
                             data-testid="journal-list-header-col-1-select-all"
+                            onChange={onChange}
+                            checked={checked}
                             label="Select All"
                             inputProps={{ 'aria-label': 'Select All' }}
+                            size="small"
                         />
                     </TableCell>
                 )}
-                <TableCell size="small" />
-                <TableCell size="small">
+                <TableCell />
+                <TableCell>
                     <Grid container>
-                        <Grid xs={12} sm={8} item>
-                            Journal title
-                        </Grid>
-                        <Hidden xsDown>
-                            <Grid item xs={12} sm={2}>
-                                Open access
-                            </Grid>
-                            <Grid item xs={12} sm={2}>
-                                Highest quartile
-                            </Grid>
-                        </Hidden>
+                        {JournalFieldsMap.filter(item => item.compactView).map(header => {
+                            return (
+                                <React.Fragment key={header.key}>
+                                    {!!header.hidden ? (
+                                        <Hidden only={[...header.hidden]}>
+                                            <Grid item {...header.size}>
+                                                {header.label}
+                                            </Grid>
+                                        </Hidden>
+                                    ) : (
+                                        <Grid item {...header.size}>
+                                            {header.label}
+                                        </Grid>
+                                    )}
+                                </React.Fragment>
+                            );
+                        })}
                     </Grid>
                 </TableCell>
             </TableRow>
@@ -45,6 +55,8 @@ const JournalsListHeaderRow = ({ isSelectable = true }) => {
 };
 
 JournalsListHeaderRow.propTypes = {
+    checked: PropTypes.bool,
+    onChange: PropTypes.func,
     isSelectable: PropTypes.bool,
 };
 export default React.memo(JournalsListHeaderRow);

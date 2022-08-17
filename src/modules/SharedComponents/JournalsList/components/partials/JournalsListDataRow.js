@@ -42,9 +42,9 @@ export const quartileFn = data => {
     return quartileList.length > 0 ? Array.min(quartileList) : null;
 };
 
-export const DataCollapsiblePanelContent = ({ key, item, data }) => {
+export const DataCollapsiblePanelContent = ({ item, data }) => {
     return (
-        <Grid xs={12} sm={6} key={key} item>
+        <Grid xs={12} sm={6} item>
             <Typography variant="body1">
                 <InputLabel
                     shrink
@@ -70,12 +70,11 @@ export const DataCollapsiblePanelContent = ({ key, item, data }) => {
 };
 
 DataCollapsiblePanelContent.propTypes = {
-    key: PropTypes.string,
     item: PropTypes.object,
-    data: PropTypes.object,
+    data: PropTypes.string,
 };
 
-const JournalsListDataRow = ({ row, classes, isSelectable }) => {
+const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
 
     return (
@@ -88,6 +87,8 @@ const JournalsListDataRow = ({ row, classes, isSelectable }) => {
                             id={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
                             data-testid={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
                             value={row.jnl_jid}
+                            onChange={onChange}
+                            checked={checked}
                             label={`Select ${row.jnl_title}`}
                             inputProps={{ 'aria-label': `Select ${row.jnl_title}` }}
                         />
@@ -142,11 +143,9 @@ const JournalsListDataRow = ({ row, classes, isSelectable }) => {
                                 {JournalFieldsMap.slice(3).map(item => {
                                     const itemData = (row && item.translateFn(row)) || '';
                                     return (
-                                        <DataCollapsiblePanelContent
-                                            key={`${item.key}-${row.jnl_jid}`}
-                                            item={item}
-                                            data={itemData}
-                                        />
+                                        <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
+                                            <DataCollapsiblePanelContent item={item} data={itemData} />
+                                        </React.Fragment>
                                     );
                                 })}
                             </Grid>
@@ -160,6 +159,8 @@ const JournalsListDataRow = ({ row, classes, isSelectable }) => {
 
 JournalsListDataRow.propTypes = {
     row: PropTypes.object,
+    onChange: PropTypes.func,
+    checked: PropTypes.bool,
     isSelectable: PropTypes.bool,
     classes: PropTypes.any,
 };

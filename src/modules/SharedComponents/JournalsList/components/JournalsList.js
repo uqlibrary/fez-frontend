@@ -76,7 +76,14 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const JournalsList = ({ journals, isSelectable = true }) => {
+const JournalsList = ({
+    journals,
+    onSelectionChange,
+    onToggleSelectAll,
+    selected = {},
+    isSelectable = true,
+    isAllSelected,
+}) => {
     const classes = useStyles();
 
     return (
@@ -88,7 +95,11 @@ const JournalsList = ({ journals, isSelectable = true }) => {
                     className={classes.resultsTableContainer}
                 >
                     <Table aria-label="collapsible table" className={classes.resultsTable}>
-                        <JournalsListHeaderRow isSelectable={isSelectable} />
+                        <JournalsListHeaderRow
+                            checked={isAllSelected}
+                            onChange={onToggleSelectAll}
+                            isSelectable={isSelectable}
+                        />
                         <TableBody>
                             {journals &&
                                 journals.length > 0 &&
@@ -96,6 +107,8 @@ const JournalsList = ({ journals, isSelectable = true }) => {
                                     <JournalsListDataRow
                                         key={row.jnl_jid}
                                         row={row}
+                                        onChange={onSelectionChange}
+                                        checked={selected[row.jnl_jid]}
                                         isSelectable={isSelectable}
                                         classes={classes}
                                     />
