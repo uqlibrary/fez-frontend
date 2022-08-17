@@ -132,7 +132,7 @@ describe('AttachedFiles component', () => {
         });
 
         fireEvent.click(getByTestId('delete-file-3'));
-        expect(onDeleteFn).toHaveBeenCalledWith(3);
+        expect(onDeleteFn).toHaveBeenCalledWith('FezACML_My_UQ_eSpace_UPO_guidelines_2013.pdf.xml');
 
         fireEvent.change(getByTestId('dsi-label-2-input'), { target: { value: 'test file description' } });
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
@@ -169,8 +169,9 @@ describe('AttachedFiles component', () => {
         });
 
         act(() => {
-            fireEvent.click(getAllByRole('button')[0]);
+            fireEvent.click(getAllByRole('button')[1]);
         });
+
         const calendar = await waitFor(() => getAllByRole('presentation')[0]);
         fireEvent.click(getByText('26', calendar));
         expect(onDateChangeFn).toHaveBeenCalledWith('dsi_embargo_date', '2018-01-26', 0);
@@ -333,18 +334,21 @@ describe('AttachedFiles component', () => {
         const userIsAdmin = jest.spyOn(UserIsAdminHook, 'userIsAdmin');
         userIsAdmin.mockImplementation(() => true);
         const onDateChangeFn = jest.fn();
-        const { getByTitle, getByTestId, queryByTestId, getByText } = setup({
+        const { getByTestId, queryByTestId, getByText } = setup({
             canEdit: true,
             dataStreams: dataStreams,
             onDateChange: onDateChangeFn,
         });
 
+        // screen.debug(undefined, 10000);
+        // done();
+
         expect(
             getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),
         ).toBeInTheDocument();
-
         act(() => {
-            fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
+            // fireEvent.click(getByTitle('Click to open a preview of http://localhost/view/UQ:252236/test.mp4'));
+            fireEvent.click(getByTestId('preview-link-test.mp4'));
         });
         let previewEl = await waitFor(() => expect(getByTestId('media-preview')).toBeInTheDocument());
         act(() => {

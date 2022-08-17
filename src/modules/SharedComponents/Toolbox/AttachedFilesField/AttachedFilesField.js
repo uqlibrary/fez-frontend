@@ -4,9 +4,10 @@ import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
 
 export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
-    const callback = index => {
-        const fileToDelete = dataStreams[index];
-        const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
+    const callback = key => {
+        const indexToDelete = dataStreams.findIndex(item => item.dsi_dsid === key);
+        const fileToDelete = dataStreams[indexToDelete];
+        const newDataStreams = [...dataStreams.slice(0, indexToDelete), ...dataStreams.slice(indexToDelete + 1)];
         onDeleteAttachedFile(fileToDelete);
         setDataStreams(newDataStreams);
     };
@@ -47,7 +48,7 @@ export const shuffleFileOrder = (arr, from, to) => {
 };
 
 export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (key, oldPosition, newPosition) => {
+    const callback = (file, key, oldPosition, newPosition) => {
         const newDataStreams = [...dataStreams];
 
         newDataStreams.map(
@@ -55,7 +56,7 @@ export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams
                 (item.dsi_order = item.hasOwnProperty('dsi_order') && !!item.dsi_order ? item.dsi_order : index + 1),
         );
 
-        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_order === oldPosition);
+        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_dsid === file);
         const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order === newPosition);
 
         newDataStreams[sourceFileIndex].dsi_order = newPosition;

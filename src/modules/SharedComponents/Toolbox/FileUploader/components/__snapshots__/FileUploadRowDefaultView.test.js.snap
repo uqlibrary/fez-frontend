@@ -13,6 +13,24 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     alignItems="center"
     container={true}
     direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
     spacing={1}
   >
     <WithStyles(ForwardRef(Grid))
@@ -45,6 +63,24 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={false}
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -57,6 +93,24 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -155,6 +209,24 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={false}
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -167,6 +239,24 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -265,6 +355,24 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={false}
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -277,6 +385,24 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -379,6 +505,24 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={false}
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -393,6 +537,9 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
       "row": "FileUploadRowDefaultView-row-2",
       "selected": "FileUploadRowDefaultView-selected-5",
       "selector": "FileUploadRowDefaultView-selector-3",
+      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-8",
+      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-7",
+      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-9",
     }
   }
   disabled={false}
@@ -421,6 +568,24 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={true}
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -517,6 +682,24 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         name="test.pdf"
         onDelete={[MockFunction]}
       />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={2}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        disabled={false}
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>

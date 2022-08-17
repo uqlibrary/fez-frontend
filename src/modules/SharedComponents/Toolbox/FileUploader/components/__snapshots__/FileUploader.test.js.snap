@@ -6652,7 +6652,10 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -6706,7 +6709,10 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -6982,7 +6988,10 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={1}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -7598,7 +7607,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -7654,7 +7666,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -8101,7 +8116,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8155,7 +8173,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8432,7 +8453,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 1,
@@ -8488,7 +8512,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8765,7 +8792,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 5,
@@ -8821,7 +8851,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -9108,7 +9141,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 5,
@@ -9164,7 +9200,10 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -9621,7 +9660,10 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -9677,7 +9719,10 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onAccessConditionChange={[Function]}
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,

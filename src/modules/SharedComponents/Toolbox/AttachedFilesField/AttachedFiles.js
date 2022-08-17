@@ -154,7 +154,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) 
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
                       embargoDate: dataStream.dsi_embargo_date,
-                      fileOrder: (!!dataStream.dsi_order && dataStream.dsi_order) || key + 1,
+                      fileOrder: key + 1,
                       key: key,
                   };
               })
@@ -205,12 +205,12 @@ export const AttachedFiles = ({
 
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
 
-    const onFileDelete = index => () => onDelete(index);
+    const onFileDelete = file => () => onDelete(file);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
     // const onFileOrderChangeUp = index => (index > 0 ? onOrderChange(index, index - 1) : null);
-    const onFileOrderChangeUp = (key, index) => onOrderChange(key, index, index - 1);
-    const onFileOrderChangeDown = (key, index) => onOrderChange(key, index, index + 1);
+    const onFileOrderChangeUp = (file, key, index) => onOrderChange(file, key, index, index - 1);
+    const onFileOrderChangeDown = (file, key, index) => onOrderChange(file, key, index, index + 1);
     // const onFileOrderChangeDown = index =>  onOrderChange(index, index+1);
     return (
         <Grid item xs={12}>
@@ -279,7 +279,9 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
-                                                    onClick={() => onFileOrderChangeUp(item.key, index + 1)}
+                                                    onClick={() =>
+                                                        onFileOrderChangeUp(item.fileName, item.key, index + 1)
+                                                    }
                                                 >
                                                     <ExpandLess />
                                                 </IconButton>
@@ -358,7 +360,7 @@ export const AttachedFiles = ({
                                                             <span>
                                                                 <IconButton
                                                                     id={`delete-file-${index}`}
-                                                                    onClick={onFileDelete(index)}
+                                                                    onClick={onFileDelete(item.fileName)}
                                                                     disabled={disabled}
                                                                 >
                                                                     <Delete />
@@ -412,7 +414,9 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
-                                                    onClick={() => onFileOrderChangeDown(item.key, index + 1)}
+                                                    onClick={() =>
+                                                        onFileOrderChangeDown(item.fileName, item.key, index + 1)
+                                                    }
                                                 >
                                                     <ExpandMore />
                                                 </IconButton>

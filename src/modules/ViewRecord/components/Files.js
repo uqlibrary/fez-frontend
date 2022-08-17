@@ -438,11 +438,11 @@ export class FilesClass extends Component {
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
         // Here's something to play with for sorting the files.
-        const sortedData = [];
-        const attachedFiles = publication.fez_record_search_key_file_attachment_name;
-        attachedFiles.map(fileInformation => {
-            sortedData.push(...fileData.filter(item => item.fileName === fileInformation.rek_file_attachment_name));
-        });
+        // const sortedData = [];
+        // const attachedFiles = publication.fez_record_search_key_file_attachment_name;
+        // attachedFiles.map(fileInformation => {
+        //    sortedData.push(...fileData.filter(item => item.fileName === fileInformation.rek_file_attachment_name));
+        // });
 
         return (
             <Grid item xs={12}>

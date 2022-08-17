@@ -16,6 +16,7 @@ exports[`AttachedFilesField component should render default view 1`] = `
        - review security policy on Security tab
     </span>
   }
+  onOrderChange={[Function]}
 />
 `;
 
@@ -70,5 +71,6 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
        - review security policy on Security tab
     </span>
   }
+  onOrderChange={[Function]}
 />
 `;
