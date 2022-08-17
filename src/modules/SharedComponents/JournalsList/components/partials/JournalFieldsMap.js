@@ -14,14 +14,20 @@ export const JournalFieldsMap = [
         subLabel: '',
         actionsCol: {
             xs: {
-                width: '30%',
+                width: '10%',
                 padding: '6px',
             },
-            sm: {
-                width: '20%',
-            },
-            md: {
-                width: 'auto',
+            selectable: {
+                xs: {
+                    width: '30%',
+                    padding: '6px',
+                },
+                sm: {
+                    width: '20%',
+                },
+                md: {
+                    width: 'auto',
+                },
             },
         },
         size: {

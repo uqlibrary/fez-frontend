@@ -51,6 +51,10 @@ const useStyles = makeStyles(
         expandedCell: {
             padding: '6px',
         },
+
+        collapsibleContainerDataRow: {
+            paddingBottom: '12px',
+        },
     }),
 );
 
@@ -81,11 +85,11 @@ export const CollapsibleDataPanelContent = ({ item, data }) => {
     const classesInternal = useStyles();
 
     return (
-        <Grid xs={12} sm={6} item size="small">
+        <Grid xs={12} sm={6} item size="small" className={classesInternal.collapsibleContainerDataRow}>
             <Typography variant="body1">
                 <InputLabel shrink className={classesInternal.inputLabel}>
                     {item.label}
-                    <span className={classesInternal.inputLabel}>{item.subLabel}</span>
+                    {!!item.subLabel && <span className={classesInternal.subLabel}>{item.subLabel}</span>}
                 </InputLabel>
             </Typography>
             <Typography variant="body1">
@@ -114,7 +118,7 @@ export const CollapsibleDataPanel = ({ row, open }) => {
                 size="small"
             >
                 <Collapse in={open} timeout="auto" unmountOnExit>
-                    <Box padding={2}>
+                    <Box paddingTop={2} paddingX={2}>
                         <Grid container>
                             {JournalFieldsMap.slice(3).map(item => {
                                 const itemData = (row && item.translateFn(row)) || '';

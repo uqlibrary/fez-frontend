@@ -25,32 +25,31 @@ const useStyles = makeStyles(theme => ({
             gridTemplateColumns: 'auto auto 50px',
         },
     },
-    actionsColumn: {
-        ...(JournalFieldsMap[0].actionsCol?.xs ?? {}),
+    actionsColumn: isSelectable => ({
+        ...(isSelectable
+            ? JournalFieldsMap[0].actionsCol?.selectable?.xs ?? {}
+            : JournalFieldsMap[0].actionsCol?.xs ?? {}),
         [theme.breakpoints.up('sm')]: {
-            ...(JournalFieldsMap[0].actionsCol?.sm ?? {}),
+            ...(isSelectable
+                ? JournalFieldsMap[0].actionsCol?.selectable?.sm ?? {}
+                : JournalFieldsMap[0].actionsCol?.sm ?? {}),
         },
         [theme.breakpoints.up('md')]: {
-            ...(JournalFieldsMap[0].actionsCol?.md ?? {}),
+            ...(isSelectable
+                ? JournalFieldsMap[0].actionsCol?.selectable?.md ?? {}
+                : JournalFieldsMap[0].actionsCol?.md ?? {}),
         },
         [theme.breakpoints.up('lg')]: {
-            ...(JournalFieldsMap[0].actionsCol?.lg ?? {}),
+            ...(isSelectable
+                ? JournalFieldsMap[0].actionsCol?.selectable?.lg ?? {}
+                : JournalFieldsMap[0].actionsCol?.lg ?? {}),
         },
         [theme.breakpoints.up('xl')]: {
-            ...(JournalFieldsMap[0].actionsCol?.xl ?? {}),
+            ...(isSelectable
+                ? JournalFieldsMap[0].actionsCol?.selectable?.xl ?? {}
+                : JournalFieldsMap[0].actionsCol?.xl ?? {}),
         },
-    },
-    moreColumnsWidth: {
-        marginLeft: 4,
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            overflow: 'unset',
-        },
-        [theme.breakpoints.up('md')]: {
-            overflow: 'auto hidden',
-        },
-        flexGrow: 1,
-    },
+    }),
     headerRow: {
         borderBottom: '1px solid #CCC',
         width: '100%',
@@ -76,7 +75,7 @@ const JournalsList = ({
     isSelectable = true,
     isAllSelected,
 }) => {
-    const classes = useStyles();
+    const classes = useStyles(isSelectable);
 
     return (
         <Grid container spacing={0} id="journal-list" data-testid="journal-list">
