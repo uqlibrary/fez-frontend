@@ -35,6 +35,7 @@ export const JournalFieldsMap = [
             xs: 12,
             sm: 8,
         },
+        hidden: ['xs'],
         prefix: '',
         suffix: '',
         compactView: true, // Does this display in the minimal view?
@@ -56,6 +57,7 @@ export const JournalFieldsMap = [
         prefix: '',
         suffix: '',
         compactView: true,
+        mobileView: true,
         titleHelp: {
             title: 'Open Access',
             text: (
@@ -117,6 +119,7 @@ export const JournalFieldsMap = [
         prefix: 'Q',
         suffix: '',
         compactView: true,
+        mobileView: true,
         titleHelp: {
             title: 'Highest quartile',
             text: (

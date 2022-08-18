@@ -29,6 +29,12 @@ const useStyles = makeStyles(theme => ({
         ...(isSelectable
             ? JournalFieldsMap[0].actionsCol?.selectable?.xs ?? {}
             : JournalFieldsMap[0].actionsCol?.xs ?? {}),
+        [theme.breakpoints.down('xs')]: {
+            verticalAlign: 'top',
+            paddingLeft: 0,
+            paddingRight: 0,
+            paddingBottom: 0,
+        },
         [theme.breakpoints.up('sm')]: {
             ...(isSelectable
                 ? JournalFieldsMap[0].actionsCol?.selectable?.sm ?? {}
@@ -51,19 +57,34 @@ const useStyles = makeStyles(theme => ({
         },
     }),
     headerRow: {
-        borderBottom: '1px solid #CCC',
-        width: '100%',
-        overflowY: 'hidden',
-        height: 40,
-        [theme.breakpoints.up('md')]: {
-            height: 32,
-        },
+        borderBottomWidth: '2px',
     },
 
     resultsTable: {
         '& th, & td:not[data-testid=collapsible-cell-closed]': {
             padding: '6px',
         },
+    },
+    headerContainer: {
+        alignItems: 'flex-end',
+    },
+    dataRowContainer: {
+        alignItems: 'center',
+    },
+    inputLabel: {
+        color: 'rgba(0, 0, 0, 0.54)',
+        padding: 0,
+        overflow: 'hidden',
+        fontSize: '0.75rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        lineHeight: 1.1,
+        whiteSpace: 'normal',
+        textOverflow: 'ellipsis',
+        fontWeight: 600,
+    },
+    subLabel: {
+        display: 'block',
+        fontWeight: 400,
     },
 }));
 
