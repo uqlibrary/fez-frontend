@@ -27,10 +27,7 @@ export const JournalFieldsMap = [
                         padding: '6px',
                     },
                     sm: {
-                        width: '20%',
-                    },
-                    md: {
-                        width: 'auto',
+                        width: '15%',
                     },
                 },
             },

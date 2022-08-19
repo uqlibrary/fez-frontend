@@ -116,10 +116,11 @@ const JournalsList = ({
                         <TableBody>
                             {journals &&
                                 journals.length > 0 &&
-                                journals.map(row => (
+                                journals.map((row, index) => (
                                     <JournalsListDataRow
                                         key={row.jnl_jid}
                                         row={row}
+                                        index={index}
                                         onChange={onSelectionChange}
                                         checked={selected[row.jnl_jid]}
                                         isSelectable={isSelectable}

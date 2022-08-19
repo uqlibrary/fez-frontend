@@ -11,12 +11,12 @@ import Hidden from '@material-ui/core/Hidden';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import { useIsMobileView } from 'hooks';
 import { makeStyles } from '@material-ui/core/styles';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 const useStyles = makeStyles(theme => ({
     iconClosed: {
@@ -57,32 +57,14 @@ const useStyles = makeStyles(theme => ({
     headerContentTitle: {
         paddingTop: theme.spacing(1),
     },
+    externalLink: {
+        '& svg': {
+            float: 'none',
+        },
+    },
 }));
 
-export const quartileFn = data => {
-    const quartileList = [];
-
-    if (data.fez_journal_cite_score && data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.length > 0) {
-        data.fez_journal_cite_score.fez_journal_cite_score_asjc_code.map(item => {
-            quartileList.push(parseInt(item.jnl_cite_score_asjc_code_quartile, 10));
-        });
-    }
-
-    if (!!data.fez_journal_jcr_scie && data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.length > 0) {
-        data.fez_journal_jcr_scie.fez_journal_jcr_scie_category.map(item => {
-            quartileList.push(parseInt(item.jnl_jcr_scie_category_quartile.replace('Q', ''), 10));
-        });
-    }
-
-    if (data.fez_journal_jcr_ssci && data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.length > 0) {
-        data.fez_journal_jcr_ssci.fez_journal_jcr_ssci_category.map(item => {
-            quartileList.push(parseInt(item.jnl_jcr_ssci_category_quartile.replace('Q', ''), 10));
-        });
-    }
-    return quartileList.length > 0 ? Array.min(quartileList) : null;
-};
-
-const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, checked = false }) => {
+const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
     const classesInternal = useStyles();
     const isXsDown = useIsMobileView();
@@ -98,8 +80,8 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                             <Grid xs={6} item>
                                 <Checkbox
                                     size="small"
-                                    id={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
-                                    data-testid={`journal-list-data-col-1-checkbox-${row.jnl_jid}`}
+                                    id={`journal-list-data-col-1-checkbox-${index}`}
+                                    data-testid={`journal-list-data-col-1-checkbox-${index}`}
                                     value={row.jnl_jid}
                                     onChange={onChange}
                                     checked={checked}
@@ -120,13 +102,15 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                     <Grid container className={classes.dataRowContainer}>
                         <Grid sm={8} item>
                             <Typography variant="body1" component="span">
-                                <Link
+                                <ExternalLink
                                     href={`/journal/view/${row.jnl_jid}`}
                                     title={row.jnl_title}
                                     id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
+                                    className={classesInternal.externalLink}
+                                    inline
                                 >
                                     {row.jnl_title}
-                                </Link>
+                                </ExternalLink>
                             </Typography>
                         </Grid>
                         {compactViewFields.map(field => {
@@ -168,6 +152,7 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
 
 JournalsListDataRow.propTypes = {
     row: PropTypes.object,
+    index: PropTypes.number.isRequired,
     onChange: PropTypes.func,
     checked: PropTypes.bool,
     isSelectable: PropTypes.bool,
