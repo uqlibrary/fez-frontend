@@ -40,13 +40,15 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                             return (
                                 <React.Fragment key={header.key}>
                                     <Hidden
-                                        only={
-                                            !!header.collapsibleComponent.hidden && [
-                                                ...header.collapsibleComponent.hidden,
-                                            ]
-                                        }
+                                        {...(!!header.collapsibleComponent?.hiddenHeader
+                                            ? { only: [...header.collapsibleComponent?.hiddenHeader] }
+                                            : {})}
                                     >
-                                        <Grid item {...header.collapsibleComponent.size} className={classes.inputLabel}>
+                                        <Grid
+                                            item
+                                            {...header.collapsibleComponent?.sizeHeader}
+                                            className={classes.inputLabel}
+                                        >
                                             <Box display="flex" alignItems="flex-end" key={header.key}>
                                                 <Typography variant="body1" className={classes.inputLabel}>
                                                     {header.label}

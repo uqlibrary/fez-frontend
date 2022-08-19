@@ -17,15 +17,13 @@ const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstR
                 !isLastRow ? classes.collapsibleContainerDataRowBottom : ''
             }`}
         >
-            <Typography variant="body1">
-                <Box display="flex" alignItems="flex-end" key={item.key}>
-                    <Typography variant="body1" className={classes.inputLabel} component="span">
-                        {item.label}
-                        {!!item.subLabel && <span className={classes.subLabel}>{item.subLabel}</span>}
-                    </Typography>
-                    {!!item.titleHelp && <HelpIcon {...item.titleHelp} testId={item.key} iconSize={'small'} />}
-                </Box>
-            </Typography>
+            <Box display="flex" alignItems="flex-end" key={item.key}>
+                <Typography variant="body1" className={classes.inputLabel} component="span">
+                    {item.label}
+                    {!!item.subLabel && <span className={classes.subLabel}>{item.subLabel}</span>}
+                </Typography>
+                {!!item.titleHelp && <HelpIcon {...item.titleHelp} testId={item.key} iconSize={'small'} />}
+            </Box>
             <Typography variant="body1">
                 {(data && item.prefix) || ''}
                 {data || ''}

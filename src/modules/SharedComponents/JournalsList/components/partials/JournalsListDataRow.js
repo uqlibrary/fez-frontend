@@ -7,18 +7,14 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
-// import Hidden from '@material-ui/core/Hidden';
+import Hidden from '@material-ui/core/Hidden';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Box from '@material-ui/core/Box';
 import { useIsMobileView } from 'hooks';
 import { makeStyles } from '@material-ui/core/styles';
-import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 
@@ -91,7 +87,7 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
     const classesInternal = useStyles();
     const isXsDown = useIsMobileView();
 
-    const mobileLabels = JournalFieldsMap.filter(item => item.collapsibleComponent?.mobileView || false);
+    const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
 
     return (
         <>
@@ -133,58 +129,35 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                                 </Link>
                             </Typography>
                         </Grid>
-                        {isXsDown && (
-                            <Grid item xs={12} className={classesInternal.headerContentMobile}>
-                                <Typography variant="body1" component="div">
-                                    <Box display="flex" alignItems="flex-end" key={mobileLabels?.[0].key}>
-                                        <Typography variant="body1" className={classes.inputLabel} component="span">
-                                            {mobileLabels?.[0].label}
-                                            {!!mobileLabels?.[0].subLabel && (
-                                                <span className={classes.subLabel}>{mobileLabels?.[0].subLabel}</span>
-                                            )}
-                                        </Typography>
-                                        {!!mobileLabels?.[0].titleHelp && (
-                                            <HelpIcon
-                                                {...mobileLabels?.[0].titleHelp}
-                                                testId={mobileLabels?.[0].key}
-                                                iconSize={'small'}
-                                            />
-                                        )}
-                                    </Box>
-                                </Typography>
-                            </Grid>
-                        )}
-                        <Grid item xs={12} sm={2} className={classesInternal.headerContentMobile}>
-                            {row.fez_journal_doaj ? (
-                                <LockOpenIcon className={classesInternal.iconClosed} />
-                            ) : (
-                                <LockOutlinedIcon className={classesInternal.iconOpen} />
-                            )}
-                        </Grid>
-                        {isXsDown && (
-                            <Grid item xs={12} className={classesInternal.headerContentMobile}>
-                                <Typography variant="body1" component="div">
-                                    <Box display="flex" alignItems="flex-end" key={mobileLabels?.[1].key}>
-                                        <Typography variant="body1" className={classes.inputLabel} component="span">
-                                            {mobileLabels?.[1].label}
-                                            {!!mobileLabels?.[1].subLabel && (
-                                                <span className={classes.subLabel}>{mobileLabels?.[1].subLabel}</span>
-                                            )}
-                                        </Typography>
-                                        {!!mobileLabels?.[1].titleHelp && (
-                                            <HelpIcon
-                                                {...mobileLabels?.[1].titleHelp}
-                                                testId={mobileLabels?.[1].key}
-                                                iconSize={'small'}
-                                            />
-                                        )}
-                                    </Box>
-                                </Typography>
-                            </Grid>
-                        )}
-                        <Grid item xs={12} sm={2} className={classesInternal.headerContentMobile}>
-                            {`Q${quartileFn(row)}`}
-                        </Grid>
+                        {compactViewFields.map(field => {
+                            return (
+                                <React.Fragment key={field.key}>
+                                    <Hidden
+                                        {...(!!field.collapsibleComponent?.hiddenData
+                                            ? { only: [...field.collapsibleComponent?.hiddenData] }
+                                            : {})}
+                                    >
+                                        <Grid
+                                            item
+                                            {...field.collapsibleComponent?.sizeHeader}
+                                            className={classes.headerContentMobile}
+                                        >
+                                            {field.collapsibleComponent?.translateFn(field, {
+                                                ...classes,
+                                                ...classesInternal,
+                                            })}
+                                        </Grid>
+                                    </Hidden>
+                                    <Grid
+                                        item
+                                        {...field.collapsibleComponent?.sizeData}
+                                        className={classesInternal.headerContentMobile}
+                                    >
+                                        {field.translateFn(row, classesInternal)}
+                                    </Grid>
+                                </React.Fragment>
+                            );
+                        })}
                     </Grid>
                 </TableCell>
             </TableRow>
