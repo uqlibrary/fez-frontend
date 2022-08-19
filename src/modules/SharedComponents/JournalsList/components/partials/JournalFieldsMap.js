@@ -12,33 +12,44 @@ export const JournalFieldsMap = [
         key: 'jnl_title',
         label: 'Journal title',
         subLabel: '',
-        actionsCol: {
-            xs: {
-                width: '10%',
-                padding: '6px',
-            },
-            selectable: {
+        collapsibleComponent: {
+            actionsCol: {
                 xs: {
-                    width: '30%',
+                    width: '10%',
                     padding: '6px',
                 },
-                sm: {
-                    width: '20%',
-                },
-                md: {
-                    width: 'auto',
+                selectable: {
+                    xs: {
+                        width: '30%',
+                        padding: '6px',
+                    },
+                    sm: {
+                        width: '20%',
+                    },
+                    md: {
+                        width: 'auto',
+                    },
                 },
             },
+            size: {
+                // width - can be anything.
+                xs: 12,
+                sm: 8,
+            },
+            hidden: ['xs'],
         },
         size: {
             // width - can be anything.
-            xs: 12,
-            sm: 8,
+            xs: 'auto',
+            sm: 'auto',
+            md: '55%',
+            lg: '60%',
+            xl: '60%',
         },
-        hidden: ['xs'],
         prefix: '',
         suffix: '',
         compactView: true, // Does this display in the minimal view?
+        compactSize: 3, // Grid size - number between 1 and 12 - or set to boolean true to fill space left
         showTooltip: true,
         translateFn: data => {
             return data.jnl_title;
@@ -48,16 +59,20 @@ export const JournalFieldsMap = [
         key: 'fez_journal_doaj',
         label: 'Open access',
         subLabel: '',
-        size: {
-            // width - can be anything.
-            xs: 12,
-            sm: 2,
+        size: 75,
+        collapsibleComponent: {
+            size: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            hidden: ['xs'],
+            mobileView: true,
         },
-        hidden: ['xs'],
         prefix: '',
         suffix: '',
         compactView: true,
-        mobileView: true,
+        compactSize: 2,
         titleHelp: {
             title: 'Open Access',
             text: (
@@ -110,16 +125,20 @@ export const JournalFieldsMap = [
         key: 'highest_quartile',
         label: 'Highest quartile',
         subLabel: 'Q1 is best',
-        size: {
-            // width - can be anything.
-            xs: 12,
-            sm: 2,
+        collapsibleComponent: {
+            size: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            hidden: ['xs'],
+            mobileView: true,
         },
-        hidden: ['xs'],
+        size: 125,
         prefix: 'Q',
         suffix: '',
         compactView: true,
-        mobileView: true,
+        compactSize: 4,
         titleHelp: {
             title: 'Highest quartile',
             text: (

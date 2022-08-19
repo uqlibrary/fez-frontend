@@ -27,8 +27,8 @@ const useStyles = makeStyles(theme => ({
     },
     actionsColumn: isSelectable => ({
         ...(isSelectable
-            ? JournalFieldsMap[0].actionsCol?.selectable?.xs ?? {}
-            : JournalFieldsMap[0].actionsCol?.xs ?? {}),
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? {}
+            : JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ?? {}),
         [theme.breakpoints.down('xs')]: {
             verticalAlign: 'top',
             paddingLeft: 0,
@@ -37,23 +37,23 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].actionsCol?.selectable?.sm ?? {}
-                : JournalFieldsMap[0].actionsCol?.sm ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? {}
+                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ?? {}),
         },
         [theme.breakpoints.up('md')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].actionsCol?.selectable?.md ?? {}
-                : JournalFieldsMap[0].actionsCol?.md ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? {}
+                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ?? {}),
         },
         [theme.breakpoints.up('lg')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].actionsCol?.selectable?.lg ?? {}
-                : JournalFieldsMap[0].actionsCol?.lg ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? {}
+                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ?? {}),
         },
         [theme.breakpoints.up('xl')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].actionsCol?.selectable?.xl ?? {}
-                : JournalFieldsMap[0].actionsCol?.xl ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? {}
+                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ?? {}),
         },
     }),
     headerRow: {

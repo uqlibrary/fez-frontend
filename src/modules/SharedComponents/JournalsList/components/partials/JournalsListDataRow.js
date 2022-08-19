@@ -7,7 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
-import Hidden from '@material-ui/core/Hidden';
+// import Hidden from '@material-ui/core/Hidden';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
@@ -16,10 +16,11 @@ import Typography from '@material-ui/core/Typography';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
+import { useIsMobileView } from 'hooks';
 import { makeStyles } from '@material-ui/core/styles';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import { useIsMobileView } from 'hooks';
+
+import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 
 const useStyles = makeStyles(theme => ({
     iconClosed: {
@@ -85,120 +86,15 @@ export const quartileFn = data => {
     return quartileList.length > 0 ? Array.min(quartileList) : null;
 };
 
-export const CollapsibleDataPanelContent = ({ item, data, classes, isFirstRow = false, isLastRow = false }) => {
-    const classesInternal = useStyles();
-    return (
-        <Grid
-            xs={12}
-            sm={6}
-            item
-            size="small"
-            className={`${!isFirstRow ? classesInternal.collapsibleContainerDataRowTop : ''} ${
-                !isLastRow ? classesInternal.collapsibleContainerDataRowBottom : ''
-            }`}
-        >
-            <Typography variant="body1">
-                <Box display="flex" alignItems="flex-end" key={item.key}>
-                    <Typography variant="body1" className={classes.inputLabel} component="span">
-                        {item.label}
-                        {!!item.subLabel && <span className={classes.subLabel}>{item.subLabel}</span>}
-                    </Typography>
-                    {!!item.titleHelp && <HelpIcon {...item.titleHelp} testId={item.key} iconSize={'small'} />}
-                </Box>
-            </Typography>
-            <Typography variant="body1">
-                {(data && item.prefix) || ''}
-                {data || ''}
-                {(data && item.suffix) || ''}
-            </Typography>
-        </Grid>
-    );
-};
-
-CollapsibleDataPanelContent.propTypes = {
-    item: PropTypes.object,
-    data: PropTypes.string,
-    classes: PropTypes.object,
-    isFirstRow: PropTypes.bool,
-    isLastRow: PropTypes.bool,
-};
-
-export const CollapsibleDataPanel = ({ row, classes, open }) => {
-    const classesInternal = useStyles();
-    const isXsDown = useIsMobileView();
-    const dataItems = JournalFieldsMap.filter(item => !item.compactView);
-
-    return (
-        <TableRow className={classesInternal.collapsibleRow}>
-            <TableCell
-                colSpan={2}
-                className={!open ? classesInternal.collapsedCell : classesInternal.expandedCell}
-                data-testid={`collapsible-cell-${open ? 'open' : 'closed'}`}
-                size="small"
-            >
-                <Collapse in={open} timeout="auto" unmountOnExit>
-                    <Box padding={1}>
-                        <Grid container>
-                            {dataItems.map((item, index) => {
-                                const itemData = (row && item.translateFn(row)) || '';
-                                return (
-                                    <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
-                                        <CollapsibleDataPanelContent
-                                            item={item}
-                                            data={itemData}
-                                            classes={classes}
-                                            {...((isXsDown && index === 0) || (!isXsDown && index <= 1)
-                                                ? { isFirstRow: true }
-                                                : {})}
-                                            {...((isXsDown && index === dataItems.length - 1) ||
-                                            (!isXsDown && index >= dataItems.length - 2)
-                                                ? { isLastRow: true }
-                                                : {})}
-                                        />
-                                    </React.Fragment>
-                                );
-                            })}
-                        </Grid>
-                    </Box>
-                </Collapse>
-            </TableCell>
-        </TableRow>
-    );
-};
-CollapsibleDataPanel.propTypes = {
-    row: PropTypes.object,
-    classes: PropTypes.object,
-    open: PropTypes.bool,
-};
-
 const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, checked = false }) => {
     const [open, setOpen] = React.useState(false);
     const classesInternal = useStyles();
     const isXsDown = useIsMobileView();
 
-    const mobileLabels = JournalFieldsMap.filter(item => item.mobileView);
+    const mobileLabels = JournalFieldsMap.filter(item => item.collapsibleComponent?.mobileView || false);
 
     return (
         <>
-            <Hidden smUp>
-                <TableRow className={classes.root}>
-                    <TableCell size="small" colSpan={2} className={classesInternal.mobileTitle} padding="none">
-                        <Grid container>
-                            <Grid xs={12} item className={classesInternal.headerContentTitle}>
-                                <Typography variant="body1" component="span">
-                                    <Link
-                                        href={`/journal/view/${row.jnl_jid}`}
-                                        title={row.jnl_title}
-                                        id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
-                                    >
-                                        {row.jnl_title}
-                                    </Link>
-                                </Typography>
-                            </Grid>
-                        </Grid>
-                    </TableCell>
-                </TableRow>
-            </Hidden>
             <TableRow className={classes.root}>
                 <TableCell size="small" className={classes.actionsColumn} {...(isXsDown ? { padding: 'none' } : {})}>
                     <Grid container className={classes.dataRowContainer}>
@@ -226,22 +122,20 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
 
                 <TableCell size="small">
                     <Grid container className={classes.dataRowContainer}>
-                        <Hidden xsDown>
-                            <Grid sm={8} item>
-                                <Typography variant="body1" component="span">
-                                    <Link
-                                        href={`/journal/view/${row.jnl_jid}`}
-                                        title={row.jnl_title}
-                                        id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
-                                    >
-                                        {row.jnl_title}
-                                    </Link>
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden smUp>
+                        <Grid sm={8} item>
+                            <Typography variant="body1" component="span">
+                                <Link
+                                    href={`/journal/view/${row.jnl_jid}`}
+                                    title={row.jnl_title}
+                                    id={sanitiseId(`${row.jnl_jid}-${row.jnl_title}`)}
+                                >
+                                    {row.jnl_title}
+                                </Link>
+                            </Typography>
+                        </Grid>
+                        {isXsDown && (
                             <Grid item xs={12} className={classesInternal.headerContentMobile}>
-                                <Typography variant="body1">
+                                <Typography variant="body1" component="div">
                                     <Box display="flex" alignItems="flex-end" key={mobileLabels?.[0].key}>
                                         <Typography variant="body1" className={classes.inputLabel} component="span">
                                             {mobileLabels?.[0].label}
@@ -259,7 +153,7 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                                     </Box>
                                 </Typography>
                             </Grid>
-                        </Hidden>
+                        )}
                         <Grid item xs={12} sm={2} className={classesInternal.headerContentMobile}>
                             {row.fez_journal_doaj ? (
                                 <LockOpenIcon className={classesInternal.iconClosed} />
@@ -267,9 +161,9 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                                 <LockOutlinedIcon className={classesInternal.iconOpen} />
                             )}
                         </Grid>
-                        <Hidden smUp>
+                        {isXsDown && (
                             <Grid item xs={12} className={classesInternal.headerContentMobile}>
-                                <Typography variant="body1">
+                                <Typography variant="body1" component="div">
                                     <Box display="flex" alignItems="flex-end" key={mobileLabels?.[1].key}>
                                         <Typography variant="body1" className={classes.inputLabel} component="span">
                                             {mobileLabels?.[1].label}
@@ -287,14 +181,14 @@ const JournalsListDataRow = ({ row, classes, isSelectable = false, onChange, che
                                     </Box>
                                 </Typography>
                             </Grid>
-                        </Hidden>
+                        )}
                         <Grid item xs={12} sm={2} className={classesInternal.headerContentMobile}>
                             {`Q${quartileFn(row)}`}
                         </Grid>
                     </Grid>
                 </TableCell>
             </TableRow>
-            <CollapsibleDataPanel row={row} open={open} classes={classes} />
+            <JournalsListCollapsibleDataPanel row={row} open={open} classes={{ ...classes, ...classesInternal }} />
         </>
     );
 };

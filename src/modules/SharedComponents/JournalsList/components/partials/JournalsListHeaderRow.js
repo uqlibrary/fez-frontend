@@ -39,8 +39,14 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                         {JournalFieldsMap.filter(item => item.compactView).map(header => {
                             return (
                                 <React.Fragment key={header.key}>
-                                    <Hidden only={!!header.hidden && [...header.hidden]}>
-                                        <Grid item {...header.size} className={classes.inputLabel}>
+                                    <Hidden
+                                        only={
+                                            !!header.collapsibleComponent.hidden && [
+                                                ...header.collapsibleComponent.hidden,
+                                            ]
+                                        }
+                                    >
+                                        <Grid item {...header.collapsibleComponent.size} className={classes.inputLabel}>
                                             <Box display="flex" alignItems="flex-end" key={header.key}>
                                                 <Typography variant="body1" className={classes.inputLabel}>
                                                     {header.label}
