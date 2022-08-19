@@ -42,7 +42,7 @@ describe('NotFound page component', () => {
     });
 
     it('should render auth required page', () => {
-        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.contact }));
+        useLocationHook.mockImplementation(() => ({ pathname: pathConfig.about }));
         useAccountContext.mockImplementation(() => ({ account: null }));
 
         const { getByText } = setup();

@@ -19,12 +19,28 @@ import { locale } from 'locale';
 import { RecordsSelectorContext } from 'context';
 
 import { userIsAdmin, userIsResearcher, userIsAuthor } from 'hooks';
-import { PUB_SEARCH_BULK_EXPORT_SIZE } from 'config/general';
+import { PUB_SEARCH_BULK_EXPORT_SIZE, COLLECTION_VIEW_TYPE } from 'config/general';
 import { getAdvancedSearchFields, getQueryParams, useQueryStringParams, useSearchRecordsControls } from '../hooks';
 import hash from 'hash-sum';
 import ImageGallery from 'modules/SharedComponents/ImageGallery/ImageGallery';
 
+/*
+a method to ensure we only use the view type strings as
+defined in general.js. This is used both by the code when loading
+a result directly, and when the user changes the display type via
+the UI - which also updates the querystring, hence the need for
+a normalised value there
+*/
+export const normaliseDisplayLookup = raw => {
+    if (!!!raw) return COLLECTION_VIEW_TYPE[0].value;
+
+    return (
+        COLLECTION_VIEW_TYPE.filter(viewType => viewType.id === raw || viewType.value === raw)?.[0]?.value ??
+        COLLECTION_VIEW_TYPE[0].value
+    );
+};
 const SearchRecords = ({
+    account,
     author,
     actions,
     canUseExport,
@@ -53,8 +69,19 @@ const SearchRecords = ({
         canBulkExport,
         isUnpublishedBufferPage,
     );
+
     const queryParamsHash = hash(queryParams);
     const [searchParams, setSearchParams] = useState(queryParams);
+    const [userSelectedDisplayAs, setUserSelectedDisplayAs] = React.useState(null);
+
+    React.useEffect(() => {
+        /* istanbul ignore next */
+        if (!!userSelectedDisplayAs && userSelectedDisplayAs !== queryParams.displayRecordsAs) {
+            /* istanbul ignore next */
+            updateQueryString({ ...queryParams, displayRecordsAs: userSelectedDisplayAs });
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [queryParamsHash]);
 
     const {
         pageSizeChanged,
@@ -73,6 +100,20 @@ const SearchRecords = ({
     };
 
     /**
+     * Handle the user changing the Display As view type via the UI.
+     * This function saves the user choice to state and then forwards
+     * that choice on to the function defined in useSearchRecordsControls.
+     * The state value is used as a user-choice override for any other
+     * displayAs values coming from either the URL or any Collection record
+     * being searched upon.
+     * @param {string} displayAs - the string value of the selected option
+     */
+    const onDisplayRecordsAsChanged = displayAs => {
+        setUserSelectedDisplayAs(displayAs === 'auto' ? /* istanbul ignore next */ null : displayAs);
+        displayRecordsAsChanged(displayAs);
+    };
+
+    /**
      * Effect to handle initial render
      */
     React.useEffect(() => {
@@ -88,18 +129,22 @@ const SearchRecords = ({
      */
     React.useEffect(() => {
         return history.listen(location => {
-            // we can't use location.state to send state around,
-            // as state changes are async and might not be up-to-date
-            const queryParams = getQueryParams(
-                location.search.substr(1),
-                canBulkExport,
-                isUnpublishedBufferPage,
-                searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
-            );
-            setSearchParams(queryParams);
-            actions.searchEspacePublications(queryParams);
-            actions.clearSearchQuery();
-            actions.resetExportPublicationsStatus();
+            // Don't mess with location if the user is clicking a link to view record details.
+            // PT #182603156
+            if (!location.pathname.startsWith('/view/')) {
+                // we can't use location.state to send state around,
+                // as state changes are async and might not be up-to-date
+                const queryParams = getQueryParams(
+                    location.search.substr(1),
+                    canBulkExport,
+                    isUnpublishedBufferPage,
+                    searchQuery?.activeFacets?.showOpenAccessOnly === 'true',
+                );
+                setSearchParams(queryParams);
+                actions.searchEspacePublications(queryParams);
+                actions.clearSearchQuery();
+                actions.resetExportPublicationsStatus();
+            }
         });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryParamsHash]);
@@ -113,7 +158,13 @@ const SearchRecords = ({
         message: txt.errorAlert.message(locale.global.errorMessages.generic),
     };
     const initSortingData = locale.components.sorting;
-    const displayLookup = searchParams.displayRecordsAs ?? publicationsListDefaultView?.lookup ?? null;
+
+    const displayLookup = normaliseDisplayLookup(
+        userSelectedDisplayAs ??
+            (searchParams.displayRecordsAs === 'auto' ? null : searchParams.displayRecordsAs) ??
+            publicationsListDefaultView?.id ??
+            null,
+    );
     const newSortingData = initSortingData.sortBy.filter(option =>
         option.exclude ? option.exclude.some(item => item !== displayLookup) : true,
     );
@@ -122,7 +173,12 @@ const SearchRecords = ({
     const SelectRecordView = publicationsList => {
         switch (displayLookup) {
             case 'image-gallery':
-                return <ImageGallery publicationsList={publicationsList} security={{ isAdmin, isAuthor, author }} />;
+                return (
+                    <ImageGallery
+                        publicationsList={publicationsList}
+                        security={{ isAdmin: !!isAdmin, isAuthor: !!isAuthor, author, account }}
+                    />
+                );
             case 'auto':
             case 'standard':
             default:
@@ -132,7 +188,7 @@ const SearchRecords = ({
                         showAdminActions={isAdmin || isUnpublishedBufferPage}
                         showUnpublishedBufferFields={isUnpublishedBufferPage}
                         showImageThumbnails
-                        security={{ isAdmin, isAuthor, author }}
+                        security={{ isAdmin, isAuthor, author, account }}
                     />
                 );
         }
@@ -198,6 +254,7 @@ const SearchRecords = ({
                                             locale={txt.bulkExport}
                                             pageSize={PUB_SEARCH_BULK_EXPORT_SIZE}
                                             totalMatches={publicationsListPagingData.total}
+                                            disabled={isLoadingOrExporting}
                                         />
                                     )}
                                 </Grid>
@@ -209,12 +266,12 @@ const SearchRecords = ({
                                         onExportPublications={handleExport}
                                         onPageSizeChanged={pageSizeChanged}
                                         onSortByChanged={sortByChanged}
-                                        onDisplayRecordsAsChanged={displayRecordsAsChanged}
+                                        onDisplayRecordsAsChanged={onDisplayRecordsAsChanged}
                                         pageSize={searchParams.pageSize}
                                         pagingData={pagingData}
                                         sortBy={searchParams.sortBy}
                                         sortDirection={searchParams.sortDirection}
-                                        displayRecordsAs={searchParams.displayRecordsAs}
+                                        displayRecordsAs={displayLookup}
                                         sortingData={sortingData}
                                     />
                                 </Grid>
@@ -296,6 +353,7 @@ const SearchRecords = ({
 };
 
 SearchRecords.propTypes = {
+    account: PropTypes.object,
     author: PropTypes.object,
     actions: PropTypes.object,
     canUseExport: PropTypes.bool,

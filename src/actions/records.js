@@ -829,6 +829,33 @@ export const copyToOrRemoveFromCollection = (records, data, isRemoveFrom = false
     };
 };
 
+export const copyToOrRemoveFromCommunity = (records, data, isRemoveFrom = false) => {
+    const copyToOrRemoveFromCommunityRequest = isRemoveFrom
+        ? transformers.getRemoveFromCommunityData(records, data)
+        : transformers.getCopyToCommunityData(records, data);
+    return async dispatch => {
+        dispatch({
+            type: actions.CHANGE_COMMUNITIES_INPROGRESS,
+        });
+        try {
+            const response = await patch(NEW_RECORD_API(), copyToOrRemoveFromCommunityRequest);
+            dispatch({
+                type: actions.CHANGE_COMMUNITIES_SUCCESS,
+                payload: response,
+            });
+
+            return Promise.resolve(response);
+        } catch (e) {
+            dispatch({
+                type: actions.CHANGE_COMMUNITIES_FAILED,
+                payload: e,
+            });
+
+            return Promise.reject(e);
+        }
+    };
+};
+
 /**
  * @param {array} records
  */

@@ -32,8 +32,12 @@ export const SelectedKeywords = ({ onKeywordDelete, keywords }) => {
                                 onKeywordDelete={onKeywordDelete}
                             />
                             {addSeparator && (
-                                <span className={classes.separator} key={`separator-${index}`}>
-                                    +
+                                <span
+                                    className={classes.separator}
+                                    id={`separator-${index}`}
+                                    key={`separator-${index}`}
+                                >
+                                    {keywords[index + 1].type.toLowerCase() === 'keyword' ? 'AND' : 'OR'}
                                 </span>
                             )}
                         </React.Fragment>

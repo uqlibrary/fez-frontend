@@ -24,7 +24,6 @@ const handlers = {
     }),
 
     [actions.VIEW_COLLECTIONS_LOADED]: (state, action) => {
-        // console.log('COLLECTIONS LOADED', state);
         const uniqueValues = new Set();
         const collectionList = [action.payload, ...state.collectionList];
         // collectionList.reverse();

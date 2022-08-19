@@ -39,8 +39,7 @@ export default {
         index: {
             title: 'eSpace',
         },
-        contact: {
-            title: 'Contact UQ eSpace',
+        about: {
             children: (
                 <StandardCard noHeader>
                     <h3>General Enquiries</h3>

@@ -11,11 +11,13 @@ import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
 import Collapse from '@material-ui/core/Collapse';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import CommunityCollectionsSorting from './CommunityCollectionsSorting';
 import Button from '@material-ui/core/Button';
 import { communityCollectionsConfig } from 'config';
 import Add from '@material-ui/icons/Add';
+import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
+import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
+import param from 'can-param';
 import { Grid } from '@material-ui/core';
 import { Hidden } from '@material-ui/core';
 
@@ -107,6 +109,13 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
     const collectionList = useSelector(state => state.get('viewCollectionsReducer').collectionList);
     const collectionListLoading = useSelector(state => state.get('viewCollectionsReducer').loadingCollections);
     const loadingCollectionsPid = useSelector(state => state.get('viewCollectionsReducer').loadingCollectionsPid);
+
+    const exportCollectionsLoading = useSelector(
+        state => state.get('exportCollectionsReducer').exportCollectionsLoading,
+    );
+    const exportingCollectionsPid = useSelector(state => state.get('exportCollectionsReducer').exportingCollectionsPid);
+    const isLoadingOrExporting = collectionListLoading || exportCollectionsLoading;
+
     const classes = useStyles();
 
     const filteredData = collectionList.filter(obj => obj.parent === pid);
@@ -119,6 +128,19 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
         per_page: finalList.per_page,
         current_page: finalList.current_page,
     };
+
+    const location = {
+        search: `?${param({
+            pid,
+            page: PagingData.current_page,
+            pageSize: PagingData.per_page,
+            sortBy,
+            sortDirection,
+        })}`,
+    };
+
+    const { queryParams } = useQueryStringParams(location);
+    const { handleCollectionExport } = useCommunityCollectionControls(queryParams, actions);
 
     const sortByChanged = (sortby, direction) => {
         setSortDirection(direction);
@@ -205,7 +227,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                         title,
                                     )}
                                 </Typography>
-                                <CommunityCollectionsSorting
+                                <PublicationsListSorting
                                     data-testid="embedded-collections-sorting-top"
                                     exportData={conf.export}
                                     pagingData={PagingData}
@@ -215,173 +237,197 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                     onSortByChanged={sortByChanged}
                                     onPageSizeChanged={pageSizeChanged}
                                     pageSize={PagingData.per_page}
-                                    isCollection
+                                    canUseExport
+                                    onExportPublications={handleCollectionExport}
+                                    disabled={isLoadingOrExporting}
                                 />
 
                                 <PublicationsListPaging
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}
-                                    disabled={false}
+                                    disabled={isLoadingOrExporting}
                                     pagingId="embedded-collections-paging-top"
                                     data-testid="embedded-collections-paging-top"
                                 />
-                                <Grid container>
-                                    <Grid container className={classes.responsiveMin}>
-                                        <Grid
-                                            container
-                                            data-testid="embedded-collections-primary-header"
-                                            spacing={0}
-                                            className={classes.primaryHeader}
-                                        >
+                                {exportCollectionsLoading && exportingCollectionsPid === pid && (
+                                    <div>
+                                        <InlineLoader
+                                            loaderId="collections-page-exporting"
+                                            message={conf.loading.exportLoadingMessage}
+                                        />
+                                    </div>
+                                )}
+                                {exportingCollectionsPid !== pid && (
+                                    <Grid container>
+                                        <Grid container className={classes.responsiveMin}>
                                             <Grid
-                                                item
-                                                xs={10}
-                                                sm={adminUser ? 8 : 9}
-                                                md={adminUser ? 6 : 7}
-                                                className={classes.dateField}
+                                                container
+                                                data-testid="embedded-collections-primary-header"
+                                                spacing={0}
+                                                className={classes.primaryHeader}
                                             >
-                                                {labels.title}
-                                            </Grid>
-                                            <Hidden xsDown>
-                                                <Grid item sm={2} md={1} className={classes.centerAlign}>
-                                                    {communityCollectionsConfig.viewCommunityTitle}
-                                                </Grid>
-                                            </Hidden>
-                                            <Hidden smDown>
-                                                <Grid item xs={2} className={classes.dateField}>
-                                                    {labels.creation_date}
-                                                </Grid>
-                                                <Grid item xs={2} className={classes.dateField}>
-                                                    {labels.updated_date}
-                                                </Grid>
-                                            </Hidden>
-                                            <Hidden xsDown>
-                                                {!!adminUser && (
-                                                    <Grid
-                                                        item
-                                                        xs={2}
-                                                        md={1}
-                                                        className={`${classes.dateField} ${classes.centerAlign}`}
-                                                    >
-                                                        {labels.actions}
-                                                    </Grid>
-                                                )}
-                                            </Hidden>
-                                            <Hidden smUp>
-                                                <Grid item xs={2} className={classes.centerAlign}>
-                                                    View
-                                                </Grid>
-                                            </Hidden>
-                                        </Grid>
-                                        <Grid container data-testid="embedded-collections-primary-body">
-                                            {finalList.data.map(row => (
                                                 <Grid
-                                                    className={classes.collectionRow}
-                                                    container
-                                                    key={row.rek_pid}
-                                                    id={`row-${row.rek_pid}`}
-                                                    data-testid={`row-${row.rek_pid}`}
+                                                    item
+                                                    xs={10}
+                                                    sm={adminUser ? 8 : 9}
+                                                    md={adminUser ? 6 : 7}
+                                                    className={classes.dateField}
                                                 >
-                                                    <Grid
-                                                        item
-                                                        xs={10}
-                                                        sm={adminUser ? 8 : 9}
-                                                        md={adminUser ? 6 : 7}
-                                                        className={classes.dateField}
-                                                    >
-                                                        <Typography variant="body2">
-                                                            <Link
-                                                                to={pathConfig.records.view(row.rek_pid)}
-                                                                id={`collection-title-${row.rek_pid}`}
-                                                                data-testid={`collection-title-${row.rek_pid}`}
-                                                            >
-                                                                {ReactHtmlParser(row.rek_title)}
-                                                            </Link>
-                                                        </Typography>
-                                                        {!!row.rek_description && (
-                                                            <Typography variant="caption">
-                                                                {row.rek_description}
-                                                            </Typography>
-                                                        )}
-                                                        <Hidden mdUp>
-                                                            <div>
-                                                                <Typography
-                                                                    variant="caption"
-                                                                    className={classes.italic}
-                                                                >
-                                                                    {communityCollectionsConfig.formatCreationDate(
-                                                                        moment(row.rek_created_date)
-                                                                            .local()
-                                                                            .format(conf.dateFormat),
-                                                                    )}
-                                                                    <Hidden smUp>
-                                                                        <br />
-                                                                    </Hidden>
-                                                                    <Hidden xsDown> / </Hidden>
-                                                                    {communityCollectionsConfig.formatUpdatedDate(
-                                                                        moment(row.rek_updated_date)
-                                                                            .local()
-                                                                            .format(conf.dateFormat),
-                                                                    )}
-                                                                </Typography>
-                                                            </div>
-                                                        </Hidden>
+                                                    {labels.title}
+                                                </Grid>
+                                                <Hidden xsDown>
+                                                    <Grid item sm={2} md={1} className={classes.centerAlign}>
+                                                        {communityCollectionsConfig.viewCommunityTitle}
                                                     </Grid>
-                                                    <Hidden xsDown>
-                                                        <Grid item xs={2} md={1} className={classes.centerAlign}>
-                                                            <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
-                                                                {communityCollectionsConfig.viewCommunityText}
-                                                            </Link>
+                                                </Hidden>
+                                                <Hidden smDown>
+                                                    <Grid item xs={2} className={classes.dateField}>
+                                                        {labels.creation_date}
+                                                    </Grid>
+                                                    <Grid item xs={2} className={classes.dateField}>
+                                                        {labels.updated_date}
+                                                    </Grid>
+                                                </Hidden>
+                                                <Hidden xsDown>
+                                                    {!!adminUser && (
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            md={1}
+                                                            className={`${classes.dateField} ${classes.centerAlign}`}
+                                                        >
+                                                            {labels.actions}
                                                         </Grid>
-                                                    </Hidden>
-                                                    <Hidden smDown>
-                                                        {returnDateField(row.rek_created_date, conf, classes.dateField)}
-                                                        {returnDateField(row.rek_updated_date, conf, classes.dateField)}
-                                                    </Hidden>
-
-                                                    <Hidden smUp>
-                                                        <Grid item xs={2} className={classes.centerAlign}>
-                                                            <div>
+                                                    )}
+                                                </Hidden>
+                                                <Hidden smUp>
+                                                    <Grid item xs={2} className={classes.centerAlign}>
+                                                        View
+                                                    </Grid>
+                                                </Hidden>
+                                            </Grid>
+                                            <Grid container data-testid="embedded-collections-primary-body">
+                                                {finalList.data.map(row => (
+                                                    <Grid
+                                                        className={classes.collectionRow}
+                                                        container
+                                                        key={row.rek_pid}
+                                                        id={`row-${row.rek_pid}`}
+                                                        data-testid={`row-${row.rek_pid}`}
+                                                    >
+                                                        <Grid
+                                                            item
+                                                            xs={10}
+                                                            sm={adminUser ? 8 : 9}
+                                                            md={adminUser ? 6 : 7}
+                                                            className={classes.dateField}
+                                                        >
+                                                            <Typography variant="body2">
+                                                                <Link
+                                                                    to={pathConfig.records.view(row.rek_pid)}
+                                                                    id={`collection-title-${row.rek_pid}`}
+                                                                    data-testid={`collection-title-${row.rek_pid}`}
+                                                                >
+                                                                    {ReactHtmlParser(row.rek_title)}
+                                                                </Link>
+                                                            </Typography>
+                                                            {!!row.rek_description && (
+                                                                <Typography variant="caption">
+                                                                    {row.rek_description}
+                                                                </Typography>
+                                                            )}
+                                                            <Hidden mdUp>
+                                                                <div>
+                                                                    <Typography
+                                                                        variant="caption"
+                                                                        className={classes.italic}
+                                                                    >
+                                                                        {communityCollectionsConfig.formatCreationDate(
+                                                                            moment(row.rek_created_date)
+                                                                                .local()
+                                                                                .format(conf.dateFormat),
+                                                                        )}
+                                                                        <Hidden smUp>
+                                                                            <br />
+                                                                        </Hidden>
+                                                                        <Hidden xsDown> / </Hidden>
+                                                                        {communityCollectionsConfig.formatUpdatedDate(
+                                                                            moment(row.rek_updated_date)
+                                                                                .local()
+                                                                                .format(conf.dateFormat),
+                                                                        )}
+                                                                    </Typography>
+                                                                </div>
+                                                            </Hidden>
+                                                        </Grid>
+                                                        <Hidden xsDown>
+                                                            <Grid item xs={2} md={1} className={classes.centerAlign}>
                                                                 <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
                                                                     {communityCollectionsConfig.viewCommunityText}
                                                                 </Link>
-                                                            </div>
-                                                            {!!adminUser && (
-                                                                <AdminActions
-                                                                    record={row.rek_pid}
-                                                                    id={`row-admin-actions-${row.rek_pid}`}
-                                                                    data-testid={`row-admin-actions-${row.rek_pid}`}
-                                                                />
-                                                            )}
-                                                        </Grid>
-                                                    </Hidden>
-                                                    <Hidden xsDown>
-                                                        {!!adminUser && (
-                                                            <Grid
-                                                                item
-                                                                xs={2}
-                                                                md={1}
-                                                                className={`${classes.dateField} ${classes.centerAlign}`}
-                                                            >
-                                                                <AdminActions
-                                                                    record={row.rek_pid}
-                                                                    id={`row-admin-actions-${row.rek_pid}`}
-                                                                    data-testid={`row-admin-actions-${row.rek_pid}`}
-                                                                />
                                                             </Grid>
-                                                        )}
-                                                    </Hidden>
-                                                </Grid>
-                                            ))}
+                                                        </Hidden>
+                                                        <Hidden smDown>
+                                                            {returnDateField(
+                                                                row.rek_created_date,
+                                                                conf,
+                                                                classes.dateField,
+                                                            )}
+                                                            {returnDateField(
+                                                                row.rek_updated_date,
+                                                                conf,
+                                                                classes.dateField,
+                                                            )}
+                                                        </Hidden>
+
+                                                        <Hidden smUp>
+                                                            <Grid item xs={2} className={classes.centerAlign}>
+                                                                <div>
+                                                                    <Link
+                                                                        to={`/records/search?${encodeLink(
+                                                                            row.rek_pid,
+                                                                        )}`}
+                                                                    >
+                                                                        {communityCollectionsConfig.viewCommunityText}
+                                                                    </Link>
+                                                                </div>
+                                                                {!!adminUser && (
+                                                                    <AdminActions
+                                                                        record={row.rek_pid}
+                                                                        id={`row-admin-actions-${row.rek_pid}`}
+                                                                        data-testid={`row-admin-actions-${row.rek_pid}`}
+                                                                    />
+                                                                )}
+                                                            </Grid>
+                                                        </Hidden>
+                                                        <Hidden xsDown>
+                                                            {!!adminUser && (
+                                                                <Grid
+                                                                    item
+                                                                    xs={2}
+                                                                    md={1}
+                                                                    className={`${classes.dateField} ${classes.centerAlign}`}
+                                                                >
+                                                                    <AdminActions
+                                                                        record={row.rek_pid}
+                                                                        id={`row-admin-actions-${row.rek_pid}`}
+                                                                        data-testid={`row-admin-actions-${row.rek_pid}`}
+                                                                    />
+                                                                </Grid>
+                                                            )}
+                                                        </Hidden>
+                                                    </Grid>
+                                                ))}
+                                            </Grid>
                                         </Grid>
                                     </Grid>
-                                </Grid>
+                                )}
                                 <PublicationsListPaging
                                     loading={false}
                                     pagingData={PagingData}
                                     onPageChanged={pageChanged}
-                                    disabled={false}
+                                    disabled={isLoadingOrExporting}
                                     pagingId="embedded-collections-paging-bottom"
                                     data-testid="embedded-collections-paging-bottom"
                                 />

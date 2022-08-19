@@ -1,5 +1,6 @@
 import * as actions from 'actions/actionTypes';
 import { locale } from 'locale';
+import { COLLECTION_VIEW_TYPE } from 'config/general';
 
 const initialSearchSources = {
     loadingPublicationSources: {
@@ -209,8 +210,8 @@ const handlers = {
             },
             publicationsListFacets: (action.payload.filters || {}).facets || {},
             publicationsListDefaultView: {
-                id: action.payload.default_view_type || locale.components.sorting.displayRecordsAs[0].index,
-                lookup: action.payload.default_view_type_lookup || locale.components.sorting.displayRecordsAs[0].label,
+                id: action.payload.rek_collection_view_type || COLLECTION_VIEW_TYPE[0].index,
+                lookup: action.payload.rek_collection_view_type_lookup || COLLECTION_VIEW_TYPE[0].text,
             },
         };
     },

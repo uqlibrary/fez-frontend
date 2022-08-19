@@ -120,18 +120,6 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -358,18 +346,6 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",
@@ -703,18 +679,6 @@ exports[`myDatasets test renders loading screen while loading publications while
                     </span>,
                     "confirmationTitle": "Export queued successfully",
                   },
-                  "displayRecordsAs": Array [
-                    Object {
-                      "index": 0,
-                      "label": "Standard",
-                      "value": "standard",
-                    },
-                    Object {
-                      "index": 1,
-                      "label": "Image Gallery",
-                      "value": "image-gallery",
-                    },
-                  ],
                   "displayRecordsAsLabel": "Display results",
                   "exportOnlyLabel": "Export Only:",
                   "pageSize": "Works per page",

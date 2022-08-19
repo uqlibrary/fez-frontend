@@ -30,7 +30,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
-import { stripHtml } from 'helpers/general';
+import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -136,8 +136,6 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor) 
 
 export const AttachedFiles = ({
     dataStreams,
-    hideCulturalSensitivityStatement,
-    setHideCulturalSensitivityStatement,
     disabled,
     deleteHint,
     onDelete,
@@ -185,16 +183,17 @@ export const AttachedFiles = ({
     return (
         <Grid item xs={12}>
             <StandardCard title={locale.title} subCard>
-                {!!record.fez_record_search_key_advisory_statement && !hideCulturalSensitivityStatement && (
+                {/* eslint-disable-next-line camelcase */}
+                {!!record.fez_record_search_key_advisory_statement && (
                     <Alert
                         allowDismiss
                         type="info"
-                        message={
-                            stripHtml(record.fez_record_search_key_advisory_statement.rek_advisory_statement) ||
-                            stripHtml(locale.culturalSensitivityStatement)
-                        }
-                        dismissAction={setHideCulturalSensitivityStatement}
+                        message={getAdvisoryStatement(record, locale.culturalSensitivityStatement)}
                     />
+                )}
+                {/* eslint-disable-next-line camelcase */}
+                {!!record.fez_record_search_key_sensitive_handling_note_id?.rek_sensitive_handling_note_id && (
+                    <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 <div style={{ padding: 8 }}>
@@ -363,8 +362,6 @@ export const AttachedFiles = ({
 
 AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
-    hideCulturalSensitivityStatement: PropTypes.bool,
-    setHideCulturalSensitivityStatement: PropTypes.func,
     disabled: PropTypes.bool,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,

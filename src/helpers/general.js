@@ -1,5 +1,7 @@
 import ReactHtmlParser from 'react-html-parser';
 
+global.dd = console.log;
+
 export const leftJoin = (objArr1, objArr2, key1, key2) => {
     if (!objArr2) {
         return objArr1;
@@ -10,9 +12,15 @@ export const leftJoin = (objArr1, objArr2, key1, key2) => {
     }));
 };
 
+export const isString = argument => typeof argument === 'string' || argument instanceof String;
+
 export const stripHtml = html => {
+    if (!isString(html)) {
+        return '';
+    }
     const temporalDivElement = document.createElement('div');
-    temporalDivElement.innerHTML = html;
+    temporalDivElement.innerHTML = html.replace(/<(?:br|p)[^>]*>/gim, ' ').replace(/\s+/, ' ');
+    /* istanbul ignore next */
     return temporalDivElement.textContent || temporalDivElement.innerText || '';
 };
 
@@ -37,7 +45,7 @@ export function hydrateMock(truncatedData) {
                 let newEntry;
                 if (!!field2 && field2.hasOwnProperty(shortKey)) {
                     newEntry = {
-                        [`${shortKey}_id`]: 547492, // any random number to mock db long unique id
+                        [`${shortKey}_id`]: truncatedData[`rek_${shortKey}_id`] || 547492, // any random number to mock db long unique id
                         [`${shortKey}_pid`]: truncatedData.rek_pid,
                         [`${shortKey}_xsdmf_id`]: null,
                         ...field2,

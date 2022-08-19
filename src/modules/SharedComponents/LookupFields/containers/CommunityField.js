@@ -13,12 +13,13 @@ const mapStateToProps = (state, props) => {
 
     // remove existing entries from full list of communities
     const existingCommunityPids = defaultValue.map(community => community.rek_pid || community);
-    const missingCommunity = itemsList.filter(item => existingCommunityPids.indexOf(item.rek_pid) === -1);
+    const validCommunities = itemsList.filter(item => item.rek_object_type === 1);
+    const missingCommunities = validCommunities.filter(item => existingCommunityPids.indexOf(item.rek_pid) === -1);
 
     return {
         id: props.id,
         autoCompleteAsynchronousFieldId: 'rek-ismemberof',
-        itemsList: missingCommunity || [],
+        itemsList: missingCommunities || [],
         itemsLoading,
         getOptionLabel: item => item.rek_title,
         ...(hasForm

@@ -903,6 +903,8 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator contribution statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
+                        editButtonLabel: <span>Edit&nbsp;Scale of significance and Contribution statement</span>,
+                        addEntryButton: 'Add entry',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -948,6 +950,8 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator research statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: 'ADD SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        editButtonLabel: 'UPDATE SCALE/SIGNIFICANCE AND RESEARCH STATEMENT',
+                        resetFormLabel: 'Cancel',
                         authorOrderAlert: {
                             message:
                                 'Any changes made to the author order require that all contribution statements are also manually updated to match.',
@@ -957,7 +961,7 @@ export default {
                 },
                 header: {
                     locale: {
-                        nameColumn: 'Scale/significance of work - Creator research statement',
+                        nameColumn: 'Author - Scale/significance of work - Creator research statement',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -979,6 +983,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
+                        editHint: 'Edit this item',
                     },
                 },
             },
@@ -1760,10 +1765,6 @@ export default {
                 confirmButtonLabel: 'Close',
             },
             displayRecordsAsLabel: 'Display results',
-            displayRecordsAs: [
-                { index: 0, value: 'standard', label: 'Standard' },
-                { index: 1, value: 'image-gallery', label: 'Image Gallery' },
-            ],
         },
         imageGallery: {
             alert: {
@@ -1776,8 +1777,22 @@ export default {
                 ariaLabel: 'Thumbnail image showing [title]',
             },
         },
-        newsFeed: {
-            title: 'Latest news',
+        culturalAdvice: {
+            title: 'Cultural advice',
+            text: (
+                <span>
+                    Aboriginal and Torres Strait Islander peoples are advised that UQ eSpace may contain images, voices
+                    or names of deceased persons in photographs, film, audio recordings or printed material. Aboriginal
+                    and Torres Strait Islander material and information accessed on this site may be culturally
+                    sensitive for some individuals and communities.
+                    <br />
+                    <br />
+                    Some material may contain language, terms, or descriptions that reflect the authors’ views, or those
+                    of the period in which the item was written or recorded but may be considered inappropriate today.
+                    These views are not necessarily the views of The University of Queensland. While the information may
+                    not reflect current understandings, it is provided in an historical context.
+                </span>
+            ),
         },
         ntroFields: {
             header: {
@@ -2188,18 +2203,17 @@ export default {
                 },
             },
         },
-        whatIsEspace: {
-            title: 'What is eSpace?',
+        acknowledgementOfCountry: {
+            title: 'Acknowledgement of Country',
             text: (
                 <span>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search
-                    engines such as Google and Trove...
+                    The University of Queensland acknowledges the Traditional Owners and their custodianship of the
+                    lands. We pay our respects to their Ancestors and their descendants, who continue cultural and
+                    spiritual connections to Country. We recognise their valuable contributions to Australian and global
+                    society, celebrating the unique knowledges, cultures, histories and languages that have been shared
+                    and created for at least 65,000 years.
                 </span>
             ),
-            readMoreLabel: ' read more',
-            readMoreTitle: 'Click to read more about UQ eSpace',
-            readMoreLink: '/contact',
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
@@ -2333,12 +2347,6 @@ export default {
                         placeholder: 'Select a document type',
                         ariaLabel: 'Select a document type',
                         selectPrompt: 'Please select a document type',
-                    },
-                    subType: {
-                        label: 'Select a document subtype',
-                        placeholder: 'Select a document subtype',
-                        ariaLabel: 'Select a document subtype',
-                        selectPrompt: 'Please select a document subtype',
                     },
                     directory: {
                         ...selectFields.directory,
@@ -3035,6 +3043,44 @@ export default {
                 confirmationTitle: `Bulk updates${!!action ? ' - ' + action.text : ''}`,
             }),
             bulkUpdatesForms: {
+                copyToCommunity: {
+                    formLabels: {
+                        community: 'Community / Communities',
+                        cancelButtonLabel: 'Cancel',
+                        submitButtonLabel: 'Bulk update',
+                    },
+                    alert: (isRemoveFrom = false) => ({
+                        title: `Bulk ${isRemoveFrom ? 'remove from' : 'copy to'} community`,
+                        message:
+                            'Select destination community if moving or copying to a community, source community if removing from a community',
+                        type: 'info',
+                    }),
+                    submittingAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} community`,
+                        message: 'Creating bulk update job',
+                        type: 'info',
+                    }),
+                    successAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} community`,
+                        message: 'Bulk update job created successfully',
+                        type: 'done',
+                    }),
+                    errorAlert: (isRemoveFrom = false) => ({
+                        title: `Bulk update - ${isRemoveFrom ? 'remove from' : 'copy to'} community`,
+                        type: 'error',
+                    }),
+                    onlyCollectionsAllowed: {
+                        title: 'Only Collections Allowed',
+                        message:
+                            'One or more selected items is not a collection-type. You can only copy or remove collection-type records to/from communities.',
+                        type: 'error',
+                    },
+                    warningAlert: {
+                        title: 'Note',
+                        message: 'Please retain membership of at least one community',
+                        type: 'warning',
+                    },
+                },
                 createOrUpdateDoiForm: {
                     formLabels: {
                         doi: 'DOIs',
@@ -3097,14 +3143,20 @@ export default {
                         message: 'Please retain membership of at least one collection',
                         type: 'warning',
                     },
+                    onlyRecordsAllowed: {
+                        title: 'Only Records Allowed',
+                        message:
+                            'One or more selected items is a collection-type. You can only copy or remove collection-type records to/from communities.',
+                        type: 'error',
+                    },
                 },
                 changeAuthorIdForm: {
                     selectPrompt: 'Please select an option to search author by',
                     formLabels: {
-                        searchBy: 'Search author by',
+                        searchBy: 'Search author by (change from)',
                         searchByAuthorName: 'Search by Author Name',
                         searchByAuthorId: 'Search by Author Id',
-                        authorId: 'Author Id',
+                        authorId: 'Author Id (change to)',
                         cancelButtonLabel: 'Cancel',
                         submitButtonLabel: 'Bulk update',
                     },
@@ -3661,6 +3713,7 @@ export default {
                 message: '...Loading Data...',
                 noCollections: 'No collections found for this community',
                 noCommunities: 'No communities found.',
+                exportLoadingMessage: 'Exporting search results',
             },
             columns: {
                 labels: {

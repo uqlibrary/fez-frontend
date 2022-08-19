@@ -26,7 +26,7 @@ import NtroDetails from './NtroDetails';
 import PublicationDetails from './PublicationDetails';
 import RelatedPublications from './RelatedPublications';
 
-import { userIsAdmin, userIsAuthor } from 'hooks';
+import { belongsToAuthor, userIsAdmin } from 'hooks';
 import { AUTH_URL_LOGIN, general } from 'config';
 import locale from 'locale/pages';
 import globalLocale from 'locale/global';
@@ -85,30 +85,24 @@ const useStyles = makeStyles(theme => ({
 export const NewViewRecord = ({
     account,
     author,
-    hideCulturalSensitivityStatement,
     isDeleted,
     isDeletedVersion,
     loadingRecordToView,
     recordToViewError,
     recordToView,
 }) => {
+    const txt = locale.pages.viewRecord;
     const dispatch = useDispatch();
     const { pid, version } = useParams();
     const isNotFoundRoute = !!pid && pid === notFound;
     const isAdmin = userIsAdmin();
-    const isAuthor = userIsAuthor();
-
-    const txt = locale.pages.viewRecord;
     const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
-
     const rekDisplayTypeLowercase = recordToView?.rek_display_type_lookup?.toLowerCase();
     const hideCitationText = doesListContainItem(PUBLICATION_EXCLUDE_CITATION_TEXT_LIST, rekDisplayTypeLowercase);
-
-    const handleSetHideCulturalSensitivityStatement = React.useCallback(
-        () => dispatch(actions.setHideCulturalSensitivityStatement()),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [],
-    );
+    const isAuthorOfNtroWork =
+        isNtro &&
+        !general.NTRO_RESEARCH_REPORT_SUBTYPES.includes(recordToView?.rek_subtype) &&
+        belongsToAuthor(author, recordToView);
     const classes = useStyles();
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [open, setOpen] = React.useState(false);
@@ -132,7 +126,7 @@ export const NewViewRecord = ({
             // eslint-disable-next-line jsx-a11y/click-events-have-key-events
             <Badge
                 color="error"
-                overlap="circle"
+                overlap="circular"
                 badgeContent=""
                 variant="dot"
                 anchorOrigin={{
@@ -306,10 +300,8 @@ export const NewViewRecord = ({
                                 author={author}
                                 account={account}
                                 publication={recordToView}
-                                hideCulturalSensitivityStatement={hideCulturalSensitivityStatement}
-                                setHideCulturalSensitivityStatement={handleSetHideCulturalSensitivityStatement}
                                 isAdmin={!!isAdmin}
-                                isAuthor={!!isAuthor}
+                                isAuthor={isAuthorOfNtroWork}
                             />
                             <Links publication={recordToView} />
                             <RelatedPublications publication={recordToView} />
@@ -329,7 +321,6 @@ export const NewViewRecord = ({
 NewViewRecord.propTypes = {
     account: PropTypes.object,
     author: PropTypes.object,
-    hideCulturalSensitivityStatement: PropTypes.bool,
     isDeleted: PropTypes.bool,
     isDeletedVersion: PropTypes.bool,
     loadingRecordToView: PropTypes.bool,

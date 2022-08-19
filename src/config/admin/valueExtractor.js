@@ -249,6 +249,9 @@ export default {
     fez_record_search_key_total_pages: {
         getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_total_pages'),
     },
+    fez_record_search_key_collection_view_type: {
+        getValue: record => getValueSearchKeyObject(record, 'fez_record_search_key_collection_view_type'),
+    },
     communities: {
         getValue: record => {
             const uniqueCommunities = [];
@@ -497,6 +500,16 @@ export default {
                 'fez_record_search_key_advisory_statement.rek_advisory_statement',
             ),
     },
+    sensitiveHandlingNote: {
+        getValue: record => {
+            return {
+                id: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_id')
+                    .rek_sensitive_handling_note_id,
+                other: getValueSearchKeyObject(record, 'fez_record_search_key_sensitive_handling_note_other')
+                    .rek_sensitive_handling_note_other,
+            };
+        },
+    },
     significanceAndContributionStatement: {
         getValue: record => {
             const authors = (record.fez_record_search_key_author || []).reduce(
@@ -510,7 +523,11 @@ export default {
             const significanceScales = (record.fez_record_search_key_significance || []).reduce(
                 (significanceScalesObject, significance) => ({
                     ...significanceScalesObject,
-                    [significance.rek_significance_order]: significance,
+                    [significance.rek_significance_order]: {
+                        ...significance,
+                        // // so we can determine if we should allow add or not
+                        // numAuthors: record.fez_record_search_key_author?.length || 0,
+                    },
                 }),
                 {},
             );
@@ -527,6 +544,8 @@ export default {
                 return {
                     rek_order: order,
                     rek_value: {
+                        id: (significanceScales[order] || {}).rek_significance_id || 0,
+                        // originalAuthorCount: (significanceScales[order] || {}).numAuthors || 0,
                         key: (significanceScales[order] || {}).rek_significance || 0,
                         value: {
                             plainText:

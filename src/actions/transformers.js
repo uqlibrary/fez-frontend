@@ -7,6 +7,7 @@ import {
 } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { contentIndicators } from '../config';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
+import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 
 const moment = require('moment');
 
@@ -1304,7 +1305,7 @@ export const getAdminSectionSearchKeys = (data = {}) => {
 };
 
 export const getFilesSectionSearchKeys = data => {
-    const { advisoryStatement, ...rest } = data;
+    const { advisoryStatement, sensitiveHandlingNote, ...rest } = data;
     return !data.hasOwnProperty('advisoryStatement')
         ? { ...cleanBlankEntries(rest) }
         : {
@@ -1312,6 +1313,22 @@ export const getFilesSectionSearchKeys = data => {
               ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
                   ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
                   : { fez_record_search_key_advisory_statement: null }),
+              ...{
+                  fez_record_search_key_sensitive_handling_note_id:
+                      parseInt(sensitiveHandlingNote?.id, 10) > 0
+                          ? {
+                                rek_sensitive_handling_note_id: sensitiveHandlingNote?.id,
+                            }
+                          : null,
+              },
+              ...{
+                  fez_record_search_key_sensitive_handling_note_other:
+                      !!sensitiveHandlingNote?.other && isSensitiveHandlingNoteTypeOther(sensitiveHandlingNote?.id)
+                          ? {
+                                rek_sensitive_handling_note_other: sensitiveHandlingNote?.other,
+                            }
+                          : null,
+              },
           };
 };
 
@@ -1472,6 +1489,16 @@ export const getRemoveFromCollectionData = (records, data) => {
     }));
 };
 
+export const getRemoveFromCommunityData = (records, data) => {
+    const selectedCommunities = data.communities.map(community => community.rek_pid);
+    return records.map(record => ({
+        rek_pid: record.rek_pid,
+        fez_record_search_key_ismemberof: record.fez_record_search_key_ismemberof.filter(
+            community => !selectedCommunities.includes(community.rek_ismemberof),
+        ),
+    }));
+};
+
 export const getCopyToCollectionData = (records, data) => {
     return records.map(record => {
         const existingCollectionPids = record.fez_record_search_key_ismemberof.map(
@@ -1491,7 +1518,25 @@ export const getCopyToCollectionData = (records, data) => {
         };
     });
 };
-
+export const getCopyToCommunityData = (records, data) => {
+    return records.map(record => {
+        const existingCommunityPids = record.fez_record_search_key_ismemberof.map(
+            existingCommunity => existingCommunity.rek_pid,
+        );
+        return {
+            rek_pid: record.rek_pid,
+            fez_record_search_key_ismemberof: [
+                ...record.fez_record_search_key_ismemberof,
+                ...data.communities
+                    .filter(newCommunity => existingCommunityPids.indexOf(newCommunity.rek_pid) === -1)
+                    .map((community, index) => ({
+                        rek_ismemberof: community.rek_pid,
+                        rek_ismemberof_order: record.fez_record_search_key_ismemberof.length + index + 1,
+                    })),
+            ],
+        };
+    });
+};
 export const createOrUpdateDoi = records => {
     return records.map(record => {
         return {

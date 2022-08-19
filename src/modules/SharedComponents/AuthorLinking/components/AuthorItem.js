@@ -74,6 +74,7 @@ export class AuthorItem extends PureComponent {
         const { linked, author, selected, index } = this.props;
         const { suffix } = this.props.locale;
         const authorOrder = `${numberToWords(index + 1)} ${suffix.replace('[type]', this.props.type)}`;
+        // eg First listed author
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;
 
