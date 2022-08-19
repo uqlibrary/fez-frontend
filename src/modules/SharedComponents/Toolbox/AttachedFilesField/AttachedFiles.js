@@ -189,28 +189,32 @@ export const AttachedFiles = ({
     // tested in cypress
     /* istanbul ignore next */
     const onEmbargoDateChange = index => value => {
+        const indexToChange = dataStreams.findIndex(item => item.dsi_dsid === index);
         value === null &&
             markEmbargoDateAsCleared([
-                ...hasClearedEmbargoDate.slice(0, index),
+                ...hasClearedEmbargoDate.slice(0, indexToChange),
                 true,
-                ...hasClearedEmbargoDate.slice(index + 1),
+                ...hasClearedEmbargoDate.slice(indexToChange + 1),
             ]);
 
         onDateChange(
             'dsi_embargo_date',
             !!value ? moment(value).format(globalLocale.global.embargoDateFormat) : null,
-            index,
+            indexToChange,
         );
     };
 
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1 || item.mimeType === 'application/mxf');
 
     const onFileDelete = file => () => onDelete(file);
-    const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
+    const onFileDescriptionChange = index => event => {
+        const indexToChange = dataStreams.findIndex(item => item.dsi_dsid === index);
+        onDescriptionChange('dsi_label', event.target.value, indexToChange);
+    };
 
     // const onFileOrderChangeUp = index => (index > 0 ? onOrderChange(index, index - 1) : null);
-    const onFileOrderChangeUp = (file, key, index) => onOrderChange(file, key, index, index - 1);
-    const onFileOrderChangeDown = (file, key, index) => onOrderChange(file, key, index, index + 1);
+    const onFileOrderChangeUp = (file, index) => onOrderChange(file, index, index - 1);
+    const onFileOrderChangeDown = (file, index) => onOrderChange(file, index, index + 1);
     // const onFileOrderChangeDown = index =>  onOrderChange(index, index+1);
     return (
         <Grid item xs={12}>
@@ -279,9 +283,7 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
-                                                    onClick={() =>
-                                                        onFileOrderChangeUp(item.fileName, item.key, index + 1)
-                                                    }
+                                                    onClick={() => onFileOrderChangeUp(item.fileName, index + 1)}
                                                 >
                                                     <ExpandLess />
                                                 </IconButton>
@@ -307,7 +309,7 @@ export const AttachedFiles = ({
                                                     {isAdmin && canEdit ? (
                                                         <TextField
                                                             fullWidth
-                                                            onChange={onFileDescriptionChange(index)}
+                                                            onChange={onFileDescriptionChange(item.fileName)}
                                                             name="fileDescription"
                                                             defaultValue={item.description}
                                                             id={`file-description-input-${index}`}
@@ -349,7 +351,7 @@ export const AttachedFiles = ({
                                                         ) && (
                                                             <FileUploadEmbargoDate
                                                                 value={item.openAccessStatus.embargoDate}
-                                                                onChange={onEmbargoDateChange(index)}
+                                                                onChange={onEmbargoDateChange(item.fileName)}
                                                                 disabled={disabled}
                                                                 fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
                                                             />
@@ -414,9 +416,7 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
-                                                    onClick={() =>
-                                                        onFileOrderChangeDown(item.fileName, item.key, index + 1)
-                                                    }
+                                                    onClick={() => onFileOrderChangeDown(item.fileName, index + 1)}
                                                 >
                                                     <ExpandMore />
                                                 </IconButton>

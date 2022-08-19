@@ -48,7 +48,7 @@ export const shuffleFileOrder = (arr, from, to) => {
 };
 
 export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (file, key, oldPosition, newPosition) => {
+    const callback = (file, oldPosition, newPosition) => {
         const newDataStreams = [...dataStreams];
 
         newDataStreams.map(
