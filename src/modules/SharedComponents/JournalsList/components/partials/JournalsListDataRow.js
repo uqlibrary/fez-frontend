@@ -73,9 +73,9 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
 
     return (
         <>
-            <TableRow className={classes.root}>
-                <TableCell size="small" className={classes.actionsColumn} {...(isXsDown ? { padding: 'none' } : {})}>
-                    <Grid container className={classes.dataRowContainer}>
+            <TableRow className={classes?.root}>
+                <TableCell size="small" className={classes?.actionsColumn} {...(isXsDown ? { padding: 'none' } : {})}>
+                    <Grid container className={classes?.dataRowContainer}>
                         {isSelectable && (
                             <Grid xs={6} item>
                                 <Checkbox
@@ -105,7 +105,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                 </TableCell>
 
                 <TableCell size="small">
-                    <Grid container className={classes.dataRowContainer}>
+                    <Grid container className={classes?.dataRowContainer}>
                         <Grid
                             sm={8}
                             item
@@ -135,7 +135,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                         <Grid
                                             item
                                             {...field.collapsibleComponent?.sizeHeader}
-                                            className={classes.headerContentMobile}
+                                            className={classes?.headerContentMobile}
                                         >
                                             {field.collapsibleComponent?.translateFn(field, {
                                                 ...classes,

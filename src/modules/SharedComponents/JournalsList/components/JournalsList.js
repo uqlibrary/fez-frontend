@@ -25,6 +25,7 @@ const useStyles = makeStyles(theme => ({
             gridTemplateColumns: 'auto auto 50px',
         },
     },
+    /* istanbul ignore next */
     actionsColumn: isSelectable => ({
         ...(isSelectable
             ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? {}
