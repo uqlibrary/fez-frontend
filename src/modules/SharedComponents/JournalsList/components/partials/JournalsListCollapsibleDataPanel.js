@@ -11,7 +11,7 @@ import { useIsMobileView } from 'hooks';
 
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';
 
-const JournalsListCollapsibleDataPanel = ({ row, classes, open }) => {
+const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
     const isXsDown = useIsMobileView();
     const dataItems = JournalFieldsMap.filter(item => !item.compactView);
 
@@ -23,7 +23,13 @@ const JournalsListCollapsibleDataPanel = ({ row, classes, open }) => {
                 data-testid={`collapsible-cell-${open ? 'open' : 'closed'}`}
                 size="small"
             >
-                <Collapse in={open} timeout="auto" unmountOnExit>
+                <Collapse
+                    in={open}
+                    timeout="auto"
+                    unmountOnExit
+                    id={`journal-list-collapse-panel-${index}`}
+                    data-testid={`journal-list-collapse-panel-${index}`}
+                >
                     <Box padding={1}>
                         <Grid container>
                             {dataItems.map((item, index) => {
@@ -53,9 +59,10 @@ const JournalsListCollapsibleDataPanel = ({ row, classes, open }) => {
     );
 };
 JournalsListCollapsibleDataPanel.propTypes = {
-    row: PropTypes.object,
+    row: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
+    open: PropTypes.bool.isRequired,
     classes: PropTypes.object,
-    open: PropTypes.bool,
 };
 
 export default React.memo(JournalsListCollapsibleDataPanel);

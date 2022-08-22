@@ -18,7 +18,13 @@ const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstR
             }`}
         >
             <Box display="flex" alignItems="flex-end" key={item.key}>
-                <Typography variant="body1" className={classes.inputLabel} component="span">
+                <Typography
+                    variant="body1"
+                    className={classes.inputLabel}
+                    component="span"
+                    id={`journal-list-header-${item.key}`}
+                    data-testid={`journal-list-header-${item.key}`}
+                >
                     {item.label}
                     {!!item.subLabel && <span className={classes.subLabel}>{item.subLabel}</span>}
                 </Typography>

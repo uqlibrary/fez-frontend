@@ -91,7 +91,13 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                             </Grid>
                         )}
                         <Grid xs={6} item>
-                            <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                            <IconButton
+                                aria-label="expand row"
+                                size="small"
+                                onClick={() => setOpen(!open)}
+                                id={`journal-list-expander-btn-${index}`}
+                                data-testid={`journal-list-expander-btn-${index}`}
+                            >
                                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                             </IconButton>
                         </Grid>
@@ -100,7 +106,12 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
 
                 <TableCell size="small">
                     <Grid container className={classes.dataRowContainer}>
-                        <Grid sm={8} item>
+                        <Grid
+                            sm={8}
+                            item
+                            id={`journal-list-data-col-1-title-${index}`}
+                            data-testid={`journal-list-data-col-1-title-${index}`}
+                        >
                             <Typography variant="body1" component="span">
                                 <ExternalLink
                                     href={`/journal/view/${row.jnl_jid}`}
@@ -145,7 +156,12 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                     </Grid>
                 </TableCell>
             </TableRow>
-            <JournalsListCollapsibleDataPanel row={row} open={open} classes={{ ...classes, ...classesInternal }} />
+            <JournalsListCollapsibleDataPanel
+                row={row}
+                open={open}
+                index={index}
+                classes={{ ...classes, ...classesInternal }}
+            />
         </>
     );
 };

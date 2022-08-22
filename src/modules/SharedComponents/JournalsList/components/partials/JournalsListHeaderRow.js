@@ -10,6 +10,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { sanitiseId } from 'helpers/general';
 
 import { JournalFieldsMap } from './JournalFieldsMap';
 
@@ -34,9 +35,15 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                         )}
                     </Grid>
                 </TableCell>
-                <TableCell size="small" className={`${classes.headerRow}`}>
+                <TableCell
+                    size="small"
+                    className={`${classes.headerRow}`}
+                    id="journal-list-header"
+                    data-testid="journal-list-header"
+                >
                     <Grid container className={classes.headerContainer}>
                         {JournalFieldsMap.filter(item => item.compactView).map(header => {
+                            const id = sanitiseId(`journal-list-header-${header.key}`);
                             return (
                                 <React.Fragment key={header.key}>
                                     <Hidden
@@ -48,6 +55,8 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                                             item
                                             {...header.collapsibleComponent?.sizeHeader}
                                             className={classes.inputLabel}
+                                            id={id}
+                                            data-testid={id}
                                         >
                                             <Box display="flex" alignItems="flex-end" key={header.key}>
                                                 <Typography variant="body1" className={classes.inputLabel}>
