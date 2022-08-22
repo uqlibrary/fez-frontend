@@ -14,6 +14,7 @@ import { sanitiseId } from 'helpers/general';
 import Typography from '@material-ui/core/Typography';
 import { useIsMobileView } from 'hooks';
 import { makeStyles } from '@material-ui/core/styles';
+import Tooltip from '@material-ui/core/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -70,7 +71,6 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
     const isXsDown = useIsMobileView();
 
     const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
-
     return (
         <>
             <TableRow className={classes?.root}>
@@ -125,6 +125,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                             </Typography>
                         </Grid>
                         {compactViewFields.map(field => {
+                            const itemData = (row && field.translateFn(row, classesInternal)) || '';
                             return (
                                 <React.Fragment key={field.key}>
                                     <Hidden
@@ -148,7 +149,26 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                         {...field.collapsibleComponent?.sizeData}
                                         className={classesInternal.headerContentMobile}
                                     >
-                                        {field.translateFn(row, classesInternal)}
+                                        <Tooltip
+                                            title={
+                                                (itemData &&
+                                                    field.showTooltip &&
+                                                    field.toolTipLabel &&
+                                                    field.toolTipLabel(row)) ||
+                                                (field.showTooltip && itemData) ||
+                                                ''
+                                            }
+                                            placement="left"
+                                            disableFocusListener={!field.showTooltip || !itemData}
+                                            disableHoverListener={!field.showTooltip || !itemData}
+                                            disableTouchListener={!field.showTooltip || !itemData}
+                                        >
+                                            <Typography variant="body1">
+                                                {(itemData && field.prefix) || ''}
+                                                {itemData || ''}
+                                                {(itemData && field.suffix) || ''}
+                                            </Typography>
+                                        </Tooltip>
                                     </Grid>
                                 </React.Fragment>
                             );

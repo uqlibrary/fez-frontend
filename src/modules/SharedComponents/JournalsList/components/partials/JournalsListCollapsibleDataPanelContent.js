@@ -40,10 +40,10 @@ const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstR
 };
 
 JournalsListCollapsibleDataPanelContent.propTypes = {
-    item: PropTypes.object,
-    data: PropTypes.string,
-    classes: PropTypes.object,
+    item: PropTypes.object.isRequired,
+    data: PropTypes.any.isRequired,
     isFirstRow: PropTypes.bool,
     isLastRow: PropTypes.bool,
+    classes: PropTypes.object,
 };
 export default React.memo(JournalsListCollapsibleDataPanelContent);
