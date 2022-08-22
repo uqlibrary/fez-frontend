@@ -301,7 +301,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {
@@ -957,7 +957,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {

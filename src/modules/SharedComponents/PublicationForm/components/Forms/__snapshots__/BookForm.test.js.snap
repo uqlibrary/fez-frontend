@@ -258,7 +258,7 @@ exports[`BookForm renders  component 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {
@@ -1380,7 +1380,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {
@@ -2020,7 +2020,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {
@@ -3384,7 +3384,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                 "identifierLabel": "UQ identifier (if available)",
                 "nameAsPublishedFieldId": "authors-name-as-published-field",
                 "nameAsPublishedHint": "Type the name exactly as published",
-                "nameAsPublishedLabel": "Authors's name as published",
+                "nameAsPublishedLabel": "Author's name as published",
               },
             },
             "header": Object {
