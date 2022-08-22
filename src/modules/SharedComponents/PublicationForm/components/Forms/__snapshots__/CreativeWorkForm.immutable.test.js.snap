@@ -52,7 +52,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -84,7 +84,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -116,7 +116,7 @@ exports[`CreativeWorkForm validation  should validate dates correctly 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field

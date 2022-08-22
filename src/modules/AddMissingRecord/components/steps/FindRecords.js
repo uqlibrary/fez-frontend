@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { PublicationSearchForm } from 'modules/SharedComponents/PublicationSearchForm';
 import { pathConfig } from 'config/pathConfig';
 import locale from 'locale/pages';
+import { sanitizeDoi } from '../../../../config/validation';
 
 export default class FindRecords extends PureComponent {
     static propTypes = {
@@ -13,7 +14,7 @@ export default class FindRecords extends PureComponent {
     };
 
     _performSearch = values => {
-        this.props.actions.searchPublications(values.get('searchQuery'));
+        this.props.actions.searchPublications(sanitizeDoi(values.get('searchQuery')));
         this.props.history.push(pathConfig.records.add.results);
     };
 

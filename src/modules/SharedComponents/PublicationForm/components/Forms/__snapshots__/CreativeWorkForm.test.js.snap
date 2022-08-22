@@ -52,7 +52,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -84,7 +84,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -116,7 +116,7 @@ exports[`CreativeWorkForm renders  component 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -443,7 +443,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -475,7 +475,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={6}
           xs={12}
         >
           <Field
@@ -507,7 +507,7 @@ exports[`CreativeWorkForm renders  should show content for a random (other) NTRO
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={4}
+          sm={12}
           xs={12}
         >
           <Field
@@ -996,7 +996,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={6}
+          sm={12}
           xs={12}
         >
           <Field
@@ -1028,7 +1028,7 @@ exports[`CreativeWorkForm renders  should show exhibition content correctly 1`] 
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={6}
+          sm={12}
           xs={12}
         >
           <Field
