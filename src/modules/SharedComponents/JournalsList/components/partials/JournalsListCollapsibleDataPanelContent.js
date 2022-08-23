@@ -7,7 +7,14 @@ import Box from '@material-ui/core/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { sanitiseId } from 'helpers/general';
 
-const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstRow = false, isLastRow = false }) => {
+const JournalsListCollapsibleDataPanelContent = ({
+    item,
+    index,
+    data,
+    classes,
+    isFirstRow = false,
+    isLastRow = false,
+}) => {
     const id = sanitiseId(item.key);
     return (
         <Grid
@@ -24,15 +31,21 @@ const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstR
                     variant="body1"
                     className={classes?.inputLabel}
                     component="span"
-                    id={`journal-list-header-${id}`}
-                    data-testid={`journal-list-header-${id}`}
+                    id={`journal-list-header-${id}-${index}`}
+                    data-testid={`journal-list-header-${id}-${index}`}
                 >
                     {item.label}
                     {!!item.subLabel && <span className={classes?.subLabel}>{item.subLabel}</span>}
                 </Typography>
-                {!!item.titleHelp && <HelpIcon {...item.titleHelp} testId={item.key} iconSize={'small'} />}
+                {!!item.titleHelp && (
+                    <HelpIcon {...item.titleHelp} testId={`${item.key}-${index}`} iconSize={'small'} />
+                )}
             </Box>
-            <Typography variant="body1" id={`journal-list-data-${id}`} data-testid={`journal-list-data-${id}`}>
+            <Typography
+                variant="body1"
+                id={`journal-list-data-${id}-${index}`}
+                data-testid={`journal-list-data-${id}-${index}`}
+            >
                 {(data && item.prefix) || ''}
                 {data || /* istanbul ignore next */ ''}
                 {(data && item.suffix) || ''}
@@ -43,6 +56,7 @@ const JournalsListCollapsibleDataPanelContent = ({ item, data, classes, isFirstR
 
 JournalsListCollapsibleDataPanelContent.propTypes = {
     item: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
     data: PropTypes.any.isRequired,
     isFirstRow: PropTypes.bool,
     isLastRow: PropTypes.bool,

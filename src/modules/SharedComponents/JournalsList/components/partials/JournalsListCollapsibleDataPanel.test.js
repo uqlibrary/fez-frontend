@@ -38,13 +38,13 @@ describe('JournalsListCollapsibleDataPanel', () => {
     it('should render a closed panel', () => {
         window.matchMedia = createMatchMedia(1024);
         const { getByTestId } = setup({ open: false });
-        expect(getByTestId('collapsible-cell-closed')).toBeInTheDocument();
+        expect(getByTestId(`collapsible-cell-closed-${defaultTestData.index}`)).toBeInTheDocument();
     });
 
     it('should render an open panel', () => {
         window.matchMedia = createMatchMedia(1024);
         const { getByTestId } = setup({ open: true });
-        expect(getByTestId('collapsible-cell-open')).toBeInTheDocument();
+        expect(getByTestId(`collapsible-cell-open-${defaultTestData.index}`)).toBeInTheDocument();
         expect(getByTestId(`journal-list-collapse-panel-${defaultTestData.index}`)).toBeInTheDocument();
     });
 
@@ -52,7 +52,7 @@ describe('JournalsListCollapsibleDataPanel', () => {
     it('should render an open panel for XS breakpoint', () => {
         window.matchMedia = createMatchMedia(599);
         const { getByTestId } = setup({ open: true });
-        expect(getByTestId('collapsible-cell-open')).toBeInTheDocument();
+        expect(getByTestId(`collapsible-cell-open-${defaultTestData.index}`)).toBeInTheDocument();
         expect(getByTestId(`journal-list-collapse-panel-${defaultTestData.index}`)).toBeInTheDocument();
     });
 });

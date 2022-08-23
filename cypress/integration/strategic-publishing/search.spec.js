@@ -23,6 +23,55 @@ const captureBeforeContent = element => {
     return before.getPropertyValue('content');
 };
 
+const assertCollapsiblePanel = index => {
+    cy.get(`[data-testid="journal-list-collapse-panel-${index}"]`).should('not.exist');
+
+    // expand item data for  row
+    cy.get(`[data-testid="journal-list-expander-btn-${index}"]`).click();
+
+    cy.get(`[data-testid="journal-list-collapse-panel-${index}"]`).should('exist');
+
+    cy.get(`[data-testid="journal-list-header-jnl-cite-score-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'CiteScore');
+
+    cy.get(`[data-testid="journal-list-header-fez-journal-cite-score-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'CiteScore percentile');
+
+    cy.get(`[data-testid="journal-list-header-jnl-jcr-scie-impact-factor-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'Impact factor');
+
+    cy.get(`[data-testid="journal-list-header-jnl-jcr-scie-category-jif-percentile-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'Impact factor percentile');
+
+    cy.get(`[data-testid="journal-list-header-jnl-cite-score-snip-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'SNIP');
+
+    cy.get(`[data-testid="journal-list-header-jnl-cite-score-sjr-${index}"]`)
+        .should('be.visible')
+        .should('contain', 'SJR');
+
+    cy.checkA11y(
+        `[data-testid=journal-list-collapse-panel-${index}]`,
+        {
+            rules: { 'color-contrast': { enabled: false } },
+            reportName: 'Search Journals',
+            scopeName: 'Journal list more view',
+            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+        },
+        violations => console.log(violations),
+    );
+
+    // collapse item data for first row
+    cy.get(`[data-testid="journal-list-expander-btn-${index}"]`).click();
+
+    cy.get(`[data-testid="journal-list-collapse-panel-${index}"]`).should('not.exist');
+};
+
 context('Strategic Publishing - Search', () => {
     beforeEach(() => {
         cy.visit('localhost:3000/journals/search/');
@@ -281,7 +330,7 @@ context('Strategic Publishing - Search', () => {
         cy.get('[role="listbox"]').should('contain', 'Excel File');
     });
 
-    it('Renders journal search result table in collapsed view by default', () => {
+    it('Renders journal search result table in collapsed view by default for desktop', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
         cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
@@ -314,6 +363,51 @@ context('Strategic Publishing - Search', () => {
             violations => console.log(violations),
         );
     });
+    it('Renders journal search result table in collapsed view by default for mobile', () => {
+        cy.viewport(599, 1000);
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-list"]').should('be.visible');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-jnl-title"]')
+            .should('be.visible')
+            .should('contain', 'Journal title');
+
+        // expect to see open access and highest quartile in less view for first item
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-fez-journal-doaj-0"]')
+            .should('be.visible')
+            .should('contain', 'Open access');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-highest-quartile-0"]')
+            .should('be.visible')
+            .should('contain', 'Highest quartile');
+
+        // expect to see open access and highest quartile in less view for last item (10 items per page)
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-fez-journal-doaj-9"]')
+            .should('be.visible')
+            .should('contain', 'Open access');
+
+        cy.get('[data-testid="journal-list"]')
+            .find('[data-testid="journal-list-header-highest-quartile-9"]')
+            .should('be.visible')
+            .should('contain', 'Highest quartile');
+
+        cy.checkA11y(
+            '[data-testid="journal-list"]',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Search Journals',
+                scopeName: 'Journal list default view',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
+    });
 
     it('Should not keep any previous search history when navigating from another page', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
@@ -332,64 +426,25 @@ context('Strategic Publishing - Search', () => {
         cy.get('[id=journal-search-results-container]').should('not.exist');
     });
 
-    it('Renders journal search result table in expanded view', () => {
+    it('Renders journal search result table in expanded desktop view', () => {
         cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
         cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
 
-        cy.get('[data-testid="journal-list-collapse-panel-0"]').should('not.exist');
+        assertCollapsiblePanel(0);
+        assertCollapsiblePanel(9);
+    });
 
-        // expand item data for first row
-        cy.get('[data-testid="journal-list-expander-btn-0"]').click();
+    it('Renders journal search result table in expanded mobile view', () => {
+        cy.viewport(599, 1000);
+        cy.get('input[data-testid="journal-search-keywords-input"]').type('bio', 200);
+        cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
+        cy.get('[data-testid="journal-search-button"]').click();
+        cy.get('[data-testid="journal-list"]').should('be.visible');
 
-        cy.get('[data-testid="journal-list-collapse-panel-0"]').should('exist');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-jnl_cite_score"]')
-            .should('be.visible')
-            .should('contain', 'CiteScore');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-fez_journal_cite_score"]')
-            .should('be.visible')
-            .should('contain', 'CiteScore percentile');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-jnl_jcr_scie_impact_factor"]')
-            .should('be.visible')
-            .should('contain', 'Impact factor');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-jnl_jcr_scie_category_jif_percentile"]')
-            .should('be.visible')
-            .should('contain', 'Impact factor percentile');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-jnl_cite_score_snip"]')
-            .should('be.visible')
-            .should('contain', 'SNIP');
-
-        cy.get('[data-testid=journal-list-collapse-panel-0]')
-            .find('[data-testid="journal-list-header-jnl_cite_score_sjr"]')
-            .should('be.visible')
-            .should('contain', 'SJR');
-
-        cy.checkA11y(
-            '[data-testid=journal-list-collapse-panel-0]',
-            {
-                rules: { 'color-contrast': { enabled: false } },
-                reportName: 'Search Journals',
-                scopeName: 'Journal list more view',
-                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
-            },
-            violations => console.log(violations),
-        );
-
-        // collapse item data for first row
-        cy.get('[data-testid="journal-list-expander-btn-0"]').click();
-
-        cy.get('[data-testid="journal-list-collapse-panel-0"]').should('not.exist');
+        assertCollapsiblePanel(0);
+        assertCollapsiblePanel(9);
     });
 
     const setupInitialSearchAndAssert = () => {

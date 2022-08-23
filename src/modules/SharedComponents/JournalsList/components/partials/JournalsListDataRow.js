@@ -108,7 +108,12 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                 </TableCell>
 
                 <TableCell size="small">
-                    <Grid container className={classes?.dataRowContainer}>
+                    <Grid
+                        container
+                        className={classes?.dataRowContainer}
+                        id={`journal-list-data-col-1-${index}`}
+                        data-testid={`journal-list-data-col-1-${index}`}
+                    >
                         <Grid
                             sm={8}
                             item
@@ -127,7 +132,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                 </ExternalLink>
                             </Typography>
                         </Grid>
-                        {compactViewFields.map(field => {
+                        {compactViewFields.map((field, fieldIndex) => {
                             const itemData =
                                 (row && field.translateFn(row, classesInternal)) || /* istanbul ignore next */ '';
                             return (
@@ -142,7 +147,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                             {...field.collapsibleComponent?.sizeHeader}
                                             className={classes?.headerContentMobile}
                                         >
-                                            {field.collapsibleComponent?.translateFn(field, {
+                                            {field.collapsibleComponent?.translateFn(field, index, {
                                                 ...classes,
                                                 ...classesInternal,
                                             })}
@@ -169,8 +174,8 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                         >
                                             <Typography
                                                 variant="body1"
-                                                id={`journal-list-data-${index}`}
-                                                data-testid={`journal-list-data-${index}`}
+                                                id={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
+                                                data-testid={`journal-list-data-col-1-data-${index}-${fieldIndex}`}
                                             >
                                                 {(itemData && field.prefix) || ''}
                                                 {itemData || /* istanbul ignore next */ ''}

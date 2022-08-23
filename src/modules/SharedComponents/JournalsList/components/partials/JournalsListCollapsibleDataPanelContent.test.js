@@ -17,6 +17,8 @@ function createMatchMedia(width) {
 }
 const testItems = JournalFieldsMap.filter(item => !item.compactView);
 const defaultTestData = {
+    item: 0,
+    index: 0,
     classes: {},
     isFirstRow: true,
     isLastRow: true,
@@ -34,23 +36,43 @@ const setup = ({ testData = { ...defaultTestData }, ...state } = {}) => {
 };
 
 describe('JournalsListCollapsibleDataPanelContent', () => {
-    it('should render panel content', () => {
+    it('should render panel content on desktop', () => {
         window.matchMedia = createMatchMedia(1024);
         testItems.map(item => {
             const data = item.translateFn(mockData[0]);
             document.body.innerHTML = '';
             const { getByTestId, getByText } = setup({ item, data });
             const id = sanitiseId(item.key);
-            expect(getByTestId(`journal-list-header-${id}`)).toBeInTheDocument();
+            expect(getByTestId(`journal-list-header-${id}-${defaultTestData.index}`)).toBeInTheDocument();
             expect(getByText(item.label)).toBeInTheDocument();
             if (!!item.subLabel) {
                 expect(getByText(item.subLabel)).toBeInTheDocument();
             }
 
             if (!!item.titleHelp) {
-                expect(getByTestId(`help-icon-${id}`)).toBeInTheDocument();
+                expect(getByTestId(`help-icon-${id}-${defaultTestData.index}`)).toBeInTheDocument();
             }
-            expect(getByTestId(`journal-list-data-${id}`)).toBeInTheDocument();
+            expect(getByTestId(`journal-list-data-${id}-${defaultTestData.index}`)).toBeInTheDocument();
+        });
+    });
+
+    it('should render panel content on mobile', () => {
+        window.matchMedia = createMatchMedia(599);
+        testItems.map(item => {
+            const data = item.translateFn(mockData[0]);
+            document.body.innerHTML = '';
+            const { getByTestId, getByText } = setup({ item, data });
+            const id = sanitiseId(item.key);
+            expect(getByTestId(`journal-list-header-${id}-${defaultTestData.index}`)).toBeInTheDocument();
+            expect(getByText(item.label)).toBeInTheDocument();
+            if (!!item.subLabel) {
+                expect(getByText(item.subLabel)).toBeInTheDocument();
+            }
+
+            if (!!item.titleHelp) {
+                expect(getByTestId(`help-icon-${id}-${defaultTestData.index}`)).toBeInTheDocument();
+            }
+            expect(getByTestId(`journal-list-data-${id}-${defaultTestData.index}`)).toBeInTheDocument();
         });
     });
 });

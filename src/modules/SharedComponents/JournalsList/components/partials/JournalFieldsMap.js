@@ -4,6 +4,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { sanitiseId } from 'helpers/general';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
@@ -72,17 +73,25 @@ export const JournalFieldsMap = [
             },
             hiddenHeader: ['xs'],
             hiddenData: ['sm', 'md', 'lg', 'xl'],
-            translateFn: (data, classes) => {
+            translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
                         <Box display="flex" alignItems="flex-end" key={data.key}>
-                            <Typography variant="body1" className={classes?.inputLabel} component="span">
+                            <Typography
+                                variant="body1"
+                                className={classes?.inputLabel}
+                                component="span"
+                                id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                                data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                            >
                                 {data.label}
                                 {/* istanbul ignore next */ !!data.subLabel && (
                                     <span className={classes?.subLabel}>{data.subLabel}</span>
                                 )}
                             </Typography>
-                            {!!data.titleHelp && <HelpIcon {...data.titleHelp} testId={data.key} iconSize={'small'} />}
+                            {!!data.titleHelp && (
+                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
+                            )}
                         </Box>
                     </Typography>
                 );
@@ -162,15 +171,23 @@ export const JournalFieldsMap = [
             },
             hiddenHeader: ['xs'],
             hiddenData: ['sm', 'md', 'lg', 'xl'],
-            translateFn: (data, classes) => {
+            translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
                         <Box display="flex" alignItems="flex-end" key={data.key}>
-                            <Typography variant="body1" className={classes.inputLabel} component="span">
+                            <Typography
+                                variant="body1"
+                                className={classes.inputLabel}
+                                component="span"
+                                id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                                data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                            >
                                 {data.label}
                                 {!!data.subLabel && <span className={classes.subLabel}>{data.subLabel}</span>}
                             </Typography>
-                            {!!data.titleHelp && <HelpIcon {...data.titleHelp} testId={data.key} iconSize={'small'} />}
+                            {!!data.titleHelp && (
+                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
+                            )}
                         </Box>
                     </Typography>
                 );
