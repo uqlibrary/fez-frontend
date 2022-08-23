@@ -22,7 +22,7 @@ describe('ResearchReportForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 12 input fields', () => {
+    it('component with 15 input fields', () => {
         const testProps = {
             formValues: {
                 get: jest.fn(),

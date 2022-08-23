@@ -324,7 +324,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   fullWidth={true}
                   label="DOI"
                   name="fez_record_search_key_doi.rek_doi"
-                  placeholder=" "
+                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
                   textFieldId="rek-doi"
                   type="text"
                   validate={
@@ -1936,7 +1936,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                   fullWidth={true}
                   label="DOI"
                   name="fez_record_search_key_doi.rek_doi"
-                  placeholder=" "
+                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
                   textFieldId="rek-doi"
                   type="text"
                   validate={
@@ -3544,7 +3544,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   fullWidth={true}
                   label="DOI"
                   name="fez_record_search_key_doi.rek_doi"
-                  placeholder=" "
+                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
                   textFieldId="rek-doi"
                   type="text"
                   validate={
@@ -5152,7 +5152,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   fullWidth={true}
                   label="DOI"
                   name="fez_record_search_key_doi.rek_doi"
-                  placeholder=" "
+                  placeholder="Enter a valid DOI (e.g. 10.123/456)"
                   textFieldId="rek-doi"
                   type="text"
                   validate={

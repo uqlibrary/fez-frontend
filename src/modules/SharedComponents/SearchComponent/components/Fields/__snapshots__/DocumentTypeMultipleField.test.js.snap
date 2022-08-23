@@ -57,6 +57,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
     aria-label="Select work types to search on"
+    data-testid="document-type-selector"
     disabled={false}
     fullWidth={true}
     id="document-type-selector"
@@ -492,6 +493,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
     aria-label="Select work types to search on"
+    data-testid="document-type-selector"
     disabled={true}
     fullWidth={true}
     id="document-type-selector"
@@ -927,6 +929,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
   </WithStyles(ForwardRef(InputLabel))>
   <WithStyles(ForwardRef(Select))
     aria-label="Select work types to search on"
+    data-testid="document-type-selector"
     disabled={false}
     fullWidth={true}
     id="document-type-selector"

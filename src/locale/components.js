@@ -1027,7 +1027,7 @@ export default {
                                 published.
                             </div>
                         ),
-                        nameAsPublishedLabel: "Authors's name as published",
+                        nameAsPublishedLabel: "Author's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',

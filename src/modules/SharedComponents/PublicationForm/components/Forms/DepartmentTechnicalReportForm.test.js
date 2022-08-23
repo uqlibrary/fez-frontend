@@ -16,9 +16,9 @@ describe('DepartmentTechnicalReportForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 10 input fields', () => {
+    it('component with 11 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(10);
+        expect(wrapper.find('Field').length).toEqual(11);
     });
 
     it('component with all fields disabled', () => {
