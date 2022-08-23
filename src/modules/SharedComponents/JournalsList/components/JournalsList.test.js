@@ -17,12 +17,11 @@ function createMatchMedia(width) {
     });
 }
 
-const testData = {
+const defaultTestData = {
     journals: mockData.data,
-    minimalView: true,
 };
 
-const setup = ({ state = {} }) => {
+const setup = ({ testData = { ...defaultTestData }, state = {} }) => {
     return render(
         <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
             <JournalsList {...testData} />
@@ -31,11 +30,9 @@ const setup = ({ state = {} }) => {
 };
 
 describe('Journal Search Results list', () => {
-    it('should show compactView labels by default on desktop', () => {
-        window.matchMedia = createMatchMedia(1024);
-        const { queryByText, getByText } = setup({
-            ...testData,
-        });
+    it('should show compactView labels by default at XL breakpoint', () => {
+        window.matchMedia = createMatchMedia(1920);
+        const { queryByText, getByText } = setup({});
         // Should default show items with compact view flags
         JournalFieldsMap.map(item => {
             !!item.compactView
@@ -43,15 +40,48 @@ describe('Journal Search Results list', () => {
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
     });
-    it('should only show two compactView labels by default on mobile', () => {
-        window.matchMedia = createMatchMedia(600);
-        const { queryByText, getByText } = setup({
-            ...testData,
+    // coverage
+    it('should show compactView labels by default at LG breakpoint', () => {
+        window.matchMedia = createMatchMedia(1280);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
+    });
+    // coverage
+    it('should show compactView labels by default at MD breakpoint', () => {
+        window.matchMedia = createMatchMedia(960);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
+    });
+    // coverage
+    it('should show compactView labels by default at SM breakpoint', () => {
+        window.matchMedia = createMatchMedia(600);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
+    });
+
+    it('should only show two compactView labels by default at XS breakpoint', () => {
+        window.matchMedia = createMatchMedia(599);
+
+        const { queryByText, getAllByText } = setup({});
         // Should default show items with compact view flags
         JournalFieldsMap.slice(1).map(item => {
             !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
+                ? expect(getAllByText(item.label).length).toEqual(mockData.data.length)
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
     });

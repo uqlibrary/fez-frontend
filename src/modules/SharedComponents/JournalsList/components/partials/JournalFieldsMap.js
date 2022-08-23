@@ -76,9 +76,11 @@ export const JournalFieldsMap = [
                 return (
                     <Typography variant="body1" component="div">
                         <Box display="flex" alignItems="flex-end" key={data.key}>
-                            <Typography variant="body1" className={classes.inputLabel} component="span">
+                            <Typography variant="body1" className={classes?.inputLabel} component="span">
                                 {data.label}
-                                {!!data.subLabel && <span className={classes.subLabel}>{data.subLabel}</span>}
+                                {/* istanbul ignore next */ !!data.subLabel && (
+                                    <span className={classes?.subLabel}>{data.subLabel}</span>
+                                )}
                             </Typography>
                             {!!data.titleHelp && <HelpIcon {...data.titleHelp} testId={data.key} iconSize={'small'} />}
                         </Box>
@@ -133,12 +135,12 @@ export const JournalFieldsMap = [
             return data.fez_journal_doaj ? (
                 <LockOpenIcon
                     className={classes?.iconOpen ?? ''}
-                    style={!!!classes ? { color: 'orange', marginTop: 12 } : {}}
+                    style={!!!classes ? { color: 'orange', marginTop: 12 } : /* istanbul ignore next */ {}}
                 />
             ) : (
                 <LockOutlinedIcon
                     className={classes?.iconClosed ?? ''}
-                    style={!!!classes ? { color: '#e5e5e5', marginTop: 12 } : {}}
+                    style={!!!classes ? { color: '#e5e5e5', marginTop: 12 } : /* istanbul ignore next */ {}}
                 />
             );
         },

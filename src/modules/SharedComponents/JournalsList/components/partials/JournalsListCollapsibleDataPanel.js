@@ -16,11 +16,12 @@ const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
     const dataItems = JournalFieldsMap.filter(item => !item.compactView);
 
     return (
-        <TableRow className={classes.collapsibleRow}>
+        <TableRow className={classes?.collapsibleRow}>
             <TableCell
                 colSpan={2}
-                className={!open ? classes.collapsedCell : classes.expandedCell}
+                className={!open ? classes?.collapsedCell : classes?.expandedCell}
                 data-testid={`collapsible-cell-${open ? 'open' : 'closed'}`}
+                id={`collapsible-cell-${open ? 'open' : 'closed'}`}
                 size="small"
             >
                 <Collapse
@@ -33,7 +34,7 @@ const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
                     <Box padding={1}>
                         <Grid container>
                             {dataItems.map((item, index) => {
-                                const itemData = (row && item.translateFn(row)) || '';
+                                const itemData = (row && item.translateFn(row)) || /* istanbul ignore next */ '';
                                 return (
                                     <React.Fragment key={`${item.key}-${row.jnl_jid}`}>
                                         <JournalsListCollapsibleDataPanelContent
@@ -42,11 +43,11 @@ const JournalsListCollapsibleDataPanel = ({ row, index, classes, open }) => {
                                             classes={classes}
                                             {...((isXsDown && index === 0) || (!isXsDown && index <= 1)
                                                 ? { isFirstRow: true }
-                                                : {})}
+                                                : /* istanbul ignore next */ {})}
                                             {...((isXsDown && index === dataItems.length - 1) ||
                                             (!isXsDown && index >= dataItems.length - 2)
                                                 ? { isLastRow: true }
-                                                : {})}
+                                                : /* istanbul ignore next */ {})}
                                         />
                                     </React.Fragment>
                                 );

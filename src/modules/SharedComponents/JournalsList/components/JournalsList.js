@@ -25,11 +25,12 @@ const useStyles = makeStyles(theme => ({
             gridTemplateColumns: 'auto auto 50px',
         },
     },
-    /* istanbul ignore next */
+
     actionsColumn: isSelectable => ({
         ...(isSelectable
-            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? {}
-            : JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ?? {}),
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+              /* istanbul ignore next */ {}),
         [theme.breakpoints.down('xs')]: {
             verticalAlign: 'top',
             paddingLeft: 0,
@@ -38,23 +39,27 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? {}
-                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('md')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? {}
-                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('lg')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? {}
-                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('xl')]: {
             ...(isSelectable
-                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? {}
-                : JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ?? {}),
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+                  /* istanbul ignore next */ {}),
         },
     }),
     headerRow: {

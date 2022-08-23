@@ -17,12 +17,12 @@ function createMatchMedia(width) {
     });
 }
 
-const testData = {
+const defaultTestData = {
     row: mockData[0],
     index: 0,
 };
 
-const setup = (state = {}) => {
+const setup = ({ testData = { ...defaultTestData }, ...state }) => {
     const onChange = state.onChange ?? jest.fn();
     return render(
         <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
@@ -46,9 +46,9 @@ describe('JournalsListDataRow', () => {
         expect(getByTestId('journal-list-expander-btn-0')).toBeInTheDocument();
 
         // title link
-        const linkId = sanitiseId(`${testData.row.jnl_jid}-${testData.row.jnl_title}-link`);
+        const linkId = sanitiseId(`${defaultTestData.row.jnl_jid}-${defaultTestData.row.jnl_title}-link`);
         expect(getByTestId(linkId)).toBeInTheDocument();
-        expect(getByTestId(linkId)).toHaveTextContent(testData.row.jnl_title);
+        expect(getByTestId(linkId)).toHaveTextContent(defaultTestData.row.jnl_title);
     });
 
     it('should render correct content in fields on desktop', () => {
@@ -118,6 +118,24 @@ describe('JournalsListDataRow', () => {
                     }
                 });
         });
+    });
+
+    it('should render nothing if no data provided', () => {
+        window.matchMedia = createMatchMedia(1024);
+        const testData = {
+            row: undefined,
+            index: 0,
+        };
+        const { queryByText } = setup({ testData });
+        JournalFieldsMap.filter(item => item.compactView).map(item => {
+            expect(queryByText(item.label)).not.toBeInTheDocument();
+        });
+    });
+
+    it('should render tooltip', () => {
+        window.matchMedia = createMatchMedia(1024);
+        setup({ isSelectable: true, checked: false });
+        expect(document.querySelector('p[title="Use filters to find alternate pathways"]')).toBeInTheDocument();
     });
 
     it('should expand to show item details when button clicked on desktop', () => {

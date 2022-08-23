@@ -70,7 +70,10 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
     const classesInternal = useStyles();
     const isXsDown = useIsMobileView();
 
+    if (!!!row || (!!row && Object.keys(row).length <= 0)) return <></>;
+
     const compactViewFields = JournalFieldsMap.slice(1).filter(item => item.compactView || false);
+
     return (
         <>
             <TableRow className={classes?.root}>
@@ -125,13 +128,14 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                             </Typography>
                         </Grid>
                         {compactViewFields.map(field => {
-                            const itemData = (row && field.translateFn(row, classesInternal)) || '';
+                            const itemData =
+                                (row && field.translateFn(row, classesInternal)) || /* istanbul ignore next */ '';
                             return (
                                 <React.Fragment key={field.key}>
                                     <Hidden
                                         {...(!!field.collapsibleComponent?.hiddenData
                                             ? { only: [...field.collapsibleComponent?.hiddenData] }
-                                            : {})}
+                                            : /* istanbul ignore next */ {})}
                                     >
                                         <Grid
                                             item
@@ -155,7 +159,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                                     field.showTooltip &&
                                                     field.toolTipLabel &&
                                                     field.toolTipLabel(row)) ||
-                                                (field.showTooltip && itemData) ||
+                                                (field.showTooltip && /* istanbul ignore next */ itemData) ||
                                                 ''
                                             }
                                             placement="left"
@@ -163,9 +167,13 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                             disableHoverListener={!field.showTooltip || !itemData}
                                             disableTouchListener={!field.showTooltip || !itemData}
                                         >
-                                            <Typography variant="body1">
+                                            <Typography
+                                                variant="body1"
+                                                id={`journal-list-data-${index}`}
+                                                data-testid={`journal-list-data-${index}`}
+                                            >
                                                 {(itemData && field.prefix) || ''}
-                                                {itemData || ''}
+                                                {itemData || /* istanbul ignore next */ ''}
                                                 {(itemData && field.suffix) || ''}
                                             </Typography>
                                         </Tooltip>
