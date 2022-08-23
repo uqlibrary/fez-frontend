@@ -616,9 +616,9 @@ export default {
     reason: {
         getValue: () => '',
     },
-    ciNotices: {
+    rek_ci_notice_attribution_incomplete: {
         getValue: record => {
-            return getValueSearchKeyObject(record, 'fez_record_search_key_ci_notice_attribution_incomplete') || null;
+            return getValueFromRekKey(record, 'rek_ci_notice_attribution_incomplete') || null;
         },
     },
     fez_datastream_info: {

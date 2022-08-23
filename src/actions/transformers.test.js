@@ -4597,9 +4597,8 @@ describe('getNotesSectionSearchKeys', () => {
                 ain_detail: '<p>This is test internal note</p>',
             },
             rek_herdc_notes: 'This is test herdc notes',
-            fez_record_search_key_ci_notice_attribution_incomplete: {
-                rek_ci_notice_attribution_incomplete: true,
-            },
+
+            rek_ci_notice_attribution_incomplete: 1,
         };
 
         expect(
@@ -4612,13 +4611,15 @@ describe('getNotesSectionSearchKeys', () => {
                     htmlText: 'This is test herdc notes',
                     plainText: 'This is test herdc notes',
                 },
-                ciNotices: { rek_ci_notice_attribution_incomplete: true },
+                rek_ci_notice_attribution_incomplete: true,
             }),
         ).toEqual(expected);
     });
 
     it('should get search key for any internal notes entered', () => {
-        expect(transformers.getNotesSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+        expect(transformers.getNotesSectionSearchKeys()).toEqual({
+            fez_internal_notes: null,
+        });
     });
 
     it('should get search key for any additional notes entered', () => {

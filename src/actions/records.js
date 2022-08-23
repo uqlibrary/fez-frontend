@@ -531,6 +531,7 @@ export function adminUpdate(data) {
             ...data.publication,
             collections: data.adminSection.collections,
         });
+
         return Promise.resolve([])
             .then(() =>
                 hasFilesToUpload

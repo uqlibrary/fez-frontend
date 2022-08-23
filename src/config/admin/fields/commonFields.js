@@ -97,7 +97,7 @@ export default {
         },
         {
             title: 'Cultural Institute (CI) Notice',
-            groups: [['ciNotices']],
+            groups: [['rek_ci_notice_attribution_incomplete']],
         },
     ],
 };

@@ -2434,9 +2434,7 @@ export const trendingPublications = {
         "fez_record_search_key_article_number": null,
         "fez_record_search_key_assigned_group_id": [],
         "fez_record_search_key_assigned_user_id": [],
-        "fez_record_search_key_ci_notice_attribution_incomplete": {
-            "rek_ci_notice_attribution_incomplete":true,
-        },
+        "rek_ci_notice_attribution_incomplete":1,
         "fez_record_search_key_author": [{
             "rek_author_id": 30466636,
             "rek_author_pid": "UQ:a62a760",

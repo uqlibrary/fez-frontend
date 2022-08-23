@@ -186,8 +186,6 @@ export class AdditionalInformationClass extends PureComponent {
                 return this.renderLink(pathConfig.list.series(object[subkey]), object[subkey], testId);
             case 'rek_license':
                 return this.renderLicense(object[subkey], data);
-            case 'rek_ci_notice_attribution_incomplete':
-                return this.renderCulturalInstitutionNotice();
             case 'rek_org_unit_name':
                 return this.renderLink(pathConfig.list.orgUnitName(data), data, testId);
             case 'rek_institutional_status':
@@ -219,6 +217,9 @@ export class AdditionalInformationClass extends PureComponent {
                 break;
             case 'rek_description':
                 renderedValue = this.renderHTML(value);
+                break;
+            case 'rek_ci_notice_attribution_incomplete':
+                renderedValue = this.renderCulturalInstitutionNotice();
                 break;
             default:
                 renderedValue = value;
@@ -349,6 +350,10 @@ export class AdditionalInformationClass extends PureComponent {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     };
 
+    getCINoticeValue = publication => {
+        return [publication.rek_ci_notice_attribution_incomplete];
+    };
+
     excludeAdminOnlyFields = fields => {
         return fields.filter(item => !locale.viewRecord.adminFields.includes(item.field));
     };
@@ -372,9 +377,7 @@ export class AdditionalInformationClass extends PureComponent {
         // REPLACE WITH const publication = this.props.publication;
         const publication = {
             ...this.props.publication,
-            ciNotices: {
-                rek_ci_notice_attribution_incomplete: true,
-            },
+            rek_ci_notice_attribution_incomplete: true,
         }; // TODO - REMOVE THIS BODGE
         /* End code for testing branch */
         const displayType = publication.rek_display_type_lookup;
@@ -402,9 +405,8 @@ export class AdditionalInformationClass extends PureComponent {
                             ? null
                             : publication[field];
                         break;
-                    case 'fez_record_search_key_ci_notice_attribution_incomplete':
-                        const ciKey = this.transformFieldNameToSubkey(field);
-                        value = publication[field] && publication[field][ciKey] === true ? publication[field] : null;
+                    case 'rek_ci_notice_attribution_incomplete':
+                        value = this.getCINoticeValue(publication);
                         break;
                     case 'fez_record_search_key_herdc_code':
                         const subkey = this.transformFieldNameToSubkey(field);

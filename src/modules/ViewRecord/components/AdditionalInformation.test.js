@@ -66,9 +66,7 @@ describe('Additional Information Component ', () => {
         const wrapper = setup({
             publication: {
                 ...records.journalArticle,
-                fez_record_search_key_ci_notice_attribution_incomplete: {
-                    rek_ci_notice_attribution_incomplete: true,
-                },
+                rek_ci_notice_attribution_incomplete: true,
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

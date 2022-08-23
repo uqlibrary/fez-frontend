@@ -31,7 +31,7 @@ exports[`NotesSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "ciNotices",
+            "rek_ci_notice_attribution_incomplete",
           ],
         ],
         "title": "Cultural Institute (CI) Notice",
@@ -73,7 +73,7 @@ exports[`NotesSection component should render disabled view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "ciNotices",
+            "rek_ci_notice_attribution_incomplete",
           ],
         ],
         "title": "Cultural Institute (CI) Notice",

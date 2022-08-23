@@ -270,10 +270,10 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
-        ciNotices: {
+        rek_ci_notice_attribution_incomplete: {
             component: AttributionIncompleteField,
             componentProps: {
-                name: 'notesSection.ciNotices.rek_ci_notice_attribution_incomplete',
+                name: 'notesSection.rek_ci_notice_attribution_incomplete',
                 label: 'Attribution Incomplete',
                 placeholder: 'Attribution Incomplete Placeholder',
                 attributionIncompleteFieldId: 'rek_ci_notice_attribution_incomplete',
