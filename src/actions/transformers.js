@@ -1408,7 +1408,7 @@ export const getNotesSectionSearchKeys = (data = {}) => {
 
         ...(!(ciNotices === null || ciNotices === undefined)
             ? { rek_ci_notice_attribution_incomplete: !!ciNotices ? 1 : 0 }
-            : null),
+            : {}),
     };
 };
 
