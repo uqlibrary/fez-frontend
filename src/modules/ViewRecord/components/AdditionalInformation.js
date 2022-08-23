@@ -351,7 +351,10 @@ export class AdditionalInformationClass extends PureComponent {
     };
 
     getCINoticeValue = publication => {
-        return [publication.rek_ci_notice_attribution_incomplete];
+        return !!publication.rek_ci_notice_attribution_incomplete &&
+            publication.rek_ci_notice_attribution_incomplete === 1
+            ? [true]
+            : null;
     };
 
     excludeAdminOnlyFields = fields => {
@@ -372,14 +375,8 @@ export class AdditionalInformationClass extends PureComponent {
 
     renderColumns = () => {
         const rows = [];
-        // const publication = this.props.publication;
-        /* Code for testing branch - TO REMOVE */
-        // REPLACE WITH const publication = this.props.publication;
-        const publication = {
-            ...this.props.publication,
-            rek_ci_notice_attribution_incomplete: true,
-        }; // TODO - REMOVE THIS BODGE
-        /* End code for testing branch */
+        const publication = this.props.publication;
+
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
