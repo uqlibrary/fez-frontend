@@ -134,6 +134,7 @@ export class FileUploader extends PureComponent {
 
     shuffleFileOrder = (arr, from, to) => {
         return arr.reduce((prev, current, idx, self) => {
+            /* istanbul ignore if */
             if (from === to) {
                 prev.push(current);
             }
@@ -143,6 +144,7 @@ export class FileUploader extends PureComponent {
             if (from < to) {
                 prev.push(current);
             }
+            /* istanbul ignore else */
             if (idx === to) {
                 prev.push(self[from]);
             }
@@ -154,11 +156,9 @@ export class FileUploader extends PureComponent {
     };
 
     _updateOrderUp = index => {
-        console.log('The current Index is', index);
-        console.log('The current file queue is', this.state.filesInQueue);
         // Below needs to be moved into a seperate function
         const filesToOrder = [...this.state.filesInQueue];
-        console.log('FILES TO ORDER', filesToOrder);
+        /* istanbul ignore else */
         if (index > 0) {
             const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
             this.setState({
@@ -167,11 +167,8 @@ export class FileUploader extends PureComponent {
         }
     };
     _updateOrderDown = index => {
-        console.log('The current Index is', index);
-        console.log('The current file queue is', this.state.filesInQueue);
-        // Below needs to be moved into a seperate function
         const filesToOrder = [...this.state.filesInQueue];
-        console.log('FILES TO ORDER', filesToOrder);
+        /* istanbul ignore else */
         if (index < filesToOrder.length - 1) {
             const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
             this.setState({

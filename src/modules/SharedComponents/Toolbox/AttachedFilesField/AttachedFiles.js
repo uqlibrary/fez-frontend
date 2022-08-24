@@ -283,6 +283,7 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
+                                                    id={`order-up-file-${index}`}
                                                     onClick={() => onFileOrderChangeUp(item.fileName, index + 1)}
                                                 >
                                                     <ExpandLess />
@@ -416,6 +417,7 @@ export const AttachedFiles = ({
                                                 <IconButton
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
+                                                    id={`order-down-file-${index}`}
                                                     onClick={() => onFileOrderChangeDown(item.fileName, index + 1)}
                                                 >
                                                     <ExpandMore />

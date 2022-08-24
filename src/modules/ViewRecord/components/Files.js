@@ -321,18 +321,19 @@ export class FilesClass extends Component {
             ? dataStreams
                   .filter(this.isFileValid)
                   .sort((a, b) => {
+                      /* istanbulXX ignore if */
                       if (a.dsi_order === null) {
                           return 1;
                       }
-
+                      /* istanbulXX ignore if */
                       if (b.dsi_order === null) {
                           return -1;
                       }
-
+                      /* istanbulXX ignore else */
                       if (a.dsi_order === b.dsi_order) {
                           return 0;
                       }
-
+                      /* istanbulXX ignore next */
                       return a.dsi_order < b.dsi_order ? -1 : 1;
                   })
 
