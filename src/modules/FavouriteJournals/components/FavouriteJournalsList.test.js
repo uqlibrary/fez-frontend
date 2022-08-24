@@ -3,7 +3,7 @@ import mockData from 'mock/data/testing/journals/journals';
 import { FavouriteJournalsList } from './FavouriteJournalsList';
 import { rtlRender } from '../../../../utils/test-utils';
 import { PublicationsListPaging, PublicationsListSorting } from '../../SharedComponents/PublicationsList';
-import { JournalsList } from '../../SharedComponents/JournalsList';
+import { JournalsListLegacy } from '../../SharedComponents/JournalsList';
 import { locale } from '../../../locale';
 
 function setup(testProps = {}) {
@@ -47,7 +47,7 @@ describe('FavouriteJournalsList', () => {
             journalsList: { total: mockData.length, data: mockData },
         });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
-        expect(wrapper.find(JournalsList).length).toBe(1);
+        expect(wrapper.find(JournalsListLegacy).length).toBe(1);
     });
     it('should render when there are fav journals with pagination', () => {
         const wrapper = getElement(FavouriteJournalsList, {
@@ -59,7 +59,7 @@ describe('FavouriteJournalsList', () => {
             },
         });
         expect(wrapper.find(PublicationsListSorting).length).toBe(1);
-        expect(wrapper.find(JournalsList).length).toBe(1);
+        expect(wrapper.find(JournalsListLegacy).length).toBe(1);
         expect(wrapper.find(PublicationsListPaging).length).toBe(2);
     });
 });
