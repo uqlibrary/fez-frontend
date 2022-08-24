@@ -1,10 +1,4 @@
-import {
-    getThumbnail,
-    getUrl,
-    sortThumbnailsBySecurityStatus,
-    filterMissingThumbnails,
-    isViewableByUser,
-} from './Utils';
+import { getThumbnail, getUrl, sortThumbnailsBySecurityStatus, filterMissingThumbnails } from './Utils';
 import { collectionSearchResultsImages } from 'mock/data';
 
 describe('ImageGallery Utils', () => {
@@ -439,83 +433,6 @@ describe('ImageGallery Utils', () => {
             ];
 
             expect(filterMissingThumbnails(unfiltered)).toEqual(filtered);
-        });
-    });
-    describe('isViewableByUser', () => {
-        let dataStreams;
-        let props;
-        beforeEach(() => {
-            dataStreams = publication.fez_datastream_info;
-            props = { isAdmin: false, isAuthor: false };
-        });
-
-        it('should return true for a valid file type', () => {
-            expect(isViewableByUser(publication, dataStreams, props)).toEqual(true);
-        });
-        it('should return false for an invalid file type', () => {
-            const testPublication = {
-                ...publication,
-                fez_record_search_key_ismemberof: [
-                    {
-                        rek_ismemberof_id: 11913978,
-                        rek_ismemberof_pid: 'UQ:288583',
-                        rek_ismemberof_xsdmf_id: null,
-                        rek_ismemberof: 'UQ:413806',
-                        rek_ismemberof_order: 1,
-                        parent: {
-                            rek_pid: 'UQ:413806',
-                            rek_security_policy: 5,
-                            rek_datastream_policy: 5,
-                        },
-                        rek_ismemberof_lookup: 'Sydney Olympics 2000',
-                    },
-                ],
-            };
-            expect(isViewableByUser(testPublication, dataStreams, props)).toEqual(false);
-        });
-        it('should return true for an invalid file type if admin', () => {
-            const newProps = { ...props, isAdmin: true };
-            const testPublication = {
-                ...publication,
-                fez_record_search_key_ismemberof: [
-                    {
-                        rek_ismemberof_id: 11913978,
-                        rek_ismemberof_pid: 'UQ:288583',
-                        rek_ismemberof_xsdmf_id: null,
-                        rek_ismemberof: 'UQ:413806',
-                        rek_ismemberof_order: 1,
-                        parent: {
-                            rek_pid: 'UQ:413806',
-                            rek_security_policy: 5,
-                            rek_datastream_policy: 5,
-                        },
-                        rek_ismemberof_lookup: 'Sydney Olympics 2000',
-                    },
-                ],
-            };
-            expect(isViewableByUser(testPublication, dataStreams, newProps)).toEqual(true);
-        });
-        it('should return true for an invalid file type if author', () => {
-            const newProps = { ...props, author: { pol_id: 1 } };
-            const testPublication = {
-                ...publication,
-                fez_record_search_key_ismemberof: [
-                    {
-                        rek_ismemberof_id: 11913978,
-                        rek_ismemberof_pid: 'UQ:288583',
-                        rek_ismemberof_xsdmf_id: null,
-                        rek_ismemberof: 'UQ:413806',
-                        rek_ismemberof_order: 1,
-                        parent: {
-                            rek_pid: 'UQ:413806',
-                            rek_security_policy: 5,
-                            rek_datastream_policy: 5,
-                        },
-                        rek_ismemberof_lookup: 'Sydney Olympics 2000',
-                    },
-                ],
-            };
-            expect(isViewableByUser(testPublication, dataStreams, newProps)).toEqual(true);
         });
     });
 });
