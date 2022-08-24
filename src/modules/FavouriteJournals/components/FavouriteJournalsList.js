@@ -6,7 +6,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsListPaging, PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 
-import { JournalsList } from 'modules/SharedComponents/JournalsList';
+import { JournalsListLegacy } from 'modules/SharedComponents/JournalsList';
 import locale from 'locale/components';
 
 export const FavouriteJournalsList = ({
@@ -80,7 +80,7 @@ export const FavouriteJournalsList = ({
                 />
             </Grid>
             <Grid item xs={12}>
-                <JournalsList
+                <JournalsListLegacy
                     journals={journalsList?.data}
                     onSelectionChange={onSelectionChange}
                     onToggleSelectAll={onToggleSelectAll}

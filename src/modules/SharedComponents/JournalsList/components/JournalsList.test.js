@@ -1,20 +1,27 @@
 import React from 'react';
-import { render, WithReduxStore, act, fireEvent } from 'test-utils';
+import { render, WithReduxStore /* ,act, fireEvent, screen*/ } from 'test-utils';
 
 import Immutable from 'immutable';
 import { mockData } from 'mock/data/testing/journals/journalSearchResults';
 import { default as JournalsList } from './JournalsList';
-import Cookies from 'js-cookie';
 
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
-import { sanitiseId } from 'helpers/general';
+// import { sanitiseId } from 'helpers/general';
+import mediaQuery from 'css-mediaquery';
 
-const testData = {
+function createMatchMedia(width) {
+    return query => ({
+        matches: mediaQuery.match(query, { width }),
+        addListener: () => {},
+        removeListener: () => {},
+    });
+}
+
+const defaultTestData = {
     journals: mockData.data,
-    minimalView: true,
 };
 
-const setup = ({ state = {} }) => {
+const setup = ({ testData = { ...defaultTestData }, state = {} }) => {
     return render(
         <WithReduxStore initialState={Immutable.Map({ searchJournalsReducer: state })}>
             <JournalsList {...testData} />
@@ -23,32 +30,43 @@ const setup = ({ state = {} }) => {
 };
 
 describe('Journal Search Results list', () => {
-    it('should show less columns in the default view', () => {
-        const { queryByText, getByText } = setup({
-            ...testData,
-        });
-        // Should default to minimal view
-        // First three columns should be in the document
+    it('should show compactView labels by default at XL breakpoint', () => {
+        window.matchMedia = createMatchMedia(1920);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
         JournalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
     });
-    it('should show more columns when more is selected', () => {
-        Cookies.set('minimalView', false);
-        const { queryByText, getByText, getByRole } = setup({
-            ...testData,
-        });
-        // All columns should be showing
+    // coverage
+    it('should show compactView labels by default at LG breakpoint', () => {
+        window.matchMedia = createMatchMedia(1280);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
         JournalFieldsMap.map(item => {
-            expect(getByText(item.label)).toBeInTheDocument();
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
-
-        // Expanded - Click the button to show less data
-        act(() => {
-            fireEvent.click(getByRole('button', { name: 'Show less data' }));
+    });
+    // coverage
+    it('should show compactView labels by default at MD breakpoint', () => {
+        window.matchMedia = createMatchMedia(960);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
+        JournalFieldsMap.map(item => {
+            !!item.compactView
+                ? expect(getByText(item.label)).toBeInTheDocument()
+                : expect(queryByText(item.label)).not.toBeInTheDocument();
         });
+    });
+    // coverage
+    it('should show compactView labels by default at SM breakpoint', () => {
+        window.matchMedia = createMatchMedia(600);
+        const { queryByText, getByText } = setup({});
+        // Should default show items with compact view flags
         JournalFieldsMap.map(item => {
             !!item.compactView
                 ? expect(getByText(item.label)).toBeInTheDocument()
@@ -56,103 +74,15 @@ describe('Journal Search Results list', () => {
         });
     });
 
-    it('should expand / contract the columns when more / less is clicked', () => {
-        const { queryByText, getByText, getByRole } = setup({
-            ...testData,
-        });
+    it('should only show two compactView labels by default at XS breakpoint', () => {
+        window.matchMedia = createMatchMedia(599);
 
-        // Default at less data.
-        JournalFieldsMap.map(item => {
+        const { queryByText, getAllByText } = setup({});
+        // Should default show items with compact view flags
+        JournalFieldsMap.slice(1).map(item => {
             !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
+                ? expect(getAllByText(item.label).length).toEqual(mockData.data.length)
                 : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-        act(() => {
-            fireEvent.click(getByRole('button', { name: 'Show more data' }));
-        });
-
-        // Expanded for more data.
-        JournalFieldsMap.map(item => {
-            expect(getByText(item.label)).toBeInTheDocument();
-        });
-
-        // contracted to less data
-        act(() => {
-            fireEvent.click(getByRole('button', { name: 'Show less data' }));
-        });
-        JournalFieldsMap.map(item => {
-            !!item.compactView
-                ? expect(getByText(item.label)).toBeInTheDocument()
-                : expect(queryByText(item.label)).not.toBeInTheDocument();
-        });
-    });
-    it('should show the correct information in the table, minimised', () => {
-        const { getByTestId } = setup({
-            ...testData,
-        });
-
-        mockData.data.map((dataItem, index) => {
-            dataItem.fez_journal_jcr_ssci = {
-                fez_journal_jcr_ssci_category: [
-                    {
-                        jnl_jcr_ssci_category_quartile: 'Q2',
-                    },
-                ],
-            };
-
-            // Make sure the title of the Journal is in the document as per the data.
-            const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
-            expect(titlesElement).toBeInTheDocument();
-            expect(titlesElement).toHaveTextContent(dataItem.jnl_title);
-            const dataElement = getByTestId(`journal-list-data-col-2-min-${index}`);
-            // Only using the first few items in the map for minified view.
-            JournalFieldsMap.slice(0, 3).map(fieldMap => {
-                switch (fieldMap.label) {
-                    case 'Highest quartile':
-                        // data appended with Q
-                        break;
-                    case 'Open Access':
-                        // expect tooltip to match supplied data.
-                        expect(dataElement.querySelector('p').title).toEqual(fieldMap.toolTipLabel(dataItem));
-                        break;
-                    default:
-                        break;
-                }
-            });
-        });
-    });
-    it('should show the correct information in the table, maximised', () => {
-        Cookies.set('minimalView', false);
-        const { getByTestId } = setup({
-            ...testData,
-        });
-        mockData.data.map((dataItem, index) => {
-            // Make sure the title of the Journal is in the document as per the data.
-            const titlesElement = getByTestId(sanitiseId(`${dataItem.jnl_jid}-${dataItem.jnl_title}-link`));
-            expect(titlesElement).toBeInTheDocument();
-            expect(titlesElement).toHaveTextContent(JournalFieldsMap[0].translateFn(dataItem));
-
-            const dataElement = getByTestId(`journal-list-data-col-2-full-${index}`);
-            JournalFieldsMap.slice(1).map(fieldMap => {
-                switch (fieldMap.label) {
-                    case 'Highest quartile':
-                        // data appended with Q
-                        expect(dataElement).toHaveTextContent(`Q${fieldMap.translateFn(dataItem)}`);
-                        break;
-                    case 'Open access':
-                        // expect tooltip to match supplied data.
-                        expect(dataElement.querySelector('p').title).toEqual(fieldMap.toolTipLabel(dataItem));
-                        break;
-                    case 'CiteScore percentile':
-                        // Normalising spaces in this string, which appears to happen in the component.
-                        expect(dataElement).toHaveTextContent(fieldMap.translateFn(dataItem).replace(/\s\s+/g, ' '));
-                        break;
-                    default:
-                        // expect data to be as returned from function
-                        expect(dataElement).toHaveTextContent(fieldMap.translateFn(dataItem));
-                        break;
-                }
-            });
         });
     });
 
@@ -166,42 +96,10 @@ describe('Journal Search Results list', () => {
             JournalFieldsMap.slice(1).map(fieldMap => {
                 switch (fieldMap.label) {
                     case 'Highest quartile':
-                    case 'Impact factor':
-                    case 'SNIP':
-                    case 'SJR':
                         expect(fieldMap.translateFn(dataItem)).toEqual(null);
                         break;
                     case 'CiteScore':
                         expect(fieldMap.translateFn(dataItem)).toEqual('');
-                        break;
-                    case 'CiteScore percentile':
-                    case 'Impact factor percentile':
-                        expect(fieldMap.translateFn(dataItem)).toEqual(undefined);
-                        expect(fieldMap.toolTipLabel(dataItem)).toEqual(undefined);
-                        break;
-                    default:
-                        break;
-                }
-            });
-        });
-        mockData.data.map(dataItem => {
-            dataItem.fez_journal_jcr_scie = null;
-            dataItem.fez_journal_jcr_ssci = {
-                fez_journal_jcr_ssci_category: [
-                    {
-                        jnl_jcr_ssci_category_jif_percentile: 10,
-                        jnl_jcr_ssci_category_description_lookup: 'test',
-                    },
-                ],
-            };
-            JournalFieldsMap.slice(1).map(fieldMap => {
-                switch (fieldMap.label) {
-                    case 'Impact factor percentile':
-                        expect(fieldMap.toolTipLabel(dataItem)).toEqual('10 - test');
-                        expect(fieldMap.translateFn(dataItem)).toEqual('10 - test');
-                        break;
-                    case 'Impact factor':
-                        expect(fieldMap.translateFn(dataItem)).toEqual(null);
                         break;
                     default:
                         break;

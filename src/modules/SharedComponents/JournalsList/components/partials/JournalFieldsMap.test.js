@@ -16,6 +16,7 @@ describe('Journal Fields Map', () => {
             ? expect(testFieldMap.toolTipLabel(testData)).toEqual('Open access journal')
             : expect(testFieldMap.toolTipLabel(testData)).toEqual('Use filters to find alternate pathways');
     });
+
     it('should show alternative style of icon for Open Access allowed', () => {
         const testData = { ...mockData.data[0] };
         const testFieldMap = JournalFieldsMap.filter(map => map.key === 'fez_journal_doaj')[0];
