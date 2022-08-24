@@ -106,11 +106,16 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
         ? dataStreams
               .filter(isFileValid(viewRecordsConfig, isAdmin))
               .map(item => {
-                  if (item.dsi_order === null || item.dsi_order === undefined) {
+                  if (
+                      (item.dsi_order === null || item.dsi_order === undefined) &&
+                      !!attachments &&
+                      attachments.length > 0
+                  ) {
                       const attachIndex = attachments.findIndex(
                           attachitem => item.dsi_dsid === attachitem.rek_file_attachment_name,
                       );
-                      item.dsi_order = attachments[attachIndex].rek_file_attachment_name_order;
+                      item.dsi_order =
+                          attachIndex >= 0 ? attachments[attachIndex].rek_file_attachment_name_order : null;
                   }
                   return item;
               })
