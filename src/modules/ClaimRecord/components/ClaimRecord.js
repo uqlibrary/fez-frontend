@@ -43,8 +43,10 @@ export default class ClaimRecord extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
     };
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillMount() {
+
+    constructor(props) {
+        super(props);
+
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         const publication = this.props.initialValues.get('publication')
             ? this.props.initialValues.get('publication').toJS()

@@ -29,6 +29,11 @@ export default class Orcid extends Component {
     constructor(props) {
         super(props);
 
+        // eslint-disable-next-line camelcase
+        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
+            this._navigateToDashboard();
+        }
+
         // when ORCID registration went through, and ORCID has redirected back to eSpace
         // check status of ORCID redirect, if it's still in the same session (state)
         // in prod/staging
@@ -74,17 +79,6 @@ export default class Orcid extends Component {
             },
         };
     }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillMount() {
-        // user should have a fez-author record to proceed
-        // user should not be able to re-link to orcid if they already have an orcid id
-        // eslint-disable-next-line camelcase
-        if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
-            this._navigateToDashboard();
-        }
-    }
-
     componentDidMount() {
         // link author to orcid when orcid authorisation response is received from orcid website
         // (url contains required parameters)

@@ -7,8 +7,7 @@ export default class Async extends React.Component {
         componentProps: PropTypes.any,
     };
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillMount = () => {
+    componentDidMount = () => {
         this.cancelUpdate = false;
         this.props.load.then(c => {
             this.C = c;
