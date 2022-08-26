@@ -360,20 +360,17 @@ export const GetColumns = () => {
                 </Typography>
             ),
             field: 'eap_end_year',
-            render: rowData => {
-                return (
-                    <Typography
-                        variant="body2"
-                        id={`eap-end-year-${rowData.tableData.id}`}
-                        data-testid={`eap-end-year-${rowData.tableData.id}`}
-                    >
-                        {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') ===
-                        moment(new Date()).format('YYYY')
-                            ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
-                            : rowData.eap_end_year}
-                    </Typography>
-                );
-            },
+            render: rowData => (
+                <Typography
+                    variant="body2"
+                    id={`eap-end-year-${rowData.tableData.id}`}
+                    data-testid={`eap-end-year-${rowData.tableData.id}`}
+                >
+                    {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
+                        ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
+                        : rowData.eap_end_year}
+                </Typography>
+            ),
             editComponent: ({ value, rowData, onChange }) => {
                 const minDate = new Date();
                 minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
@@ -385,7 +382,7 @@ export const GetColumns = () => {
                         onChange={value => onChange((!!value && value.format('YYYY')) || null)}
                         error={
                             !moment(String(value), 'YYYY').isValid() ||
-                            Number(moment(String(value), 'YYYY').format('YYYY')) < Number(rowData.eap_start_year)
+                            moment(String(value), 'YYYY').isBefore(moment(String(rowData.eap_start_year), 'YYYY'))
                         }
                         {...((!!value &&
                             moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
