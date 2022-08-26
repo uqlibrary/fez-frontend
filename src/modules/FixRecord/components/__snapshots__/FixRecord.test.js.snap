@@ -491,7 +491,7 @@ exports[`Component FixRecord _handleDefaultSubmit() 1`] = `
 </StandardPage>
 `;
 
-exports[`Component FixRecord UNSAFE_componentWillReceiveProps() 1`] = `
+exports[`Component FixRecord componentDidUpdate() 1`] = `
 <StandardPage
   title="Request a correction, add more information or upload files"
 >

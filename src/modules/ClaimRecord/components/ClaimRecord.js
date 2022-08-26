@@ -43,7 +43,6 @@ export default class ClaimRecord extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
     };
-
     // eslint-disable-next-line camelcase
     UNSAFE_componentWillMount() {
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
@@ -54,7 +53,6 @@ export default class ClaimRecord extends PureComponent {
             this.props.history.go(-1);
         }
     }
-
     componentDidMount() {
         const publication = this.props.initialValues.get('publication')
             ? this.props.initialValues.get('publication').toJS()
@@ -64,13 +62,11 @@ export default class ClaimRecord extends PureComponent {
         }
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.successConfirmationBox.showConfirmation();
         }
     }
-
     componentWillUnmount() {
         // clear previously selected publication for a claim
         this.props.actions.clearClaimPublication();
