@@ -16,7 +16,7 @@ describe('NewListEditorField component', () => {
                     { rek_keywords: 'testing', rek_keywords_order: 2 },
                 ],
             },
-            remindToAdd: 'test2',
+            remindToAdd: true,
             maxInputLength: 100,
             searchKey: {
                 value: 'rek_keywords',
@@ -44,7 +44,7 @@ describe('NewListEditorField component', () => {
                     { rek_keywords: 'testing', rek_keywords_order: 2 },
                 ]),
             },
-            remindToAdd: 'test2',
+            remindToAdd: true,
             maxInputLength: 100,
             searchKey: {
                 value: 'rek_keywords',
@@ -65,7 +65,7 @@ describe('NewListEditorField component', () => {
             input: {
                 onChange: jest.fn(),
             },
-            remindToAdd: 'test2',
+            remindToAdd: true,
             maxInputLength: 100,
             searchKey: {
                 value: 'rek_keywords',
