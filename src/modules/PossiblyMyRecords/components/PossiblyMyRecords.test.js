@@ -202,7 +202,7 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({ loadingPossiblePublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             loadingPossiblePublicationsList: false,
             possiblePublicationsList: [1, 2, 3],
             history: {},
@@ -220,7 +220,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: {
                 action: 'POP',
             },
@@ -252,7 +252,7 @@ describe('Component PossiblyMyRecords', () => {
             },
         });
 
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             history: { action: 'POP' },
             location: { pathname: pathConfig.records.possible, state: null },
         });

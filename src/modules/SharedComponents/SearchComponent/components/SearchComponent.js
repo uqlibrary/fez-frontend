@@ -61,7 +61,7 @@ export default class SearchComponent extends PureComponent {
         updateFacetExcludesFromSearchFields: () => {},
     };
 
-    constructor(props) {
+    constructor(props, context) {
         super(props);
         this.state = {
             snackbarOpen: false,
@@ -83,20 +83,33 @@ export default class SearchComponent extends PureComponent {
                 yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets),
                 ...this.getDateRangeFromSearchQuery(props.searchQueryParams),
             },
+            getFieldRowsFromSearchQuery: this.getFieldRowsFromSearchQuery,
+            getDocTypesFromSearchQuery: this.getDocTypesFromSearchQuery,
+            getDateRangeFromSearchQuery: this.getDateRangeFromSearchQuery,
+            isMobile: context.isMobile,
+            prevProps: {
+                isOpenAccessInAdvancedMode: props.isOpenAccessInAdvancedMode,
+            },
         };
     }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    /* HERE - FIGURE OUT WHY isOpenAccessInAdvancedMode FLAG ISNT SETTING PROPERLY IN THE TEST,
+AND IS THEREFORE FAILING THE SNAPSHOT MATCH */
+    static getDerivedStateFromProps(props, state) {
         const isOpenAccessInAdvancedModeChanged =
-            nextProps.isOpenAccessInAdvancedMode !== this.props.isOpenAccessInAdvancedMode;
-        const isAdvancedSearchChanged = nextProps.isAdvancedSearch !== this.props.isAdvancedSearch;
+            props.isOpenAccessInAdvancedMode !== state.prevProps?.isOpenAccessInAdvancedMode;
+        console.log(
+            'getDerivedStateFromProps',
+            isOpenAccessInAdvancedModeChanged,
+            props.isOpenAccessInAdvancedMode,
+            state.prevProps?.isOpenAccessInAdvancedMode,
+        );
+        const isAdvancedSearchChanged = props.isAdvancedSearch !== state.prevProps?.isAdvancedSearch;
         const isAdvancedSearchMinimisedChanged =
-            this.context.isMobile && nextProps.isAdvancedSearchMinimised !== this.props.isAdvancedSearchMinimised;
+            state.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
         const searchQueryChanged =
-            nextProps.searchQueryParams &&
-            this.props.searchQueryParams &&
-            hash(nextProps.searchQueryParams) !== hash(this.props.searchQueryParams);
+            props.searchQueryParams &&
+            state.prevProps?.searchQueryParams &&
+            hash(props.searchQueryParams) !== hash(state.prevProps?.searchQueryParams);
 
         if (
             !isOpenAccessInAdvancedModeChanged &&
@@ -104,16 +117,16 @@ export default class SearchComponent extends PureComponent {
             !isAdvancedSearchMinimisedChanged &&
             !searchQueryChanged
         ) {
-            return;
+            return { prevProps: { ...props } };
         }
 
         let newState = {
-            ...this.state,
-            ...(isAdvancedSearchChanged ? { isAdvancedSearch: nextProps.isAdvancedSearch } : {}),
+            ...state,
+            ...(isAdvancedSearchChanged ? { isAdvancedSearch: props.isAdvancedSearch } : {}),
             advancedSearch: {
-                ...this.state.advancedSearch,
-                ...(isOpenAccessInAdvancedModeChanged ? { isOpenAccess: nextProps.isOpenAccessInAdvancedMode } : {}),
-                ...(isAdvancedSearchMinimisedChanged ? { isMinimised: nextProps.isAdvancedSearchMinimised } : {}),
+                ...state.advancedSearch,
+                ...(isOpenAccessInAdvancedModeChanged ? { isOpenAccess: props.isOpenAccessInAdvancedMode } : {}),
+                ...(isAdvancedSearchMinimisedChanged ? { isMinimised: props.isAdvancedSearchMinimised } : {}),
             },
         };
 
@@ -124,28 +137,23 @@ export default class SearchComponent extends PureComponent {
                     ...newState.simpleSearch,
                     searchText:
                         /* istanbul ignore next */
-                        nextProps.searchQueryParams?.all?.value ||
-                        (typeof nextProps.searchQueryParams?.all === 'string' && nextProps.searchQueryParams?.all) ||
+                        props.searchQueryParams?.all?.value ||
+                        (typeof props.searchQueryParams?.all === 'string' && props.searchQueryParams?.all) ||
                         '',
                 },
                 advancedSearch: {
                     ...newState.advancedSearch,
-                    fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
-                    docTypes: this.getDocTypesFromSearchQuery(nextProps.searchQueryParams),
+                    fieldRows: state.getFieldRowsFromSearchQuery(props.searchQueryParams),
+                    docTypes: state.getDocTypesFromSearchQuery(props.searchQueryParams),
                     yearFilter: {
-                        from: this.state.advancedSearch.yearFilter.from,
-                        to: this.state.advancedSearch.yearFilter.to,
+                        from: state.advancedSearch.yearFilter.from,
+                        to: state.advancedSearch.yearFilter.to,
                     },
-                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
+                    ...state.getDateRangeFromSearchQuery(props.searchQueryParams),
                 },
             };
         }
-
-        this.setState(newState, () => {
-            // Update the excluded facets in SearchRecords to hide from facetFilter
-            nextProps.isAdvancedSearch &&
-                this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
-        });
+        return { ...newState, prevProps: { ...props } };
     }
 
     getFieldRowsFromSearchQuery = searchQueryParams => {
@@ -511,6 +519,9 @@ export default class SearchComponent extends PureComponent {
     };
 
     render() {
+        this.props.isAdvancedSearch &&
+            this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
+
         return (
             <React.Fragment>
                 {(!this.state.isAdvancedSearch || this.props.isInHeader) && (

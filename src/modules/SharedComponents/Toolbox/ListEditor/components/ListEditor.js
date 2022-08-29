@@ -89,11 +89,10 @@ export default class ListEditor extends Component {
         this.editItem = this.editItem.bind(this);
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate() {
         // notify parent component when local state has been updated, eg itemList added/removed/reordered
         if (this.props.onChange) {
-            this.props.onChange(this.transformOutput(nextState.itemList));
+            this.props.onChange(this.transformOutput(this.state.itemList));
         }
     }
 

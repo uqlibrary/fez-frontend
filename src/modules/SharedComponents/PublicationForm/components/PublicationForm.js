@@ -82,23 +82,22 @@ export default class PublicationForm extends Component {
         ];
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
         } else {
-            if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
-                this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
+            if (!!prevProps.subtypes && prevProps.subtypes !== this.props.subtypes) {
+                this.publicationSubtypeItems = this.props.subtypes.map((item, index) => (
                     <MenuItem value={item} key={index}>
                         {item}
                     </MenuItem>
                 ));
             }
-            if (nextProps.hasDefaultDocTypeSubType) {
-                this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
+            if (this.props.hasDefaultDocTypeSubType) {
+                this.props.changeDisplayType(this.props.docTypeSubTypeCombo);
             }
-            if (nextProps.isNtro !== this.props.isNtro) {
-                this.props.changeFormType(nextProps.isNtro);
+            if (prevProps.isNtro !== this.props.isNtro) {
+                this.props.changeFormType(this.props.isNtro);
             }
         }
     }

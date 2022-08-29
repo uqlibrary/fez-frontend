@@ -51,15 +51,6 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
-        !!this.props.onChange &&
-            this.props.onChange({
-                queue: nextState.filesInQueue,
-                isValid: this.isFileUploadValid(nextState),
-            });
-    }
-
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
@@ -260,6 +251,12 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
+        !!this.props.onChange &&
+            this.props.onChange({
+                queue: this.state.filesInQueue,
+                isValid: this.isFileUploadValid(this.state),
+            });
+
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
