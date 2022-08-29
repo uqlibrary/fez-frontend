@@ -101,6 +101,24 @@ function checkCoverage {
 
 case "$PIPE_NUM" in
 "1")
+    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+    printf "\n$ npm run codestyles:files -s\n"
+    FILES=$(npm run codestyles:files -s)
+
+    if [[ "$?" == 0 ]]; then
+        printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
+    else
+        printf "\n\e[91mThese files should pass code style checks but do not:\e[0m\n\n"
+        for FILE in $FILES
+        do
+            printf "\t\e[31m$FILE\e[0m\n"
+        done
+        printf "\n* Please fix code styles and try again. Running '\e[1m npm run codestyles:fix:all \e[0m' is a good start."
+        printf "\n* You can run '\e[1m npm run eslint \e[0m' to view ESLint code quality issues, if any.\n\n"
+        exit 1
+    fi
+
+    # Set this after the codestyle checks above, so that this script doesn't exit before any failures can be printed
     set -e
 
     printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
@@ -132,24 +150,6 @@ case "$PIPE_NUM" in
 
 ;;
 "2")
-    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-    printf "\n$ npm run codestyles:files -s\n"
-    FILES=$(npm run codestyles:files -s)
-
-    if [[ "$?" == 0 ]]; then
-        printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
-    else
-        printf "\n\e[91mThese files should pass code style checks but do not:\e[0m\n\n"
-        for FILE in $FILES
-        do
-            printf "\t\e[31m$FILE\e[0m\n"
-        done
-        printf "\n* Please fix code styles and try again. Running '\e[1m npm run codestyles:fix:all \e[0m' is a good start."
-        printf "\n* You can run '\e[1m npm run eslint \e[0m' to view ESLint code quality issues, if any.\n\n"
-        exit 1
-    fi
-
-    # Set this after the codestyle checks above, so that this script doesn't exit before any failures can be printed
     set -e
 
     if [[ $CODE_COVERAGE_REQUIRED == true ]]; then
