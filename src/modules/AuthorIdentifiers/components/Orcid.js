@@ -77,8 +77,35 @@ export default class Orcid extends Component {
                 code: queryParams.code || null,
                 state: queryParams.state || null,
             },
+            createOrcidStateId: this.createOrcidStateId,
+            prevProps: { ...props },
         };
     }
+
+    static getDerivedStateFromProps(props, state) {
+        // wait for user account to get loaded and set state if props were not available in constructor
+        if (
+            props.account !== state.prevProps?.account &&
+            (!state.prevProps?.account || props.account.id !== state.prevProps?.account.id)
+        ) {
+            const orcidStateId = state.createOrcidStateId(props.account);
+
+            return {
+                orcidRequest: {
+                    ...state.orcidRequest,
+                    state: orcidStateId,
+                },
+                existingOrcidRequest: {
+                    ...state.existingOrcidRequest,
+                    family_names: !!props.account && !!props.account.lastName ? props.account.lastName : '',
+                    given_names: !!props.account && !!props.account.firstName ? props.account.firstName : '',
+                },
+                prevProps: { ...props },
+            };
+        }
+        return null;
+    }
+
     componentDidMount() {
         // link author to orcid when orcid authorisation response is received from orcid website
         // (url contains required parameters)
@@ -98,40 +125,24 @@ export default class Orcid extends Component {
         }
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        // wait for user account to get loaded and set state if props were not available in constructor
-        if (
-            nextProps.account !== this.props.account &&
-            (!this.props.account || nextProps.account.id !== this.props.account.id)
-        ) {
-            const orcidStateId = this.createOrcidStateId(nextProps.account);
-
-            this.setState(prevState => ({
-                orcidRequest: {
-                    ...prevState.orcidRequest,
-                    state: orcidStateId,
-                },
-                existingOrcidRequest: {
-                    ...prevState.existingOrcidRequest,
-                    family_names: !!nextProps.account && !!nextProps.account.lastName ? nextProps.account.lastName : '',
-                    given_names:
-                        !!nextProps.account && !!nextProps.account.firstName ? nextProps.account.firstName : '',
-                },
-            }));
-        }
-
+    componentDidUpdate(prevProps) {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
         if (
-            nextProps.author !== this.props.author &&
-            ((!nextProps.accountAuthorLoading && !nextProps.author) || nextProps.author.aut_orcid_id)
+            prevProps.author !== this.props.author &&
+            // eslint-disable-next-line camelcase
+            ((!this.props.accountAuthorLoading && !this.props.author) || this.props.author?.aut_orcid_id)
         ) {
             this._navigateToDashboard();
         }
 
         // author's orcid id has been updated successfully
-        if (nextProps.author && this.props.author && nextProps.author.aut_orcid_id !== this.props.author.aut_orcid_id) {
+        if (
+            prevProps.author &&
+            this.props.author &&
+            // eslint-disable-next-line camelcase
+            prevProps.author?.aut_orcid_id !== this.props.author?.aut_orcid_id
+        ) {
             this.props.actions.showAppAlert({
                 ...locale.pages.orcidLink.successAlert,
                 dismissAction: this.props.actions.dismissAppAlert,
@@ -143,17 +154,19 @@ export default class Orcid extends Component {
         // (if props.author were not available in componentDidMount)
         if (
             this.props.account &&
-            !nextProps.accountAuthorLoading &&
-            (nextProps.author !== this.props.author ||
-                (nextProps.author && this.props.author.aut_id !== nextProps.author.aut_id)) &&
-            !nextProps.author.aut_orcid_id &&
+            !prevProps.accountAuthorLoading &&
+            (prevProps.author !== this.props.author ||
+                // eslint-disable-next-line camelcase
+                (prevProps.author && this.props.author?.aut_id !== prevProps.author?.aut_id)) &&
+            // eslint-disable-next-line camelcase
+            !prevProps.author?.aut_orcid_id &&
             this.state.orcidResponse.code &&
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
         ) {
             this.props.actions.linkAuthorOrcidId(
-                nextProps.account.id,
-                nextProps.author.aut_id,
+                this.props.account.id,
+                this.props.author.aut_id,
                 this.state.orcidResponse.code,
             );
         }
