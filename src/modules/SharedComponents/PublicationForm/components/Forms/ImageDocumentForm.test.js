@@ -16,9 +16,9 @@ describe('ImageDocumentForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 6 input fields', () => {
+    it('component with 7 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(6);
+        expect(wrapper.find('Field').length).toEqual(7);
     });
 
     it('component with all fields disabled', () => {

@@ -11,6 +11,7 @@ import {
 import param from 'can-param';
 import locale from 'locale/components';
 import { doesListContainItem } from 'helpers/general';
+import { sanitizeDoi } from '../config/validation';
 
 export const zeroPaddedYear = value => (value ? ('0000' + value).substr(-4) : '*');
 
@@ -78,7 +79,7 @@ export const getSearchType = searchQuery => {
     if (!searchQuery) return {};
 
     if (validation.isValidDOIValue(searchQuery)) {
-        return { doi: searchQuery.trim() };
+        return { doi: sanitizeDoi(searchQuery) };
     }
 
     if (validation.isValidPubMedValue(searchQuery)) {

@@ -5,18 +5,20 @@ import OpenInNew from '@material-ui/icons/OpenInNew';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(() => ({
-    externalLink: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        overflowWrap: 'break-word',
-        wordBreak: 'break-all',
-        whiteSpace: 'nowrap',
+    externalLink: inline => ({
+        ...(!inline && {
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-all',
+            display: 'inline-block',
+        }),
         maxWidth: '100% !important',
         minWidth: 0,
-        display: 'inline-block',
         verticalAlign: 'bottom',
         cursor: 'pointer',
-    },
+    }),
     externalLinkIcon: {
         color: 'inherit',
         fontSize: '0.66rem',
@@ -26,8 +28,8 @@ export const useStyles = makeStyles(() => ({
     },
 }));
 
-const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, ...rest }) => {
-    const classes = useStyles();
+const ExternalLink = ({ children, className = '', height, openInNewIcon = true, width, inline = false, ...rest }) => {
+    const classes = useStyles(inline);
 
     const openInSizedWindow = (link, width, height) => () =>
         window.open(
@@ -63,8 +65,21 @@ const ExternalLink = ({ children, className = '', height, openInNewIcon = true, 
             }
             className={[className, classes.externalLink].filter(Boolean).join(' ')}
         >
-            {openInNewIcon && <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />}
-            {!!children && children}
+            {!!inline ? (
+                <>
+                    {!!children && children}
+                    {openInNewIcon && (
+                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                    )}
+                </>
+            ) : (
+                <>
+                    {openInNewIcon && (
+                        <OpenInNew className={classes.externalLinkIcon} id={`${rest.id}-link-new-window-icon`} />
+                    )}
+                    {!!children && children}
+                </>
+            )}
         </a>
     );
 };
@@ -77,6 +92,7 @@ ExternalLink.propTypes = {
     rel: PropTypes.string,
     width: PropTypes.number,
     id: PropTypes.string.isRequired,
+    inline: PropTypes.bool,
 };
 
 export default ExternalLink;

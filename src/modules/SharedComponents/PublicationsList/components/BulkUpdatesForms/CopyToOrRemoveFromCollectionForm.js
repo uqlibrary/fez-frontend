@@ -100,7 +100,7 @@ export const CopyToOrRemoveFromCollectionForm = ({
                             collectionFieldId="rek-ismemberof"
                             disabled={submitting || submitSucceeded}
                             floatingLabelText={txt.copyToOrRemoveFromCollectionForm.formLabels.collection}
-                            fullwidth
+                            fullWidth
                             name="collections"
                             required
                             validate={[validation.requiredList]}
