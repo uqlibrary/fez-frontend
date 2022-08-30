@@ -118,9 +118,9 @@ export const selectFields = {
         selectPrompt: 'Please select a thesis type',
     },
     externalLabels: {
-        label: 'Traditional Knowledge Rights',
-        ariaLabel: 'Please select a Traditional Knowledge label for this work',
-        selectPrompt: 'Select one or more Traditional Knowledge Rights label(s)',
+        label: 'TK and BC Labels',
+        ariaLabel: 'Please select a Traditional Knowledge or Biocultural (BC) label for this work',
+        selectPrompt: 'Select one or more Traditional Knowledge or Biocultural (BC) Rights label(s)',
         loadingHint: 'Loading labels...',
     },
     wokDocType: {

@@ -20,7 +20,7 @@ export default {
             additionalInformation: {
                 title: 'Additional information',
                 licenseLinkText: 'View license details',
-                externalLabelLinkText: 'View Traditional Knowledge rights details',
+                externalLabelLinkText: 'View Traditional Knowledge (TK) or Biocultural (BC) Labels details',
             },
             relatedPublications: {
                 title: 'Related works and datasets in eSpace',
@@ -185,7 +185,7 @@ export default {
                 fez_record_search_key_project_description: 'Project description',
                 fez_record_search_key_project_name: 'Project name',
                 fez_record_search_key_license: 'Licence and terms of access',
-                fez_record_search_key_external_label_id: 'Traditional Knowledge rights',
+                fez_record_search_key_external_label_id: 'Traditional Knowledge and Biocultural rights',
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
                 fez_record_search_key_software_required: 'Software required',
