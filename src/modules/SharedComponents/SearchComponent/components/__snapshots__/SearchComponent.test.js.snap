@@ -404,17 +404,34 @@ exports[`SearchComponent should render default view with advanced search 1`] = `
 
 exports[`SearchComponent should render in advanced search and take in consideration isOpenAccessInAdvancedMode changes 1`] = `
 <Fragment>
-  <WithStyles(SimpleSearchComponent)
-    isInHeader={false}
-    onInvalidSearch={[Function]}
+  <AdvancedSearchComponent
+    createdRange={Object {}}
+    docTypes={Array []}
+    fieldRows={
+      Array [
+        Object {
+          "label": "",
+          "searchField": "0",
+          "value": "",
+        },
+      ]
+    }
+    isMinimised={false}
+    isOpenAccess={true}
+    onAdvancedSearchReset={[Function]}
+    onAdvancedSearchRowAdd={[Function]}
+    onAdvancedSearchRowChange={[Function]}
+    onAdvancedSearchRowRemove={[Function]}
     onSearch={[Function]}
-    onSearchTextChange={[Function]}
+    onToggleMinimise={[Function]}
+    onToggleOpenAccess={[Function]}
     onToggleSearchMode={[Function]}
-    searchText=""
-    showAdvancedSearchButton={false}
-    showMobileSearchButton={false}
-    showPrefixIcon={false}
-    showSearchButton={false}
+    showUnpublishedFields={false}
+    updateDateRange={[Function]}
+    updateDocTypeValues={[Function]}
+    updateYearRangeFilter={[Function]}
+    updatedRange={Object {}}
+    yearFilter={Object {}}
   />
   <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={

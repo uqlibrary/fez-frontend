@@ -92,17 +92,11 @@ export default class SearchComponent extends PureComponent {
             },
         };
     }
-    /* HERE - FIGURE OUT WHY isOpenAccessInAdvancedMode FLAG ISNT SETTING PROPERLY IN THE TEST,
-AND IS THEREFORE FAILING THE SNAPSHOT MATCH */
+
     static getDerivedStateFromProps(props, state) {
         const isOpenAccessInAdvancedModeChanged =
             props.isOpenAccessInAdvancedMode !== state.prevProps?.isOpenAccessInAdvancedMode;
-        console.log(
-            'getDerivedStateFromProps',
-            isOpenAccessInAdvancedModeChanged,
-            props.isOpenAccessInAdvancedMode,
-            state.prevProps?.isOpenAccessInAdvancedMode,
-        );
+
         const isAdvancedSearchChanged = props.isAdvancedSearch !== state.prevProps?.isAdvancedSearch;
         const isAdvancedSearchMinimisedChanged =
             state.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
@@ -117,7 +111,7 @@ AND IS THEREFORE FAILING THE SNAPSHOT MATCH */
             !isAdvancedSearchMinimisedChanged &&
             !searchQueryChanged
         ) {
-            return { prevProps: { ...props } };
+            return null;
         }
 
         let newState = {

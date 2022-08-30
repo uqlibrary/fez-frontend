@@ -43,10 +43,10 @@ describe('SearchComponent', () => {
         const wrapper = setup({
             isAdvancedSearch: true,
         });
+
         wrapper.setProps({
             isOpenAccessInAdvancedMode: true,
         });
-        // wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -75,7 +75,6 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle search to minimised view of advanced search', () => {
-        // UNSAFE_componentWillReceiveProps
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({
