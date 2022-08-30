@@ -46101,15 +46101,15 @@ exports[`Additional Information Component  should render component with generic 
                   "fez_record_search_key_end_page": null,
                   "fez_record_search_key_external_label_id": Array [
                     Object {
-                      "rek_external_label_id": 456927,
+                      "rek_external_label_id": 456929,
                       "rek_external_label_id_order": 1,
                     },
                     Object {
-                      "rek_external_label_id": 456926,
+                      "rek_external_label_id": 456930,
                       "rek_external_label_id_order": 2,
                     },
                     Object {
-                      "rek_external_label_id": 456928,
+                      "rek_external_label_id": 456999,
                       "rek_external_label_id_order": 3,
                     },
                   ],
@@ -46635,15 +46635,15 @@ exports[`Additional Information Component  should render component with generic 
                   "fez_record_search_key_end_page": null,
                   "fez_record_search_key_external_label_id": Array [
                     Object {
-                      "rek_external_label_id": 456927,
+                      "rek_external_label_id": 456929,
                       "rek_external_label_id_order": 1,
                     },
                     Object {
-                      "rek_external_label_id": 456926,
+                      "rek_external_label_id": 456930,
                       "rek_external_label_id_order": 2,
                     },
                     Object {
-                      "rek_external_label_id": 456928,
+                      "rek_external_label_id": 456999,
                       "rek_external_label_id_order": 3,
                     },
                   ],
@@ -46978,7 +46978,7 @@ exports[`Additional Information Component  should render component with generic 
         alignItems="flex-start"
         className="gridRow"
         container={true}
-        key="additional-info-Traditional Knowledge rights"
+        key="additional-info-Traditional Knowledge and Biocultural rights"
         spacing={2}
       >
         <WithStyles(ForwardRef(Grid))
@@ -46996,7 +46996,7 @@ exports[`Additional Information Component  should render component with generic 
             data-testid="rek-external-label-id-label"
             variant="body2"
           >
-            Traditional Knowledge rights
+            Traditional Knowledge and Biocultural rights
           </WithStyles(ForwardRef(Typography))>
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
@@ -47013,11 +47013,18 @@ exports[`Additional Information Component  should render component with generic 
               className="externallabels"
             >
               <li
-                key="456927"
+                key="456929"
               >
-                <ExternalImageElement
-                  labelId={456927}
-                />
+                <ExternalLink
+                  href="https://localcontexts.org/label/tk-non-commercial/"
+                  id="rek-tk-label"
+                  openInNewIcon={false}
+                >
+                  <img
+                    className="fez-icon externallabel uq"
+                    src="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456929.png"
+                  />
+                </ExternalLink>
                 <div
                   className="externalLabelText"
                 >
@@ -47028,11 +47035,18 @@ exports[`Additional Information Component  should render component with generic 
                 </div>
               </li>
               <li
-                key="456926"
+                key="456930"
               >
-                <ExternalImageElement
-                  labelId={456926}
-                />
+                <ExternalLink
+                  href="https://localcontexts.org/label/tk-secret-sacred/"
+                  id="rek-tk-label"
+                  openInNewIcon={false}
+                >
+                  <img
+                    className="fez-icon externallabel uq"
+                    src="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456930.png"
+                  />
+                </ExternalLink>
                 <div
                   className="externalLabelText"
                 >
@@ -47043,10 +47057,11 @@ exports[`Additional Information Component  should render component with generic 
                 </div>
               </li>
               <li
-                key="456928"
+                key="456999"
               >
-                <ExternalImageElement
-                  labelId={456928}
+                <img
+                  className="fez-icon externallabel undefined"
+                  src="https://fez-staging.library.uq.edu.au/external-assets/local-contexts/456999.png"
                 />
                 <div
                   className="externalLabelText"

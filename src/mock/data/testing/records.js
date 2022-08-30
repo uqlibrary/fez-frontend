@@ -19337,15 +19337,15 @@ export const genericWithExternalLabels = {
     ],
     fez_record_search_key_external_label_id:  [
         {
-            rek_external_label_id: 456927,
+            rek_external_label_id: 456929,
             rek_external_label_id_order: 1,
         },
         {
-            rek_external_label_id: 456926,
+            rek_external_label_id: 456930,
             rek_external_label_id_order: 2,
         },
         {
-            rek_external_label_id: 456928,
+            rek_external_label_id: 456999, // doesnt exist, to test label without external link
             rek_external_label_id_order: 3,
         },
     ],

@@ -284,12 +284,12 @@ export class AdditionalInformationClass extends PureComponent {
                     //     tkLabelLink && tkLabelLink.className.indexOf('uq') === 0
                     //         ? locale.viewRecord.sections.additionalInformation.tkLabelLinkText
                     //         : null;
-                    const ExternalImageElement = ({ labelId }) => {
+                    const externalImageElement = (labelId, externalLink) => {
                         const externalLabelImageUrl = getExternalLabelImageUrl(labelId);
                         return (
                             <img
                                 src={externalLabelImageUrl}
-                                className={`fez-icon externallabel ${externalLabelLink.className}`}
+                                className={`fez-icon externallabel ${externalLink?.className}`}
                             />
                         );
                     };
@@ -297,10 +297,11 @@ export class AdditionalInformationClass extends PureComponent {
                         <li key={cvoId}>
                             {!!externalLabelLink && (
                                 <ExternalLink href={externalLabelLink.url} openInNewIcon={false} id="rek-tk-label">
-                                    <ExternalImageElement labelId={data.rek_external_label_id} />
+                                    {externalImageElement(data.rek_external_label_id, externalLabelLink)}
                                 </ExternalLink>
                             )}
-                            {!!!externalLabelLink && <ExternalImageElement labelId={data.rek_external_label_id} />}
+                            {!!!externalLabelLink &&
+                                externalImageElement(data.rek_external_label_id, externalLabelLink)}
                             <div className="externalLabelText">{externalLabelLookup}</div>
                         </li>
                     );

@@ -210,7 +210,8 @@ describe('Additional Information Component ', () => {
     it('should render component with generic document with Local Context labels', () => {
         const wrapper = setup({ publication: records.genericWithExternalLabels });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.externalLabelText').length).toEqual(3);
+        expect(wrapper.find('.externalLabelText').length).toEqual(3); // 3 labels
+        expect(wrapper.find('#rek-tk-label').length).toEqual(2); // only 2 have external links
     });
 
     it('should render component with rek_start and end dates', () => {
