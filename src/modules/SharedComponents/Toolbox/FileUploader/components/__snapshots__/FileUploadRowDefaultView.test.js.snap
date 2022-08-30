@@ -21,7 +21,9 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
         disabled={true}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -75,7 +77,9 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
         disabled={false}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -105,7 +109,9 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
         disabled={true}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -221,7 +227,9 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
         disabled={false}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -251,7 +259,9 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
         disabled={true}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -367,7 +377,9 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
         disabled={false}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -397,7 +409,9 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
         disabled={true}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -517,7 +531,9 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
         disabled={false}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -580,7 +596,9 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
         disabled={true}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandLessIcon)) />
       </WithStyles(ForwardRef(IconButton))>
@@ -696,7 +714,9 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       xs={1}
     >
       <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
         disabled={false}
+        id="new-file-upload-down-0"
       >
         <Memo(ForwardRef(ExpandMoreIcon)) />
       </WithStyles(ForwardRef(IconButton))>
