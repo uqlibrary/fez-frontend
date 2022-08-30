@@ -1,4 +1,4 @@
-import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID, TK_FIELDS_VOCAB_ID } from 'config/general';
+import { ORG_UNITS_VOCAB_ID, FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID, EXTERNAL_LABELS_FIELDS_VOCAB_ID } from 'config/general';
 
 export const vocabulariesList = {
     [ORG_UNITS_VOCAB_ID]: {
@@ -5479,7 +5479,7 @@ export const vocabulariesList = {
         ],
         "filters": []
     },
-    [TK_FIELDS_VOCAB_ID]: {
+    [EXTERNAL_LABELS_FIELDS_VOCAB_ID]: {
         "total": 17,
         "data": [
           {
