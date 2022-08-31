@@ -103,9 +103,11 @@ describe('DataStreamSecuritySelector component', () => {
             attachedDataStreams: [
                 {
                     dsi_dsid: 'preview_test8.txt',
+                    dsi_security_policy: '',
                 },
                 {
                     dsi_dsid: 'testA.txt',
+                    dsi_security_policy: '',
                 },
             ],
             collections: [
@@ -128,6 +130,7 @@ describe('DataStreamSecuritySelector component', () => {
             attachedDataStreams: [
                 {
                     dsi_dsid: 'test9.txt',
+                    dsi_security_policy: '',
                 },
             ],
             collections: [

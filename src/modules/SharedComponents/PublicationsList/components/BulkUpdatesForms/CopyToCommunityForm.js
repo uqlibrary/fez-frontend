@@ -96,7 +96,7 @@ export const CopyToCommunityForm = ({
                             floatingLabelText={`${isRemoveFrom ? 'Remove from ' : 'Add to '} ${
                                 txt.copyToCommunity.formLabels.community
                             }`}
-                            fullwidth
+                            fullWidth
                             name="communities"
                             required
                             validate={[validation.requiredList]}
