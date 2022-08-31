@@ -61,6 +61,8 @@ describe('SearchKeyword', () => {
             keyword,
             cvoId,
             sources,
+            type,
+            index,
         });
         expect(getByText(keyword)).toBeInTheDocument();
     });
@@ -70,6 +72,8 @@ describe('SearchKeyword', () => {
             keyword,
             cvoId,
             sources,
+            type,
+            index,
         });
         sources.forEach(source => {
             expect(getByText(source.index)).toBeInTheDocument();

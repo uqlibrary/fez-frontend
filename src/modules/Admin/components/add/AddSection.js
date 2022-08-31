@@ -64,7 +64,7 @@ export const AddSection = ({
                                         hintText={locale.pages.adminAdd.formLabels.ismemberof.hintText}
                                         required
                                         validate={[validation.requiredList]}
-                                        fullwidth
+                                        fullWidth
                                         collectionFieldId="rek-ismemberof"
                                     />
                                 </Grid>
