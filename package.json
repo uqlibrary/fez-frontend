@@ -173,7 +173,7 @@
         "match-sorter": "^6.3.1",
         "material-table": "^1.69.2",
         "moment": "^2.22.1",
-        "moment-timezone": "^0.5.16",
+        "moment-timezone": "^0.5.35",
         "number-to-words": "^1.2.4",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
