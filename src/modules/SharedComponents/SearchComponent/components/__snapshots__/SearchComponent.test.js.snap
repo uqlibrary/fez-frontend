@@ -176,7 +176,7 @@ exports[`SearchComponent should display simple search with query string 2`] = `
     onSearch={[Function]}
     onSearchTextChange={[Function]}
     onToggleSearchMode={[Function]}
-    searchText="i feel very lucky"
+    searchText=""
     showAdvancedSearchButton={false}
     showMobileSearchButton={false}
     showPrefixIcon={false}
@@ -819,8 +819,8 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
       Array [
         Object {
           "label": "",
-          "searchField": "all",
-          "value": "i feel very lucky",
+          "searchField": "0",
+          "value": "",
         },
       ]
     }
@@ -839,12 +839,7 @@ exports[`SearchComponent should toggle search to minimised view of advanced sear
     updateDocTypeValues={[Function]}
     updateYearRangeFilter={[Function]}
     updatedRange={Object {}}
-    yearFilter={
-      Object {
-        "from": undefined,
-        "to": undefined,
-      }
-    }
+    yearFilter={Object {}}
   />
   <WithStyles(ForwardRef(Snackbar))
     anchorOrigin={

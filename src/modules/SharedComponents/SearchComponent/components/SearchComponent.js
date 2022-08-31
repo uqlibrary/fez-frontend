@@ -89,6 +89,7 @@ export default class SearchComponent extends PureComponent {
             isMobile: context.isMobile,
             prevProps: {
                 isOpenAccessInAdvancedMode: props.isOpenAccessInAdvancedMode,
+                isAdvancedSearch: props.isAdvancedSearch,
             },
         };
     }
@@ -96,7 +97,6 @@ export default class SearchComponent extends PureComponent {
     static getDerivedStateFromProps(props, state) {
         const isOpenAccessInAdvancedModeChanged =
             props.isOpenAccessInAdvancedMode !== state.prevProps?.isOpenAccessInAdvancedMode;
-
         const isAdvancedSearchChanged = props.isAdvancedSearch !== state.prevProps?.isAdvancedSearch;
         const isAdvancedSearchMinimisedChanged =
             state.isMobile && props.isAdvancedSearchMinimised !== state.prevProps?.isAdvancedSearchMinimised;
@@ -147,6 +147,8 @@ export default class SearchComponent extends PureComponent {
                 },
             };
         }
+        !!props.isAdvancedSearch && props.updateFacetExcludesFromSearchFields(state.advancedSearch.fieldRows);
+
         return { ...newState, prevProps: { ...props } };
     }
 
@@ -513,9 +515,6 @@ export default class SearchComponent extends PureComponent {
     };
 
     render() {
-        this.props.isAdvancedSearch &&
-            this.props.updateFacetExcludesFromSearchFields(this.state.advancedSearch.fieldRows);
-
         return (
             <React.Fragment>
                 {(!this.state.isAdvancedSearch || this.props.isInHeader) && (
