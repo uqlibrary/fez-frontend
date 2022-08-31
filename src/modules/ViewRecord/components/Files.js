@@ -514,7 +514,6 @@ export class FilesClass extends Component {
                             </Hidden>
                         </Grid>
                     </div>
-                    {/* here is where I can possibly tweak the ordering of the files */}
 
                     {fileData.map((item, index) => (
                         <div className={this.props.classes.containerPadding} key={index}>
