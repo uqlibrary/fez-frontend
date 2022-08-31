@@ -28,6 +28,7 @@ export const getFileUploadMetadata = (file, collections) => {
     const metadata = {
         dsi_security_inherited: securityInherited ? 1 : 0,
         dsi_security_policy: securityPolicy,
+        dsi_label: file.description,
         ...(file.access_condition_id === FILE_ACCESS_CONDITION_OPEN && !moment(file.date).isSame(moment(), 'day')
             ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
             : {}),

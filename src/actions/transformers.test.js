@@ -181,25 +181,9 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                 name: 'file4.txt',
             },
         ];
-        const defaultFileExpected = {
-            fez_record_search_key_file_attachment_description: [
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-            ],
-        };
+
         const record = null;
         const expected = {
-            ...defaultFileExpected,
             fez_record_search_key_file_attachment_name: [
                 {
                     rek_file_attachment_name: 'file1.txt',
@@ -260,19 +244,9 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                 name: 'file2.txt',
             },
         ];
-        const defaultFileExpected = {
-            fez_record_search_key_file_attachment_description: [
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-            ],
-        };
+
         const record = null;
         const expected = {
-            ...defaultFileExpected,
             fez_record_search_key_file_attachment_name: [
                 {
                     rek_file_attachment_name: 'file.txt',
@@ -301,19 +275,9 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                 access_condition_id: 5,
             },
         ];
-        const defaultFileExpected = {
-            fez_record_search_key_file_attachment_description: [
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-            ],
-        };
+
         const record = { collections: [{ rek_datastream_policy: 4 }, { rek_datastream_policy: 5 }] };
         const expected = {
-            ...defaultFileExpected,
             fez_record_search_key_file_attachment_name: [
                 {
                     rek_file_attachment_name: 'file.txt',
@@ -352,23 +316,13 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                 name: 'file2.txt',
             },
         ];
-        const defaultFileExpected = {
-            fez_record_search_key_file_attachment_description: [
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-            ],
-        };
+
         const record = {
             fez_record_search_key_file_attachment_access_condition: [],
             fez_record_search_key_file_attachment_embargo_date: [],
             fez_record_search_key_file_attachment_name: [],
         };
         const expected = {
-            ...defaultFileExpected,
             fez_record_search_key_file_attachment_name: [
                 {
                     rek_file_attachment_name: 'file.txt',
@@ -414,16 +368,7 @@ describe('getRecordFileAttachmentSearchKey test', () => {
                 name: 'file2.txt',
             },
         ];
-        const defaultFileExpected = {
-            fez_record_search_key_file_attachment_description: [
-                {
-                    rek_file_attachment_description: undefined,
-                },
-                {
-                    rek_file_attachment_description: undefined,
-                },
-            ],
-        };
+
         const record = {
             fez_record_search_key_file_attachment_access_condition: [],
             fez_record_search_key_file_attachment_embargo_date: [],
@@ -437,7 +382,6 @@ describe('getRecordFileAttachmentSearchKey test', () => {
             ],
         };
         const expected = {
-            ...defaultFileExpected,
             fez_record_search_key_file_attachment_name: [
                 {
                     rek_file_attachment_name_id: null,
