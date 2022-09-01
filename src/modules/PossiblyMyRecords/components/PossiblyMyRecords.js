@@ -73,10 +73,10 @@ export default class PossiblyMyRecords extends PureComponent {
             props.history.action === 'POP' &&
             props.location.pathname === pathConfig.records.possible
         ) {
+            props.actions.searchPossiblyYourPublications({ ...state });
             return {
                 ...(!!props.location.state ? props.location.state : state.initState),
                 prevProps: { ...props },
-                searchPossiblyYourPublications: true,
             };
         }
         // set forever-true flag if user has publications
@@ -89,17 +89,11 @@ export default class PossiblyMyRecords extends PureComponent {
             return { hasPublications: true };
         }
 
-        return { searchPossiblyYourPublications: true };
+        return null;
     }
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchPossiblyYourPublications({ ...this.state });
-        }
-    }
-
-    componentDidUpdate() {
-        if (!!this.state.searchPossiblyYourPublications) {
             this.props.actions.searchPossiblyYourPublications({ ...this.state });
         }
     }

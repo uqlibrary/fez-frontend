@@ -209,7 +209,7 @@ describe('Component PublicationForm', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call componentDidUpdate when props change', () => {
+    it('should call getDerivedStateFromProps when props change', () => {
         const changeDisplayType = jest.fn();
         const changeFormType = jest.fn();
         const wrapper = setup({
@@ -217,8 +217,7 @@ describe('Component PublicationForm', () => {
             changeDisplayType: changeDisplayType,
             changeFormType: changeFormType,
         });
-        // eslint-disable-next-line camelcase
-        const componentDidUpdate = jest.spyOn(wrapper.instance(), 'componentDidUpdate');
+
         wrapper.setProps({
             submitSucceeded: true,
             hasSubtypes: false,
@@ -228,7 +227,7 @@ describe('Component PublicationForm', () => {
             hasDefaultDocTypeSubType: false,
             docTypeSubTypeCombo: null,
         });
-        expect(componentDidUpdate).toHaveBeenCalled();
+
         // Testing conditional paths
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({
@@ -240,7 +239,7 @@ describe('Component PublicationForm', () => {
             hasDefaultDocTypeSubType: false,
             docTypeSubTypeCombo: null,
         });
-        expect(componentDidUpdate).toHaveBeenCalled();
+
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
@@ -252,7 +251,7 @@ describe('Component PublicationForm', () => {
             hasDefaultDocTypeSubType: false,
             docTypeSubTypeCombo: null,
         });
-        expect(componentDidUpdate).toHaveBeenCalled();
+
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
@@ -264,7 +263,7 @@ describe('Component PublicationForm', () => {
             hasDefaultDocTypeSubType: true,
             docTypeSubTypeCombo: null,
         });
-        expect(componentDidUpdate).toHaveBeenCalled();
+
         expect(changeDisplayType).toHaveBeenCalled();
         expect(changeFormType).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();

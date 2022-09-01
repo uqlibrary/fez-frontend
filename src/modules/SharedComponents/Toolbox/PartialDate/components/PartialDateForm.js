@@ -106,15 +106,25 @@ export class PartialDateForm extends PureComponent {
                 day: dateValue.date(),
                 month: dateValue.month(),
                 year: dateValue.year(),
+                setDate: this._setDate,
             };
         } else {
             this.state = {
                 day: '',
                 month: -1,
                 year: '',
+                setDate: this._setDate,
             };
         }
         this.errors = { day: '', month: '', year: '' };
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        console.log('getDerivedStateFromProps');
+        if (props.onChange) {
+            console.log('getDerivedStateFromProps inside IF');
+            props.onChange(state.setDate(state));
+        }
     }
 
     /**
@@ -272,9 +282,6 @@ export class PartialDateForm extends PureComponent {
     };
 
     render() {
-        if (this.props.onChange) {
-            this.props.onChange(this._setDate(this.state));
-        }
         const { locale, months } = this.props;
         const renderMonths = months.map((month, index) => (
             <MenuItem key={index} value={index}>

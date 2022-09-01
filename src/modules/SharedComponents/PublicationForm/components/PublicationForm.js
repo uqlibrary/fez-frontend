@@ -80,25 +80,35 @@ export default class PublicationForm extends Component {
                 </MenuItem>
             )),
         ];
+        this.state = {
+            prevProps: { ...this.props },
+        };
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        let publicationSubtypeItems;
+
+        if (!!props.subtypes && props.subtypes !== state.prevProps.subtypes) {
+            publicationSubtypeItems = props.subtypes.map((item, index) => (
+                <MenuItem value={item} key={index}>
+                    {item}
+                </MenuItem>
+            ));
+        }
+
+        return { publicationSubtypeItems, prevProps: { ...props } };
     }
 
     componentDidUpdate(prevProps) {
         if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        } else {
-            if (!!prevProps.subtypes && prevProps.subtypes !== this.props.subtypes) {
-                this.publicationSubtypeItems = this.props.subtypes.map((item, index) => (
-                    <MenuItem value={item} key={index}>
-                        {item}
-                    </MenuItem>
-                ));
-            }
-            if (this.props.hasDefaultDocTypeSubType) {
-                this.props.changeDisplayType(this.props.docTypeSubTypeCombo);
-            }
-            if (prevProps.isNtro !== this.props.isNtro) {
-                this.props.changeFormType(this.props.isNtro);
-            }
+        }
+
+        if (this.props.hasDefaultDocTypeSubType) {
+            this.props.changeDisplayType(this.props.docTypeSubTypeCombo);
+        }
+        if (prevProps.isNtro !== this.props.isNtro) {
+            this.props.changeFormType(this.props.isNtro);
         }
     }
 
@@ -147,7 +157,7 @@ export default class PublicationForm extends Component {
                                                 placeholder={txt.publicationSubtype.hintText}
                                                 selectFieldId="rek-subtype"
                                             >
-                                                {this.publicationSubtypeItems}
+                                                {this.state?.publicationSubtypeItems}
                                             </Field>
                                         </Grid>
                                     )}

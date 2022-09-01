@@ -26,12 +26,6 @@ export default class AddMissingRecord extends PureComponent {
         }
     }
 
-    // componentDidMount() {
-    //     if (!this.props.rawSearchQuery && this.props.match.path === pathConfig.records.add.results) {
-    //         this.props.history.replace(pathConfig.records.add.find);
-    //     }
-    // }
-
     getStepperIndex = location => {
         const locationTokens = location.split('/').filter(Boolean);
         if (locationTokens.length !== 3) return 0;
