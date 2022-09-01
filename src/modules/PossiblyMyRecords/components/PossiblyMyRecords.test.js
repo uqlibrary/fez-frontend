@@ -319,10 +319,31 @@ describe('Component PossiblyMyRecords', () => {
         wrapper.setState({
             hasPublications: true,
         });
+
         expect(wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) PublicationsListSorting').length).toBe(1);
         expect(
             wrapper.find('StandardCard WithStyles(ForwardRef(Grid)) WithStyles(PublicationsListPaging)').length,
         ).toBe(2);
+    });
+
+    // coverage
+    it('should show loader when user is filtering/paging', () => {
+        const wrapper = setup({
+            accountLoading: false,
+            possibleCounts: 21,
+            loadingPossibleCounts: false,
+            possiblePublicationsList: [],
+            loadingPossiblePublicationsList: true,
+        });
+        wrapper.setState({
+            hasPublications: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(
+            wrapper.find(
+                'StandardPage WithStyles(ForwardRef(Grid)) WithStyles(ForwardRef(Grid)) WithStyles(InlineLoader)',
+            ).length,
+        ).toBe(1);
     });
 
     it('should not enable export functionality', () => {

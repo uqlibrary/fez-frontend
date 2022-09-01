@@ -86,7 +86,7 @@ export default class PossiblyMyRecords extends PureComponent {
             !!props.possiblePublicationsList &&
             props.possiblePublicationsList.length > 0
         ) {
-            return { hasPublications: true };
+            return { hasPublications: true, prevProps: { ...props } };
         }
 
         return null;
@@ -106,7 +106,7 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
-            state: { ...this.state },
+            state: { ...this.state, prevProps: {} },
         });
         this.props.actions.searchPossiblyYourPublications({ ...this.state });
     };
