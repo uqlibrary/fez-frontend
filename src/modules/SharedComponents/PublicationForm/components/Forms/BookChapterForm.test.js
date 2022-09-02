@@ -18,9 +18,9 @@ describe('BookChapterForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 14 input fields', () => {
+    it('component with 15 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(14);
+        expect(wrapper.find('Field').length).toEqual(15);
     });
 
     it('component with all fields disabled', () => {

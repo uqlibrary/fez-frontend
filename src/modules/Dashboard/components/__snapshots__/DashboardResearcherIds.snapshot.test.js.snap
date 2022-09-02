@@ -521,7 +521,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-3"
         data-testid="publons-link"
         href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
         id="publons-link"
@@ -540,7 +540,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-4"
         data-testid="researcher-link"
         href="http://www.researcherid.com/rid/A-1137-2007"
         id="researcher-link"
@@ -559,7 +559,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-5"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus-link"
@@ -578,7 +578,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-6"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar-link"
@@ -597,7 +597,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-7"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid-link"
@@ -625,7 +625,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
             class="MuiIconButton-label"
           >
             <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-3 MuiSvgIcon-fontSizeSmall"
+              class="MuiSvgIcon-root makeStyles-helpIcon-8 MuiSvgIcon-fontSizeSmall"
               focusable="false"
               role="img"
               viewBox="0 0 24 24"

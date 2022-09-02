@@ -16,9 +16,9 @@ describe('PreprintForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 5 input fields', () => {
+    it('component with 6 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(5);
+        expect(wrapper.find('Field').length).toEqual(6);
     });
 
     it('component with all fields disabled', () => {

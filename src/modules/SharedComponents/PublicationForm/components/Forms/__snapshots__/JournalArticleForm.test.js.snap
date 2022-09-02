@@ -53,7 +53,6 @@ exports[`JournalArticleForm renders  component 1`] = `
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Grid))
           item={true}
-          sm={6}
           xs={12}
         >
           <Field
@@ -76,6 +75,38 @@ exports[`JournalArticleForm renders  component 1`] = `
             placeholder=""
             required={true}
             textFieldId="rek-journal-name"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            label="DOI"
+            name="fez_record_search_key_doi.rek_doi"
+            placeholder="Enter a valid DOI (e.g. 10.123/456)"
+            textFieldId="rek-doi"
             type="text"
             validate={
               Array [
@@ -176,7 +207,7 @@ exports[`JournalArticleForm renders  component 1`] = `
                     "identifierLabel": "UQ identifier (if available)",
                     "nameAsPublishedFieldId": "authors-name-as-published-field",
                     "nameAsPublishedHint": "Type the name exactly as published",
-                    "nameAsPublishedLabel": "Authors's name as published",
+                    "nameAsPublishedLabel": "Author's name as published",
                   },
                 },
                 "header": Object {

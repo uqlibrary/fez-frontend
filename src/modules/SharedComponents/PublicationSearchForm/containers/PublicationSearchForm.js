@@ -4,6 +4,7 @@ import Immutable from 'immutable';
 import PublicationSearchForm from '../components/PublicationSearchForm';
 import { validation } from 'config';
 import { locale } from 'locale';
+import { sanitizeDoi } from '../../../../config/validation';
 
 const FORM_NAME = 'PublicationSearchForm';
 
@@ -12,7 +13,7 @@ const validate = values => {
     stopSubmit(FORM_NAME, null);
 
     const errors = {};
-    const fieldValue = values.get('searchQuery');
+    const fieldValue = sanitizeDoi(values.get('searchQuery'));
 
     if (
         !validation.required(fieldValue) &&

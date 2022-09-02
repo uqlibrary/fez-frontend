@@ -9914,7 +9914,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-11"
                                                                                                     data-testid="publons-link"
                                                                                                     href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
                                                                                                     id="publons-link"
@@ -10116,7 +10116,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-12"
                                                                                                     data-testid="researcher-link"
                                                                                                     href="http://www.researcherid.com/rid/A-1137-2007"
                                                                                                     id="researcher-link"
@@ -10318,7 +10318,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-13"
                                                                                                     data-testid="scopus-link"
                                                                                                     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
                                                                                                     id="scopus-link"
@@ -10520,7 +10520,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-14"
                                                                                                     data-testid="google_scholar-link"
                                                                                                     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
                                                                                                     id="google_scholar-link"
@@ -10722,7 +10722,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-15"
                                                                                                     data-testid="orcid-link"
                                                                                                     href="https://orcid.org/0000-0001-1111-1111"
                                                                                                     id="orcid-link"
@@ -11168,13 +11168,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                             wiggle={null}
                                           >
                                             <div
-                                              className="makeStyles-root-11"
+                                              className="makeStyles-root-16"
                                               data-testid="alert"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
                                                 alignItems="flex-start"
-                                                className="makeStyles-info_outline-26 makeStyles-common-12"
+                                                className="makeStyles-info_outline-31 makeStyles-common-17"
                                                 container={true}
                                                 justifyContent="center"
                                                 spacing={3}
@@ -11182,7 +11182,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 <ForwardRef(Grid)
                                                   alignContent="center"
                                                   alignItems="flex-start"
-                                                  className="makeStyles-info_outline-26 makeStyles-common-12"
+                                                  className="makeStyles-info_outline-31 makeStyles-common-17"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11295,16 +11295,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   spacing={3}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root makeStyles-info_outline-26 makeStyles-common-12 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
+                                                    className="MuiGrid-root makeStyles-info_outline-31 makeStyles-common-17 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-linked-19"
+                                                      className="makeStyles-linked-24"
                                                       item={true}
                                                       sm={true}
                                                       xs={12}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-linked-19"
+                                                        className="makeStyles-linked-24"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11417,7 +11417,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={12}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-linked-19 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
+                                                          className="MuiGrid-root makeStyles-linked-24 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
                                                         >
                                                           <WithStyles(ForwardRef(Grid))
                                                             alignContent="center"
@@ -11542,13 +11542,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                               >
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-icon-15 alert-icon "
+                                                                  className="makeStyles-icon-20 alert-icon "
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-icon-15 alert-icon "
+                                                                    className="makeStyles-icon-20 alert-icon "
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11661,7 +11661,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     onKeyDown={[Function]}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-icon-15 alert-icon  MuiGrid-item"
+                                                                      className="MuiGrid-root makeStyles-icon-20 alert-icon  MuiGrid-item"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11708,14 +11708,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-text-16 alert-text"
+                                                                  className="makeStyles-text-21 alert-text"
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                   xs={true}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-text-16 alert-text"
+                                                                    className="makeStyles-text-21 alert-text"
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11829,7 +11829,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     xs={true}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-text-16 alert-text MuiGrid-item MuiGrid-grid-xs-true"
+                                                                      className="MuiGrid-root makeStyles-text-21 alert-text MuiGrid-item MuiGrid-grid-xs-true"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11847,13 +11847,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-actionButton-17"
+                                                      className="makeStyles-actionButton-22"
                                                       item={true}
                                                       sm="auto"
                                                       xs={true}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-actionButton-17"
+                                                        className="makeStyles-actionButton-22"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11966,7 +11966,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={true}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-actionButton-17 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
+                                                          className="MuiGrid-root makeStyles-actionButton-22 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"

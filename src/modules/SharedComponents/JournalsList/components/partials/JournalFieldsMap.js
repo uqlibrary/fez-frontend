@@ -1,6 +1,10 @@
 import React from 'react';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { sanitiseId } from 'helpers/general';
 
 // This prototype mutation allows us to return the smallest integer value in an array
 Array.min = array => {
@@ -12,6 +16,28 @@ export const JournalFieldsMap = [
         key: 'jnl_title',
         label: 'Journal title',
         subLabel: '',
+        collapsibleComponent: {
+            actionsCol: {
+                xs: {
+                    width: '10%',
+                    padding: '6px',
+                },
+                selectable: {
+                    xs: {
+                        width: '30%',
+                        padding: '6px',
+                    },
+                    sm: {
+                        width: '15%',
+                    },
+                },
+            },
+            sizeHeader: {
+                // width - can be anything.
+                xs: 12,
+                sm: 8,
+            },
+        },
         size: {
             // width - can be anything.
             xs: 'auto',
@@ -34,6 +60,43 @@ export const JournalFieldsMap = [
         label: 'Open access',
         subLabel: '',
         size: 75,
+        collapsibleComponent: {
+            sizeHeader: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            sizeData: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            hiddenHeader: ['xs'],
+            hiddenData: ['sm', 'md', 'lg', 'xl'],
+            translateFn: (data, index, classes) => {
+                return (
+                    <Typography variant="body1" component="div">
+                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                            <Typography
+                                variant="body1"
+                                className={classes?.inputLabel}
+                                component="span"
+                                id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                                data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                            >
+                                {data.label}
+                                {/* istanbul ignore next */ !!data.subLabel && (
+                                    <span className={classes?.subLabel}>{data.subLabel}</span>
+                                )}
+                            </Typography>
+                            {!!data.titleHelp && (
+                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
+                            )}
+                        </Box>
+                    </Typography>
+                );
+            },
+        },
         prefix: '',
         suffix: '',
         compactView: true,
@@ -77,12 +140,17 @@ export const JournalFieldsMap = [
         toolTipLabel: data => {
             return data.fez_journal_doaj ? 'Open access journal' : 'Use filters to find alternate pathways';
         },
-        translateFn: data => {
-            // Awaiting final logic for OA from MF/EA
+        translateFn: (data, classes) => {
             return data.fez_journal_doaj ? (
-                <LockOpenIcon style={{ color: 'orange', marginTop: 12 }} />
+                <LockOpenIcon
+                    className={classes?.iconOpen ?? ''}
+                    style={!!!classes ? { color: 'orange', marginTop: 12 } : /* istanbul ignore next */ {}}
+                />
             ) : (
-                <LockOutlinedIcon style={{ color: '#e5e5e5', marginTop: 12 }} />
+                <LockOutlinedIcon
+                    className={classes?.iconClosed ?? ''}
+                    style={!!!classes ? { color: '#e5e5e5', marginTop: 12 } : /* istanbul ignore next */ {}}
+                />
             );
         },
     },
@@ -90,6 +158,41 @@ export const JournalFieldsMap = [
         key: 'highest_quartile',
         label: 'Highest quartile',
         subLabel: 'Q1 is best',
+        collapsibleComponent: {
+            sizeHeader: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            sizeData: {
+                // width - can be anything.
+                xs: 12,
+                sm: 2,
+            },
+            hiddenHeader: ['xs'],
+            hiddenData: ['sm', 'md', 'lg', 'xl'],
+            translateFn: (data, index, classes) => {
+                return (
+                    <Typography variant="body1" component="div">
+                        <Box display="flex" alignItems="flex-end" key={data.key}>
+                            <Typography
+                                variant="body1"
+                                className={classes.inputLabel}
+                                component="span"
+                                id={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                                data-testid={sanitiseId(`journal-list-header-${data.key}-${index}`)}
+                            >
+                                {data.label}
+                                {!!data.subLabel && <span className={classes.subLabel}>{data.subLabel}</span>}
+                            </Typography>
+                            {!!data.titleHelp && (
+                                <HelpIcon {...data.titleHelp} testId={`${data.key}-${index}`} iconSize={'small'} />
+                            )}
+                        </Box>
+                    </Typography>
+                );
+            },
+        },
         size: 125,
         prefix: 'Q',
         suffix: '',

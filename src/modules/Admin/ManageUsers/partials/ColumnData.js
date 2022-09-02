@@ -37,7 +37,7 @@ export const ColumnData = ({ columnDataId, data, copiable }) => {
                 className={classes.columnData}
                 value={!!data ? data : ''}
                 readOnly
-                fullwidth
+                fullWidth
                 {...(!!copiable
                     ? {
                           endAdornment: (
