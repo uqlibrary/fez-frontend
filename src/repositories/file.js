@@ -1,5 +1,11 @@
 import { generateCancelToken } from 'config';
-import { MIME_TYPE_WHITELIST, FILE_SECURITY_POLICY_PUBLIC } from 'modules/SharedComponents/Toolbox/FileUploader/config';
+import {
+    MIME_TYPE_WHITELIST,
+    FILE_ACCESS_CONDITION_CLOSED,
+    FILE_ACCESS_CONDITION_OPEN,
+    FILE_ACCESS_CONDITION_INHERIT,
+    FILE_SECURITY_POLICY_PUBLIC,
+} from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
 import { post, put } from './generic';
@@ -7,11 +13,33 @@ import * as Sentry from '@sentry/react';
 import locale from 'locale/global';
 const moment = require('moment');
 
-export const getFileUploadMetadata = (file /* , collections*/) => {
-    const securityPolicy = file.security_policy;
+export const getFileUploadMetadata = (file, collections) => {
+    const securityInherited = !!file.access_condition_id && file.access_condition_id === FILE_ACCESS_CONDITION_INHERIT;
+    let securityPolicy = file.security_policy;
+    if (!!!securityPolicy) {
+        // assume file_access is being set
+        securityPolicy = file.access_condition_id;
+        if (securityInherited) {
+            const parentPolicy = collections.reduce(
+                (policy, collection) =>
+                    collection.rek_datastream_policy < policy ? collection.rek_datastream_policy : policy,
+                FILE_ACCESS_CONDITION_OPEN,
+            );
+            securityPolicy = parentPolicy;
+        } else if (
+            file.access_condition_id === FILE_ACCESS_CONDITION_OPEN &&
+            !!file.date &&
+            moment(file.date).isAfter()
+        ) {
+            securityPolicy = FILE_ACCESS_CONDITION_CLOSED;
+        }
+    }
     const metadata = {
+        dsi_security_inherited: securityInherited ? 1 : 0,
         dsi_security_policy: securityPolicy,
-        ...(securityPolicy === FILE_SECURITY_POLICY_PUBLIC && !moment(file.date).isSame(moment(), 'day')
+        ...((file.access_condition_id === FILE_ACCESS_CONDITION_OPEN ||
+            file.security_policy === FILE_SECURITY_POLICY_PUBLIC) &&
+        !moment(file.date).isSame(moment(), 'day')
             ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
             : {}),
     };
