@@ -20,13 +20,14 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled }) => {
+export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
     const {
         filenameColumn,
         fileDescriptionColumn,
         fileAccessColumn,
+        fileSecurityPolicyColumn,
         embargoDateColumn,
         deleteAllFiles,
         deleteAllFilesConfirmation,
@@ -54,10 +55,12 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                     <Grid item md={3} sm={3}>
                         <Typography variant="caption" gutterBottom>
-                            {requireOpenAccessStatus && fileAccessColumn}
+                            {isAdmin
+                                ? requireOpenAccessStatus && fileSecurityPolicyColumn
+                                : requireOpenAccessStatus && fileAccessColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={2} sm={2}>
+                    <Grid item sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {requireOpenAccessStatus && embargoDateColumn}
                         </Typography>
@@ -82,6 +85,7 @@ FileUploadRowHeader.propTypes = {
     locale: PropTypes.object,
     requireOpenAccessStatus: PropTypes.bool,
     disabled: PropTypes.bool,
+    isAdmin: PropTypes.bool,
 };
 
 FileUploadRowHeader.defaultProps = {
@@ -89,6 +93,7 @@ FileUploadRowHeader.defaultProps = {
         filenameColumn: 'File name',
         fileAccessColumn: 'Access conditions',
         fileDescriptionColumn: 'Description',
+        fileSecurityPolicyColumn: 'Security policy',
         embargoDateColumn: 'Embargo release date',
         deleteAllFiles: 'Remove all files from the upload queue',
         deleteAllFilesConfirmation: {

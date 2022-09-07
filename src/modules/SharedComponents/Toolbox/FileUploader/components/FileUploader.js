@@ -107,7 +107,21 @@ export class FileUploader extends PureComponent {
 
         file[config.FILE_META_KEY_ACCESS_CONDITION] = newValue;
 
-        if (newValue === config.FILE_ACCESS_CONDITION_OPEN) {
+        if (newValue === config.FILE_SECURITY_POLICY_PUBLIC) {
+            file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
+        } else {
+            file[config.FILE_META_KEY_EMBARGO_DATE] = null;
+        }
+
+        this.replaceFile(file, index);
+    };
+
+    _updateFileSecurityPolicy = (fileToUpdate, index, newValue) => {
+        const file = { ...fileToUpdate };
+
+        file[config.FILE_META_KEY_SECURITY_POLICY] = newValue;
+
+        if (newValue === config.FILE_SECURITY_POLICY_PUBLIC) {
             file[config.FILE_META_KEY_EMBARGO_DATE] = moment().format();
         } else {
             file[config.FILE_META_KEY_EMBARGO_DATE] = null;
@@ -234,6 +248,22 @@ export class FileUploader extends PureComponent {
     };
 
     /**
+     * Check if any file has public security policy (admin only)
+     *
+     * @param files
+     * @returns {boolean}
+     */
+    isAnySecurityPolicyPublic = files => {
+        return (
+            files.filter(
+                file =>
+                    file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY) &&
+                    file[config.FILE_META_KEY_SECURITY_POLICY] === config.FILE_SECURITY_POLICY_PUBLIC,
+            ).length > 0
+        );
+    };
+
+    /**
      * Check if entire file uploader is valid including access conditions and t&c
      *
      * @param filesInQueue
@@ -246,7 +276,11 @@ export class FileUploader extends PureComponent {
             (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
                 filesInQueue.length &&
                 ((this.isAnyOpenAccess(filesInQueue) && isTermsAndConditionsAccepted) ||
-                    !this.isAnyOpenAccess(filesInQueue)))
+                    !this.isAnyOpenAccess(filesInQueue))) ||
+            (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_SECURITY_POLICY)).length ===
+                filesInQueue.length &&
+                ((this.isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
+                    !this.isAnySecurityPolicyPublic(filesInQueue)))
         );
     };
 
@@ -304,6 +338,7 @@ export class FileUploader extends PureComponent {
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
                     onFileDescriptionChange={this._updateFileDescription}
+                    onSecurityPolicyChange={this._updateFileSecurityPolicy}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                     disabled={disabled}
@@ -362,21 +397,23 @@ export class FileUploader extends PureComponent {
                                 onDeleteAll={this._deleteAllFiles}
                                 requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
                                 disabled={disabled}
+                                isAdmin={this.props.isAdmin}
                             />
                         </Grid>
                         <Grid item xs={12} data-testid="fez-datastream-info-list">
                             {filesInQueueRow}
                         </Grid>
-                        {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (
-                            <Grid item xs={12}>
-                                <FileUploadTermsAndConditions
-                                    onAcceptTermsAndConditions={this._acceptTermsAndConditions}
-                                    accessTermsAndConditions={accessTermsAndConditions}
-                                    isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
-                                    disabled={disabled}
-                                />
-                            </Grid>
-                        )}
+                        {requireOpenAccessStatus &&
+                            (this.isAnyOpenAccess(filesInQueue) || this.isAnySecurityPolicyPublic(filesInQueue)) && (
+                                <Grid item xs={12}>
+                                    <FileUploadTermsAndConditions
+                                        onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                        accessTermsAndConditions={accessTermsAndConditions}
+                                        isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
+                                        disabled={disabled}
+                                    />
+                                </Grid>
+                            )}
                     </Fragment>
                 )}
             </Grid>
