@@ -8785,7 +8785,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       uploadedFile={
         Object {
           "access_condition_id": 5,
-          "date": "2020-01-01T10:00:00-00:15",
+          "date": "2020-01-01T10:00:00-00:10",
           "fileData": File {},
           "name": "a.txt",
           "size": 0,
@@ -9131,7 +9131,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       uploadedFile={
         Object {
           "access_condition_id": 5,
-          "date": "2017-10-10T00:00:00-00:15",
+          "date": "2017-10-10T00:00:00-00:10",
           "fileData": File {},
           "name": "a.txt",
           "size": 0,
@@ -10822,7 +10822,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
-          "date": "2020-01-01T10:00:00-00:15",
+          "date": "2020-01-01T10:00:00-00:10",
           "fileData": File {},
           "name": "a.txt",
           "security_policy": 5,
@@ -11168,7 +11168,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       requireOpenAccessStatus={true}
       uploadedFile={
         Object {
-          "date": "2017-10-10T00:00:00-00:15",
+          "date": "2017-10-10T00:00:00-00:10",
           "fileData": File {},
           "name": "a.txt",
           "security_policy": 5,
