@@ -111,7 +111,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={3}
+      sm={4}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -234,7 +234,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={3}
+      sm={4}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -357,7 +357,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={3}
+      sm={4}
     >
       <PolicyDropdown
         autoFocus={false}
@@ -536,7 +536,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={3}
+      sm={4}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
