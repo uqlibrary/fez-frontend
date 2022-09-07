@@ -9,6 +9,11 @@ export const selectFields = {
         selectPrompt: 'Select access conditions',
         errorMessage: 'This field is required',
     },
+    securityPolicy: {
+        label: 'Security policy',
+        selectPrompt: 'Select security policy',
+        errorMessage: 'This field is required',
+    },
     andsCollectionType: {
         label: 'Collection type',
         ariaLabel: 'Please select a collection type',
