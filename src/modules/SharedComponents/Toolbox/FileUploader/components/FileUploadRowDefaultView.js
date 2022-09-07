@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
 export class FileUploadRowDefaultView extends PureComponent {
@@ -28,6 +29,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         classes: PropTypes.object,
         onDelete: PropTypes.func.isRequired,
         onEmbargoDateChange: PropTypes.func.isRequired,
+        onFileDescriptionChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
         onSecurityPolicyChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
@@ -60,10 +62,22 @@ export class FileUploadRowDefaultView extends PureComponent {
         return (
             <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
-                    <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
+                    <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
                         </Typography>
+                    </Grid>
+                    <Grid item sm={3} md={3}>
+                        <TextField
+                            fullWidth
+                            className={classes.input}
+                            onChange={this.props.onFileDescriptionChange}
+                            name="fileDescription"
+                            placeholder={'Description'}
+                            id={`file-description-input-upload-${index}`}
+                            textFieldId={`dsi-label-upload-${index}`}
+                            key={this.props.name}
+                        />
                     </Grid>
                     {!!this.props.isAdmin && requireOpenAccessStatus && (
                         <Grid item md={3} sm={4}>

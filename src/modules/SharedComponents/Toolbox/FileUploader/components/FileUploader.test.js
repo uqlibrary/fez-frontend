@@ -85,6 +85,7 @@ describe('Component FileUploader', () => {
         const files = [getMockFile('a.txt'), getMockFile('b.txt')];
 
         wrapper.instance()._handleDroppedFiles(files, {});
+
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -136,6 +137,9 @@ describe('Component FileUploader', () => {
         wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment('10/10/2017', 'DD/MM/YYYY'));
         wrapper.update();
 
+        expect(toJson(wrapper)).toMatchSnapshot();
+        wrapper.instance()._updateFileDescription(fileA, 0, 'Test Description');
+        wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
