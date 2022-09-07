@@ -59,9 +59,33 @@ describe('File repository', () => {
                 input: { access_condition_id: FILE_ACCESS_CONDITION_INHERIT },
                 output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 1 },
             },
+            {
+                input: { access_condition_id: FILE_ACCESS_CONDITION_INHERIT, description: 'TEST DESCRIPTION' },
+                output: {
+                    dsi_security_policy: FILE_ACCESS_CONDITION_OPEN,
+                    dsi_security_inherited: 1,
+                    dsi_label: 'TEST DESCRIPTION',
+                },
+            },
         ];
         testCases.forEach(testCase => expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output));
         MockDate.reset();
+    });
+
+    it('correctly leaves file description for null metadata', () => {
+        const testCase = {
+            input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN, description: null },
+            output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0, dsi_label: null },
+        };
+        expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output);
+    });
+
+    it('correctly sets file description for provided metadata', () => {
+        const testCase = {
+            input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN, description: 'test' },
+            output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0, dsi_label: 'test' },
+        };
+        expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output);
     });
 
     it('dispatches an upload failed action for uploading a file', async () => {
