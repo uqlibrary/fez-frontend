@@ -165,34 +165,6 @@ describe('Component FileUploader', () => {
         expect(wrapper.instance().state.filesInQueue[1].description).toEqual(descriptionB);
     });
 
-    it('should handle file order change', () => {
-        const wrapper = setup({ requireOpenAccessStatus: true });
-
-        const tree = toJson(wrapper);
-
-        expect(tree).toMatchSnapshot();
-
-        const fileA = getMockFile('a.txt');
-        const fileB = getMockFile('b.txt');
-        const files = [fileA, fileB];
-
-        wrapper.instance()._handleDroppedFiles(files, {});
-        wrapper.update();
-
-        wrapper.instance()._updateOrderUp(1);
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.instance()._updateOrderDown(0);
-        wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance()._updateFileDescription(fileA, 0, 'Test Description');
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should render rows for uploaded files with security policy', () => {
         const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
 
