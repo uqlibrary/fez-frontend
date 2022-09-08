@@ -22,6 +22,7 @@ function setup(testProps = {}) {
 }
 
 describe('Component FileUploader', () => {
+    const dateToCheck = '10/10/2017';
     const getMockFile = name => ({ fileData: new File([''], name), name: name, size: 0 });
     const MockDate = require('mockdate');
     beforeEach(() => {
@@ -129,14 +130,17 @@ describe('Component FileUploader', () => {
 
         wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
         wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
+            moment(new Date()).format('DD/MM/YYYY'),
+        );
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(toJson(wrapper)).toMatchSnapshot();
 
         fileA.access_condition_id = 5;
-        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment('10/10/2017', 'DD/MM/YYYY'));
+        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
         wrapper.update();
-
-        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+        // expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render rows for uploaded files with security policy', () => {
@@ -162,14 +166,18 @@ describe('Component FileUploader', () => {
 
         wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 5);
         wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
+            moment(new Date()).format('DD/MM/YYYY'),
+        );
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(toJson(wrapper)).toMatchSnapshot();
 
         fileA.security_policy = 5;
-        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment('10/10/2017', 'DD/MM/YYYY'));
+        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
         wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render rows for uploaded files with default access condition based on quick template Id', () => {
