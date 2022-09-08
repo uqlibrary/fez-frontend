@@ -4199,6 +4199,7 @@ exports[`Component PublicationForm should render component initialised with two 
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="submit-work"
           fullWidth={true}
           id="submit-work"
           onClick={[MockFunction]}
@@ -7281,6 +7282,7 @@ exports[`Component PublicationForm should render form after selecting both publi
       >
         <WithStyles(ForwardRef(Button))
           color="primary"
+          data-testid="submit-work"
           fullWidth={true}
           id="submit-work"
           onClick={[MockFunction]}
