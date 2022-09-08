@@ -86,6 +86,7 @@ describe('Component FileUploader', () => {
         const files = [getMockFile('a.txt'), getMockFile('b.txt')];
 
         wrapper.instance()._handleDroppedFiles(files, {});
+
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -139,8 +140,54 @@ describe('Component FileUploader', () => {
         fileA.access_condition_id = 5;
         wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
         wrapper.update();
-        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+
         // expect(toJson(wrapper)).toMatchSnapshot();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+    });
+    it('should update file description', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true });
+        const descriptionA = 'Test Description A';
+        const descriptionB = 'Test Description B';
+        const fileA = getMockFile('a.txt');
+        const fileB = getMockFile('b.txt');
+        const files = [fileA, fileB];
+
+        wrapper.instance()._handleDroppedFiles(files, {});
+        wrapper.update();
+
+        wrapper.instance()._updateFileDescription(fileA, 0, descriptionA);
+        wrapper.update();
+        expect(wrapper.instance().state.filesInQueue[0].description).toEqual(descriptionA);
+
+        wrapper.instance()._updateFileDescription(fileA, 1, descriptionB);
+        wrapper.update();
+
+        expect(wrapper.instance().state.filesInQueue[1].description).toEqual(descriptionB);
+    });
+
+    it('should handle file order change', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true });
+
+        const tree = toJson(wrapper);
+
+        expect(tree).toMatchSnapshot();
+
+        const fileA = getMockFile('a.txt');
+        const fileB = getMockFile('b.txt');
+        const files = [fileA, fileB];
+
+        wrapper.instance()._handleDroppedFiles(files, {});
+        wrapper.update();
+
+        wrapper.instance()._updateOrderUp(1);
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance()._updateOrderDown(0);
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render rows for uploaded files with security policy', () => {
