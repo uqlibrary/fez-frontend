@@ -17,8 +17,8 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      md={11}
-      sm={11}
+      md={8}
+      sm={8}
     >
       <WithStyles(ForwardRef(Typography))
         data-testid="dsi-dsid-0"
@@ -31,6 +31,20 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
         100 MB
         )
       </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       className=""
@@ -65,8 +79,8 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
       <WithStyles(ForwardRef(Typography))
         data-testid="dsi-dsid-0"
@@ -79,6 +93,20 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
         100 MB
         )
       </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -174,8 +202,8 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
       <WithStyles(ForwardRef(Typography))
         data-testid="dsi-dsid-0"
@@ -188,6 +216,20 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
         100 MB
         )
       </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -283,8 +325,8 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
       <WithStyles(ForwardRef(Typography))
         data-testid="dsi-dsid-0"
@@ -297,6 +339,20 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
         100 MB
         )
       </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -448,8 +504,8 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
-      md={6}
-      sm={5}
+      md={3}
+      sm={2}
     >
       <WithStyles(ForwardRef(Typography))
         data-testid="dsi-dsid-0"
@@ -462,6 +518,20 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         100 MB
         )
       </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={3}
+      sm={3}
+    >
+      <TextField
+        fullWidth={true}
+        id="file-description-input-upload-0"
+        key="test.pdf"
+        name="fileDescription"
+        placeholder="Description"
+        textFieldId="dsi-label-upload-0"
+      />
     </WithStyles(ForwardRef(Grid))>
     <WithStyles(ForwardRef(Grid))
       item={true}
