@@ -185,7 +185,7 @@ export const ThesisSubmission = ({
                     <Grid item>
                         <Button
                             children={thesisLocale.afterSubmit}
-                            color={!newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
+                            color={!newRecordFileUploadingOrIssueError ? 'primary' : 'inherit'}
                             fullWidth
                             onClick={afterSubmit}
                             variant={'contained'}

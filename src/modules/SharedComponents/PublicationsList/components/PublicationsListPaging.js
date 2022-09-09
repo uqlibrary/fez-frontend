@@ -171,7 +171,7 @@ export class PublicationsListPaging extends Component {
                     this.pageChanged(key);
                 }}
                 disabled={this.props.disabled}
-                color={isCurrentPage ? 'primary' : 'default'}
+                color={isCurrentPage ? 'primary' : 'inherit'}
                 aria-label={locale.components.paging.pageButtonAriaLabel
                     .replace('[pageNumber]', key)
                     .replace('[totalPages]', totalPages)}

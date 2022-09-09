@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { connectRouter } from 'connected-react-router/immutable';
 import { AppContainer } from 'react-hot-loader';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 
@@ -62,7 +62,7 @@ const render = () => {
         <AppErrorBoundary>
             <AppContainer>
                 <Provider store={store}>
-                    <LocalizationProvider utils={MomentUtils}>
+                    <LocalizationProvider dateAdapter={MomentUtils}>
                         <Root history={history} />
                     </LocalizationProvider>
                 </Provider>

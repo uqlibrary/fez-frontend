@@ -16,7 +16,7 @@ import MockAdapter from 'axios-mock-adapter';
 import { mui1theme } from 'config';
 import { api, sessionApi } from 'config/axios';
 import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
 import renderer from 'react-test-renderer';
 
@@ -73,7 +73,7 @@ global.getElement = (component, props, args = {}) => {
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <StyledEngineProvider injectFirst>
                     <MuiThemeProvider theme={mui1theme}>
-                        <LocalizationProvider utils={MomentUtils}>
+                        <LocalizationProvider dateAdapter={MomentUtils}>
                             {React.createElement(component, props)}
                         </LocalizationProvider>
                     </MuiThemeProvider>
