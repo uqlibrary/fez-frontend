@@ -37,6 +37,7 @@ export const getFileUploadMetadata = (file, collections) => {
     const metadata = {
         dsi_security_inherited: securityInherited ? 1 : 0,
         dsi_security_policy: securityPolicy,
+        dsi_label: file.description,
         ...((file.access_condition_id === FILE_ACCESS_CONDITION_OPEN ||
             file.security_policy === FILE_SECURITY_POLICY_PUBLIC) &&
         !moment(file.date).isSame(moment(), 'day')

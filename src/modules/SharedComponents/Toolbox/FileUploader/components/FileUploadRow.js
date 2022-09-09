@@ -18,6 +18,7 @@ export class FileUploadRow extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func,
         onEmbargoDateChange: PropTypes.func,
+        onFileDescriptionChange: PropTypes.func,
         onSecurityPolicyChange: PropTypes.func,
         requireOpenAccessStatus: PropTypes.bool.isRequired,
         uploadedFile: PropTypes.object.isRequired,
@@ -59,6 +60,9 @@ export class FileUploadRow extends PureComponent {
         this.props.onAccessConditionChange(this.props.uploadedFile, this.props.index, newValue);
     };
 
+    _updateFileDescription = newValue => {
+        this.props.onFileDescriptionChange(this.props.uploadedFile, this.props.index, newValue.target.value);
+    };
     _updateSecurityPolicy = newValue => {
         this.props.onSecurityPolicyChange(this.props.uploadedFile, this.props.index, newValue);
     };
@@ -98,6 +102,7 @@ export class FileUploadRow extends PureComponent {
                     disabled={disabled}
                     onDelete={this._showConfirmation}
                     onAccessConditionChange={this._updateAccessCondition}
+                    onFileDescriptionChange={this._updateFileDescription}
                     onEmbargoDateChange={this._updateEmbargoDate}
                     onSecurityPolicyChange={this._updateSecurityPolicy}
                     focusOnIndex={focusOnIndex}
