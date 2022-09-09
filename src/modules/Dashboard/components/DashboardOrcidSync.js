@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import CircularProgress from '@material-ui/core/CircularProgress';
-import SyncProblemIcon from '@material-ui/icons/SyncProblem';
-import DoneIcon from '@material-ui/icons/Done';
+import CircularProgress from '@mui/material/CircularProgress';
+import SyncProblemIcon from '@mui/icons-material/SyncProblem';
+import DoneIcon from '@mui/icons-material/Done';
 
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import DashboardOrcidSyncMessage from './DashboardOrcidSyncMessage';

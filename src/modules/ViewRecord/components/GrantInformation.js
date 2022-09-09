@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import makeStyles from '@mui/styles/makeStyles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
 
@@ -16,7 +16,7 @@ const useStyles = makeStyles(
             paddingRight: 4,
         },
         containerPadding: {
-            padding: `${theme.spacing(1)}px 0`,
+            padding: `${theme.spacing(1)} 0`,
             [theme.breakpoints.up('sm')]: {
                 padding: theme.spacing(1),
             },

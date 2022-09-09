@@ -3,13 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
 import moment from 'moment';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { KeyboardDatePicker } from '@material-ui/pickers';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import DatePicker from '@mui/lab/DatePicker';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
@@ -49,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     transformResponsive: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             '& [class*="MuiToolbar-root-"]': {
                 padding: 0,
                 display: 'block',
@@ -296,7 +297,7 @@ export const GetColumns = () => {
             ),
             editComponent: props => {
                 return (
-                    <KeyboardDatePicker
+                    <DatePicker
                         value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
                         onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
                         error={
@@ -377,7 +378,7 @@ export const GetColumns = () => {
                 minDate.setDate(1);
                 minDate.setMonth(0);
                 return (
-                    <KeyboardDatePicker
+                    <DatePicker
                         value={(!!value && moment(String(value), 'YYYY')) || null}
                         onChange={value => onChange((!!value && value.format('YYYY')) || null)}
                         error={

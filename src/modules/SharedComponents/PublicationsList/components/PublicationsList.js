@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import { useRecordsSelector } from 'hooks';
 
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 import BulkUpdatesActions from './BulkUpdatesActions';
 import locale from 'locale/components';
@@ -21,8 +21,8 @@ const useStyles = makeStyles(theme => ({
         margin: 0,
     },
     bulkActionContainer: {
-        [theme.breakpoints.down('xs')]: {
-            paddingLeft: `${theme.spacing(2)}px !important`,
+        [theme.breakpoints.down('sm')]: {
+            paddingLeft: `${theme.spacing(2)} !important`,
             marginBottom: theme.spacing(2),
         },
     },

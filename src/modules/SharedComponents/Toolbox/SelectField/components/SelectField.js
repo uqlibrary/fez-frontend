@@ -1,12 +1,12 @@
 import React from 'react';
-import Select from '@material-ui/core/Select';
-import FormControl from '@material-ui/core/FormControl';
-// import Input from '@material-ui/core/Input';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
+// import Input from '@mui/material/Input';
+import FormHelperText from '@mui/material/FormHelperText';
 
 import PropTypes from 'prop-types';
 import propFilter from '../../helpers/_filterProps';
-import InputLabel from '@material-ui/core/InputLabel';
+import InputLabel from '@mui/material/InputLabel';
 
 const SelectFieldWrapper = props => {
     const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
@@ -22,9 +22,10 @@ const SelectFieldWrapper = props => {
 
     return (
         <React.Fragment>
-            <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
+            <FormControl variant="standard" error={error} style={{ width: '100%' }} required={filteredProps.required}>
                 {!hideLabel && <InputLabel id={`${props.selectFieldId}-label`}>{filteredProps.label}</InputLabel>}
                 <Select
+                    variant="standard"
                     inputProps={{
                         'aria-labelledby': `${props.selectFieldId}-label`,
                         'data-testid': `${props.selectFieldId}-input`,

@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { throttle } from 'throttle-debounce';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import CircularProgress from '@material-ui/core/CircularProgress';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export const AutoCompleteAsynchronousField = ({
     allowFreeText,
@@ -106,7 +106,7 @@ export const AutoCompleteAsynchronousField = ({
                 onInputChange={handleInputChange}
                 onChange={handleChange}
                 filterOptions={filterOptions}
-                getOptionSelected={(option, value) => option.value === value.value}
+                isOptionEqualToValue={(option, value) => option.value === value.value}
                 getOptionLabel={getOptionLabel}
                 options={options}
                 loading={loading}
@@ -114,6 +114,7 @@ export const AutoCompleteAsynchronousField = ({
                 value={value}
                 renderInput={params => (
                     <TextField
+                        variant="standard"
                         {...params}
                         name={name || autoCompleteAsynchronousFieldId}
                         error={error}

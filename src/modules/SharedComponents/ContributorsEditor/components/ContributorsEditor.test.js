@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme, adaptV4Theme } from '@mui/material/styles';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -630,15 +630,17 @@ describe('ContributorsEditor', () => {
     });
 
     it('should have a proper style generator', () => {
-        const theme = createTheme({
-            components: {
-                MuiUseMediaQuery: {
-                    defaultProps: {
-                        noSsr: true,
+        const theme = createTheme(
+            adaptV4Theme({
+                components: {
+                    MuiUseMediaQuery: {
+                        defaultProps: {
+                            noSsr: true,
+                        },
                     },
                 },
-            },
-        });
+            }),
+        );
         expect(styles(theme)).toMatchSnapshot();
     });
 

@@ -4,9 +4,9 @@ import { locale } from 'locale';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
     statsLink: {
@@ -101,7 +101,7 @@ export class CitationCounts extends PureComponent {
                             </ExternalLink>
                         )}
                 </Grid>
-                <Hidden xsDown>
+                <Hidden smDown>
                     <Grid item xs />
                 </Hidden>
             </Grid>

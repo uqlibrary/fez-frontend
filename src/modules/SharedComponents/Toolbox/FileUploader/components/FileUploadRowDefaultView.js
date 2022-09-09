@@ -7,10 +7,10 @@ import FileUploadRowStatus from './FileUploadRowStatus';
 import { FILE_ACCESS_CONDITION_OPEN, FILE_ACCESS_OPTIONS, FILE_SECURITY_POLICY_PUBLIC } from '../config';
 import { selectFields } from 'locale/selectFields';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Input from '@material-ui/core/Input';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Input from '@mui/material/Input';
+import withStyles from '@mui/styles/withStyles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';

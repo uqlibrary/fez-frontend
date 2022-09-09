@@ -1,18 +1,18 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Hidden from '@mui/material/Hidden';
+import Button from '@mui/material/Button';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 const useStyles = makeStyles(theme => ({
     containerPadding: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: `${theme.spacing(1)} 0`,
         [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(1),
         },
@@ -116,7 +116,7 @@ export const MediaPreview = ({ ...props }) => {
                         {title}
                     </Typography>
                 </Grid>
-                <Hidden xsDown>
+                <Hidden smDown>
                     <Grid item>
                         <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
                     </Grid>

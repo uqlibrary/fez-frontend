@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { makeStyles } from '@material-ui/styles';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 import JournalSearchInput from './JournalSearchInput';
 import SelectedKeywords from './SelectedKeywords';
 import KeywordsBrowser from './KeywordsBrowser';
-import Snackbar from '@material-ui/core/Snackbar';
+import Snackbar from '@mui/material/Snackbar';
 import locale from 'locale/components';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Tooltip from '@mui/material/Tooltip';
 
 export const id = 'journal-search-interface';
 
@@ -108,6 +108,7 @@ export const JournalSearchInterface = ({
                             onClick={handleKeywordReset}
                             id="journal-search-clear-keywords-button"
                             data-testid="journal-search-clear-keywords-button"
+                            size="large"
                         >
                             <CloseIcon />
                         </IconButton>

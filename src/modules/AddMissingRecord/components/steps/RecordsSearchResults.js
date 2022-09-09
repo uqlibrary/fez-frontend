@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Button from '@mui/material/Button';
 
 // forms & custom components
 const PublicationsList = React.lazy(() =>
@@ -191,7 +191,7 @@ export default class RecordsSearchResults extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Hidden xsDown>
+                    <Hidden smDown>
                         <Grid item sm={4} md={3}>
                             <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
                                 <Suspense fallback={<div>Loading...</div>}>

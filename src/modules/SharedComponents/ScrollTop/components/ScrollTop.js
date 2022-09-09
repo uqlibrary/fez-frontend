@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fab from '@material-ui/core/Fab';
-import Hidden from '@material-ui/core/Hidden';
-import { withStyles } from '@material-ui/core/styles';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import Fab from '@mui/material/Fab';
+import Hidden from '@mui/material/Hidden';
+import withStyles from '@mui/styles/withStyles';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 export const styles = () => ({
     scrollTop: {
@@ -55,7 +55,7 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
     }
     if (!!show) {
         return (
-            <Hidden smDown>
+            <Hidden mdDown>
                 <Fab
                     color="secondary"
                     aria-label="Scroll to top of page"

@@ -1,17 +1,17 @@
 import React from 'react';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { userIsAdmin } from 'hooks';
 import { useQueryStringParams, useCommunityCollectionControls } from './hooks';
 import { Link } from 'react-router-dom';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config';
 import { communityCollectionsConfig } from 'config';
 
@@ -23,10 +23,10 @@ import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsLi
 
 // import { CommunityCollectionsPaging } from './components/CommunityCollectionsPaging';
 import { CommunityTable } from './components/CommunityTable';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import queryString from 'query-string';
 import { useHistory } from 'react-router-dom';
-import Add from '@material-ui/icons/Add';
+import Add from '@mui/icons-material/Add';
 
 import { pushHistory } from './components/functions';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     },
     addNewCommunity: {
         float: 'left',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             float: 'none',
         },
     },
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     },
     autoCloseCommunity: {
         float: 'right',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             float: 'none',
         },
     },

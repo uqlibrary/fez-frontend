@@ -2,17 +2,18 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Snackbar from '@material-ui/core/Snackbar';
-import Divider from '@material-ui/core/Divider';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Snackbar from '@mui/material/Snackbar';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import Toolbar from '@mui/material/Toolbar';
+import Drawer from '@mui/material/Drawer';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import locale from 'locale/pages';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import AdminRecordDrawerSection from './AdminViewRecordDrawerSection';
 
 const drawerWidth = 260;
@@ -104,7 +105,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 id={`adminDrawerContentContainer${variant}`}
                 data-testid={`adminDrawerContentContainer${variant}`}
             >
-                <Hidden smDown implementation="css" key="toolbarMobile">
+                <Hidden mdDown implementation="css" key="toolbarMobile">
                     <Toolbar className={classes.adjustedToolbarHeight} />
                 </Hidden>
                 <div className={classes.drawerHeader} key="mainHeader">
@@ -114,6 +115,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                             id={`adminRecordDrawerCloseBtn${variant}`}
                             data-testid={`btnAdminRecordDrawerCloseBtn${variant}`}
                             aria-label="Close admin record drawer"
+                            size="large"
                         >
                             {/* istanbul ignore next */
                             theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
@@ -137,7 +139,7 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     return (
         <>
-            <Hidden smDown implementation="css">
+            <Hidden mdDown implementation="css">
                 <Drawer
                     className={classes.drawer}
                     classes={{

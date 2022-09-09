@@ -1,6 +1,6 @@
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import mockData from 'mock/data/testing/journals/journals';
 import { WithReduxStore, render } from 'test-utils';

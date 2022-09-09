@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ChevronRight from '@material-ui/icons/ChevronRight';
-import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import { withStyles } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import ChevronRight from '@mui/icons-material/ChevronRight';
+import ChevronLeft from '@mui/icons-material/ChevronLeft';
+import withStyles from '@mui/styles/withStyles';
 import classNames from 'classnames';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 
 const styles = theme => ({
     pageButton: {
@@ -29,7 +29,7 @@ const styles = theme => ({
         maxHeight: 32,
         minWidth: 'auto',
         overflow: 'hidden',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
             paddingLeft: 0,
             paddingRight: 0,
             '& > span': {
@@ -221,7 +221,7 @@ export class PublicationsListPaging extends Component {
                                 </Button>
                             </Grid>
                         )}
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <Grid item sm={'auto'} className={classes.paginationGridContainer}>
                                 {paginationPages.indexOf(1) === -1 && this.renderButton(1)}
                                 {paginationPages[0] - 1 > 1 && txt.firstLastSeparator}

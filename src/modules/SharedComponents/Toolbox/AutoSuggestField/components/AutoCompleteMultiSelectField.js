@@ -1,8 +1,8 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete';
-import Chip from '@material-ui/core/Chip';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import Chip from '@mui/material/Chip';
 
 export const AutoCompleteMultiSelectField = ({
     autoCompleteMultiSelectFieldId,
@@ -42,6 +42,7 @@ export const AutoCompleteMultiSelectField = ({
             disableClearable
             renderInput={params => (
                 <TextField
+                    variant="standard"
                     {...params}
                     error={error}
                     helperText={(error && errorText) || ''}

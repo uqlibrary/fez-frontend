@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { makeStyles } from '@material-ui/styles';
-import Delete from '@material-ui/icons/Delete';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import WarningIcon from '@material-ui/icons/Warning';
+import { makeStyles } from '@mui/styles';
+import Delete from '@mui/icons-material/Delete';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import WarningIcon from '@mui/icons-material/Warning';
 
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
@@ -206,21 +206,21 @@ export const AttachedFiles = ({
                                 {locale.fileName}
                             </Typography>
                         </Grid>
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <Grid item sm={3}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.description}
                                 </Typography>
                             </Grid>
                         </Hidden>
-                        <Hidden smDown>
+                        <Hidden mdDown>
                             <Grid item md={2}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.size}
                                 </Typography>
                             </Grid>
                         </Hidden>
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <Grid item sm />
                         </Hidden>
                         {isAdmin && canEdit && (
@@ -251,7 +251,7 @@ export const AttachedFiles = ({
                                         <Grid item sm={3} className={classes.dataWrapper}>
                                             <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
                                         </Grid>
-                                        <Hidden xsDown>
+                                        <Hidden smDown>
                                             <Grid item sm={3} className={classes.dataWrapper}>
                                                 {isAdmin && canEdit ? (
                                                     <TextField
@@ -270,14 +270,14 @@ export const AttachedFiles = ({
                                                 )}
                                             </Grid>
                                         </Hidden>
-                                        <Hidden smDown>
+                                        <Hidden mdDown>
                                             <Grid item sm={2} className={classes.dataWrapper}>
                                                 <Typography variant="body2" noWrap>
                                                     {item.calculatedSize}
                                                 </Typography>
                                             </Grid>
                                         </Hidden>
-                                        <Hidden xsDown>
+                                        <Hidden smDown>
                                             <Grid item sm style={{ textAlign: 'right' }}>
                                                 <OpenAccessIcon
                                                     {...item.openAccessStatus}
@@ -309,6 +309,7 @@ export const AttachedFiles = ({
                                                                 id={`delete-file-${index}`}
                                                                 onClick={onFileDelete(index)}
                                                                 disabled={disabled}
+                                                                size="large"
                                                             >
                                                                 <Delete />
                                                             </IconButton>

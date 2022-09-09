@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { createHash } from 'crypto';
 import { parse } from 'querystring';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Typography from '@mui/material/Typography';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -253,7 +253,7 @@ export default class Orcid extends Component {
                                 {txt.linkOrcid.description}
                             </Typography>
                             <Grid container spacing={2}>
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <Grid item xs />
                                 </Hidden>
                                 <Grid item xs={12} sm={'auto'}>
@@ -275,7 +275,7 @@ export default class Orcid extends Component {
                                 {txt.createOrcid.description}
                             </Typography>
                             <Grid container spacing={2}>
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <Grid item xs />
                                 </Hidden>
                                 <Grid item xs={12} sm={'auto'}>

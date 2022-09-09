@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import ReactHtmlParser from 'react-html-parser';
 

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardDatePicker } from '@material-ui/pickers';
-import { withStyles } from '@material-ui/core/styles';
+import DatePicker from '@mui/lab/DatePicker';
+import withStyles from '@mui/styles/withStyles';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
@@ -28,7 +28,7 @@ export class FileUploadEmbargoDate extends PureComponent {
         };
 
         return (
-            <KeyboardDatePicker
+            <DatePicker
                 format={GENERIC_DATE_FORMAT}
                 value={this.props.value ? new Date(this.props.value) : null}
                 variant="inline"

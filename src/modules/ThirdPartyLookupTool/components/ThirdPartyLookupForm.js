@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid/Grid';
-import Typography from '@material-ui/core/Typography/Typography';
-import IconButton from '@material-ui/core/IconButton/IconButton';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid/Grid';
+import Typography from '@mui/material/Typography/Typography';
+import IconButton from '@mui/material/IconButton/IconButton';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 
 export class ThirdPartyLookupForm extends PureComponent {
     static propTypes = {
@@ -99,6 +99,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                                 <IconButton
                                     onClick={this._toggleMinimise}
                                     tooltip={!!this.state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}
+                                    size="large"
                                 >
                                     {!!this.state.isMinimised ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
                                 </IconButton>
@@ -112,6 +113,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                                     <h4>{txt.thisForm.primaryField.heading}</h4>
                                     <p>{txt.thisForm.primaryField.tip ? txt.thisForm.primaryField.tip : ''}</p>
                                     <TextField
+                                        variant="standard"
                                         fullWidth
                                         name={'primaryValue'}
                                         placeholder={
@@ -134,6 +136,7 @@ export class ThirdPartyLookupForm extends PureComponent {
                                         <h4>{txt.thisForm.secondaryField.heading}</h4>
                                         <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
                                         <TextField
+                                            variant="standard"
                                             fullWidth
                                             name={'secondaryValue'}
                                             placeholder={

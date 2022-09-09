@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { connectRouter } from 'connected-react-router/immutable';
 import { AppContainer } from 'react-hot-loader';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 
@@ -62,9 +62,9 @@ const render = () => {
         <AppErrorBoundary>
             <AppContainer>
                 <Provider store={store}>
-                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                    <LocalizationProvider utils={MomentUtils}>
                         <Root history={history} />
-                    </MuiPickersUtilsProvider>
+                    </LocalizationProvider>
                 </Provider>
             </AppContainer>
         </AppErrorBoundary>,

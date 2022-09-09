@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Person from '@material-ui/icons/Person';
-import PersonOutline from '@material-ui/icons/PersonOutline';
-import Fade from '@material-ui/core/Fade';
-import { makeStyles } from '@material-ui/styles';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Person from '@mui/icons-material/Person';
+import PersonOutline from '@mui/icons-material/PersonOutline';
+import Fade from '@mui/material/Fade';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(
     theme => ({
@@ -31,6 +31,7 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, ariaLabel, si
                     aria-label={ariaLabel}
                     onClick={onClick}
                     className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}
+                    size="large"
                 >
                     {isAuthorizedUser ? (
                         <Person id="logged-in-icon" className={classes.iconButton} />

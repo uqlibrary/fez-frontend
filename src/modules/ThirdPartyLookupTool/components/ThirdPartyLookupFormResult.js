@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import Grid from '@material-ui/core/Grid/Grid';
-import Button from '@material-ui/core/Button/Button';
+import Grid from '@mui/material/Grid/Grid';
+import Button from '@mui/material/Button/Button';
 
 export class ThirdPartyLookupFormResult extends PureComponent {
     static propTypes = {

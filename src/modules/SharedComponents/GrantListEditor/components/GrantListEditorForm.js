@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import FormControl from '@material-ui/core/FormControl';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import FormControl from '@mui/material/FormControl';
+import FormHelperText from '@mui/material/FormHelperText';
 import { ORG_AFFILIATION_TYPES, ORG_TYPE_NOT_SET } from 'config/general';
 import validationLocale from 'locale/validationErrors';
 
@@ -122,6 +122,7 @@ export const GrantListEditorForm = ({
                 {!hideType && (
                     <Grid item xs={12} sm={12} md={3}>
                         <FormControl
+                            variant="standard"
                             fullWidth
                             required={required || (!!grantAgencyName && grantAgencyName.trim().length > 0)}
                             error={!!grantAgencyName && grantAgencyName.trim().length > 0 && !grantAgencyType}
@@ -130,6 +131,7 @@ export const GrantListEditorForm = ({
                                 {!!grantAgencyType ? grantAgencyTypeLabel : ' '}&nbsp;
                             </Typography>
                             <Select
+                                variant="standard"
                                 SelectDisplayProps={{
                                     id: 'rek-grant-type-select',
                                     'data-testid': 'rek-grant-type-select',

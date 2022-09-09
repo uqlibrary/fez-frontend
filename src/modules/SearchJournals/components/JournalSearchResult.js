@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -19,7 +19,7 @@ import { useHistory, useLocation } from 'react-router';
 import { FAQ } from './partials/FAQ';
 import { CommonButtons } from 'modules/SharedComponents/JournalsCommonButtons';
 import { AddToFavouritesButton } from './partials/AddToFavouritesButton';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 import { ScrollToPos as ScrollToTop } from 'modules/SharedComponents/Toolbox/ScrollToPos';
 
@@ -206,7 +206,7 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
             </Grid>
             {!!journalsList && (
                 <Grid item xs={12} md={3}>
-                    <Hidden smDown>
+                    <Hidden mdDown>
                         <JournalSearchFacetsFilter
                             key={'journal-search-facets-filter'}
                             facetsData={journalsList.filters?.facets}

@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '@material-ui/core/IconButton';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import { makeStyles } from '@material-ui/styles';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Typography from '@mui/material/Typography';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import { makeStyles } from '@mui/styles';
 
 import AudioPlayer from './AudioPlayer';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
@@ -135,6 +135,7 @@ const FileName = ({
                                     onClick={showConfirmation}
                                     id={`${id}-download-button`}
                                     data-testid={`${id}-download-button`}
+                                    size="large"
                                 >
                                     <GetAppIcon />
                                 </IconButton>
@@ -143,7 +144,7 @@ const FileName = ({
                     </Grid>
                 )}
             </Grid>
-            <Hidden xsDown>
+            <Hidden smDown>
                 {allowDownload && !downloadLicence && isAudio(mimeType) && (
                     <Grid item sm={2}>
                         <AudioPlayer

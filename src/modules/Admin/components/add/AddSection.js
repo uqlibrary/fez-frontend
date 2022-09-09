@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import MenuItem from '@material-ui/core/MenuItem';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
 
 import { validation, publicationTypes } from 'config';
 import { DOCUMENT_TYPES_EDIT_ONLY } from 'config/general';
@@ -14,7 +14,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from '@mui/material/Hidden';
 import { pathConfig } from 'config';
 
 export const AddSection = ({
@@ -105,7 +105,7 @@ export const AddSection = ({
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Grid container spacing={1}>
-                                        <Hidden xsDown>
+                                        <Hidden smDown>
                                             <Grid item xs />
                                         </Hidden>
                                         <Grid item xs={12} sm={'auto'}>

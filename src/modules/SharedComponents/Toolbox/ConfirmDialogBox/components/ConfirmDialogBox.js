@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogContent from '@material-ui/core/DialogContent';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogContent from '@mui/material/DialogContent';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
 
 export const styles = theme => ({
     alternateActionButtonClass: {
@@ -106,7 +106,7 @@ export class ConfirmDialogBox extends Component {
                 </DialogContent>
                 <DialogActions>
                     <Grid container spacing={1}>
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <Grid item xs />
                         </Hidden>
                         <Grid item xs={12} sm={'auto'}>

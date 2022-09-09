@@ -1,24 +1,26 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/components';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
+// FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
+const withWidth = () => WrappedComponent => props => <WrappedComponent {...props} width="xs" />;
+
 export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
             margin: '-16px -16px 0px -16px',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             margin: '-16px -16px 0px -16px',
         },
         backgroundColor: theme.palette.primary.main,

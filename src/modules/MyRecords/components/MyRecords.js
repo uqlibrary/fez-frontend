@@ -14,8 +14,8 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import locale from 'locale/components';
 import { MY_RECORDS_BULK_EXPORT_SIZE } from 'config/general';
 import { pathConfig } from 'config';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
 
 export default class MyRecords extends PureComponent {
     static propTypes = {
@@ -309,7 +309,7 @@ export default class MyRecords extends PureComponent {
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0) ||
                         (this.state.activeFacets && !!this.state.activeFacets.showOpenAccessOnly)) && (
-                        <Hidden smDown>
+                        <Hidden mdDown>
                             <Grid item md={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                     <FacetsFilter

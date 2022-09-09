@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
-import LockIcon from '@material-ui/icons/Lock';
-import Typography from '@material-ui/core/Typography';
+import LockIcon from '@mui/icons-material/Lock';
+import Typography from '@mui/material/Typography';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import OpenInNew from '@material-ui/icons/OpenInNew';
+import OpenInNew from '@mui/icons-material/OpenInNew';
 
 import locale from 'locale/components';
 import globalLocale from './global';

@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Field, reduxForm, SubmissionError } from 'redux-form/immutable';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
@@ -112,7 +112,7 @@ export const GoogleScholarForm = ({ author, error, handleSubmit, submitFailed, s
                     }
                 </Grid>
                 <Grid container spacing={2}>
-                    <Hidden xsDown>
+                    <Hidden smDown>
                         <Grid item xs />
                     </Hidden>
                     <Grid item xs={12} sm={'auto'}>

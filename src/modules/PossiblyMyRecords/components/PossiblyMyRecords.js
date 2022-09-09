@@ -17,9 +17,9 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { pathConfig } from 'config/pathConfig';
 import { locale } from 'locale';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Hidden from '@mui/material/Hidden';
 
 export default class PossiblyMyRecords extends PureComponent {
     static propTypes = {
@@ -340,7 +340,7 @@ export default class PossiblyMyRecords extends PureComponent {
                         (this.state.activeFacets &&
                             this.state.activeFacets.ranges &&
                             Object.keys(this.state.activeFacets.ranges).length > 0)) && (
-                        <Hidden smDown>
+                        <Hidden mdDown>
                             <Grid item sm={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                     <FacetsFilter

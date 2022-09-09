@@ -5,10 +5,10 @@ import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import List from '@mui/material/List';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
 
 export class GrantListEditor extends PureComponent {
     static propTypes = {

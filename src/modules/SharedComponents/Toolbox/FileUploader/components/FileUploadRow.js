@@ -1,12 +1,14 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import withWidth from '@material-ui/core/withWidth';
 
 import * as config from '../config';
 import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 
 import FileUploadRowDefaultView from './FileUploadRowDefaultView';
 import FileUploadRowMobileView from './FileUploadRowMobileView';
+
+// FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
+const withWidth = () => WrappedComponent => props => <WrappedComponent {...props} width="xs" />;
 
 export class FileUploadRow extends PureComponent {
     static propTypes = {

@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 import locale from 'locale/components';
 
 export default class PublicationYearRangeField extends PureComponent {
@@ -55,6 +55,7 @@ export default class PublicationYearRangeField extends PureComponent {
                 <Grid container>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <TextField
+                            variant="standard"
                             fullWidth
                             id="from"
                             value={this.props.yearFilter.from ? `${this.props.yearFilter.from}` : ''}
@@ -71,6 +72,7 @@ export default class PublicationYearRangeField extends PureComponent {
                     </Grid>
                     <Grid item xs={'auto'}>
                         <TextField
+                            variant="standard"
                             style={{ width: 24 }}
                             value={' to '}
                             disabled
@@ -82,6 +84,7 @@ export default class PublicationYearRangeField extends PureComponent {
                     </Grid>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <TextField
+                            variant="standard"
                             fullWidth
                             id="to"
                             aria-labelledby={'to-label'}

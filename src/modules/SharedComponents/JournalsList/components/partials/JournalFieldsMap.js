@@ -1,9 +1,9 @@
 import React from 'react';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { sanitiseId } from 'helpers/general';
 
 // This prototype mutation allows us to return the smallest integer value in an array

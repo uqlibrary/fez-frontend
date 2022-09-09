@@ -15,7 +15,7 @@ jest.mock('js-cookie', () => ({
 
 jest.mock('redux-form/immutable');
 
-jest.mock('@material-ui/styles/useTheme', () => () => ({
+jest.mock('@mui/styles/useTheme', () => () => ({
     breakpoints: {
         down() {
             return false;

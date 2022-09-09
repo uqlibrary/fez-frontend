@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import { OrcidSyncContext } from 'context';
 
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/core/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import withStyles from '@mui/styles/withStyles';
 
 import {
     AuthorsPublicationsPerYearChart,
@@ -33,7 +33,7 @@ export const styles = theme => ({
         [theme.breakpoints.up('sm')]: {
             margin: '-16px -16px',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             margin: -16,
         },
         backgroundColor: theme.palette.primary.main,

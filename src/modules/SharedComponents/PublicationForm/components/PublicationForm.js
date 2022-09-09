@@ -15,11 +15,11 @@ import { NtroHeader } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 
 import * as recordForms from './Forms';
 import { publicationTypes, validation } from 'config';

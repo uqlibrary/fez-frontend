@@ -5,14 +5,14 @@ import { Field } from 'redux-form/immutable';
 import ReactHtmlParser from 'react-html-parser';
 import queryString from 'query-string';
 
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
-import Badge from '@material-ui/core/Badge';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Button from '@mui/material/Button';
+import Badge from '@mui/material/Badge';
+import Typography from '@mui/material/Typography';
+import withStyles from '@mui/styles/withStyles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -356,7 +356,7 @@ export const AdminInterface = ({
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
-                    <Hidden xsDown>
+                    <Hidden smDown>
                         <Grid item xs="auto">
                             <FormViewToggler />
                         </Grid>
@@ -383,7 +383,7 @@ export const AdminInterface = ({
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Hidden xsDown>
+                    <Hidden smDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
                                 <Grid item xs={12}>

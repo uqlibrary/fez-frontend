@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Image from '@material-ui/icons/Image';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import Typography from '@material-ui/core/Typography';
-import Videocam from '@material-ui/icons/Videocam';
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Image from '@mui/icons-material/Image';
+import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
+import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
+import Typography from '@mui/material/Typography';
+import Videocam from '@mui/icons-material/Videocam';
+import VolumeUp from '@mui/icons-material/VolumeUp';
+import withStyles from '@mui/styles/withStyles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
@@ -441,21 +441,21 @@ export class FilesClass extends Component {
                                     {locale.viewRecord.sections.files.fileName}
                                 </Typography>
                             </Grid>
-                            <Hidden xsDown>
+                            <Hidden smDown>
                                 <Grid item sm={6} md={4} data-testid="dsi-label-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.description}
                                     </Typography>
                                 </Grid>
                             </Hidden>
-                            <Hidden smDown>
+                            <Hidden mdDown>
                                 <Grid item md={2} data-testid="dsi-size-label">
                                     <Typography variant="caption" gutterBottom>
                                         {locale.viewRecord.sections.files.size}
                                     </Typography>
                                 </Grid>
                             </Hidden>
-                            <Hidden xsDown>
+                            <Hidden smDown>
                                 <Grid item sm />
                             </Hidden>
                         </Grid>
@@ -493,7 +493,7 @@ export class FilesClass extends Component {
                                         onFileSelect={this.showPreview}
                                     />
                                 </Grid>
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <Grid
                                         item
                                         sm={6}
@@ -506,7 +506,7 @@ export class FilesClass extends Component {
                                         </Typography>
                                     </Grid>
                                 </Hidden>
-                                <Hidden smDown>
+                                <Hidden mdDown>
                                     <Grid
                                         item
                                         md={2}
@@ -518,7 +518,7 @@ export class FilesClass extends Component {
                                         </Typography>
                                     </Grid>
                                 </Hidden>
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}

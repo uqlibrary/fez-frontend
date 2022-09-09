@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-import Button from '@material-ui/core/Button';
-import CloudDoneIcon from '@material-ui/icons/CloudDone';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import CloseIcon from '@material-ui/icons/Close';
-import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import Dialog from '@material-ui/core/Dialog';
-import ErrorIcon from '@material-ui/icons/Error';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import MuiDialogContent from '@material-ui/core/DialogContent';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
+import CloudDoneIcon from '@mui/icons-material/CloudDone';
+import CircularProgress from '@mui/material/CircularProgress';
+import CloseIcon from '@mui/icons-material/Close';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import Dialog from '@mui/material/Dialog';
+import ErrorIcon from '@mui/icons-material/Error';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import MuiDialogContent from '@mui/material/DialogContent';
+import MuiDialogTitle from '@mui/material/DialogTitle';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 
@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     dialogMobileMargins: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             margin: 0,
         },
     },
@@ -197,7 +197,7 @@ const BulkExport = ({
                     <Typography variant="h4" id="bulk-export-dialog-title">
                         {buttonText}
                     </Typography>
-                    <IconButton aria-label="close" onClick={closeDialog} className={classes.closeButton}>
+                    <IconButton aria-label="close" onClick={closeDialog} className={classes.closeButton} size="large">
                         <CloseIcon />
                     </IconButton>
                 </MuiDialogTitle>

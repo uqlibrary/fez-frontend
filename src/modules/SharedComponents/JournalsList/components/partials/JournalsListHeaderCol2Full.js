@@ -1,7 +1,7 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import Tooltip from '@material-ui/core/Tooltip';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { sanitiseId } from 'helpers/general';

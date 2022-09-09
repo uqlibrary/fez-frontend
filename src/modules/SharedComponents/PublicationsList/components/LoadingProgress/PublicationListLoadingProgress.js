@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Hidden from '@mui/material/Hidden';
+import CircularProgress from '@mui/material/CircularProgress';
+import LinearProgress from '@mui/material/LinearProgress';
 import locale from 'locale/pages';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
     copy: {
@@ -26,7 +26,7 @@ export class PublicationListLoadingProgressClass extends PureComponent {
 
         return (
             <React.Fragment>
-                <Hidden xsDown>
+                <Hidden smDown>
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={1} key={index}>
                             <Grid item xs>

@@ -1,25 +1,25 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
+import Box from '@mui/material/Box';
 import * as actions from 'actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import makeStyles from '@mui/styles/makeStyles';
 import { pathConfig } from 'config';
 import ReactHtmlParser from 'react-html-parser';
 import AdminActions from './AdminActions';
 import PropTypes from 'prop-types';
-import Collapse from '@material-ui/core/Collapse';
+import Collapse from '@mui/material/Collapse';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { communityCollectionsConfig } from 'config';
-import Add from '@material-ui/icons/Add';
+import Add from '@mui/icons-material/Add';
 import { useQueryStringParams, useCommunityCollectionControls } from '../hooks';
 import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsList';
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
-import { Grid } from '@material-ui/core';
-import { Hidden } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { Hidden } from '@mui/material';
 
 const moment = require('moment');
 
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: '#eee',
         padding: 20,
         boxShadow: 'inset 0px 2px 4px 0px rgba(0,0,0,0.2)',
-        [theme.breakpoints.down('md')]: {},
+        [theme.breakpoints.down('lg')]: {},
     },
     collectionContainer: {
         minHeight: 200,
@@ -276,12 +276,12 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 >
                                                     {labels.title}
                                                 </Grid>
-                                                <Hidden xsDown>
+                                                <Hidden smDown>
                                                     <Grid item sm={2} md={1} className={classes.centerAlign}>
                                                         {communityCollectionsConfig.viewCommunityTitle}
                                                     </Grid>
                                                 </Hidden>
-                                                <Hidden smDown>
+                                                <Hidden mdDown>
                                                     <Grid item xs={2} className={classes.dateField}>
                                                         {labels.creation_date}
                                                     </Grid>
@@ -289,7 +289,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                         {labels.updated_date}
                                                     </Grid>
                                                 </Hidden>
-                                                <Hidden xsDown>
+                                                <Hidden smDown>
                                                     {!!adminUser && (
                                                         <Grid
                                                             item
@@ -351,7 +351,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                         <Hidden smUp>
                                                                             <br />
                                                                         </Hidden>
-                                                                        <Hidden xsDown> / </Hidden>
+                                                                        <Hidden smDown> / </Hidden>
                                                                         {communityCollectionsConfig.formatUpdatedDate(
                                                                             moment(row.rek_updated_date)
                                                                                 .local()
@@ -361,14 +361,14 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 </div>
                                                             </Hidden>
                                                         </Grid>
-                                                        <Hidden xsDown>
+                                                        <Hidden smDown>
                                                             <Grid item xs={2} md={1} className={classes.centerAlign}>
                                                                 <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
                                                                     {communityCollectionsConfig.viewCommunityText}
                                                                 </Link>
                                                             </Grid>
                                                         </Hidden>
-                                                        <Hidden smDown>
+                                                        <Hidden mdDown>
                                                             {returnDateField(
                                                                 row.rek_created_date,
                                                                 conf,
@@ -401,7 +401,7 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 )}
                                                             </Grid>
                                                         </Hidden>
-                                                        <Hidden xsDown>
+                                                        <Hidden smDown>
                                                             {!!adminUser && (
                                                                 <Grid
                                                                     item

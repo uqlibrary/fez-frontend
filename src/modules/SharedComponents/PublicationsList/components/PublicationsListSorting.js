@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
-import Select from '@material-ui/core/Select';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import ListSubheader from '@mui/material/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
 import { userIsAdmin, userIsResearcher } from 'hooks';
@@ -104,9 +104,10 @@ const PublicationsListSorting = props => {
     return (
         <Grid container spacing={2}>
             <Grid item xs={12} sm={6} md={3}>
-                <FormControl fullWidth>
+                <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
                     <Select
+                        variant="standard"
                         id="sortBy"
                         onChange={sortByChanged}
                         value={sortBy}
@@ -129,9 +130,10 @@ const PublicationsListSorting = props => {
                 </FormControl>
             </Grid>
             <Grid item xs={12} sm={6} md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}>
-                <FormControl fullWidth>
+                <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
                     <Select
+                        variant="standard"
                         id="sortOrder"
                         onChange={orderDirectionsChanged}
                         value={sortDirection}
@@ -159,9 +161,10 @@ const PublicationsListSorting = props => {
                 sm={props.canUseExport ? 6 : 12}
                 md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
             >
-                <FormControl fullWidth>
+                <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
                     <Select
+                        variant="standard"
                         id="pageSize"
                         value={pageSize}
                         disabled={props.disabled}
@@ -205,9 +208,10 @@ const PublicationsListSorting = props => {
                     sm={props.canUseExport ? 6 : 12}
                     md={props.canUseExport ? dropDownWidth : dropDownWidth + 1}
                 >
-                    <FormControl fullWidth>
+                    <FormControl variant="standard" fullWidth>
                         <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
                         <Select
+                            variant="standard"
                             id="displayRecordsAs"
                             value={displayRecordsAs}
                             disabled={props.disabled}
@@ -231,7 +235,7 @@ const PublicationsListSorting = props => {
                 </Grid>
             )}
             {props.canUseExport && (
-                <Hidden xsDown>
+                <Hidden smDown>
                     <Grid item sm={6} md={3}>
                         <ExportPublications
                             onChange={exportPublicationsFormatChanged}

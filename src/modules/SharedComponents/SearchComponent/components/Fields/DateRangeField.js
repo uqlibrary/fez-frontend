@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@mui/material/TextField';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import makeStyles from '@mui/styles/makeStyles';
 
-import { KeyboardDatePicker } from '@material-ui/pickers';
+import DatePicker from '@mui/lab/DatePicker';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
 const useStyles = makeStyles(
@@ -76,7 +76,7 @@ export const DateRangeField = ({
             </Grid>
             <Grid container>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <KeyboardDatePicker
+                    <DatePicker
                         value={from}
                         onChange={handleFromDateChange}
                         error={!!error || !!fromError}
@@ -91,10 +91,16 @@ export const DateRangeField = ({
                     />
                 </Grid>
                 <Grid item xs="auto">
-                    <TextField style={{ width: 24 }} value=" to " disabled InputProps={{ disableUnderline: true }} />
+                    <TextField
+                        variant="standard"
+                        style={{ width: 24 }}
+                        value=" to "
+                        disabled
+                        InputProps={{ disableUnderline: true }}
+                    />
                 </Grid>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <KeyboardDatePicker
+                    <DatePicker
                         value={to}
                         onChange={handleToDateChange}
                         error={!!error || !!toError}

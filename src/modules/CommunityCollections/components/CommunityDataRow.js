@@ -1,18 +1,18 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import AdminActions from './AdminActions';
 import * as actions from 'actions';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import ReactHtmlParser from 'react-html-parser';
 import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
-import IconButton from '@material-ui/core/IconButton';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import IconButton from '@mui/material/IconButton';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
-import { Grid } from '@material-ui/core';
-import { Hidden } from '@material-ui/core';
+import { Grid } from '@mui/material';
+import { Hidden } from '@mui/material';
 import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
 
@@ -117,7 +117,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                         <Hidden smUp>
                                             <br />
                                         </Hidden>
-                                        <Hidden xsDown> / </Hidden>
+                                        <Hidden smDown> / </Hidden>
                                         {communityCollectionsConfig.formatUpdatedDate(
                                             moment(row.rek_updated_date)
                                                 .local()
@@ -129,7 +129,7 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         </div>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    <Hidden smDown>
+                    <Hidden mdDown>
                         {returnDateField(row.rek_created_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
                         {returnDateField(row.rek_updated_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
                     </Hidden>

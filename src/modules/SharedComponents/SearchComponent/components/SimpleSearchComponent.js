@@ -1,21 +1,21 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Tooltip from '@mui/material/Tooltip';
 
-import Search from '@material-ui/icons/Search';
-import Close from '@material-ui/icons/Close';
-import ArrowForward from '@material-ui/icons/ArrowForward';
+import Search from '@mui/icons-material/Search';
+import Close from '@mui/icons-material/Close';
+import ArrowForward from '@mui/icons-material/ArrowForward';
 
 import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
 import { locale } from 'locale';
 
-import { withStyles } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
-import Fade from '@material-ui/core/Fade';
+import withStyles from '@mui/styles/withStyles';
+import Hidden from '@mui/material/Hidden';
+import Fade from '@mui/material/Fade';
 
 export const styles = theme => ({
     searchIconPrefix: {
@@ -173,7 +173,7 @@ export class SimpleSearchComponent extends PureComponent {
                     {this.props.isInHeader ? (
                         <React.Fragment>
                             {/* DESKTOP in header */}
-                            <Hidden xsDown>
+                            <Hidden smDown>
                                 <Grid
                                     container
                                     alignItems={'center'}
@@ -217,6 +217,7 @@ export class SimpleSearchComponent extends PureComponent {
                                         <IconButton
                                             onClick={this._handleToggleMobile}
                                             aria-label={txt.mobileSearchButtonAriaLabel}
+                                            size="large"
                                         >
                                             <Search className={classes.searchIconMobile} />
                                         </IconButton>
@@ -237,6 +238,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                         <IconButton
                                                             onClick={this._handleToggleMobile}
                                                             className={classes.mobileSearchButtons}
+                                                            size="large"
                                                         >
                                                             <Close
                                                                 className={classes.mobileCloseButton}
@@ -270,6 +272,7 @@ export class SimpleSearchComponent extends PureComponent {
                                                             onClick={this._handleSearch}
                                                             disabled={this.state.searchTerm.trim().length === 0}
                                                             className={classes.mobileSearchButtons}
+                                                            size="large"
                                                         >
                                                             <ArrowForward fontSize="inherit" />
                                                         </IconButton>

@@ -1,17 +1,17 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import DeleteForever from '@material-ui/icons/DeleteForever';
-import People from '@material-ui/icons/People';
-import { withStyles } from '@material-ui/core/styles';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import DeleteForever from '@mui/icons-material/DeleteForever';
+import People from '@mui/icons-material/People';
+import withStyles from '@mui/styles/withStyles';
 
 export class ContributorRowHeader extends PureComponent {
     static propTypes = {
@@ -92,7 +92,7 @@ export class ContributorRowHeader extends PureComponent {
                     </Fragment>
                 )}
                 <ListItem classes={{ root: classes.header }}>
-                    <Hidden xsDown>
+                    <Hidden smDown>
                         <ListItemIcon>
                             <People />
                         </ListItemIcon>
@@ -103,7 +103,7 @@ export class ContributorRowHeader extends PureComponent {
                         </Grid>
                         {showIdentifierLookup && (
                             <Grid item xs={12} sm={4}>
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <ListItemText
                                         secondary={identifierColumn}
                                         secondaryTypographyProps={{ variant: 'caption' }}
@@ -113,7 +113,7 @@ export class ContributorRowHeader extends PureComponent {
                         )}
                         <Grid item xs={12} sm={5} md={4}>
                             {showRoleInput && (
-                                <Hidden xsDown>
+                                <Hidden smDown>
                                     <ListItemText
                                         secondary={roleColumn}
                                         secondaryTypographyProps={{ variant: 'caption' }}
@@ -123,7 +123,7 @@ export class ContributorRowHeader extends PureComponent {
                         </Grid>
                     </Grid>
                     <ListItemSecondaryAction classes={{ root: classes.paddingRight64 }}>
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <ListItemText
                                 secondary={reorderColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
@@ -152,6 +152,7 @@ export class ContributorRowHeader extends PureComponent {
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
                                     aria-label={deleteAll}
+                                    size="large"
                                 >
                                     <DeleteForever />
                                 </IconButton>

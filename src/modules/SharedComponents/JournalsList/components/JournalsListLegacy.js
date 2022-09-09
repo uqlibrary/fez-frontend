@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
@@ -11,17 +11,17 @@ import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import JournalsListDataCol3 from './partials/JournalsListDataCol3';
 import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             display: 'grid',
             gridTemplateColumns: '80% auto 50px',
             flexWrap: 'nowrap',
             overflowX: 'scroll',
         },
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             gridTemplateColumns: 'auto auto 50px',
         },
     },
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     },
     moreColumnsWidth: {
         marginLeft: 4,
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             width: '100%',
             overflow: 'unset',
         },

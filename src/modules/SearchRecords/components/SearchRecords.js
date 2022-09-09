@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -325,7 +325,7 @@ const SearchRecords = ({
                     </Grid>
                 )}
                 {publicationsListFacets && Object.keys(publicationsListFacets).length !== 0 && (
-                    <Hidden smDown>
+                    <Hidden mdDown>
                         <Grid item md={3} id="refine-results-facets" data-testid="refine-results-facets">
                             <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
                                 <FacetsFilter

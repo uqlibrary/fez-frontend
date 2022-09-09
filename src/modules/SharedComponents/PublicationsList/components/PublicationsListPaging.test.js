@@ -1,6 +1,6 @@
 import PublicationsListPagingWithStyles, { PublicationsListPaging, paginate } from './PublicationsListPaging';
 import React from 'react';
-import { createTheme, MuiThemeProvider } from '@material-ui/core';
+import { createTheme, ThemeProvider, StyledEngineProvider, adaptV4Theme } from '@mui/material';
 import { render } from 'test-utils';
 import { locale } from 'locale';
 
@@ -296,20 +296,22 @@ describe('PublicationsListPaging renders ', () => {
         };
         const setup = (theme, testProps) => {
             return render(
-                <MuiThemeProvider theme={theme}>
-                    <PublicationsListPaging {...testProps} />
-                </MuiThemeProvider>,
+                <StyledEngineProvider injectFirst>
+                    <ThemeProvider theme={theme}>
+                        <PublicationsListPaging {...testProps} />
+                    </ThemeProvider>
+                </StyledEngineProvider>,
             );
         };
         it('Should render page buttons at sm and above screen sizes ', () => {
-            const themeSm = createTheme({ props: { MuiWithWidth: { initialWidth: 'sm' } } });
+            const themeSm = createTheme(adaptV4Theme({ props: { MuiWithWidth: { initialWidth: 'sm' } } }));
             const { getByTestId } = setup(themeSm, getProps(testProps));
             expect(getByTestId(`${testProps.pagingId}-select-page-1`)).toBeInTheDocument();
             expect(getByTestId(`${testProps.pagingId}-select-page-2`)).toBeInTheDocument();
         });
 
         it('Should not render page buttons at xs and below screen sizes ', () => {
-            const themeXs = createTheme({ props: { MuiWithWidth: { initialWidth: 'xs' } } });
+            const themeXs = createTheme(adaptV4Theme({ props: { MuiWithWidth: { initialWidth: 'xs' } } }));
             const { queryByTestId } = setup(themeXs, getProps(testProps));
 
             expect(queryByTestId(`${testProps.pagingId}-select-page-1`)).not.toBeInTheDocument();

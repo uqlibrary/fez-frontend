@@ -1,21 +1,23 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
-import Grid from '@material-ui/core/Grid';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import Delete from '@material-ui/icons/Delete';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import Edit from '@material-ui/icons/Edit';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Delete from '@mui/icons-material/Delete';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import Edit from '@mui/icons-material/Edit';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import Hidden from '@material-ui/core/Hidden';
+import Hidden from '@mui/material/Hidden';
 import { ORG_TYPES_LOOKUP } from 'config/general';
+
+// FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
+const withWidth = () => WrappedComponent => props => <WrappedComponent {...props} width="xs" />;
 
 export const styles = theme => ({
     rowSelected: {
@@ -137,7 +139,7 @@ export class GrantListEditorRow extends PureComponent {
                 <Grid item xs={12} sm={5}>
                     {this.getListItemTypoGraphy(grant.grantAgencyName, '', `${classes.primary} ${selectedClass}`, '')}
                 </Grid>
-                <Hidden xsDown>
+                <Hidden smDown>
                     <Grid item sm={3}>
                         {this.getListItemTypoGraphy(
                             `${grant.grantId}`,
@@ -192,7 +194,7 @@ export class GrantListEditorRow extends PureComponent {
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
                                 <Grid container spacing={0}>
-                                    <Hidden smDown>
+                                    <Hidden mdDown>
                                         <Grid item xs={8} style={{ textAlign: 'right' }}>
                                             <Tooltip
                                                 title={moveUpHint}
@@ -205,6 +207,7 @@ export class GrantListEditorRow extends PureComponent {
                                                         onClick={this._onMoveUp}
                                                         disabled={disabled || !canMoveUp}
                                                         aria-label={moveUpHint}
+                                                        size="large"
                                                     >
                                                         <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
                                                     </IconButton>
@@ -221,6 +224,7 @@ export class GrantListEditorRow extends PureComponent {
                                                         onClick={this._onMoveDown}
                                                         disabled={disabled || !canMoveDown}
                                                         aria-label={moveDownHint}
+                                                        size="large"
                                                     >
                                                         <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
                                                     </IconButton>
@@ -239,6 +243,7 @@ export class GrantListEditorRow extends PureComponent {
                                                             onClick={this._handleEdit}
                                                             disabled={disabled}
                                                             id={`${editButtonId}-${index}`}
+                                                            size="large"
                                                         >
                                                             <Edit />
                                                         </IconButton>
@@ -263,6 +268,7 @@ export class GrantListEditorRow extends PureComponent {
                                                     aria-label={deleteHint}
                                                     onClick={this._showConfirmation}
                                                     disabled={disabled}
+                                                    size="large"
                                                 >
                                                     <Delete />
                                                 </IconButton>

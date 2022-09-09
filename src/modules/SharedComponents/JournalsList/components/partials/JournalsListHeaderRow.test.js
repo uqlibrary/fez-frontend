@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '@material-ui/core/Table';
+import Table from '@mui/material/Table';
 import JournalsListHeaderRow from './JournalsListHeaderRow';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import { WithReduxStore, fireEvent, render } from 'test-utils';

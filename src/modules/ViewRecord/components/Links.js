@@ -7,11 +7,11 @@ import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from '@mui/styles/withStyles';
 
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@mui/material/Grid';
+import Hidden from '@mui/material/Hidden';
+import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
 import { openAccessConfig } from 'config';
@@ -20,9 +20,9 @@ import moment from 'moment';
 
 const styles = theme => ({
     header: {
-        padding: `${theme.spacing(1)}px 0`,
+        padding: `${theme.spacing(1)} 0`,
         [theme.breakpoints.up('sm')]: {
-            padding: `${theme.spacing(2)}px ${theme.spacing(1)}px ${theme.spacing(1)}px ${theme.spacing(1)}px`,
+            padding: `${theme.spacing(2)} ${theme.spacing(1)} ${theme.spacing(1)} ${theme.spacing(1)}`,
         },
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
@@ -229,7 +229,7 @@ export class LinksClass extends PureComponent {
                                 {txt.headerTitles.link}
                             </Typography>
                         </Grid>
-                        <Hidden xsDown>
+                        <Hidden smDown>
                             <Grid item sm={4} data-testid="description-label">
                                 <Typography variant="caption" gutterBottom>
                                     {txt.headerTitles.description}

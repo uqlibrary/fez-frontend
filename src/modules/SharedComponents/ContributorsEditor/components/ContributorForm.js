@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
@@ -10,7 +10,7 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 import { default as globalLocale } from 'locale/global';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import {
     AFFILIATION_TYPE_NOT_UQ,
@@ -21,7 +21,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
     contributorFormButton: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             height: '100%',
         },
     },
