@@ -17,9 +17,9 @@ describe('JournalArticleForm renders ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('component with 11 input fields', () => {
+    it('component with 13 input fields', () => {
         const wrapper = setup();
-        expect(wrapper.find('Field').length).toEqual(12);
+        expect(wrapper.find('Field').length).toEqual(13);
     });
 
     it('component with all fields disabled', () => {

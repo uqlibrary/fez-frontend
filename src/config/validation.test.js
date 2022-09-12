@@ -102,10 +102,34 @@ describe('Validation method', () => {
     });
 
     it('should validate doi', () => {
+        expect(validation.isValidDOIValue('https://doi.org/10.1007/978-3-319-60492-3_52')).toBeTruthy();
+        expect(validation.isValidDOIValue('https://dx.doi.org/10.1007/978-3-319-60492-3_52')).toBeTruthy();
+        expect(validation.isValidDOIValue('https://12345/10.1007/978-3-319-60492-3_52')).toBeTruthy();
+        expect(validation.isValidDOIValue('abcde/10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/978-3-319-60492-3_52')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1007/something')).toBeTruthy();
         expect(validation.isValidDOIValue('10.1021/jp030583+')).toBeTruthy();
         expect(validation.isValidDOIValue('10.2984/1534-6188(2008)62[205:ACOIGT]2.0.CO;2')).toBeTruthy();
+    });
+
+    it('should get doi', () => {
+        const doi = '10.1007/978-3-319-60492-3_52';
+        expect(validation.getDoi(`https://doi.org/${doi}`)).toBeTruthy();
+        expect(validation.getDoi(`https://dx.doi.org/${doi}`)).toBeTruthy();
+        expect(validation.getDoi(`https://12345/${doi}`)).toBeTruthy();
+        expect(validation.getDoi(`abcde/${doi}`)).toBeTruthy();
+        expect(validation.getDoi(doi)).toBeTruthy();
+        expect(validation.getDoi('abcde')).toBeNull();
+    });
+
+    it('should sanitize doi', () => {
+        const doi = '10.1007/978-3-319-60492-3_52';
+        expect(validation.sanitizeDoi(`https://doi.org/${doi}`)).toBe(doi);
+        expect(validation.sanitizeDoi(`https://dx.doi.org/${doi}`)).toBe(doi);
+        expect(validation.sanitizeDoi(`https://12345/${doi}`)).toBe(doi);
+        expect(validation.sanitizeDoi(`abcde/${doi}`)).toBe(doi);
+        expect(validation.sanitizeDoi(doi)).toBe(doi);
+        expect(validation.sanitizeDoi('abcde')).toBe('abcde');
     });
 
     it('should validate pubmed id', () => {

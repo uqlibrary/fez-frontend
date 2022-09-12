@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`RichEditor should call componentDidUpdate 1`] = `
+<Fragment>
+  <span />
+  <div
+    className=""
+    data-testid="rek-test"
+    id="rek-test"
+  />
+</Fragment>
+`;
+
 exports[`RichEditor should render component 1`] = `
 <Provider
   store={

@@ -16,7 +16,7 @@ describe('PartialDateForm component', () => {
     it('should not call _setDate if props.onChange is not defined', () => {
         const wrapper = setup({});
         wrapper.instance()._setDate = jest.fn();
-        wrapper.instance().UNSAFE_componentWillUpdate();
+        wrapper.setProps({});
         expect(wrapper.instance()._setDate).not.toBeCalled();
     });
 

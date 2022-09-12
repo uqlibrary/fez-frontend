@@ -9788,7 +9788,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                   >
                                                                     <a
                                                                       aria-label="Check publisher's OA archiving policy in a new window"
-                                                                      className="makeStyles-externalLink-11"
+                                                                      className="makeStyles-externalLink-11 makeStyles-externalLink-13"
                                                                       data-testid="rek-journal-name-sherpa-link"
                                                                       href="https://example.com/"
                                                                       id="rek-journal-name-sherpa-link"
@@ -11833,7 +11833,7 @@ exports[`Additional Information Component  Full mount render 1`] = `
                                                                 >
                                                                   <a
                                                                     aria-label="Open this DOI in an new window"
-                                                                    className="citationDoiLink makeStyles-externalLink-11"
+                                                                    className="citationDoiLink makeStyles-externalLink-11 makeStyles-externalLink-14"
                                                                     data-testid="citation-doi-link"
                                                                     href="https://doi.org/10.1242/jcs.196659"
                                                                     id="citation-doi-link"

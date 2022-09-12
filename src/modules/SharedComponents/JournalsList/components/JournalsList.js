@@ -1,17 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
-import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
-import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
-import JournalsListDataCol1 from './partials/JournalsListDataCol1';
-import JournalsListDataCol2Full from './partials/JournalsListDataCol2Full';
-import JournalsListDataCol2Min from './partials/JournalsListDataCol2Min';
 import { JournalFieldsMap } from './partials/JournalFieldsMap';
-import Cookies from 'js-cookie';
 import PropTypes from 'prop-types';
-import JournalsListDataCol3 from './partials/JournalsListDataCol3';
-import JournalsListHeaderCol3 from './partials/JournalsListHeaderCol3';
 import { makeStyles } from '@material-ui/core/styles';
+
+// import Collapse from '@material-ui/core/Collapse';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableContainer from '@material-ui/core/TableContainer';
+import Paper from '@material-ui/core/Paper';
+import JournalsListHeaderRow from './partials/JournalsListHeaderRow';
+import JournalsListDataRow from './partials/JournalsListDataRow';
 
 const useStyles = makeStyles(theme => ({
     journalList: {
@@ -25,40 +25,72 @@ const useStyles = makeStyles(theme => ({
             gridTemplateColumns: 'auto auto 50px',
         },
     },
-    titleColumn: {
-        width: JournalFieldsMap[0].size.xs,
+
+    actionsColumn: isSelectable => ({
+        ...(isSelectable
+            ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xs ?? /* istanbul ignore next */ {}
+            : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xs ??
+              /* istanbul ignore next */ {}),
+        [theme.breakpoints.down('xs')]: {
+            verticalAlign: 'top',
+            paddingLeft: 0,
+            paddingRight: 0,
+            paddingBottom: 0,
+        },
         [theme.breakpoints.up('sm')]: {
-            width: JournalFieldsMap[0].size.sm,
+            ...(isSelectable
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.sm ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.sm ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('md')]: {
-            width: JournalFieldsMap[0].size.md,
+            ...(isSelectable
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.md ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.md ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('lg')]: {
-            width: JournalFieldsMap[0].size.lg,
+            ...(isSelectable
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.lg ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.lg ??
+                  /* istanbul ignore next */ {}),
         },
         [theme.breakpoints.up('xl')]: {
-            width: JournalFieldsMap[0].size.xl,
+            ...(isSelectable
+                ? JournalFieldsMap[0].collapsibleComponent.actionsCol?.selectable?.xl ?? /* istanbul ignore next */ {}
+                : /* istanbul ignore next */ JournalFieldsMap[0].collapsibleComponent.actionsCol?.xl ??
+                  /* istanbul ignore next */ {}),
         },
-    },
-    moreColumnsWidth: {
-        marginLeft: 4,
-        [theme.breakpoints.down('sm')]: {
-            width: '100%',
-            overflow: 'unset',
-        },
-        [theme.breakpoints.up('md')]: {
-            overflow: props => (props.minimalView ? 'unset' : 'auto hidden'),
-        },
-        flexGrow: props => (props.minimalView ? 'inherit' : 1),
-    },
+    }),
     headerRow: {
-        borderBottom: '1px solid #CCC',
-        width: '100%',
-        overflowY: 'hidden',
-        height: 40,
-        [theme.breakpoints.up('md')]: {
-            height: 32,
+        borderBottomWidth: '2px',
+    },
+
+    resultsTable: {
+        '& th, & td:not[data-testid=collapsible-cell-closed]': {
+            padding: '6px',
         },
+    },
+    headerContainer: {
+        alignItems: 'flex-end',
+    },
+    dataRowContainer: {
+        alignItems: 'center',
+    },
+    inputLabel: {
+        color: 'rgba(0, 0, 0, 0.54)',
+        padding: 0,
+        overflow: 'hidden',
+        fontSize: '0.75rem',
+        fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
+        lineHeight: 1.1,
+        whiteSpace: 'normal',
+        textOverflow: 'ellipsis',
+        fontWeight: 600,
+    },
+    subLabel: {
+        display: 'block',
+        fontWeight: 400,
     },
 }));
 
@@ -67,107 +99,43 @@ const JournalsList = ({
     onSelectionChange,
     onToggleSelectAll,
     selected = {},
-    isSelectable,
+    isSelectable = true,
     isAllSelected,
 }) => {
-    React.useEffect(() => {
-        if (!Cookies.get('minimalView')) {
-            Cookies.set('minimalView', true);
-        }
-    }, []);
-
-    const [minimalView, setMinimalView] = React.useState(Cookies.get('minimalView') !== 'false');
-    const toggleView = () => {
-        Cookies.set('minimalView', !minimalView);
-        setMinimalView(!minimalView);
-    };
-    let colWidth = 0;
-    if (!minimalView) {
-        for (let i = 0; i < JournalFieldsMap.length - 1; i++) {
-            colWidth += JournalFieldsMap[i + 1].size;
-        }
-    } else {
-        for (let i = 0; i < JournalFieldsMap.filter(item => item.compactView).length - 1; i++) {
-            colWidth += JournalFieldsMap.filter(item => item.compactView)[i + 1].size;
-        }
-    }
-
-    const props = {
-        minimalView,
-    };
-    const classes = useStyles(props);
+    const classes = useStyles(isSelectable);
 
     return (
-        <Grid
-            container
-            spacing={0}
-            id="journal-list"
-            data-testid="journal-list"
-            alignItems="stretch"
-            className={classes.journalList}
-        >
-            <Grid item className={classes.titleColumn}>
-                {/* Header */}
-                <JournalsListHeaderCol1
-                    isSelectable={isSelectable}
-                    checked={isAllSelected}
-                    onChange={onToggleSelectAll}
-                />
-                {/* Data */}
-                {journals &&
-                    journals.length > 0 &&
-                    journals.map((item, index) => {
-                        return (
-                            <JournalsListDataCol1
-                                key={index}
-                                index={index}
-                                journal={item}
-                                onChange={onSelectionChange}
-                                checked={selected[item.jnl_jid]}
-                                isSelectable={isSelectable}
-                            />
-                        );
-                    })}
-            </Grid>
-            <Grid item xs className={classes.moreColumnsWidth}>
-                <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
-                    <Grid container spacing={0} alignItems="flex-end" className={classes.headerRow}>
-                        {/* Header */}
-                        {!minimalView
-                            ? JournalFieldsMap.slice(1).map((item, index) => {
-                                  return <JournalsListHeaderCol2Full journal={item} index={index} key={index} />;
-                              })
-                            : JournalFieldsMap.slice(1)
-                                  .filter(item => !!item.compactView)
-                                  .map((item, index) => {
-                                      return <JournalsListHeaderCol2Min journal={item} index={index} key={index} />;
-                                  })}
-                    </Grid>
-                    {/* Data */}
-                    <Grid container spacing={0} alignItems="center">
-                        <Grid item xs={12} style={{ marginTop: 6 }}>
+        <Grid container spacing={0} id="journal-list" data-testid="journal-list">
+            <Grid item xs={12}>
+                <TableContainer
+                    component={Paper}
+                    style={{ boxShadow: 'none' }}
+                    className={classes.resultsTableContainer}
+                >
+                    <Table aria-label="collapsible table" className={classes.resultsTable}>
+                        <JournalsListHeaderRow
+                            checked={isAllSelected}
+                            onChange={onToggleSelectAll}
+                            isSelectable={isSelectable}
+                            classes={classes}
+                        />
+                        <TableBody>
                             {journals &&
                                 journals.length > 0 &&
-                                journals.map((item, index) => {
-                                    return !minimalView ? (
-                                        <JournalsListDataCol2Full key={index} index={index} journal={item} />
-                                    ) : (
-                                        <JournalsListDataCol2Min key={index} index={index} journal={item} />
-                                    );
-                                })}
-                        </Grid>
-                    </Grid>
-                </div>
-            </Grid>
-            <Grid item xs={'auto'}>
-                {/* Header */}
-                <JournalsListHeaderCol3 toggleView={toggleView} minimalView={!!minimalView} />
-                {/* Data */}
-                {journals &&
-                    journals.length > 0 &&
-                    journals.map((item, index) => {
-                        return <JournalsListDataCol3 key={index} journal={item} minimalView={minimalView} />;
-                    })}
+                                journals.map((row, index) => (
+                                    <JournalsListDataRow
+                                        key={row.jnl_jid}
+                                        row={row}
+                                        index={index}
+                                        onChange={onSelectionChange}
+                                        checked={selected[row.jnl_jid]}
+                                        isSelectable={isSelectable}
+                                        classes={classes}
+                                    />
+                                ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             </Grid>
         </Grid>
     );

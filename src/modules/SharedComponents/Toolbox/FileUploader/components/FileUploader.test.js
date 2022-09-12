@@ -23,6 +23,7 @@ function setup(testProps = {}) {
 }
 
 describe('Component FileUploader', () => {
+    const dateToCheck = '10/10/2017';
     const getMockFile = name => ({ fileData: new File([''], name), name: name, size: 0 });
     const MockDate = require('mockdate');
     beforeEach(() => {
@@ -38,6 +39,12 @@ describe('Component FileUploader', () => {
 
     it('should render default component', () => {
         const wrapper = setup();
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should render security policy selector if admin user', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -80,6 +87,7 @@ describe('Component FileUploader', () => {
         const files = [getMockFile('a.txt'), getMockFile('b.txt')];
 
         wrapper.instance()._handleDroppedFiles(files, {});
+
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -124,14 +132,75 @@ describe('Component FileUploader', () => {
 
         wrapper.instance()._updateFileAccessCondition(fileA, 0, 5);
         wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
+            moment(new Date()).format('DD/MM/YYYY'),
+        );
 
-        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(toJson(wrapper)).toMatchSnapshot();
 
         fileA.access_condition_id = 5;
-        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment('10/10/2017', 'DD/MM/YYYY'));
+        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
+        wrapper.update();
+
+        // expect(toJson(wrapper)).toMatchSnapshot();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+    });
+    it('should update file description', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true });
+        const descriptionA = 'Test Description A';
+        const descriptionB = 'Test Description B';
+        const fileA = getMockFile('a.txt');
+        const fileB = getMockFile('b.txt');
+        const files = [fileA, fileB];
+
+        wrapper.instance()._handleDroppedFiles(files, {});
+        wrapper.update();
+
+        wrapper.instance()._updateFileDescription(fileA, 0, descriptionA);
+        wrapper.update();
+        expect(wrapper.instance().state.filesInQueue[0].description).toEqual(descriptionA);
+
+        wrapper.instance()._updateFileDescription(fileA, 1, descriptionB);
+        wrapper.update();
+
+        expect(wrapper.instance().state.filesInQueue[1].description).toEqual(descriptionB);
+    });
+
+    it('should render rows for uploaded files with security policy', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+
+        const tree = toJson(wrapper);
+
+        expect(tree).toMatchSnapshot();
+
+        const fileA = getMockFile('a.txt');
+        const fileB = getMockFile('b.txt');
+        const files = [fileA, fileB];
+
+        wrapper.instance()._handleDroppedFiles(files, {});
         wrapper.update();
 
         expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 1);
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 5);
+        wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(
+            moment(new Date()).format('DD/MM/YYYY'),
+        );
+
+        // expect(toJson(wrapper)).toMatchSnapshot();
+
+        fileA.security_policy = 5;
+        wrapper.instance()._updateFileEmbargoDate(fileA, 0, moment(dateToCheck, 'DD/MM/YYYY'));
+        wrapper.update();
+        expect(moment(wrapper.instance().state.filesInQueue[0].date).format('DD/MM/YYYY')).toEqual(dateToCheck);
+
+        // expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render rows for uploaded files with default access condition based on quick template Id', () => {
@@ -256,6 +325,36 @@ describe('Component FileUploader', () => {
         },
     );
 
+    it(
+        'should accept terms and condition and reset back to not accepted state if ' +
+            'security policy changed back to non-public',
+        () => {
+            const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+
+            const fileA = getMockFile('a.txt');
+
+            wrapper.instance()._handleDroppedFiles([fileA], {});
+            wrapper.update();
+            const fileData = wrapper.instance().state.filesInQueue[0].fileData;
+            expect(fileData.name).toEqual('a.txt');
+            expect(fileData.lastModified).toEqual(12345678912);
+
+            wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 5);
+            wrapper.update();
+            expect(wrapper.instance().state.filesInQueue[0].security_policy).toEqual(5);
+
+            wrapper.instance()._acceptTermsAndConditions(true);
+            wrapper.update();
+            expect(wrapper.state().isTermsAndConditionsAccepted).toBeTruthy();
+
+            wrapper.instance()._updateFileSecurityPolicy(fileA, 0, 1);
+            wrapper.update();
+            expect(wrapper.instance().state.filesInQueue[0].security_policy).toEqual(1);
+
+            expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
+        },
+    );
+
     it('should return false if any file has open access with date selected but the terms and conditions not accepted', () => {
         const wrapper = setup({ requireOpenAccessStatus: true });
 
@@ -268,6 +367,24 @@ describe('Component FileUploader', () => {
         fileC.access_condition_id = 1;
         const fileD = getMockFile('d.txt');
         fileD.access_condition_id = 1;
+
+        wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
+        wrapper.state().isTermsAndConditionsAccepted = false;
+        expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
+    });
+
+    it('should return false if any file has security policy with date selected but the terms and conditions not accepted', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true, isAdmin: true });
+
+        const fileA = getMockFile('a.txt');
+        fileA.security_policy = 1;
+        const fileB = getMockFile('b.txt');
+        fileB.security_policy = 5;
+        fileB.date = '2017-01-01';
+        const fileC = getMockFile('c.txt');
+        fileC.security_policy = 1;
+        const fileD = getMockFile('d.txt');
+        fileD.security_policy = 1;
 
         wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
         wrapper.state().isTermsAndConditionsAccepted = false;

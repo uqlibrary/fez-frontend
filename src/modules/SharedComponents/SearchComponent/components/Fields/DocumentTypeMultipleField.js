@@ -76,6 +76,7 @@ export class DocumentTypeMultipleField extends PureComponent {
                 <InputLabel>{txt.advancedSearch.fieldTypes.rek_display_type.title}</InputLabel>
                 <Select
                     id="document-type-selector"
+                    data-testid="document-type-selector"
                     name="document-type-selector"
                     aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
                     value={this.props.docTypes || ['0']}
