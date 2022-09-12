@@ -41,6 +41,16 @@ describe('Component FileUploadRowHeader', () => {
         expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
     });
 
+    it('should render for admins with security policy and embargo date column', () => {
+        const { getByText, getByTitle, queryByText } = setup({ requireOpenAccessStatus: true, isAdmin: true });
+        expect(getByText('File name')).toBeInTheDocument();
+
+        expect(queryByText('Access conditions')).toBeNull();
+        expect(getByText('Security policy')).toBeInTheDocument();
+        expect(getByText('Embargo release date')).toBeInTheDocument();
+        expect(getByTitle('Remove all files from the upload queue')).toBeInTheDocument();
+    });
+
     it('should render in disabled state', () => {
         const { getByTestId } = setup({ disabled: true });
         expect(getByTestId('delete-all-files').disabled).toBeTruthy();

@@ -14,7 +14,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
-import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import { openAccessConfig, pathConfig } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -316,8 +316,9 @@ export class FilesClass extends Component {
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
         const componentProps = this.props;
-        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
-            ? dataStreams.filter(this.isFileValid).map(dataStream => {
+        return !!!dataStreams
+            ? []
+            : dataStreams.filter(this.isFileValid).map(dataStream => {
                   const pid = publication.rek_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -366,21 +367,7 @@ export class FilesClass extends Component {
                       checksums: checksums,
                       requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
                   };
-              })
-            : [];
-    };
-
-    isViewableByUser = (publication, dataStreams) => {
-        const { files } = viewRecordsConfig;
-        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof),
-        );
-        return (
-            (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin)) ||
-            // eslint-disable-next-line camelcase
-            this.props.author?.pol_id === 1
-        );
+              });
     };
 
     handleImageFailed = () => {

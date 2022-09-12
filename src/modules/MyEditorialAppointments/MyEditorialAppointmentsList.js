@@ -366,7 +366,7 @@ export const GetColumns = () => {
                     id={`eap-end-year-${rowData.tableData.id}`}
                     data-testid={`eap-end-year-${rowData.tableData.id}`}
                 >
-                    {moment(String(rowData.eap_end_year)).format('YYYY') === moment(new Date()).format('YYYY')
+                    {moment(String(rowData.eap_end_year), 'YYYY').format('YYYY') === moment(new Date()).format('YYYY')
                         ? locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel
                         : rowData.eap_end_year}
                 </Typography>
@@ -382,10 +382,10 @@ export const GetColumns = () => {
                         onChange={value => onChange((!!value && value.format('YYYY')) || null)}
                         error={
                             !moment(String(value), 'YYYY').isValid() ||
-                            moment(String(value)).isBefore(String(rowData.eap_start_year))
+                            moment(String(value), 'YYYY').isBefore(moment(String(rowData.eap_start_year), 'YYYY'))
                         }
                         {...((!!value &&
-                            moment(String(value)).format('YYYY') === moment().format('YYYY') && {
+                            moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
                                 format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
                             }) ||
                             {})}
