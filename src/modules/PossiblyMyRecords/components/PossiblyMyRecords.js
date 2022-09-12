@@ -57,6 +57,7 @@ export default class PossiblyMyRecords extends PureComponent {
             },
         };
         this.state = {
+            initState: { ...this.initState },
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPossiblePublicationsList && props.possiblePublicationsList.length > 0,
@@ -65,33 +66,35 @@ export default class PossiblyMyRecords extends PureComponent {
         };
     }
 
-    componentDidMount() {
-        if (!this.props.accountLoading) {
-            this.props.actions.searchPossiblyYourPublications({ ...this.state });
-        }
-    }
-
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(newProps) {
+    static getDerivedStateFromProps(props, state) {
         // handle browser back button - set state from location/dispatch action for this state
         if (
-            this.props.location !== newProps.location &&
-            newProps.history.action === 'POP' &&
-            newProps.location.pathname === pathConfig.records.possible
+            state.prevProps?.location !== props.location &&
+            props.history.action === 'POP' &&
+            props.location.pathname === pathConfig.records.possible
         ) {
-            this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.initState) }, () => {
-                // only will be called when user clicks back on my records page
-                this.props.actions.searchPossiblyYourPublications({ ...this.state });
-            });
+            props.actions.searchPossiblyYourPublications({ ...state });
+            return {
+                ...(!!props.location.state ? props.location.state : state.initState),
+                prevProps: { ...props },
+            };
         }
         // set forever-true flag if user has publications
         if (
-            !this.state.hasPublications &&
-            !newProps.loadingPossiblePublicationsList &&
-            !!newProps.possiblePublicationsList &&
-            newProps.possiblePublicationsList.length > 0
+            !state.hasPublications &&
+            !props.loadingPossiblePublicationsList &&
+            !!props.possiblePublicationsList &&
+            props.possiblePublicationsList.length > 0
         ) {
-            this.setState({ hasPublications: true });
+            return { hasPublications: true, prevProps: { ...props } };
+        }
+
+        return null;
+    }
+
+    componentDidMount() {
+        if (!this.props.accountLoading) {
+            this.props.actions.searchPossiblyYourPublications({ ...this.state });
         }
     }
 
@@ -103,7 +106,7 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
-            state: { ...this.state },
+            state: { ...this.state, prevProps: {} },
         });
         this.props.actions.searchPossiblyYourPublications({ ...this.state });
     };

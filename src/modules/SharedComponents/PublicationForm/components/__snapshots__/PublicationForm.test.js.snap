@@ -1515,7 +1515,7 @@ exports[`Component PublicationForm Shows an alert 3`] = `
 </ConfirmDiscardFormChanges>
 `;
 
-exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps when props change 1`] = `
+exports[`Component PublicationForm should call getDerivedStateFromProps when props change 1`] = `
 <ConfirmDiscardFormChanges
   dirty={true}
   submitSucceeded={true}
@@ -1950,7 +1950,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
 </ConfirmDiscardFormChanges>
 `;
 
-exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps when props change 2`] = `
+exports[`Component PublicationForm should call getDerivedStateFromProps when props change 2`] = `
 <ConfirmDiscardFormChanges
   dirty={true}
   submitSucceeded={true}
@@ -2400,7 +2400,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
 </ConfirmDiscardFormChanges>
 `;
 
-exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps when props change 3`] = `
+exports[`Component PublicationForm should call getDerivedStateFromProps when props change 3`] = `
 <ConfirmDiscardFormChanges
   dirty={true}
   submitSucceeded={true}
@@ -2863,7 +2863,7 @@ exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps 
 </ConfirmDiscardFormChanges>
 `;
 
-exports[`Component PublicationForm should call UNSAFE_componentWillReceiveProps when props change 4`] = `
+exports[`Component PublicationForm should call getDerivedStateFromProps when props change 4`] = `
 <ConfirmDiscardFormChanges
   dirty={true}
   submitSucceeded={true}
