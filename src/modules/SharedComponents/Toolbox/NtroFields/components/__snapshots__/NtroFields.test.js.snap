@@ -1,5 +1,750 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component NtroFields should call componentDidUpdate 1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      help={
+        Object {
+          "buttonLabel": "CLOSE",
+          "text": <React.Fragment>
+            <WithStyles(ForwardRef(Typography))
+              component="h4"
+              variant="h6"
+            >
+              Quality indicators
+            </WithStyles(ForwardRef(Typography))>
+            <p>
+              For more information about each quality indicator option, click
+               
+              <b>
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </b>
+            </p>
+          </React.Fragment>,
+          "title": "NTRO data",
+        }
+      }
+      title="NTRO data"
+    >
+      <WithStyles(ForwardRef(Grid))
+        container={true}
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            description="Enter a brief description of the work"
+            disabled={false}
+            fullWidth={true}
+            maxValue={800}
+            name="ntroAbstract"
+            richEditorId="rek-description"
+            title={
+              <span>
+                Abstract/Description* 
+                <span
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                >
+                  (for public view)
+                </span>
+              </span>
+            }
+            validate={
+              Array [
+                [Function],
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            isValid={[Function]}
+            listEditorId="ismn"
+            locale={
+              Object {
+                "form": Object {
+                  "locale": Object {
+                    "addButtonLabel": <span>
+                      Add ISMN
+                    </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
+                    "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
+                    "inputFieldLabel": "ISMN value",
+                    "remindToAddText": <span>
+                      Please press 
+                      <b>
+                        ENTER
+                      </b>
+                       or click 
+                      <b>
+                        ADD
+                      </b>
+                       button to add this value to the list
+                    </span>,
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "ISMN",
+                    "reorderColumn": "Reorder items",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move item down the order",
+                    "moveUpHint": "Move item up the order",
+                  },
+                },
+              }
+            }
+            maxCount={5}
+            name="fez_record_search_key_ismn"
+            remindToAdd={true}
+            searchKey={
+              Object {
+                "order": "rek_ismn_order",
+                "value": "rek_ismn",
+              }
+            }
+            transformFunction={[Function]}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            inputNormalizer={[Function]}
+            isValid={[Function]}
+            listEditorId="isrc"
+            locale={
+              Object {
+                "form": Object {
+                  "locale": Object {
+                    "addButtonLabel": <span>
+                      Add ISRC
+                    </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
+                    "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
+                    "inputFieldLabel": "ISRC value",
+                    "remindToAddText": <span>
+                      Please press 
+                      <b>
+                        ENTER
+                      </b>
+                       or click 
+                      <b>
+                        ADD
+                      </b>
+                       button to add this value to the list
+                    </span>,
+                  },
+                },
+                "header": Object {
+                  "locale": Object {
+                    "deleteAll": "Remove all items",
+                    "deleteAllConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete all items?",
+                      "confirmationTitle": "Delete all",
+                    },
+                    "nameColumn": "ISRC",
+                    "reorderColumn": "Reorder items",
+                  },
+                },
+                "row": Object {
+                  "locale": Object {
+                    "deleteHint": "Remove this item",
+                    "deleteRecordConfirmation": Object {
+                      "cancelButtonLabel": "No",
+                      "confirmButtonLabel": "Yes",
+                      "confirmationMessage": "Are you sure you want to delete this item?",
+                      "confirmationTitle": "Delete item",
+                    },
+                    "editHint": "Edit this item",
+                    "moveDownHint": "Move item down the order",
+                    "moveUpHint": "Move item up the order",
+                  },
+                },
+              }
+            }
+            maxCount={5}
+            name="fez_record_search_key_isrc"
+            remindToAdd={true}
+            searchKey={
+              Object {
+                "order": "rek_isrc_order",
+                "value": "rek_isrc",
+              }
+            }
+            transformFunction={[Function]}
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "compare": null,
+                  "type": [Function],
+                },
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            floatingLabelText="Series"
+            hintText="Enter the name of publication, performance, recording, or event series"
+            name="fez_record_search_key_series.rek_series"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            label="Issue"
+            name="fez_record_search_key_issue_number.rek_issue_number"
+            textFieldId="rek-issue-number"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={3}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            label="End page"
+            name="fez_record_search_key_end_page.rek_end_page"
+            textFieldId="rek-end-page"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            id="rek-total-pages"
+            label="Total pages/Extent"
+            name="fez_record_search_key_total_pages.rek_total_pages"
+            placeholder="Total pages, size, or duration"
+            required={true}
+            textFieldId="rek-total-pages"
+            type="text"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={6}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "classes": [Function],
+                  "help": [Function],
+                  "innerRef": [Function],
+                  "textFieldId": [Function],
+                },
+                "render": [Function],
+              }
+            }
+            disabled={false}
+            fullWidth={true}
+            label="Physical description"
+            name="fez_record_search_key_original_format.rek_original_format"
+            placeholder="e.g Building, Exhibit, Performance"
+            textFieldId="rek-original-format"
+            type="text"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            genericSelectFieldId="rek-language"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Afrikaans",
+                  "value": "afr",
+                },
+                Object {
+                  "text": "Albanian",
+                  "value": "alb",
+                },
+                Object {
+                  "text": "Arabic",
+                  "value": "ara",
+                },
+                Object {
+                  "text": "Australian Indigenous",
+                  "value": "aus",
+                },
+                Object {
+                  "text": "Bosnian",
+                  "value": "bos",
+                },
+                Object {
+                  "text": "Catalan",
+                  "value": "cat",
+                },
+                Object {
+                  "text": "Chinese",
+                  "value": "chi",
+                },
+                Object {
+                  "text": "Coptic",
+                  "value": "cop",
+                },
+                Object {
+                  "text": "Czech",
+                  "value": "cze",
+                },
+                Object {
+                  "text": "Danish",
+                  "value": "dan",
+                },
+                Object {
+                  "text": "Dutch",
+                  "value": "dut",
+                },
+                Object {
+                  "text": "Egyptian (Ancient)",
+                  "value": "egy",
+                },
+                Object {
+                  "text": "Elamite",
+                  "value": "elx",
+                },
+                Object {
+                  "text": "English",
+                  "value": "eng",
+                },
+                Object {
+                  "text": "English (Ancient)",
+                  "value": "enm",
+                },
+                Object {
+                  "text": "Esperanto",
+                  "value": "epo",
+                },
+                Object {
+                  "text": "Estonian",
+                  "value": "est",
+                },
+                Object {
+                  "text": "Finnish",
+                  "value": "fin",
+                },
+                Object {
+                  "text": "French",
+                  "value": "fre",
+                },
+                Object {
+                  "text": "German",
+                  "value": "ger",
+                },
+                Object {
+                  "text": "Germanic",
+                  "value": "gem",
+                },
+                Object {
+                  "text": "Greek (Ancient)",
+                  "value": "grc",
+                },
+                Object {
+                  "text": "Greek",
+                  "value": "gre",
+                },
+                Object {
+                  "text": "Hebrew",
+                  "value": "heb",
+                },
+                Object {
+                  "text": "Croatian",
+                  "value": "hrv",
+                },
+                Object {
+                  "text": "Hungarian",
+                  "value": "hun",
+                },
+                Object {
+                  "text": "Indonesian",
+                  "value": "ind",
+                },
+                Object {
+                  "text": "Iranian",
+                  "value": "ira",
+                },
+                Object {
+                  "text": "Italian",
+                  "value": "ita",
+                },
+                Object {
+                  "text": "Japanese",
+                  "value": "jpn",
+                },
+                Object {
+                  "text": "Korean",
+                  "value": "kor",
+                },
+                Object {
+                  "text": "Lao",
+                  "value": "lao",
+                },
+                Object {
+                  "text": "Latin",
+                  "value": "lat",
+                },
+                Object {
+                  "text": "Latvian",
+                  "value": "lav",
+                },
+                Object {
+                  "text": "Lithuanian",
+                  "value": "lit",
+                },
+                Object {
+                  "text": "Macedonian",
+                  "value": "mac",
+                },
+                Object {
+                  "text": "Malayalam",
+                  "value": "mal",
+                },
+                Object {
+                  "text": "Malay",
+                  "value": "may",
+                },
+                Object {
+                  "text": "Mongolian",
+                  "value": "mon",
+                },
+                Object {
+                  "text": "Nahuatl",
+                  "value": "nah",
+                },
+                Object {
+                  "text": "Norwegian",
+                  "value": "nor",
+                },
+                Object {
+                  "text": "Turkish (Ottoman)",
+                  "value": "ota",
+                },
+                Object {
+                  "text": "Papuan",
+                  "value": "paa",
+                },
+                Object {
+                  "text": "Persian",
+                  "value": "per",
+                },
+                Object {
+                  "text": "Polish",
+                  "value": "pol",
+                },
+                Object {
+                  "text": "Portuguese",
+                  "value": "por",
+                },
+                Object {
+                  "text": "Romanian",
+                  "value": "rum",
+                },
+                Object {
+                  "text": "Russian",
+                  "value": "rus",
+                },
+                Object {
+                  "text": "Sanskrit",
+                  "value": "san",
+                },
+                Object {
+                  "text": "Slovak",
+                  "value": "slo",
+                },
+                Object {
+                  "text": "Slovenian",
+                  "value": "slv",
+                },
+                Object {
+                  "text": "Spanish",
+                  "value": "spa",
+                },
+                Object {
+                  "text": "Serbian",
+                  "value": "srp",
+                },
+                Object {
+                  "text": "Swedish",
+                  "value": "swe",
+                },
+                Object {
+                  "text": "Classical Syriac",
+                  "value": "syc",
+                },
+                Object {
+                  "text": "Syriac",
+                  "value": "syr",
+                },
+                Object {
+                  "text": "Tetum",
+                  "value": "tet",
+                },
+                Object {
+                  "text": "Thai",
+                  "value": "tha",
+                },
+                Object {
+                  "text": "Turkish",
+                  "value": "tur",
+                },
+                Object {
+                  "text": "Ukrainian",
+                  "value": "ukr",
+                },
+                Object {
+                  "text": "Vietnamese",
+                  "value": "vie",
+                },
+                Object {
+                  "text": "Waray",
+                  "value": "war",
+                },
+                Object {
+                  "text": "Yiddish",
+                  "value": "yid",
+                },
+              ]
+            }
+            label="Language"
+            multiple={true}
+            name="languages"
+            selectPrompt="Please select languages as required"
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={4}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            genericSelectFieldId="rek-quality-indicator"
+            id="quality-indicators"
+            itemsList={
+              Array [
+                Object {
+                  "text": "Disseminated via nationally recognised outlet or entity",
+                  "value": 453996,
+                },
+                Object {
+                  "text": "Disseminated via internationally recognised outlet or entity",
+                  "value": 453997,
+                },
+                Object {
+                  "text": "Association with recognised national entities, distinct from co-creation",
+                  "value": 454033,
+                },
+                Object {
+                  "text": "Association with recognised international entities, distinct from co-creation",
+                  "value": 454034,
+                },
+                Object {
+                  "text": "Reviews, prizes, awards recognition of the output",
+                  "value": 454035,
+                },
+                Object {
+                  "text": "Commissioned by external body",
+                  "value": 454036,
+                },
+                Object {
+                  "text": "Repeat performances, reproductions, republications or re-exhibitions",
+                  "value": 454037,
+                },
+                Object {
+                  "text": "Selected for use by nationally recognised outlet or entity",
+                  "value": 454038,
+                },
+                Object {
+                  "text": "Selected for use by internationally recognised outlet or entity",
+                  "value": 454039,
+                },
+                Object {
+                  "text": "Other (add details to Author/Creator research statement)",
+                  "value": 454040,
+                },
+              ]
+            }
+            label="Quality indicators"
+            multiple={true}
+            name="qualityIndicators"
+            placeholder="Quality indicators"
+            required={true}
+            validate={
+              Array [
+                [Function],
+              ]
+            }
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </StandardCard>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      title="Grant details"
+    >
+      <Field
+        component={[Function]}
+        disableDeleteAllGrants={false}
+        disabled={false}
+        name="grants"
+        validate={
+          Array [
+            [Function],
+          ]
+        }
+      />
+    </StandardCard>
+  </WithStyles(ForwardRef(Grid))>
+</Fragment>
+`;
+
 exports[`Component NtroFields should not show NTRO data card in the Ntro fields 1`] = `
 <Fragment>
   <WithStyles(ForwardRef(Grid))

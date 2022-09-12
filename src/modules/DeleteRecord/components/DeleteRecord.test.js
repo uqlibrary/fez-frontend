@@ -179,7 +179,9 @@ describe('Component DeleteRecord', () => {
         const testMethod = jest.fn();
         const wrapper = setup({ recordToDelete: mockRecordToDelete });
         wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
-        wrapper.instance().UNSAFE_componentWillReceiveProps({ submitSucceeded: true });
+        wrapper.update();
+        expect(testMethod).not.toHaveBeenCalled();
+        wrapper.setProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -197,13 +199,12 @@ describe('Component DeleteRecord', () => {
         expect(testFN).toHaveBeenCalled();
     });
 
-    it('UNSAFE_componentWillReceiveProps()', () => {
+    it('componentDidUpdate()', () => {
         const wrapper = setup({
             submitSucceeded: true,
             recordToDelete: mockRecordToDelete,
         });
-        const nextProps = { submitSucceeded: true };
-        wrapper.instance().UNSAFE_componentWillReceiveProps(nextProps);
+        wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

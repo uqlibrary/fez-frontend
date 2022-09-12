@@ -395,7 +395,9 @@ describe('Component ClaimRecord ', () => {
         const testMethod = jest.fn();
         const wrapper = setup();
         wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
-        wrapper.instance().UNSAFE_componentWillReceiveProps({ submitSucceeded: true });
+        wrapper.update();
+        expect(testMethod).not.toHaveBeenCalled();
+        wrapper.setProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
     });
 

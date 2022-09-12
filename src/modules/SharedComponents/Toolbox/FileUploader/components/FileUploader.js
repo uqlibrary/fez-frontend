@@ -51,15 +51,6 @@ export class FileUploader extends PureComponent {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
-        !!this.props.onChange &&
-            this.props.onChange({
-                queue: nextState.filesInQueue,
-                isValid: this.isFileUploadValid(nextState),
-            });
-    }
-
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
@@ -142,6 +133,21 @@ export class FileUploader extends PureComponent {
         const file = { ...fileToUpdate };
 
         file[config.FILE_META_KEY_EMBARGO_DATE] = moment(newValue).format();
+
+        this.replaceFile(file, index);
+    };
+
+    /**
+     * Update file's description
+     *
+     * @param fileToUpdate
+     * @param index
+     * @param newValue
+     * @private
+     */
+    _updateFileDescription = (fileToUpdate, index, newValue) => {
+        const file = { ...fileToUpdate };
+        file[config.FILE_META_KEY_DESCRIPTION] = newValue;
 
         this.replaceFile(file, index);
     };
@@ -294,6 +300,12 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
+        !!this.props.onChange &&
+            this.props.onChange({
+                queue: this.state.filesInQueue,
+                isValid: this.isFileUploadValid(this.state),
+            });
+
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
@@ -322,6 +334,7 @@ export class FileUploader extends PureComponent {
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onFileDescriptionChange={this._updateFileDescription}
                     onSecurityPolicyChange={this._updateFileSecurityPolicy}
                     defaultAccessCondition={defaultQuickTemplateId}
                     requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
