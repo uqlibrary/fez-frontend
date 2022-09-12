@@ -436,3 +436,44 @@ exports[`Component PossiblyMyRecords should generate <Alert> when appropriate 2`
   wiggle={null}
 />
 `;
+
+exports[`Component PossiblyMyRecords should show loader when user is filtering/paging 1`] = `
+<StandardPage
+  title="Claim possible works"
+>
+  <WithStyles(ForwardRef(Grid))
+    container={true}
+    spacing={3}
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <StandardCard
+        noHeader={true}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={true}
+          />
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+          >
+            <WithStyles(InlineLoader)
+              message="Searching for possibly your works"
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            xs={true}
+          />
+        </WithStyles(ForwardRef(Grid))>
+      </StandardCard>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</StandardPage>
+`;

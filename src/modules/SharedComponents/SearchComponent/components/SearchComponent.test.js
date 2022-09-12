@@ -43,10 +43,10 @@ describe('SearchComponent', () => {
         const wrapper = setup({
             isAdvancedSearch: true,
         });
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+
+        wrapper.setProps({
             isOpenAccessInAdvancedMode: true,
         });
-        wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -75,10 +75,9 @@ describe('SearchComponent', () => {
     });
 
     it('should toggle search to minimised view of advanced search', () => {
-        // UNSAFE_componentWillReceiveProps
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             searchQueryParams: {
                 all: 'i feel very lucky',
             },
@@ -107,10 +106,9 @@ describe('SearchComponent', () => {
     });
 
     it('should display simple search with query string', () => {
-        // UNSAFE_componentWillReceiveProps
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.setProps({
             searchQueryParams: {
                 all: 'i feel very lucky',
             },
