@@ -136,6 +136,7 @@ export const AutoCompleteAsynchronousField = ({
                             ...params.inputProps,
                             id: `${autoCompleteAsynchronousFieldId}-input`,
                             'data-testid': `${autoCompleteAsynchronousFieldId}-input`,
+                            'aria-label': `${floatingLabelText}`,
                         }}
                         value={inputValue}
                         onChange={handleSearchTextChange}

@@ -51,6 +51,7 @@ export const ListRowHeader = ({ onDeleteAll, locale, disabled, hideReorder, list
                                 onClick={showConfirmation}
                                 disabled={disabled}
                                 id={`delete-all-${listEditorId}`}
+                                aria-label={'Delete all'}
                                 data-testid={`delete-all-${listEditorId}`}
                             >
                                 <DeleteForever />

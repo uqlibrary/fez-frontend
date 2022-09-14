@@ -1,6 +1,7 @@
 context('As an admin,', () => {
     it('I can add a creative work', () => {
         cy.visit('/admin/add?user=uqstaff');
+        cy.injectAxe();
 
         // Choose a collection
         cy.get('[data-testid=rek-ismemberof-input]').type('a');
@@ -85,5 +86,16 @@ context('As an admin,', () => {
                         cy.get('[data-testid="rek-significance-form"]').should('not.exist');
                     });
             });
+
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'CreativeWork',
+                scopeName: 'Creative Work',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
     });
 });

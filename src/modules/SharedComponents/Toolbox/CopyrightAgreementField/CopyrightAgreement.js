@@ -33,6 +33,7 @@ export class CopyrightAgreement extends PureComponent {
                         inputProps={{
                             'data-testid': `${this.props.copyrightAgreementFieldId}-input`,
                             id: `${this.props.copyrightAgreementFieldId}-input`,
+                            'aria-label': 'Copyright Agreement',
                         }}
                         checked={isCopyrightAgreementAccepted}
                         onChange={this._handleChange}

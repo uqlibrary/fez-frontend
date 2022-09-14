@@ -139,6 +139,7 @@ export const ListRow = ({
                         <span>
                             <IconButton
                                 onClick={showConfirmation}
+                                aria-label={'Delete'}
                                 disabled={disabled}
                                 id={`${listRowId}-delete`}
                                 data-testid={`${listRowId}-delete`}

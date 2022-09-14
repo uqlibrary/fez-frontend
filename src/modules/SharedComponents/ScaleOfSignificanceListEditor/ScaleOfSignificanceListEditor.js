@@ -339,6 +339,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
             padding: 16,
             borderBottom: '1px solid rgba(224, 224, 224, 1)',
         };
+
         return (
             <div id={`${this.props.listEditorId}-list-editor`}>
                 {this.state.showAddForm ? (
@@ -378,7 +379,7 @@ export default class ScaleOfSignificanceListEditor extends Component {
                         <IconButton
                             data-testid="rek-significance-showhidebutton"
                             onClick={this.showFormInAddMode}
-                            aria-label={this.props.locale.form.locale.addEntryButton}
+                            aria-label={this.props.locale.form.locale.addButtonLabel}
                             size="small"
                             style={{ color: '#fff', backgroundColor: '#51247A' }}
                         >

@@ -1,6 +1,7 @@
 context('As an admin,', () => {
     it('I can create a community', () => {
         cy.visit('/admin/community?user=uqstaff');
+        cy.injectAxe();
 
         cy.get('h2').should('contain', 'Add a missing community');
 
@@ -16,6 +17,17 @@ context('As an admin,', () => {
         cy.get('[data-testid=submit-community]').click();
 
         cy.get('h3').should('contain', 'Community added successfully');
+
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Communities',
+                scopeName: 'Communities Add page',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
 
         cy.get('button')
             .contains('Add another community')

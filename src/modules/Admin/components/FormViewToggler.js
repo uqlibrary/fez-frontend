@@ -15,7 +15,13 @@ export const FormViewToggler = React.memo(() => {
         <Grid container direction="row" spacing={0} alignItems="center">
             <Grid item>
                 <Tooltip title={`Switch to ${tabbed ? 'full form' : 'tabbed'} mode`}>
-                    <Switch color="primary" checked={tabbed} onChange={toggleTabbed} value="tabbed" />
+                    <Switch
+                        inputProps={{ 'aria-label': `Switch to ${tabbed ? 'full form' : 'tabbed'} mode` }}
+                        color="primary"
+                        checked={tabbed}
+                        onChange={toggleTabbed}
+                        value="tabbed"
+                    />
                 </Tooltip>
             </Grid>
             <Grid item>

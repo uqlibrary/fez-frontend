@@ -1,6 +1,7 @@
 context('As an admin,', () => {
     it('I can create a collection', () => {
         cy.visit('/admin/collection?user=uqstaff');
+        cy.injectAxe();
 
         cy.get('h3')
             .contains('Add a missing collection')
@@ -29,6 +30,17 @@ context('As an admin,', () => {
         cy.get('[data-testid=rek-keywords-list]')
             .should('exist')
             .contains('p', 'testing');
+
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'Collections',
+                scopeName: 'Collections base page',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
 
         cy.get('button')
             .contains('Add collection')

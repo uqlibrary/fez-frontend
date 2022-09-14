@@ -1,6 +1,7 @@
 context('As an admin,', () => {
     it('I can add a journal article', () => {
         cy.visit('/admin/add?user=uqstaff');
+        cy.injectAxe();
 
         // Choose a collection
         cy.get('[data-testid=rek-ismemberof-input]').type('a');
@@ -18,6 +19,16 @@ context('As an admin,', () => {
             .contains('li', 'Article (original research)')
             .click();
 
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'JournalArticle',
+                scopeName: 'Create JournalArticle',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
         // Apply selections
         cy.get('button')
             .contains('Create work')
@@ -26,13 +37,29 @@ context('As an admin,', () => {
 
         // Confirm that alert badges are present when in tabbed mode
         cy.adminEditTabbedView();
+
         cy.adminEditCheckTabErrorBadge('bibliographic', 3);
+
         cy.adminEditCheckTabErrorBadge('files');
         cy.adminEditTabbedView(false);
 
         // Fill required fields
         cy.typeCKEditor('rek-title', 'Test title');
         cy.get('[data-testid=rek-date-year-input]').type('2020');
+
+        // Check Accessibility here - fails below for add author.
+        cy.checkA11y(
+            'div.StandardPage',
+            {
+                rules: { 'color-contrast': { enabled: false } },
+                reportName: 'JournalArticle',
+                scopeName: 'Create JournalArticle',
+                includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+            },
+            violations => console.log(violations),
+        );
+
+        // Add Author fails accessibility for Up/Down arrows - does not support aria-label
         cy.get('[data-testid=rek-author-add]').click();
         cy.get('[data-testid=rek-author-input]').type('Test author');
         cy.get('[data-testid=rek-author-add-save]').click();
