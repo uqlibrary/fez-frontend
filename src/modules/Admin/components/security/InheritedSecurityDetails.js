@@ -15,7 +15,7 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
             backgroundColor: 'rgba(0,0,0,0.05)',
         }}
     >
-        <Typography variant="h6" style={{ marginTop: -8 }}>
+        <Typography variant="h5" style={{ fontSize: '1.25rem', fontWeight: '500', marginTop: -8 }}>
             {title}
         </Typography>
         <Grid container spacing={1} style={{ marginTop: 8 }}>

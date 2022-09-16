@@ -30,13 +30,18 @@ export class FileUploadEmbargoDate extends PureComponent {
         return (
             <KeyboardDatePicker
                 format={GENERIC_DATE_FORMAT}
+                title="test"
                 value={this.props.value ? new Date(this.props.value) : null}
                 variant="inline"
                 minDate={this.props.minDate}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
+                inputProps={{ 'aria-label': 'Embargo Date' }}
                 allowKeyboardControl
+                KeyboardButtonProps={{
+                    'aria-label': 'Embargo Date',
+                }}
                 autoOk
                 data-testid={`${this.props.fileUploadEmbargoDateId}-input`}
             />

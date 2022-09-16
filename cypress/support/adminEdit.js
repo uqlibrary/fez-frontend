@@ -9,6 +9,33 @@ const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > di
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
     cy.get('h2').should('contain.text', pid);
+    cy.injectAxe();
+});
+
+Cypress.Commands.add('checkAccessibility', (reportName, scopeName) => {
+    cy.checkA11y(
+        'div.StandardPage',
+        {
+            rules: { 'color-contrast': { enabled: false } },
+            reportName: reportName,
+            scopeName: scopeName,
+            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+        },
+        violations => console.log(violations),
+    );
+});
+Cypress.Commands.add('logAccessibility', (reportName, scopeName) => {
+    cy.checkA11y(
+        'div.StandardPage',
+        {
+            rules: { 'color-contrast': { enabled: false } },
+            reportName: reportName,
+            scopeName: scopeName,
+            includedImpacts: ['minor', 'moderate', 'serious', 'critical'],
+        },
+        violations => console.log(violations),
+        true,
+    );
 });
 
 Cypress.Commands.add('adminEditCleanup', () => {

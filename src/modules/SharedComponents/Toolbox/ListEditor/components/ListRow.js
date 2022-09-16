@@ -88,6 +88,7 @@ export const ListRow = ({
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-up`}
                                                 data-testid={`${listRowId}-move-up`}
+                                                aria-label={'Move Up'}
                                             >
                                                 <KeyboardArrowUp />
                                             </IconButton>
@@ -104,6 +105,7 @@ export const ListRow = ({
                                                 disabled={disabled}
                                                 id={`${listRowId}-move-down`}
                                                 data-testid={`${listRowId}-move-down`}
+                                                aria-label={'Move Down'}
                                             >
                                                 <KeyboardArrowDown />
                                             </IconButton>

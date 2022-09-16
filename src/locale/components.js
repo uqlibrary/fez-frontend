@@ -1027,6 +1027,7 @@ export default {
                                 published.
                             </div>
                         ),
+                        elementIdentifier: 'Author',
                         nameAsPublishedLabel: "Author's name as published",
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
@@ -1140,6 +1141,7 @@ export default {
                                 published.
                             </div>
                         ),
+                        elementIdentifier: 'Editor',
                         nameAsPublishedLabel: "Editor's name as published",
                         nameAsPublishedHint: 'e.g. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',

@@ -32,13 +32,13 @@ export const useStyles = makeStyles(() => ({
     },
 }));
 
-const getIcon = rowData => {
+const getIcon = (id, rowData) => {
     if (parseInt(rowData.uqIdentifier, 10)) {
-        return <HowToRegIcon color="primary" id={`contributor-linked-${rowData.tableData.id}`} />;
+        return <HowToRegIcon color="primary" id={`${id}-contributor-linked-${rowData.tableData.id}`} />;
     } else if (rowData.disabled) {
-        return <Lock color="secondary" id={`contributor-locked-${rowData.tableData.id}`} />;
+        return <Lock color="secondary" id={`${id}-contributor-locked-${rowData.tableData.id}`} />;
     } else {
-        return <PersonOutlined color="secondary" id={`contributor-unlinked-${rowData.tableData.id}`} />;
+        return <PersonOutlined color="secondary" id={`${id}-contributor-unlinked-${rowData.tableData.id}`} />;
     }
 };
 
@@ -88,7 +88,7 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
             field: 'nameAsPublished',
             render: rowData => (
                 <NameAsPublished
-                    icon={getIcon({ ...rowData, disabled })}
+                    icon={getIcon(contributorEditorId, { ...rowData, disabled })}
                     text={
                         <React.Fragment>
                             <Typography
@@ -455,6 +455,7 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         return (
                             <MTableAction
                                 {...props}
+                                InputProps={{ 'aria-label': 'Change Order' }}
                                 action={{
                                     ...restAction,
                                     icon: () => (

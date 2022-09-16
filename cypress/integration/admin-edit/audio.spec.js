@@ -8,6 +8,7 @@ context('Audio admin edit', () => {
     });
 
     afterEach(() => {
+        cy.logAccessibility('AudioAdmin', 'Audio Spec');
         cy.adminEditCleanup();
     });
 
