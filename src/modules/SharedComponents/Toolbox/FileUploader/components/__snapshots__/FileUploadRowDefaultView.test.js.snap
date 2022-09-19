@@ -13,7 +13,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -83,7 +83,7 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -115,7 +115,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -171,7 +171,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -246,7 +246,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -278,7 +278,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -334,7 +334,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -409,7 +409,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -441,7 +441,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -597,7 +597,7 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -628,9 +628,9 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
       "securitySelector": "FileUploadRowDefaultView-securitySelector-4",
       "selected": "FileUploadRowDefaultView-selected-6",
       "selector": "FileUploadRowDefaultView-selector-3",
-      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-8",
-      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-7",
-      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-9",
+      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-9",
+      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-8",
+      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-10",
     }
   }
   disabled={false}
@@ -663,7 +663,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))
@@ -719,7 +719,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -794,7 +794,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     alignItems="center"
     container={true}
     direction="row"
-    spacing={2}
+    spacing={1}
     wrap="nowrap"
   >
     <WithStyles(ForwardRef(Grid))

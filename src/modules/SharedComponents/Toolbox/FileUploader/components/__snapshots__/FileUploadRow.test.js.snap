@@ -21,8 +21,10 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     onAccessConditionChange={[Function]}
     onDelete={[Function]}
     onEmbargoDateChange={[Function]}
+    onFileDescriptionChange={[Function]}
     onOrderDownClick={[Function]}
     onOrderUpClick={[Function]}
+    onSecurityPolicyChange={[Function]}
     requireOpenAccessStatus={true}
     size="100.0B"
   />
@@ -50,8 +52,10 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
     onAccessConditionChange={[Function]}
     onDelete={[Function]}
     onEmbargoDateChange={[Function]}
+    onFileDescriptionChange={[Function]}
     onOrderDownClick={[Function]}
     onOrderUpClick={[Function]}
+    onSecurityPolicyChange={[Function]}
     requireOpenAccessStatus={true}
     size="100.0B"
   />
