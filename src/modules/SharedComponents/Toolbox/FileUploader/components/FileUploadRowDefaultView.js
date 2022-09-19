@@ -70,7 +70,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                 data-testid={this.props.fileUploadRowViewId}
                 className={classes.row}
             >
-                <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
                     <Grid item xs={1} className={classes.upDownArrowContainer}>
                         <IconButton
                             disabled={index === 0}
@@ -84,7 +84,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container direction="row" alignItems="center" spacing={1}>
-                    <Grid item md={!requireOpenAccessStatus ? 11 : 6} sm={!requireOpenAccessStatus ? 11 : 5}>
+                    <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
                         </Typography>
@@ -131,7 +131,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                         </Grid>
                     )}
                     {!!!this.props.isAdmin && requireOpenAccessStatus && (
-                        <Grid item md={3} sm={4}>
+                        <Grid item md={3} sm={3}>
                             <NewGenericSelectField
                                 value={accessConditionId || ''}
                                 onChange={this.props.onAccessConditionChange}
@@ -192,7 +192,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                         />
                     </Grid>
                 </Grid>
-                <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
+                <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
                     <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
                         <IconButton
                             id={`new-file-upload-down-${index}`}
