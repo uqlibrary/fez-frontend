@@ -20,10 +20,18 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled }) => {
+export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStatus, disabled, isAdmin }) => {
     const classes = useStyles();
     const [isOpen, showConfirmation, hideConfirmation] = useConfirmationState();
-    const { filenameColumn, fileAccessColumn, embargoDateColumn, deleteAllFiles, deleteAllFilesConfirmation } = locale;
+    const {
+        filenameColumn,
+        fileDescriptionColumn,
+        fileAccessColumn,
+        fileSecurityPolicyColumn,
+        embargoDateColumn,
+        deleteAllFiles,
+        deleteAllFilesConfirmation,
+    } = locale;
     return (
         <Hidden only={['xs']}>
             <ConfirmationBox
@@ -35,17 +43,24 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
             />
             <div style={{ flexGrow: 1, padding: 4 }}>
                 <Grid container direction="row" alignItems="center" spacing={1} className={classes.header} gutter={8}>
-                    <Grid item md={6} sm={5}>
+                    <Grid item md={3} sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {filenameColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={3} sm={4}>
+                    <Grid item md={3} sm={3}>
                         <Typography variant="caption" gutterBottom>
-                            {requireOpenAccessStatus && fileAccessColumn}
+                            {fileDescriptionColumn}
                         </Typography>
                     </Grid>
-                    <Grid item md={2} sm={2}>
+                    <Grid item md={3} sm={3}>
+                        <Typography variant="caption" gutterBottom>
+                            {isAdmin
+                                ? requireOpenAccessStatus && fileSecurityPolicyColumn
+                                : requireOpenAccessStatus && fileAccessColumn}
+                        </Typography>
+                    </Grid>
+                    <Grid item sm={2}>
                         <Typography variant="caption" gutterBottom>
                             {requireOpenAccessStatus && embargoDateColumn}
                         </Typography>
@@ -70,12 +85,15 @@ FileUploadRowHeader.propTypes = {
     locale: PropTypes.object,
     requireOpenAccessStatus: PropTypes.bool,
     disabled: PropTypes.bool,
+    isAdmin: PropTypes.bool,
 };
 
 FileUploadRowHeader.defaultProps = {
     locale: {
         filenameColumn: 'File name',
         fileAccessColumn: 'Access conditions',
+        fileDescriptionColumn: 'Description',
+        fileSecurityPolicyColumn: 'Security policy',
         embargoDateColumn: 'Embargo release date',
         deleteAllFiles: 'Remove all files from the upload queue',
         deleteAllFilesConfirmation: {

@@ -1,6 +1,6 @@
 # SearchComponent
 
-Prototype component to publically search eSpace
+Prototype component to publicly search eSpace
 
 ## Props
 

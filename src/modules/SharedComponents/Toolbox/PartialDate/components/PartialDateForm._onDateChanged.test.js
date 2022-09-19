@@ -13,9 +13,13 @@ function setup(testProps, isShallow = true) {
 
 describe('PartialDateForm unit tests', () => {
     it('should return correct formatted date 1', () => {
+        const expectToBe = value => {
+            expect(value).toBe('2015-01-01');
+            return expectToBe;
+        };
         const props = {
             allowPartial: true,
-            onChange: value => expect(value).toBe('2015-01-01'),
+            onChange: () => expectToBe,
         };
 
         const form = setup(props);

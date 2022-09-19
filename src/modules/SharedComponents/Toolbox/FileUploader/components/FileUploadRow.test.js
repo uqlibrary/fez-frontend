@@ -35,6 +35,20 @@ describe('FileUploadRow', () => {
         wrapper.instance()._updateAccessCondition(8);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
     });
+    it('call prop to update file description', () => {
+        const testFunction = jest.fn();
+        const file = new File([''], 'a.txt');
+        file.date = '2017-01-01';
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            onFileDescriptionChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
+
+        wrapper.instance()._updateFileDescription({ target: { value: 'Test Description' } });
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 'Test Description');
+    });
 
     it('call prop to update file metadata with open access', () => {
         const testFunction = jest.fn();
@@ -48,6 +62,37 @@ describe('FileUploadRow', () => {
         });
 
         wrapper.instance()._updateAccessCondition(9);
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
+    });
+    it('call prop to update file metadata with non-public security policy', () => {
+        const testFunction = jest.fn();
+        const file = new File([''], 'a.txt');
+        file.date = '2017-01-01';
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+            onSecurityPolicyChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
+
+        wrapper.instance()._updateSecurityPolicy(8);
+        expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
+    });
+
+    it('call prop to update file metadata with public security policy', () => {
+        const testFunction = jest.fn();
+        const file = new File([''], 'a.txt');
+        file.date = '2017-01-01';
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            isAdmin: true,
+            onSecurityPolicyChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
+
+        wrapper.instance()._updateSecurityPolicy(9);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
     });
 

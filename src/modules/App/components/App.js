@@ -140,23 +140,22 @@ export class AppClass extends PureComponent {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
     }
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.isSessionExpired) {
+
+    componentDidUpdate(prevProps) {
+        if (this.props.isSessionExpired) {
             this.sessionExpiredConfirmationBox.showConfirmation();
         }
         // don't call the api for non author users since the api call requires an author
         if (
-            !nextProps.accountAuthorLoading &&
+            !this.props.accountAuthorLoading &&
             // eslint-disable-next-line camelcase
-            nextProps.author?.aut_id &&
+            this.props.author?.aut_id &&
             // eslint-disable-next-line camelcase
-            this.props.author?.aut_id !== nextProps.author?.aut_id
+            this.props.author?.aut_id !== prevProps.author?.aut_id
         ) {
             this.props.actions.searchAuthorPublications({}, 'incomplete');
         }
     }
-
     componentWillUnmount() {
         this.state.mediaQuery.removeListener(this.handleResize);
     }

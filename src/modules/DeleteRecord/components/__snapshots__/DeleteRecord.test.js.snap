@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component DeleteRecord UNSAFE_componentWillReceiveProps() 1`] = `
+exports[`Component DeleteRecord componentDidUpdate() 1`] = `
 <StandardPage
   title="Delete work"
 >
