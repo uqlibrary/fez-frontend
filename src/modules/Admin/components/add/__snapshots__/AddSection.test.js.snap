@@ -40,7 +40,7 @@ exports[`AddSection component should render default view 1`] = `
                 }
                 disabled={false}
                 floatingLabelText="Member of collections"
-                fullwidth={true}
+                fullWidth={true}
                 hintText="Begin typing to select and add work to a list of collection(s)"
                 name="adminSection.collections"
                 required={true}
@@ -310,7 +310,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                 }
                 disabled={false}
                 floatingLabelText="Member of collections"
-                fullwidth={true}
+                fullWidth={true}
                 hintText="Begin typing to select and add work to a list of collection(s)"
                 name="adminSection.collections"
                 required={true}

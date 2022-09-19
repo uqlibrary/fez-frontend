@@ -212,8 +212,8 @@ AdminViewRecordDrawer.propTypes = {
         ).isRequired,
     }).isRequired,
     handleDrawerToggle: PropTypes.func.isRequired,
-    open: PropTypes.bool.isRequired,
-    mobileOpen: PropTypes.bool.isRequired,
+    open: PropTypes.bool,
+    mobileOpen: PropTypes.bool,
 };
 
 export default React.memo(AdminViewRecordDrawer);

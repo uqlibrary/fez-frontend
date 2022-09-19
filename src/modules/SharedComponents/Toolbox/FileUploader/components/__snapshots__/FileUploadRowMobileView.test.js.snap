@@ -385,51 +385,72 @@ exports[`Component FileUploadRowMobileView should render default view for admin 
         }
       }
     >
-      <Memo(NewGenericSelectField)
+      <PolicyDropdown
         autoFocus={false}
         disabled={false}
         displayEmpty={true}
-        error="This field is required"
+        displayPrompt={true}
+        errorText="This field is required"
+        fieldLabel="Work level policy to apply to this PID"
+        fieldName="test.pdf"
         formHelperTextProps={
           Object {
             "className": undefined,
           }
         }
-        genericSelectFieldId="dsi-open-access-0"
         hideLabel={true}
-        itemsList={
+        inheritedSecurity={5}
+        input={
+          Object {
+            "autoFocus": false,
+            "className": undefined,
+            "disableUnderline": true,
+            "onBlur": [Function],
+            "onChange": undefined,
+          }
+        }
+        policyDropdownId="dsi-security-policy-0"
+        policyList={
           Array [
             Object {
-              "text": "Open Access",
-              "value": 5,
-            },
-            Object {
-              "text": "Closed Access",
+              "id": 1,
+              "label": "Administrators",
+              "name": "Administrators",
+              "order": 0,
               "value": 1,
             },
             Object {
-              "text": "Inherit from parent collection",
-              "value": 99,
+              "id": 2,
+              "label": "Theses Assessors",
+              "name": "Theses Assessors",
+              "order": 10,
+              "value": 2,
+            },
+            Object {
+              "id": 3,
+              "label": "Evidence Assessors",
+              "name": "Evidence Assessors",
+              "order": 20,
+              "value": 3,
+            },
+            Object {
+              "id": 4,
+              "label": "Staff and Students",
+              "name": "Staff and Students",
+              "order": 30,
+              "value": 4,
+            },
+            Object {
+              "id": 5,
+              "label": "Public",
+              "name": "Public",
+              "order": 100,
+              "value": 5,
             },
           ]
         }
-        onChange={[MockFunction]}
+        prompt="Select security policy"
         required={true}
-        selectPrompt="Select access conditions"
-        selectProps={
-          Object {
-            "className": undefined,
-            "input": <WithStyles(ForwardRef(Input))
-              autoFocus={false}
-              classes={
-                Object {
-                  "root": undefined,
-                }
-              }
-              disableUnderline={true}
-            />,
-          }
-        }
         value=""
       />
     </WithStyles(ForwardRef(ListItemText))>

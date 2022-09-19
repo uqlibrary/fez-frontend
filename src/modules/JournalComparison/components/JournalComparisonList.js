@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
 
-import { JournalsList } from 'modules/SharedComponents/JournalsList';
+import { JournalsListLegacy } from 'modules/SharedComponents/JournalsList';
 import { locale } from '../../../locale';
 
 export const JournalComparisonList = ({ journals }) => {
@@ -17,7 +17,7 @@ export const JournalComparisonList = ({ journals }) => {
     }
     return (
         <Grid item xs={12}>
-            <JournalsList journals={journals} isSelectable={false} />
+            <JournalsListLegacy journals={journals} isSelectable={false} />
         </Grid>
     );
 };
