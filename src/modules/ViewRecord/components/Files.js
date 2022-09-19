@@ -14,7 +14,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
-import { openAccessConfig, pathConfig, viewRecordsConfig } from 'config';
+import { openAccessConfig, pathConfig } from 'config';
 import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -318,8 +318,9 @@ export class FilesClass extends Component {
         const attachments = publication.fez_record_search_key_file_attachment_name;
         const componentProps = this.props;
 
-        return !!dataStreams && this.isViewableByUser(publication, dataStreams)
-            ? dataStreams
+        return !!!dataStreams
+            ? []
+            : dataStreams
                   .filter(this.isFileValid)
                   .map(item => {
                       if (
@@ -400,21 +401,7 @@ export class FilesClass extends Component {
                           checksums: checksums,
                           requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
                       };
-                  })
-            : [];
-    };
-
-    isViewableByUser = (publication, dataStreams) => {
-        const { files } = viewRecordsConfig;
-        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof?.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof),
-        );
-        return (
-            (!!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin)) ||
-            // eslint-disable-next-line camelcase
-            this.props.author?.pol_id === 1
-        );
+                  });
     };
 
     handleImageFailed = () => {
@@ -452,12 +439,6 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
-        // Here's something to play with for sorting the files.
-        // const sortedData = [];
-        // const attachedFiles = publication.fez_record_search_key_file_attachment_name;
-        // attachedFiles.map(fileInformation => {
-        //    sortedData.push(...fileData.filter(item => item.fileName === fileInformation.rek_file_attachment_name));
-        // });
 
         return (
             <Grid item xs={12}>
