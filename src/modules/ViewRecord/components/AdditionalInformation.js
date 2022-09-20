@@ -168,7 +168,6 @@ export class AdditionalInformationClass extends PureComponent {
         }
 
         const testId = subkey.replace(/_/g, '-');
-
         switch (subkey) {
             case 'rek_doi':
                 return this.renderDoi(data);
@@ -219,6 +218,9 @@ export class AdditionalInformationClass extends PureComponent {
             case 'rek_description':
                 renderedValue = this.renderHTML(value);
                 break;
+            case 'rek_ci_notice_attribution_incomplete':
+                renderedValue = this.renderCulturalInstitutionNotice();
+                break;
             default:
                 renderedValue = value;
         }
@@ -257,6 +259,25 @@ export class AdditionalInformationClass extends PureComponent {
                         {uqLicenseLinkText || <div className={`fez-icon license ${licenseLink.className}`} />}
                     </ExternalLink>
                 )}
+            </span>
+        );
+    };
+
+    renderCulturalInstitutionNotice = () => {
+        return (
+            <span>
+                <div
+                    data-testid="fez-icon-cilabel"
+                    className={'fez-icon_cilabel'}
+                    style={{
+                        backgroundImage: `url(${locale.viewRecord.culturalNoticeAI.imagePath})`,
+                        width: 100,
+                        height: 100,
+                    }}
+                />
+                <br />
+                <strong>{locale.viewRecord.culturalNoticeAI.title} - </strong>
+                {locale.viewRecord.culturalNoticeAI.text}
             </span>
         );
     };
@@ -329,6 +350,13 @@ export class AdditionalInformationClass extends PureComponent {
         return field.indexOf(keyPrefix) === 0 ? subkeyPrefix + field.substring(keyPrefix.length) : null;
     };
 
+    getCINoticeValue = publication => {
+        return !!publication.rek_ci_notice_attribution_incomplete &&
+            publication.rek_ci_notice_attribution_incomplete === 1
+            ? [true]
+            : null;
+    };
+
     excludeAdminOnlyFields = fields => {
         return fields.filter(item => !locale.viewRecord.adminFields.includes(item.field));
     };
@@ -348,6 +376,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderColumns = () => {
         const rows = [];
         const publication = this.props.publication;
+
         const displayType = publication.rek_display_type_lookup;
         const headings = locale.viewRecord.headings;
         const displayTypeHeadings = displayType && headings[displayType] ? headings[displayType] : [];
@@ -372,6 +401,9 @@ export class AdditionalInformationClass extends PureComponent {
                         value = moment(publication[field]).isSame(moment(PLACEHOLDER_ISO8601_ZULU_DATE))
                             ? null
                             : publication[field];
+                        break;
+                    case 'rek_ci_notice_attribution_incomplete':
+                        value = this.getCINoticeValue(publication);
                         break;
                     case 'fez_record_search_key_herdc_code':
                         const subkey = this.transformFieldNameToSubkey(field);

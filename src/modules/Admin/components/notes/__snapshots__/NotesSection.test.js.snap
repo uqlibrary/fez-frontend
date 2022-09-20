@@ -28,6 +28,14 @@ exports[`NotesSection component should render default view 1`] = `
         ],
         "title": "HERDC notes",
       },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_ci_notice_attribution_incomplete",
+          ],
+        ],
+        "title": "Cultural Institute (CI) Notice",
+      },
     ]
   }
   disabled={false}
@@ -61,6 +69,14 @@ exports[`NotesSection component should render disabled view 1`] = `
           ],
         ],
         "title": "HERDC notes",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_ci_notice_attribution_incomplete",
+          ],
+        ],
+        "title": "Cultural Institute (CI) Notice",
       },
     ]
   }
