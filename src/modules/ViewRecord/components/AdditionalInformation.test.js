@@ -59,7 +59,35 @@ describe('Additional Information Component ', () => {
     it('should render component with audio document', () => {
         const wrapper = setup({ publication: records.audioDocument });
         expect(toJson(wrapper)).toMatchSnapshot();
-        // expect(wrapper.find('.license.cc-by-nc-nd').length).toEqual(1);
+    });
+
+    it('should render component with Attribution incomplete', () => {
+        const wrapper = setup({
+            publication: {
+                ...records.journalArticle,
+                rek_ci_notice_attribution_incomplete: 1,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component without Attribution incomplete, set to 0', () => {
+        const wrapper = setup({
+            publication: {
+                ...records.journalArticle,
+                rek_ci_notice_attribution_incomplete: 0,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render component without Attribution incomplete, wirh no value', () => {
+        const wrapper = setup({
+            publication: {
+                ...records.journalArticle,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with book', () => {

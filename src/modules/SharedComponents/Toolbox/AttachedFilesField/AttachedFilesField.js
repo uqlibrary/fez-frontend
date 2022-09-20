@@ -4,9 +4,10 @@ import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
 
 export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
-    const callback = index => {
-        const fileToDelete = dataStreams[index];
-        const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
+    const callback = key => {
+        const indexToDelete = dataStreams.findIndex(item => item.dsi_dsid === key);
+        const fileToDelete = dataStreams[indexToDelete];
+        const newDataStreams = [...dataStreams.slice(0, indexToDelete), ...dataStreams.slice(indexToDelete + 1)];
         onDeleteAttachedFile(fileToDelete);
         setDataStreams(newDataStreams);
     };
@@ -25,6 +26,26 @@ export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => 
     return [callback, [dataStreams, setDataStreams]];
 };
 
+export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
+    const callback = (file, oldPosition, newPosition) => {
+        const newDataStreams = [...dataStreams];
+
+        newDataStreams.map(
+            (item, index) =>
+                (item.dsi_order = item.hasOwnProperty('dsi_order') && !!item.dsi_order ? item.dsi_order : index + 1),
+        );
+
+        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_dsid === file);
+        const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order === newPosition);
+
+        newDataStreams[sourceFileIndex].dsi_order = newPosition;
+        newDataStreams[replaceFileIndex].dsi_order = oldPosition;
+
+        setDataStreams(newDataStreams);
+    };
+    return [callback, [dataStreams, setDataStreams]];
+};
+
 export const onChangeCallbackFactory = (dataStreams, onChange) => {
     const callback = () => onChange(dataStreams);
     return [callback, [dataStreams, onChange]];
@@ -33,12 +54,17 @@ export const onChangeCallbackFactory = (dataStreams, onChange) => {
 export const AttachedFilesField = ({ input, ...props }) => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
-    const [dataStreams, setDataStreams] = useState(
-        !!formValues.fez_datastream_info
+    const [dataStreams, setDataStreams] = useState(() => {
+        return !!formValues.fez_datastream_info
             ? formValues.fez_datastream_info
-            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [],
-    );
+            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
+    });
     const { onChange } = input;
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const handleDataStreamOrderChange = useCallback(
+        ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
+    );
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
@@ -52,6 +78,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
             onDelete={handleDelete}
             onDateChange={handleDataStreamChange}
             onDescriptionChange={handleDataStreamChange}
+            onOrderChange={handleDataStreamOrderChange}
             dataStreams={dataStreams}
             {...props}
         />

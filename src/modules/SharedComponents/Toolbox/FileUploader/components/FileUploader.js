@@ -143,6 +143,51 @@ export class FileUploader extends PureComponent {
         this.replaceFile(file, index);
     };
 
+    shuffleFileOrder = (arr, from, to) => {
+        return arr.reduce((prev, current, idx, self) => {
+            /* istanbul ignore if */
+            if (from === to) {
+                prev.push(current);
+            }
+            if (idx === from) {
+                return prev;
+            }
+            if (from < to) {
+                prev.push(current);
+            }
+            /* istanbul ignore else */
+            if (idx === to) {
+                prev.push(self[from]);
+            }
+            if (from > to) {
+                prev.push(current);
+            }
+            return prev;
+        }, []);
+    };
+
+    _updateOrderUp = index => {
+        // Below needs to be moved into a seperate function
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index > 0) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+    _updateOrderDown = index => {
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index < filesToOrder.length - 1) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+
     /**
      * Update file's description
      *
@@ -345,12 +390,15 @@ export class FileUploader extends PureComponent {
                 <FileUploadRow
                     key={file.name}
                     fileUploadRowId={`fez-datastream-info-list-row-${index}`}
+                    rowCount={this.state.filesInQueue.length}
                     index={index}
                     uploadedFile={file}
                     fileSizeUnit={fileSizeUnit}
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onOrderUpClick={this._updateOrderUp}
+                    onOrderDownClick={this._updateOrderDown}
                     onFileDescriptionChange={this._updateFileDescription}
                     onSecurityPolicyChange={this._updateFileSecurityPolicy}
                     defaultAccessCondition={defaultQuickTemplateId}
