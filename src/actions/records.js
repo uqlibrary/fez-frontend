@@ -340,6 +340,7 @@ const getAdminRecordRequest = data => {
         'filesSection',
         'securitySection',
         'reasonSection',
+        'culturalInstitutionNoticeSection',
     ];
 
     return [
@@ -525,7 +526,6 @@ export function adminUpdate(data) {
         dispatch({
             type: actions.ADMIN_UPDATE_WORK_PROCESSING,
         });
-
         const [patchRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
         const collections = transformers.getCollectionsOnRecordWithSecurity({
             ...data.publication,

@@ -42,6 +42,8 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
+import { AttributionIncompleteField } from 'modules/SharedComponents/Toolbox/AttributionIncompleteField';
+
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import {
@@ -268,6 +270,18 @@ export default {
                 placeholder: 'Reason for Edit',
             },
         },
+        rek_ci_notice_attribution_incomplete: {
+            component: AttributionIncompleteField,
+            componentProps: {
+                name: 'notesSection.rek_ci_notice_attribution_incomplete',
+                label: 'Attribution Incomplete',
+                placeholder: 'Attribution Incomplete Placeholder',
+                attributionIncompleteFieldId: 'rek_ci_notice_attribution_incomplete',
+                attributionIncompleteStatement: 'Attribution Incomplete',
+                attributionIncompleteDetail:
+                    'Determines if the record or collection is to be CI labelled Attribution Incomplete.',
+            },
+        },
         fez_record_search_key_collection_view_type: {
             component: NewGenericSelectField,
             componentProps: {
@@ -281,7 +295,7 @@ export default {
         collections: {
             component: CollectionField,
             componentProps: {
-                floatingLabelText: 'Member of collections',
+                floatingLabelText: 'Member of collection',
                 hintText: 'Begin typing to select and add collection(s)',
                 name: 'adminSection.collections',
                 id: 'member-of-collections-input',
@@ -291,6 +305,7 @@ export default {
                 collectionFieldId: 'rek-ismemberof',
             },
         },
+
         rek_subtype: {
             component: PublicationSubtypeField,
             componentProps: {
