@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { IconButton } from '@material-ui/core';
+import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
@@ -19,6 +21,7 @@ export class FileUploadRowDefaultView extends PureComponent {
     static propTypes = {
         index: PropTypes.number.isRequired,
         name: PropTypes.string,
+        rowCount: PropTypes.number,
         size: PropTypes.string,
         accessConditionId: PropTypes.number,
         embargoDate: PropTypes.string,
@@ -31,6 +34,8 @@ export class FileUploadRowDefaultView extends PureComponent {
         onEmbargoDateChange: PropTypes.func.isRequired,
         onFileDescriptionChange: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func.isRequired,
+        onOrderUpClick: PropTypes.func,
+        onOrderDownClick: PropTypes.func,
         onSecurityPolicyChange: PropTypes.func.isRequired,
         focusOnIndex: PropTypes.number,
         accessConditionLocale: PropTypes.object,
@@ -49,6 +54,7 @@ export class FileUploadRowDefaultView extends PureComponent {
         const {
             disabled,
             index,
+            rowCount,
             requireOpenAccessStatus,
             accessConditionId,
             embargoDate,
@@ -58,10 +64,26 @@ export class FileUploadRowDefaultView extends PureComponent {
             classes,
             focusOnIndex,
         } = this.props;
-
         return (
-            <div style={{ flexGrow: 1, padding: 4 }} data-testid={this.props.fileUploadRowViewId}>
-                <Grid container direction="row" alignItems="center" spacing={1} className={classes.row}>
+            <div
+                style={{ flexGrow: 1, padding: 4 }}
+                data-testid={this.props.fileUploadRowViewId}
+                className={classes.row}
+            >
+                <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
+                    <Grid item xs={1} className={classes.upDownArrowContainer}>
+                        <IconButton
+                            disabled={index === 0}
+                            id={`new-file-upload-down-${index}`}
+                            data-testid={`new-file-upload-up-${index}`}
+                            className={classes.upDownArrow}
+                            onClick={this.props.onOrderUpClick}
+                        >
+                            <ExpandLess />
+                        </IconButton>
+                    </Grid>
+                </Grid>
+                <Grid container direction="row" alignItems="center" spacing={1}>
                     <Grid item md={!requireOpenAccessStatus ? 8 : 3} sm={!requireOpenAccessStatus ? 8 : 2}>
                         <Typography variant="body2" gutterBottom noWrap data-testid={`dsi-dsid-${index}`}>
                             {name} ({size})
@@ -109,7 +131,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                         </Grid>
                     )}
                     {!!!this.props.isAdmin && requireOpenAccessStatus && (
-                        <Grid item md={3} sm={4}>
+                        <Grid item md={3} sm={3}>
                             <NewGenericSelectField
                                 value={accessConditionId || ''}
                                 onChange={this.props.onAccessConditionChange}
@@ -170,6 +192,19 @@ export class FileUploadRowDefaultView extends PureComponent {
                         />
                     </Grid>
                 </Grid>
+                <Grid container direction="row" alignItems="center" spacing={1} wrap={'nowrap'}>
+                    <Grid item xs={1} className={classes.upDownArrowContainerBottom}>
+                        <IconButton
+                            id={`new-file-upload-down-${index}`}
+                            data-testid={`new-file-upload-down-${index}`}
+                            disabled={index === rowCount - 1}
+                            className={classes.upDownArrow}
+                            onClick={this.props.onOrderDownClick}
+                        >
+                            <ExpandMore />
+                        </IconButton>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
@@ -199,6 +234,19 @@ const styles = () => ({
     error: {
         marginTop: 0,
         fontSize: 10,
+    },
+    upDownArrowContainer: {
+        padding: '0 0 0 10px !important',
+        height: 30,
+    },
+    upDownArrow: {
+        height: 30,
+        padding: 0,
+    },
+    upDownArrowContainerBottom: {
+        padding: '0 0 0 10px!important',
+        height: 30,
+        margin: '0 0 10px',
     },
 });
 

@@ -2,6 +2,7 @@ import {
     AttachedFilesField,
     deleteCallbackFactory,
     datastreamChangeCallbackFactory,
+    datastreamOrderChangeCallbackFactory,
     onChangeCallbackFactory,
 } from './AttachedFilesField';
 import Immutable from 'immutable';
@@ -40,7 +41,7 @@ describe('AttachedFilesField callback factories', () => {
         const onDeleteAttachedFile = jest.fn();
         const callback = deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile)[0];
         callback(1);
-        expect(setDataStreams).toHaveBeenCalledWith([1, 3]);
+        expect(setDataStreams).toHaveBeenCalledWith([1, 2, 1, 2, 3]);
     });
 
     it('should create datastream change callback', () => {
@@ -61,5 +62,21 @@ describe('AttachedFilesField callback factories', () => {
         const callback = onChangeCallbackFactory(dataStreams, onChange)[0];
         callback();
         expect(onChange).toHaveBeenCalledWith(dataStreams);
+    });
+
+    it('should create datastream order change callback', () => {
+        const dataStreams = [
+            { test1: 'test a', dsi_dsid: 'test_a', dsi_order: 1 },
+            { test1: 'test b', dsi_dsid: 'test_b', dsi_order: 2 },
+            { test1: 'test c', dsi_dsid: 'test_c' },
+        ];
+        const setDataStreams = jest.fn();
+        const callback = datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams)[0];
+        callback('test_b', 2, 1);
+        expect(setDataStreams).toHaveBeenCalledWith([
+            { test1: 'test a', dsi_dsid: 'test_a', dsi_order: 2 },
+            { test1: 'test b', dsi_dsid: 'test_b', dsi_order: 1 },
+            { test1: 'test c', dsi_dsid: 'test_c', dsi_order: 3 },
+        ]);
     });
 });

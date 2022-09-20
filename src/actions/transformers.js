@@ -1379,6 +1379,7 @@ export const getDatastreamInfo = (
             [ds.dsi_dsid]: {
                 dsi_label: ds.dsi_label,
                 dsi_embargo_date: ds.dsi_embargo_date,
+                dsi_order: ds.dsi_order,
             },
         }),
         {},

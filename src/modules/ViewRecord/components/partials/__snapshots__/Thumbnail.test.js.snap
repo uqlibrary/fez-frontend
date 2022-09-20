@@ -2,6 +2,8 @@
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 1`] = `
 <a
+  data-testid="preview-link-video.mp4"
+  id="preview-link-video.mp4"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
@@ -14,6 +16,8 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 2`] = `
 <a
+  data-testid="preview-link-video.mp4"
+  id="preview-link-video.mp4"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
@@ -26,6 +30,8 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 3`] = `
 <a
+  data-testid="preview-link-file.random"
+  id="preview-link-file.random"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
@@ -38,6 +44,8 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 4`] = `
 <a
+  data-testid="preview-link-file.random"
+  id="preview-link-file.random"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
@@ -50,6 +58,8 @@ exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for s
 
 exports[`Thumbnail component should render FLV files as a thumbnail only for specific mime types 1`] = `
 <a
+  data-testid="preview-link-video.mov"
+  id="preview-link-video.mov"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of video.flv"
@@ -91,6 +101,8 @@ exports[`Thumbnail component should render PDF files as a thumbnail only plus li
 
 exports[`Thumbnail component should show a broken thumbnail icon when the thumbnail wont load. 1`] = `
 <a
+  data-testid="preview-link-undefined"
+  id="preview-link-undefined"
   onClick={[Function]}
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
@@ -103,6 +115,8 @@ exports[`Thumbnail component should show a broken thumbnail icon when the thumbn
 
 exports[`Thumbnail component should show a broken thumbnail icon when the thumbnail wont load. 2`] = `
 <a
+  data-testid="preview-link-undefined"
+  id="preview-link-undefined"
   onClick={[Function]}
   onKeyPress={[Function]}
   title=""
