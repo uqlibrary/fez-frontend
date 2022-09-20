@@ -111,7 +111,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 1
         },
         {
             "dsi_pid": "UQ:252236",
@@ -124,7 +125,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 2
         },
         {
             "dsi_pid": "UQ:252236",
@@ -137,7 +139,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3092,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 3
         },
         {
             "dsi_pid": "UQ:252236",
@@ -150,7 +153,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 4
         },
         {
             "dsi_pid": "UQ:252236",
@@ -163,7 +167,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 4
         },
         {
             "dsi_pid": "UQ:252236",
@@ -176,7 +181,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3705,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": 3
         },
         {
             "dsi_pid": "UQ:252236",
@@ -189,7 +195,8 @@ const recordWithDatastreams = {
             "dsi_state": "A",
             "dsi_size": 3097,
             "dsi_security_inherited": 1,
-            "dsi_security_policy": 1
+            "dsi_security_policy": 1,
+            "dsi_order": null
         },
         {
             "dsi_pid": "UQ:252236",

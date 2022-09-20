@@ -106,6 +106,22 @@ describe('FileUploadRow', () => {
         expect(testFunction).toHaveBeenCalledWith(file, 0, new Date(2016));
     });
 
+    it('call prop to update file order', () => {
+        const testFunction = jest.fn();
+        const file = new File([''], 'a.txt');
+        const wrapper = setup({
+            onOrderUpClick: testFunction,
+            onOrderDownClick: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
+
+        wrapper.instance()._onOrderUpClick(1);
+        expect(testFunction).toHaveBeenCalledWith(0, 1);
+        wrapper.instance()._onOrderDownClick(0);
+        expect(testFunction).toHaveBeenCalledWith(0, 0);
+    });
+
     it('should show confirmation and delete file', () => {
         const onDeleteFn = jest.fn();
         const showConfirmationFn = jest.fn();
