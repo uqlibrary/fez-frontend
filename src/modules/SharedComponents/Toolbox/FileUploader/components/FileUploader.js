@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { clearFileUpload } from '../actions';
-
+import { RecordContext } from 'context';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
@@ -26,6 +26,8 @@ export class FileUploader extends PureComponent {
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
+        currentFiles: PropTypes.array,
+        fullyUploadedFiles: PropTypes.array,
     };
 
     static defaultProps = {
@@ -40,10 +42,13 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: false,
         isNtro: false,
         isAdmin: false,
+        currentFiles: [],
+        fullyUploadedFiles: [],
     };
 
     constructor(props) {
         super(props);
+        console.log('Super Props', props);
         this.state = {
             filesInQueue: [],
             isTermsAndConditionsAccepted: false,
@@ -54,6 +59,7 @@ export class FileUploader extends PureComponent {
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
+    // static contextType = FormValuesContext;
 
     /**
      * Delete file on a given index
@@ -170,6 +176,13 @@ export class FileUploader extends PureComponent {
      * @param errorsFromDropzone
      */
     _handleDroppedFiles = (uniqueFilesToQueue, errorsFromDropzone) => {
+        console.log('THIS PROPS FOR DROPPED FILES', this.props);
+        console.log('THIS DROPPED HANDLER STATE', this.state);
+        console.log('ERRORS FROM DROP ZONE', errorsFromDropzone);
+        console.log('The state of this element', this.state);
+
+        console.log('This saves my life', this.context);
+
         const { defaultQuickTemplateId } = this.props;
         const { filesInQueue } = this.state;
 
@@ -300,12 +313,14 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
+        // const { formValues } = this.context;
+        console.log('This context', this.context);
+        // console.log('THIS PROPS CONTEXT', formValues);
         !!this.props.onChange &&
             this.props.onChange({
                 queue: this.state.filesInQueue,
                 isValid: this.isFileUploadValid(this.state),
             });
-
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
@@ -314,7 +329,7 @@ export class FileUploader extends PureComponent {
             fileNameRestrictions,
             mimeTypeWhitelist,
         } = this.props.fileRestrictionsConfig;
-        const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
+        const { requireOpenAccessStatus, defaultQuickTemplateId, disabled, currentFiles } = this.props;
         const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
         const { errorTitle, successTitle, successMessage, delayNotice, delayMessage } = this.props.locale;
 
@@ -323,6 +338,8 @@ export class FileUploader extends PureComponent {
             .replace('[maxFileSize]', `${maxFileSize}`)
             .replace('[fileSizeUnit]', fileSizeUnit === config.SIZE_UNIT_B ? config.SIZE_UNIT_B : `${fileSizeUnit}B`);
 
+        console.log(currentFiles);
+        console.log('Files In Queue', filesInQueue);
         const filesInQueueRow = filesInQueue.map((file, index) => {
             return (
                 <FileUploadRow
@@ -417,6 +434,8 @@ export class FileUploader extends PureComponent {
         );
     }
 }
+
+FileUploader.contextType = RecordContext;
 
 const mapStateToProps = () => {
     return {};

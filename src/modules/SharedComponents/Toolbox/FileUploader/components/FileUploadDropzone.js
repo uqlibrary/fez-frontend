@@ -223,6 +223,7 @@ export class FileUploadDropzone extends PureComponent {
      * @private
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
+        console.log('Dropzone props', this.props);
         const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
         const notFiles = [];
 
@@ -272,6 +273,7 @@ export class FileUploadDropzone extends PureComponent {
     };
 
     render() {
+        console.log('DropZone Props', this.props);
         const { maxSize, disabled, locale } = this.props;
         return (
             <Grid container>
