@@ -26,7 +26,6 @@ export class FileUploader extends PureComponent {
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
-        currentFiles: PropTypes.array,
         fullyUploadedFiles: PropTypes.array,
     };
 
@@ -42,13 +41,11 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: false,
         isNtro: false,
         isAdmin: false,
-        currentFiles: [],
         fullyUploadedFiles: [],
     };
 
     constructor(props) {
         super(props);
-        console.log('Super Props', props);
         this.state = {
             filesInQueue: [],
             isTermsAndConditionsAccepted: false,
@@ -221,13 +218,6 @@ export class FileUploader extends PureComponent {
      * @param errorsFromDropzone
      */
     _handleDroppedFiles = (uniqueFilesToQueue, errorsFromDropzone) => {
-        console.log('THIS PROPS FOR DROPPED FILES', this.props);
-        console.log('THIS DROPPED HANDLER STATE', this.state);
-        console.log('ERRORS FROM DROP ZONE', errorsFromDropzone);
-        console.log('The state of this element', this.state);
-
-        console.log('This saves my life', this.context);
-
         const { defaultQuickTemplateId } = this.props;
         const { filesInQueue } = this.state;
 
@@ -358,9 +348,6 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
-        // const { formValues } = this.context;
-        console.log('This context', this.context);
-        // console.log('THIS PROPS CONTEXT', formValues);
         !!this.props.onChange &&
             this.props.onChange({
                 queue: this.state.filesInQueue,
@@ -374,7 +361,7 @@ export class FileUploader extends PureComponent {
             fileNameRestrictions,
             mimeTypeWhitelist,
         } = this.props.fileRestrictionsConfig;
-        const { requireOpenAccessStatus, defaultQuickTemplateId, disabled, currentFiles } = this.props;
+        const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
         const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
         const { errorTitle, successTitle, successMessage, delayNotice, delayMessage } = this.props.locale;
 
@@ -383,8 +370,6 @@ export class FileUploader extends PureComponent {
             .replace('[maxFileSize]', `${maxFileSize}`)
             .replace('[fileSizeUnit]', fileSizeUnit === config.SIZE_UNIT_B ? config.SIZE_UNIT_B : `${fileSizeUnit}B`);
 
-        console.log(currentFiles);
-        console.log('Files In Queue', filesInQueue);
         const filesInQueueRow = filesInQueue.map((file, index) => {
             return (
                 <FileUploadRow
@@ -431,6 +416,8 @@ export class FileUploader extends PureComponent {
                         mimeTypeWhitelist={mimeTypeWhitelist}
                         fileUploadLimit={fileUploadLimit}
                         onDrop={this._handleDroppedFiles}
+                        // eslint-disable-next-line camelcase
+                        existingFiles={this.context?.record?.fez_record_search_key_file_attachment_name}
                     />
                 </Grid>
                 {filesInQueue.length > 0 && (
