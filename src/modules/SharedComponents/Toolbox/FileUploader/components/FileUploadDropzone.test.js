@@ -55,7 +55,9 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt', 'c.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper
+            .instance()
+            .removeDuplicate(files, ['a.txt', 'b.txt', 'c.txt'], []);
 
         expect(uniqueFiles.length).toEqual(1);
         expect(duplicateFiles.length).toEqual(1);
@@ -67,11 +69,36 @@ describe('Component FileUploadDropzone', () => {
         const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
         const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
             .instance()
-            .removeDuplicate(files, []);
+            .removeDuplicate(files, [], []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
         expect(sameFileNameWithDifferentExt.length).toEqual(1);
+    });
+    it('should remove files with same filename but different extension from dropped incoming files if already exist', () => {
+        const wrapper = setup();
+
+        const files = [getMockFile('a.txt'), getMockFile('b.txt')];
+        const existingFiles = [{ rek_file_attachment_name: 'a.doc' }];
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+            .instance()
+            .removeDuplicate(files, [], existingFiles);
+        expect(uniqueFiles.length).toEqual(1);
+        expect(duplicateFiles.length).toEqual(0);
+        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+    });
+
+    it('should remove duplicate filenames if duplicated in both dropped and existing', () => {
+        const wrapper = setup();
+
+        const files = [getMockFile('a.txt'), getMockFile('b.txt'), getMockFile('b.jpg')];
+        const existingFiles = [{ rek_file_attachment_name: 'a.doc' }];
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+            .instance()
+            .removeDuplicate(files, [], existingFiles);
+        expect(uniqueFiles.length).toEqual(1);
+        expect(duplicateFiles.length).toEqual(0);
+        expect(sameFileNameWithDifferentExt.length).toEqual(2);
     });
 
     it(
@@ -84,7 +111,7 @@ describe('Component FileUploadDropzone', () => {
             const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
                 .instance()
-                .removeDuplicate(files, queuedFiles);
+                .removeDuplicate(files, queuedFiles, []);
 
             expect(uniqueFiles.length).toEqual(1);
             expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
@@ -107,7 +134,7 @@ describe('Component FileUploadDropzone', () => {
             const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
                 .instance()
-                .removeDuplicate(files, queuedFiles);
+                .removeDuplicate(files, queuedFiles, []);
 
             expect(uniqueFiles.length).toEqual(1);
             expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
@@ -123,7 +150,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('c.txt'), getMockFile('d.txt')];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt'], []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
@@ -133,7 +160,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt']);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, ['a.txt', 'b.txt'], []);
 
         expect(uniqueFiles.length).toEqual(0);
         expect(duplicateFiles.length).toEqual(0);
@@ -143,7 +170,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('a.001.zip'), getMockFile('a.002.zip')];
-        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, []);
+        const { uniqueFiles, duplicateFiles } = wrapper.instance().removeDuplicate(files, [], []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
