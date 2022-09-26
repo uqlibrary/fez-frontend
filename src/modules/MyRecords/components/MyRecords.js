@@ -163,7 +163,6 @@ export default class MyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${this.props.thisUrl}`,
             search: `?ts=${Date.now()}`,
-            state: { ...this.state },
         });
         if (this.state.pageSize === MY_RECORDS_BULK_EXPORT_SIZE) {
             this.setState({ bulkExportSelected: true });
