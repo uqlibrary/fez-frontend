@@ -31,12 +31,8 @@ export default class Orcid extends Component {
 
         // eslint-disable-next-line camelcase
         if (!this.props.accountAuthorLoading && (!this.props.author?.aut_id || this.props.author.aut_orcid_id)) {
-            /* istanbul ignore next */
-            console.info('constructor calling navigateToDashboard');
             this._navigateToDashboard();
         }
-        /* istanbul ignore next */
-        console.info('constructor after navigateToDashboard');
 
         // when ORCID registration went through, and ORCID has redirected back to eSpace
         // check status of ORCID redirect, if it's still in the same session (state)
@@ -53,11 +49,7 @@ export default class Orcid extends Component {
         let queryParams;
         try {
             queryParams = parse(queryString);
-            /* istanbul ignore next */
-            console.info('constructor got queryParams', queryParams);
         } catch (e) {
-            /* istanbul ignore next */
-            console.info('constructor didnt get queryParams');
             /* istanbul ignore next */
             queryParams = {
                 code: null,
@@ -97,8 +89,6 @@ export default class Orcid extends Component {
             (!state.prevProps?.account || props.account.id !== state.prevProps?.account.id)
         ) {
             const orcidStateId = state.createOrcidStateId(props.account);
-            /* istanbul ignore next */
-            console.info('getDerivedStateFromProps, props, state, orcidStateId', props, state, orcidStateId);
             //
             return {
                 orcidRequest: {
@@ -127,15 +117,6 @@ export default class Orcid extends Component {
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
         ) {
-            /* istanbul ignore next */
-            console.info(
-                'componentDidMount: begin linking orcid',
-                this.props.account,
-                // eslint-disable-next-line camelcase
-                this.props.author?.aut_orcid_id,
-                this.state.orcidResponse.code,
-                this.state.orcidResponse.state,
-            );
             this.props.actions.linkAuthorOrcidId(
                 this.props.account.id,
                 this.props.author.aut_id,
@@ -152,8 +133,6 @@ export default class Orcid extends Component {
             // eslint-disable-next-line camelcase
             ((!this.props.accountAuthorLoading && !this.props.author) || this.props.author?.aut_orcid_id)
         ) {
-            /* istanbul ignore next */
-            console.info('componentDidUpdate calling navigateToDashboard 1');
             this._navigateToDashboard();
         }
 
@@ -168,8 +147,6 @@ export default class Orcid extends Component {
                 ...locale.pages.orcidLink.successAlert,
                 dismissAction: this.props.actions.dismissAppAlert,
             });
-            /* istanbul ignore next */
-            console.info('componentDidUpdate calling navigateToDashboard 2');
             this._navigateToDashboard();
         }
 
@@ -187,15 +164,6 @@ export default class Orcid extends Component {
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
         ) {
-            /* istanbul ignore next */
-            console.info(
-                'componentDidUpdate: begin linking orcid',
-                this.props.account,
-                // eslint-disable-next-line camelcase
-                prevProps.author?.aut_orcid_id,
-                this.state.orcidResponse.code,
-                this.state.orcidResponse.state,
-            );
             this.props.actions.linkAuthorOrcidId(
                 this.props.account.id,
                 this.props.author.aut_id,
