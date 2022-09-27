@@ -851,7 +851,7 @@ export const getRecordLocationSearchKey = locations => {
     };
 };
 
-const cleanDatastreamObject = data => {
+const cleanDatastreamsObject = data => {
     // Clean the datastream object, where required.
     // If an admin has renamed an existing, attached file in the record there will be a
     // unique dsi_dsid_new key that we must do something with.
@@ -866,9 +866,9 @@ const cleanDatastreamObject = data => {
     // The frontend, however, uses dsi_dsid to present filename information
     // on screen and with every update from the user, so a record of the original
     // is stored in _new for processing here.
-    if (!!!data.fez_datastream_info) return {};
+    if (!!!data) return {};
 
-    return data.fez_datastream_info?.map(entry => {
+    const newDatastreamObject = data.map(entry => {
         if (!entry.hasOwnProperty('dsi_dsid_new')) return entry;
         if (entry.dsi_dsid === entry.dsi_dsid_new) {
             delete entry.dsi_dsid_new;
@@ -879,6 +879,7 @@ const cleanDatastreamObject = data => {
         }
         return entry;
     });
+    return newDatastreamObject;
 };
 
 const cleanBlankEntries = data => {
@@ -1383,9 +1384,6 @@ export const getFilesSectionSearchKeys = data => {
                             }
                           : null,
               },
-              ...{
-                  fez_datastream_info: { ...cleanDatastreamObject(rest) },
-              },
           };
 };
 
@@ -1406,11 +1404,13 @@ export const getDatastreamInfo = (
     dataStreamsFromFileSection = [],
     dataStreamsFromSecuritySection = [],
 ) => {
-    const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
+    const cleanedDataStreamsFromFileSection = cleanDatastreamsObject(dataStreamsFromFileSection);
+    const dataStreamsLabelMap = cleanedDataStreamsFromFileSection.reduce(
         (map, ds) => ({
             ...map,
             [ds.dsi_dsid]: {
                 dsi_label: ds.dsi_label,
+                ...(ds.hasOwnProperty('dsi_dsid_new') ? { dsi_dsid_new: ds.dsi_dsid_new } : {}),
                 dsi_embargo_date: ds.dsi_embargo_date,
             },
         }),
