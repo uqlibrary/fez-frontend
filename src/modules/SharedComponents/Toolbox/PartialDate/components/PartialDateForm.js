@@ -120,11 +120,8 @@ export class PartialDateForm extends PureComponent {
     }
 
     static getDerivedStateFromProps(props, state) {
-        console.log('getDerivedStateFromProps');
-        if (props.onChange) {
-            console.log('getDerivedStateFromProps inside IF');
-            props.onChange(state.setDate(state));
-        }
+        props.onChange?.(state.setDate(state));
+        return { ...state };
     }
 
     /**

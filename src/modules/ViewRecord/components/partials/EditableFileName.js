@@ -48,8 +48,7 @@ const EditableFileName = ({
         setIsEditing(false);
         setIsValid(true);
         isEdited.current = editingFilenameRef.current !== originalFilenameRef.current;
-        /* istanbul ignore next */
-        onFileNameChange(editingFilenameRef.current ?? originalFilenameRef.current, true);
+        onFileNameChange(editingFilenameRef.current ?? originalFilenameRef.current);
     };
 
     const handleFileEditFilename = () => {
@@ -61,8 +60,10 @@ const EditableFileName = ({
     const handleFileSaveFilename = () => {
         const isValid = new RegExp(filenameRestrictions, 'gi').test(props.fileName);
         setIsValid(isValid);
-        isValid && setIsEditing(false);
-        onFileSaveFilename?.();
+        if (isValid) {
+            setIsEditing(false);
+            onFileSaveFilename?.(originalFilenameRef.current);
+        }
     };
 
     const handleFileRestoreFilename = () => {
@@ -74,7 +75,7 @@ const EditableFileName = ({
     const handleKeyPress = (key, callbackFn) => {
         if (key.code.toLowerCase() === 'enter' || key.code.toLowerCase() === 'numpadenter') {
             key.preventDefault();
-            callbackFn?.();
+            callbackFn?.(originalFilenameRef.current);
         }
     };
 

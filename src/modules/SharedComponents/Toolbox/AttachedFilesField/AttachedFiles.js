@@ -199,6 +199,7 @@ export const AttachedFiles = ({
         const processedFilenames = removeInvalidFileNames(mappedFilenames, fileRestrictionsConfig.fileNameRestrictions);
         const errormessage = getErrorMessage(processedFilenames, fileUploadLocale.default, fileRestrictionsConfig);
         setErrorMessage(errormessage);
+        return errormessage === '';
     };
 
     /* istanbul ignore next */
@@ -206,13 +207,15 @@ export const AttachedFiles = ({
         checkFileNamesForErrors();
     };
 
-    const onFileNameChange = index => (filename /* , reset*/) => {
+    const onFileNameChange = index => filename => {
         onFilenameChange('dsi_dsid', filename, index);
-        // POSSIBLE METHOD TO INDICATE FILENAME CHANGE AT API
-        // onFilenameChange('dsi_dsid_changed', !!reset ?? false, index);
     };
-    const onFileSaveFilename = () => {
-        checkFileNamesForErrors();
+    const onFileSaveFilename = index => originalFilename => {
+        if (checkFileNamesForErrors()) {
+            // dsi_dsid_new key contains original filename. This is picked up when
+            // the record is saved in the validator, and processed there.
+            onFilenameChange('dsi_dsid_new', originalFilename, index);
+        }
     };
     const handleFileIsValid = index => isValid => {
         onHandleFileIsValid?.('isValid', isValid, index);
@@ -292,7 +295,7 @@ export const AttachedFiles = ({
                                                     {...item}
                                                     onFileNameChange={onFileNameChange(index)}
                                                     onFileSelect={showPreview}
-                                                    onFileSaveFilename={onFileSaveFilename}
+                                                    onFileSaveFilename={onFileSaveFilename(index)}
                                                     onFileCancelEdit={onFileCancelEdit}
                                                     filenameRestrictions={fileRestrictionsConfig.fileNameRestrictions}
                                                     handleFileIsValid={handleFileIsValid(index)}

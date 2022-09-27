@@ -851,6 +851,36 @@ export const getRecordLocationSearchKey = locations => {
     };
 };
 
+const cleanDatastreamObject = data => {
+    // Clean the datastream object, where required.
+    // If an admin has renamed an existing, attached file in the record there will be a
+    // unique dsi_dsid_new key that we must do something with.
+    //
+    // IF the dsi_dsid === dsi_dsid_new, delete the latter
+    // IF dsi_dsid !== dsi_dsid_new, swap values between keys.
+    //
+    // Background: the backend server will look for dsi_dsid_new when
+    // processing the record and, if found, will proceed to rename
+    // the original file and all derivatives with the value of
+    // dsi_dsid_new.
+    // The frontend, however, uses dsi_dsid to present filename information
+    // on screen and with every update from the user, so a record of the original
+    // is stored in _new for processing here.
+    if (!!!data.fez_datastream_info) return {};
+
+    return data.fez_datastream_info?.map(entry => {
+        if (!entry.hasOwnProperty('dsi_dsid_new')) return entry;
+        if (entry.dsi_dsid === entry.dsi_dsid_new) {
+            delete entry.dsi_dsid_new;
+        } else {
+            const newFilename = entry.dsi_dsid;
+            entry.dsi_dsid = entry.dsi_dsid_new;
+            entry.dsi_dsid_new = newFilename;
+        }
+        return entry;
+    });
+};
+
 const cleanBlankEntries = data => {
     // Clean out blanked fields
     // * For a single-child-key, to delete, remove the key from the payload sent to api
@@ -1352,6 +1382,9 @@ export const getFilesSectionSearchKeys = data => {
                                 rek_sensitive_handling_note_other: sensitiveHandlingNote?.other,
                             }
                           : null,
+              },
+              ...{
+                  fez_datastream_info: { ...cleanDatastreamObject(rest) },
               },
           };
 };
