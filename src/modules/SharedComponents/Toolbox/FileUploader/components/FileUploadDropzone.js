@@ -99,8 +99,9 @@ export class FileUploadDropzone extends PureComponent {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
                 !existingFiles.some(
                     item =>
-                        item.rek_file_attachment_name.slice(0, file.name.lastIndexOf('.')).toLowerCase() ===
-                        fileNameWithoutExt.toLowerCase(),
+                        item.rek_file_attachment_name
+                            .slice(0, item.rek_file_attachment_name.lastIndexOf('.'))
+                            .toLowerCase() === fileNameWithoutExt.toLowerCase(),
                 )
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
