@@ -25,6 +25,22 @@ export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => 
     return [callback, [dataStreams, setDataStreams]];
 };
 
+export const multiDatastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
+    const callback = (keyValuePairs, index) => {
+        let newDataStreams = [...dataStreams];
+        keyValuePairs.forEach(
+            pair =>
+                (newDataStreams = [
+                    ...newDataStreams.slice(0, index),
+                    { ...newDataStreams[index], [pair.key]: pair.value },
+                    ...newDataStreams.slice(index + 1),
+                ]),
+        );
+        setDataStreams(newDataStreams);
+    };
+    return [callback, [dataStreams, setDataStreams]];
+};
+
 export const onChangeCallbackFactory = (dataStreams, onChange) => {
     const callback = () => onChange(dataStreams);
     return [callback, [dataStreams, onChange]];
@@ -45,6 +61,10 @@ export const AttachedFilesField = ({ input, ...props }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
     // eslint-disable-next-line react-hooks/exhaustive-deps
+    const handleMultiDataStreamChange = useCallback(
+        ...multiDatastreamChangeCallbackFactory(dataStreams, setDataStreams),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(...onChangeCallbackFactory(dataStreams, onChange));
 
     return (
@@ -53,6 +73,7 @@ export const AttachedFilesField = ({ input, ...props }) => {
             onDateChange={handleDataStreamChange}
             onDescriptionChange={handleDataStreamChange}
             onFilenameChange={handleDataStreamChange}
+            onFilenameSave={handleMultiDataStreamChange}
             onHandleFileIsValid={handleDataStreamChange}
             dataStreams={dataStreams}
             {...props}

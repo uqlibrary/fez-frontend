@@ -147,6 +147,7 @@ export const AttachedFiles = ({
     onDateChange,
     onDescriptionChange,
     onFilenameChange,
+    onFilenameSave,
     onHandleFileIsValid,
     onEmbargoClearPromptText,
     locale,
@@ -210,11 +211,17 @@ export const AttachedFiles = ({
     const onFileNameChange = index => filename => {
         onFilenameChange('dsi_dsid', filename, index);
     };
-    const onFileSaveFilename = index => originalFilename => {
+    const onFileSaveFilename = index => (originalFilename, filename) => {
         if (checkFileNamesForErrors()) {
             // dsi_dsid_new key contains original filename. This is picked up when
             // the record is saved in the validator, and processed there.
-            onFilenameChange('dsi_dsid_new', originalFilename, index);
+            onFilenameSave(
+                [
+                    { key: 'dsi_dsid_new', value: originalFilename },
+                    { key: 'dsi_dsid', value: filename },
+                ],
+                index,
+            );
         }
     };
     const handleFileIsValid = index => isValid => {
@@ -432,6 +439,7 @@ AttachedFiles.propTypes = {
     onDateChange: PropTypes.func,
     onDescriptionChange: PropTypes.func,
     onFilenameChange: PropTypes.func,
+    onFilenameSave: PropTypes.func,
     onHandleFileIsValid: PropTypes.func,
     onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,
