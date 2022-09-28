@@ -88,6 +88,19 @@ describe('Component FileUploadDropzone', () => {
         expect(sameFileNameWithDifferentExt.length).toEqual(1);
     });
 
+    it('should remove files with same filename but different extension and different casing from dropped incoming files if already exist', () => {
+        const wrapper = setup();
+
+        const files = [getMockFile('filea.txt'), getMockFile('fileb.txt')];
+        const existingFiles = [{ rek_file_attachment_name: 'FiLeA.doc' }];
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+            .instance()
+            .removeDuplicate(files, [], existingFiles);
+        expect(uniqueFiles.length).toEqual(1);
+        expect(duplicateFiles.length).toEqual(0);
+        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+    });
+
     it('should remove duplicate filenames if duplicated in both dropped and existing', () => {
         const wrapper = setup();
 

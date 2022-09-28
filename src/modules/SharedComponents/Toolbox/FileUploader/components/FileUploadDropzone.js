@@ -81,7 +81,10 @@ export class FileUploadDropzone extends PureComponent {
         const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce(
             (unique, file) => {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
-                unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                const index = unique.fileNames.findIndex(element => {
+                    return element.toLowerCase() === fileNameWithoutExt.toLowerCase();
+                });
+                index < 0
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
                 return unique;
@@ -95,7 +98,9 @@ export class FileUploadDropzone extends PureComponent {
             (unique, file) => {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
                 !existingFiles.some(
-                    item => item.rek_file_attachment_name.slice(0, file.name.lastIndexOf('.')) === fileNameWithoutExt,
+                    item =>
+                        item.rek_file_attachment_name.slice(0, file.name.lastIndexOf('.')).toLowerCase() ===
+                        fileNameWithoutExt.toLowerCase(),
                 )
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
@@ -110,8 +115,8 @@ export class FileUploadDropzone extends PureComponent {
                     const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
 
                     unique.fileNames
-                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')))
-                        .indexOf(fileNameWithoutExt) === -1
+                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')).toLowerCase())
+                        .indexOf(fileNameWithoutExt.toLowerCase()) === -1
                         ? unique.incomingFiles.push(file)
                         : unique.filesWithSameNameDifferentExt.push(file.name);
                 } else {
