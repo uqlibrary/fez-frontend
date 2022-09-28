@@ -29,7 +29,7 @@ export default {
             'File(s) ([fileNames]) will not be uploaded',
         ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
         ['sameFileNameWithDifferentExt']:
-            'File(s) ([fileNames]) have same name that match with other existing files with different extension',
+            'File(s) ([fileNames]) name matches with an existing file with a different extension.',
     },
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
