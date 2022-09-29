@@ -3700,6 +3700,25 @@ describe('getBibliographicSectionSearchKeys', () => {
                 ],
             });
         });
+
+        it('should send matched journals as null if match ID is null or 0', () => {
+            const zeroData = {
+                fez_matched_journals: {
+                    jnl_jid: 0,
+                },
+            };
+            expect(transformers.getFezMatchedJournalsKey(zeroData)).toEqual({
+                fez_matched_journals: null,
+            });
+            const nullData = {
+                fez_matched_journals: {
+                    jnl_jid: null,
+                },
+            };
+            expect(transformers.getFezMatchedJournalsKey(nullData)).toEqual({
+                fez_matched_journals: null,
+            });
+        });
     });
 
     describe('Design', () => {
