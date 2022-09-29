@@ -28,8 +28,7 @@ export default {
             'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
             'File(s) ([fileNames]) will not be uploaded',
         ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
-        ['sameFileNameWithDifferentExt']:
-            'File(s) ([fileNames]) name matches with an existing file with a different extension.',
+        ['sameFileNameWithDifferentExt']: 'File(s) ([fileNames]) name matches with an existing file.',
     },
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
