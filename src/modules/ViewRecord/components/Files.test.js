@@ -482,6 +482,7 @@ const pub = {
             dsi_state: 'A',
             dsi_size: 3000090,
             dsi_checksum: 'a6a6d6qs6dq6wsdqwd',
+            dsi_order: null,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -493,6 +494,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 2750166,
+            dsi_order: null,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -504,6 +506,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 3000090,
+            dsi_order: 2,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -515,6 +518,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 4500146,
+            dsi_order: 2,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -526,6 +530,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 1175050,
+            dsi_order: 3,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -537,6 +542,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 6998485,
+            dsi_order: 1,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -548,6 +554,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'D',
             dsi_size: 3000090,
+            dsi_order: null,
         },
         {
             dsi_pid: 'UQ:185044',
@@ -559,6 +566,7 @@ const pub = {
             dsi_copyright: null,
             dsi_state: 'A',
             dsi_size: 3093,
+            dsi_order: null,
         },
         {
             dsi_pid: 'UQ:185044',

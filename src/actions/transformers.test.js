@@ -4706,12 +4706,14 @@ describe('getRecordIsDatasetOfSearchKey', () => {
 });
 
 describe('getNotesSectionSearchKeys', () => {
-    it('should get search key for any internal notes entered', () => {
+    it('should get search key for any internal notes entered, with CI true', () => {
         const expected = {
             fez_internal_notes: {
                 ain_detail: '<p>This is test internal note</p>',
             },
             rek_herdc_notes: 'This is test herdc notes',
+
+            rek_ci_notice_attribution_incomplete: 1,
         };
 
         expect(
@@ -4724,12 +4726,39 @@ describe('getNotesSectionSearchKeys', () => {
                     htmlText: 'This is test herdc notes',
                     plainText: 'This is test herdc notes',
                 },
+                rek_ci_notice_attribution_incomplete: true,
+            }),
+        ).toEqual(expected);
+    });
+    it('should get search key for any internal notes entered, with CI false', () => {
+        const expected = {
+            fez_internal_notes: {
+                ain_detail: '<p>This is test internal note</p>',
+            },
+            rek_herdc_notes: 'This is test herdc notes',
+
+            rek_ci_notice_attribution_incomplete: 0,
+        };
+
+        expect(
+            transformers.getNotesSectionSearchKeys({
+                internalNotes: {
+                    htmlText: '<p>This is test internal note</p>',
+                    plainText: 'This is test internal note',
+                },
+                rek_herdc_notes: {
+                    htmlText: 'This is test herdc notes',
+                    plainText: 'This is test herdc notes',
+                },
+                rek_ci_notice_attribution_incomplete: false,
             }),
         ).toEqual(expected);
     });
 
-    it('should get search key for any internal notes entered', () => {
-        expect(transformers.getNotesSectionSearchKeys()).toEqual({ fez_internal_notes: null });
+    it('should get search key for any internal notes empty', () => {
+        expect(transformers.getNotesSectionSearchKeys()).toEqual({
+            fez_internal_notes: null,
+        });
     });
 
     it('should get search key for any additional notes entered', () => {
@@ -5346,3 +5375,16 @@ describe('reasonForEdit', () => {
         expect(transformers.getReasonSectionSearchKeys({})).toEqual({});
     });
 });
+
+// describe('Cultural Institution Notices', () => {
+//     it('should correctly transform CI data', () => {
+//         const record = { ciNotices: { rek_ci_notice_attribution_incomplete: true } };
+//         // console.log(transformers.getNotesSectionSearchKeys(record));
+//         expect(transformers.getNotesSectionSearchKeys(record)).toEqual({
+//             // fez_internal_notes: null,
+//             fez_record_search_key_ci_notice_attribution_incomplete: { rek_ci_notice_attribution_incomplete: true },
+//         });
+
+//         expect(transformers.getNotesSectionSearchKeys({})).toEqual({});
+//     });
+// });

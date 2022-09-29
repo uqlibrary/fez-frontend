@@ -95,5 +95,9 @@ export default {
             title: 'HERDC notes',
             groups: [['rek_herdc_notes']],
         },
+        {
+            title: 'Cultural Institute (CI) Notice',
+            groups: [['rek_ci_notice_attribution_incomplete']],
+        },
     ],
 };

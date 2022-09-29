@@ -156,8 +156,8 @@ context('Thesis admin edit', () => {
                 .as('cards')
                 .eq(0)
                 .within(() => {
-                    cy.get('h4').should('contain', 'Member of collections');
-                    cy.get('#rek-ismemberof-label').should('contain', 'Member of collections');
+                    cy.get('h4').should('contain', 'Member of collection');
+                    cy.get('#rek-ismemberof-label').should('contain', 'Member of collection');
 
                     cy.get('[class*="MuiAutocomplete-tag-"]')
                         .eq(0)

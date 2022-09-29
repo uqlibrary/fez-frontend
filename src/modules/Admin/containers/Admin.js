@@ -43,11 +43,11 @@ const getInitialValues = (record, tab, tabParams = () => {}) => {
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
     const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true, true));
-
     return {
         initialValues: {
             pid: recordToView.rek_pid,
             publication: recordToView,
+            rek_requires_attribution: false,
             rek_display_type: recordToView.rek_display_type,
             rek_date: recordToView.rek_date || recordToView.rek_created_date,
             identifiersSection:
@@ -68,6 +68,10 @@ const getInitialFormValues = (recordToView, recordType) => {
                       }
                     : []),
             },
+            // culturalInstitutionNoticeSection:
+            //     ((recordType === RECORD_TYPE_RECORD || recordType === RECORD_TYPE_COLLECTION) &&
+            //         getInitialValues(recordToView, 'culturalInstitutionNotice')) ||
+            //     {},
             bibliographicSection:
                 ((recordType === RECORD_TYPE_RECORD ||
                     recordType === RECORD_TYPE_COMMUNITY ||
@@ -149,6 +153,7 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
+        // console.log('Reducer State', recordToView);
         locked = state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =

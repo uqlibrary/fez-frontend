@@ -89,7 +89,7 @@ export default class Orcid extends Component {
             (!state.prevProps?.account || props.account.id !== state.prevProps?.account.id)
         ) {
             const orcidStateId = state.createOrcidStateId(props.account);
-
+            //
             return {
                 orcidRequest: {
                     ...state.orcidRequest,
@@ -129,7 +129,7 @@ export default class Orcid extends Component {
         // user should have a fez-author record to proceed
         // user should not be able to re-link to orcid if they already have an orcid id
         if (
-            prevProps.author !== this.props.author &&
+            this.props.author !== prevProps.author &&
             // eslint-disable-next-line camelcase
             ((!this.props.accountAuthorLoading && !this.props.author) || this.props.author?.aut_orcid_id)
         ) {
@@ -138,10 +138,10 @@ export default class Orcid extends Component {
 
         // author's orcid id has been updated successfully
         if (
-            prevProps.author &&
             this.props.author &&
+            prevProps.author &&
             // eslint-disable-next-line camelcase
-            prevProps.author?.aut_orcid_id !== this.props.author?.aut_orcid_id
+            this.props.author?.aut_orcid_id !== prevProps.author?.aut_orcid_id
         ) {
             this.props.actions.showAppAlert({
                 ...locale.pages.orcidLink.successAlert,
@@ -154,12 +154,12 @@ export default class Orcid extends Component {
         // (if props.author were not available in componentDidMount)
         if (
             this.props.account &&
-            !prevProps.accountAuthorLoading &&
-            (prevProps.author !== this.props.author ||
+            !this.props.accountAuthorLoading &&
+            (this.props.author !== prevProps.author ||
                 // eslint-disable-next-line camelcase
-                (prevProps.author && this.props.author?.aut_id !== prevProps.author?.aut_id)) &&
+                (this.props.author && prevProps.author?.aut_id !== this.props.author?.aut_id)) &&
             // eslint-disable-next-line camelcase
-            !prevProps.author?.aut_orcid_id &&
+            !this.props.author?.aut_orcid_id &&
             this.state.orcidResponse.code &&
             this.state.orcidResponse.state &&
             this.isValidOrcidState(this.props.account, this.state.orcidRequest.state, this.state.orcidResponse.state)
