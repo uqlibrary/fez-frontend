@@ -66,7 +66,7 @@ const EditableFileName = ({
         setIsEditing(false);
         setIsValid(true);
         // set edited flag
-        isEdited.current = editedFilenameRef.current !== originalFilenameRef.current;
+        isEdited.current = !!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current;
         // reset the filename to the last previous state (which may be an edited filename)
         setProxyFilename(editedFilenameRef.current ?? originalFilenameRef.current);
     };
