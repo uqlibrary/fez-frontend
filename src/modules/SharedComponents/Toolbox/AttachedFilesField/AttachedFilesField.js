@@ -3,49 +3,6 @@ import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
 
-export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttachedFile) => {
-    const callback = index => {
-        const fileToDelete = dataStreams[index];
-        const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
-        onDeleteAttachedFile(fileToDelete);
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams, onDeleteAttachedFile]];
-};
-
-export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (key, value, index) => {
-        const newDataStreams = [
-            ...dataStreams.slice(0, index),
-            { ...dataStreams[index], [key]: value },
-            ...dataStreams.slice(index + 1),
-        ];
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams]];
-};
-
-export const multiDatastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (keyValuePairs, index) => {
-        let newDataStreams = [...dataStreams];
-        keyValuePairs.forEach(
-            pair =>
-                (newDataStreams = [
-                    ...newDataStreams.slice(0, index),
-                    { ...newDataStreams[index], [pair.key]: pair.value },
-                    ...newDataStreams.slice(index + 1),
-                ]),
-        );
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams]];
-};
-
-export const onChangeCallbackFactory = (dataStreams, onChange) => {
-    const callback = () => onChange(dataStreams);
-    return [callback, [dataStreams, onChange]];
-};
-
 export const AttachedFilesField = ({ input, ...props }) => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
@@ -56,16 +13,49 @@ export const AttachedFilesField = ({ input, ...props }) => {
     );
     const { onChange } = input;
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleMultiDataStreamChange = useCallback(
-        ...multiDatastreamChangeCallbackFactory(dataStreams, setDataStreams),
+    const handleDelete = useCallback(
+        index => {
+            const fileToDelete = dataStreams[index];
+            const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
+            onDeleteAttachedFile(fileToDelete);
+            setDataStreams(newDataStreams);
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [dataStreams],
     );
+
+    const handleDataStreamChange = useCallback(
+        (key, value, index) => {
+            const newDataStreams = [
+                ...dataStreams.slice(0, index),
+                { ...dataStreams[index], [key]: value },
+                ...dataStreams.slice(index + 1),
+            ];
+            setDataStreams(newDataStreams);
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [dataStreams],
+    );
+
+    const handleMultiDataStreamChange = useCallback(
+        (keyValuePairs, index) => {
+            let newDataStreams = [...dataStreams];
+            keyValuePairs.forEach(
+                pair =>
+                    (newDataStreams = [
+                        ...newDataStreams.slice(0, index),
+                        { ...newDataStreams[index], [pair.key]: pair.value },
+                        ...newDataStreams.slice(index + 1),
+                    ]),
+            );
+            setDataStreams(newDataStreams);
+        },
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [dataStreams],
+    );
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(...onChangeCallbackFactory(dataStreams, onChange));
+    useEffect(() => onChange(dataStreams), [dataStreams]);
 
     return (
         <AttachedFiles
