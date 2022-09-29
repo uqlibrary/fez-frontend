@@ -28,11 +28,13 @@ export class FileUploadDropzone extends PureComponent {
         fileUploadLimit: PropTypes.number,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
+        existingFiles: PropTypes.array,
     };
 
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
+        existingFiles: [],
         fileNameRestrictions: FILE_NAME_RESTRICTION,
         mimeTypeWhitelist: MIME_TYPE_WHITELIST,
     };
@@ -70,15 +72,19 @@ export class FileUploadDropzone extends PureComponent {
      * Remove duplicate files from given accepted files
      *
      * @param incomingFiles
-     * @param filesInQueue - list of names of files in queue
+     * @param filesInQueue - list of names of files in queue to be uploaded
+     * @param existingFiles - Files that are already attached from a previous upload.
      * @returns Object
      */
-    removeDuplicate = (incomingFiles, filesInQueue) => {
+    removeDuplicate = (incomingFiles, filesInQueue, existingFiles) => {
         // Ignore files from incomingFiles which have same name with different extension
         const incomingFilesWithoutDuplicateFileName = incomingFiles.reduce(
             (unique, file) => {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
-                unique.fileNames.indexOf(fileNameWithoutExt) === -1
+                const index = unique.fileNames.findIndex(element => {
+                    return element.toLowerCase() === fileNameWithoutExt.toLowerCase();
+                });
+                index < 0
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
                 return unique;
@@ -86,14 +92,32 @@ export class FileUploadDropzone extends PureComponent {
             { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] },
         );
 
-        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
+        // Ignore files from incomingFiles which have same name with different extension
+        // of a formerly uploaded file (For example, when editing and adding new files)
+        const incomingFilesWithoutDuplicateExisting = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
+            (unique, file) => {
+                const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
+                !existingFiles.some(
+                    item =>
+                        item.rek_file_attachment_name
+                            .slice(0, item.rek_file_attachment_name.lastIndexOf('.'))
+                            .toLowerCase() === fileNameWithoutExt.toLowerCase(),
+                )
+                    ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
+                    : unique.filesWithSameNameDifferentExt.push(file.name);
+                return unique;
+            },
+            { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] },
+        );
+
+        const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateExisting.incomingFiles.reduce(
             (unique, file) => {
                 if (unique.fileNames.indexOf(file.name) === -1) {
                     const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
 
                     unique.fileNames
-                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')))
-                        .indexOf(fileNameWithoutExt) === -1
+                        .map(fileName => fileName.slice(0, fileName.lastIndexOf('.')).toLowerCase())
+                        .indexOf(fileNameWithoutExt.toLowerCase()) === -1
                         ? unique.incomingFiles.push(file)
                         : unique.filesWithSameNameDifferentExt.push(file.name);
                 } else {
@@ -123,6 +147,7 @@ export class FileUploadDropzone extends PureComponent {
             duplicateFiles: duplicateFiles,
             sameFileNameWithDifferentExt: [
                 ...incomingFilesWithoutDuplicateFileName.filesWithSameNameDifferentExt,
+                ...incomingFilesWithoutDuplicateExisting.filesWithSameNameDifferentExt,
                 ...incomingFilesWithoutDuplicate.filesWithSameNameDifferentExt,
             ],
         };
@@ -223,9 +248,8 @@ export class FileUploadDropzone extends PureComponent {
      * @private
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
-        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
+        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit, existingFiles } = this.props;
         const notFiles = [];
-
         // Remove folders from accepted files (async)
         this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
             // Remove invalid file names
@@ -235,6 +259,7 @@ export class FileUploadDropzone extends PureComponent {
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(
                 validFiles,
                 filesInQueue,
+                existingFiles,
             );
 
             // Remove invalid mime type files - based on it's extension

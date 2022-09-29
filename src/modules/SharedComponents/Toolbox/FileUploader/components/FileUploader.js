@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { clearFileUpload } from '../actions';
-
+import { RecordContext } from 'context';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
@@ -26,6 +26,7 @@ export class FileUploader extends PureComponent {
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
+        fullyUploadedFiles: PropTypes.array,
     };
 
     static defaultProps = {
@@ -40,6 +41,7 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: false,
         isNtro: false,
         isAdmin: false,
+        fullyUploadedFiles: [],
     };
 
     constructor(props) {
@@ -54,6 +56,7 @@ export class FileUploader extends PureComponent {
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
+    // static contextType = FormValuesContext;
 
     /**
      * Delete file on a given index
@@ -350,7 +353,6 @@ export class FileUploader extends PureComponent {
                 queue: this.state.filesInQueue,
                 isValid: this.isFileUploadValid(this.state),
             });
-
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
@@ -414,6 +416,8 @@ export class FileUploader extends PureComponent {
                         mimeTypeWhitelist={mimeTypeWhitelist}
                         fileUploadLimit={fileUploadLimit}
                         onDrop={this._handleDroppedFiles}
+                        // eslint-disable-next-line camelcase
+                        existingFiles={this.context?.record?.fez_record_search_key_file_attachment_name}
                     />
                 </Grid>
                 {filesInQueue.length > 0 && (
@@ -465,6 +469,8 @@ export class FileUploader extends PureComponent {
         );
     }
 }
+
+FileUploader.contextType = RecordContext;
 
 const mapStateToProps = () => {
     return {};

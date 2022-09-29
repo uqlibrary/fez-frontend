@@ -110,7 +110,7 @@ exports[`Component FileUploader should handle file order change 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -284,7 +284,7 @@ exports[`Component FileUploader should handle file order change 2`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -626,7 +626,7 @@ exports[`Component FileUploader should handle file order change 3`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -1341,6 +1341,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 }
               }
               filesInQueue={Array []}
+              fullyUploadedFiles={Array []}
               isAdmin={false}
               isNtro={true}
               locale={
@@ -1434,7 +1435,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -1880,7 +1881,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                   "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
-                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                 },
@@ -1895,6 +1896,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "hideLabel": "FileUploadDropzone-hideLabel-1",
                                 }
                               }
+                              existingFiles={Array []}
                               fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                               fileUploadLimit={5}
                               filesInQueue={Array []}
@@ -1989,7 +1991,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
-                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                   },
@@ -2414,7 +2416,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                         "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
-                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                         "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                       },
@@ -2521,7 +2523,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                           "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
-                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                           "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                         },
@@ -4288,6 +4290,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 }
               }
               filesInQueue={Array []}
+              fullyUploadedFiles={Array []}
               isAdmin={false}
               isNtro={true}
               locale={
@@ -4381,7 +4384,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -4827,7 +4830,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                   "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
-                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                 },
@@ -4842,6 +4845,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "hideLabel": "FileUploadDropzone-hideLabel-1",
                                 }
                               }
+                              existingFiles={Array []}
                               fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
                               fileUploadLimit={5}
                               filesInQueue={Array []}
@@ -4936,7 +4940,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
-                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                   },
@@ -5361,7 +5365,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                         "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
-                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                         "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                       },
@@ -5468,7 +5472,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                           "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
-                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                           "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                         },
@@ -6843,7 +6847,7 @@ exports[`Component FileUploader should render default component 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7013,7 +7017,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7182,7 +7186,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7356,7 +7360,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7697,7 +7701,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7975,7 +7979,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8144,7 +8148,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8318,7 +8322,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8659,7 +8663,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8833,7 +8837,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9175,7 +9179,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9514,7 +9518,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9688,7 +9692,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -10029,7 +10033,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -10203,7 +10207,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -10545,7 +10549,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -10884,7 +10888,7 @@ exports[`Component FileUploader should render security policy selector if admin 
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
