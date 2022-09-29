@@ -2321,6 +2321,21 @@ export default {
                 openInNewWindow: 'Open/Download file in a new window',
                 close: 'Close',
             },
+            renamingFilesInstructions: {
+                title: 'File attachments',
+                text: (
+                    <React.Fragment>
+                        <Typography component="h4" variant="h6">
+                            File attachments
+                        </Typography>
+                        <p>There may be a delay before newly uploaded or renamed files appear on the record.</p>
+                        <p>
+                            If you have recently renamed any files please allow this process to complete before updating
+                            the file(s) again. Progress can be checked via the Bulk updates menu option.
+                        </p>
+                    </React.Fragment>
+                ),
+            },
             downloadButtonLabel: 'Download file',
             licenceConfirmation: licence =>
                 (!!licence && {

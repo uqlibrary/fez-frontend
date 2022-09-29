@@ -244,6 +244,7 @@ export const AttachedFiles = ({
                     <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
+                {isAdmin && canEdit && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <div style={{ padding: 8 }}>
                     <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
