@@ -37,13 +37,17 @@ const EditableFileName = ({
     const [isValid, setIsValid] = useState(true);
     const isEdited = useRef(false);
     const originalFilenameRef = useRef(null);
+    const originalFilenameExtRef = useRef(null);
     const editedFilenameRef = useRef(null);
     const [proxyFilename, setProxyFilename] = useState(props.filename);
+
+    const getFilenamePart = filename => filename.split('.').shift();
+    const getNewFilename = filename => `${filename}.${originalFilenameExtRef.current}`;
 
     useEffect(() => {
         // update state of filename whenever a new value is passed in props.
         // this will happen whenever several of the functions below fire
-        setProxyFilename(props.fileName);
+        setProxyFilename(getFilenamePart(props.fileName));
 
         // set edit flag whenever the filename changes
         !!originalFilenameRef.current && (isEdited.current = props.fileName !== originalFilenameRef.current);
@@ -74,26 +78,29 @@ const EditableFileName = ({
     const handleFileEditFilename = () => {
         // save the initial filename in case we need to reset
         !!!originalFilenameRef.current && (originalFilenameRef.current = props.fileName);
+        !!!originalFilenameExtRef.current && (originalFilenameExtRef.current = props.fileName.split('.').pop());
         setIsEditing(true);
     };
 
     const handleFileSaveFilename = () => {
-        const isValid = new RegExp(filenameRestrictions, 'gi').test(proxyFilename);
+        const newFilename = getNewFilename(proxyFilename);
+        const isValid = new RegExp(filenameRestrictions, 'gi').test(newFilename);
         setIsValid(isValid);
         // only allow exit from edit mode if the entered filename is valid
         if (isValid) {
-            editedFilenameRef.current = proxyFilename;
+            editedFilenameRef.current = newFilename;
             setIsEditing(false);
-            onFileSaveFilename?.(originalFilenameRef.current, editedFilenameRef.current);
+            onFileSaveFilename?.(originalFilenameRef.current, newFilename);
             // onFileNameChange(editedFilenameRef.current);
         }
     };
 
     const handleFileRestoreFilename = () => {
-        // reset filename to original value
-        onFileNameChange(originalFilenameRef.current);
         isEdited.current = false;
         setIsValid(true);
+        editedFilenameRef.current = null;
+        // reset filename to original value
+        onFileNameChange(originalFilenameRef.current);
     };
 
     const handleKeyPress = (key, callbackFn) => {
@@ -118,7 +125,7 @@ const EditableFileName = ({
                                 {!!!isEdited.current && <FileName {...props} />}
                                 {!!isEdited.current && (
                                     <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
-                                        {proxyFilename}
+                                        {editedFilenameRef.current}
                                     </Typography>
                                 )}
                             </Grid>
@@ -150,7 +157,7 @@ const EditableFileName = ({
                         {!!!isEdited.current && <FileName {...props} />}
                         {!!isEdited.current && (
                             <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
-                                {proxyFilename}
+                                {editedFilenameRef.current}
                             </Typography>
                         )}
                     </Hidden>
