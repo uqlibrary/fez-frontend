@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, screen } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 import { openAccessConfig } from 'config';
 
 import mediaQuery from 'css-mediaquery';
@@ -346,9 +346,6 @@ describe('AttachedFiles component', () => {
             dataStreams: dataStreams,
             onDateChange: onDateChangeFn,
         });
-
-        // screen.debug(undefined, 10000);
-        // done();
 
         expect(
             getByText('Please RIGHT CLICK then select link SAVE AS option to save and play video files'),

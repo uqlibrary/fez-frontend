@@ -29,7 +29,7 @@ const EditableFileName = ({
     onFileSaveFilename,
     handleFileIsValid,
     onFileCancelEdit,
-    filenameRestrictions,
+    checkFileNameForErrors,
     ...props
 }) => {
     const classes = useStyles();
@@ -72,7 +72,7 @@ const EditableFileName = ({
         // set edited flag
         isEdited.current = !!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current;
         // reset the filename to the last previous state (which may be an edited filename)
-        setProxyFilename(editedFilenameRef.current ?? originalFilenameRef.current);
+        setProxyFilename(getFilenamePart(editedFilenameRef.current ?? originalFilenameRef.current));
     };
 
     const handleFileEditFilename = () => {
@@ -84,14 +84,14 @@ const EditableFileName = ({
 
     const handleFileSaveFilename = () => {
         const newFilename = getNewFilename(proxyFilename);
-        const isValid = new RegExp(filenameRestrictions, 'gi').test(newFilename);
+        const isValid = checkFileNameForErrors(newFilename);
+
         setIsValid(isValid);
         // only allow exit from edit mode if the entered filename is valid
         if (isValid) {
             editedFilenameRef.current = newFilename;
             setIsEditing(false);
             onFileSaveFilename?.(originalFilenameRef.current, newFilename);
-            // onFileNameChange(editedFilenameRef.current);
         }
     };
 
@@ -111,9 +111,9 @@ const EditableFileName = ({
     };
 
     useEffect(() => {
-        handleFileIsValid?.(isEditing ? false : isValid);
+        handleFileIsValid?.(isValid);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isEditing, isValid]);
+    }, [isValid]);
 
     return (
         <>
@@ -208,7 +208,7 @@ export const EditableFileNameProps = {
     onFileSaveFilename: PropTypes.func,
     onFileCancelEdit: PropTypes.func,
     handleFileIsValid: PropTypes.func,
-    filenameRestrictions: PropTypes.any,
+    checkFileNameForErrors: PropTypes.func,
     ...FileNameProps,
 };
 

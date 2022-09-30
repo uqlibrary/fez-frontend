@@ -14,34 +14,6 @@ export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttac
     return [callback, [dataStreams, setDataStreams, onDeleteAttachedFile]];
 };
 
-export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (key, value, index) => {
-        const newDataStreams = [
-            ...dataStreams.slice(0, index),
-            { ...dataStreams[index], [key]: value },
-            ...dataStreams.slice(index + 1),
-        ];
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams]];
-};
-
-export const datastreamMultiChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (keyValuePairs, index) => {
-        let newDataStreams = [...dataStreams];
-        keyValuePairs.forEach(
-            pair =>
-                (newDataStreams = [
-                    ...newDataStreams.slice(0, index),
-                    { ...newDataStreams[index], [pair.key]: pair.value },
-                    ...newDataStreams.slice(index + 1),
-                ]),
-        );
-        setDataStreams(newDataStreams);
-    };
-    return [callback, [dataStreams, setDataStreams]];
-};
-
 export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
     const callback = (file, oldPosition, newPosition) => {
         const newDataStreams = [...dataStreams];
@@ -62,9 +34,20 @@ export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams
     return [callback, [dataStreams, setDataStreams]];
 };
 
-export const onChangeCallbackFactory = (dataStreams, onChange) => {
-    const callback = () => onChange(dataStreams);
-    return [callback, [dataStreams, onChange]];
+export const handleDatastreamChange = (dataStreams, setDataStreams) => (key, value, index) => {
+    const newDataStreams = [...dataStreams];
+    newDataStreams[index][key] = value;
+    setDataStreams(newDataStreams);
+};
+
+export const handleDatastreamMultiChange = (dataStreams, setDataStreams) => (keyValuePairs, index) => {
+    const newDataStreams = [...dataStreams];
+    keyValuePairs.forEach(pair => (newDataStreams[index][pair.key] = pair.value));
+    setDataStreams(newDataStreams);
+};
+
+export const handleOnChange = (dataStreams, onChange) => {
+    onChange(dataStreams);
 };
 
 export const AttachedFilesField = ({ input, ...props }) => {
@@ -84,23 +67,18 @@ export const AttachedFilesField = ({ input, ...props }) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const handleMultiDataStreamChange = useCallback(
-        ...datastreamMultiChangeCallbackFactory(dataStreams, setDataStreams),
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(...onChangeCallbackFactory(dataStreams, onChange));
+    useEffect(() => handleOnChange(dataStreams, onChange), [dataStreams]);
 
     return (
         <AttachedFiles
             onDelete={handleDelete}
-            onDateChange={handleDataStreamChange}
-            onDescriptionChange={handleDataStreamChange}
-            onFilenameChange={handleDataStreamChange}
-            onFilenameSave={handleMultiDataStreamChange}
-            onHandleFileIsValid={handleDataStreamChange}
+            onDateChange={handleDatastreamChange(dataStreams, setDataStreams)}
+            onDescriptionChange={handleDatastreamChange(dataStreams, setDataStreams)}
+            onFilenameChange={handleDatastreamChange(dataStreams, setDataStreams)}
+            onFilenameSave={handleDatastreamMultiChange(dataStreams, setDataStreams)}
+            onHandleFileIsValid={handleDatastreamChange(dataStreams, setDataStreams)}
             onOrderChange={handleDataStreamOrderChange}
             dataStreams={dataStreams}
             {...props}
