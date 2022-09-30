@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { clearFileUpload } from '../actions';
-
+import { RecordContext } from 'context';
 import FileUploadDropzone from './FileUploadDropzone';
 import FileUploadRowHeader from './FileUploadRowHeader';
 import FileUploadRow from './FileUploadRow';
@@ -49,6 +49,7 @@ export class FileUploader extends PureComponent {
         defaultQuickTemplateId: PropTypes.number,
         isNtro: PropTypes.bool,
         isAdmin: PropTypes.bool,
+        fullyUploadedFiles: PropTypes.array,
     };
 
     static defaultProps = {
@@ -63,6 +64,7 @@ export class FileUploader extends PureComponent {
         requireOpenAccessStatus: false,
         isNtro: false,
         isAdmin: false,
+        fullyUploadedFiles: [],
     };
 
     constructor(props) {
@@ -77,6 +79,7 @@ export class FileUploader extends PureComponent {
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
+    // static contextType = FormValuesContext;
 
     /**
      * Delete file on a given index
@@ -158,6 +161,51 @@ export class FileUploader extends PureComponent {
         file[config.FILE_META_KEY_EMBARGO_DATE] = moment(newValue).format();
 
         this.replaceFile(file, index);
+    };
+
+    shuffleFileOrder = (arr, from, to) => {
+        return arr.reduce((prev, current, idx, self) => {
+            /* istanbul ignore if */
+            if (from === to) {
+                prev.push(current);
+            }
+            if (idx === from) {
+                return prev;
+            }
+            if (from < to) {
+                prev.push(current);
+            }
+            /* istanbul ignore else */
+            if (idx === to) {
+                prev.push(self[from]);
+            }
+            if (from > to) {
+                prev.push(current);
+            }
+            return prev;
+        }, []);
+    };
+
+    _updateOrderUp = index => {
+        // Below needs to be moved into a seperate function
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index > 0) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index - 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
+    };
+    _updateOrderDown = index => {
+        const filesToOrder = [...this.state.filesInQueue];
+        /* istanbul ignore else */
+        if (index < filesToOrder.length - 1) {
+            const newOrder = this.shuffleFileOrder(filesToOrder, index, index + 1);
+            this.setState({
+                filesInQueue: [...newOrder],
+            });
+        }
     };
 
     /**
@@ -304,7 +352,6 @@ export class FileUploader extends PureComponent {
                 queue: this.state.filesInQueue,
                 isValid: this.isFileUploadValid(this.state),
             });
-
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
@@ -327,12 +374,15 @@ export class FileUploader extends PureComponent {
                 <FileUploadRow
                     key={file.name}
                     fileUploadRowId={`fez-datastream-info-list-row-${index}`}
+                    rowCount={this.state.filesInQueue.length}
                     index={index}
                     uploadedFile={file}
                     fileSizeUnit={fileSizeUnit}
                     onDelete={this._deleteFile}
                     onAccessConditionChange={this._updateFileAccessCondition}
                     onEmbargoDateChange={this._updateFileEmbargoDate}
+                    onOrderUpClick={this._updateOrderUp}
+                    onOrderDownClick={this._updateOrderDown}
                     onFileDescriptionChange={this._updateFileDescription}
                     onSecurityPolicyChange={this._updateFileSecurityPolicy}
                     defaultAccessCondition={defaultQuickTemplateId}
@@ -365,6 +415,8 @@ export class FileUploader extends PureComponent {
                         mimeTypeWhitelist={mimeTypeWhitelist}
                         fileUploadLimit={fileUploadLimit}
                         onDrop={this._handleDroppedFiles}
+                        // eslint-disable-next-line camelcase
+                        existingFiles={this.context?.record?.fez_record_search_key_file_attachment_name}
                     />
                 </Grid>
                 {filesInQueue.length > 0 && (
@@ -416,6 +468,8 @@ export class FileUploader extends PureComponent {
         );
     }
 }
+
+FileUploader.contextType = RecordContext;
 
 const mapStateToProps = () => {
     return {};

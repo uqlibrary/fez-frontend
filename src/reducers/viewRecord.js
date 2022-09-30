@@ -16,12 +16,14 @@ const handlers = {
         ...initialState,
     }),
 
-    [actions.VIEW_RECORD_LOADED]: (state, action) => ({
-        ...initialState,
-        loadingRecordToView: false,
-        recordToView: action.payload,
-        isRecordLocked: !!action.payload.rek_editing_user,
-    }),
+    [actions.VIEW_RECORD_LOADED]: (state, action) => {
+        return {
+            ...initialState,
+            loadingRecordToView: false,
+            recordToView: action.payload,
+            isRecordLocked: !!action.payload.rek_editing_user,
+        };
+    },
 
     [actions.VIEW_RECORD_VERSION_DELETED_LOADED]: (state, action) => ({
         ...initialState,

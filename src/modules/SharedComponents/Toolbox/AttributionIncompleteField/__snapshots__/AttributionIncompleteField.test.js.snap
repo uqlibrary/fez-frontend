@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component AttributionIncompleteField should render default view 1`] = `
+<WithStyles(AttributionIncomplete)
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": true,
+    }
+  }
+  isAttributionIncomplete={true}
+  onChange={[MockFunction]}
+/>
+`;

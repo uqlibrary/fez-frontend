@@ -277,7 +277,6 @@ export default class PossiblyMyRecords extends PureComponent {
                                                         <React.Fragment>
                                                             <Grid item xs>
                                                                 <PublicationsListSorting
-                                                                    initPageLength={this.initState.pageSize}
                                                                     sortBy={this.state.sortBy}
                                                                     sortDirection={this.state.sortDirection}
                                                                     pageSize={this.state.pageSize}

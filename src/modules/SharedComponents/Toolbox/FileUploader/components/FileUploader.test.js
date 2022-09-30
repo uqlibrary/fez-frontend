@@ -203,6 +203,31 @@ describe('Component FileUploader', () => {
         // expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should handle file order change', () => {
+        const wrapper = setup({ requireOpenAccessStatus: true });
+
+        const tree = toJson(wrapper);
+
+        expect(tree).toMatchSnapshot();
+
+        const fileA = getMockFile('a.txt');
+        const fileB = getMockFile('b.txt');
+        const files = [fileA, fileB];
+
+        wrapper.instance()._handleDroppedFiles(files, {});
+        wrapper.update();
+
+        wrapper.instance()._updateOrderUp(1);
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance()._updateOrderDown(0);
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render rows for uploaded files with default access condition based on quick template Id', () => {
         const wrapper = setup({ defaultQuickTemplateId: 3 });
 

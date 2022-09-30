@@ -190,6 +190,7 @@ export const AdminContainer = ({
                                             ),
                                         numberOfErrors: tabErrors.current.adminSection || null,
                                     },
+                                    /* it would go here or something */
                                     bibliographic: {
                                         component: BibliographicSection,
                                         activated:
@@ -247,6 +248,7 @@ export const AdminContainer = ({
                                         component: SecuritySection,
                                         activated: !createMode, // true,
                                     },
+
                                     reason: {
                                         component: ReasonSection,
                                         activated:

@@ -1794,6 +1794,49 @@ export default {
                 </span>
             ),
         },
+        culturalNoticeOC: {
+            title: 'Open to Collaborate',
+            imagePath:
+                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg',
+            text: (
+                <span>
+                    The University of Queensland is committed to the development of new modes of collaboration,
+                    engagement, and partnership with Indigenous peoples for the care and stewardship of past and future
+                    heritage collections.
+                </span>
+            ),
+            description: (
+                <span>
+                    The Open to Collaborate Notice indicates that an institution is committed to developing new modes of
+                    collaboration, engagement, and partnership over Indigenous collections and data that have colonial
+                    and/or problematic histories or unclear provenance. This notice indicates an institutional
+                    commitment to change and to develop new processes for the care and stewardship of past and future
+                    heritage collections.
+                </span>
+            ),
+        },
+        culturalNoticeAI: {
+            title: 'Attribution Incomplete',
+            imagePath:
+                'https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-attribution-incomplete.svg',
+            text: (
+                <span>
+                    Collections and items in UQ eSpace have incomplete, inaccurate, and/or missing attribution. We are
+                    using this notice to clearly identify this material so that it can be updated, or corrected by
+                    communities of origin. Our institution is committed to collaboration and partnerships to address
+                    this problem of incorrect or missing attribution.
+                </span>
+            ),
+            description: (
+                <span>
+                    The Attribution Incomplete Notice is attached to a collection or at an item level where there is
+                    incomplete, inaccurate, or missing attribution. This Notice indicates to the public that the record
+                    and/or metadata is incomplete. Visibly identifying missing attribution within collections is the
+                    first step towards correcting existing attribution to include: contributors, collaborators, other
+                    authors and/or communities of origin.
+                </span>
+            ),
+        },
         ntroFields: {
             header: {
                 title: 'Non-traditional research output (NTRO) requirements',

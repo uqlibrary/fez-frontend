@@ -101,6 +101,8 @@ export class Thumbnail extends Component {
                     checksums,
                 )}
                 title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
+                id={`preview-link-${fileName}`}
+                data-testid={`preview-link-${fileName}`}
             >
                 {this.props.securityStatus ? (
                     <Img
