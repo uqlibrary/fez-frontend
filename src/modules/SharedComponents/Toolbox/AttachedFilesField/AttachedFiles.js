@@ -105,6 +105,21 @@ export const getFileOpenAccessStatus = (openAccessStatusId, dataStream) => {
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
 };
 
+export const getSecurityPolicyFileEmbargoStatus = dataStream => {
+    const embargoDate = dataStream.dsi_embargo_date;
+    if (
+        dataStream.dsi_security_policy === fileUploadConfig.FILE_SECURITY_POLICY_ADMIN &&
+        embargoDate &&
+        moment(embargoDate).isAfter(moment(), 'day')
+    ) {
+        return {
+            isEmbargoed: true,
+            embargoDate,
+        };
+    }
+    return { isEmbargoed: false };
+};
+
 export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, record) => {
     const attachments = record.fez_record_search_key_file_attachment_name;
     return !!dataStreams && dataStreams.length > 0
@@ -174,6 +189,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                       webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
+                      securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
                       embargoDate: dataStream.dsi_embargo_date,
                       fileOrder: key + 1,
                       key: key,
@@ -438,17 +454,21 @@ export const AttachedFiles = ({
                                             </Hidden>
                                             {isAdmin && canEdit && (
                                                 <React.Fragment>
-                                                    {/* cypress test does not like period in the id */}
+                                                    {/* cypress test does not like full stop in the id */}
                                                     <Grid
                                                         item
                                                         xs={2}
                                                         id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                     >
-                                                        {openAccessConfig.openAccessFiles.includes(
+                                                        {(openAccessConfig.openAccessFiles.includes(
                                                             openAccessStatusId,
-                                                        ) && (
+                                                        ) ||
+                                                            !!item.securityPolicyStatus.isEmbargoed) && (
                                                             <FileUploadEmbargoDate
-                                                                value={item.openAccessStatus.embargoDate}
+                                                                value={
+                                                                    item.openAccessStatus.embargoDate ??
+                                                                    item.securityPolicyStatus.embargoDate
+                                                                }
                                                                 onChange={onEmbargoDateChange(item.id)}
                                                                 disabled={disabled}
                                                                 fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
@@ -471,7 +491,7 @@ export const AttachedFiles = ({
                                                 </React.Fragment>
                                             )}
                                         </Grid>
-                                        {!!hasClearedEmbargoDate[index] && (
+                                        {!!hasClearedEmbargoDate[getDsIndex(item.id)] && (
                                             // tested in cypress admin-edit audio
                                             /* istanbul ignore next */
                                             <React.Fragment>
