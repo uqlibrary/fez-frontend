@@ -8,6 +8,7 @@ import {
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from 'config/general';
 import { FILE_SECURITY_POLICY_ADMIN, FILE_SECURITY_POLICY_PUBLIC } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { cleanDatastreamsObject } from 'actions/transformers.js';
 
 const moment = require('moment');
 
@@ -2541,6 +2542,7 @@ describe('getDatastreamInfo', () => {
                     {
                         dsi_dsid: 'test.png',
                         dsi_label: 'test.png new label',
+                        dsi_order: undefined,
                         dsi_embargo_date: null,
                         dsi_security_policy: 1,
                         dsi_security_inherited: 1,
@@ -2548,6 +2550,7 @@ describe('getDatastreamInfo', () => {
                     {
                         dsi_dsid: 'test1.txt',
                         dsi_label: 'test1.txt new label',
+                        dsi_order: undefined,
                         dsi_embargo_date: '2020-11-01',
                         dsi_security_policy: 1,
                         dsi_security_inherited: 1,
@@ -5369,3 +5372,19 @@ describe('reasonForEdit', () => {
 //         expect(transformers.getNotesSectionSearchKeys({})).toEqual({});
 //     });
 // });
+
+describe('cleanDatastreamsObject', () => {
+    it('should return nothing if no data provided', () => {
+        expect(cleanDatastreamsObject()).toEqual({});
+    });
+
+    it('should return the same data object if dsi_dsid_new prop is not present', () => {
+        expect(cleanDatastreamsObject([{ test: 'ok' }])).toEqual([{ test: 'ok' }]);
+    });
+
+    it('should return an object with swapped dsi_dsid and dsi_dsid_new props', () => {
+        expect(cleanDatastreamsObject([{ dsi_dsid: 'renamed.jpg', dsi_dsid_new: 'original.jpg' }])).toEqual([
+            { dsi_dsid: 'original.jpg', dsi_dsid_new: 'renamed.jpg' },
+        ]);
+    });
+});

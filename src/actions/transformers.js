@@ -851,7 +851,7 @@ export const getRecordLocationSearchKey = locations => {
     };
 };
 
-const cleanDatastreamsObject = data => {
+export const cleanDatastreamsObject = data => {
     // Clean the datastream object, where required.
     // If an admin has renamed an existing, attached file in the record there will be a
     // unique dsi_dsid_new key that we must do something with.

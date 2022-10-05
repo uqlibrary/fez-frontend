@@ -228,6 +228,7 @@ export const AttachedFiles = ({
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
+    console.log(dataStreams);
     if (fileData.length === 0) return null;
 
     // tested in cypress
