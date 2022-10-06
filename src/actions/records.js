@@ -21,6 +21,14 @@ import {
 import * as actions from './actionTypes';
 import * as Sentry from '@sentry/react';
 
+export const safeEscapeBibliographicTitle = data => {
+    const regSearch = /([^a-zA-Z0-9\s])/gm;
+    const escapeSearch = /\\{2}/gm;
+    const subst = '\\\\$1';
+    data.rek_title.plainText = data.rek_title?.plainText?.replace(escapeSearch, '').replace(regSearch, subst);
+    return data;
+};
+
 /**
  * @param data
  * @param replacer
@@ -343,8 +351,11 @@ const getAdminRecordRequest = data => {
         'culturalInstitutionNoticeSection',
     ];
 
+    delete data.publication.rek_citation;
+    data.bibliographicSection = safeEscapeBibliographicTitle({ ...data.bibliographicSection });
     return [
         {
+            // ...safeEscapeContent({ ...data.bibliographicSection }),
             ...data.publication,
             ...{
                 rek_genre: DOCUMENT_TYPES_LOOKUP[data.rek_display_type],
