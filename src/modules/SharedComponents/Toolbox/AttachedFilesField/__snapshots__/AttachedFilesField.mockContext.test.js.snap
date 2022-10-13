@@ -19,6 +19,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
       "fileUploadLimit": 10,
     }
   }
+  input={Object {}}
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}

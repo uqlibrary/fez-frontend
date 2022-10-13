@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback /* , useEffect */ } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
@@ -46,11 +46,11 @@ export const handleDatastreamMultiChange = (dataStreams, setDataStreams) => (key
     setDataStreams(newDataStreams);
 };
 
-export const handleOnChange = (dataStreams, onChange) => {
-    onChange(dataStreams);
-};
+// export const handleOnChange = (dataStreams, onChange) => {
+//     onChange(dataStreams);
+// };
 
-export const AttachedFilesField = ({ input, ...props }) => {
+export const AttachedFilesField = props => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(() => {
@@ -58,7 +58,8 @@ export const AttachedFilesField = ({ input, ...props }) => {
             ? formValues.fez_datastream_info
             : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
     });
-    const { onChange } = input;
+
+    // const { onChange } = input;
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
@@ -68,8 +69,11 @@ export const AttachedFilesField = ({ input, ...props }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => handleOnChange(dataStreams, onChange), [dataStreams]);
+    // useEffect(() => {
+    //     console.log('ds change effect');
+    //     return handleOnChange(dataStreams, onChange);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [dataStreams]);
 
     return (
         <AttachedFiles

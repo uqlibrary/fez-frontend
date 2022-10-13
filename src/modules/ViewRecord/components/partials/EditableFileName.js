@@ -35,7 +35,7 @@ const EditableFileName = ({
     const classes = useStyles();
     const [isEditing, setIsEditing] = useState(false);
     const [isValid, setIsValid] = useState(true);
-    const isEdited = useRef(false);
+    const [isEdited, setIsEdited] = useState(false);
     const originalFilenameRef = useRef(null);
     const originalFilenameExtRef = useRef(null);
     const editedFilenameRef = useRef(null);
@@ -50,7 +50,7 @@ const EditableFileName = ({
         setProxyFilename(getFilenamePart(props.fileName));
 
         // set edit flag whenever the filename changes
-        !!originalFilenameRef.current && (isEdited.current = props.fileName !== originalFilenameRef.current);
+        !!originalFilenameRef.current && setIsEdited(props.fileName !== originalFilenameRef.current);
 
         /* istanbul ignore next */
         if (!!originalFilenameRef.current && !isEditing) {
@@ -70,7 +70,7 @@ const EditableFileName = ({
         setIsEditing(false);
         setIsValid(true);
         // set edited flag
-        isEdited.current = !!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current;
+        setIsEdited(!!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current);
         // reset the filename to the last previous state (which may be an edited filename)
         setProxyFilename(getFilenamePart(editedFilenameRef.current ?? originalFilenameRef.current));
     };
@@ -96,7 +96,7 @@ const EditableFileName = ({
     };
 
     const handleFileRestoreFilename = () => {
-        isEdited.current = false;
+        setIsEdited(false);
         setIsValid(true);
         editedFilenameRef.current = null;
         // reset filename to original value
@@ -122,8 +122,8 @@ const EditableFileName = ({
                     <Hidden smDown>
                         <Grid container alignItems={'center'} wrap="nowrap">
                             <Grid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>
-                                {!!!isEdited.current && <FileName {...props} />}
-                                {!!isEdited.current && (
+                                {!!!isEdited && <FileName {...props} />}
+                                {!!isEdited && (
                                     <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
                                         {editedFilenameRef.current}
                                     </Typography>
@@ -139,7 +139,7 @@ const EditableFileName = ({
                                 >
                                     <EditIcon />
                                 </IconButton>
-                                {!!isEdited.current && (
+                                {!!isEdited && (
                                     <IconButton
                                         aria-label="reset file name"
                                         onClick={handleFileRestoreFilename}
@@ -154,8 +154,8 @@ const EditableFileName = ({
                         </Grid>
                     </Hidden>
                     <Hidden mdUp>
-                        {!!!isEdited.current && <FileName {...props} />}
-                        {!!isEdited.current && (
+                        {!!!isEdited && <FileName {...props} />}
+                        {!!isEdited && (
                             <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
                                 {editedFilenameRef.current}
                             </Typography>

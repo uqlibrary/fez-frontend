@@ -228,7 +228,7 @@ export const AttachedFiles = ({
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
-    console.log(dataStreams);
+
     if (fileData.length === 0) return null;
 
     // tested in cypress
@@ -298,18 +298,16 @@ export const AttachedFiles = ({
         onFilenameChange('dsi_dsid', filename, index);
     };
     const onFileSaveFilename = id => (originalFilename, filename) => {
-        if (checkFileNamesForErrors()) {
-            // dsi_dsid_new key contains original filename. This is picked up when
-            // the record is saved in the validator, and processed there.
-            const index = getDsIndex(id);
-            onFilenameSave(
-                [
-                    { key: 'dsi_dsid_new', value: originalFilename },
-                    { key: 'dsi_dsid', value: filename },
-                ],
-                index,
-            );
-        }
+        // dsi_dsid_new key contains original filename. This is picked up when
+        // the record is saved in the validator, and processed there.
+        const index = getDsIndex(id);
+        onFilenameSave(
+            [
+                { key: 'dsi_dsid_new', value: originalFilename },
+                { key: 'dsi_dsid', value: filename },
+            ],
+            index,
+        );
     };
     const handleFileIsValid = id => isValid => {
         const index = getDsIndex(id);

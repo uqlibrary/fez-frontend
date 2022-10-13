@@ -1,7 +1,7 @@
 import React from 'react';
 import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
-import { rtlRender, fireEvent, waitFor, act, screen } from 'test-utils';
+import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 import { openAccessConfig } from 'config';
 
 import mediaQuery from 'css-mediaquery';
@@ -482,10 +482,12 @@ describe('AttachedFiles component', () => {
                     dsi_size: 587005,
                     dsi_security_inherited: 1,
                     dsi_security_policy: 1,
+                    dsi_order: null,
                 },
             ];
 
             const onFilenameSave = jest.fn();
+            const onFilenameChange = jest.fn();
 
             const { rerender, getByTestId, queryByTestId } = setup({
                 canEdit: true,
@@ -536,35 +538,41 @@ describe('AttachedFiles component', () => {
                 0,
             );
 
-            // setup(
-            //     {
-            //         dataStreamsRenamed,
-            //     },
-            //     rerender,
-            // );
+            setup(
+                {
+                    canEdit: true,
+                    dataStreams: dataStreamsRenamed,
+                    onFilenameSave,
+                    onFilenameChange,
+                },
+                rerender,
+            );
 
-            // await waitFor(() => expect(getByTestId('file-name-0-reset')).toBeInTheDocument());
+            await waitFor(() => expect(queryByTestId('file-name-0-reset')).toBeInTheDocument());
 
-            // act(() => {
-            //     fireEvent.click(getByTestId('file-name-0-reset'));
-            // });
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-reset'));
+            });
 
-            // expect(onFilenameSave).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0);
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0);
 
-            // await waitFor(() => expect(getByTestId('file-name-0-edit')).toBeInTheDocument());
+            // code coverage
+            await waitFor(() => expect(queryByTestId('file-name-0-edit')).toBeInTheDocument());
 
-            // act(() => {
-            //     fireEvent.click(getByTestId('file-name-0-edit'));
-            // });
-            // await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-edit'));
+            });
+            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
 
-            // fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: 'test.pdf.invalid' } });
+            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: 'test.pdf.invalid' } });
 
-            // act(() => {
-            //     fireEvent.click(getByTestId('file-name-0-save'));
-            // });
+            act(() => {
+                fireEvent.click(getByTestId('file-name-0-save'));
+            });
 
-            // expect(onFilenameSave).toHaveBeenCalledWith('dsi_dsid', 'test.pdf.invalid', 0);
+            // state of buttons doesnt change for invalid entries
+            expect(getByTestId('file-name-0-editing')).toBeInTheDocument();
+            expect(queryByTestId('file-name-0-edit')).not.toBeInTheDocument();
         });
     });
 });

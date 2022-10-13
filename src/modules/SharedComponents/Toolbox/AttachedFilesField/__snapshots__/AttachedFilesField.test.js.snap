@@ -11,6 +11,7 @@ exports[`AttachedFilesField component should render default view 1`] = `
       "fileUploadLimit": 10,
     }
   }
+  input={Object {}}
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
@@ -38,6 +39,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
         "dsi_copyright": null,
         "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
         "dsi_embargo_date": null,
+        "dsi_id": 1,
         "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
         "dsi_mimetype": "text/xml",
         "dsi_open_access": null,
@@ -57,6 +59,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
       "fileUploadLimit": 10,
     }
   }
+  input={Object {}}
   meta={
     Object {
       "initial": Immutable.List [
@@ -64,6 +67,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
           "dsi_copyright": null,
           "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
           "dsi_embargo_date": null,
+          "dsi_id": 1,
           "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
           "dsi_mimetype": "text/xml",
           "dsi_open_access": null,

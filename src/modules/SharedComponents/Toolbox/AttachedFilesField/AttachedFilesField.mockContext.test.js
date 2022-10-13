@@ -4,6 +4,8 @@ import { cleanup } from 'test-utils';
 jest.mock('../../../../context');
 import { useFormValuesContext } from 'context';
 
+// import { recordWithDatastreams } from 'mock/data';
+
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         input: {},
@@ -34,3 +36,35 @@ describe('DataStreamSecuritySelector component with mockContext', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
+
+// describe('input onChange', () => {
+//     afterEach(() => cleanup);
+
+//     it('fires when datastreams change', () => {
+//         const dataStreamsInitial = [...recordWithDatastreams.fez_datastream_info];
+//         const dataStreamsChanged = recordWithDatastreams.fez_datastream_info.slice(1, 2);
+//         const onChange = jest.fn();
+
+//         useFormValuesContext.mockImplementation(() => ({
+//             formValues: {
+//                 fez_datastream_info: dataStreamsInitial,
+//             },
+//         }));
+
+//         const wrapper = setup({});
+//         expect(toJson(wrapper)).toMatchSnapshot();
+
+//         useFormValuesContext.mockImplementation(() => ({
+//             formValues: { fez_datastream_info: dataStreamsChanged },
+//         }));
+
+//         wrapper.setProps({
+//             input: {
+//                 onChange,
+//             },
+//         });
+//         wrapper.update();
+
+//         expect(onChange).toHaveBeenCalled();
+//     });
+// });
