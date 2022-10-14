@@ -374,7 +374,10 @@ export const AttachedFiles = ({
                     .sort((a, b) => a.fileOrder - b.fileOrder)
                     .map((item, index) => (
                         <React.Fragment key={item.id}>
-                            <div style={{ padding: 8 }}>
+                            <div
+                                style={{ padding: 8 }}
+                                data-testid={`fez-datastream-info-attached-list-row-${item.id}`}
+                            >
                                 <Grid container className={classes.header} spacing={3}>
                                     <Grid item xs={12}>
                                         <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
@@ -383,6 +386,7 @@ export const AttachedFiles = ({
                                                     disabled={index === 0}
                                                     className={classes.upDownArrow}
                                                     id={`order-up-file-${index}`}
+                                                    data-testid={`order-up-file-${index}`}
                                                     onClick={() => onFileOrderChangeUp(item.fileName, index + 1)}
                                                 >
                                                     <ExpandLess />
@@ -526,6 +530,7 @@ export const AttachedFiles = ({
                                                     className={classes.upDownArrow}
                                                     disabled={index === fileData.length - 1}
                                                     id={`order-down-file-${index}`}
+                                                    data-testid={`order-down-file-${index}`}
                                                     onClick={() => onFileOrderChangeDown(item.fileName, index + 1)}
                                                 >
                                                     <ExpandMore />
@@ -540,13 +545,13 @@ export const AttachedFiles = ({
                 {preview.mediaUrl && preview.mimeType && (
                     <MediaPreview {...preview} onClose={hidePreview} id="media-preview" />
                 )}
+                {/* istanbul ignore next*/
+                errorMessage.length > 0 && (
+                    <Grid item xs={12}>
+                        <Alert alertId="alert-files" title={errorTitle} message={errorMessage} type="error" />
+                    </Grid>
+                )}
             </StandardCard>
-            {/* istanbul ignore next*/
-            errorMessage.length > 0 && (
-                <Grid item xs={12}>
-                    <Alert title={errorTitle} message={errorMessage} type="error" />
-                </Grid>
-            )}
         </Grid>
     );
 };

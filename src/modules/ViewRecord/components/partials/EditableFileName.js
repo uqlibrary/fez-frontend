@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Hidden } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
-import Input from '@material-ui/core/Input';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -24,6 +24,10 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
+export const getFilenamePart = filename => filename.split('.').shift();
+export const getFilenameExtension = filename => filename.split('.').pop();
+export const getNewFilename = (filename, extension) => `${filename}.${extension}`;
+
 const EditableFileName = ({
     onFileNameChange,
     onFileSaveFilename,
@@ -40,9 +44,6 @@ const EditableFileName = ({
     const originalFilenameExtRef = useRef(null);
     const editedFilenameRef = useRef(null);
     const [proxyFilename, setProxyFilename] = useState(props.filename);
-
-    const getFilenamePart = filename => filename.split('.').shift();
-    const getNewFilename = filename => `${filename}.${originalFilenameExtRef.current}`;
 
     useEffect(() => {
         // update state of filename whenever a new value is passed in props.
@@ -73,17 +74,18 @@ const EditableFileName = ({
         setIsEdited(!!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current);
         // reset the filename to the last previous state (which may be an edited filename)
         setProxyFilename(getFilenamePart(editedFilenameRef.current ?? originalFilenameRef.current));
+        onFileCancelEdit?.();
     };
 
     const handleFileEditFilename = () => {
         // save the initial filename in case we need to reset
         !!!originalFilenameRef.current && (originalFilenameRef.current = props.fileName);
-        !!!originalFilenameExtRef.current && (originalFilenameExtRef.current = props.fileName.split('.').pop());
+        !!!originalFilenameExtRef.current && (originalFilenameExtRef.current = getFilenameExtension(props.fileName));
         setIsEditing(true);
     };
 
     const handleFileSaveFilename = () => {
-        const newFilename = getNewFilename(proxyFilename);
+        const newFilename = getNewFilename(proxyFilename, originalFilenameExtRef.current);
         const isValid = checkFileNameForErrors(newFilename);
 
         setIsValid(isValid);
@@ -124,7 +126,12 @@ const EditableFileName = ({
                             <Grid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>
                                 {!!!isEdited && <FileName {...props} />}
                                 {!!isEdited && (
-                                    <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
+                                    <Typography
+                                        data-testid={`${props.id}-edited`}
+                                        variant="body2"
+                                        color="textPrimary"
+                                        className={classes.labelTruncated}
+                                    >
                                         {editedFilenameRef.current}
                                     </Typography>
                                 )}
@@ -156,48 +163,59 @@ const EditableFileName = ({
                     <Hidden mdUp>
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
-                            <Typography variant="body2" color="textPrimary" className={classes.labelTruncated}>
+                            <Typography
+                                data-testid={`${props.id}-edited`}
+                                variant="body2"
+                                color="textPrimary"
+                                className={classes.labelTruncated}
+                            >
                                 {editedFilenameRef.current}
                             </Typography>
                         )}
                     </Hidden>
                 </>
             ) : (
-                <Input
-                    autoFocus
-                    required
-                    error={!isValid}
-                    type={'text'}
-                    value={proxyFilename}
-                    onChange={onFilenameChangeProxy}
-                    onKeyPress={key => handleKeyPress(key, handleFileSaveFilename)}
-                    id={`${props.id}-editing`}
-                    data-testid={`${props.id}-editing`}
-                    endAdornment={
-                        <>
-                            <InputAdornment position="end">
-                                <IconButton
-                                    aria-label="save rename"
-                                    onClick={handleFileSaveFilename}
-                                    size={'small'}
-                                    id={`${props.id}-save`}
-                                    data-testid={`${props.id}-save`}
-                                >
-                                    <CheckIcon />
-                                </IconButton>
-                                <IconButton
-                                    aria-label="cancel rename"
-                                    onClick={handleFileCancelEdit}
-                                    size={'small'}
-                                    id={`${props.id}-cancel`}
-                                    data-testid={`${props.id}-cancel`}
-                                >
-                                    <ClearIcon />
-                                </IconButton>
-                            </InputAdornment>
-                        </>
-                    }
-                />
+                <>
+                    <TextField
+                        autoFocus
+                        fullWidth
+                        hideLabel
+                        required
+                        textFieldId={`${props.id}-editing`}
+                        value={proxyFilename}
+                        onChange={onFilenameChangeProxy}
+                        onKeyPress={key => handleKeyPress(key, handleFileSaveFilename)}
+                        autoComplete="off"
+                        error={!isValid}
+                        InputProps={{
+                            type: 'text',
+                            endAdornment: (
+                                <>
+                                    <InputAdornment position="end">
+                                        <IconButton
+                                            aria-label="save rename"
+                                            onClick={handleFileSaveFilename}
+                                            size={'small'}
+                                            id={`${props.id}-save`}
+                                            data-testid={`${props.id}-save`}
+                                        >
+                                            <CheckIcon />
+                                        </IconButton>
+                                        <IconButton
+                                            aria-label="cancel rename"
+                                            onClick={handleFileCancelEdit}
+                                            size={'small'}
+                                            id={`${props.id}-cancel`}
+                                            data-testid={`${props.id}-cancel`}
+                                        >
+                                            <ClearIcon />
+                                        </IconButton>
+                                    </InputAdornment>
+                                </>
+                            ),
+                        }}
+                    />
+                </>
             )}
         </>
     );

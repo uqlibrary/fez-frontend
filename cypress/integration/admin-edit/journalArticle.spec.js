@@ -456,12 +456,18 @@ context('Journal Article admin edit', () => {
                 .should('have.text', 'Attached files');
             cy.get('p')
                 .eq(0)
+                .should(
+                    'have.text',
+                    'There may be a delay before newly uploaded or renamed files appear on the record.',
+                );
+            cy.get('p')
+                .eq(2)
                 .should('have.text', record.fez_datastream_info[1].dsi_dsid);
             cy.get('input')
                 .eq(0)
                 .should('have.value', record.fez_datastream_info[1].dsi_label);
             cy.get('p')
-                .eq(1)
+                .eq(3)
                 .should('have.text', `${fileSizeInMB} MB`);
             cy.get('input')
                 .eq(1)

@@ -499,7 +499,7 @@ describe('AttachedFiles component', () => {
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-edit'));
             });
-            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+            await waitFor(() => expect(queryByTestId('file-name-0-editing-input')).toBeInTheDocument());
 
             expect(getByTestId('file-name-0-cancel')).toBeInTheDocument(); // cancel btn
             expect(getByTestId('file-name-0-save')).toBeInTheDocument(); // save btn
@@ -513,9 +513,9 @@ describe('AttachedFiles component', () => {
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-edit'));
             });
-            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+            await waitFor(() => expect(queryByTestId('file-name-0-editing-input')).toBeInTheDocument());
 
-            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: badNewFilename } });
+            fireEvent.change(getByTestId('file-name-0-editing-input'), { target: { value: badNewFilename } });
 
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-save'));
@@ -524,7 +524,7 @@ describe('AttachedFiles component', () => {
             // bad filename shouldnt call the save method
             expect(onFilenameSave).not.toHaveBeenCalled();
 
-            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: goodNewFilename } });
+            fireEvent.change(getByTestId('file-name-0-editing-input'), { target: { value: goodNewFilename } });
 
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-save'));
@@ -562,16 +562,16 @@ describe('AttachedFiles component', () => {
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-edit'));
             });
-            await waitFor(() => expect(queryByTestId('file-name-0-editing')).toBeInTheDocument());
+            await waitFor(() => expect(queryByTestId('file-name-0-editing-input')).toBeInTheDocument());
 
-            fireEvent.change(getByTestId('file-name-0-editing'), { target: { value: 'test.pdf.invalid' } });
+            fireEvent.change(getByTestId('file-name-0-editing-input'), { target: { value: 'test.pdf.invalid' } });
 
             act(() => {
                 fireEvent.click(getByTestId('file-name-0-save'));
             });
 
             // state of buttons doesnt change for invalid entries
-            expect(getByTestId('file-name-0-editing')).toBeInTheDocument();
+            expect(getByTestId('file-name-0-editing-input')).toBeInTheDocument();
             expect(queryByTestId('file-name-0-edit')).not.toBeInTheDocument();
         });
     });

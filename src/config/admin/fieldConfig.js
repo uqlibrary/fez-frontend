@@ -1043,7 +1043,7 @@ export default {
                 name: 'filesSection.fez_datastream_info',
                 locale: { ...locale.components.attachedFiles, title: 'Attached files' },
                 canEdit: true,
-                validate: [validation.required, validation.validFileNames],
+                validate: [validation.validFileNames],
             },
         },
         rek_copyright: {

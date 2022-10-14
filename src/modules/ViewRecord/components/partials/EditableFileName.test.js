@@ -19,7 +19,7 @@ const editId = `${id}-edit`;
 const resetId = `${id}-reset`;
 const saveId = `${id}-save`;
 const cancelId = `${id}-cancel`;
-const editingId = `${id}-editing`;
+const editingId = `${id}-editing-input`;
 
 function setup(testProps = {}, renderer = rtlRender) {
     const props = {
