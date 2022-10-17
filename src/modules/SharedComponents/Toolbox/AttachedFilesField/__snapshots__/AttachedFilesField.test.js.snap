@@ -11,7 +11,6 @@ exports[`AttachedFilesField component should render default view 1`] = `
       "fileUploadLimit": 10,
     }
   }
-  input={Object {}}
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
@@ -59,7 +58,6 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
       "fileUploadLimit": 10,
     }
   }
-  input={Object {}}
   meta={
     Object {
       "initial": Immutable.List [

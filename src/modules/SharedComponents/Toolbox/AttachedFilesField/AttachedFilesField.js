@@ -1,4 +1,4 @@
-import React, { useState, useCallback /* , useEffect */ } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
 import { useFormValuesContext } from 'context';
@@ -46,11 +46,11 @@ export const handleDatastreamMultiChange = (dataStreams, setDataStreams) => (key
     setDataStreams(newDataStreams);
 };
 
-// export const handleOnChange = (dataStreams, onChange) => {
-//     onChange(dataStreams);
-// };
+export const handleOnChange = (dataStreams, onChange) => {
+    onChange(dataStreams);
+};
 
-export const AttachedFilesField = props => {
+export const AttachedFilesField = ({ input, ...props }) => {
     const { formValues, onDeleteAttachedFile } = useFormValuesContext();
 
     const [dataStreams, setDataStreams] = useState(() => {
@@ -59,8 +59,7 @@ export const AttachedFilesField = props => {
             : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [];
     });
 
-    // const { onChange } = input;
-
+    const { onChange } = input;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDataStreamOrderChange = useCallback(
         ...datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams),
@@ -69,11 +68,11 @@ export const AttachedFilesField = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams, onDeleteAttachedFile));
 
-    // useEffect(() => {
-    //     console.log('ds change effect');
-    //     return handleOnChange(dataStreams, onChange);
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [dataStreams]);
+    useEffect(() => {
+        // Called when attachment is deleted in the UI
+        return handleOnChange(dataStreams, onChange);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [dataStreams]);
 
     return (
         <AttachedFiles
