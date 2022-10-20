@@ -192,7 +192,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                       securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
                       embargoDate: dataStream.dsi_embargo_date,
                       fileOrder: key + 1,
-                      key: key,
+                      key: dataStream.dsi_id,
                   };
               })
         : [];
@@ -258,8 +258,8 @@ export const AttachedFiles = ({
         onDescriptionChange('dsi_label', event.target.value, indexToChange);
     };
 
-    const onFileOrderChangeUp = (file, index) => onOrderChange(file, index, index - 1);
-    const onFileOrderChangeDown = (file, index) => onOrderChange(file, index, index + 1);
+    const onFileOrderChangeUp = (id, index) => onOrderChange(id, index, index - 1);
+    const onFileOrderChangeDown = (id, index) => onOrderChange(id, index, index + 1);
     const checkFileNamesForErrors = () => {
         const mappedFilenames = fileData.map((file, index) => ({
             index,
@@ -387,7 +387,7 @@ export const AttachedFiles = ({
                                                     className={classes.upDownArrow}
                                                     id={`order-up-file-${index}`}
                                                     data-testid={`order-up-file-${index}`}
-                                                    onClick={() => onFileOrderChangeUp(item.fileName, index + 1)}
+                                                    onClick={() => onFileOrderChangeUp(item.id, index + 1)}
                                                 >
                                                     <ExpandLess />
                                                 </IconButton>
@@ -532,7 +532,7 @@ export const AttachedFiles = ({
                                                     disabled={index === fileData.length - 1}
                                                     id={`order-down-file-${index}`}
                                                     data-testid={`order-down-file-${index}`}
-                                                    onClick={() => onFileOrderChangeDown(item.fileName, index + 1)}
+                                                    onClick={() => onFileOrderChangeDown(item.id, index + 1)}
                                                 >
                                                     <ExpandMore />
                                                 </IconButton>

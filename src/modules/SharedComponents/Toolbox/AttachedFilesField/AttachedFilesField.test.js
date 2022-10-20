@@ -46,17 +46,17 @@ describe('AttachedFilesField component', () => {
 
         it('should create datastream order change callback', () => {
             const dataStreams = [
-                { test1: 'test a', dsi_dsid: 'test_a', dsi_order: 1 },
-                { test1: 'test b', dsi_dsid: 'test_b', dsi_order: 2 },
-                { test1: 'test c', dsi_dsid: 'test_c' },
+                { test1: 'test a', dsi_id: 1, dsi_dsid: 'test_a', dsi_order: 1 },
+                { test1: 'test b', dsi_id: 2, dsi_dsid: 'test_b', dsi_order: 2 },
+                { test1: 'test c', dsi_id: 3, dsi_dsid: 'test_c' },
             ];
             const setDataStreams = jest.fn();
             const callback = datastreamOrderChangeCallbackFactory(dataStreams, setDataStreams)[0];
-            callback('test_b', 2, 1);
+            callback(2, 2, 1);
             expect(setDataStreams).toHaveBeenCalledWith([
-                { test1: 'test a', dsi_dsid: 'test_a', dsi_order: 2 },
-                { test1: 'test b', dsi_dsid: 'test_b', dsi_order: 1 },
-                { test1: 'test c', dsi_dsid: 'test_c', dsi_order: 3 },
+                { test1: 'test a', dsi_id: 1, dsi_dsid: 'test_a', dsi_order: 2 },
+                { test1: 'test b', dsi_id: 2, dsi_dsid: 'test_b', dsi_order: 1 },
+                { test1: 'test c', dsi_id: 3, dsi_dsid: 'test_c', dsi_order: 3 },
             ]);
         });
     });

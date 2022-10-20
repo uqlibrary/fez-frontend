@@ -15,7 +15,7 @@ export const deleteCallbackFactory = (dataStreams, setDataStreams, onDeleteAttac
 };
 
 export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams) => {
-    const callback = (file, oldPosition, newPosition) => {
+    const callback = (fileId, oldPosition, newPosition) => {
         const newDataStreams = [...dataStreams];
 
         newDataStreams.map(
@@ -23,7 +23,7 @@ export const datastreamOrderChangeCallbackFactory = (dataStreams, setDataStreams
                 (item.dsi_order = item.hasOwnProperty('dsi_order') && !!item.dsi_order ? item.dsi_order : index + 1),
         );
 
-        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_dsid === file);
+        const sourceFileIndex = newDataStreams.findIndex(item => item.dsi_id === fileId);
         const replaceFileIndex = newDataStreams.findIndex(item => item.dsi_order === newPosition);
 
         newDataStreams[sourceFileIndex].dsi_order = newPosition;

@@ -145,10 +145,10 @@ describe('AttachedFiles component', () => {
         expect(onDescriptionChangeFn).toHaveBeenCalledWith('dsi_label', 'test file description', 2);
 
         fireEvent.click(getByTestId('order-down-file-1'));
-        expect(onOrderChangeFn).toHaveBeenCalledWith('FezACML_My_UQ_eSpace_researcher_guidelines_2014.pdf.xml', 2, 3);
+        expect(onOrderChangeFn).toHaveBeenCalledWith(2, 2, 3);
 
         fireEvent.click(getByTestId('order-up-file-2'));
-        expect(onOrderChangeFn).toHaveBeenCalledWith('FezACML_My_UQ_eSpace_UPO_guidelines.pdf.xml', 3, 2);
+        expect(onOrderChangeFn).toHaveBeenLastCalledWith(3, 3, 2);
     });
 
     it('should render embargo date field for open access file with embargo date in future', async () => {
