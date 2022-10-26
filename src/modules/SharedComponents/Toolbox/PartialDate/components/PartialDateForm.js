@@ -120,9 +120,9 @@ export class PartialDateForm extends PureComponent {
     }
 
     static getDerivedStateFromProps(props, state) {
-        if (props.onChange) {
-            props.onChange(state.setDate(state));
-        }
+        props.onChange?.(state.setDate(state));
+
+        return { ...state };
     }
 
     /**
@@ -249,7 +249,7 @@ export class PartialDateForm extends PureComponent {
 
         this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
 
-        // moment validation doesn't recognise -1 as a valid date
+        // moment validation doesn't recognise -1 as a valid date.
         const month = date.month === MONTH_UNSELECTED ? null : date.month;
         const day = isNaN(date.day) || !date.day ? null : date.day;
         const momentDate = { ...date, month, day };
