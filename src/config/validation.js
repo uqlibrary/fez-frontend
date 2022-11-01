@@ -178,6 +178,12 @@ export const validFileUpload = value => {
     return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
 
+export const validFileNames = value => {
+    return value && value.some(file => file.hasOwnProperty('isValid') && file.isValid === false)
+        ? locale.validationErrors.fileName
+        : undefined;
+};
+
 export const fileUploadRequired = value => {
     return value === undefined || (value.queue || {}).length === 0
         ? locale.validationErrors.fileUploadRequired

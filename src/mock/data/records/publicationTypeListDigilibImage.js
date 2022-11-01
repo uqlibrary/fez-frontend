@@ -464,6 +464,7 @@ export default {
             "fez_record_search_key_scopus_id": null,
             "fez_datastream_info": [{
                 "dsi_pid": "UQ:108093",
+                "dsi_id": 1,
                 "dsi_dsid": "BA_MM_147.tif",
                 "dsi_embargo_date": null,
                 "dsi_open_access": 1,
@@ -476,6 +477,7 @@ export default {
                 "dsi_security_inherited": 1
             }, {
                 "dsi_pid": "UQ:108093",
+                "dsi_id": 1,
                 "dsi_dsid": "presmd_BA_MM_147.xml",
                 "dsi_embargo_date": null,
                 "dsi_open_access": null,
@@ -488,6 +490,7 @@ export default {
                 "dsi_security_inherited": 0
             }, {
                 "dsi_pid": "UQ:108093",
+                "dsi_id": 1,
                 "dsi_dsid": "preview_BA_MM_147.jpg",
                 "dsi_embargo_date": null,
                 "dsi_open_access": null,
@@ -500,6 +503,7 @@ export default {
                 "dsi_security_inherited": 0
             }, {
                 "dsi_pid": "UQ:108093",
+                "dsi_id": 1,
                 "dsi_dsid": "thumbnail_BA_MM_147.jpg",
                 "dsi_embargo_date": null,
                 "dsi_open_access": null,
@@ -512,7 +516,73 @@ export default {
                 "dsi_security_inherited": 0
             }, {
                 "dsi_pid": "UQ:108093",
+                "dsi_id": 1,
                 "dsi_dsid": "web_BA_MM_147.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image\/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 101340,
+                "dsi_security_policy": 1,
+                "dsi_security_inherited": 0
+            },{
+                "dsi_pid": "UQ:108093",
+                "dsi_id": 2,
+                "dsi_dsid": "BA_MM_147_2.tif",
+                "dsi_embargo_date": null,
+                "dsi_open_access": 1,
+                "dsi_label": "",
+                "dsi_mimetype": "image\/tiff",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 55439244,
+                "dsi_security_policy": 5,
+                "dsi_security_inherited": 1
+            }, {
+                "dsi_pid": "UQ:108093",
+                "dsi_id": 2,
+                "dsi_dsid": "presmd_BA_MM_147_2.xml",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "application\/xml",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 211681,
+                "dsi_security_policy": 1,
+                "dsi_security_inherited": 0
+            }, {
+                "dsi_pid": "UQ:108093",
+                "dsi_id": 2,
+                "dsi_dsid": "preview_BA_MM_147_2.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image\/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 65426,
+                "dsi_security_policy": 1,
+                "dsi_security_inherited": 0
+            }, {
+                "dsi_pid": "UQ:108093",
+                "dsi_id": 2,
+                "dsi_dsid": "thumbnail_BA_MM_147_2.jpg",
+                "dsi_embargo_date": null,
+                "dsi_open_access": null,
+                "dsi_label": "",
+                "dsi_mimetype": "image\/jpeg",
+                "dsi_copyright": null,
+                "dsi_state": "A",
+                "dsi_size": 3381,
+                "dsi_security_policy": 1,
+                "dsi_security_inherited": 0
+            }, {
+                "dsi_pid": "UQ:108093",
+                "dsi_id": 2,
+                "dsi_dsid": "web_BA_MM_147_2.jpg",
                 "dsi_embargo_date": null,
                 "dsi_open_access": null,
                 "dsi_label": "",

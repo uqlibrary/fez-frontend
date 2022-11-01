@@ -121,7 +121,6 @@ export class PartialDateForm extends PureComponent {
 
     static getDerivedStateFromProps(props, state) {
         props.onChange?.(state.setDate(state));
-
         return { ...state };
     }
 

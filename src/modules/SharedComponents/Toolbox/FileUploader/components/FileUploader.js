@@ -15,6 +15,29 @@ import locale from '../locale';
 
 const moment = require('moment');
 
+/**
+ * Process errors into a message
+ *
+ */
+export const getErrorMessage = (errors, locale, fileRestrictionsConfig) => {
+    const { validation } = locale;
+    const errorMessages = [];
+
+    Object.keys(errors).map(errorCode => {
+        const fileNames = errors[errorCode];
+        if (fileNames && fileNames.length > 0 && validation[errorCode]) {
+            errorMessages.push(
+                validation[errorCode]
+                    .replace('[numberOfFiles]', fileNames.length)
+                    .replace('[fileNames]', fileNames.join(', '))
+                    .replace('[maxNumberOfFiles]', `${fileRestrictionsConfig.fileUploadLimit}`),
+            );
+        }
+    });
+
+    return errorMessages.length > 0 ? errorMessages.join('; ') : '';
+};
+
 export class FileUploader extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
@@ -238,7 +261,7 @@ export class FileUploader extends PureComponent {
                 ? totalFiles.map(file => ({ ...file, [config.FILE_META_KEY_ACCESS_CONDITION]: defaultQuickTemplateId }))
                 : totalFiles,
             focusOnIndex: filesInQueue.length,
-            errorMessage: this.getErrorMessage(errorsFromDropzone),
+            errorMessage: getErrorMessage(errorsFromDropzone, this.props.locale, this.props.fileRestrictionsConfig),
         });
     };
 
@@ -329,30 +352,6 @@ export class FileUploader extends PureComponent {
                 ((this.isAnySecurityPolicyPublic(filesInQueue) && isTermsAndConditionsAccepted) ||
                     !this.isAnySecurityPolicyPublic(filesInQueue)))
         );
-    };
-
-    /**
-     * Process errors into a message
-     *
-     * @private
-     */
-    getErrorMessage = errors => {
-        const { validation } = this.props.locale;
-        const errorMessages = [];
-
-        Object.keys(errors).map(errorCode => {
-            const fileNames = errors[errorCode];
-            if (fileNames && fileNames.length > 0 && validation[errorCode]) {
-                errorMessages.push(
-                    validation[errorCode]
-                        .replace('[numberOfFiles]', fileNames.length)
-                        .replace('[fileNames]', fileNames.join(', '))
-                        .replace('[maxNumberOfFiles]', `${this.props.fileRestrictionsConfig.fileUploadLimit}`),
-                );
-            }
-        });
-
-        return errorMessages.length > 0 ? errorMessages.join('; ') : '';
     };
 
     render() {
