@@ -76,9 +76,17 @@ export class FileUploader extends PureComponent {
         };
     }
 
+    componentDidUpdate() {
+        !!this.props.onChange &&
+            this.props.onChange({
+                queue: this.state.filesInQueue,
+                isValid: this.isFileUploadValid(this.state),
+            });
+    }
     componentWillUnmount() {
         this.props.clearFileUpload();
     }
+
     // static contextType = FormValuesContext;
 
     /**
@@ -347,11 +355,6 @@ export class FileUploader extends PureComponent {
     };
 
     render() {
-        !!this.props.onChange &&
-            this.props.onChange({
-                queue: this.state.filesInQueue,
-                isValid: this.isFileUploadValid(this.state),
-            });
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
         const {
             maxFileSize,
