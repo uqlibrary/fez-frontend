@@ -800,6 +800,7 @@ const publicationTypeListJournalArticle = {
             'fez_record_search_key_wok_doc_types': ['Article'],
             'fez_datastream_info': [
                 {
+                    'dsi_id': 1,
                     'dsi_pid': 'UQ:696826',
                     'dsi_dsid': 'FezACML_UQ696826_OA.pdf.xml',
                     'dsi_embargo_date': null,
@@ -813,6 +814,7 @@ const publicationTypeListJournalArticle = {
                     'dsi_security_inherited': 0,
                 },
                 {
+                    'dsi_id': 2,
                     'dsi_pid': 'UQ:696826',
                     'dsi_dsid': 'UQ696826_OA.pdf',
                     'dsi_embargo_date': '2099-10-31',
