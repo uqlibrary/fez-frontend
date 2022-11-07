@@ -9249,7 +9249,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                     Object {
                                                                                       "google_scholar": true,
                                                                                       "orcid": true,
-                                                                                      "publons": false,
                                                                                       "researcher": true,
                                                                                       "scopus": true,
                                                                                     }
@@ -9259,7 +9258,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                     Object {
                                                                                       "google_scholar": "kUemDfMAAAAJ",
                                                                                       "orcid": "0000-0001-1111-1111",
-                                                                                      "publons": null,
                                                                                       "researcher": "A-1137-2007",
                                                                                       "scopus": "35478294000",
                                                                                     }
@@ -9270,7 +9268,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                       Object {
                                                                                         "google_scholar": true,
                                                                                         "orcid": true,
-                                                                                        "publons": false,
                                                                                         "researcher": true,
                                                                                         "scopus": true,
                                                                                       }
@@ -9649,7 +9646,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                       Object {
                                                                                         "google_scholar": "kUemDfMAAAAJ",
                                                                                         "orcid": "0000-0001-1111-1111",
-                                                                                        "publons": null,
                                                                                         "researcher": "A-1137-2007",
                                                                                         "scopus": "35478294000",
                                                                                       }
@@ -9909,21 +9905,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-                                                                                                  id="publons"
+                                                                                                  href="http://www.researcherid.com/rid/A-1137-2007"
+                                                                                                  id="researcher"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-11"
-                                                                                                    data-testid="publons-link"
-                                                                                                    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-                                                                                                    id="publons-link"
+                                                                                                    data-testid="researcher-link"
+                                                                                                    href="http://www.researcherid.com/rid/A-1137-2007"
+                                                                                                    id="researcher-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="You are not linked to Publons - Click for more information"
+                                                                                                      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -9941,11 +9937,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="You are not linked to Publons - Click for more information"
+                                                                                                        title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon publons error"
+                                                                                                          className="fez-icon researcher ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -9959,14 +9955,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="You are not linked to Publons - Click for more information"
+                                                                                                          title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon publons error"
+                                                                                                              class="fez-icon researcher ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="You are not linked to Publons - Click for more information"
+                                                                                                              title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10111,21 +10107,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://www.researcherid.com/rid/A-1137-2007"
-                                                                                                  id="researcher"
+                                                                                                  href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                                                                                                  id="scopus"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-12"
-                                                                                                    data-testid="researcher-link"
-                                                                                                    href="http://www.researcherid.com/rid/A-1137-2007"
-                                                                                                    id="researcher-link"
+                                                                                                    data-testid="scopus-link"
+                                                                                                    href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
+                                                                                                    id="scopus-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                                                                                                      title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -10143,11 +10139,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                                                                                                        title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon researcher ok"
+                                                                                                          className="fez-icon scopus ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -10161,14 +10157,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                                                                                                          title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon researcher ok"
+                                                                                                              class="fez-icon scopus ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
+                                                                                                              title="Your Scopus ID is 35478294000 - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10313,21 +10309,21 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-                                                                                                  id="scopus"
+                                                                                                  href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                                                                                                  id="google_scholar"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
                                                                                                     className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-13"
-                                                                                                    data-testid="scopus-link"
-                                                                                                    href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
-                                                                                                    id="scopus-link"
+                                                                                                    data-testid="google_scholar-link"
+                                                                                                    href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
+                                                                                                    id="google_scholar-link"
                                                                                                     rel="noopener noreferrer"
                                                                                                     tabIndex="0"
                                                                                                     target="_blank"
                                                                                                   >
                                                                                                     <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="Your Scopus ID is 35478294000 - Click to review"
+                                                                                                      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                     >
                                                                                                       <ForwardRef(Tooltip)
                                                                                                         classes={
@@ -10345,11 +10341,11 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                             "touch": "MuiTooltip-touch",
                                                                                                           }
                                                                                                         }
-                                                                                                        title="Your Scopus ID is 35478294000 - Click to review"
+                                                                                                        title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                       >
                                                                                                         <div
                                                                                                           aria-describedby={null}
-                                                                                                          className="fez-icon scopus ok"
+                                                                                                          className="fez-icon google_scholar ok"
                                                                                                           onBlur={[Function]}
                                                                                                           onFocus={[Function]}
                                                                                                           onMouseLeave={[Function]}
@@ -10363,14 +10359,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                                               "width": 32,
                                                                                                             }
                                                                                                           }
-                                                                                                          title="Your Scopus ID is 35478294000 - Click to review"
+                                                                                                          title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                         />
                                                                                                         <ForwardRef(Popper)
                                                                                                           anchorEl={
                                                                                                             <div
-                                                                                                              class="fez-icon scopus ok"
+                                                                                                              class="fez-icon google_scholar ok"
                                                                                                               style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="Your Scopus ID is 35478294000 - Click to review"
+                                                                                                              title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
                                                                                                             />
                                                                                                           }
                                                                                                           className="MuiTooltip-popper"
@@ -10515,214 +10511,12 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                                               >
                                                                                                 <ExternalLink
                                                                                                   className="DashboardResearcherIdsClass-researcherIDlink-6"
-                                                                                                  href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-                                                                                                  id="google_scholar"
-                                                                                                  openInNewIcon={false}
-                                                                                                >
-                                                                                                  <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-14"
-                                                                                                    data-testid="google_scholar-link"
-                                                                                                    href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
-                                                                                                    id="google_scholar-link"
-                                                                                                    rel="noopener noreferrer"
-                                                                                                    tabIndex="0"
-                                                                                                    target="_blank"
-                                                                                                  >
-                                                                                                    <WithStyles(ForwardRef(Tooltip))
-                                                                                                      title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                                                                                                    >
-                                                                                                      <ForwardRef(Tooltip)
-                                                                                                        classes={
-                                                                                                          Object {
-                                                                                                            "arrow": "MuiTooltip-arrow",
-                                                                                                            "popper": "MuiTooltip-popper",
-                                                                                                            "popperArrow": "MuiTooltip-popperArrow",
-                                                                                                            "popperInteractive": "MuiTooltip-popperInteractive",
-                                                                                                            "tooltip": "MuiTooltip-tooltip",
-                                                                                                            "tooltipArrow": "MuiTooltip-tooltipArrow",
-                                                                                                            "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                                                                                                            "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                                                                                                            "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                                                                                                            "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                                                                                                            "touch": "MuiTooltip-touch",
-                                                                                                          }
-                                                                                                        }
-                                                                                                        title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                                                                                                      >
-                                                                                                        <div
-                                                                                                          aria-describedby={null}
-                                                                                                          className="fez-icon google_scholar ok"
-                                                                                                          onBlur={[Function]}
-                                                                                                          onFocus={[Function]}
-                                                                                                          onMouseLeave={[Function]}
-                                                                                                          onMouseOver={[Function]}
-                                                                                                          onTouchEnd={[Function]}
-                                                                                                          onTouchStart={[Function]}
-                                                                                                          style={
-                                                                                                            Object {
-                                                                                                              "borderRadius": 32,
-                                                                                                              "height": 32,
-                                                                                                              "width": 32,
-                                                                                                            }
-                                                                                                          }
-                                                                                                          title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                                                                                                        />
-                                                                                                        <ForwardRef(Popper)
-                                                                                                          anchorEl={
-                                                                                                            <div
-                                                                                                              class="fez-icon google_scholar ok"
-                                                                                                              style="width: 32px; height: 32px; border-radius: 32px;"
-                                                                                                              title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
-                                                                                                            />
-                                                                                                          }
-                                                                                                          className="MuiTooltip-popper"
-                                                                                                          id={null}
-                                                                                                          open={false}
-                                                                                                          placement="bottom"
-                                                                                                          popperOptions={
-                                                                                                            Object {
-                                                                                                              "modifiers": Object {
-                                                                                                                "arrow": Object {
-                                                                                                                  "element": null,
-                                                                                                                  "enabled": false,
-                                                                                                                },
-                                                                                                              },
-                                                                                                            }
-                                                                                                          }
-                                                                                                          transition={true}
-                                                                                                        />
-                                                                                                      </ForwardRef(Tooltip)>
-                                                                                                    </WithStyles(ForwardRef(Tooltip))>
-                                                                                                  </a>
-                                                                                                </ExternalLink>
-                                                                                              </div>
-                                                                                            </ForwardRef(Grid)>
-                                                                                          </WithStyles(ForwardRef(Grid))>
-                                                                                          <WithStyles(ForwardRef(Grid))
-                                                                                            item={true}
-                                                                                            key="4"
-                                                                                          >
-                                                                                            <ForwardRef(Grid)
-                                                                                              classes={
-                                                                                                Object {
-                                                                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center",
-                                                                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
-                                                                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
-                                                                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
-                                                                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
-                                                                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
-                                                                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center",
-                                                                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
-                                                                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
-                                                                                                  "container": "MuiGrid-container",
-                                                                                                  "direction-xs-column": "MuiGrid-direction-xs-column",
-                                                                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
-                                                                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
-                                                                                                  "grid-lg-1": "MuiGrid-grid-lg-1",
-                                                                                                  "grid-lg-10": "MuiGrid-grid-lg-10",
-                                                                                                  "grid-lg-11": "MuiGrid-grid-lg-11",
-                                                                                                  "grid-lg-12": "MuiGrid-grid-lg-12",
-                                                                                                  "grid-lg-2": "MuiGrid-grid-lg-2",
-                                                                                                  "grid-lg-3": "MuiGrid-grid-lg-3",
-                                                                                                  "grid-lg-4": "MuiGrid-grid-lg-4",
-                                                                                                  "grid-lg-5": "MuiGrid-grid-lg-5",
-                                                                                                  "grid-lg-6": "MuiGrid-grid-lg-6",
-                                                                                                  "grid-lg-7": "MuiGrid-grid-lg-7",
-                                                                                                  "grid-lg-8": "MuiGrid-grid-lg-8",
-                                                                                                  "grid-lg-9": "MuiGrid-grid-lg-9",
-                                                                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto",
-                                                                                                  "grid-lg-true": "MuiGrid-grid-lg-true",
-                                                                                                  "grid-md-1": "MuiGrid-grid-md-1",
-                                                                                                  "grid-md-10": "MuiGrid-grid-md-10",
-                                                                                                  "grid-md-11": "MuiGrid-grid-md-11",
-                                                                                                  "grid-md-12": "MuiGrid-grid-md-12",
-                                                                                                  "grid-md-2": "MuiGrid-grid-md-2",
-                                                                                                  "grid-md-3": "MuiGrid-grid-md-3",
-                                                                                                  "grid-md-4": "MuiGrid-grid-md-4",
-                                                                                                  "grid-md-5": "MuiGrid-grid-md-5",
-                                                                                                  "grid-md-6": "MuiGrid-grid-md-6",
-                                                                                                  "grid-md-7": "MuiGrid-grid-md-7",
-                                                                                                  "grid-md-8": "MuiGrid-grid-md-8",
-                                                                                                  "grid-md-9": "MuiGrid-grid-md-9",
-                                                                                                  "grid-md-auto": "MuiGrid-grid-md-auto",
-                                                                                                  "grid-md-true": "MuiGrid-grid-md-true",
-                                                                                                  "grid-sm-1": "MuiGrid-grid-sm-1",
-                                                                                                  "grid-sm-10": "MuiGrid-grid-sm-10",
-                                                                                                  "grid-sm-11": "MuiGrid-grid-sm-11",
-                                                                                                  "grid-sm-12": "MuiGrid-grid-sm-12",
-                                                                                                  "grid-sm-2": "MuiGrid-grid-sm-2",
-                                                                                                  "grid-sm-3": "MuiGrid-grid-sm-3",
-                                                                                                  "grid-sm-4": "MuiGrid-grid-sm-4",
-                                                                                                  "grid-sm-5": "MuiGrid-grid-sm-5",
-                                                                                                  "grid-sm-6": "MuiGrid-grid-sm-6",
-                                                                                                  "grid-sm-7": "MuiGrid-grid-sm-7",
-                                                                                                  "grid-sm-8": "MuiGrid-grid-sm-8",
-                                                                                                  "grid-sm-9": "MuiGrid-grid-sm-9",
-                                                                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto",
-                                                                                                  "grid-sm-true": "MuiGrid-grid-sm-true",
-                                                                                                  "grid-xl-1": "MuiGrid-grid-xl-1",
-                                                                                                  "grid-xl-10": "MuiGrid-grid-xl-10",
-                                                                                                  "grid-xl-11": "MuiGrid-grid-xl-11",
-                                                                                                  "grid-xl-12": "MuiGrid-grid-xl-12",
-                                                                                                  "grid-xl-2": "MuiGrid-grid-xl-2",
-                                                                                                  "grid-xl-3": "MuiGrid-grid-xl-3",
-                                                                                                  "grid-xl-4": "MuiGrid-grid-xl-4",
-                                                                                                  "grid-xl-5": "MuiGrid-grid-xl-5",
-                                                                                                  "grid-xl-6": "MuiGrid-grid-xl-6",
-                                                                                                  "grid-xl-7": "MuiGrid-grid-xl-7",
-                                                                                                  "grid-xl-8": "MuiGrid-grid-xl-8",
-                                                                                                  "grid-xl-9": "MuiGrid-grid-xl-9",
-                                                                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto",
-                                                                                                  "grid-xl-true": "MuiGrid-grid-xl-true",
-                                                                                                  "grid-xs-1": "MuiGrid-grid-xs-1",
-                                                                                                  "grid-xs-10": "MuiGrid-grid-xs-10",
-                                                                                                  "grid-xs-11": "MuiGrid-grid-xs-11",
-                                                                                                  "grid-xs-12": "MuiGrid-grid-xs-12",
-                                                                                                  "grid-xs-2": "MuiGrid-grid-xs-2",
-                                                                                                  "grid-xs-3": "MuiGrid-grid-xs-3",
-                                                                                                  "grid-xs-4": "MuiGrid-grid-xs-4",
-                                                                                                  "grid-xs-5": "MuiGrid-grid-xs-5",
-                                                                                                  "grid-xs-6": "MuiGrid-grid-xs-6",
-                                                                                                  "grid-xs-7": "MuiGrid-grid-xs-7",
-                                                                                                  "grid-xs-8": "MuiGrid-grid-xs-8",
-                                                                                                  "grid-xs-9": "MuiGrid-grid-xs-9",
-                                                                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto",
-                                                                                                  "grid-xs-true": "MuiGrid-grid-xs-true",
-                                                                                                  "item": "MuiGrid-item",
-                                                                                                  "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
-                                                                                                  "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
-                                                                                                  "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
-                                                                                                  "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
-                                                                                                  "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
-                                                                                                  "root": "MuiGrid-root",
-                                                                                                  "spacing-xs-1": "MuiGrid-spacing-xs-1",
-                                                                                                  "spacing-xs-10": "MuiGrid-spacing-xs-10",
-                                                                                                  "spacing-xs-2": "MuiGrid-spacing-xs-2",
-                                                                                                  "spacing-xs-3": "MuiGrid-spacing-xs-3",
-                                                                                                  "spacing-xs-4": "MuiGrid-spacing-xs-4",
-                                                                                                  "spacing-xs-5": "MuiGrid-spacing-xs-5",
-                                                                                                  "spacing-xs-6": "MuiGrid-spacing-xs-6",
-                                                                                                  "spacing-xs-7": "MuiGrid-spacing-xs-7",
-                                                                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8",
-                                                                                                  "spacing-xs-9": "MuiGrid-spacing-xs-9",
-                                                                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
-                                                                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
-                                                                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth",
-                                                                                                }
-                                                                                              }
-                                                                                              item={true}
-                                                                                            >
-                                                                                              <div
-                                                                                                className="MuiGrid-root MuiGrid-item"
-                                                                                              >
-                                                                                                <ExternalLink
-                                                                                                  className="DashboardResearcherIdsClass-researcherIDlink-6"
                                                                                                   href="https://orcid.org/0000-0001-1111-1111"
                                                                                                   id="orcid"
                                                                                                   openInNewIcon={false}
                                                                                                 >
                                                                                                   <a
-                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-15"
+                                                                                                    className="DashboardResearcherIdsClass-researcherIDlink-6 makeStyles-externalLink-9 makeStyles-externalLink-14"
                                                                                                     data-testid="orcid-link"
                                                                                                     href="https://orcid.org/0000-0001-1111-1111"
                                                                                                     id="orcid-link"
@@ -11168,13 +10962,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                             wiggle={null}
                                           >
                                             <div
-                                              className="makeStyles-root-16"
+                                              className="makeStyles-root-15"
                                               data-testid="alert"
                                             >
                                               <WithStyles(ForwardRef(Grid))
                                                 alignContent="center"
                                                 alignItems="flex-start"
-                                                className="makeStyles-info_outline-31 makeStyles-common-17"
+                                                className="makeStyles-info_outline-30 makeStyles-common-16"
                                                 container={true}
                                                 justifyContent="center"
                                                 spacing={3}
@@ -11182,7 +10976,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                 <ForwardRef(Grid)
                                                   alignContent="center"
                                                   alignItems="flex-start"
-                                                  className="makeStyles-info_outline-31 makeStyles-common-17"
+                                                  className="makeStyles-info_outline-30 makeStyles-common-16"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11295,16 +11089,16 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   spacing={3}
                                                 >
                                                   <div
-                                                    className="MuiGrid-root makeStyles-info_outline-31 makeStyles-common-17 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
+                                                    className="MuiGrid-root makeStyles-info_outline-30 makeStyles-common-16 MuiGrid-container MuiGrid-spacing-xs-3 MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                   >
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-linked-24"
+                                                      className="makeStyles-linked-23"
                                                       item={true}
                                                       sm={true}
                                                       xs={12}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-linked-24"
+                                                        className="makeStyles-linked-23"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11417,7 +11211,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={12}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-linked-24 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
+                                                          className="MuiGrid-root makeStyles-linked-23 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true"
                                                         >
                                                           <WithStyles(ForwardRef(Grid))
                                                             alignContent="center"
@@ -11542,13 +11336,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                 className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-flex-start MuiGrid-align-content-xs-center MuiGrid-justify-content-xs-center"
                                                               >
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-icon-20 alert-icon "
+                                                                  className="makeStyles-icon-19 alert-icon "
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-icon-20 alert-icon "
+                                                                    className="makeStyles-icon-19 alert-icon "
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11661,7 +11455,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     onKeyDown={[Function]}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-icon-20 alert-icon  MuiGrid-item"
+                                                                      className="MuiGrid-root makeStyles-icon-19 alert-icon  MuiGrid-item"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11708,14 +11502,14 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                   </ForwardRef(Grid)>
                                                                 </WithStyles(ForwardRef(Grid))>
                                                                 <WithStyles(ForwardRef(Grid))
-                                                                  className="makeStyles-text-21 alert-text"
+                                                                  className="makeStyles-text-20 alert-text"
                                                                   item={true}
                                                                   onClick={[Function]}
                                                                   onKeyDown={[Function]}
                                                                   xs={true}
                                                                 >
                                                                   <ForwardRef(Grid)
-                                                                    className="makeStyles-text-21 alert-text"
+                                                                    className="makeStyles-text-20 alert-text"
                                                                     classes={
                                                                       Object {
                                                                         "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11829,7 +11623,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                                     xs={true}
                                                                   >
                                                                     <div
-                                                                      className="MuiGrid-root makeStyles-text-21 alert-text MuiGrid-item MuiGrid-grid-xs-true"
+                                                                      className="MuiGrid-root makeStyles-text-20 alert-text MuiGrid-item MuiGrid-grid-xs-true"
                                                                       onClick={[Function]}
                                                                       onKeyDown={[Function]}
                                                                     >
@@ -11847,13 +11641,13 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>
                                                     <WithStyles(ForwardRef(Grid))
-                                                      className="makeStyles-actionButton-22"
+                                                      className="makeStyles-actionButton-21"
                                                       item={true}
                                                       sm="auto"
                                                       xs={true}
                                                     >
                                                       <ForwardRef(Grid)
-                                                        className="makeStyles-actionButton-22"
+                                                        className="makeStyles-actionButton-21"
                                                         classes={
                                                           Object {
                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center",
@@ -11966,7 +11760,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                         xs={true}
                                                       >
                                                         <div
-                                                          className="MuiGrid-root makeStyles-actionButton-22 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
+                                                          className="MuiGrid-root makeStyles-actionButton-21 MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-sm-auto"
                                                         >
                                                           <WithStyles(ForwardRef(Button))
                                                             className="action alert-button"

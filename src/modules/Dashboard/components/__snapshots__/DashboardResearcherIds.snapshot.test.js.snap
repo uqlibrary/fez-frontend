@@ -3,31 +3,6 @@
 exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 2`] = `
-<Fragment>
-  <ExternalLink
     href="http://www.researcherid.com/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
@@ -50,7 +25,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 3`] = `
+exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 2`] = `
 <Fragment>
   <ExternalLink
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -75,7 +50,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 4`] = `
+exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 3`] = `
 <Fragment>
   <ExternalLink
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -100,7 +75,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 5`] = `
+exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 4`] = `
 <Fragment>
   <ExternalLink
     href="https://orcid.org/0000-0001-1111-1111"
@@ -128,31 +103,6 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
-<Fragment>
-  <ExternalLink
     href="http://www.researcherid.com/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
@@ -175,7 +125,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
+exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
 <Fragment>
   <ExternalLink
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -200,7 +150,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
+exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
 <Fragment>
   <ExternalLink
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -225,9 +175,9 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 5`] = `""`;
+exports[`Dashboard Researcher IDs test Testing auth internal links 4`] = `""`;
 
-exports[`Dashboard Researcher IDs test Testing auth internal links 6`] = `
+exports[`Dashboard Researcher IDs test Testing auth internal links 5`] = `
 <a
   id="orcid"
   onClick={[Function]}
@@ -245,31 +195,6 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 6`] = `
 exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
-<Fragment>
-  <ExternalLink
     href="http://www.researcherid.com/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
@@ -292,7 +217,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
+exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
 <Fragment>
   <ExternalLink
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -317,7 +242,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
+exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
 <Fragment>
   <ExternalLink
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -342,7 +267,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing orcid caption 5`] = `
+exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
 <Fragment>
   <ExternalLink
     href="https://orcid.org/0000-0001-1111-1111"
@@ -370,31 +295,6 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 5`] = `
 exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-    id="publons"
-    openInNewIcon={false}
-  >
-    <WithStyles(ForwardRef(Tooltip))
-      title="You are not linked to Publons - Click for more information"
-    >
-      <div
-        className="fez-icon publons error"
-        style={
-          Object {
-            "borderRadius": 32,
-            "height": 32,
-            "width": 32,
-          }
-        }
-      />
-    </WithStyles(ForwardRef(Tooltip))>
-  </ExternalLink>
-</Fragment>
-`;
-
-exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
-<Fragment>
-  <ExternalLink
     href="http://www.researcherid.com/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
@@ -417,7 +317,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
+exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
 <Fragment>
   <ExternalLink
     href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
@@ -442,7 +342,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
+exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
 <Fragment>
   <ExternalLink
     href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
@@ -467,9 +367,9 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `
 </Fragment>
 `;
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 5`] = `""`;
+exports[`Dashboard Researcher IDs test Testing unauth internal links 4`] = `""`;
 
-exports[`Dashboard Researcher IDs test Testing unauth internal links 6`] = `
+exports[`Dashboard Researcher IDs test Testing unauth internal links 5`] = `
 <a
   id="orcid"
   onClick={[Function]}
@@ -522,25 +422,6 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
     >
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-3"
-        data-testid="publons-link"
-        href="http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons"
-        id="publons-link"
-        rel="noopener noreferrer"
-        tabindex="0"
-        target="_blank"
-      >
-        <div
-          class="fez-icon publons error"
-          style="width: 32px; height: 32px; border-radius: 32px;"
-          title="You are not linked to Publons - Click for more information"
-        />
-      </a>
-    </div>
-    <div
-      class="MuiGrid-root MuiGrid-item"
-    >
-      <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-4"
         data-testid="researcher-link"
         href="http://www.researcherid.com/rid/A-1137-2007"
         id="researcher-link"
@@ -559,7 +440,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-5"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-4"
         data-testid="scopus-link"
         href="http://www.scopus.com/authid/detail.url?authorId=35478294000"
         id="scopus-link"
@@ -578,7 +459,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-6"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-5"
         data-testid="google_scholar-link"
         href="https://scholar.google.com.au/citations?user=kUemDfMAAAAJ"
         id="google_scholar-link"
@@ -597,7 +478,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       class="MuiGrid-root MuiGrid-item"
     >
       <a
-        class="makeStyles-externalLink-1 makeStyles-externalLink-7"
+        class="makeStyles-externalLink-1 makeStyles-externalLink-6"
         data-testid="orcid-link"
         href="https://orcid.org/0000-0001-1111-1111"
         id="orcid-link"
@@ -625,7 +506,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
             class="MuiIconButton-label"
           >
             <svg
-              class="MuiSvgIcon-root makeStyles-helpIcon-8 MuiSvgIcon-fontSizeSmall"
+              class="MuiSvgIcon-root makeStyles-helpIcon-7 MuiSvgIcon-fontSizeSmall"
               focusable="false"
               role="img"
               viewBox="0 0 24 24"
