@@ -3,7 +3,7 @@
 exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expected for a UQ researcher 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
   >
@@ -103,7 +103,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
 exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
   >
@@ -195,7 +195,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 5`] = `
 exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
   >
@@ -295,7 +295,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
 exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
 <Fragment>
   <ExternalLink
-    href="http://www.researcherid.com/rid/A-1137-2007"
+    href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
     id="researcher"
     openInNewIcon={false}
   >
@@ -423,7 +423,7 @@ exports[`Dashboard Researcher IDs test should show orcid sync UI 1`] = `
       <a
         class="makeStyles-externalLink-1 makeStyles-externalLink-3"
         data-testid="researcher-link"
-        href="http://www.researcherid.com/rid/A-1137-2007"
+        href="https://www.webofscience.com/wos/author/rid/A-1137-2007"
         id="researcher-link"
         rel="noopener noreferrer"
         tabindex="0"

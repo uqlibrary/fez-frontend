@@ -244,7 +244,7 @@ export default {
                     links: {
                         linkedUrl: {
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
-                            researcher: 'http://www.researcherid.com/rid/',
+                            researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
                             orcid: 'https://orcid.org/',
                         },
