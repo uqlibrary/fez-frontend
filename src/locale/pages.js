@@ -236,7 +236,6 @@ export default {
                     orcidLinkPrefix: ' orcid.org/',
                     orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
-                        publons: 'Publons',
                         scopus: 'Scopus',
                         researcher: 'Researcher (ISI)',
                         google_scholar: 'Google Scholar',
@@ -244,14 +243,12 @@ export default {
                     },
                     links: {
                         linkedUrl: {
-                            publons: 'https://publons.com/author/',
                             scopus: 'http://www.scopus.com/authid/detail.url?authorId=',
-                            researcher: 'http://www.researcherid.com/rid/',
+                            researcher: 'https://www.webofscience.com/wos/author/rid/',
                             google_scholar: 'https://scholar.google.com.au/citations?user=',
                             orcid: 'https://orcid.org/',
                         },
                         notLinkedUrl: {
-                            publons: 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
                             scopus:
                                 'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/scopus-authorid',
                             researcher:
