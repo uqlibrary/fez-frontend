@@ -60,6 +60,11 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -162,6 +167,11 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -325,6 +335,11 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -488,6 +503,11 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -710,6 +730,11 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
