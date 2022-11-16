@@ -100,7 +100,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             textFieldId={`dsi-label-upload-${index}`}
                             key={this.props.name}
                             inputProps={{
-                                maxLength: 255,
+                                maxLength: 254,
                             }}
                         />
                     </Grid>
