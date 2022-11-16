@@ -225,6 +225,7 @@ export const AttachedFiles = ({
     const isAdmin = userIsAdmin();
     const isAuthor = userIsAuthor();
     const { openAccessStatusId } = useFormValuesContext();
+    const { formValues: formValuesFromContext } = useFormValuesContext();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
@@ -260,6 +261,25 @@ export const AttachedFiles = ({
 
     const onFileOrderChangeUp = (id, index) => onOrderChange(id, index, index - 1);
     const onFileOrderChangeDown = (id, index) => onOrderChange(id, index, index + 1);
+
+    const checkFileNamesForDupes = excludeIndex => newFilename => {
+        const filesToCheck = [
+            ...dataStreams.filter((_, index) => index !== excludeIndex),
+            ...(formValuesFromContext?.files?.queue?.map(file => ({ dsi_dsid: file.name })) ?? []),
+        ];
+        const hasDupe =
+            filesToCheck?.some(
+                dataStream =>
+                    dataStream.dsi_dsid === newFilename ||
+                    (!!dataStream.dsi_dsid_new && dataStream.dsi_dsid_new === newFilename),
+            ) ?? false;
+        !!hasDupe &&
+            setErrorMessage(
+                fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', newFilename),
+            );
+        return !hasDupe;
+    };
+
     const checkFileNamesForErrors = () => {
         const mappedFilenames = fileData.map((file, index) => ({
             index,
@@ -293,11 +313,11 @@ export const AttachedFiles = ({
         checkFileNamesForErrors();
     };
 
-    const onFileNameChange = id => filename => {
+    const onFileNameChange = id => (originalFilename, previousFilename) => {
         const index = getDsIndex(id);
-        onFilenameChange('dsi_dsid', filename, index);
+        onFilenameChange('dsi_dsid', originalFilename, index, previousFilename);
     };
-    const onFileSaveFilename = id => (originalFilename, filename) => {
+    const onFileSaveFilename = id => (originalFilename, previousFilename, filename) => {
         // dsi_dsid_new key contains original filename. This is picked up when
         // the record is saved in the validator, and processed there.
         const index = getDsIndex(id);
@@ -306,6 +326,7 @@ export const AttachedFiles = ({
                 { key: 'dsi_dsid_new', value: originalFilename },
                 { key: 'dsi_dsid', value: filename },
             ],
+            previousFilename,
             index,
         );
     };
@@ -411,6 +432,7 @@ export const AttachedFiles = ({
                                                         onFileCancelEdit={onFileCancelEdit}
                                                         handleFileIsValid={handleFileIsValid(item.id)}
                                                         checkFileNameForErrors={checkFileNameForErrors(item.id)}
+                                                        checkFileNamesForDupes={checkFileNamesForDupes(index)}
                                                         id={`file-name-${item.id}`}
                                                         key={item.id}
                                                     />

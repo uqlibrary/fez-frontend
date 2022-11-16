@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
+import { FormValuesContext } from 'context';
 
 const styles = () => ({
     hideLabel: {
@@ -44,13 +45,11 @@ export class FileUploadDropzone extends PureComponent {
         fileUploadLimit: PropTypes.number,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
-        existingFiles: PropTypes.array,
     };
 
     static defaultProps = {
         fileUploadLimit: 10,
         filesInQueue: [],
-        existingFiles: [],
         fileNameRestrictions: FILE_NAME_RESTRICTION,
         mimeTypeWhitelist: MIME_TYPE_WHITELIST,
     };
@@ -115,9 +114,12 @@ export class FileUploadDropzone extends PureComponent {
                 const fileNameWithoutExt = file.name.slice(0, file.name.lastIndexOf('.'));
                 !existingFiles.some(
                     item =>
-                        item.rek_file_attachment_name
-                            .slice(0, item.rek_file_attachment_name.lastIndexOf('.'))
-                            .toLowerCase() === fileNameWithoutExt.toLowerCase(),
+                        item.dsi_dsid.slice(0, item.dsi_dsid.lastIndexOf('.')).toLowerCase() ===
+                            fileNameWithoutExt.toLowerCase() ||
+                        // eslint-disable-next-line camelcase
+                        (!!item?.dsi_dsid_new &&
+                            item.dsi_dsid_new.slice(0, item.dsi_dsid_new.lastIndexOf('.')).toLowerCase() ===
+                                fileNameWithoutExt.toLowerCase()),
                 )
                     ? unique.fileNames.push(fileNameWithoutExt) && unique.incomingFiles.push(file)
                     : unique.filesWithSameNameDifferentExt.push(file.name);
@@ -248,7 +250,9 @@ export class FileUploadDropzone extends PureComponent {
      * @private
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
-        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit, existingFiles } = this.props;
+        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
+        // eslint-disable-next-line camelcase
+        const existingFiles = this?.context?.formValues?.fez_datastream_info ?? [];
         const notFiles = [];
         // Remove folders from accepted files (async)
         this.removeDroppedFolders([...incomingFiles], notFiles).then(onlyFiles => {
@@ -298,6 +302,7 @@ export class FileUploadDropzone extends PureComponent {
 
     render() {
         const { maxSize, disabled, locale } = this.props;
+
         return (
             <Grid container>
                 <Grid item xs={12}>
@@ -326,5 +331,7 @@ export class FileUploadDropzone extends PureComponent {
         );
     }
 }
+
+FileUploadDropzone.contextType = FormValuesContext;
 
 export default withStyles(styles)(FileUploadDropzone);
