@@ -783,7 +783,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
                 },
             },
             currentAuthorOrder,
-            data.initialSignificance,
+            data.initialValues?.initialSignificance,
             data.significance,
         ),
         ...getSearchKey(
@@ -795,7 +795,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
                 },
             },
             currentAuthorOrder,
-            data.initialContributionStatements,
+            data.initialValues?.initialContributionStatements,
             (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null,
         ),
     };

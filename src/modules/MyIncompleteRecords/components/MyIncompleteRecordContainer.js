@@ -23,8 +23,9 @@ import { incompleteRecord } from 'config';
 import MyIncompleteRecordForm, { FORM_NAME } from './MyIncompleteRecordForm';
 import { loadRecordToFix, clearFixRecord } from 'actions';
 import { getFormSyncErrors } from 'redux-form/immutable';
+import { userIsAdmin } from 'hooks';
 
-const getInitialValues = (recordToFix, author, canMasquerade, disableInitialGrants) => {
+const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) => {
     const grants = recordToFix.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
         grantAgencyName: grantAgency.rek_grant_agency,
         grantId:
@@ -84,8 +85,8 @@ const getInitialValues = (recordToFix, author, canMasquerade, disableInitialGran
         }));
 
     const initialContributionStatements =
-        (canMasquerade && recordToFix.fez_record_search_key_creator_contribution_statement) || [];
-    const initialSignificance = (canMasquerade && recordToFix.fez_record_search_key_significance) || [];
+        (isAdmin && recordToFix.fez_record_search_key_creator_contribution_statement) || [];
+    const initialSignificance = (isAdmin && recordToFix.fez_record_search_key_significance) || [];
 
     const languages = (recordToFix &&
         (recordToFix.fez_record_search_key_language || []).length > 0 &&
@@ -174,6 +175,7 @@ const getIsAuthorLinked = (recordToFix, author) => {
 export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const isAdmin = userIsAdmin();
     const { pid } = useParams();
 
     /* Reading reducers */
@@ -205,7 +207,7 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
     React.useEffect(() => {
         if (!!recordToFix) {
             setNtroFieldProps(getNtroFieldFlags(recordToFix, author));
-            setInitialValues(getInitialValues(recordToFix, author, account.canMasquerade, disableInitialGrants));
+            setInitialValues(getInitialValues(recordToFix, author, isAdmin, disableInitialGrants));
             setIsNtro(!!recordToFix.rek_subtype && !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype));
             setHasAnyFiles(recordToFix.fez_datastream_info.filter(isFileValid).length > 0);
             setIsAuthorLinked(getIsAuthorLinked(recordToFix, author));
