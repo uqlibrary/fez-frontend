@@ -440,7 +440,7 @@ export const AttachedFiles = ({
                                                             dataStreams,
                                                             formValuesFromContext,
                                                             setErrorMessage,
-                                                            index,
+                                                            getDsIndex(item.id),
                                                         )}
                                                         id={`file-name-${item.id}`}
                                                         key={item.id}
