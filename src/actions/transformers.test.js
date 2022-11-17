@@ -2281,34 +2281,36 @@ describe('transformers', () => {
                         impactStatement: {
                             htmlText: '<span>test</span>',
                         },
-                        initialContributionStatements: [
-                            {
-                                rek_creator_contribution_statement: 'Some statement',
-                                rek_creator_contribution_statement_order: 1,
-                            },
-                            {
-                                rek_creator_contribution_statement: 'Missing',
-                                rek_creator_contribution_statement_order: 2,
-                            },
-                            {
-                                rek_creator_contribution_statement: 'Missing',
-                                rek_creator_contribution_statement_order: 3,
-                            },
-                        ],
-                        initialSignificance: [
-                            {
-                                rek_significance: '1234',
-                                rek_significance_order: 1,
-                            },
-                            {
-                                rek_significance: 0,
-                                rek_significance_order: 2,
-                            },
-                            {
-                                rek_significance: 0,
-                                rek_significance_order: 3,
-                            },
-                        ],
+                        initialValues: {
+                            initialContributionStatements: [
+                                {
+                                    rek_creator_contribution_statement: 'Some statement',
+                                    rek_creator_contribution_statement_order: 1,
+                                },
+                                {
+                                    rek_creator_contribution_statement: 'Missing',
+                                    rek_creator_contribution_statement_order: 2,
+                                },
+                                {
+                                    rek_creator_contribution_statement: 'Missing',
+                                    rek_creator_contribution_statement_order: 3,
+                                },
+                            ],
+                            initialSignificance: [
+                                {
+                                    rek_significance: '1234',
+                                    rek_significance_order: 1,
+                                },
+                                {
+                                    rek_significance: 0,
+                                    rek_significance_order: 2,
+                                },
+                                {
+                                    rek_significance: 0,
+                                    rek_significance_order: 3,
+                                },
+                            ],
+                        },
                         author: {
                             aut_id: 3,
                         },
@@ -2364,34 +2366,36 @@ describe('transformers', () => {
                         impactStatement: {
                             htmlText: '<span>test</span>',
                         },
-                        initialContributionStatements: [
-                            {
-                                rek_creator_contribution_statement: 'Some statement',
-                                rek_creator_contribution_statement_order: 1,
-                            },
-                            {
-                                rek_creator_contribution_statement: 'Missing',
-                                rek_creator_contribution_statement_order: 2,
-                            },
-                            {
-                                rek_creator_contribution_statement: 'Missing',
-                                rek_creator_contribution_statement_order: 3,
-                            },
-                        ],
-                        initialSignificance: [
-                            {
-                                rek_significance: '1234',
-                                rek_significance_order: 1,
-                            },
-                            {
-                                rek_significance: 0,
-                                rek_significance_order: 2,
-                            },
-                            {
-                                rek_significance: 0,
-                                rek_significance_order: 3,
-                            },
-                        ],
+                        initialValues: {
+                            initialContributionStatements: [
+                                {
+                                    rek_creator_contribution_statement: 'Some statement',
+                                    rek_creator_contribution_statement_order: 1,
+                                },
+                                {
+                                    rek_creator_contribution_statement: 'Missing',
+                                    rek_creator_contribution_statement_order: 2,
+                                },
+                                {
+                                    rek_creator_contribution_statement: 'Missing',
+                                    rek_creator_contribution_statement_order: 3,
+                                },
+                            ],
+                            initialSignificance: [
+                                {
+                                    rek_significance: '1234',
+                                    rek_significance_order: 1,
+                                },
+                                {
+                                    rek_significance: 0,
+                                    rek_significance_order: 2,
+                                },
+                                {
+                                    rek_significance: 0,
+                                    rek_significance_order: 3,
+                                },
+                            ],
+                        },
                         author: {
                             aut_id: 3,
                         },
