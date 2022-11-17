@@ -1,8 +1,9 @@
 import React from 'react';
-import AttachedFiles, { getFileOpenAccessStatus } from './AttachedFiles';
+import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 import { openAccessConfig } from 'config';
+import * as fileUploadLocale from '../FileUploader/locale';
 
 import mediaQuery from 'css-mediaquery';
 
@@ -535,6 +536,7 @@ describe('AttachedFiles component', () => {
                     { key: 'dsi_dsid_new', value: originalFilename },
                     { key: 'dsi_dsid', value: `${goodNewFilename}.pdf` },
                 ],
+                null,
                 0,
             );
 
@@ -554,7 +556,7 @@ describe('AttachedFiles component', () => {
                 fireEvent.click(getByTestId('file-name-0-reset'));
             });
 
-            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0);
+            expect(onFilenameChange).toHaveBeenCalledWith('dsi_dsid', originalFilename, 0, badNewFilename);
 
             // code coverage
             await waitFor(() => expect(queryByTestId('file-name-0-edit')).toBeInTheDocument());
@@ -573,6 +575,87 @@ describe('AttachedFiles component', () => {
             // state of buttons doesnt change for invalid entries
             expect(getByTestId('file-name-0-editing-input')).toBeInTheDocument();
             expect(queryByTestId('file-name-0-edit')).not.toBeInTheDocument();
+        });
+    });
+    describe('helper functions', () => {
+        const getErrorMessageFormatted = file =>
+            fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', file);
+        it('checkFileNamesForDupes should check for duplicate filenames after rename 1', () => {
+            const setErrorMessage = jest.fn();
+            const dataStreams = [
+                {
+                    dsi_dsid: 'file1.jpg',
+                },
+                {
+                    dsi_dsid: 'file2_renamed.jpg',
+                    dsi_dsid_new: 'file2.jpg',
+                },
+            ];
+            const formValuesFromContext = [];
+            const excludeIndex = 1;
+            const callback = checkFileNamesForDupes(dataStreams, formValuesFromContext, setErrorMessage, excludeIndex);
+            const expectedErrorMessage = getErrorMessageFormatted('file1.jpg');
+            expect(callback('file1.jpg')).toEqual(false);
+            expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
+            expect(callback('file_new.jpg')).toEqual(true);
+        });
+        it('checkFileNamesForDupes should check for duplicate filenames after rename 2', () => {
+            const setErrorMessage = jest.fn();
+            const dataStreams = [
+                {
+                    dsi_dsid: 'file1.jpg',
+                },
+                {
+                    dsi_dsid: 'file2_renamed.jpg',
+                    dsi_dsid_new: 'file2.jpg',
+                },
+            ];
+            const formValuesFromContext = [];
+            const excludeIndex = 0;
+            const callback = checkFileNamesForDupes(dataStreams, formValuesFromContext, setErrorMessage, excludeIndex);
+            const expectedErrorMessage = getErrorMessageFormatted('file2_renamed.jpg');
+            expect(callback('file2_renamed.jpg')).toEqual(false);
+            expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
+            expect(callback('file2.jpg')).toEqual(false);
+            expect(callback('file_new.jpg')).toEqual(true);
+        });
+        it('checkFileNamesForDupes should check for duplicate filenames with new file attached and before rename', () => {
+            const setErrorMessage = jest.fn();
+            const dataStreams = [
+                {
+                    dsi_dsid: 'file1.jpg',
+                },
+                {
+                    dsi_dsid: 'file2_renamed.jpg',
+                    dsi_dsid_new: 'file2.jpg',
+                },
+            ];
+            const formValuesFromContext = { files: { queue: [{ name: 'attached.jpg' }] } };
+            const excludeIndex = 1;
+            const callback = checkFileNamesForDupes(dataStreams, formValuesFromContext, setErrorMessage, excludeIndex);
+            const expectedErrorMessage = getErrorMessageFormatted('attached.jpg');
+            expect(callback('attached.jpg')).toEqual(false);
+            expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
+            expect(callback('file_new.jpg')).toEqual(true);
+        });
+
+        it('checkFileNamesForDupes should check for duplicate filenames with new file attached and after rename', () => {
+            const setErrorMessage = jest.fn();
+            const dataStreams = [
+                {
+                    dsi_dsid: 'file1.jpg',
+                },
+                {
+                    dsi_dsid: 'attached.jpg',
+                    dsi_dsid_new: 'file2.jpg',
+                },
+            ];
+            const formValuesFromContext = { files: { queue: [{ name: 'attached.jpg' }] } };
+            const excludeIndex = 0;
+            const callback = checkFileNamesForDupes(dataStreams, formValuesFromContext, setErrorMessage, excludeIndex);
+            const expectedErrorMessage = getErrorMessageFormatted('attached.jpg');
+            expect(callback('attached.jpg')).toEqual(false);
+            expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
         });
     });
 });

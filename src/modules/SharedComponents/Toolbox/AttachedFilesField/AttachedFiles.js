@@ -198,6 +198,28 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
         : [];
 };
 
+export const checkFileNamesForDupes = (
+    dataStreams,
+    formValuesFromContext,
+    setErrorMessage,
+    excludeIndex,
+) => newFilename => {
+    const filesToCheck = [
+        ...dataStreams.filter((_, index) => index !== excludeIndex),
+        ...(formValuesFromContext?.files?.queue?.map(file => ({ dsi_dsid: file.name })) ?? []),
+    ];
+    const hasDupe = filesToCheck.some(
+        dataStream =>
+            dataStream.dsi_dsid === newFilename ||
+            (!!dataStream.dsi_dsid_new && dataStream.dsi_dsid_new === newFilename),
+    );
+    !!hasDupe &&
+        setErrorMessage(
+            fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', newFilename),
+        );
+    return !hasDupe;
+};
+
 export const AttachedFiles = ({
     dataStreams,
     disabled,
@@ -261,24 +283,6 @@ export const AttachedFiles = ({
 
     const onFileOrderChangeUp = (id, index) => onOrderChange(id, index, index - 1);
     const onFileOrderChangeDown = (id, index) => onOrderChange(id, index, index + 1);
-
-    const checkFileNamesForDupes = excludeIndex => newFilename => {
-        const filesToCheck = [
-            ...dataStreams.filter((_, index) => index !== excludeIndex),
-            ...(formValuesFromContext?.files?.queue?.map(file => ({ dsi_dsid: file.name })) ?? []),
-        ];
-        const hasDupe =
-            filesToCheck?.some(
-                dataStream =>
-                    dataStream.dsi_dsid === newFilename ||
-                    (!!dataStream.dsi_dsid_new && dataStream.dsi_dsid_new === newFilename),
-            ) ?? false;
-        !!hasDupe &&
-            setErrorMessage(
-                fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', newFilename),
-            );
-        return !hasDupe;
-    };
 
     const checkFileNamesForErrors = () => {
         const mappedFilenames = fileData.map((file, index) => ({
@@ -432,7 +436,12 @@ export const AttachedFiles = ({
                                                         onFileCancelEdit={onFileCancelEdit}
                                                         handleFileIsValid={handleFileIsValid(item.id)}
                                                         checkFileNameForErrors={checkFileNameForErrors(item.id)}
-                                                        checkFileNamesForDupes={checkFileNamesForDupes(index)}
+                                                        checkFileNamesForDupes={checkFileNamesForDupes(
+                                                            dataStreams,
+                                                            formValuesFromContext,
+                                                            setErrorMessage,
+                                                            index,
+                                                        )}
                                                         id={`file-name-${item.id}`}
                                                         key={item.id}
                                                     />
