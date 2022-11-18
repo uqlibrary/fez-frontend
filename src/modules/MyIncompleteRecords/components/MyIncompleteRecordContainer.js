@@ -110,6 +110,12 @@ const getCurrentAuthorOrder = (recordToFix, author) => {
 
 const getNtroFieldFlags = (recordToFix, author) => {
     const currentAuthorOrder = getCurrentAuthorOrder(recordToFix, author);
+    const significance = (recordToFix.fez_record_search_key_significance || []).filter(
+        item => item.rek_significance_order === currentAuthorOrder,
+    );
+    const contributionStatement = (recordToFix.fez_record_search_key_creator_contribution_statement || []).filter(
+        item => item.rek_creator_contribution_statement_order === currentAuthorOrder,
+    );
 
     return {
         hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
@@ -121,20 +127,14 @@ const getNtroFieldFlags = (recordToFix, author) => {
         hideAudienceSize:
             ![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(recordToFix.rek_subtype) ||
             !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size,
-        showSignificance:
-            (recordToFix.fez_record_search_key_significance || []).length === 0 ||
-            recordToFix.fez_record_search_key_significance.filter(
-                item => item.rek_significance_order === currentAuthorOrder && !item.rek_significance,
-            ).length > 0,
+        showSignificance: significance.length === 0 || (significance.length > 0 && !significance[0].rek_significance),
         showContributionStatement:
-            (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
-            recordToFix.fez_record_search_key_creator_contribution_statement.filter(
-                item =>
-                    item.rek_creator_contribution_statement_order === currentAuthorOrder &&
-                    (!item.rek_creator_contribution_statement ||
-                        item.rek_creator_contribution_statement === '' ||
-                        item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder),
-            ).length > 0,
+            contributionStatement.length === 0 ||
+            (contributionStatement.length > 0 &&
+                (!contributionStatement[0].rek_creator_contribution_statement ||
+                    contributionStatement[0].rek_creator_contribution_statement === '' ||
+                    contributionStatement[0].rek_creator_contribution_statement ===
+                        locale.global.defaultAuthorDataPlaceholder)),
     };
 };
 
