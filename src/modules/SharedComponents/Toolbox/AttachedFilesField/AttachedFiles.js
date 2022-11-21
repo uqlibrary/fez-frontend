@@ -23,7 +23,7 @@ import * as fileUploadConfig from '../FileUploader/config';
 import { getErrorMessage } from '../FileUploader/components/FileUploader';
 import { removeInvalidFileNames } from '../FileUploader/components/FileUploadDropzone';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
-import EditableFileName from 'modules/ViewRecord/components/partials/EditableFileName';
+import EditableFileName, { getFilenamePart } from 'modules/ViewRecord/components/partials/EditableFileName';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
 import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -208,10 +208,11 @@ export const checkFileNamesForDupes = (
         ...dataStreams.filter((_, index) => index !== excludeIndex),
         ...(formValuesFromContext?.files?.queue?.map(file => ({ dsi_dsid: file.name })) ?? []),
     ];
+    const newFilenamePart = getFilenamePart(newFilename);
     const hasDupe = filesToCheck.some(
         dataStream =>
-            dataStream.dsi_dsid === newFilename ||
-            (!!dataStream.dsi_dsid_new && dataStream.dsi_dsid_new === newFilename),
+            getFilenamePart(dataStream.dsi_dsid) === newFilenamePart ||
+            (!!dataStream.dsi_dsid_new && getFilenamePart(dataStream.dsi_dsid_new) === newFilenamePart),
     );
     !!hasDupe &&
         setErrorMessage(

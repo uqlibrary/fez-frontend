@@ -580,7 +580,7 @@ describe('AttachedFiles component', () => {
     describe('helper functions', () => {
         const getErrorMessageFormatted = file =>
             fileUploadLocale.default.validation.sameFileNameWithDifferentExt.replace('[fileNames]', file);
-        it('checkFileNamesForDupes should check for duplicate filenames after rename 1', () => {
+        it('checkFileNamesForDupes should check for duplicate filenames after rename', () => {
             const setErrorMessage = jest.fn();
             const dataStreams = [
                 {
@@ -599,7 +599,26 @@ describe('AttachedFiles component', () => {
             expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
             expect(callback('file_new.jpg')).toEqual(true);
         });
-        it('checkFileNamesForDupes should check for duplicate filenames after rename 2', () => {
+        it('checkFileNamesForDupes should check for duplicate filenames with different extensions after rename', () => {
+            const setErrorMessage = jest.fn();
+            const dataStreams = [
+                {
+                    dsi_dsid: 'file1.pdf',
+                },
+                {
+                    dsi_dsid: 'file2_renamed.jpg',
+                    dsi_dsid_new: 'file2.jpg',
+                },
+            ];
+            const formValuesFromContext = [];
+            const excludeIndex = 1;
+            const callback = checkFileNamesForDupes(dataStreams, formValuesFromContext, setErrorMessage, excludeIndex);
+            const expectedErrorMessage = getErrorMessageFormatted('file1.jpg');
+            expect(callback('file1.jpg')).toEqual(false); // test file names with different extensions are captured
+            expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
+            expect(callback('file_new.jpg')).toEqual(true);
+        });
+        it('checkFileNamesForDupes should check for duplicate filenames after already renamed', () => {
             const setErrorMessage = jest.fn();
             const dataStreams = [
                 {
