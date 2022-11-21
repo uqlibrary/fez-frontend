@@ -19,4 +19,17 @@ describe('ScaleOfSignificanceTemplate component', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render with author name', () => {
+        const wrapper = setup({
+            item: {
+                id: 0,
+                value: {},
+                author: {
+                    rek_author: 'author',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -4,11 +4,11 @@ import React from 'react';
 import Immutable from 'immutable';
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { incompleteNTRORecordUQ352045 } from 'mock/data/records';
-import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 import { render, WithReduxStore, waitForElementToBeRemoved, WithRouter, fireEvent, waitFor } from 'test-utils';
 import * as repositories from 'repositories';
 
 import { useParams } from 'react-router';
+import * as UserIsAdmin from 'hooks/userIsAdmin';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ pid: 'UQ:123456' })),
@@ -44,9 +44,6 @@ describe('MyIncompleteRecordContainer', () => {
             {
                 accountReducer: {
                     author: { aut_id: 78691 },
-                    account: {
-                        canMasquerade: false,
-                    },
                 },
             },
         );
@@ -79,9 +76,6 @@ describe('MyIncompleteRecordContainer', () => {
             {
                 accountReducer: {
                     author: { aut_id: 78691 },
-                    account: {
-                        canMasquerade: false,
-                    },
                 },
             },
         );
@@ -101,9 +95,6 @@ describe('MyIncompleteRecordContainer', () => {
             {
                 accountReducer: {
                     author: { aut_id: 78692 },
-                    account: {
-                        canMasquerade: false,
-                    },
                 },
             },
         );
@@ -114,6 +105,8 @@ describe('MyIncompleteRecordContainer', () => {
     });
 
     it('should load all contributor statements for logged in admin user', async () => {
+        const userIsAdmin = jest.spyOn(UserIsAdmin, 'userIsAdmin');
+        userIsAdmin.mockImplementation(() => true);
         mockApi.onGet(repositories.routes.EXISTING_RECORD_API({ pid: 'UQ:111111' }).apiUrl).replyOnce(200, {
             data: {
                 ...incompleteNTRORecordUQ352045,
@@ -220,9 +213,6 @@ describe('MyIncompleteRecordContainer', () => {
             {
                 accountReducer: {
                     author: { aut_id: 79324 },
-                    account: {
-                        canMasquerade: true,
-                    },
                 },
             },
         );

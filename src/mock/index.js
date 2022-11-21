@@ -382,6 +382,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.communityRecord },
             { ...mockData.incompleteNTROrecord },
             { ...mockData.incompleteNTRORecordUQ352045 },
+            { ...mockData.incompleteNTRORecordUQe09e0b8 },
             { ...mockData.recordWithoutAuthorIds },
             { ...mockData.recordWithLotOfAuthors },
             { ...mockData.recordWithTiffAndThumbnail },

@@ -76,6 +76,7 @@ export function updateIncompleteRecord(data) {
             'publication',
             'qualityIndicators',
             'significance',
+            'initialValues',
         ];
         keysToDelete.forEach(key => {
             delete patchRecordRequest[key];
