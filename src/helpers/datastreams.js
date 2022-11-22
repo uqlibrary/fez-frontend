@@ -1,5 +1,5 @@
 import { viewRecordsConfig } from '../config';
-import { STATE_ADDED } from '../config/viewRecord';
+import { STATE_ADDED, STATE_DELETED } from '../config/viewRecord';
 import { stripHtml } from './general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
@@ -15,7 +15,7 @@ export const isDerivative = dataStream => {
 };
 
 export const isAdded = datastream => {
-    return datastream.dsi_state === STATE_ADDED;
+    return datastream.dsi_state !== STATE_DELETED;
 };
 
 /**

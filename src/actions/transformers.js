@@ -10,6 +10,7 @@ import {
 import { contentIndicators } from '../config';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
+import { STATE_DELETED } from '../config/viewRecord';
 
 const moment = require('moment');
 
@@ -1402,7 +1403,7 @@ export const getDatastreamInfo = (
                 ...dataStream,
                 ...(dataStreamsLabelMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsLabelMap[dataStream.dsi_dsid] }
-                    : { dsi_state: 'D' }),
+                    : { dsi_state: STATE_DELETED }),
                 ...(dataStreamsSecurityMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsSecurityMap[dataStream.dsi_dsid] }
                     : {}),
