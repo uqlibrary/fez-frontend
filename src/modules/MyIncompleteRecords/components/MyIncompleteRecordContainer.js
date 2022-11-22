@@ -23,8 +23,9 @@ import { incompleteRecord } from 'config';
 import MyIncompleteRecordForm, { FORM_NAME } from './MyIncompleteRecordForm';
 import { loadRecordToFix, clearFixRecord } from 'actions';
 import { getFormSyncErrors } from 'redux-form/immutable';
+import { userIsAdmin } from 'hooks';
 
-const getInitialValues = (recordToFix, author, canMasquerade, disableInitialGrants) => {
+const getInitialValues = (recordToFix, author, isAdmin, disableInitialGrants) => {
     const grants = recordToFix.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
         grantAgencyName: grantAgency.rek_grant_agency,
         grantId:
@@ -84,8 +85,8 @@ const getInitialValues = (recordToFix, author, canMasquerade, disableInitialGran
         }));
 
     const initialContributionStatements =
-        (canMasquerade && recordToFix.fez_record_search_key_creator_contribution_statement) || [];
-    const initialSignificance = (canMasquerade && recordToFix.fez_record_search_key_significance) || [];
+        (isAdmin && recordToFix.fez_record_search_key_creator_contribution_statement) || [];
+    const initialSignificance = (isAdmin && recordToFix.fez_record_search_key_significance) || [];
 
     const languages = (recordToFix &&
         (recordToFix.fez_record_search_key_language || []).length > 0 &&
@@ -109,6 +110,12 @@ const getCurrentAuthorOrder = (recordToFix, author) => {
 
 const getNtroFieldFlags = (recordToFix, author) => {
     const currentAuthorOrder = getCurrentAuthorOrder(recordToFix, author);
+    const significance = (recordToFix.fez_record_search_key_significance || []).filter(
+        item => item.rek_significance_order === currentAuthorOrder,
+    );
+    const contributionStatement = (recordToFix.fez_record_search_key_creator_contribution_statement || []).filter(
+        item => item.rek_creator_contribution_statement_order === currentAuthorOrder,
+    );
 
     return {
         hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
@@ -120,20 +127,14 @@ const getNtroFieldFlags = (recordToFix, author) => {
         hideAudienceSize:
             ![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(recordToFix.rek_subtype) ||
             !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size,
-        showSignificance:
-            (recordToFix.fez_record_search_key_significance || []).length === 0 ||
-            recordToFix.fez_record_search_key_significance.filter(
-                item => item.rek_significance_order === currentAuthorOrder && !item.rek_significance,
-            ).length > 0,
+        showSignificance: significance.length === 0 || (significance.length > 0 && !significance[0].rek_significance),
         showContributionStatement:
-            (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
-            recordToFix.fez_record_search_key_creator_contribution_statement.filter(
-                item =>
-                    item.rek_creator_contribution_statement_order === currentAuthorOrder &&
-                    (!item.rek_creator_contribution_statement ||
-                        item.rek_creator_contribution_statement === '' ||
-                        item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder),
-            ).length > 0,
+            contributionStatement.length === 0 ||
+            (contributionStatement.length > 0 &&
+                (!contributionStatement[0].rek_creator_contribution_statement ||
+                    contributionStatement[0].rek_creator_contribution_statement === '' ||
+                    contributionStatement[0].rek_creator_contribution_statement ===
+                        locale.global.defaultAuthorDataPlaceholder)),
     };
 };
 
@@ -174,6 +175,7 @@ const getIsAuthorLinked = (recordToFix, author) => {
 export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) => {
     const dispatch = useDispatch();
     const history = useHistory();
+    const isAdmin = userIsAdmin();
     const { pid } = useParams();
 
     /* Reading reducers */
@@ -205,7 +207,7 @@ export const MyIncompleteRecordContainer = ({ disableInitialGrants, ...rest }) =
     React.useEffect(() => {
         if (!!recordToFix) {
             setNtroFieldProps(getNtroFieldFlags(recordToFix, author));
-            setInitialValues(getInitialValues(recordToFix, author, account.canMasquerade, disableInitialGrants));
+            setInitialValues(getInitialValues(recordToFix, author, isAdmin, disableInitialGrants));
             setIsNtro(!!recordToFix.rek_subtype && !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype));
             setHasAnyFiles(recordToFix.fez_datastream_info.filter(isFileValid).length > 0);
             setIsAuthorLinked(getIsAuthorLinked(recordToFix, author));

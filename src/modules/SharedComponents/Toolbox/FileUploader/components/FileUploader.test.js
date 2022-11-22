@@ -1,6 +1,7 @@
 import { FileUploader } from './FileUploader';
 import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
-import FileUploaderContainer from './FileUploader';
+import FileUploaderContainer, { getErrorMessage } from './FileUploader';
+import locale from '../locale';
 const moment = require('moment');
 
 const getProps = (testProps = {}) => ({
@@ -463,17 +464,21 @@ describe('Component FileUploader', () => {
     });
 
     it('should get correct error message based on errors object', () => {
-        const wrapper = setup();
+        setup();
 
         expect(
-            wrapper.instance().getErrorMessage({
-                tooManyFiles: ['a.txt', 'b.txt'],
-                duplicateFiles: ['c.txt', 'd.txt'],
-                invalidFileNames: ['web_a.txt'],
-                invalidMimeTypeFiles: ['web_a.txt'],
-                notFiles: ['someFolder'],
-                tooBigFiles: ['big_file.txt'],
-            }),
+            getErrorMessage(
+                {
+                    tooManyFiles: ['a.txt', 'b.txt'],
+                    duplicateFiles: ['c.txt', 'd.txt'],
+                    invalidFileNames: ['web_a.txt'],
+                    invalidMimeTypeFiles: ['web_a.txt'],
+                    notFiles: ['someFolder'],
+                    tooBigFiles: ['big_file.txt'],
+                },
+                locale,
+                getProps().fileRestrictionsConfig,
+            ),
         ).toEqual(
             'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; File(s)' +
                 ' (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name;' +
@@ -483,16 +488,20 @@ describe('Component FileUploader', () => {
     });
 
     it('should get empty string as an error message', () => {
-        const wrapper = setup();
+        setup();
         expect(
-            wrapper.instance().getErrorMessage({
-                tooManyFiles: [],
-                duplicateFiles: [],
-                invalidFileNames: [],
-                invalidMimeTypeFiles: [],
-                notFiles: [],
-                tooBigFiles: [],
-            }),
+            getErrorMessage(
+                {
+                    tooManyFiles: [],
+                    duplicateFiles: [],
+                    invalidFileNames: [],
+                    invalidMimeTypeFiles: [],
+                    notFiles: [],
+                    tooBigFiles: [],
+                },
+                locale,
+                getProps().fileRestrictionsConfig,
+            ),
         ).toEqual('');
     });
 

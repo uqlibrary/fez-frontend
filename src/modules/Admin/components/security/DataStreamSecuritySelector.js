@@ -78,7 +78,7 @@ export const DataStreamSecuritySelector = ({ attachedDataStreams, classes, colle
                                 index={index}
                                 inheritedSecurity={mostSecureParentDatastreamSecurity}
                                 initialDataStream={initialDataStreams[index]}
-                                key={dataStream.dsi_dsid}
+                                key={dataStream.dsi_id}
                                 onSecurityChange={handleDataStreamSecurityChange}
                                 policyDropdownLabel={text.overridePolicyPrompt}
                             />

@@ -153,7 +153,6 @@ const mapStateToProps = (state, props) => {
         };
     } else {
         recordToView = state.get('viewRecordReducer').recordToView;
-        // console.log('Reducer State', recordToView);
         locked = state.get('viewRecordReducer').isRecordLocked;
         const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
         initialFormValues =

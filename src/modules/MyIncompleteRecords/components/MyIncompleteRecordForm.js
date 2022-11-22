@@ -11,6 +11,7 @@ export const onSubmit = (values, dispatch, props) => {
         ...values.toJS(),
         publication: { ...props.recordToFix },
         author: { ...props.author },
+        initialValues: { ...(props.initialValues?.toJS() || {}) },
     };
 
     return dispatch(actions.updateIncompleteRecord(data)).catch(error => {

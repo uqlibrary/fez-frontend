@@ -99,6 +99,9 @@ export class FileUploadRowDefaultView extends PureComponent {
                             id={`file-description-input-upload-${index}`}
                             textFieldId={`dsi-label-upload-${index}`}
                             key={this.props.name}
+                            inputProps={{
+                                maxLength: 255,
+                            }}
                         />
                     </Grid>
                     {!!this.props.isAdmin && requireOpenAccessStatus && (

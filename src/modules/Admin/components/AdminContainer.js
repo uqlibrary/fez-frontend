@@ -103,18 +103,7 @@ export const AdminContainer = ({
         }),
         {},
     );
-    // Collections and Communities admin edit currently only has the Security tab, so don't act on errors in other tabs
-    const reducedFormErrors = formErrors => {
-        // if (
-        //     !!recordToView &&
-        //     recordToView.rek_display_type_lookup &&
-        //     (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
-        //         recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
-        // ) {
-        //     return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
-        // }
-        return formErrors;
-    };
+
     const handleToggle = React.useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
     const handleAddFormDisplay = React.useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
@@ -185,7 +174,7 @@ export const AdminContainer = ({
                                 createMode={createMode}
                                 isDeleted={isDeleted}
                                 isJobCreated={isJobCreated}
-                                formErrors={reducedFormErrors(formErrors)}
+                                formErrors={formErrors}
                                 destroy={destroy}
                                 locked={locked}
                                 disabled
