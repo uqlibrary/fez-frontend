@@ -1,5 +1,5 @@
 import { viewRecordsConfig } from '../config';
-import { STATE_ADDED, STATE_DELETED } from '../config/viewRecord';
+import { STATE_DELETED } from '../config/viewRecord';
 import { stripHtml } from './general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
