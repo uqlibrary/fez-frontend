@@ -34,6 +34,7 @@ const EditableFileName = ({
     handleFileIsValid,
     onFileCancelEdit,
     checkFileNameForErrors,
+    checkFileNamesForDupes,
     ...props
 }) => {
     const classes = useStyles();
@@ -60,6 +61,11 @@ const EditableFileName = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.fileName]);
 
+    const setValidFlag = value => {
+        setIsValid(value);
+        handleFileIsValid?.(value);
+    };
+
     const onFilenameChangeProxy = event => {
         // update local filename proxy state var to avoid
         // input lag as the user types
@@ -69,7 +75,7 @@ const EditableFileName = ({
     const handleFileCancelEdit = () => {
         // exit editing mode and set valid to true (last known state)
         setIsEditing(false);
-        setIsValid(true);
+        setValidFlag(true);
         // set edited flag
         setIsEdited(!!editedFilenameRef.current && editedFilenameRef.current !== originalFilenameRef.current);
         // reset the filename to the last previous state (which may be an edited filename)
@@ -86,23 +92,23 @@ const EditableFileName = ({
 
     const handleFileSaveFilename = () => {
         const newFilename = getNewFilename(proxyFilename, originalFilenameExtRef.current);
-        const isValid = checkFileNameForErrors(newFilename);
-
-        setIsValid(isValid);
+        const isValid = checkFileNameForErrors(newFilename) && checkFileNamesForDupes(newFilename);
+        setValidFlag(isValid);
         // only allow exit from edit mode if the entered filename is valid
         if (isValid) {
+            const previousFilename = editedFilenameRef.current;
             editedFilenameRef.current = newFilename;
             setIsEditing(false);
-            onFileSaveFilename?.(originalFilenameRef.current, newFilename);
+            onFileSaveFilename?.(originalFilenameRef.current, previousFilename, newFilename);
         }
     };
 
     const handleFileRestoreFilename = () => {
         setIsEdited(false);
-        setIsValid(true);
-        editedFilenameRef.current = null;
+        setValidFlag(true);
         // reset filename to original value
-        onFileNameChange(originalFilenameRef.current);
+        onFileNameChange(originalFilenameRef.current, editedFilenameRef.current);
+        editedFilenameRef.current = null;
     };
 
     const handleKeyPress = (key, callbackFn) => {
@@ -111,11 +117,6 @@ const EditableFileName = ({
             callbackFn?.(originalFilenameRef.current);
         }
     };
-
-    useEffect(() => {
-        handleFileIsValid?.(isValid);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isValid]);
 
     return (
         <>
@@ -227,6 +228,7 @@ export const EditableFileNameProps = {
     onFileCancelEdit: PropTypes.func,
     handleFileIsValid: PropTypes.func,
     checkFileNameForErrors: PropTypes.func,
+    checkFileNamesForDupes: PropTypes.func,
     ...FileNameProps,
 };
 

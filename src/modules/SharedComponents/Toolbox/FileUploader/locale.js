@@ -56,6 +56,7 @@ export default {
                     m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar,
                     tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                 </li>
+                <li>file names, regardless of extension, must be unique</li>
                 <li>files are uploaded individually and not inside a folder</li>
             </ul>
         </div>

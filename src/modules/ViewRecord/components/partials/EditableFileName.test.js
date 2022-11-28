@@ -32,6 +32,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         mediaUrl: 'https://espace.library.uq.edu.au/view/UQ:676287/test.jpg',
         previewMediaUrl: 'https://espace.library.uq.edu.au/view/UQ:676287/preview_test.jpg',
         onFileSelect: jest.fn(),
+        checkFileNamesForDupes: jest.fn(() => true),
         checkFileNameForErrors: jest.fn(() => true),
         allowDownload: true,
         checksums: { media: '111' },
@@ -80,7 +81,7 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(saveId));
         });
 
-        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', 'renamed.jpg');
+        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', null, 'renamed.jpg');
 
         expect(queryByTestId(editingId)).not.toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();
@@ -110,7 +111,7 @@ describe('Editable File Name Component ', () => {
         // test main enter key
         fireEvent.keyPress(getByTestId(editingId), { key: 'Enter', charCode: 13, code: 'Enter' });
 
-        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', 'renamed.jpg');
+        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', null, 'renamed.jpg');
 
         expect(queryByTestId(editingId)).not.toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();
@@ -260,7 +261,7 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(saveId));
         });
 
-        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', 'renamed.jpg');
+        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', null, 'renamed.jpg');
 
         expect(queryByTestId(editingId)).not.toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();
@@ -278,7 +279,7 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(resetId));
         });
 
-        expect(onFileNameChange).toHaveBeenCalledWith('test.jpg');
+        expect(onFileNameChange).toHaveBeenCalledWith('test.jpg', 'renamed.jpg');
     });
 
     it('should handle resetting to original name a filename renamed more than once', () => {
@@ -303,7 +304,7 @@ describe('Editable File Name Component ', () => {
         act(() => {
             fireEvent.click(getByTestId(saveId));
         });
-        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', 'renamed.jpg');
+        expect(onFileSaveFilename).toHaveBeenCalledWith('test.jpg', null, 'renamed.jpg');
 
         setup(
             {
@@ -324,7 +325,7 @@ describe('Editable File Name Component ', () => {
         act(() => {
             fireEvent.click(getByTestId(saveId));
         });
-        expect(onFileSaveFilename).toHaveBeenLastCalledWith('test.jpg', 'renamed-again.jpg');
+        expect(onFileSaveFilename).toHaveBeenLastCalledWith('test.jpg', 'renamed.jpg', 'renamed-again.jpg');
 
         setup(
             {
@@ -341,6 +342,6 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(resetId));
         });
 
-        expect(onFileNameChange).toHaveBeenCalledWith('test.jpg');
+        expect(onFileNameChange).toHaveBeenCalledWith('test.jpg', 'renamed-again.jpg');
     });
 });
