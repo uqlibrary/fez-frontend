@@ -79,7 +79,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('a.txt'), getMockFile('b.txt')];
-        const existingFiles = [{ rek_file_attachment_name: 'a.doc' }];
+        const existingFiles = [{ dsi_dsid: 'a.doc' }];
         const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
             .instance()
             .removeDuplicate(files, [], existingFiles);
@@ -92,7 +92,20 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('filea.txt'), getMockFile('fileb.txt')];
-        const existingFiles = [{ rek_file_attachment_name: 'FiLeA.doc' }];
+        const existingFiles = [{ dsi_dsid: 'FiLeA.doc' }];
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+            .instance()
+            .removeDuplicate(files, [], existingFiles);
+        expect(uniqueFiles.length).toEqual(1);
+        expect(duplicateFiles.length).toEqual(0);
+        expect(sameFileNameWithDifferentExt.length).toEqual(1);
+    });
+
+    it('should remove files with same filename but different extension from dropped incoming files if already exist or uses a renamed file name', () => {
+        const wrapper = setup();
+
+        const files = [getMockFile('filea.txt'), getMockFile('fileb.txt')];
+        const existingFiles = [{ dsi_dsid: 'filec.doc', dsi_dsid_new: 'filea.doc' }];
         const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
             .instance()
             .removeDuplicate(files, [], existingFiles);
@@ -105,7 +118,7 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup();
 
         const files = [getMockFile('a.txt'), getMockFile('b.txt'), getMockFile('b.jpg')];
-        const existingFiles = [{ rek_file_attachment_name: 'a.doc' }];
+        const existingFiles = [{ dsi_dsid: 'a.doc' }];
         const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
             .instance()
             .removeDuplicate(files, [], existingFiles);

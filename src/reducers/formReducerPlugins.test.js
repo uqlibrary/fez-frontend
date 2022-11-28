@@ -1,7 +1,7 @@
 import * as plugins from './formReducerPlugins';
 import { actionTypes } from 'redux-form';
 import { Map, List } from 'immutable';
-import { ADMIN_DELETE_ATTACHED_FILE } from 'actions/actionTypes';
+import { ADMIN_DELETE_ATTACHED_FILE, ADMIN_RENAME_ATTACHED_FILE } from 'actions/actionTypes';
 
 describe('Form reducer plugin', () => {
     describe('resetValue: ', () => {
@@ -277,6 +277,31 @@ describe('Form reducer plugin', () => {
             expect(dataStreams.length).toEqual(2);
 
             expect(dataStreams).toEqual([{ dsi_dsid: 'test.mp4' }, { dsi_dsid: 'testing.jpg' }]);
+        });
+
+        it('should rename file provided in action payload', () => {
+            const nextState = plugins.adminReduxFormPlugin(initialState, {
+                type: ADMIN_RENAME_ATTACHED_FILE,
+                payload: {
+                    prev: 'testing.mp4',
+                    next: 'rename.mp4',
+                },
+            });
+
+            const attachment = nextState
+                .get('values')
+                .get('publication')
+                .get('fez_record_search_key_file_attachment_name')
+                .toJS();
+            expect(attachment.length).toEqual(2);
+            expect(
+                nextState
+                    .get('values')
+                    .get('publication')
+                    .get('fez_record_search_key_file_attachment_name')
+                    .get(1)
+                    .get('rek_file_attachment_name'),
+            ).toEqual('rename.mp4');
         });
 
         it('should return given state as it is for action not listed in the plugin', () => {
