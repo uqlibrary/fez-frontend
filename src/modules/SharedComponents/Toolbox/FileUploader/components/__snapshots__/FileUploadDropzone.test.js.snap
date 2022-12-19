@@ -448,7 +448,6 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
         >
           <FileUploadDropzone
             classes={Object {}}
-            existingFiles={Array []}
             fileNameRestrictions={/\\.\\+/}
             fileUploadLimit={10}
             filesInQueue={Array []}
@@ -2501,7 +2500,6 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
           <FileUploadDropzone
             classes={Object {}}
             disabled={true}
-            existingFiles={Array []}
             fileNameRestrictions={/\\.\\+/}
             fileUploadLimit={10}
             filesInQueue={Array []}
@@ -4067,7 +4065,6 @@ exports[`Component FileUploadDropzone should render with styles 1`] = `
       "hideLabel": "FileUploadDropzone-hideLabel-5",
     }
   }
-  existingFiles={Array []}
   fileNameRestrictions={/\\.\\+/}
   fileUploadLimit={10}
   filesInQueue={Array []}

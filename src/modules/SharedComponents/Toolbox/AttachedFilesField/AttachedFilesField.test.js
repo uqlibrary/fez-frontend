@@ -62,32 +62,30 @@ describe('AttachedFilesField component', () => {
     });
 
     describe('handler functions', () => {
-        // it('Change handler', () => {
-        //     const dataStreams = [1, 2, 3];
-        //     const onChange = jest.fn();
-        //     handleOnChange(dataStreams, onChange);
-        //     expect(onChange).toHaveBeenCalledWith(dataStreams);
-        // });
         it('DatastreamChange handler', () => {
             const dataStreams = [{ test1: 'test a' }, { test1: 'test b' }, { test1: 'test c' }];
             const setDataStreams = jest.fn();
-            const callback = handleDatastreamChange(dataStreams, setDataStreams);
-            callback('test2', 'test b2', 1);
+            const onRenameAttachedFile = jest.fn();
+            const callback = handleDatastreamChange(dataStreams, setDataStreams, onRenameAttachedFile);
+            callback('test2', 'test b2', 1, 'test b');
             expect(setDataStreams).toHaveBeenCalledWith([
                 { test1: 'test a' },
                 { test1: 'test b', test2: 'test b2' },
                 { test1: 'test c' },
             ]);
+            expect(onRenameAttachedFile).toHaveBeenCalledWith('test b', 'test b2');
         });
         it('DatastreamMultiChange handler', () => {
             const dataStreams = [{ dsi_dsid: 'test a' }, { dsi_dsid: 'test b' }, { dsi_dsid: 'test c' }];
             const setDataStreams = jest.fn();
-            const callback = handleDatastreamMultiChange(dataStreams, setDataStreams);
+            const onRenameAttachedFile = jest.fn();
+            const callback = handleDatastreamMultiChange(dataStreams, setDataStreams, onRenameAttachedFile);
             callback(
                 [
                     { key: 'dsi_dsid_new', value: 'test b' },
                     { key: 'dsi_dsid', value: 'new test b' },
                 ],
+                null,
                 1,
             );
             expect(setDataStreams).toHaveBeenCalledWith([
@@ -95,6 +93,7 @@ describe('AttachedFilesField component', () => {
                 { dsi_dsid: 'new test b', dsi_dsid_new: 'test b' },
                 { dsi_dsid: 'test c' },
             ]);
+            expect(onRenameAttachedFile).toHaveBeenCalledWith('test b', 'new test b');
         });
     });
 });

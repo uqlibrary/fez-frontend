@@ -675,6 +675,15 @@ export const deleteAttachedFile = file => {
     };
 };
 
+export const renameAttachedFile = (prev, next) => {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_RENAME_ATTACHED_FILE,
+            payload: { prev, next },
+        });
+    };
+};
+
 export const unlockRecord = (pid, unlockRecordCallback) => {
     return dispatch => {
         dispatch({

@@ -1,5 +1,5 @@
 import { actionTypes } from 'redux-form';
-import { ADMIN_DELETE_ATTACHED_FILE } from 'actions/actionTypes';
+import { ADMIN_DELETE_ATTACHED_FILE, ADMIN_RENAME_ATTACHED_FILE } from 'actions/actionTypes';
 
 import { PUBLICATION_TYPE_CONFERENCE_PAPER, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 
@@ -35,6 +35,27 @@ export const resetValue = (state, action) => {
 
 export const adminReduxFormPlugin = (state, action) => {
     switch (action.type) {
+        case ADMIN_RENAME_ATTACHED_FILE:
+            const oldFileName = action.payload.prev;
+            const newFileName = action.payload.next;
+            const originalFileAttachmentIndex = state
+                .get('values')
+                .get('publication')
+                .get('fez_record_search_key_file_attachment_name')
+                .findIndex(file => {
+                    return file.get('rek_file_attachment_name') === oldFileName;
+                });
+            const newState = state.setIn(
+                [
+                    'values',
+                    'publication',
+                    'fez_record_search_key_file_attachment_name',
+                    originalFileAttachmentIndex,
+                    'rek_file_attachment_name',
+                ],
+                newFileName,
+            );
+            return newState;
         case ADMIN_DELETE_ATTACHED_FILE:
             const fileName = action.payload.dsi_dsid;
             const fileAttachmentName = state
