@@ -63,7 +63,7 @@ export class OpenAccessIcon extends PureComponent {
                         </span>
                     )}
                     <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                        <LockClockOutlined color="#989898" />
+                        <LockClockOutlined />
                     </Tooltip>
                 </Fragment>
             );
