@@ -37,6 +37,8 @@ import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../help
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 import FileAvStateIcon from './FileAvStateIcon';
+import Box from '@material-ui/core/Box';
+import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -454,6 +456,9 @@ export const AttachedFiles = ({
                                                         {...item}
                                                         onFileSelect={showPreview}
                                                         id={`file-name-${item.id}`}
+                                                        allowDownload={
+                                                            isAdmin && item.avCheck.state !== AV_CHECK_STATE_INFECTED
+                                                        }
                                                     />
                                                 )}
                                             </Grid>
@@ -491,39 +496,42 @@ export const AttachedFiles = ({
                                                 </Grid>
                                             </Hidden>
                                             {!isEditing && (
-                                                <Grid container wrap="nowrap" sm={1}>
-                                                    <Grid
-                                                        container
-                                                        wrap="nowrap"
-                                                        md={6}
-                                                        sm={10}
-                                                        xs={2}
-                                                        style={{ marginLeft: 'auto' }}
-                                                    >
-                                                        <FileAvStateIcon
-                                                            state={item.avCheck?.state}
-                                                            checkedAt={item.avCheck?.date}
-                                                        />
-                                                        <OpenAccessIcon
-                                                            {...item.openAccessStatus}
-                                                            securityStatus={item.securityStatus}
-                                                        />
-                                                    </Grid>
-                                                </Grid>
-                                            )}
-                                            {isEditing && (
-                                                <Grid container wrap="nowrap" md={3} sm={4}>
-                                                    <Grid container wrap="nowrap" xs={3}>
-                                                        <Hidden smDown>
+                                                <Grid item xs style={{ textAlign: 'right' }}>
+                                                    <Box style={{ whiteSpace: 'nowrap' }}>
+                                                        <Box component={'span'} paddingRight={1}>
                                                             <FileAvStateIcon
                                                                 state={item.avCheck?.state}
                                                                 checkedAt={item.avCheck?.date}
                                                             />
-                                                        </Hidden>
-                                                        <OpenAccessIcon
-                                                            {...item.openAccessStatus}
-                                                            securityStatus={item.securityStatus}
-                                                        />
+                                                        </Box>
+                                                        <Box component={'span'} paddingRight={1}>
+                                                            <OpenAccessIcon
+                                                                {...item.openAccessStatus}
+                                                                securityStatus={item.securityStatus}
+                                                            />
+                                                        </Box>
+                                                    </Box>
+                                                </Grid>
+                                            )}
+                                            {isEditing && (
+                                                <Grid container wrap="nowrap" md={3} sm={4}>
+                                                    <Grid item xs={3}>
+                                                        <Box style={{ whiteSpace: 'nowrap' }}>
+                                                            <Hidden smDown>
+                                                                <Box component={'span'} paddingRight={1}>
+                                                                    <FileAvStateIcon
+                                                                        state={item.avCheck?.state}
+                                                                        checkedAt={item.avCheck?.date}
+                                                                    />
+                                                                </Box>
+                                                            </Hidden>
+                                                            <Box component={'span'} paddingRight={1}>
+                                                                <OpenAccessIcon
+                                                                    {...item.openAccessStatus}
+                                                                    securityStatus={item.securityStatus}
+                                                                />
+                                                            </Box>
+                                                        </Box>
                                                     </Grid>
                                                     {/* cypress test does not like full stop in the id */}
                                                     <Grid

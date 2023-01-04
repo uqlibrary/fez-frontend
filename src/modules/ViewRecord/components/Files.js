@@ -15,7 +15,7 @@ import { withStyles } from '@material-ui/core/styles';
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig } from 'config';
-import { CURRENT_LICENCES } from 'config/general';
+import { AV_CHECK_STATE_INFECTED, CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -27,6 +27,7 @@ import Thumbnail from './partials/Thumbnail';
 import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 import FileAvStateIcon from '../../SharedComponents/Toolbox/AttachedFilesField/FileAvStateIcon';
+import Box from '@material-ui/core/Box';
 
 export const styles = theme => ({
     header: {
@@ -532,6 +533,7 @@ export class FilesClass extends Component {
                                         id={`file-name-${index}`}
                                         downloadLicence={getDownloadLicence(publication)}
                                         onFileSelect={this.showPreview}
+                                        allowDownload={item.avCheck.state !== AV_CHECK_STATE_INFECTED}
                                     />
                                 </Grid>
                                 <Hidden xsDown>
@@ -560,13 +562,20 @@ export class FilesClass extends Component {
                                     </Grid>
                                 </Hidden>
                                 <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
-                                    <div style={{ whiteSpace: 'nowrap' }}>
-                                        <FileAvStateIcon state={item.avCheck?.state} checkedAt={item.avCheck?.date} />
-                                        <OpenAccessIcon
-                                            {...item.openAccessStatus}
-                                            securityStatus={item.securityStatus}
-                                        />
-                                    </div>
+                                    <Box style={{ whiteSpace: 'nowrap' }}>
+                                        <Box component={'span'} paddingRight={1}>
+                                            <FileAvStateIcon
+                                                state={item.avCheck?.state}
+                                                checkedAt={item.avCheck?.date}
+                                            />
+                                        </Box>
+                                        <Box component={'span'} paddingRight={1}>
+                                            <OpenAccessIcon
+                                                {...item.openAccessStatus}
+                                                securityStatus={item.securityStatus}
+                                            />
+                                        </Box>
+                                    </Box>
                                 </Grid>
                             </Grid>
                         </div>
