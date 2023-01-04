@@ -446,30 +446,17 @@ exports[`Journal Name Component test  should render closed access 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate={null}
             isOpenAccess={false}
             openAccessStatusId={1234}
+            securityStatus={true}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
-                Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
-                }
-              }
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={1234}
-              securityStatus={true}
-              showEmbargoText={false}
-            >
-              <span
-                className="noOaIcon"
-              />
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+            <span
+              className="noOaIcon"
+            />
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -923,222 +910,388 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate="2019-01-01"
             isOpenAccess={false}
             openAccessStatusId={453694}
+            securityStatus={true}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
+            <WithStyles(ForwardRef(Tooltip))
+              TransitionComponent={
                 Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "children": [Function],
+                    "disableStrictModeCompat": [Function],
+                    "in": [Function],
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "style": [Function],
+                    "timeout": [Function],
+                  },
+                  "render": [Function],
                 }
               }
-              embargoDate="2019-01-01"
-              isOpenAccess={false}
-              openAccessStatusId={453694}
-              securityStatus={true}
-              showEmbargoText={false}
+              placement="left"
+              title="Link (no DOI) - Open access after 2019-01-01"
             >
-              <WithStyles(ForwardRef(Badge))
-                badgeContent={
-                  <Memo
-                    className="OpenAccessIcon-embargoedBadgeStyle-2"
-                    fontSize="small"
-                  />
+              <ForwardRef(Tooltip)
+                TransitionComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "propTypes": Object {
+                      "children": [Function],
+                      "disableStrictModeCompat": [Function],
+                      "in": [Function],
+                      "onEnter": [Function],
+                      "onEntered": [Function],
+                      "onEntering": [Function],
+                      "onExit": [Function],
+                      "onExited": [Function],
+                      "onExiting": [Function],
+                      "style": [Function],
+                      "timeout": [Function],
+                    },
+                    "render": [Function],
+                  }
                 }
+                classes={
+                  Object {
+                    "arrow": "MuiTooltip-arrow",
+                    "popper": "MuiTooltip-popper",
+                    "popperArrow": "MuiTooltip-popperArrow",
+                    "popperInteractive": "MuiTooltip-popperInteractive",
+                    "tooltip": "MuiTooltip-tooltip",
+                    "tooltipArrow": "MuiTooltip-tooltipArrow",
+                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                    "touch": "MuiTooltip-touch",
+                  }
+                }
+                placement="left"
+                title="Link (no DOI) - Open access after 2019-01-01"
               >
-                <ForwardRef(Badge)
-                  badgeContent={
-                    <Memo
-                      className="OpenAccessIcon-embargoedBadgeStyle-2"
-                      fontSize="small"
-                    />
-                  }
-                  classes={
-                    Object {
-                      "anchorOriginBottomLeftCircle": "MuiBadge-anchorOriginBottomLeftCircle",
-                      "anchorOriginBottomLeftCircular": "MuiBadge-anchorOriginBottomLeftCircular",
-                      "anchorOriginBottomLeftRectangle": "MuiBadge-anchorOriginBottomLeftRectangle",
-                      "anchorOriginBottomLeftRectangular": "MuiBadge-anchorOriginBottomLeftRectangular",
-                      "anchorOriginBottomRightCircle": "MuiBadge-anchorOriginBottomRightCircle",
-                      "anchorOriginBottomRightCircular": "MuiBadge-anchorOriginBottomRightCircular",
-                      "anchorOriginBottomRightRectangle": "MuiBadge-anchorOriginBottomRightRectangle",
-                      "anchorOriginBottomRightRectangular": "MuiBadge-anchorOriginBottomRightRectangular",
-                      "anchorOriginTopLeftCircle": "MuiBadge-anchorOriginTopLeftCircle",
-                      "anchorOriginTopLeftCircular": "MuiBadge-anchorOriginTopLeftCircular",
-                      "anchorOriginTopLeftRectangle": "MuiBadge-anchorOriginTopLeftRectangle",
-                      "anchorOriginTopLeftRectangular": "MuiBadge-anchorOriginTopLeftRectangular",
-                      "anchorOriginTopRightCircle": "MuiBadge-anchorOriginTopRightCircle",
-                      "anchorOriginTopRightCircular": "MuiBadge-anchorOriginTopRightCircular",
-                      "anchorOriginTopRightRectangle": "MuiBadge-anchorOriginTopRightRectangle",
-                      "anchorOriginTopRightRectangular": "MuiBadge-anchorOriginTopRightRectangular",
-                      "badge": "MuiBadge-badge",
-                      "colorError": "MuiBadge-colorError",
-                      "colorPrimary": "MuiBadge-colorPrimary",
-                      "colorSecondary": "MuiBadge-colorSecondary",
-                      "dot": "MuiBadge-dot",
-                      "invisible": "MuiBadge-invisible",
-                      "root": "MuiBadge-root",
-                    }
-                  }
+                <ForwardRef(LockClockOutlinedIcon)
+                  aria-describedby={null}
+                  className=""
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
+                  title="Link (no DOI) - Open access after 2019-01-01"
                 >
-                  <span
-                    className="MuiBadge-root"
+                  <ForwardRef(SvgIcon)
+                    aria-describedby={null}
+                    className=""
+                    data-testid="LockClockOutlinedIcon"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    title="Link (no DOI) - Open access after 2019-01-01"
                   >
-                    <WithStyles(ForwardRef(Tooltip))
-                      TransitionComponent={
+                    <MuiSvgIconRoot
+                      aria-describedby={null}
+                      aria-hidden={true}
+                      as="svg"
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                      data-testid="LockClockOutlinedIcon"
+                      focusable="false"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      ownerState={
                         Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "propTypes": Object {
-                            "children": [Function],
-                            "disableStrictModeCompat": [Function],
-                            "in": [Function],
-                            "onEnter": [Function],
-                            "onEntered": [Function],
-                            "onEntering": [Function],
-                            "onExit": [Function],
-                            "onExited": [Function],
-                            "onExiting": [Function],
-                            "style": [Function],
-                            "timeout": [Function],
-                          },
-                          "render": [Function],
+                          "aria-describedby": null,
+                          "children": Array [
+                            <path
+                              d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                            />,
+                            <path
+                              d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                            />,
+                          ],
+                          "className": "",
+                          "color": "inherit",
+                          "component": "svg",
+                          "data-testid": "LockClockOutlinedIcon",
+                          "fontSize": "medium",
+                          "inheritViewBox": false,
+                          "instanceFontSize": undefined,
+                          "onBlur": [Function],
+                          "onFocus": [Function],
+                          "onMouseLeave": [Function],
+                          "onMouseOver": [Function],
+                          "onTouchEnd": [Function],
+                          "onTouchStart": [Function],
+                          "title": "Link (no DOI) - Open access after 2019-01-01",
+                          "viewBox": "0 0 24 24",
                         }
                       }
-                      placement="left"
                       title="Link (no DOI) - Open access after 2019-01-01"
+                      viewBox="0 0 24 24"
                     >
-                      <ForwardRef(Tooltip)
-                        TransitionComponent={
+                      <Insertion
+                        cache={
                           Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "propTypes": Object {
-                              "children": [Function],
-                              "disableStrictModeCompat": [Function],
-                              "in": [Function],
-                              "onEnter": [Function],
-                              "onEntered": [Function],
-                              "onEntering": [Function],
-                              "onExit": [Function],
-                              "onExited": [Function],
-                              "onExiting": [Function],
-                              "style": [Function],
-                              "timeout": [Function],
+                            "insert": [Function],
+                            "inserted": Object {
+                              "i4bv87-MuiSvgIcon-root": true,
                             },
-                            "render": [Function],
+                            "key": "css",
+                            "nonce": undefined,
+                            "registered": Object {},
+                            "sheet": StyleSheet {
+                              "_alreadyInsertedOrderInsensitiveRule": true,
+                              "_insertTag": [Function],
+                              "before": null,
+                              "container": <head>
+                                <style
+                                  data-jss=""
+                                  data-meta="MuiTooltip"
+                                >
+                                  
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+
+                                </style>
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>
+                              </head>,
+                              "ctr": 1,
+                              "insertionPoint": undefined,
+                              "isSpeedy": false,
+                              "key": "css",
+                              "nonce": undefined,
+                              "prepend": undefined,
+                              "tags": Array [
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>,
+                              ],
+                            },
                           }
                         }
-                        classes={
+                        isStringTag={true}
+                        serialized={
                           Object {
-                            "arrow": "MuiTooltip-arrow",
-                            "popper": "MuiTooltip-popper",
-                            "popperArrow": "MuiTooltip-popperArrow",
-                            "popperInteractive": "MuiTooltip-popperInteractive",
-                            "tooltip": "MuiTooltip-tooltip",
-                            "tooltipArrow": "MuiTooltip-tooltipArrow",
-                            "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                            "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                            "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                            "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                            "touch": "MuiTooltip-touch",
+                            "map": undefined,
+                            "name": "i4bv87-MuiSvgIcon-root",
+                            "next": undefined,
+                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
+                            "toString": [Function],
                           }
                         }
-                        placement="left"
+                      />
+                      <svg
+                        aria-describedby={null}
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="LockClockOutlinedIcon"
+                        focusable="false"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
                         title="Link (no DOI) - Open access after 2019-01-01"
+                        viewBox="0 0 24 24"
                       >
-                        <span
-                          aria-describedby={null}
-                          aria-label="Link (no DOI) - Open access after 2019-01-01"
-                          className="fez-icon openAccessEmbargoed large"
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchStart={[Function]}
-                          role="img"
-                          title="Link (no DOI) - Open access after 2019-01-01"
+                        <path
+                          d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                          key="0"
                         />
-                        <ForwardRef(Popper)
-                          anchorEl={
-                            <span
-                              aria-label="Link (no DOI) - Open access after 2019-01-01"
-                              class="fez-icon openAccessEmbargoed large"
-                              role="img"
-                              title="Link (no DOI) - Open access after 2019-01-01"
-                            />
-                          }
-                          className="MuiTooltip-popper"
-                          id={null}
-                          open={false}
-                          placement="left"
-                          popperOptions={
-                            Object {
-                              "modifiers": Object {
-                                "arrow": Object {
-                                  "element": null,
-                                  "enabled": false,
-                                },
-                              },
-                            }
-                          }
-                          transition={true}
+                        <path
+                          d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                          key="1"
                         />
-                      </ForwardRef(Tooltip)>
-                    </WithStyles(ForwardRef(Tooltip))>
-                    <span
-                      className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
+                      </svg>
+                    </MuiSvgIconRoot>
+                  </ForwardRef(SvgIcon)>
+                </ForwardRef(LockClockOutlinedIcon)>
+                <ForwardRef(Popper)
+                  anchorEl={
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="LockClockOutlinedIcon"
+                      focusable="false"
+                      title="Link (no DOI) - Open access after 2019-01-01"
+                      viewBox="0 0 24 24"
                     >
-                      <ForwardRef(AccessTimeIcon)
-                        className="OpenAccessIcon-embargoedBadgeStyle-2"
-                        fontSize="small"
-                      >
-                        <WithStyles(ForwardRef(SvgIcon))
-                          className="OpenAccessIcon-embargoedBadgeStyle-2"
-                          fontSize="small"
-                        >
-                          <ForwardRef(SvgIcon)
-                            className="OpenAccessIcon-embargoedBadgeStyle-2"
-                            classes={
-                              Object {
-                                "colorAction": "MuiSvgIcon-colorAction",
-                                "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                "colorError": "MuiSvgIcon-colorError",
-                                "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                "root": "MuiSvgIcon-root",
-                              }
-                            }
-                            fontSize="small"
-                          >
-                            <svg
-                              aria-hidden={true}
-                              className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                              />
-                              <path
-                                d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                              />
-                            </svg>
-                          </ForwardRef(SvgIcon)>
-                        </WithStyles(ForwardRef(SvgIcon))>
-                      </ForwardRef(AccessTimeIcon)>
-                    </span>
-                  </span>
-                </ForwardRef(Badge)>
-              </WithStyles(ForwardRef(Badge))>
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+                      <path
+                        d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                      />
+                      <path
+                        d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                      />
+                    </svg>
+                  }
+                  className="MuiTooltip-popper"
+                  id={null}
+                  open={false}
+                  placement="left"
+                  popperOptions={
+                    Object {
+                      "modifiers": Object {
+                        "arrow": Object {
+                          "element": null,
+                          "enabled": false,
+                        },
+                      },
+                    }
+                  }
+                  transition={true}
+                />
+              </ForwardRef(Tooltip)>
+            </WithStyles(ForwardRef(Tooltip))>
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -1592,228 +1745,393 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate="2019-01-01"
             isOpenAccess={false}
             openAccessStatusId={453694}
             securityStatus={true}
             showEmbargoText={true}
           >
-            <OpenAccessIcon
-              classes={
+            <span
+              className="is-hidden-mobile is-hidden-tablet-only"
+            >
+              Open access after 2019-01-01 
+            </span>
+            <WithStyles(ForwardRef(Tooltip))
+              TransitionComponent={
                 Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "children": [Function],
+                    "disableStrictModeCompat": [Function],
+                    "in": [Function],
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "style": [Function],
+                    "timeout": [Function],
+                  },
+                  "render": [Function],
                 }
               }
-              embargoDate="2019-01-01"
-              isOpenAccess={false}
-              openAccessStatusId={453694}
-              securityStatus={true}
-              showEmbargoText={true}
+              placement="left"
+              title="Link (no DOI) - Open access after 2019-01-01"
             >
-              <span
-                className="is-hidden-mobile is-hidden-tablet-only"
-              >
-                Open access after 2019-01-01 
-              </span>
-              <WithStyles(ForwardRef(Badge))
-                badgeContent={
-                  <Memo
-                    className="OpenAccessIcon-embargoedBadgeStyle-2"
-                    fontSize="small"
-                  />
+              <ForwardRef(Tooltip)
+                TransitionComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "propTypes": Object {
+                      "children": [Function],
+                      "disableStrictModeCompat": [Function],
+                      "in": [Function],
+                      "onEnter": [Function],
+                      "onEntered": [Function],
+                      "onEntering": [Function],
+                      "onExit": [Function],
+                      "onExited": [Function],
+                      "onExiting": [Function],
+                      "style": [Function],
+                      "timeout": [Function],
+                    },
+                    "render": [Function],
+                  }
                 }
+                classes={
+                  Object {
+                    "arrow": "MuiTooltip-arrow",
+                    "popper": "MuiTooltip-popper",
+                    "popperArrow": "MuiTooltip-popperArrow",
+                    "popperInteractive": "MuiTooltip-popperInteractive",
+                    "tooltip": "MuiTooltip-tooltip",
+                    "tooltipArrow": "MuiTooltip-tooltipArrow",
+                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                    "touch": "MuiTooltip-touch",
+                  }
+                }
+                placement="left"
+                title="Link (no DOI) - Open access after 2019-01-01"
               >
-                <ForwardRef(Badge)
-                  badgeContent={
-                    <Memo
-                      className="OpenAccessIcon-embargoedBadgeStyle-2"
-                      fontSize="small"
-                    />
-                  }
-                  classes={
-                    Object {
-                      "anchorOriginBottomLeftCircle": "MuiBadge-anchorOriginBottomLeftCircle",
-                      "anchorOriginBottomLeftCircular": "MuiBadge-anchorOriginBottomLeftCircular",
-                      "anchorOriginBottomLeftRectangle": "MuiBadge-anchorOriginBottomLeftRectangle",
-                      "anchorOriginBottomLeftRectangular": "MuiBadge-anchorOriginBottomLeftRectangular",
-                      "anchorOriginBottomRightCircle": "MuiBadge-anchorOriginBottomRightCircle",
-                      "anchorOriginBottomRightCircular": "MuiBadge-anchorOriginBottomRightCircular",
-                      "anchorOriginBottomRightRectangle": "MuiBadge-anchorOriginBottomRightRectangle",
-                      "anchorOriginBottomRightRectangular": "MuiBadge-anchorOriginBottomRightRectangular",
-                      "anchorOriginTopLeftCircle": "MuiBadge-anchorOriginTopLeftCircle",
-                      "anchorOriginTopLeftCircular": "MuiBadge-anchorOriginTopLeftCircular",
-                      "anchorOriginTopLeftRectangle": "MuiBadge-anchorOriginTopLeftRectangle",
-                      "anchorOriginTopLeftRectangular": "MuiBadge-anchorOriginTopLeftRectangular",
-                      "anchorOriginTopRightCircle": "MuiBadge-anchorOriginTopRightCircle",
-                      "anchorOriginTopRightCircular": "MuiBadge-anchorOriginTopRightCircular",
-                      "anchorOriginTopRightRectangle": "MuiBadge-anchorOriginTopRightRectangle",
-                      "anchorOriginTopRightRectangular": "MuiBadge-anchorOriginTopRightRectangular",
-                      "badge": "MuiBadge-badge",
-                      "colorError": "MuiBadge-colorError",
-                      "colorPrimary": "MuiBadge-colorPrimary",
-                      "colorSecondary": "MuiBadge-colorSecondary",
-                      "dot": "MuiBadge-dot",
-                      "invisible": "MuiBadge-invisible",
-                      "root": "MuiBadge-root",
-                    }
-                  }
+                <ForwardRef(LockClockOutlinedIcon)
+                  aria-describedby={null}
+                  className=""
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
+                  title="Link (no DOI) - Open access after 2019-01-01"
                 >
-                  <span
-                    className="MuiBadge-root"
+                  <ForwardRef(SvgIcon)
+                    aria-describedby={null}
+                    className=""
+                    data-testid="LockClockOutlinedIcon"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseOver={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    title="Link (no DOI) - Open access after 2019-01-01"
                   >
-                    <WithStyles(ForwardRef(Tooltip))
-                      TransitionComponent={
+                    <MuiSvgIconRoot
+                      aria-describedby={null}
+                      aria-hidden={true}
+                      as="svg"
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                      data-testid="LockClockOutlinedIcon"
+                      focusable="false"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      ownerState={
                         Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "propTypes": Object {
-                            "children": [Function],
-                            "disableStrictModeCompat": [Function],
-                            "in": [Function],
-                            "onEnter": [Function],
-                            "onEntered": [Function],
-                            "onEntering": [Function],
-                            "onExit": [Function],
-                            "onExited": [Function],
-                            "onExiting": [Function],
-                            "style": [Function],
-                            "timeout": [Function],
-                          },
-                          "render": [Function],
+                          "aria-describedby": null,
+                          "children": Array [
+                            <path
+                              d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                            />,
+                            <path
+                              d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                            />,
+                          ],
+                          "className": "",
+                          "color": "inherit",
+                          "component": "svg",
+                          "data-testid": "LockClockOutlinedIcon",
+                          "fontSize": "medium",
+                          "inheritViewBox": false,
+                          "instanceFontSize": undefined,
+                          "onBlur": [Function],
+                          "onFocus": [Function],
+                          "onMouseLeave": [Function],
+                          "onMouseOver": [Function],
+                          "onTouchEnd": [Function],
+                          "onTouchStart": [Function],
+                          "title": "Link (no DOI) - Open access after 2019-01-01",
+                          "viewBox": "0 0 24 24",
                         }
                       }
-                      placement="left"
                       title="Link (no DOI) - Open access after 2019-01-01"
+                      viewBox="0 0 24 24"
                     >
-                      <ForwardRef(Tooltip)
-                        TransitionComponent={
+                      <Insertion
+                        cache={
                           Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "propTypes": Object {
-                              "children": [Function],
-                              "disableStrictModeCompat": [Function],
-                              "in": [Function],
-                              "onEnter": [Function],
-                              "onEntered": [Function],
-                              "onEntering": [Function],
-                              "onExit": [Function],
-                              "onExited": [Function],
-                              "onExiting": [Function],
-                              "style": [Function],
-                              "timeout": [Function],
+                            "insert": [Function],
+                            "inserted": Object {
+                              "i4bv87-MuiSvgIcon-root": true,
                             },
-                            "render": [Function],
+                            "key": "css",
+                            "nonce": undefined,
+                            "registered": Object {},
+                            "sheet": StyleSheet {
+                              "_alreadyInsertedOrderInsensitiveRule": true,
+                              "_insertTag": [Function],
+                              "before": null,
+                              "container": <head>
+                                <style
+                                  data-jss=""
+                                  data-meta="MuiTooltip"
+                                >
+                                  
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+
+                                </style>
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>
+                              </head>,
+                              "ctr": 1,
+                              "insertionPoint": undefined,
+                              "isSpeedy": false,
+                              "key": "css",
+                              "nonce": undefined,
+                              "prepend": undefined,
+                              "tags": Array [
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>,
+                              ],
+                            },
                           }
                         }
-                        classes={
+                        isStringTag={true}
+                        serialized={
                           Object {
-                            "arrow": "MuiTooltip-arrow",
-                            "popper": "MuiTooltip-popper",
-                            "popperArrow": "MuiTooltip-popperArrow",
-                            "popperInteractive": "MuiTooltip-popperInteractive",
-                            "tooltip": "MuiTooltip-tooltip",
-                            "tooltipArrow": "MuiTooltip-tooltipArrow",
-                            "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                            "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                            "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                            "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                            "touch": "MuiTooltip-touch",
+                            "map": undefined,
+                            "name": "i4bv87-MuiSvgIcon-root",
+                            "next": undefined,
+                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
+                            "toString": [Function],
                           }
                         }
-                        placement="left"
+                      />
+                      <svg
+                        aria-describedby={null}
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="LockClockOutlinedIcon"
+                        focusable="false"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
                         title="Link (no DOI) - Open access after 2019-01-01"
+                        viewBox="0 0 24 24"
                       >
-                        <span
-                          aria-describedby={null}
-                          aria-label="Link (no DOI) - Open access after 2019-01-01"
-                          className="fez-icon openAccessEmbargoed large"
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                          onMouseLeave={[Function]}
-                          onMouseOver={[Function]}
-                          onTouchEnd={[Function]}
-                          onTouchStart={[Function]}
-                          role="img"
-                          title="Link (no DOI) - Open access after 2019-01-01"
+                        <path
+                          d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                          key="0"
                         />
-                        <ForwardRef(Popper)
-                          anchorEl={
-                            <span
-                              aria-label="Link (no DOI) - Open access after 2019-01-01"
-                              class="fez-icon openAccessEmbargoed large"
-                              role="img"
-                              title="Link (no DOI) - Open access after 2019-01-01"
-                            />
-                          }
-                          className="MuiTooltip-popper"
-                          id={null}
-                          open={false}
-                          placement="left"
-                          popperOptions={
-                            Object {
-                              "modifiers": Object {
-                                "arrow": Object {
-                                  "element": null,
-                                  "enabled": false,
-                                },
-                              },
-                            }
-                          }
-                          transition={true}
+                        <path
+                          d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                          key="1"
                         />
-                      </ForwardRef(Tooltip)>
-                    </WithStyles(ForwardRef(Tooltip))>
-                    <span
-                      className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
+                      </svg>
+                    </MuiSvgIconRoot>
+                  </ForwardRef(SvgIcon)>
+                </ForwardRef(LockClockOutlinedIcon)>
+                <ForwardRef(Popper)
+                  anchorEl={
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="LockClockOutlinedIcon"
+                      focusable="false"
+                      title="Link (no DOI) - Open access after 2019-01-01"
+                      viewBox="0 0 24 24"
                     >
-                      <ForwardRef(AccessTimeIcon)
-                        className="OpenAccessIcon-embargoedBadgeStyle-2"
-                        fontSize="small"
-                      >
-                        <WithStyles(ForwardRef(SvgIcon))
-                          className="OpenAccessIcon-embargoedBadgeStyle-2"
-                          fontSize="small"
-                        >
-                          <ForwardRef(SvgIcon)
-                            className="OpenAccessIcon-embargoedBadgeStyle-2"
-                            classes={
-                              Object {
-                                "colorAction": "MuiSvgIcon-colorAction",
-                                "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                "colorError": "MuiSvgIcon-colorError",
-                                "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                "root": "MuiSvgIcon-root",
-                              }
-                            }
-                            fontSize="small"
-                          >
-                            <svg
-                              aria-hidden={true}
-                              className="MuiSvgIcon-root OpenAccessIcon-embargoedBadgeStyle-2 MuiSvgIcon-fontSizeSmall"
-                              focusable="false"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-                              />
-                              <path
-                                d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                              />
-                            </svg>
-                          </ForwardRef(SvgIcon)>
-                        </WithStyles(ForwardRef(SvgIcon))>
-                      </ForwardRef(AccessTimeIcon)>
-                    </span>
-                  </span>
-                </ForwardRef(Badge)>
-              </WithStyles(ForwardRef(Badge))>
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+                      <path
+                        d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
+                      />
+                      <path
+                        d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                      />
+                    </svg>
+                  }
+                  className="MuiTooltip-popper"
+                  id={null}
+                  open={false}
+                  placement="left"
+                  popperOptions={
+                    Object {
+                      "modifiers": Object {
+                        "arrow": Object {
+                          "element": null,
+                          "enabled": false,
+                        },
+                      },
+                    }
+                  }
+                  transition={true}
+                />
+              </ForwardRef(Tooltip)>
+            </WithStyles(ForwardRef(Tooltip))>
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -2267,27 +2585,37 @@ exports[`Journal Name Component test  should render locked 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate={null}
             isOpenAccess={false}
             openAccessStatusId={453694}
             securityStatus={false}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
+            <WithStyles(ForwardRef(Tooltip))
+              TransitionComponent={
                 Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "children": [Function],
+                    "disableStrictModeCompat": [Function],
+                    "in": [Function],
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "style": [Function],
+                    "timeout": [Function],
+                  },
+                  "render": [Function],
                 }
               }
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={453694}
-              securityStatus={false}
-              showEmbargoText={false}
+              placement="left"
+              title="You do not have access to this file"
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 TransitionComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -2307,57 +2635,39 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     "render": [Function],
                   }
                 }
+                classes={
+                  Object {
+                    "arrow": "MuiTooltip-arrow",
+                    "popper": "MuiTooltip-popper",
+                    "popperArrow": "MuiTooltip-popperArrow",
+                    "popperInteractive": "MuiTooltip-popperInteractive",
+                    "tooltip": "MuiTooltip-tooltip",
+                    "tooltipArrow": "MuiTooltip-tooltipArrow",
+                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                    "touch": "MuiTooltip-touch",
+                  }
+                }
                 placement="left"
                 title="You do not have access to this file"
               >
-                <ForwardRef(Tooltip)
-                  TransitionComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "children": [Function],
-                        "disableStrictModeCompat": [Function],
-                        "in": [Function],
-                        "onEnter": [Function],
-                        "onEntered": [Function],
-                        "onEntering": [Function],
-                        "onExit": [Function],
-                        "onExited": [Function],
-                        "onExiting": [Function],
-                        "style": [Function],
-                        "timeout": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  classes={
-                    Object {
-                      "arrow": "MuiTooltip-arrow",
-                      "popper": "MuiTooltip-popper",
-                      "popperArrow": "MuiTooltip-popperArrow",
-                      "popperInteractive": "MuiTooltip-popperInteractive",
-                      "tooltip": "MuiTooltip-tooltip",
-                      "tooltipArrow": "MuiTooltip-tooltipArrow",
-                      "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                      "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                      "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                      "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                      "touch": "MuiTooltip-touch",
-                    }
-                  }
-                  placement="left"
+                <ForwardRef(LockIcon)
+                  aria-describedby={null}
+                  className=""
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
                   title="You do not have access to this file"
                 >
-                  <WithStyles(ForwardRef(Badge))
+                  <ForwardRef(SvgIcon)
                     aria-describedby={null}
-                    badgeContent={
-                      <Memo
-                        className="OpenAccessIcon-badgeStyle-1"
-                        color="secondary"
-                        fontSize="small"
-                      />
-                    }
                     className=""
+                    data-testid="LockIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -2366,54 +2676,234 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     onTouchStart={[Function]}
                     title="You do not have access to this file"
                   >
-                    <ForwardRef(Badge)
+                    <MuiSvgIconRoot
                       aria-describedby={null}
-                      badgeContent={
-                        <Memo
-                          className="OpenAccessIcon-badgeStyle-1"
-                          color="secondary"
-                          fontSize="small"
-                        />
-                      }
-                      className=""
-                      classes={
-                        Object {
-                          "anchorOriginBottomLeftCircle": "MuiBadge-anchorOriginBottomLeftCircle",
-                          "anchorOriginBottomLeftCircular": "MuiBadge-anchorOriginBottomLeftCircular",
-                          "anchorOriginBottomLeftRectangle": "MuiBadge-anchorOriginBottomLeftRectangle",
-                          "anchorOriginBottomLeftRectangular": "MuiBadge-anchorOriginBottomLeftRectangular",
-                          "anchorOriginBottomRightCircle": "MuiBadge-anchorOriginBottomRightCircle",
-                          "anchorOriginBottomRightCircular": "MuiBadge-anchorOriginBottomRightCircular",
-                          "anchorOriginBottomRightRectangle": "MuiBadge-anchorOriginBottomRightRectangle",
-                          "anchorOriginBottomRightRectangular": "MuiBadge-anchorOriginBottomRightRectangular",
-                          "anchorOriginTopLeftCircle": "MuiBadge-anchorOriginTopLeftCircle",
-                          "anchorOriginTopLeftCircular": "MuiBadge-anchorOriginTopLeftCircular",
-                          "anchorOriginTopLeftRectangle": "MuiBadge-anchorOriginTopLeftRectangle",
-                          "anchorOriginTopLeftRectangular": "MuiBadge-anchorOriginTopLeftRectangular",
-                          "anchorOriginTopRightCircle": "MuiBadge-anchorOriginTopRightCircle",
-                          "anchorOriginTopRightCircular": "MuiBadge-anchorOriginTopRightCircular",
-                          "anchorOriginTopRightRectangle": "MuiBadge-anchorOriginTopRightRectangle",
-                          "anchorOriginTopRightRectangular": "MuiBadge-anchorOriginTopRightRectangular",
-                          "badge": "MuiBadge-badge",
-                          "colorError": "MuiBadge-colorError",
-                          "colorPrimary": "MuiBadge-colorPrimary",
-                          "colorSecondary": "MuiBadge-colorSecondary",
-                          "dot": "MuiBadge-dot",
-                          "invisible": "MuiBadge-invisible",
-                          "root": "MuiBadge-root",
-                        }
-                      }
+                      aria-hidden={true}
+                      as="svg"
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                      data-testid="LockIcon"
+                      focusable="false"
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
+                      ownerState={
+                        Object {
+                          "aria-describedby": null,
+                          "children": <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                          />,
+                          "className": "",
+                          "color": "inherit",
+                          "component": "svg",
+                          "data-testid": "LockIcon",
+                          "fontSize": "medium",
+                          "inheritViewBox": false,
+                          "instanceFontSize": undefined,
+                          "onBlur": [Function],
+                          "onFocus": [Function],
+                          "onMouseLeave": [Function],
+                          "onMouseOver": [Function],
+                          "onTouchEnd": [Function],
+                          "onTouchStart": [Function],
+                          "title": "You do not have access to this file",
+                          "viewBox": "0 0 24 24",
+                        }
+                      }
                       title="You do not have access to this file"
+                      viewBox="0 0 24 24"
                     >
-                      <span
+                      <Insertion
+                        cache={
+                          Object {
+                            "insert": [Function],
+                            "inserted": Object {
+                              "i4bv87-MuiSvgIcon-root": true,
+                            },
+                            "key": "css",
+                            "nonce": undefined,
+                            "registered": Object {},
+                            "sheet": StyleSheet {
+                              "_alreadyInsertedOrderInsensitiveRule": true,
+                              "_insertTag": [Function],
+                              "before": null,
+                              "container": <head>
+                                <style
+                                  data-jss=""
+                                  data-meta="MuiTooltip"
+                                >
+                                  
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+
+                                </style>
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>
+                              </head>,
+                              "ctr": 1,
+                              "insertionPoint": undefined,
+                              "isSpeedy": false,
+                              "key": "css",
+                              "nonce": undefined,
+                              "prepend": undefined,
+                              "tags": Array [
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>,
+                              ],
+                            },
+                          }
+                        }
+                        isStringTag={true}
+                        serialized={
+                          Object {
+                            "map": undefined,
+                            "name": "i4bv87-MuiSvgIcon-root",
+                            "next": undefined,
+                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
+                            "toString": [Function],
+                          }
+                        }
+                      />
+                      <svg
                         aria-describedby={null}
-                        className="MuiBadge-root"
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="LockIcon"
+                        focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
                         onMouseLeave={[Function]}
@@ -2421,107 +2911,49 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         onTouchEnd={[Function]}
                         onTouchStart={[Function]}
                         title="You do not have access to this file"
+                        viewBox="0 0 24 24"
                       >
-                        <span
-                          aria-label="You do not have access to this file"
-                          className="fez-icon openAccessLocked large"
-                          role="img"
+                        <path
+                          d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
                         />
-                        <span
-                          className="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
-                        >
-                          <ForwardRef(LockIcon)
-                            className="OpenAccessIcon-badgeStyle-1"
-                            color="secondary"
-                            fontSize="small"
-                          >
-                            <WithStyles(ForwardRef(SvgIcon))
-                              className="OpenAccessIcon-badgeStyle-1"
-                              color="secondary"
-                              fontSize="small"
-                            >
-                              <ForwardRef(SvgIcon)
-                                className="OpenAccessIcon-badgeStyle-1"
-                                classes={
-                                  Object {
-                                    "colorAction": "MuiSvgIcon-colorAction",
-                                    "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                    "colorError": "MuiSvgIcon-colorError",
-                                    "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                    "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                    "root": "MuiSvgIcon-root",
-                                  }
-                                }
-                                color="secondary"
-                                fontSize="small"
-                              >
-                                <svg
-                                  aria-hidden={true}
-                                  className="MuiSvgIcon-root OpenAccessIcon-badgeStyle-1 MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall"
-                                  focusable="false"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
-                                  />
-                                </svg>
-                              </ForwardRef(SvgIcon)>
-                            </WithStyles(ForwardRef(SvgIcon))>
-                          </ForwardRef(LockIcon)>
-                        </span>
-                      </span>
-                    </ForwardRef(Badge)>
-                  </WithStyles(ForwardRef(Badge))>
-                  <ForwardRef(Popper)
-                    anchorEl={
-                      <span
-                        class="MuiBadge-root"
-                        title="You do not have access to this file"
-                      >
-                        <span
-                          aria-label="You do not have access to this file"
-                          class="fez-icon openAccessLocked large"
-                          role="img"
-                        />
-                        <span
-                          class="MuiBadge-badge MuiBadge-anchorOriginTopRightRectangle"
-                        >
-                          <svg
-                            aria-hidden="true"
-                            class="MuiSvgIcon-root OpenAccessIcon-badgeStyle-1 MuiSvgIcon-colorSecondary MuiSvgIcon-fontSizeSmall"
-                            focusable="false"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
-                            />
-                          </svg>
-                        </span>
-                      </span>
-                    }
-                    className="MuiTooltip-popper"
-                    id={null}
-                    open={false}
-                    placement="left"
-                    popperOptions={
-                      Object {
-                        "modifiers": Object {
-                          "arrow": Object {
-                            "element": null,
-                            "enabled": false,
-                          },
+                      </svg>
+                    </MuiSvgIconRoot>
+                  </ForwardRef(SvgIcon)>
+                </ForwardRef(LockIcon)>
+                <ForwardRef(Popper)
+                  anchorEl={
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="LockIcon"
+                      focusable="false"
+                      title="You do not have access to this file"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                      />
+                    </svg>
+                  }
+                  className="MuiTooltip-popper"
+                  id={null}
+                  open={false}
+                  placement="left"
+                  popperOptions={
+                    Object {
+                      "modifiers": Object {
+                        "arrow": Object {
+                          "element": null,
+                          "enabled": false,
                         },
-                      }
+                      },
                     }
-                    transition={true}
-                  />
-                </ForwardRef(Tooltip)>
-              </WithStyles(ForwardRef(Tooltip))>
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+                  }
+                  transition={true}
+                />
+              </ForwardRef(Tooltip)>
+            </WithStyles(ForwardRef(Tooltip))>
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -2975,31 +3407,17 @@ exports[`Journal Name Component test  should render no icon 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate={null}
             isOpenAccess={null}
             openAccessStatusId={null}
             securityStatus={true}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
-                Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
-                }
-              }
-              embargoDate={null}
-              isOpenAccess={null}
-              openAccessStatusId={null}
-              securityStatus={true}
-              showEmbargoText={false}
-            >
-              <span
-                className="noOaIcon"
-              />
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+            <span
+              className="noOaIcon"
+            />
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -3453,26 +3871,37 @@ exports[`Journal Name Component test  should render open access 1`] = `
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate={null}
             isOpenAccess={true}
             openAccessStatusId={1234}
+            securityStatus={true}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
+            <WithStyles(ForwardRef(Tooltip))
+              TransitionComponent={
                 Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "children": [Function],
+                    "disableStrictModeCompat": [Function],
+                    "in": [Function],
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "style": [Function],
+                    "timeout": [Function],
+                  },
+                  "render": [Function],
                 }
               }
-              embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={1234}
-              securityStatus={true}
-              showEmbargoText={false}
+              placement="left"
+              title="Open Access - undefined - Free to read"
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 TransitionComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -3492,89 +3921,325 @@ exports[`Journal Name Component test  should render open access 1`] = `
                     "render": [Function],
                   }
                 }
+                classes={
+                  Object {
+                    "arrow": "MuiTooltip-arrow",
+                    "popper": "MuiTooltip-popper",
+                    "popperArrow": "MuiTooltip-popperArrow",
+                    "popperInteractive": "MuiTooltip-popperInteractive",
+                    "tooltip": "MuiTooltip-tooltip",
+                    "tooltipArrow": "MuiTooltip-tooltipArrow",
+                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                    "touch": "MuiTooltip-touch",
+                  }
+                }
                 placement="left"
                 title="Open Access - undefined - Free to read"
               >
-                <ForwardRef(Tooltip)
-                  TransitionComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "children": [Function],
-                        "disableStrictModeCompat": [Function],
-                        "in": [Function],
-                        "onEnter": [Function],
-                        "onEntered": [Function],
-                        "onEntering": [Function],
-                        "onExit": [Function],
-                        "onExited": [Function],
-                        "onExiting": [Function],
-                        "style": [Function],
-                        "timeout": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  classes={
-                    Object {
-                      "arrow": "MuiTooltip-arrow",
-                      "popper": "MuiTooltip-popper",
-                      "popperArrow": "MuiTooltip-popperArrow",
-                      "popperInteractive": "MuiTooltip-popperInteractive",
-                      "tooltip": "MuiTooltip-tooltip",
-                      "tooltipArrow": "MuiTooltip-tooltipArrow",
-                      "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                      "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                      "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                      "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                      "touch": "MuiTooltip-touch",
-                    }
-                  }
-                  placement="left"
+                <ForwardRef(LockOpenIcon)
+                  aria-describedby={null}
+                  className=""
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
                   title="Open Access - undefined - Free to read"
                 >
-                  <span
+                  <ForwardRef(SvgIcon)
                     aria-describedby={null}
-                    aria-label="Open Access - undefined - Free to read"
-                    className="fez-icon openAccess large"
+                    className=""
+                    data-testid="LockOpenIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
                     onTouchEnd={[Function]}
                     onTouchStart={[Function]}
-                    role="img"
                     title="Open Access - undefined - Free to read"
-                  />
-                  <ForwardRef(Popper)
-                    anchorEl={
-                      <span
-                        aria-label="Open Access - undefined - Free to read"
-                        class="fez-icon openAccess large"
-                        role="img"
-                        title="Open Access - undefined - Free to read"
-                      />
-                    }
-                    className="MuiTooltip-popper"
-                    id={null}
-                    open={false}
-                    placement="left"
-                    popperOptions={
-                      Object {
-                        "modifiers": Object {
-                          "arrow": Object {
-                            "element": null,
-                            "enabled": false,
-                          },
-                        },
+                  >
+                    <MuiSvgIconRoot
+                      aria-describedby={null}
+                      aria-hidden={true}
+                      as="svg"
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                      data-testid="LockOpenIcon"
+                      focusable="false"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      ownerState={
+                        Object {
+                          "aria-describedby": null,
+                          "children": <path
+                            d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                          />,
+                          "className": "",
+                          "color": "inherit",
+                          "component": "svg",
+                          "data-testid": "LockOpenIcon",
+                          "fontSize": "medium",
+                          "inheritViewBox": false,
+                          "instanceFontSize": undefined,
+                          "onBlur": [Function],
+                          "onFocus": [Function],
+                          "onMouseLeave": [Function],
+                          "onMouseOver": [Function],
+                          "onTouchEnd": [Function],
+                          "onTouchStart": [Function],
+                          "title": "Open Access - undefined - Free to read",
+                          "viewBox": "0 0 24 24",
+                        }
                       }
+                      title="Open Access - undefined - Free to read"
+                      viewBox="0 0 24 24"
+                    >
+                      <Insertion
+                        cache={
+                          Object {
+                            "insert": [Function],
+                            "inserted": Object {
+                              "i4bv87-MuiSvgIcon-root": true,
+                            },
+                            "key": "css",
+                            "nonce": undefined,
+                            "registered": Object {},
+                            "sheet": StyleSheet {
+                              "_alreadyInsertedOrderInsensitiveRule": true,
+                              "_insertTag": [Function],
+                              "before": null,
+                              "container": <head>
+                                <style
+                                  data-jss=""
+                                  data-meta="MuiTooltip"
+                                >
+                                  
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+
+                                </style>
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>
+                              </head>,
+                              "ctr": 1,
+                              "insertionPoint": undefined,
+                              "isSpeedy": false,
+                              "key": "css",
+                              "nonce": undefined,
+                              "prepend": undefined,
+                              "tags": Array [
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>,
+                              ],
+                            },
+                          }
+                        }
+                        isStringTag={true}
+                        serialized={
+                          Object {
+                            "map": undefined,
+                            "name": "i4bv87-MuiSvgIcon-root",
+                            "next": undefined,
+                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
+                            "toString": [Function],
+                          }
+                        }
+                      />
+                      <svg
+                        aria-describedby={null}
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="LockOpenIcon"
+                        focusable="false"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        title="Open Access - undefined - Free to read"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                        />
+                      </svg>
+                    </MuiSvgIconRoot>
+                  </ForwardRef(SvgIcon)>
+                </ForwardRef(LockOpenIcon)>
+                <ForwardRef(Popper)
+                  anchorEl={
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="LockOpenIcon"
+                      focusable="false"
+                      title="Open Access - undefined - Free to read"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                      />
+                    </svg>
+                  }
+                  className="MuiTooltip-popper"
+                  id={null}
+                  open={false}
+                  placement="left"
+                  popperOptions={
+                    Object {
+                      "modifiers": Object {
+                        "arrow": Object {
+                          "element": null,
+                          "enabled": false,
+                        },
+                      },
                     }
-                    transition={true}
-                  />
-                </ForwardRef(Tooltip)>
-              </WithStyles(ForwardRef(Tooltip))>
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+                  }
+                  transition={true}
+                />
+              </ForwardRef(Tooltip)>
+            </WithStyles(ForwardRef(Tooltip))>
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>
@@ -4028,26 +4693,37 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
         <MuiPickersUtilsProvider
           utils={[Function]}
         >
-          <WithStyles(OpenAccessIcon)
+          <OpenAccessIcon
             embargoDate={null}
             isOpenAccess={true}
             openAccessStatusId={453694}
+            securityStatus={true}
             showEmbargoText={false}
           >
-            <OpenAccessIcon
-              classes={
+            <WithStyles(ForwardRef(Tooltip))
+              TransitionComponent={
                 Object {
-                  "badgeStyle": "OpenAccessIcon-badgeStyle-1",
-                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-2",
+                  "$$typeof": Symbol(react.forward_ref),
+                  "propTypes": Object {
+                    "children": [Function],
+                    "disableStrictModeCompat": [Function],
+                    "in": [Function],
+                    "onEnter": [Function],
+                    "onEntered": [Function],
+                    "onEntering": [Function],
+                    "onExit": [Function],
+                    "onExited": [Function],
+                    "onExiting": [Function],
+                    "style": [Function],
+                    "timeout": [Function],
+                  },
+                  "render": [Function],
                 }
               }
-              embargoDate={null}
-              isOpenAccess={true}
-              openAccessStatusId={453694}
-              securityStatus={true}
-              showEmbargoText={false}
+              placement="left"
+              title="Open Access - Free to read"
             >
-              <WithStyles(ForwardRef(Tooltip))
+              <ForwardRef(Tooltip)
                 TransitionComponent={
                   Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -4067,89 +4743,325 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                     "render": [Function],
                   }
                 }
+                classes={
+                  Object {
+                    "arrow": "MuiTooltip-arrow",
+                    "popper": "MuiTooltip-popper",
+                    "popperArrow": "MuiTooltip-popperArrow",
+                    "popperInteractive": "MuiTooltip-popperInteractive",
+                    "tooltip": "MuiTooltip-tooltip",
+                    "tooltipArrow": "MuiTooltip-tooltipArrow",
+                    "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
+                    "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
+                    "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
+                    "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
+                    "touch": "MuiTooltip-touch",
+                  }
+                }
                 placement="left"
                 title="Open Access - Free to read"
               >
-                <ForwardRef(Tooltip)
-                  TransitionComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "propTypes": Object {
-                        "children": [Function],
-                        "disableStrictModeCompat": [Function],
-                        "in": [Function],
-                        "onEnter": [Function],
-                        "onEntered": [Function],
-                        "onEntering": [Function],
-                        "onExit": [Function],
-                        "onExited": [Function],
-                        "onExiting": [Function],
-                        "style": [Function],
-                        "timeout": [Function],
-                      },
-                      "render": [Function],
-                    }
-                  }
-                  classes={
-                    Object {
-                      "arrow": "MuiTooltip-arrow",
-                      "popper": "MuiTooltip-popper",
-                      "popperArrow": "MuiTooltip-popperArrow",
-                      "popperInteractive": "MuiTooltip-popperInteractive",
-                      "tooltip": "MuiTooltip-tooltip",
-                      "tooltipArrow": "MuiTooltip-tooltipArrow",
-                      "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom",
-                      "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft",
-                      "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight",
-                      "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop",
-                      "touch": "MuiTooltip-touch",
-                    }
-                  }
-                  placement="left"
+                <ForwardRef(LockOpenIcon)
+                  aria-describedby={null}
+                  className=""
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseOver={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchStart={[Function]}
                   title="Open Access - Free to read"
                 >
-                  <span
+                  <ForwardRef(SvgIcon)
                     aria-describedby={null}
-                    aria-label="Open Access - Free to read"
-                    className="fez-icon openAccess large"
+                    className=""
+                    data-testid="LockOpenIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
                     onMouseOver={[Function]}
                     onTouchEnd={[Function]}
                     onTouchStart={[Function]}
-                    role="img"
                     title="Open Access - Free to read"
-                  />
-                  <ForwardRef(Popper)
-                    anchorEl={
-                      <span
-                        aria-label="Open Access - Free to read"
-                        class="fez-icon openAccess large"
-                        role="img"
-                        title="Open Access - Free to read"
-                      />
-                    }
-                    className="MuiTooltip-popper"
-                    id={null}
-                    open={false}
-                    placement="left"
-                    popperOptions={
-                      Object {
-                        "modifiers": Object {
-                          "arrow": Object {
-                            "element": null,
-                            "enabled": false,
-                          },
-                        },
+                  >
+                    <MuiSvgIconRoot
+                      aria-describedby={null}
+                      aria-hidden={true}
+                      as="svg"
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                      data-testid="LockOpenIcon"
+                      focusable="false"
+                      onBlur={[Function]}
+                      onFocus={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseOver={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      ownerState={
+                        Object {
+                          "aria-describedby": null,
+                          "children": <path
+                            d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                          />,
+                          "className": "",
+                          "color": "inherit",
+                          "component": "svg",
+                          "data-testid": "LockOpenIcon",
+                          "fontSize": "medium",
+                          "inheritViewBox": false,
+                          "instanceFontSize": undefined,
+                          "onBlur": [Function],
+                          "onFocus": [Function],
+                          "onMouseLeave": [Function],
+                          "onMouseOver": [Function],
+                          "onTouchEnd": [Function],
+                          "onTouchStart": [Function],
+                          "title": "Open Access - Free to read",
+                          "viewBox": "0 0 24 24",
+                        }
                       }
+                      title="Open Access - Free to read"
+                      viewBox="0 0 24 24"
+                    >
+                      <Insertion
+                        cache={
+                          Object {
+                            "insert": [Function],
+                            "inserted": Object {
+                              "i4bv87-MuiSvgIcon-root": true,
+                            },
+                            "key": "css",
+                            "nonce": undefined,
+                            "registered": Object {},
+                            "sheet": StyleSheet {
+                              "_alreadyInsertedOrderInsensitiveRule": true,
+                              "_insertTag": [Function],
+                              "before": null,
+                              "container": <head>
+                                <style
+                                  data-jss=""
+                                  data-meta="MuiTooltip"
+                                >
+                                  
+.MuiTooltip-popper {
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
+  top: 0;
+  left: 0;
+  margin-top: -0.71em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
+  left: 0;
+  bottom: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.71em;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
+  left: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-left: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
+  right: 0;
+  width: 0.71em;
+  height: 1em;
+  margin-top: 4px;
+  margin-right: -0.71em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
+  transform-origin: 0 0;
+}
+.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 100%;
+}
+.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
+  transform-origin: 100% 0;
+}
+.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
+  transform-origin: 0 100%;
+}
+.MuiTooltip-tooltip {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow {
+  color: rgba(97, 97, 97, 0.9);
+  width: 1em;
+  height: 0.71em;
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+}
+.MuiTooltip-arrow::before {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  content: "";
+  display: block;
+  transform: rotate(45deg);
+  background-color: currentColor;
+}
+.MuiTooltip-touch {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom {
+    margin: 14px 0;
+  }
+}
+
+                                </style>
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>
+                              </head>,
+                              "ctr": 1,
+                              "insertionPoint": undefined,
+                              "isSpeedy": false,
+                              "key": "css",
+                              "nonce": undefined,
+                              "prepend": undefined,
+                              "tags": Array [
+                                <style
+                                  data-emotion="css"
+                                  data-s=""
+                                >
+                                  
+                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
+                                </style>,
+                              ],
+                            },
+                          }
+                        }
+                        isStringTag={true}
+                        serialized={
+                          Object {
+                            "map": undefined,
+                            "name": "i4bv87-MuiSvgIcon-root",
+                            "next": undefined,
+                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
+                            "toString": [Function],
+                          }
+                        }
+                      />
+                      <svg
+                        aria-describedby={null}
+                        aria-hidden={true}
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                        data-testid="LockOpenIcon"
+                        focusable="false"
+                        onBlur={[Function]}
+                        onFocus={[Function]}
+                        onMouseLeave={[Function]}
+                        onMouseOver={[Function]}
+                        onTouchEnd={[Function]}
+                        onTouchStart={[Function]}
+                        title="Open Access - Free to read"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                        />
+                      </svg>
+                    </MuiSvgIconRoot>
+                  </ForwardRef(SvgIcon)>
+                </ForwardRef(LockOpenIcon)>
+                <ForwardRef(Popper)
+                  anchorEl={
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="LockOpenIcon"
+                      focusable="false"
+                      title="Open Access - Free to read"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                      />
+                    </svg>
+                  }
+                  className="MuiTooltip-popper"
+                  id={null}
+                  open={false}
+                  placement="left"
+                  popperOptions={
+                    Object {
+                      "modifiers": Object {
+                        "arrow": Object {
+                          "element": null,
+                          "enabled": false,
+                        },
+                      },
                     }
-                    transition={true}
-                  />
-                </ForwardRef(Tooltip)>
-              </WithStyles(ForwardRef(Tooltip))>
-            </OpenAccessIcon>
-          </WithStyles(OpenAccessIcon)>
+                  }
+                  transition={true}
+                />
+              </ForwardRef(Tooltip)>
+            </WithStyles(ForwardRef(Tooltip))>
+          </OpenAccessIcon>
         </MuiPickersUtilsProvider>
       </ThemeProvider>
     </Router>

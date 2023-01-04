@@ -4,13 +4,7 @@ import { locale } from 'locale';
 import { openAccessConfig } from 'config';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
-import { withStyles } from '@material-ui/core/styles';
 import { LockOpen, Lock, LockClockOutlined } from '@mui/icons-material';
-
-const styles = theme => ({
-    badgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4 },
-    embargoedBadgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4, color: theme.palette.secondary.main },
-});
 
 export class OpenAccessIcon extends PureComponent {
     static propTypes = {
@@ -72,4 +66,4 @@ export class OpenAccessIcon extends PureComponent {
     }
 }
 
-export default withStyles(styles)(OpenAccessIcon);
+export default OpenAccessIcon;

@@ -49,7 +49,6 @@ export const useStyles = makeStyles(
         dataWrapper: {
             overflow: 'hidden',
             textOverflow: 'ellipsis',
-            // border: '1px solid black',
         },
         fileIcon: {
             opacity: 0.5,

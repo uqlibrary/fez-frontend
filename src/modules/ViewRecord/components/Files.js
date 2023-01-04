@@ -445,7 +445,6 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
-        fileData[0].description = 'qweqweqweq we qweqwe qwe qwe qwe ';
 
         return (
             <Grid item xs={12}>
