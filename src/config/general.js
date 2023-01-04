@@ -1742,6 +1742,10 @@ export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
     },
 ];
 
+export const AV_CHECK_STATE_CLEAN = 'clean';
+export const AV_CHECK_STATE_INFECTED = 'infected';
+export const AV_CHECK_STATE_UNSCANNABLE = 'unscannable';
+
 export const BULK_DELETE_USER_SUCCESS = 'User deleted';
 export const BULK_DELETE_USER_NOT_FOUND = 'User not found';
 export const BULK_DELETE_USER_PREMIS_EVENT = 'Cannot delete user with premis events';

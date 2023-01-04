@@ -26,6 +26,7 @@ import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
 import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
+import FileAvStateIcon from '../../SharedComponents/Toolbox/AttachedFilesField/FileAvStateIcon';
 
 export const styles = theme => ({
     header: {
@@ -329,7 +330,7 @@ export class FilesClass extends Component {
                           attachments.length > 0
                       ) {
                           const attachIndex = attachments.findIndex(
-                              attachitem => item.dsi_dsid === attachitem.rek_file_attachment_name,
+                              attachItem => item.dsi_dsid === attachItem.rek_file_attachment_name,
                           );
                           item.dsi_order =
                               attachIndex >= 0 ? attachments[attachIndex].rek_file_attachment_name_order : null;
@@ -400,6 +401,10 @@ export class FilesClass extends Component {
                           securityStatus: securityAccess,
                           checksums: checksums,
                           requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
+                          avCheck: {
+                              state: dataStream.dsi_av_check_state,
+                              date: dataStream.dsi_av_check_date,
+                          },
                       };
                   });
     };
@@ -439,6 +444,7 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
+        fileData[0].description = 'qweqweqweq we qweqwe qwe qwe qwe ';
 
         return (
             <Grid item xs={12}>
@@ -468,7 +474,7 @@ export class FilesClass extends Component {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item xs={2} sm={1}>
+                            <Grid item xs={2}>
                                 &nbsp;
                             </Grid>
                             <Grid item sm={4} data-testid="dsi-dsid-label">
@@ -490,9 +496,7 @@ export class FilesClass extends Component {
                                     </Typography>
                                 </Grid>
                             </Hidden>
-                            <Hidden xsDown>
-                                <Grid item sm />
-                            </Hidden>
+                            <Grid item sm />
                         </Grid>
                     </div>
 
@@ -518,6 +522,7 @@ export class FilesClass extends Component {
                                 </Grid>
                                 <Grid
                                     item
+                                    xs={8}
                                     sm={4}
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-dsid-${index}`}
@@ -554,14 +559,15 @@ export class FilesClass extends Component {
                                         </Typography>
                                     </Grid>
                                 </Hidden>
-                                <Hidden xsDown>
-                                    <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
+                                <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
+                                    <div style={{ whiteSpace: 'nowrap' }}>
+                                        <FileAvStateIcon state={item.avCheck?.state} checkedAt={item.avCheck?.date} />
                                         <OpenAccessIcon
                                             {...item.openAccessStatus}
                                             securityStatus={item.securityStatus}
                                         />
-                                    </Grid>
-                                </Hidden>
+                                    </div>
+                                </Grid>
                             </Grid>
                         </div>
                     ))}

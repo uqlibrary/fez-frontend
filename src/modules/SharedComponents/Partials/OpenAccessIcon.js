@@ -2,12 +2,10 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import { openAccessConfig } from 'config';
-import Badge from '@material-ui/core/Badge';
-import AccessTime from '@material-ui/icons/AccessTime';
-import Lock from '@material-ui/icons/Lock';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
 import { withStyles } from '@material-ui/core/styles';
+import { LockOpen, Lock, LockClockOutlined } from '@mui/icons-material';
 
 const styles = theme => ({
     badgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4 },
@@ -32,20 +30,11 @@ export class OpenAccessIcon extends PureComponent {
 
     render() {
         const txt = locale.viewRecord.sections.links;
-        const classes = this.props.classes;
         if (!this.props.securityStatus) {
             return (
                 <Fragment>
                     <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
-                        <Badge
-                            badgeContent={<Lock fontSize="small" color="secondary" className={classes.badgeStyle} />}
-                        >
-                            <span
-                                className="fez-icon openAccessLocked large"
-                                role="img"
-                                aria-label={txt.securityLocked}
-                            />
-                        </Badge>
+                        <Lock />
                     </Tooltip>
                 </Fragment>
             );
@@ -58,7 +47,7 @@ export class OpenAccessIcon extends PureComponent {
             return (
                 <Fragment>
                     <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                        <span className="fez-icon openAccess large" role="img" aria-label={openAccessTitle} />
+                        <LockOpen />
                     </Tooltip>
                 </Fragment>
             );
@@ -73,15 +62,9 @@ export class OpenAccessIcon extends PureComponent {
                             {txt.embargoedUntil.replace('[embargo_date]', this.props.embargoDate)}
                         </span>
                     )}
-                    <Badge badgeContent={<AccessTime fontSize="small" className={classes.embargoedBadgeStyle} />}>
-                        <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
-                            <span
-                                className="fez-icon openAccessEmbargoed large"
-                                role="img"
-                                aria-label={openAccessTitle}
-                            />
-                        </Tooltip>
-                    </Badge>
+                    <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                        <LockClockOutlined color="#989898" />
+                    </Tooltip>
                 </Fragment>
             );
         }
