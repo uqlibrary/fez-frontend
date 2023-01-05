@@ -61,7 +61,7 @@ export default {
                                     'https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets',
                                 ) || undefined
                             }
-                            tabIndex="0"
+                            tabIndex={0}
                         >
                             <OpenInNew className="externalLinkIcon" /> online guide
                         </a>

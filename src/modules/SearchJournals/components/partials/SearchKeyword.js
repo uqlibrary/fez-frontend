@@ -70,7 +70,7 @@ export const SearchKeyword = ({
                 id={id}
                 data-testid={id}
                 role="button"
-                tabIndex="0"
+                tabIndex={0}
                 aria-label={`${isSelected ? 'Remove' : 'Add'} ${type} ${keyword}`}
             >
                 {keyword}

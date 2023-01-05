@@ -86,7 +86,7 @@ export const renderButton = args => {
             {isInternal && (
                 <a
                     id={item}
-                    tabIndex="0"
+                    tabIndex={0}
                     onClick={navHandler}
                     className={classes.researcherIDlink}
                     onKeyPress={navHandler}
@@ -145,7 +145,7 @@ export class DashboardResearcherIdsClass extends React.Component {
                             target="_blank"
                             aria-label={txt.orcidlinkLabel}
                             title={txt.orcidlinkLabel}
-                            tabIndex="0"
+                            tabIndex={0}
                         >
                             <Typography variant={'caption'} className={classes.orcidLink}>
                                 {`${txt.orcidLinkPrefix}${values.orcid}`}

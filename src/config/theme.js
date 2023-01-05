@@ -89,7 +89,7 @@ export const mui1theme = createTheme({
         MuiMenuItem: {
             styleOverrides: {
                 root: {
-                    '&$selected': {
+                    '&.selected': {
                         backgroundColor: '#4085C6 !important',
                         color: '#FFFFFF',
                     },

@@ -276,7 +276,7 @@ export class FileUploadDropzone extends PureComponent {
         return (
             <Grid container>
                 <Grid item xs={12}>
-                    <div tabIndex="0" onKeyPress={this._onKeyPress} id="FileUploadDropZone">
+                    <div tabIndex={0} onKeyPress={this._onKeyPress} id="FileUploadDropZone">
                         <Dropzone
                             inputProps={{
                                 id: 'Uploader',

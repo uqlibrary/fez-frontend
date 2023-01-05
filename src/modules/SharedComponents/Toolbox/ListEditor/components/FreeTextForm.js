@@ -9,7 +9,7 @@ import { isValidKeyword } from 'config/validation';
 import { indexOf } from 'lodash';
 
 const useStyles = makeStyles(theme => ({
-    MUITextLabel: theme.overrides.MuiFormLabel,
+    MUITextLabel: theme.components.MuiFormLabel.styleOverrides,
     remindToAdd: {
         marginTop: 8,
         color: '#f06f0d',

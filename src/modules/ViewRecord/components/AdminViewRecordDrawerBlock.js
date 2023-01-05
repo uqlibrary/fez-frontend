@@ -47,7 +47,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     key={`content-clipboard-${parentIndex}-${index}`}
                     id={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
                     data-testid={`drawer-${variant}-content-clipboard-${parentIndex}-${index}`}
-                    tabIndex="0"
+                    tabIndex={0}
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
@@ -73,7 +73,7 @@ export const AdminRecordDrawerBlock = ({ block, parentIndex, index, copyToClipbo
                     key={`content-scrollable-${parentIndex}-${index}`}
                     id={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
                     data-testid={`drawer-${variant}-content-scrollable-${parentIndex}-${index}`}
-                    tabIndex="0"
+                    tabIndex={0}
                     aria-label={block.value !== '-' ? block.value : 'No content available'}
                 >
                     {block.value}
