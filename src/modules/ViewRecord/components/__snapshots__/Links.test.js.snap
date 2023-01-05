@@ -4831,6 +4831,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                         openAccessStatusId={453954}
                                                         securityStatus={true}
                                                         showEmbargoText={false}
+                                                        style={
+                                                          Object {
+                                                            "marginBottom": -5,
+                                                          }
+                                                        }
                                                       >
                                                         <WithStyles(ForwardRef(Tooltip))
                                                           TransitionComponent={
@@ -4895,7 +4900,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                           >
                                                             <ForwardRef(LockOpenIcon)
                                                               aria-describedby={null}
-                                                              className=""
+                                                              className="makeStyles-svg-13 makeStyles-svg-14"
                                                               onBlur={[Function]}
                                                               onFocus={[Function]}
                                                               onMouseLeave={[Function]}
@@ -4906,7 +4911,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             >
                                                               <ForwardRef(SvgIcon)
                                                                 aria-describedby={null}
-                                                                className=""
+                                                                className="makeStyles-svg-13 makeStyles-svg-14"
                                                                 data-testid="LockOpenIcon"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
@@ -4920,7 +4925,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   aria-describedby={null}
                                                                   aria-hidden={true}
                                                                   as="svg"
-                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-14"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   onBlur={[Function]}
@@ -4935,7 +4940,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "children": <path
                                                                         d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                       />,
-                                                                      "className": "",
+                                                                      "className": "makeStyles-svg-13 makeStyles-svg-14",
                                                                       "color": "inherit",
                                                                       "component": "svg",
                                                                       "data-testid": "LockOpenIcon",
@@ -6027,6 +6032,42 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             </style>
                                                                             <style
                                                                               data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
                                                                               data-meta="LinksClass"
                                                                             >
                                                                               
@@ -6093,7 +6134,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   <svg
                                                                     aria-describedby={null}
                                                                     aria-hidden={true}
-                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-14 css-i4bv87-MuiSvgIcon-root"
                                                                     data-testid="LockOpenIcon"
                                                                     focusable="false"
                                                                     onBlur={[Function]}
@@ -6116,7 +6157,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                               anchorEl={
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-14 css-i4bv87-MuiSvgIcon-root"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   title="Open Access - PMC - Free to read"
@@ -6473,7 +6514,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 >
                                                                   <a
                                                                     aria-label="Open this DOI in an new window"
-                                                                    className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-13"
+                                                                    className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-15"
                                                                     data-testid="citation-doi-link"
                                                                     href="https://doi.org/10.1093/hmg/ddw177"
                                                                     id="citation-doi-link"
@@ -6852,6 +6893,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                         isOpenAccess={false}
                                                         securityStatus={true}
                                                         showEmbargoText={false}
+                                                        style={
+                                                          Object {
+                                                            "marginBottom": -5,
+                                                          }
+                                                        }
                                                       >
                                                         <span
                                                           className="noOaIcon"
@@ -7186,7 +7232,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                               title="Link to publication"
                                                             >
                                                               <a
-                                                                className="makeStyles-externalLink-10 makeStyles-externalLink-14"
+                                                                className="makeStyles-externalLink-10 makeStyles-externalLink-17"
                                                                 data-testid="publication-0-link"
                                                                 href="http://www.thisisatest.com"
                                                                 id="publication-0-link"
@@ -7564,6 +7610,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                         openAccessStatusId={453694}
                                                         securityStatus={true}
                                                         showEmbargoText={false}
+                                                        style={
+                                                          Object {
+                                                            "marginBottom": -5,
+                                                          }
+                                                        }
                                                       >
                                                         <WithStyles(ForwardRef(Tooltip))
                                                           TransitionComponent={
@@ -7628,7 +7679,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                           >
                                                             <ForwardRef(LockOpenIcon)
                                                               aria-describedby={null}
-                                                              className=""
+                                                              className="makeStyles-svg-13 makeStyles-svg-18"
                                                               onBlur={[Function]}
                                                               onFocus={[Function]}
                                                               onMouseLeave={[Function]}
@@ -7639,7 +7690,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             >
                                                               <ForwardRef(SvgIcon)
                                                                 aria-describedby={null}
-                                                                className=""
+                                                                className="makeStyles-svg-13 makeStyles-svg-18"
                                                                 data-testid="LockOpenIcon"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
@@ -7653,7 +7704,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   aria-describedby={null}
                                                                   aria-hidden={true}
                                                                   as="svg"
-                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-18"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   onBlur={[Function]}
@@ -7668,7 +7719,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "children": <path
                                                                         d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                       />,
-                                                                      "className": "",
+                                                                      "className": "makeStyles-svg-13 makeStyles-svg-18",
                                                                       "color": "inherit",
                                                                       "component": "svg",
                                                                       "data-testid": "LockOpenIcon",
@@ -8760,6 +8811,42 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             </style>
                                                                             <style
                                                                               data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
                                                                               data-meta="LinksClass"
                                                                             >
                                                                               
@@ -8826,7 +8913,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   <svg
                                                                     aria-describedby={null}
                                                                     aria-hidden={true}
-                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-18 css-i4bv87-MuiSvgIcon-root"
                                                                     data-testid="LockOpenIcon"
                                                                     focusable="false"
                                                                     onBlur={[Function]}
@@ -8849,7 +8936,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                               anchorEl={
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-18 css-i4bv87-MuiSvgIcon-root"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   title="Open Access - Free to read"
@@ -9208,7 +9295,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                               title="Click to open link in a new window"
                                                             >
                                                               <a
-                                                                className="makeStyles-externalLink-10 makeStyles-externalLink-15"
+                                                                className="makeStyles-externalLink-10 makeStyles-externalLink-19"
                                                                 data-testid="publication-1-link"
                                                                 href="http://www.thisisanothertest.com"
                                                                 id="publication-1-link"
@@ -9586,6 +9673,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                         openAccessStatusId={453694}
                                                         securityStatus={true}
                                                         showEmbargoText={false}
+                                                        style={
+                                                          Object {
+                                                            "marginBottom": -5,
+                                                          }
+                                                        }
                                                       >
                                                         <WithStyles(ForwardRef(Tooltip))
                                                           TransitionComponent={
@@ -9650,7 +9742,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                           >
                                                             <ForwardRef(LockOpenIcon)
                                                               aria-describedby={null}
-                                                              className=""
+                                                              className="makeStyles-svg-13 makeStyles-svg-20"
                                                               onBlur={[Function]}
                                                               onFocus={[Function]}
                                                               onMouseLeave={[Function]}
@@ -9661,7 +9753,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             >
                                                               <ForwardRef(SvgIcon)
                                                                 aria-describedby={null}
-                                                                className=""
+                                                                className="makeStyles-svg-13 makeStyles-svg-20"
                                                                 data-testid="LockOpenIcon"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
@@ -9675,7 +9767,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   aria-describedby={null}
                                                                   aria-hidden={true}
                                                                   as="svg"
-                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-20"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   onBlur={[Function]}
@@ -9690,7 +9782,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                       "children": <path
                                                                         d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                       />,
-                                                                      "className": "",
+                                                                      "className": "makeStyles-svg-13 makeStyles-svg-20",
                                                                       "color": "inherit",
                                                                       "component": "svg",
                                                                       "data-testid": "LockOpenIcon",
@@ -10782,6 +10874,42 @@ exports[`Component Links  Full mount render 1`] = `
                                                                             </style>
                                                                             <style
                                                                               data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
+                                                                              data-meta="makeStyles"
+                                                                            >
+                                                                              
+
+                                                                            </style>
+                                                                            <style
+                                                                              data-jss=""
                                                                               data-meta="LinksClass"
                                                                             >
                                                                               
@@ -10848,7 +10976,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                                   <svg
                                                                     aria-describedby={null}
                                                                     aria-hidden={true}
-                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-20 css-i4bv87-MuiSvgIcon-root"
                                                                     data-testid="LockOpenIcon"
                                                                     focusable="false"
                                                                     onBlur={[Function]}
@@ -10871,7 +10999,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                               anchorEl={
                                                                 <svg
                                                                   aria-hidden="true"
-                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-20 css-i4bv87-MuiSvgIcon-root"
                                                                   data-testid="LockOpenIcon"
                                                                   focusable="false"
                                                                   title="Open Access - Free to read"
@@ -12933,7 +13061,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           >
                                                             <a
                                                               aria-label="Full text via Pubmed Central (open access)"
-                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-20"
+                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-29"
                                                               data-testid="pubmed-central-link"
                                                               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                               id="pubmed-central-link"
@@ -13310,6 +13438,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     openAccessStatusId={453954}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <WithStyles(ForwardRef(Tooltip))
                                                       TransitionComponent={
@@ -13374,7 +13507,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                       >
                                                         <ForwardRef(LockOpenIcon)
                                                           aria-describedby={null}
-                                                          className=""
+                                                          className="makeStyles-svg-13 makeStyles-svg-30"
                                                           onBlur={[Function]}
                                                           onFocus={[Function]}
                                                           onMouseLeave={[Function]}
@@ -13385,7 +13518,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         >
                                                           <ForwardRef(SvgIcon)
                                                             aria-describedby={null}
-                                                            className=""
+                                                            className="makeStyles-svg-13 makeStyles-svg-30"
                                                             data-testid="LockOpenIcon"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
@@ -13399,7 +13532,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               aria-describedby={null}
                                                               aria-hidden={true}
                                                               as="svg"
-                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-30"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               onBlur={[Function]}
@@ -13414,7 +13547,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   "children": <path
                                                                     d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                   />,
-                                                                  "className": "",
+                                                                  "className": "makeStyles-svg-13 makeStyles-svg-30",
                                                                   "color": "inherit",
                                                                   "component": "svg",
                                                                   "data-testid": "LockOpenIcon",
@@ -14569,6 +14702,105 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         </style>
                                                                         <style
                                                                           data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
                                                                           data-meta="LinksClass"
                                                                         >
                                                                           
@@ -14635,7 +14867,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               <svg
                                                                 aria-describedby={null}
                                                                 aria-hidden={true}
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-30 css-i4bv87-MuiSvgIcon-root"
                                                                 data-testid="LockOpenIcon"
                                                                 focusable="false"
                                                                 onBlur={[Function]}
@@ -14658,7 +14890,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           anchorEl={
                                                             <svg
                                                               aria-hidden="true"
-                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-30 css-i4bv87-MuiSvgIcon-root"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               title="Open Access - PMC - Free to read"
@@ -15021,7 +15253,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             >
                                                               <a
                                                                 aria-label="Open this DOI in an new window"
-                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-21"
+                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-31"
                                                                 data-testid="citation-doi-link"
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                 id="citation-doi-link"
@@ -15399,6 +15631,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     openAccessStatusId={453693}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <WithStyles(ForwardRef(Tooltip))
                                                       TransitionComponent={
@@ -15463,7 +15700,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                       >
                                                         <ForwardRef(LockOpenIcon)
                                                           aria-describedby={null}
-                                                          className=""
+                                                          className="makeStyles-svg-13 makeStyles-svg-32"
                                                           onBlur={[Function]}
                                                           onFocus={[Function]}
                                                           onMouseLeave={[Function]}
@@ -15474,7 +15711,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         >
                                                           <ForwardRef(SvgIcon)
                                                             aria-describedby={null}
-                                                            className=""
+                                                            className="makeStyles-svg-13 makeStyles-svg-32"
                                                             data-testid="LockOpenIcon"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
@@ -15488,7 +15725,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               aria-describedby={null}
                                                               aria-hidden={true}
                                                               as="svg"
-                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-32"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               onBlur={[Function]}
@@ -15503,7 +15740,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                   "children": <path
                                                                     d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                   />,
-                                                                  "className": "",
+                                                                  "className": "makeStyles-svg-13 makeStyles-svg-32",
                                                                   "color": "inherit",
                                                                   "component": "svg",
                                                                   "data-testid": "LockOpenIcon",
@@ -16658,6 +16895,105 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                                         </style>
                                                                         <style
                                                                           data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
                                                                           data-meta="LinksClass"
                                                                         >
                                                                           
@@ -16724,7 +17060,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                               <svg
                                                                 aria-describedby={null}
                                                                 aria-hidden={true}
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-32 css-i4bv87-MuiSvgIcon-root"
                                                                 data-testid="LockOpenIcon"
                                                                 focusable="false"
                                                                 onBlur={[Function]}
@@ -16747,7 +17083,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           anchorEl={
                                                             <svg
                                                               aria-hidden="true"
-                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-32 css-i4bv87-MuiSvgIcon-root"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               title="Open Access - DOI - Free to read"
@@ -17100,7 +17436,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           title="Link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-22"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-33"
                                                             data-testid="publication-0-link"
                                                             href="http://www.thisisatest.com"
                                                             id="publication-0-link"
@@ -17475,6 +17811,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -17803,7 +18144,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           title="Another link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-23"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-35"
                                                             data-testid="publication-1-link"
                                                             href="http://www.thisisanothertest.com"
                                                             id="publication-1-link"
@@ -18178,6 +18519,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -18506,7 +18852,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           title="Click to open link in a new window"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-24"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-37"
                                                             data-testid="publication-2-link"
                                                             href="http://www.nodescription.com"
                                                             id="publication-2-link"
@@ -18881,6 +19227,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -20708,7 +21059,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           >
                                                             <a
                                                               aria-label="Full text via Pubmed Central (open access)"
-                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-25"
+                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-39"
                                                               data-testid="pubmed-central-link"
                                                               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                               id="pubmed-central-link"
@@ -21085,6 +21436,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     openAccessStatusId={453954}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <WithStyles(ForwardRef(Tooltip))
                                                       TransitionComponent={
@@ -21149,7 +21505,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                       >
                                                         <ForwardRef(LockOpenIcon)
                                                           aria-describedby={null}
-                                                          className=""
+                                                          className="makeStyles-svg-13 makeStyles-svg-40"
                                                           onBlur={[Function]}
                                                           onFocus={[Function]}
                                                           onMouseLeave={[Function]}
@@ -21160,7 +21516,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         >
                                                           <ForwardRef(SvgIcon)
                                                             aria-describedby={null}
-                                                            className=""
+                                                            className="makeStyles-svg-13 makeStyles-svg-40"
                                                             data-testid="LockOpenIcon"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
@@ -21174,7 +21530,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                               aria-describedby={null}
                                                               aria-hidden={true}
                                                               as="svg"
-                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-40"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               onBlur={[Function]}
@@ -21189,7 +21545,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                   "children": <path
                                                                     d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                   />,
-                                                                  "className": "",
+                                                                  "className": "makeStyles-svg-13 makeStyles-svg-40",
                                                                   "color": "inherit",
                                                                   "component": "svg",
                                                                   "data-testid": "LockOpenIcon",
@@ -22372,6 +22728,133 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                                         </style>
                                                                         <style
                                                                           data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
                                                                           data-meta="LinksClass"
                                                                         >
                                                                           
@@ -22438,7 +22921,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                               <svg
                                                                 aria-describedby={null}
                                                                 aria-hidden={true}
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-40 css-i4bv87-MuiSvgIcon-root"
                                                                 data-testid="LockOpenIcon"
                                                                 focusable="false"
                                                                 onBlur={[Function]}
@@ -22461,7 +22944,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           anchorEl={
                                                             <svg
                                                               aria-hidden="true"
-                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-40 css-i4bv87-MuiSvgIcon-root"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               title="Open Access - PMC - Free to read"
@@ -22814,7 +23297,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           title="Link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-26"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-41"
                                                             data-testid="publication-0-link"
                                                             href="http://www.thisisatest.com"
                                                             id="publication-0-link"
@@ -23189,6 +23672,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -23517,7 +24005,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           title="Another link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-27"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-43"
                                                             data-testid="publication-1-link"
                                                             href="http://www.thisisanothertest.com"
                                                             id="publication-1-link"
@@ -23892,6 +24380,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -24220,7 +24713,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           title="Click to open link in a new window"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-28"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-45"
                                                             data-testid="publication-2-link"
                                                             href="http://www.nodescription.com"
                                                             id="publication-2-link"
@@ -24595,6 +25088,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -26292,7 +26790,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           >
                                                             <a
                                                               aria-label="Full text via Pubmed Central (open access)"
-                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-29"
+                                                              className="pubmedCentralLinkUrl makeStyles-externalLink-10 makeStyles-externalLink-47"
                                                               data-testid="pubmed-central-link"
                                                               href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5179926"
                                                               id="pubmed-central-link"
@@ -26669,6 +27167,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     openAccessStatusId={453954}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <WithStyles(ForwardRef(Tooltip))
                                                       TransitionComponent={
@@ -26733,7 +27236,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                       >
                                                         <ForwardRef(LockOpenIcon)
                                                           aria-describedby={null}
-                                                          className=""
+                                                          className="makeStyles-svg-13 makeStyles-svg-48"
                                                           onBlur={[Function]}
                                                           onFocus={[Function]}
                                                           onMouseLeave={[Function]}
@@ -26744,7 +27247,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         >
                                                           <ForwardRef(SvgIcon)
                                                             aria-describedby={null}
-                                                            className=""
+                                                            className="makeStyles-svg-13 makeStyles-svg-48"
                                                             data-testid="LockOpenIcon"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
@@ -26758,7 +27261,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                               aria-describedby={null}
                                                               aria-hidden={true}
                                                               as="svg"
-                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-48"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               onBlur={[Function]}
@@ -26773,7 +27276,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                   "children": <path
                                                                     d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
                                                                   />,
-                                                                  "className": "",
+                                                                  "className": "makeStyles-svg-13 makeStyles-svg-48",
                                                                   "color": "inherit",
                                                                   "component": "svg",
                                                                   "data-testid": "LockOpenIcon",
@@ -27991,6 +28494,168 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                                         </style>
                                                                         <style
                                                                           data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
                                                                           data-meta="LinksClass"
                                                                         >
                                                                           
@@ -28057,7 +28722,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                               <svg
                                                                 aria-describedby={null}
                                                                 aria-hidden={true}
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-48 css-i4bv87-MuiSvgIcon-root"
                                                                 data-testid="LockOpenIcon"
                                                                 focusable="false"
                                                                 onBlur={[Function]}
@@ -28080,7 +28745,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           anchorEl={
                                                             <svg
                                                               aria-hidden="true"
-                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-48 css-i4bv87-MuiSvgIcon-root"
                                                               data-testid="LockOpenIcon"
                                                               focusable="false"
                                                               title="Open Access - PMC - Free to read"
@@ -28437,7 +29102,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             >
                                                               <a
                                                                 aria-label="Open this DOI in an new window"
-                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-30"
+                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-49"
                                                                 data-testid="citation-doi-link"
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                 id="citation-doi-link"
@@ -28814,6 +29479,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -29142,7 +29812,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           title="Link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-31"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-51"
                                                             data-testid="publication-0-link"
                                                             href="http://www.thisisatest.com"
                                                             id="publication-0-link"
@@ -29517,6 +30187,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -29845,7 +30520,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           title="Another link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-32"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-53"
                                                             data-testid="publication-1-link"
                                                             href="http://www.thisisanothertest.com"
                                                             id="publication-1-link"
@@ -30220,6 +30895,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -30548,7 +31228,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           title="Click to open link in a new window"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-33"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-55"
                                                             data-testid="publication-2-link"
                                                             href="http://www.nodescription.com"
                                                             id="publication-2-link"
@@ -30923,6 +31603,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -32753,7 +33438,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             >
                                                               <a
                                                                 aria-label="Open this DOI in an new window"
-                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-16"
+                                                                className="citationDoiLink makeStyles-externalLink-10 makeStyles-externalLink-21"
                                                                 data-testid="citation-doi-link"
                                                                 href="https://doi.org/10.1016/j.pnsc.2012.12.004"
                                                                 id="citation-doi-link"
@@ -33131,6 +33816,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     openAccessStatusId={453693}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <WithStyles(ForwardRef(Tooltip))
                                                       TransitionComponent={
@@ -33195,7 +33885,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                       >
                                                         <ForwardRef(LockClockOutlinedIcon)
                                                           aria-describedby={null}
-                                                          className=""
+                                                          className="makeStyles-svg-13 makeStyles-svg-22"
                                                           onBlur={[Function]}
                                                           onFocus={[Function]}
                                                           onMouseLeave={[Function]}
@@ -33206,7 +33896,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         >
                                                           <ForwardRef(SvgIcon)
                                                             aria-describedby={null}
-                                                            className=""
+                                                            className="makeStyles-svg-13 makeStyles-svg-22"
                                                             data-testid="LockClockOutlinedIcon"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
@@ -33220,7 +33910,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                               aria-describedby={null}
                                                               aria-hidden={true}
                                                               as="svg"
-                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium"
+                                                              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-22"
                                                               data-testid="LockClockOutlinedIcon"
                                                               focusable="false"
                                                               onBlur={[Function]}
@@ -33240,7 +33930,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                       d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
                                                                     />,
                                                                   ],
-                                                                  "className": "",
+                                                                  "className": "makeStyles-svg-13 makeStyles-svg-22",
                                                                   "color": "inherit",
                                                                   "component": "svg",
                                                                   "data-testid": "LockClockOutlinedIcon",
@@ -34360,6 +35050,70 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                                         </style>
                                                                         <style
                                                                           data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
+                                                                          data-meta="makeStyles"
+                                                                        >
+                                                                          
+
+                                                                        </style>
+                                                                        <style
+                                                                          data-jss=""
                                                                           data-meta="LinksClass"
                                                                         >
                                                                           
@@ -34426,7 +35180,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                               <svg
                                                                 aria-describedby={null}
                                                                 aria-hidden={true}
-                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-22 css-i4bv87-MuiSvgIcon-root"
                                                                 data-testid="LockClockOutlinedIcon"
                                                                 focusable="false"
                                                                 onBlur={[Function]}
@@ -34454,7 +35208,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           anchorEl={
                                                             <svg
                                                               aria-hidden="true"
-                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                                              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-13 makeStyles-svg-22 css-i4bv87-MuiSvgIcon-root"
                                                               data-testid="LockClockOutlinedIcon"
                                                               focusable="false"
                                                               title="DOI - Open access after 24th December 2020"
@@ -34810,7 +35564,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           title="Link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-17"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-23"
                                                             data-testid="publication-0-link"
                                                             href="http://www.thisisatest.com"
                                                             id="publication-0-link"
@@ -35185,6 +35939,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -35513,7 +36272,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           title="Another link to publication"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-18"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-25"
                                                             data-testid="publication-1-link"
                                                             href="http://www.thisisanothertest.com"
                                                             id="publication-1-link"
@@ -35888,6 +36647,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"
@@ -36216,7 +36980,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           title="Click to open link in a new window"
                                                         >
                                                           <a
-                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-19"
+                                                            className="makeStyles-externalLink-10 makeStyles-externalLink-27"
                                                             data-testid="publication-2-link"
                                                             href="http://www.nodescription.com"
                                                             id="publication-2-link"
@@ -36591,6 +37355,11 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                     isOpenAccess={false}
                                                     securityStatus={true}
                                                     showEmbargoText={false}
+                                                    style={
+                                                      Object {
+                                                        "marginBottom": -5,
+                                                      }
+                                                    }
                                                   >
                                                     <span
                                                       className="noOaIcon"

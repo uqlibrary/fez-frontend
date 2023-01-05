@@ -227,6 +227,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -448,6 +449,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -693,6 +695,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -837,6 +840,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -1085,6 +1089,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -1229,6 +1234,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -1479,6 +1485,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -1623,6 +1630,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -1871,6 +1879,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -2015,6 +2024,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -2263,6 +2273,7 @@ exports[`Files Component  should render advisory statement 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -2407,6 +2418,7 @@ exports[`Files Component  should render advisory statement 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -2650,6 +2662,7 @@ exports[`Files Component  should render an image as the original filename with n
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -2871,6 +2884,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -3015,6 +3029,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -3252,6 +3267,7 @@ exports[`Files Component  should render component 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -3396,6 +3412,7 @@ exports[`Files Component  should render component 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -3633,6 +3650,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -3777,6 +3795,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4014,6 +4033,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4158,6 +4178,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4395,6 +4416,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4539,6 +4561,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4776,6 +4799,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -4920,6 +4944,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -5157,6 +5182,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -5301,6 +5327,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -5538,6 +5565,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -5682,6 +5710,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -5930,6 +5959,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -6074,6 +6104,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -6322,6 +6353,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -6466,6 +6498,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -6799,6 +6832,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -7036,6 +7070,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
@@ -7180,6 +7215,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
                 openAccessStatusId={453693}
                 securityStatus={true}
                 showEmbargoText={false}
+                style={Object {}}
               />
             </Styled(MuiBox)>
           </Styled(MuiBox)>
