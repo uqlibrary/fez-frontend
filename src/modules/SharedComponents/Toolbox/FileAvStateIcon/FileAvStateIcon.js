@@ -26,7 +26,6 @@ const getStateIcon = state => {
             return <GppGood {...props} />;
         case AV_CHECK_STATE_INFECTED:
             return <Coronavirus {...props} />;
-            break;
         case AV_CHECK_STATE_UNSCANNABLE:
             return <GppMaybe {...props} />;
         default:

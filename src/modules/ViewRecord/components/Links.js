@@ -62,7 +62,7 @@ export class LinksClass extends PureComponent {
                 </Typography>
             </Grid>
             <Grid item xs={1} sm={2} style={{ textAlign: 'right' }} data-testid={`${linkId}-oa-status`}>
-                <OpenAccessIcon {...openAccessStatus} />
+                <OpenAccessIcon {...openAccessStatus} style={{ marginBottom: -5 }} />
             </Grid>
         </Grid>
     );

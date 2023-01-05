@@ -26,8 +26,8 @@ import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
 import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
-import FileAvStateIcon from '../../SharedComponents/Toolbox/AttachedFilesField/FileAvStateIcon';
 import Box from '@material-ui/core/Box';
+import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
 
 export const styles = theme => ({
     header: {

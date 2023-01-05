@@ -36,9 +36,9 @@ import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
-import FileAvStateIcon from './FileAvStateIcon';
 import Box from '@material-ui/core/Box';
 import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
+import { FileAvStateIcon } from '../FileAvStateIcon';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
