@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@mui/material/TextField';
@@ -34,7 +34,7 @@ export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the fut
 
 export const MONTH_UNSELECTED = -1;
 
-export class PartialDateForm extends Component {
+export class PartialDateForm extends PureComponent {
     static propTypes = {
         locale: PropTypes.object,
         onChange: PropTypes.func,
@@ -106,21 +106,24 @@ export class PartialDateForm extends Component {
                 day: dateValue.date(),
                 month: dateValue.month(),
                 year: dateValue.year(),
+                setDate: this._setDate,
             };
         } else {
             this.state = {
                 day: '',
                 month: -1,
                 year: '',
+                setDate: this._setDate,
             };
         }
         this.errors = { day: '', month: '', year: '' };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) {
-            this.props.onChange(this._setDate(nextState));
+    static getDerivedStateFromProps(props, state) {
+        console.log('getDerivedStateFromProps');
+        if (props.onChange) {
+            console.log('getDerivedStateFromProps inside IF');
+            props.onChange(state.setDate(state));
         }
     }
 

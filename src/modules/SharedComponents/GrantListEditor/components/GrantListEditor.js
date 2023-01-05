@@ -40,13 +40,12 @@ export class GrantListEditor extends PureComponent {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillUpdate(nextProps, nextState) {
+    componentDidUpdate() {
         // notify parent component when local state has been updated, eg grants added/removed/reordered
-        if (nextState.grantFormPopulated && this.props.onChange) {
-            this.props.onChange(nextState.grantFormPopulated);
+        if (this.state.grantFormPopulated && this.props.onChange) {
+            this.props.onChange(this.state.grantFormPopulated);
         } else {
-            this.props.onChange(nextState.grants);
+            this.props.onChange(this.state.grants);
         }
     }
 

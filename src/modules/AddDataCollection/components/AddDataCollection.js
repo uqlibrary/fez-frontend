@@ -68,9 +68,8 @@ export default class AddDataCollection extends Component {
         userCountry: PropTypes.any,
     };
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.confirmationBox.showConfirmation();
         }
     }

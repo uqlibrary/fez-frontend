@@ -141,11 +141,11 @@ export class PublicationsListPaging extends Component {
         };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (!nextProps.disabled && JSON.stringify(nextProps.pagingData) !== JSON.stringify(this.state)) {
-            this.setState({ ...nextProps.pagingData });
+    static getDerivedStateFromProps(props, state) {
+        if (!props.disabled && JSON.stringify(props.pagingData) !== JSON.stringify(state)) {
+            return { ...props.pagingData };
         }
+        return {};
     }
 
     pageChanged = newPage => {

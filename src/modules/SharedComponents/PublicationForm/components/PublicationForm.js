@@ -80,26 +80,35 @@ export default class PublicationForm extends Component {
                 </MenuItem>
             )),
         ];
+        this.state = {
+            prevProps: { ...this.props },
+        };
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
+    static getDerivedStateFromProps(props, state) {
+        let publicationSubtypeItems;
+
+        if (!!props.subtypes && props.subtypes !== state.prevProps.subtypes) {
+            publicationSubtypeItems = props.subtypes.map((item, index) => (
+                <MenuItem value={item} key={index}>
+                    {item}
+                </MenuItem>
+            ));
+        }
+
+        return { publicationSubtypeItems, prevProps: { ...props } };
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.submitSucceeded !== this.props.submitSucceeded) {
             this.props.onFormSubmitSuccess();
-        } else {
-            if (!!nextProps.subtypes && nextProps.subtypes !== this.props.subtypes) {
-                this.publicationSubtypeItems = nextProps.subtypes.map((item, index) => (
-                    <MenuItem value={item} key={index}>
-                        {item}
-                    </MenuItem>
-                ));
-            }
-            if (nextProps.hasDefaultDocTypeSubType) {
-                this.props.changeDisplayType(nextProps.docTypeSubTypeCombo);
-            }
-            if (nextProps.isNtro !== this.props.isNtro) {
-                this.props.changeFormType(nextProps.isNtro);
-            }
+        }
+
+        if (this.props.hasDefaultDocTypeSubType) {
+            this.props.changeDisplayType(this.props.docTypeSubTypeCombo);
+        }
+        if (prevProps.isNtro !== this.props.isNtro) {
+            this.props.changeFormType(this.props.isNtro);
         }
     }
 
@@ -148,7 +157,7 @@ export default class PublicationForm extends Component {
                                                 placeholder={txt.publicationSubtype.hintText}
                                                 selectFieldId="rek-subtype"
                                             >
-                                                {this.publicationSubtypeItems}
+                                                {this.state?.publicationSubtypeItems}
                                             </Field>
                                         </Grid>
                                     )}

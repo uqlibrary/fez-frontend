@@ -169,19 +169,18 @@ export default class NtroFields extends React.PureComponent {
         this.row5Width = this.getWidth([props.hideAudienceSize, props.hidePeerReviewActivity, props.hideLanguage]);
     }
 
-    // eslint-disable-next-line camelcase
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate() {
         this.row3Width = this.getWidth([
-            nextProps.hideVolume,
-            nextProps.hideIssue,
-            nextProps.hideStartPage,
-            nextProps.hideEndPage,
+            this.props.hideVolume,
+            this.props.hideIssue,
+            this.props.hideStartPage,
+            this.props.hideEndPage,
         ]);
-        this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat]);
+        this.row4Width = this.getWidth([this.props.hideExtent, this.props.hideOriginalFormat]);
         this.row5Width = this.getWidth([
-            nextProps.hideAudienceSize,
-            nextProps.hidePeerReviewActivity,
-            nextProps.hideLanguage,
+            this.props.hideAudienceSize,
+            this.props.hidePeerReviewActivity,
+            this.props.hideLanguage,
         ]);
     }
 
