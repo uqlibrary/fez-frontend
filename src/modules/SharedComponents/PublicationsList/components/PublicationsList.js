@@ -109,7 +109,6 @@ export const PublicationsList = ({
                                 }}
                                 onChange={handleSelectAll}
                                 name="select-all-publications"
-                                color="primary"
                                 checked={allSelected}
                                 indeterminate={!allSelected && Object.keys(recordsSelected).length > 0}
                             />
@@ -147,7 +146,6 @@ export const PublicationsList = ({
                                 }}
                                 name={`select-publication-${index}-input`}
                                 onChange={handleChange(publication)}
-                                color="primary"
                                 checked={recordsSelected.hasOwnProperty(publication.rek_pid)}
                             />
                         </Grid>
