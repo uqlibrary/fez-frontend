@@ -14,7 +14,7 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
-// import { useConfirmationState } from 'hooks';
+import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 
 export const useStyles = makeStyles(
     theme => ({
@@ -48,6 +48,7 @@ const FileName = ({
     previewMediaUrl,
     securityStatus,
     webMediaUrl,
+    avCheck,
 }) => {
     const classes = useStyles();
 
@@ -64,7 +65,9 @@ const FileName = ({
     };
 
     const canShowPreview = mimeType => {
-        return previewMediaUrl && (isImage(mimeType) || isVideo(mimeType));
+        return (
+            previewMediaUrl && (isImage(mimeType) || isVideo(mimeType)) && avCheck?.state !== AV_CHECK_STATE_INFECTED
+        );
     };
 
     const showPreview = e => {
@@ -177,6 +180,7 @@ export const FileNameProps = {
     allowDownload: PropTypes.bool,
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
+    avCheck: PropTypes.object,
 };
 
 FileName.propTypes = { ...FileNameProps };

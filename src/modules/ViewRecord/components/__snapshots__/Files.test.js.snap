@@ -2035,6 +2035,229 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
 </WithStyles(ForwardRef(Grid))>
 `;
 
+exports[`Files Component  should not render thumb for infected file 1`] = `
+<WithStyles(ForwardRef(Grid))
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={2}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={2}
+        >
+           
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-label"
+          item={true}
+          sm={4}
+        >
+          <WithStyles(ForwardRef(Typography))
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-label"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-label"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          sm={true}
+        />
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+    <div
+      key="0"
+    >
+      <WithStyles(ForwardRef(Grid))
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={2}
+        wrap="nowrap"
+      >
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-mimetype-0"
+          item={true}
+          sm={1}
+          xs={2}
+        >
+          <Memo(ForwardRef(ImageIcon))
+            color="secondary"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="dsi-dsid-0"
+          item={true}
+          sm={4}
+          xs={8}
+        >
+          <FileName
+            allowDownload={false}
+            avCheck={
+              Object {
+                "date": "2000-01-01 00:00:00",
+                "state": "infected",
+              }
+            }
+            calculatedSize="26.64 MB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
+            description=""
+            fileName="AL_LH_01.tif"
+            icon={
+              <Memo
+                color="secondary"
+              />
+            }
+            id="file-name-0"
+            mediaUrl="http://localhost/view/UQ:676287/AL_LH_01.tif"
+            mimeType="image/tiff"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "allowDownload": true,
+                "embargoDate": null,
+                "isOpenAccess": false,
+                "openAccessStatusId": 453693,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_AL_LH_01.jpg"
+            requiresLoginToDownload={false}
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_AL_LH_01.jpg"
+          />
+        </WithStyles(ForwardRef(Grid))>
+        <Hidden
+          xsDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-label-0"
+            item={true}
+            md={4}
+            sm={6}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <Hidden
+          smDown={true}
+        >
+          <WithStyles(ForwardRef(Grid))
+            data-testid="dsi-size-0"
+            item={true}
+            md={2}
+          >
+            <WithStyles(ForwardRef(Typography))
+              noWrap={true}
+              variant="body2"
+            >
+              26.64 MB
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(Grid))>
+        </Hidden>
+        <WithStyles(ForwardRef(Grid))
+          data-testid="rek-oa-status-0"
+          item={true}
+          sm={true}
+          style={
+            Object {
+              "textAlign": "right",
+            }
+          }
+        >
+          <Styled(MuiBox)
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <Styled(MuiBox)
+              component="span"
+              paddingRight={1}
+            >
+              <FileAvStateIcon
+                checkedAt="2000-01-01 00:00:00"
+                state="infected"
+              />
+            </Styled(MuiBox)>
+            <Styled(MuiBox)
+              component="span"
+              paddingRight={1}
+            >
+              <OpenAccessIcon
+                allowDownload={true}
+                embargoDate={null}
+                isOpenAccess={false}
+                openAccessStatusId={453693}
+                securityStatus={true}
+                showEmbargoText={false}
+                style={Object {}}
+              />
+            </Styled(MuiBox)>
+          </Styled(MuiBox)>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </div>
+  </StandardCard>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`Files Component  should render advisory statement 1`] = `
 <WithStyles(ForwardRef(Grid))
   item={true}

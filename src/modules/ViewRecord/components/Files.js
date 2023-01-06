@@ -383,7 +383,8 @@ export class FilesClass extends Component {
                               mimeType,
                               fileName,
                               !getDownloadLicence(publication) &&
-                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                                  !(!componentProps.account && dataStream.dsi_security_policy === 4) &&
+                                  dataStream.dsi_av_check_state !== AV_CHECK_STATE_INFECTED
                                   ? thumbnailFileName
                                   : null,
                               previewFileName,

@@ -37,7 +37,6 @@ import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../help
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 import Box from '@material-ui/core/Box';
-import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 import { FileAvStateIcon } from '../FileAvStateIcon';
 
 export const useStyles = makeStyles(
@@ -455,9 +454,6 @@ export const AttachedFiles = ({
                                                         {...item}
                                                         onFileSelect={showPreview}
                                                         id={`file-name-${item.id}`}
-                                                        allowDownload={
-                                                            isAdmin && item.avCheck.state !== AV_CHECK_STATE_INFECTED
-                                                        }
                                                     />
                                                 )}
                                             </Grid>

@@ -10,6 +10,7 @@ import {
 } from './Files';
 import * as mock from 'mock/data';
 import {
+    AV_CHECK_STATE_INFECTED,
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
@@ -1571,6 +1572,60 @@ describe('Files Component ', () => {
             dsi_state: 'A',
             dsi_size: 95360,
         });
+    });
+
+    it('should not render thumb for infected file', () => {
+        const fezDatastreamInfo = [
+            {
+                dsi_pid: 'UQ:107683',
+                dsi_dsid: 'AL_LH_01.tif',
+                dsi_embargo_date: null,
+                dsi_open_access: 1,
+                dsi_label: '',
+                dsi_mimetype: 'image/tiff',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 27932352,
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_pid: 'UQ:107683',
+                dsi_dsid: 'preview_AL_LH_01.jpg',
+                dsi_embargo_date: null,
+                dsi_open_access: null,
+                dsi_label: '',
+                dsi_mimetype: 'image/jpeg',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 95360,
+            },
+            {
+                dsi_pid: 'UQ:107683',
+                dsi_dsid: 'thumbnail_AL_LH_01.jpg',
+                dsi_embargo_date: null,
+                dsi_open_access: null,
+                dsi_label: '',
+                dsi_mimetype: 'image/jpeg',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 3912,
+            },
+            {
+                dsi_pid: 'UQ:107683',
+                dsi_dsid: 'web_AL_LH_01.jpg',
+                dsi_embargo_date: null,
+                dsi_open_access: null,
+                dsi_label: '',
+                dsi_mimetype: 'image/jpeg',
+                dsi_copyright: null,
+                dsi_state: 'A',
+                dsi_size: 163244,
+            },
+        ];
+
+        const wrapper = setup({ publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it(
