@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
+import Box from '@mui/material/Box';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -206,14 +206,14 @@ export const JournalSearchResult = ({ onSearch, onSearchAll, browseAllJournals =
             </Grid>
             {!!journalsList && (
                 <Grid item xs={12} md={3}>
-                    <Hidden mdDown>
+                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                         <JournalSearchFacetsFilter
                             key={'journal-search-facets-filter'}
                             facetsData={journalsList.filters?.facets}
                             onFacetsChanged={facetsChanged}
                             disabled={!journalsListLoaded}
                         />
-                    </Hidden>
+                    </Box>
                     <FAQ />
                 </Grid>
             )}

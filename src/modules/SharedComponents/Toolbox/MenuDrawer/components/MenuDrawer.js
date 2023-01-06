@@ -9,7 +9,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
@@ -228,17 +227,15 @@ export class MenuDrawer extends Component {
                                         </ExternalLink>
                                     )}
                                 </Grid>
-                                <Hidden smUp>
-                                    <Grid item xs={2}>
-                                        <IconButton
-                                            onClick={onToggleDrawer}
-                                            aria-label={locale.closeMenuLabel}
-                                            size="small"
-                                        >
-                                            <KeyboardArrowLeft className={classes.iconButton} />
-                                        </IconButton>
-                                    </Grid>
-                                </Hidden>
+                                <Grid item xs={2} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                                    <IconButton
+                                        onClick={onToggleDrawer}
+                                        aria-label={locale.closeMenuLabel}
+                                        size="small"
+                                    >
+                                        <KeyboardArrowLeft className={classes.iconButton} />
+                                    </IconButton>
+                                </Grid>
                             </Grid>
                             {// Skip nav section
                             docked && (

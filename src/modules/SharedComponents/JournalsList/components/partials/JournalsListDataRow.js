@@ -7,7 +7,6 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import Hidden from '@mui/material/Hidden';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
@@ -137,22 +136,21 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                 (row && field.translateFn(row, classesInternal)) || /* istanbul ignore next */ '';
                             return (
                                 <React.Fragment key={field.key}>
-                                    <Hidden
-                                        {...(!!field.collapsibleComponent?.hiddenData
-                                            ? { only: [...field.collapsibleComponent?.hiddenData] }
-                                            : /* istanbul ignore next */ {})}
+                                    <Grid
+                                        item
+                                        {...field.collapsibleComponent?.sizeHeader}
+                                        className={classes?.headerContentMobile}
+                                        sx={{
+                                            ...(!!field.collapsibleComponent?.hiddenData
+                                                ? field.collapsibleComponent?.hiddenData
+                                                : /* istanbul ignore next */ {}),
+                                        }}
                                     >
-                                        <Grid
-                                            item
-                                            {...field.collapsibleComponent?.sizeHeader}
-                                            className={classes?.headerContentMobile}
-                                        >
-                                            {field.collapsibleComponent?.translateFn(field, index, {
-                                                ...classes,
-                                                ...classesInternal,
-                                            })}
-                                        </Grid>
-                                    </Hidden>
+                                        {field.collapsibleComponent?.translateFn(field, index, {
+                                            ...classes,
+                                            ...classesInternal,
+                                        })}
+                                    </Grid>
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeData}

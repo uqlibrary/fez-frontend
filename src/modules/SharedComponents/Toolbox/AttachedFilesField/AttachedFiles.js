@@ -5,7 +5,6 @@ import moment from 'moment';
 import { makeStyles } from '@mui/styles';
 import Delete from '@mui/icons-material/Delete';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -206,23 +205,18 @@ export const AttachedFiles = ({
                                 {locale.fileName}
                             </Typography>
                         </Grid>
-                        <Hidden smDown>
-                            <Grid item sm={3}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.description}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden mdDown>
-                            <Grid item md={2}>
-                                <Typography variant="caption" gutterBottom>
-                                    {locale.size}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
-                        <Hidden smDown>
-                            <Grid item sm />
-                        </Hidden>
+                        <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.description}
+                            </Typography>
+                        </Grid>
+                        <Grid item md={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {locale.size}
+                            </Typography>
+                        </Grid>
+                        <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                         {isAdmin && canEdit && (
                             <React.Fragment>
                                 <Grid item xs={2}>
@@ -251,40 +245,49 @@ export const AttachedFiles = ({
                                         <Grid item sm={3} className={classes.dataWrapper}>
                                             <FileName {...item} onFileSelect={showPreview} id={`file-name-${index}`} />
                                         </Grid>
-                                        <Hidden smDown>
-                                            <Grid item sm={3} className={classes.dataWrapper}>
-                                                {isAdmin && canEdit ? (
-                                                    <TextField
-                                                        fullWidth
-                                                        onChange={onFileDescriptionChange(index)}
-                                                        name="fileDescription"
-                                                        defaultValue={item.description}
-                                                        id={`file-description-input-${index}`}
-                                                        textFieldId={`dsi-label-${index}`}
-                                                        key={item.fileName}
-                                                    />
-                                                ) : (
-                                                    <Typography variant="body2" noWrap>
-                                                        {item.description}
-                                                    </Typography>
-                                                )}
-                                            </Grid>
-                                        </Hidden>
-                                        <Hidden mdDown>
-                                            <Grid item sm={2} className={classes.dataWrapper}>
-                                                <Typography variant="body2" noWrap>
-                                                    {item.calculatedSize}
-                                                </Typography>
-                                            </Grid>
-                                        </Hidden>
-                                        <Hidden smDown>
-                                            <Grid item sm style={{ textAlign: 'right' }}>
-                                                <OpenAccessIcon
-                                                    {...item.openAccessStatus}
-                                                    securityStatus={item.securityStatus}
+                                        <Grid
+                                            item
+                                            sm={3}
+                                            className={classes.dataWrapper}
+                                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                                        >
+                                            {isAdmin && canEdit ? (
+                                                <TextField
+                                                    fullWidth
+                                                    onChange={onFileDescriptionChange(index)}
+                                                    name="fileDescription"
+                                                    defaultValue={item.description}
+                                                    id={`file-description-input-${index}`}
+                                                    textFieldId={`dsi-label-${index}`}
+                                                    key={item.fileName}
                                                 />
-                                            </Grid>
-                                        </Hidden>
+                                            ) : (
+                                                <Typography variant="body2" noWrap>
+                                                    {item.description}
+                                                </Typography>
+                                            )}
+                                        </Grid>
+                                        <Grid
+                                            item
+                                            sm={2}
+                                            className={classes.dataWrapper}
+                                            sx={{ display: { xs: 'none', md: 'block' } }}
+                                        >
+                                            <Typography variant="body2" noWrap>
+                                                {item.calculatedSize}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid
+                                            item
+                                            sm
+                                            style={{ textAlign: 'right' }}
+                                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                                        >
+                                            <OpenAccessIcon
+                                                {...item.openAccessStatus}
+                                                securityStatus={item.securityStatus}
+                                            />
+                                        </Grid>
                                         {isAdmin && canEdit && (
                                             <React.Fragment>
                                                 {/* cypress test does not like period in the id */}

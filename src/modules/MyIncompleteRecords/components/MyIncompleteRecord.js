@@ -8,7 +8,6 @@ import { useConfirmationState } from 'hooks';
 
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -243,9 +242,8 @@ export const MyIncompleteRecord = props => {
                         )}
                     </Grid>
                     <Grid container spacing={3}>
-                        <Hidden mdDown>
-                            <Grid item xs />
-                        </Hidden>
+                        <Grid item xs sx={{ display: { xs: 'none', md: 'block' } }} />
+
                         <Grid item xs={12} md="auto">
                             <Button
                                 id="cancel-fix-work"

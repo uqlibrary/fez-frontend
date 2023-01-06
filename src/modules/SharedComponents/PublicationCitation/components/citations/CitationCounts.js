@@ -5,7 +5,6 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import * as Partials from './partials';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
@@ -101,9 +100,7 @@ export class CitationCounts extends PureComponent {
                             </ExternalLink>
                         )}
                 </Grid>
-                <Hidden smDown>
-                    <Grid item xs />
-                </Hidden>
+                <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
             </Grid>
         );
     }

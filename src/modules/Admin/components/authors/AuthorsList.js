@@ -5,7 +5,6 @@ import MaterialTable, { MTableBodyRow, MTableEditRow, MTableAction } from 'mater
 import { useTheme } from '@mui/material/styles';
 import makeStyles from '@mui/styles/makeStyles';
 import { numberToWords } from 'config';
-import Hidden from '@mui/material/Hidden';
 import AddCircle from '@mui/icons-material/AddCircle';
 import Grid from '@mui/material/Grid';
 import Edit from '@mui/icons-material/Edit';
@@ -47,11 +46,9 @@ export const NameAsPublished = React.memo(({ icon, text, linked }) => {
     const classes = useStyles();
     return (
         <Grid container spacing={2}>
-            <Hidden smDown>
-                <Grid item style={{ alignSelf: 'center' }}>
-                    {icon}
-                </Grid>
-            </Hidden>
+            <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {icon}
+            </Grid>
             <Grid item className={linked ? classes.linked : ''}>
                 {text}
             </Grid>
@@ -112,11 +109,9 @@ export const getColumns = ({ contributorEditorId, disabled, suffix, classes, sho
                 const { rowData: contributor } = props;
                 return (
                     <Grid container spacing={2}>
-                        <Hidden smDown>
-                            <Grid item style={{ alignSelf: 'center' }}>
-                                <PersonOutlined color="secondary" />
-                            </Grid>
-                        </Hidden>
+                        <Grid item style={{ alignSelf: 'center' }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <PersonOutlined color="secondary" />
+                        </Grid>
                         <Grid item style={{ flexGrow: '1' }}>
                             <TextField
                                 autoFocus

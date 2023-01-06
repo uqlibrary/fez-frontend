@@ -8,7 +8,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
 import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 
 export const styles = theme => ({
     alternateActionButtonClass: {
@@ -106,9 +105,8 @@ export class ConfirmDialogBox extends Component {
                 </DialogContent>
                 <DialogActions>
                     <Grid container spacing={1}>
-                        <Hidden smDown>
-                            <Grid item xs />
-                        </Hidden>
+                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                         <Grid item xs={12} sm={'auto'}>
                             <Button
                                 children={this.props.locale.confirmButtonLabel}

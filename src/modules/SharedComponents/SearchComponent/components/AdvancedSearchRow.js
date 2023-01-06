@@ -9,7 +9,6 @@ import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
 import Close from '@mui/icons-material/Close';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 import makeStyles from '@mui/styles/makeStyles';
 import FormControl from '@mui/material/FormControl';
@@ -200,11 +199,9 @@ export const AdvancedSearchRow = props => {
                                 </IconButton>
                             </Grid>
                         )}
-                        <Hidden mdUp>
-                            <Grid item xs={12}>
-                                <Divider className={classes.mobileRowSpacer} />
-                            </Grid>
-                        </Hidden>
+                        <Grid item xs={12} sx={{ display: { xs: 'block', md: 'none' } }}>
+                            <Divider className={classes.mobileRowSpacer} />
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

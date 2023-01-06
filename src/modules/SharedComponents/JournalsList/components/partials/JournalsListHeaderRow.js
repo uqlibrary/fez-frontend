@@ -6,7 +6,6 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Checkbox from '@mui/material/Checkbox';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -46,37 +45,31 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                             const id = sanitiseId(`journal-list-header-${header.key}`);
 
                             return (
-                                <React.Fragment key={header.key}>
-                                    <Hidden
-                                        {...(!!header.collapsibleComponent?.hiddenHeader
-                                            ? { only: [...header.collapsibleComponent?.hiddenHeader] }
-                                            : {})}
-                                    >
-                                        <Grid
-                                            item
-                                            {...header.collapsibleComponent?.sizeHeader}
-                                            className={classes?.inputLabel}
-                                            id={id}
-                                            data-testid={id}
-                                        >
-                                            <Box display="flex" alignItems="flex-end" key={header.key}>
-                                                <Typography variant="body1" className={classes?.inputLabel}>
-                                                    {header.label}
-                                                    {!!header.subLabel && (
-                                                        <span className={classes?.subLabel}>{header.subLabel}</span>
-                                                    )}
-                                                </Typography>
-                                                {!!header.titleHelp && (
-                                                    <HelpIcon
-                                                        {...header.titleHelp}
-                                                        testId={header.key}
-                                                        iconSize={'small'}
-                                                    />
-                                                )}
-                                            </Box>
-                                        </Grid>
-                                    </Hidden>
-                                </React.Fragment>
+                                <Grid
+                                    key={header.key}
+                                    item
+                                    {...header.collapsibleComponent?.sizeHeader}
+                                    className={classes?.inputLabel}
+                                    id={id}
+                                    data-testid={id}
+                                    sx={{
+                                        ...(!!header.collapsibleComponent?.hiddenHeader
+                                            ? header.collapsibleComponent?.hiddenHeader
+                                            : /* istanbul ignore next */ {}),
+                                    }}
+                                >
+                                    <Box display="flex" alignItems="flex-end" key={header.key}>
+                                        <Typography variant="body1" className={classes?.inputLabel}>
+                                            {header.label}
+                                            {!!header.subLabel && (
+                                                <span className={classes?.subLabel}>{header.subLabel}</span>
+                                            )}
+                                        </Typography>
+                                        {!!header.titleHelp && (
+                                            <HelpIcon {...header.titleHelp} testId={header.key} iconSize={'small'} />
+                                        )}
+                                    </Box>
+                                </Grid>
                             );
                         })}
                     </Grid>

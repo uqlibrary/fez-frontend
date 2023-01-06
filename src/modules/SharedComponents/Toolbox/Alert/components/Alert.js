@@ -14,7 +14,6 @@ import Help from '@mui/icons-material/Help';
 import HelpOutline from '@mui/icons-material/HelpOutline';
 import Done from '@mui/icons-material/Done';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import { makeStyles } from '@mui/styles';
 
 const classNames = require('classnames');
@@ -340,19 +339,17 @@ export const Alert = ({
                             {message}
                         </Grid>
                         {allowDismiss && dismissAction && (
-                            <Hidden smUp>
-                                <Grid item className={classes.dismissButton}>
-                                    <IconButton
-                                        onClick={dismissAction}
-                                        title={dismissTitle}
-                                        aria-label={dismissTitle}
-                                        id="dismiss-mobile"
-                                        size="large"
-                                    >
-                                        <Close className="dismiss" />
-                                    </IconButton>
-                                </Grid>
-                            </Hidden>
+                            <Grid item className={classes.dismissButton} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                                <IconButton
+                                    onClick={dismissAction}
+                                    title={dismissTitle}
+                                    aria-label={dismissTitle}
+                                    id="dismiss-mobile"
+                                    size="large"
+                                >
+                                    <Close className="dismiss" />
+                                </IconButton>
+                            </Grid>
                         )}
                     </Grid>
                 </Grid>
@@ -370,19 +367,17 @@ export const Alert = ({
                     </Grid>
                 )}
                 {allowDismiss && dismissAction && (
-                    <Hidden smDown>
-                        <Grid item className={classes.dismissButton}>
-                            <IconButton
-                                onClick={dismissAction}
-                                title={dismissTitle}
-                                aria-label={dismissTitle}
-                                id="dismiss"
-                                size="large"
-                            >
-                                <Close className="dismiss" />
-                            </IconButton>
-                        </Grid>
-                    </Hidden>
+                    <Grid item className={classes.dismissButton} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <IconButton
+                            onClick={dismissAction}
+                            title={dismissTitle}
+                            aria-label={dismissTitle}
+                            id="dismiss"
+                            size="large"
+                        >
+                            <Close className="dismiss" />
+                        </IconButton>
+                    </Grid>
                 )}
             </Grid>
         </div>

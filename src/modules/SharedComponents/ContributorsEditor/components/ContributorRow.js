@@ -8,7 +8,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
-import Hidden from '@mui/material/Hidden';
 import Person from '@mui/icons-material/Person';
 import PersonOutlined from '@mui/icons-material/PersonOutlined';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -222,9 +221,10 @@ export const ContributorRow = ({
                 id={`${contributorRowId}-${index}`}
             >
                 <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-                    <Hidden smDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{getRowIcon()}</ListItemIcon>
-                    </Hidden>
+                    <ListItemIcon classes={{ root: selectedClass }} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        {getRowIcon()}
+                    </ListItemIcon>
+
                     <ContributorRowText
                         index={index}
                         canEdit={canEdit}

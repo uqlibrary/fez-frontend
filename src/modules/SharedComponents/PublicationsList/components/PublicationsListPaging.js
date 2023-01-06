@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import ChevronRight from '@mui/icons-material/ChevronRight';
 import ChevronLeft from '@mui/icons-material/ChevronLeft';
 import withStyles from '@mui/styles/withStyles';
@@ -221,28 +220,29 @@ export class PublicationsListPaging extends Component {
                                 </Button>
                             </Grid>
                         )}
-                        <Hidden smDown>
-                            <Grid item sm={'auto'} className={classes.paginationGridContainer}>
-                                {paginationPages.indexOf(1) === -1 && this.renderButton(1)}
-                                {paginationPages[0] - 1 > 1 && txt.firstLastSeparator}
-                                {renderedPageButtons}
-                                {paginationPages[paginationPages.length - 1] + 1 < totalPages && txt.firstLastSeparator}
-                                {paginationPages.indexOf(totalPages) === -1 && this.renderButton(totalPages)}
-                            </Grid>
-                        </Hidden>
-                        <Hidden smUp>
-                            <Grid item xs>
-                                <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
-                                    <Button
-                                        variant={'text'}
-                                        className={classes.nextPrevButtons}
-                                        children={txt.pageOf
-                                            .replace('[currentPage]', currentPage)
-                                            .replace('[totalPages]', totalPages)}
-                                    />
-                                </Box>
-                            </Grid>
-                        </Hidden>
+                        <Grid
+                            item
+                            sm={'auto'}
+                            className={classes.paginationGridContainer}
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                        >
+                            {paginationPages.indexOf(1) === -1 && this.renderButton(1)}
+                            {paginationPages[0] - 1 > 1 && txt.firstLastSeparator}
+                            {renderedPageButtons}
+                            {paginationPages[paginationPages.length - 1] + 1 < totalPages && txt.firstLastSeparator}
+                            {paginationPages.indexOf(totalPages) === -1 && this.renderButton(totalPages)}
+                        </Grid>
+                        <Grid item xs sx={{ display: { xs: 'block', sm: 'none' } }}>
+                            <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
+                                <Button
+                                    variant={'text'}
+                                    className={classes.nextPrevButtons}
+                                    children={txt.pageOf
+                                        .replace('[currentPage]', currentPage)
+                                        .replace('[totalPages]', totalPages)}
+                                />
+                            </Box>
+                        </Grid>
                         {currentPage <= totalPages && (
                             <Grid item xs={'auto'}>
                                 <Button

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Fab from '@mui/material/Fab';
-import Hidden from '@mui/material/Hidden';
 import withStyles from '@mui/styles/withStyles';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
@@ -55,18 +54,17 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
     }
     if (!!show) {
         return (
-            <Hidden mdDown>
-                <Fab
-                    color="secondary"
-                    aria-label="Scroll to top of page"
-                    className={classes.scrollTop}
-                    id="scrolltopbtn"
-                    title="Scroll to top of page"
-                    onClick={scrollWindowToTop}
-                >
-                    <ArrowUpwardIcon />
-                </Fab>
-            </Hidden>
+            <Fab
+                color="secondary"
+                aria-label="Scroll to top of page"
+                className={classes.scrollTop}
+                id="scrolltopbtn"
+                title="Scroll to top of page"
+                onClick={scrollWindowToTop}
+                sx={{ display: { xs: 'none', md: 'block' } }}
+            >
+                <ArrowUpwardIcon />
+            </Fab>
         );
     } else {
         return <div className={'scrolltop-hidden'} />;

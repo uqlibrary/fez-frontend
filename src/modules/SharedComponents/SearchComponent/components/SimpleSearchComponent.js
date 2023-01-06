@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Tooltip from '@mui/material/Tooltip';
@@ -14,7 +15,6 @@ import { MAX_PUBLIC_SEARCH_TEXT_LENGTH } from 'config/general';
 import { locale } from 'locale';
 
 import withStyles from '@mui/styles/withStyles';
-import Hidden from '@mui/material/Hidden';
 import Fade from '@mui/material/Fade';
 
 export const styles = theme => ({
@@ -173,116 +173,107 @@ export class SimpleSearchComponent extends PureComponent {
                     {this.props.isInHeader ? (
                         <React.Fragment>
                             {/* DESKTOP in header */}
-                            <Hidden smDown>
-                                <Grid
-                                    container
-                                    alignItems={'center'}
-                                    spacing={1}
-                                    wrap={'nowrap'}
-                                    className={classes.inHeader}
-                                    direction={'row'}
-                                >
-                                    {this.props.showPrefixIcon && (
-                                        <Grid item xs={'auto'}>
-                                            <Search className={classes.searchIconPrefix} />
-                                        </Grid>
-                                    )}
-                                    <Grid item xs>
-                                        <TextField
-                                            textFieldId="simple-search"
-                                            type="search"
-                                            autoComplete={'search'}
-                                            fullWidth
-                                            autoFocus={this.props.autoFocus}
-                                            label={''}
-                                            placeholder={txt.searchBoxPlaceholder}
-                                            onChange={this._handleSearchTextChange}
-                                            onKeyPress={this._handleSearch}
-                                            value={this.props.searchText}
-                                            InputProps={{ disableUnderline: true }}
-                                            errorText={this.searchTextValidationMessage(this.props.searchText)}
-                                        />
+                            <Grid
+                                container
+                                alignItems={'center'}
+                                spacing={1}
+                                wrap={'nowrap'}
+                                className={classes.inHeader}
+                                direction={'row'}
+                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                            >
+                                {this.props.showPrefixIcon && (
+                                    <Grid item xs={'auto'}>
+                                        <Search className={classes.searchIconPrefix} />
                                     </Grid>
-                                </Grid>
-                            </Hidden>
-                            {/* MOBILE in header */}
-                            <Hidden smUp>
-                                {!this.state.showMobile ? (
-                                    <Tooltip
-                                        title={txt.searchBoxPlaceholder}
-                                        placement="bottom-end"
-                                        TransitionComponent={Fade}
-                                        TransitionProps={{ timeout: 300 }}
-                                    >
-                                        <IconButton
-                                            onClick={this._handleToggleMobile}
-                                            aria-label={txt.mobileSearchButtonAriaLabel}
-                                            size="large"
-                                        >
-                                            <Search className={classes.searchIconMobile} />
-                                        </IconButton>
-                                    </Tooltip>
-                                ) : (
-                                    <div className={classes.mobileHeader}>
-                                        <Grid
-                                            container
-                                            spacing={0}
-                                            direction={'row'}
-                                            wrap={'nowrap'}
-                                            alignItems={'center'}
-                                            justifyContent={'center'}
-                                        >
-                                            {this.props.showMobileSearchButton && (
-                                                <Hidden smUp>
-                                                    <Grid item>
-                                                        <IconButton
-                                                            onClick={this._handleToggleMobile}
-                                                            className={classes.mobileSearchButtons}
-                                                            size="large"
-                                                        >
-                                                            <Close
-                                                                className={classes.mobileCloseButton}
-                                                                fontSize="inherit"
-                                                            />
-                                                        </IconButton>
-                                                    </Grid>
-                                                </Hidden>
-                                            )}
-                                            <Grid item xs zeroMinWidth>
-                                                <TextField
-                                                    className={classes.mobileSearchInput}
-                                                    type="search"
-                                                    id="mobileSearchField"
-                                                    textFieldId="mobile-search"
-                                                    fullWidth
-                                                    label={''}
-                                                    placeholder={txt.searchBoxPlaceholder}
-                                                    inputProps={ariaLabel}
-                                                    onChange={this._handleSearchTextChange}
-                                                    onKeyPress={this._handleSearch}
-                                                    value={this.state.searchTerm}
-                                                    InputProps={{ disableUnderline: true }}
-                                                    error={this.searchTextValidationMessage(this.props.searchText)}
-                                                />
-                                            </Grid>
-                                            {this.props.showMobileSearchButton && (
-                                                <Hidden smUp>
-                                                    <Grid item>
-                                                        <IconButton
-                                                            onClick={this._handleSearch}
-                                                            disabled={this.state.searchTerm.trim().length === 0}
-                                                            className={classes.mobileSearchButtons}
-                                                            size="large"
-                                                        >
-                                                            <ArrowForward fontSize="inherit" />
-                                                        </IconButton>
-                                                    </Grid>
-                                                </Hidden>
-                                            )}
-                                        </Grid>
-                                    </div>
                                 )}
-                            </Hidden>
+                                <Grid item xs>
+                                    <TextField
+                                        textFieldId="simple-search"
+                                        type="search"
+                                        autoComplete={'search'}
+                                        fullWidth
+                                        autoFocus={this.props.autoFocus}
+                                        label={''}
+                                        placeholder={txt.searchBoxPlaceholder}
+                                        onChange={this._handleSearchTextChange}
+                                        onKeyPress={this._handleSearch}
+                                        value={this.props.searchText}
+                                        InputProps={{ disableUnderline: true }}
+                                        errorText={this.searchTextValidationMessage(this.props.searchText)}
+                                    />
+                                </Grid>
+                            </Grid>
+                            {/* MOBILE in header */}
+                            {!this.state.showMobile ? (
+                                <Tooltip
+                                    title={txt.searchBoxPlaceholder}
+                                    placement="bottom-end"
+                                    TransitionComponent={Fade}
+                                    TransitionProps={{ timeout: 300 }}
+                                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                                >
+                                    <IconButton
+                                        onClick={this._handleToggleMobile}
+                                        aria-label={txt.mobileSearchButtonAriaLabel}
+                                        size="large"
+                                    >
+                                        <Search className={classes.searchIconMobile} />
+                                    </IconButton>
+                                </Tooltip>
+                            ) : (
+                                <Box className={classes.mobileHeader} sx={{ display: { xs: 'block', sm: 'none' } }}>
+                                    <Grid
+                                        container
+                                        spacing={0}
+                                        direction={'row'}
+                                        wrap={'nowrap'}
+                                        alignItems={'center'}
+                                        justifyContent={'center'}
+                                    >
+                                        {this.props.showMobileSearchButton && (
+                                            <Grid item>
+                                                <IconButton
+                                                    onClick={this._handleToggleMobile}
+                                                    className={classes.mobileSearchButtons}
+                                                    size="large"
+                                                >
+                                                    <Close className={classes.mobileCloseButton} fontSize="inherit" />
+                                                </IconButton>
+                                            </Grid>
+                                        )}
+                                        <Grid item xs zeroMinWidth>
+                                            <TextField
+                                                className={classes.mobileSearchInput}
+                                                type="search"
+                                                id="mobileSearchField"
+                                                textFieldId="mobile-search"
+                                                fullWidth
+                                                label={''}
+                                                placeholder={txt.searchBoxPlaceholder}
+                                                inputProps={ariaLabel}
+                                                onChange={this._handleSearchTextChange}
+                                                onKeyPress={this._handleSearch}
+                                                value={this.state.searchTerm}
+                                                InputProps={{ disableUnderline: true }}
+                                                error={this.searchTextValidationMessage(this.props.searchText)}
+                                            />
+                                        </Grid>
+                                        {this.props.showMobileSearchButton && (
+                                            <Grid item>
+                                                <IconButton
+                                                    onClick={this._handleSearch}
+                                                    disabled={this.state.searchTerm.trim().length === 0}
+                                                    className={classes.mobileSearchButtons}
+                                                    size="large"
+                                                >
+                                                    <ArrowForward fontSize="inherit" />
+                                                </IconButton>
+                                            </Grid>
+                                        )}
+                                    </Grid>
+                                </Box>
+                            )}
                         </React.Fragment>
                     ) : (
                         <React.Fragment>

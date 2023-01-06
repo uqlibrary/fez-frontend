@@ -37,7 +37,7 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
-import Hidden from '@mui/material/Hidden';
+import Box from '@mui/material/Box';
 import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
@@ -353,13 +353,11 @@ export class AppClass extends PureComponent {
                                     wrap={'nowrap'}
                                 >
                                     {!this.state.docked && !this.state.menuDrawerOpen && (
-                                        <Hidden smDown>
-                                            <Grid item>
-                                                <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
-                                                    {locale.global.logo.label}
-                                                </div>
-                                            </Grid>
-                                        </Hidden>
+                                        <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                            <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
+                                                {locale.global.logo.label}
+                                            </div>
+                                        </Grid>
                                     )}
                                     <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                         <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
@@ -422,9 +420,9 @@ export class AppClass extends PureComponent {
                     />
                 )}
                 <div className="content-container" id="content-container" style={containerStyle}>
-                    <Hidden mdDown>
+                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                         <ScrollTop show containerId="content-container" />
-                    </Hidden>
+                    </Box>
                     <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
                         {!isAdminPage() && <alert-list system="espace" />}
                     </div>

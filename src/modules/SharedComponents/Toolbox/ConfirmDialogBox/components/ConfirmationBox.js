@@ -8,7 +8,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogContent from '@mui/material/DialogContent';
 import makeStyles from '@mui/styles/makeStyles';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 
 export const useStyles = makeStyles(theme => ({
     alternateActionButtonClass: {
@@ -69,9 +68,8 @@ export const ConfirmationBox = ({
             </DialogContent>
             <DialogActions>
                 <Grid container spacing={1}>
-                    <Hidden smDown>
-                        <Grid item xs />
-                    </Hidden>
+                    <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                     {!hideActionButton && (
                         <Grid item xs={12} sm={'auto'}>
                             <Button

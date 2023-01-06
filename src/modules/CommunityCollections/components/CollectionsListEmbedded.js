@@ -19,7 +19,6 @@ import { PublicationsListSorting } from 'modules/SharedComponents/PublicationsLi
 import { PublicationsListPaging } from 'modules/SharedComponents/PublicationsList';
 import param from 'can-param';
 import { Grid } from '@mui/material';
-import { Hidden } from '@mui/material';
 
 const moment = require('moment');
 
@@ -276,36 +275,50 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                 >
                                                     {labels.title}
                                                 </Grid>
-                                                <Hidden smDown>
-                                                    <Grid item sm={2} md={1} className={classes.centerAlign}>
-                                                        {communityCollectionsConfig.viewCommunityTitle}
+                                                <Grid
+                                                    item
+                                                    sm={2}
+                                                    md={1}
+                                                    className={classes.centerAlign}
+                                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                >
+                                                    {communityCollectionsConfig.viewCommunityTitle}
+                                                </Grid>
+                                                <Grid
+                                                    item
+                                                    xs={2}
+                                                    className={classes.dateField}
+                                                    sx={{ display: { xs: 'none', md: 'block' } }}
+                                                >
+                                                    {labels.creation_date}
+                                                </Grid>
+                                                <Grid
+                                                    item
+                                                    xs={2}
+                                                    className={classes.dateField}
+                                                    sx={{ display: { xs: 'none', md: 'block' } }}
+                                                >
+                                                    {labels.updated_date}
+                                                </Grid>
+                                                {!!adminUser && (
+                                                    <Grid
+                                                        item
+                                                        xs={2}
+                                                        md={1}
+                                                        className={`${classes.dateField} ${classes.centerAlign}`}
+                                                        sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                    >
+                                                        {labels.actions}
                                                     </Grid>
-                                                </Hidden>
-                                                <Hidden mdDown>
-                                                    <Grid item xs={2} className={classes.dateField}>
-                                                        {labels.creation_date}
-                                                    </Grid>
-                                                    <Grid item xs={2} className={classes.dateField}>
-                                                        {labels.updated_date}
-                                                    </Grid>
-                                                </Hidden>
-                                                <Hidden smDown>
-                                                    {!!adminUser && (
-                                                        <Grid
-                                                            item
-                                                            xs={2}
-                                                            md={1}
-                                                            className={`${classes.dateField} ${classes.centerAlign}`}
-                                                        >
-                                                            {labels.actions}
-                                                        </Grid>
-                                                    )}
-                                                </Hidden>
-                                                <Hidden smUp>
-                                                    <Grid item xs={2} className={classes.centerAlign}>
-                                                        View
-                                                    </Grid>
-                                                </Hidden>
+                                                )}
+                                                <Grid
+                                                    item
+                                                    xs={2}
+                                                    className={classes.centerAlign}
+                                                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                                                >
+                                                    View
+                                                </Grid>
                                             </Grid>
                                             <Grid container data-testid="embedded-collections-primary-body">
                                                 {finalList.data.map(row => (
@@ -337,38 +350,51 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                     {row.rek_description}
                                                                 </Typography>
                                                             )}
-                                                            <Hidden mdUp>
-                                                                <div>
-                                                                    <Typography
-                                                                        variant="caption"
-                                                                        className={classes.italic}
+                                                            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                                                                <Typography
+                                                                    variant="caption"
+                                                                    className={classes.italic}
+                                                                >
+                                                                    {communityCollectionsConfig.formatCreationDate(
+                                                                        moment(row.rek_created_date)
+                                                                            .local()
+                                                                            .format(conf.dateFormat),
+                                                                    )}
+                                                                    <Box
+                                                                        sx={{
+                                                                            display: { xs: 'block', sm: 'none' },
+                                                                        }}
                                                                     >
-                                                                        {communityCollectionsConfig.formatCreationDate(
-                                                                            moment(row.rek_created_date)
-                                                                                .local()
-                                                                                .format(conf.dateFormat),
-                                                                        )}
-                                                                        <Hidden smUp>
-                                                                            <br />
-                                                                        </Hidden>
-                                                                        <Hidden smDown> / </Hidden>
-                                                                        {communityCollectionsConfig.formatUpdatedDate(
-                                                                            moment(row.rek_updated_date)
-                                                                                .local()
-                                                                                .format(conf.dateFormat),
-                                                                        )}
-                                                                    </Typography>
-                                                                </div>
-                                                            </Hidden>
+                                                                        <br />
+                                                                    </Box>
+                                                                    <Box
+                                                                        sx={{
+                                                                            display: { xs: 'none', sm: 'block' },
+                                                                        }}
+                                                                    >
+                                                                        {' '}
+                                                                        /{' '}
+                                                                    </Box>
+                                                                    {communityCollectionsConfig.formatUpdatedDate(
+                                                                        moment(row.rek_updated_date)
+                                                                            .local()
+                                                                            .format(conf.dateFormat),
+                                                                    )}
+                                                                </Typography>
+                                                            </Box>
                                                         </Grid>
-                                                        <Hidden smDown>
-                                                            <Grid item xs={2} md={1} className={classes.centerAlign}>
-                                                                <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
-                                                                    {communityCollectionsConfig.viewCommunityText}
-                                                                </Link>
-                                                            </Grid>
-                                                        </Hidden>
-                                                        <Hidden mdDown>
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            md={1}
+                                                            className={classes.centerAlign}
+                                                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                        >
+                                                            <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
+                                                                {communityCollectionsConfig.viewCommunityText}
+                                                            </Link>
+                                                        </Grid>
+                                                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                                                             {returnDateField(
                                                                 row.rek_created_date,
                                                                 conf,
@@ -379,44 +405,42 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 conf,
                                                                 classes.dateField,
                                                             )}
-                                                        </Hidden>
+                                                        </Box>
 
-                                                        <Hidden smUp>
-                                                            <Grid item xs={2} className={classes.centerAlign}>
-                                                                <div>
-                                                                    <Link
-                                                                        to={`/records/search?${encodeLink(
-                                                                            row.rek_pid,
-                                                                        )}`}
-                                                                    >
-                                                                        {communityCollectionsConfig.viewCommunityText}
-                                                                    </Link>
-                                                                </div>
-                                                                {!!adminUser && (
-                                                                    <AdminActions
-                                                                        record={row.rek_pid}
-                                                                        id={`row-admin-actions-${row.rek_pid}`}
-                                                                        data-testid={`row-admin-actions-${row.rek_pid}`}
-                                                                    />
-                                                                )}
-                                                            </Grid>
-                                                        </Hidden>
-                                                        <Hidden smDown>
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            className={classes.centerAlign}
+                                                            sx={{ display: { xs: 'block', sm: 'none' } }}
+                                                        >
+                                                            <div>
+                                                                <Link to={`/records/search?${encodeLink(row.rek_pid)}`}>
+                                                                    {communityCollectionsConfig.viewCommunityText}
+                                                                </Link>
+                                                            </div>
                                                             {!!adminUser && (
-                                                                <Grid
-                                                                    item
-                                                                    xs={2}
-                                                                    md={1}
-                                                                    className={`${classes.dateField} ${classes.centerAlign}`}
-                                                                >
-                                                                    <AdminActions
-                                                                        record={row.rek_pid}
-                                                                        id={`row-admin-actions-${row.rek_pid}`}
-                                                                        data-testid={`row-admin-actions-${row.rek_pid}`}
-                                                                    />
-                                                                </Grid>
+                                                                <AdminActions
+                                                                    record={row.rek_pid}
+                                                                    id={`row-admin-actions-${row.rek_pid}`}
+                                                                    data-testid={`row-admin-actions-${row.rek_pid}`}
+                                                                />
                                                             )}
-                                                        </Hidden>
+                                                        </Grid>
+                                                        {!!adminUser && (
+                                                            <Grid
+                                                                item
+                                                                xs={2}
+                                                                md={1}
+                                                                className={`${classes.dateField} ${classes.centerAlign}`}
+                                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                            >
+                                                                <AdminActions
+                                                                    record={row.rek_pid}
+                                                                    id={`row-admin-actions-${row.rek_pid}`}
+                                                                    data-testid={`row-admin-actions-${row.rek_pid}`}
+                                                                />
+                                                            </Grid>
+                                                        )}
                                                     </Grid>
                                                 ))}
                                             </Grid>

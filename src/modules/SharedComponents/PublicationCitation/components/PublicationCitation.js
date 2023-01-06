@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 import withStyles from '@mui/styles/withStyles';
 
@@ -597,9 +596,8 @@ export class PublicationCitation extends PureComponent {
                     </Grid>
                     {(showDefaultActions || customActions) && (
                         <Grid container spacing={1} className={classes.buttonMargin}>
-                            <Hidden smDown>
-                                <Grid item xs />
-                            </Hidden>
+                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
+
                             {this.renderActions(showDefaultActions ? this.defaultActions : customActions)}
                         </Grid>
                     )}

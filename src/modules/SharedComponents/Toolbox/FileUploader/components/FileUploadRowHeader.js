@@ -5,7 +5,7 @@ import { useConfirmationState } from 'hooks';
 
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Hidden from '@mui/material/Hidden';
+import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
@@ -33,7 +33,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
         deleteAllFilesConfirmation,
     } = locale;
     return (
-        <Hidden only={['xs']}>
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <ConfirmationBox
                 onAction={onDeleteAll}
                 onClose={hideConfirmation}
@@ -81,7 +81,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                 </Grid>
             </div>
-        </Hidden>
+        </Box>
     );
 };
 

@@ -9,7 +9,6 @@ import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid/Grid';
-import Hidden from '@mui/material/Hidden';
 
 // FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
 const withWidth = () => WrappedComponent => props => <WrappedComponent {...props} width="xs" />;
@@ -79,24 +78,22 @@ export class GrantListEditorHeader extends PureComponent {
                                         style={{ padding: 0 }}
                                     />
                                 </Grid>
-                                <Hidden smDown>
-                                    <Grid item sm={3}>
+                                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    <ListItemText
+                                        secondary={GrantID}
+                                        secondaryTypographyProps={{ variant: 'caption' }}
+                                        style={{ padding: 0 }}
+                                    />
+                                </Grid>
+                                {!this.props.hideType && (
+                                    <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                         <ListItemText
-                                            secondary={GrantID}
+                                            secondary={GrantAgencyType}
                                             secondaryTypographyProps={{ variant: 'caption' }}
                                             style={{ padding: 0 }}
                                         />
                                     </Grid>
-                                    {!this.props.hideType && (
-                                        <Grid item sm={4}>
-                                            <ListItemText
-                                                secondary={GrantAgencyType}
-                                                secondaryTypographyProps={{ variant: 'caption' }}
-                                                style={{ padding: 0 }}
-                                            />
-                                        </Grid>
-                                    )}
-                                </Hidden>
+                                )}
                             </Grid>
                         </Grid>
                         <Grid item xs={2} sm={1} md={3}>
@@ -104,16 +101,14 @@ export class GrantListEditorHeader extends PureComponent {
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
                                 <Grid container spacing={0}>
-                                    <Hidden mdDown>
-                                        <Grid item xs={8}>
-                                            <ListItemText
-                                                secondary={reorderColumn}
-                                                secondaryTypographyProps={{ variant: 'caption' }}
-                                                style={{ padding: 0 }}
-                                                classes={{ root: classes.right }}
-                                            />
-                                        </Grid>
-                                    </Hidden>
+                                    <Grid item xs={8} sx={{ display: { xs: 'none', md: 'block' } }}>
+                                        <ListItemText
+                                            secondary={reorderColumn}
+                                            secondaryTypographyProps={{ variant: 'caption' }}
+                                            style={{ padding: 0 }}
+                                            classes={{ root: classes.right }}
+                                        />
+                                    </Grid>
                                     <Grid
                                         item
                                         xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4}

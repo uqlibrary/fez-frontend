@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 import GetAppIcon from '@mui/icons-material/GetApp';
 import { makeStyles } from '@mui/styles';
@@ -14,7 +13,6 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
-// import { useConfirmationState } from 'hooks';
 
 export const useStyles = makeStyles(
     theme => ({
@@ -144,19 +142,15 @@ const FileName = ({
                     </Grid>
                 )}
             </Grid>
-            <Hidden smDown>
-                {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                    <Grid item sm={2}>
-                        <AudioPlayer
-                            pid={pid}
-                            fileName={
-                                previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)
-                            }
-                            mimeType={mimeType}
-                        />
-                    </Grid>
-                )}
-            </Hidden>
+            {allowDownload && !downloadLicence && isAudio(mimeType) && (
+                <Grid item sm={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <AudioPlayer
+                        pid={pid}
+                        fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}
+                        mimeType={mimeType}
+                    />
+                </Grid>
+            )}
         </Grid>
     );
 };

@@ -71,8 +71,8 @@ export const JournalFieldsMap = [
                 xs: 12,
                 sm: 2,
             },
-            hiddenHeader: ['xs'],
-            hiddenData: ['sm', 'md', 'lg', 'xl'],
+            hiddenHeader: { display: { xs: 'none', sm: 'block' } },
+            hiddenData: { display: { xs: 'block', sm: 'none' } },
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">
@@ -169,8 +169,8 @@ export const JournalFieldsMap = [
                 xs: 12,
                 sm: 2,
             },
-            hiddenHeader: ['xs'],
-            hiddenData: ['sm', 'md', 'lg', 'xl'],
+            hiddenHeader: { display: { xs: 'none', sm: 'block' } },
+            hiddenData: { display: { xs: 'block', sm: 'none' } },
             translateFn: (data, index, classes) => {
                 return (
                     <Typography variant="body1" component="div">

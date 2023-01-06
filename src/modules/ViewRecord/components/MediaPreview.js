@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Hidden from '@mui/material/Hidden';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
@@ -116,11 +116,9 @@ export const MediaPreview = ({ ...props }) => {
                         {title}
                     </Typography>
                 </Grid>
-                <Hidden smDown>
-                    <Grid item>
-                        <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
-                    </Grid>
-                </Hidden>
+                <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
+                </Grid>
             </Grid>
             {isVideo && videoErrorMsg && videoErrorCode && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
@@ -184,9 +182,9 @@ export const MediaPreview = ({ ...props }) => {
                     <InlineLoader message={videoLoadingMessage} />
                 </div>
             )}
-            <Hidden smUp>
+            <Box sx={{ display: { xs: 'block', sm: 'none' } }} component="span">
                 <MediaPreviewButtons {...{ id: 'media-preview-buttons-smaller-screen', ...props }} />
-            </Hidden>
+            </Box>
         </React.Fragment>
     );
 };

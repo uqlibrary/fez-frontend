@@ -5,7 +5,6 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Button from '@mui/material/Button';
 
 // forms & custom components
@@ -118,16 +117,14 @@ export default class RecordsSearchResults extends PureComponent {
         return (
             <React.Fragment>
                 <Grid container spacing={3}>
-                    <Hidden smUp>
-                        <Grid item xs>
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <PublicationListLoadingProgress
-                                    mobile
-                                    loadingPublicationSources={this.props.loadingPublicationSources}
-                                />
-                            </Suspense>
-                        </Grid>
-                    </Hidden>
+                    <Grid item xs sx={{ display: { xs: 'block', sm: 'none' } }}>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <PublicationListLoadingProgress
+                                mobile
+                                loadingPublicationSources={this.props.loadingPublicationSources}
+                            />
+                        </Suspense>
+                    </Grid>
                     <Grid item xs sm={8} md={9}>
                         {this.props.searchLoading && <InlineLoader message={searchResultsTxt.loadingMessage} />}
                         {this.props.publicationsList.length > 0 && (
@@ -191,17 +188,15 @@ export default class RecordsSearchResults extends PureComponent {
                             </Grid>
                         )}
                     </Grid>
-                    <Hidden smDown>
-                        <Grid item sm={4} md={3}>
-                            <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
-                                <Suspense fallback={<div>Loading...</div>}>
-                                    <PublicationListLoadingProgress
-                                        loadingPublicationSources={this.props.loadingPublicationSources}
-                                    />
-                                </Suspense>
-                            </StandardRighthandCard>
-                        </Grid>
-                    </Hidden>
+                    <Grid item sm={4} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <StandardRighthandCard title={searchResultsTxt.searchResults.searchDashboard.title}>
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <PublicationListLoadingProgress
+                                    loadingPublicationSources={this.props.loadingPublicationSources}
+                                />
+                            </Suspense>
+                        </StandardRighthandCard>
+                    </Grid>
                 </Grid>
             </React.Fragment>
         );

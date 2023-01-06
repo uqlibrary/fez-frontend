@@ -4,7 +4,6 @@ import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialog
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -92,53 +91,49 @@ export class ContributorRowHeader extends PureComponent {
                     </Fragment>
                 )}
                 <ListItem classes={{ root: classes.header }}>
-                    <Hidden smDown>
-                        <ListItemIcon>
-                            <People />
-                        </ListItemIcon>
-                    </Hidden>
+                    <ListItemIcon sx={{ display: { xs: 'none', sm: 'block' } }}>
+                        <People />
+                    </ListItemIcon>
+
                     <Grid container classes={{ container: classes.listContainer }}>
                         <Grid item xs={10} sm={5} md={3}>
                             <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
                         </Grid>
                         {showIdentifierLookup && (
                             <Grid item xs={12} sm={4}>
-                                <Hidden smDown>
-                                    <ListItemText
-                                        secondary={identifierColumn}
-                                        secondaryTypographyProps={{ variant: 'caption' }}
-                                    />
-                                </Hidden>
+                                <ListItemText
+                                    secondary={identifierColumn}
+                                    secondaryTypographyProps={{ variant: 'caption' }}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                />
                             </Grid>
                         )}
                         <Grid item xs={12} sm={5} md={4}>
                             {showRoleInput && (
-                                <Hidden smDown>
-                                    <ListItemText
-                                        secondary={roleColumn}
-                                        secondaryTypographyProps={{ variant: 'caption' }}
-                                    />
-                                </Hidden>
+                                <ListItemText
+                                    secondary={roleColumn}
+                                    secondaryTypographyProps={{ variant: 'caption' }}
+                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                />
                             )}
                         </Grid>
                     </Grid>
                     <ListItemSecondaryAction classes={{ root: classes.paddingRight64 }}>
-                        <Hidden smDown>
-                            <ListItemText
-                                secondary={reorderColumn}
-                                secondaryTypographyProps={{ variant: 'caption' }}
-                                classes={{
-                                    secondary: `${classes.right} ${
-                                        // eslint-disable-next-line no-nested-ternary
-                                        isInfinite
-                                            ? classes.infinitePaddingRight
-                                            : canEdit
-                                            ? classes.paddingRightEdit
-                                            : classes.paddingRight
-                                    }`,
-                                }}
-                            />
-                        </Hidden>
+                        <ListItemText
+                            secondary={reorderColumn}
+                            secondaryTypographyProps={{ variant: 'caption' }}
+                            classes={{
+                                secondary: `${classes.right} ${
+                                    // eslint-disable-next-line no-nested-ternary
+                                    isInfinite
+                                        ? classes.infinitePaddingRight
+                                        : canEdit
+                                        ? classes.paddingRightEdit
+                                        : classes.paddingRight
+                                }`,
+                            }}
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                        />
                     </ListItemSecondaryAction>
                     <ListItemSecondaryAction>
                         <Tooltip

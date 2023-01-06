@@ -14,7 +14,6 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
-import Hidden from '@mui/material/Hidden';
 import { pathConfig } from 'config';
 
 export const AddSection = ({
@@ -105,9 +104,7 @@ export const AddSection = ({
                                 </Grid>
                                 <Grid item xs={12}>
                                     <Grid container spacing={1}>
-                                        <Hidden smDown>
-                                            <Grid item xs />
-                                        </Hidden>
+                                        <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
                                         <Grid item xs={12} sm={'auto'}>
                                             <Button
                                                 id="cancel-work"

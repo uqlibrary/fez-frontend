@@ -7,7 +7,6 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Toolbar from '@mui/material/Toolbar';
 import Drawer from '@mui/material/Drawer';
-import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -105,9 +104,12 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
                 id={`adminDrawerContentContainer${variant}`}
                 data-testid={`adminDrawerContentContainer${variant}`}
             >
-                <Hidden mdDown implementation="css" key="toolbarMobile">
-                    <Toolbar className={classes.adjustedToolbarHeight} />
-                </Hidden>
+                <Toolbar
+                    className={classes.adjustedToolbarHeight}
+                    sx={{ display: { xs: 'none', md: 'block' } }}
+                    key="toolbarMobile"
+                />
+
                 <div className={classes.drawerHeader} key="mainHeader">
                     <Typography variant={'h6'} tabIndex="0">
                         <IconButton
@@ -139,46 +141,44 @@ export const AdminViewRecordDrawer = ({ content, handleDrawerToggle, open = fals
 
     return (
         <>
-            <Hidden mdDown implementation="css">
-                <Drawer
-                    className={classes.drawer}
-                    classes={{
-                        paper: classes.drawerPaper,
-                    }}
-                    open={open}
-                    variant="persistent"
-                    anchor={
-                        /* istanbul ignore next */
-                        theme.direction === 'rtl' ? 'left' : 'right'
-                    }
-                    id="adminViewRecordDrawerDesktop"
-                    data-testid="adminViewRecordDrawerDesktop"
-                >
-                    <DrawerContent content={content} />
-                </Drawer>
-            </Hidden>
-            <Hidden mdUp implementation="css">
-                <Drawer
-                    className={classes.drawerMobile}
-                    variant="temporary"
-                    anchor={
-                        /* istanbul ignore next */
-                        theme.direction === 'rtl' ? 'left' : 'right'
-                    }
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    classes={{
-                        paper: classes.drawerPaper,
-                    }}
-                    ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
-                    }}
-                    id="adminViewRecordDrawerMobile"
-                    data-testid="adminViewRecordDrawerMobile"
-                >
-                    <DrawerContent content={content} variant="Mobile" />
-                </Drawer>
-            </Hidden>
+            <Drawer
+                className={classes.drawer}
+                classes={{
+                    paper: classes.drawerPaper,
+                }}
+                open={open}
+                variant="persistent"
+                anchor={
+                    /* istanbul ignore next */
+                    theme.direction === 'rtl' ? 'left' : 'right'
+                }
+                id="adminViewRecordDrawerDesktop"
+                data-testid="adminViewRecordDrawerDesktop"
+                sx={{ display: { xs: 'none', md: 'block' } }}
+            >
+                <DrawerContent content={content} />
+            </Drawer>
+            <Drawer
+                className={classes.drawerMobile}
+                variant="temporary"
+                anchor={
+                    /* istanbul ignore next */
+                    theme.direction === 'rtl' ? 'left' : 'right'
+                }
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                classes={{
+                    paper: classes.drawerPaper,
+                }}
+                ModalProps={{
+                    keepMounted: true, // Better open performance on mobile.
+                }}
+                id="adminViewRecordDrawerMobile"
+                data-testid="adminViewRecordDrawerMobile"
+                sx={{ display: { xs: 'block', sm: 'none' } }}
+            >
+                <DrawerContent content={content} variant="Mobile" />
+            </Drawer>
             <Snackbar
                 id="copied-text-snackbar"
                 anchorOrigin={{

@@ -6,7 +6,6 @@ import DashboardResearcherIds from './DashboardResearcherIds';
 import DashboardAuthorAvatar from './DashboardAuthorAvatar';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import Hidden from '@mui/material/Hidden';
 import withStyles from '@mui/styles/withStyles';
 
 const background = require('../../../../public/images/dashboard_cover.jpg');
@@ -91,11 +90,9 @@ export class DashboardAuthorProfile extends PureComponent {
                         </Grid>
                     </Grid>
                     {/* Publication count */}
-                    <Hidden mdDown>
-                        <Grid item xs={'auto'}>
-                            <DashboardArticleCount />
-                        </Grid>
-                    </Hidden>
+                    <Grid item xs={'auto'} sx={{ display: { xs: 'none', md: 'block' } }}>
+                        <DashboardArticleCount />
+                    </Grid>
                 </Grid>
             </Card>
         );

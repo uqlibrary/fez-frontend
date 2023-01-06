@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { PropTypes } from 'prop-types';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Hidden from '@mui/material/Hidden';
+import Box from '@mui/material/Box';
 import CircularProgress from '@mui/material/CircularProgress';
 import LinearProgress from '@mui/material/LinearProgress';
 import locale from 'locale/pages';
@@ -26,7 +26,7 @@ export class PublicationListLoadingProgressClass extends PureComponent {
 
         return (
             <React.Fragment>
-                <Hidden smDown>
+                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                     {txt.repositories.map((item, index) => (
                         <Grid container spacing={1} key={index}>
                             <Grid item xs>
@@ -52,24 +52,21 @@ export class PublicationListLoadingProgressClass extends PureComponent {
                             )}
                         </Grid>
                     ))}
-                </Hidden>
-                <Hidden smUp>
-                    <LinearProgress
-                        variant="determinate"
-                        value={
-                            (loadingPublicationSources.totalSearchedCount /
-                                loadingPublicationSources.totalSourcesCount) *
-                            100
-                        }
-                        aria-valuenow={
-                            (loadingPublicationSources.totalSearchedCount /
-                                loadingPublicationSources.totalSourcesCount) *
-                            100
-                        }
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                    />
-                </Hidden>
+                </Box>
+                <LinearProgress
+                    sx={{ display: { xs: 'block', sm: 'none' } }}
+                    variant="determinate"
+                    value={
+                        (loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount) *
+                        100
+                    }
+                    aria-valuenow={
+                        (loadingPublicationSources.totalSearchedCount / loadingPublicationSources.totalSourcesCount) *
+                        100
+                    }
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                />
             </React.Fragment>
         );
     }

@@ -13,7 +13,6 @@ import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
 import Edit from '@mui/icons-material/Edit';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import Hidden from '@mui/material/Hidden';
 import { ORG_TYPES_LOOKUP } from 'config/general';
 
 // FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
@@ -139,24 +138,22 @@ export class GrantListEditorRow extends PureComponent {
                 <Grid item xs={12} sm={5}>
                     {this.getListItemTypoGraphy(grant.grantAgencyName, '', `${classes.primary} ${selectedClass}`, '')}
                 </Grid>
-                <Hidden smDown>
-                    <Grid item sm={3}>
-                        {this.getListItemTypoGraphy(
-                            `${grant.grantId}`,
-                            '',
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            '',
-                        )}
-                    </Grid>
-                    <Grid item sm={4}>
-                        {this.getListItemTypoGraphy(
-                            `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
-                            '',
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            '',
-                        )}
-                    </Grid>
-                </Hidden>
+                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    {this.getListItemTypoGraphy(
+                        `${grant.grantId}`,
+                        '',
+                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                        '',
+                    )}
+                </Grid>
+                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    {this.getListItemTypoGraphy(
+                        `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
+                        '',
+                        `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
+                        '',
+                    )}
+                </Grid>
             </Grid>
         );
     };
@@ -194,64 +191,67 @@ export class GrantListEditorRow extends PureComponent {
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
                                 <Grid container spacing={0}>
-                                    <Hidden mdDown>
-                                        <Grid item xs={8} style={{ textAlign: 'right' }}>
-                                            <Tooltip
-                                                title={moveUpHint}
-                                                disableFocusListener={disabled || !canMoveUp}
-                                                disableHoverListener={disabled || !canMoveUp}
-                                                disableTouchListener={disabled || !canMoveUp}
-                                            >
-                                                <div style={{ display: 'inline' }}>
-                                                    <IconButton
-                                                        onClick={this._onMoveUp}
-                                                        disabled={disabled || !canMoveUp}
-                                                        aria-label={moveUpHint}
-                                                        size="large"
-                                                    >
-                                                        <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
-                                                    </IconButton>
-                                                </div>
-                                            </Tooltip>
-                                            <Tooltip
-                                                title={moveDownHint}
-                                                disableFocusListener={disabled || !canMoveDown}
-                                                disableHoverListener={disabled || !canMoveDown}
-                                                disableTouchListener={disabled || !canMoveDown}
-                                            >
-                                                <div style={{ display: 'inline' }}>
-                                                    <IconButton
-                                                        onClick={this._onMoveDown}
-                                                        disabled={disabled || !canMoveDown}
-                                                        aria-label={moveDownHint}
-                                                        size="large"
-                                                    >
-                                                        <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
-                                                    </IconButton>
-                                                </div>
-                                            </Tooltip>
-                                            {canEdit && (
-                                                <Tooltip
-                                                    title={editHint}
-                                                    disableFocusListener={disabled}
-                                                    disableHoverListener={disabled}
-                                                    disableTouchListener={disabled}
+                                    <Grid
+                                        item
+                                        xs={8}
+                                        style={{ textAlign: 'right' }}
+                                        sx={{ display: { xs: 'none', md: 'block' } }}
+                                    >
+                                        <Tooltip
+                                            title={moveUpHint}
+                                            disableFocusListener={disabled || !canMoveUp}
+                                            disableHoverListener={disabled || !canMoveUp}
+                                            disableTouchListener={disabled || !canMoveUp}
+                                        >
+                                            <div style={{ display: 'inline' }}>
+                                                <IconButton
+                                                    onClick={this._onMoveUp}
+                                                    disabled={disabled || !canMoveUp}
+                                                    aria-label={moveUpHint}
+                                                    size="large"
                                                 >
-                                                    <span>
-                                                        <IconButton
-                                                            aria-label={editHint}
-                                                            onClick={this._handleEdit}
-                                                            disabled={disabled}
-                                                            id={`${editButtonId}-${index}`}
-                                                            size="large"
-                                                        >
-                                                            <Edit />
-                                                        </IconButton>
-                                                    </span>
-                                                </Tooltip>
-                                            )}
-                                        </Grid>
-                                    </Hidden>
+                                                    <KeyboardArrowUp classes={{ root: `${selectedClass}` }} />
+                                                </IconButton>
+                                            </div>
+                                        </Tooltip>
+                                        <Tooltip
+                                            title={moveDownHint}
+                                            disableFocusListener={disabled || !canMoveDown}
+                                            disableHoverListener={disabled || !canMoveDown}
+                                            disableTouchListener={disabled || !canMoveDown}
+                                        >
+                                            <div style={{ display: 'inline' }}>
+                                                <IconButton
+                                                    onClick={this._onMoveDown}
+                                                    disabled={disabled || !canMoveDown}
+                                                    aria-label={moveDownHint}
+                                                    size="large"
+                                                >
+                                                    <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                                </IconButton>
+                                            </div>
+                                        </Tooltip>
+                                        {canEdit && (
+                                            <Tooltip
+                                                title={editHint}
+                                                disableFocusListener={disabled}
+                                                disableHoverListener={disabled}
+                                                disableTouchListener={disabled}
+                                            >
+                                                <span>
+                                                    <IconButton
+                                                        aria-label={editHint}
+                                                        onClick={this._handleEdit}
+                                                        disabled={disabled}
+                                                        id={`${editButtonId}-${index}`}
+                                                        size="large"
+                                                    >
+                                                        <Edit />
+                                                    </IconButton>
+                                                </span>
+                                            </Tooltip>
+                                        )}
+                                    </Grid>
                                     <Grid
                                         item
                                         xs={this.props.width === 'sm' || this.props.width === 'xs' ? 12 : 4}

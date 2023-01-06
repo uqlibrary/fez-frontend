@@ -10,7 +10,6 @@ import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import withStyles from '@mui/styles/withStyles';
 
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
@@ -229,13 +228,11 @@ export class LinksClass extends PureComponent {
                                 {txt.headerTitles.link}
                             </Typography>
                         </Grid>
-                        <Hidden smDown>
-                            <Grid item sm={4} data-testid="description-label">
-                                <Typography variant="caption" gutterBottom>
-                                    {txt.headerTitles.description}
-                                </Typography>
-                            </Grid>
-                        </Hidden>
+                        <Grid item sm={4} data-testid="description-label" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            <Typography variant="caption" gutterBottom>
+                                {txt.headerTitles.description}
+                            </Typography>
+                        </Grid>
                         <Grid item sm={2} data-testid="oa-status-label">
                             <Typography variant="caption" gutterBottom>
                                 {txt.headerTitles.oaStatus}

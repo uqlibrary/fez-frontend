@@ -23,7 +23,6 @@ import {
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { claimRecordConfig, pathConfig, validation } from 'config';
 import locale from 'locale/forms';
-import Hidden from '@mui/material/Hidden';
 import { CLAIM_PRE_CHECK } from '../../../repositories/routes';
 
 export const isClaimPreCheckResponse = error => error?.request?.responseURL?.includes?.(CLAIM_PRE_CHECK().apiUrl);
@@ -364,9 +363,7 @@ export default class ClaimRecord extends PureComponent {
                             )}
                         </Grid>
                         <Grid container spacing={3}>
-                            <Hidden smDown>
-                                <Grid item xs />
-                            </Hidden>
+                            <Grid item xs sx={{ display: { xs: 'none', sm: 'block' } }} />
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}

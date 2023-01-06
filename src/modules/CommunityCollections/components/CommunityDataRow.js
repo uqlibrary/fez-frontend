@@ -8,11 +8,12 @@ import ReactHtmlParser from 'react-html-parser';
 import { pathConfig } from 'config';
 import CollectionsListEmbedded from './CollectionsListEmbedded';
 import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useSelector, useDispatch } from 'react-redux';
 import { Grid } from '@mui/material';
-import { Hidden } from '@mui/material';
+
 import { communityCollectionsConfig } from 'config';
 const moment = require('moment');
 
@@ -106,33 +107,28 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                 </Link>
                             </Typography>
                             {!!row.rek_description && <Typography variant="caption">{row.rek_description}</Typography>}
-                            <Hidden mdUp>
-                                <div>
-                                    <Typography variant="caption" className={classes.italic}>
-                                        {communityCollectionsConfig.formatCreationDate(
-                                            moment(row.rek_created_date)
-                                                .local()
-                                                .format(conf.dateFormat),
-                                        )}
-                                        <Hidden smUp>
-                                            <br />
-                                        </Hidden>
-                                        <Hidden smDown> / </Hidden>
-                                        {communityCollectionsConfig.formatUpdatedDate(
-                                            moment(row.rek_updated_date)
-                                                .local()
-                                                .format(conf.dateFormat),
-                                        )}
-                                    </Typography>
-                                </div>
-                            </Hidden>
+                            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                                <Typography variant="caption" className={classes.italic}>
+                                    {communityCollectionsConfig.formatCreationDate(
+                                        moment(row.rek_created_date)
+                                            .local()
+                                            .format(conf.dateFormat),
+                                    )}
+                                    <br />/
+                                    {communityCollectionsConfig.formatUpdatedDate(
+                                        moment(row.rek_updated_date)
+                                            .local()
+                                            .format(conf.dateFormat),
+                                    )}
+                                </Typography>
+                            </Box>
                         </div>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    <Hidden mdDown>
+                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                         {returnDateField(row.rek_created_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
                         {returnDateField(row.rek_updated_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
-                    </Hidden>
+                    </Box>
                     {!!adminUser && (
                         <Grid item xs={2} sm={1} className={classes.rightAlign}>
                             <AdminActions

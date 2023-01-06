@@ -6,7 +6,6 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import ListSubheader from '@mui/material/ListSubheader';
 
 import { ExportPublications } from 'modules/SharedComponents/ExportPublications';
@@ -235,15 +234,13 @@ const PublicationsListSorting = props => {
                 </Grid>
             )}
             {props.canUseExport && (
-                <Hidden smDown>
-                    <Grid item sm={6} md={3}>
-                        <ExportPublications
-                            onChange={exportPublicationsFormatChanged}
-                            disabled={props.disabled}
-                            exportData={props.exportData}
-                        />
-                    </Grid>
-                </Hidden>
+                <Grid item sm={6} md={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <ExportPublications
+                        onChange={exportPublicationsFormatChanged}
+                        disabled={props.disabled}
+                        exportData={props.exportData}
+                    />
+                </Grid>
             )}
         </Grid>
     );

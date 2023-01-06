@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@mui/material/Grid';
-import Hidden from '@mui/material/Hidden';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
@@ -325,27 +324,31 @@ const SearchRecords = ({
                     </Grid>
                 )}
                 {publicationsListFacets && Object.keys(publicationsListFacets).length !== 0 && (
-                    <Hidden mdDown>
-                        <Grid item md={3} id="refine-results-facets" data-testid="refine-results-facets">
-                            <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                <FacetsFilter
-                                    activeFacets={searchParams.activeFacets}
-                                    disabled={isLoadingOrExporting}
-                                    excludeFacetsList={
-                                        (searchParams.advancedSearchFields &&
-                                            searchParams.advancedSearchFields.length &&
-                                            searchParams.advancedSearchFields) ||
-                                        locale.pages.searchRecords.facetsFilter.excludeFacetsList
-                                    }
-                                    facetsData={publicationsListFacets}
-                                    lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                    onFacetsChanged={facetsChanged}
-                                    renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                    showOpenAccessFilter
-                                />
-                            </StandardRighthandCard>
-                        </Grid>
-                    </Hidden>
+                    <Grid
+                        item
+                        md={3}
+                        id="refine-results-facets"
+                        data-testid="refine-results-facets"
+                        sx={{ display: { xs: 'none', md: 'block' } }}
+                    >
+                        <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                            <FacetsFilter
+                                activeFacets={searchParams.activeFacets}
+                                disabled={isLoadingOrExporting}
+                                excludeFacetsList={
+                                    (searchParams.advancedSearchFields &&
+                                        searchParams.advancedSearchFields.length &&
+                                        searchParams.advancedSearchFields) ||
+                                    locale.pages.searchRecords.facetsFilter.excludeFacetsList
+                                }
+                                facetsData={publicationsListFacets}
+                                lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                onFacetsChanged={facetsChanged}
+                                renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                showOpenAccessFilter
+                            />
+                        </StandardRighthandCard>
+                    </Grid>
                 )}
             </Grid>
         </StandardPage>

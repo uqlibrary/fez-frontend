@@ -15,7 +15,6 @@ import { default as PublicationYearRangeField } from './Fields/PublicationYearRa
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
 import makeStyles from '@mui/styles/makeStyles';
-import Hidden from '@mui/material/Hidden';
 import * as validationRules from 'config/validation';
 
 export const useStyles = makeStyles(
@@ -277,9 +276,12 @@ export const AdvancedSearchComponent = ({
                                     fullWidth
                                 />
                             </Grid>
-                            <Hidden mdDown>
-                                <Grid item style={{ flexGrow: 1, width: 1 }} />
-                            </Hidden>
+                            <Grid
+                                item
+                                style={{ flexGrow: 1, width: 1 }}
+                                sx={{ display: { xs: 'none', md: 'block' } }}
+                            />
+
                             <Grid item xs={12} md={4} className={classes.searchButton}>
                                 <Button
                                     variant={'contained'}
