@@ -303,16 +303,16 @@ export const Alert = ({
     };
 
     return (
-        <div className={classes.root} data-testid="alert">
+        <div data-testid="alert">
             <Grid
                 container
-                spacing={3}
                 className={classNames(classes[!!customIcon ? customType : type], classes.common)}
                 justifyContent="center"
                 alignItems="flex-start"
                 alignContent="center"
                 id={alertId}
                 data-testid={alertId}
+                classes={{ root: classes.root }}
             >
                 <Grid item xs={12} sm className={(action && !disableAlertClick && classes.linked) || ''}>
                     <Grid container justifyContent="center" alignItems="flex-start" alignContent="center">
