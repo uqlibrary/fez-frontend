@@ -19,7 +19,7 @@ const moment = require('moment');
 
 const returnDateField = (date, conf, className) => {
     return (
-        <Grid item xs={2} className={className}>
+        <Grid item xs={2} className={className} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">
                 {moment(date)
                     .local()
@@ -114,7 +114,17 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                                             .local()
                                             .format(conf.dateFormat),
                                     )}
-                                    <br />/
+                                    <Box sx={{ display: { xs: 'inline', sm: 'none' } }} component="span">
+                                        <br />
+                                    </Box>
+                                    <Typography
+                                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                                        component="span"
+                                        variant="caption"
+                                        className={classes.italic}
+                                    >
+                                        {' / '}
+                                    </Typography>
                                     {communityCollectionsConfig.formatUpdatedDate(
                                         moment(row.rek_updated_date)
                                             .local()
@@ -125,10 +135,8 @@ export const CommunityDataRow = ({ conf, row, adminUser, labels, autoCollapse })
                         </div>
                         <div style={{ clear: 'both' }} />
                     </Grid>
-                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                        {returnDateField(row.rek_created_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
-                        {returnDateField(row.rek_updated_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
-                    </Box>
+                    {returnDateField(row.rek_created_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
+                    {returnDateField(row.rek_updated_date, conf, `${classes.datefield} ${classes.padTopLarge}`)}
                     {!!adminUser && (
                         <Grid item xs={2} sm={1} className={classes.rightAlign}>
                             <AdminActions

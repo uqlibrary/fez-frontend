@@ -204,7 +204,7 @@ export class SimpleSearchComponent extends PureComponent {
                                     />
                                 </Grid>
                             </Grid>
-                            <Box sx={{ display: { xs: 'flex', sm: 'none' } }}>
+                            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
                                 {/* MOBILE in header */}
                                 {!this.state.showMobile ? (
                                     <Tooltip

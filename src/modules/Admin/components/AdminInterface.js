@@ -380,7 +380,7 @@ export const AdminInterface = ({
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={0} direction="row" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Grid container spacing={0} direction="row" sx={{ display: { xs: 'none', sm: 'flex' } }}>
                         {tabbed && (
                             <Grid item xs={12}>
                                 <Tabs

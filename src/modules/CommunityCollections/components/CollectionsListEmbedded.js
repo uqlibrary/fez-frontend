@@ -24,7 +24,7 @@ const moment = require('moment');
 
 const returnDateField = (date, conf, className) => {
     return (
-        <Grid item xs={2} className={className}>
+        <Grid item xs={2} className={className} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Typography variant="body2">
                 {moment(date)
                     .local()
@@ -361,20 +361,19 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                             .format(conf.dateFormat),
                                                                     )}
                                                                     <Box
-                                                                        sx={{
-                                                                            display: { xs: 'block', sm: 'none' },
-                                                                        }}
+                                                                        sx={{ display: { xs: 'inline', sm: 'none' } }}
+                                                                        component="span"
                                                                     >
                                                                         <br />
                                                                     </Box>
-                                                                    <Box
-                                                                        sx={{
-                                                                            display: { xs: 'none', sm: 'block' },
-                                                                        }}
+                                                                    <Typography
+                                                                        sx={{ display: { xs: 'none', sm: 'inline' } }}
+                                                                        component="span"
+                                                                        variant="caption"
+                                                                        className={classes.italic}
                                                                     >
-                                                                        {' '}
-                                                                        /{' '}
-                                                                    </Box>
+                                                                        {' / '}
+                                                                    </Typography>
                                                                     {communityCollectionsConfig.formatUpdatedDate(
                                                                         moment(row.rek_updated_date)
                                                                             .local()
@@ -394,18 +393,8 @@ export const CollectionsListEmbedded = ({ title, pid, labels, conf, adminUser, o
                                                                 {communityCollectionsConfig.viewCommunityText}
                                                             </Link>
                                                         </Grid>
-                                                        <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                                                            {returnDateField(
-                                                                row.rek_created_date,
-                                                                conf,
-                                                                classes.dateField,
-                                                            )}
-                                                            {returnDateField(
-                                                                row.rek_updated_date,
-                                                                conf,
-                                                                classes.dateField,
-                                                            )}
-                                                        </Box>
+                                                        {returnDateField(row.rek_created_date, conf, classes.dateField)}
+                                                        {returnDateField(row.rek_updated_date, conf, classes.dateField)}
 
                                                         <Grid
                                                             item
