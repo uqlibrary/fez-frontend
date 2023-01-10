@@ -7,10 +7,10 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import ClearIcon from '@material-ui/icons/Clear';
-import EditIcon from '@material-ui/icons/Edit';
-import CheckIcon from '@material-ui/icons/Check';
-import ReplayIcon from '@material-ui/icons/Replay';
+import ClearIcon from '@mui/icons-material/Clear';
+import EditIcon from '@mui/icons-material/Edit';
+import CheckIcon from '@mui/icons-material/Check';
+import ReplayIcon from '@mui/icons-material/Replay';
 import { makeStyles } from '@material-ui/core/styles';
 
 import FileName from './FileName';

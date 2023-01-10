@@ -13,7 +13,8 @@ import Input from '@mui/material/Input';
 import withStyles from '@mui/styles/withStyles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { IconButton } from '@material-ui/core';
-import { ExpandMore, ExpandLess } from '@material-ui/icons';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { PolicyDropdown } from 'modules/Admin/components/security/PolicyDropdown';
 
@@ -79,7 +80,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             className={classes.upDownArrow}
                             onClick={this.props.onOrderUpClick}
                         >
-                            <ExpandLess />
+                            <ExpandLessIcon />
                         </IconButton>
                     </Grid>
                 </Grid>
@@ -204,7 +205,7 @@ export class FileUploadRowDefaultView extends PureComponent {
                             className={classes.upDownArrow}
                             onClick={this.props.onOrderDownClick}
                         >
-                            <ExpandMore />
+                            <ExpandMoreIcon />
                         </IconButton>
                     </Grid>
                 </Grid>
