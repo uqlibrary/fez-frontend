@@ -7,12 +7,14 @@ import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 
 const styles = theme => ({
     layoutCard: {
-        maxWidth: '1200px',
-        margin: '24px auto',
-        width: '90%',
-        padding: 0,
-        [theme.breakpoints.down('md')]: {
-            margin: '12px auto',
+        '&.MuiGrid-item': {
+            maxWidth: '1200px',
+            margin: '24px auto',
+            width: '90%',
+            padding: 0,
+            [theme.breakpoints.down('md')]: {
+                margin: '12px auto',
+            },
         },
     },
     layoutTitle: {
