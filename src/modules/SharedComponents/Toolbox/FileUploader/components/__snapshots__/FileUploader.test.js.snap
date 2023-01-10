@@ -1,5 +1,867 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FileUploader should handle file order change 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+      variant="body2"
+    >
+      You may add up to 5 files (max 1KB each)
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(FileUploadDropzone)
+      fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+      fileUploadLimit={5}
+      filesInQueue={Array []}
+      locale={
+        Object {
+          "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+          "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+          "delayNotice": "Notice",
+          "errorTitle": "Upload Errors",
+          "fileUploadInstruction": <p>
+            Click here to select files,
+            <br />
+            or drag files into this area to upload
+          </p>,
+          "fileUploadRestrictionHeading": "File upload restrictions",
+          "fileUploadRestrictions": <div>
+            Please ensure:
+            <ul>
+              <li>
+                files are under 5GB in size
+              </li>
+              <li>
+                file names begin with a letter and are less than 45 characters long
+              </li>
+              <li>
+                file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
+              </li>
+              <li>
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+              </li>
+              <li>
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+              </li>
+              <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
+                files are uploaded individually and not inside a folder
+              </li>
+            </ul>
+          </div>,
+          "fileUploadRow": Object {
+            "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+            },
+            "deleteHint": "Remove this file",
+            "deleteRecordConfirmation": Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+              "confirmationTitle": "Delete file",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+            "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "filenameColumn": "File name",
+            },
+            "uploadInProgressText": "Uploading...",
+          },
+          "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+          "ntroSpecificInstructions": <span>
+            You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+              target="_blank"
+            >
+              More information
+            </a>
+            .
+          </span>,
+          "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+          "successTitle": "Success",
+          "validation": Object {
+            "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+            "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
+            "notFiles": "Invalid files ([fileNames])",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
+            "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+            "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+          },
+        }
+      }
+      maxSize={1000}
+      mimeTypeWhitelist={
+        Object {
+          "7z": "application/x-7z-compressed",
+          "avi": "video/x-msvideo",
+          "csv": "text/csv",
+          "gif": "image/gif",
+          "gsheet": "application/vnd.google-apps.spreadsheet",
+          "gz": "application/gzip",
+          "jpe": "image/jpeg",
+          "jpeg": "image/jpeg",
+          "jpg": "image/jpeg",
+          "m1v": "video/mpeg",
+          "m2v": "video/mpeg",
+          "m4a": "audio/x-m4a",
+          "mk3d": "video/x-matroska",
+          "mks": "video/x-matroska",
+          "mkv": "video/x-matroska",
+          "mov": "video/quicktime",
+          "mp3": "audio/mp3",
+          "mp4": "video/mp4",
+          "mp4v": "video/mp4",
+          "mpe": "video/mpeg",
+          "mpeg": "video/mpeg",
+          "mpg": "video/mpeg",
+          "mxf": "application/mxf",
+          "ods": "application/vnd.oasis.opendocument.spreadsheet",
+          "pdf": "application/pdf",
+          "png": "image/png",
+          "qt": "video/quicktime",
+          "rar": "application/x-rar-compressed",
+          "tar": "application/x-tar",
+          "tif": "image/tiff",
+          "tiff": "image/tiff",
+          "wav": "audio/wav",
+          "wma": "audio/x-ms-wma",
+          "wmv": "video/x-ms-wmv",
+          "xla": "application/vnd.ms-excel",
+          "xlc": "application/vnd.ms-excel",
+          "xlm": "application/vnd.ms-excel",
+          "xls": "application/vnd.ms-excel",
+          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "xlt": "application/vnd.ms-excel",
+          "xlw": "application/vnd.ms-excel",
+          "zip": "application/zip",
+        }
+      }
+      onDrop={[Function]}
+    />
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Component FileUploader should handle file order change 2`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+      variant="body2"
+    >
+      You may add up to 5 files (max 1KB each)
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(FileUploadDropzone)
+      fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+      fileUploadLimit={5}
+      filesInQueue={
+        Array [
+          "b.txt",
+          "a.txt",
+        ]
+      }
+      locale={
+        Object {
+          "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+          "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+          "delayNotice": "Notice",
+          "errorTitle": "Upload Errors",
+          "fileUploadInstruction": <p>
+            Click here to select files,
+            <br />
+            or drag files into this area to upload
+          </p>,
+          "fileUploadRestrictionHeading": "File upload restrictions",
+          "fileUploadRestrictions": <div>
+            Please ensure:
+            <ul>
+              <li>
+                files are under 5GB in size
+              </li>
+              <li>
+                file names begin with a letter and are less than 45 characters long
+              </li>
+              <li>
+                file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
+              </li>
+              <li>
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+              </li>
+              <li>
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+              </li>
+              <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
+                files are uploaded individually and not inside a folder
+              </li>
+            </ul>
+          </div>,
+          "fileUploadRow": Object {
+            "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+            },
+            "deleteHint": "Remove this file",
+            "deleteRecordConfirmation": Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+              "confirmationTitle": "Delete file",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+            "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "filenameColumn": "File name",
+            },
+            "uploadInProgressText": "Uploading...",
+          },
+          "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+          "ntroSpecificInstructions": <span>
+            You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+              target="_blank"
+            >
+              More information
+            </a>
+            .
+          </span>,
+          "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+          "successTitle": "Success",
+          "validation": Object {
+            "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+            "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
+            "notFiles": "Invalid files ([fileNames])",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
+            "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+            "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+          },
+        }
+      }
+      maxSize={1000}
+      mimeTypeWhitelist={
+        Object {
+          "7z": "application/x-7z-compressed",
+          "avi": "video/x-msvideo",
+          "csv": "text/csv",
+          "gif": "image/gif",
+          "gsheet": "application/vnd.google-apps.spreadsheet",
+          "gz": "application/gzip",
+          "jpe": "image/jpeg",
+          "jpeg": "image/jpeg",
+          "jpg": "image/jpeg",
+          "m1v": "video/mpeg",
+          "m2v": "video/mpeg",
+          "m4a": "audio/x-m4a",
+          "mk3d": "video/x-matroska",
+          "mks": "video/x-matroska",
+          "mkv": "video/x-matroska",
+          "mov": "video/quicktime",
+          "mp3": "audio/mp3",
+          "mp4": "video/mp4",
+          "mp4v": "video/mp4",
+          "mpe": "video/mpeg",
+          "mpeg": "video/mpeg",
+          "mpg": "video/mpeg",
+          "mxf": "application/mxf",
+          "ods": "application/vnd.oasis.opendocument.spreadsheet",
+          "pdf": "application/pdf",
+          "png": "image/png",
+          "qt": "video/quicktime",
+          "rar": "application/x-rar-compressed",
+          "tar": "application/x-tar",
+          "tif": "image/tiff",
+          "tiff": "image/tiff",
+          "wav": "audio/wav",
+          "wma": "audio/x-ms-wma",
+          "wmv": "video/x-ms-wmv",
+          "xla": "application/vnd.ms-excel",
+          "xlc": "application/vnd.ms-excel",
+          "xlm": "application/vnd.ms-excel",
+          "xls": "application/vnd.ms-excel",
+          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "xlt": "application/vnd.ms-excel",
+          "xlw": "application/vnd.ms-excel",
+          "zip": "application/zip",
+        }
+      }
+      onDrop={[Function]}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Alert
+      allowDismiss={false}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissTitle="Click to dismiss this alert"
+      message="Successfully added 2 file(s) to upload queue."
+      showLoader={false}
+      title="Success"
+      type="done"
+      wiggle={null}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Alert
+      allowDismiss={false}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissTitle="Click to dismiss this alert"
+      message="During peak times, there may be a delay before newly uploaded files appear on the record."
+      showLoader={false}
+      title="Notice"
+      type="warning"
+      wiggle={null}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Memo(FileUploadRowHeader)
+      isAdmin={false}
+      onDeleteAll={[Function]}
+      requireOpenAccessStatus={true}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
+    item={true}
+    xs={12}
+  >
+    <WithWidth(FileUploadRow)
+      fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
+      focusOnIndex={0}
+      index={0}
+      isAdmin={false}
+      key="b.txt"
+      locale={
+        Object {
+          "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        }
+      }
+      onAccessConditionChange={[Function]}
+      onDelete={[Function]}
+      onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
+      onSecurityPolicyChange={[Function]}
+      requireOpenAccessStatus={true}
+      rowCount={2}
+      uploadedFile={
+        Object {
+          "fileData": File {},
+          "name": "b.txt",
+          "size": 0,
+        }
+      }
+    />
+    <WithWidth(FileUploadRow)
+      fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
+      focusOnIndex={0}
+      index={1}
+      isAdmin={false}
+      key="a.txt"
+      locale={
+        Object {
+          "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        }
+      }
+      onAccessConditionChange={[Function]}
+      onDelete={[Function]}
+      onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
+      onSecurityPolicyChange={[Function]}
+      requireOpenAccessStatus={true}
+      rowCount={2}
+      uploadedFile={
+        Object {
+          "fileData": File {},
+          "name": "a.txt",
+          "size": 0,
+        }
+      }
+    />
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
+exports[`Component FileUploader should handle file order change 3`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <WithStyles(ForwardRef(Typography))
+      gutterBottom={true}
+      variant="body2"
+    >
+      You may add up to 5 files (max 1KB each)
+    </WithStyles(ForwardRef(Typography))>
+    <WithStyles(FileUploadDropzone)
+      fileNameRestrictions={/\\^\\(\\?=\\^\\\\S\\*\\$\\)\\(\\?=\\^\\[a-z\\\\d\\\\-_\\]\\+\\(\\\\\\.\\\\d\\{3\\}\\|\\\\\\.r\\\\d\\{2,3\\}\\|\\\\\\.part\\\\d\\{1,3\\}\\)\\?\\\\\\.\\[\\^\\\\\\.\\]\\+\\$\\)\\(\\?=\\.\\{1,45\\}\\$\\)\\(\\?!\\(web_\\|preview_\\|thumbnail_\\|stream_\\|fezacml_\\|presmd_\\|\\\\d\\)\\)\\[a-z\\\\d\\\\-_\\\\\\.\\]\\+/}
+      fileUploadLimit={5}
+      filesInQueue={
+        Array [
+          "a.txt",
+          "b.txt",
+        ]
+      }
+      locale={
+        Object {
+          "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+          "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
+          "delayNotice": "Notice",
+          "errorTitle": "Upload Errors",
+          "fileUploadInstruction": <p>
+            Click here to select files,
+            <br />
+            or drag files into this area to upload
+          </p>,
+          "fileUploadRestrictionHeading": "File upload restrictions",
+          "fileUploadRestrictions": <div>
+            Please ensure:
+            <ul>
+              <li>
+                files are under 5GB in size
+              </li>
+              <li>
+                file names begin with a letter and are less than 45 characters long
+              </li>
+              <li>
+                file names contain only upper and lowercase alphanumeric characters, and underscores
+              </li>
+              <li>
+                file names must not contain any spaces
+              </li>
+              <li>
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+              </li>
+              <li>
+                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+              </li>
+              <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
+                files are uploaded individually and not inside a folder
+              </li>
+            </ul>
+          </div>,
+          "fileUploadRow": Object {
+            "defaultView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+            },
+            "deleteHint": "Remove this file",
+            "deleteRecordConfirmation": Object {
+              "cancelButtonLabel": "No",
+              "confirmButtonLabel": "Yes",
+              "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+              "confirmationTitle": "Delete file",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+            "mobileView": Object {
+              "accessCondition": Object {
+                "errorMessage": "This field is required",
+                "label": "Access conditions",
+                "selectPrompt": "Select access conditions",
+              },
+              "embargoDateClosedAccess": "No date required",
+              "embargoDateColumn": "Embargo date",
+              "fileAccessColumn": "File access",
+              "filenameColumn": "File name",
+            },
+            "uploadInProgressText": "Uploading...",
+          },
+          "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
+          "ntroSpecificInstructions": <span>
+            You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
+            <a
+              href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
+              target="_blank"
+            >
+              More information
+            </a>
+            .
+          </span>,
+          "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
+          "successTitle": "Success",
+          "validation": Object {
+            "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
+            "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
+            "notFiles": "Invalid files ([fileNames])",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
+            "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
+            "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
+          },
+        }
+      }
+      maxSize={1000}
+      mimeTypeWhitelist={
+        Object {
+          "7z": "application/x-7z-compressed",
+          "avi": "video/x-msvideo",
+          "csv": "text/csv",
+          "gif": "image/gif",
+          "gsheet": "application/vnd.google-apps.spreadsheet",
+          "gz": "application/gzip",
+          "jpe": "image/jpeg",
+          "jpeg": "image/jpeg",
+          "jpg": "image/jpeg",
+          "m1v": "video/mpeg",
+          "m2v": "video/mpeg",
+          "m4a": "audio/x-m4a",
+          "mk3d": "video/x-matroska",
+          "mks": "video/x-matroska",
+          "mkv": "video/x-matroska",
+          "mov": "video/quicktime",
+          "mp3": "audio/mp3",
+          "mp4": "video/mp4",
+          "mp4v": "video/mp4",
+          "mpe": "video/mpeg",
+          "mpeg": "video/mpeg",
+          "mpg": "video/mpeg",
+          "mxf": "application/mxf",
+          "ods": "application/vnd.oasis.opendocument.spreadsheet",
+          "pdf": "application/pdf",
+          "png": "image/png",
+          "qt": "video/quicktime",
+          "rar": "application/x-rar-compressed",
+          "tar": "application/x-tar",
+          "tif": "image/tiff",
+          "tiff": "image/tiff",
+          "wav": "audio/wav",
+          "wma": "audio/x-ms-wma",
+          "wmv": "video/x-ms-wmv",
+          "xla": "application/vnd.ms-excel",
+          "xlc": "application/vnd.ms-excel",
+          "xlm": "application/vnd.ms-excel",
+          "xls": "application/vnd.ms-excel",
+          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "xlt": "application/vnd.ms-excel",
+          "xlw": "application/vnd.ms-excel",
+          "zip": "application/zip",
+        }
+      }
+      onDrop={[Function]}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Alert
+      allowDismiss={false}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissTitle="Click to dismiss this alert"
+      message="Successfully added 2 file(s) to upload queue."
+      showLoader={false}
+      title="Success"
+      type="done"
+      wiggle={null}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Alert
+      allowDismiss={false}
+      customIcon={null}
+      customType={null}
+      disableAlertClick={false}
+      dismissTitle="Click to dismiss this alert"
+      message="During peak times, there may be a delay before newly uploaded files appear on the record."
+      showLoader={false}
+      title="Notice"
+      type="warning"
+      wiggle={null}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    xs={12}
+  >
+    <Memo(FileUploadRowHeader)
+      isAdmin={false}
+      onDeleteAll={[Function]}
+      requireOpenAccessStatus={true}
+    />
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    data-testid="fez-datastream-info-list"
+    item={true}
+    xs={12}
+  >
+    <WithWidth(FileUploadRow)
+      fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-0"
+      focusOnIndex={0}
+      index={0}
+      isAdmin={false}
+      key="a.txt"
+      locale={
+        Object {
+          "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        }
+      }
+      onAccessConditionChange={[Function]}
+      onDelete={[Function]}
+      onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
+      onSecurityPolicyChange={[Function]}
+      requireOpenAccessStatus={true}
+      rowCount={2}
+      uploadedFile={
+        Object {
+          "fileData": File {},
+          "name": "a.txt",
+          "size": 0,
+        }
+      }
+    />
+    <WithWidth(FileUploadRow)
+      fileSizeUnit="K"
+      fileUploadRowId="fez-datastream-info-list-row-1"
+      focusOnIndex={0}
+      index={1}
+      isAdmin={false}
+      key="b.txt"
+      locale={
+        Object {
+          "defaultView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+          },
+          "deleteHint": "Remove this file",
+          "deleteRecordConfirmation": Object {
+            "cancelButtonLabel": "No",
+            "confirmButtonLabel": "Yes",
+            "confirmationMessage": "Are you sure you want to remove this file from the uploaded queue?",
+            "confirmationTitle": "Delete file",
+          },
+          "embargoDateClosedAccess": "No date required",
+          "embargoDateColumn": "Embargo date",
+          "fileAccessColumn": "File access",
+          "filenameColumn": "File name",
+          "mobileView": Object {
+            "accessCondition": Object {
+              "errorMessage": "This field is required",
+              "label": "Access conditions",
+              "selectPrompt": "Select access conditions",
+            },
+            "embargoDateClosedAccess": "No date required",
+            "embargoDateColumn": "Embargo date",
+            "fileAccessColumn": "File access",
+            "filenameColumn": "File name",
+          },
+          "uploadInProgressText": "Uploading...",
+        }
+      }
+      onAccessConditionChange={[Function]}
+      onDelete={[Function]}
+      onEmbargoDateChange={[Function]}
+      onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
+      onSecurityPolicyChange={[Function]}
+      requireOpenAccessStatus={true}
+      rowCount={2}
+      uploadedFile={
+        Object {
+          "fileData": File {},
+          "name": "b.txt",
+          "size": 0,
+        }
+      }
+    />
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;
+
 exports[`Component FileUploader should mount and unmount containers and clear file uploader 1`] = `
 <Provider
   store={
@@ -488,6 +1350,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 }
               }
               filesInQueue={Array []}
+              fullyUploadedFiles={Array []}
               isAdmin={false}
               isNtro={true}
               locale={
@@ -524,6 +1387,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                       </li>
                       <li>
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                      </li>
+                      <li>
+                        file names, regardless of extension, must be unique
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -581,7 +1447,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -972,6 +1838,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
                                       files are uploaded individually and not inside a folder
                                     </li>
                                   </ul>
@@ -1027,7 +1896,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                   "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
-                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                 },
@@ -1079,6 +1948,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                       </li>
                                       <li>
                                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                      </li>
+                                      <li>
+                                        file names, regardless of extension, must be unique
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -1136,7 +2008,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
-                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                   },
@@ -1506,6 +2378,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
+                                                            file names, regardless of extension, must be unique
+                                                          </li>
+                                                          <li>
                                                             files are uploaded individually and not inside a folder
                                                           </li>
                                                         </ul>
@@ -1561,7 +2436,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                         "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
-                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                         "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                       },
@@ -1611,6 +2486,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             </li>
                                                             <li>
                                                               file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                            </li>
+                                                            <li>
+                                                              file names, regardless of extension, must be unique
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -1668,7 +2546,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                           "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
-                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                           "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                         },
@@ -2344,6 +3222,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                     </li>
                                                                     <li>
                                                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                                    </li>
+                                                                    <li>
+                                                                      file names, regardless of extension, must be unique
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
@@ -3435,6 +4316,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 }
               }
               filesInQueue={Array []}
+              fullyUploadedFiles={Array []}
               isAdmin={false}
               isNtro={true}
               locale={
@@ -3471,6 +4353,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                       </li>
                       <li>
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                      </li>
+                      <li>
+                        file names, regardless of extension, must be unique
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -3528,7 +4413,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -3919,6 +4804,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
+                                      file names, regardless of extension, must be unique
+                                    </li>
+                                    <li>
                                       files are uploaded individually and not inside a folder
                                     </li>
                                   </ul>
@@ -3974,7 +4862,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                   "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
-                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                  "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                 },
@@ -4026,6 +4914,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                       </li>
                                       <li>
                                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                      </li>
+                                      <li>
+                                        file names, regardless of extension, must be unique
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -4083,7 +4974,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
-                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                   },
@@ -4453,6 +5344,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
+                                                            file names, regardless of extension, must be unique
+                                                          </li>
+                                                          <li>
                                                             files are uploaded individually and not inside a folder
                                                           </li>
                                                         </ul>
@@ -4508,7 +5402,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                         "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
-                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                        "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                         "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                       },
@@ -4558,6 +5452,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             </li>
                                                             <li>
                                                               file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                                                            </li>
+                                                            <li>
+                                                              file names, regardless of extension, must be unique
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -4615,7 +5512,7 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                                                           "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
-                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                                                          "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                                                           "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                                                         },
@@ -5293,6 +6190,9 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                                     </li>
                                                                     <li>
+                                                                      file names, regardless of extension, must be unique
+                                                                    </li>
+                                                                    <li>
                                                                       files are uploaded individually and not inside a folder
                                                                     </li>
                                                                   </ul>
@@ -5935,6 +6835,9 @@ exports[`Component FileUploader should render default component 1`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -5990,7 +6893,7 @@ exports[`Component FileUploader should render default component 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -6105,6 +7008,9 @@ exports[`Component FileUploader should render disabled component 1`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -6160,7 +7066,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -6274,6 +7180,9 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -6329,7 +7238,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -6448,6 +7357,9 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -6503,7 +7415,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -6654,8 +7566,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -6710,8 +7625,11 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -6783,6 +7701,9 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -6838,7 +7759,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -6989,8 +7910,11 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={1}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -7058,6 +7982,9 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -7113,7 +8040,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7227,6 +8154,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -7282,7 +8212,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7401,6 +8331,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -7456,7 +8389,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7608,8 +8541,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -7666,8 +8602,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -7736,6 +8675,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -7791,7 +8733,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -7910,6 +8852,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -7965,7 +8910,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8116,8 +9061,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8172,8 +9120,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8246,6 +9197,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -8301,7 +9255,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8452,8 +9406,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 1,
@@ -8510,8 +9467,11 @@ exports[`Component FileUploader should render rows for uploaded files with acces
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -8579,6 +9539,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -8634,7 +9597,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8753,6 +9716,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -8808,7 +9774,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -8960,8 +9926,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -9018,8 +9987,11 @@ exports[`Component FileUploader should render rows for uploaded files with defau
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={false}
+      rowCount={2}
       uploadedFile={
         Object {
           "access_condition_id": 3,
@@ -9088,6 +10060,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -9143,7 +10118,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9262,6 +10237,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -9317,7 +10295,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9468,8 +10446,11 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -9524,8 +10505,11 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -9598,6 +10582,9 @@ exports[`Component FileUploader should render rows for uploaded files with secur
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -9653,7 +10640,7 @@ exports[`Component FileUploader should render rows for uploaded files with secur
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },
@@ -9804,8 +10791,11 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "date": null,
@@ -9862,8 +10852,11 @@ exports[`Component FileUploader should render rows for uploaded files with secur
       onDelete={[Function]}
       onEmbargoDateChange={[Function]}
       onFileDescriptionChange={[Function]}
+      onOrderDownClick={[Function]}
+      onOrderUpClick={[Function]}
       onSecurityPolicyChange={[Function]}
       requireOpenAccessStatus={true}
+      rowCount={2}
       uploadedFile={
         Object {
           "fileData": File {},
@@ -9931,6 +10924,9 @@ exports[`Component FileUploader should render security policy selector if admin 
                 file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
+                file names, regardless of extension, must be unique
+              </li>
+              <li>
                 files are uploaded individually and not inside a folder
               </li>
             </ul>
@@ -9986,7 +10982,7 @@ exports[`Component FileUploader should render security policy selector if admin 
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
             "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
-            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+            "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
             "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
           },

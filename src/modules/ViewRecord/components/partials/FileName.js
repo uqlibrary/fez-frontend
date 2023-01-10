@@ -16,13 +16,15 @@ import componentsLocale from 'locale/components';
 
 export const useStyles = makeStyles(
     theme => ({
+        filenameParent: {
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+        },
         filename: {
             ...theme.typography.body2,
             cursor: 'pointer',
             placeSelf: 'center',
-            overflow: 'hidden',
-            whiteSpace: 'nowrap',
-            textOverflow: 'ellipsis',
         },
         fileDownloadIcon: {
             textAlign: 'right',
@@ -90,7 +92,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs sm={10}>
+            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 10 : 12}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -102,7 +104,7 @@ const FileName = ({
                     <ExternalLink
                         href={downloadUrl}
                         title={fileName}
-                        className={classes.filename}
+                        className={`${classes.filename} ${classes.filenameParent}`}
                         openInNewIcon
                         id={`${id}-download`}
                     >
@@ -110,7 +112,7 @@ const FileName = ({
                     </ExternalLink>
                 )}
                 {allowDownload && !downloadLicence && canShowPreview(mimeType) && (
-                    <Typography variant="body2">
+                    <Typography variant="body2" className={classes.filenameParent}>
                         <a
                             onClick={showPreview}
                             onKeyPress={showPreview}
@@ -124,7 +126,9 @@ const FileName = ({
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
-                            <Typography variant="body2">{fileName}</Typography>
+                            <Typography variant="body2" className={`${classes.filename} ${classes.filenameParent}`}>
+                                {fileName}
+                            </Typography>
                         </Grid>
                         {!!downloadLicence && (
                             <Grid item xs="auto" className={classes.fileDownloadIcon}>
@@ -155,7 +159,7 @@ const FileName = ({
     );
 };
 
-FileName.propTypes = {
+export const FileNameProps = {
     downloadLicence: PropTypes.object,
     id: PropTypes.string,
     pid: PropTypes.string.isRequired,
@@ -169,5 +173,7 @@ FileName.propTypes = {
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
 };
+
+FileName.propTypes = { ...FileNameProps };
 
 export default FileName;

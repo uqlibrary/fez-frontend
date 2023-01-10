@@ -102,14 +102,12 @@ export const renderButton = args => {
 export class DashboardResearcherIdsClass extends React.Component {
     static propTypes = {
         values: PropTypes.shape({
-            publons: PropTypes.string,
             researcher: PropTypes.string,
             scopus: PropTypes.string,
             google_scholar: PropTypes.string,
             orcid: PropTypes.string,
         }),
         authenticated: PropTypes.shape({
-            publons: PropTypes.bool,
             researcher: PropTypes.bool,
             scopus: PropTypes.bool,
             google_scholar: PropTypes.bool,

@@ -10,6 +10,8 @@ import {
 import { contentIndicators } from '../config';
 import { NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK, PLACEHOLDER_ISO8601_DATE } from '../config/general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
+import { STATE_DELETED } from '../config/viewRecord';
+import { isDerivative } from 'helpers/datastreams';
 
 const moment = require('moment');
 
@@ -782,7 +784,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
                 },
             },
             currentAuthorOrder,
-            data.initialSignificance,
+            data.initialValues?.initialSignificance,
             data.significance,
         ),
         ...getSearchKey(
@@ -794,7 +796,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
                 },
             },
             currentAuthorOrder,
-            data.initialContributionStatements,
+            data.initialValues?.initialContributionStatements,
             (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null,
         ),
     };
@@ -849,6 +851,37 @@ export const getRecordLocationSearchKey = locations => {
             ...location,
         })),
     };
+};
+
+export const cleanDatastreamsObject = data => {
+    // Clean the datastream object, where required.
+    // If an admin has renamed an existing, attached file in the record there will be a
+    // unique dsi_dsid_new key that we must do something with.
+    //
+    // IF the dsi_dsid === dsi_dsid_new, delete the latter
+    // IF dsi_dsid !== dsi_dsid_new, swap values between keys.
+    //
+    // Background: the backend server will look for dsi_dsid_new when
+    // processing the record and, if found, will proceed to rename
+    // the original file and all derivatives with the value of
+    // dsi_dsid_new.
+    // The frontend, however, uses dsi_dsid to present filename information
+    // on screen and with every update from the user, so a record of the original
+    // is stored in _new for processing here.
+    if (!!!data) return {};
+
+    const newDatastreamObject = data.map(entry => {
+        if (!entry.hasOwnProperty('dsi_dsid_new')) return entry;
+        if (entry.dsi_dsid === entry.dsi_dsid_new) {
+            delete entry.dsi_dsid_new;
+        } else {
+            const newFilename = entry.dsi_dsid;
+            entry.dsi_dsid = entry.dsi_dsid_new;
+            entry.dsi_dsid_new = newFilename;
+        }
+        return entry;
+    });
+    return newDatastreamObject;
 };
 
 const cleanBlankEntries = data => {
@@ -965,6 +998,7 @@ export const getRecordIsDerivationOfSearchKey = relatedPubs => {
 
 export const getFezMatchedJournalsKey = matchedJournal => {
     // No match was present in unedited record
+
     if (matchedJournal === undefined) {
         return {};
     }
@@ -986,9 +1020,15 @@ export const getFezMatchedJournalsKey = matchedJournal => {
     }
 
     // New match
-    return {
-        fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' },
-    };
+    if (matchedJournal.jnl_jid && matchedJournal.jnl_jid !== 0) {
+        return {
+            fez_matched_journals: { mtj_jnl_id: matchedJournal.jnl_jid, mtj_status: 'M' },
+        };
+    } else {
+        return {
+            fez_matched_journals: null,
+        };
+    }
 };
 
 /**
@@ -1373,12 +1413,15 @@ export const getDatastreamInfo = (
     dataStreamsFromFileSection = [],
     dataStreamsFromSecuritySection = [],
 ) => {
-    const dataStreamsLabelMap = dataStreamsFromFileSection.reduce(
+    const cleanedDataStreamsFromFileSection = cleanDatastreamsObject(dataStreamsFromFileSection);
+    const dataStreamsLabelMap = cleanedDataStreamsFromFileSection.reduce(
         (map, ds) => ({
             ...map,
             [ds.dsi_dsid]: {
                 dsi_label: ds.dsi_label,
+                ...(ds.hasOwnProperty('dsi_dsid_new') ? { dsi_dsid_new: ds.dsi_dsid_new } : {}),
                 dsi_embargo_date: ds.dsi_embargo_date,
+                dsi_order: ds.dsi_order,
             },
         }),
         {},
@@ -1401,7 +1444,9 @@ export const getDatastreamInfo = (
                 ...dataStream,
                 ...(dataStreamsLabelMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsLabelMap[dataStream.dsi_dsid] }
-                    : { dsi_state: 'D' }),
+                    : {
+                          ...(!isDerivative(dataStream) ? { dsi_state: STATE_DELETED } : /* istanbul ignore next */ {}),
+                      }), // only set delete status on non-derivatives
                 ...(dataStreamsSecurityMap.hasOwnProperty(dataStream.dsi_dsid)
                     ? { ...dataStreamsSecurityMap[dataStream.dsi_dsid] }
                     : {}),
@@ -1411,7 +1456,13 @@ export const getDatastreamInfo = (
 };
 
 export const getNotesSectionSearchKeys = (data = {}) => {
-    const { additionalNotes, internalNotes, rek_herdc_notes: herdcNotes } = data;
+    const {
+        additionalNotes,
+        internalNotes,
+        rek_herdc_notes: herdcNotes,
+        rek_ci_notice_attribution_incomplete: ciNotices,
+    } = data;
+
     return {
         ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
             ? {
@@ -1423,6 +1474,10 @@ export const getNotesSectionSearchKeys = (data = {}) => {
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : { fez_internal_notes: null }),
         ...(!!herdcNotes && herdcNotes.hasOwnProperty('htmlText') ? { rek_herdc_notes: herdcNotes.htmlText } : {}),
+
+        ...(!(ciNotices === null || ciNotices === undefined)
+            ? { rek_ci_notice_attribution_incomplete: !!ciNotices ? 1 : 0 }
+            : {}),
     };
 };
 

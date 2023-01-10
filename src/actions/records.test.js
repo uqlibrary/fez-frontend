@@ -1265,6 +1265,15 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('renameAttachedFile()', () => {
+        it('dispatches expected actions', async () => {
+            const expectedActions = [actions.ADMIN_RENAME_ATTACHED_FILE];
+
+            await mockActionsStore.dispatch(recordActions.renameAttachedFile('file.jpg', 'renamed.jpg'));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
     describe('unlockRecord()', () => {
         it('dispatches expected actions on success', async () => {
             const pid = 'UQ:123456';

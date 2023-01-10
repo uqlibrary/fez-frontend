@@ -78,7 +78,7 @@ describe('File repository', () => {
     it('correctly leaves file description for null metadata', () => {
         const testCase = {
             input: { access_condition_id: FILE_ACCESS_CONDITION_OPEN, description: null },
-            output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0, dsi_label: null },
+            output: { dsi_security_policy: FILE_ACCESS_CONDITION_OPEN, dsi_security_inherited: 0 },
         };
         expect(getFileUploadMetadata(testCase.input, [])).toEqual(testCase.output);
     });

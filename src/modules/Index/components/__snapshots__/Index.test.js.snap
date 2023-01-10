@@ -1946,6 +1946,7 @@ exports[`Index page should render placeholders 1`] = `
                                                         "mergeAvailableAuthoringData": [Function],
                                                         "removeFromFavourites": [Function],
                                                         "removeShadowSuffixFromTableNames": [Function],
+                                                        "renameAttachedFile": [Function],
                                                         "requestMJLIngest": [Function],
                                                         "requestOrcidSync": [Function],
                                                         "resetDoi": [Function],
@@ -2131,6 +2132,7 @@ exports[`Index page should render placeholders 1`] = `
                                                           "mergeAvailableAuthoringData": [Function],
                                                           "removeFromFavourites": [Function],
                                                           "removeShadowSuffixFromTableNames": [Function],
+                                                          "renameAttachedFile": [Function],
                                                           "requestMJLIngest": [Function],
                                                           "requestOrcidSync": [Function],
                                                           "resetDoi": [Function],
@@ -3247,6 +3249,405 @@ exports[`Index page should render placeholders 1`] = `
                                                               </WithStyles(ForwardRef(Card))>
                                                             </StandardCard>
                                                           </CulturalAdvice>
+                                                        </div>
+                                                      </ForwardRef(Grid)>
+                                                    </WithStyles(ForwardRef(Grid))>
+                                                    <WithStyles(ForwardRef(Grid))
+                                                      item={true}
+                                                      xs={12}
+                                                    >
+                                                      <ForwardRef(Grid)
+                                                        classes={
+                                                          Object {
+                                                            "align-content-xs-center": "MuiGrid-align-content-xs-center",
+                                                            "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end",
+                                                            "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start",
+                                                            "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around",
+                                                            "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between",
+                                                            "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline",
+                                                            "align-items-xs-center": "MuiGrid-align-items-xs-center",
+                                                            "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end",
+                                                            "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start",
+                                                            "container": "MuiGrid-container",
+                                                            "direction-xs-column": "MuiGrid-direction-xs-column",
+                                                            "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse",
+                                                            "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse",
+                                                            "grid-lg-1": "MuiGrid-grid-lg-1",
+                                                            "grid-lg-10": "MuiGrid-grid-lg-10",
+                                                            "grid-lg-11": "MuiGrid-grid-lg-11",
+                                                            "grid-lg-12": "MuiGrid-grid-lg-12",
+                                                            "grid-lg-2": "MuiGrid-grid-lg-2",
+                                                            "grid-lg-3": "MuiGrid-grid-lg-3",
+                                                            "grid-lg-4": "MuiGrid-grid-lg-4",
+                                                            "grid-lg-5": "MuiGrid-grid-lg-5",
+                                                            "grid-lg-6": "MuiGrid-grid-lg-6",
+                                                            "grid-lg-7": "MuiGrid-grid-lg-7",
+                                                            "grid-lg-8": "MuiGrid-grid-lg-8",
+                                                            "grid-lg-9": "MuiGrid-grid-lg-9",
+                                                            "grid-lg-auto": "MuiGrid-grid-lg-auto",
+                                                            "grid-lg-true": "MuiGrid-grid-lg-true",
+                                                            "grid-md-1": "MuiGrid-grid-md-1",
+                                                            "grid-md-10": "MuiGrid-grid-md-10",
+                                                            "grid-md-11": "MuiGrid-grid-md-11",
+                                                            "grid-md-12": "MuiGrid-grid-md-12",
+                                                            "grid-md-2": "MuiGrid-grid-md-2",
+                                                            "grid-md-3": "MuiGrid-grid-md-3",
+                                                            "grid-md-4": "MuiGrid-grid-md-4",
+                                                            "grid-md-5": "MuiGrid-grid-md-5",
+                                                            "grid-md-6": "MuiGrid-grid-md-6",
+                                                            "grid-md-7": "MuiGrid-grid-md-7",
+                                                            "grid-md-8": "MuiGrid-grid-md-8",
+                                                            "grid-md-9": "MuiGrid-grid-md-9",
+                                                            "grid-md-auto": "MuiGrid-grid-md-auto",
+                                                            "grid-md-true": "MuiGrid-grid-md-true",
+                                                            "grid-sm-1": "MuiGrid-grid-sm-1",
+                                                            "grid-sm-10": "MuiGrid-grid-sm-10",
+                                                            "grid-sm-11": "MuiGrid-grid-sm-11",
+                                                            "grid-sm-12": "MuiGrid-grid-sm-12",
+                                                            "grid-sm-2": "MuiGrid-grid-sm-2",
+                                                            "grid-sm-3": "MuiGrid-grid-sm-3",
+                                                            "grid-sm-4": "MuiGrid-grid-sm-4",
+                                                            "grid-sm-5": "MuiGrid-grid-sm-5",
+                                                            "grid-sm-6": "MuiGrid-grid-sm-6",
+                                                            "grid-sm-7": "MuiGrid-grid-sm-7",
+                                                            "grid-sm-8": "MuiGrid-grid-sm-8",
+                                                            "grid-sm-9": "MuiGrid-grid-sm-9",
+                                                            "grid-sm-auto": "MuiGrid-grid-sm-auto",
+                                                            "grid-sm-true": "MuiGrid-grid-sm-true",
+                                                            "grid-xl-1": "MuiGrid-grid-xl-1",
+                                                            "grid-xl-10": "MuiGrid-grid-xl-10",
+                                                            "grid-xl-11": "MuiGrid-grid-xl-11",
+                                                            "grid-xl-12": "MuiGrid-grid-xl-12",
+                                                            "grid-xl-2": "MuiGrid-grid-xl-2",
+                                                            "grid-xl-3": "MuiGrid-grid-xl-3",
+                                                            "grid-xl-4": "MuiGrid-grid-xl-4",
+                                                            "grid-xl-5": "MuiGrid-grid-xl-5",
+                                                            "grid-xl-6": "MuiGrid-grid-xl-6",
+                                                            "grid-xl-7": "MuiGrid-grid-xl-7",
+                                                            "grid-xl-8": "MuiGrid-grid-xl-8",
+                                                            "grid-xl-9": "MuiGrid-grid-xl-9",
+                                                            "grid-xl-auto": "MuiGrid-grid-xl-auto",
+                                                            "grid-xl-true": "MuiGrid-grid-xl-true",
+                                                            "grid-xs-1": "MuiGrid-grid-xs-1",
+                                                            "grid-xs-10": "MuiGrid-grid-xs-10",
+                                                            "grid-xs-11": "MuiGrid-grid-xs-11",
+                                                            "grid-xs-12": "MuiGrid-grid-xs-12",
+                                                            "grid-xs-2": "MuiGrid-grid-xs-2",
+                                                            "grid-xs-3": "MuiGrid-grid-xs-3",
+                                                            "grid-xs-4": "MuiGrid-grid-xs-4",
+                                                            "grid-xs-5": "MuiGrid-grid-xs-5",
+                                                            "grid-xs-6": "MuiGrid-grid-xs-6",
+                                                            "grid-xs-7": "MuiGrid-grid-xs-7",
+                                                            "grid-xs-8": "MuiGrid-grid-xs-8",
+                                                            "grid-xs-9": "MuiGrid-grid-xs-9",
+                                                            "grid-xs-auto": "MuiGrid-grid-xs-auto",
+                                                            "grid-xs-true": "MuiGrid-grid-xs-true",
+                                                            "item": "MuiGrid-item",
+                                                            "justify-content-xs-center": "MuiGrid-justify-content-xs-center",
+                                                            "justify-content-xs-flex-end": "MuiGrid-justify-content-xs-flex-end",
+                                                            "justify-content-xs-space-around": "MuiGrid-justify-content-xs-space-around",
+                                                            "justify-content-xs-space-between": "MuiGrid-justify-content-xs-space-between",
+                                                            "justify-content-xs-space-evenly": "MuiGrid-justify-content-xs-space-evenly",
+                                                            "root": "MuiGrid-root",
+                                                            "spacing-xs-1": "MuiGrid-spacing-xs-1",
+                                                            "spacing-xs-10": "MuiGrid-spacing-xs-10",
+                                                            "spacing-xs-2": "MuiGrid-spacing-xs-2",
+                                                            "spacing-xs-3": "MuiGrid-spacing-xs-3",
+                                                            "spacing-xs-4": "MuiGrid-spacing-xs-4",
+                                                            "spacing-xs-5": "MuiGrid-spacing-xs-5",
+                                                            "spacing-xs-6": "MuiGrid-spacing-xs-6",
+                                                            "spacing-xs-7": "MuiGrid-spacing-xs-7",
+                                                            "spacing-xs-8": "MuiGrid-spacing-xs-8",
+                                                            "spacing-xs-9": "MuiGrid-spacing-xs-9",
+                                                            "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap",
+                                                            "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse",
+                                                            "zeroMinWidth": "MuiGrid-zeroMinWidth",
+                                                          }
+                                                        }
+                                                        item={true}
+                                                        xs={12}
+                                                      >
+                                                        <div
+                                                          className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+                                                        >
+                                                          <CulturalNotice>
+                                                            <StandardCard
+                                                              primaryHeader={true}
+                                                              title="Open to Collaborate"
+                                                            >
+                                                              <WithStyles(ForwardRef(Card))
+                                                                className="makeStyles-card-7 StandardCard"
+                                                                data-testid="standard-card-open-to-collaborate"
+                                                                id="standard-card-open-to-collaborate"
+                                                                style={Object {}}
+                                                              >
+                                                                <ForwardRef(Card)
+                                                                  className="makeStyles-card-7 StandardCard"
+                                                                  classes={
+                                                                    Object {
+                                                                      "root": "MuiCard-root",
+                                                                    }
+                                                                  }
+                                                                  data-testid="standard-card-open-to-collaborate"
+                                                                  id="standard-card-open-to-collaborate"
+                                                                  style={Object {}}
+                                                                >
+                                                                  <WithStyles(ForwardRef(Paper))
+                                                                    className="MuiCard-root makeStyles-card-7 StandardCard"
+                                                                    data-testid="standard-card-open-to-collaborate"
+                                                                    elevation={1}
+                                                                    id="standard-card-open-to-collaborate"
+                                                                    style={Object {}}
+                                                                  >
+                                                                    <ForwardRef(Paper)
+                                                                      className="MuiCard-root makeStyles-card-7 StandardCard"
+                                                                      classes={
+                                                                        Object {
+                                                                          "elevation0": "MuiPaper-elevation0",
+                                                                          "elevation1": "MuiPaper-elevation1",
+                                                                          "elevation10": "MuiPaper-elevation10",
+                                                                          "elevation11": "MuiPaper-elevation11",
+                                                                          "elevation12": "MuiPaper-elevation12",
+                                                                          "elevation13": "MuiPaper-elevation13",
+                                                                          "elevation14": "MuiPaper-elevation14",
+                                                                          "elevation15": "MuiPaper-elevation15",
+                                                                          "elevation16": "MuiPaper-elevation16",
+                                                                          "elevation17": "MuiPaper-elevation17",
+                                                                          "elevation18": "MuiPaper-elevation18",
+                                                                          "elevation19": "MuiPaper-elevation19",
+                                                                          "elevation2": "MuiPaper-elevation2",
+                                                                          "elevation20": "MuiPaper-elevation20",
+                                                                          "elevation21": "MuiPaper-elevation21",
+                                                                          "elevation22": "MuiPaper-elevation22",
+                                                                          "elevation23": "MuiPaper-elevation23",
+                                                                          "elevation24": "MuiPaper-elevation24",
+                                                                          "elevation3": "MuiPaper-elevation3",
+                                                                          "elevation4": "MuiPaper-elevation4",
+                                                                          "elevation5": "MuiPaper-elevation5",
+                                                                          "elevation6": "MuiPaper-elevation6",
+                                                                          "elevation7": "MuiPaper-elevation7",
+                                                                          "elevation8": "MuiPaper-elevation8",
+                                                                          "elevation9": "MuiPaper-elevation9",
+                                                                          "outlined": "MuiPaper-outlined",
+                                                                          "root": "MuiPaper-root",
+                                                                          "rounded": "MuiPaper-rounded",
+                                                                        }
+                                                                      }
+                                                                      data-testid="standard-card-open-to-collaborate"
+                                                                      elevation={1}
+                                                                      id="standard-card-open-to-collaborate"
+                                                                      style={Object {}}
+                                                                    >
+                                                                      <div
+                                                                        className="MuiPaper-root MuiCard-root makeStyles-card-7 StandardCard MuiPaper-elevation1 MuiPaper-rounded"
+                                                                        data-testid="standard-card-open-to-collaborate"
+                                                                        id="standard-card-open-to-collaborate"
+                                                                        style={Object {}}
+                                                                      >
+                                                                        <WithStyles(ForwardRef(CardHeader))
+                                                                          action={false}
+                                                                          classes={
+                                                                            Object {
+                                                                              "root": "makeStyles-cardHeaderPrimary-9",
+                                                                              "title": "makeStyles-responsiveHeader-12",
+                                                                            }
+                                                                          }
+                                                                          style={Object {}}
+                                                                          title="Open to Collaborate"
+                                                                          titleTypographyProps={
+                                                                            Object {
+                                                                              "color": "inherit",
+                                                                              "component": "h3",
+                                                                              "data-testid": "standard-card-open-to-collaborate-header",
+                                                                              "id": "standard-card-open-to-collaborate-header",
+                                                                              "variant": "h5",
+                                                                            }
+                                                                          }
+                                                                        >
+                                                                          <ForwardRef(CardHeader)
+                                                                            action={false}
+                                                                            classes={
+                                                                              Object {
+                                                                                "action": "MuiCardHeader-action",
+                                                                                "avatar": "MuiCardHeader-avatar",
+                                                                                "content": "MuiCardHeader-content",
+                                                                                "root": "MuiCardHeader-root makeStyles-cardHeaderPrimary-9",
+                                                                                "subheader": "MuiCardHeader-subheader",
+                                                                                "title": "MuiCardHeader-title makeStyles-responsiveHeader-12",
+                                                                              }
+                                                                            }
+                                                                            style={Object {}}
+                                                                            title="Open to Collaborate"
+                                                                            titleTypographyProps={
+                                                                              Object {
+                                                                                "color": "inherit",
+                                                                                "component": "h3",
+                                                                                "data-testid": "standard-card-open-to-collaborate-header",
+                                                                                "id": "standard-card-open-to-collaborate-header",
+                                                                                "variant": "h5",
+                                                                              }
+                                                                            }
+                                                                          >
+                                                                            <div
+                                                                              className="MuiCardHeader-root makeStyles-cardHeaderPrimary-9"
+                                                                              style={Object {}}
+                                                                            >
+                                                                              <div
+                                                                                className="MuiCardHeader-content"
+                                                                              >
+                                                                                <WithStyles(ForwardRef(Typography))
+                                                                                  className="MuiCardHeader-title makeStyles-responsiveHeader-12"
+                                                                                  color="inherit"
+                                                                                  component="h3"
+                                                                                  data-testid="standard-card-open-to-collaborate-header"
+                                                                                  display="block"
+                                                                                  id="standard-card-open-to-collaborate-header"
+                                                                                  variant="h5"
+                                                                                >
+                                                                                  <ForwardRef(Typography)
+                                                                                    className="MuiCardHeader-title makeStyles-responsiveHeader-12"
+                                                                                    classes={
+                                                                                      Object {
+                                                                                        "alignCenter": "MuiTypography-alignCenter",
+                                                                                        "alignJustify": "MuiTypography-alignJustify",
+                                                                                        "alignLeft": "MuiTypography-alignLeft",
+                                                                                        "alignRight": "MuiTypography-alignRight",
+                                                                                        "body1": "MuiTypography-body1",
+                                                                                        "body2": "MuiTypography-body2",
+                                                                                        "button": "MuiTypography-button",
+                                                                                        "caption": "MuiTypography-caption",
+                                                                                        "colorError": "MuiTypography-colorError",
+                                                                                        "colorInherit": "MuiTypography-colorInherit",
+                                                                                        "colorPrimary": "MuiTypography-colorPrimary",
+                                                                                        "colorSecondary": "MuiTypography-colorSecondary",
+                                                                                        "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                                                        "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                                                        "displayBlock": "MuiTypography-displayBlock",
+                                                                                        "displayInline": "MuiTypography-displayInline",
+                                                                                        "gutterBottom": "MuiTypography-gutterBottom",
+                                                                                        "h1": "MuiTypography-h1",
+                                                                                        "h2": "MuiTypography-h2",
+                                                                                        "h3": "MuiTypography-h3",
+                                                                                        "h4": "MuiTypography-h4",
+                                                                                        "h5": "MuiTypography-h5",
+                                                                                        "h6": "MuiTypography-h6",
+                                                                                        "noWrap": "MuiTypography-noWrap",
+                                                                                        "overline": "MuiTypography-overline",
+                                                                                        "paragraph": "MuiTypography-paragraph",
+                                                                                        "root": "MuiTypography-root",
+                                                                                        "srOnly": "MuiTypography-srOnly",
+                                                                                        "subtitle1": "MuiTypography-subtitle1",
+                                                                                        "subtitle2": "MuiTypography-subtitle2",
+                                                                                      }
+                                                                                    }
+                                                                                    color="inherit"
+                                                                                    component="h3"
+                                                                                    data-testid="standard-card-open-to-collaborate-header"
+                                                                                    display="block"
+                                                                                    id="standard-card-open-to-collaborate-header"
+                                                                                    variant="h5"
+                                                                                  >
+                                                                                    <h3
+                                                                                      className="MuiTypography-root MuiCardHeader-title makeStyles-responsiveHeader-12 MuiTypography-h5 MuiTypography-colorInherit MuiTypography-displayBlock"
+                                                                                      data-testid="standard-card-open-to-collaborate-header"
+                                                                                      id="standard-card-open-to-collaborate-header"
+                                                                                    >
+                                                                                      Open to Collaborate
+                                                                                    </h3>
+                                                                                  </ForwardRef(Typography)>
+                                                                                </WithStyles(ForwardRef(Typography))>
+                                                                              </div>
+                                                                            </div>
+                                                                          </ForwardRef(CardHeader)>
+                                                                        </WithStyles(ForwardRef(CardHeader))>
+                                                                        <WithStyles(ForwardRef(CardContent))
+                                                                          className=""
+                                                                          data-testid="standard-card-open-to-collaborate-content"
+                                                                          id="standard-card-open-to-collaborate-content"
+                                                                        >
+                                                                          <ForwardRef(CardContent)
+                                                                            className=""
+                                                                            classes={
+                                                                              Object {
+                                                                                "root": "MuiCardContent-root",
+                                                                              }
+                                                                            }
+                                                                            data-testid="standard-card-open-to-collaborate-content"
+                                                                            id="standard-card-open-to-collaborate-content"
+                                                                          >
+                                                                            <div
+                                                                              className="MuiCardContent-root"
+                                                                              data-testid="standard-card-open-to-collaborate-content"
+                                                                              id="standard-card-open-to-collaborate-content"
+                                                                            >
+                                                                              <div
+                                                                                className="makeStyles-culturalNoticeParent-13"
+                                                                              >
+                                                                                <img
+                                                                                  alt="Open to Collaborate"
+                                                                                  className="makeStyles-culturalNoticeImage-14"
+                                                                                  src="https://storage.googleapis.com/anth-ja77-local-contexts-8985.appspot.com/labels/notices/ci-open-to-collaborate.svg"
+                                                                                />
+                                                                                <WithStyles(ForwardRef(Typography))
+                                                                                  variant="body2"
+                                                                                >
+                                                                                  <ForwardRef(Typography)
+                                                                                    classes={
+                                                                                      Object {
+                                                                                        "alignCenter": "MuiTypography-alignCenter",
+                                                                                        "alignJustify": "MuiTypography-alignJustify",
+                                                                                        "alignLeft": "MuiTypography-alignLeft",
+                                                                                        "alignRight": "MuiTypography-alignRight",
+                                                                                        "body1": "MuiTypography-body1",
+                                                                                        "body2": "MuiTypography-body2",
+                                                                                        "button": "MuiTypography-button",
+                                                                                        "caption": "MuiTypography-caption",
+                                                                                        "colorError": "MuiTypography-colorError",
+                                                                                        "colorInherit": "MuiTypography-colorInherit",
+                                                                                        "colorPrimary": "MuiTypography-colorPrimary",
+                                                                                        "colorSecondary": "MuiTypography-colorSecondary",
+                                                                                        "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                                                                                        "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                                                                                        "displayBlock": "MuiTypography-displayBlock",
+                                                                                        "displayInline": "MuiTypography-displayInline",
+                                                                                        "gutterBottom": "MuiTypography-gutterBottom",
+                                                                                        "h1": "MuiTypography-h1",
+                                                                                        "h2": "MuiTypography-h2",
+                                                                                        "h3": "MuiTypography-h3",
+                                                                                        "h4": "MuiTypography-h4",
+                                                                                        "h5": "MuiTypography-h5",
+                                                                                        "h6": "MuiTypography-h6",
+                                                                                        "noWrap": "MuiTypography-noWrap",
+                                                                                        "overline": "MuiTypography-overline",
+                                                                                        "paragraph": "MuiTypography-paragraph",
+                                                                                        "root": "MuiTypography-root",
+                                                                                        "srOnly": "MuiTypography-srOnly",
+                                                                                        "subtitle1": "MuiTypography-subtitle1",
+                                                                                        "subtitle2": "MuiTypography-subtitle2",
+                                                                                      }
+                                                                                    }
+                                                                                    variant="body2"
+                                                                                  >
+                                                                                    <p
+                                                                                      className="MuiTypography-root MuiTypography-body2"
+                                                                                    >
+                                                                                      <span>
+                                                                                        The University of Queensland is committed to the development of new modes of collaboration, engagement, and partnership with Indigenous peoples for the care and stewardship of past and future heritage collections.
+                                                                                      </span>
+                                                                                    </p>
+                                                                                  </ForwardRef(Typography)>
+                                                                                </WithStyles(ForwardRef(Typography))>
+                                                                              </div>
+                                                                            </div>
+                                                                          </ForwardRef(CardContent)>
+                                                                        </WithStyles(ForwardRef(CardContent))>
+                                                                      </div>
+                                                                    </ForwardRef(Paper)>
+                                                                  </WithStyles(ForwardRef(Paper))>
+                                                                </ForwardRef(Card)>
+                                                              </WithStyles(ForwardRef(Card))>
+                                                            </StandardCard>
+                                                          </CulturalNotice>
                                                         </div>
                                                       </ForwardRef(Grid)>
                                                     </WithStyles(ForwardRef(Grid))>

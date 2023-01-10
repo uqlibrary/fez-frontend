@@ -13,6 +13,7 @@ const withWidth = () => WrappedComponent => props => <WrappedComponent {...props
 export class FileUploadRow extends PureComponent {
     static propTypes = {
         disabled: PropTypes.bool,
+        rowCount: PropTypes.number,
         fileUploadRowId: PropTypes.string,
         focusOnIndex: PropTypes.number,
         index: PropTypes.number.isRequired,
@@ -20,6 +21,8 @@ export class FileUploadRow extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func,
         onEmbargoDateChange: PropTypes.func,
+        onOrderUpClick: PropTypes.func,
+        onOrderDownClick: PropTypes.func,
         onFileDescriptionChange: PropTypes.func,
         onSecurityPolicyChange: PropTypes.func,
         requireOpenAccessStatus: PropTypes.bool.isRequired,
@@ -72,6 +75,12 @@ export class FileUploadRow extends PureComponent {
     _updateEmbargoDate = newValue => {
         this.props.onEmbargoDateChange(this.props.uploadedFile, this.props.index, newValue);
     };
+    _onOrderUpClick = newIndex => {
+        this.props.onOrderUpClick(this.props.index, newIndex);
+    };
+    _onOrderDownClick = newIndex => {
+        this.props.onOrderDownClick(this.props.index, newIndex);
+    };
 
     render() {
         const { deleteRecordConfirmation } = this.props.locale;
@@ -95,6 +104,7 @@ export class FileUploadRow extends PureComponent {
                 />
                 <FileUploadRowView
                     index={index}
+                    rowCount={this.props.rowCount}
                     name={uploadedFile.name}
                     size={this.calculateFilesizeToDisplay(uploadedFile.size)}
                     accessConditionId={accessConditionId}
@@ -104,6 +114,8 @@ export class FileUploadRow extends PureComponent {
                     disabled={disabled}
                     onDelete={this._showConfirmation}
                     onAccessConditionChange={this._updateAccessCondition}
+                    onOrderUpClick={this._onOrderUpClick}
+                    onOrderDownClick={this._onOrderDownClick}
                     onFileDescriptionChange={this._updateFileDescription}
                     onEmbargoDateChange={this._updateEmbargoDate}
                     onSecurityPolicyChange={this._updateSecurityPolicy}

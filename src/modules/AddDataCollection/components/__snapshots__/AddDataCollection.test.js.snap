@@ -1492,6 +1492,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
                         files are uploaded individually and not inside a folder
                       </li>
                     </ul>
@@ -1559,7 +1562,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -3104,6 +3107,9 @@ exports[`AddDataCollection test should render component with a valid collection 
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
                         files are uploaded individually and not inside a folder
                       </li>
                     </ul>
@@ -3171,7 +3177,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -4712,6 +4718,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
                         files are uploaded individually and not inside a folder
                       </li>
                     </ul>
@@ -4779,7 +4788,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },
@@ -6320,6 +6329,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
                         file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, mxf, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
+                        file names, regardless of extension, must be unique
+                      </li>
+                      <li>
                         files are uploaded individually and not inside a folder
                       </li>
                     </ul>
@@ -6387,7 +6399,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
                     "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
-                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
+                    "sameFileNameWithDifferentExt": "File(s) ([fileNames]) name matches with an existing file.",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                     "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
                   },

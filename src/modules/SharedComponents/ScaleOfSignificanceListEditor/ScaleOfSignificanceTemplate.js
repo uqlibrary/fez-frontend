@@ -6,9 +6,8 @@ import { numberToWords, SIGNIFICANCE_MAP } from 'config/general';
 import ReactHtmlParser from 'react-html-parser';
 
 export const ScaleOfSignificanceTemplate = ({ item }) => {
-    const wrappedAuthor = `(${item.author.rek_author})`;
     // eslint-disable-next-line camelcase
-    const authorNameIfKnown = <>{!!item.author?.rek_author ? wrappedAuthor : ''}</>;
+    const authorNameIfKnown = <>{!!item.author?.rek_author ? `(${item.author.rek_author})` : ''}</>;
     return (
         <Grid container>
             <Grid item xs={12}>

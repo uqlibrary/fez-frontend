@@ -314,59 +314,93 @@ export class FilesClass extends Component {
 
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
+        const attachments = publication.fez_record_search_key_file_attachment_name;
         const componentProps = this.props;
+
         return !!!dataStreams
             ? []
-            : dataStreams.filter(this.isFileValid).map(dataStream => {
-                  const pid = publication.rek_pid;
-                  const fileName = dataStream.dsi_dsid;
-                  const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                  const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
-                  const previewFileName = checkForPreview(fileName, dataStreams);
-                  const webFileName = checkForWeb(fileName, dataStreams);
-                  const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
-                  const securityAccess = getSecurityAccess(dataStream, componentProps);
-                  const checksums = this.getChecksums(
-                      dataStream,
-                      thumbnailFileName,
-                      previewFileName,
-                      webFileName,
-                      dataStreams,
-                  );
+            : dataStreams
+                  .filter(this.isFileValid)
+                  .map(item => {
+                      if (
+                          (item.dsi_order === null || item.dsi_order === undefined) &&
+                          !!attachments &&
+                          attachments.length > 0
+                      ) {
+                          const attachIndex = attachments.findIndex(
+                              attachitem => item.dsi_dsid === attachitem.rek_file_attachment_name,
+                          );
+                          item.dsi_order =
+                              attachIndex >= 0 ? attachments[attachIndex].rek_file_attachment_name_order : null;
+                      }
+                      return item;
+                  })
+                  .sort((a, b) => {
+                      if (a.dsi_order === null) {
+                          return 1;
+                      }
 
-                  return {
-                      pid: pid,
-                      fileName: fileName,
-                      description: dataStream.dsi_label,
-                      mimeType: mimeType,
-                      calculatedSize: formatBytes(dataStream.dsi_size),
-                      allowDownload: openAccessStatus.allowDownload,
-                      icon: this.renderFileIcon(
-                          pid,
-                          mimeType,
-                          fileName,
-                          !getDownloadLicence(publication) &&
-                              !(!componentProps.account && dataStream.dsi_security_policy === 4)
-                              ? thumbnailFileName
-                              : null,
+                      if (b.dsi_order === null) {
+                          return -1;
+                      }
+
+                      if (a.dsi_order === b.dsi_order) {
+                          return 0;
+                      }
+
+                      return a.dsi_order < b.dsi_order ? -1 : 1;
+                  })
+
+                  .map(dataStream => {
+                      const pid = publication.rek_pid;
+                      const fileName = dataStream.dsi_dsid;
+                      const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
+                      const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+                      const previewFileName = checkForPreview(fileName, dataStreams);
+                      const webFileName = checkForWeb(fileName, dataStreams);
+                      const openAccessStatus = getFileOpenAccessStatus(publication, dataStream, componentProps);
+                      const securityAccess = getSecurityAccess(dataStream, componentProps);
+                      const checksums = this.getChecksums(
+                          dataStream,
+                          thumbnailFileName,
                           previewFileName,
                           webFileName,
-                          securityAccess,
-                          checksums,
-                      ),
-                      openAccessStatus: openAccessStatus,
-                      previewMediaUrl: this.getUrl(
-                          pid,
-                          previewFileName ? previewFileName : fileName,
-                          checksums && checksums.preview,
-                      ),
-                      webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
-                      mediaUrl: this.getUrl(pid, fileName, checksums.media),
-                      securityStatus: securityAccess,
-                      checksums: checksums,
-                      requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
-                  };
-              });
+                          dataStreams,
+                      );
+
+                      return {
+                          pid: pid,
+                          fileName: fileName,
+                          description: dataStream.dsi_label,
+                          mimeType: mimeType,
+                          calculatedSize: formatBytes(dataStream.dsi_size),
+                          allowDownload: openAccessStatus.allowDownload,
+                          icon: this.renderFileIcon(
+                              pid,
+                              mimeType,
+                              fileName,
+                              !getDownloadLicence(publication) &&
+                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
+                                  ? thumbnailFileName
+                                  : null,
+                              previewFileName,
+                              webFileName,
+                              securityAccess,
+                              checksums,
+                          ),
+                          openAccessStatus: openAccessStatus,
+                          previewMediaUrl: this.getUrl(
+                              pid,
+                              previewFileName ? previewFileName : fileName,
+                              checksums && checksums.preview,
+                          ),
+                          webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                          mediaUrl: this.getUrl(pid, fileName, checksums.media),
+                          securityStatus: securityAccess,
+                          checksums: checksums,
+                          requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
+                      };
+                  });
     };
 
     handleImageFailed = () => {
@@ -404,6 +438,7 @@ export class FilesClass extends Component {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
         if (fileData.length === 0) return null;
+
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
@@ -464,6 +499,7 @@ export class FilesClass extends Component {
                             <Grid item sm sx={{ display: { xs: 'none', sm: 'block' } }} />
                         </Grid>
                     </div>
+
                     {fileData.map((item, index) => (
                         <div className={this.props.classes.containerPadding} key={index}>
                             <Grid

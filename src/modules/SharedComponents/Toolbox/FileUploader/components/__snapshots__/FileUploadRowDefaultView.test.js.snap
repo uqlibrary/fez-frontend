@@ -14,6 +14,26 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
     container={true}
     direction="row"
     spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -40,6 +60,11 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -59,6 +84,26 @@ exports[`Component FileUploadRowDefaultView should not render access selector or
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -71,6 +116,26 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -102,6 +167,11 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -111,7 +181,7 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -182,6 +252,26 @@ exports[`Component FileUploadRowDefaultView should not render embargo date picke
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -194,6 +284,26 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -225,6 +335,11 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -234,7 +349,7 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -305,6 +420,26 @@ exports[`Component FileUploadRowDefaultView should render default view 1`] = `
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -317,6 +452,26 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
     }
   }
 >
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
   <WithStyles(ForwardRef(Grid))
     alignItems="center"
     container={true}
@@ -348,6 +503,11 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -453,6 +613,26 @@ exports[`Component FileUploadRowDefaultView should render default view for admin
       />
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
 </div>
 `;
 
@@ -468,6 +648,9 @@ exports[`Component FileUploadRowDefaultView should render default view with styl
       "securitySelector": "FileUploadRowDefaultView-securitySelector-4",
       "selected": "FileUploadRowDefaultView-selected-6",
       "selector": "FileUploadRowDefaultView-selector-3",
+      "upDownArrow": "FileUploadRowDefaultView-upDownArrow-9",
+      "upDownArrowContainer": "FileUploadRowDefaultView-upDownArrowContainer-8",
+      "upDownArrowContainerBottom": "FileUploadRowDefaultView-upDownArrowContainerBottom-10",
     }
   }
   disabled={false}
@@ -501,6 +684,26 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     container={true}
     direction="row"
     spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-up-0"
+        disabled={true}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandLessIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
   >
     <WithStyles(ForwardRef(Grid))
       item={true}
@@ -527,6 +730,11 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       <TextField
         fullWidth={true}
         id="file-description-input-upload-0"
+        inputProps={
+          Object {
+            "maxLength": 255,
+          }
+        }
         key="test.pdf"
         name="fileDescription"
         placeholder="Description"
@@ -536,7 +744,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
     <WithStyles(ForwardRef(Grid))
       item={true}
       md={3}
-      sm={4}
+      sm={3}
     >
       <Memo(NewGenericSelectField)
         autoFocus={false}
@@ -605,6 +813,26 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
         name="test.pdf"
         onDelete={[MockFunction]}
       />
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={1}
+    wrap="nowrap"
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={1}
+    >
+      <WithStyles(ForwardRef(IconButton))
+        data-testid="new-file-upload-down-0"
+        disabled={false}
+        id="new-file-upload-down-0"
+      >
+        <Memo(ForwardRef(ExpandMoreIcon)) />
+      </WithStyles(ForwardRef(IconButton))>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
 </div>
