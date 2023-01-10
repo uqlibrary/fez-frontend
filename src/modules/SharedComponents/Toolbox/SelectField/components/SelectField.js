@@ -10,6 +10,7 @@ import InputLabel from '@mui/material/InputLabel';
 
 const SelectFieldWrapper = props => {
     const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
+    filteredProps.value = filteredProps.value ?? '';
     filteredProps.onChange = event => props.input.onChange(event.target.value);
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
@@ -50,6 +51,7 @@ const SelectFieldWrapper = props => {
 
 SelectFieldWrapper.propTypes = {
     ...Select.propTypes,
+    input: PropTypes.object,
     selectFieldId: PropTypes.string.isRequired,
     hideLabel: PropTypes.bool,
     formHelperTextProps: PropTypes.object,
