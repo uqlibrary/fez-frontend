@@ -4,9 +4,29 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import withStyles from '@mui/styles/withStyles';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
-// FIXME checkout https://mui.com/components/use-media-query/#migrating-from-withwidth
-const withWidth = () => WrappedComponent => props => <WrappedComponent {...props} width="xs" />;
+/**
+ * Be careful using this hook. It only works because the number of
+ * breakpoints in theme is static. It will break once you change the number of
+ * breakpoints. See https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level
+ */
+function useWidth() {
+    const theme = useTheme();
+    const keys = [...theme.breakpoints.keys].reverse();
+    return (
+        keys.reduce((output, key) => {
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            const matches = useMediaQuery(theme.breakpoints.up(key));
+            return !output && matches ? key : output;
+        }, null) || 'xs'
+    );
+}
+const withWidth = () => WrappedComponent => props => {
+    const width = useWidth();
+    return <WrappedComponent {...props} width={width} />;
+};
 
 export const styles = theme => ({
     stepper: {
