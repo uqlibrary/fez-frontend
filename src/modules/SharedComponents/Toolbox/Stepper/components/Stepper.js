@@ -4,25 +4,8 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import withStyles from '@mui/styles/withStyles';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { useWidth } from 'hooks';
 
-/**
- * Be careful using this hook. It only works because the number of
- * breakpoints in theme is static. It will break once you change the number of
- * breakpoints. See https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level
- */
-function useWidth() {
-    const theme = useTheme();
-    const keys = [...theme.breakpoints.keys].reverse();
-    return (
-        keys.reduce((output, key) => {
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            const matches = useMediaQuery(theme.breakpoints.up(key));
-            return !output && matches ? key : output;
-        }, null) || 'xs'
-    );
-}
 const withWidth = () => WrappedComponent => props => {
     const width = useWidth();
     return <WrappedComponent {...props} width={width} />;
@@ -30,6 +13,7 @@ const withWidth = () => WrappedComponent => props => {
 
 export const styles = theme => ({
     stepper: {
+        padding: theme.spacing(3),
         backgroundColor: theme.hexToRGBA('#F7F7F7', 0),
         [theme.breakpoints.down('md')]: {
             padding: '12px 0 24px 8px',
@@ -51,7 +35,11 @@ export class CustomStepper extends Component {
     };
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.activeStep !== this.props.activeStep || nextProps.steps !== this.props.steps;
+        return (
+            nextProps.width !== this.props.width ||
+            nextProps.activeStep !== this.props.activeStep ||
+            nextProps.steps !== this.props.steps
+        );
     }
 
     render() {
@@ -73,4 +61,4 @@ export class CustomStepper extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(withWidth()(CustomStepper));
+export default withStyles(styles)(withWidth()(CustomStepper));
