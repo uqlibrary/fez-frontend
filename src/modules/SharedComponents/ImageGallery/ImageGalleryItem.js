@@ -15,11 +15,11 @@ import { default as config } from 'config/imageGalleryConfig';
 import ImageGalleryItemImage from './ImageGalleryItemImage';
 
 const useStyles = makeStyles(theme => ({
-    imageListItemRoot: {},
-    imageListItemItem: {
+    imageListItemRoot: {
         backgroundColor: '#fff',
         border: '1px solid #d7d1cc',
     },
+    imageListItemItem: {},
     imageListItemWithLink: {
         cursor: 'pointer',
     },
