@@ -116,6 +116,8 @@ export class TopCitedPublicationsClass extends PureComponent {
                             onChange={this.handleTabChange}
                             variant="fullWidth"
                             centered
+                            indicatorColor="primary"
+                            textColor="inherit"
                         >
                             {/* Tabs */}
                             {reorderedItems.map(

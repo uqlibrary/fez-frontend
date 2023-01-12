@@ -445,6 +445,8 @@ export class DashboardClass extends PureComponent {
                                         onChange={this.handleTabChange}
                                         variant="fullWidth"
                                         centered
+                                        indicatorColor="primary"
+                                        textColor="inherit"
                                     >
                                         {this.props.showLatestPublicationsTab && (
                                             <Tab
