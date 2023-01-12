@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import { Hidden } from '@material-ui/core';
-import Grid from '@material-ui/core/Grid';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
 import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckIcon from '@mui/icons-material/Check';
 import ReplayIcon from '@mui/icons-material/Replay';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import FileName from './FileName';
 import { FileNameProps } from './FileName';
@@ -122,46 +122,45 @@ const EditableFileName = ({
         <>
             {!isEditing ? (
                 <>
-                    <Hidden smDown>
-                        <Grid container alignItems={'center'} wrap="nowrap">
-                            <Grid item xs={8} style={{ display: 'flex', alignItems: 'center' }}>
-                                {!!!isEdited && <FileName {...props} />}
-                                {!!isEdited && (
-                                    <Typography
-                                        data-testid={`${props.id}-edited`}
-                                        variant="body2"
-                                        color="textPrimary"
-                                        className={classes.labelTruncated}
-                                    >
-                                        {editedFilenameRef.current}
-                                    </Typography>
-                                )}
-                            </Grid>
-                            <Grid item xs>
-                                <IconButton
-                                    aria-label="rename file"
-                                    onClick={handleFileEditFilename}
-                                    size={'small'}
-                                    id={`${props.id}-edit`}
-                                    data-testid={`${props.id}-edit`}
+                    <Grid container alignItems={'center'} wrap="nowrap" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+                        <Grid item xs={8} sx={{ display: 'flex', alignItems: 'center' }}>
+                            {!!!isEdited && <FileName {...props} />}
+                            {!!isEdited && (
+                                <Typography
+                                    data-testid={`${props.id}-edited`}
+                                    variant="body2"
+                                    color="textPrimary"
+                                    className={classes.labelTruncated}
                                 >
-                                    <EditIcon />
-                                </IconButton>
-                                {!!isEdited && (
-                                    <IconButton
-                                        aria-label="reset file name"
-                                        onClick={handleFileRestoreFilename}
-                                        size={'small'}
-                                        id={`${props.id}-reset`}
-                                        data-testid={`${props.id}-reset`}
-                                    >
-                                        <ReplayIcon />
-                                    </IconButton>
-                                )}
-                            </Grid>
+                                    {editedFilenameRef.current}
+                                </Typography>
+                            )}
                         </Grid>
-                    </Hidden>
-                    <Hidden mdUp>
+                        <Grid item xs>
+                            <IconButton
+                                aria-label="rename file"
+                                onClick={handleFileEditFilename}
+                                size={'small'}
+                                id={`${props.id}-edit`}
+                                data-testid={`${props.id}-edit`}
+                            >
+                                <EditIcon />
+                            </IconButton>
+                            {!!isEdited && (
+                                <IconButton
+                                    aria-label="reset file name"
+                                    onClick={handleFileRestoreFilename}
+                                    size={'small'}
+                                    id={`${props.id}-reset`}
+                                    data-testid={`${props.id}-reset`}
+                                >
+                                    <ReplayIcon />
+                                </IconButton>
+                            )}
+                        </Grid>
+                    </Grid>
+
+                    <Box component="span" sx={{ display: { xs: 'inline', md: 'none' } }}>
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
                             <Typography
@@ -173,7 +172,7 @@ const EditableFileName = ({
                                 {editedFilenameRef.current}
                             </Typography>
                         )}
-                    </Hidden>
+                    </Box>
                 </>
             ) : (
                 <>
