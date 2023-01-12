@@ -109,7 +109,6 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                                         <Switch
                                                             {...props}
                                                             name="checkedB"
-                                                            color="primary"
                                                             // eslint-disable-next-line react/prop-types
                                                             checked={isBulkFileIngest}
                                                             // eslint-disable-next-line react/prop-types
