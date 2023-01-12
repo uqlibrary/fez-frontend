@@ -134,8 +134,8 @@ export const AdvancedSearchComponent = ({
     const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
     return (
-        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch} style={{ padding: 12 }}>
-            <Grid container spacing={3}>
+        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch}>
+            <Grid container spacing={0}>
                 <Grid container spacing={5} alignItems={'center'}>
                     <Grid item style={{ flexGrow: 1, width: 1 }}>
                         <Typography variant="h5">{txt.advancedSearch.title}</Typography>
