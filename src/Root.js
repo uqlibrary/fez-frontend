@@ -21,17 +21,17 @@ const Root = ({ history }) => {
     return (
         <ConnectedRouter history={history}>
             <ScrollToTop>
-                <JssProvider generateClassName={generateClassName}>
-                    <ThemeProvider theme={mui1theme}>
-                        <StyledEngineProvider injectFirst>
+                <StyledEngineProvider injectFirst>
+                    <JssProvider generateClassName={generateClassName}>
+                        <ThemeProvider theme={mui1theme}>
                             <MuiThemeProvider theme={mui1theme}>
                                 <Switch>
                                     <Route component={App} />
                                 </Switch>
                             </MuiThemeProvider>
-                        </StyledEngineProvider>
-                    </ThemeProvider>
-                </JssProvider>
+                        </ThemeProvider>
+                    </JssProvider>
+                </StyledEngineProvider>
             </ScrollToTop>
         </ConnectedRouter>
     );

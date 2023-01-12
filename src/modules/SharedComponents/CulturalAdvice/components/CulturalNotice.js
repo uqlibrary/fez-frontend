@@ -1,10 +1,8 @@
 import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { locale } from 'locale';
-import Typography from '@material-ui/core/Typography';
-// import Grid from '@material-ui/core/Grid';
-// import { withStyles } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     culturalNoticeParent: {

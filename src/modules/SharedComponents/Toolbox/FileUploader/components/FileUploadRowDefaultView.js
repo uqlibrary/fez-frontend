@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Input from '@mui/material/Input';
 import withStyles from '@mui/styles/withStyles';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { IconButton } from '@material-ui/core';
+import IconButton from '@mui/material/IconButton';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
