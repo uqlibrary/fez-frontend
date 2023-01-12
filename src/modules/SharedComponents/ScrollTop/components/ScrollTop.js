@@ -57,11 +57,11 @@ export const ScrollTop = ({ show, showAfter, classes }) => {
             <Fab
                 color="secondary"
                 aria-label="Scroll to top of page"
-                className={classes.scrollTop}
+                classes={{ root: classes.scrollTop }}
                 id="scrolltopbtn"
                 title="Scroll to top of page"
                 onClick={scrollWindowToTop}
-                sx={{ display: { xs: 'none', md: 'block' } }}
+                sx={{ display: { xs: 'none', md: 'inline-flex' } }}
             >
                 <ArrowUpwardIcon />
             </Fab>

@@ -37,7 +37,6 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/icons-material/Menu';
-import Box from '@mui/material/Box';
 import withStyles from '@mui/styles/withStyles';
 
 const styles = theme => ({
@@ -420,9 +419,8 @@ export class AppClass extends PureComponent {
                     />
                 )}
                 <div className="content-container" id="content-container" style={containerStyle}>
-                    <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-                        <ScrollTop show containerId="content-container" />
-                    </Box>
+                    <ScrollTop show containerId="content-container" />
+
                     <div role="region" aria-label="eSpace alerts" style={{ paddingBottom: 24 }}>
                         {!isAdminPage() && <alert-list system="espace" />}
                     </div>
