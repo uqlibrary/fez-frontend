@@ -201,7 +201,7 @@
         "react-share": "^3.0.1",
         "react-speech-recognition": "^3.8.2",
         "redux": "4.0.0",
-        "redux-form": "8.2.4",
+        "redux-form": "8.3.8",
         "redux-immutable": "^4.0.0",
         "redux-thunk": "^2.2.0",
         "regenerator-runtime": "^0.13.9",
