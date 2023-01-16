@@ -76,6 +76,9 @@ const styles = theme => ({
         overflow: 'hidden',
         textOverflow: 'ellipsis',
     },
+    toolbar: {
+        height: '70px',
+    },
 });
 
 export class AppClass extends PureComponent {
@@ -315,7 +318,7 @@ export class AppClass extends PureComponent {
             <Grid container className={classes.layoutFill}>
                 <Meta routesConfig={routesConfig} />
                 <AppBar className="AppBar" color="primary" position="fixed">
-                    <Toolbar style={{ height: '70px' }}>
+                    <Toolbar classes={{ root: classes.toolbar }}>
                         <Grid
                             container
                             spacing={1}

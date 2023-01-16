@@ -27,6 +27,8 @@ export const styles = theme => ({
         '& input[type="search"]::-webkit-search-cancel-button': {
             display: 'none',
         },
+        width: 'calc(100% + 8px)',
+        margin: '-4px',
     },
     searchIconMobile: {
         fill: theme.palette.white.main,
@@ -56,6 +58,11 @@ export const styles = theme => ({
             fontSize: 24,
             lineHeight: 1.2,
             fontWeight: theme.typography.fontWeightNormal,
+        },
+    },
+    searchHeaderContainerPadding: {
+        '&.MuiGrid-item': {
+            padding: '4px',
         },
     },
 });
@@ -183,11 +190,23 @@ export class SimpleSearchComponent extends PureComponent {
                                 sx={{ display: { xs: 'none', sm: 'flex' } }}
                             >
                                 {this.props.showPrefixIcon && (
-                                    <Grid item xs={'auto'}>
+                                    <Grid
+                                        item
+                                        xs={'auto'}
+                                        classes={{
+                                            item: classes.searchHeaderContainerPadding,
+                                        }}
+                                    >
                                         <Search className={classes.searchIconPrefix} />
                                     </Grid>
                                 )}
-                                <Grid item xs>
+                                <Grid
+                                    item
+                                    xs
+                                    classes={{
+                                        item: classes.searchHeaderContainerPadding,
+                                    }}
+                                >
                                     <TextField
                                         textFieldId="simple-search"
                                         type="search"
@@ -332,4 +351,4 @@ export class SimpleSearchComponent extends PureComponent {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(SimpleSearchComponent);
+export default withStyles(styles)(SimpleSearchComponent);
