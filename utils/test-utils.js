@@ -16,6 +16,7 @@ import { createMemoryHistory } from 'history';
 
 const domTestingLib = require('@testing-library/dom');
 const reactTestingLib = require('@testing-library/react');
+const mime = require('mime-types');
 
 const { configure } = domTestingLib;
 
@@ -83,6 +84,66 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
     </Provider>
 );
 
+export const defaultDatastream = {
+    dsi_embargo_date: null,
+    dsi_open_access: 1,
+    dsi_label: '',
+    dsi_copyright: null,
+    dsi_state: 'A',
+    dsi_size: 27932352,
+};
+export const createFezDatastreamInfoArray = (datastreams, pid = null, withPreview = true) => {
+    let processed = datastreams.filter(datastream => typeof datastream === 'object' || typeof datastream === 'string');
+    if (withPreview) {
+        processed = [];
+        datastreams.forEach(function(datastream) {
+            processed.push(datastream);
+            const filename = typeof datastream === 'object' ? datastream.dsi_dsid : datastream;
+            const mimetype = mime.lookup(filename);
+            // bail in case it's not derivable
+            if (
+                !filename.includes('.pdf') &&
+                !mimetype.includes('image') &&
+                !mimetype.includes('audio') &&
+                !mimetype.includes('video')
+            ) {
+                return;
+            }
+            // eslint-disable-next-line no-nested-ternary
+            const derivativeMimetype = mimetype.includes('audio')
+                ? 'audio/mp3'
+                : mimetype.includes('video')
+                ? 'video/mp4'
+                : 'image/jpg';
+
+            (derivativeMimetype.includes('image') ? ['preview_', 'thumbnail_', 'web_'] : ['']).forEach(function(
+                prefix,
+            ) {
+                processed.push({
+                    dsi_dsid: `${prefix}${filename.split('.')[0]}_t.${derivativeMimetype.split('/').pop()}`,
+                    dsi_mimetype: derivativeMimetype,
+                });
+            });
+        });
+    }
+
+    return processed.map((datastream, index) => ({
+        ...defaultDatastream,
+        ...{
+            dsi_pid: pid,
+            dsi_order: index + 1,
+            dsi_mimetype: mime.lookup(typeof datastream === 'object' ? datastream.dsi_dsid : datastream),
+        },
+        ...(typeof datastream === 'object'
+            ? datastream
+            : {
+                  dsi_dsid: datastream,
+              }),
+    }));
+};
+export const getDatastreamByFilename = (filename, derivatives) =>
+    derivatives.find(derivative => derivative.dsi_dsid === filename);
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -94,4 +155,6 @@ module.exports = {
     AllTheProviders,
     WithReduxStore,
     WithRouter,
+    createFezDatastreamInfoArray,
+    getDatastreamByFilename,
 };

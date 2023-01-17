@@ -10,11 +10,19 @@ import {
 } from './Files';
 import * as mock from 'mock/data';
 import {
+    AV_CHECK_STATE_CLEAN,
     AV_CHECK_STATE_INFECTED,
+    AV_CHECK_STATE_UNSCANNABLE,
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../config/general';
+import { createFezDatastreamInfoArray, rtlRender } from '../../../../utils/test-utils';
+import {
+    getAvState,
+    getTestId as getAvStateIconTestId,
+} from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
+import { getTestId as getThumbTestId } from './partials/Thumbnail';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -824,7 +832,7 @@ const pub = {
     rek_pubmed_doc_type_lookup: null,
 };
 
-function setup(testProps) {
+function setup(testProps, args) {
     const props = {
         theme: {},
         isAdmin: testProps.isAdmin || true,
@@ -834,7 +842,7 @@ function setup(testProps) {
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
-    return getElement(FilesClass, props, { isShallow: true });
+    return getElement(FilesClass, props, { isShallow: true, ...args });
 }
 
 describe('Files Component ', () => {
@@ -1574,58 +1582,99 @@ describe('Files Component ', () => {
         });
     });
 
-    it('should not render thumb for infected file', () => {
-        const fezDatastreamInfo = [
+    it('should render the proper av status icon', () => {
+        const datastreams = [
             {
-                dsi_pid: 'UQ:107683',
-                dsi_dsid: 'AL_LH_01.tif',
-                dsi_embargo_date: null,
-                dsi_open_access: 1,
-                dsi_label: '',
-                dsi_mimetype: 'image/tiff',
-                dsi_copyright: null,
-                dsi_state: 'A',
-                dsi_size: 27932352,
+                dsi_dsid: 'dogs.tiff',
                 dsi_av_check_state: AV_CHECK_STATE_INFECTED,
                 dsi_av_check_date: '2000-01-01 00:00:00',
             },
             {
-                dsi_pid: 'UQ:107683',
-                dsi_dsid: 'preview_AL_LH_01.jpg',
-                dsi_embargo_date: null,
-                dsi_open_access: null,
-                dsi_label: '',
-                dsi_mimetype: 'image/jpeg',
-                dsi_copyright: null,
-                dsi_state: 'A',
-                dsi_size: 95360,
+                dsi_dsid: 'cats.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
             },
             {
-                dsi_pid: 'UQ:107683',
-                dsi_dsid: 'thumbnail_AL_LH_01.jpg',
-                dsi_embargo_date: null,
-                dsi_open_access: null,
-                dsi_label: '',
-                dsi_mimetype: 'image/jpeg',
-                dsi_copyright: null,
-                dsi_state: 'A',
-                dsi_size: 3912,
+                dsi_dsid: 'birds.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
             },
             {
-                dsi_pid: 'UQ:107683',
-                dsi_dsid: 'web_AL_LH_01.jpg',
-                dsi_embargo_date: null,
-                dsi_open_access: null,
-                dsi_label: '',
-                dsi_mimetype: 'image/jpeg',
-                dsi_copyright: null,
-                dsi_state: 'A',
-                dsi_size: 163244,
+                dsi_dsid: 'interview.wav',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'big-file.zip',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
             },
         ];
+        const fezDatastreamInfo = createFezDatastreamInfoArray(datastreams, journalArticle.rek_pid);
 
-        const wrapper = setup({ publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { queryByTestId } = setup(
+            { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
+            { isShallow: false, renderer: rtlRender },
+        );
+        const avStateIdPrefix = filename => `${journalArticle.rek_pid}-${filename}`;
+
+        fezDatastreamInfo.map(item => {
+            const source = datastreams.find(datastream =>
+                datastream.dsi_dsid.includes(
+                    item.dsi_dsid
+                        .replace('_t.', '.')
+                        .replace('preview_', '')
+                        .replace('thumbnail_', '')
+                        .replace('web_', '')
+                        .split('.')[0],
+                ),
+            );
+            const isDerivative = item.dsi_dsid !== source.dsi_dsid;
+            if (!isDerivative) {
+                expect(
+                    queryByTestId(
+                        getAvStateIconTestId(getAvState(source.dsi_av_check_state), avStateIdPrefix(item.dsi_dsid)),
+                    ),
+                ).toBeInTheDocument();
+                return;
+            }
+            expect(
+                queryByTestId(
+                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), avStateIdPrefix(item.dsi_dsid)),
+                ),
+            ).not.toBeInTheDocument();
+            expect(
+                queryByTestId(getAvStateIconTestId(getAvState(), avStateIdPrefix(item.dsi_dsid))),
+            ).not.toBeInTheDocument();
+        });
+    });
+
+    it('should not render preview button for infected file', () => {
+        const filenames = [
+            {
+                dsi_dsid: 'dogs.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            'cats.tiff',
+        ];
+        const fezDatastreamInfo = createFezDatastreamInfoArray(filenames, journalArticle.rek_pid);
+
+        const { queryByTestId } = setup(
+            {
+                publication: {
+                    ...journalArticle,
+                    fez_datastream_info: fezDatastreamInfo,
+                    fez_record_search_key_oa_status: {
+                        rek_oa_status: 453695,
+                    },
+                },
+            },
+            { isShallow: false, renderer: rtlRender },
+        );
+
+        expect(queryByTestId(getThumbTestId(filenames[0]))).not.toBeInTheDocument();
+        expect(queryByTestId(getThumbTestId(filenames[1]))).toBeInTheDocument();
     });
 
     it(
@@ -1775,6 +1824,8 @@ describe('Files Component ', () => {
                     dsi_size: 587005,
                     dsi_security_inherited: 1,
                     dsi_security_policy: 1,
+                    dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
                 },
             ],
         };

@@ -10,6 +10,7 @@ import {
 import Tooltip from '@material-ui/core/Tooltip';
 import moment from 'moment-timezone';
 import { locale } from '../../../../locale';
+import { sanitiseId } from '../../../../helpers/general';
 
 export const UTCDateToCurrentTZDate = date =>
     moment
@@ -18,9 +19,10 @@ export const UTCDateToCurrentTZDate = date =>
         .format('lll');
 
 const defaultState = 'default';
-export const getStateIconId = state => `file-av-state-icon-${state ?? defaultState}`;
-const getStateIcon = state => {
-    const props = { 'data-testid': getStateIconId(state), id: getStateIconId(state) };
+export const getAvState = state => (AV_CHECK_STATES.includes(state) ? state : defaultState);
+export const getTestId = (state, id) => `${sanitiseId(id)}-file-av-state-icon-${state ?? defaultState}`;
+const getAvStateIcon = (state, id) => {
+    const props = { 'data-testid': getTestId(state, id), id: getTestId(state, id) };
     switch (state) {
         case AV_CHECK_STATE_CLEAN:
             return <GppGood {...props} />;
@@ -33,18 +35,16 @@ const getStateIcon = state => {
     }
 };
 
-export const FileAvStateIcon = ({ state, checkedAt }) => {
+export const FileAvStateIcon = ({ state, checkedAt, id }) => {
     const txt = locale.components.fileAvStateIcon;
-    const description = txt.description.map[AV_CHECK_STATES.includes(state) ? state : defaultState]?.(
-        UTCDateToCurrentTZDate(checkedAt),
-    );
-
-    return <Tooltip title={description}>{getStateIcon(state)}</Tooltip>;
+    const description = txt.description.map[getAvState(state)]?.(UTCDateToCurrentTZDate(checkedAt));
+    return <Tooltip title={description}>{getAvStateIcon(state, id)}</Tooltip>;
 };
 
 FileAvStateIcon.propTypes = {
     state: PropTypes.string,
     checkedAt: PropTypes.string,
+    id: PropTypes.string,
 };
 
 export default FileAvStateIcon;

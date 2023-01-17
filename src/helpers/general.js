@@ -331,10 +331,10 @@ export function hydrateMockSearchList(truncatedSearchlist) {
  */
 export const sanitiseId = id =>
     id
-        .trim()
-        .replace(/[^0-9a-z\s-_]+/gi, '')
-        .replace(/[-_\s]+/g, '-')
-        .toLowerCase();
+        ?.trim()
+        ?.replace(/[^0-9a-z\s-_]+/gi, '')
+        ?.replace(/[-_\s]+/g, '-')
+        ?.toLowerCase();
 
 /**
  * Insert line break opportunities into a URL

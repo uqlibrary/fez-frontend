@@ -377,7 +377,9 @@ export class FilesClass extends Component {
                           description: dataStream.dsi_label,
                           mimeType: mimeType,
                           calculatedSize: formatBytes(dataStream.dsi_size),
-                          allowDownload: openAccessStatus.allowDownload,
+                          allowDownload:
+                              openAccessStatus.allowDownload &&
+                              dataStream.dsi_av_check_state !== AV_CHECK_STATE_INFECTED,
                           icon: this.renderFileIcon(
                               pid,
                               mimeType,
@@ -533,7 +535,6 @@ export class FilesClass extends Component {
                                         id={`file-name-${index}`}
                                         downloadLicence={getDownloadLicence(publication)}
                                         onFileSelect={this.showPreview}
-                                        allowDownload={item.avCheck.state !== AV_CHECK_STATE_INFECTED}
                                     />
                                 </Grid>
                                 <Hidden xsDown>
@@ -567,6 +568,7 @@ export class FilesClass extends Component {
                                             <FileAvStateIcon
                                                 state={item.avCheck?.state}
                                                 checkedAt={item.avCheck?.date}
+                                                id={`${item.pid}-${item.fileName}`}
                                             />
                                         </Box>
                                         <Box component={'span'} paddingRight={1}>
