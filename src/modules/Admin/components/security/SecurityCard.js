@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import OverrideSecurity from './OverrideSecurity';
@@ -50,7 +50,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                     accentHeader
                     subCard
                 >
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} padding={0}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
                                 <Grid item xs={12}>
@@ -114,7 +114,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                             accentHeader
                             subCard
                         >
-                            <Grid container spacing={1}>
+                            <Grid container spacing={1} padding={0}>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails
                                         title={text.inheritedPolicy.dataStream.title}

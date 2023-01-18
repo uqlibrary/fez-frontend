@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { PolicyDropdown } from './PolicyDropdown';
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';

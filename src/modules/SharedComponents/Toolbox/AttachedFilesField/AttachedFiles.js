@@ -4,7 +4,7 @@ import moment from 'moment';
 
 import { makeStyles } from '@mui/styles';
 import Delete from '@mui/icons-material/Delete';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';

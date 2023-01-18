@@ -160,5 +160,12 @@ export const adminTheme = createTheme({
                 },
             },
         },
+        MuiGrid2: {
+            styleOverrides: {
+                root: {
+                    minWidth: 'auto',
+                },
+            },
+        },
     },
 });
