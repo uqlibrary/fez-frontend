@@ -160,7 +160,7 @@ const EditableFileName = ({
                         </Grid>
                     </Grid>
 
-                    <Box component="span" sx={{ display: { xs: 'inline', md: 'none' } }}>
+                    <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
                             <Typography
