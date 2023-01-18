@@ -1618,6 +1618,7 @@ describe('Files Component ', () => {
         );
         const avStateIdPrefix = filename => `${journalArticle.rek_pid}-${filename}`;
 
+        expect(fezDatastreamInfo).toMatchSnapshot();
         fezDatastreamInfo.map(item => {
             const source = datastreams.find(datastream =>
                 datastream.dsi_dsid.includes(
@@ -1673,6 +1674,7 @@ describe('Files Component ', () => {
             { isShallow: false, renderer: rtlRender },
         );
 
+        expect(fezDatastreamInfo).toMatchSnapshot();
         expect(queryByTestId(getThumbTestId(filenames[0]))).not.toBeInTheDocument();
         expect(queryByTestId(getThumbTestId(filenames[1]))).toBeInTheDocument();
     });
