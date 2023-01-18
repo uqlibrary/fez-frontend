@@ -9,7 +9,7 @@ import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import withStyles from '@mui/styles/withStyles';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import locale from 'locale/viewRecord';
@@ -221,6 +221,7 @@ export class LinksClass extends PureComponent {
                         direction="row"
                         alignItems="center"
                         spacing={2}
+                        padding={0}
                         className={this.props.classes.header}
                     >
                         <Grid item sm={6} data-testid="link-label">

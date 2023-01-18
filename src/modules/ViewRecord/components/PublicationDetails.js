@@ -6,7 +6,7 @@ import { pathConfig } from 'config/pathConfig';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Link } from 'react-router-dom';
 import withStyles from '@mui/styles/withStyles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 const styles = theme => ({
@@ -40,7 +40,7 @@ export class PublicationDetailsClass extends PureComponent {
 
     ViewRecordRow = ({ heading, data, rowId }) => (
         <div className={this.props.classes.containerPadding}>
-            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} padding={0} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography
                         variant="body2"

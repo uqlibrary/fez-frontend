@@ -4,7 +4,7 @@ import locale from 'locale/viewRecord';
 import { default as global } from 'locale/global';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import withStyles from '@mui/styles/withStyles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { general } from 'config';
 import ReactHtmlParser from 'react-html-parser';
@@ -42,7 +42,7 @@ export class NtroDetailsClass extends PureComponent {
 
     ViewNtroRow = ({ heading, subheading, className, data, rowId }) => (
         <div className={this.props.classes.containerPadding}>
-            <Grid container spacing={2} className={this.props.classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} padding={0} className={this.props.classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3} data-testid={`${rowId}-label`}>
                     <Typography
                         variant="body2"

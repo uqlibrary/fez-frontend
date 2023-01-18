@@ -17,7 +17,7 @@ import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
 import { CURRENT_LICENCES, NTRO_SUBTYPE_CW_TEXTUAL_WORK, PLACEHOLDER_ISO8601_ZULU_DATE } from 'config/general';
 import withStyles from '@mui/styles/withStyles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 const styles = theme => ({
@@ -77,6 +77,7 @@ export class AdditionalInformationClass extends PureComponent {
                 <Grid
                     container
                     spacing={2}
+                    padding={0}
                     key={`additional-info-${heading}`}
                     className={this.props.classes.gridRow}
                     alignItems="flex-start"

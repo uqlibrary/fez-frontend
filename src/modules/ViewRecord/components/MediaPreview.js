@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
@@ -34,7 +34,7 @@ const MediaPreviewButtons = React.memo(({ ...props }) => {
 
     return (
         <div className={classes.containerPadding} id={id}>
-            <Grid container spacing={2} justifyContent="flex-end" direction="row">
+            <Grid container spacing={2} padding={0} justifyContent="flex-end" direction="row">
                 {mediaUrl && (
                     <Grid item xs={12} sm="auto">
                         <Button

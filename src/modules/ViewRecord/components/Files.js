@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Image from '@mui/icons-material/Image';
 import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
 import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
@@ -465,6 +465,7 @@ export class FilesClass extends Component {
                             direction="row"
                             alignItems="center"
                             spacing={2}
+                            padding={0}
                             className={this.props.classes.header}
                         >
                             <Grid item xs={2} sm={1}>
@@ -508,6 +509,7 @@ export class FilesClass extends Component {
                                 alignItems="center"
                                 key={`file-${index}`}
                                 spacing={2}
+                                padding={0}
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >

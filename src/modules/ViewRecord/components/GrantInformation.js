@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
 import makeStyles from '@mui/styles/makeStyles';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ORG_TYPES_LOOKUP, ORG_TYPE_NOT_SET } from 'config/general';
@@ -40,7 +40,7 @@ const GrantDetails = ({ grantAgencyName, grantId, grantText, order, index }) => 
 
     return (
         <div className={classes.containerPadding} key={index}>
-            <Grid container spacing={2} key={order} className={classes.gridRow} alignItems="flex-start">
+            <Grid container spacing={2} padding={0} key={order} className={classes.gridRow} alignItems="flex-start">
                 <Grid item xs={12} sm={3}>
                     <Typography variant="body2" data-testid={`rek-grant-label-${index}`}>
                         {`${txt.fez_record_search_key_grant_agency}${(grantIdTitle && ` (${grantIdTitle})`) || ''}`}

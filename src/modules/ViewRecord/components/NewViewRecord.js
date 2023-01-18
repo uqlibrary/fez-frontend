@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
