@@ -93,7 +93,7 @@ export default {
                         </ul>
                         <p>
                             You can also read the{' '}
-                            <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">
+                            <a href="https://espace.library.uq.edu.au/view/UQ:847df85/UQ_eSpace_Scope_and_Policy.pdf">
                                 UQ eSpace Scope and Policy
                             </a>
                             .
