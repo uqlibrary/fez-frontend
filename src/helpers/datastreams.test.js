@@ -1,7 +1,11 @@
-import { getAdvisoryStatement, getSensitiveHandlingNote, isDerivative } from './datastreams';
+import { generatePKString, getAdvisoryStatement, getSensitiveHandlingNote, isDerivative } from './datastreams';
 import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
 
 describe('datastream derivative helpers', () => {
+    it('generatePKString', () => {
+        expect(generatePKString('UQ:1', 'cat.png')).toEqual('uq1-catpng');
+    });
+
     it('is not Derivative', () => {
         const datastream = {
             dsi_dsid: 'test7.txt',

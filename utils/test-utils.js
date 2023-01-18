@@ -141,6 +141,23 @@ export const createFezDatastreamInfoArray = (datastreams, pid = null, withPrevie
               }),
     }));
 };
+
+export const withDatastreams = (sources, datastreams, callback) =>
+    datastreams.map(item => {
+        const source = sources.find(datastream =>
+            datastream.dsi_dsid.includes(
+                item.dsi_dsid
+                    .replace('_t.', '.')
+                    .replace('preview_', '')
+                    .replace('thumbnail_', '')
+                    .replace('web_', '')
+                    .split('.')[0],
+            ),
+        );
+        const isDerivative = item.dsi_dsid !== source.dsi_dsid;
+        callback(item, source, isDerivative);
+    });
+
 export const getDatastreamByFilename = (filename, derivatives) =>
     derivatives.find(derivative => derivative.dsi_dsid === filename);
 
@@ -157,4 +174,5 @@ module.exports = {
     WithRouter,
     createFezDatastreamInfoArray,
     getDatastreamByFilename,
+    withDatastreams,
 };

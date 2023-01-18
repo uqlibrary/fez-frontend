@@ -1,5 +1,5 @@
 import React from 'react';
-import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes } from './AttachedFiles';
+import AttachedFiles, { getFileOpenAccessStatus, checkFileNamesForDupes, getFilenameId } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 import { rtlRender, fireEvent, waitFor, act } from 'test-utils';
 import { openAccessConfig } from 'config';
@@ -20,10 +20,18 @@ import * as UserIsAdminHook from 'hooks/userIsAdmin';
 jest.mock('context');
 import { useRecordContext, useFormValuesContext } from 'context';
 import {
+    AV_CHECK_STATE_CLEAN,
+    AV_CHECK_STATE_INFECTED,
+    AV_CHECK_STATE_UNSCANNABLE,
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../../config/general';
+import { journalArticle } from '../../../../mock/data/testing/records';
+import { getAvState, getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
+import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
+import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
+import { generatePKString } from '../../../../helpers/datastreams';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
@@ -675,6 +683,86 @@ describe('AttachedFiles component', () => {
             const expectedErrorMessage = getErrorMessageFormatted('attached.jpg');
             expect(callback('attached.jpg')).toEqual(false);
             expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
+        });
+    });
+
+    describe('AV Check', () => {
+        const sources = [
+            {
+                dsi_dsid: 'cats.tiff',
+            },
+            {
+                dsi_dsid: 'dogs.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'birds.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'fish.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'interview.wav',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'big-file.zip',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+        ];
+
+        it('should render the proper av status icon', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, journalArticle.rek_pid);
+            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const idPrefix = generatePKString(item.dsi_pid, item.dsi_dsid);
+                const avStateIcon = queryByTestId(
+                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), idPrefix),
+                );
+                if (!isDerivative) {
+                    expect(avStateIcon).toBeInTheDocument();
+                    return;
+                }
+                expect(avStateIcon).not.toBeInTheDocument();
+                expect(queryByTestId(getAvStateIconTestId(getAvState(), idPrefix))).not.toBeInTheDocument();
+            });
+        });
+
+        it('should render download link infected files, preview link for non infected and none for derivatives', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, recordWithDatastreams.rek_pid);
+            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const id = getFilenameId(createDatastreamPK(item.dsi_pid, item.dsi_dsid));
+                const previewLink = queryByTestId(getPreviewLinkTestId(id));
+                const downloadLink = queryByTestId(`${getDownloadLinkTestId(id)}-link`);
+                if (!isDerivative) {
+                    if (
+                        item.dsi_av_check_state === AV_CHECK_STATE_INFECTED ||
+                        item.dsi_dsid.includes('interview.wav') ||
+                        item.dsi_dsid.includes('big-file.zip')
+                    ) {
+                        expect(previewLink).not.toBeInTheDocument();
+                        expect(downloadLink).toBeInTheDocument();
+                        return;
+                    }
+                    expect(previewLink).toBeInTheDocument();
+                    expect(downloadLink).not.toBeInTheDocument();
+                    return;
+                }
+                expect(previewLink).not.toBeInTheDocument();
+                expect(downloadLink).not.toBeInTheDocument();
+            });
         });
     });
 });

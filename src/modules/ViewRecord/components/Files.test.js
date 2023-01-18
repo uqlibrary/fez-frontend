@@ -17,12 +17,13 @@ import {
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../config/general';
-import { createFezDatastreamInfoArray, rtlRender } from '../../../../utils/test-utils';
+import { createFezDatastreamInfoArray, rtlRender, withDatastreams } from '../../../../utils/test-utils';
 import {
     getAvState,
     getTestId as getAvStateIconTestId,
 } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
 import { getTestId as getThumbTestId } from './partials/Thumbnail';
+import { generatePKString } from '../../../helpers/datastreams';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -1582,103 +1583,6 @@ describe('Files Component ', () => {
         });
     });
 
-    it('should render the proper av status icon', () => {
-        const datastreams = [
-            {
-                dsi_dsid: 'dogs.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'cats.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'birds.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'interview.wav',
-                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'big-file.zip',
-                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-        ];
-        const fezDatastreamInfo = createFezDatastreamInfoArray(datastreams, journalArticle.rek_pid);
-
-        const { queryByTestId } = setup(
-            { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
-            { isShallow: false, renderer: rtlRender },
-        );
-        const avStateIdPrefix = filename => `${journalArticle.rek_pid}-${filename}`;
-
-        expect(fezDatastreamInfo).toMatchSnapshot();
-        fezDatastreamInfo.map(item => {
-            const source = datastreams.find(datastream =>
-                datastream.dsi_dsid.includes(
-                    item.dsi_dsid
-                        .replace('_t.', '.')
-                        .replace('preview_', '')
-                        .replace('thumbnail_', '')
-                        .replace('web_', '')
-                        .split('.')[0],
-                ),
-            );
-            const isDerivative = item.dsi_dsid !== source.dsi_dsid;
-            if (!isDerivative) {
-                expect(
-                    queryByTestId(
-                        getAvStateIconTestId(getAvState(source.dsi_av_check_state), avStateIdPrefix(item.dsi_dsid)),
-                    ),
-                ).toBeInTheDocument();
-                return;
-            }
-            expect(
-                queryByTestId(
-                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), avStateIdPrefix(item.dsi_dsid)),
-                ),
-            ).not.toBeInTheDocument();
-            expect(
-                queryByTestId(getAvStateIconTestId(getAvState(), avStateIdPrefix(item.dsi_dsid))),
-            ).not.toBeInTheDocument();
-        });
-    });
-
-    it('should not render preview button for infected file', () => {
-        const filenames = [
-            {
-                dsi_dsid: 'dogs.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            'cats.tiff',
-        ];
-        const fezDatastreamInfo = createFezDatastreamInfoArray(filenames, journalArticle.rek_pid);
-
-        const { queryByTestId } = setup(
-            {
-                publication: {
-                    ...journalArticle,
-                    fez_datastream_info: fezDatastreamInfo,
-                    fez_record_search_key_oa_status: {
-                        rek_oa_status: 453695,
-                    },
-                },
-            },
-            { isShallow: false, renderer: rtlRender },
-        );
-
-        expect(fezDatastreamInfo).toMatchSnapshot();
-        expect(queryByTestId(getThumbTestId(filenames[0]))).not.toBeInTheDocument();
-        expect(queryByTestId(getThumbTestId(filenames[1]))).toBeInTheDocument();
-    });
-
     it(
         'should correctly get dataStream item for a file that skips transcoding and has' +
             'overrides supplied for thumbnail and preview images',
@@ -1999,5 +1903,93 @@ describe('Files Component ', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    describe('AV Check', () => {
+        const sources = [
+            {
+                dsi_dsid: 'cats.tiff',
+            },
+            {
+                dsi_dsid: 'dogs.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'birds.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'fish.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+        ];
+
+        it('should render the proper av status icon', () => {
+            const anotherSources = [
+                ...sources,
+                {
+                    dsi_dsid: 'interview.wav',
+                    dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
+                },
+                {
+                    dsi_dsid: 'big-file.zip',
+                    dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
+                },
+            ];
+            const fezDatastreamInfo = createFezDatastreamInfoArray(anotherSources, journalArticle.rek_pid);
+            const { queryByTestId } = setup(
+                { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
+                { isShallow: false, renderer: rtlRender },
+            );
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(anotherSources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const idPrefix = generatePKString(item.dsi_pid, item.dsi_dsid);
+                const avStateIcon = queryByTestId(
+                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), idPrefix),
+                );
+                if (!isDerivative) {
+                    expect(avStateIcon).toBeInTheDocument();
+                    return;
+                }
+                expect(avStateIcon).not.toBeInTheDocument();
+                expect(queryByTestId(getAvStateIconTestId(getAvState(), idPrefix))).not.toBeInTheDocument();
+            });
+        });
+
+        it('should not render preview button for infected file', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, journalArticle.rek_pid);
+            const { queryByTestId } = setup(
+                {
+                    publication: {
+                        ...journalArticle,
+                        fez_datastream_info: fezDatastreamInfo,
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: 453695,
+                        },
+                    },
+                },
+                { isShallow: false, renderer: rtlRender },
+            );
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const thumbnail = queryByTestId(getThumbTestId(item.dsi_dsid));
+                if (!isDerivative) {
+                    if (item.dsi_av_check_state === AV_CHECK_STATE_INFECTED) {
+                        expect(thumbnail).not.toBeInTheDocument();
+                        return;
+                    }
+                    expect(thumbnail).toBeInTheDocument();
+                    return;
+                }
+                expect(thumbnail).not.toBeInTheDocument();
+            });
+        });
     });
 });

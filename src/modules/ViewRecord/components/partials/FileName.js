@@ -35,6 +35,9 @@ export const useStyles = makeStyles(
     { withTheme: true },
 );
 
+export const getDownloadLinkTestId = id => `${id}-download`;
+export const getPreviewLinkTestId = id => `${id}-preview`;
+
 const FileName = ({
     downloadLicence,
     allowDownload,
@@ -111,7 +114,8 @@ const FileName = ({
                         title={fileName}
                         className={`${classes.filename} ${classes.filenameParent}`}
                         openInNewIcon
-                        id={`${id}-download`}
+                        data-testid={getDownloadLinkTestId(id)}
+                        id={getDownloadLinkTestId(id)}
                     >
                         {fileName}
                     </ExternalLink>
@@ -122,7 +126,8 @@ const FileName = ({
                             onClick={showPreview}
                             onKeyPress={showPreview}
                             className={classes.filename}
-                            id={`${id}-preview`}
+                            data-testid={getPreviewLinkTestId(id)}
+                            id={getPreviewLinkTestId(id)}
                         >
                             {fileName}
                         </a>

@@ -33,7 +33,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
-import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
+import { generatePKString, getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 import Box from '@material-ui/core/Box';
@@ -168,7 +168,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
 
                   return {
-                      id: dataStream.dsi_id,
+                      id: generatePKString(pid, fileName),
                       pid,
                       fileName,
                       description: dataStream.dsi_label,
@@ -226,6 +226,8 @@ export const checkFileNamesForDupes = (
         );
     return !hasDupe;
 };
+
+export const getFilenameId = id => `file-name-${id}`;
 
 export const AttachedFiles = ({
     dataStreams,
@@ -446,14 +448,14 @@ export const AttachedFiles = ({
                                                             setErrorMessage,
                                                             getDsIndex(item.id),
                                                         )}
-                                                        id={`file-name-${item.id}`}
+                                                        id={getFilenameId(item.id)}
                                                         key={item.id}
                                                     />
                                                 ) : (
                                                     <FileName
                                                         {...item}
                                                         onFileSelect={showPreview}
-                                                        id={`file-name-${item.id}`}
+                                                        id={getFilenameId(item.id)}
                                                     />
                                                 )}
                                             </Grid>
@@ -497,6 +499,7 @@ export const AttachedFiles = ({
                                                             <FileAvStateIcon
                                                                 state={item.avCheck?.state}
                                                                 checkedAt={item.avCheck?.date}
+                                                                id={`${item.pid}-${item.fileName}`}
                                                             />
                                                         </Box>
                                                         <Box component={'span'} paddingRight={1}>
@@ -517,6 +520,7 @@ export const AttachedFiles = ({
                                                                     <FileAvStateIcon
                                                                         state={item.avCheck?.state}
                                                                         checkedAt={item.avCheck?.date}
+                                                                        id={`${item.pid}-${item.fileName}`}
                                                                     />
                                                                 </Box>
                                                             </Hidden>
