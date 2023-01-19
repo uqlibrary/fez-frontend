@@ -1,10 +1,8 @@
 import { viewRecordsConfig } from '../config';
 import { STATE_DELETED } from '../config/viewRecord';
-import { sanitiseId, stripHtml } from './general';
+import { stripHtml } from './general';
 import { isSensitiveHandlingNoteTypeOther } from '../modules/SharedComponents/SensitiveHandlingNote/containers/SensitiveHandlingNoteField';
 import { SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
-
-export const generatePKString = (pid, filename) => sanitiseId(`${pid}-${filename}`);
 
 export const isDerivative = dataStream => {
     const {

@@ -44,7 +44,7 @@ export const FileAvStateIcon = ({ state, checkedAt, id }) => {
 FileAvStateIcon.propTypes = {
     state: PropTypes.string,
     checkedAt: PropTypes.string,
-    id: PropTypes.string,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default FileAvStateIcon;

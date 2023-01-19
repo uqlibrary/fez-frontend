@@ -23,7 +23,7 @@ import {
     getTestId as getAvStateIconTestId,
 } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
 import { getTestId as getThumbTestId } from './partials/Thumbnail';
-import { generatePKString } from '../../../helpers/datastreams';
+import { sanitiseId } from '../../../helpers/general';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -1949,7 +1949,7 @@ describe('Files Component ', () => {
 
             expect(fezDatastreamInfo).toMatchSnapshot();
             withDatastreams(anotherSources, fezDatastreamInfo, (item, source, isDerivative) => {
-                const idPrefix = generatePKString(item.dsi_pid, item.dsi_dsid);
+                const idPrefix = sanitiseId(item.dsi_pid, item.dsi_dsid);
                 const avStateIcon = queryByTestId(
                     getAvStateIconTestId(getAvState(source.dsi_av_check_state), idPrefix),
                 );

@@ -33,7 +33,7 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'modules/ViewRecord/components/Files';
 
 import { FileIcon } from './FileIcon';
-import { generatePKString, getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
+import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
 import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 import Box from '@material-ui/core/Box';
@@ -157,6 +157,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   return a.dsi_order < b.dsi_order ? -1 : 1;
               })
               .map((dataStream, key) => {
+                  const id = dataStream.dsi_id;
                   const pid = dataStream.dsi_pid;
                   const fileName = dataStream.dsi_dsid;
                   const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
@@ -168,7 +169,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
 
                   return {
-                      id: generatePKString(pid, fileName),
+                      id,
+                      key: id,
                       pid,
                       fileName,
                       description: dataStream.dsi_label,
@@ -194,7 +196,6 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                       securityPolicyStatus: getSecurityPolicyFileEmbargoStatus(dataStream),
                       embargoDate: dataStream.dsi_embargo_date,
                       fileOrder: key + 1,
-                      key: dataStream.dsi_id,
                       avCheck: {
                           state: dataStream.dsi_av_check_state,
                           date: dataStream.dsi_av_check_date,
@@ -499,7 +500,7 @@ export const AttachedFiles = ({
                                                             <FileAvStateIcon
                                                                 state={item.avCheck?.state}
                                                                 checkedAt={item.avCheck?.date}
-                                                                id={`${item.pid}-${item.fileName}`}
+                                                                id={item.id}
                                                             />
                                                         </Box>
                                                         <Box component={'span'} paddingRight={1}>
@@ -512,15 +513,15 @@ export const AttachedFiles = ({
                                                 </Grid>
                                             )}
                                             {isEditing && (
-                                                <Grid container wrap="nowrap" md={3} sm={4}>
-                                                    <Grid item xs={3}>
+                                                <Grid container wrap="nowrap">
+                                                    <Grid item md={3} sm={4} xs={3}>
                                                         <Box style={{ whiteSpace: 'nowrap' }}>
                                                             <Hidden smDown>
                                                                 <Box component={'span'} paddingRight={1}>
                                                                     <FileAvStateIcon
                                                                         state={item.avCheck?.state}
                                                                         checkedAt={item.avCheck?.date}
-                                                                        id={`${item.pid}-${item.fileName}`}
+                                                                        id={item.id}
                                                                     />
                                                                 </Box>
                                                             </Hidden>
@@ -553,7 +554,7 @@ export const AttachedFiles = ({
                                                             />
                                                         )}
                                                     </Grid>
-                                                    <Grid xs={2} style={{ marginTop: -10, textAlign: 'right' }}>
+                                                    <Grid item xs={2} style={{ marginTop: -10, textAlign: 'right' }}>
                                                         <Tooltip title={deleteHint}>
                                                             <span>
                                                                 <IconButton

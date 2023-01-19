@@ -31,7 +31,7 @@ import { journalArticle } from '../../../../mock/data/testing/records';
 import { getAvState, getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
 import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
-import { generatePKString } from '../../../../helpers/datastreams';
+import { sanitiseId } from '../../../../helpers/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
@@ -61,6 +61,85 @@ describe('AttachedFiles component', () => {
         useFormValuesContext.mockImplementation(() => ({
             openAccessStatusId: 0,
         }));
+    });
+
+    describe('AV Check', () => {
+        const sources = [
+            {
+                dsi_dsid: 'cats.tiff',
+            },
+            {
+                dsi_dsid: 'dogs.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'birds.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'fish.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'interview.wav',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'big-file.zip',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+        ];
+
+        it('should render the proper av status icon', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, journalArticle.rek_pid);
+            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const avStateIcon = queryByTestId(
+                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), item.dsi_id),
+                );
+                if (!isDerivative) {
+                    expect(avStateIcon).toBeInTheDocument();
+                    return;
+                }
+                expect(avStateIcon).not.toBeInTheDocument();
+                expect(queryByTestId(getAvStateIconTestId(getAvState(), item.dsi_id))).not.toBeInTheDocument();
+            });
+        });
+
+        it('should render download link infected files, preview link for non infected and none for derivatives', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, recordWithDatastreams.rek_pid);
+            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const id = getFilenameId(item.dsi_id);
+                const previewLink = queryByTestId(getPreviewLinkTestId(id));
+                const downloadLink = queryByTestId(`${getDownloadLinkTestId(id)}-link`);
+                if (!isDerivative) {
+                    if (
+                        item.dsi_av_check_state === AV_CHECK_STATE_INFECTED ||
+                        item.dsi_dsid.includes('interview.wav') ||
+                        item.dsi_dsid.includes('big-file.zip')
+                    ) {
+                        expect(previewLink).not.toBeInTheDocument();
+                        expect(downloadLink).toBeInTheDocument();
+                        return;
+                    }
+                    expect(previewLink).toBeInTheDocument();
+                    expect(downloadLink).not.toBeInTheDocument();
+                    return;
+                }
+                expect(previewLink).not.toBeInTheDocument();
+                expect(downloadLink).not.toBeInTheDocument();
+            });
+        });
     });
 
     it('should render default view', () => {
@@ -683,86 +762,6 @@ describe('AttachedFiles component', () => {
             const expectedErrorMessage = getErrorMessageFormatted('attached.jpg');
             expect(callback('attached.jpg')).toEqual(false);
             expect(setErrorMessage).toHaveBeenCalledWith(expectedErrorMessage);
-        });
-    });
-
-    describe('AV Check', () => {
-        const sources = [
-            {
-                dsi_dsid: 'cats.tiff',
-            },
-            {
-                dsi_dsid: 'dogs.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'birds.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'fish.tiff',
-                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'interview.wav',
-                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-            {
-                dsi_dsid: 'big-file.zip',
-                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
-                dsi_av_check_date: '2000-01-01 00:00:00',
-            },
-        ];
-
-        it('should render the proper av status icon', () => {
-            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, journalArticle.rek_pid);
-            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
-
-            expect(fezDatastreamInfo).toMatchSnapshot();
-            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
-                const idPrefix = generatePKString(item.dsi_pid, item.dsi_dsid);
-                const avStateIcon = queryByTestId(
-                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), idPrefix),
-                );
-                if (!isDerivative) {
-                    expect(avStateIcon).toBeInTheDocument();
-                    return;
-                }
-                expect(avStateIcon).not.toBeInTheDocument();
-                expect(queryByTestId(getAvStateIconTestId(getAvState(), idPrefix))).not.toBeInTheDocument();
-            });
-        });
-
-        it('should render download link infected files, preview link for non infected and none for derivatives', () => {
-            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, recordWithDatastreams.rek_pid);
-            const { queryByTestId } = setup({ dataStreams: fezDatastreamInfo });
-
-            expect(fezDatastreamInfo).toMatchSnapshot();
-            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
-                const id = getFilenameId(createDatastreamPK(item.dsi_pid, item.dsi_dsid));
-                const previewLink = queryByTestId(getPreviewLinkTestId(id));
-                const downloadLink = queryByTestId(`${getDownloadLinkTestId(id)}-link`);
-                if (!isDerivative) {
-                    if (
-                        item.dsi_av_check_state === AV_CHECK_STATE_INFECTED ||
-                        item.dsi_dsid.includes('interview.wav') ||
-                        item.dsi_dsid.includes('big-file.zip')
-                    ) {
-                        expect(previewLink).not.toBeInTheDocument();
-                        expect(downloadLink).toBeInTheDocument();
-                        return;
-                    }
-                    expect(previewLink).toBeInTheDocument();
-                    expect(downloadLink).not.toBeInTheDocument();
-                    return;
-                }
-                expect(previewLink).not.toBeInTheDocument();
-                expect(downloadLink).not.toBeInTheDocument();
-            });
         });
     });
 });

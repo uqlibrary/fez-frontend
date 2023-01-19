@@ -130,6 +130,7 @@ export const createFezDatastreamInfoArray = (datastreams, pid = null, withPrevie
     return processed.map((datastream, index) => ({
         ...defaultDatastream,
         ...{
+            dsi_id: index + 1,
             dsi_pid: pid,
             dsi_order: index + 1,
             dsi_mimetype: mime.lookup(typeof datastream === 'object' ? datastream.dsi_dsid : datastream),
@@ -158,8 +159,8 @@ export const withDatastreams = (sources, datastreams, callback) =>
         callback(item, source, isDerivative);
     });
 
-export const getDatastreamByFilename = (filename, derivatives) =>
-    derivatives.find(derivative => derivative.dsi_dsid === filename);
+export const getDatastreamByFilename = (filename, datastreams) =>
+    datastreams.find(datastream => datastream.dsi_dsid === filename);
 
 module.exports = {
     ...domTestingLib,
