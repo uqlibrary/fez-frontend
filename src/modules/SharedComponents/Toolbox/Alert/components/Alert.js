@@ -303,7 +303,7 @@ export const Alert = ({
     };
 
     return (
-        <div data-testid="alert">
+        <div data-testid="alert" style={{ marginTop: '5px' }}>
             <Grid
                 container
                 className={classNames(classes[!!customIcon ? customType : type], classes.common)}
