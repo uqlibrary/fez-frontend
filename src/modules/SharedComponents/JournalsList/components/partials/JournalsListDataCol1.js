@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Tooltip from '@mui/material/Tooltip';
 import Checkbox from '@mui/material/Checkbox';
 import Typography from '@mui/material/Typography';
@@ -12,6 +12,7 @@ const JournalsListDataCol1 = ({ journal, index, onChange, checked = false, isSel
         <Grid
             container
             spacing={1}
+            padding={0}
             direction="row"
             id={`journal-list-data-col-1-${index}`}
             data-testid={`journal-list-data-col-1-${index}`}

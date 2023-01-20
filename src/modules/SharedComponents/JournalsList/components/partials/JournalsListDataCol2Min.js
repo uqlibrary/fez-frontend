@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import Tooltip from '@mui/material/Tooltip';
@@ -11,6 +11,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
         <Grid
             container
             spacing={0}
+            padding={0}
             id={`journal-list-data-col-2-min-${index}`}
             data-testid={`journal-list-data-col-2-min-${index}`}
             style={{ borderBottom: '1px dashed #e6e6e6' }}

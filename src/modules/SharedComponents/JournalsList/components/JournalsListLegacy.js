@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import JournalsListHeaderCol1 from './partials/JournalsListHeaderCol1';
 import JournalsListHeaderCol2Full from './partials/JournalsListHeaderCol2Full';
 import JournalsListHeaderCol2Min from './partials/JournalsListHeaderCol2Min';
@@ -50,6 +50,7 @@ const useStyles = makeStyles(theme => ({
             overflow: props => (props.minimalView ? 'unset' : 'auto hidden'),
         },
         flexGrow: props => (props.minimalView ? 'inherit' : 1),
+        minWidth: 'auto',
     },
     headerRow: {
         borderBottom: '1px solid #CCC',
@@ -101,6 +102,7 @@ const JournalsListLegacy = ({
         <Grid
             container
             spacing={0}
+            padding={0}
             id="journal-list"
             data-testid="journal-list"
             alignItems="stretch"
@@ -131,7 +133,7 @@ const JournalsListLegacy = ({
             </Grid>
             <Grid item xs className={classes.moreColumnsWidth}>
                 <div style={{ width: colWidth, paddingBottom: !minimalView ? 4 : 0 }}>
-                    <Grid container spacing={0} alignItems="flex-end" className={classes.headerRow}>
+                    <Grid container spacing={0} padding={0} alignItems="flex-end" className={classes.headerRow}>
                         {/* Header */}
                         {!minimalView
                             ? JournalFieldsMap.slice(1).map((item, index) => {
@@ -144,7 +146,7 @@ const JournalsListLegacy = ({
                                   })}
                     </Grid>
                     {/* Data */}
-                    <Grid container spacing={0} alignItems="center">
+                    <Grid container spacing={0} padding={0} alignItems="center">
                         <Grid item xs={12} style={{ marginTop: 6 }}>
                             {journals &&
                                 journals.length > 0 &&
