@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     },
     transformResponsive: {
         [theme.breakpoints.down('md')]: {
-            '& [class*="MuiToolbar-root-"]': {
+            '& [class*="MuiToolbar-root"]': {
                 padding: 0,
                 display: 'block',
                 marginBlockEnd: '12px',
@@ -61,24 +61,24 @@ const useStyles = makeStyles(theme => ({
                 },
             },
 
-            '& [class*="MuiTable-root-"]': {
+            '& [class*="MuiTable-root"]': {
                 '& thead': {
                     display: 'none',
                 },
 
-                '& tr[class*="MuiTableRow-root-"]': {
+                '& tr[class*="MuiTableRow-root"]': {
                     display: 'block',
                     width: '100%',
                     boxSizing: 'border-box',
 
-                    '& td[class*="MuiTableCell-root-"]:last-of-type': {
+                    '& td[class*="MuiTableCell-root"]:last-of-type': {
                         display: 'block',
                         clear: 'both',
                         width: '100% !important',
                         boxSizing: 'border-box',
                     },
                 },
-                '& tr[class*="MuiTableRow-root-"]:not(:last-of-type)': {
+                '& tr[class*="MuiTableRow-root"]:not(:last-of-type)': {
                     marginBottom: '12px',
                 },
             },
