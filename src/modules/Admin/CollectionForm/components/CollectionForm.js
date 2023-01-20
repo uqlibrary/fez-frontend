@@ -15,7 +15,7 @@ import { ConfirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { CommunitySelectField } from 'modules/SharedComponents/SelectFields';
 
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import { pathConfig } from 'config/pathConfig';
 
@@ -126,13 +126,14 @@ export default class CollectionForm extends Component {
                             }
                             txt={txt.cancelWorkflowConfirmation}
                         />
-                        <Grid container spacing={3}>
+                        <Grid container spacing={3} padding={0}>
                             {!!!hasParams && (
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.title} help={txt.help}>
                                         <Grid
                                             container
                                             spacing={3}
+                                            padding={0}
                                             id="community-selector"
                                             data-testid="community-selector"
                                         >
@@ -156,7 +157,7 @@ export default class CollectionForm extends Component {
                                     this.props.formValues.get('fez_record_search_key_ismemberof').length > 0)) && (
                                 <Grid item xs={12}>
                                     <StandardCard title={detailsTitle} help={txt.details.help}>
-                                        <Grid container spacing={3}>
+                                        <Grid container spacing={3} padding={0}>
                                             <Grid item xs={12}>
                                                 <Field
                                                     component={TextField}
@@ -229,7 +230,7 @@ export default class CollectionForm extends Component {
                                 </Grid>
                             )}
                         </Grid>
-                        <Grid container spacing={2}>
+                        <Grid container spacing={2} padding={0}>
                             <Grid item xs={false} sm />
                             <Grid item xs={12} sm="auto">
                                 <Button
@@ -238,6 +239,7 @@ export default class CollectionForm extends Component {
                                     fullWidth
                                     disabled={this.props.submitting}
                                     onClick={this.cancelSubmit}
+                                    color={'default'}
                                 >
                                     {txt.cancel}
                                 </Button>
