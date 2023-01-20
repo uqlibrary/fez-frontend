@@ -91,6 +91,7 @@ const MasterJournalListIngest = ({ error, handleSubmit, history, submitSucceeded
                             id="cancelIngest"
                             onClick={cancelIngest}
                             variant="contained"
+                            color={'default'}
                         />
                     </Grid>
                     <Grid item xs={12} sm="auto">

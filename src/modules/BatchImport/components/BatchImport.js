@@ -199,6 +199,7 @@ export const BatchImport = ({ dirty, error, handleSubmit, reset, submitSucceeded
                                 id="cancelBatchImport"
                                 onClick={_abandonImport}
                                 variant="contained"
+                                color={'default'}
                             />
                         </Grid>
                         <Grid item xs={12} sm="auto">
