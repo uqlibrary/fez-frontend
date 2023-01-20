@@ -182,6 +182,7 @@ const BulkExport = ({
                 onClick={openDialog}
                 data-testid="bulk-export-open"
                 id="bulk-export-open"
+                color={'default'}
             />
             <Dialog
                 open={open}

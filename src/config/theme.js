@@ -22,6 +22,11 @@ const palette = {
             },
         },
     },
+    default: {
+        light: 'rgba(0, 0, 0, 0.87)',
+        main: '#595959',
+        dark: '#333333',
+    },
     secondary: {
         light: '#f2f2f2',
         main: '#595959',
@@ -111,6 +116,24 @@ export const mui1theme = createTheme({
                     margin: 0,
                 },
             },
+        },
+        MuiButton: {
+            variants: [
+                {
+                    props: { variant: 'contained', color: 'default' }, // restore button default style to mui5
+                    style: {
+                        color: palette.default,
+                        boxShadow:
+                            '0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12)',
+                        backgroundColor: '#e0e0e0',
+                        '&:hover': {
+                            boxShadow:
+                                '0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)',
+                            backgroundColor: '#d5d5d5',
+                        },
+                    },
+                },
+            ],
         },
     },
     graphs: {

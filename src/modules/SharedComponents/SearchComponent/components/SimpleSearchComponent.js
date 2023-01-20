@@ -333,6 +333,7 @@ export class SimpleSearchComponent extends PureComponent {
                                 <Grid item xs={12} sm={'auto'}>
                                     <Button
                                         variant={'contained'}
+                                        color={'default'}
                                         children={txt.advancedSearchButtonText}
                                         aria-label={txt.advancedSearchButtonAriaLabel}
                                         onClick={this._handleSearchMode}

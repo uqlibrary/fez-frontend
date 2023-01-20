@@ -371,6 +371,7 @@ export default class ClaimRecord extends PureComponent {
                                     children={txt.cancel}
                                     disabled={this.props.submitting}
                                     onClick={this._cancelClaim}
+                                    color={'default'}
                                 />
                             </Grid>
                             {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&

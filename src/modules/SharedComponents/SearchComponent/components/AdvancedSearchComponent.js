@@ -264,6 +264,7 @@ export const AdvancedSearchComponent = ({
                                     aria-label={txt.advancedSearch.reset.aria}
                                     onClick={_resetAdvancedSearch}
                                     fullWidth
+                                    color={'default'}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
@@ -288,7 +289,6 @@ export const AdvancedSearchComponent = ({
                                     children={txt.searchButtonText}
                                     aria-label={txt.searchButtonAriaLabel}
                                     type="submit"
-                                    color={'primary'}
                                     fullWidth
                                     onClick={_handleAdvancedSearch}
                                     disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}

@@ -623,6 +623,7 @@ export default class AddDataCollection extends Component {
                                     aria-label={formLocale.addDataset.cancel}
                                     disabled={this.props.submitting}
                                     onClick={this._restartWorkflow}
+                                    color={'default'}
                                 />
                             </Grid>
                             <Grid item xs={12} sm="auto">
