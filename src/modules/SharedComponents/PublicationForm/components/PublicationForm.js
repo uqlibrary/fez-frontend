@@ -17,7 +17,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 
@@ -128,7 +128,7 @@ export default class PublicationForm extends Component {
                         />
                         <Grid item xs={12}>
                             <StandardCard title={txt.publicationType.title} help={txt.publicationType.help}>
-                                <Grid container spacing={1}>
+                                <Grid container spacing={1} padding={0}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={SelectField}
@@ -183,7 +183,7 @@ export default class PublicationForm extends Component {
                                             title={txt.contentIndicators.title}
                                             help={txt.contentIndicators.help}
                                         >
-                                            <Grid container spacing={3}>
+                                            <Grid container spacing={3} padding={0}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
                                                     <Field
