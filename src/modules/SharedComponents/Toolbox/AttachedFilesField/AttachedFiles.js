@@ -38,6 +38,7 @@ import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
 import Box from '@material-ui/core/Box';
 import { FileAvStateIcon } from '../FileAvStateIcon';
+import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -167,6 +168,8 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                   const webFileName = checkForWeb(fileName, dataStreams);
 
                   const openAccessStatus = getFileOpenAccessStatus(openAccessStatusId, dataStream);
+                  const previewUrl = previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName);
+                  const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                   return {
                       id,
@@ -189,7 +192,7 @@ export const getFileData = (openAccessStatusId, dataStreams, isAdmin, isAuthor, 
                           securityAccess: true,
                       },
                       openAccessStatus,
-                      previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                      previewMediaUrl: isInfected ? null : previewUrl,
                       webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
                       mediaUrl: getUrl(pid, fileName),
                       securityStatus: true,
@@ -258,7 +261,7 @@ export const AttachedFiles = ({
     const isAuthor = userIsAuthor();
     const { openAccessStatusId } = useFormValuesContext();
     const { formValues: formValuesFromContext } = useFormValuesContext();
-    const isEditing = isAdmin && canEdit;
+    const isAdminEditing = isAdmin && canEdit;
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(openAccessStatusId, dataStreams, isAdmin, isAuthor, record);
@@ -366,7 +369,7 @@ export const AttachedFiles = ({
                     <Alert allowDismiss type="info" message={getSensitiveHandlingNote(record)} />
                 )}
                 {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
-                {isEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
+                {isAdminEditing && <Alert type="warning" message={locale.renamingFilesInstructions.text} />}
                 <div style={{ padding: 8 }}>
                     <Grid container direction="row" alignItems="center" spacing={2} className={classes.header}>
                         <Grid item xs={1}>
@@ -378,7 +381,7 @@ export const AttachedFiles = ({
                             </Typography>
                         </Grid>
                         <Hidden xsDown>
-                            <Grid item md={isEditing ? 3 : 5} sm={isEditing ? 3 : 7}>
+                            <Grid item md={isAdminEditing ? 3 : 5} sm={isAdminEditing ? 3 : 7}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.description}
                                 </Typography>
@@ -391,7 +394,7 @@ export const AttachedFiles = ({
                                 </Typography>
                             </Grid>
                         </Hidden>
-                        {isEditing && (
+                        {isAdminEditing && (
                             <Grid item md={3} sm={4} style={{ textAlign: 'center' }}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.embargoDateLabel || 'Embargo date'}
@@ -412,17 +415,15 @@ export const AttachedFiles = ({
                                     <Grid item xs={12}>
                                         <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
                                             <Grid item xs={1} className={classes.upDownArrowContainer}>
-                                                {isEditing && (
-                                                    <IconButton
-                                                        disabled={index === 0}
-                                                        className={classes.upDownArrow}
-                                                        id={`order-up-file-${index}`}
-                                                        data-testid={`order-up-file-${index}`}
-                                                        onClick={() => onFileOrderChangeUp(item.id, index + 1)}
-                                                    >
-                                                        <ExpandLess />
-                                                    </IconButton>
-                                                )}
+                                                <IconButton
+                                                    disabled={index === 0}
+                                                    className={classes.upDownArrow}
+                                                    id={`order-up-file-${index}`}
+                                                    data-testid={`order-up-file-${index}`}
+                                                    onClick={() => onFileOrderChangeUp(item.id, index + 1)}
+                                                >
+                                                    <ExpandLess />
+                                                </IconButton>
                                             </Grid>
                                         </Grid>
                                         <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
@@ -434,7 +435,7 @@ export const AttachedFiles = ({
                                                 />
                                             </Grid>
                                             <Grid item sm={3} xs={7} className={classes.dataWrapper}>
-                                                {isEditing ? (
+                                                {isAdminEditing ? (
                                                     <EditableFileName
                                                         {...item}
                                                         onFileNameChange={onFileNameChange(item.id)}
@@ -463,11 +464,11 @@ export const AttachedFiles = ({
                                             <Hidden xsDown>
                                                 <Grid
                                                     item
-                                                    md={isEditing ? 3 : 5}
-                                                    sm={isEditing ? 3 : 7}
+                                                    md={isAdminEditing ? 3 : 5}
+                                                    sm={isAdminEditing ? 3 : 7}
                                                     className={classes.dataWrapper}
                                                 >
-                                                    {isEditing ? (
+                                                    {isAdminEditing ? (
                                                         <TextField
                                                             fullWidth
                                                             onChange={onFileDescriptionChange(item.id)}
@@ -493,7 +494,7 @@ export const AttachedFiles = ({
                                                     </Typography>
                                                 </Grid>
                                             </Hidden>
-                                            {!isEditing && (
+                                            {!isAdminEditing && (
                                                 <Grid item xs style={{ textAlign: 'right' }}>
                                                     <Box style={{ whiteSpace: 'nowrap' }}>
                                                         <Box component={'span'} paddingRight={1}>
@@ -512,7 +513,7 @@ export const AttachedFiles = ({
                                                     </Box>
                                                 </Grid>
                                             )}
-                                            {isEditing && (
+                                            {isAdminEditing && (
                                                 <Grid container wrap="nowrap">
                                                     <Grid item md={3} sm={4} xs={3}>
                                                         <Box style={{ whiteSpace: 'nowrap' }}>
@@ -603,17 +604,15 @@ export const AttachedFiles = ({
 
                                         <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
                                             <Grid item xs={1} className={classes.upDownArrowContainer}>
-                                                {isEditing && (
-                                                    <IconButton
-                                                        className={classes.upDownArrow}
-                                                        disabled={index === fileData.length - 1}
-                                                        id={`order-down-file-${index}`}
-                                                        data-testid={`order-down-file-${index}`}
-                                                        onClick={() => onFileOrderChangeDown(item.id, index + 1)}
-                                                    >
-                                                        <ExpandMore />
-                                                    </IconButton>
-                                                )}
+                                                <IconButton
+                                                    className={classes.upDownArrow}
+                                                    disabled={index === fileData.length - 1}
+                                                    id={`order-down-file-${index}`}
+                                                    data-testid={`order-down-file-${index}`}
+                                                    onClick={() => onFileOrderChangeDown(item.id, index + 1)}
+                                                >
+                                                    <ExpandMore />
+                                                </IconButton>
                                             </Grid>
                                         </Grid>
                                     </Grid>

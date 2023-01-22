@@ -370,6 +370,7 @@ export class FilesClass extends Component {
                           webFileName,
                           dataStreams,
                       );
+                      const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                       return {
                           pid: pid,
@@ -377,16 +378,14 @@ export class FilesClass extends Component {
                           description: dataStream.dsi_label,
                           mimeType: mimeType,
                           calculatedSize: formatBytes(dataStream.dsi_size),
-                          allowDownload:
-                              openAccessStatus.allowDownload &&
-                              dataStream.dsi_av_check_state !== AV_CHECK_STATE_INFECTED,
+                          allowDownload: !isInfected && openAccessStatus.allowDownload,
                           icon: this.renderFileIcon(
                               pid,
                               mimeType,
                               fileName,
-                              !getDownloadLicence(publication) &&
-                                  !(!componentProps.account && dataStream.dsi_security_policy === 4) &&
-                                  dataStream.dsi_av_check_state !== AV_CHECK_STATE_INFECTED
+                              !isInfected &&
+                                  !getDownloadLicence(publication) &&
+                                  !(!componentProps.account && dataStream.dsi_security_policy === 4)
                                   ? thumbnailFileName
                                   : null,
                               previewFileName,
@@ -395,11 +394,13 @@ export class FilesClass extends Component {
                               checksums,
                           ),
                           openAccessStatus: openAccessStatus,
-                          previewMediaUrl: this.getUrl(
-                              pid,
-                              previewFileName ? previewFileName : fileName,
-                              checksums && checksums.preview,
-                          ),
+                          previewMediaUrl: isInfected
+                              ? null
+                              : this.getUrl(
+                                    pid,
+                                    previewFileName ? previewFileName : fileName,
+                                    checksums && checksums.preview,
+                                ),
                           webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
                           mediaUrl: this.getUrl(pid, fileName, checksums.media),
                           securityStatus: securityAccess,

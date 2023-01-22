@@ -31,7 +31,6 @@ import { journalArticle } from '../../../../mock/data/testing/records';
 import { getAvState, getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
 import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
-import { sanitiseId } from '../../../../helpers/general';
 
 function setup(testProps = {}, renderer = rtlRender) {
     const { locale, ...restProps } = testProps;
