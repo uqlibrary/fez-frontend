@@ -10,9 +10,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { tableIcons } from './MyEditorialAppointmentsListIcons';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import DatePicker from '@mui/lab/DatePicker';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import TextField from '@mui/material/TextField';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField as SharedTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RoleField, JournalIdField } from 'modules/SharedComponents/LookupFields';
 import { default as locale } from 'locale/components';
 
@@ -247,7 +250,7 @@ export const GetColumns = () => {
                             }
                         />
                         {rowData.eap_role_cvo_id === EDITORIAL_ROLE_OTHER && (
-                            <TextField
+                            <SharedTextField
                                 value={rowData.eap_role_name || ''}
                                 onChange={handleRoleNameChangeForOther}
                                 textFieldId="eap-role-name"
@@ -297,37 +300,52 @@ export const GetColumns = () => {
             ),
             editComponent: props => {
                 return (
-                    <DatePicker
-                        value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
-                        onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
-                        error={
-                            !moment(String(props.value), 'YYYY').isValid() ||
-                            !moment(String(props.value), 'YYYY').isSameOrBefore(moment(), 'year')
-                        }
-                        autoOk
-                        variant="inline"
-                        disableToolbar
-                        views={['year']}
-                        id="eap-start-year"
-                        required
-                        label={startYearLabel}
-                        disableFuture
-                        maxDateMessage={startYearErrorMessage}
-                        invalidDateMessage={startYearErrorMessage}
-                        inputProps={{
-                            id: 'eap-start-year-input',
-                            'data-testid': 'eap-start-year-input',
-                            label: startYearLabel,
-                            'aria-label': startYearLabel,
-                            'aria-labelledby': 'eap-start-year-label',
-                        }}
-                        InputLabelProps={{
-                            id: 'eap-start-year-label',
-                            'data-testid': 'eap-start-year-label',
-                            htmlFor: 'eap-start-year-input',
-                        }}
-                        className={classes.datePicker}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={(!!props.value && moment(String(props.value), 'YYYY')) || null}
+                            onChange={value => props.onChange((!!value && value.format('YYYY')) || null)}
+                            views={['year']}
+                            openTo="year"
+                            disableFuture
+                            className={classes.datePicker}
+                            InputProps={{
+                                id: 'eap-start-year-input',
+                                'data-testid': 'eap-start-year-input',
+                                label: startYearLabel,
+                                'aria-label': startYearLabel,
+                                'aria-labelledby': 'eap-start-year-label',
+                            }}
+                            renderInput={params => {
+                                const value = params.inputProps?.value ?? null;
+                                return (
+                                    <TextField
+                                        {...params}
+                                        id="eap-start-year"
+                                        variant="standard"
+                                        required
+                                        label={startYearLabel}
+                                        InputLabelProps={{
+                                            id: 'eap-start-year-label',
+                                            'data-testid': 'eap-start-year-label',
+                                            htmlFor: 'eap-start-year-input',
+                                        }}
+                                        helperText={
+                                            !!value &&
+                                            (!moment(String(value), 'YYYY').isValid() ||
+                                                !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year'))
+                                                ? startYearErrorMessage
+                                                : ''
+                                        }
+                                        error={
+                                            !value ||
+                                            !moment(String(value), 'YYYY').isValid() ||
+                                            !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year')
+                                        }
+                                    />
+                                );
+                            }}
+                        />
+                    </LocalizationProvider>
                 );
             },
             validate: rowData => {
@@ -377,48 +395,69 @@ export const GetColumns = () => {
                 minDate.setFullYear(parseInt(rowData.eap_start_year, 10));
                 minDate.setDate(1);
                 minDate.setMonth(0);
+
                 return (
-                    <DatePicker
-                        value={(!!value && moment(String(value), 'YYYY')) || null}
-                        onChange={value => onChange((!!value && value.format('YYYY')) || null)}
-                        error={
-                            !moment(String(value), 'YYYY').isValid() ||
-                            moment(String(value), 'YYYY').isBefore(moment(String(rowData.eap_start_year), 'YYYY'))
-                        }
-                        {...((!!value &&
-                            moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
-                                format: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
-                            }) ||
-                            {})}
-                        autoOk
-                        variant="inline"
-                        views={['year']}
-                        id="eap-end-year"
-                        required
-                        label={endYearLabel}
-                        minDate={minDate}
-                        minDateMessage={endYearErrorMessage}
-                        invalidDateMessage={endYearErrorMessage}
-                        inputProps={{
-                            id: 'eap-end-year-input',
-                            'data-testid': 'eap-end-year-input',
-                            label: endYearLabel,
-                            'aria-label': endYearLabel,
-                            'aria-labelledby': 'eap-end-year-label',
-                            placeholder: endYearHint,
-                        }}
-                        InputLabelProps={{
-                            id: 'eap-end-year-label',
-                            'data-testid': 'eap-end-year-label',
-                            htmlFor: 'eap-end-year-input',
-                        }}
-                        ToolbarComponent={CustomToolbar}
-                        KeyboardButtonProps={{
-                            id: 'eap-end-year-button-input',
-                            'data-testid': 'eap-end-year-button-input',
-                        }}
-                        className={classes.datePicker}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={(!!value && moment(String(value), 'YYYY')) || null}
+                            onChange={value => onChange((!!value && value.format('YYYY')) || null)}
+                            {...((!!value &&
+                                moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
+                                    inputFormat: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
+                                }) ||
+                                {})}
+                            views={['year']}
+                            openTo="year"
+                            minDate={minDate}
+                            ToolbarComponent={CustomToolbar}
+                            InputAdornmentProps={{
+                                id: 'eap-end-year-button-input',
+                                'data-testid': 'eap-end-year-button-input',
+                            }}
+                            className={classes.datePicker}
+                            InputProps={{
+                                id: 'eap-end-year-input',
+                                'data-testid': 'eap-end-year-input',
+                                label: endYearLabel,
+                                'aria-label': endYearLabel,
+                                'aria-labelledby': 'eap-end-year-label',
+                                placeholder: endYearHint,
+                            }}
+                            renderInput={params => {
+                                const value = params.inputProps?.value ?? null;
+                                return (
+                                    <TextField
+                                        {...params}
+                                        id="eap-end-year"
+                                        variant="standard"
+                                        required
+                                        helperText={
+                                            !!value &&
+                                            (!moment(String(value), 'YYYY').isValid() ||
+                                                moment(String(value), 'YYYY').isBefore(
+                                                    moment(String(rowData.eap_start_year), 'YYYY'),
+                                                ))
+                                                ? endYearErrorMessage
+                                                : ''
+                                        }
+                                        label={endYearLabel}
+                                        InputLabelProps={{
+                                            id: 'eap-end-year-label',
+                                            'data-testid': 'eap-end-year-label',
+                                            htmlFor: 'eap-end-year-input',
+                                        }}
+                                        error={
+                                            !value ||
+                                            !moment(String(value), 'YYYY').isValid() ||
+                                            moment(String(value), 'YYYY').isBefore(
+                                                moment(String(rowData.eap_start_year), 'YYYY'),
+                                            )
+                                        }
+                                    />
+                                );
+                            }}
+                        />
+                    </LocalizationProvider>
                 );
             },
             validate: rowData => {

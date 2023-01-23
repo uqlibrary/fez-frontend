@@ -141,7 +141,7 @@
         "@mui/lab": "^5.0.0-alpha.98",
         "@mui/material": "^5.11.4",
         "@mui/styles": "^5.11.2",
-        "@mui/x-date-pickers": "^5.0.0",
+        "@mui/x-date-pickers": "^5.0.15",
         "@react-google-maps/api": "^2.2.0",
         "@sentry/react": "^7.15.0",
         "@sentry/tracing": "^7.15.0",
