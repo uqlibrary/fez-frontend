@@ -8,7 +8,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
 import DeleteForever from '@mui/icons-material/DeleteForever';
 import withStyles from '@mui/styles/withStyles';
-import Grid from '@mui/material/Grid/Grid';
+import Grid from '@mui/material/Grid';
 import { useWidth } from 'hooks';
 
 const withWidth = () => WrappedComponent => props => {

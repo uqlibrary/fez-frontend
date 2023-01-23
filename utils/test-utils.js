@@ -6,9 +6,10 @@ import { Router } from 'react-router-dom';
 import { Route } from 'react-router';
 import { mui1theme } from 'config/theme';
 import { Provider } from 'react-redux';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import MomentUtils from '@date-io/moment';
+
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 
 import { getStore } from '../src/config/store';
 import Immutable from 'immutable';
@@ -27,7 +28,7 @@ configure(config => ({
 export const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>{props.children}</MuiPickersUtilsProvider>
+            <LocalizationProvider dateAdapter={AdapterMoment}>{props.children}</LocalizationProvider>
         </MuiThemeProvider>
     );
 };

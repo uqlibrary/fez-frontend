@@ -6,7 +6,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid/Grid';
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography/Typography';
 import IconButton from '@mui/material/IconButton/IconButton';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
