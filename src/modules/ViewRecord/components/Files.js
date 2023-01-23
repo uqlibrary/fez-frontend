@@ -15,7 +15,7 @@ import { withStyles } from '@material-ui/core/styles';
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
 import { openAccessConfig, pathConfig } from 'config';
-import { AV_CHECK_STATE_INFECTED, CURRENT_LICENCES } from 'config/general';
+import { CURRENT_LICENCES } from 'config/general';
 
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -24,16 +24,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FileName from './partials/FileName';
 import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
-import {
-    getAdvisoryStatement,
-    getAvStateDescription,
-    getSensitiveHandlingNote,
-    isAdded,
-    isDerivative,
-} from 'helpers/datastreams';
+import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
-import Box from '@material-ui/core/Box';
-import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
 
 export const styles = theme => ({
     header: {
@@ -337,7 +329,7 @@ export class FilesClass extends Component {
                           attachments.length > 0
                       ) {
                           const attachIndex = attachments.findIndex(
-                              attachItem => item.dsi_dsid === attachItem.rek_file_attachment_name,
+                              attachitem => item.dsi_dsid === attachitem.rek_file_attachment_name,
                           );
                           item.dsi_order =
                               attachIndex >= 0 ? attachments[attachIndex].rek_file_attachment_name_order : null;
@@ -376,7 +368,6 @@ export class FilesClass extends Component {
                           webFileName,
                           dataStreams,
                       );
-                      const isInfected = dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED;
 
                       return {
                           pid: pid,
@@ -384,13 +375,12 @@ export class FilesClass extends Component {
                           description: dataStream.dsi_label,
                           mimeType: mimeType,
                           calculatedSize: formatBytes(dataStream.dsi_size),
-                          allowDownload: !isInfected && openAccessStatus.allowDownload,
+                          allowDownload: openAccessStatus.allowDownload,
                           icon: this.renderFileIcon(
                               pid,
                               mimeType,
                               fileName,
-                              !isInfected &&
-                                  !getDownloadLicence(publication) &&
+                              !getDownloadLicence(publication) &&
                                   !(!componentProps.account && dataStream.dsi_security_policy === 4)
                                   ? thumbnailFileName
                                   : null,
@@ -400,23 +390,16 @@ export class FilesClass extends Component {
                               checksums,
                           ),
                           openAccessStatus: openAccessStatus,
-                          previewMediaUrl: isInfected
-                              ? null
-                              : this.getUrl(
-                                    pid,
-                                    previewFileName ? previewFileName : fileName,
-                                    checksums && checksums.preview,
-                                ),
+                          previewMediaUrl: this.getUrl(
+                              pid,
+                              previewFileName ? previewFileName : fileName,
+                              checksums && checksums.preview,
+                          ),
                           webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
                           mediaUrl: this.getUrl(pid, fileName, checksums.media),
                           securityStatus: securityAccess,
                           checksums: checksums,
                           requiresLoginToDownload: !componentProps.account && dataStream.dsi_security_policy === 4,
-                          avCheck: {
-                              state: dataStream.dsi_av_check_state,
-                              date: dataStream.dsi_av_check_date,
-                              isInfected: dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED,
-                          },
                       };
                   });
     };
@@ -485,7 +468,7 @@ export class FilesClass extends Component {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item xs={2}>
+                            <Grid item xs={2} sm={1}>
                                 &nbsp;
                             </Grid>
                             <Grid item sm={4} data-testid="dsi-dsid-label">
@@ -507,7 +490,9 @@ export class FilesClass extends Component {
                                     </Typography>
                                 </Grid>
                             </Hidden>
-                            <Grid item sm />
+                            <Hidden xsDown>
+                                <Grid item sm />
+                            </Hidden>
                         </Grid>
                     </div>
 
@@ -533,7 +518,6 @@ export class FilesClass extends Component {
                                 </Grid>
                                 <Grid
                                     item
-                                    xs={8}
                                     sm={4}
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-dsid-${index}`}
@@ -543,12 +527,6 @@ export class FilesClass extends Component {
                                         id={`file-name-${index}`}
                                         downloadLicence={getDownloadLicence(publication)}
                                         onFileSelect={this.showPreview}
-                                        tooltip={
-                                            item.avCheck.isInfected
-                                                ? getAvStateDescription(item.avCheck.state, item.checkedAt)
-                                                : ''
-                                        }
-                                        disabled={item.avCheck.isInfected}
                                     />
                                 </Grid>
                                 <Hidden xsDown>
@@ -576,23 +554,14 @@ export class FilesClass extends Component {
                                         </Typography>
                                     </Grid>
                                 </Hidden>
-                                <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
-                                    <Box style={{ whiteSpace: 'nowrap' }}>
-                                        <Box component={'span'} paddingRight={1}>
-                                            <FileAvStateIcon
-                                                state={item.avCheck?.state}
-                                                checkedAt={item.avCheck?.date}
-                                                id={`${item.pid}-${item.fileName}`}
-                                            />
-                                        </Box>
-                                        <Box component={'span'} paddingRight={1}>
-                                            <OpenAccessIcon
-                                                {...item.openAccessStatus}
-                                                securityStatus={item.securityStatus}
-                                            />
-                                        </Box>
-                                    </Box>
-                                </Grid>
+                                <Hidden xsDown>
+                                    <Grid item sm style={{ textAlign: 'right' }} data-testid={`rek-oa-status-${index}`}>
+                                        <OpenAccessIcon
+                                            {...item.openAccessStatus}
+                                            securityStatus={item.securityStatus}
+                                        />
+                                    </Grid>
+                                </Hidden>
                             </Grid>
                         </div>
                     ))}

@@ -20,7 +20,7 @@ const orcidClientId = 'APP-OXX6M6MBQ77GUVWX';
 module.exports = {
     mode: 'development',
     context: resolve(__dirname),
-    devtool: 'eval',
+    devtool: 'source-map',
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
         patch: 'react-hot-loader/patch',
@@ -40,6 +40,7 @@ module.exports = {
         headers: { 'X-Custom-Header': 'yes' },
         historyApiFallback: true,
         host: url,
+        hot: true,
         https: false,
         open: false,
         port: port,
@@ -132,7 +133,7 @@ module.exports = {
                 sassLoader: {
                     includePaths: [resolve(__dirname, './src')],
                     outputStyle: 'expanded',
-                    sourceMap: false,
+                    sourceMap: true,
                 },
                 eslint: {
                     configFile: '.eslintrc',

@@ -14,7 +14,7 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
-import Tooltip from '@material-ui/core/Tooltip';
+// import { useConfirmationState } from 'hooks';
 
 export const useStyles = makeStyles(
     theme => ({
@@ -28,18 +28,12 @@ export const useStyles = makeStyles(
             cursor: 'pointer',
             placeSelf: 'center',
         },
-        disabled: {
-            cursor: 'not-allowed',
-        },
         fileDownloadIcon: {
             textAlign: 'right',
         },
     }),
     { withTheme: true },
 );
-
-export const getDownloadLinkTestId = id => `${id}-download`;
-export const getPreviewLinkTestId = id => `${id}-preview`;
 
 const FileName = ({
     downloadLicence,
@@ -54,8 +48,6 @@ const FileName = ({
     previewMediaUrl,
     securityStatus,
     webMediaUrl,
-    tooltip,
-    disabled,
 }) => {
     const classes = useStyles();
 
@@ -116,8 +108,7 @@ const FileName = ({
                         title={fileName}
                         className={`${classes.filename} ${classes.filenameParent}`}
                         openInNewIcon
-                        data-testid={getDownloadLinkTestId(id)}
-                        id={getDownloadLinkTestId(id)}
+                        id={`${id}-download`}
                     >
                         {fileName}
                     </ExternalLink>
@@ -128,8 +119,7 @@ const FileName = ({
                             onClick={showPreview}
                             onKeyPress={showPreview}
                             className={classes.filename}
-                            data-testid={getPreviewLinkTestId(id)}
-                            id={getPreviewLinkTestId(id)}
+                            id={`${id}-preview`}
                         >
                             {fileName}
                         </a>
@@ -138,22 +128,11 @@ const FileName = ({
                 {(!allowDownload || !!downloadLicence) && (
                     <Grid container>
                         <Grid item xs className={classes.filename}>
-                            <Tooltip
-                                title={!!tooltip ? tooltip : ''}
-                                id={`${id}-tooltip`}
-                                data-testid={`${id}-tooltip`}
-                            >
-                                <Typography
-                                    variant="body2"
-                                    className={`${classes.filename} ${disabled ? classes.disabled : ''} ${
-                                        classes.filenameParent
-                                    }`}
-                                >
-                                    {fileName}
-                                </Typography>
-                            </Tooltip>
+                            <Typography variant="body2" className={`${classes.filename} ${classes.filenameParent}`}>
+                                {fileName}
+                            </Typography>
                         </Grid>
-                        {!disabled && !!downloadLicence && (
+                        {!!downloadLicence && (
                             <Grid item xs="auto" className={classes.fileDownloadIcon}>
                                 <IconButton
                                     aria-label={txt.downloadButtonLabel}
@@ -193,13 +172,11 @@ export const FileNameProps = {
     mimeType: PropTypes.string.isRequired,
     mediaUrl: PropTypes.string.isRequired,
     webMediaUrl: PropTypes.string,
-    previewMediaUrl: PropTypes.string,
+    previewMediaUrl: PropTypes.string.isRequired,
     onFileSelect: PropTypes.func.isRequired,
     allowDownload: PropTypes.bool,
     securityStatus: PropTypes.bool,
     checksums: PropTypes.object,
-    tooltip: PropTypes.string,
-    disabled: PropTypes.bool,
 };
 
 FileName.propTypes = { ...FileNameProps };
