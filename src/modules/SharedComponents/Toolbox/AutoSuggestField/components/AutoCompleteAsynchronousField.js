@@ -90,6 +90,7 @@ export const AutoCompleteAsynchronousField = ({
             setOptions([]);
         }
     }, [open]);
+
     return (
         <React.Fragment>
             <Autocomplete
@@ -148,7 +149,15 @@ export const AutoCompleteAsynchronousField = ({
                     'data-testid': `${autoCompleteAsynchronousFieldId}-options`,
                 }}
                 {...((!!allowFreeText && { freeSolo: true }) || {})}
-                {...((!!OptionTemplate && { renderOption: option => <OptionTemplate option={option} /> }) || {})}
+                {...((!!OptionTemplate && {
+                    // eslint-disable-next-line react/prop-types
+                    renderOption: (props, option) => (
+                        <li {...props}>
+                            <OptionTemplate option={option} />
+                        </li>
+                    ),
+                }) ||
+                    {})}
             />
             {!!supplemental && <div style={{ marginTop: '0.5rem' }}>{supplemental}</div>}
         </React.Fragment>
