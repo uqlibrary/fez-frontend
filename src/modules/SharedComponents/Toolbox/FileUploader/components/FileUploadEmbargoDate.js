@@ -1,8 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from '@mui/lab/DatePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import withStyles from '@mui/styles/withStyles';
 import { GENERIC_DATE_FORMAT } from 'config/general';
+import TextField from '@mui/material/TextField';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
@@ -25,21 +28,21 @@ export class FileUploadEmbargoDate extends PureComponent {
             classes: {
                 root: classes.input,
             },
+            'data-testid': `${this.props.fileUploadEmbargoDateId}-input`,
         };
 
         return (
-            <DatePicker
-                format={GENERIC_DATE_FORMAT}
-                value={this.props.value ? new Date(this.props.value) : null}
-                variant="inline"
-                minDate={this.props.minDate}
-                onChange={this._onChange}
-                disabled={this.props.disabled}
-                InputProps={inputProps}
-                allowKeyboardControl
-                autoOk
-                data-testid={`${this.props.fileUploadEmbargoDateId}-input`}
-            />
+            <LocalizationProvider dateAdapter={AdapterMoment}>
+                <DatePicker
+                    value={this.props.value ? new Date(this.props.value) : null}
+                    inputFormat={GENERIC_DATE_FORMAT}
+                    minDate={this.props.minDate}
+                    onChange={this._onChange}
+                    disabled={this.props.disabled}
+                    InputProps={inputProps}
+                    renderInput={params => <TextField {...params} variant="standard" />}
+                />
+            </LocalizationProvider>
         );
     }
 }

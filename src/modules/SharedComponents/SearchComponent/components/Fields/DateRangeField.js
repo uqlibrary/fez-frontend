@@ -5,7 +5,9 @@ import Grid from '@mui/material/Grid';
 import InputLabel from '@mui/material/InputLabel';
 import makeStyles from '@mui/styles/makeStyles';
 
-import DatePicker from '@mui/lab/DatePicker';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
 const useStyles = makeStyles(
@@ -76,19 +78,25 @@ export const DateRangeField = ({
             </Grid>
             <Grid container>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <DatePicker
-                        value={from}
-                        onChange={handleFromDateChange}
-                        error={!!error || !!fromError}
-                        helperText={error || fromError}
-                        autoOk
-                        variant="inline"
-                        disableToolbar
-                        format={format}
-                        id={`${id}-from-date`}
-                        disableFuture={disableFuture}
-                        disabled={disabled}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={from}
+                            onChange={handleFromDateChange}
+                            disableToolbar
+                            inputFormat={format}
+                            disableFuture={disableFuture}
+                            disabled={disabled}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    id={`${id}-from-date`}
+                                    error={!!error || !!fromError}
+                                    helperText={error || fromError}
+                                    variant="standard"
+                                />
+                            )}
+                        />
+                    </LocalizationProvider>
                 </Grid>
                 <Grid item xs="auto">
                     <TextField
@@ -100,19 +108,25 @@ export const DateRangeField = ({
                     />
                 </Grid>
                 <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                    <DatePicker
-                        value={to}
-                        onChange={handleToDateChange}
-                        error={!!error || !!toError}
-                        helperText={toError}
-                        autoOk
-                        variant="inline"
-                        disableToolbar
-                        format={format}
-                        id={`${id}-to-date`}
-                        disableFuture={disableFuture}
-                        disabled={disabled}
-                    />
+                    <LocalizationProvider dateAdapter={AdapterMoment}>
+                        <DatePicker
+                            value={to}
+                            onChange={handleToDateChange}
+                            disableToolbar
+                            inputFormat={format}
+                            disableFuture={disableFuture}
+                            disabled={disabled}
+                            renderInput={params => (
+                                <TextField
+                                    {...params}
+                                    id={`${id}-to-date`}
+                                    error={!!error || !!toError}
+                                    helperText={toError}
+                                    variant="standard"
+                                />
+                            )}
+                        />
+                    </LocalizationProvider>
                 </Grid>
             </Grid>
         </React.Fragment>
