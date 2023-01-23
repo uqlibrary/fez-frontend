@@ -28,7 +28,8 @@ import {
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../../config/general';
 import { journalArticle } from '../../../../mock/data/testing/records';
-import { getAvState, getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
+import { getAvState } from '../../../../helpers/datastreams';
+import { getTestId as getAvStateIconTestId } from '../FileAvStateIcon/FileAvStateIcon';
 import { createFezDatastreamInfoArray, withDatastreams } from '../../../../../utils/test-utils';
 import { getDownloadLinkTestId, getPreviewLinkTestId } from '../../../ViewRecord/components/partials/FileName';
 

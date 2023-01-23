@@ -18,12 +18,10 @@ import {
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../config/general';
 import { createFezDatastreamInfoArray, rtlRender, withDatastreams } from '../../../../utils/test-utils';
-import {
-    getAvState,
-    getTestId as getAvStateIconTestId,
-} from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
+import { getTestId as getAvStateIconTestId } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
 import { getTestId as getThumbTestId } from './partials/Thumbnail';
 import { sanitiseId } from '../../../helpers/general';
+import { getAvState } from '../../../helpers/datastreams';
 
 const pub = {
     rek_pid: 'UQ:185044',

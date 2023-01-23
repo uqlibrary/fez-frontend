@@ -1742,6 +1742,7 @@ export const DATASET_ACCESS_CONDITIONS_OPTIONS = [
     },
 ];
 
+export const AV_CHECK_STATE_DEFAULT = 'default';
 export const AV_CHECK_STATE_CLEAN = 'clean';
 export const AV_CHECK_STATE_INFECTED = 'infected';
 export const AV_CHECK_STATE_UNSCANNABLE = 'unscannable';

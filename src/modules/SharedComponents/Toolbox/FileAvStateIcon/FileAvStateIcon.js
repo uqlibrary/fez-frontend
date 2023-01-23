@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { ShieldOutlined, GppGood, Coronavirus, GppMaybe } from '@mui/icons-material';
 import {
     AV_CHECK_STATE_CLEAN,
+    AV_CHECK_STATE_DEFAULT,
     AV_CHECK_STATE_INFECTED,
     AV_CHECK_STATE_UNSCANNABLE,
-    AV_CHECK_STATES,
 } from '../../../../config/general';
 import Tooltip from '@material-ui/core/Tooltip';
 import moment from 'moment-timezone';
-import { locale } from '../../../../locale';
 import { sanitiseId } from '../../../../helpers/general';
+import { getAvStateDescription } from '../../../../helpers/datastreams';
 
 export const UTCDateToCurrentTZDate = date =>
     moment
@@ -18,10 +18,8 @@ export const UTCDateToCurrentTZDate = date =>
         .tz(moment.tz.guess())
         .format('lll');
 
-const defaultState = 'default';
-export const getAvState = state => (AV_CHECK_STATES.includes(state) ? state : defaultState);
-export const getTestId = (state, id) => `${sanitiseId(id)}-file-av-state-icon-${state ?? defaultState}`;
-const getAvStateIcon = (state, id) => {
+export const getTestId = (state, id) => `${sanitiseId(id)}-file-av-state-icon-${state ?? AV_CHECK_STATE_DEFAULT}`;
+const getIcon = (state, id) => {
     const props = { 'data-testid': getTestId(state, id), id: getTestId(state, id) };
     switch (state) {
         case AV_CHECK_STATE_CLEAN:
@@ -36,9 +34,7 @@ const getAvStateIcon = (state, id) => {
 };
 
 export const FileAvStateIcon = ({ state, checkedAt, id }) => {
-    const txt = locale.components.fileAvStateIcon;
-    const description = txt.description.map[getAvState(state)]?.(UTCDateToCurrentTZDate(checkedAt));
-    return <Tooltip title={description}>{getAvStateIcon(state, id)}</Tooltip>;
+    return <Tooltip title={getAvStateDescription(state, checkedAt)}>{getIcon(state, id)}</Tooltip>;
 };
 
 FileAvStateIcon.propTypes = {

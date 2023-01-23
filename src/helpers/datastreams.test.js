@@ -1,5 +1,18 @@
-import { getAdvisoryStatement, getSensitiveHandlingNote, isDerivative } from './datastreams';
-import { SENSITIVE_HANDLING_NOTE_OTHER_TYPE, SENSITIVE_HANDLING_NOTE_TYPE } from '../config/general';
+import {
+    getAdvisoryStatement,
+    getAvState,
+    getAvStateDescription,
+    getSensitiveHandlingNote,
+    isDerivative,
+} from './datastreams';
+import {
+    AV_CHECK_STATE_CLEAN,
+    AV_CHECK_STATE_DEFAULT,
+    AV_CHECK_STATE_INFECTED,
+    AV_CHECK_STATE_UNSCANNABLE,
+    SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
+    SENSITIVE_HANDLING_NOTE_TYPE,
+} from '../config/general';
 
 describe('datastream derivative helpers', () => {
     it('is not Derivative', () => {
@@ -56,5 +69,20 @@ describe('datastream derivative helpers', () => {
             },
         });
         expect(actual).toEqual(expected);
+    });
+
+    it('getAvState', () => {
+        expect(getAvState(undefined)).toEqual(AV_CHECK_STATE_DEFAULT);
+        expect(getAvState(AV_CHECK_STATE_CLEAN)).toEqual(AV_CHECK_STATE_CLEAN);
+        expect(getAvState(AV_CHECK_STATE_UNSCANNABLE)).toEqual(AV_CHECK_STATE_UNSCANNABLE);
+        expect(getAvState(AV_CHECK_STATE_INFECTED)).toEqual(AV_CHECK_STATE_INFECTED);
+    });
+
+    it('getAvStateDescription', () => {
+        const checkedAt = '2001-01-01 00:00:00';
+        expect(getAvStateDescription()).toMatchSnapshot();
+        expect(getAvStateDescription(AV_CHECK_STATE_CLEAN, checkedAt)).toMatchSnapshot();
+        expect(getAvStateDescription(AV_CHECK_STATE_UNSCANNABLE, checkedAt)).toMatchSnapshot();
+        expect(getAvStateDescription(AV_CHECK_STATE_INFECTED, checkedAt)).toMatchSnapshot();
     });
 });

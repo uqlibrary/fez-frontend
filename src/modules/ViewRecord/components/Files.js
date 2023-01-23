@@ -24,7 +24,13 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import FileName from './partials/FileName';
 import MediaPreview from './MediaPreview';
 import Thumbnail from './partials/Thumbnail';
-import { getAdvisoryStatement, getSensitiveHandlingNote, isAdded, isDerivative } from 'helpers/datastreams';
+import {
+    getAdvisoryStatement,
+    getAvStateDescription,
+    getSensitiveHandlingNote,
+    isAdded,
+    isDerivative,
+} from 'helpers/datastreams';
 import { redirectUserToLogin } from 'helpers/redirectUserToLogin';
 import Box from '@material-ui/core/Box';
 import { FileAvStateIcon } from '../../SharedComponents/Toolbox/FileAvStateIcon';
@@ -409,6 +415,7 @@ export class FilesClass extends Component {
                           avCheck: {
                               state: dataStream.dsi_av_check_state,
                               date: dataStream.dsi_av_check_date,
+                              isInfected: dataStream.dsi_av_check_state === AV_CHECK_STATE_INFECTED,
                           },
                       };
                   });
@@ -536,6 +543,12 @@ export class FilesClass extends Component {
                                         id={`file-name-${index}`}
                                         downloadLicence={getDownloadLicence(publication)}
                                         onFileSelect={this.showPreview}
+                                        tooltip={
+                                            item.avCheck.isInfected
+                                                ? getAvStateDescription(item.avCheck.state, item.checkedAt)
+                                                : ''
+                                        }
+                                        disabled={item.avCheck.isInfected}
                                     />
                                 </Grid>
                                 <Hidden xsDown>
