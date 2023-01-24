@@ -499,6 +499,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -742,6 +743,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -977,6 +979,7 @@ exports[`Files Component  should not render advisory statement 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -1381,6 +1384,7 @@ exports[`Files Component  should not render advisory statement 2`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -1787,6 +1791,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 1
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -2191,6 +2196,7 @@ exports[`Files Component  should not render sensitive handling note - scenario 2
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -2595,6 +2601,7 @@ exports[`Files Component  should render advisory statement 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -3010,6 +3017,7 @@ exports[`Files Component  should render an image as the original filename with n
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -3237,6 +3245,7 @@ exports[`Files Component  should render audio files with _xt in their filename f
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -3614,6 +3623,7 @@ exports[`Files Component  should render component 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -4007,6 +4017,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -4400,6 +4411,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -4793,6 +4805,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -5186,6 +5199,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -5579,6 +5593,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -5972,6 +5987,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -6376,6 +6392,7 @@ exports[`Files Component  should render sensitive handling note - other 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -6780,6 +6797,7 @@ exports[`Files Component  should render sensitive handling note 1`] = `
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -7285,6 +7303,7 @@ exports[`Files Component  should show a blacklisted collection member when the u
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
@@ -7512,6 +7531,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
       >
         <WithStyles(ForwardRef(Grid))
           item={true}
+          sm={1}
           xs={2}
         >
            
