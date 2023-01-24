@@ -33,7 +33,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                     onChange={handleTabChange}
                     textColor="primary"
                     value={currentTabValue}
-                    scrollButtons={isSmDown && multipleData ? 'on' : 'off'}
+                    scrollButtons={isSmDown && multipleData ? true : false}
                     variant={isSmDown && multipleData ? 'scrollable' : 'standard'}
                 >
                     {data.map((tab, index) => (

@@ -11,11 +11,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -931,7 +931,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -986,18 +986,18 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1006,10 +1006,44 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1023,8 +1057,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1033,10 +1067,44 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -1053,11 +1121,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1086,19 +1154,19 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -1112,11 +1180,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1135,40 +1203,45 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -1176,9 +1249,9 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -1195,11 +1268,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1897,7 +1970,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -1952,7 +2025,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1994,8 +2067,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2032,19 +2105,19 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               validate={[Function]}
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2053,10 +2126,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2070,8 +2177,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -2080,10 +2187,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -2100,11 +2241,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2123,40 +2264,45 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -2164,9 +2310,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -2183,11 +2329,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3088,7 +3234,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -3143,7 +3289,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3185,19 +3331,19 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3206,10 +3352,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3223,8 +3403,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3233,10 +3413,44 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -3253,11 +3467,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3286,19 +3500,19 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -3312,11 +3526,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3335,40 +3549,45 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -3376,9 +3595,9 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -3395,11 +3614,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4090,7 +4309,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -4145,7 +4364,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4182,19 +4401,19 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               validate={[Function]}
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4203,10 +4422,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4220,8 +4473,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -4230,10 +4483,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -4250,11 +4537,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4273,40 +4560,45 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -4314,9 +4606,9 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -4333,11 +4625,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -5341,7 +5633,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -5396,7 +5688,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -5543,19 +5835,19 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5564,10 +5856,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5581,8 +5907,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5591,10 +5917,44 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -5611,11 +5971,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -5644,19 +6004,19 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -5670,11 +6030,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -5693,40 +6053,45 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -5734,9 +6099,9 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -5753,11 +6118,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -6761,7 +7126,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -6816,7 +7181,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -6963,19 +7328,19 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -6984,10 +7349,44 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -7001,8 +7400,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -7011,10 +7410,44 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -7031,11 +7464,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -7064,19 +7497,19 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -7090,11 +7523,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -7113,40 +7546,45 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -7154,9 +7592,9 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -7173,11 +7611,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -8181,7 +8619,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -8236,7 +8674,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -8383,19 +8821,19 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -8404,10 +8842,44 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -8421,8 +8893,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -8431,10 +8903,44 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -8451,11 +8957,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -8484,19 +8990,19 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -8510,11 +9016,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -8533,40 +9039,45 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -8574,9 +9085,9 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -8593,11 +9104,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -9601,7 +10112,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -9656,7 +10167,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -9803,19 +10314,19 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -9824,10 +10335,44 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -9841,8 +10386,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -9851,10 +10396,44 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -9871,11 +10450,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -9904,19 +10483,19 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -9930,11 +10509,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -9953,40 +10532,45 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -9994,9 +10578,9 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -10013,11 +10597,11 @@ exports[`Component ClaimRecord  should render publication citation, error messag
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -10933,8 +11517,8 @@ exports[`Component ClaimRecord  should render publication citation, error messag
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -10960,35 +11544,40 @@ exports[`Component ClaimRecord  should render publication citation, error messag
             type="error"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -11005,11 +11594,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -12013,7 +12602,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -12022,10 +12611,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "cancelButtonLabel": "Claim more works",
               "confirmButtonLabel": "Go to my works",
               "confirmationMessage": <React.Fragment>
-                <WithStyles(ForwardRef(Grid))
+                <ForwardRef(Grid)
                   container={true}
                 >
-                  <WithStyles(ForwardRef(Grid))
+                  <ForwardRef(Grid)
                     item={true}
                     xs={12}
                   >
@@ -12042,8 +12631,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                       type="warning"
                       wiggle={null}
                     />
-                  </WithStyles(ForwardRef(Grid))>
-                </WithStyles(ForwardRef(Grid))>
+                  </ForwardRef(Grid)>
+                </ForwardRef(Grid)>
                 <span
                   style={
                     Object {
@@ -12090,7 +12679,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -12237,19 +12826,19 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -12258,10 +12847,44 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -12275,8 +12898,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -12285,10 +12908,44 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -12305,11 +12962,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -12338,19 +12995,19 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -12364,11 +13021,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -12387,40 +13044,45 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -12428,9 +13090,9 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -12447,11 +13109,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -13455,7 +14117,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -13510,7 +14172,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -13657,19 +14319,19 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -13678,10 +14340,44 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -13695,8 +14391,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -13705,10 +14401,44 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -13725,11 +14455,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -13758,19 +14488,19 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -13784,11 +14514,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -13807,40 +14537,45 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -13848,9 +14583,9 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -13867,11 +14602,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -14875,7 +15610,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -14930,7 +15665,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -15077,19 +15812,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -15098,10 +15833,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -15115,8 +15884,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -15125,10 +15894,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -15145,11 +15948,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -15178,19 +15981,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -15204,11 +16007,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -15227,8 +16030,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -15245,40 +16048,45 @@ exports[`Component ClaimRecord  should return and render alert message depending
             type="info_outline"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={true}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             disabled={true}
             fullWidth={true}
@@ -15287,9 +16095,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -15306,11 +16114,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -16314,7 +17122,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -16369,7 +17177,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
           when={false}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -16516,19 +17324,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -16537,10 +17345,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -16554,8 +17396,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -16564,10 +17406,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -16584,11 +17460,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -16617,19 +17493,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -16643,11 +17519,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -16666,8 +17542,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -16684,40 +17560,45 @@ exports[`Component ClaimRecord  should return and render alert message depending
             type="done"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -16725,9 +17606,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -16744,11 +17625,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -17752,7 +18633,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -17807,7 +18688,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -17954,19 +18835,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -17975,10 +18856,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -17992,8 +18907,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -18002,10 +18917,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -18022,11 +18971,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -18055,19 +19004,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -18081,11 +19030,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -18104,8 +19053,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -18136,40 +19085,45 @@ exports[`Component ClaimRecord  should return and render alert message depending
             type="error_outline"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -18177,9 +19131,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -18196,11 +19150,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19204,7 +20158,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -19259,7 +20213,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19406,19 +20360,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19427,10 +20381,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -19444,8 +20432,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19454,10 +20442,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -19474,11 +20496,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19507,19 +20529,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19533,11 +20555,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19556,8 +20578,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19590,40 +20612,45 @@ exports[`Component ClaimRecord  should return and render alert message depending
             type="warning"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -19631,9 +20658,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -19650,11 +20677,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19670,7 +20697,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -19725,18 +20752,18 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19745,10 +20772,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -19762,8 +20823,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19772,10 +20833,44 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -19792,11 +20887,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19825,19 +20920,19 @@ exports[`Component ClaimRecord  should return and render alert message depending
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -19850,11 +20945,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19873,8 +20968,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19905,40 +21000,45 @@ exports[`Component ClaimRecord  should return and render alert message depending
             type="error_outline"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
             color="primary"
             fullWidth={true}
             id="claimSubmit"
@@ -19946,9 +21046,9 @@ exports[`Component ClaimRecord  should return and render alert message depending
             variant="contained"
           >
             Claim this work
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -19965,11 +21065,11 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -19981,7 +21081,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               publication={Object {}}
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
         <WithStyles(ConfirmDialogBox)
           locale={
             Object {
@@ -20036,18 +21136,18 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
           }
           when={true}
         />
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
           <StandardCard
             title="Optional: Suggest changes or add links to this work"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={2}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -20056,10 +21156,44 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -20073,8 +21207,8 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   textFieldId="claim-comments"
                   type="text"
                 />
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -20083,10 +21217,44 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "propTypes": Object {
+                        "FormHelperTextProps": [Function],
+                        "InputLabelProps": [Function],
+                        "InputProps": [Function],
+                        "SelectProps": [Function],
+                        "autoComplete": [Function],
+                        "autoFocus": [Function],
+                        "children": [Function],
+                        "className": [Function],
                         "classes": [Function],
+                        "color": [Function],
+                        "defaultValue": [Function],
+                        "disabled": [Function],
+                        "error": [Function],
+                        "fullWidth": [Function],
                         "help": [Function],
-                        "innerRef": [Function],
+                        "helperText": [Function],
+                        "id": [Function],
+                        "inputProps": [Function],
+                        "inputRef": [Function],
+                        "label": [Function],
+                        "margin": [Function],
+                        "maxRows": [Function],
+                        "minRows": [Function],
+                        "multiline": [Function],
+                        "name": [Function],
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "onFocus": [Function],
+                        "placeholder": [Function],
+                        "required": [Function],
+                        "rows": [Function],
+                        "select": [Function],
+                        "size": [Function],
+                        "sx": [Function],
                         "textFieldId": [Function],
+                        "type": [Function],
+                        "value": [Function],
+                        "variant": [Function],
                       },
                       "render": [Function],
                     }
@@ -20103,11 +21271,11 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                     ]
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -20136,19 +21304,19 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             }
             title="Optional: Content Indicators"
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               container={true}
               spacing={3}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
-                <WithStyles(ForwardRef(Typography))>
+                <ForwardRef(Typography)>
                   If relevant to your work, you can select multiple content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
-                </WithStyles(ForwardRef(Typography))>
-              </WithStyles(ForwardRef(Grid))>
-              <WithStyles(ForwardRef(Grid))
+                </ForwardRef(Typography)>
+              </ForwardRef(Grid)>
+              <ForwardRef(Grid)
                 item={true}
                 xs={12}
               >
@@ -20161,11 +21329,11 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   multiple={true}
                   name="contentIndicators"
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -20184,8 +21352,8 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -20216,35 +21384,40 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             type="error_outline"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -20261,11 +21434,11 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
     <form
       onSubmit={[Function]}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -21278,8 +22451,8 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
               }
             />
           </StandardCard>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -21305,35 +22478,40 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
             type="error"
             wiggle={null}
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         container={true}
         spacing={3}
       >
-        <Hidden
-          xsDown={true}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            xs={true}
-          />
-        </Hidden>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
+          item={true}
+          sx={
+            Object {
+              "display": Object {
+                "sm": "block",
+                "xs": "none",
+              },
+            }
+          }
+          xs={true}
+        />
+        <ForwardRef(Grid)
           item={true}
           sm="auto"
           xs={12}
         >
-          <WithStyles(ForwardRef(Button))
+          <ForwardRef(Button)
+            color="default"
             disabled={false}
             fullWidth={true}
             onClick={[Function]}
             variant="contained"
           >
             Cancel this claim
-          </WithStyles(ForwardRef(Button))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Button)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </form>
   </ConfirmDiscardFormChanges>
 </StandardPage>
@@ -21341,17 +22519,17 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
 
 exports[`Component ClaimRecord  should show the loader 1`] = `
 <StandardPage>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <WithStyles(InlineLoader)
         message="Loading work to claim"
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;

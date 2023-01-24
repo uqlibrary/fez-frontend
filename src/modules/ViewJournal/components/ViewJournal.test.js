@@ -538,7 +538,7 @@ describe('ViewJournal', () => {
     });
 
     it('should display journal details Tab width in tablet size when >1 tab shown', async () => {
-        window.matchMedia = createMatchMedia(950);
+        window.matchMedia = createMatchMedia(890);
 
         mockApi.onGet(new RegExp(repositories.routes.JOURNAL_API({ id: '.*' }).apiUrl)).reply(200, {
             data: {
