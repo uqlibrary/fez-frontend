@@ -238,10 +238,13 @@ describe('Component ContributorForm', () => {
         });
 
         fireEvent.change(getByTestId('rek-contributor-input'), { target: { value: 'Testing, UqId' } });
+        fireEvent.click(getByTestId('rek-contributor-aut-id-input')); // add focus so control shows entered text
         fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
+
         fireEvent.click(getByText('Professor Del Mar, Christopher B. (mdcmar)'), list);
+
         expect(testFn).toBeCalledWith({
             id: 553,
             value: 'Professor Del Mar, Christopher B. (mdcmar)',
@@ -292,9 +295,11 @@ describe('Component ContributorForm', () => {
 
         const { getByTestId, getByText } = setup({
             showIdentifierLookup: true,
+            canEdit: true,
             onSubmit: testFn,
         });
 
+        fireEvent.click(getByTestId('rek-contributor-aut-id-input'));
         fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
@@ -381,6 +386,7 @@ describe('Component ContributorForm', () => {
 
         const { getByTestId, getByText } = setup({
             showIdentifierLookup: true,
+            canEdit: true,
             onSubmit: testFn,
         });
 
@@ -480,6 +486,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('Not UQ'), affiliationOptions);
 
+        fireEvent.click(getByTestId('rek-contributor-aut-id-input'));
         fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));
@@ -538,6 +545,7 @@ describe('Component ContributorForm', () => {
 
         fireEvent.click(getByText('UQ'), affiliationOptions);
 
+        fireEvent.click(getByTestId('rek-contributor-aut-id-input'));
         fireEvent.change(getByTestId('rek-contributor-aut-id-input'), { target: { value: 'christ' } });
 
         const list = await waitFor(() => getByTestId('rek-contributor-aut-id-options'));

@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 import locale from 'locale/components';
-import { createTheme, adaptV4Theme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 function setup(testProps = {}, args = {}) {
     const props = {
@@ -555,7 +555,7 @@ describe('ContributorsEditor', () => {
             meta: { error: 'This is a test error' },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(ForwardRef(Typography))').length).toEqual(1);
+        expect(wrapper.find('ForwardRef(Typography)').length).toEqual(1);
     });
 
     it('should update component', () => {
@@ -630,17 +630,17 @@ describe('ContributorsEditor', () => {
     });
 
     it('should have a proper style generator', () => {
-        const theme = createTheme(
-            adaptV4Theme({
-                components: {
-                    MuiUseMediaQuery: {
+        const theme = createTheme({
+            components: {
+                MuiUseMediaQuery: {
+                    styleOverrides: {
                         defaultProps: {
                             noSsr: true,
                         },
                     },
                 },
-            }),
-        );
+            },
+        });
         expect(styles(theme)).toMatchSnapshot();
     });
 
