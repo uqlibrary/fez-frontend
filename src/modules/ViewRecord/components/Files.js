@@ -485,7 +485,7 @@ export class FilesClass extends Component {
                             spacing={2}
                             className={this.props.classes.header}
                         >
-                            <Grid item xs={2}>
+                            <Grid item xs={2} sm={1}>
                                 &nbsp;
                             </Grid>
                             <Grid item sm={4} data-testid="dsi-dsid-label">
