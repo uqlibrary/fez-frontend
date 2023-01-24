@@ -19,6 +19,7 @@ import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
 import 'cypress-wait-until';
 import 'cypress-axe';
+import 'cypress-real-events';
 
 // Custom
 import './adminEdit';
