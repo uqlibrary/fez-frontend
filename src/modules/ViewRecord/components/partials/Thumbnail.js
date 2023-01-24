@@ -8,7 +8,6 @@ import locale from 'locale/pages';
 import Img from 'react-image';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-export const getTestId = filename => `preview-link-${filename}`;
 export const styles = () => ({
     image: {
         width: '100%',
@@ -102,8 +101,8 @@ export class Thumbnail extends Component {
                     checksums,
                 )}
                 title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
-                id={getTestId(fileName)}
-                data-testid={getTestId(fileName)}
+                id={`preview-link-${fileName}`}
+                data-testid={`preview-link-${fileName}`}
             >
                 {this.props.securityStatus ? (
                     <Img
