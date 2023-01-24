@@ -10,10 +10,18 @@ import {
 } from './Files';
 import * as mock from 'mock/data';
 import {
+    AV_CHECK_STATE_CLEAN,
+    AV_CHECK_STATE_INFECTED,
+    AV_CHECK_STATE_UNSCANNABLE,
     CURRENT_LICENCES,
     SENSITIVE_HANDLING_NOTE_OTHER_TYPE,
     SENSITIVE_HANDLING_NOTE_TYPE,
 } from '../../../config/general';
+import { createFezDatastreamInfoArray, rtlRender, withDatastreams } from '../../../../utils/test-utils';
+import { getTestId as getAvStateIconTestId } from '../../SharedComponents/Toolbox/FileAvStateIcon/FileAvStateIcon';
+import { getTestId as getThumbTestId } from './partials/Thumbnail';
+import { sanitiseId } from '../../../helpers/general';
+import { getAvState } from '../../../helpers/datastreams';
 
 const pub = {
     rek_pid: 'UQ:185044',
@@ -823,7 +831,7 @@ const pub = {
     rek_pubmed_doc_type_lookup: null,
 };
 
-function setup(testProps) {
+function setup(testProps, args) {
     const props = {
         theme: {},
         isAdmin: testProps.isAdmin || true,
@@ -833,7 +841,7 @@ function setup(testProps) {
         author: testProps.author || mock.currentAuthor.uqresearcher.data,
         ...testProps,
     };
-    return getElement(FilesClass, props, { isShallow: true });
+    return getElement(FilesClass, props, { isShallow: true, ...args });
 }
 
 describe('Files Component ', () => {
@@ -1720,6 +1728,8 @@ describe('Files Component ', () => {
                     dsi_size: 587005,
                     dsi_security_inherited: 1,
                     dsi_security_policy: 1,
+                    dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
                 },
             ],
         };
@@ -1891,5 +1901,93 @@ describe('Files Component ', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    describe('AV Check', () => {
+        const sources = [
+            {
+                dsi_dsid: 'cats.tiff',
+            },
+            {
+                dsi_dsid: 'dogs.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_INFECTED,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'birds.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+            {
+                dsi_dsid: 'fish.tiff',
+                dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                dsi_av_check_date: '2000-01-01 00:00:00',
+            },
+        ];
+
+        it('should render the proper av status icon', () => {
+            const anotherSources = [
+                ...sources,
+                {
+                    dsi_dsid: 'interview.wav',
+                    dsi_av_check_state: AV_CHECK_STATE_CLEAN,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
+                },
+                {
+                    dsi_dsid: 'big-file.zip',
+                    dsi_av_check_state: AV_CHECK_STATE_UNSCANNABLE,
+                    dsi_av_check_date: '2000-01-01 00:00:00',
+                },
+            ];
+            const fezDatastreamInfo = createFezDatastreamInfoArray(anotherSources, journalArticle.rek_pid);
+            const { queryByTestId } = setup(
+                { publication: { ...journalArticle, fez_datastream_info: fezDatastreamInfo } },
+                { isShallow: false, renderer: rtlRender },
+            );
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(anotherSources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const idPrefix = sanitiseId(item.dsi_pid, item.dsi_dsid);
+                const avStateIcon = queryByTestId(
+                    getAvStateIconTestId(getAvState(source.dsi_av_check_state), idPrefix),
+                );
+                if (!isDerivative) {
+                    expect(avStateIcon).toBeInTheDocument();
+                    return;
+                }
+                expect(avStateIcon).not.toBeInTheDocument();
+                expect(queryByTestId(getAvStateIconTestId(getAvState(), idPrefix))).not.toBeInTheDocument();
+            });
+        });
+
+        it('should not render preview button for infected file', () => {
+            const fezDatastreamInfo = createFezDatastreamInfoArray(sources, journalArticle.rek_pid);
+            const { queryByTestId } = setup(
+                {
+                    publication: {
+                        ...journalArticle,
+                        fez_datastream_info: fezDatastreamInfo,
+                        fez_record_search_key_oa_status: {
+                            rek_oa_status: 453695,
+                        },
+                    },
+                },
+                { isShallow: false, renderer: rtlRender },
+            );
+
+            expect(fezDatastreamInfo).toMatchSnapshot();
+            withDatastreams(sources, fezDatastreamInfo, (item, source, isDerivative) => {
+                const thumbnail = queryByTestId(getThumbTestId(item.dsi_dsid));
+                if (!isDerivative) {
+                    if (item.dsi_av_check_state === AV_CHECK_STATE_INFECTED) {
+                        expect(thumbnail).not.toBeInTheDocument();
+                        return;
+                    }
+                    expect(thumbnail).toBeInTheDocument();
+                    return;
+                }
+                expect(thumbnail).not.toBeInTheDocument();
+            });
+        });
     });
 });

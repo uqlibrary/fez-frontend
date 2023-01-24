@@ -214,6 +214,7 @@ describe('general helpers', () => {
         expect(sanitiseId('subject-code abc')).toEqual('subject-code-abc');
         expect(sanitiseId('search-subject-1111 Abc-0')).toEqual('search-subject-1111-abc-0');
         expect(sanitiseId('help-icon-fez_journal_doaj')).toEqual('help-icon-fez-journal-doaj');
+        expect(sanitiseId('UQ:1', 'cats.png')).toEqual('uq1-catspng');
     });
 
     it('should insert WBR tags in to a URL', () => {

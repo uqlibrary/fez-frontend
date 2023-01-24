@@ -1,7 +1,7 @@
 context('Strategic Publishing - Favourite Journals', () => {
     it('Should render', () => {
         cy.visit('/journals/favourites/');
-        cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]', { timeout: 1000 });
+        cy.waitUntil(() => cy.get('[data-testid="journal-list-data-col-1-checkbox-1"]').should('exist'));
         cy.injectAxe();
         cy.checkA11y(
             'div.StandardPage',
@@ -15,7 +15,7 @@ context('Strategic Publishing - Favourite Journals', () => {
 
     it('Should toggle select all', () => {
         cy.visit('/journals/favourites/');
-        cy.get('#journal-list-header-col-1-select-all', { timeout: 1000 }).should('not.checked');
+        cy.waitUntil(() => cy.get('#journal-list-header-col-1-select-all').should('not.checked'));
         cy.get('#journal-list-data-col-1-checkbox-0').should('not.be.checked');
         cy.get('#journal-list-data-col-1-checkbox-1').should('not.be.checked');
         // select all

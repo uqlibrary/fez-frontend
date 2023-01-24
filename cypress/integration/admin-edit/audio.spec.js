@@ -120,7 +120,8 @@ context('Audio admin edit', () => {
             cy.get('div > button:nth-child(1) > span > h6').should('have.text', '2099');
         });
 
-        cy.get('[role="presentation"] > div:nth-child(1)').click();
+        // close datepicker
+        cy.realPress('{esc}');
 
         cy.get('@filesTab')
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')

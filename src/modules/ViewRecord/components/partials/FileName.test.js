@@ -47,9 +47,31 @@ describe('File Name Component ', () => {
     });
 
     it('should render component and display file name only', () => {
-        const { getByText, queryByTestId } = setup({ downloadLicence: {} });
+        const { getByText, queryByTestId, container } = setup({ downloadLicence: {} });
         expect(queryByTestId('test-file-name')).toBeInTheDocument();
         expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
+
+        const tooltip = container.querySelector('p[data-testid="test-file-name-tooltip"]');
+        expect(tooltip).toHaveProperty('title', '');
+        expect(container.querySelector('p[class*="disabled"]')).not.toBeInTheDocument();
+    });
+
+    test('should render component and display file name only with tooltip', async () => {
+        const tooltipText = 'tooltip text';
+        const { queryByTestId, getByText, container } = setup({ downloadLicence: {}, tooltip: tooltipText });
+
+        expect(queryByTestId('test-file-name')).toBeInTheDocument();
+        expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
+        const wrapper = container.querySelector('p[data-testid="test-file-name-tooltip"]');
+        expect(wrapper).toHaveProperty('title', tooltipText);
+    });
+
+    test('should render component and display file name only when disabled', async () => {
+        const { queryByTestId, getByText, container } = setup({ downloadLicence: {}, disabled: true });
+
+        expect(queryByTestId('test-file-name')).toBeInTheDocument();
+        expect(getByText('UQ676287_OA.pdf')).toBeInTheDocument();
+        expect(container.querySelector('p[class*="disabled"]')).toBeInTheDocument();
     });
 
     it('should display file name link', () => {

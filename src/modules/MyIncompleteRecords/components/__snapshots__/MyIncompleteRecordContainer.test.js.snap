@@ -46,7 +46,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </svg>
         </span>
         <span
-          class="MuiTouchRipple-root-417"
+          class="MuiTouchRipple-root-418"
         />
       </button>
     </div>
@@ -376,7 +376,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root-418"
                     />
                   </button>
                 </div>
@@ -428,7 +428,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <div
                           aria-haspopup="listbox"
                           aria-labelledby="rek-significance-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-root-363 MuiSelect-select-364 MuiSelect-selectMenu-367 MuiInputBase-input-322 MuiInput-input-310"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="button"
@@ -441,7 +441,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-significance-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput-372"
                           data-testid="rek-significance-input"
                           id="rek-significance-input"
                           name="significance"
@@ -451,7 +451,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root-174 MuiSelect-icon-368"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -461,7 +461,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-428 Mui-error Mui-required"
                       >
                         This field is required
                       </p>
@@ -570,7 +570,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root-418"
                     />
                   </button>
                 </div>
@@ -613,7 +613,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <div
                           aria-haspopup="listbox"
                           aria-labelledby="rek-audience-size-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-root-363 MuiSelect-select-364 MuiSelect-selectMenu-367 MuiInputBase-input-322 MuiInput-input-310"
                           data-testid="rek-audience-size-select"
                           id="rek-audience-size-select"
                           role="button"
@@ -626,7 +626,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-audience-size-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput-372"
                           data-testid="rek-audience-size-input"
                           id="rek-audience-size-input"
                           name="fez_record_search_key_audience_size.rek_audience_size"
@@ -636,7 +636,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root-174 MuiSelect-icon-368"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -646,7 +646,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-428 Mui-error Mui-required"
                       >
                         This field is required
                       </p>
@@ -678,7 +678,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <div
                           aria-haspopup="listbox"
                           aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-root-363 MuiSelect-select-364 MuiSelect-selectMenu-367 MuiInputBase-input-322 MuiInput-input-310"
                           data-testid="rek-quality-indicator-select"
                           id="rek-quality-indicator-select"
                           role="button"
@@ -691,7 +691,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-quality-indicator-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput-372"
                           data-testid="rek-quality-indicator-input"
                           id="rek-quality-indicator-input"
                           required=""
@@ -700,7 +700,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root-174 MuiSelect-icon-368"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -710,7 +710,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root-428 Mui-error Mui-required"
                         data-testid="rek-quality-indicator-helper-text"
                         id="rek-quality-indicator-helper-text"
                       >
@@ -845,7 +845,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                             aria-disabled="true"
                             aria-haspopup="listbox"
                             aria-labelledby="rek-grant-type-select"
-                            class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310 Mui-disabled Mui-disabled Mui-disabled"
+                            class="MuiSelect-root-363 MuiSelect-select-364 MuiSelect-selectMenu-367 MuiInputBase-input-322 MuiInput-input-310 Mui-disabled Mui-disabled Mui-disabled"
                             data-testid="rek-grant-type-select"
                             id="rek-grant-type-select"
                             role="button"
@@ -854,7 +854,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           </div>
                           <input
                             aria-hidden="true"
-                            class="MuiSelect-nativeInput-371"
+                            class="MuiSelect-nativeInput-372"
                             data-testid="rek-grant-type-input"
                             id="rek-grant-type-input"
                             name="grantAgencyType"
@@ -864,7 +864,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root-174 MuiSelect-icon-367 Mui-disabled"
+                            class="MuiSvgIcon-root-174 MuiSelect-icon-368 Mui-disabled"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -950,7 +950,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root-418"
                     />
                   </button>
                 </div>
@@ -991,7 +991,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
                     >
                       <ul
-                        class="MuiList-root-380 MuiList-padding-381"
+                        class="MuiList-root-381 MuiList-padding-382"
                         style="margin-bottom: 0px;"
                       >
                         <br />
@@ -1008,10 +1008,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           .
                         </div>
                         <li
-                          class="MuiListItem-container-391"
+                          class="MuiListItem-container-392"
                         >
                           <div
-                            class="MuiListItem-root-390 ContributorRowHeader-header-385 MuiListItem-gutters-395 MuiListItem-secondaryAction-397"
+                            class="MuiListItem-root-391 ContributorRowHeader-header-386 MuiListItem-gutters-396 MuiListItem-secondaryAction-398"
                           >
                             <div
                               class="MuiGrid-root-1 MuiGrid-container-2"
@@ -1020,10 +1020,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                 class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
                               >
                                 <div
-                                  class="MuiListItemText-root-398"
+                                  class="MuiListItemText-root-399"
                                 >
                                   <span
-                                    class="MuiTypography-root-118 MuiListItemText-secondary-403 MuiTypography-caption-121 MuiTypography-colorTextSecondary-144 MuiTypography-displayBlock-147"
+                                    class="MuiTypography-root-118 MuiListItemText-secondary-404 MuiTypography-caption-121 MuiTypography-colorTextSecondary-144 MuiTypography-displayBlock-147"
                                   >
                                     Author's name as published
                                   </span>
@@ -1034,11 +1034,11 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               />
                             </div>
                             <div
-                              class="MuiListItemSecondaryAction-root-404"
+                              class="MuiListItemSecondaryAction-root-405"
                             />
                           </div>
                           <div
-                            class="MuiListItemSecondaryAction-root-404"
+                            class="MuiListItemSecondaryAction-root-405"
                           >
                             <span
                               class=""
@@ -1070,18 +1070,18 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                       </ul>
                       <ul
-                        class="MuiList-root-380 ContributorList Connect(ContributorsEditor)-list-284 Connect(ContributorsEditor)-scroll-285 MuiList-padding-381"
+                        class="MuiList-root-381 ContributorList Connect(ContributorsEditor)-list-284 Connect(ContributorsEditor)-scroll-285 MuiList-padding-382"
                         data-testid="rek-author-list"
                         id="rek-author-list"
                       >
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root-391 makeStyles-listItem-407 makeStyles-highlighted-409 MuiListItem-gutters-396 MuiListItem-divider-395"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-406"
                             id="contributor-row"
                           >
                             <div
@@ -1089,10 +1089,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-0-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root-399 MuiListItemText-multiline-400"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root-118 makeStyles-primary-413  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
                                   Topology
                                 </p>
@@ -1108,11 +1108,11 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-0-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root-399"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-417"
                               data-testid="rek-author-list-row-0-actions"
                               id="rek-author-list-row-0-actions"
                             >
@@ -1164,7 +1164,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root-418"
                                 />
                               </button>
                               <button
@@ -1196,12 +1196,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-disabledListItem-407 makeStyles-contributorLinked-415 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root-391 makeStyles-listItem-407 makeStyles-disabledListItem-408 makeStyles-contributorLinked-416 MuiListItem-gutters-396 MuiListItem-divider-395"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-406"
                             id="contributor-row"
                           >
                             <div
@@ -1209,10 +1209,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-1-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root-399 MuiListItemText-multiline-400"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root-118 makeStyles-primary-413  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
                                   Davidson, Robert
                                 </p>
@@ -1228,11 +1228,11 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-1-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root-399"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-417"
                               data-testid="rek-author-list-row-1-actions"
                               id="rek-author-list-row-1-actions"
                             >
@@ -1337,12 +1337,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 makeStyles-contributorLinked-415 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root-391 makeStyles-listItem-407 makeStyles-highlighted-409 makeStyles-contributorLinked-416 MuiListItem-gutters-396 MuiListItem-divider-395"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-406"
                             id="contributor-row"
                           >
                             <div
@@ -1350,10 +1350,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-2-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root-399 MuiListItemText-multiline-400"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root-118 makeStyles-primary-413  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
                                   Babbage, John
                                 </p>
@@ -1369,11 +1369,11 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-2-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root-399"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-417"
                               data-testid="rek-author-list-row-2-actions"
                               id="rek-author-list-row-2-actions"
                             >
@@ -1449,7 +1449,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root-418"
                                 />
                               </button>
                               <button
@@ -1481,12 +1481,12 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </li>
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root-391 makeStyles-listItem-407 makeStyles-highlighted-409 MuiListItem-gutters-396 MuiListItem-divider-395"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-406"
                             id="contributor-row"
                           >
                             <div
@@ -1494,10 +1494,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-3-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root-399 MuiListItemText-multiline-400"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root-118 makeStyles-primary-413  MuiTypography-body2-119 MuiTypography-noWrap-137"
                                 >
                                   The Brodsky Quartet
                                 </p>
@@ -1513,11 +1513,11 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                               id="rek-author-list-row-3-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root-399"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-417"
                               data-testid="rek-author-list-row-3-actions"
                               id="rek-author-list-row-3-actions"
                             >
@@ -1569,7 +1569,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                                   </svg>
                                 </span>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root-418"
                                 />
                               </button>
                               <button
@@ -1691,7 +1691,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 Cancel and return to my incomplete works list
               </span>
               <span
-                class="MuiTouchRipple-root-417"
+                class="MuiTouchRipple-root-418"
               />
             </button>
           </div>
