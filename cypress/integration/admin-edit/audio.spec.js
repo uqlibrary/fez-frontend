@@ -121,7 +121,7 @@ context('Audio admin edit', () => {
         });
 
         // close datepicker
-        cy.realPress('{esc}');
+        cy.get('[role="presentation"] > div:nth-child(3) > div').type('{esc}');
 
         cy.get('@filesTab')
             .find('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
