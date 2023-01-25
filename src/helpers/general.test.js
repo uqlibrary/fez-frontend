@@ -8,6 +8,14 @@ import {
 } from './general';
 
 describe('general helpers', () => {
+    it('dd should given args using console.dir', () => {
+        const consoleDirMock = jest.spyOn(console, 'dir').mockImplementation(() => {});
+        const args = [true, false, 1, 0, -1, [], {}];
+        dd(...args);
+        expect(consoleDirMock).toBeCalledWith(args, { depth: null });
+        consoleDirMock.mockRestore();
+    });
+
     it('leftJoin', () => {
         const objArrA = [
             { nameA: 'test1', testA: 'testA1' },
