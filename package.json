@@ -60,7 +60,7 @@
         "@types/redux-immutable": "^4.0.1",
         "@types/sinon": "^10.0.2",
         "@types/webpack": "^4.41.29",
-        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
         "assets-webpack-plugin": "^6.1.2",
         "autoprefixer": "^9.7.5",
         "axe-core": "^4.3.3",
