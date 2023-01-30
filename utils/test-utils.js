@@ -84,6 +84,13 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
     </Provider>
 );
 
+const extensionToMimeMap = {
+    tiff: 'image/tiff',
+    wav: 'audio/wave',
+    zip: 'application/zip',
+};
+const mimeType = filename => extensionToMimeMap[filename.split('.').pop()];
+
 export const defaultDatastream = {
     dsi_embargo_date: null,
     dsi_open_access: 1,
@@ -92,14 +99,15 @@ export const defaultDatastream = {
     dsi_state: 'A',
     dsi_size: 27932352,
 };
+
 export const createFezDatastreamInfoArray = (datastreams, pid = null, withPreview = true) => {
     let processed = datastreams.filter(datastream => typeof datastream === 'object' || typeof datastream === 'string');
     if (withPreview) {
         processed = [];
-        datastreams.forEach(function(datastream) {
+        datastreams.forEach(datastream => {
             processed.push(datastream);
             const filename = typeof datastream === 'object' ? datastream.dsi_dsid : datastream;
-            const mimetype = mime.lookup(filename);
+            const mimetype = mimeType(filename);
             // bail in case it's not derivable
             if (
                 !filename.includes('.pdf') &&
@@ -116,9 +124,7 @@ export const createFezDatastreamInfoArray = (datastreams, pid = null, withPrevie
                 ? 'video/mp4'
                 : 'image/jpg';
 
-            (derivativeMimetype.includes('image') ? ['preview_', 'thumbnail_', 'web_'] : ['']).forEach(function(
-                prefix,
-            ) {
+            (derivativeMimetype.includes('image') ? ['preview_', 'thumbnail_', 'web_'] : ['']).forEach(prefix => {
                 processed.push({
                     dsi_dsid: `${prefix}${filename.split('.')[0]}_t.${derivativeMimetype.split('/').pop()}`,
                     dsi_mimetype: derivativeMimetype,
