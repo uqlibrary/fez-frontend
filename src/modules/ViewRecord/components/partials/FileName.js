@@ -102,7 +102,7 @@ const FileName = ({
 
     return (
         <Grid container alignItems="center" wrap="nowrap" data-testid={id} id={id}>
-            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 10 : 12}>
+            <Grid item xs sm={allowDownload && !downloadLicence && isAudio(mimeType) ? 8 : 12}>
                 <ConfirmationBox
                     confirmationBoxId="file-download-accept-licence"
                     isOpen={isOpen}
@@ -170,7 +170,7 @@ const FileName = ({
             </Grid>
             <Hidden xsDown>
                 {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                    <Grid item sm={2}>
+                    <Grid item sm={4}>
                         <AudioPlayer
                             pid={pid}
                             fileName={

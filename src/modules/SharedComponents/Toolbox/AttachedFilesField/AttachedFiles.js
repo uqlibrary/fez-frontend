@@ -514,60 +514,70 @@ export const AttachedFiles = ({
                                                 </Grid>
                                             )}
                                             {isAdminEditing && (
-                                                <Grid container wrap="nowrap">
-                                                    <Grid item md={3} sm={4} xs={3}>
-                                                        <Box style={{ whiteSpace: 'nowrap' }}>
-                                                            <Hidden smDown>
+                                                <Grid item md={3} sm={4}>
+                                                    <Grid container wrap="nowrap">
+                                                        <Grid item xs={3}>
+                                                            <Box style={{ whiteSpace: 'nowrap' }}>
+                                                                <Hidden smDown>
+                                                                    <Box component={'span'} paddingRight={1}>
+                                                                        <FileAvStateIcon
+                                                                            state={item.avCheck?.state}
+                                                                            checkedAt={item.avCheck?.date}
+                                                                            id={item.id}
+                                                                        />
+                                                                    </Box>
+                                                                </Hidden>
                                                                 <Box component={'span'} paddingRight={1}>
-                                                                    <FileAvStateIcon
-                                                                        state={item.avCheck?.state}
-                                                                        checkedAt={item.avCheck?.date}
-                                                                        id={item.id}
+                                                                    <OpenAccessIcon
+                                                                        {...item.openAccessStatus}
+                                                                        securityStatus={item.securityStatus}
                                                                     />
                                                                 </Box>
-                                                            </Hidden>
-                                                            <Box component={'span'} paddingRight={1}>
-                                                                <OpenAccessIcon
-                                                                    {...item.openAccessStatus}
-                                                                    securityStatus={item.securityStatus}
-                                                                />
                                                             </Box>
-                                                        </Box>
-                                                    </Grid>
-                                                    {/* cypress test does not like full stop in the id */}
-                                                    <Grid
-                                                        item
-                                                        xs={7}
-                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
-                                                    >
-                                                        {(openAccessConfig.openAccessFiles.includes(
-                                                            openAccessStatusId,
-                                                        ) ||
-                                                            !!item.securityPolicyStatus.isEmbargoed) && (
-                                                            <FileUploadEmbargoDate
-                                                                value={
-                                                                    item.openAccessStatus.embargoDate ??
-                                                                    item.securityPolicyStatus.embargoDate
-                                                                }
-                                                                onChange={onEmbargoDateChange(item.id)}
-                                                                disabled={disabled}
-                                                                fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
-                                                            />
-                                                        )}
-                                                    </Grid>
-                                                    <Grid item xs={2} style={{ marginTop: -10, textAlign: 'right' }}>
-                                                        <Tooltip title={deleteHint}>
-                                                            <span>
-                                                                <IconButton
-                                                                    id={`delete-file-${index}`}
-                                                                    data-testid={`delete-file-${index}`}
-                                                                    onClick={onFileDelete(item.fileName)}
+                                                        </Grid>
+                                                        {/* cypress test does not like full stop in the id */}
+                                                        <Grid
+                                                            item
+                                                            xs={7}
+                                                            id={`embargoDateButton-${item.fileName.replace(
+                                                                /\./g,
+                                                                '-',
+                                                            )}`}
+                                                            style={{ marginLeft: 8 }}
+                                                        >
+                                                            {(openAccessConfig.openAccessFiles.includes(
+                                                                openAccessStatusId,
+                                                            ) ||
+                                                                !!item.securityPolicyStatus.isEmbargoed) && (
+                                                                <FileUploadEmbargoDate
+                                                                    value={
+                                                                        item.openAccessStatus.embargoDate ??
+                                                                        item.securityPolicyStatus.embargoDate
+                                                                    }
+                                                                    onChange={onEmbargoDateChange(item.id)}
                                                                     disabled={disabled}
-                                                                >
-                                                                    <Delete />
-                                                                </IconButton>
-                                                            </span>
-                                                        </Tooltip>
+                                                                    fileUploadEmbargoDateId={`dsi-embargo-date-${index}`}
+                                                                />
+                                                            )}
+                                                        </Grid>
+                                                        <Grid
+                                                            item
+                                                            xs={2}
+                                                            style={{ marginTop: -10, textAlign: 'right' }}
+                                                        >
+                                                            <Tooltip title={deleteHint}>
+                                                                <span>
+                                                                    <IconButton
+                                                                        id={`delete-file-${index}`}
+                                                                        data-testid={`delete-file-${index}`}
+                                                                        onClick={onFileDelete(item.fileName)}
+                                                                        disabled={disabled}
+                                                                    >
+                                                                        <Delete />
+                                                                    </IconButton>
+                                                                </span>
+                                                            </Tooltip>
+                                                        </Grid>
                                                     </Grid>
                                                 </Grid>
                                             )}
