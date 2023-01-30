@@ -3,7 +3,7 @@ import FileAvStateIcon, { getTestId, UTCDateToCurrentTZDate } from './FileAvStat
 import { render } from 'test-utils';
 import { locale } from '../../../../locale';
 import { AV_CHECK_STATE_CLEAN, AV_CHECK_STATE_INFECTED, AV_CHECK_STATE_UNSCANNABLE } from '../../../../config/general';
-import moment from 'moment';
+import moment from 'moment-timezone';
 
 const txt = locale.components.fileAvStateIcon;
 const checkedAt = '2000-01-01 00:00:00';
