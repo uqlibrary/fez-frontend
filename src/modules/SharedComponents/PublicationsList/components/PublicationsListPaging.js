@@ -225,6 +225,8 @@ export class PublicationsListPaging extends Component {
                             sm={'auto'}
                             className={classes.paginationGridContainer}
                             sx={{ display: { xs: 'none', sm: 'block' } }}
+                            data-testid={`${this.props.pagingId}-desktop-controls`}
+                            id={`${this.props.pagingId}-desktop-controls`}
                         >
                             {paginationPages.indexOf(1) === -1 && this.renderButton(1)}
                             {paginationPages[0] - 1 > 1 && txt.firstLastSeparator}
@@ -232,7 +234,13 @@ export class PublicationsListPaging extends Component {
                             {paginationPages[paginationPages.length - 1] + 1 < totalPages && txt.firstLastSeparator}
                             {paginationPages.indexOf(totalPages) === -1 && this.renderButton(totalPages)}
                         </Grid>
-                        <Grid item xs sx={{ display: { xs: 'block', sm: 'none' } }}>
+                        <Grid
+                            item
+                            xs
+                            sx={{ display: { xs: 'block', sm: 'none' } }}
+                            data-testid={`${this.props.pagingId}-mobile-controls`}
+                            id={`${this.props.pagingId}-mobile-controls`}
+                        >
                             <Box textAlign={'center'} paddingLeft={1} paddingRight={1}>
                                 <Button
                                     variant={'text'}

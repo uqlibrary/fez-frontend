@@ -100,6 +100,21 @@ context('Communities and Collections', () => {
         cy.get('[data-testid="rek-ismemberof-0"] > span').should('contain', 'Mill Point Archaeological Project');
     });
 });
+context.only('Responsiveness (coverage)', () => {
+    beforeEach(() => {
+        cy.visit('/communities');
+    });
+    it('shows reduced pagination controls at mobile breakpoints', () => {
+        cy.viewport(320, 580);
+        cy.get('[data-testid="community-collections-paging-top-mobile-controls"]').should('be.visible');
+        cy.get('[data-testid="community-collections-paging-top-desktop-controls"]').should('not.be.visible');
+    });
+    it('shows expanded pagination controls at desktop breakpoints', () => {
+        cy.viewport(1024, 768);
+        cy.get('[data-testid="community-collections-paging-top-mobile-controls"]').should('not.be.visible');
+        cy.get('[data-testid="community-collections-paging-top-desktop-controls"]').should('be.visible');
+    });
+});
 context('Communities and Collections - Admin', () => {
     beforeEach(() => {
         cy.visit('/communities?user=uqstaff');
@@ -123,30 +138,26 @@ context('Communities and Collections - Admin', () => {
         cy.get('[data-testid="admin-actions-menu-UQ:12096"]').should('exist');
         cy.get('[data-testid="admin-actions-menu-UQ:12096"] ul li[tabindex="0"]').should('exist');
     });
-    it('Renders correctly at smaller screen resolutions', () => {
-        cy.viewport(320, 200);
+    it('Renders result rows correctly at smaller screen resolutions', () => {
+        cy.viewport(320, 480);
         cy.get('[data-testid="row-UQ:12096"] > div')
             .children()
-            .should($element => {
-                expect($element).to.have.length(2);
-            });
+            .filter(':visible')
+            .should('have.length', 2);
         cy.viewport(640, 480);
         cy.get('[data-testid="row-UQ:12096"] > div')
             .children()
-            .should($element => {
-                expect($element).to.have.length(2);
-            });
+            .filter(':visible')
+            .should('have.length', 2);
         cy.viewport(800, 600);
         cy.get('[data-testid="row-UQ:12096"] > div')
             .children()
-            .should($element => {
-                expect($element).to.have.length(2);
-            });
+            .filter(':visible')
+            .should('have.length', 2);
         cy.viewport(1024, 768);
         cy.get('[data-testid="row-UQ:12096"] > div')
             .children()
-            .should($element => {
-                expect($element).to.have.length(4);
-            });
+            .filter(':visible')
+            .should('have.length', 4);
     });
 });

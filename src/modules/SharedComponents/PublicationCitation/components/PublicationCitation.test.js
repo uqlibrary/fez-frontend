@@ -274,7 +274,7 @@ describe('PublicationCitation ', () => {
             customActions: customActions,
         });
 
-        wrapper.find('WithStyles(ForwardRef(Button)).publicationAction').forEach(button => {
+        wrapper.find('ForwardRef(Button).publicationAction').forEach(button => {
             button.simulate('click');
         });
 
