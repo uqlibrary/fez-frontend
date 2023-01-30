@@ -8,14 +8,14 @@ import {
     AV_CHECK_STATE_UNSCANNABLE,
 } from '../../../../config/general';
 import Tooltip from '@material-ui/core/Tooltip';
-import moment from 'moment-timezone';
+import moment from 'moment';
 import { sanitiseId } from '../../../../helpers/general';
 import { getAvStateDescription } from '../../../../helpers/datastreams';
 
 export const UTCDateToCurrentTZDate = date =>
     moment
         .utc(date)
-        .tz(moment.tz.guess())
+        .local()
         .format('lll');
 
 export const getTestId = (state, id) => `${sanitiseId(id)}-file-av-state-icon-${state ?? AV_CHECK_STATE_DEFAULT}`;

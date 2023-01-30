@@ -2,7 +2,7 @@
 
 const { resolve, join } = require('path');
 const webpack = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
+// const TerserPlugin = require('terser-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -53,7 +53,7 @@ if (config.environment === 'development') {
 
 const webpackConfig = {
     mode: 'production',
-    devtool: 'source-map',
+    // devtool: 'source-map',
     // The entry file. All your app roots from here.
     entry: {
         browserUpdate: join(__dirname, 'public', 'browser-update.js'),
@@ -163,12 +163,12 @@ const webpackConfig = {
                 },
             },
         },
-        minimizer: [
-            new TerserPlugin({
-                sourceMap: true,
-                parallel: true,
-            }),
-        ],
+        // minimizer: [
+        //     new TerserPlugin({
+        //         sourceMap: true,
+        //         parallel: true,
+        //     }),
+        // ],
     },
     module: {
         rules: [
