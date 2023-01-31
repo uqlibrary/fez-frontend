@@ -36,7 +36,9 @@ export const CustomToolbar = props => {
                 margin: '8px',
                 cursor: 'pointer',
             }}
-            onClick={() => props.onChange(moment(new Date(), 'YYYY'))}
+            onClick={() => {
+                props.onChange(moment(new Date(), 'YYYY'));
+            }}
             id="eap-end-year-current"
             data-testid="eap-end-year-current"
         >
@@ -400,7 +402,9 @@ export const GetColumns = () => {
                     <LocalizationProvider dateAdapter={AdapterMoment}>
                         <DatePicker
                             value={(!!value && moment(String(value), 'YYYY')) || null}
-                            onChange={value => onChange((!!value && value.format('YYYY')) || null)}
+                            onChange={value => {
+                                onChange((!!value && value.format('YYYY')) || null);
+                            }}
                             {...((!!value &&
                                 moment(String(value), 'YYYY').format('YYYY') === moment().format('YYYY') && {
                                     inputFormat: `[${locale.components.myEditorialAppointmentsList.form.locale.endYearCurrentYearLabel}]`,
@@ -408,9 +412,11 @@ export const GetColumns = () => {
                                 {})}
                             views={['year']}
                             openTo="year"
+                            closeOnSelect
                             minDate={minDate}
+                            showToolbar
                             ToolbarComponent={CustomToolbar}
-                            InputAdornmentProps={{
+                            OpenPickerButtonProps={{
                                 id: 'eap-end-year-button-input',
                                 'data-testid': 'eap-end-year-button-input',
                             }}
@@ -424,10 +430,12 @@ export const GetColumns = () => {
                                 placeholder: endYearHint,
                             }}
                             renderInput={params => {
-                                const value = params.inputProps?.value ?? null;
+                                const displayValue = params.inputProps?.value ?? null;
+
                                 return (
                                     <TextField
                                         {...params}
+                                        value={displayValue}
                                         id="eap-end-year"
                                         variant="standard"
                                         required
@@ -447,7 +455,6 @@ export const GetColumns = () => {
                                             htmlFor: 'eap-end-year-input',
                                         }}
                                         error={
-                                            !value ||
                                             !moment(String(value), 'YYYY').isValid() ||
                                             moment(String(value), 'YYYY').isBefore(
                                                 moment(String(rowData.eap_start_year), 'YYYY'),

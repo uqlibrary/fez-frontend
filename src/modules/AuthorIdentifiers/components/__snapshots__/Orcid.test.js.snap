@@ -22,11 +22,11 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
     }
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -44,38 +44,42 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
         type="error_outline"
         wiggle={null}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -83,19 +87,19 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
               variant="contained"
             >
               Link your existing ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
@@ -105,25 +109,29 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
           <p>
             Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
           </p>
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -131,12 +139,12 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
               variant="contained"
             >
               Create a new ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -162,11 +170,11 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
     }
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -184,38 +192,42 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
         type="error_outline"
         wiggle={null}
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -223,19 +235,19 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
               variant="contained"
             >
               Link your existing ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
@@ -245,25 +257,29 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
           <p>
             Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
           </p>
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -271,12 +287,12 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
               variant="contained"
             >
               Create a new ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -302,45 +318,49 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
     }
     onRef={[Function]}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     />
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I already have an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
           This option enables you to link your existing ORCID iD to UQ.
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -348,19 +368,19 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
               variant="contained"
             >
               Link your existing ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <StandardCard
         title="I need an ORCID iD"
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           component="span"
           gutterBottom={true}
         >
@@ -370,25 +390,29 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
           <p>
             Use this option if you are unsure if you already have an ORCID iD. It will detect matches to your name and email from the ORCID registry and prompt you to log in to avoid creating a new ORCID iD.
           </p>
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <Hidden
-            xsDown={true}
-          >
-            <WithStyles(ForwardRef(Grid))
-              item={true}
-              xs={true}
-            />
-          </Hidden>
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
+            item={true}
+            sx={
+              Object {
+                "display": Object {
+                  "sm": "block",
+                  "xs": "none",
+                },
+              }
+            }
+            xs={true}
+          />
+          <ForwardRef(Grid)
             item={true}
             sm="auto"
             xs={12}
           >
-            <WithStyles(ForwardRef(Button))
+            <ForwardRef(Button)
               color="primary"
               disabled={false}
               fullWidth={true}
@@ -396,12 +420,12 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
               variant="contained"
             >
               Create a new ORCID iD
-            </WithStyles(ForwardRef(Button))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+            </ForwardRef(Button)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
