@@ -520,7 +520,7 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                 placement="left"
                 title="Open Access - undefined - Free to read"
               >
-                <ForwardRef(LockOpenIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-3"
                   onBlur={[Function]}
@@ -531,10 +531,9 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                   onTouchStart={[Function]}
                   title="Open Access - undefined - Free to read"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-3"
-                    data-testid="LockOpenIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -543,255 +542,34 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                     onTouchStart={[Function]}
                     title="Open Access - undefined - Free to read"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3"
-                      data-testid="LockOpenIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-3"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": <path
-                            d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
-                          />,
-                          "className": "makeStyles-svg-1 makeStyles-svg-3",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockOpenIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "Open Access - undefined - Free to read",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="Open Access - undefined - Free to read"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockOpenIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-3"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -803,24 +581,23 @@ exports[`Journal Name Component test  should pass style to child component 1`] =
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockOpenIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-3 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockOpenIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-3"
                       focusable="false"
                       title="Open Access - undefined - Free to read"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }
@@ -1830,7 +1607,7 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                 placement="left"
                 title="Link (no DOI) - Open access after 2019-01-01"
               >
-                <ForwardRef(LockClockOutlinedIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-5"
                   onBlur={[Function]}
@@ -1841,10 +1618,9 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                   onTouchStart={[Function]}
                   title="Link (no DOI) - Open access after 2019-01-01"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-5"
-                    data-testid="LockClockOutlinedIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -1853,274 +1629,34 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                     onTouchStart={[Function]}
                     title="Link (no DOI) - Open access after 2019-01-01"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5"
-                      data-testid="LockClockOutlinedIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-5"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": Array [
-                            <path
-                              d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                            />,
-                            <path
-                              d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
-                            />,
-                          ],
-                          "className": "makeStyles-svg-1 makeStyles-svg-5",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockClockOutlinedIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "Link (no DOI) - Open access after 2019-01-01",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="Link (no DOI) - Open access after 2019-01-01"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockClockOutlinedIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-5"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -2132,32 +1668,23 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                          key="0"
-                        />
-                        <path
-                          d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
-                          key="1"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockClockOutlinedIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-5 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockClockOutlinedIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-5"
                       focusable="false"
                       title="Link (no DOI) - Open access after 2019-01-01"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                      />
-                      <path
-                        d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }
@@ -2707,7 +2234,7 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                 placement="left"
                 title="Link (no DOI) - Open access after 2019-01-01"
               >
-                <ForwardRef(LockClockOutlinedIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-7"
                   onBlur={[Function]}
@@ -2718,10 +2245,9 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                   onTouchStart={[Function]}
                   title="Link (no DOI) - Open access after 2019-01-01"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-7"
-                    data-testid="LockClockOutlinedIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -2730,288 +2256,34 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                     onTouchStart={[Function]}
                     title="Link (no DOI) - Open access after 2019-01-01"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7"
-                      data-testid="LockClockOutlinedIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-7"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": Array [
-                            <path
-                              d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                            />,
-                            <path
-                              d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
-                            />,
-                          ],
-                          "className": "makeStyles-svg-1 makeStyles-svg-7",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockClockOutlinedIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "Link (no DOI) - Open access after 2019-01-01",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="Link (no DOI) - Open access after 2019-01-01"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockClockOutlinedIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-7"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3023,32 +2295,23 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                          key="0"
-                        />
-                        <path
-                          d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
-                          key="1"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockClockOutlinedIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-7 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockClockOutlinedIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-7"
                       focusable="false"
                       title="Link (no DOI) - Open access after 2019-01-01"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M6 20V10h12v1c.7 0 1.37.1 2 .29V10c0-1.1-.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h6.26c-.42-.6-.75-1.28-.97-2H6zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"
-                      />
-                      <path
-                        d="M18 13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm1.65 7.35L17.5 18.2V15h1v2.79l1.85 1.85-.7.71z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }
@@ -3593,7 +2856,7 @@ exports[`Journal Name Component test  should render locked 1`] = `
                 placement="left"
                 title="You do not have access to this file"
               >
-                <ForwardRef(LockIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-8"
                   onBlur={[Function]}
@@ -3604,10 +2867,9 @@ exports[`Journal Name Component test  should render locked 1`] = `
                   onTouchStart={[Function]}
                   title="You do not have access to this file"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-8"
-                    data-testid="LockIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -3616,290 +2878,34 @@ exports[`Journal Name Component test  should render locked 1`] = `
                     onTouchStart={[Function]}
                     title="You do not have access to this file"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8"
-                      data-testid="LockIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-8"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": <path
-                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
-                          />,
-                          "className": "makeStyles-svg-1 makeStyles-svg-8",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "You do not have access to this file",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="You do not have access to this file"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-8"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -3911,24 +2917,23 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-8 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-8"
                       focusable="false"
                       title="You do not have access to this file"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }
@@ -4938,7 +3943,7 @@ exports[`Journal Name Component test  should render open access 1`] = `
                 placement="left"
                 title="Open Access - undefined - Free to read"
               >
-                <ForwardRef(LockOpenIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-2"
                   onBlur={[Function]}
@@ -4949,10 +3954,9 @@ exports[`Journal Name Component test  should render open access 1`] = `
                   onTouchStart={[Function]}
                   title="Open Access - undefined - Free to read"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-2"
-                    data-testid="LockOpenIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -4961,248 +3965,34 @@ exports[`Journal Name Component test  should render open access 1`] = `
                     onTouchStart={[Function]}
                     title="Open Access - undefined - Free to read"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2"
-                      data-testid="LockOpenIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-2"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": <path
-                            d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
-                          />,
-                          "className": "makeStyles-svg-1 makeStyles-svg-2",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockOpenIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "Open Access - undefined - Free to read",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="Open Access - undefined - Free to read"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockOpenIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-2"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -5214,24 +4004,23 @@ exports[`Journal Name Component test  should render open access 1`] = `
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockOpenIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-2 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockOpenIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-2"
                       focusable="false"
                       title="Open Access - undefined - Free to read"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }
@@ -5776,7 +4565,7 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                 placement="left"
                 title="Open Access - Free to read"
               >
-                <ForwardRef(LockOpenIcon)
+                <ForwardRef(VolumeUpIcon)
                   aria-describedby={null}
                   className="makeStyles-svg-1 makeStyles-svg-4"
                   onBlur={[Function]}
@@ -5787,10 +4576,9 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                   onTouchStart={[Function]}
                   title="Open Access - Free to read"
                 >
-                  <ForwardRef(SvgIcon)
+                  <WithStyles(ForwardRef(SvgIcon))
                     aria-describedby={null}
                     className="makeStyles-svg-1 makeStyles-svg-4"
-                    data-testid="LockOpenIcon"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseLeave={[Function]}
@@ -5799,262 +4587,34 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                     onTouchStart={[Function]}
                     title="Open Access - Free to read"
                   >
-                    <MuiSvgIconRoot
+                    <ForwardRef(SvgIcon)
                       aria-describedby={null}
-                      aria-hidden={true}
-                      as="svg"
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4"
-                      data-testid="LockOpenIcon"
-                      focusable="false"
+                      className="makeStyles-svg-1 makeStyles-svg-4"
+                      classes={
+                        Object {
+                          "colorAction": "MuiSvgIcon-colorAction",
+                          "colorDisabled": "MuiSvgIcon-colorDisabled",
+                          "colorError": "MuiSvgIcon-colorError",
+                          "colorPrimary": "MuiSvgIcon-colorPrimary",
+                          "colorSecondary": "MuiSvgIcon-colorSecondary",
+                          "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                          "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                          "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                          "root": "MuiSvgIcon-root",
+                        }
+                      }
                       onBlur={[Function]}
                       onFocus={[Function]}
                       onMouseLeave={[Function]}
                       onMouseOver={[Function]}
                       onTouchEnd={[Function]}
                       onTouchStart={[Function]}
-                      ownerState={
-                        Object {
-                          "aria-describedby": null,
-                          "children": <path
-                            d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
-                          />,
-                          "className": "makeStyles-svg-1 makeStyles-svg-4",
-                          "color": "inherit",
-                          "component": "svg",
-                          "data-testid": "LockOpenIcon",
-                          "fontSize": "medium",
-                          "inheritViewBox": false,
-                          "instanceFontSize": undefined,
-                          "onBlur": [Function],
-                          "onFocus": [Function],
-                          "onMouseLeave": [Function],
-                          "onMouseOver": [Function],
-                          "onTouchEnd": [Function],
-                          "onTouchStart": [Function],
-                          "title": "Open Access - Free to read",
-                          "viewBox": "0 0 24 24",
-                        }
-                      }
                       title="Open Access - Free to read"
-                      viewBox="0 0 24 24"
                     >
-                      <Insertion
-                        cache={
-                          Object {
-                            "insert": [Function],
-                            "inserted": Object {
-                              "i4bv87-MuiSvgIcon-root": true,
-                            },
-                            "key": "css",
-                            "nonce": undefined,
-                            "registered": Object {},
-                            "sheet": StyleSheet {
-                              "_alreadyInsertedOrderInsensitiveRule": true,
-                              "_insertTag": [Function],
-                              "before": null,
-                              "container": <head>
-                                <style
-                                  data-jss=""
-                                  data-meta="MuiTooltip"
-                                >
-                                  
-.MuiTooltip-popper {
-  z-index: 1500;
-  pointer-events: none;
-}
-.MuiTooltip-popperInteractive {
-  pointer-events: auto;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow {
-  top: 0;
-  left: 0;
-  margin-top: -0.71em;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow {
-  left: 0;
-  bottom: 0;
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-bottom: -0.71em;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow {
-  left: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-left: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow {
-  right: 0;
-  width: 0.71em;
-  height: 1em;
-  margin-top: 4px;
-  margin-right: -0.71em;
-  margin-bottom: 4px;
-}
-.MuiTooltip-popperArrow[x-placement*="left"] .MuiTooltip-arrow::before {
-  transform-origin: 0 0;
-}
-.MuiTooltip-popperArrow[x-placement*="right"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 100%;
-}
-.MuiTooltip-popperArrow[x-placement*="top"] .MuiTooltip-arrow::before {
-  transform-origin: 100% 0;
-}
-.MuiTooltip-popperArrow[x-placement*="bottom"] .MuiTooltip-arrow::before {
-  transform-origin: 0 100%;
-}
-.MuiTooltip-tooltip {
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 0.625rem;
-  max-width: 300px;
-  word-wrap: break-word;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 1.4em;
-  border-radius: 4px;
-  background-color: rgba(97, 97, 97, 0.9);
-}
-.MuiTooltip-tooltipArrow {
-  margin: 0;
-  position: relative;
-}
-.MuiTooltip-arrow {
-  color: rgba(97, 97, 97, 0.9);
-  width: 1em;
-  height: 0.71em;
-  overflow: hidden;
-  position: absolute;
-  box-sizing: border-box;
-}
-.MuiTooltip-arrow::before {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  content: "";
-  display: block;
-  transform: rotate(45deg);
-  background-color: currentColor;
-}
-.MuiTooltip-touch {
-  padding: 8px 16px;
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.14286em;
-}
-.MuiTooltip-tooltipPlacementLeft {
-  margin: 0 24px ;
-  transform-origin: right center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementLeft {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementRight {
-  margin: 0 24px;
-  transform-origin: left center;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementRight {
-    margin: 0 14px;
-  }
-}
-.MuiTooltip-tooltipPlacementTop {
-  margin: 24px 0;
-  transform-origin: center bottom;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementTop {
-    margin: 14px 0;
-  }
-}
-.MuiTooltip-tooltipPlacementBottom {
-  margin: 24px 0;
-  transform-origin: center top;
-}
-@media (min-width:600px) {
-  .MuiTooltip-tooltipPlacementBottom {
-    margin: 14px 0;
-  }
-}
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-jss=""
-                                  data-meta="makeStyles"
-                                >
-                                  
-
-                                </style>
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>
-                              </head>,
-                              "ctr": 1,
-                              "insertionPoint": undefined,
-                              "isSpeedy": false,
-                              "key": "css",
-                              "nonce": undefined,
-                              "prepend": undefined,
-                              "tags": Array [
-                                <style
-                                  data-emotion="css"
-                                  data-s=""
-                                >
-                                  
-                                  .css-i4bv87-MuiSvgIcon-root{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;}
-                                </style>,
-                              ],
-                            },
-                          }
-                        }
-                        isStringTag={true}
-                        serialized={
-                          Object {
-                            "map": undefined,
-                            "name": "i4bv87-MuiSvgIcon-root",
-                            "next": undefined,
-                            "styles": "label:MuiSvgIcon-root;user-select:none;width:1em;height:1em;display:inline-block;fill:currentColor;flex-shrink:0;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;font-size:1.5rem;",
-                            "toString": [Function],
-                          }
-                        }
-                      />
                       <svg
                         aria-describedby={null}
                         aria-hidden={true}
-                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
-                        data-testid="LockOpenIcon"
+                        className="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-4"
                         focusable="false"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -6066,24 +4626,23 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                         viewBox="0 0 24 24"
                       >
                         <path
-                          d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                          d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                         />
                       </svg>
-                    </MuiSvgIconRoot>
-                  </ForwardRef(SvgIcon)>
-                </ForwardRef(LockOpenIcon)>
+                    </ForwardRef(SvgIcon)>
+                  </WithStyles(ForwardRef(SvgIcon))>
+                </ForwardRef(VolumeUpIcon)>
                 <ForwardRef(Popper)
                   anchorEl={
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-svg-1 makeStyles-svg-4 css-i4bv87-MuiSvgIcon-root"
-                      data-testid="LockOpenIcon"
+                      class="MuiSvgIcon-root makeStyles-svg-1 makeStyles-svg-4"
                       focusable="false"
                       title="Open Access - Free to read"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"
+                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
                       />
                     </svg>
                   }

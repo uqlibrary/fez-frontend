@@ -31,18 +31,18 @@ fi
 # (Putting * around the test-string gives a test for inclusion of the substring rather than exact match)
 
 # Not running code coverage check for feature branches.
-CODE_COVERAGE_REQUIRED=false
-if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
+#CODE_COVERAGE_REQUIRED=false
+#if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production" || $CI_BRANCH == "prodtest" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"coverage"*) ]]; then
     CODE_COVERAGE_REQUIRED=true
-fi
+#fi
 
 export TZ='Australia/Brisbane'
 
 # Run cypress tests only on certain branches
-CYPRESS_TESTS_REQUIRED=false
-if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
+#CYPRESS_TESTS_REQUIRED=false
+#if [[ $CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "codebuild" || $CI_BRANCH == *"cypress"* ]]; then
     CYPRESS_TESTS_REQUIRED=true
-fi
+#fi
 
 if [[ -z $PIPE_NUM ]]; then
   PIPE_NUM=1
