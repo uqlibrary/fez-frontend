@@ -1,19 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { ShieldOutlined, GppGood, Coronavirus, GppMaybe } from '@mui/material';
-// import ShieldOutlined from '@mui/icons-material/ShieldOutlined';
-// import GppGood from '@mui/icons-material/GppGood';
-// import Coronavirus from '@mui/icons-material/Coronavirus';
-// import GppMaybe from '@mui/icons-material/GppMaybe';
-// import { ReactComponent as ShieldOutlined } from '../../../../images/material-icons/shield_black_24dp.svg';
-// import { ReactComponent as GppGood } from '../../../../images/material-icons/gpp_good_black_24dp.svg.svg';
-// import { ReactComponent as Coronavirus } from '../../../../images/material-icons/coronavirus_black_24dp.svg';
-// import { ReactComponent as GppMaybe } from '../../../../images/material-icons/gpp_maybe_black_24dp.svg';
-import ShieldOutlined from '@material-ui/icons/VolumeUp';
-import GppGood from '@material-ui/icons/VolumeUp';
-import Coronavirus from '@material-ui/icons/VolumeUp';
-import GppMaybe from '@material-ui/icons/VolumeUp';
-
+import { ShieldOutlined, GppGood, Coronavirus, GppMaybe } from '@mui/icons-material';
 import {
     AV_CHECK_STATE_CLEAN,
     AV_CHECK_STATE_DEFAULT,

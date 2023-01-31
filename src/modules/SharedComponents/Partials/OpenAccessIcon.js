@@ -4,16 +4,7 @@ import { locale } from 'locale';
 import { openAccessConfig } from 'config';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
-// import { LockOpen, Lock, LockClockOutlined } from '@mui/icons-material';
-// import LockOpen from '@mui/icons-material/LockOpen';
-// import Lock from '@mui/icons-material/Lock';
-// import LockClockOutlined from '@mui/icons-material/LockClockOutlined';
-// import LockOpen from '../Icons/LockOpen';
-// import Lock from '../Icons/Lock';
-// import LockClockOutlined from '../Icons/LockClock';
-import Lock from '@material-ui/icons/VolumeUp';
-import LockOpen from '@material-ui/icons/VolumeUp';
-import LockClockOutlined from '@material-ui/icons/VolumeUp';
+import { LockOpen, Lock, LockClockOutlined } from '@mui/icons-material';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
