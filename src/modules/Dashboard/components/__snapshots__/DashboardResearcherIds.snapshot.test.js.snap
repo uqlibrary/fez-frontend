@@ -7,7 +7,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -20,7 +20,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -32,7 +32,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -45,7 +45,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -57,7 +57,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -70,7 +70,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -82,7 +82,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
     id="orcid"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
     >
       <div
@@ -95,7 +95,7 @@ exports[`Dashboard Researcher IDs test Render the authors Researcher IDs as expe
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -107,7 +107,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -120,7 +120,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 1`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -132,7 +132,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -145,7 +145,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 2`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -157,7 +157,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -170,7 +170,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 3`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -182,7 +182,7 @@ exports[`Dashboard Researcher IDs test Testing auth internal links 5`] = `
   id="orcid"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabIndex="0"
+  tabIndex={0}
   title="You are not linked to ORCID - Click for more information"
 >
   <div
@@ -199,7 +199,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -212,7 +212,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 1`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -224,7 +224,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -237,7 +237,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 2`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -249,7 +249,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -262,7 +262,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 3`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -274,7 +274,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
     id="orcid"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your ORCID ID is 0000-0001-1111-1111 - Click to review"
     >
       <div
@@ -287,7 +287,7 @@ exports[`Dashboard Researcher IDs test Testing orcid caption 4`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -299,7 +299,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
     id="researcher"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Researcher (ISI) ID is A-1137-2007 - Click to review"
     >
       <div
@@ -312,7 +312,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 1`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -324,7 +324,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
     id="scopus"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Scopus ID is 35478294000 - Click to review"
     >
       <div
@@ -337,7 +337,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 2`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -349,7 +349,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
     id="google_scholar"
     openInNewIcon={false}
   >
-    <WithStyles(ForwardRef(Tooltip))
+    <ForwardRef(Tooltip)
       title="Your Google Scholar ID is kUemDfMAAAAJ - Click to review"
     >
       <div
@@ -362,7 +362,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 3`] = `
           }
         }
       />
-    </WithStyles(ForwardRef(Tooltip))>
+    </ForwardRef(Tooltip)>
   </ExternalLink>
 </Fragment>
 `;
@@ -374,7 +374,7 @@ exports[`Dashboard Researcher IDs test Testing unauth internal links 5`] = `
   id="orcid"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabIndex="0"
+  tabIndex={0}
   title="You are not linked to ORCID - Click for more information"
 >
   <div

@@ -1,6 +1,6 @@
 import React from 'react';
 import FavouriteSearchList from './FavouriteSearchList';
-import { render, fireEvent, act } from 'test-utils';
+import { render, AllTheProviders, fireEvent, act } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
 function setup(testProps = {}, renderer = render) {
@@ -11,7 +11,11 @@ function setup(testProps = {}, renderer = render) {
         ...testProps,
     };
 
-    return renderer(<FavouriteSearchList {...props} />);
+    return renderer(
+        <AllTheProviders>
+            <FavouriteSearchList {...props} />
+        </AllTheProviders>,
+    );
 }
 
 describe('FavouriteSearchList', () => {

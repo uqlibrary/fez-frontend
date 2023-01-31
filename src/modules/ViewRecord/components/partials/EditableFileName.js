@@ -122,7 +122,14 @@ const EditableFileName = ({
         <>
             {!isEditing ? (
                 <>
-                    <Grid container alignItems={'center'} wrap="nowrap" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+                    <Grid
+                        container
+                        alignItems={'center'}
+                        wrap="nowrap"
+                        sx={{ display: { xs: 'none', md: 'flex' } }}
+                        id={`${props.id}ContainerDesktop`}
+                        data-testid={`${props.id}ContainerDesktop`}
+                    >
                         <Grid item xs={8} sx={{ display: 'flex', alignItems: 'center' }}>
                             {!!!isEdited && <FileName {...props} />}
                             {!!isEdited && (
@@ -160,7 +167,12 @@ const EditableFileName = ({
                         </Grid>
                     </Grid>
 
-                    <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>
+                    <Box
+                        component="span"
+                        sx={{ display: { xs: 'inline', md: 'none' } }}
+                        data-testid={`${props.id}ContainerMobile`}
+                        id={`${props.id}ContainerMobile`}
+                    >
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
                             <Typography

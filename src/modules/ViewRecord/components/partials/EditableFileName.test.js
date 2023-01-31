@@ -1,19 +1,11 @@
 import React from 'react';
-import { rtlRender, fireEvent, act, AllTheProviders } from 'test-utils';
+import { rtlRender, fireEvent, act, AllTheProviders, within } from 'test-utils';
 
 import EditableFileName from './EditableFileName';
 
 import { journalArticle } from 'mock/data/testing/records';
+import createMatchMedia from 'helpers/createMatchMedia';
 
-import mediaQuery from 'css-mediaquery';
-
-const createMatchMedia = width => {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-};
 const id = 'test-file-name';
 const editId = `${id}-edit`;
 const resetId = `${id}-reset`;
@@ -46,16 +38,18 @@ function setup(testProps = {}, renderer = rtlRender) {
     );
 }
 
-describe('Editable File Name Component ', () => {
+describe('Editable File Name Component on Desktop', () => {
     beforeAll(() => {
         window.matchMedia = createMatchMedia(1024);
     });
 
     it('should render a filename with edit control', () => {
-        const { getByTestId, getByText } = setup({});
-
-        expect(getByText('test.jpg')).toBeInTheDocument();
-        expect(getByTestId(editId)).toBeInTheDocument();
+        const { getByTestId } = setup({});
+        // Note, all tests in this file are for desktop breakpoints.
+        // Rename functionality is not enabled for mobile devices.
+        const container = getByTestId(`${id}ContainerDesktop`);
+        expect(within(container).getByText('test.jpg')).toBeInTheDocument();
+        expect(within(container).getByTestId(editId)).toBeInTheDocument();
     });
 
     it('should handle editing a filename', () => {
@@ -165,7 +159,7 @@ describe('Editable File Name Component ', () => {
     });
 
     it('should handle cancel editing a filename before prior rename', () => {
-        const { getByTestId, queryByTestId, getByText } = setup();
+        const { getByTestId, queryByTestId } = setup();
 
         expect(getByTestId(editId)).toBeInTheDocument();
 
@@ -182,7 +176,8 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(cancelId));
         });
 
-        expect(getByText('test.jpg')).toBeInTheDocument();
+        const container = getByTestId(`${id}ContainerDesktop`);
+        expect(within(container).getByText('test.jpg')).toBeInTheDocument();
 
         expect(queryByTestId(editingId)).not.toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();
@@ -190,7 +185,7 @@ describe('Editable File Name Component ', () => {
 
     it('should handle cancel editing a filename after already renamed', () => {
         const onFileSaveFilename = jest.fn();
-        const { rerender, getByTestId, queryByTestId, getByText } = setup({ onFileSaveFilename });
+        const { rerender, getByTestId, queryByTestId } = setup({ onFileSaveFilename });
 
         expect(getByTestId(editId)).toBeInTheDocument();
 
@@ -217,7 +212,8 @@ describe('Editable File Name Component ', () => {
             rerender,
         );
 
-        expect(getByText('renamed.jpg')).toBeInTheDocument();
+        let container = getByTestId(`${id}ContainerDesktop`);
+        expect(within(container).getByText('renamed.jpg')).toBeInTheDocument();
 
         act(() => {
             fireEvent.click(getByTestId(editId));
@@ -230,8 +226,10 @@ describe('Editable File Name Component ', () => {
             fireEvent.click(getByTestId(cancelId));
         });
 
+        // refresh handle
+        container = getByTestId(`${id}ContainerDesktop`);
         // should return page state to the previous edited filename
-        expect(getByText('renamed.jpg')).toBeInTheDocument();
+        expect(within(container).getByText('renamed.jpg')).toBeInTheDocument();
 
         expect(queryByTestId(editingId)).not.toBeInTheDocument();
         expect(getByTestId(editId)).toBeInTheDocument();

@@ -1,6 +1,6 @@
 import React from 'react';
 import AuthorLinking from './AuthorLinking';
-import { render, fireEvent } from 'test-utils';
+import { render, fireEvent, AllTheProviders } from 'test-utils';
 
 import * as Hook from 'hooks/useWidth';
 
@@ -18,7 +18,11 @@ function setup(testProps = {}) {
         },
         ...testProps,
     };
-    return render(<AuthorLinking {...props} />);
+    return render(
+        <AllTheProviders>
+            <AuthorLinking {...props} />
+        </AllTheProviders>,
+    );
 }
 
 // Authors
