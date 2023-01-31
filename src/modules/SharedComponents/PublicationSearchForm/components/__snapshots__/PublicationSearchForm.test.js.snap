@@ -7,23 +7,23 @@ exports[`PublicationSearchForm renders  component 1`] = `
   <form
     onSubmit={[MockFunction]}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           gutterBottom={true}
           id="search-description"
         >
           Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm={true}
         xs={12}
@@ -37,10 +37,44 @@ exports[`PublicationSearchForm renders  component 1`] = `
             Object {
               "$$typeof": Symbol(react.forward_ref),
               "propTypes": Object {
+                "FormHelperTextProps": [Function],
+                "InputLabelProps": [Function],
+                "InputProps": [Function],
+                "SelectProps": [Function],
+                "autoComplete": [Function],
+                "autoFocus": [Function],
+                "children": [Function],
+                "className": [Function],
                 "classes": [Function],
+                "color": [Function],
+                "defaultValue": [Function],
+                "disabled": [Function],
+                "error": [Function],
+                "fullWidth": [Function],
                 "help": [Function],
-                "innerRef": [Function],
+                "helperText": [Function],
+                "id": [Function],
+                "inputProps": [Function],
+                "inputRef": [Function],
+                "label": [Function],
+                "margin": [Function],
+                "maxRows": [Function],
+                "minRows": [Function],
+                "multiline": [Function],
+                "name": [Function],
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onFocus": [Function],
+                "placeholder": [Function],
+                "required": [Function],
+                "rows": [Function],
+                "select": [Function],
+                "size": [Function],
+                "sx": [Function],
                 "textFieldId": [Function],
+                "type": [Function],
+                "value": [Function],
+                "variant": [Function],
               },
               "render": [Function],
             }
@@ -56,13 +90,13 @@ exports[`PublicationSearchForm renders  component 1`] = `
             ]
           }
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           color="primary"
           disabled={false}
           fullWidth={true}
@@ -70,9 +104,9 @@ exports[`PublicationSearchForm renders  component 1`] = `
           variant="contained"
         >
           Search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </form>
 </StandardCard>
 `;
@@ -84,23 +118,23 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
   <form
     onSubmit={[MockFunction]}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       alignItems="center"
       container={true}
       spacing={2}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           gutterBottom={true}
           id="search-description"
         >
           Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm={true}
         xs={12}
@@ -114,10 +148,44 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
             Object {
               "$$typeof": Symbol(react.forward_ref),
               "propTypes": Object {
+                "FormHelperTextProps": [Function],
+                "InputLabelProps": [Function],
+                "InputProps": [Function],
+                "SelectProps": [Function],
+                "autoComplete": [Function],
+                "autoFocus": [Function],
+                "children": [Function],
+                "className": [Function],
                 "classes": [Function],
+                "color": [Function],
+                "defaultValue": [Function],
+                "disabled": [Function],
+                "error": [Function],
+                "fullWidth": [Function],
                 "help": [Function],
-                "innerRef": [Function],
+                "helperText": [Function],
+                "id": [Function],
+                "inputProps": [Function],
+                "inputRef": [Function],
+                "label": [Function],
+                "margin": [Function],
+                "maxRows": [Function],
+                "minRows": [Function],
+                "multiline": [Function],
+                "name": [Function],
+                "onBlur": [Function],
+                "onChange": [Function],
+                "onFocus": [Function],
+                "placeholder": [Function],
+                "required": [Function],
+                "rows": [Function],
+                "select": [Function],
+                "size": [Function],
+                "sx": [Function],
                 "textFieldId": [Function],
+                "type": [Function],
+                "value": [Function],
+                "variant": [Function],
               },
               "render": [Function],
             }
@@ -133,13 +201,13 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
             ]
           }
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           color="primary"
           disabled={false}
           fullWidth={true}
@@ -147,22 +215,22 @@ exports[`PublicationSearchForm renders  should display with skip search option 1
           variant="contained"
         >
           Search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           fullWidth={true}
           onClick={[MockFunction]}
           variant="text"
         >
           Skip search
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </form>
 </StandardCard>
 `;

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AudioDocumentForm renders  component 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={2}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -32,11 +32,11 @@ exports[`AudioDocumentForm renders  component 1`] = `
       }
       title="Audio document information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -46,10 +46,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -69,8 +103,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -79,10 +113,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -94,8 +162,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             placeholder="City, Country"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -104,10 +172,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -119,8 +221,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             placeholder="Type the name of the publisher or producer of the work."
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -130,10 +232,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -151,8 +287,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -173,8 +309,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -183,10 +319,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -200,11 +370,11 @@ exports[`AudioDocumentForm renders  component 1`] = `
             rows={3}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -302,8 +472,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
         showContributorAssignment={true}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -404,19 +574,19 @@ exports[`AudioDocumentForm renders  component 1`] = `
         showContributorAssignment={true}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Optional information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -425,10 +595,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -442,8 +646,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
             rows={1}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -452,10 +656,44 @@ exports[`AudioDocumentForm renders  component 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -472,19 +710,19 @@ exports[`AudioDocumentForm renders  component 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`AudioDocumentForm renders  component should render contributor assignment 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
   spacing={2}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -511,11 +749,11 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
       }
       title="Audio document information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -525,10 +763,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -548,8 +820,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -558,10 +830,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -573,8 +879,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             placeholder="City, Country"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -583,10 +889,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -598,8 +938,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             placeholder="Type the name of the publisher or producer of the work."
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -609,10 +949,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -630,8 +1004,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -652,8 +1026,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -662,10 +1036,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -679,11 +1087,11 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             rows={3}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -781,8 +1189,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
         showContributorAssignment={false}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -883,19 +1291,19 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
         showContributorAssignment={false}
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
     <StandardCard
       title="Optional information"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -904,10 +1312,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -921,8 +1363,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
             rows={1}
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -931,10 +1373,44 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -951,9 +1427,9 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

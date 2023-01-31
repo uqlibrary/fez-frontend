@@ -1,9 +1,13 @@
 import React from 'react';
-import { fireEvent, render } from 'test-utils';
+import { AllTheProviders, fireEvent, render } from 'test-utils';
 import { getId, SearchKeyword } from './SearchKeyword';
 
 const setup = state => {
-    return render(<SearchKeyword {...{ onKeywordClick: () => {}, ...state }} />);
+    return render(
+        <AllTheProviders>
+            <SearchKeyword {...{ onKeywordClick: () => {}, ...state }} />
+        </AllTheProviders>,
+    );
 };
 
 const keyword = 'test';

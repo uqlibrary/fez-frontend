@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button/Button';
+import Button from '@mui/material/Button';
 
 export class ThirdPartyLookupFormResult extends PureComponent {
     static propTypes = {
