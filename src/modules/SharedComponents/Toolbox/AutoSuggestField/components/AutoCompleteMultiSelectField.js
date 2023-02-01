@@ -71,7 +71,15 @@ export const AutoCompleteMultiSelectField = ({
                 id: `${autoCompleteMultiSelectFieldId}-options`,
                 'data-testid': `${autoCompleteMultiSelectFieldId}-options`,
             }}
-            {...(!!OptionTemplate ? { renderOption: option => <OptionTemplate option={option} /> } : {})}
+            {...(!!OptionTemplate
+                ? {
+                      renderOption: (props, option) => (
+                          <li {...props}>
+                              <OptionTemplate option={option} />
+                          </li>
+                      ),
+                  }
+                : {})}
             {...((!!defaultValue && { value: defaultValue }) || {})}
         />
     );
