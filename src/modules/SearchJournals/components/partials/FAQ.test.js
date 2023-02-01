@@ -1,11 +1,15 @@
 import React from 'react';
-import { fireEvent, render } from 'test-utils';
+import { fireEvent, render, AllTheProviders } from 'test-utils';
 
 import { FAQ } from './FAQ';
 import locale from '../../../../locale/components';
 
 function setup() {
-    return render(<FAQ />);
+    return render(
+        <AllTheProviders>
+            <FAQ />
+        </AllTheProviders>,
+    );
 }
 
 describe('FAQ partial', () => {

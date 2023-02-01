@@ -1,10 +1,14 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render, AllTheProviders } from 'test-utils';
 import { SelectedKeywords } from './SelectedKeywords';
 import locale from 'locale/components';
 
 const setup = state => {
-    return render(<SelectedKeywords {...{ onKeywordDelete: () => {}, ...state }} />);
+    return render(
+        <AllTheProviders>
+            <SelectedKeywords {...{ onKeywordDelete: () => {}, ...state }} />
+        </AllTheProviders>,
+    );
 };
 
 describe('SelectedKeywords', () => {

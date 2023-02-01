@@ -1,6 +1,6 @@
 import React from 'react';
 import BulkUpdatesList from './BulkUpdatesList';
-import { render } from 'test-utils';
+import { AllTheProviders, render } from 'test-utils';
 
 function setup(testProps = {}, renderer = render) {
     const props = {
@@ -8,7 +8,11 @@ function setup(testProps = {}, renderer = render) {
         ...testProps,
     };
 
-    return renderer(<BulkUpdatesList {...props} />);
+    return renderer(
+        <AllTheProviders>
+            <BulkUpdatesList {...props} />
+        </AllTheProviders>,
+    );
 }
 
 describe('BulkUpdatesList', () => {
