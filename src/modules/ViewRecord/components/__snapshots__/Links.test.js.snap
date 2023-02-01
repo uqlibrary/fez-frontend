@@ -4898,7 +4898,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             placement="left"
                                                             title="Open Access - PMC - Free to read"
                                                           >
-                                                            <ForwardRef(VolumeUpIcon)
+                                                            <ForwardRef
                                                               aria-describedby={null}
                                                               className="makeStyles-svg-13 makeStyles-svg-14"
                                                               onBlur={[Function]}
@@ -4909,9 +4909,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                               onTouchStart={[Function]}
                                                               title="Open Access - PMC - Free to read"
                                                             >
-                                                              <WithStyles(ForwardRef(SvgIcon))
+                                                              <svg
                                                                 aria-describedby={null}
                                                                 className="makeStyles-svg-13 makeStyles-svg-14"
+                                                                fill="#000000"
+                                                                height="24px"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
                                                                 onMouseLeave={[Function]}
@@ -4919,66 +4921,20 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 onTouchEnd={[Function]}
                                                                 onTouchStart={[Function]}
                                                                 title="Open Access - PMC - Free to read"
+                                                                viewBox="0 0 24 24"
+                                                                width="24px"
+                                                                xmlns="http://www.w3.org/2000/svg"
                                                               >
-                                                                <ForwardRef(SvgIcon)
-                                                                  aria-describedby={null}
-                                                                  className="makeStyles-svg-13 makeStyles-svg-14"
-                                                                  classes={
-                                                                    Object {
-                                                                      "colorAction": "MuiSvgIcon-colorAction",
-                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                      "colorError": "MuiSvgIcon-colorError",
-                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                      "root": "MuiSvgIcon-root",
-                                                                    }
-                                                                  }
-                                                                  onBlur={[Function]}
-                                                                  onFocus={[Function]}
-                                                                  onMouseLeave={[Function]}
-                                                                  onMouseOver={[Function]}
-                                                                  onTouchEnd={[Function]}
-                                                                  onTouchStart={[Function]}
-                                                                  title="Open Access - PMC - Free to read"
-                                                                >
-                                                                  <svg
-                                                                    aria-describedby={null}
-                                                                    aria-hidden={true}
-                                                                    className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-14"
-                                                                    focusable="false"
-                                                                    onBlur={[Function]}
-                                                                    onFocus={[Function]}
-                                                                    onMouseLeave={[Function]}
-                                                                    onMouseOver={[Function]}
-                                                                    onTouchEnd={[Function]}
-                                                                    onTouchStart={[Function]}
-                                                                    title="Open Access - PMC - Free to read"
-                                                                    viewBox="0 0 24 24"
-                                                                  >
-                                                                    <path
-                                                                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                    />
-                                                                  </svg>
-                                                                </ForwardRef(SvgIcon)>
-                                                              </WithStyles(ForwardRef(SvgIcon))>
-                                                            </ForwardRef(VolumeUpIcon)>
+                                                                <path
+                                                                  d="M0 0h24v24H0V0z"
+                                                                  fill="none"
+                                                                />
+                                                                <path
+                                                                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                                />
+                                                              </svg>
+                                                            </ForwardRef>
                                                             <ForwardRef(Popper)
-                                                              anchorEl={
-                                                                <svg
-                                                                  aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-14"
-                                                                  focusable="false"
-                                                                  title="Open Access - PMC - Free to read"
-                                                                  viewBox="0 0 24 24"
-                                                                >
-                                                                  <path
-                                                                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                  />
-                                                                </svg>
-                                                              }
                                                               className="MuiTooltip-popper"
                                                               id={null}
                                                               open={false}
@@ -6488,7 +6444,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             placement="left"
                                                             title="Open Access - Free to read"
                                                           >
-                                                            <ForwardRef(VolumeUpIcon)
+                                                            <ForwardRef
                                                               aria-describedby={null}
                                                               className="makeStyles-svg-13 makeStyles-svg-18"
                                                               onBlur={[Function]}
@@ -6499,9 +6455,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                               onTouchStart={[Function]}
                                                               title="Open Access - Free to read"
                                                             >
-                                                              <WithStyles(ForwardRef(SvgIcon))
+                                                              <svg
                                                                 aria-describedby={null}
                                                                 className="makeStyles-svg-13 makeStyles-svg-18"
+                                                                fill="#000000"
+                                                                height="24px"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
                                                                 onMouseLeave={[Function]}
@@ -6509,66 +6467,20 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 onTouchEnd={[Function]}
                                                                 onTouchStart={[Function]}
                                                                 title="Open Access - Free to read"
+                                                                viewBox="0 0 24 24"
+                                                                width="24px"
+                                                                xmlns="http://www.w3.org/2000/svg"
                                                               >
-                                                                <ForwardRef(SvgIcon)
-                                                                  aria-describedby={null}
-                                                                  className="makeStyles-svg-13 makeStyles-svg-18"
-                                                                  classes={
-                                                                    Object {
-                                                                      "colorAction": "MuiSvgIcon-colorAction",
-                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                      "colorError": "MuiSvgIcon-colorError",
-                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                      "root": "MuiSvgIcon-root",
-                                                                    }
-                                                                  }
-                                                                  onBlur={[Function]}
-                                                                  onFocus={[Function]}
-                                                                  onMouseLeave={[Function]}
-                                                                  onMouseOver={[Function]}
-                                                                  onTouchEnd={[Function]}
-                                                                  onTouchStart={[Function]}
-                                                                  title="Open Access - Free to read"
-                                                                >
-                                                                  <svg
-                                                                    aria-describedby={null}
-                                                                    aria-hidden={true}
-                                                                    className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-18"
-                                                                    focusable="false"
-                                                                    onBlur={[Function]}
-                                                                    onFocus={[Function]}
-                                                                    onMouseLeave={[Function]}
-                                                                    onMouseOver={[Function]}
-                                                                    onTouchEnd={[Function]}
-                                                                    onTouchStart={[Function]}
-                                                                    title="Open Access - Free to read"
-                                                                    viewBox="0 0 24 24"
-                                                                  >
-                                                                    <path
-                                                                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                    />
-                                                                  </svg>
-                                                                </ForwardRef(SvgIcon)>
-                                                              </WithStyles(ForwardRef(SvgIcon))>
-                                                            </ForwardRef(VolumeUpIcon)>
+                                                                <path
+                                                                  d="M0 0h24v24H0V0z"
+                                                                  fill="none"
+                                                                />
+                                                                <path
+                                                                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                                />
+                                                              </svg>
+                                                            </ForwardRef>
                                                             <ForwardRef(Popper)
-                                                              anchorEl={
-                                                                <svg
-                                                                  aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-18"
-                                                                  focusable="false"
-                                                                  title="Open Access - Free to read"
-                                                                  viewBox="0 0 24 24"
-                                                                >
-                                                                  <path
-                                                                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                  />
-                                                                </svg>
-                                                              }
                                                               className="MuiTooltip-popper"
                                                               id={null}
                                                               open={false}
@@ -7362,7 +7274,7 @@ exports[`Component Links  Full mount render 1`] = `
                                                             placement="left"
                                                             title="Open Access - Free to read"
                                                           >
-                                                            <ForwardRef(VolumeUpIcon)
+                                                            <ForwardRef
                                                               aria-describedby={null}
                                                               className="makeStyles-svg-13 makeStyles-svg-20"
                                                               onBlur={[Function]}
@@ -7373,9 +7285,11 @@ exports[`Component Links  Full mount render 1`] = `
                                                               onTouchStart={[Function]}
                                                               title="Open Access - Free to read"
                                                             >
-                                                              <WithStyles(ForwardRef(SvgIcon))
+                                                              <svg
                                                                 aria-describedby={null}
                                                                 className="makeStyles-svg-13 makeStyles-svg-20"
+                                                                fill="#000000"
+                                                                height="24px"
                                                                 onBlur={[Function]}
                                                                 onFocus={[Function]}
                                                                 onMouseLeave={[Function]}
@@ -7383,66 +7297,20 @@ exports[`Component Links  Full mount render 1`] = `
                                                                 onTouchEnd={[Function]}
                                                                 onTouchStart={[Function]}
                                                                 title="Open Access - Free to read"
+                                                                viewBox="0 0 24 24"
+                                                                width="24px"
+                                                                xmlns="http://www.w3.org/2000/svg"
                                                               >
-                                                                <ForwardRef(SvgIcon)
-                                                                  aria-describedby={null}
-                                                                  className="makeStyles-svg-13 makeStyles-svg-20"
-                                                                  classes={
-                                                                    Object {
-                                                                      "colorAction": "MuiSvgIcon-colorAction",
-                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                      "colorError": "MuiSvgIcon-colorError",
-                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                      "root": "MuiSvgIcon-root",
-                                                                    }
-                                                                  }
-                                                                  onBlur={[Function]}
-                                                                  onFocus={[Function]}
-                                                                  onMouseLeave={[Function]}
-                                                                  onMouseOver={[Function]}
-                                                                  onTouchEnd={[Function]}
-                                                                  onTouchStart={[Function]}
-                                                                  title="Open Access - Free to read"
-                                                                >
-                                                                  <svg
-                                                                    aria-describedby={null}
-                                                                    aria-hidden={true}
-                                                                    className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-20"
-                                                                    focusable="false"
-                                                                    onBlur={[Function]}
-                                                                    onFocus={[Function]}
-                                                                    onMouseLeave={[Function]}
-                                                                    onMouseOver={[Function]}
-                                                                    onTouchEnd={[Function]}
-                                                                    onTouchStart={[Function]}
-                                                                    title="Open Access - Free to read"
-                                                                    viewBox="0 0 24 24"
-                                                                  >
-                                                                    <path
-                                                                      d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                    />
-                                                                  </svg>
-                                                                </ForwardRef(SvgIcon)>
-                                                              </WithStyles(ForwardRef(SvgIcon))>
-                                                            </ForwardRef(VolumeUpIcon)>
+                                                                <path
+                                                                  d="M0 0h24v24H0V0z"
+                                                                  fill="none"
+                                                                />
+                                                                <path
+                                                                  d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                                />
+                                                              </svg>
+                                                            </ForwardRef>
                                                             <ForwardRef(Popper)
-                                                              anchorEl={
-                                                                <svg
-                                                                  aria-hidden="true"
-                                                                  class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-20"
-                                                                  focusable="false"
-                                                                  title="Open Access - Free to read"
-                                                                  viewBox="0 0 24 24"
-                                                                >
-                                                                  <path
-                                                                    d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                  />
-                                                                </svg>
-                                                              }
                                                               className="MuiTooltip-popper"
                                                               id={null}
                                                               open={false}
@@ -9938,7 +9806,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         placement="left"
                                                         title="Open Access - PMC - Free to read"
                                                       >
-                                                        <ForwardRef(VolumeUpIcon)
+                                                        <ForwardRef
                                                           aria-describedby={null}
                                                           className="makeStyles-svg-13 makeStyles-svg-30"
                                                           onBlur={[Function]}
@@ -9949,9 +9817,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           onTouchStart={[Function]}
                                                           title="Open Access - PMC - Free to read"
                                                         >
-                                                          <WithStyles(ForwardRef(SvgIcon))
+                                                          <svg
                                                             aria-describedby={null}
                                                             className="makeStyles-svg-13 makeStyles-svg-30"
+                                                            fill="#000000"
+                                                            height="24px"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
                                                             onMouseLeave={[Function]}
@@ -9959,66 +9829,20 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             onTouchEnd={[Function]}
                                                             onTouchStart={[Function]}
                                                             title="Open Access - PMC - Free to read"
+                                                            viewBox="0 0 24 24"
+                                                            width="24px"
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <ForwardRef(SvgIcon)
-                                                              aria-describedby={null}
-                                                              className="makeStyles-svg-13 makeStyles-svg-30"
-                                                              classes={
-                                                                Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                  "colorError": "MuiSvgIcon-colorError",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                  "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                  "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                  "root": "MuiSvgIcon-root",
-                                                                }
-                                                              }
-                                                              onBlur={[Function]}
-                                                              onFocus={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              onMouseOver={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                              onTouchStart={[Function]}
-                                                              title="Open Access - PMC - Free to read"
-                                                            >
-                                                              <svg
-                                                                aria-describedby={null}
-                                                                aria-hidden={true}
-                                                                className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-30"
-                                                                focusable="false"
-                                                                onBlur={[Function]}
-                                                                onFocus={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                onMouseOver={[Function]}
-                                                                onTouchEnd={[Function]}
-                                                                onTouchStart={[Function]}
-                                                                title="Open Access - PMC - Free to read"
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                />
-                                                              </svg>
-                                                            </ForwardRef(SvgIcon)>
-                                                          </WithStyles(ForwardRef(SvgIcon))>
-                                                        </ForwardRef(VolumeUpIcon)>
+                                                            <path
+                                                              d="M0 0h24v24H0V0z"
+                                                              fill="none"
+                                                            />
+                                                            <path
+                                                              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                            />
+                                                          </svg>
+                                                        </ForwardRef>
                                                         <ForwardRef(Popper)
-                                                          anchorEl={
-                                                            <svg
-                                                              aria-hidden="true"
-                                                              class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-30"
-                                                              focusable="false"
-                                                              title="Open Access - PMC - Free to read"
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                              />
-                                                            </svg>
-                                                          }
                                                           className="MuiTooltip-popper"
                                                           id={null}
                                                           open={false}
@@ -10816,7 +10640,7 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                         placement="left"
                                                         title="Open Access - DOI - Free to read"
                                                       >
-                                                        <ForwardRef(VolumeUpIcon)
+                                                        <ForwardRef
                                                           aria-describedby={null}
                                                           className="makeStyles-svg-13 makeStyles-svg-32"
                                                           onBlur={[Function]}
@@ -10827,9 +10651,11 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                           onTouchStart={[Function]}
                                                           title="Open Access - DOI - Free to read"
                                                         >
-                                                          <WithStyles(ForwardRef(SvgIcon))
+                                                          <svg
                                                             aria-describedby={null}
                                                             className="makeStyles-svg-13 makeStyles-svg-32"
+                                                            fill="#000000"
+                                                            height="24px"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
                                                             onMouseLeave={[Function]}
@@ -10837,66 +10663,20 @@ exports[`Component Links  should render 3 not OA links and DOI and PMC links wit
                                                             onTouchEnd={[Function]}
                                                             onTouchStart={[Function]}
                                                             title="Open Access - DOI - Free to read"
+                                                            viewBox="0 0 24 24"
+                                                            width="24px"
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <ForwardRef(SvgIcon)
-                                                              aria-describedby={null}
-                                                              className="makeStyles-svg-13 makeStyles-svg-32"
-                                                              classes={
-                                                                Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                  "colorError": "MuiSvgIcon-colorError",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                  "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                  "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                  "root": "MuiSvgIcon-root",
-                                                                }
-                                                              }
-                                                              onBlur={[Function]}
-                                                              onFocus={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              onMouseOver={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                              onTouchStart={[Function]}
-                                                              title="Open Access - DOI - Free to read"
-                                                            >
-                                                              <svg
-                                                                aria-describedby={null}
-                                                                aria-hidden={true}
-                                                                className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-32"
-                                                                focusable="false"
-                                                                onBlur={[Function]}
-                                                                onFocus={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                onMouseOver={[Function]}
-                                                                onTouchEnd={[Function]}
-                                                                onTouchStart={[Function]}
-                                                                title="Open Access - DOI - Free to read"
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                />
-                                                              </svg>
-                                                            </ForwardRef(SvgIcon)>
-                                                          </WithStyles(ForwardRef(SvgIcon))>
-                                                        </ForwardRef(VolumeUpIcon)>
+                                                            <path
+                                                              d="M0 0h24v24H0V0z"
+                                                              fill="none"
+                                                            />
+                                                            <path
+                                                              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                            />
+                                                          </svg>
+                                                        </ForwardRef>
                                                         <ForwardRef(Popper)
-                                                          anchorEl={
-                                                            <svg
-                                                              aria-hidden="true"
-                                                              class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-32"
-                                                              focusable="false"
-                                                              title="Open Access - DOI - Free to read"
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                              />
-                                                            </svg>
-                                                          }
                                                           className="MuiTooltip-popper"
                                                           id={null}
                                                           open={false}
@@ -15306,7 +15086,7 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                         placement="left"
                                                         title="Open Access - PMC - Free to read"
                                                       >
-                                                        <ForwardRef(VolumeUpIcon)
+                                                        <ForwardRef
                                                           aria-describedby={null}
                                                           className="makeStyles-svg-13 makeStyles-svg-40"
                                                           onBlur={[Function]}
@@ -15317,9 +15097,11 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                           onTouchStart={[Function]}
                                                           title="Open Access - PMC - Free to read"
                                                         >
-                                                          <WithStyles(ForwardRef(SvgIcon))
+                                                          <svg
                                                             aria-describedby={null}
                                                             className="makeStyles-svg-13 makeStyles-svg-40"
+                                                            fill="#000000"
+                                                            height="24px"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
                                                             onMouseLeave={[Function]}
@@ -15327,66 +15109,20 @@ exports[`Component Links  should render 3 not OA links and PMC link with OA for 
                                                             onTouchEnd={[Function]}
                                                             onTouchStart={[Function]}
                                                             title="Open Access - PMC - Free to read"
+                                                            viewBox="0 0 24 24"
+                                                            width="24px"
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <ForwardRef(SvgIcon)
-                                                              aria-describedby={null}
-                                                              className="makeStyles-svg-13 makeStyles-svg-40"
-                                                              classes={
-                                                                Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                  "colorError": "MuiSvgIcon-colorError",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                  "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                  "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                  "root": "MuiSvgIcon-root",
-                                                                }
-                                                              }
-                                                              onBlur={[Function]}
-                                                              onFocus={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              onMouseOver={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                              onTouchStart={[Function]}
-                                                              title="Open Access - PMC - Free to read"
-                                                            >
-                                                              <svg
-                                                                aria-describedby={null}
-                                                                aria-hidden={true}
-                                                                className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-40"
-                                                                focusable="false"
-                                                                onBlur={[Function]}
-                                                                onFocus={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                onMouseOver={[Function]}
-                                                                onTouchEnd={[Function]}
-                                                                onTouchStart={[Function]}
-                                                                title="Open Access - PMC - Free to read"
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                />
-                                                              </svg>
-                                                            </ForwardRef(SvgIcon)>
-                                                          </WithStyles(ForwardRef(SvgIcon))>
-                                                        </ForwardRef(VolumeUpIcon)>
+                                                            <path
+                                                              d="M0 0h24v24H0V0z"
+                                                              fill="none"
+                                                            />
+                                                            <path
+                                                              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                            />
+                                                          </svg>
+                                                        </ForwardRef>
                                                         <ForwardRef(Popper)
-                                                          anchorEl={
-                                                            <svg
-                                                              aria-hidden="true"
-                                                              class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-40"
-                                                              focusable="false"
-                                                              title="Open Access - PMC - Free to read"
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                              />
-                                                            </svg>
-                                                          }
                                                           className="MuiTooltip-popper"
                                                           id={null}
                                                           open={false}
@@ -19666,7 +19402,7 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                         placement="left"
                                                         title="Open Access - PMC - Free to read"
                                                       >
-                                                        <ForwardRef(VolumeUpIcon)
+                                                        <ForwardRef
                                                           aria-describedby={null}
                                                           className="makeStyles-svg-13 makeStyles-svg-48"
                                                           onBlur={[Function]}
@@ -19677,9 +19413,11 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                           onTouchStart={[Function]}
                                                           title="Open Access - PMC - Free to read"
                                                         >
-                                                          <WithStyles(ForwardRef(SvgIcon))
+                                                          <svg
                                                             aria-describedby={null}
                                                             className="makeStyles-svg-13 makeStyles-svg-48"
+                                                            fill="#000000"
+                                                            height="24px"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
                                                             onMouseLeave={[Function]}
@@ -19687,66 +19425,20 @@ exports[`Component Links  should render 3 not OA links and PMC with OA and DOI l
                                                             onTouchEnd={[Function]}
                                                             onTouchStart={[Function]}
                                                             title="Open Access - PMC - Free to read"
+                                                            viewBox="0 0 24 24"
+                                                            width="24px"
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <ForwardRef(SvgIcon)
-                                                              aria-describedby={null}
-                                                              className="makeStyles-svg-13 makeStyles-svg-48"
-                                                              classes={
-                                                                Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                  "colorError": "MuiSvgIcon-colorError",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                  "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                  "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                  "root": "MuiSvgIcon-root",
-                                                                }
-                                                              }
-                                                              onBlur={[Function]}
-                                                              onFocus={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              onMouseOver={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                              onTouchStart={[Function]}
-                                                              title="Open Access - PMC - Free to read"
-                                                            >
-                                                              <svg
-                                                                aria-describedby={null}
-                                                                aria-hidden={true}
-                                                                className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-48"
-                                                                focusable="false"
-                                                                onBlur={[Function]}
-                                                                onFocus={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                onMouseOver={[Function]}
-                                                                onTouchEnd={[Function]}
-                                                                onTouchStart={[Function]}
-                                                                title="Open Access - PMC - Free to read"
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                />
-                                                              </svg>
-                                                            </ForwardRef(SvgIcon)>
-                                                          </WithStyles(ForwardRef(SvgIcon))>
-                                                        </ForwardRef(VolumeUpIcon)>
+                                                            <path
+                                                              d="M0 0h24v24H0V0z"
+                                                              fill="none"
+                                                            />
+                                                            <path
+                                                              d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h2c0-1.66 1.34-3 3-3s3 1.34 3 3v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+                                                            />
+                                                          </svg>
+                                                        </ForwardRef>
                                                         <ForwardRef(Popper)
-                                                          anchorEl={
-                                                            <svg
-                                                              aria-hidden="true"
-                                                              class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-48"
-                                                              focusable="false"
-                                                              title="Open Access - PMC - Free to read"
-                                                              viewBox="0 0 24 24"
-                                                            >
-                                                              <path
-                                                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                              />
-                                                            </svg>
-                                                          }
                                                           className="MuiTooltip-popper"
                                                           id={null}
                                                           open={false}
@@ -24874,7 +24566,7 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                         placement="left"
                                                         title="DOI - Open access after 24th December 2020"
                                                       >
-                                                        <ForwardRef(VolumeUpIcon)
+                                                        <ForwardRef
                                                           aria-describedby={null}
                                                           className="makeStyles-svg-13 makeStyles-svg-22"
                                                           onBlur={[Function]}
@@ -24885,9 +24577,12 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                           onTouchStart={[Function]}
                                                           title="DOI - Open access after 24th December 2020"
                                                         >
-                                                          <WithStyles(ForwardRef(SvgIcon))
+                                                          <svg
                                                             aria-describedby={null}
                                                             className="makeStyles-svg-13 makeStyles-svg-22"
+                                                            enableBackground="new 0 0 24 24"
+                                                            fill="#000000"
+                                                            height="24px"
                                                             onBlur={[Function]}
                                                             onFocus={[Function]}
                                                             onMouseLeave={[Function]}
@@ -24895,66 +24590,29 @@ exports[`Component Links  should render list of 3 not OA links and DOI link with
                                                             onTouchEnd={[Function]}
                                                             onTouchStart={[Function]}
                                                             title="DOI - Open access after 24th December 2020"
+                                                            viewBox="0 0 24 24"
+                                                            width="24px"
+                                                            xmlns="http://www.w3.org/2000/svg"
                                                           >
-                                                            <ForwardRef(SvgIcon)
-                                                              aria-describedby={null}
-                                                              className="makeStyles-svg-13 makeStyles-svg-22"
-                                                              classes={
-                                                                Object {
-                                                                  "colorAction": "MuiSvgIcon-colorAction",
-                                                                  "colorDisabled": "MuiSvgIcon-colorDisabled",
-                                                                  "colorError": "MuiSvgIcon-colorError",
-                                                                  "colorPrimary": "MuiSvgIcon-colorPrimary",
-                                                                  "colorSecondary": "MuiSvgIcon-colorSecondary",
-                                                                  "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
-                                                                  "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
-                                                                  "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
-                                                                  "root": "MuiSvgIcon-root",
-                                                                }
-                                                              }
-                                                              onBlur={[Function]}
-                                                              onFocus={[Function]}
-                                                              onMouseLeave={[Function]}
-                                                              onMouseOver={[Function]}
-                                                              onTouchEnd={[Function]}
-                                                              onTouchStart={[Function]}
-                                                              title="DOI - Open access after 24th December 2020"
-                                                            >
-                                                              <svg
-                                                                aria-describedby={null}
-                                                                aria-hidden={true}
-                                                                className="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-22"
-                                                                focusable="false"
-                                                                onBlur={[Function]}
-                                                                onFocus={[Function]}
-                                                                onMouseLeave={[Function]}
-                                                                onMouseOver={[Function]}
-                                                                onTouchEnd={[Function]}
-                                                                onTouchStart={[Function]}
-                                                                title="DOI - Open access after 24th December 2020"
-                                                                viewBox="0 0 24 24"
-                                                              >
-                                                                <path
-                                                                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
-                                                                />
-                                                              </svg>
-                                                            </ForwardRef(SvgIcon)>
-                                                          </WithStyles(ForwardRef(SvgIcon))>
-                                                        </ForwardRef(VolumeUpIcon)>
-                                                        <ForwardRef(Popper)
-                                                          anchorEl={
-                                                            <svg
-                                                              aria-hidden="true"
-                                                              class="MuiSvgIcon-root makeStyles-svg-13 makeStyles-svg-22"
-                                                              focusable="false"
-                                                              title="DOI - Open access after 24th December 2020"
-                                                              viewBox="0 0 24 24"
-                                                            >
+                                                            <g>
                                                               <path
-                                                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"
+                                                                d="M0,0h24v24H0V0z"
+                                                                fill="none"
                                                               />
-                                                            </svg>
-                                                          }
+                                                            </g>
+                                                            <g>
+                                                              <g>
+                                                                <path
+                                                                  d="M6,20V10h12v1c0.7,0,1.37,0.1,2,0.29V10c0-1.1-0.9-2-2-2h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10 c0,1.1,0.9,2,2,2h6.26c-0.42-0.6-0.75-1.28-0.97-2H6z M9,6c0-1.66,1.34-3,3-3s3,1.34,3,3v2H9V6z"
+                                                                />
+                                                                <path
+                                                                  d="M18,13c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S20.76,13,18,13z M19.65,20.35l-2.15-2.15V15h1v2.79l1.85,1.85 L19.65,20.35z"
+                                                                />
+                                                              </g>
+                                                            </g>
+                                                          </svg>
+                                                        </ForwardRef>
+                                                        <ForwardRef(Popper)
                                                           className="MuiTooltip-popper"
                                                           id={null}
                                                           open={false}

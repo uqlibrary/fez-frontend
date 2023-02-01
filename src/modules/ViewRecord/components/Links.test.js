@@ -3,13 +3,8 @@ import Links from './Links';
 import { recordLinks } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
-// import { LockClockOutlined, LockOpen } from '@mui/icons-material';
-// import LockOpen from '@mui/icons-material/LockOpen';
-// import LockClockOutlined from '@mui/icons-material/LockClockOutlined';
-// import { ReactComponent as LockOpen } from '../../../images/material-icons/lock_open_black_24dp.svg';
-// import { ReactComponent as LockClockOutlined } from '../../../images/material-icons/lock_clock_black_24dp.svg';
-import LockOpen from '@material-ui/icons/VolumeUp';
-import LockClockOutlined from '@material-ui/icons/VolumeUp';
+import LockOpen from '../../SharedComponents/Icons/MaterialDesign/LockOpen';
+import LockClockOutlined from '../../SharedComponents/Icons/MaterialDesign/LockClock';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
