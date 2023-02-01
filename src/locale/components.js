@@ -2355,7 +2355,7 @@ export default {
                     clean: date => `Clean of threats. Scanned at ${date}`,
                     infected: date => `Flagged as infected at ${date}`,
                     unscannable: () => 'File cannot be scanned for threats. e.g., too big, archive, encrypted',
-                    default: () => 'Not yet scanned for virus',
+                    default: () => 'Not yet scanned for threats',
                 },
             },
         },
