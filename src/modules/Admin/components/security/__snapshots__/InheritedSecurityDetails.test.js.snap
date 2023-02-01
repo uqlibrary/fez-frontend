@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InheritedSecurityDetails component should render collections correctly 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   item={true}
   style={
     Object {
@@ -11,7 +11,7 @@ exports[`InheritedSecurityDetails component should render collections correctly 
   }
   xs={12}
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     style={
       Object {
         "marginTop": -8,
@@ -20,8 +20,8 @@ exports[`InheritedSecurityDetails component should render collections correctly 
     variant="h6"
   >
     Inherited security policy details
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Typography)>
+  <ForwardRef(Grid)
     container={true}
     spacing={1}
     style={
@@ -30,82 +30,82 @@ exports[`InheritedSecurityDetails component should render collections correctly 
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:11111
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription)
           selectedPolicyKey={2}
         />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:22222
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Another test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription)
           selectedPolicyKey={4}
         />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   item={true}
   style={
     Object {
@@ -115,7 +115,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
   }
   xs={12}
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     style={
       Object {
         "marginTop": -8,
@@ -124,8 +124,8 @@ exports[`InheritedSecurityDetails component should render collections for datast
     variant="h6"
   >
     Inherited datastream security policy details
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Typography)>
+  <ForwardRef(Grid)
     container={true}
     spacing={1}
     style={
@@ -134,82 +134,82 @@ exports[`InheritedSecurityDetails component should render collections for datast
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:11111
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription)
           selectedPolicyKey={2}
         />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:22222
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Another test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription)
           selectedPolicyKey={4}
         />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for datastreams correctly with empty policy description 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   item={true}
   style={
     Object {
@@ -219,7 +219,7 @@ exports[`InheritedSecurityDetails component should render collections for datast
   }
   xs={12}
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     style={
       Object {
         "marginTop": -8,
@@ -228,8 +228,8 @@ exports[`InheritedSecurityDetails component should render collections for datast
     variant="h6"
   >
     Inherited datastream security policy details
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Typography)>
+  <ForwardRef(Grid)
     container={true}
     spacing={1}
     style={
@@ -238,78 +238,78 @@ exports[`InheritedSecurityDetails component should render collections for datast
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:11111
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription) />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:22222
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Another test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription) />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`InheritedSecurityDetails component should render collections for record correctly with empty policy description 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   item={true}
   style={
     Object {
@@ -319,7 +319,7 @@ exports[`InheritedSecurityDetails component should render collections for record
   }
   xs={12}
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     style={
       Object {
         "marginTop": -8,
@@ -328,8 +328,8 @@ exports[`InheritedSecurityDetails component should render collections for record
     variant="h6"
   >
     Inherited security policy details
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Typography)>
+  <ForwardRef(Grid)
     container={true}
     spacing={1}
     style={
@@ -338,78 +338,78 @@ exports[`InheritedSecurityDetails component should render collections for record
       }
     }
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:11111
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription) />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={2}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle1"
       >
         UQ:22222
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={7}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="subtitle2"
       >
         Another test collection
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       sm={3}
       xs={12}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="body2"
       >
         <Memo(PolicyDescription) />
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;
 
 exports[`InheritedSecurityDetails component should render properly 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   item={true}
   style={
     Object {
@@ -419,7 +419,7 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
   }
   xs={12}
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     style={
       Object {
         "marginTop": -8,
@@ -428,8 +428,8 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
     variant="h6"
   >
     Inherited security policy details
-  </WithStyles(ForwardRef(Typography))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Typography)>
+  <ForwardRef(Grid)
     container={true}
     spacing={1}
     style={
@@ -438,5 +438,5 @@ exports[`InheritedSecurityDetails component should render properly 1`] = `
       }
     }
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;

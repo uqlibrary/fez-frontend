@@ -1,9 +1,9 @@
 import React from 'react';
 import FavouriteSearchList from './FavouriteSearchList';
-import { render, AllTheProviders, fireEvent, act } from 'test-utils';
+import { rtlRender, fireEvent, act } from 'test-utils';
 import { waitFor } from '@testing-library/dom';
 
-function setup(testProps = {}, renderer = render) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         list: [],
         handleRowDelete: jest.fn(() => Promise.resolve()),
@@ -11,11 +11,7 @@ function setup(testProps = {}, renderer = render) {
         ...testProps,
     };
 
-    return renderer(
-        <AllTheProviders>
-            <FavouriteSearchList {...props} />
-        </AllTheProviders>,
-    );
+    return renderer(<FavouriteSearchList {...props} />);
 }
 
 describe('FavouriteSearchList', () => {

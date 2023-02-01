@@ -3,52 +3,53 @@
 exports[`DataStreamSecurityItem component should render default view with inherited security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
     </a>
     <br />
     <span
-      class="MuiTypography-root MuiTypography-caption"
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
     >
       Inherited
     </span>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
   >
     <div
-      class="MuiFormControl-root"
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
         Test Policy Dropdown Label
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
+          aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
-          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
           role="button"
@@ -59,7 +60,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
         <input
           aria-hidden="true"
           aria-labelledby="dsi-security-policy-0-label"
-          class="MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-testid="dsi-security-policy-0-input"
           id="dsi-security-policy-0-input"
           name="test.jpg"
@@ -69,7 +70,8 @@ exports[`DataStreamSecurityItem component should render default view with inheri
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -86,52 +88,53 @@ exports[`DataStreamSecurityItem component should render default view with inheri
 exports[`DataStreamSecurityItem component should render default view with overridden security 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
     </a>
     <br />
     <span
-      class="MuiTypography-root MuiTypography-caption"
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
     >
       Overridden
     </span>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
   >
     <div
-      class="MuiFormControl-root"
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
         Test Policy Dropdown Label
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
+          aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
-          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
           role="button"
@@ -142,7 +145,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
         <input
           aria-hidden="true"
           aria-labelledby="dsi-security-policy-0-label"
-          class="MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-testid="dsi-security-policy-0-input"
           id="dsi-security-policy-0-input"
           name="test.jpg"
@@ -152,7 +155,8 @@ exports[`DataStreamSecurityItem component should render default view with overri
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -169,52 +173,53 @@ exports[`DataStreamSecurityItem component should render default view with overri
 exports[`DataStreamSecurityItem component should render view for a subsequent file 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root dataStreamFileName MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 dataStreamFileName css-y6fwcd-MuiGrid2-root"
   >
     <a
-      class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-n3j285-MuiTypography-root-MuiLink-root"
       title="test.jpg"
     >
       test.jpg
     </a>
     <br />
     <span
-      class="MuiTypography-root MuiTypography-caption"
+      class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
     >
       Overridden
     </span>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+    class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 css-y6fwcd-MuiGrid2-root"
   >
     <div
-      class="MuiFormControl-root"
+      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-2-label"
       >
         Test Policy Dropdown Label
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-5g2d0z-MuiFormLabel-asterisk"
         >
            *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
 }"
       >
         <div
+          aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-2-select"
-          class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-2-select"
           id="dsi-security-policy-2-select"
           role="button"
@@ -225,7 +230,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
         <input
           aria-hidden="true"
           aria-labelledby="dsi-security-policy-2-label"
-          class="MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           data-testid="dsi-security-policy-2-input"
           id="dsi-security-policy-2-input"
           name="test.jpg"
@@ -235,7 +240,8 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+          data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
         >

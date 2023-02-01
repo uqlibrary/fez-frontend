@@ -12,41 +12,41 @@ exports[`PolicyDropdown component should hide policies that the user cant select
     ]
   }
 >
-  <WithStyles(ForwardRef(MenuItem))
+  <ForwardRef(MenuItem)
     disabled={false}
     key="0"
     value={1}
   >
     Administrators
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={false}
     key="1"
     value={2}
   >
     Theses Assessors
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={true}
     key="2"
     value={3}
   >
     Evidence Assessors
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={true}
     key="3"
     value={4}
   >
     Staff and Students
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={true}
     key="4"
     value={5}
   >
     Public
-  </WithStyles(ForwardRef(MenuItem))>
+  </ForwardRef(MenuItem)>
 </SelectFieldWrapper>
 `;
 
@@ -62,44 +62,44 @@ exports[`PolicyDropdown component should render properly 1`] = `
     ]
   }
 >
-  <WithStyles(ForwardRef(MenuItem))
+  <ForwardRef(MenuItem)
     disabled={true}
     value=""
   />
-  <WithStyles(ForwardRef(MenuItem))
+  <ForwardRef(MenuItem)
     disabled={false}
     key="0"
     value={1}
   >
     Administrators
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={false}
     key="1"
     value={2}
   >
     Theses Assessors
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={false}
     key="2"
     value={3}
   >
     Evidence Assessors
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={false}
     key="3"
     value={4}
   >
     Staff and Students
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     disabled={false}
     key="4"
     value={5}
   >
     Public
-  </WithStyles(ForwardRef(MenuItem))>
+  </ForwardRef(MenuItem)>
 </SelectFieldWrapper>
 `;

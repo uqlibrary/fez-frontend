@@ -6,23 +6,23 @@ exports[`AudienceSizeField component should render default view 1`] = `
   name="audienceSize"
   selectFieldId="rek-audience-size"
 >
-  <WithStyles(ForwardRef(MenuItem))
+  <ForwardRef(MenuItem)
     key="453992"
     value={453992}
   >
     Less than 100
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     key="453993"
     value={453993}
   >
     100 - 500
-  </WithStyles(ForwardRef(MenuItem))>
-  <WithStyles(ForwardRef(MenuItem))
+  </ForwardRef(MenuItem)>
+  <ForwardRef(MenuItem)
     key="453994"
     value={453994}
   >
     Greater than 500
-  </WithStyles(ForwardRef(MenuItem))>
+  </ForwardRef(MenuItem)>
 </SelectFieldWrapper>
 `;
