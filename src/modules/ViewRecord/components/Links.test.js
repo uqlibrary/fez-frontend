@@ -3,8 +3,8 @@ import Links from './Links';
 import { recordLinks } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
-import LockOpen from '../../SharedComponents/Icons/MaterialDesign/LockOpen';
-import LockClockOutlined from '../../SharedComponents/Icons/MaterialDesign/LockClock';
+import LockOpen from '../../SharedComponents/Icons/MUI/LockOpen';
+import LockClockOutlined from '../../SharedComponents/Icons/MUI/LockClock';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {

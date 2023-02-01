@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ShieldOutlined from '../../Icons/MaterialDesign/Shield';
-import GppGood from '../../Icons/MaterialDesign/GppGood';
-import Coronavirus from '../../Icons/MaterialDesign/Coronavirus';
-import GppMaybe from '../../Icons/MaterialDesign/GppMaybe';
+import ShieldOutlined from '../../Icons/MUI/Shield';
+import GppGood from '../../Icons/MUI/GppGood';
+import Coronavirus from '../../Icons/MUI/Coronavirus';
+import GppMaybe from '../../Icons/MUI/GppMaybe';
 
 import {
     AV_CHECK_STATE_CLEAN,
