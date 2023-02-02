@@ -177,6 +177,11 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -1707,6 +1712,11 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                                   "color": "#FFFFFF",
                                                 },
                                               },
+                                            },
+                                          },
+                                          "MuiUseMediaQuery": Object {
+                                            "defaultProps": Object {
+                                              "noSsr": true,
                                             },
                                           },
                                         },
@@ -5397,6 +5407,11 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -6928,6 +6943,11 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                                   "color": "#FFFFFF",
                                                 },
                                               },
+                                            },
+                                          },
+                                          "MuiUseMediaQuery": Object {
+                                            "defaultProps": Object {
+                                              "noSsr": true,
                                             },
                                           },
                                         },

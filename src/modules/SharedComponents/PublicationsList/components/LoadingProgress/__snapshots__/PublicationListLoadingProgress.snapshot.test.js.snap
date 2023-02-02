@@ -177,6 +177,11 @@ exports[`Search Dashboard test Full render 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -898,6 +903,11 @@ exports[`Search Dashboard test Full render 1`] = `
                             },
                           },
                         },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
+                          },
+                        },
                       },
                       "direction": "ltr",
                       "graphs": Object {
@@ -1583,6 +1593,11 @@ exports[`Search Dashboard test Full render 1`] = `
                                     "color": "#FFFFFF",
                                   },
                                 },
+                              },
+                            },
+                            "MuiUseMediaQuery": Object {
+                              "defaultProps": Object {
+                                "noSsr": true,
                               },
                             },
                           },

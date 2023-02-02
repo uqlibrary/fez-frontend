@@ -188,6 +188,11 @@ exports[`RichEditor should render component 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -1013,6 +1018,11 @@ exports[`RichEditor should render error as one child 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -2247,6 +2257,11 @@ exports[`RichEditor should render error as react children 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -3484,6 +3499,11 @@ exports[`RichEditor should render error showing input length 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -4700,6 +4720,11 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -5896,6 +5921,11 @@ exports[`RichEditor should render given title and description 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -6955,6 +6985,11 @@ exports[`RichEditor should render given title and description with error 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },

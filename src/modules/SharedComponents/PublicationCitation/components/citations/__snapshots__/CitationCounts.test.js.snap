@@ -177,6 +177,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -902,6 +907,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               "color": "#FFFFFF",
                             },
                           },
+                        },
+                      },
+                      "MuiUseMediaQuery": Object {
+                        "defaultProps": Object {
+                          "noSsr": true,
                         },
                       },
                     },
@@ -2548,6 +2558,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -3260,6 +3275,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                               "color": "#FFFFFF",
                                             },
                                           },
+                                        },
+                                      },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
                                         },
                                       },
                                     },
@@ -3976,6 +3996,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -4688,6 +4713,11 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                               "color": "#FFFFFF",
                                             },
                                           },
+                                        },
+                                      },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
                                         },
                                       },
                                     },
@@ -6412,6 +6442,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -8945,6 +8980,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                           },
                         },
                       },
+                      "MuiUseMediaQuery": Object {
+                        "defaultProps": Object {
+                          "noSsr": true,
+                        },
+                      },
                     },
                     "direction": "ltr",
                     "graphs": Object {
@@ -10461,6 +10501,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -11175,6 +11220,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -11887,6 +11937,11 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                               "color": "#FFFFFF",
                                             },
                                           },
+                                        },
+                                      },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
                                         },
                                       },
                                     },
@@ -13904,6 +13959,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -14627,6 +14687,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               "color": "#FFFFFF",
                             },
                           },
+                        },
+                      },
+                      "MuiUseMediaQuery": Object {
+                        "defaultProps": Object {
+                          "noSsr": true,
                         },
                       },
                     },
@@ -16226,6 +16291,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -16938,6 +17008,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                               "color": "#FFFFFF",
                                             },
                                           },
+                                        },
+                                      },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
                                         },
                                       },
                                     },
@@ -17654,6 +17729,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                           },
                                         },
                                       },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
+                                        },
+                                      },
                                     },
                                     "direction": "ltr",
                                     "graphs": Object {
@@ -18366,6 +18446,11 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                               "color": "#FFFFFF",
                                             },
                                           },
+                                        },
+                                      },
+                                      "MuiUseMediaQuery": Object {
+                                        "defaultProps": Object {
+                                          "noSsr": true,
                                         },
                                       },
                                     },
@@ -20493,6 +20578,11 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -21170,6 +21260,11 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                               "color": "#FFFFFF",
                             },
                           },
+                        },
+                      },
+                      "MuiUseMediaQuery": Object {
+                        "defaultProps": Object {
+                          "noSsr": true,
                         },
                       },
                     },

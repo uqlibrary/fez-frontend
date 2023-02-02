@@ -322,6 +322,11 @@ exports[`NtroDetails  rendered full mount 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {

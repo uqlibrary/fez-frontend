@@ -177,6 +177,11 @@ exports[`Journal Name Component test  should render closed access 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -959,6 +964,11 @@ exports[`Journal Name Component test  should render embargoed 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -3142,6 +3152,11 @@ exports[`Journal Name Component test  should render embargoed 2`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -5331,6 +5346,11 @@ exports[`Journal Name Component test  should render locked 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -7673,6 +7693,11 @@ exports[`Journal Name Component test  should render no icon 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -8456,6 +8481,11 @@ exports[`Journal Name Component test  should render open access 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -9684,6 +9714,11 @@ exports[`Journal Name Component test  should render open access with OPEN_ACCESS
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },

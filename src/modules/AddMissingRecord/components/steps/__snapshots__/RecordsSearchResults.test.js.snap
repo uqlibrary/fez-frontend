@@ -936,6 +936,11 @@ exports[`Search record results should render a single unclaimable item with no a
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -37233,6 +37238,11 @@ exports[`Search record results should render a single unclaimable item with no a
                                             "color": "#FFFFFF",
                                           },
                                         },
+                                      },
+                                    },
+                                    "MuiUseMediaQuery": Object {
+                                      "defaultProps": Object {
+                                        "noSsr": true,
                                       },
                                     },
                                   },

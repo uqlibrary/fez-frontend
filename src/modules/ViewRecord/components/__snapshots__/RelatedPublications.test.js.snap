@@ -267,6 +267,11 @@ exports[`Related publications Component  should render component 2`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -3256,6 +3261,11 @@ exports[`Related publications Component  should render component 2`] = `
                                 "color": "#FFFFFF",
                               },
                             },
+                          },
+                        },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
                           },
                         },
                       },
@@ -6616,6 +6626,11 @@ exports[`Related publications Component  should render with a publication title 
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -9631,6 +9646,11 @@ exports[`Related publications Component  should render with a publication title 
                                 "color": "#FFFFFF",
                               },
                             },
+                          },
+                        },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
                           },
                         },
                       },
@@ -13321,6 +13341,11 @@ exports[`Related publications Component  should render without a child search ke
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -16358,6 +16383,11 @@ exports[`Related publications Component  should render without a child search ke
                                 "color": "#FFFFFF",
                               },
                             },
+                          },
+                        },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
                           },
                         },
                       },
@@ -19716,6 +19746,11 @@ exports[`Related publications Component  should render without a parent search k
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -30915,6 +30950,11 @@ exports[`Related publications Component  should render without a parent search k
                                 "color": "#FFFFFF",
                               },
                             },
+                          },
+                        },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
                           },
                         },
                       },

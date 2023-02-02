@@ -297,6 +297,11 @@ exports[`AuthorsCitationView should render component with 1 author 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -1110,6 +1115,11 @@ exports[`AuthorsCitationView should render component with 2 authors 1`] = `
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -1947,6 +1957,11 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -2834,6 +2849,11 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -3713,6 +3733,11 @@ exports[`AuthorsCitationView should render component with 3 authors 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -4571,6 +4596,11 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -5504,6 +5534,11 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -6364,6 +6399,11 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },
@@ -7444,6 +7484,11 @@ exports[`AuthorsCitationView should render component with link containing contri
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -8288,6 +8333,11 @@ exports[`AuthorsCitationView should render component with no authors 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -9073,6 +9123,11 @@ exports[`AuthorsCitationView should set class on component with no authors 1`] =
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },

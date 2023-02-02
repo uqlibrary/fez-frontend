@@ -731,6 +731,11 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -1435,6 +1440,11 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                               "color": "#FFFFFF",
                             },
                           },
+                        },
+                      },
+                      "MuiUseMediaQuery": Object {
+                        "defaultProps": Object {
+                          "noSsr": true,
                         },
                       },
                     },

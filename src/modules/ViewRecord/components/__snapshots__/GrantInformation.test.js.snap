@@ -177,6 +177,11 @@ exports[`Grant Information Component  should not break if grant text is not in t
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -11703,6 +11708,11 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                         "color": "#FFFFFF",
                       },
                     },
+                  },
+                },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
                   },
                 },
               },

@@ -177,6 +177,11 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -6080,6 +6085,11 @@ exports[`Publication Details Component  Renders full mount 1`] = `
                                 "color": "#FFFFFF",
                               },
                             },
+                          },
+                        },
+                        "MuiUseMediaQuery": Object {
+                          "defaultProps": Object {
+                            "noSsr": true,
                           },
                         },
                       },

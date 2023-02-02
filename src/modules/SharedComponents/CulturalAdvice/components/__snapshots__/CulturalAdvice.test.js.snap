@@ -5,7 +5,7 @@ exports[`Component CulturalAdvice should render component 1`] = `
   primaryHeader={true}
   title="Cultural advice"
 >
-  <WithStyles(ForwardRef(Typography))
+  <ForwardRef(Typography)
     variant="body2"
   >
     <span>
@@ -14,6 +14,6 @@ exports[`Component CulturalAdvice should render component 1`] = `
       <br />
       Some material may contain language, terms, or descriptions that reflect the authors’ views, or those of the period in which the item was written or recorded but may be considered inappropriate today. These views are not necessarily the views of The University of Queensland. While the information may not reflect current understandings, it is provided in an historical context.
     </span>
-  </WithStyles(ForwardRef(Typography))>
+  </ForwardRef(Typography)>
 </StandardCard>
 `;

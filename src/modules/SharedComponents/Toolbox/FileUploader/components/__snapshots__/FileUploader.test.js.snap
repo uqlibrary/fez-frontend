@@ -1056,6 +1056,11 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -5439,6 +5444,11 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                     "color": "#FFFFFF",
                                                                   },
                                                                 },
+                                                              },
+                                                            },
+                                                            "MuiUseMediaQuery": Object {
+                                                              "defaultProps": Object {
+                                                                "noSsr": true,
                                                               },
                                                             },
                                                           },
@@ -9834,6 +9844,11 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                     },
                   },
                 },
+                "MuiUseMediaQuery": Object {
+                  "defaultProps": Object {
+                    "noSsr": true,
+                  },
+                },
               },
               "direction": "ltr",
               "graphs": Object {
@@ -13893,6 +13908,11 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                                     "color": "#FFFFFF",
                                                                   },
                                                                 },
+                                                              },
+                                                            },
+                                                            "MuiUseMediaQuery": Object {
+                                                              "defaultProps": Object {
+                                                                "noSsr": true,
                                                               },
                                                             },
                                                           },
