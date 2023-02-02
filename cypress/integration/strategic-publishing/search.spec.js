@@ -336,6 +336,11 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
 
+        // desktop check of expected header cell count
+        cy.get('[data-testid="journal-list"] table > thead > tr > th:last-child > div > div').each($el => {
+            cy.wrap($el).should('not.have.css', 'display', 'none');
+        });
+
         cy.get('[data-testid="journal-list"]')
             .find('[data-testid="journal-list-header-jnl-title"]')
             .should('be.visible')
@@ -369,6 +374,12 @@ context('Strategic Publishing - Search', () => {
         cy.get('[data-testid="journal-search-item-addable-title-microbiology-0"]').click();
         cy.get('[data-testid="journal-search-button"]').click();
         cy.get('[data-testid="journal-list"]').should('be.visible');
+
+        // mobile check of expected header cell count
+        cy.get('[data-testid="journal-list"] table > thead > tr > th:last-child > div > div').each(($el, index) => {
+            if (index === 0) cy.wrap($el).should('not.have.css', 'display', 'none');
+            else cy.wrap($el).should('have.css', 'display', 'none');
+        });
 
         cy.get('[data-testid="journal-list"]')
             .find('[data-testid="journal-list-header-jnl-title"]')

@@ -6,15 +6,6 @@ import { WithReduxStore, fireEvent, render } from 'test-utils';
 import Immutable from 'immutable';
 import { act } from 'react-test-renderer';
 import { sanitiseId } from 'helpers/general';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const setup = (state = {}) => {
     const onChange = state.onChange ?? jest.fn();
@@ -43,8 +34,8 @@ describe('JournalsListHeaderRow', () => {
         expect(getByTestId('journal-list-header-col-1-select-all')).not.toHaveAttribute('disabled');
         expect(getByTestId('journal-list-header-col-1-select-all')).toHaveAttribute('checked');
     });
-    it('should render all compactView headers on desktop with help icons', () => {
-        window.matchMedia = createMatchMedia(1024);
+    it('should render all headers on with help icons', () => {
+        // this just checks the elements are in the page. See search.spec.js for breakpoint tests
         const { getByTestId } = setup({ isSelectable: true });
         expect(getByTestId('journal-list-header')).toBeInTheDocument();
         JournalFieldsMap.filter(item => item.compactView).map((item, index) => {
@@ -54,18 +45,7 @@ describe('JournalsListHeaderRow', () => {
             }
         });
     });
-    it('should only render first column header on mobile', () => {
-        window.matchMedia = createMatchMedia(599);
-        const { getByTestId, queryByTestId } = setup({ isSelectable: true });
-        expect(getByTestId('journal-list-header')).toBeInTheDocument();
-        JournalFieldsMap.filter(item => item.compactView).map((item, index) => {
-            if (index === 0) {
-                expect(getByTestId(`journal-list-header-${sanitiseId(item.key)}`)).toBeInTheDocument();
-            } else {
-                expect(queryByTestId(`journal-list-header-${sanitiseId(item.key)}`)).not.toBeInTheDocument();
-            }
-        });
-    });
+
     it('should fire onChange function when Select All is checked', () => {
         const onChange = jest.fn();
         const { getByTestId } = setup({ isSelectable: true, checked: false, onChange });

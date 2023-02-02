@@ -135,6 +135,11 @@ export const mui1theme = createTheme({
                 },
             ],
         },
+        MuiUseMediaQuery: {
+            defaultProps: {
+                noSsr: true,
+            },
+        },
     },
     graphs: {
         color1: '#d72865',
@@ -188,6 +193,11 @@ export const adminTheme = createTheme({
                 root: {
                     minWidth: 'auto',
                 },
+            },
+        },
+        MuiUseMediaQuery: {
+            defaultProps: {
+                noSsr: true,
             },
         },
     },

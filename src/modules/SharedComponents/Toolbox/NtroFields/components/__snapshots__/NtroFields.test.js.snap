@@ -2,7 +2,7 @@
 
 exports[`Component NtroFields should call componentDidUpdate 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -11,12 +11,12 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -40,11 +40,11 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -77,8 +77,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -152,8 +152,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -228,8 +228,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -251,8 +251,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -262,10 +262,44 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -277,8 +311,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -288,10 +322,44 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -303,8 +371,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -314,10 +382,44 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -337,8 +439,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -348,10 +450,44 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -364,8 +500,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -646,8 +782,8 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -718,11 +854,11 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -741,13 +877,13 @@ exports[`Component NtroFields should call componentDidUpdate 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should not show NTRO data card in the Ntro fields 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -756,12 +892,12 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Creator research statement
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about the research statement, click
                
@@ -783,15 +919,15 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
       }
       title="Author/Creator research statement"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             <span>
               Select the option that best describes the significance of the work*
               <span
@@ -804,7 +940,7 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
                  (not for public view)
               </span>
             </span>
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -818,24 +954,24 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="454027"
               value={454027}
             >
               Minor
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="454026"
               value={454026}
             >
               Major
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -854,13 +990,13 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should render all fields as disabled 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -869,12 +1005,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Creator research statement
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about the research statement, click
                
@@ -896,15 +1032,15 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
       }
       title="Author/Creator research statement"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             <span>
               Select the option that best describes the significance of the work*
               <span
@@ -917,7 +1053,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                  (not for public view)
               </span>
             </span>
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <Field
             component={[Function]}
             disabled={true}
@@ -931,21 +1067,21 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="454027"
               value={454027}
             >
               Minor
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="454026"
               value={454026}
             >
               Major
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -984,11 +1120,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -997,12 +1133,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -1026,11 +1162,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1063,8 +1199,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1138,8 +1274,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1214,8 +1350,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -1237,8 +1373,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -1248,10 +1384,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1263,8 +1433,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             textFieldId="rek-volume-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -1274,10 +1444,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1289,8 +1493,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -1300,10 +1504,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1315,8 +1553,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             textFieldId="rek-start-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -1326,10 +1564,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1341,8 +1613,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -1352,10 +1624,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1375,8 +1681,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -1386,10 +1692,44 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -1402,8 +1742,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -1421,27 +1761,27 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="453992"
               value={453992}
             >
               Less than 100
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453993"
               value={453993}
             >
               100 - 500
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453994"
               value={453994}
             >
               Greater than 500
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -1722,8 +2062,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -1794,11 +2134,11 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -1817,13 +2157,13 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should render contribution statement fields as well 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -1832,12 +2172,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Creator research statement
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about the research statement, click
                
@@ -1859,15 +2199,15 @@ exports[`Component NtroFields should render contribution statement fields as wel
       }
       title="Author/Creator research statement"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             <span>
               Select the option that best describes the significance of the work*
               <span
@@ -1880,7 +2220,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                  (not for public view)
               </span>
             </span>
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -1894,21 +2234,21 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="454027"
               value={454027}
             >
               Minor
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="454026"
               value={454026}
             >
               Major
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -1947,11 +2287,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -1960,12 +2300,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -1989,11 +2329,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2026,8 +2366,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2101,8 +2441,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2177,8 +2517,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2200,8 +2540,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -2211,10 +2551,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2226,8 +2600,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             textFieldId="rek-volume-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -2237,10 +2611,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2252,8 +2660,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -2263,10 +2671,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2278,8 +2720,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             textFieldId="rek-start-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -2289,10 +2731,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2304,8 +2780,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -2315,10 +2791,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2338,8 +2848,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -2349,10 +2859,44 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -2365,8 +2909,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -2384,27 +2928,27 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="453992"
               value={453992}
             >
               Less than 100
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453993"
               value={453993}
             >
               100 - 500
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453994"
               value={453994}
             >
               Greater than 500
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -2685,8 +3229,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -2757,11 +3301,11 @@ exports[`Component NtroFields should render contribution statement fields as wel
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -2780,13 +3324,13 @@ exports[`Component NtroFields should render contribution statement fields as wel
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should render default view 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -2795,12 +3339,12 @@ exports[`Component NtroFields should render default view 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -2824,11 +3368,11 @@ exports[`Component NtroFields should render default view 1`] = `
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2861,8 +3405,8 @@ exports[`Component NtroFields should render default view 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -2936,8 +3480,8 @@ exports[`Component NtroFields should render default view 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3012,8 +3556,8 @@ exports[`Component NtroFields should render default view 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3035,8 +3579,8 @@ exports[`Component NtroFields should render default view 1`] = `
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -3046,10 +3590,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3061,8 +3639,8 @@ exports[`Component NtroFields should render default view 1`] = `
             textFieldId="rek-volume-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -3072,10 +3650,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3087,8 +3699,8 @@ exports[`Component NtroFields should render default view 1`] = `
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -3098,10 +3710,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3113,8 +3759,8 @@ exports[`Component NtroFields should render default view 1`] = `
             textFieldId="rek-start-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -3124,10 +3770,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3139,8 +3819,8 @@ exports[`Component NtroFields should render default view 1`] = `
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -3150,10 +3830,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3173,8 +3887,8 @@ exports[`Component NtroFields should render default view 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -3184,10 +3898,44 @@ exports[`Component NtroFields should render default view 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -3200,8 +3948,8 @@ exports[`Component NtroFields should render default view 1`] = `
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -3219,27 +3967,27 @@ exports[`Component NtroFields should render default view 1`] = `
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="453992"
               value={453992}
             >
               Less than 100
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453993"
               value={453993}
             >
               100 - 500
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453994"
               value={453994}
             >
               Greater than 500
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -3520,8 +4268,8 @@ exports[`Component NtroFields should render default view 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -3592,11 +4340,11 @@ exports[`Component NtroFields should render default view 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -3615,13 +4363,13 @@ exports[`Component NtroFields should render default view 1`] = `
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should render with grants component hidden 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -3630,12 +4378,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Creator research statement
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about the research statement, click
                
@@ -3657,15 +4405,15 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
       }
       title="Author/Creator research statement"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             <span>
               Select the option that best describes the significance of the work*
               <span
@@ -3678,7 +4426,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                  (not for public view)
               </span>
             </span>
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -3692,21 +4440,21 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="454027"
               value={454027}
             >
               Minor
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="454026"
               value={454026}
             >
               Major
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           style={
             Object {
@@ -3745,11 +4493,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -3758,12 +4506,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -3787,11 +4535,11 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3824,8 +4572,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3899,8 +4647,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3975,8 +4723,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -3998,8 +4746,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4009,10 +4757,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4024,8 +4806,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             textFieldId="rek-volume-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4035,10 +4817,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4050,8 +4866,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4061,10 +4877,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4076,8 +4926,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             textFieldId="rek-start-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4087,10 +4937,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4102,8 +4986,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -4113,10 +4997,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4136,8 +5054,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -4147,10 +5065,44 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4163,8 +5115,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -4182,27 +5134,27 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="453992"
               value={453992}
             >
               Less than 100
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453993"
               value={453993}
             >
               100 - 500
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453994"
               value={453994}
             >
               Greater than 500
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -4483,8 +5435,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -4555,16 +5507,16 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;
 
 exports[`Component NtroFields should show significance field even if contribution field isnt empty 1`] = `
 <Fragment>
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -4573,12 +5525,12 @@ exports[`Component NtroFields should show significance field even if contributio
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Creator research statement
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about the research statement, click
                
@@ -4600,15 +5552,15 @@ exports[`Component NtroFields should show significance field even if contributio
       }
       title="Author/Creator research statement"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={1}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
-          <WithStyles(ForwardRef(Typography))>
+          <ForwardRef(Typography)>
             <span>
               Select the option that best describes the significance of the work*
               <span
@@ -4621,7 +5573,7 @@ exports[`Component NtroFields should show significance field even if contributio
                  (not for public view)
               </span>
             </span>
-          </WithStyles(ForwardRef(Typography))>
+          </ForwardRef(Typography)>
           <Field
             component={[Function]}
             disabled={false}
@@ -4635,24 +5587,24 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="454027"
               value={454027}
             >
               Minor
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="454026"
               value={454026}
             >
               Major
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -4661,12 +5613,12 @@ exports[`Component NtroFields should show significance field even if contributio
         Object {
           "buttonLabel": "CLOSE",
           "text": <React.Fragment>
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h4"
               variant="h6"
             >
               Quality indicators
-            </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Typography)>
             <p>
               For more information about each quality indicator option, click
                
@@ -4690,11 +5642,11 @@ exports[`Component NtroFields should show significance field even if contributio
       }
       title="NTRO data"
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
         spacing={2}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4727,8 +5679,8 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4802,8 +5754,8 @@ exports[`Component NtroFields should show significance field even if contributio
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4878,8 +5830,8 @@ exports[`Component NtroFields should show significance field even if contributio
             }
             transformFunction={[Function]}
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -4901,8 +5853,8 @@ exports[`Component NtroFields should show significance field even if contributio
             hintText="Enter the name of publication, performance, recording, or event series"
             name="fez_record_search_key_series.rek_series"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4912,10 +5864,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4927,8 +5913,8 @@ exports[`Component NtroFields should show significance field even if contributio
             textFieldId="rek-volume-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4938,10 +5924,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4953,8 +5973,8 @@ exports[`Component NtroFields should show significance field even if contributio
             textFieldId="rek-issue-number"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4964,10 +5984,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -4979,8 +6033,8 @@ exports[`Component NtroFields should show significance field even if contributio
             textFieldId="rek-start-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={3}
           xs={12}
@@ -4990,10 +6044,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -5005,8 +6093,8 @@ exports[`Component NtroFields should show significance field even if contributio
             textFieldId="rek-end-page"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -5016,10 +6104,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -5039,8 +6161,8 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={6}
           xs={12}
@@ -5050,10 +6172,44 @@ exports[`Component NtroFields should show significance field even if contributio
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "propTypes": Object {
+                  "FormHelperTextProps": [Function],
+                  "InputLabelProps": [Function],
+                  "InputProps": [Function],
+                  "SelectProps": [Function],
+                  "autoComplete": [Function],
+                  "autoFocus": [Function],
+                  "children": [Function],
+                  "className": [Function],
                   "classes": [Function],
+                  "color": [Function],
+                  "defaultValue": [Function],
+                  "disabled": [Function],
+                  "error": [Function],
+                  "fullWidth": [Function],
                   "help": [Function],
-                  "innerRef": [Function],
+                  "helperText": [Function],
+                  "id": [Function],
+                  "inputProps": [Function],
+                  "inputRef": [Function],
+                  "label": [Function],
+                  "margin": [Function],
+                  "maxRows": [Function],
+                  "minRows": [Function],
+                  "multiline": [Function],
+                  "name": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onFocus": [Function],
+                  "placeholder": [Function],
+                  "required": [Function],
+                  "rows": [Function],
+                  "select": [Function],
+                  "size": [Function],
+                  "sx": [Function],
                   "textFieldId": [Function],
+                  "type": [Function],
+                  "value": [Function],
+                  "variant": [Function],
                 },
                 "render": [Function],
               }
@@ -5066,8 +6222,8 @@ exports[`Component NtroFields should show significance field even if contributio
             textFieldId="rek-original-format"
             type="text"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -5085,27 +6241,27 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           >
-            <WithStyles(ForwardRef(MenuItem))
+            <ForwardRef(MenuItem)
               key="453992"
               value={453992}
             >
               Less than 100
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453993"
               value={453993}
             >
               100 - 500
-            </WithStyles(ForwardRef(MenuItem))>
-            <WithStyles(ForwardRef(MenuItem))
+            </ForwardRef(MenuItem)>
+            <ForwardRef(MenuItem)
               key="453994"
               value={453994}
             >
               Greater than 500
-            </WithStyles(ForwardRef(MenuItem))>
+            </ForwardRef(MenuItem)>
           </Field>
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -5386,8 +6542,8 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           sm={4}
           xs={12}
@@ -5458,11 +6614,11 @@ exports[`Component NtroFields should show significance field even if contributio
               ]
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -5481,6 +6637,6 @@ exports[`Component NtroFields should show significance field even if contributio
         }
       />
     </StandardCard>
-  </WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
 </Fragment>
 `;

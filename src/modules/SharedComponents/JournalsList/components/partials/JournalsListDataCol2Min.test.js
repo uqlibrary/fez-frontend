@@ -34,7 +34,10 @@ describe('JournalsListDataCol2 Min', () => {
                         break;
                     case 'Open Access':
                         // expect tooltip to match supplied data.
-                        expect(document.querySelector('p').title).toEqual(fieldMap.toolTipLabel(mockItem));
+                        expect(document.querySelector('p')).toHaveAttribute(
+                            'aria-label',
+                            fieldMap.toolTipLabel(mockItem),
+                        );
                         break;
                     default:
                         break;
@@ -52,6 +55,10 @@ describe('JournalsListDataCol2 Min', () => {
         };
         const { queryByText } = setup({ journal: mockData[0] });
         expect(queryByText('Q')).not.toBeInTheDocument();
-        expect(document.querySelector('.MuiGrid-item:last-of-type p').title).toEqual('');
+
+        expect(document.querySelector('.MuiGrid2-root:not(.MuiGrid2-container):last-of-type p')).toHaveAttribute(
+            'aria-label',
+            '',
+        );
     });
 });
