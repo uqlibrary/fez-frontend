@@ -16,7 +16,7 @@ const useStyles = makeStyles(
     { withTheme: true },
 );
 
-export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, ariaLabel, signInTooltipText, onClick }) => {
+export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, signInTooltipText, onClick }) => {
     const classes = useStyles();
     return (
         <div className="auth-button-wrapper">
@@ -28,7 +28,6 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, ariaLabel, si
                 TransitionProps={{ timeout: 300 }}
             >
                 <IconButton
-                    aria-label={ariaLabel}
                     onClick={onClick}
                     className={isAuthorizedUser ? 'log-out-button' : 'log-in-button'}
                     size="large"
@@ -47,7 +46,6 @@ export const AuthButton = ({ isAuthorizedUser, signOutTooltipText, ariaLabel, si
 AuthButton.propTypes = {
     isAuthorizedUser: PropTypes.bool.isRequired,
     signOutTooltipText: PropTypes.string,
-    ariaLabel: PropTypes.string,
     signInTooltipText: PropTypes.string,
     onClick: PropTypes.func,
 };
