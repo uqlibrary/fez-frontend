@@ -1,18 +1,14 @@
 import React from 'react';
 import BulkUpdatesList from './BulkUpdatesList';
-import { AllTheProviders, render } from 'test-utils';
+import { rtlRender } from 'test-utils';
 
-function setup(testProps = {}, renderer = render) {
+function setup(testProps = {}, renderer = rtlRender) {
     const props = {
         list: [],
         ...testProps,
     };
 
-    return renderer(
-        <AllTheProviders>
-            <BulkUpdatesList {...props} />
-        </AllTheProviders>,
-    );
+    return renderer(<BulkUpdatesList {...props} />);
 }
 
 describe('BulkUpdatesList', () => {

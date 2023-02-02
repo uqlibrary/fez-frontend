@@ -1,13 +1,9 @@
 import React from 'react';
-import { AllTheProviders, fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 import { SelectedKeywordItem } from './SelectedKeywordItem';
 
-const setup = state => {
-    return render(
-        <AllTheProviders>
-            <SelectedKeywordItem {...state} />
-        </AllTheProviders>,
-    );
+const setup = (state, render = rtlRender) => {
+    return render(<SelectedKeywordItem {...state} />);
 };
 
 const keyword = { type: 'type1', text: 'dogs' };

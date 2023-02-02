@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, act, AllTheProviders } from 'test-utils';
+import { rtlRender, fireEvent, act } from 'test-utils';
 
 import FileName from './FileName';
 
@@ -18,7 +18,7 @@ const createMatchMedia = width => {
 
 const id = 'test-file-name';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, render = rtlRender) {
     const { previewFileName, ...rest } = testProps;
     const props = {
         id: id,
@@ -34,11 +34,7 @@ function setup(testProps = {}) {
         allowDownload: false,
         ...rest,
     };
-    return render(
-        <AllTheProviders>
-            <FileName {...props} />
-        </AllTheProviders>,
-    );
+    return render(<FileName {...props} />);
 }
 
 describe('File Name Component ', () => {

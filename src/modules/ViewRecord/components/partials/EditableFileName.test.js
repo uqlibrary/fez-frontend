@@ -1,5 +1,5 @@
 import React from 'react';
-import { rtlRender, fireEvent, act, AllTheProviders, within } from 'test-utils';
+import { rtlRender, fireEvent, act, within } from 'test-utils';
 
 import EditableFileName from './EditableFileName';
 
@@ -13,7 +13,7 @@ const saveId = `${id}-save`;
 const cancelId = `${id}-cancel`;
 const editingId = `${id}-editing-input`;
 
-function setup(testProps = {}, renderer = rtlRender) {
+function setup(testProps = {}, render = rtlRender) {
     const props = {
         id,
         classes: {},
@@ -31,11 +31,7 @@ function setup(testProps = {}, renderer = rtlRender) {
         isEdited: false,
         ...testProps,
     };
-    return renderer(
-        <AllTheProviders>
-            <EditableFileName {...props} />
-        </AllTheProviders>,
-    );
+    return render(<EditableFileName {...props} />);
 }
 
 describe('Editable File Name Component on Desktop', () => {

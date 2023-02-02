@@ -1,13 +1,9 @@
 import React from 'react';
-import { AllTheProviders, fireEvent, render } from 'test-utils';
+import { fireEvent, rtlRender } from 'test-utils';
 import { getId, SearchKeyword } from './SearchKeyword';
 
-const setup = state => {
-    return render(
-        <AllTheProviders>
-            <SearchKeyword {...{ onKeywordClick: () => {}, ...state }} />
-        </AllTheProviders>,
-    );
+const setup = (state, render = rtlRender) => {
+    return render(<SearchKeyword {...{ onKeywordClick: () => {}, ...state }} />);
 };
 
 const keyword = 'test';

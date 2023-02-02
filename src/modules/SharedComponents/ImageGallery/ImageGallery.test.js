@@ -1,19 +1,15 @@
 import React from 'react';
-import { render, AllTheProviders } from 'test-utils';
+import { rtlRender } from 'test-utils';
 
 import ImageGallery, { getItemUrl, getItemsPerRow } from './ImageGallery';
 import { collectionSearchResultsImages } from 'mock/data';
 
-const setup = (props = {}) => {
+const setup = (props = {}, render = rtlRender) => {
     const testProps = {
         publicationsList: [],
         ...props,
     };
-    return render(
-        <AllTheProviders>
-            <ImageGallery {...testProps} />
-        </AllTheProviders>,
-    );
+    return render(<ImageGallery {...testProps} />);
 };
 
 describe('Image Gallery', () => {
