@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Typography from '@mui/material/Typography';
@@ -121,58 +120,8 @@ const EditableFileName = ({
     return (
         <>
             {!isEditing ? (
-                <>
-                    <Grid
-                        container
-                        alignItems={'center'}
-                        wrap="nowrap"
-                        sx={{ display: { xs: 'none', md: 'flex' } }}
-                        id={`${props.id}ContainerDesktop`}
-                        data-testid={`${props.id}ContainerDesktop`}
-                    >
-                        <Grid item xs={8} sx={{ display: 'flex', alignItems: 'center' }}>
-                            {!!!isEdited && <FileName {...props} />}
-                            {!!isEdited && (
-                                <Typography
-                                    data-testid={`${props.id}-edited`}
-                                    variant="body2"
-                                    color="textPrimary"
-                                    className={classes.labelTruncated}
-                                >
-                                    {editedFilenameRef.current}
-                                </Typography>
-                            )}
-                        </Grid>
-                        <Grid item xs>
-                            <IconButton
-                                aria-label="rename file"
-                                onClick={handleFileEditFilename}
-                                size={'small'}
-                                id={`${props.id}-edit`}
-                                data-testid={`${props.id}-edit`}
-                            >
-                                <EditIcon />
-                            </IconButton>
-                            {!!isEdited && (
-                                <IconButton
-                                    aria-label="reset file name"
-                                    onClick={handleFileRestoreFilename}
-                                    size={'small'}
-                                    id={`${props.id}-reset`}
-                                    data-testid={`${props.id}-reset`}
-                                >
-                                    <ReplayIcon />
-                                </IconButton>
-                            )}
-                        </Grid>
-                    </Grid>
-
-                    <Box
-                        component="span"
-                        sx={{ display: { xs: 'inline', md: 'none' } }}
-                        data-testid={`${props.id}ContainerMobile`}
-                        id={`${props.id}ContainerMobile`}
-                    >
+                <Grid container alignItems={'center'} wrap="nowrap">
+                    <Grid item xs={12} sm={8} sx={{ display: 'flex', alignItems: 'center' }}>
                         {!!!isEdited && <FileName {...props} />}
                         {!!isEdited && (
                             <Typography
@@ -184,8 +133,30 @@ const EditableFileName = ({
                                 {editedFilenameRef.current}
                             </Typography>
                         )}
-                    </Box>
-                </>
+                    </Grid>
+                    <Grid item sm sx={{ display: { xs: 'none', md: 'flex' } }}>
+                        <IconButton
+                            aria-label="rename file"
+                            onClick={handleFileEditFilename}
+                            size={'small'}
+                            id={`${props.id}-edit`}
+                            data-testid={`${props.id}-edit`}
+                        >
+                            <EditIcon />
+                        </IconButton>
+                        {!!isEdited && (
+                            <IconButton
+                                aria-label="reset file name"
+                                onClick={handleFileRestoreFilename}
+                                size={'small'}
+                                id={`${props.id}-reset`}
+                                data-testid={`${props.id}-reset`}
+                            >
+                                <ReplayIcon />
+                            </IconButton>
+                        )}
+                    </Grid>
+                </Grid>
             ) : (
                 <>
                     <TextField

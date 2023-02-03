@@ -4,12 +4,14 @@ import locale from 'locale/viewRecord';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 import makeStyles from '@mui/styles/makeStyles';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 const useStyles = makeStyles(theme => ({
     containerPadding: {
         padding: `${theme.spacing(1)} 0`,
@@ -100,6 +102,9 @@ export const MediaPreview = ({ ...props }) => {
     const isVideo = mimeType.indexOf('video') >= 0 || mimeType === 'application/mxf';
     const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
     const title = isVideo ? videoTitle : imageTitle;
+    const theme = useTheme();
+    const desktopVisible = useMediaQuery(theme.breakpoints.up('sm'));
+    const mobileVisible = useMediaQuery(theme.breakpoints.down('sm'));
 
     React.useEffect(() => {
         if (imageError || (videoErrorCode && videoErrorMsg) || !videoLoading) {
@@ -116,9 +121,11 @@ export const MediaPreview = ({ ...props }) => {
                         {title}
                     </Typography>
                 </Grid>
-                <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
-                    <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
-                </Grid>
+                {desktopVisible && (
+                    <Grid item>
+                        <MediaPreviewButtons {...{ id: 'media-preview-buttons-larger-screen', ...props }} />
+                    </Grid>
+                )}
             </Grid>
             {isVideo && videoErrorMsg && videoErrorCode && (
                 <div style={{ marginTop: 12, marginBottom: 12 }}>
@@ -182,9 +189,7 @@ export const MediaPreview = ({ ...props }) => {
                     <InlineLoader message={videoLoadingMessage} />
                 </div>
             )}
-            <Box sx={{ display: { xs: 'block', sm: 'none' } }} component="span">
-                <MediaPreviewButtons {...{ id: 'media-preview-buttons-smaller-screen', ...props }} />
-            </Box>
+            {mobileVisible && <MediaPreviewButtons {...{ id: 'media-preview-buttons-smaller-screen', ...props }} />}
         </React.Fragment>
     );
 };
