@@ -6495,32 +6495,6 @@ exports[`Files Component  should set image error flag 1`] = `
         Image preview
       </ForwardRef(Typography)>
     </ForwardRef(Grid)>
-    <ForwardRef(Grid)
-      item={true}
-      sx={
-        Object {
-          "display": Object {
-            "sm": "block",
-            "xs": "none",
-          },
-        }
-      }
-    >
-      <Memo()
-        fileName="http://localhost/view/UQ:185044/fileName"
-        id="media-preview-buttons-larger-screen"
-        imageError={true}
-        mediaUrl="mediaUrl"
-        mimeType="image/jpeg"
-        onClose={[Function]}
-        onImageFailed={[Function]}
-        onVideoFailed={[Function]}
-        onVideoLoad={[Function]}
-        previewMediaUrl="previewMediaUrl"
-        videoLoading={true}
-        webMediaUrl="webMediaUrl"
-      />
-    </ForwardRef(Grid)>
   </ForwardRef(Grid)>
   <div
     style={
@@ -6543,32 +6517,6 @@ exports[`Files Component  should set image error flag 1`] = `
       wiggle={null}
     />
   </div>
-  <ForwardRef(Box)
-    component="span"
-    sx={
-      Object {
-        "display": Object {
-          "sm": "none",
-          "xs": "block",
-        },
-      }
-    }
-  >
-    <Memo()
-      fileName="http://localhost/view/UQ:185044/fileName"
-      id="media-preview-buttons-smaller-screen"
-      imageError={true}
-      mediaUrl="mediaUrl"
-      mimeType="image/jpeg"
-      onClose={[Function]}
-      onImageFailed={[Function]}
-      onVideoFailed={[Function]}
-      onVideoLoad={[Function]}
-      previewMediaUrl="previewMediaUrl"
-      videoLoading={true}
-      webMediaUrl="webMediaUrl"
-    />
-  </ForwardRef(Box)>
 </Fragment>
 `;
 
