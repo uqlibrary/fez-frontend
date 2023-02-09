@@ -195,10 +195,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       <form>
         <div />
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               data-testid="alert"
@@ -243,7 +243,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
@@ -271,13 +271,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid-root MuiGrid-container makeStyles-GridType-1 css-11lq3yg-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-o171l1-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container css-u9p4s6-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -286,7 +286,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-173qa7i-MuiGrid-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -297,13 +297,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root MuiGrid-container makeStyles-GridSubType-2 css-11lq3yg-MuiGrid-root"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-o171l1-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root MuiGrid-container css-u9p4s6-MuiGrid-root"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-3 css-zbaamk-MuiGrid-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -312,7 +312,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </p>
                     </div>
                     <div
-                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-9 css-173qa7i-MuiGrid-root"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
                     >
                       <p
                         class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
@@ -905,7 +905,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
@@ -1670,7 +1670,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
               class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
@@ -1740,13 +1740,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-10s4gdy-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1jgh8sh-MuiGrid2-root"
           />
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-lvo4zz-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-auto css-1mjcfts-MuiGrid2-root"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
@@ -1761,7 +1761,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </button>
           </div>
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-auto css-lvo4zz-MuiGrid-root"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-auto css-1mjcfts-MuiGrid2-root"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
