@@ -100,7 +100,7 @@ context('Communities and Collections', () => {
         cy.get('[data-testid="rek-ismemberof-0"] > span').should('contain', 'Mill Point Archaeological Project');
     });
 });
-context.only('Responsiveness (coverage)', () => {
+context('Responsiveness (coverage)', () => {
     beforeEach(() => {
         cy.visit('/communities');
     });

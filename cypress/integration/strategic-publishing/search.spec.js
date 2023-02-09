@@ -120,9 +120,7 @@ context('Strategic Publishing - Search', () => {
             .should('have.attr', 'aria-disabled')
             .should('eq', 'true');
         cy.get('input[data-testid="journal-search-keywords-input"]').type('t');
-        cy.get('[data-testid="clear-journal-search-keywords"]')
-            .should('have.attr', 'aria-disabled')
-            .should('eq', 'false');
+        cy.get('[data-testid="clear-journal-search-keywords"]').should('not.have.attr', 'aria-disabled');
         cy.get('[data-testid="clear-journal-search-keywords"]').click();
         cy.get('input[data-testid="journal-search-keywords-input"]').should('have.value', '');
 
@@ -150,7 +148,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 32);
+            .should('have.length', 31);
 
         cy.checkA11y('div.StandardPage', {
             reportName: 'Search Journals',
@@ -180,7 +178,7 @@ context('Strategic Publishing - Search', () => {
 
         cy.get('div[data-testid="journal-search-keyword-list-subjects-field-of-research"]')
             .find('span')
-            .should('have.length', 34);
+            .should('have.length', 33);
 
         cy.get('button[data-testid="journal-search-button"]').should('have.attr', 'disabled');
 

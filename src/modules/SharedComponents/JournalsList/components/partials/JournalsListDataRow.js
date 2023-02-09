@@ -165,6 +165,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                                 (field.showTooltip && /* istanbul ignore next */ itemData) ||
                                                 ''
                                             }
+                                            describeChild
                                             placement="left"
                                             disableFocusListener={!field.showTooltip || !itemData}
                                             disableHoverListener={!field.showTooltip || !itemData}

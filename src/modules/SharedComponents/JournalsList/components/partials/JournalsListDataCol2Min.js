@@ -43,6 +43,7 @@ const JournalsListDataCol2Min = ({ journal, index }) => {
                                     (item.showTooltip && itemData) ||
                                     ''
                                 }
+                                describeChild
                                 placement="left"
                                 disableFocusListener={!item.showTooltip || !itemData}
                                 disableHoverListener={!item.showTooltip || !itemData}

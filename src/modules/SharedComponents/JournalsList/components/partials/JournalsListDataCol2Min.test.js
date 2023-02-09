@@ -56,9 +56,8 @@ describe('JournalsListDataCol2 Min', () => {
         const { queryByText } = setup({ journal: mockData[0] });
         expect(queryByText('Q')).not.toBeInTheDocument();
 
-        expect(document.querySelector('.MuiGrid2-root:not(.MuiGrid2-container):last-of-type p')).toHaveAttribute(
-            'aria-label',
-            '',
+        expect(document.querySelector('.MuiGrid2-root:not(.MuiGrid2-container):last-of-type p')).not.toHaveAttribute(
+            'title',
         );
     });
 });

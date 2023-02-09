@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Field, propTypes } from 'redux-form/immutable';

@@ -193,7 +193,7 @@ context('Incomplete record form', () => {
 
         context('big screens', () => {
             beforeEach(() => {
-                cy.viewport(960, 800);
+                cy.viewport(900, 800);
             });
 
             it('should display without overlaying elements', () => {
@@ -211,7 +211,7 @@ context('Incomplete record form', () => {
 
         context('small screens', () => {
             beforeEach(() => {
-                cy.viewport(959, 600);
+                cy.viewport(899, 600);
             });
 
             it('should display without overlaying elements', () => {
