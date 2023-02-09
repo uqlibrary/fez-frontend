@@ -4,12 +4,7 @@ import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
 import withStyles from '@mui/styles/withStyles';
-import { useWidth } from 'hooks';
-
-const withWidth = () => WrappedComponent => props => {
-    const width = useWidth();
-    return <WrappedComponent {...props} width={width} />;
-};
+import { withWidth } from 'helpers/withWidth';
 
 export const styles = theme => ({
     stepper: {

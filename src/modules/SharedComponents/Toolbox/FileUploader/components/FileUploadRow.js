@@ -7,12 +7,7 @@ import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import FileUploadRowDefaultView from './FileUploadRowDefaultView';
 import FileUploadRowMobileView from './FileUploadRowMobileView';
 
-import { useWidth } from 'hooks';
-
-const withWidth = () => WrappedComponent => props => {
-    const width = useWidth();
-    return <WrappedComponent {...props} width={width} />;
-};
+import { withWidth } from 'helpers/withWidth';
 
 export class FileUploadRow extends PureComponent {
     static propTypes = {

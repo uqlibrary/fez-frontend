@@ -501,7 +501,7 @@ export const AttachedFiles = ({
                                                     <Grid
                                                         item
                                                         xs={2}
-                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')} `}
+                                                        id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
                                                     >
                                                         {(openAccessConfig.openAccessFiles.includes(
                                                             openAccessStatusId,
