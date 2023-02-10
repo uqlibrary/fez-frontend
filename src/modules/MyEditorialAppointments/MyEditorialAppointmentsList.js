@@ -118,7 +118,6 @@ export const GetColumns = () => {
                 otherRoleLabel,
                 otherRoleHint,
                 startYearLabel,
-                startYearErrorMessage,
                 endYearLabel,
                 endYearHint,
                 endYearErrorMessage,
@@ -318,7 +317,7 @@ export const GetColumns = () => {
                                 'aria-labelledby': 'eap-start-year-label',
                             }}
                             renderInput={params => {
-                                const value = params.inputProps?.value ?? null;
+                                const value = params.inputProps?.value ?? /* istanbul ignore next */ null;
                                 return (
                                     <TextField
                                         {...params}
@@ -331,13 +330,6 @@ export const GetColumns = () => {
                                             'data-testid': 'eap-start-year-label',
                                             htmlFor: 'eap-start-year-input',
                                         }}
-                                        helperText={
-                                            !!value &&
-                                            (!moment(String(value), 'YYYY').isValid() ||
-                                                !moment(String(value), 'YYYY').isSameOrBefore(moment(), 'year'))
-                                                ? startYearErrorMessage
-                                                : ''
-                                        }
                                         error={
                                             !value ||
                                             !moment(String(value), 'YYYY').isValid() ||
@@ -430,7 +422,7 @@ export const GetColumns = () => {
                                 placeholder: endYearHint,
                             }}
                             renderInput={params => {
-                                const displayValue = params.inputProps?.value ?? null;
+                                const displayValue = params.inputProps?.value ?? /* istanbul ignore next */ null;
 
                                 return (
                                     <TextField

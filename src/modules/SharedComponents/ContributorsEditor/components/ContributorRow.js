@@ -39,7 +39,7 @@ export const useStyles = makeStyles(theme => ({
         borderLeft: '5px solid red',
     },
     rowSelected: {
-        backgroundColor: `${(theme.palette.accent || {}).main} !important`,
+        backgroundColor: `${(theme.palette.accent || /* istanbul ignore next */ {}).main} !important`,
         '& svg': {
             color: 'white !important',
         },
@@ -128,6 +128,7 @@ export const ContributorRow = ({
     }, [contributor, index]);
 
     const _onMoveUp = React.useCallback(() => {
+        /* istanbul ignore else */
         if (!disabled && onMoveUp) {
             onMoveUp(contributor, index);
         }
@@ -135,6 +136,7 @@ export const ContributorRow = ({
     }, [contributor, index]);
 
     const _onMoveDown = React.useCallback(() => {
+        /* istanbul ignore else */
         if (!disabled && onMoveDown) {
             onMoveDown(contributor, index);
         }

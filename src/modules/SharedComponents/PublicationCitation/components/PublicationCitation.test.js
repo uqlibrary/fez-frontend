@@ -218,7 +218,8 @@ describe('PublicationCitation ', () => {
             showDefaultActions: true,
         });
         const test = jest.spyOn(wrapper.instance(), '_handleDefaultActions');
-        wrapper.find('WithStyles(ForwardRef(Button)).publicationAction').forEach((button, index) => {
+
+        wrapper.find('ForwardRef(Button).publicationAction').forEach((button, index) => {
             expect(button.getElement().props.children).toEqual(
                 // wrapper.instance().defaultActions[index].label
                 [wrapper.instance().defaultActions[index].label, false],
