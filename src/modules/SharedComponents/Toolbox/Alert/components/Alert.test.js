@@ -1,7 +1,6 @@
 import React from 'react';
-import { rtlRender, fireEvent } from 'test-utils';
+import { rtlRender, fireEvent, createMatchMedia } from 'test-utils';
 import Alert from './Alert';
-import mediaQuery from 'css-mediaquery';
 
 function setup(testProps = {}) {
     return rtlRender(
@@ -16,14 +15,6 @@ function setup(testProps = {}) {
             {...testProps}
         />,
     );
-}
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
 }
 
 describe('Alert', () => {

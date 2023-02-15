@@ -15,6 +15,8 @@ import { getStore } from '../src/config/store';
 import Immutable from 'immutable';
 import { createMemoryHistory } from 'history';
 
+import mediaQuery from 'css-mediaquery';
+
 const domTestingLib = require('@testing-library/dom');
 const reactTestingLib = require('@testing-library/react');
 
@@ -84,6 +86,16 @@ export const WithReduxStore = ({ initialState = Immutable.Map(), children }) => 
     </Provider>
 );
 
+export const createMatchMedia = width => {
+    return query => ({
+                     matches: mediaQuery.match(query, { width }),
+                     /* istanbul ignore next */
+                     addListener: () => {},
+                     /* istanbul ignore next */
+                     removeListener: () => {},
+                     });
+};
+
 module.exports = {
     ...domTestingLib,
     ...reactTestingLib,
@@ -95,4 +107,5 @@ module.exports = {
     AllTheProviders,
     WithReduxStore,
     WithRouter,
+    createMatchMedia,
 };

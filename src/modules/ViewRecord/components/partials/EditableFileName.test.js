@@ -1,10 +1,9 @@
 import React from 'react';
-import { rtlRender, fireEvent, act } from 'test-utils';
+import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
 
 import EditableFileName from './EditableFileName';
 
 import { journalArticle } from 'mock/data/testing/records';
-import createMatchMedia from 'helpers/createMatchMedia';
 
 const id = 'test-file-name';
 const editId = `${id}-edit`;

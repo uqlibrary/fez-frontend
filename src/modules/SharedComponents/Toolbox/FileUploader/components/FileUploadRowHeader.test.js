@@ -1,15 +1,6 @@
 import React from 'react';
 import FileUploadRowHeader from './FileUploadRowHeader';
-import { rtlRender, fireEvent, waitFor } from 'test-utils';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
+import { rtlRender, fireEvent, waitFor, createMatchMedia } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {

@@ -3,17 +3,8 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import mockData from 'mock/data/testing/journals/journals';
-import { WithReduxStore, render } from 'test-utils';
+import { WithReduxStore, render, createMatchMedia } from 'test-utils';
 import Immutable from 'immutable';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const defaultTestData = {
     row: mockData[0],

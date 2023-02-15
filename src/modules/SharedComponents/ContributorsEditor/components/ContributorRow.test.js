@@ -1,16 +1,7 @@
 import ContributorRow from './ContributorRow';
-
+import { createMatchMedia } from 'test-utils';
 import { authorsSearch } from 'mock/data';
 import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
-import mediaQuery from 'css-mediaquery';
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 function setup(testProps = {}, testArgs = {}) {
     // build full props list required by the component

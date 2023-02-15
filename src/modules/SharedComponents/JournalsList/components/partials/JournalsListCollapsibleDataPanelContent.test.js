@@ -3,18 +3,10 @@ import Grid from '@mui/material/Grid';
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';
 import { JournalFieldsMap } from './JournalFieldsMap';
 import mockData from 'mock/data/testing/journals/journals';
-import { WithReduxStore, render } from 'test-utils';
+import { WithReduxStore, render, createMatchMedia } from 'test-utils';
 import Immutable from 'immutable';
-import mediaQuery from 'css-mediaquery';
 import { sanitiseId } from 'helpers/general';
 
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 const testItems = JournalFieldsMap.filter(item => !item.compactView);
 const defaultTestData = {
     item: 0,

@@ -1,8 +1,7 @@
 import React from 'react';
 import { default as SearchRecords, normaliseDisplayLookup } from './SearchRecords';
 import { pathConfig } from 'config';
-import { act, fireEvent, WithReduxStore } from 'test-utils';
-import mediaQuery from 'css-mediaquery';
+import { act, fireEvent, WithReduxStore, createMatchMedia } from 'test-utils';
 import * as UserIsAdminHook from 'hooks/userIsAdmin';
 import { EXPORT_FORMAT_TO_EXTENSION, COLLECTION_VIEW_TYPE } from 'config/general';
 import { createMemoryHistory } from 'history';
@@ -95,17 +94,6 @@ const props = {
             ],
         },
     },
-};
-
-/**
- * Unhide items hidden by MaterialUI based on screen size
- */
-const createMatchMedia = width => {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
 };
 
 /**

@@ -1,7 +1,6 @@
 import React from 'react';
 import MediaPreview from './MediaPreview';
-import { rtlRender, fireEvent, act } from 'test-utils';
-import createMatchMedia from 'helpers/createMatchMedia';
+import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
 import * as MediaPreviewUtils from './MediaPreviewUtils';
 jest.mock('./MediaPreviewUtils');
 

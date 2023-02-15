@@ -1,20 +1,9 @@
 import React from 'react';
-import { rtlRender, fireEvent, act } from 'test-utils';
-
+import { rtlRender, fireEvent, act, createMatchMedia } from 'test-utils';
 import FileName from './FileName';
 
 import { journalArticle } from 'mock/data/testing/records';
 import { CURRENT_LICENCES } from 'config/general';
-
-import mediaQuery from 'css-mediaquery';
-
-const createMatchMedia = width => {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-};
 
 const id = 'test-file-name';
 

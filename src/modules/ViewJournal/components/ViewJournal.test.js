@@ -2,21 +2,12 @@ import React from 'react';
 import * as repositories from 'repositories';
 import { journalDetails } from 'mock/data/journal';
 
-import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent } from 'test-utils';
+import { render, waitForElementToBeRemoved, WithReduxStore, act, fireEvent, createMatchMedia } from 'test-utils';
 import ViewJournal from './ViewJournal';
-import mediaQuery from 'css-mediaquery';
 
 jest.mock('react-router', () => ({
     useParams: jest.fn(() => ({ id: 1 })),
 }));
-
-function createMatchMedia(width) {
-    return query => ({
-        matches: mediaQuery.match(query, { width }),
-        addListener: () => {},
-        removeListener: () => {},
-    });
-}
 
 const setup = () => {
     return render(
