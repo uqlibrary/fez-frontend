@@ -511,10 +511,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     icon: () => (
                                         <Icon
                                             disabled={props.disabled}
-                                            id={`users-list-row-${
+                                            id={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`users-list-row-${
+                                            data-testid={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                             {...restAction.iconProps}
@@ -529,9 +529,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         const { tooltip } = props.action;
                         return (
                             <Button
-                                id={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                data-testid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={props.disabled}
+                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                disabled={props.disabled || disabled}
                                 variant="contained"
                                 color="primary"
                                 children={tooltip}
