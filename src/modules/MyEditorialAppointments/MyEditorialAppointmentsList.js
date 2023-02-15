@@ -500,12 +500,8 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                     />
                 ),
                 Action: props => {
-                    if (
-                        typeof props.action !== 'function' &&
-                        !props.action.action &&
-                        props.action.position !== 'toolbar'
-                    ) {
-                        const { icon: Icon, tooltip, ...restAction } = props.action;
+                    if (typeof props.action === 'function') {
+                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (
                             <MTableAction
                                 {...props}
@@ -515,10 +511,10 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     icon: () => (
                                         <Icon
                                             disabled={props.disabled}
-                                            id={`my-editorial-appointments-list-row-${
+                                            id={`users-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-list-row-${
+                                            data-testid={`users-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                             {...restAction.iconProps}
@@ -528,14 +524,14 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                 size="small"
                             />
                         );
-                    } else if (typeof props.action === 'function' && !!props.action.tooltip) {
+                    } else if (!!props.action.tooltip) {
                         //  Add action
-                        const { tooltip } = props.action(props.data);
+                        const { tooltip } = props.action;
                         return (
                             <Button
-                                id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={disabled}
+                                id={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                data-testid={`users-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                disabled={props.disabled}
                                 variant="contained"
                                 color="primary"
                                 children={tooltip}
