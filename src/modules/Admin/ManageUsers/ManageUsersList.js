@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import makeStyles from '@material-ui/styles/makeStyles';
-import MaterialTable, { MTableAction, MTableBodyRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableBodyRow } from '@material-table/core';
 import { tableIcons } from './ManageUsersListIcons';
 
 import Backdrop from '@material-ui/core/Backdrop';
@@ -34,6 +34,7 @@ export const getColumns = () => {
         {
             title: <UserDetailsHeader />,
             field: 'user',
+            sorting: false,
             render: rowData => <UserDetailsRow rowData={rowData} />,
         },
     ];
@@ -204,7 +205,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                             {...props}
                             {...(props.hasAnyEditingRow
                                 ? {
-                                      onRowClick: false,
+                                      onRowClick: null,
                                       hover: false,
                                   }
                                 : { hover: true })}
@@ -281,7 +282,7 @@ export const ManageUsersList = ({ onRowAdd, onRowDelete, onRowUpdate, onBulkRowD
                         showAddRow: false,
                     });
                 }}
-                onChangeRowsPerPage={pageSize => setPageSize(pageSize)}
+                onRowsPerPageChange={pageSize => setPageSize(pageSize)}
                 icons={tableIcons}
                 title=""
                 localization={{

@@ -27,7 +27,12 @@ export const FavouriteSearch = () => {
     }, []);
 
     const handleRowUpdate = (newData, oldData) => {
-        return dispatch(updateFavouriteSearchListItem(newData, oldData));
+        const oldD = { ...oldData };
+        delete oldD.tableData;
+        const newD = { ...newData };
+        delete newD.tableData;
+        // delete newData.tableData;
+        return dispatch(updateFavouriteSearchListItem(newD, oldD));
     };
 
     const handleRowDelete = oldData => {

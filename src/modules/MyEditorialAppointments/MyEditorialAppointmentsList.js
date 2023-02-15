@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from 'material-table';
+import MaterialTable, { MTableAction, MTableBodyRow, MTableEditRow } from '@material-table/core';
 import moment from 'moment';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -460,7 +461,6 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     } = locale.components.myEditorialAppointmentsList;
 
     const [data, setData] = React.useState(list);
-
     const handleEditingApproved = props => (action, newData, oldData) => {
         const invalid = props.columns.some(column => !column.validate(newData));
 
@@ -505,28 +505,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         !props.action.action &&
                         props.action.position !== 'toolbar'
                     ) {
-                        //  Save or Cancel actions for Add/Edit/Delete actions
                         const { icon: Icon, tooltip, ...restAction } = props.action;
-                        return (
-                            <MTableAction
-                                {...props}
-                                action={{
-                                    ...restAction,
-                                    icon: () => (
-                                        <Icon
-                                            id={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                            data-testid={`my-editorial-appointments-${(!!props.data.tableData &&
-                                                props.data.tableData.editing) ||
-                                                'add'}-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                        />
-                                    ),
-                                }}
-                            />
-                        );
-                    } else if (typeof props.action === 'function') {
-                        const { icon: Icon, tooltip, ...restAction } = props.action(props.data);
                         return (
                             <MTableAction
                                 {...props}
@@ -535,32 +514,37 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                                     tooltip,
                                     icon: () => (
                                         <Icon
-                                            disabled={disabled}
+                                            disabled={props.disabled}
                                             id={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                             data-testid={`my-editorial-appointments-list-row-${
                                                 props.data.tableData.id
                                             }-${tooltip.toLowerCase().replace(/ /g, '-')}`}
+                                            {...restAction.iconProps}
                                         />
                                     ),
                                 }}
+                                size="small"
                             />
                         );
-                    } else {
-                        //  Add actions
-                        const { tooltip } = props.action;
+                    } else if (typeof props.action === 'function' && !!props.action.tooltip) {
+                        //  Add action
+                        const { tooltip } = props.action(props.data);
                         return (
                             <Button
                                 id={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
                                 data-testid={`my-editorial-appointments-${tooltip.toLowerCase().replace(/ /g, '-')}`}
-                                disabled={props.disabled}
+                                disabled={disabled}
                                 variant="contained"
                                 color="primary"
                                 children={tooltip}
                                 onClick={event => props.action.onClick(event, props.data)}
                             />
                         );
+                    } else {
+                        // Catch for erronious "Buttons" on rows after editing
+                        return <React.Fragment />;
                     }
                 },
             }}
@@ -590,7 +574,9 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                         .then(data => {
                             setData(prevState => {
                                 const list = [...prevState];
-                                list[list.indexOf(oldData)] = data;
+                                const target = list.find(el => el.eap_id === oldData.eap_id);
+                                const index = list.indexOf(target);
+                                list[index] = data;
                                 return list;
                             });
                         })
@@ -598,10 +584,15 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
                 },
                 onRowDelete: oldData => {
                     return handleRowDelete(oldData).then(() => {
-                        setData(prevState => {
-                            const data = [...prevState];
-                            data.splice(data.indexOf(oldData), 1);
-                            return data;
+                        return new Promise(resolve => {
+                            setTimeout(() => {
+                                const dataDelete = [...data];
+                                const target = dataDelete.find(el => el.eap_id === oldData.eap_id);
+                                const index = dataDelete.indexOf(target);
+                                dataDelete.splice(index, 1);
+                                setData([...dataDelete]);
+                                resolve();
+                            }, 1000);
                         });
                     });
                 },
