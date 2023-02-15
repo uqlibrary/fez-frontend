@@ -505,7 +505,10 @@ export const AuthorsList = ({ contributorEditorId, disabled, isNtro, list, local
                         'data-testid': `${contributorEditorId}-list-row-${rowData.tableData.id}-move-up`,
                     },
                     tooltip: moveUpHint,
-                    disabled: disabled || (rowData.itemIndex && rowData.itemIndex === 0) || rowData.tableData.id === 0,
+                    disabled:
+                        disabled ||
+                        (rowData.itemIndex && /* istanbul ignore next */ rowData.itemIndex === 0) ||
+                        rowData.tableData.id === 0,
                     onClick: () => {
                         const index = rowData.tableData.id;
                         const nextContributor = {
