@@ -642,8 +642,7 @@ describe('ManageUsers', () => {
         await waitFor(() => expect(showAppAlert).toHaveBeenCalled());
 
         // await waitFor(() => expect(getByTestId('usr-full-name-0')).toBeInTheDocument());
-        await new Promise(r => setTimeout(r, 2000));
-        screen.debug(undefined, 100000);
+        // await new Promise(r => setTimeout(r, 2000));
         // expect(getByTestId('usr-full-name-0')).toHaveAttribute('value', 'Testing User');
         // expect(getByTestId('usr-username-0')).toHaveAttribute('value', 'uqvasai');
     });

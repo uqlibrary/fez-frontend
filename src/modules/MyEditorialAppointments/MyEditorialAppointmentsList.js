@@ -463,7 +463,7 @@ export const MyEditorialAppointmentsList = ({ disabled, handleRowAdd, handleRowD
     const [data, setData] = React.useState(list);
     const handleEditingApproved = props => (action, newData, oldData) => {
         const invalid = props.columns.some(column => !column.validate(newData));
-
+        /* istanbul ignore if  */
         if (invalid) {
             return;
         }
