@@ -1022,7 +1022,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -1034,15 +1033,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -5412,7 +5402,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             "MuiFormLabel": Object {
                                                               "styleOverrides": Object {
                                                                 "root": Object {
-                                                                  "lineHeight": "normal",
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
@@ -5424,15 +5413,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                               "styleOverrides": Object {
                                                                 "colorInherit": Object {
                                                                   "color": "none",
-                                                                },
-                                                              },
-                                                            },
-                                                            "MuiInput": Object {
-                                                              "styleOverrides": Object {
-                                                                "formControl": Object {
-                                                                  "label + &": Object {
-                                                                    "marginTop": 17,
-                                                                  },
                                                                 },
                                                               },
                                                             },
@@ -9810,7 +9790,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -9822,15 +9801,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -13876,7 +13846,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                             "MuiFormLabel": Object {
                                                               "styleOverrides": Object {
                                                                 "root": Object {
-                                                                  "lineHeight": "normal",
                                                                   "overflow": "hidden",
                                                                   "textOverflow": "ellipsis",
                                                                   "whiteSpace": "nowrap",
@@ -13888,15 +13857,6 @@ exports[`Component FileUploader should mount and unmount containers and clear fi
                                                               "styleOverrides": Object {
                                                                 "colorInherit": Object {
                                                                   "color": "none",
-                                                                },
-                                                              },
-                                                            },
-                                                            "MuiInput": Object {
-                                                              "styleOverrides": Object {
-                                                                "formControl": Object {
-                                                                  "label + &": Object {
-                                                                    "marginTop": 17,
-                                                                  },
                                                                 },
                                                               },
                                                             },

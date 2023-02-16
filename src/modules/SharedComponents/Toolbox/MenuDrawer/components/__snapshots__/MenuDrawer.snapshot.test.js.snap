@@ -143,7 +143,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -155,15 +154,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -862,7 +852,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -874,15 +863,6 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },

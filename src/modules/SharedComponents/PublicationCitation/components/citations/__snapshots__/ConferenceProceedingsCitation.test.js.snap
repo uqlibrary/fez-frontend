@@ -143,7 +143,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -155,15 +154,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -2514,7 +2504,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                             "MuiFormLabel": Object {
                               "styleOverrides": Object {
                                 "root": Object {
-                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -2526,15 +2515,6 @@ exports[`ConferenceProceedingsCitation renders  component with a mock espace rec
                               "styleOverrides": Object {
                                 "colorInherit": Object {
                                   "color": "none",
-                                },
-                              },
-                            },
-                            "MuiInput": Object {
-                              "styleOverrides": Object {
-                                "formControl": Object {
-                                  "label + &": Object {
-                                    "marginTop": 17,
-                                  },
                                 },
                               },
                             },
@@ -3425,7 +3405,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -3437,15 +3416,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -5808,7 +5778,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                             "MuiFormLabel": Object {
                               "styleOverrides": Object {
                                 "root": Object {
-                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -5820,15 +5789,6 @@ exports[`ConferenceProceedingsCitation renders  component with an empty doi view
                               "styleOverrides": Object {
                                 "colorInherit": Object {
                                   "color": "none",
-                                },
-                              },
-                            },
-                            "MuiInput": Object {
-                              "styleOverrides": Object {
-                                "formControl": Object {
-                                  "label + &": Object {
-                                    "marginTop": 17,
-                                  },
                                 },
                               },
                             },
@@ -6719,7 +6679,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -6731,15 +6690,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -7454,7 +7404,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                             "MuiFormLabel": Object {
                               "styleOverrides": Object {
                                 "root": Object {
-                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -7466,15 +7415,6 @@ exports[`ConferenceProceedingsCitation renders  component with empty publication
                               "styleOverrides": Object {
                                 "colorInherit": Object {
                                   "color": "none",
-                                },
-                              },
-                            },
-                            "MuiInput": Object {
-                              "styleOverrides": Object {
-                                "formControl": Object {
-                                  "label + &": Object {
-                                    "marginTop": 17,
-                                  },
                                 },
                               },
                             },

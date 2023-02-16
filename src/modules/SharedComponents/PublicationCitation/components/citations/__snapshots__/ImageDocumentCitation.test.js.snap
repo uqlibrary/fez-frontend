@@ -143,7 +143,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -155,15 +154,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -1521,7 +1511,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
-                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -1533,15 +1522,6 @@ exports[`ImageDocumentCitation renders  component with a mock espace record 1`] 
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
-                              },
-                            },
-                          },
-                          "MuiInput": Object {
-                            "styleOverrides": Object {
-                              "formControl": Object {
-                                "label + &": Object {
-                                  "marginTop": 17,
-                                },
                               },
                             },
                           },
@@ -2335,7 +2315,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -2347,15 +2326,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -3044,7 +3014,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
-                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -3056,15 +3025,6 @@ exports[`ImageDocumentCitation renders  component with empty publication 1`] = `
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
-                              },
-                            },
-                          },
-                          "MuiInput": Object {
-                            "styleOverrides": Object {
-                              "formControl": Object {
-                                "label + &": Object {
-                                  "marginTop": 17,
-                                },
                               },
                             },
                           },

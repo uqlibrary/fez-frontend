@@ -26,7 +26,6 @@ exports[`PublicationsListSorting component has the correct display type options 
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -116,7 +115,6 @@ exports[`PublicationsListSorting component has the correct display type options 
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -158,7 +156,6 @@ exports[`PublicationsListSorting component has the correct display type options 
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"
@@ -232,7 +229,6 @@ exports[`PublicationsListSorting component has the correct display type options 
         id="displayRecordsAs"
         onChange={[Function]}
         value="auto"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-display-records-as-option-456849"
@@ -296,7 +292,6 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -386,7 +381,6 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -428,7 +422,6 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"
@@ -502,7 +495,6 @@ exports[`PublicationsListSorting component renders correctly when set to true 1`
         id="displayRecordsAs"
         onChange={[Function]}
         value="auto"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-display-records-as-option-456849"
@@ -579,7 +571,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -669,7 +660,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -711,7 +701,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="pageSize"
         onChange={[Function]}
         value={5}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"
@@ -785,7 +774,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -875,7 +863,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -917,7 +904,6 @@ exports[`PublicationsListSorting component renders will set state on receiving n
         id="pageSize"
         onChange={[Function]}
         value={5}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"
@@ -997,7 +983,6 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -1087,7 +1072,6 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -1129,7 +1113,6 @@ exports[`PublicationsListSorting component renders with export dropdown for admi
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-10"
@@ -1214,7 +1197,6 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -1304,7 +1286,6 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -1346,7 +1327,6 @@ exports[`PublicationsListSorting component renders with export dropdown hidden 1
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-10"
@@ -1412,7 +1392,6 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -1502,7 +1481,6 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -1544,7 +1522,6 @@ exports[`PublicationsListSorting component renders with non-empty paging data 1`
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-10"
@@ -1610,7 +1587,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="sortBy"
         onChange={[Function]}
         value="published_date"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -1700,7 +1676,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="sortOrder"
         onChange={[Function]}
         value="Desc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -1742,7 +1717,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="pageSize"
         onChange={[Function]}
         value={20}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"
@@ -1824,7 +1798,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="sortBy"
         onChange={[Function]}
         value="score"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-by-option-0"
@@ -1914,7 +1887,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="sortOrder"
         onChange={[Function]}
         value="Asc"
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-sort-order-option-0"
@@ -1956,7 +1928,6 @@ exports[`PublicationsListSorting component updates sortBy, sortDirection and pag
         id="pageSize"
         onChange={[Function]}
         value={50}
-        variant="standard"
       >
         <ForwardRef(MenuItem)
           data-testid="publication-list-sorting-page-size-option-5"

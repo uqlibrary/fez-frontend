@@ -106,7 +106,6 @@ const PublicationsListSorting = props => {
                 <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{props.sortingData.sortLabel}</InputLabel>
                     <Select
-                        variant="standard"
                         id="sortBy"
                         onChange={sortByChanged}
                         value={sortBy}
@@ -132,7 +131,6 @@ const PublicationsListSorting = props => {
                 <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{txt.sortDirectionLabel}</InputLabel>
                     <Select
-                        variant="standard"
                         id="sortOrder"
                         onChange={orderDirectionsChanged}
                         value={sortDirection}
@@ -163,7 +161,6 @@ const PublicationsListSorting = props => {
                 <FormControl variant="standard" fullWidth>
                     <InputLabel shrink>{props.sortingData.pageSize}</InputLabel>
                     <Select
-                        variant="standard"
                         id="pageSize"
                         value={pageSize}
                         disabled={props.disabled}
@@ -210,7 +207,6 @@ const PublicationsListSorting = props => {
                     <FormControl variant="standard" fullWidth>
                         <InputLabel shrink>{props.sortingData.displayRecordsAsLabel}</InputLabel>
                         <Select
-                            variant="standard"
                             id="displayRecordsAs"
                             value={displayRecordsAs}
                             disabled={props.disabled}

@@ -37,7 +37,7 @@ import Badge from '@mui/material/Badge';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import makeStyles from '@mui/styles/makeStyles';
 import AdminViewRecordDrawer from './AdminViewRecordDrawer';
-import { Button } from '@mui/material';
+import Button from '@mui/material/Button';
 import fields from 'locale/viewRecord';
 import { createDefaultDrawerDescriptorObject } from 'helpers/adminViewRecordObject';
 import { doesListContainItem } from 'helpers/general';
