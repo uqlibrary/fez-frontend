@@ -9,7 +9,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-7 dataStreamFileBlock css-fpg2v9-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-7 dataStreamFileBlock css-h296zj-MuiGrid2-root"
     >
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-8 dataStreamFileName css-y6fwcd-MuiGrid2-root"
@@ -35,7 +35,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-nnay6n-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -48,7 +48,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -58,7 +58,7 @@ exports[`DataStreamSecuritySelector component should hide derivative datastreams
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="button"
@@ -114,7 +114,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock css-fpg2v9-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock css-h296zj-MuiGrid2-root"
     >
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName css-y6fwcd-MuiGrid2-root"
@@ -140,7 +140,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="dsi-security-policy-0-label"
           >
@@ -153,7 +153,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -163,7 +163,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="button"
@@ -210,7 +210,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-9 dataStreamFileBlock css-fpg2v9-MuiGrid2-root"
+      class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-4 DataStreamSecuritySelector-dataStreamFileBlock-9 dataStreamFileBlock css-h296zj-MuiGrid2-root"
     >
       <div
         class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-6 DataStreamSecuritySelector-dataStreamFileName-10 dataStreamFileName css-y6fwcd-MuiGrid2-root"
@@ -236,7 +236,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
           style="width: 100%;"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-nnay6n-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="dsi-security-policy-0-label"
           >
@@ -249,7 +249,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
             required=""
             validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -259,7 +259,7 @@ exports[`DataStreamSecuritySelector component should show non-derivative datastr
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="dsi-security-policy-0-select"
-              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+              class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
               data-testid="dsi-security-policy-0-select"
               id="dsi-security-policy-0-select"
               role="button"

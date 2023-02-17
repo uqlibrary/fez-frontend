@@ -143,7 +143,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -155,15 +154,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -875,7 +865,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -887,15 +876,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },
@@ -2524,7 +2504,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -2536,15 +2515,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -3243,7 +3213,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -3255,15 +3224,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -3962,7 +3922,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -3974,15 +3933,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -4681,7 +4631,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -4693,15 +4642,6 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -6410,7 +6350,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -6422,15 +6361,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -8946,7 +8876,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -8958,15 +8887,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },
@@ -10467,7 +10387,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -10479,15 +10398,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -11186,7 +11096,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -11198,15 +11107,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -11905,7 +11805,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -11917,15 +11816,6 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -13925,7 +13815,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -13937,15 +13826,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -14655,7 +14535,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -14667,15 +14546,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },
@@ -16257,7 +16127,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -16269,15 +16138,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -16976,7 +16836,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -16988,15 +16847,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -17695,7 +17545,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -17707,15 +17556,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -18414,7 +18254,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "MuiFormLabel": Object {
                                         "styleOverrides": Object {
                                           "root": Object {
-                                            "lineHeight": "normal",
                                             "overflow": "hidden",
                                             "textOverflow": "ellipsis",
                                             "whiteSpace": "nowrap",
@@ -18426,15 +18265,6 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                         "styleOverrides": Object {
                                           "colorInherit": Object {
                                             "color": "none",
-                                          },
-                                        },
-                                      },
-                                      "MuiInput": Object {
-                                        "styleOverrides": Object {
-                                          "formControl": Object {
-                                            "label + &": Object {
-                                              "marginTop": 17,
-                                            },
                                           },
                                         },
                                       },
@@ -20544,7 +20374,6 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -20556,15 +20385,6 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -21228,7 +21048,6 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -21240,15 +21059,6 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },

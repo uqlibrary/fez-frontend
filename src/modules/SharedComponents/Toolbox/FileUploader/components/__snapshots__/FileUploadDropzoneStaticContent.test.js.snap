@@ -143,7 +143,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -155,15 +154,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -842,7 +832,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -854,15 +843,6 @@ exports[`Component FileUploadDropzoneStaticContent should render with default se
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },

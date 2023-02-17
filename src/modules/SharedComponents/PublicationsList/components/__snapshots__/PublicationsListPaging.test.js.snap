@@ -697,7 +697,6 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -709,15 +708,6 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -1408,7 +1398,6 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                       "MuiFormLabel": Object {
                         "styleOverrides": Object {
                           "root": Object {
-                            "lineHeight": "normal",
                             "overflow": "hidden",
                             "textOverflow": "ellipsis",
                             "whiteSpace": "nowrap",
@@ -1420,15 +1409,6 @@ exports[`PublicationsListPaging renders  component with styles 1`] = `
                         "styleOverrides": Object {
                           "colorInherit": Object {
                             "color": "none",
-                          },
-                        },
-                      },
-                      "MuiInput": Object {
-                        "styleOverrides": Object {
-                          "formControl": Object {
-                            "label + &": Object {
-                              "marginTop": 17,
-                            },
                           },
                         },
                       },

@@ -221,7 +221,6 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
-                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -233,15 +232,6 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
-                    },
-                  },
-                },
-                "MuiInput": Object {
-                  "styleOverrides": Object {
-                    "formControl": Object {
-                      "label + &": Object {
-                        "marginTop": 17,
-                      },
                     },
                   },
                 },
@@ -2463,6 +2453,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                               "type": "checkbox",
                                             }
                                           }
+                                          required={false}
                                           type="checkbox"
                                         />,
                                         <Memo
@@ -2974,6 +2965,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                           "type": "checkbox",
                                         }
                                       }
+                                      required={false}
                                       type="checkbox"
                                     >
                                       <Insertion
@@ -3420,6 +3412,7 @@ exports[`Component FileUploadTermsAndConditions should render default view with 
                                         disabled={false}
                                         id="terms-and-conditions-input"
                                         onChange={[Function]}
+                                        required={false}
                                         type="checkbox"
                                       />
                                     </Styled(input)>
