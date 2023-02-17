@@ -29,8 +29,6 @@ module.exports = {
         index: join(__dirname, 'src', 'index.js'),
     },
     output: {
-        filename: '[name].js',
-        path: resolve(__dirname),
         pathinfo: true,
         publicPath: `http://${url}:${port}/${publicPath}`,
     },
@@ -170,17 +168,24 @@ module.exports = {
         alias: {
             '@material-ui/styles': resolve(__dirname, 'node_modules', '@material-ui/styles'),
         },
+        fallback: {
+            https: require.resolve('https-browserify'),
+            stream: require.resolve('stream-browserify'),
+            crypto: require.resolve('crypto-browserify'),
+            console: require.resolve('console-browserify'),
+            constants: require.resolve('constants-browserify'),
+            timers: require.resolve('timers-browserify'),
+            os: require.resolve('os-browserify'),
+            path: require.resolve('path-browserify'),
+            tty: require.resolve('tty-browserify'),
+            vm: require.resolve('vm-browserify'),
+        },
     },
     optimization: {
-        noEmitOnErrors: true,
-        namedModules: true,
+        emitOnErrors: false,
+        // moduleIds: 'named',
         splitChunks: {
-            minChunks: 6,
-            cacheGroups: {
-                commons: {
-                    chunks: 'all',
-                },
-            },
+            chunks: 'all',
         },
     },
 };
