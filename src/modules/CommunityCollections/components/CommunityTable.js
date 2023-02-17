@@ -2,7 +2,7 @@ import React from 'react';
 import makeStyles from '@mui/styles/makeStyles';
 import PropTypes from 'prop-types';
 import CommunityDataRow from './CommunityDataRow';
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 const useStyles = makeStyles({
     headerStyle: {
         fontWeight: 400,
