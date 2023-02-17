@@ -143,6 +143,7 @@ exports[`Grant Information Component  should not break if grant text is not in t
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -154,6 +155,15 @@ exports[`Grant Information Component  should not break if grant text is not in t
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -11666,6 +11676,7 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -11677,6 +11688,15 @@ exports[`Grant Information Component  should not break if rek_grant_id is not in
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },

@@ -263,6 +263,7 @@ exports[`AuthorsCitationView should render component with 1 author 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -274,6 +275,15 @@ exports[`AuthorsCitationView should render component with 1 author 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1073,6 +1083,7 @@ exports[`AuthorsCitationView should render component with 2 authors 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -1084,6 +1095,15 @@ exports[`AuthorsCitationView should render component with 2 authors 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1905,6 +1925,7 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -1916,6 +1937,15 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -2785,6 +2815,7 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -2796,6 +2827,15 @@ exports[`AuthorsCitationView should render component with 2 authors for publicat
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -3659,6 +3699,7 @@ exports[`AuthorsCitationView should render component with 3 authors 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -3670,6 +3711,15 @@ exports[`AuthorsCitationView should render component with 3 authors 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -4514,6 +4564,7 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -4525,6 +4576,15 @@ exports[`AuthorsCitationView should render component with 3 authors for publicat
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -5440,6 +5500,7 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -5451,6 +5512,15 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -6297,6 +6367,7 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -6308,6 +6379,15 @@ exports[`AuthorsCitationView should render component with 3 authors with prefix/
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -7370,6 +7450,7 @@ exports[`AuthorsCitationView should render component with link containing contri
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -7381,6 +7462,15 @@ exports[`AuthorsCitationView should render component with link containing contri
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -8209,6 +8299,7 @@ exports[`AuthorsCitationView should render component with no authors 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -8220,6 +8311,15 @@ exports[`AuthorsCitationView should render component with no authors 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -8991,6 +9091,7 @@ exports[`AuthorsCitationView should set class on component with no authors 1`] =
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -9002,6 +9103,15 @@ exports[`AuthorsCitationView should set class on component with no authors 1`] =
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },

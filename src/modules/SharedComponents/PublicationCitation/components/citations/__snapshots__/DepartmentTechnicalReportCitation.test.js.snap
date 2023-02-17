@@ -143,6 +143,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -154,6 +155,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1481,6 +1491,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -1492,6 +1503,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with a mock espace
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -2347,6 +2367,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -2358,6 +2379,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -3700,6 +3730,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -3711,6 +3742,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with an empty doi 
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -4566,6 +4606,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -4577,6 +4618,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -5265,6 +5315,7 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -5276,6 +5327,15 @@ exports[`DepartmentTechnicalReportCitation renders  component with empty publica
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },

@@ -4,7 +4,7 @@ import { JournalFieldsMap } from './JournalFieldsMap';
 import Checkbox from '@mui/material/Checkbox';
 import InputLabel from '@mui/material/InputLabel';
 import PropTypes from 'prop-types';
-import Tooltip from '@mui/material/Tooltip';
+import { Tooltip } from '@mui/material';
 import makeStyles from '@mui/styles/makeStyles';
 import clsx from 'clsx';
 

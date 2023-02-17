@@ -143,6 +143,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -154,6 +155,15 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1766,6 +1776,7 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -1777,6 +1788,15 @@ exports[`BookCitation renders  component with a mock espace record 1`] = `
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -2671,6 +2691,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -2682,6 +2703,15 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -4392,6 +4422,7 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                             "MuiFormLabel": Object {
                               "styleOverrides": Object {
                                 "root": Object {
+                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -4403,6 +4434,15 @@ exports[`BookCitation renders  component with an empty doi view  1`] = `
                               "styleOverrides": Object {
                                 "colorInherit": Object {
                                   "color": "none",
+                                },
+                              },
+                            },
+                            "MuiInput": Object {
+                              "styleOverrides": Object {
+                                "formControl": Object {
+                                  "label + &": Object {
+                                    "marginTop": 17,
+                                  },
                                 },
                               },
                             },
@@ -5296,6 +5336,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -5307,6 +5348,15 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -5995,6 +6045,7 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -6006,6 +6057,15 @@ exports[`BookCitation renders  component with empty publication 1`] = `
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -6812,6 +6872,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -6823,6 +6884,15 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -8525,6 +8595,7 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                             "MuiFormLabel": Object {
                               "styleOverrides": Object {
                                 "root": Object {
+                                  "lineHeight": "normal",
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
@@ -8536,6 +8607,15 @@ exports[`BookCitation renders  should render citation for edited book record 1`]
                               "styleOverrides": Object {
                                 "colorInherit": Object {
                                   "color": "none",
+                                },
+                              },
+                            },
+                            "MuiInput": Object {
+                              "styleOverrides": Object {
+                                "formControl": Object {
+                                  "label + &": Object {
+                                    "marginTop": 17,
+                                  },
                                 },
                               },
                             },

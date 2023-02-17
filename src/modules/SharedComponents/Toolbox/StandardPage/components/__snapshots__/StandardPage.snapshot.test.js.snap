@@ -228,6 +228,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -239,6 +240,15 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -929,6 +939,7 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                         "MuiFormLabel": Object {
                           "styleOverrides": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -940,6 +951,15 @@ exports[`Snapshot tests for full mount StandardPage component renders StandardPa
                           "styleOverrides": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                        },
+                        "MuiInput": Object {
+                          "styleOverrides": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                         },

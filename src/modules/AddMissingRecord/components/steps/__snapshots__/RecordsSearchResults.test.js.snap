@@ -902,6 +902,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -913,6 +914,15 @@ exports[`Search record results should render a single unclaimable item with no a
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -37196,6 +37206,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                     "MuiFormLabel": Object {
                                       "styleOverrides": Object {
                                         "root": Object {
+                                          "lineHeight": "normal",
                                           "overflow": "hidden",
                                           "textOverflow": "ellipsis",
                                           "whiteSpace": "nowrap",
@@ -37207,6 +37218,15 @@ exports[`Search record results should render a single unclaimable item with no a
                                       "styleOverrides": Object {
                                         "colorInherit": Object {
                                           "color": "none",
+                                        },
+                                      },
+                                    },
+                                    "MuiInput": Object {
+                                      "styleOverrides": Object {
+                                        "formControl": Object {
+                                          "label + &": Object {
+                                            "marginTop": 17,
+                                          },
                                         },
                                       },
                                     },

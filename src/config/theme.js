@@ -78,6 +78,16 @@ export const mui1theme = createTheme({
                     overflow: 'hidden',
                     width: '100%',
                     textOverflow: 'ellipsis',
+                    lineHeight: 'normal',
+                },
+            },
+        },
+        MuiInput: {
+            styleOverrides: {
+                formControl: {
+                    'label + &': {
+                        marginTop: 17,
+                    },
                 },
             },
         },

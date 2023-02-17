@@ -233,6 +233,7 @@ exports[`Related publications Component  should render component 2`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -244,6 +245,15 @@ exports[`Related publications Component  should render component 2`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -3219,6 +3229,7 @@ exports[`Related publications Component  should render component 2`] = `
                         "MuiFormLabel": Object {
                           "styleOverrides": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -3230,6 +3241,15 @@ exports[`Related publications Component  should render component 2`] = `
                           "styleOverrides": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                        },
+                        "MuiInput": Object {
+                          "styleOverrides": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                         },
@@ -6572,6 +6592,7 @@ exports[`Related publications Component  should render with a publication title 
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -6583,6 +6604,15 @@ exports[`Related publications Component  should render with a publication title 
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -9584,6 +9614,7 @@ exports[`Related publications Component  should render with a publication title 
                         "MuiFormLabel": Object {
                           "styleOverrides": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -9595,6 +9626,15 @@ exports[`Related publications Component  should render with a publication title 
                           "styleOverrides": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                        },
+                        "MuiInput": Object {
+                          "styleOverrides": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                         },
@@ -13267,6 +13307,7 @@ exports[`Related publications Component  should render without a child search ke
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -13278,6 +13319,15 @@ exports[`Related publications Component  should render without a child search ke
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -16301,6 +16351,7 @@ exports[`Related publications Component  should render without a child search ke
                         "MuiFormLabel": Object {
                           "styleOverrides": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -16312,6 +16363,15 @@ exports[`Related publications Component  should render without a child search ke
                           "styleOverrides": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                        },
+                        "MuiInput": Object {
+                          "styleOverrides": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                         },
@@ -19654,6 +19714,7 @@ exports[`Related publications Component  should render without a parent search k
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -19665,6 +19726,15 @@ exports[`Related publications Component  should render without a parent search k
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -30848,6 +30918,7 @@ exports[`Related publications Component  should render without a parent search k
                         "MuiFormLabel": Object {
                           "styleOverrides": Object {
                             "root": Object {
+                              "lineHeight": "normal",
                               "overflow": "hidden",
                               "textOverflow": "ellipsis",
                               "whiteSpace": "nowrap",
@@ -30859,6 +30930,15 @@ exports[`Related publications Component  should render without a parent search k
                           "styleOverrides": Object {
                             "colorInherit": Object {
                               "color": "none",
+                            },
+                          },
+                        },
+                        "MuiInput": Object {
+                          "styleOverrides": Object {
+                            "formControl": Object {
+                              "label + &": Object {
+                                "marginTop": 17,
+                              },
                             },
                           },
                         },

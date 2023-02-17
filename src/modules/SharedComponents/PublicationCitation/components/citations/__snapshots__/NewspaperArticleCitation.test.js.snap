@@ -143,6 +143,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -154,6 +155,15 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1880,6 +1890,7 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -1891,6 +1902,15 @@ exports[`NewspaperArticleCitation renders  component with a mock espace record 1
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -2788,6 +2808,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -2799,6 +2820,15 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -4531,6 +4561,7 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -4542,6 +4573,15 @@ exports[`NewspaperArticleCitation renders  component with an empty end page view
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },
@@ -5439,6 +5479,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -5450,6 +5491,15 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -6138,6 +6188,7 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                           "MuiFormLabel": Object {
                             "styleOverrides": Object {
                               "root": Object {
+                                "lineHeight": "normal",
                                 "overflow": "hidden",
                                 "textOverflow": "ellipsis",
                                 "whiteSpace": "nowrap",
@@ -6149,6 +6200,15 @@ exports[`NewspaperArticleCitation renders  component with empty publication 1`] 
                             "styleOverrides": Object {
                               "colorInherit": Object {
                                 "color": "none",
+                              },
+                            },
+                          },
+                          "MuiInput": Object {
+                            "styleOverrides": Object {
+                              "formControl": Object {
+                                "label + &": Object {
+                                  "marginTop": 17,
+                                },
                               },
                             },
                           },

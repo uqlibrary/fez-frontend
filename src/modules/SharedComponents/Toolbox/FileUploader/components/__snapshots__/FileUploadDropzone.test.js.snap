@@ -143,6 +143,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -154,6 +155,15 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -1670,6 +1680,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                           "MuiFormLabel": Object {
                                             "styleOverrides": Object {
                                               "root": Object {
+                                                "lineHeight": "normal",
                                                 "overflow": "hidden",
                                                 "textOverflow": "ellipsis",
                                                 "whiteSpace": "nowrap",
@@ -1681,6 +1692,15 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                                             "styleOverrides": Object {
                                               "colorInherit": Object {
                                                 "color": "none",
+                                              },
+                                            },
+                                          },
+                                          "MuiInput": Object {
+                                            "styleOverrides": Object {
+                                              "formControl": Object {
+                                                "label + &": Object {
+                                                  "marginTop": 17,
+                                                },
                                               },
                                             },
                                           },
@@ -5353,6 +5373,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                 "MuiFormLabel": Object {
                   "styleOverrides": Object {
                     "root": Object {
+                      "lineHeight": "normal",
                       "overflow": "hidden",
                       "textOverflow": "ellipsis",
                       "whiteSpace": "nowrap",
@@ -5364,6 +5385,15 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                   "styleOverrides": Object {
                     "colorInherit": Object {
                       "color": "none",
+                    },
+                  },
+                },
+                "MuiInput": Object {
+                  "styleOverrides": Object {
+                    "formControl": Object {
+                      "label + &": Object {
+                        "marginTop": 17,
+                      },
                     },
                   },
                 },
@@ -6881,6 +6911,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                           "MuiFormLabel": Object {
                                             "styleOverrides": Object {
                                               "root": Object {
+                                                "lineHeight": "normal",
                                                 "overflow": "hidden",
                                                 "textOverflow": "ellipsis",
                                                 "whiteSpace": "nowrap",
@@ -6892,6 +6923,15 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                                             "styleOverrides": Object {
                                               "colorInherit": Object {
                                                 "color": "none",
+                                              },
+                                            },
+                                          },
+                                          "MuiInput": Object {
+                                            "styleOverrides": Object {
+                                              "formControl": Object {
+                                                "label + &": Object {
+                                                  "marginTop": 17,
+                                                },
                                               },
                                             },
                                           },

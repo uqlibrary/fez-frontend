@@ -26,7 +26,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
@@ -39,7 +39,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -49,7 +49,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
-          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
           role="button"
@@ -111,7 +111,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-0-label"
       >
@@ -124,7 +124,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -134,7 +134,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-0-select"
-          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-0-select"
           id="dsi-security-policy-0-select"
           role="button"
@@ -196,7 +196,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       style="width: 100%;"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-5afocb-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-ewijpo-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="dsi-security-policy-2-label"
       >
@@ -209,7 +209,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl  css-mdoj9g-MuiInputBase-root-MuiInput-root-MuiSelect-root"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -219,7 +219,7 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="dsi-security-policy-2-select"
-          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
+          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-emq5k1-MuiSelect-select-MuiInputBase-input-MuiInput-input"
           data-testid="dsi-security-policy-2-select"
           id="dsi-security-policy-2-select"
           role="button"
