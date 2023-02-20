@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Checkbox from '@material-ui/core/Checkbox';
-import Hidden from '@material-ui/core/Hidden';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Grid from '@mui/material/Grid';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Checkbox from '@mui/material/Checkbox';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { sanitiseId } from 'helpers/general';
 
@@ -46,37 +45,31 @@ const JournalsListHeaderRow = ({ checked, onChange, classes, isSelectable = true
                             const id = sanitiseId(`journal-list-header-${header.key}`);
 
                             return (
-                                <React.Fragment key={header.key}>
-                                    <Hidden
-                                        {...(!!header.collapsibleComponent?.hiddenHeader
-                                            ? { only: [...header.collapsibleComponent?.hiddenHeader] }
-                                            : {})}
-                                    >
-                                        <Grid
-                                            item
-                                            {...header.collapsibleComponent?.sizeHeader}
-                                            className={classes?.inputLabel}
-                                            id={id}
-                                            data-testid={id}
-                                        >
-                                            <Box display="flex" alignItems="flex-end" key={header.key}>
-                                                <Typography variant="body1" className={classes?.inputLabel}>
-                                                    {header.label}
-                                                    {!!header.subLabel && (
-                                                        <span className={classes?.subLabel}>{header.subLabel}</span>
-                                                    )}
-                                                </Typography>
-                                                {!!header.titleHelp && (
-                                                    <HelpIcon
-                                                        {...header.titleHelp}
-                                                        testId={header.key}
-                                                        iconSize={'small'}
-                                                    />
-                                                )}
-                                            </Box>
-                                        </Grid>
-                                    </Hidden>
-                                </React.Fragment>
+                                <Grid
+                                    key={header.key}
+                                    item
+                                    {...header.collapsibleComponent?.sizeHeader}
+                                    className={classes?.inputLabel}
+                                    id={id}
+                                    data-testid={id}
+                                    sx={{
+                                        ...(!!header.collapsibleComponent?.hiddenHeader
+                                            ? header.collapsibleComponent?.hiddenHeader
+                                            : /* istanbul ignore next */ {}),
+                                    }}
+                                >
+                                    <Box display="flex" alignItems="flex-end" key={header.key}>
+                                        <Typography variant="body1" className={classes?.inputLabel}>
+                                            {header.label}
+                                            {!!header.subLabel && (
+                                                <span className={classes?.subLabel}>{header.subLabel}</span>
+                                            )}
+                                        </Typography>
+                                        {!!header.titleHelp && (
+                                            <HelpIcon {...header.titleHelp} testId={header.key} iconSize={'small'} />
+                                        )}
+                                    </Box>
+                                </Grid>
                             );
                         })}
                     </Grid>

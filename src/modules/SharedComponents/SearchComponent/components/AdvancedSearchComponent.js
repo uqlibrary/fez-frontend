@@ -1,21 +1,20 @@
 import React, { Fragment, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
-import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
-import Checkbox from '@material-ui/core/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 import { locale } from 'locale';
 import DocumentTypeMultipleField from './Fields/DocumentTypeMultipleField';
 import { default as PublicationYearRangeField } from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
-import { makeStyles } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
+import makeStyles from '@mui/styles/makeStyles';
 import * as validationRules from 'config/validation';
 
 export const useStyles = makeStyles(
@@ -135,8 +134,8 @@ export const AdvancedSearchComponent = ({
     const alreadyAddedFields = fieldRows.map(item => item.searchField);
 
     return (
-        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch} style={{ padding: 12 }}>
-            <Grid container spacing={3}>
+        <form id="advancedSearchForm" onSubmit={_handleAdvancedSearch}>
+            <Grid container spacing={0}>
                 <Grid container spacing={5} alignItems={'center'}>
                     <Grid item style={{ flexGrow: 1, width: 1 }}>
                         <Typography variant="h5">{txt.advancedSearch.title}</Typography>
@@ -147,6 +146,7 @@ export const AdvancedSearchComponent = ({
                             onClick={_toggleMinimise}
                             tooltip={isMinimised ? txt.advancedSearch.tooltip.show : txt.advancedSearch.tooltip.hide}
                             id={!isMinimised ? 'minimize-advanced-search' : 'maximize-advanced-search'}
+                            size="large"
                         >
                             {!isMinimised ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
                         </IconButton>
@@ -264,6 +264,7 @@ export const AdvancedSearchComponent = ({
                                     aria-label={txt.advancedSearch.reset.aria}
                                     onClick={_resetAdvancedSearch}
                                     fullWidth
+                                    color={'default'}
                                 />
                             </Grid>
                             <Grid item xs={12} sm={'auto'}>
@@ -276,16 +277,18 @@ export const AdvancedSearchComponent = ({
                                     fullWidth
                                 />
                             </Grid>
-                            <Hidden smDown>
-                                <Grid item style={{ flexGrow: 1, width: 1 }} />
-                            </Hidden>
+                            <Grid
+                                item
+                                style={{ flexGrow: 1, width: 1 }}
+                                sx={{ display: { xs: 'none', md: 'block' } }}
+                            />
+
                             <Grid item xs={12} md={4} className={classes.searchButton}>
                                 <Button
                                     variant={'contained'}
                                     children={txt.searchButtonText}
                                     aria-label={txt.searchButtonAriaLabel}
                                     type="submit"
-                                    color={'primary'}
                                     fullWidth
                                     onClick={_handleAdvancedSearch}
                                     disabled={!haveAllAdvancedSearchFieldsValidated(fieldRows)}

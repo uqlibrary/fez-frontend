@@ -1,9 +1,10 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import ImageList from '@material-ui/core/ImageList';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import ImageList from '@mui/material/ImageList';
+import { useTheme } from '@mui/material/styles';
+import makeStyles from '@mui/styles/makeStyles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import { pathConfig } from 'config/pathConfig';
 import { default as config } from 'config/imageGalleryConfig';

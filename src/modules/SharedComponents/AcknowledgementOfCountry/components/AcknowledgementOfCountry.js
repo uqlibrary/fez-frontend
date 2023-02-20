@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import { locale } from 'locale';
 
 const AcknowledgementOfCountry = () => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import NewListEditor from './NewListEditor';
-import { render, AllTheProviders, fireEvent, waitFor } from 'test-utils';
+import { rtlRender, fireEvent, waitFor } from 'test-utils';
 
-const setup = (testProps = {}) => {
+const setup = (testProps = {}, render = rtlRender) => {
     const props = {
         onChange: jest.fn(),
         locale: {
@@ -15,11 +15,7 @@ const setup = (testProps = {}) => {
         },
         ...testProps,
     };
-    return render(
-        <AllTheProviders>
-            <NewListEditor {...props} />
-        </AllTheProviders>,
-    );
+    return render(<NewListEditor {...props} />);
 };
 
 describe('NewListEditor component', () => {

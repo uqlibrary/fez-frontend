@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ScaleOfSignificanceForm component should render the default view 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   alignItems="center"
   container={true}
   data-testid="rek-significance-form"
   display="row"
   spacing={2}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     style={
       Object {
@@ -36,8 +36,8 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       required={true}
       value={null}
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={12}
   >
@@ -70,12 +70,12 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       }
       value=""
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={9}
   >
-    <WithStyles(ForwardRef(Button))
+    <ForwardRef(Button)
       color="primary"
       data-testid="rek-significance-add"
       disabled={true}
@@ -85,19 +85,19 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       variant="contained"
     >
       label
-    </WithStyles(ForwardRef(Button))>
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Button)>
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={3}
   >
-    <WithStyles(ForwardRef(Button))
+    <ForwardRef(Button)
       data-testid="rek-significance-clear"
       fullWidth={true}
       id="clear-items"
       onClick={[Function]}
       variant="contained"
     />
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Grid))>
+  </ForwardRef(Grid)>
+</ForwardRef(Grid)>
 `;

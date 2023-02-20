@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { default as defaultConfig } from 'config/imageGalleryConfig';
 import { getThumbnail, getUrl } from './Utils';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const useStyles = makeStyles(() => ({

@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import ColumnTitle from '../partials/ColumnTitle';
 import { default as locale } from 'locale/components';
 

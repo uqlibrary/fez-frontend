@@ -1,16 +1,20 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import DeleteForever from '@material-ui/icons/DeleteForever';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
-import Grid from '@material-ui/core/Grid/Grid';
-import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction';
+import DeleteForever from '@mui/icons-material/DeleteForever';
+import withStyles from '@mui/styles/withStyles';
+import Grid from '@mui/material/Grid';
+import { useWidth } from 'hooks';
+
+const withWidth = () => WrappedComponent => props => {
+    const width = useWidth();
+    return <WrappedComponent {...props} width={width} />;
+};
 
 export class GrantListEditorHeader extends PureComponent {
     static propTypes = {
@@ -77,24 +81,22 @@ export class GrantListEditorHeader extends PureComponent {
                                         style={{ padding: 0 }}
                                     />
                                 </Grid>
-                                <Hidden xsDown>
-                                    <Grid item sm={3}>
+                                <Grid item sm={3} sx={{ display: { xs: 'none', sm: 'block' } }}>
+                                    <ListItemText
+                                        secondary={GrantID}
+                                        secondaryTypographyProps={{ variant: 'caption' }}
+                                        style={{ padding: 0 }}
+                                    />
+                                </Grid>
+                                {!this.props.hideType && (
+                                    <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                                         <ListItemText
-                                            secondary={GrantID}
+                                            secondary={GrantAgencyType}
                                             secondaryTypographyProps={{ variant: 'caption' }}
                                             style={{ padding: 0 }}
                                         />
                                     </Grid>
-                                    {!this.props.hideType && (
-                                        <Grid item sm={4}>
-                                            <ListItemText
-                                                secondary={GrantAgencyType}
-                                                secondaryTypographyProps={{ variant: 'caption' }}
-                                                style={{ padding: 0 }}
-                                            />
-                                        </Grid>
-                                    )}
-                                </Hidden>
+                                )}
                             </Grid>
                         </Grid>
                         <Grid item xs={2} sm={1} md={3}>
@@ -102,16 +104,14 @@ export class GrantListEditorHeader extends PureComponent {
                                 style={{ position: 'relative', width: '100%', margin: '0 0 -32px 0' }}
                             >
                                 <Grid container spacing={0}>
-                                    <Hidden smDown>
-                                        <Grid item xs={8}>
-                                            <ListItemText
-                                                secondary={reorderColumn}
-                                                secondaryTypographyProps={{ variant: 'caption' }}
-                                                style={{ padding: 0 }}
-                                                classes={{ root: classes.right }}
-                                            />
-                                        </Grid>
-                                    </Hidden>
+                                    <Grid item xs={8} sx={{ display: { xs: 'none', md: 'block' } }}>
+                                        <ListItemText
+                                            secondary={reorderColumn}
+                                            secondaryTypographyProps={{ variant: 'caption' }}
+                                            style={{ padding: 0 }}
+                                            classes={{ root: classes.right }}
+                                        />
+                                    </Grid>
                                     <Grid
                                         item
                                         xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4}
@@ -128,6 +128,7 @@ export class GrantListEditorHeader extends PureComponent {
                                                     onClick={this._showConfirmation}
                                                     disabled={this.props.disabled}
                                                     aria-label={deleteAll}
+                                                    size="large"
                                                 >
                                                     <DeleteForever />
                                                 </IconButton>

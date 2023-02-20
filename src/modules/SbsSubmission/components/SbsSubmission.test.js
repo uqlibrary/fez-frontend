@@ -54,7 +54,7 @@ describe('SbsSubmission test', () => {
         const wrapper = setup({ isHdrThesis: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(12);
-        expect(wrapper.find('WithStyles(ForwardRef(Button))').length).toEqual(2);
+        expect(wrapper.find('ForwardRef(Button)').length).toEqual(2);
     });
 
     it('should render sbs thesis submission form', () => {

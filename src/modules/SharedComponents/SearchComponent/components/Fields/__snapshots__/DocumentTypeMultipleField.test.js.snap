@@ -49,13 +49,14 @@ Object {
 `;
 
 exports[`DocumentTypeMultipleField component should render default view 1`] = `
-<WithStyles(ForwardRef(FormControl))
+<ForwardRef(FormControl)
   fullWidth={true}
+  variant="standard"
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <ForwardRef(InputLabel)>
     Work type
-  </WithStyles(ForwardRef(InputLabel))>
-  <WithStyles(ForwardRef(Select))
+  </ForwardRef(InputLabel)>
+  <ForwardRef(Select)
     aria-label="Select work types to search on"
     data-testid="document-type-selector"
     disabled={false}
@@ -65,14 +66,15 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     name="document-type-selector"
     onChange={[Function]}
     value={Array []}
+    variant="standard"
   >
-    <WithStyles(ForwardRef(MenuItem))
+    <ForwardRef(MenuItem)
       disabled={true}
       key="0"
     >
       Select work types
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -88,8 +90,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={130}
     >
       Conference Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -105,8 +107,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={174}
     >
       Book
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -122,8 +124,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={177}
     >
       Book Chapter
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -139,8 +141,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={179}
     >
       Journal Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -156,8 +158,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={181}
     >
       Department Technical Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -173,8 +175,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={183}
     >
       Working Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -190,8 +192,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={185}
     >
       Patent
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -207,8 +209,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={187}
     >
       Thesis
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -224,8 +226,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={189}
     >
       Seminar Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -241,8 +243,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={191}
     >
       Newspaper Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -258,8 +260,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={197}
     >
       Conference Proceedings
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -275,8 +277,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={202}
     >
       Generic Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -292,8 +294,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={204}
     >
       Preprint
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -309,8 +311,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={228}
     >
       Digilib Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -326,8 +328,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={238}
     >
       Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -343,8 +345,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={263}
     >
       Audio Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -360,8 +362,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={272}
     >
       Reference Entry
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -377,8 +379,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={275}
     >
       Research Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -394,8 +396,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={294}
     >
       Journal
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -411,8 +413,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={310}
     >
       Video Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -428,8 +430,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={313}
     >
       Creative Work
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -445,8 +447,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={316}
     >
       Design
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -462,8 +464,8 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={371}
     >
       Data Collection
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -479,19 +481,20 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={374}
     >
       Manuscript
-    </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(ForwardRef(Select))>
-</WithStyles(ForwardRef(FormControl))>
+    </ForwardRef(MenuItem)>
+  </ForwardRef(Select)>
+</ForwardRef(FormControl)>
 `;
 
 exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
-<WithStyles(ForwardRef(FormControl))
+<ForwardRef(FormControl)
   fullWidth={true}
+  variant="standard"
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <ForwardRef(InputLabel)>
     Work type
-  </WithStyles(ForwardRef(InputLabel))>
-  <WithStyles(ForwardRef(Select))
+  </ForwardRef(InputLabel)>
+  <ForwardRef(Select)
     aria-label="Select work types to search on"
     data-testid="document-type-selector"
     disabled={true}
@@ -501,14 +504,15 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     name="document-type-selector"
     onChange={[Function]}
     value={Array []}
+    variant="standard"
   >
-    <WithStyles(ForwardRef(MenuItem))
+    <ForwardRef(MenuItem)
       disabled={true}
       key="0"
     >
       Select work types
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -524,8 +528,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={130}
     >
       Conference Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -541,8 +545,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={174}
     >
       Book
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -558,8 +562,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={177}
     >
       Book Chapter
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -575,8 +579,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={179}
     >
       Journal Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -592,8 +596,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={181}
     >
       Department Technical Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -609,8 +613,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={183}
     >
       Working Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -626,8 +630,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={185}
     >
       Patent
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -643,8 +647,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={187}
     >
       Thesis
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -660,8 +664,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={189}
     >
       Seminar Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -677,8 +681,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={191}
     >
       Newspaper Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -694,8 +698,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={197}
     >
       Conference Proceedings
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -711,8 +715,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={202}
     >
       Generic Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -728,8 +732,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={204}
     >
       Preprint
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -745,8 +749,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={228}
     >
       Digilib Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -762,8 +766,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={238}
     >
       Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -779,8 +783,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={263}
     >
       Audio Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -796,8 +800,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={272}
     >
       Reference Entry
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -813,8 +817,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={275}
     >
       Research Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -830,8 +834,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={294}
     >
       Journal
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -847,8 +851,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={310}
     >
       Video Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -864,8 +868,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={313}
     >
       Creative Work
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -881,8 +885,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={316}
     >
       Design
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -898,8 +902,8 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={371}
     >
       Data Collection
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -915,19 +919,20 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={374}
     >
       Manuscript
-    </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(ForwardRef(Select))>
-</WithStyles(ForwardRef(FormControl))>
+    </ForwardRef(MenuItem)>
+  </ForwardRef(Select)>
+</ForwardRef(FormControl)>
 `;
 
 exports[`DocumentTypeMultipleField component should render with given document types selected by default 1`] = `
-<WithStyles(ForwardRef(FormControl))
+<ForwardRef(FormControl)
   fullWidth={true}
+  variant="standard"
 >
-  <WithStyles(ForwardRef(InputLabel))>
+  <ForwardRef(InputLabel)>
     Work type
-  </WithStyles(ForwardRef(InputLabel))>
-  <WithStyles(ForwardRef(Select))
+  </ForwardRef(InputLabel)>
+  <ForwardRef(Select)
     aria-label="Select work types to search on"
     data-testid="document-type-selector"
     disabled={false}
@@ -942,14 +947,15 @@ exports[`DocumentTypeMultipleField component should render with given document t
         316,
       ]
     }
+    variant="standard"
   >
-    <WithStyles(ForwardRef(MenuItem))
+    <ForwardRef(MenuItem)
       disabled={true}
       key="0"
     >
       Select work types
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -965,8 +971,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={130}
     >
       Conference Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -982,8 +988,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={174}
     >
       Book
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -999,8 +1005,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={177}
     >
       Book Chapter
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1016,8 +1022,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={179}
     >
       Journal Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1033,8 +1039,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={181}
     >
       Department Technical Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1050,8 +1056,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={183}
     >
       Working Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1067,8 +1073,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={185}
     >
       Patent
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1084,8 +1090,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={187}
     >
       Thesis
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1101,8 +1107,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={189}
     >
       Seminar Paper
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1118,8 +1124,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={191}
     >
       Newspaper Article
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1135,8 +1141,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={197}
     >
       Conference Proceedings
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1152,8 +1158,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={202}
     >
       Generic Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1169,8 +1175,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={204}
     >
       Preprint
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1186,8 +1192,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={228}
     >
       Digilib Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1203,8 +1209,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={238}
     >
       Image
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1220,8 +1226,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={263}
     >
       Audio Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1237,8 +1243,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={272}
     >
       Reference Entry
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1254,8 +1260,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={275}
     >
       Research Report
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1271,8 +1277,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={294}
     >
       Journal
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1288,8 +1294,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={310}
     >
       Video Document
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1305,8 +1311,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={313}
     >
       Creative Work
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={true}
       classes={
         Object {
@@ -1322,8 +1328,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={316}
     >
       Design
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={true}
       classes={
         Object {
@@ -1339,8 +1345,8 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={371}
     >
       Data Collection
-    </WithStyles(ForwardRef(MenuItem))>
-    <WithStyles(ForwardRef(MenuItem))
+    </ForwardRef(MenuItem)>
+    <ForwardRef(MenuItem)
       checked={false}
       classes={
         Object {
@@ -1356,7 +1362,7 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={374}
     >
       Manuscript
-    </WithStyles(ForwardRef(MenuItem))>
-  </WithStyles(ForwardRef(Select))>
-</WithStyles(ForwardRef(FormControl))>
+    </ForwardRef(MenuItem)>
+  </ForwardRef(Select)>
+</ForwardRef(FormControl)>
 `;

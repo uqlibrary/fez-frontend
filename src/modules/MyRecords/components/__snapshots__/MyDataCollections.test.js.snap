@@ -4,11 +4,11 @@ exports[`myDatasets test renders active filters 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -38,8 +38,8 @@ exports[`myDatasets test renders active filters 1`] = `
           .
         </div>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -47,11 +47,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={9}
       xs={12}
@@ -62,11 +62,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
         <span>
           Displaying works 1 to 2 of 2 total works. 
         </span>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -79,8 +79,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               </a>
               .
             </span>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -182,8 +182,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               }
               sortingDefaults={Object {}}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -201,8 +201,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               }
               pagingId="my-records-paging-top"
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -226,8 +226,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               }
               onRef={[Function]}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -242,8 +242,8 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               showAdminActions={false}
               showDefaultActions={true}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -261,11 +261,11 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
               }
               pagingId="my-records-paging-bottom"
             />
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -273,11 +273,11 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={9}
       xs={12}
@@ -288,11 +288,11 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
         <span>
           Displaying works 1 to 2 of 2 total works. 
         </span>
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -305,8 +305,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               </a>
               .
             </span>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -408,8 +408,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               }
               sortingDefaults={Object {}}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -427,8 +427,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               }
               pagingId="my-records-paging-top"
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -452,8 +452,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               }
               onRef={[Function]}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -468,8 +468,8 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               showAdminActions={false}
               showDefaultActions={true}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -487,106 +487,110 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
               }
               pagingId="my-records-paging-bottom"
             />
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      md={3}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        md={3}
+      <WithStyles(StandardRighthandCard)
+        title="Refine results"
       >
-        <WithStyles(StandardRighthandCard)
-          title="Refine results"
-        >
-          <Memo(FacetsFilter)
-            activeFacets={
-              Object {
-                "filters": Object {},
-                "ranges": Object {},
-              }
+        <Memo(FacetsFilter)
+          activeFacets={
+            Object {
+              "filters": Object {},
+              "ranges": Object {},
             }
-            excludeFacetsList={
-              Array [
-                "Scopus document type",
-                "Subtype",
-                "Year published",
-                "Display type",
-              ]
+          }
+          excludeFacetsList={
+            Array [
+              "Scopus document type",
+              "Subtype",
+              "Year published",
+              "Display type",
+            ]
+          }
+          facetsData={
+            Object {
+              "Display type": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 95,
+                    "key": 179,
+                  },
+                  Object {
+                    "doc_count": 34,
+                    "key": 130,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 177,
+                  },
+                  Object {
+                    "doc_count": 2,
+                    "key": 183,
+                  },
+                  Object {
+                    "doc_count": 1,
+                    "key": 174,
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 3,
+              },
+              "Keywords": Object {
+                "buckets": Array [
+                  Object {
+                    "doc_count": 15,
+                    "key": "Brca1",
+                  },
+                  Object {
+                    "doc_count": 15,
+                    "key": "Oncology",
+                  },
+                  Object {
+                    "doc_count": 13,
+                    "key": "Breast cancer",
+                  },
+                  Object {
+                    "doc_count": 12,
+                    "key": "Genetics & Heredity",
+                  },
+                  Object {
+                    "doc_count": 10,
+                    "key": "Biochemistry & Molecular Biology",
+                  },
+                ],
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 641,
+              },
             }
-            facetsData={
-              Object {
-                "Display type": Object {
-                  "buckets": Array [
-                    Object {
-                      "doc_count": 95,
-                      "key": 179,
-                    },
-                    Object {
-                      "doc_count": 34,
-                      "key": 130,
-                    },
-                    Object {
-                      "doc_count": 2,
-                      "key": 177,
-                    },
-                    Object {
-                      "doc_count": 2,
-                      "key": 183,
-                    },
-                    Object {
-                      "doc_count": 1,
-                      "key": 174,
-                    },
-                  ],
-                  "doc_count_error_upper_bound": 0,
-                  "sum_other_doc_count": 3,
-                },
-                "Keywords": Object {
-                  "buckets": Array [
-                    Object {
-                      "doc_count": 15,
-                      "key": "Brca1",
-                    },
-                    Object {
-                      "doc_count": 15,
-                      "key": "Oncology",
-                    },
-                    Object {
-                      "doc_count": 13,
-                      "key": "Breast cancer",
-                    },
-                    Object {
-                      "doc_count": 12,
-                      "key": "Genetics & Heredity",
-                    },
-                    Object {
-                      "doc_count": 10,
-                      "key": "Biochemistry & Molecular Biology",
-                    },
-                  ],
-                  "doc_count_error_upper_bound": 0,
-                  "sum_other_doc_count": 641,
-                },
-              }
+          }
+          isMyDataSetPage={true}
+          lookupFacetsList={
+            Object {
+              "Collection": "Collection (lookup)",
+              "Subject": "Subject (lookup)",
             }
-            isMyDataSetPage={true}
-            lookupFacetsList={
-              Object {
-                "Collection": "Collection (lookup)",
-                "Subject": "Subject (lookup)",
-              }
-            }
-            onFacetsChanged={[Function]}
-            renameFacetsList={Object {}}
-            showOpenAccessFilter={true}
-          />
-        </WithStyles(StandardRighthandCard)>
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
+          }
+          onFacetsChanged={[Function]}
+          renameFacetsList={Object {}}
+          showOpenAccessFilter={true}
+        />
+      </WithStyles(StandardRighthandCard)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -596,19 +600,19 @@ exports[`myDatasets test renders loading screen while loading publications  1`] 
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
       <WithStyles(InlineLoader)
         message="Searching for your datasets"
       />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -616,11 +620,11 @@ exports[`myDatasets test renders loading screen while loading publications while
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       md={9}
       xs={12}
@@ -628,11 +632,11 @@ exports[`myDatasets test renders loading screen while loading publications while
       <StandardCard
         noHeader={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={2}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -645,8 +649,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               </a>
               .
             </span>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -741,8 +745,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               }
               sortingDefaults={Object {}}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -753,8 +757,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               pagingData={Object {}}
               pagingId="my-records-paging-top"
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -778,8 +782,8 @@ exports[`myDatasets test renders loading screen while loading publications while
               }
               onRef={[Function]}
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -790,8 +794,8 @@ exports[`myDatasets test renders loading screen while loading publications while
                 message="Retrieving your datasets"
               />
             </div>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -802,11 +806,11 @@ exports[`myDatasets test renders loading screen while loading publications while
               pagingData={Object {}}
               pagingId="my-records-paging-bottom"
             />
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;
 
@@ -814,11 +818,11 @@ exports[`myDatasets test renders no results 1`] = `
 <StandardPage
   title="My research data"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
     spacing={2}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs={12}
     >
@@ -848,7 +852,7 @@ exports[`myDatasets test renders no results 1`] = `
           .
         </div>
       </StandardCard>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </StandardPage>
 `;

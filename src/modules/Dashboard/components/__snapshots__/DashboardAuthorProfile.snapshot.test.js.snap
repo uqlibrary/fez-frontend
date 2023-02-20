@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard Author Profile test Render the authors profile as expected for a UQ researcher) 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
+<ForwardRef(Card)>
+  <ForwardRef(Grid)
     alignContent="center"
     alignItems="center"
     container={true}
     justifyContent="center"
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
@@ -23,15 +23,15 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
           }
         }
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -56,8 +56,8 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
             }
             title="Professor"
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -80,33 +80,37 @@ exports[`Dashboard Author Profile test Render the authors profile as expected fo
               }
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
+      xs="auto"
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
+      <Connect(WithStyles(DashboardArticleCount)) />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
 `;
 
 exports[`Dashboard Author Profile test Renders empty div if there is no profile but profile image exists 1`] = `
-<WithStyles(ForwardRef(Card))>
-  <WithStyles(ForwardRef(Grid))
+<ForwardRef(Card)>
+  <ForwardRef(Grid)
     alignContent="center"
     alignItems="center"
     container={true}
     justifyContent="center"
     spacing={3}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
       xs="auto"
     >
@@ -120,15 +124,15 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
           }
         }
       />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
       xs={true}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         container={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -137,8 +141,8 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
             givenName=""
             title=""
           />
-        </WithStyles(ForwardRef(Grid))>
-        <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Grid)>
+        <ForwardRef(Grid)
           item={true}
           xs={12}
         >
@@ -161,21 +165,25 @@ exports[`Dashboard Author Profile test Renders empty div if there is no profile 
               }
             }
           />
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <Hidden
-      smDown={true}
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
+      item={true}
+      sx={
+        Object {
+          "display": Object {
+            "md": "block",
+            "xs": "none",
+          },
+        }
+      }
+      xs="auto"
     >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs="auto"
-      >
-        <Connect(WithStyles(DashboardArticleCount)) />
-      </WithStyles(ForwardRef(Grid))>
-    </Hidden>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Card))>
+      <Connect(WithStyles(DashboardArticleCount)) />
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
+</ForwardRef(Card)>
 `;
 
 exports[`Dashboard Author Profile test Renders empty div if there is no profile loaded 1`] = `

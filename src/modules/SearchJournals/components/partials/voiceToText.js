@@ -1,10 +1,10 @@
 import React from 'react';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import MicIcon from '@material-ui/icons/Mic';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import MicIcon from '@mui/icons-material/Mic';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { PropTypes } from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 export const id = 'journal-search-keywords-voice-record';
 export const VoiceToText = ({ sendHandler }) => {

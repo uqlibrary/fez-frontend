@@ -1,11 +1,11 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import SwapHorizontalCircleOutlinedIcon from '@material-ui/icons/SwapHorizontalCircleOutlined';
-import SwapHorizontalCircleIcon from '@material-ui/icons/SwapHorizontalCircle';
-import Tooltip from '@material-ui/core/Tooltip';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import SwapHorizontalCircleOutlinedIcon from '@mui/icons-material/SwapHorizontalCircleOutlined';
+import SwapHorizontalCircleIcon from '@mui/icons-material/SwapHorizontalCircle';
+import Tooltip from '@mui/material/Tooltip';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(theme => ({
     gridContainer: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '0.8rem',
         marginLeft: 8,
         marginTop: -18,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
             padding: 0,
             borderRadius: 0,
         },
@@ -49,7 +49,7 @@ const JournalsListHeaderCol3 = ({ toggleView, minimalView }) => {
         >
             <Grid item xs>
                 <Tooltip title={!!minimalView ? 'Show more data' : 'Show less data'}>
-                    <IconButton onClick={toggleView} className={classes.toggleButton}>
+                    <IconButton onClick={toggleView} className={classes.toggleButton} size="large">
                         {!minimalView ? (
                             <SwapHorizontalCircleOutlinedIcon style={{ paddingBottom: 10, color: '#2377cb' }} />
                         ) : (

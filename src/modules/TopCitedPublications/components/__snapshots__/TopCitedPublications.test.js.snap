@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component TopCitedPublications should render loading indicator 1`] = `
-<WithStyles(ForwardRef(Grid))
+<ForwardRef(Grid)
   container={true}
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     xs={true}
   />
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
   >
     <WithStyles(InlineLoader)
       message="Loading trending works"
     />
-  </WithStyles(ForwardRef(Grid))>
-  <WithStyles(ForwardRef(Grid))
+  </ForwardRef(Grid)>
+  <ForwardRef(Grid)
     item={true}
     xs={true}
   />
-</WithStyles(ForwardRef(Grid))>
+</ForwardRef(Grid)>
 `;
 
 exports[`Component TopCitedPublications should render tabs with xs width properly 1`] = `
@@ -27,34 +27,36 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
   <StandardCard
     noHeader={true}
   >
-    <WithStyles(ForwardRef(Tabs))
+    <ForwardRef(Tabs)
       centered={true}
       classes={
         Object {
           "indicator": undefined,
         }
       }
+      indicatorColor="primary"
       onChange={[Function]}
+      textColor="inherit"
       value="altmetric"
       variant="fullWidth"
     >
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="altmetric"
         label="Trending"
         value="altmetric"
       />
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="scopus"
         label="Scopus"
         value="scopus"
       />
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="thomson"
         label="WOS"
         value="thomson"
       />
-    </WithStyles(ForwardRef(Tabs))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Tabs)>
+    <ForwardRef(Grid)
       alignContent="flex-start"
       alignItems="flex-start"
       container={true}
@@ -65,11 +67,11 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           key="altmetric"
           variant="h6"
@@ -79,9 +81,9 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
             key="altmetric"
           />
           Altmetric score
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -122,8 +124,8 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
           }
           title="About these metrics"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         id="topCitedPublications"
         item={true}
         style={
@@ -729,8 +731,8 @@ exports[`Component TopCitedPublications should render tabs with xs width properl
           }
           showMetrics={true}
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardCard>
 </Fragment>
 `;
@@ -740,18 +742,20 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
   <StandardCard
     noHeader={true}
   >
-    <WithStyles(ForwardRef(Tabs))
+    <ForwardRef(Tabs)
       centered={true}
       classes={
         Object {
           "indicator": undefined,
         }
       }
+      indicatorColor="primary"
       onChange={[Function]}
+      textColor="inherit"
       value="altmetric"
       variant="fullWidth"
     >
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="altmetric"
         label={
           <span>
@@ -760,7 +764,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="altmetric"
       />
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="scopus"
         label={
           <span>
@@ -769,7 +773,7 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="scopus"
       />
-      <WithStyles(ForwardRef(Tab))
+      <ForwardRef(Tab)
         key="thomson"
         label={
           <span>
@@ -778,8 +782,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
         value="thomson"
       />
-    </WithStyles(ForwardRef(Tabs))>
-    <WithStyles(ForwardRef(Grid))
+    </ForwardRef(Tabs)>
+    <ForwardRef(Grid)
       alignContent="flex-start"
       alignItems="flex-start"
       container={true}
@@ -790,11 +794,11 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
         }
       }
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           color="primary"
           key="altmetric"
           variant="h6"
@@ -804,9 +808,9 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
             key="altmetric"
           />
           Altmetric score
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         style={
           Object {
@@ -847,8 +851,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           }
           title="About these metrics"
         />
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         id="topCitedPublications"
         item={true}
         style={
@@ -1454,8 +1458,8 @@ exports[`Component TopCitedPublications should render top cited publications 1`]
           }
           showMetrics={true}
         />
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </StandardCard>
 </Fragment>
 `;

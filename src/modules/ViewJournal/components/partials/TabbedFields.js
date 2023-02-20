@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Grid from '@material-ui/core/Grid';
-import Tab from '@material-ui/core/Tab';
-import Tabs from '@material-ui/core/Tabs';
+import Grid from '@mui/material/Grid';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import TabContainer from 'modules/Admin/components/TabContainer';
 
 import { JournalDetailsContext } from '../JournalDataContext';
 import ViewRow from './ViewRow';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
     const theme = useTheme();
-    const isXsDown = useMediaQuery(theme.breakpoints.down('xs'));
-    const isSmDown = useMediaQuery(theme.breakpoints.down('sm'));
+    const isXsDown = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSmDown = useMediaQuery(theme.breakpoints.down('md'));
     const [currentTabValue, setCurrentTabValue] = React.useState('0');
     const handleTabChange = (event, value) => setCurrentTabValue(value);
     const multipleData = data.length > 1;
@@ -33,7 +33,7 @@ const TabbedFields = ({ tabId, tabTitle, tabContent: contentConfig, data }) => {
                     onChange={handleTabChange}
                     textColor="primary"
                     value={currentTabValue}
-                    scrollButtons={isSmDown && multipleData ? 'on' : 'off'}
+                    scrollButtons={isSmDown && multipleData ? true : false}
                     variant={isSmDown && multipleData ? 'scrollable' : 'standard'}
                 >
                     {data.map((tab, index) => (

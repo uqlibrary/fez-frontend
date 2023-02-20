@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
 
 export default class ExportPublications extends PureComponent {
     static propTypes = {
@@ -24,9 +24,10 @@ export default class ExportPublications extends PureComponent {
                 : locale.components.export;
 
         return (
-            <FormControl fullWidth>
+            <FormControl variant="standard" fullWidth>
                 <InputLabel shrink>{txt.label}</InputLabel>
                 <Select
+                    variant="standard"
                     id="exportPublicationsFormat"
                     onChange={this.formatChanged}
                     disabled={this.props.disabled}

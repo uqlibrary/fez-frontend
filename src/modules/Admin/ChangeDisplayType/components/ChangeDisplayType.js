@@ -5,10 +5,10 @@ import { useParams } from 'react-router';
 import { Field } from 'redux-form/immutable';
 import { useConfirmationState } from 'hooks';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 
 import { DOCUMENT_TYPES_EDIT_ONLY, publicationTypes } from 'config/general';
 import { pathConfig, validation } from 'config';

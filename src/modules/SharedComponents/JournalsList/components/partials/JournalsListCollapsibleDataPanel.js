@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { JournalFieldsMap } from './JournalFieldsMap';
 
-import Grid from '@material-ui/core/Grid';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import Box from '@material-ui/core/Box';
-import Collapse from '@material-ui/core/Collapse';
+import Grid from '@mui/material/Grid';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
 import { useIsMobileView } from 'hooks';
 
 import JournalsListCollapsibleDataPanelContent from './JournalsListCollapsibleDataPanelContent';

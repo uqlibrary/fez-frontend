@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Grid from '@mui/material/Grid';
+import FormHelperText from '@mui/material/FormHelperText';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import ColumnTitle from '../partials/ColumnTitle';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import CircularProgress from '@mui/material/CircularProgress';
+import InputAdornment from '@mui/material/InputAdornment';
 
 export const AuthorFieldData = ({ authorFieldDataId, label, helperText, ...props }) => {
     return (

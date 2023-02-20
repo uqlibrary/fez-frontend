@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';

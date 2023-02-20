@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 import ColumnData from './ColumnData';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
 import moment from 'moment';
 import { upperFirst } from 'lodash';
 

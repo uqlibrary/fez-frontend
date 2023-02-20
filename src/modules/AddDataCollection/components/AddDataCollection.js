@@ -30,9 +30,9 @@ import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
 import { selectFields } from 'locale/selectFields';
 
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Unstable_Grid2';
+import Typography from '@mui/material/Typography';
 import { NewGenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
 /*
@@ -176,7 +176,7 @@ export default class AddDataCollection extends Component {
                         <Grid container spacing={3} className={'DataCollection'}>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.information.agreement.title}>
-                                    <Grid container spacing={3}>
+                                    <Grid container spacing={3} padding={0}>
                                         <Grid item xs={12}>
                                             <Field
                                                 component={DepositAgreementField}
@@ -193,7 +193,7 @@ export default class AddDataCollection extends Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.information.dataset.title}>
-                                    <Grid container spacing={3}>
+                                    <Grid container spacing={3} padding={0}>
                                         <Grid item xs={12} sm={12}>
                                             <Field
                                                 component={TextField}
@@ -337,7 +337,7 @@ export default class AddDataCollection extends Component {
                                     title={txt.information.accessAndLicensing.title}
                                     help={getLicenceHelp(txt.information.accessAndLicensing.help)}
                                 >
-                                    <Grid container spacing={3}>
+                                    <Grid container spacing={3} padding={0}>
                                         <Grid item xs={12} sm={12} md={4}>
                                             <Field
                                                 component={NewGenericSelectField}
@@ -380,7 +380,7 @@ export default class AddDataCollection extends Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.information.project.title}>
-                                    <Grid container spacing={3}>
+                                    <Grid container spacing={3} padding={0}>
                                         <Grid item xs={12}>
                                             <Field
                                                 component={TextField}
@@ -442,7 +442,7 @@ export default class AddDataCollection extends Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.information.optionalDatasetDetails.title}>
-                                    <Grid container spacing={3}>
+                                    <Grid container spacing={3} padding={0}>
                                         <Grid item xs={12}>
                                             <Field
                                                 component={NewListEditorField}
@@ -492,7 +492,7 @@ export default class AddDataCollection extends Component {
                                         <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                             <Divider />
                                         </Grid>
-                                        <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
+                                        <Grid item xs={12} sm={6}>
                                             <Field
                                                 component={PartialDateField}
                                                 partialDateFieldId="rek-start-date"
@@ -509,7 +509,7 @@ export default class AddDataCollection extends Component {
                                                 hasError={dateError}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
+                                        <Grid item xs={12} sm={6}>
                                             <Field
                                                 component={PartialDateField}
                                                 partialDateFieldId="rek-end-date"
@@ -566,7 +566,7 @@ export default class AddDataCollection extends Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.information.additionalNotes.title}>
-                                    <Grid container spacing={2}>
+                                    <Grid container spacing={2} padding={0}>
                                         <Grid item xs={12}>
                                             <Field
                                                 component={TextField}
@@ -623,6 +623,7 @@ export default class AddDataCollection extends Component {
                                     aria-label={formLocale.addDataset.cancel}
                                     disabled={this.props.submitting}
                                     onClick={this._restartWorkflow}
+                                    color={'default'}
                                 />
                             </Grid>
                             <Grid item xs={12} sm="auto">

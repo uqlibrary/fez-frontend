@@ -4,9 +4,11 @@ import moment from 'moment';
 import { isAdded } from 'helpers/datastreams';
 
 export const calculateOpenAccess = record => {
-    const openAccessStatusId = !!record.fez_record_search_key_oa_status
-        ? record.fez_record_search_key_oa_status.rek_oa_status
-        : null;
+    const openAccessStatusId =
+        !!record.fez_record_search_key_oa_status &&
+        Number.isFinite(record.fez_record_search_key_oa_status.rek_oa_status)
+            ? record.fez_record_search_key_oa_status.rek_oa_status
+            : null;
 
     if (
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI ||

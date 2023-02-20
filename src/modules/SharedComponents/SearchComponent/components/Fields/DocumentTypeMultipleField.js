@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import { publicationTypes } from 'config';
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 import { locale } from 'locale';
 import PropTypes from 'prop-types';
-import Select from '@material-ui/core/Select';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import { withStyles } from '@material-ui/core/styles';
+import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import withStyles from '@mui/styles/withStyles';
 
 export const styles = theme => ({
     title: {
@@ -72,9 +72,10 @@ export class DocumentTypeMultipleField extends PureComponent {
         ];
         // const {classes} = this.props;
         return (
-            <FormControl fullWidth>
+            <FormControl variant="standard" fullWidth>
                 <InputLabel>{txt.advancedSearch.fieldTypes.rek_display_type.title}</InputLabel>
                 <Select
+                    variant="standard"
                     id="document-type-selector"
                     data-testid="document-type-selector"
                     name="document-type-selector"

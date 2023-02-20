@@ -35,7 +35,7 @@ describe('JournalsListDataCol2 Full', () => {
                     case 'CiteScore percentile':
                         if (fieldMap.toolTipLabel(mockItem)) {
                             expect(
-                                document.querySelector(`p[title='${fieldMap.toolTipLabel(mockItem)}']`),
+                                document.querySelector(`p[aria-label='${fieldMap.toolTipLabel(mockItem)}']`),
                             ).toBeInTheDocument();
                         }
                         break;

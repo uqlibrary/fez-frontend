@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+import withStyles from '@mui/styles/withStyles';
+import Typography from '@mui/material/Typography';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 export class FileUploadTermsAndConditions extends PureComponent {
     static propTypes = {
@@ -66,7 +66,7 @@ const styles = theme => ({
         paddingTop: 10,
     },
     checkboxRoot: {
-        color: (theme.status || {}).danger,
+        color: (theme.status || /* istanbul ignore next */ {}).danger,
     },
     checkboxChecked: {
         color: `${theme.palette.primary.main} !important`,

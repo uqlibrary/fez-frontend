@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, fireEvent, AllTheProviders } from 'test-utils';
+import { rtlRender, fireEvent } from 'test-utils';
 import NewGenericSelectField from './NewGenericSelectField';
 import Immutable from 'immutable';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, render = rtlRender) {
     const props = {
         value: !testProps.input && testProps.multiple ? [] : '',
         selectPrompt: 'Please select an option',
@@ -13,11 +13,7 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return render(
-        <AllTheProviders>
-            <NewGenericSelectField {...props} />
-        </AllTheProviders>,
-    );
+    return render(<NewGenericSelectField {...props} />);
 }
 
 describe('NewGenericSelectField', () => {

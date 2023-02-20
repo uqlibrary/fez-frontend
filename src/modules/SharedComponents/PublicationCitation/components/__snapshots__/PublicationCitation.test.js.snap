@@ -100,19 +100,19 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
     data-testid="publication-citation-parent-undefined"
     id="publication-citation-parent-undefined"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -121,14 +121,14 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
               Oral Presentations – Thursday 11 July 2019
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -188,16 +188,16 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -261,31 +261,35 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       container={true}
       spacing={1}
     >
-      <Hidden
-        xsDown={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={true}
-        />
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs={true}
+      />
+      <ForwardRef(Grid)
         item={true}
         key="action_key_0"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder0"
           classes={
             Object {
@@ -301,7 +305,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           variant="contained"
         >
           Claim now
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -314,15 +318,15 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         key="action_key_1"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder1"
           classes={
             Object {
@@ -337,7 +341,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           variant="text"
         >
           Not mine
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -350,15 +354,15 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         key="action_key_2"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder2"
           classes={
             Object {
@@ -373,7 +377,7 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
           variant="text"
         >
           View stats
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -386,11 +390,11 @@ exports[`PublicationCitation  should render button disabled on action buttons fo
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -403,19 +407,19 @@ exports[`PublicationCitation  should render button disabled with spinners on act
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -424,7 +428,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -433,9 +437,9 @@ exports[`PublicationCitation  should render button disabled with spinners on act
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -853,16 +857,16 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -1284,16 +1288,16 @@ exports[`PublicationCitation  should render button disabled with spinners on act
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -1303,28 +1307,32 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       container={true}
       spacing={1}
     >
-      <Hidden
-        xsDown={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={true}
-        />
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs={true}
+      />
+      <ForwardRef(Grid)
         item={true}
         key="action_key_0"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder0"
           classes={
             Object {
@@ -1340,7 +1348,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           variant="contained"
         >
           Claim now
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -1353,15 +1361,15 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         key="action_key_1"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder1"
           classes={
             Object {
@@ -1376,7 +1384,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           variant="text"
         >
           Not mine
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -1389,15 +1397,15 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         key="action_key_2"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder2"
           classes={
             Object {
@@ -1412,7 +1420,7 @@ exports[`PublicationCitation  should render button disabled with spinners on act
           variant="text"
         >
           View stats
-          <WithStyles(ForwardRef(CircularProgress))
+          <ForwardRef(CircularProgress)
             aria-label="Waiting for records to finish loading"
             color="secondary"
             size={12}
@@ -1425,11 +1433,11 @@ exports[`PublicationCitation  should render button disabled with spinners on act
             thickness={3}
             variant="indeterminate"
           />
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -1442,19 +1450,19 @@ exports[`PublicationCitation  should render component with content indicators 1`
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -1463,7 +1471,7 @@ exports[`PublicationCitation  should render component with content indicators 1`
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -1472,9 +1480,9 @@ exports[`PublicationCitation  should render component with content indicators 1`
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -1893,16 +1901,16 @@ exports[`PublicationCitation  should render component with content indicators 1`
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -2325,16 +2333,16 @@ exports[`PublicationCitation  should render component with content indicators 1`
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -2344,11 +2352,11 @@ exports[`PublicationCitation  should render component with content indicators 1`
             :
           </span>
           a content indicator, another content indicator
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -2361,19 +2369,19 @@ exports[`PublicationCitation  should render component with default actions 1`] =
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -2382,7 +2390,7 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -2391,9 +2399,9 @@ exports[`PublicationCitation  should render component with default actions 1`] =
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -2811,16 +2819,16 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -3242,16 +3250,16 @@ exports[`PublicationCitation  should render component with default actions 1`] =
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -3261,28 +3269,32 @@ exports[`PublicationCitation  should render component with default actions 1`] =
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       container={true}
       spacing={1}
     >
-      <Hidden
-        xsDown={true}
-      >
-        <WithStyles(ForwardRef(Grid))
-          item={true}
-          xs={true}
-        />
-      </Hidden>
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
+        item={true}
+        sx={
+          Object {
+            "display": Object {
+              "sm": "block",
+              "xs": "none",
+            },
+          }
+        }
+        xs={true}
+      />
+      <ForwardRef(Grid)
         item={true}
         key="action_key_0"
         sm="auto"
         xs={12}
       >
-        <WithStyles(ForwardRef(Button))
+        <ForwardRef(Button)
           className="publicationAction buttonOrder0"
           classes={
             Object {
@@ -3297,11 +3309,11 @@ exports[`PublicationCitation  should render component with default actions 1`] =
           variant="text"
         >
           Request Correction
-        </WithStyles(ForwardRef(Button))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Button)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -3314,19 +3326,19 @@ exports[`PublicationCitation  should render component with default item 1`] = `
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -3335,7 +3347,7 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -3344,9 +3356,9 @@ exports[`PublicationCitation  should render component with default item 1`] = `
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -3764,16 +3776,16 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -4195,16 +4207,16 @@ exports[`PublicationCitation  should render component with default item 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -4214,11 +4226,11 @@ exports[`PublicationCitation  should render component with default item 1`] = `
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -5250,19 +5262,19 @@ exports[`PublicationCitation  should render component with default item with ima
     data-testid="publication-citation-parent-UQ:676287"
     id="publication-citation-parent-UQ:676287"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -5271,7 +5283,7 @@ exports[`PublicationCitation  should render component with default item with ima
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -5280,9 +5292,9 @@ exports[`PublicationCitation  should render component with default item with ima
               >
                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -6283,16 +6295,16 @@ exports[`PublicationCitation  should render component with default item with ima
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -7297,14 +7309,14 @@ exports[`PublicationCitation  should render component with default item with ima
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -8338,19 +8350,19 @@ exports[`PublicationCitation  should render component with default item with ima
     data-testid="publication-citation-parent-UQ:676287"
     id="publication-citation-parent-UQ:676287"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -8359,7 +8371,7 @@ exports[`PublicationCitation  should render component with default item with ima
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -8368,9 +8380,9 @@ exports[`PublicationCitation  should render component with default item with ima
               >
                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -9373,16 +9385,16 @@ exports[`PublicationCitation  should render component with default item with ima
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -10389,14 +10401,14 @@ exports[`PublicationCitation  should render component with default item with ima
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -10409,19 +10421,19 @@ exports[`PublicationCitation  should render component with default item without 
     data-testid="publication-citation-parent-UQ:676287"
     id="publication-citation-parent-UQ:676287"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -10430,7 +10442,7 @@ exports[`PublicationCitation  should render component with default item without 
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -10439,9 +10451,9 @@ exports[`PublicationCitation  should render component with default item without 
               >
                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -11442,16 +11454,16 @@ exports[`PublicationCitation  should render component with default item without 
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -12456,14 +12468,14 @@ exports[`PublicationCitation  should render component with default item without 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -12476,19 +12488,19 @@ exports[`PublicationCitation  should render component with default item without 
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -12497,14 +12509,14 @@ exports[`PublicationCitation  should render component with default item without 
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
               Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -12922,16 +12934,16 @@ exports[`PublicationCitation  should render component with default item without 
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -13353,16 +13365,16 @@ exports[`PublicationCitation  should render component with default item without 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -13372,11 +13384,11 @@ exports[`PublicationCitation  should render component with default item without 
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -13389,19 +13401,19 @@ exports[`PublicationCitation  should render component with default list hiding t
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -13410,7 +13422,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -13419,17 +13431,17 @@ exports[`PublicationCitation  should render component with default list hiding t
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -13851,16 +13863,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -13870,11 +13882,11 @@ exports[`PublicationCitation  should render component with default list hiding t
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -13887,19 +13899,19 @@ exports[`PublicationCitation  should render component with default list hiding t
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -13908,7 +13920,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -13917,9 +13929,9 @@ exports[`PublicationCitation  should render component with default list hiding t
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -14337,16 +14349,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -14768,16 +14780,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -14787,11 +14799,11 @@ exports[`PublicationCitation  should render component with default list hiding t
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -14804,19 +14816,19 @@ exports[`PublicationCitation  should render component with default list hiding t
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -14825,7 +14837,7 @@ exports[`PublicationCitation  should render component with default list hiding t
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -14834,9 +14846,9 @@ exports[`PublicationCitation  should render component with default list hiding t
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -15254,16 +15266,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -15685,16 +15697,16 @@ exports[`PublicationCitation  should render component with default list hiding t
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -15704,11 +15716,11 @@ exports[`PublicationCitation  should render component with default list hiding t
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -15721,19 +15733,19 @@ exports[`PublicationCitation  should render component with publication from mult
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -15742,7 +15754,7 @@ exports[`PublicationCitation  should render component with publication from mult
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -15751,9 +15763,9 @@ exports[`PublicationCitation  should render component with publication from mult
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -16177,16 +16189,16 @@ exports[`PublicationCitation  should render component with publication from mult
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -16614,14 +16626,14 @@ exports[`PublicationCitation  should render component with publication from mult
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
@@ -16635,15 +16647,15 @@ exports[`PublicationCitation  should render component with publication from mult
               >
                 eSpace
               </ExternalLink>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -16653,11 +16665,11 @@ exports[`PublicationCitation  should render component with publication from mult
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -16670,23 +16682,23 @@ exports[`PublicationCitation  should render component without a title 1`] = `
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={true}
           />
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -17110,16 +17122,16 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -17547,14 +17559,14 @@ exports[`PublicationCitation  should render component without a title 1`] = `
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               gutterBottom={true}
               variant="caption"
             >
@@ -17568,15 +17580,15 @@ exports[`PublicationCitation  should render component without a title 1`] = `
               >
                 eSpace
               </ExternalLink>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -17586,11 +17598,11 @@ exports[`PublicationCitation  should render component without a title 1`] = `
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
@@ -18543,19 +18555,19 @@ exports[`PublicationCitation  should render component without image if whitelist
     data-testid="publication-citation-parent-UQ:676287"
     id="publication-citation-parent-UQ:676287"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -18564,7 +18576,7 @@ exports[`PublicationCitation  should render component without image if whitelist
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -18573,9 +18585,9 @@ exports[`PublicationCitation  should render component without image if whitelist
               >
                 TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -19497,16 +19509,16 @@ exports[`PublicationCitation  should render component without image if whitelist
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -20432,25 +20444,25 @@ exports[`PublicationCitation  should render component without image if whitelist
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 
 exports[`PublicationCitation  should render primary action button 1`] = `
 Array [
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     item={true}
     sm="auto"
     xs={12}
   >
-    <WithStyles(ForwardRef(Button))
+    <ForwardRef(Button)
       className="publicationAction buttonOrder0"
       classes={
         Object {
@@ -20465,7 +20477,7 @@ Array [
       onClick={[Function]}
       variant="contained"
     />
-  </WithStyles(ForwardRef(Grid))>,
+  </ForwardRef(Grid)>,
 ]
 `;
 
@@ -20477,25 +20489,25 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
   openInNewIcon={false}
   title="Full citation in Altmetric will open in a new window"
 >
-  <WithStyles(ForwardRef(Grid))
+  <ForwardRef(Grid)
     container={true}
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       item={true}
     >
       <span
         className="fez-icon altmetric xxxlarge"
       />
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         variant="h6"
       >
         23
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+    <ForwardRef(Grid)
       item={true}
     >
-      <WithStyles(ForwardRef(Typography))
+      <ForwardRef(Typography)
         className="difference"
         color="inherit"
         title="Difference in social media activities"
@@ -20503,9 +20515,9 @@ exports[`PublicationCitation  should render publication with citation metric 1`]
       >
         +
         5
-      </WithStyles(ForwardRef(Typography))>
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
+      </ForwardRef(Typography)>
+    </ForwardRef(Grid)>
+  </ForwardRef(Grid)>
 </ExternalLink>
 `;
 
@@ -20520,19 +20532,19 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
     data-testid="publication-citation-parent-UQ:41878"
     id="publication-citation-parent-UQ:41878"
   >
-    <WithStyles(ForwardRef(Grid))
+    <ForwardRef(Grid)
       container={true}
       spacing={0}
     >
-      <WithStyles(ForwardRef(Grid))
+      <ForwardRef(Grid)
         item={true}
         xs={true}
       >
-        <WithStyles(ForwardRef(Grid))
+        <ForwardRef(Grid)
           container={true}
           spacing={0}
         >
-          <WithStyles(ForwardRef(Grid))
+          <ForwardRef(Grid)
             item={true}
             style={
               Object {
@@ -20541,7 +20553,7 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             }
             xs={true}
           >
-            <WithStyles(ForwardRef(Typography))
+            <ForwardRef(Typography)
               component="h6"
               variant="h6"
             >
@@ -20550,9 +20562,9 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
               >
                 Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth
               </Link>
-            </WithStyles(ForwardRef(Typography))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+            </ForwardRef(Typography)>
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -20970,8 +20982,8 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
@@ -21387,16 +21399,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                 }
               }
             />
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
+          </ForwardRef(Grid)>
+          <ForwardRef(Grid)
             item={true}
             xs={12}
           >
-            <WithStyles(ForwardRef(Grid))
+            <ForwardRef(Grid)
               alignItems="center"
               container={true}
             >
-              <WithStyles(ForwardRef(Grid))
+              <ForwardRef(Grid)
                 item={true}
                 style={
                   Object {
@@ -21818,16 +21830,16 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
                     }
                   }
                 />
-              </WithStyles(ForwardRef(Grid))>
-            </WithStyles(ForwardRef(Grid))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
+              </ForwardRef(Grid)>
+            </ForwardRef(Grid)>
+          </ForwardRef(Grid)>
+        </ForwardRef(Grid)>
+      </ForwardRef(Grid)>
+      <ForwardRef(Grid)
         item={true}
         xs={12}
       >
-        <WithStyles(ForwardRef(Typography))
+        <ForwardRef(Typography)
           data-testid="rek-content-indicator"
           id="rek-content-indicator"
           variant="caption"
@@ -21837,11 +21849,11 @@ exports[`PublicationCitation  should render publication with unpublished buffer 
             :
           </span>
           Scholarship of Teaching and Learning, Protocol
-        </WithStyles(ForwardRef(Typography))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
+        </ForwardRef(Typography)>
+      </ForwardRef(Grid)>
+    </ForwardRef(Grid)>
   </div>
-  <WithStyles(ForwardRef(Divider)) />
+  <ForwardRef(Divider) />
 </div>
 `;
 

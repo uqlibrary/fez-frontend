@@ -3,13 +3,13 @@
 exports[`MyIncompleteRecordContainer should render default component 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root-1 StandardPage MuiGrid-container-2"
+    class="MuiGrid-root MuiGrid-container StandardPage css-11lq3yg-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-true-35"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
     >
       <h2
-        class="MuiTypography-root-118 Page-layoutTitle-151 MuiTypography-body1-120 MuiTypography-colorPrimary-141"
+        class="MuiTypography-root MuiTypography-body1 Page-layoutTitle-4 css-14y2kic-MuiTypography-root"
         data-testid="page-title"
         id="page-title"
       >
@@ -17,44 +17,41 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
       </h2>
     </div>
     <div
-      class="Page-helpIcon-152"
+      class="Page-helpIcon-5"
     >
       <button
         aria-label="Click for more information"
-        class="MuiButtonBase-root-173 MuiIconButton-root-165"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+        data-mui-internal-clone-element="true"
         data-testid="help-icon"
         id="help-icon"
         tabindex="0"
-        title="Click for more information"
         type="button"
       >
-        <span
-          class="MuiIconButton-label-172"
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+          data-testid="HelpOutlineIcon"
+          focusable="false"
+          role="img"
+          viewBox="0 0 24 24"
         >
-          <svg
-            class="MuiSvgIcon-root-174 makeStyles-helpIcon-153"
-            focusable="false"
-            role="img"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-            />
-            <title>
-              Click for more information
-            </title>
-          </svg>
-        </span>
+          <path
+            d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+          />
+          <title>
+            Click for more information
+          </title>
+        </svg>
         <span
-          class="MuiTouchRipple-root-417"
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
         />
       </button>
     </div>
     <div
-      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
     />
     <div
-      class="MuiGrid-root-1 Page-layoutCard-150 MuiGrid-item-3"
+      class="MuiGrid-root MuiGrid-item Page-layoutCard-3 css-13i4rnv-MuiGrid-root"
     >
       <div
         class="publicationCitation"
@@ -64,20 +61,20 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           id="publication-citation-parent-UQ:352045"
         >
           <div
-            class="MuiGrid-root-1 MuiGrid-container-2"
+            class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-true-35"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root-1 MuiGrid-container-2"
+                class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-true-35"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1vd824g-MuiGrid-root"
                   style="min-width: 1px;"
                 >
                   <h6
-                    class="MuiTypography-root-118 PublicationCitation-citationTitle-184 MuiTypography-h6-128"
+                    class="MuiTypography-root MuiTypography-h6 PublicationCitation-citationTitle-8 css-1uywuy6-MuiTypography-root"
                   >
                     <a
                       href="/view/UQ:352045"
@@ -87,7 +84,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </h6>
                 </div>
                 <div
-                  class="MuiGrid-root-1 PublicationCitation-citationText-185 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 PublicationCitation-citationText-9 css-1idn90j-MuiGrid-root"
                 >
                   <div
                     class="citationContent citationCreativeWork"
@@ -143,24 +140,24 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-center-10"
+                    class="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root-1 PublicationCitation-citationCounts-186 MuiGrid-item-3 MuiGrid-grid-xs-auto-34"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-auto PublicationCitation-citationCounts-10 css-1wrgmsj-MuiGrid-root"
                       style="flex-grow: 1;"
                     >
                       <div
-                        class="MuiGrid-root-1 MuiGrid-container-2"
+                        class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                       >
                         <div
-                          class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-auto-48"
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-auto css-pr9bjb-MuiGrid-root"
                         >
                           <a
                             aria-label="Full citation in Google scholar will open in a new window"
-                            class="googleCitationCount CitationCountView-citationCount-195 makeStyles-externalLink-197 makeStyles-externalLink-361"
+                            class="googleCitationCount CitationCountView-citationCount-19 makeStyles-externalLink-21 makeStyles-externalLink-57"
                             data-testid="citation-count-link"
                             href="https://scholar.google.com/scholar?q=intitle:Il%20Sogno:%20Topology%20and%20the%20Brodsky%20Quartet%20play%20Elvis%20Costello"
                             id="citation-count-link"
@@ -178,7 +175,10 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           />
                         </div>
                         <div
-                          class="MuiGrid-root-1 MuiGrid-item-3"
+                          class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+                        />
+                        <div
+                          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-j9fe35-MuiGrid-root"
                         />
                       </div>
                     </div>
@@ -189,36 +189,37 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </div>
         </div>
         <hr
-          class="MuiDivider-root-202 PublicationCitation-divider-183"
+          class="MuiDivider-root MuiDivider-fullWidth PublicationCitation-divider-7 css-9mgopn-MuiDivider-root"
         />
       </div>
       <form>
         <div />
         <div
-          class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-3-26"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="makeStyles-root-225"
               data-testid="alert"
+              style="margin-top: 5px;"
             >
               <div
-                class="MuiGrid-root-1 makeStyles-info_outline-240 makeStyles-common-226 MuiGrid-container-2 MuiGrid-spacing-xs-3-26 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-content-xs-center-19"
+                class="MuiGrid-root makeStyles-root-27 MuiGrid-container makeStyles-info_outline-42 makeStyles-common-28 css-1k6h6af-MuiGrid-root"
               >
                 <div
-                  class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-true-49"
+                  class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-true css-cyocdy-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-flex-start-11 MuiGrid-align-content-xs-center-14 MuiGrid-justify-content-xs-center-19"
+                    class="MuiGrid-root MuiGrid-container css-1k6h6af-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root-1 makeStyles-icon-229 alert-icon  MuiGrid-item-3"
+                      class="MuiGrid-root MuiGrid-item makeStyles-icon-31 alert-icon  css-13i4rnv-MuiGrid-root"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-174 icon"
+                        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium icon css-i4bv87-MuiSvgIcon-root"
+                        data-testid="InfoOutlinedIcon"
                         focusable="false"
                         id="info-outline-icon"
                         viewBox="0 0 24 24"
@@ -229,7 +230,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </svg>
                     </div>
                     <div
-                      class="MuiGrid-root-1 makeStyles-text-230 alert-text MuiGrid-item-3 MuiGrid-grid-xs-true-35"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true makeStyles-text-32 alert-text css-1vd824g-MuiGrid-root"
                     >
                       <b>
                         Missing data - 
@@ -242,21 +243,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-type-&-collection"
               id="standard-card-type-&-collection"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-type-&-collection-header"
                     id="standard-card-type-&-collection-header"
                   >
@@ -265,30 +266,30 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-type-&-collection-content"
                 id="standard-card-type-&-collection-content"
               >
                 <div
-                  class="MuiGrid-root-1 makeStyles-GridType-148 MuiGrid-container-2"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridType-1 css-o171l1-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-flex-start-11"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-3-52"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                     >
                       <p
-                        class="MuiTypography-root-118 MuiTypography-body1-120"
+                        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                       >
                         Type of work
                       </p>
                     </div>
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-9-58"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
                     >
                       <p
-                        class="MuiTypography-root-118 MuiTypography-body1-120"
+                        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                       >
                         Creative Work
                       </p>
@@ -296,25 +297,25 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </div>
                 </div>
                 <div
-                  class="MuiGrid-root-1 makeStyles-GridSubType-149 MuiGrid-container-2"
+                  class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row makeStyles-GridSubType-2 css-o171l1-MuiGrid2-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-align-items-xs-flex-start-11"
+                    class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row css-1vh3ggi-MuiGrid2-root"
                   >
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-3-52"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-3 css-b5eswy-MuiGrid2-root"
                     >
                       <p
-                        class="MuiTypography-root-118 MuiTypography-body1-120"
+                        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                       >
                         Sub-type
                       </p>
                     </div>
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-9-58"
+                      class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-sm-9 css-3iu82-MuiGrid2-root"
                     >
                       <p
-                        class="MuiTypography-root-118 MuiTypography-body1-120"
+                        class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                       >
                         Live Performance of Creative Work - Music
                       </p>
@@ -325,21 +326,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-author/creator-research-statement"
               id="standard-card-author/creator-research-statement"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-author/creator-research-statement-header"
                     id="standard-card-author/creator-research-statement-header"
                   >
@@ -347,53 +348,50 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action-279"
+                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
-                    title="Click for more information"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label-172"
+                    <svg
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      data-testid="HelpOutlineIcon"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="MuiSvgIcon-root-174 makeStyles-helpIcon-153"
-                        focusable="false"
-                        role="img"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                        />
-                        <title>
-                          Click for more information
-                        </title>
-                      </svg>
-                    </span>
+                      <path
+                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                      />
+                      <title>
+                        Click for more information
+                      </title>
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-author/creator-research-statement-content"
                 id="standard-card-author/creator-research-statement-content"
               >
                 <div
-                  class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   >
                     <p
-                      class="MuiTypography-root-118 MuiTypography-body1-120"
+                      class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                     >
                       <span>
                         Select the option that best describes the significance of the work*
@@ -405,43 +403,46 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </span>
                     </p>
                     <div
-                      class="MuiFormControl-root-287"
+                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296 Mui-error Mui-error Mui-required Mui-required"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-significance-label"
                       >
                         Scale/Significance of work
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk-302 MuiInputLabel-asterisk-292 Mui-error Mui-error"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 Mui-error Mui-error MuiInputBase-formControl-315 MuiInput-formControl-304"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
+                          aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-significance-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-significance-select"
                           id="rek-significance-select"
                           role="button"
                           tabindex="0"
                         >
-                          <span>
+                          <span
+                            class="notranslate"
+                          >
                             ​
                           </span>
                         </div>
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-significance-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-testid="rek-significance-input"
                           id="rek-significance-input"
                           name="significance"
@@ -451,7 +452,8 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -461,19 +463,19 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
                       >
                         This field is required
                       </p>
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     style="margin-top: 24px;"
                   >
                     <span>
                       <p
-                        class="MuiTypography-root-118 MuiTypography-body1-120 MuiTypography-colorError-145"
+                        class="MuiTypography-root MuiTypography-body1 css-v0lc22-MuiTypography-root"
                       >
                         <span>
                           Creator research statement*. Include Background, Contribution and Significance
@@ -488,7 +490,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </span>
                       </p>
                       <span
-                        class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-colorError-145"
+                        class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
                       >
                         Remember to include substantiation of your major or minor scale/significance claim above.
                       </span>
@@ -499,7 +501,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       id="rek-creator-contribution-statement"
                     />
                     <span
-                      class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-colorError-145"
+                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
                       style="display: inline-block;"
                     >
                       This field is required
@@ -508,7 +510,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </span>
                     </span>
                     <span
-                      class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-colorError-145"
+                      class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
                       style="display: inline-block;"
                     >
                       0 characters of 2000
@@ -519,21 +521,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-ntro-data"
               id="standard-card-ntro-data"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-ntro-data-header"
                     id="standard-card-ntro-data-header"
                   >
@@ -541,92 +543,92 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action-279"
+                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
-                    title="Click for more information"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label-172"
+                    <svg
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      data-testid="HelpOutlineIcon"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="MuiSvgIcon-root-174 makeStyles-helpIcon-153"
-                        focusable="false"
-                        role="img"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                        />
-                        <title>
-                          Click for more information
-                        </title>
-                      </svg>
-                    </span>
+                      <path
+                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                      />
+                      <title>
+                        Click for more information
+                      </title>
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-ntro-data-content"
                 id="standard-card-ntro-data-content"
               >
                 <div
-                  class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-2-25"
+                  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                   />
                   <div
-                    class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-6-55"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root-287"
+                      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
                       style="width: 100%;"
                     >
                       <label
-                        class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296 Mui-error Mui-error Mui-required Mui-required"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         id="rek-audience-size-label"
                       >
                         Audience size
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk-302 MuiInputLabel-asterisk-292 Mui-error Mui-error"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 Mui-error Mui-error MuiInputBase-formControl-315 MuiInput-formControl-304"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         required=""
                       >
                         <div
+                          aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-audience-size-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-audience-size-select"
                           id="rek-audience-size-select"
                           role="button"
                           tabindex="0"
                         >
-                          <span>
+                          <span
+                            class="notranslate"
+                          >
                             ​
                           </span>
                         </div>
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-audience-size-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-testid="rek-audience-size-input"
                           id="rek-audience-size-input"
                           name="fez_record_search_key_audience_size.rek_audience_size"
@@ -636,7 +638,8 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -646,20 +649,20 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
                       >
                         This field is required
                       </p>
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-6-55"
+                    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 css-1b3l6lk-MuiGrid-root"
                   >
                     <div
-                      class="MuiFormControl-root-287 MuiFormControl-fullWidth-290"
+                      class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                     >
                       <label
-                        class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296 Mui-error Mui-error Mui-required Mui-required"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                         data-shrink="false"
                         data-testid="rek-quality-indicator-label"
                         id="rek-quality-indicator-label"
@@ -667,31 +670,34 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         Quality indicators
                         <span
                           aria-hidden="true"
-                          class="MuiFormLabel-asterisk-302 MuiInputLabel-asterisk-292 Mui-error Mui-error"
+                          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-5g2d0z-MuiFormLabel-asterisk"
                         >
                            *
                         </span>
                       </label>
                       <div
-                        class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 Mui-error Mui-error MuiInputBase-formControl-315 MuiInput-formControl-304"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                       >
                         <div
+                          aria-expanded="false"
                           aria-haspopup="listbox"
                           aria-labelledby="rek-quality-indicator-select"
-                          class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310"
+                          class="MuiSelect-select MuiSelect-standard MuiSelect-multiple MuiInputBase-input MuiInput-input css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                           data-testid="rek-quality-indicator-select"
                           id="rek-quality-indicator-select"
                           role="button"
                           tabindex="0"
                         >
-                          <span>
+                          <span
+                            class="notranslate"
+                          >
                             ​
                           </span>
                         </div>
                         <input
                           aria-hidden="true"
                           aria-labelledby="rek-quality-indicator-label"
-                          class="MuiSelect-nativeInput-371"
+                          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                           data-testid="rek-quality-indicator-input"
                           id="rek-quality-indicator-input"
                           required=""
@@ -700,7 +706,8 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         />
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-174 MuiSelect-icon-367"
+                          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                          data-testid="ArrowDropDownIcon"
                           focusable="false"
                           viewBox="0 0 24 24"
                         >
@@ -710,7 +717,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                         </svg>
                       </div>
                       <p
-                        class="MuiFormHelperText-root-427 Mui-error Mui-required"
+                        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium Mui-required css-1d7hrfi-MuiFormHelperText-root"
                         data-testid="rek-quality-indicator-helper-text"
                         id="rek-quality-indicator-helper-text"
                       >
@@ -723,21 +730,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-grant-details"
               id="standard-card-grant-details"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-grant-details-header"
                     id="standard-card-grant-details-header"
                   >
@@ -746,24 +753,24 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-grant-details-content"
                 id="standard-card-grant-details-content"
               >
                 <div>
                   Add the Funder/Sponsor's name, grant ID and type - then click the ADD GRANT button to add each to the list
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                     style="margin-top: 8px;"
                   >
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-12-61 MuiGrid-grid-md-true-63"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-true css-1p5zwaw-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root-287 MuiTextField-root-286 MuiFormControl-fullWidth-290"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek-grant-agency-label"
                           for="rek-grant-agency-input"
@@ -772,14 +779,14 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           Funder/Sponsor name
                         </label>
                         <div
-                          class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 MuiInputBase-fullWidth-321 MuiInput-fullWidth-309 MuiInputBase-formControl-315 MuiInput-formControl-304"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
                             aria-label="Funder/Sponsor name"
                             aria-labelledby="rek-grant-agency-label"
                             autocomplete="off"
-                            class="MuiInputBase-input-322 MuiInput-input-310"
+                            class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-grant-agency-input"
                             id="rek-grant-agency-input"
                             label="Funder/Sponsor name"
@@ -792,13 +799,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-12-61 MuiGrid-grid-md-3-66"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root-287 MuiTextField-root-286 MuiFormControl-fullWidth-290"
+                        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                       >
                         <label
-                          class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296 Mui-disabled Mui-disabled"
+                          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary Mui-disabled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                           data-shrink="false"
                           data-testid="rek-grant-id-label"
                           for="rek-grant-id-input"
@@ -807,13 +814,13 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           Grant ID
                         </label>
                         <div
-                          class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 Mui-disabled Mui-disabled MuiInputBase-fullWidth-321 MuiInput-fullWidth-309 MuiInputBase-formControl-315 MuiInput-formControl-304"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
                         >
                           <input
                             aria-invalid="false"
                             aria-label="Grant ID"
                             aria-labelledby="rek-grant-id-label"
-                            class="MuiInputBase-input-322 MuiInput-input-310 Mui-disabled Mui-disabled"
+                            class="MuiInputBase-input MuiInput-input Mui-disabled css-1x51dt5-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-grant-id-input"
                             disabled=""
                             id="rek-grant-id-input"
@@ -827,25 +834,26 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-12-61 MuiGrid-grid-md-3-66"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-3 css-iv7vbz-MuiGrid-root"
                     >
                       <div
-                        class="MuiFormControl-root-287 MuiFormControl-fullWidth-290"
+                        class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
                       >
                         <span
-                          class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-colorSecondary-142"
+                          class="MuiTypography-root MuiTypography-caption css-19or1c6-MuiTypography-root"
                           style="margin-bottom: -3px;"
                         >
                             
                         </span>
                         <div
-                          class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 Mui-disabled Mui-disabled MuiInputBase-formControl-315 MuiInput-formControl-304"
+                          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary Mui-disabled MuiInputBase-formControl  css-11v83nz-MuiInputBase-root-MuiInput-root-MuiSelect-root"
                         >
                           <div
                             aria-disabled="true"
+                            aria-expanded="false"
                             aria-haspopup="listbox"
                             aria-labelledby="rek-grant-type-select"
-                            class="MuiSelect-root-362 MuiSelect-select-363 MuiSelect-selectMenu-366 MuiInputBase-input-322 MuiInput-input-310 Mui-disabled Mui-disabled Mui-disabled"
+                            class="MuiSelect-select MuiSelect-standard Mui-disabled MuiInputBase-input MuiInput-input Mui-disabled css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input"
                             data-testid="rek-grant-type-select"
                             id="rek-grant-type-select"
                             role="button"
@@ -854,8 +862,9 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           </div>
                           <input
                             aria-hidden="true"
-                            class="MuiSelect-nativeInput-371"
+                            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                             data-testid="rek-grant-type-input"
+                            disabled=""
                             id="rek-grant-type-input"
                             name="grantAgencyType"
                             placeholder="Funder/Sponsor type"
@@ -864,7 +873,8 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           />
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root-174 MuiSelect-icon-367 Mui-disabled"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconStandard Mui-disabled css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon"
+                            data-testid="ArrowDropDownIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -876,21 +886,17 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                       </div>
                     </div>
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     >
                       <button
-                        class="MuiButtonBase-root-173 MuiButton-root-334 MuiButton-contained-342 MuiButton-containedPrimary-343 Mui-disabled MuiButton-fullWidth-355 Mui-disabled"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
                         data-testid="rek-grant-add"
                         disabled=""
                         id="rek-grant-add"
                         tabindex="-1"
                         type="button"
                       >
-                        <span
-                          class="MuiButton-label-335"
-                        >
-                          Add grant
-                        </span>
+                        Add grant
                       </button>
                     </div>
                   </div>
@@ -899,21 +905,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-authors"
               id="standard-card-authors"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-authors-header"
                     id="standard-card-authors-header"
                   >
@@ -921,47 +927,44 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   </h3>
                 </div>
                 <div
-                  class="MuiCardHeader-action-279"
+                  class="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
                 >
                   <button
                     aria-label="Click for more information"
-                    class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-whz9ym-MuiButtonBase-root-MuiIconButton-root"
+                    data-mui-internal-clone-element="true"
                     data-testid="help-icon"
                     id="help-icon"
                     tabindex="0"
-                    title="Click for more information"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label-172"
+                    <svg
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium makeStyles-helpIcon-6 css-i4bv87-MuiSvgIcon-root"
+                      data-testid="HelpOutlineIcon"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        class="MuiSvgIcon-root-174 makeStyles-helpIcon-153"
-                        focusable="false"
-                        role="img"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
-                        />
-                        <title>
-                          Click for more information
-                        </title>
-                      </svg>
-                    </span>
+                      <path
+                        d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"
+                      />
+                      <title>
+                        Click for more information
+                      </title>
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root-417"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-authors-content"
                 id="standard-card-authors-content"
               >
                 <p
-                  class="MuiTypography-root-118 MuiTypography-body1-120"
+                  class="MuiTypography-root MuiTypography-body1 css-u1nwny-MuiTypography-root"
                 >
                   <span>
                     For each author marked with a 
@@ -982,16 +985,16 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                   id="rek-author-list-editor"
                 >
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                   />
                   <div
-                    class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-1-24"
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 css-a5rdam-MuiGrid-root"
                   >
                     <div
-                      class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+                      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1idn90j-MuiGrid-root"
                     >
                       <ul
-                        class="MuiList-root-380 MuiList-padding-381"
+                        class="MuiList-root MuiList-padding css-h4y409-MuiList-root"
                         style="margin-bottom: 0px;"
                       >
                         <br />
@@ -1008,593 +1011,648 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                           .
                         </div>
                         <li
-                          class="MuiListItem-container-391"
+                          class="MuiListItem-container css-oyakqy-MuiListItem-container"
                         >
                           <div
-                            class="MuiListItem-root-390 ContributorRowHeader-header-385 MuiListItem-gutters-395 MuiListItem-secondaryAction-397"
+                            class="MuiListItem-root ContributorRowHeader-header-63 MuiListItem-gutters MuiListItem-padding MuiListItem-secondaryAction css-qc9893-MuiListItem-root"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-container-2"
+                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                data-testid="PeopleIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-container css-11lq3yg-MuiGrid-root"
                             >
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-3-66"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-sm-5 MuiGrid-grid-md-3 css-vu4o0z-MuiGrid-root"
                               >
                                 <div
-                                  class="MuiListItemText-root-398"
+                                  class="MuiListItemText-root css-tlelie-MuiListItemText-root"
                                 >
                                   <span
-                                    class="MuiTypography-root-118 MuiListItemText-secondary-403 MuiTypography-caption-121 MuiTypography-colorTextSecondary-144 MuiTypography-displayBlock-147"
+                                    class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary css-1vklb8l-MuiTypography-root"
                                   >
                                     Author's name as published
                                   </span>
                                 </div>
                               </div>
                               <div
-                                class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-sm-5-54 MuiGrid-grid-md-4-67"
+                                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-4 css-14jb2qe-MuiGrid-root"
                               />
                             </div>
                             <div
-                              class="MuiListItemSecondaryAction-root-404"
-                            />
+                              class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
+                            >
+                              <div
+                                class="MuiListItemText-root css-1n57w7e-MuiListItemText-root"
+                              >
+                                <span
+                                  class="MuiTypography-root MuiTypography-caption MuiListItemText-secondary ContributorRowHeader-right-62 ContributorRowHeader-paddingRightEdit-64 css-1vklb8l-MuiTypography-root"
+                                >
+                                  Reorder items
+                                </span>
+                              </div>
+                            </div>
                           </div>
                           <div
-                            class="MuiListItemSecondaryAction-root-404"
+                            class="MuiListItemSecondaryAction-root css-518kzi-MuiListItemSecondaryAction-root"
                           >
                             <span
+                              aria-label="Remove all items"
                               class=""
+                              data-mui-internal-clone-element="true"
                             >
                               <button
                                 aria-label="Remove all items"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                                 disabled=""
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="DeleteForeverIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                                  />
+                                </svg>
                               </button>
                             </span>
                           </div>
                         </li>
                       </ul>
                       <ul
-                        class="MuiList-root-380 ContributorList Connect(ContributorsEditor)-list-284 Connect(ContributorsEditor)-scroll-285 MuiList-padding-381"
+                        class="MuiList-root ContributorList Connect(ContributorsEditor)-list-50 Connect(ContributorsEditor)-scroll-51 MuiList-padding css-h4y409-MuiList-root"
                         data-testid="rek-author-list"
                         id="rek-author-list"
                       >
                         <li
                           aria-label="Select this author (Topology) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-0"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                data-testid="PersonOutlinedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
                               id="rek-author-list-row-0-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Topology
                                 </p>
                                 <span
-                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                                 >
                                   First  listed author
                                 </span>
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
                               id="rek-author-list-row-0-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-79"
                               data-testid="rek-author-list-row-0-actions"
                               id="rek-author-list-row-0-actions"
                             >
                               <button
                                 aria-label="Move item down the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-move-down"
                                 disabled=""
                                 id="rek-author-list-row-move-down-0"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowDownIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Edit this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-edit"
                                 id="rek-author-list-row-edit-0"
                                 tabindex="0"
-                                title="Edit this item"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="EditIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                                  />
+                                </svg>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                                 />
                               </button>
                               <button
                                 aria-label="Remove this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-0-delete"
                                 disabled=""
                                 id="rek-author-list-row-delete-0"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="DeleteIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                  />
+                                </svg>
                               </button>
                             </div>
                           </div>
                         </li>
                         <li
                           aria-label="Select this author (Davidson, Robert) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-disabledListItem-407 makeStyles-contributorLinked-415 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-disabledListItem-70 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-1"
                           tabindex="-1"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                data-testid="HowToRegIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
                               id="rek-author-list-row-1-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Davidson, Robert
                                 </p>
                                 <span
-                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                                 >
                                   Second  listed author
                                 </span>
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
                               id="rek-author-list-row-1-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-79"
                               data-testid="rek-author-list-row-1-actions"
                               id="rek-author-list-row-1-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-up"
                                 disabled=""
                                 id="rek-author-list-row-move-up-1"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowUpIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Move item down the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-move-down"
                                 disabled=""
                                 id="rek-author-list-row-move-down-1"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowDownIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Edit this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-edit"
                                 disabled=""
                                 id="rek-author-list-row-edit-1"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="EditIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Remove this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-1-delete"
                                 disabled=""
                                 id="rek-author-list-row-delete-1"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="DeleteIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                  />
+                                </svg>
                               </button>
                             </div>
                           </div>
                         </li>
                         <li
                           aria-label="Select this author (Babbage, John) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 makeStyles-contributorLinked-415 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 makeStyles-contributorLinked-78 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-2"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                data-testid="HowToRegIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="m9 17 3-2.94c-.39-.04-.68-.06-1-.06-2.67 0-8 1.34-8 4v2h9l-3-3zm2-5c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4m4.47 8.5L12 17l1.4-1.41 2.07 2.08 5.13-5.17 1.4 1.41z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
                               id="rek-author-list-row-2-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   Babbage, John
                                 </p>
                                 <span
-                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                                 >
                                   Third  listed author
                                 </span>
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
                               id="rek-author-list-row-2-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-79"
                               data-testid="rek-author-list-row-2-actions"
                               id="rek-author-list-row-2-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-up"
                                 disabled=""
                                 id="rek-author-list-row-move-up-2"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowUpIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Move item down the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-move-down"
                                 disabled=""
                                 id="rek-author-list-row-move-down-2"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowDownIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Edit this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-edit"
                                 id="rek-author-list-row-edit-2"
                                 tabindex="0"
-                                title="Edit this item"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="EditIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                                  />
+                                </svg>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                                 />
                               </button>
                               <button
                                 aria-label="Remove this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-2-delete"
                                 disabled=""
                                 id="rek-author-list-row-delete-2"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="DeleteIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                  />
+                                </svg>
                               </button>
                             </div>
                           </div>
                         </li>
                         <li
                           aria-label="Select this author (The Brodsky Quartet) to update their affiliation data."
-                          class="MuiListItem-root-390 makeStyles-listItem-406 makeStyles-highlighted-408 MuiListItem-gutters-395 MuiListItem-divider-394"
+                          class="MuiListItem-root makeStyles-listItem-69 makeStyles-highlighted-71 MuiListItem-gutters MuiListItem-padding MuiListItem-divider css-zl9c03-MuiListItem-root"
                           id="rek-author-list-row-3"
                           tabindex="0"
                         >
                           <div
-                            class="MuiGrid-root-1 MuiGrid-container-2 makeStyles-listContainer-405"
+                            class="MuiGrid-root MuiGrid-container makeStyles-listContainer-68 css-11lq3yg-MuiGrid-root"
                             id="contributor-row"
                           >
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-10-45 MuiGrid-grid-md-3-66"
+                              class="MuiListItemIcon-root css-12l3zot-MuiListItemIcon-root"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                data-testid="PersonOutlinedIcon"
+                                focusable="false"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  d="M12 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0 10c2.7 0 5.8 1.29 6 2H6c.23-.72 3.31-2 6-2m0-12C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                                />
+                              </svg>
+                            </div>
+                            <div
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-10 MuiGrid-grid-md-3 css-1lhy94w-MuiGrid-root"
                               id="rek-author-list-row-3-name-as-published"
                             >
                               <div
-                                class="MuiListItemText-root-398 MuiListItemText-multiline-399"
+                                class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
                               >
                                 <p
-                                  class="MuiTypography-root-118 makeStyles-primary-412  MuiTypography-body2-119 MuiTypography-noWrap-137"
+                                  class="MuiTypography-root makeStyles-primary-75  MuiTypography-body2 MuiTypography-noWrap css-13796ou-MuiTypography-root"
                                 >
                                   The Brodsky Quartet
                                 </p>
                                 <span
-                                  class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-noWrap-137 MuiTypography-displayBlock-147"
+                                  class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-nl826q-MuiTypography-root"
                                 >
                                   Fourth  listed author
                                 </span>
                               </div>
                             </div>
                             <div
-                              class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-5-68"
+                              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5 css-urj5pv-MuiGrid-root"
                               id="rek-author-list-row-3-affiliation"
                             >
                               <div
-                                class="MuiListItemText-root-398"
+                                class="MuiListItemText-root css-tlelie-MuiListItemText-root"
                               />
                             </div>
                             <div
-                              class="makeStyles-actionsContainer-416"
+                              class="makeStyles-actionsContainer-79"
                               data-testid="rek-author-list-row-3-actions"
                               id="rek-author-list-row-3-actions"
                             >
                               <button
                                 aria-label="Move item up the order"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-move-up"
                                 disabled=""
                                 id="rek-author-list-row-move-up-3"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="KeyboardArrowUpIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                                  />
+                                </svg>
                               </button>
                               <button
                                 aria-label="Edit this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165"
+                                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-edit"
                                 id="rek-author-list-row-edit-3"
                                 tabindex="0"
-                                title="Edit this item"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="EditIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+                                  />
+                                </svg>
                                 <span
-                                  class="MuiTouchRipple-root-417"
+                                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                                 />
                               </button>
                               <button
                                 aria-label="Remove this item"
-                                class="MuiButtonBase-root-173 MuiIconButton-root-165 Mui-disabled Mui-disabled"
+                                class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
+                                data-mui-internal-clone-element="true"
                                 data-testid="rek-author-list-row-3-delete"
                                 disabled=""
                                 id="rek-author-list-row-delete-3"
                                 tabindex="-1"
                                 type="button"
                               >
-                                <span
-                                  class="MuiIconButton-label-172"
+                                <svg
+                                  aria-hidden="true"
+                                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                                  data-testid="DeleteIcon"
+                                  focusable="false"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="MuiSvgIcon-root-174"
-                                    focusable="false"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                                    />
-                                  </svg>
-                                </span>
+                                  <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                                  />
+                                </svg>
                               </button>
                             </div>
                           </div>
@@ -1603,7 +1661,7 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     </div>
                   </div>
                   <span
-                    class="MuiTypography-root-118 MuiTypography-caption-121 MuiTypography-colorError-145"
+                    class="MuiTypography-root MuiTypography-caption css-1xktwm9-MuiTypography-root"
                   >
                     Rows marked with a red prefix must be updated
                   </span>
@@ -1612,21 +1670,21 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
             </div>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 css-16fnxy3-MuiGrid2-root"
           >
             <div
-              class="MuiPaper-root-249 MuiCard-root-248 makeStyles-card-242 StandardCard MuiPaper-elevation1-253 MuiPaper-rounded-250"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root makeStyles-card-44 StandardCard css-bhp9pd-MuiPaper-root-MuiCard-root"
               data-testid="standard-card-notes"
               id="standard-card-notes"
             >
               <div
-                class="MuiCardHeader-root-277"
+                class="MuiCardHeader-root css-185gdzj-MuiCardHeader-root"
               >
                 <div
-                  class="MuiCardHeader-content-280"
+                  class="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
                 >
                   <h3
-                    class="MuiTypography-root-118 MuiCardHeader-title-281 makeStyles-responsiveHeader-247 MuiTypography-h5-127 MuiTypography-colorInherit-140 MuiTypography-displayBlock-147"
+                    class="MuiTypography-root MuiTypography-h5 MuiCardHeader-title makeStyles-responsiveHeader-49 css-1hzv55z-MuiTypography-root"
                     data-testid="standard-card-notes-header"
                     id="standard-card-notes-header"
                   >
@@ -1635,16 +1693,16 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                 </div>
               </div>
               <div
-                class="MuiCardContent-root-283"
+                class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
                 data-testid="standard-card-notes-content"
                 id="standard-card-notes-content"
               >
                 <div
-                  class="MuiFormControl-root-287 MuiTextField-root-286 MuiFormControl-fullWidth-290"
+                  class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                   style="margin-top: -24px;"
                 >
                   <label
-                    class="MuiFormLabel-root-299 MuiInputLabel-root-291 MuiInputLabel-formControl-293 MuiInputLabel-animated-296"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
                     data-testid="comments-label"
                     for="comments-input"
@@ -1653,19 +1711,27 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
                     Notes for this work
                   </label>
                   <div
-                    class="MuiInputBase-root-314 MuiInput-root-303 MuiInput-underline-306 MuiInputBase-fullWidth-321 MuiInput-fullWidth-309 MuiInputBase-formControl-315 MuiInput-formControl-304 MuiInputBase-multiline-319 MuiInput-multiline-308"
+                    class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline css-hy6btv-MuiInputBase-root-MuiInput-root"
                   >
                     <textarea
                       aria-invalid="false"
                       aria-label="Notes for this work"
                       aria-labelledby="comments-label"
-                      class="MuiInputBase-input-322 MuiInput-input-310 MuiInputBase-inputMultiline-324 MuiInput-inputMultiline-312"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
                       data-testid="comments-input"
                       id="comments-input"
                       label="Notes for this work"
                       name="comments"
                       placeholder="Add any other notes or comments about this work to send to the eSpace team."
                       rows="5"
+                      style="height: 0px; overflow: hidden;"
+                    />
+                    <textarea
+                      aria-hidden="true"
+                      class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline css-66dh3a-MuiInputBase-input-MuiInput-input"
+                      readonly=""
+                      style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding: 0px; width: 100%;"
+                      tabindex="-1"
                     />
                   </div>
                 </div>
@@ -1674,42 +1740,37 @@ exports[`MyIncompleteRecordContainer should render default component 1`] = `
           </div>
         </div>
         <div
-          class="MuiGrid-root-1 MuiGrid-container-2 MuiGrid-spacing-xs-3-26"
+          class="MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-spacing-xs-3 css-71wc8y-MuiGrid2-root"
         >
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-auto-62"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-true css-1jgh8sh-MuiGrid2-root"
+          />
+          <div
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-auto css-1mjcfts-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root-173 MuiButton-root-334 MuiButton-contained-342 MuiButton-fullWidth-355"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               id="cancel-fix-work"
               tabindex="0"
               type="button"
             >
+              Cancel and return to my incomplete works list
               <span
-                class="MuiButton-label-335"
-              >
-                Cancel and return to my incomplete works list
-              </span>
-              <span
-                class="MuiTouchRipple-root-417"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
           </div>
           <div
-            class="MuiGrid-root-1 MuiGrid-item-3 MuiGrid-grid-xs-12-47 MuiGrid-grid-md-auto-62"
+            class="MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 MuiGrid2-grid-md-auto css-1mjcfts-MuiGrid2-root"
           >
             <button
-              class="MuiButtonBase-root-173 MuiButton-root-334 MuiButton-contained-342 MuiButton-containedPrimary-343 Mui-disabled MuiButton-fullWidth-355 Mui-disabled"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
               disabled=""
               id="update-my-work"
               tabindex="-1"
               type="button"
             >
-              <span
-                class="MuiButton-label-335"
-              >
-                Complete work
-              </span>
+              Complete work
             </button>
           </div>
         </div>

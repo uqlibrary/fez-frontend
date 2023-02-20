@@ -8,7 +8,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 // forms & custom components
 import { pathConfig } from 'config';
 import locale from 'locale/pages';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Grid';
 
 export default class NewRecord extends PureComponent {
     static propTypes = {

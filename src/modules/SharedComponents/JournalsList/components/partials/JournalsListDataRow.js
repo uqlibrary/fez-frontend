@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { JournalFieldsMap } from './JournalFieldsMap';
 
-import Grid from '@material-ui/core/Grid';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import Checkbox from '@material-ui/core/Checkbox';
-import IconButton from '@material-ui/core/IconButton';
-import Hidden from '@material-ui/core/Hidden';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import Grid from '@mui/material/Grid';
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+import Checkbox from '@mui/material/Checkbox';
+import IconButton from '@mui/material/IconButton';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { sanitiseId } from 'helpers/general';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import { useIsMobileView } from 'hooks';
-import { makeStyles } from '@material-ui/core/styles';
-import Tooltip from '@material-ui/core/Tooltip';
+import makeStyles from '@mui/styles/makeStyles';
+import Tooltip from '@mui/material/Tooltip';
 
 import JournalsListCollapsibleDataPanel from './JournalsListCollapsibleDataPanel';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
@@ -51,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         border: 0,
     },
     headerContentMobile: {
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             paddingBottom: theme.spacing(1),
         },
     },
@@ -137,22 +136,21 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                 (row && field.translateFn(row, classesInternal)) || /* istanbul ignore next */ '';
                             return (
                                 <React.Fragment key={field.key}>
-                                    <Hidden
-                                        {...(!!field.collapsibleComponent?.hiddenData
-                                            ? { only: [...field.collapsibleComponent?.hiddenData] }
-                                            : /* istanbul ignore next */ {})}
+                                    <Grid
+                                        item
+                                        {...field.collapsibleComponent?.sizeHeader}
+                                        className={classes?.headerContentMobile}
+                                        sx={{
+                                            ...(!!field.collapsibleComponent?.hiddenData
+                                                ? field.collapsibleComponent?.hiddenData
+                                                : /* istanbul ignore next */ {}),
+                                        }}
                                     >
-                                        <Grid
-                                            item
-                                            {...field.collapsibleComponent?.sizeHeader}
-                                            className={classes?.headerContentMobile}
-                                        >
-                                            {field.collapsibleComponent?.translateFn(field, index, {
-                                                ...classes,
-                                                ...classesInternal,
-                                            })}
-                                        </Grid>
-                                    </Hidden>
+                                        {field.collapsibleComponent?.translateFn(field, index, {
+                                            ...classes,
+                                            ...classesInternal,
+                                        })}
+                                    </Grid>
                                     <Grid
                                         item
                                         {...field.collapsibleComponent?.sizeData}
@@ -167,6 +165,7 @@ const JournalsListDataRow = ({ row, index, classes, isSelectable = false, onChan
                                                 (field.showTooltip && /* istanbul ignore next */ itemData) ||
                                                 ''
                                             }
+                                            describeChild
                                             placement="left"
                                             disableFocusListener={!field.showTooltip || !itemData}
                                             disableHoverListener={!field.showTooltip || !itemData}

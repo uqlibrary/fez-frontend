@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import Grid from '@mui/material/Unstable_Grid2';
 import PropTypes from 'prop-types';
 
 const JournalsListDataCol3 = ({ journal, minimalView }) => {
@@ -7,6 +7,7 @@ const JournalsListDataCol3 = ({ journal, minimalView }) => {
         <Grid
             container
             spacing={0}
+            padding={0}
             id={`journal-list-fav-${journal.jnl_jid}`}
             data-testid={`journal-list-fav-${journal.jnl_jid}`}
             alignItems="flex-end"

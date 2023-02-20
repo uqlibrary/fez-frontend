@@ -6,21 +6,20 @@ exports[`NewListEditorField component should render new list editor component wi
     id="test-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
       data-testid="test-form-add"
-      display="row"
       id="test-form-add"
     >
       <div
-        class="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           data-testid="test-input"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -28,11 +27,11 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input MuiInput-input"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"
@@ -42,21 +41,17 @@ exports[`NewListEditorField component should render new list editor component wi
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-testid="test-add"
           disabled=""
           id="test-add"
           tabindex="-1"
           type="button"
         >
-          <span
-            class="MuiButton-label"
-          >
-            Add
-          </span>
+          Add
         </button>
       </div>
     </div>
@@ -64,56 +59,54 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root makeStyles-header-13 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-13 css-ofrcno-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption"
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-right-11 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-11 css-k3f0g4-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption"
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
           >
             Reorder items
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-center-12 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-12 css-1ux21pi-MuiGrid-root"
         >
           <span
+            aria-label="Remove all items"
             class=""
-            title="Remove all items"
+            data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
               data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
               type="button"
             >
-              <span
-                class="MuiIconButton-label"
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-              </span>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
               <span
-                class="MuiTouchRipple-root"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
           </span>
@@ -130,53 +123,51 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-16 css-7ldjcq-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2"
+              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               test
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-15 css-17o05rx-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <span
+                  aria-label="Move item down the order"
                   class=""
-                  title="Move item down the order"
+                  data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="test-list-row-0-move-down"
                     id="test-list-row-0-move-down"
                     tabindex="0"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label"
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                        />
-                      </svg>
-                    </span>
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </span>
@@ -184,35 +175,33 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-15 css-1ux21pi-MuiGrid-root"
           >
             <span
+              aria-label="Remove this item"
               class=""
-              title="Remove this item"
+              data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="test-list-row-0-delete"
                 id="test-list-row-0-delete"
                 tabindex="0"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </button>
             </span>
@@ -225,53 +214,51 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-16 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-16 css-7ldjcq-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2"
+              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               testing
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-15 css-17o05rx-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <span
+                  aria-label="Move item up the order"
                   class=""
-                  title="Move item up the order"
+                  data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="test-list-row-1-move-up"
                     id="test-list-row-1-move-up"
                     tabindex="0"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label"
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                        />
-                      </svg>
-                    </span>
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </span>
@@ -279,35 +266,33 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-15 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-15 css-1ux21pi-MuiGrid-root"
           >
             <span
+              aria-label="Remove this item"
               class=""
-              title="Remove this item"
+              data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="test-list-row-1-delete"
                 id="test-list-row-1-delete"
                 tabindex="0"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </button>
             </span>
@@ -316,7 +301,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error"
+      class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
     >
       test1
     </p>
@@ -330,21 +315,20 @@ exports[`NewListEditorField component should render new list editor component wi
     id="test-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
       data-testid="test-form-add"
-      display="row"
       id="test-form-add"
     >
       <div
-        class="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           data-testid="test-input"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -352,11 +336,11 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input MuiInput-input"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"
@@ -366,21 +350,17 @@ exports[`NewListEditorField component should render new list editor component wi
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-testid="test-add"
           disabled=""
           id="test-add"
           tabindex="-1"
           type="button"
         >
-          <span
-            class="MuiButton-label"
-          >
-            Add
-          </span>
+          Add
         </button>
       </div>
     </div>
@@ -388,56 +368,54 @@ exports[`NewListEditorField component should render new list editor component wi
       style="flex-grow: 1; padding: 8px;"
     >
       <div
-        class="MuiGrid-root makeStyles-header-5 MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 makeStyles-header-5 css-ofrcno-MuiGrid-root"
       >
         <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 css-fyaqcr-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption"
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
           >
             Name
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-right-3 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 makeStyles-right-3 css-k3f0g4-MuiGrid-root"
         >
           <span
-            class="MuiTypography-root MuiTypography-caption"
+            class="MuiTypography-root MuiTypography-caption css-1e4ju4k-MuiTypography-root"
           >
             Reorder items
           </span>
         </div>
         <div
-          class="MuiGrid-root makeStyles-center-4 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-4 css-1ux21pi-MuiGrid-root"
         >
           <span
+            aria-label="Remove all items"
             class=""
-            title="Remove all items"
+            data-mui-internal-clone-element="true"
           >
             <button
-              class="MuiButtonBase-root MuiIconButton-root"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
               data-testid="delete-all-test"
               id="delete-all-test"
               tabindex="0"
               type="button"
             >
-              <span
-                class="MuiIconButton-label"
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="DeleteForeverIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
-                  />
-                </svg>
-              </span>
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
               <span
-                class="MuiTouchRipple-root"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
           </span>
@@ -454,53 +432,51 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-8 css-7ldjcq-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2"
+              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               test
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-7 css-17o05rx-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <span
+                  aria-label="Move item down the order"
                   class=""
-                  title="Move item down the order"
+                  data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="test-list-row-0-move-down"
                     id="test-list-row-0-move-down"
                     tabindex="0"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label"
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowDownIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
-                        />
-                      </svg>
-                    </span>
+                      <path
+                        d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </span>
@@ -508,35 +484,33 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-7 css-1ux21pi-MuiGrid-root"
           >
             <span
+              aria-label="Remove this item"
               class=""
-              title="Remove this item"
+              data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="test-list-row-0-delete"
                 id="test-list-row-0-delete"
                 tabindex="0"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </button>
             </span>
@@ -549,53 +523,51 @@ exports[`NewListEditorField component should render new list editor component wi
         style="flex-grow: 1; padding: 8px;"
       >
         <div
-          class="MuiGrid-root makeStyles-row-8 MuiGrid-container MuiGrid-spacing-xs-1 MuiGrid-align-items-xs-center"
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1 makeStyles-row-8 css-7ldjcq-MuiGrid-root"
         >
           <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-6 MuiGrid-grid-md-9 css-1ncsxfs-MuiGrid-root"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2"
+              class="MuiTypography-root MuiTypography-body2 css-1omq3q2-MuiTypography-root"
             >
               testing
             </p>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-5 MuiGrid-grid-sm-5 MuiGrid-grid-md-2 makeStyles-center-7 css-17o05rx-MuiGrid-root"
           >
             <div
-              class="MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-flex-end"
+              class="MuiGrid-root MuiGrid-container css-16g5rpk-MuiGrid-root"
             >
               <div
-                class="MuiGrid-root MuiGrid-item"
+                class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
               >
                 <span
+                  aria-label="Move item up the order"
                   class=""
-                  title="Move item up the order"
+                  data-mui-internal-clone-element="true"
                 >
                   <button
-                    class="MuiButtonBase-root MuiIconButton-root"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                     data-testid="test-list-row-1-move-up"
                     id="test-list-row-1-move-up"
                     tabindex="0"
                     type="button"
                   >
-                    <span
-                      class="MuiIconButton-label"
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                      data-testid="KeyboardArrowUpIcon"
+                      focusable="false"
+                      viewBox="0 0 24 24"
                     >
-                      <svg
-                        aria-hidden="true"
-                        class="MuiSvgIcon-root"
-                        focusable="false"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
-                        />
-                      </svg>
-                    </span>
+                      <path
+                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                      />
+                    </svg>
                     <span
-                      class="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                     />
                   </button>
                 </span>
@@ -603,35 +575,33 @@ exports[`NewListEditorField component should render new list editor component wi
             </div>
           </div>
           <div
-            class="MuiGrid-root makeStyles-center-7 MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1"
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-sm-1 makeStyles-center-7 css-1ux21pi-MuiGrid-root"
           >
             <span
+              aria-label="Remove this item"
               class=""
-              title="Remove this item"
+              data-mui-internal-clone-element="true"
             >
               <button
-                class="MuiButtonBase-root MuiIconButton-root"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeLarge css-bc0omg-MuiButtonBase-root-MuiIconButton-root"
                 data-testid="test-list-row-1-delete"
                 id="test-list-row-1-delete"
                 tabindex="0"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="DeleteIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </button>
             </span>
@@ -640,7 +610,7 @@ exports[`NewListEditorField component should render new list editor component wi
       </div>
     </div>
     <p
-      class="MuiFormHelperText-root Mui-error"
+      class="MuiFormHelperText-root Mui-error css-1d7hrfi-MuiFormHelperText-root"
     >
       test1
     </p>
@@ -654,21 +624,20 @@ exports[`NewListEditorField component should render new list editor component wi
     id="test-list-editor"
   >
     <div
-      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center"
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-hckusd-MuiGrid-root"
       data-testid="test-form-add"
-      display="row"
       id="test-form-add"
     >
       <div
-        class="MuiGrid-root MuiGrid-item"
+        class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
         style="flex-grow: 1;"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           data-testid="test-input"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-standard css-h9aup-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for="test-input"
             id="test-input-label"
@@ -676,11 +645,11 @@ exports[`NewListEditorField component should render new list editor component wi
             Item name
           </label>
           <div
-            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1xrq768-MuiInputBase-root-MuiInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input MuiInput-input"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
               id="test-input"
               placeholder="Please type the item name"
               type="text"
@@ -690,21 +659,17 @@ exports[`NewListEditorField component should render new list editor component wi
         </div>
       </div>
       <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2"
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-2 css-63b4os-MuiGrid-root"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1duotrm-MuiButtonBase-root-MuiButton-root"
           data-testid="test-add"
           disabled=""
           id="test-add"
           tabindex="-1"
           type="button"
         >
-          <span
-            class="MuiButton-label"
-          >
-            Add
-          </span>
+          Add
         </button>
       </div>
     </div>
@@ -713,7 +678,7 @@ exports[`NewListEditorField component should render new list editor component wi
       id="test-list"
     />
     <p
-      class="MuiFormHelperText-root"
+      class="MuiFormHelperText-root css-1d7hrfi-MuiFormHelperText-root"
     />
   </div>
 </DocumentFragment>

@@ -15,8 +15,9 @@ import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
 import { mui1theme } from 'config';
 import { api, sessionApi } from 'config/axios';
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import { StyledEngineProvider } from '@mui/material/styles';
+import ThemeProvider from '@mui/styles/ThemeProvider';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import prettyFormat from 'pretty-format';
 import renderer from 'react-test-renderer';
 
@@ -68,14 +69,17 @@ global.getElement = (component, props, args = {}) => {
             return shallow(React.createElement(component, props), { context });
         }
     }
+
     return renderer(
         <Provider store={store}>
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
-                <MuiThemeProvider theme={mui1theme}>
-                    <MuiPickersUtilsProvider utils={MomentUtils}>
-                        {React.createElement(component, props)}
-                    </MuiPickersUtilsProvider>
-                </MuiThemeProvider>
+                <StyledEngineProvider injectFirst>
+                    <ThemeProvider theme={mui1theme}>
+                        <LocalizationProvider dateAdapter={MomentUtils}>
+                            {React.createElement(component, props)}
+                        </LocalizationProvider>
+                    </ThemeProvider>
+                </StyledEngineProvider>
             </MemoryRouter>
         </Provider>,
     );

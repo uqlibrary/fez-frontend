@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import { withStyles } from '@material-ui/core/styles';
-import withWidth from '@material-ui/core/withWidth';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+import withStyles from '@mui/styles/withStyles';
+import { withWidth } from 'helpers/withWidth';
 
 export const styles = theme => ({
     stepper: {
+        padding: theme.spacing(3),
         backgroundColor: theme.hexToRGBA('#F7F7F7', 0),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
             padding: '12px 0 24px 8px',
             margin: '-24px 0 0 0',
         },
@@ -29,7 +30,11 @@ export class CustomStepper extends Component {
     };
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.activeStep !== this.props.activeStep || nextProps.steps !== this.props.steps;
+        return (
+            nextProps.width !== this.props.width ||
+            nextProps.activeStep !== this.props.activeStep ||
+            nextProps.steps !== this.props.steps
+        );
     }
 
     render() {
@@ -51,4 +56,4 @@ export class CustomStepper extends Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(withWidth()(CustomStepper));
+export default withStyles(styles)(withWidth()(CustomStepper));

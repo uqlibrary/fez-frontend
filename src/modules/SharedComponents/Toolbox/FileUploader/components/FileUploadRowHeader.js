@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import { useConfirmationState } from 'hooks';
 
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import makeStyles from '@mui/styles/makeStyles';
 
 const useStyles = makeStyles(() => ({
     icon: {
@@ -33,7 +33,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
         deleteAllFilesConfirmation,
     } = locale;
     return (
-        <Hidden only={['xs']}>
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             <ConfirmationBox
                 onAction={onDeleteAll}
                 onClose={hideConfirmation}
@@ -68,7 +68,12 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     <Grid item xs={1} className={classes.icon}>
                         <Tooltip title={deleteAllFiles}>
                             <span>
-                                <IconButton onClick={showConfirmation} disabled={disabled} id="delete-all-files">
+                                <IconButton
+                                    onClick={showConfirmation}
+                                    disabled={disabled}
+                                    id="delete-all-files"
+                                    size="large"
+                                >
                                     <DeleteForeverIcon />
                                 </IconButton>
                             </span>
@@ -76,7 +81,7 @@ export const FileUploadRowHeader = ({ onDeleteAll, locale, requireOpenAccessStat
                     </Grid>
                 </Grid>
             </div>
-        </Hidden>
+        </Box>
     );
 };
 
