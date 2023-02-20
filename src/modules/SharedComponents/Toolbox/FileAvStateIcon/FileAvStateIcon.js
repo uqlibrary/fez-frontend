@@ -11,10 +11,10 @@ import {
     AV_CHECK_STATE_INFECTED,
     AV_CHECK_STATE_UNSCANNABLE,
 } from '../../../../config/general';
-import Tooltip from '@material-ui/core/Tooltip';
 import moment from 'moment';
 import { sanitiseId } from '../../../../helpers/general';
 import { getAvStateDescription } from '../../../../helpers/datastreams';
+import Tooltip from '@mui/material/Tooltip';
 
 export const UTCDateToCurrentTZDate = date =>
     moment

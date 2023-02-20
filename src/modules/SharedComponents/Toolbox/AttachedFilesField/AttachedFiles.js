@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { makeStyles } from '@material-ui/styles';
-import Delete from '@material-ui/icons/Delete';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
-import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
-import WarningIcon from '@material-ui/icons/Warning';
+import { makeStyles } from '@mui/styles';
+import Delete from '@mui/icons-material/Delete';
+import Grid from '@mui/material/Unstable_Grid2';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+import WarningIcon from '@mui/icons-material/Warning';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import globalLocale from 'locale/global';
 import viewRecordLocale from 'locale/viewRecord';
 
@@ -33,11 +36,10 @@ import { checkForThumbnail, checkForPreview, checkForWeb, formatBytes } from 'mo
 
 import { FileIcon } from './FileIcon';
 import { getAdvisoryStatement, getSensitiveHandlingNote } from '../../../../helpers/datastreams';
-import { ExpandLess, ExpandMore } from '@material-ui/icons';
 import * as fileUploadLocale from '../FileUploader/locale';
-import Box from '@material-ui/core/Box';
 import { FileAvStateIcon } from '../FileAvStateIcon';
 import { AV_CHECK_STATE_INFECTED } from '../../../../config/general';
+import Box from '@mui/material/Box';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -416,7 +418,7 @@ export const AttachedFiles = ({
                             >
                                 <Grid container className={classes.header} spacing={3}>
                                     <Grid item xs={12}>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                             <Grid item xs={1} className={classes.upDownArrowContainer}>
                                                 <IconButton
                                                     disabled={index === 0}
@@ -425,11 +427,11 @@ export const AttachedFiles = ({
                                                     data-testid={`order-up-file-${index}`}
                                                     onClick={() => onFileOrderChangeUp(item.id, index + 1)}
                                                 >
-                                                    <ExpandLess />
+                                                    <ExpandLessIcon />
                                                 </IconButton>
                                             </Grid>
                                         </Grid>
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                             <Grid item xs={1} className={classes.thumbIconCentered}>
                                                 <FileIcon
                                                     {...item.iconProps}
@@ -493,7 +495,7 @@ export const AttachedFiles = ({
                                                 item
                                                 sm={2}
                                                 className={classes.dataWrapper}
-                                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                                sx={{ display: { xs: 'none', md: 'block' } }}
                                             >
                                                 <Typography variant="body2" noWrap>
                                                     {item.calculatedSize}
@@ -625,7 +627,7 @@ export const AttachedFiles = ({
                                             </React.Fragment>
                                         )}
 
-                                        <Grid container direction="row" alignItems="center" spacing={2} wrap="nowrap">
+                                        <Grid container direction="row" alignItems="center" spacing={2} wrap={'nowrap'}>
                                             <Grid item xs={1} className={classes.upDownArrowContainer}>
                                                 <IconButton
                                                     className={classes.upDownArrow}
@@ -634,7 +636,7 @@ export const AttachedFiles = ({
                                                     data-testid={`order-down-file-${index}`}
                                                     onClick={() => onFileOrderChangeDown(item.id, index + 1)}
                                                 >
-                                                    <ExpandMore />
+                                                    <ExpandMoreIcon />
                                                 </IconButton>
                                             </Grid>
                                         </Grid>

@@ -5,9 +5,9 @@ import { openAccessConfig } from 'config';
 import Lock from '@mui/icons-material/Lock';
 import LockOpen from '@mui/icons-material/LockOpen';
 import LockClockOutlined from '@mui/icons-material/LockClock';
-import { makeStyles } from '@material-ui/styles';
 import Tooltip from '@mui/material/Tooltip';
 import Fade from '@mui/material/Fade';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     svg: props => props.style,

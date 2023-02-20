@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
-import Image from '@material-ui/icons/Image';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import Typography from '@material-ui/core/Typography';
-import Videocam from '@material-ui/icons/Videocam';
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import { withStyles } from '@material-ui/core/styles';
+import Grid from '@mui/material/Unstable_Grid2';
+import Image from '@mui/icons-material/Image';
+import InsertDriveFile from '@mui/icons-material/InsertDriveFile';
+import PictureAsPdf from '@mui/icons-material/PictureAsPdf';
+import Typography from '@mui/material/Typography';
+import Videocam from '@mui/icons-material/Videocam';
+import VolumeUp from '@mui/icons-material/VolumeUp';
+import withStyles from '@mui/styles/withStyles';
 
 import locale from 'locale/viewRecord';
 import globalLocale from 'locale/global';
@@ -509,7 +508,7 @@ export class FilesClass extends Component {
                                 item
                                 md={2}
                                 data-testid="dsi-size-label"
-                                sx={{ display: { xs: 'none', sm: 'block' } }}
+                                sx={{ display: { xs: 'none', md: 'block' } }}
                             >
                                 <Typography variant="caption" gutterBottom>
                                     {locale.viewRecord.sections.files.size}
@@ -577,7 +576,7 @@ export class FilesClass extends Component {
                                     md={2}
                                     className={this.props.classes.dataWrapper}
                                     data-testid={`dsi-size-${index}`}
-                                    sx={{ display: { xs: 'none', sm: 'block' } }}
+                                    sx={{ display: { xs: 'none', md: 'block' } }}
                                 >
                                     <Typography variant="body2" noWrap>
                                         {item.calculatedSize}

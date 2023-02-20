@@ -13,7 +13,7 @@ import { ConfirmationBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogB
 
 import { pathConfig } from 'config/pathConfig';
 import componentsLocale from 'locale/components';
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
 
 export const useStyles = makeStyles(
     theme => ({
@@ -41,21 +41,21 @@ export const getDownloadLinkTestId = id => `${id}-download`;
 export const getPreviewLinkTestId = id => `${id}-preview`;
 
 const FileName = ({
-                      downloadLicence,
-                      allowDownload,
-                      checksums,
-                      fileName,
-                      id,
-                      mediaUrl,
-                      mimeType,
-                      onFileSelect,
-                      pid,
-                      previewMediaUrl,
-                      securityStatus,
-                      webMediaUrl,
-                      tooltip,
-                      disabled,
-                  }) => {
+    downloadLicence,
+    allowDownload,
+    checksums,
+    fileName,
+    id,
+    mediaUrl,
+    mimeType,
+    onFileSelect,
+    pid,
+    previewMediaUrl,
+    securityStatus,
+    webMediaUrl,
+    tooltip,
+    disabled,
+}) => {
     const classes = useStyles();
 
     const isAudio = mimeType => {
@@ -161,7 +161,7 @@ const FileName = ({
                                     data-testid={`${id}-download-button`}
                                     size="large"
                                 >
-                                    <GetAppIcon/>
+                                    <GetAppIcon />
                                 </IconButton>
                             </Grid>
                         )}
@@ -169,37 +169,35 @@ const FileName = ({
                 )}
             </Grid>
             {allowDownload && !downloadLicence && isAudio(mimeType) && (
-                <Grid item sm={4 sx={{display: {xs: 'none', sm: 'block'}}}>
+                <Grid item sm={4} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <AudioPlayer
-                    pid={pid}
-                    fileName={
-                    previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)
-                }
-                    mimeType={mimeType}
+                        pid={pid}
+                        fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksums && checksums.preview)}
+                        mimeType={mimeType}
                     />
-                    </Grid>
-                    )}
                 </Grid>
-                );
-            };
+            )}
+        </Grid>
+    );
+};
 
-            export const FileNameProps = {
-            downloadLicence: PropTypes.object,
-            id: PropTypes.string,
-            pid: PropTypes.string.isRequired,
-            fileName: PropTypes.string.isRequired,
-            mimeType: PropTypes.string.isRequired,
-            mediaUrl: PropTypes.string.isRequired,
-            webMediaUrl: PropTypes.string,
-            previewMediaUrl: PropTypes.string,
-            onFileSelect: PropTypes.func.isRequired,
-            allowDownload: PropTypes.bool,
-            securityStatus: PropTypes.bool,
-            checksums: PropTypes.object,
-            tooltip: PropTypes.string,
-            disabled: PropTypes.bool,
-        };
+export const FileNameProps = {
+    downloadLicence: PropTypes.object,
+    id: PropTypes.string,
+    pid: PropTypes.string.isRequired,
+    fileName: PropTypes.string.isRequired,
+    mimeType: PropTypes.string.isRequired,
+    mediaUrl: PropTypes.string.isRequired,
+    webMediaUrl: PropTypes.string,
+    previewMediaUrl: PropTypes.string,
+    onFileSelect: PropTypes.func.isRequired,
+    allowDownload: PropTypes.bool,
+    securityStatus: PropTypes.bool,
+    checksums: PropTypes.object,
+    tooltip: PropTypes.string,
+    disabled: PropTypes.bool,
+};
 
-            FileName.propTypes = {...FileNameProps};
+FileName.propTypes = { ...FileNameProps };
 
-            export default FileName;
+export default FileName;
